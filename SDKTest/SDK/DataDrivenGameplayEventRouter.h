@@ -1,0 +1,109 @@
+/********************************************************
+*                                                       *
+*   Package generated using UEDumper by Spuckwaffel.    *
+*                                                       *
+********************************************************/
+
+/// Package DataDrivenGameplayEventRouter.
+
+/// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventDefinition
+/// Size: 0x0010 (0x000000 - 0x000010)
+class FGameplayEventDefinition : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(UScriptStruct*)                            EventType                                                   ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	DMember(bool)                                      bIsStateful                                                 ___ OFFSET(get<bool>, {0x8, 1, 0, 0})
+	CMember(EGameplayEventNetPolicy)                   NetPolicy                                                   ___ OFFSET(get<T>, {0x9, 1, 0, 0})
+};
+
+/// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventDescriptor
+/// Size: 0x0008 (0x000000 - 0x000008)
+class FGameplayEventDescriptor : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 8;
+
+public:
+};
+
+/// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventSubscription
+/// Size: 0x0070 (0x000000 - 0x000070)
+class FGameplayEventSubscription : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      ___ OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FMemberReference)                          EventDescriptor                                             ___ OFFSET(get<T>, {0x20, 48, 0, 0})
+	SMember(FGameplayEventListenerHandle)              EventHandle                                                 ___ OFFSET(get<T>, {0x50, 28, 0, 0})
+};
+
+/// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventHandlerFunction
+/// Size: 0x0080 (0x000000 - 0x000080)
+class FGameplayEventHandlerFunction : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 128;
+
+public:
+	SMember(FMemberReference)                          EventHandlerFunction                                        ___ OFFSET(get<T>, {0x0, 48, 0, 0})
+	CMember(TMap<FName, FString>)                      EventHandlerFunctionDefaultValues                           ___ OFFSET(get<T>, {0x30, 80, 0, 0})
+};
+
+/// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventHandlerFunctions
+/// Size: 0x0180 (0x000000 - 0x000180)
+class FGameplayEventHandlerFunctions : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 384;
+
+public:
+	SMember(FGameplayEventHandlerFunction)             OnEventReceived                                             ___ OFFSET(get<T>, {0x0, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnStatefulEventApplied                                      ___ OFFSET(get<T>, {0x80, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnStatefulEventCleared                                      ___ OFFSET(get<T>, {0x100, 128, 0, 0})
+};
+
+/// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventFunction
+/// Size: 0x0018 (0x000000 - 0x000018)
+class FGameplayEventFunction : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	CMember(TArray<FGameplayEventSubscription>)        EventSubscriptions                                          ___ OFFSET(get<T>, {0x8, 16, 0, 0})
+};
+
+/// Class /Script/DataDrivenGameplayEventRouter.GameplayEventLegacyBroadcast
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UGameplayEventLegacyBroadcast : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Script/DataDrivenGameplayEventRouter.GameplayEventDescriptorLibrary
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UGameplayEventDescriptorLibrary : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Enum /Script/DataDrivenGameplayEventRouter.EGameplayEventNetPolicy
+/// Size: 0x03
+enum EGameplayEventNetPolicy : uint8_t
+{
+	EGameplayEventNetPolicy__ServerOnly0                                             = 0,
+	EGameplayEventNetPolicy__ClientOrServer1                                         = 1,
+	EGameplayEventNetPolicy__EGameplayEventNetPolicy_MAX2                            = 2
+};
+

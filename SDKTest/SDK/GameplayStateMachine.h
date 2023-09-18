@@ -1,0 +1,119 @@
+/********************************************************
+*                                                       *
+*   Package generated using UEDumper by Spuckwaffel.    *
+*                                                       *
+********************************************************/
+
+/// Package GameplayStateMachine.
+
+/// Struct /Script/GameplayStateMachine.GameplayStateTransition
+/// Size: 0x0028 (0x000000 - 0x000028)
+class FGameplayStateTransition : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+	SMember(FGameplayTagContainer)                     TransitionConditionTags                                     ___ OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTag)                              TransitionStateTag                                          ___ OFFSET(get<T>, {0x20, 4, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0x24, 4, 0, 0})
+};
+
+/// Struct /Script/GameplayStateMachine.GameplayStateSettings
+/// Size: 0x0020 (0x000000 - 0x000020)
+class FGameplayStateSettings : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	CMember(UClass*)                                   StateClass                                                  ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              StateId                                                     ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	CMember(TArray<FGameplayStateTransition>)          StateTransitions                                            ___ OFFSET(get<T>, {0x10, 16, 0, 0})
+};
+
+/// Struct /Script/GameplayStateMachine.ActiveGameplayStateData
+/// Size: 0x0018 (0x000000 - 0x000018)
+class FActiveGameplayStateData : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	CMember(UGameplayState*)                           GameplayState                                               ___ OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              PreviousStateId                                             ___ OFFSET(get<T>, {0x8, 4, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     InitializationTime                                          ___ OFFSET(get<float>, {0x10, 4, 0, 0})
+};
+
+/// Struct /Script/GameplayStateMachine.GameplayStateMachineItem
+/// Size: 0x0014 (0x00000C - 0x000020)
+class FGameplayStateMachineItem : public FFastArraySerializerItem
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 32;
+
+public:
+	CMember(UGameplayStateMachine*)                    StateMachine                                                ___ OFFSET(get<T>, {0x10, 8, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     InitializationTime                                          ___ OFFSET(get<float>, {0x1C, 4, 0, 0})
+};
+
+/// Struct /Script/GameplayStateMachine.GameplayStateMachineArray
+/// Size: 0x0018 (0x000108 - 0x000120)
+class FGameplayStateMachineArray : public FFastArraySerializer
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 288;
+
+public:
+	CMember(UGameplayStateMachineManager*)             StateMachineManager                                         ___ OFFSET(get<T>, {0x108, 8, 0, 0})
+	CMember(TArray<FGameplayStateMachineItem>)         StateMachineItems                                           ___ OFFSET(get<T>, {0x110, 16, 0, 0})
+};
+
+/// Class /Script/GameplayStateMachine.GameplayState
+/// Size: 0x0050 (0x000028 - 0x000078)
+class UGameplayState : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 120;
+
+public:
+	SMember(FGameplayTag)                              StateId                                                     ___ OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     StateRuntimeTags                                            ___ OFFSET(get<T>, {0x30, 32, 0, 0})
+	DMember(bool)                                      bEvaluateTransition                                         ___ OFFSET(get<bool>, {0x50, 1, 0, 0})
+	DMember(bool)                                      bReplicates                                                 ___ OFFSET(get<bool>, {0x51, 1, 0, 0})
+	DMember(bool)                                      bStateBegun                                                 ___ OFFSET(get<bool>, {0x52, 1, 0, 0})
+	DMember(bool)                                      bStateEnded                                                 ___ OFFSET(get<bool>, {0x53, 1, 0, 0})
+	DMember(float)                                     InitializationServerTime                                    ___ OFFSET(get<float>, {0x54, 4, 0, 0})
+	DMember(float)                                     BeginStateDelay                                             ___ OFFSET(get<float>, {0x58, 4, 0, 0})
+	CMember(UGameplayStateMachine*)                    CachedGameplayStateMachine                                  ___ OFFSET(get<T>, {0x60, 8, 0, 0})
+	CMember(UGameplayStateMachineManager*)             CachedStateMachineManager                                   ___ OFFSET(get<T>, {0x68, 8, 0, 0})
+	CMember(UGameplayState*)                           Hack_StateToDelayProcess                                    ___ OFFSET(get<T>, {0x70, 8, 0, 0})
+};
+
+/// Class /Script/GameplayStateMachine.GameplayStateMachine
+/// Size: 0x0050 (0x000078 - 0x0000C8)
+class UGameplayStateMachine : public UGameplayState
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 200;
+
+public:
+	SMember(FGameplayTag)                              StateMachineId                                              ___ OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FActiveGameplayStateData)                  ActiveGameplayStateData                                     ___ OFFSET(get<T>, {0x98, 24, 0, 0})
+	CMember(TArray<FGameplayStateSettings>)            GameplayStateSettings                                       ___ OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FGameplayTag)                              InitialGameplayStateId                                      ___ OFFSET(get<T>, {0xC0, 4, 0, 0})
+};
+
+/// Class /Script/GameplayStateMachine.GameplayStateMachineManager
+/// Size: 0x0120 (0x0000A0 - 0x0001C0)
+class UGameplayStateMachineManager : public UActorComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 448;
+
+public:
+	SMember(FGameplayStateMachineArray)                StateMachineList                                            ___ OFFSET(get<T>, {0xA0, 288, 0, 0})
+};
+

@@ -1,0 +1,96 @@
+/********************************************************
+*                                                       *
+*   Package generated using UEDumper by Spuckwaffel.    *
+*                                                       *
+********************************************************/
+
+/// Package DataflowNodes.
+
+/// Struct /Script/DataflowNodes.FloatOverrideDataflowNode
+/// Size: 0x0010 (0x0000E8 - 0x0000F8)
+class FFloatOverrideDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 248;
+
+public:
+	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0xE8, 4, 0, 0})
+	SMember(FName)                                     KeyName                                                     ___ OFFSET(get<T>, {0xEC, 4, 0, 0})
+	DMember(float)                                     ValueOut                                                    ___ OFFSET(get<float>, {0xF0, 4, 0, 0})
+};
+
+/// Struct /Script/DataflowNodes.SelectionSetDataflowNode
+/// Size: 0x0020 (0x0000E8 - 0x000108)
+class FSelectionSetDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 264;
+
+public:
+	SMember(FString)                                   Indices                                                     ___ OFFSET(get<T>, {0xE8, 16, 0, 0})
+	CMember(TArray<int32_t>)                           IndicesOut                                                  ___ OFFSET(get<T>, {0xF8, 16, 0, 0})
+};
+
+/// Struct /Script/DataflowNodes.GetSkeletalMeshDataflowNode
+/// Size: 0x0010 (0x0000E8 - 0x0000F8)
+class FGetSkeletalMeshDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 248;
+
+public:
+	CMember(USkeletalMesh*)                            SkeletalMesh                                                ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
+	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0xF0, 4, 0, 0})
+};
+
+/// Struct /Script/DataflowNodes.GetSkeletonDataflowNode
+/// Size: 0x0010 (0x0000E8 - 0x0000F8)
+class FGetSkeletonDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 248;
+
+public:
+	CMember(USkeleton*)                                Skeleton                                                    ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
+	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0xF0, 4, 0, 0})
+};
+
+/// Struct /Script/DataflowNodes.SkeletalMeshBoneDataflowNode
+/// Size: 0x0018 (0x0000E8 - 0x000100)
+class FSkeletalMeshBoneDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 256;
+
+public:
+	SMember(FName)                                     BoneName                                                    ___ OFFSET(get<T>, {0xE8, 4, 0, 0})
+	CMember(USkeletalMesh*)                            SkeletalMesh                                                ___ OFFSET(get<T>, {0xF0, 8, 0, 0})
+	DMember(int32_t)                                   BoneIndexOut                                                ___ OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
+	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0xFC, 4, 0, 0})
+};
+
+/// Struct /Script/DataflowNodes.SkeletalMeshReferenceTransformDataflowNode
+/// Size: 0x0078 (0x0000E8 - 0x000160)
+class FSkeletalMeshReferenceTransformDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 352;
+
+public:
+	CMember(USkeletalMesh*)                            SkeletalMeshIn                                              ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
+	DMember(int32_t)                                   BoneIndexIn                                                 ___ OFFSET(get<int32_t>, {0xF0, 4, 0, 0})
+	SMember(FTransform)                                TransformOut                                                ___ OFFSET(get<T>, {0x100, 96, 0, 0})
+};
+
+/// Struct /Script/DataflowNodes.GetStaticMeshDataflowNode
+/// Size: 0x0010 (0x0000E8 - 0x0000F8)
+class FGetStaticMeshDataflowNode : public FDataflowNode
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 248;
+
+public:
+	CMember(UStaticMesh*)                              StaticMesh                                                  ___ OFFSET(get<T>, {0xE8, 8, 0, 0})
+	SMember(FName)                                     PropertyName                                                ___ OFFSET(get<T>, {0xF0, 4, 0, 0})
+};
+
