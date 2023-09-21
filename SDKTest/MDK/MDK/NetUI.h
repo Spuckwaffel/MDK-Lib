@@ -75,11 +75,11 @@ class UNetGraph : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FColor)                                    BackgroundColor                                             OFFSET(get<T>, {0x2A8, 4, 0, 0})
-	SMember(FColor)                                    PingLineColor                                               OFFSET(get<T>, {0x2AC, 4, 0, 0})
-	SMember(FColor)                                    QueuedBunchesLineColor                                      OFFSET(get<T>, {0x2B0, 4, 0, 0})
-	SMember(FColor)                                    PacketLossLineColor                                         OFFSET(get<T>, {0x2B4, 4, 0, 0})
-	SMember(FVector2D)                                 DesiredSize                                                 OFFSET(get<T>, {0x2B8, 16, 0, 0})
+	SMember(FColor)                                    BackgroundColor                                             OFFSET(getStruct<T>, {0x2A8, 4, 0, 0})
+	SMember(FColor)                                    PingLineColor                                               OFFSET(getStruct<T>, {0x2AC, 4, 0, 0})
+	SMember(FColor)                                    QueuedBunchesLineColor                                      OFFSET(getStruct<T>, {0x2B0, 4, 0, 0})
+	SMember(FColor)                                    PacketLossLineColor                                         OFFSET(getStruct<T>, {0x2B4, 4, 0, 0})
+	SMember(FVector2D)                                 DesiredSize                                                 OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
 	DMember(float)                                     MaxPingToGraph                                              OFFSET(get<float>, {0x2C8, 4, 0, 0})
 };
 

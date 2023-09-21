@@ -39,11 +39,11 @@ public:
 	CMember(UScrollBox*)                               TabButtonsScrollBox                                         OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        LeftButton                                                  OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        RightButton                                                 OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       LeftInputAction                                             OFFSET(get<T>, {0x2F8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       RightInputAction                                            OFFSET(get<T>, {0x310, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       LeftInputAction                                             OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RightInputAction                                            OFFSET(getStruct<T>, {0x310, 16, 0, 0})
 	CMember(TArray<UClassSelectorTeamTile*>)           TabButtons                                                  OFFSET(get<T>, {0x328, 16, 0, 0})
 	CMember(UClass*)                                   TabButtonClass                                              OFFSET(get<T>, {0x338, 8, 0, 0})
-	SMember(FMargin)                                   TabButtonPadding                                            OFFSET(get<T>, {0x340, 16, 0, 0})
+	SMember(FMargin)                                   TabButtonPadding                                            OFFSET(getStruct<T>, {0x340, 16, 0, 0})
 	CMember(TArray<FText>)                             DesignerPreviewTabNames                                     OFFSET(get<T>, {0x358, 16, 0, 0})
 	DMember(float)                                     ButtonScrollAmount                                          OFFSET(get<float>, {0x368, 4, 0, 0})
 };
@@ -71,8 +71,8 @@ class UCreativeClassSelectorButton : public UCommonButtonBase
 public:
 	CMember(UCommonTextBlock*)                         ButtonTextBlock                                             OFFSET(get<T>, {0x1470, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      ActionWidget                                                OFFSET(get<T>, {0x1478, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x1480, 24, 0, 0})
-	SMember(FDataTableRowHandle)                       buttonInputAction                                           OFFSET(get<T>, {0x1498, 16, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(getStruct<T>, {0x1480, 24, 0, 0})
+	SMember(FDataTableRowHandle)                       buttonInputAction                                           OFFSET(getStruct<T>, {0x1498, 16, 0, 0})
 	DMember(bool)                                      bAutoCapitalize                                             OFFSET(get<bool>, {0x14A8, 1, 0, 0})
 
 
@@ -126,7 +126,7 @@ class UCreativeClassItemInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMinigameClassSlot)                        ClassSlot                                                   OFFSET(get<T>, {0x28, 80, 0, 0})
+	SMember(FMinigameClassSlot)                        ClassSlot                                                   OFFSET(getStruct<T>, {0x28, 80, 0, 0})
 };
 
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassEntry
@@ -185,7 +185,7 @@ public:
 	DMember(int32_t)                                   ModalTimeLimitInSeconds                                     OFFSET(get<int32_t>, {0x4CC, 4, 0, 0})
 	CMember(EClassSelectorDisplayMode)                 DisplayMode                                                 OFFSET(get<T>, {0x4E0, 1, 0, 0})
 	DMember(bool)                                      bDeferRespawn                                               OFFSET(get<bool>, {0x4E1, 1, 0, 0})
-	SMember(FDataTableRowHandle)                       ReturnToClassSelectionInputAction                           OFFSET(get<T>, {0x4E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ReturnToClassSelectionInputAction                           OFFSET(getStruct<T>, {0x4E8, 16, 0, 0})
 	DMember(float)                                     LoadoutScrollPadding                                        OFFSET(get<float>, {0x4F8, 4, 0, 0})
 	CMember(UCreativeClassItemInfo*)                   SelectedClassItemInfo                                       OFFSET(get<T>, {0x518, 8, 0, 0})
 
@@ -213,7 +213,7 @@ class UCreativeClassSelectorMapTab : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FAthenaMapScreenContainerTabInfo)          MapTabInfo                                                  OFFSET(get<T>, {0x3F8, 72, 0, 0})
+	SMember(FAthenaMapScreenContainerTabInfo)          MapTabInfo                                                  OFFSET(getStruct<T>, {0x3F8, 72, 0, 0})
 	CMember(UCreativeClassSelector*)                   CreativeClassSelector                                       OFFSET(get<T>, {0x440, 8, 0, 0})
 
 

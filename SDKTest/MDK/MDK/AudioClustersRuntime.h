@@ -52,26 +52,28 @@ public:
 
 /// Struct /Script/AudioClustersRuntime.AudioClusterActorInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FAudioClusterActorInfo : public MDKStruct
+class FAudioClusterActorInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/AudioClustersRuntime.AudioClusterOneShotInfo
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FAudioClusterOneShotInfo : public MDKStruct
+class FAudioClusterOneShotInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     LifetimeSeconds                                             OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     TimeRemainingSeconds                                        OFFSET(get<float>, {0x24, 4, 0, 0})
 };

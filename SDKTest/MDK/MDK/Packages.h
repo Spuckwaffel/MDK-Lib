@@ -16,7 +16,7 @@ class A_WaterMeshBlueprintMaster_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 763;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     CollisionMesh1                                              OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     CollisionMesh2                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     CollisionMesh4                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -75,8 +75,9 @@ public:
 
 /// Struct /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/WaterMeshAssetsToReplace.WaterMeshAssetsToReplace
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FWaterMeshAssetsToReplace : public MDKStruct
+class FWaterMeshAssetsToReplace : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 

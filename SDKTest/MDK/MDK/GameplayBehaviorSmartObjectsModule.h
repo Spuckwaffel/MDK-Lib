@@ -30,9 +30,9 @@ class UAITask_UseGameplayBehaviorSmartObject : public UAITask
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSucceeded                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMoveToFailed                                              OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSucceeded                                                 OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMoveToFailed                                              OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 	CMember(UAITask_MoveTo*)                           MoveToTask                                                  OFFSET(get<T>, {0x98, 8, 0, 0})
 	CMember(UGameplayBehavior*)                        GameplayBehavior                                            OFFSET(get<T>, {0xA0, 8, 0, 0})
 
@@ -54,8 +54,8 @@ class UBTTask_FindAndUseGameplayBehaviorSmartObject : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FGameplayTagQuery)                         ActivityRequirements                                        OFFSET(get<T>, {0x70, 72, 0, 0})
-	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(get<T>, {0xB8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         ActivityRequirements                                        OFFSET(getStruct<T>, {0x70, 72, 0, 0})
+	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(getStruct<T>, {0xB8, 72, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x100, 4, 0, 0})
 };
 

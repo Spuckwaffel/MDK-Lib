@@ -19,12 +19,13 @@ public:
 
 /// Struct /Script/JsonUtilities.JsonObjectWrapper
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FJsonObjectWrapper : public MDKStruct
+class FJsonObjectWrapper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   JsonString                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   JsonString                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 

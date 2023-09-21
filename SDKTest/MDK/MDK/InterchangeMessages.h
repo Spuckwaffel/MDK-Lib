@@ -16,7 +16,7 @@ class UInterchangeResultMeshWarning : public UInterchangeResultWarning
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   MeshName                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   MeshName                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeMessages.InterchangeResultTextureWarning
@@ -27,7 +27,7 @@ class UInterchangeResultTextureWarning : public UInterchangeResultWarning
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   TextureName                                                 OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   TextureName                                                 OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeMessages.InterchangeResultMeshError
@@ -38,7 +38,7 @@ class UInterchangeResultMeshError : public UInterchangeResultError
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   MeshName                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   MeshName                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeMessages.InterchangeResultMeshWarning_Generic
@@ -49,7 +49,7 @@ class UInterchangeResultMeshWarning_Generic : public UInterchangeResultMeshWarni
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x70, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeMessages.InterchangeResultMeshError_Generic
@@ -60,7 +60,7 @@ class UInterchangeResultMeshError_Generic : public UInterchangeResultMeshError
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x70, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeMessages.InterchangeResultMeshWarning_TooManyUVs
@@ -82,7 +82,7 @@ class UInterchangeResultTextureWarning_TextureFileDoNotExist : public UInterchan
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FString)                                   MaterialName                                                OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FString)                                   MaterialName                                                OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 };
 

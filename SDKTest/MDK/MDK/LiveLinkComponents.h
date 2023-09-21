@@ -27,7 +27,7 @@ class ULiveLinkControllerBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FComponentReference)                       ComponentPicker                                             OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FComponentReference)                       ComponentPicker                                             OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkLightController
@@ -48,7 +48,7 @@ class ULiveLinkTransformController : public ULiveLinkControllerBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FLiveLinkTransformControllerData)          TransformData                                               OFFSET(get<T>, {0x68, 6, 0, 0})
+	SMember(FLiveLinkTransformControllerData)          TransformData                                               OFFSET(getStruct<T>, {0x68, 6, 0, 0})
 };
 
 /// Class /Script/LiveLinkComponents.LiveLinkComponentController
@@ -59,11 +59,11 @@ class ULiveLinkComponentController : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FLiveLinkSubjectRepresentation)            SubjectRepresentation                                       OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FLiveLinkSubjectRepresentation)            SubjectRepresentation                                       OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	CMember(TMap<UClass*, ULiveLinkControllerBase*>)   ControllerMap                                               OFFSET(get<T>, {0xB0, 80, 0, 0})
 	DMember(bool)                                      bUpdateInEditor                                             OFFSET(get<bool>, {0x100, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           OFFSET(get<T>, {0x108, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnControllerMapUpdatedDelegate                              OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           OFFSET(getStruct<T>, {0x108, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnControllerMapUpdatedDelegate                              OFFSET(getStruct<T>, {0x118, 16, 0, 0})
 	DMember(bool)                                      bDisableEvaluateLiveLinkWhenSpawnable                       OFFSET(get<bool>, {0x128, 1, 0, 0})
 	DMember(bool)                                      bEvaluateLiveLink                                           OFFSET(get<bool>, {0x129, 1, 0, 0})
 	DMember(bool)                                      bUpdateInPreviewEditor                                      OFFSET(get<bool>, {0x12A, 1, 0, 0})
@@ -78,8 +78,9 @@ public:
 
 /// Struct /Script/LiveLinkComponents.LiveLinkTransformControllerData
 /// Size: 0x0006 (0x000000 - 0x000006)
-class FLiveLinkTransformControllerData : public MDKStruct
+class FLiveLinkTransformControllerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 6;
 

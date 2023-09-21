@@ -20,9 +20,9 @@ class AFortGameplayCueNotify_CrownWear : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2632;
 
 public:
-	SMember(FScalableFloat)                            IntroFXVisualVolume                                         OFFSET(get<T>, {0x990, 40, 0, 0})
-	SMember(FScalableFloat)                            IntroFXTimelineRate                                         OFFSET(get<T>, {0x9B8, 40, 0, 0})
-	SMember(FScalableFloat)                            IntroFXUpdatePrecision                                      OFFSET(get<T>, {0x9E0, 40, 0, 0})
+	SMember(FScalableFloat)                            IntroFXVisualVolume                                         OFFSET(getStruct<T>, {0x990, 40, 0, 0})
+	SMember(FScalableFloat)                            IntroFXTimelineRate                                         OFFSET(getStruct<T>, {0x9B8, 40, 0, 0})
+	SMember(FScalableFloat)                            IntroFXUpdatePrecision                                      OFFSET(getStruct<T>, {0x9E0, 40, 0, 0})
 	CMember(TArray<FScalableFloat>)                    IntroFXUpdateFrequencies                                    OFFSET(get<T>, {0xA08, 16, 0, 0})
 	CMember(UCurveVector*)                             IntroFXCurve                                                OFFSET(get<T>, {0xA18, 8, 0, 0})
 	CMember(UTimelineComponent*)                       IntroFXTimeline                                             OFFSET(get<T>, {0xA20, 8, 0, 0})
@@ -67,18 +67,18 @@ class UFortControllerComponent_VictoryCrowns : public UFortControllerComponent
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnVictoryCrownStatusChanged                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHasWonCrownInMatch                                        OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHasWonRoyalRoyale                                         OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVictoryCrownStatusChanged                                 OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHasWonCrownInMatch                                        OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHasWonRoyalRoyale                                         OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) CrownInventoryItemClass                                     OFFSET(get<T>, {0x108, 32, 0, 0})
 	DMember(bool)                                      bWonCrownInMatch                                            OFFSET(get<bool>, {0x128, 1, 0, 0})
 	DMember(bool)                                      bWonRoyalRoyale                                             OFFSET(get<bool>, {0x129, 1, 0, 0})
 	CMember(UFortVictoryCrownAccountItemDefinition*)   VictoryCrownAccountItemDefinition                           OFFSET(get<T>, {0x130, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortMontageItemDefinitionBase*>) RoyalRoyaleEmoteItemDefinition                        OFFSET(get<T>, {0x138, 32, 0, 0})
 	CMember(UDataTable*)                               VictoryCrownPlaylistData                                    OFFSET(get<T>, {0x158, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     SourceTagsForRoyalRoyale                                    OFFSET(get<T>, {0x160, 32, 0, 0})
-	SMember(FVictoryCrownAccountData)                  VictoryCrownAccountData                                     OFFSET(get<T>, {0x180, 16, 0, 0})
-	SMember(FScalableFloat)                            InitialGrantDelay                                           OFFSET(get<T>, {0x190, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     SourceTagsForRoyalRoyale                                    OFFSET(getStruct<T>, {0x160, 32, 0, 0})
+	SMember(FVictoryCrownAccountData)                  VictoryCrownAccountData                                     OFFSET(getStruct<T>, {0x180, 16, 0, 0})
+	SMember(FScalableFloat)                            InitialGrantDelay                                           OFFSET(getStruct<T>, {0x190, 40, 0, 0})
 	DMember(bool)                                      bKillFeedBroadcastReady                                     OFFSET(get<bool>, {0x260, 1, 0, 0})
 
 
@@ -168,8 +168,8 @@ class UFortGameStateComponent_VictoryCrowns : public UFortGameStateComponent
 
 public:
 	CMember(TArray<AFortPlayerStateAthena*>)           CrownBearerPlayerStates                                     OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FText)                                     KillFeedFormat_Dropped                                      OFFSET(get<T>, {0xB0, 24, 0, 0})
-	SMember(FText)                                     KillFeedFormat_PickedUp                                     OFFSET(get<T>, {0xC8, 24, 0, 0})
+	SMember(FText)                                     KillFeedFormat_Dropped                                      OFFSET(getStruct<T>, {0xB0, 24, 0, 0})
+	SMember(FText)                                     KillFeedFormat_PickedUp                                     OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
 
 
 	/// Functions
@@ -222,6 +222,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FVictoryCrownPlaylistData : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

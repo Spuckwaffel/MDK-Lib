@@ -28,7 +28,7 @@ public:
 	DMember(bool)                                      bIsActiveInvite                                             OFFSET(get<bool>, {0x6C, 1, 0, 0})
 	DMember(bool)                                      bIsPartyPrivate                                             OFFSET(get<bool>, {0x6D, 1, 0, 0})
 	DMember(int32_t)                                   CurrentPartySize                                            OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	SMember(FText)                                     RichPresenceText                                            OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FText)                                     RichPresenceText                                            OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	CMember(UFortActivityViewModel*)                   ParentActivity                                              OFFSET(get<T>, {0x90, 8, 0, 0})
 	CMember(UFortActivityViewModel*)                   ChildActivity                                               OFFSET(get<T>, {0x98, 8, 0, 0})
 };
@@ -71,7 +71,7 @@ public:
 	CMember(UCommonButtonBase*)                        Button_JoinAsSpectator                                      OFFSET(get<T>, {0x428, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_ShowSpectateMatchModal                               OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UFortTabListWidgetBase_Legacy*)            TabList_BrowserTabs                                         OFFSET(get<T>, {0x438, 8, 0, 0})
-	SMember(FPrimaryContentSetup)                      PrimaryContentSetup                                         OFFSET(get<T>, {0x440, 3, 0, 0})
+	SMember(FPrimaryContentSetup)                      PrimaryContentSetup                                         OFFSET(getStruct<T>, {0x440, 3, 0, 0})
 	CMember(UClass*)                                   TabButtonClass                                              OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UClass*)                                   ActivityDetailsModalClass                                   OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UClass*)                                   ActivityModeSetSelectionModalClass                          OFFSET(get<T>, {0x458, 8, 0, 0})
@@ -84,7 +84,7 @@ public:
 	CMember(UClass*)                                   CampaignPurchaseScreenClass                                 OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	CMember(UClass*)                                   CCUModalClass                                               OFFSET(get<T>, {0x4C8, 8, 0, 0})
 	CMember(TMap<FName, UFortActivityBrowserColorSchemeAsset*>) ColorSchemes                                       OFFSET(get<T>, {0x4D0, 80, 0, 0})
-	SMember(FText)                                     MobileAcceptButtonBaseText                                  OFFSET(get<T>, {0x520, 24, 0, 0})
+	SMember(FText)                                     MobileAcceptButtonBaseText                                  OFFSET(getStruct<T>, {0x520, 24, 0, 0})
 	CMember(UFortCreativeDiscoverySurfaceManager*)     Manager                                                     OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortActivityBrowserPlayWithFriendsTile*>) LastSelectedPlayWithFriendsTile              OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortGameActivity*)                        SelectedGameActivity                                        OFFSET(get<T>, {0x558, 8, 0, 0})
@@ -160,9 +160,9 @@ public:
 	DMember(bool)                                      bIsPartyPrivate                                             OFFSET(get<bool>, {0x1500, 1, 0, 0})
 	CMember(UFortGameActivity*)                        CachedGameActivity                                          OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(TWeakObjectPtr<USocialUser*>)              CachedTargetSocialUser                                      OFFSET(get<T>, {0x1520, 8, 0, 0})
-	SMember(FText)                                     CurrentCTAButtonText                                        OFFSET(get<T>, {0x1528, 24, 0, 0})
-	SMember(FText)                                     JoinPartyText                                               OFFSET(get<T>, {0x1540, 24, 0, 0})
-	SMember(FText)                                     RequestToJoinText                                           OFFSET(get<T>, {0x1558, 24, 0, 0})
+	SMember(FText)                                     CurrentCTAButtonText                                        OFFSET(getStruct<T>, {0x1528, 24, 0, 0})
+	SMember(FText)                                     JoinPartyText                                               OFFSET(getStruct<T>, {0x1540, 24, 0, 0})
+	SMember(FText)                                     RequestToJoinText                                           OFFSET(getStruct<T>, {0x1558, 24, 0, 0})
 
 
 	/// Functions
@@ -347,7 +347,7 @@ public:
 	DMember(bool)                                      bShowMobileGameDetailsButton                                OFFSET(get<bool>, {0x442, 1, 0, 0})
 	DMember(bool)                                      bShowMobileAcceptButton                                     OFFSET(get<bool>, {0x443, 1, 0, 0})
 	DMember(bool)                                      bShowBackToTopButton                                        OFFSET(get<bool>, {0x444, 1, 0, 0})
-	SMember(FName)                                     DiscoverySurfaceName                                        OFFSET(get<T>, {0x448, 4, 0, 0})
+	SMember(FName)                                     DiscoverySurfaceName                                        OFFSET(getStruct<T>, {0x448, 4, 0, 0})
 
 
 	/// Functions
@@ -367,8 +367,8 @@ class UFortActivityBrowserRowView : public UFortActivityBrowserView
 public:
 	DMember(float)                                     MouseWheelScrollTimeThreshold                               OFFSET(get<float>, {0x4E8, 4, 0, 0})
 	CMember(UFortActivityBrowserListView*)             BrowserList_Activities                                      OFFSET(get<T>, {0x4F0, 8, 0, 0})
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x558, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x560, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x558, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x560, 240, 0, 0})
 	CMember(UFortSwipePanel*)                          SwipePanel_Navigation                                       OFFSET(get<T>, {0x650, 8, 0, 0})
 
 
@@ -409,8 +409,8 @@ class UFortActivityPlayerBrowserView : public UFortActivityBrowserView
 public:
 	CMember(UFortGameActivityProvider*)                ActivityProvider                                            OFFSET(get<T>, {0x4E8, 8, 0, 0})
 	CMember(UFortActivityTileView*)                    TileView_PlayerActivities                                   OFFSET(get<T>, {0x4F0, 8, 0, 0})
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4F8, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x500, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x4F8, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x500, 240, 0, 0})
 	CMember(EFortCreativeDiscoveryPlayHistoryType)     PlayHistoryProviderType                                     OFFSET(get<T>, {0x5F0, 1, 0, 0})
 
 
@@ -491,8 +491,8 @@ class UFortActivityCategoryView : public UFortActivityBrowserView
 	static inline constexpr uint64_t __MDKClassSize = 1536;
 
 public:
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4E8, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x4F0, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x4E8, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x4F0, 240, 0, 0})
 	CMember(UFortActivityCategoryTilePanel*)           TilePanel_Featured                                          OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(UFortActivityCategoryTilePanel*)           TilePanel_All                                               OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(UFortActivityCategoryTilePanel*)           CurrentSelectedPanel                                        OFFSET(get<T>, {0x5F0, 8, 0, 0})
@@ -519,8 +519,8 @@ class UFortActivityCreateView : public UFortActivityBrowserView
 	static inline constexpr uint64_t __MDKClassSize = 1536;
 
 public:
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4E8, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x4F0, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x4E8, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x4F0, 240, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_Create                                               OFFSET(get<T>, {0x5E0, 8, 0, 0})
 
 
@@ -620,8 +620,8 @@ public:
 	CMember(UFortDiscoverBackgroundManager*)           DiscoverBackgroundManager                                   OFFSET(get<T>, {0x670, 8, 0, 0})
 	CMember(UDiscoverSelectedActivityViewModel*)       SelectedActivityVM                                          OFFSET(get<T>, {0x6A8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   SoftCustomMatchmakingModalClass                             OFFSET(get<T>, {0x6B0, 32, 0, 0})
-	SMember(FDataTableRowHandle)                       BackToTopInputAction                                        OFFSET(get<T>, {0x6D8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       CustomKeyInputAction                                        OFFSET(get<T>, {0x6F0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackToTopInputAction                                        OFFSET(getStruct<T>, {0x6D8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CustomKeyInputAction                                        OFFSET(getStruct<T>, {0x6F0, 16, 0, 0})
 
 
 	/// Functions
@@ -777,8 +777,8 @@ class UFortActivityPlayerView : public UFortActivityBrowserView
 	static inline constexpr uint64_t __MDKClassSize = 1568;
 
 public:
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4E8, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x4F0, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x4E8, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x4F0, 240, 0, 0})
 	CMember(UClass*)                                   TabButtonClass                                              OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(UFortTabListWidgetBase_Legacy*)            TabList_PlayerViewTabs                                      OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(UCommonActivatableWidgetSwitcher*)         Switcher_PlayerBrowserViews                                 OFFSET(get<T>, {0x5F0, 8, 0, 0})
@@ -804,8 +804,8 @@ class UFortActivitySearchView : public UFortActivityBrowserView
 	static inline constexpr uint64_t __MDKClassSize = 1600;
 
 public:
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4E8, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x4F0, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x4E8, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x4F0, 240, 0, 0})
 	CMember(UEditableText*)                            EditableText_IslandLink                                     OFFSET(get<T>, {0x5E0, 8, 0, 0})
 
 
@@ -860,8 +860,8 @@ class UFortActivityTileDetailsDisplay : public UCommonButtonBase
 	static inline constexpr uint64_t __MDKClassSize = 5600;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnActivitySelectedDelegate                                  OFFSET(get<T>, {0x1470, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActivityUnSelectedDelegate                                OFFSET(get<T>, {0x1480, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActivitySelectedDelegate                                  OFFSET(getStruct<T>, {0x1470, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActivityUnSelectedDelegate                                OFFSET(getStruct<T>, {0x1480, 16, 0, 0})
 	DMember(bool)                                      bShowDetailsButton                                          OFFSET(get<bool>, {0x1490, 1, 0, 0})
 	DMember(int32_t)                                   DefaultColumnSize                                           OFFSET(get<int32_t>, {0x1494, 4, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ActivityName                                           OFFSET(get<T>, {0x1498, 8, 0, 0})
@@ -1009,13 +1009,14 @@ class UOverrideMatchmakingUIComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FMatchmakingUIOverride)                    MatchmakingUIOverride                                       OFFSET(get<T>, {0xA0, 96, 0, 0})
+	SMember(FMatchmakingUIOverride)                    MatchmakingUIOverride                                       OFFSET(getStruct<T>, {0xA0, 96, 0, 0})
 };
 
 /// Struct /Script/DiscoveryBrowserUI.ColorSchemeParamaterValues
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FColorSchemeParamaterValues : public MDKStruct
+class FColorSchemeParamaterValues : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 

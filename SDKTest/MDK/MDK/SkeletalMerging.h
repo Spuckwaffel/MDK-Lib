@@ -20,8 +20,9 @@ public:
 
 /// Struct /Script/SkeletalMerging.SkeletalMeshMergeParams
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSkeletalMeshMergeParams : public MDKStruct
+class FSkeletalMeshMergeParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -37,8 +38,9 @@ public:
 
 /// Struct /Script/SkeletalMerging.SkeletonMergeParams
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSkeletonMergeParams : public MDKStruct
+class FSkeletonMergeParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

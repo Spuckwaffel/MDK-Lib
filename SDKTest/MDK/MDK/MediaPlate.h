@@ -47,7 +47,7 @@ public:
 	CMember(TArray<UStaticMeshComponent*>)             Letterboxes                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(UMediaPlaylist*)                           MediaPlaylist                                               OFFSET(get<T>, {0xD0, 8, 0, 0})
 	DMember(int32_t)                                   PlaylistIndex                                               OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
-	SMember(FMediaSourceCacheSettings)                 CacheSettings                                               OFFSET(get<T>, {0xDC, 8, 0, 0})
+	SMember(FMediaSourceCacheSettings)                 CacheSettings                                               OFFSET(getStruct<T>, {0xDC, 8, 0, 0})
 	DMember(bool)                                      bIsMediaPlatePlaying                                        OFFSET(get<bool>, {0xE4, 1, 0, 0})
 	DMember(bool)                                      bPlayOnlyWhenVisible                                        OFFSET(get<bool>, {0xEC, 1, 0, 0})
 	DMember(bool)                                      bLoop                                                       OFFSET(get<bool>, {0xED, 1, 0, 0})
@@ -57,7 +57,7 @@ public:
 	DMember(bool)                                      bEnableMipMapUpscaling                                      OFFSET(get<bool>, {0xF5, 1, 0, 0})
 	DMember(int32_t)                                   MipLevelToUpscale                                           OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
 	DMember(float)                                     LetterboxAspectRatio                                        OFFSET(get<float>, {0xFC, 4, 0, 0})
-	SMember(FVector2D)                                 MeshRange                                                   OFFSET(get<T>, {0x108, 16, 0, 0})
+	SMember(FVector2D)                                 MeshRange                                                   OFFSET(getStruct<T>, {0x108, 16, 0, 0})
 	CMember(TArray<UMediaTexture*>)                    MediaTextures                                               OFFSET(get<T>, {0x118, 16, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x128, 8, 0, 0})
 

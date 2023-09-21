@@ -21,7 +21,7 @@ public:
 	CMember(UTexture2D*)                               LodBiasMinMaxTexture                                        OFFSET(get<T>, {0x38, 8, 0, 0})
 	DMember(int32_t)                                   MaxCPULevels                                                OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	CMember(TArray<FVector2D>)                         TextureData                                                 OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FIntPoint)                                 TextureDataSize                                             OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FIntPoint)                                 TextureDataSize                                             OFFSET(getStruct<T>, {0x58, 8, 0, 0})
 	CMember(TArray<int32_t>)                           TextureDataMips                                             OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 

@@ -30,23 +30,25 @@ public:
 
 /// Struct /Script/CosmeticsFrameworkItems.CosmeticPropertyBase
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCosmeticPropertyBase : public MDKStruct
+class FCosmeticPropertyBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FGameplayTag)                              PropertyTag                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              PropertyTag                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/CosmeticsFrameworkItems.CosmeticProperty_Vector
 /// Size: 0x001C (0x000004 - 0x000020)
 class FCosmeticProperty_Vector : public FCosmeticPropertyBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 

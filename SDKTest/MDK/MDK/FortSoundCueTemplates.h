@@ -160,10 +160,10 @@ class UGliderThrustSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FGliderThrustData)                         Forward                                                     OFFSET(get<T>, {0x90, 88, 0, 0})
-	SMember(FGliderThrustData)                         Sideways                                                    OFFSET(get<T>, {0xE8, 88, 0, 0})
-	SMember(FGliderThrustData)                         Backwards                                                   OFFSET(get<T>, {0x140, 88, 0, 0})
-	SMember(FGliderThrustData)                         AnyDirection                                                OFFSET(get<T>, {0x198, 88, 0, 0})
+	SMember(FGliderThrustData)                         Forward                                                     OFFSET(getStruct<T>, {0x90, 88, 0, 0})
+	SMember(FGliderThrustData)                         Sideways                                                    OFFSET(getStruct<T>, {0xE8, 88, 0, 0})
+	SMember(FGliderThrustData)                         Backwards                                                   OFFSET(getStruct<T>, {0x140, 88, 0, 0})
+	SMember(FGliderThrustData)                         AnyDirection                                                OFFSET(getStruct<T>, {0x198, 88, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.GliderThrustLoop
@@ -224,11 +224,11 @@ class UPhysicsStateSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	SMember(FName)                                     SpeedParameterName                                          OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FPhysicsStateData)                         Rolling                                                     OFFSET(get<T>, {0x98, 144, 0, 0})
-	SMember(FPhysicsStateData)                         Sliding                                                     OFFSET(get<T>, {0x128, 144, 0, 0})
-	SMember(FPhysicsStateData)                         Flying                                                      OFFSET(get<T>, {0x1B8, 144, 0, 0})
-	SMember(FPhysicsStateData)                         Floating                                                    OFFSET(get<T>, {0x248, 144, 0, 0})
+	SMember(FName)                                     SpeedParameterName                                          OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+	SMember(FPhysicsStateData)                         Rolling                                                     OFFSET(getStruct<T>, {0x98, 144, 0, 0})
+	SMember(FPhysicsStateData)                         Sliding                                                     OFFSET(getStruct<T>, {0x128, 144, 0, 0})
+	SMember(FPhysicsStateData)                         Flying                                                      OFFSET(getStruct<T>, {0x1B8, 144, 0, 0})
+	SMember(FPhysicsStateData)                         Floating                                                    OFFSET(getStruct<T>, {0x248, 144, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.PhysicsStateLoop
@@ -249,11 +249,11 @@ class UPhysicsImpactSCTDefaults : public UFortSoundCueTemplateDefaults
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FName)                                     ImpactTypeParameterName                                     OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FName)                                     StrengthParameterName                                       OFFSET(get<T>, {0x94, 4, 0, 0})
-	SMember(FPhysicsImpactData)                        Light                                                       OFFSET(get<T>, {0x98, 88, 0, 0})
-	SMember(FPhysicsImpactData)                        Medium                                                      OFFSET(get<T>, {0xF0, 88, 0, 0})
-	SMember(FPhysicsImpactData)                        Heavy                                                       OFFSET(get<T>, {0x148, 88, 0, 0})
+	SMember(FName)                                     ImpactTypeParameterName                                     OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+	SMember(FName)                                     StrengthParameterName                                       OFFSET(getStruct<T>, {0x94, 4, 0, 0})
+	SMember(FPhysicsImpactData)                        Light                                                       OFFSET(getStruct<T>, {0x98, 88, 0, 0})
+	SMember(FPhysicsImpactData)                        Medium                                                      OFFSET(getStruct<T>, {0xF0, 88, 0, 0})
+	SMember(FPhysicsImpactData)                        Heavy                                                       OFFSET(getStruct<T>, {0x148, 88, 0, 0})
 };
 
 /// Class /Script/FortSoundCueTemplates.PhysicsImpact
@@ -409,22 +409,24 @@ public:
 
 /// Struct /Script/FortSoundCueTemplates.FortContinuousModulatorConfig
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FFortContinuousModulatorConfig : public MDKStruct
+class FFortContinuousModulatorConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector2D)                                 VolumeRange                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 PitchRange                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 VolumeRange                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 PitchRange                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(TEnumAsByte<ModulationParamMode>)          VolumeMode                                                  OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(TEnumAsByte<ModulationParamMode>)          PitchMode                                                   OFFSET(get<T>, {0x21, 1, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.FortSubmixPair
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortSubmixPair : public MDKStruct
+class FFortSubmixPair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -435,8 +437,9 @@ public:
 
 /// Struct /Script/FortSoundCueTemplates.FortBusPair
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortBusPair : public MDKStruct
+class FFortBusPair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -448,48 +451,51 @@ public:
 
 /// Struct /Script/FortSoundCueTemplates.GliderThrustData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FGliderThrustData : public MDKStruct
+class FGliderThrustData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(USoundWave*)                               sound                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(get<T>, {0x30, 40, 0, 0})
+	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(getStruct<T>, {0x30, 40, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.PhysicsStateData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FPhysicsStateData : public MDKStruct
+class FPhysicsStateData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FDistanceDatum)                            CrossfadeInputSlow                                          OFFSET(get<T>, {0x50, 20, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(getStruct<T>, {0x28, 40, 0, 0})
+	SMember(FDistanceDatum)                            CrossfadeInputSlow                                          OFFSET(getStruct<T>, {0x50, 20, 0, 0})
 	CMember(USoundWave*)                               SlowLoop                                                    OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FDistanceDatum)                            CrossfadeInputFast                                          OFFSET(get<T>, {0x70, 20, 0, 0})
+	SMember(FDistanceDatum)                            CrossfadeInputFast                                          OFFSET(getStruct<T>, {0x70, 20, 0, 0})
 	CMember(USoundWave*)                               FastLoop                                                    OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Struct /Script/FortSoundCueTemplates.PhysicsImpactData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FPhysicsImpactData : public MDKStruct
+class FPhysicsImpactData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(get<T>, {0x20, 40, 0, 0})
+	SMember(FVector2D)                                 VolumeOutput                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 PitchOutput                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FFortContinuousModulatorConfig)            Settings                                                    OFFSET(getStruct<T>, {0x20, 40, 0, 0})
 	CMember(TArray<USoundWave*>)                       Variations                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 

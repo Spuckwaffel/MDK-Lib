@@ -72,9 +72,9 @@ class ALobbyBeaconPlayerState : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x290, 24, 0, 0})
-	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(get<T>, {0x2A8, 48, 0, 0})
-	SMember(FUniqueNetIdRepl)                          PartyOwnerUniqueId                                          OFFSET(get<T>, {0x2D8, 48, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x290, 24, 0, 0})
+	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(getStruct<T>, {0x2A8, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          PartyOwnerUniqueId                                          OFFSET(getStruct<T>, {0x2D8, 48, 0, 0})
 	DMember(bool)                                      bInLobby                                                    OFFSET(get<bool>, {0x308, 1, 0, 0})
 	CMember(AOnlineBeaconClient*)                      ClientActor                                                 OFFSET(get<T>, {0x310, 8, 0, 0})
 
@@ -100,7 +100,7 @@ public:
 	CMember(UClass*)                                   LobbyBeaconPlayerStateClass                                 OFFSET(get<T>, {0x298, 8, 0, 0})
 	DMember(bool)                                      bLobbyStarted                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 	DMember(float)                                     WaitForPlayersTimeRemaining                                 OFFSET(get<float>, {0x2AC, 4, 0, 0})
-	SMember(FLobbyPlayerStateInfoArray)                Players                                                     OFFSET(get<T>, {0x2B0, 288, 0, 0})
+	SMember(FLobbyPlayerStateInfoArray)                Players                                                     OFFSET(getStruct<T>, {0x2B0, 288, 0, 0})
 
 
 	/// Functions
@@ -114,6 +114,7 @@ public:
 /// Size: 0x000C (0x00000C - 0x000018)
 class FLobbyPlayerStateActorInfo : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -125,6 +126,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FLobbyPlayerStateInfoArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 

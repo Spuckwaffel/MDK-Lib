@@ -25,8 +25,8 @@ class UTypedElementSelectionSet : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 2200;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPreSelectionChange                                        OFFSET(get<T>, {0x828, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSelectionChange                                           OFFSET(get<T>, {0x838, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreSelectionChange                                        OFFSET(getStruct<T>, {0x828, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectionChange                                           OFFSET(getStruct<T>, {0x838, 16, 0, 0})
 
 
 	/// Functions
@@ -132,8 +132,9 @@ public:
 
 /// Struct /Script/TypedElementRuntime.TypedElementSelectionOptions
 /// Size: 0x0005 (0x000000 - 0x000005)
-class FTypedElementSelectionOptions : public MDKStruct
+class FTypedElementSelectionOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 5;
 
@@ -147,8 +148,9 @@ public:
 
 /// Struct /Script/TypedElementRuntime.TypedElementSelectionSetState
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTypedElementSelectionSetState : public MDKStruct
+class FTypedElementSelectionSetState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -158,8 +160,9 @@ public:
 
 /// Struct /Script/TypedElementRuntime.TypedElementIsSelectedOptions
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FTypedElementIsSelectedOptions : public MDKStruct
+class FTypedElementIsSelectedOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -169,8 +172,9 @@ public:
 
 /// Struct /Script/TypedElementRuntime.TypedElementSelectionNormalizationOptions
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FTypedElementSelectionNormalizationOptions : public MDKStruct
+class FTypedElementSelectionNormalizationOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 

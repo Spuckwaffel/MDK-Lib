@@ -15,7 +15,7 @@ class UChatroom : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   CurrentChatRoomId                                           OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   CurrentChatRoomId                                           OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(int32_t)                                   MaxChatRoomRetries                                          OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 	DMember(int32_t)                                   NumChatRoomRetries                                          OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 };
@@ -91,8 +91,8 @@ class USocialGroupChannel : public UObject
 
 public:
 	CMember(USocialUser*)                              SocialUser                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FUniqueNetIdRepl)                          GroupId                                                     OFFSET(get<T>, {0x30, 48, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FUniqueNetIdRepl)                          GroupId                                                     OFFSET(getStruct<T>, {0x30, 48, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 	CMember(TArray<USocialUser*>)                      Members                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
@@ -137,8 +137,8 @@ class USocialParty : public UObject
 public:
 	CMember(UClass*)                                   ReservationBeaconClientClass                                OFFSET(get<T>, {0x60, 8, 0, 0})
 	CMember(UClass*)                                   SpectatorBeaconClientClass                                  OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FUniqueNetIdRepl)                          OwningLocalUserId                                           OFFSET(get<T>, {0x80, 48, 0, 0})
-	SMember(FUniqueNetIdRepl)                          CurrentLeaderId                                             OFFSET(get<T>, {0xB0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          OwningLocalUserId                                           OFFSET(getStruct<T>, {0x80, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          CurrentLeaderId                                             OFFSET(getStruct<T>, {0xB0, 48, 0, 0})
 	CMember(TMap<FUniqueNetIdRepl, UPartyMember*>)     PartyMembersById                                            OFFSET(get<T>, {0xE0, 80, 0, 0})
 	DMember(bool)                                      bEnableAutomaticPartyRejoin                                 OFFSET(get<bool>, {0x130, 1, 0, 0})
 	DMember(double)                                    PlatformUserInviteCooldown                                  OFFSET(get<double>, {0x188, 8, 0, 0})
@@ -204,65 +204,70 @@ public:
 
 /// Struct /Script/Party.PartyMemberPlatformData
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FPartyMemberPlatformData : public MDKStruct
+class FPartyMemberPlatformData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FUserPlatform)                             Platform                                                    OFFSET(get<T>, {0x0, 88, 0, 0})
-	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(get<T>, {0x58, 48, 0, 0})
-	SMember(FString)                                   SessionId                                                   OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FUserPlatform)                             Platform                                                    OFFSET(getStruct<T>, {0x0, 88, 0, 0})
+	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(getStruct<T>, {0x58, 48, 0, 0})
+	SMember(FString)                                   SessionId                                                   OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/Party.UserPlatform
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FUserPlatform : public MDKStruct
+class FUserPlatform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FSocialPlatformDescription)                PlatformDescription                                         OFFSET(get<T>, {0x0, 88, 0, 0})
+	SMember(FSocialPlatformDescription)                PlatformDescription                                         OFFSET(getStruct<T>, {0x0, 88, 0, 0})
 };
 
 /// Struct /Script/Party.SocialPlatformDescription
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FSocialPlatformDescription : public MDKStruct
+class FSocialPlatformDescription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   PlatformType                                                OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     OnlineSubsystem                                             OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FString)                                   SessionType                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   ExternalAccountType                                         OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   CrossplayPool                                               OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   PlatformType                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     OnlineSubsystem                                             OFFSET(getStruct<T>, {0x20, 4, 0, 0})
+	SMember(FString)                                   SessionType                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   ExternalAccountType                                         OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   CrossplayPool                                               OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 };
 
 /// Struct /Script/Party.PartyMemberJoinInProgressRequest
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FPartyMemberJoinInProgressRequest : public MDKStruct
+class FPartyMemberJoinInProgressRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FUniqueNetIdRepl)                          Target                                                      OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          Target                                                      OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	DMember(int64_t)                                   Time                                                        OFFSET(get<int64_t>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/Party.PartyMemberJoinInProgressResponse
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FPartyMemberJoinInProgressResponse : public MDKStruct
+class FPartyMemberJoinInProgressResponse : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FUniqueNetIdRepl)                          Requester                                                   OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          Requester                                                   OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	DMember(int64_t)                                   RequestTime                                                 OFFSET(get<int64_t>, {0x30, 8, 0, 0})
 	DMember(int64_t)                                   ResponseTime                                                OFFSET(get<int64_t>, {0x38, 8, 0, 0})
 	DMember(char)                                      DenialReason                                                OFFSET(get<char>, {0x40, 1, 0, 0})
@@ -270,20 +275,22 @@ public:
 
 /// Struct /Script/Party.PartyMemberJoinInProgressData
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FPartyMemberJoinInProgressData : public MDKStruct
+class FPartyMemberJoinInProgressData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FPartyMemberJoinInProgressRequest)         Request                                                     OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FPartyMemberJoinInProgressRequest)         Request                                                     OFFSET(getStruct<T>, {0x0, 56, 0, 0})
 	CMember(TArray<FPartyMemberJoinInProgressResponse>) Responses                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/Party.OnlinePartyRepDataBase
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOnlinePartyRepDataBase : public MDKStruct
+class FOnlinePartyRepDataBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -294,33 +301,36 @@ public:
 /// Size: 0x0258 (0x000018 - 0x000270)
 class FPartyMemberRepData : public FOnlinePartyRepDataBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FPartyMemberPlatformData)                  PlatformData                                                OFFSET(get<T>, {0x28, 152, 0, 0})
+	SMember(FPartyMemberPlatformData)                  PlatformData                                                OFFSET(getStruct<T>, {0x28, 152, 0, 0})
 	CMember(ECrossplayPreference)                      CrossplayPreference                                         OFFSET(get<T>, {0x150, 1, 0, 0})
-	SMember(FString)                                   JoinMethod                                                  OFFSET(get<T>, {0x188, 16, 0, 0})
-	SMember(FPartyMemberJoinInProgressData)            JoinInProgressData                                          OFFSET(get<T>, {0x1C8, 72, 0, 0})
+	SMember(FString)                                   JoinMethod                                                  OFFSET(getStruct<T>, {0x188, 16, 0, 0})
+	SMember(FPartyMemberJoinInProgressData)            JoinInProgressData                                          OFFSET(getStruct<T>, {0x1C8, 72, 0, 0})
 };
 
 /// Struct /Script/Party.PartyPlatformSessionInfo
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FPartyPlatformSessionInfo : public MDKStruct
+class FPartyPlatformSessionInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   SessionType                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   SessionId                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FUniqueNetIdRepl)                          OwnerPrimaryId                                              OFFSET(get<T>, {0x20, 48, 0, 0})
+	SMember(FString)                                   SessionType                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   SessionId                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FUniqueNetIdRepl)                          OwnerPrimaryId                                              OFFSET(getStruct<T>, {0x20, 48, 0, 0})
 };
 
 /// Struct /Script/Party.PartyPrivacySettings
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FPartyPrivacySettings : public MDKStruct
+class FPartyPrivacySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
@@ -334,18 +344,20 @@ public:
 /// Size: 0x0068 (0x000018 - 0x000080)
 class FPartyRepData : public FOnlinePartyRepDataBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FPartyPrivacySettings)                     PrivacySettings                                             OFFSET(get<T>, {0x21, 3, 0, 0})
+	SMember(FPartyPrivacySettings)                     PrivacySettings                                             OFFSET(getStruct<T>, {0x21, 3, 0, 0})
 	CMember(TArray<FPartyPlatformSessionInfo>)         PlatformSessions                                            OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/Party.SocialChatChannelConfig
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSocialChatChannelConfig : public MDKStruct
+class FSocialChatChannelConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 

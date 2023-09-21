@@ -320,25 +320,27 @@ public:
 
 /// Struct /Script/InterchangeNodes.InterchangeAnimationPayLoadKey
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FInterchangeAnimationPayLoadKey : public MDKStruct
+class FInterchangeAnimationPayLoadKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   UniqueID                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   UniqueID                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EInterchangeAnimationPayLoadType)          Type                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/InterchangeNodes.InterchangeMeshPayLoadKey
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FInterchangeMeshPayLoadKey : public MDKStruct
+class FInterchangeMeshPayLoadKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   UniqueID                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   UniqueID                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EInterchangeMeshPayLoadType)               Type                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 

@@ -75,7 +75,7 @@ class USocialChatMessageEntry : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 1032;
 
 public:
-	SMember(FSocialChatMessageEntryStyle)              DefaultStyle                                                OFFSET(get<T>, {0x2C0, 312, 0, 0})
+	SMember(FSocialChatMessageEntryStyle)              DefaultStyle                                                OFFSET(getStruct<T>, {0x2C0, 312, 0, 0})
 	CMember(UCommonRichTextBlock*)                     RichText_Message                                            OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UButton*)                                  Button_MessageButton                                        OFFSET(get<T>, {0x400, 8, 0, 0})
 
@@ -140,8 +140,8 @@ class USocialInteractionButton : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5488;
 
 public:
-	SMember(FLinearColor)                              DefaultIndicatorColor                                       OFFSET(get<T>, {0x14C0, 16, 0, 0})
-	SMember(FLinearColor)                              AlertingIndicatorColor                                      OFFSET(get<T>, {0x14D0, 16, 0, 0})
+	SMember(FLinearColor)                              DefaultIndicatorColor                                       OFFSET(getStruct<T>, {0x14C0, 16, 0, 0})
+	SMember(FLinearColor)                              AlertingIndicatorColor                                      OFFSET(getStruct<T>, {0x14D0, 16, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_InteractionName                                        OFFSET(get<T>, {0x1560, 8, 0, 0})
 	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x1568, 8, 0, 0})
 
@@ -203,7 +203,7 @@ public:
 	DMember(bool)                                      bShowSecondName                                             OFFSET(get<bool>, {0x878, 1, 0, 0})
 	CMember(EPlatformIconDisplayRule)                  PlatformIconDisplayRule                                     OFFSET(get<T>, {0x879, 1, 0, 0})
 	DMember(bool)                                      bWrapToNextLine                                             OFFSET(get<bool>, {0x87A, 1, 0, 0})
-	SMember(FColor)                                    SecondNameColor                                             OFFSET(get<T>, {0x87C, 4, 0, 0})
+	SMember(FColor)                                    SecondNameColor                                             OFFSET(getStruct<T>, {0x87C, 4, 0, 0})
 	DMember(int32_t)                                   SecondNameFontSize                                          OFFSET(get<int32_t>, {0x880, 4, 0, 0})
 };
 
@@ -305,32 +305,34 @@ class USocialChatEditableText : public UWidget
 	static inline constexpr uint64_t __MDKClassSize = 1968;
 
 public:
-	SMember(FEditableTextStyle)                        EditableTextStyle                                           OFFSET(get<T>, {0x1A0, 704, 0, 0})
-	SMember(FTextBlockStyle)                           AutoCompleteStyle                                           OFFSET(get<T>, {0x460, 784, 0, 0})
+	SMember(FEditableTextStyle)                        EditableTextStyle                                           OFFSET(getStruct<T>, {0x1A0, 704, 0, 0})
+	SMember(FTextBlockStyle)                           AutoCompleteStyle                                           OFFSET(getStruct<T>, {0x460, 784, 0, 0})
 };
 
 /// Struct /Script/SocialUMG.SocialChatMessageEntryTextStyle
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FSocialChatMessageEntryTextStyle : public MDKStruct
+class FSocialChatMessageEntryTextStyle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FSlateFontInfo)                            FontInfo                                                    OFFSET(get<T>, {0x0, 88, 0, 0})
-	SMember(FLinearColor)                              ColorAndOpacity                                             OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FSlateFontInfo)                            FontInfo                                                    OFFSET(getStruct<T>, {0x0, 88, 0, 0})
+	SMember(FLinearColor)                              ColorAndOpacity                                             OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/SocialUMG.SocialChatMessageEntryStyle
 /// Size: 0x0138 (0x000000 - 0x000138)
-class FSocialChatMessageEntryStyle : public MDKStruct
+class FSocialChatMessageEntryStyle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FSocialChatMessageEntryTextStyle)          SenderNameStyle                                             OFFSET(get<T>, {0x0, 104, 0, 0})
-	SMember(FSocialChatMessageEntryTextStyle)          ChannelNameStyle                                            OFFSET(get<T>, {0x68, 104, 0, 0})
-	SMember(FSocialChatMessageEntryTextStyle)          MessageTextStyle                                            OFFSET(get<T>, {0xD0, 104, 0, 0})
+	SMember(FSocialChatMessageEntryTextStyle)          SenderNameStyle                                             OFFSET(getStruct<T>, {0x0, 104, 0, 0})
+	SMember(FSocialChatMessageEntryTextStyle)          ChannelNameStyle                                            OFFSET(getStruct<T>, {0x68, 104, 0, 0})
+	SMember(FSocialChatMessageEntryTextStyle)          MessageTextStyle                                            OFFSET(getStruct<T>, {0xD0, 104, 0, 0})
 };
 

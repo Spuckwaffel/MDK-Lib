@@ -18,7 +18,7 @@ class UKeyPlayerInfoWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FGameplayTag)                              KeyStatusTag                                                OFFSET(get<T>, {0x318, 4, 0, 0})
+	SMember(FGameplayTag)                              KeyStatusTag                                                OFFSET(getStruct<T>, {0x318, 4, 0, 0})
 
 
 	/// Functions

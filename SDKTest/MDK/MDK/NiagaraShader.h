@@ -19,58 +19,61 @@ public:
 
 /// Struct /Script/NiagaraShader.SimulationStageMetaData
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FSimulationStageMetaData : public MDKStruct
+class FSimulationStageMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     SimulationStageName                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     EnabledBinding                                              OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FIntVector)                                ElementCount                                                OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FName)                                     ElementCountXBinding                                        OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FName)                                     ElementCountYBinding                                        OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     ElementCountZBinding                                        OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FName)                                     SimulationStageName                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     EnabledBinding                                              OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FIntVector)                                ElementCount                                                OFFSET(getStruct<T>, {0x8, 12, 0, 0})
+	SMember(FName)                                     ElementCountXBinding                                        OFFSET(getStruct<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     ElementCountYBinding                                        OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     ElementCountZBinding                                        OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 	CMember(ENiagaraIterationSource)                   IterationSourceType                                         OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FName)                                     IterationDataInterface                                      OFFSET(get<T>, {0x24, 4, 0, 0})
-	SMember(FName)                                     IterationDirectBinding                                      OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     IterationDataInterface                                      OFFSET(getStruct<T>, {0x24, 4, 0, 0})
+	SMember(FName)                                     IterationDirectBinding                                      OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(ENiagaraSimStageExecuteBehavior)           ExecuteBehavior                                             OFFSET(get<T>, {0x2C, 1, 0, 0})
 	DMember(bool)                                      bWritesParticles                                            OFFSET(get<bool>, {0x30, 1, 1, 0})
 	DMember(bool)                                      bPartialParticleUpdate                                      OFFSET(get<bool>, {0x30, 1, 1, 1})
 	DMember(bool)                                      bParticleIterationStateEnabled                              OFFSET(get<bool>, {0x30, 1, 1, 2})
 	DMember(bool)                                      bGpuIndirectDispatch                                        OFFSET(get<bool>, {0x30, 1, 1, 3})
-	SMember(FName)                                     ParticleIterationStateBinding                               OFFSET(get<T>, {0x34, 4, 0, 0})
-	SMember(FIntPoint)                                 ParticleIterationStateRange                                 OFFSET(get<T>, {0x3C, 8, 0, 0})
+	SMember(FName)                                     ParticleIterationStateBinding                               OFFSET(getStruct<T>, {0x34, 4, 0, 0})
+	SMember(FIntPoint)                                 ParticleIterationStateRange                                 OFFSET(getStruct<T>, {0x3C, 8, 0, 0})
 	CMember(TArray<FName>)                             OutputDestinations                                          OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<FName>)                             InputDataInterfaces                                         OFFSET(get<T>, {0x58, 16, 0, 0})
 	DMember(int32_t)                                   NumIterations                                               OFFSET(get<int32_t>, {0x68, 4, 0, 0})
-	SMember(FName)                                     NumIterationsBinding                                        OFFSET(get<T>, {0x6C, 4, 0, 0})
+	SMember(FName)                                     NumIterationsBinding                                        OFFSET(getStruct<T>, {0x6C, 4, 0, 0})
 	CMember(ENiagaraGpuDispatchType)                   GpuDispatchType                                             OFFSET(get<T>, {0x70, 1, 0, 0})
 	CMember(ENiagaraDirectDispatchElementType)         GpuDirectDispatchElementType                                OFFSET(get<T>, {0x71, 1, 0, 0})
-	SMember(FIntVector)                                GpuDispatchNumThreads                                       OFFSET(get<T>, {0x74, 12, 0, 0})
+	SMember(FIntVector)                                GpuDispatchNumThreads                                       OFFSET(getStruct<T>, {0x74, 12, 0, 0})
 };
 
 /// Struct /Script/NiagaraShader.NiagaraCompileEvent
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNiagaraCompileEvent : public MDKStruct
+class FNiagaraCompileEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FNiagaraCompileEventSeverity)              Severity                                                    OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FString)                                   Message                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   ShortDescription                                            OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FGuid)                                     NodeGUID                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FGuid)                                     PinGuid                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FNiagaraCompileEventSeverity)              Severity                                                    OFFSET(getStruct<T>, {0x0, 1, 0, 0})
+	SMember(FString)                                   Message                                                     OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ShortDescription                                            OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FGuid)                                     NodeGUID                                                    OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FGuid)                                     PinGuid                                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FGuid>)                             StackGuids                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FNiagaraCompileEventSource)                Source                                                      OFFSET(get<T>, {0x58, 1, 0, 0})
+	SMember(FNiagaraCompileEventSource)                Source                                                      OFFSET(getStruct<T>, {0x58, 1, 0, 0})
 };
 
 /// Struct /Script/NiagaraShader.NiagaraDataInterfaceGeneratedFunction
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraDataInterfaceGeneratedFunction : public MDKStruct
+class FNiagaraDataInterfaceGeneratedFunction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -81,34 +84,37 @@ public:
 
 /// Struct /Script/NiagaraShader.NiagaraDataInterfaceGPUParamInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FNiagaraDataInterfaceGPUParamInfo : public MDKStruct
+class FNiagaraDataInterfaceGPUParamInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   DataInterfaceHLSLSymbol                                     OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DIClassName                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   DataInterfaceHLSLSymbol                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DIClassName                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(uint32_t)                                  ShaderParametersOffset                                      OFFSET(get<uint32_t>, {0x20, 4, 0, 0})
 	CMember(TArray<FNiagaraDataInterfaceGeneratedFunction>) GeneratedFunctions                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/NiagaraShader.NiagaraShaderScriptExternalConstant
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraShaderScriptExternalConstant : public MDKStruct
+class FNiagaraShaderScriptExternalConstant : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Type                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Type                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/NiagaraShader.NiagaraShaderScriptParametersMetadata
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FNiagaraShaderScriptParametersMetadata : public MDKStruct
+class FNiagaraShaderScriptParametersMetadata : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 

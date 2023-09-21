@@ -17,7 +17,7 @@ class AFrontend_BG_Main_C : public AFortLevelScriptActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(ABP_Frontend_ShopBG_C*)                    BP_Frontend_ShopBG_9_ExecuteUbergraph_Frontend_BG_Main_RefProperty OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(AFortStaticMeshActor*)                     S_UI_FrontendInspect_HexDonut_ExecuteUbergraph_Frontend_BG_Main_RefProperty OFFSET(get<T>, {0x2B8, 8, 0, 0})
 
@@ -79,7 +79,7 @@ class AFrontend_C : public AFortLevelScriptActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	DMember(bool)                                      NewLobby                                                    OFFSET(get<bool>, {0x2B0, 1, 0, 0})
 	DMember(bool)                                      NewVar                                                      OFFSET(get<bool>, {0x2B1, 1, 0, 0})
 	CMember(AHBOnboardingFlow_C*)                      HBOnboardingFlow_ExecuteUbergraph_Frontend_RefProperty      OFFSET(get<T>, {0x2B8, 8, 0, 0})

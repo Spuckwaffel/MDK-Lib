@@ -15,15 +15,15 @@ class UEpicBaseStreamingVideo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FMulticastInlineDelegate)                  VideoOnTerminalError                                        OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VideoOnSuccess                                              OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VideoOnClosed                                               OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VideoOnEndReached                                           OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VideoOnOpenTimeout                                          OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VideoOnResumed                                              OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VideoOnTerminalError                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VideoOnSuccess                                              OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VideoOnClosed                                               OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VideoOnEndReached                                           OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VideoOnOpenTimeout                                          OFFSET(getStruct<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VideoOnResumed                                              OFFSET(getStruct<T>, {0x80, 16, 0, 0})
 	CMember(UEpicStreamMediaSource*)                   MediaSource                                                 OFFSET(get<T>, {0x90, 8, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x98, 8, 0, 0})
-	SMember(FIntPoint)                                 VideoSize                                                   OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FIntPoint)                                 VideoSize                                                   OFFSET(getStruct<T>, {0xA0, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         DefaultSubmix                                               OFFSET(get<T>, {0x130, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         LicensedSubmix                                              OFFSET(get<T>, {0x138, 8, 0, 0})
 	CMember(UMediaSoundComponent*)                     MediaSoundComponent                                         OFFSET(get<T>, {0x140, 8, 0, 0})
@@ -84,8 +84,9 @@ public:
 
 /// Struct /Script/EpicMediaBasePlayer.BaseMediaDelayConfig
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FBaseMediaDelayConfig : public MDKStruct
+class FBaseMediaDelayConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 

@@ -66,7 +66,7 @@ class ALandscapePatchManager : public ALandscapeBlueprintBrushBase
 
 public:
 	CMember(TArray<TWeakObjectPtr>)                    PatchComponents                                             OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FTransform)                                HeightmapCoordsToWorld                                      OFFSET(get<T>, {0x2A0, 96, 0, 0})
+	SMember(FTransform)                                HeightmapCoordsToWorld                                      OFFSET(getStruct<T>, {0x2A0, 96, 0, 0})
 };
 
 /// Class /Script/LandscapePatch.LandscapeTextureBackedRenderTargetBase
@@ -104,7 +104,7 @@ class ULandscapeHeightTextureBackedRenderTarget : public ULandscapeTextureBacked
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FLandscapeHeightPatchConvertToNativeParams) ConversionParams                                           OFFSET(get<T>, {0x50, 12, 0, 0})
+	SMember(FLandscapeHeightPatchConvertToNativeParams) ConversionParams                                           OFFSET(getStruct<T>, {0x50, 12, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   RenderTargetFormat                                          OFFSET(get<T>, {0x5C, 1, 0, 0})
 };
 
@@ -116,7 +116,7 @@ class ULandscapeWeightPatchTextureInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     WeightmapLayerName                                          OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     WeightmapLayerName                                          OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(bool)                                      bEditVisibilityLayer                                        OFFSET(get<bool>, {0x2C, 1, 0, 0})
 	CMember(UTexture*)                                 TextureAsset                                                OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(ULandscapeWeightTextureBackedRenderTarget*) InternalData                                               OFFSET(get<T>, {0x38, 8, 0, 0})
@@ -138,7 +138,7 @@ class ULandscapeTexturePatch : public ULandscapePatchComponent
 public:
 	DMember(int32_t)                                   ResolutionX                                                 OFFSET(get<int32_t>, {0x308, 4, 0, 0})
 	DMember(int32_t)                                   ResolutionY                                                 OFFSET(get<int32_t>, {0x30C, 4, 0, 0})
-	SMember(FVector2D)                                 UnscaledPatchCoverage                                       OFFSET(get<T>, {0x310, 16, 0, 0})
+	SMember(FVector2D)                                 UnscaledPatchCoverage                                       OFFSET(getStruct<T>, {0x310, 16, 0, 0})
 	CMember(ELandscapeTexturePatchBlendMode)           BlendMode                                                   OFFSET(get<T>, {0x320, 1, 0, 0})
 	CMember(ELandscapeTexturePatchFalloffMode)         FalloffMode                                                 OFFSET(get<T>, {0x321, 1, 0, 0})
 	DMember(float)                                     Falloff                                                     OFFSET(get<float>, {0x324, 4, 0, 0})
@@ -148,7 +148,7 @@ public:
 	CMember(UTexture*)                                 HeightTextureAsset                                          OFFSET(get<T>, {0x338, 8, 0, 0})
 	DMember(bool)                                      bUseTextureAlphaForHeight                                   OFFSET(get<bool>, {0x340, 1, 0, 0})
 	CMember(ELandscapeTextureHeightPatchEncoding)      HeightEncoding                                              OFFSET(get<T>, {0x341, 1, 0, 0})
-	SMember(FLandscapeTexturePatchEncodingSettings)    HeightEncodingSettings                                      OFFSET(get<T>, {0x348, 16, 0, 0})
+	SMember(FLandscapeTexturePatchEncodingSettings)    HeightEncodingSettings                                      OFFSET(getStruct<T>, {0x348, 16, 0, 0})
 	CMember(ELandscapeTextureHeightPatchZeroHeightMeaning) ZeroHeightMeaning                                       OFFSET(get<T>, {0x358, 1, 0, 0})
 	DMember(bool)                                      bApplyComponentZScale                                       OFFSET(get<bool>, {0x359, 1, 0, 0})
 	CMember(TArray<ULandscapeWeightPatchTextureInfo*>) WeightPatches                                               OFFSET(get<T>, {0x360, 16, 0, 0})
@@ -237,6 +237,7 @@ public:
 /// Size: 0x0008 (0x0000B8 - 0x0000C0)
 class FLandscapePatchComponentInstanceData : public FSceneComponentInstanceData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
@@ -246,8 +247,9 @@ public:
 
 /// Struct /Script/LandscapePatch.LandscapeTexturePatchEncodingSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLandscapeTexturePatchEncodingSettings : public MDKStruct
+class FLandscapeTexturePatchEncodingSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -258,8 +260,9 @@ public:
 
 /// Struct /Script/LandscapePatch.LandscapeHeightPatchConvertToNativeParams
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FLandscapeHeightPatchConvertToNativeParams : public MDKStruct
+class FLandscapeHeightPatchConvertToNativeParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

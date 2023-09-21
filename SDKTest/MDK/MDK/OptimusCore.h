@@ -167,7 +167,7 @@ class UOptimusSkinnedMeshVertexAttributeDataInterface : public UOptimusComputeDa
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     AttributeName                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     AttributeName                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusSkinnedMeshVertexAttributeDataProvider
@@ -179,7 +179,7 @@ class UOptimusSkinnedMeshVertexAttributeDataProvider : public UComputeDataProvid
 
 public:
 	CMember(USkinnedMeshComponent*)                    SkinnedMeshComponent                                        OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FName)                                     AttributeName                                               OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     AttributeName                                               OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusKernelSource
@@ -190,7 +190,7 @@ class UOptimusKernelSource : public UComputeKernelSource
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FString)                                   Source                                                      OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   Source                                                      OFFSET(getStruct<T>, {0x98, 16, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusComponentSource
@@ -241,7 +241,7 @@ class UOptimusAnimAttributeDataInterface : public UOptimusComputeDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FOptimusAnimAttributeArray)                AttributeArray                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FOptimusAnimAttributeArray)                AttributeArray                                              OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusAnimAttributeDataProvider
@@ -306,7 +306,7 @@ class UOptimusCustomComputeKernelDataInterface : public UComputeDataInterface
 
 public:
 	CMember(TWeakObjectPtr<UOptimusComponentSourceBinding*>) ComponentSourceBinding                                OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FString)                                   NumThreadsExpression                                        OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   NumThreadsExpression                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusCustomComputeKernelDataProvider
@@ -327,7 +327,7 @@ class UOptimusDebugDrawDataInterface : public UOptimusComputeDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FOptimusDebugDrawParameters)               DebugDrawParameters                                         OFFSET(get<T>, {0x28, 20, 0, 0})
+	SMember(FOptimusDebugDrawParameters)               DebugDrawParameters                                         OFFSET(getStruct<T>, {0x28, 20, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusDebugDrawDataProvider
@@ -339,7 +339,7 @@ class UOptimusDebugDrawDataProvider : public UComputeDataProvider
 
 public:
 	CMember(UPrimitiveComponent*)                      PrimitiveComponent                                          OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FOptimusDebugDrawParameters)               DebugDrawParameters                                         OFFSET(get<T>, {0x30, 20, 0, 0})
+	SMember(FOptimusDebugDrawParameters)               DebugDrawParameters                                         OFFSET(getStruct<T>, {0x30, 20, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusDuplicateVerticesDataInterface
@@ -438,8 +438,8 @@ class UOptimusRawBufferDataInterface : public UOptimusComputeDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FShaderValueTypeHandle)                    ValueType                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(get<T>, {0x30, 64, 0, 0})
+	SMember(FShaderValueTypeHandle)                    ValueType                                                   OFFSET(getStruct<T>, {0x28, 8, 0, 0})
+	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x30, 64, 0, 0})
 	CMember(TWeakObjectPtr<UOptimusComponentSourceBinding*>) ComponentSourceBinding                                OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
@@ -461,7 +461,7 @@ class UOptimusPersistentBufferDataInterface : public UOptimusRawBufferDataInterf
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     ResourceName                                                OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     ResourceName                                                OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusRawBufferDataProvider
@@ -474,7 +474,7 @@ class UOptimusRawBufferDataProvider : public UComputeDataProvider
 public:
 	CMember(TWeakObjectPtr<UActorComponent*>)          Component                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TWeakObjectPtr<UOptimusComponentSource*>)  ComponentSource                                             OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(get<T>, {0x38, 64, 0, 0})
+	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x38, 64, 0, 0})
 	DMember(int32_t)                                   ElementStride                                               OFFSET(get<int32_t>, {0x78, 4, 0, 0})
 	DMember(int32_t)                                   RawStride                                                   OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
 };
@@ -614,8 +614,8 @@ class UOptimusNode : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector2D)                                 GraphPosition                                               OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector2D)                                 GraphPosition                                               OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	CMember(TArray<UOptimusNodePin*>)                  Pins                                                        OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TSet<FName>)                               ExpandedPins                                                OFFSET(get<T>, {0x68, 80, 0, 0})
 	CMember(EOptimusDiagnosticLevel)                   DiagnosticLevel                                             OFFSET(get<T>, {0xB8, 1, 0, 0})
@@ -685,13 +685,13 @@ class UOptimusNode_ComputeKernelFunctionGeneratorClass : public UClass
 	static inline constexpr uint64_t __MDKClassSize = 584;
 
 public:
-	SMember(FName)                                     category                                                    OFFSET(get<T>, {0x200, 4, 0, 0})
-	SMember(FName)                                     KernelName                                                  OFFSET(get<T>, {0x204, 4, 0, 0})
-	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(get<T>, {0x208, 4, 0, 0})
-	SMember(FIntVector)                                GroupSize                                                   OFFSET(get<T>, {0x20C, 12, 0, 0})
+	SMember(FName)                                     category                                                    OFFSET(getStruct<T>, {0x200, 4, 0, 0})
+	SMember(FName)                                     KernelName                                                  OFFSET(getStruct<T>, {0x204, 4, 0, 0})
+	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(getStruct<T>, {0x208, 4, 0, 0})
+	SMember(FIntVector)                                GroupSize                                                   OFFSET(getStruct<T>, {0x20C, 12, 0, 0})
 	CMember(TArray<FOptimusParameterBinding>)          InputBindings                                               OFFSET(get<T>, {0x218, 16, 0, 0})
 	CMember(TArray<FOptimusParameterBinding>)          OutputBindings                                              OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(FString)                                   ShaderSource                                                OFFSET(get<T>, {0x238, 16, 0, 0})
+	SMember(FString)                                   ShaderSource                                                OFFSET(getStruct<T>, {0x238, 16, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_ComputeKernelFunction
@@ -712,7 +712,7 @@ class UOptimusNode_ConstantValueGeneratorClass : public UClass
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x200, 12, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x200, 12, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_ConstantValue
@@ -733,18 +733,18 @@ class UOptimusNode_CustomComputeKernel : public UOptimusNode_ComputeKernelBase
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FName)                                     category                                                    OFFSET(get<T>, {0x138, 4, 0, 0})
-	SMember(FOptimusValidatedName)                     KernelName                                                  OFFSET(get<T>, {0x13C, 4, 0, 0})
-	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(get<T>, {0x140, 4, 0, 0})
-	SMember(FIntVector)                                GroupSize                                                   OFFSET(get<T>, {0x144, 12, 0, 0})
+	SMember(FName)                                     category                                                    OFFSET(getStruct<T>, {0x138, 4, 0, 0})
+	SMember(FOptimusValidatedName)                     KernelName                                                  OFFSET(getStruct<T>, {0x13C, 4, 0, 0})
+	SMember(FOptimusExecutionDomain)                   ExecutionDomain                                             OFFSET(getStruct<T>, {0x140, 4, 0, 0})
+	SMember(FIntVector)                                GroupSize                                                   OFFSET(getStruct<T>, {0x144, 12, 0, 0})
 	CMember(TArray<FOptimus_ShaderBinding>)            Parameters                                                  OFFSET(get<T>, {0x150, 16, 0, 0})
 	CMember(TArray<FOptimusParameterBinding>)          InputBindings                                               OFFSET(get<T>, {0x160, 16, 0, 0})
 	CMember(TArray<FOptimusParameterBinding>)          OutputBindings                                              OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FOptimusParameterBindingArray)             InputBindingArray                                           OFFSET(get<T>, {0x180, 16, 0, 0})
-	SMember(FOptimusParameterBindingArray)             OutputBindingArray                                          OFFSET(get<T>, {0x190, 16, 0, 0})
+	SMember(FOptimusParameterBindingArray)             InputBindingArray                                           OFFSET(getStruct<T>, {0x180, 16, 0, 0})
+	SMember(FOptimusParameterBindingArray)             OutputBindingArray                                          OFFSET(getStruct<T>, {0x190, 16, 0, 0})
 	CMember(TArray<FOptimusSecondaryInputBindingsGroup>) SecondaryInputBindingGroups                               OFFSET(get<T>, {0x1A0, 16, 0, 0})
 	CMember(TArray<UComputeSource*>)                   AdditionalSources                                           OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FOptimusShaderText)                        ShaderSource                                                OFFSET(get<T>, {0x1C0, 32, 0, 0})
+	SMember(FOptimusShaderText)                        ShaderSource                                                OFFSET(getStruct<T>, {0x1C0, 32, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_FunctionReference
@@ -768,7 +768,7 @@ class UOptimusNode_ResourceAccessorBase : public UOptimusNode
 public:
 	CMember(TWeakObjectPtr<UOptimusResourceDescription*>) ResourceDesc                                             OFFSET(get<T>, {0x120, 8, 0, 0})
 	CMember(EOptimusBufferWriteType)                   WriteType                                                   OFFSET(get<T>, {0x128, 1, 0, 0})
-	SMember(FOptimusNode_ResourceAccessorBase_DuplicationInfo) DuplicationInfo                                     OFFSET(get<T>, {0x130, 80, 0, 0})
+	SMember(FOptimusNode_ResourceAccessorBase_DuplicationInfo) DuplicationInfo                                     OFFSET(getStruct<T>, {0x130, 80, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_GetResource
@@ -790,7 +790,7 @@ class UOptimusNode_GetVariable : public UOptimusNode
 
 public:
 	CMember(TWeakObjectPtr<UOptimusVariableDescription*>) VariableDesc                                             OFFSET(get<T>, {0x118, 8, 0, 0})
-	SMember(FOptimusNode_GetVariable_DuplicationInfo)  DuplicationInfo                                             OFFSET(get<T>, {0x120, 32, 0, 0})
+	SMember(FOptimusNode_GetVariable_DuplicationInfo)  DuplicationInfo                                             OFFSET(getStruct<T>, {0x120, 32, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNode_GraphTerminal
@@ -855,7 +855,7 @@ class UOptimusComponentSourceBinding : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     BindingName                                                 OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BindingName                                                 OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(UClass*)                                   ComponentType                                               OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<FName>)                             ComponentTags                                               OFFSET(get<T>, {0x38, 16, 0, 0})
 	DMember(bool)                                      bIsPrimaryBinding                                           OFFSET(get<bool>, {0x48, 1, 0, 0})
@@ -1078,7 +1078,7 @@ class UOptimusFunctionNodeGraph : public UOptimusNodeSubGraph
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FName)                                     category                                                    OFFSET(get<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     category                                                    OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusNodeLink
@@ -1104,8 +1104,8 @@ public:
 	DMember(bool)                                      bIsGroupingPin                                              OFFSET(get<bool>, {0x28, 1, 0, 0})
 	CMember(EOptimusNodePinDirection)                  Direction                                                   OFFSET(get<T>, {0x29, 1, 0, 0})
 	CMember(EOptimusNodePinStorageType)                StorageType                                                 OFFSET(get<T>, {0x2A, 1, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(get<T>, {0x30, 64, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x70, 12, 0, 0})
+	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x30, 64, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x70, 12, 0, 0})
 	CMember(TArray<UOptimusNodePin*>)                  SubPins                                                     OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
@@ -1117,10 +1117,10 @@ class UOptimusResourceDescription : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     ResourceName                                                OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x2C, 12, 0, 0})
+	SMember(FName)                                     ResourceName                                                OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x2C, 12, 0, 0})
 	CMember(TWeakObjectPtr<UOptimusComponentSourceBinding*>) ComponentBinding                                      OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(get<T>, {0x40, 64, 0, 0})
+	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x40, 64, 0, 0})
 	CMember(UOptimusPersistentBufferDataInterface*)    DataInterface                                               OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
@@ -1132,7 +1132,7 @@ class UOptimusSource : public UComputeSource
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   SourceText                                                  OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   SourceText                                                  OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusValueContainerGeneratorClass
@@ -1143,7 +1143,7 @@ class UOptimusValueContainerGeneratorClass : public UClass
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x200, 12, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x200, 12, 0, 0})
 };
 
 /// Class /Script/OptimusCore.OptimusValueContainer
@@ -1164,65 +1164,70 @@ class UOptimusVariableDescription : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FName)                                     VariableName                                                OFFSET(get<T>, {0x38, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x3C, 12, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FName)                                     VariableName                                                OFFSET(getStruct<T>, {0x38, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x3C, 12, 0, 0})
 	CMember(UOptimusValueContainer*)                   DefaultValue                                                OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(TArray<char>)                              ValueData                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusExecutionDomain
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FOptimusExecutionDomain : public MDKStruct
+class FOptimusExecutionDomain : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.Optimus_ShaderBinding
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FOptimus_ShaderBinding : public MDKStruct
+class FOptimus_ShaderBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x4, 12, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x4, 12, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusDataTypeRef
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FOptimusDataTypeRef : public MDKStruct
+class FOptimusDataTypeRef : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     TypeName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TypeName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  TypeObject                                                  OFFSET(get<T>, {0x4, 8, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusParameterBinding
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FOptimusParameterBinding : public MDKStruct
+class FOptimusParameterBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FOptimusValidatedName)                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x4, 12, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(get<T>, {0x10, 64, 0, 0})
+	SMember(FOptimusValidatedName)                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x4, 12, 0, 0})
+	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x10, 64, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusDataDomain
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FOptimusDataDomain : public MDKStruct
+class FOptimusDataDomain : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -1230,25 +1235,27 @@ public:
 	CMember(EOptimusDataDomainType)                    Type                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FName>)                             DimensionNames                                              OFFSET(get<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   Multiplier                                                  OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FString)                                   Expression                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Expression                                                  OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FName>)                             LevelNames                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusValidatedName
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FOptimusValidatedName : public MDKStruct
+class FOptimusValidatedName : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusParameterBindingArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FOptimusParameterBindingArray : public MDKStruct
+class FOptimusParameterBindingArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1258,20 +1265,22 @@ public:
 
 /// Struct /Script/OptimusCore.OptimusShaderText
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FOptimusShaderText : public MDKStruct
+class FOptimusShaderText : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Declarations                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ShaderText                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Declarations                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ShaderText                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusAction
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOptimusAction : public MDKStruct
+class FOptimusAction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1282,6 +1291,7 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FOptimusCompoundAction : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1292,6 +1302,7 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FOptimusComponentBindingAction_AddBinding : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1302,6 +1313,7 @@ public:
 /// Size: 0x0028 (0x000018 - 0x000040)
 class FOptimusComponentBindingAction_RemoveBinding : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -1312,6 +1324,7 @@ public:
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FOptimusComponentBindingAction_RenameBinding : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1322,6 +1335,7 @@ public:
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FOptimusComponentBindingAction_SetComponentSource : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1332,6 +1346,7 @@ public:
 /// Size: 0x0040 (0x000018 - 0x000058)
 class FOptimusNodeAction_RenameNode : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -1342,6 +1357,7 @@ public:
 /// Size: 0x0030 (0x000018 - 0x000048)
 class FOptimusNodeAction_MoveNode : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -1352,6 +1368,7 @@ public:
 /// Size: 0x0030 (0x000018 - 0x000048)
 class FOptimusNodeAction_SetPinValue : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -1362,6 +1379,7 @@ public:
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FOptimusNodeAction_SetPinName : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1372,6 +1390,7 @@ public:
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FOptimusNodeAction_SetPinType : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1382,6 +1401,7 @@ public:
 /// Size: 0x0090 (0x000018 - 0x0000A8)
 class FOptimusNodeAction_SetPinDataDomain : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
@@ -1392,6 +1412,7 @@ public:
 /// Size: 0x0098 (0x000018 - 0x0000B0)
 class FOptimusNodeAction_AddRemovePin : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -1402,6 +1423,7 @@ public:
 /// Size: 0x0000 (0x0000B0 - 0x0000B0)
 class FOptimusNodeAction_AddPin : public FOptimusNodeAction_AddRemovePin
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -1412,6 +1434,7 @@ public:
 /// Size: 0x0000 (0x0000B0 - 0x0000B0)
 class FOptimusNodeAction_AddGroupingPin : public FOptimusNodeAction_AddRemovePin
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -1422,6 +1445,7 @@ public:
 /// Size: 0x0000 (0x0000B0 - 0x0000B0)
 class FOptimusNodeAction_RemovePin : public FOptimusNodeAction_AddRemovePin
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -1432,6 +1456,7 @@ public:
 /// Size: 0x0030 (0x000018 - 0x000048)
 class FOptimusNodeAction_MovePin : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -1442,6 +1467,7 @@ public:
 /// Size: 0x0078 (0x000018 - 0x000090)
 class FOptimusNodeGraphAction_AddGraph : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -1452,6 +1478,7 @@ public:
 /// Size: 0x0040 (0x000018 - 0x000058)
 class FOptimusNodeGraphAction_RemoveGraph : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -1462,6 +1489,7 @@ public:
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FOptimusNodeGraphAction_RenameGraph : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1472,6 +1500,7 @@ public:
 /// Size: 0x0088 (0x000018 - 0x0000A0)
 class FOptimusNodeGraphAction_AddNode : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -1482,6 +1511,7 @@ public:
 /// Size: 0x0088 (0x000018 - 0x0000A0)
 class FOptimusNodeGraphAction_DuplicateNode : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -1492,6 +1522,7 @@ public:
 /// Size: 0x0048 (0x000018 - 0x000060)
 class FOptimusNodeGraphAction_RemoveNode : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -1502,6 +1533,7 @@ public:
 /// Size: 0x0028 (0x000018 - 0x000040)
 class FOptimusNodeGraphAction_AddRemoveLink : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -1512,6 +1544,7 @@ public:
 /// Size: 0x0000 (0x000040 - 0x000040)
 class FOptimusNodeGraphAction_AddLink : public FOptimusNodeGraphAction_AddRemoveLink
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -1522,6 +1555,7 @@ public:
 /// Size: 0x0000 (0x000040 - 0x000040)
 class FOptimusNodeGraphAction_RemoveLink : public FOptimusNodeGraphAction_AddRemoveLink
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -1532,6 +1566,7 @@ public:
 /// Size: 0x0060 (0x000040 - 0x0000A0)
 class FOptimusNodeGraphAction_ConnectAdderPin : public FOptimusNodeGraphAction_AddRemoveLink
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -1542,6 +1577,7 @@ public:
 /// Size: 0x0090 (0x000018 - 0x0000A8)
 class FOptimusNodeGraphAction_PackageKernelFunction : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
@@ -1552,6 +1588,7 @@ public:
 /// Size: 0x0048 (0x000018 - 0x000060)
 class FOptimusNodeGraphAction_UnpackageKernelFunction : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -1562,6 +1599,7 @@ public:
 /// Size: 0x0050 (0x000018 - 0x000068)
 class FOptimusResourceAction_AddResource : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -1572,6 +1610,7 @@ public:
 /// Size: 0x0028 (0x000018 - 0x000040)
 class FOptimusResourceAction_RemoveResource : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -1582,6 +1621,7 @@ public:
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FOptimusResourceAction_RenameResource : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1592,6 +1632,7 @@ public:
 /// Size: 0x0020 (0x000018 - 0x000038)
 class FOptimusResourceAction_SetDataType : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1602,6 +1643,7 @@ public:
 /// Size: 0x0088 (0x000018 - 0x0000A0)
 class FOptimusResourceAction_SetDataDomain : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -1612,6 +1654,7 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FOptimusVariableAction_AddVariable : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1622,6 +1665,7 @@ public:
 /// Size: 0x0038 (0x000018 - 0x000050)
 class FOptimusVariableAction_RemoveVariable : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -1632,6 +1676,7 @@ public:
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FOptimusVariableAction_RenameVariable : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1642,6 +1687,7 @@ public:
 /// Size: 0x0020 (0x000018 - 0x000038)
 class FOptimusVariableAction_SetDataType : public FOptimusAction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1650,24 +1696,26 @@ public:
 
 /// Struct /Script/OptimusCore.OptimusAnimAttributeDescription
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FOptimusAnimAttributeDescription : public MDKStruct
+class FOptimusAnimAttributeDescription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x14, 12, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x14, 12, 0, 0})
 	CMember(UOptimusValueContainer*)                   DefaultValue                                                OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FString)                                   HlslId                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FName)                                     PinName                                                     OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FString)                                   HlslId                                                      OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FName)                                     PinName                                                     OFFSET(getStruct<T>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusAnimAttributeArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FOptimusAnimAttributeArray : public MDKStruct
+class FOptimusAnimAttributeArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1677,8 +1725,9 @@ public:
 
 /// Struct /Script/OptimusCore.OptimusDebugDrawParameters
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FOptimusDebugDrawParameters : public MDKStruct
+class FOptimusDebugDrawParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -1692,125 +1741,134 @@ public:
 
 /// Struct /Script/OptimusCore.OptimusGraphVariableDescription
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FOptimusGraphVariableDescription : public MDKStruct
+class FOptimusGraphVariableDescription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FShaderValueTypeHandle)                    ValueType                                                   OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FShaderValueTypeHandle)                    ValueType                                                   OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 	CMember(TArray<char>)                              Value                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
 	DMember(int32_t)                                   Offset                                                      OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusSecondaryInputBindingsGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOptimusSecondaryInputBindingsGroup : public MDKStruct
+class FOptimusSecondaryInputBindingsGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FOptimusValidatedName)                     GroupName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FOptimusParameterBindingArray)             BindingArray                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FOptimusValidatedName)                     GroupName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FOptimusParameterBindingArray)             BindingArray                                                OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusNode_GetVariable_DuplicationInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FOptimusNode_GetVariable_DuplicationInfo : public MDKStruct
+class FOptimusNode_GetVariable_DuplicationInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     VariableName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x4, 12, 0, 0})
-	SMember(FString)                                   DefaultValue                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     VariableName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x4, 12, 0, 0})
+	SMember(FString)                                   DefaultValue                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusNode_ResourceAccessorBase_DuplicationInfo
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FOptimusNode_ResourceAccessorBase_DuplicationInfo : public MDKStruct
+class FOptimusNode_ResourceAccessorBase_DuplicationInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     ResourceName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(get<T>, {0x4, 12, 0, 0})
-	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(get<T>, {0x10, 64, 0, 0})
+	SMember(FName)                                     ResourceName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FOptimusDataTypeRef)                       DataType                                                    OFFSET(getStruct<T>, {0x4, 12, 0, 0})
+	SMember(FOptimusDataDomain)                        DataDomain                                                  OFFSET(getStruct<T>, {0x10, 64, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusDataType
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FOptimusDataType : public MDKStruct
+class FOptimusDataType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     TypeName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FShaderValueTypeHandle)                    ShaderValueType                                             OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FName)                                     TypeName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FShaderValueTypeHandle)                    ShaderValueType                                             OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 	DMember(int32_t)                                   ShaderValueSize                                             OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	SMember(FName)                                     TypeCategory                                                OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     TypeCategory                                                OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  TypeObject                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
 	DMember(bool)                                      bHasCustomPinColor                                          OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FLinearColor)                              CustomPinColor                                              OFFSET(get<T>, {0x3C, 16, 0, 0})
+	SMember(FLinearColor)                              CustomPinColor                                              OFFSET(getStruct<T>, {0x3C, 16, 0, 0})
 	CMember(EOptimusDataTypeUsageFlags)                UsageFlags                                                  OFFSET(get<T>, {0x4C, 1, 0, 0})
 	CMember(EOptimusDataTypeFlags)                     TypeFlags                                                   OFFSET(get<T>, {0x4D, 1, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusComputeGraphInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FOptimusComputeGraphInfo : public MDKStruct
+class FOptimusComputeGraphInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	CMember(EOptimusNodeGraphType)                     GraphType                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     GraphName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     GraphName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(UOptimusComputeGraph*)                     ComputeGraph                                                OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusDeformerInstanceExecInfo
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FOptimusDeformerInstanceExecInfo : public MDKStruct
+class FOptimusDeformerInstanceExecInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     GraphName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     GraphName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(EOptimusNodeGraphType)                     GraphType                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
 	CMember(UComputeGraph*)                            ComputeGraph                                                OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FComputeGraphInstance)                     ComputeGraphInstance                                        OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FComputeGraphInstance)                     ComputeGraphInstance                                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusDeformerInstanceComponentBinding
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FOptimusDeformerInstanceComponentBinding : public MDKStruct
+class FOptimusDeformerInstanceComponentBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     ProviderName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ComponentName                                               OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ProviderName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ComponentName                                               OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/OptimusCore.OptimusVariableMetaDataEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOptimusVariableMetaDataEntry : public MDKStruct
+class FOptimusVariableMetaDataEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/OptimusCore.EOptimusDiagnosticLevel

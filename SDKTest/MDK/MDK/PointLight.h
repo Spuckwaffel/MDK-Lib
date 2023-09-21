@@ -17,7 +17,7 @@ class UPointLightNativeComponent : public UActorComponent
 
 public:
 	CMember(UTimelineComponent*)                       ShortCircuitTimelineComponent                               OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FLinearColor)                              FlickerColor                                                OFFSET(get<T>, {0x150, 16, 0, 0})
+	SMember(FLinearColor)                              FlickerColor                                                OFFSET(getStruct<T>, {0x150, 16, 0, 0})
 	DMember(float)                                     ShortCircuitMinDelay                                        OFFSET(get<float>, {0x160, 4, 0, 0})
 	DMember(float)                                     ShortCircuitMaxDelay                                        OFFSET(get<float>, {0x164, 4, 0, 0})
 
@@ -37,13 +37,14 @@ public:
 
 /// Struct /Script/PointLight.PointLightRhythmParameters
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FPointLightRhythmParameters : public MDKStruct
+class FPointLightRhythmParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              LightColor                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              LightColor                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(ULightComponent*)                          ActiveLight                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StaticMeshComponent                                         OFFSET(get<T>, {0x18, 8, 0, 0})
 	DMember(int32_t)                                   ColorBands                                                  OFFSET(get<int32_t>, {0x20, 4, 0, 0})

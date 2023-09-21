@@ -36,7 +36,7 @@ class UPOIBannerToastWidgetBase : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x350, 2, 0, 0})
+	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(getStruct<T>, {0x350, 2, 0, 0})
 
 
 	/// Functions

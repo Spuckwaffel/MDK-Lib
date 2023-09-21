@@ -15,7 +15,7 @@ class UShaderPlatformQualitySettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FMaterialQualityOverrides)                 QualityOverrides                                            OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FMaterialQualityOverrides)                 QualityOverrides                                            OFFSET(getStruct<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/MaterialShaderQualitySettings.MaterialShaderQualitySettings
@@ -31,8 +31,9 @@ public:
 
 /// Struct /Script/MaterialShaderQualitySettings.MaterialQualityOverrides
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMaterialQualityOverrides : public MDKStruct
+class FMaterialQualityOverrides : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

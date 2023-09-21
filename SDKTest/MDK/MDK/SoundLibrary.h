@@ -21,11 +21,11 @@ class USoundLibraryContext : public UObject
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FGameplayTag)                              BaseEventName                                               OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FGameplayTag)                              BaseEventName                                               OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	DMember(bool)                                      bForwardToActorOwner                                        OFFSET(get<bool>, {0x34, 1, 0, 0})
 	DMember(bool)                                      bForwardToAttachedActors                                    OFFSET(get<bool>, {0x35, 1, 0, 0})
 	DMember(bool)                                      bAutoResetContext                                           OFFSET(get<bool>, {0x36, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     PlaybackTags                                                OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlaybackTags                                                OFFSET(getStruct<T>, {0x38, 32, 0, 0})
 
 
 	/// Functions
@@ -49,7 +49,7 @@ class USoundLibraryAnimContext : public USoundLibraryContext
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FSoundLibraryAnimContextSettings)          AnimSettings                                                OFFSET(get<T>, {0x58, 36, 0, 0})
+	SMember(FSoundLibraryAnimContextSettings)          AnimSettings                                                OFFSET(getStruct<T>, {0x58, 36, 0, 0})
 	CMember(TWeakObjectPtr<UAnimSequenceBase*>)        Animation                                                   OFFSET(get<T>, {0x7C, 8, 0, 0})
 	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   MeshComponent                                               OFFSET(get<T>, {0x84, 8, 0, 0})
 	DMember(bool)                                      bSupportsNotifyEnd                                          OFFSET(get<bool>, {0x8C, 1, 0, 0})
@@ -117,10 +117,10 @@ class USoundLibrary : public UObject
 
 public:
 	CMember(TMap<FGameplayTag, TWeakObjectPtr>)        Sounds                                                      OFFSET(get<T>, {0x28, 80, 0, 0})
-	SMember(FAudioGameplayRequirements)                LibraryRequirements                                         OFFSET(get<T>, {0x78, 80, 0, 0})
-	SMember(FGameplayTag)                              Channel                                                     OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FAudioGameplayRequirements)                LibraryRequirements                                         OFFSET(getStruct<T>, {0x78, 80, 0, 0})
+	SMember(FGameplayTag)                              Channel                                                     OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0xCC, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     MetaData                                                    OFFSET(get<T>, {0xD0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     MetaData                                                    OFFSET(getStruct<T>, {0xD0, 32, 0, 0})
 	CMember(TMap<FGameplayTag, TWeakObjectPtr>)        FullLibrary                                                 OFFSET(get<T>, {0xF0, 80, 0, 0})
 	CMember(TArray<USoundBase*>)                       LoadedSoundObjects                                          OFFSET(get<T>, {0x140, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    Assets                                                      OFFSET(get<T>, {0x150, 16, 0, 0})
@@ -145,10 +145,10 @@ class USoundLibraryComponent : public UAudioGameplayComponent
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FGameplayTag)                              ComponentTag                                                OFFSET(get<T>, {0xB0, 4, 0, 0})
+	SMember(FGameplayTag)                              ComponentTag                                                OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
 	CMember(UClass*)                                   ContextClass                                                OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(TArray<USoundLibrary*>)                    Libraries                                                   OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSoundLibraryPlayEvent                                     OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSoundLibraryPlayEvent                                     OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 	CMember(USoundLibraryContext*)                     Context                                                     OFFSET(get<T>, {0x130, 8, 0, 0})
 
 
@@ -219,7 +219,7 @@ class USoundLibrarySimpleContext : public USoundLibraryContext
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FSoundLibrarySimpleContextSettings)        Settings                                                    OFFSET(get<T>, {0x58, 88, 0, 0})
+	SMember(FSoundLibrarySimpleContextSettings)        Settings                                                    OFFSET(getStruct<T>, {0x58, 88, 0, 0})
 
 
 	/// Functions
@@ -281,13 +281,14 @@ public:
 
 /// Struct /Script/SoundLibrary.SoundLibraryPlayResult
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSoundLibraryPlayResult : public MDKStruct
+class FSoundLibraryPlayResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              EventName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              EventName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bWasBlocked                                                 OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bSuccess                                                    OFFSET(get<bool>, {0x5, 1, 0, 0})
 	CMember(TArray<UAudioComponent*>)                  AudioComponents                                             OFFSET(get<T>, {0x8, 16, 0, 0})
@@ -295,16 +296,17 @@ public:
 
 /// Struct /Script/SoundLibrary.SoundLibraryAnimContextSettings
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FSoundLibraryAnimContextSettings : public MDKStruct
+class FSoundLibraryAnimContextSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
 public:
-	SMember(FFloatInterval)                            AnimRateThreshold                                           OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              EventName                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FFloatInterval)                            AnimRateThreshold                                           OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FGameplayTag)                              EventName                                                   OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(bool)                                      bAttachToActor                                              OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FName)                                     AttachName                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     AttachName                                                  OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bFadeOutOnEnd                                               OFFSET(get<bool>, {0x14, 1, 0, 0})
 	DMember(float)                                     FadeTime                                                    OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     NotifyTriggerChance                                         OFFSET(get<float>, {0x1C, 4, 0, 0})
@@ -313,22 +315,24 @@ public:
 
 /// Struct /Script/SoundLibrary.SoundLibraryContextEventInput
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FSoundLibraryContextEventInput : public MDKStruct
+class FSoundLibraryContextEventInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(USoundBase*)                               sound                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(AActor*)                                   Owner                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     LibraryTags                                                 OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     LibraryTags                                                 OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 };
 
 /// Struct /Script/SoundLibrary.SoundLibrarySet
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FSoundLibrarySet : public MDKStruct
+class FSoundLibrarySet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -338,13 +342,14 @@ public:
 
 /// Struct /Script/SoundLibrary.SoundLibrarySimpleContextSettings
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FSoundLibrarySimpleContextSettings : public MDKStruct
+class FSoundLibrarySimpleContextSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FGameplayTag)                              EventName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              EventName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bAttachedSound                                              OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bStopWhenAttachedDestroyed                                  OFFSET(get<bool>, {0x5, 1, 0, 0})
 	DMember(bool)                                      bAutoDestroy                                                OFFSET(get<bool>, {0x6, 1, 0, 0})
@@ -354,16 +359,17 @@ public:
 	DMember(float)                                     StartTime                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
 	CMember(USoundConcurrency*)                        ConcurrencySettings                                         OFFSET(get<T>, {0x18, 8, 0, 0})
 	CMember(USoundAttenuation*)                        AttenuationSettings                                         OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FName)                                     AttachName                                                  OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     AttachName                                                  OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(USceneComponent*)                          AttachToComponent                                           OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TEnumAsByte<EAttachLocation>)              LocationType                                                OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/SoundLibrary.SoundLibraryActorData
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FSoundLibraryActorData : public MDKStruct
+class FSoundLibraryActorData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -376,6 +382,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FSoundLibraryTag : public FGameplayTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 

@@ -75,8 +75,8 @@ class UFortCommandScreen : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1040;
 
 public:
-	SMember(FDataTableRowHandle)                       ShowAllStatsActionData                                      OFFSET(get<T>, {0x3E8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectHeroActionData                                       OFFSET(get<T>, {0x3F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ShowAllStatsActionData                                      OFFSET(getStruct<T>, {0x3E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectHeroActionData                                       OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
 
 
 	/// Functions
@@ -150,8 +150,8 @@ class UFortCollectionBookOverviewWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageSelected                                OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageClicked                                 OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageSelected                                OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageClicked                                 OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	CMember(UFortCollectionBookPage*)                  LastSelectedPage                                            OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UFortCollectionBookCategory*)              LastSelectedCategory                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(TArray<UFortCollectionBookCategory*>)      CategoryObjectPool                                          OFFSET(get<T>, {0x300, 16, 0, 0})
@@ -191,7 +191,7 @@ public:
 	CMember(UCommonButtonLegacy*)                      RewardDetailsButton                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UFortCollectionBookPage*)                  DetailsPage                                                 OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   RewardDetailsModalWidgetClass                               OFFSET(get<T>, {0x2F8, 32, 0, 0})
-	SMember(FText)                                     ModalTitle                                                  OFFSET(get<T>, {0x318, 24, 0, 0})
+	SMember(FText)                                     ModalTitle                                                  OFFSET(getStruct<T>, {0x318, 24, 0, 0})
 	CMember(UFortCollectionBookRewardModalWidget*)     RewardDetailsModalWidget                                    OFFSET(get<T>, {0x330, 8, 0, 0})
 
 
@@ -272,11 +272,11 @@ class UFortCollectionBookPrimaryPanel : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1200;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageSelectedDelegate                        OFFSET(get<T>, {0x3E8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageClickedDelegate                         OFFSET(get<T>, {0x3F8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookSectionClickedDelegate                      OFFSET(get<T>, {0x408, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       BackActionRowHandle                                         OFFSET(get<T>, {0x418, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       SummonInfoPanelActionRowHandle                              OFFSET(get<T>, {0x428, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageSelectedDelegate                        OFFSET(getStruct<T>, {0x3E8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageClickedDelegate                         OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookSectionClickedDelegate                      OFFSET(getStruct<T>, {0x408, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackActionRowHandle                                         OFFSET(getStruct<T>, {0x418, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       SummonInfoPanelActionRowHandle                              OFFSET(getStruct<T>, {0x428, 16, 0, 0})
 	CMember(UFortCollectionBookOverviewWidget*)        OverviewWidget                                              OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UCommonTileView*)                          SectionTileViewWidget                                       OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(ECollectionBookPrimaryNavTarget)           CurrentNavTarget                                            OFFSET(get<T>, {0x448, 1, 0, 0})
@@ -306,11 +306,11 @@ class UFortCollectionBookPrimaryPanel_Legacy : public UCommonActivatablePanelLeg
 	static inline constexpr uint64_t __MDKClassSize = 1504;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageSelectedDelegate                        OFFSET(get<T>, {0x520, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageClickedDelegate                         OFFSET(get<T>, {0x530, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCollectionBookSectionClickedDelegate                      OFFSET(get<T>, {0x540, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       BackActionRowHandle                                         OFFSET(get<T>, {0x550, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       SummonInfoPanelActionRowHandle                              OFFSET(get<T>, {0x560, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageSelectedDelegate                        OFFSET(getStruct<T>, {0x520, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookPageClickedDelegate                         OFFSET(getStruct<T>, {0x530, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollectionBookSectionClickedDelegate                      OFFSET(getStruct<T>, {0x540, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackActionRowHandle                                         OFFSET(getStruct<T>, {0x550, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       SummonInfoPanelActionRowHandle                              OFFSET(getStruct<T>, {0x560, 16, 0, 0})
 	CMember(UFortCollectionBookOverviewWidget*)        OverviewWidget                                              OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UCommonTileView*)                          SectionTileViewWidget                                       OFFSET(get<T>, {0x578, 8, 0, 0})
 	CMember(ECollectionBookPrimaryNavTarget)           CurrentNavTarget                                            OFFSET(get<T>, {0x580, 1, 0, 0})
@@ -363,7 +363,7 @@ class UFortCollectionBookProgressionRewardsModalWidget : public UFortActivatable
 
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   RewardWidgetClass                                           OFFSET(get<T>, {0x558, 32, 0, 0})
-	SMember(FMargin)                                   RewardWidgetPadding                                         OFFSET(get<T>, {0x578, 16, 0, 0})
+	SMember(FMargin)                                   RewardWidgetPadding                                         OFFSET(getStruct<T>, {0x578, 16, 0, 0})
 	DMember(int32_t)                                   NumRewardsToShow                                            OFFSET(get<int32_t>, {0x588, 4, 0, 0})
 	CMember(UVerticalBox*)                             RewardBoxWidget                                             OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(UVerticalBox*)                             MajorRewardBoxWidget                                        OFFSET(get<T>, {0x598, 8, 0, 0})
@@ -472,7 +472,7 @@ class UFortCollectionBookRewardCardWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnDisplayedItemChangedEvent                                 OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDisplayedItemChangedEvent                                 OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 	CMember(UFortMultiSizeItemCard*)                   ItemCardWidget                                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UWidget*)                                  MultiItemRewardOverlay                                      OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UWidget*)                                  ChoiceRewardOverlay                                         OFFSET(get<T>, {0x2F0, 8, 0, 0})
@@ -480,9 +480,9 @@ public:
 	DMember(float)                                     UpdateCardInterval                                          OFFSET(get<float>, {0x300, 4, 0, 0})
 	CMember(EFortItemCardSize)                         ItemCardSize                                                OFFSET(get<T>, {0x304, 1, 0, 0})
 	DMember(bool)                                      bDisplayAsRewardCard                                        OFFSET(get<bool>, {0x305, 1, 0, 0})
-	SMember(FFortRewardInfo)                           RepresentedRewards                                          OFFSET(get<T>, {0x308, 48, 0, 0})
+	SMember(FFortRewardInfo)                           RepresentedRewards                                          OFFSET(getStruct<T>, {0x308, 48, 0, 0})
 	CMember(TArray<UFortItem*>)                        DummyItems                                                  OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(FTimerHandle)                              UpdateCardTimer                                             OFFSET(get<T>, {0x348, 8, 0, 0})
+	SMember(FTimerHandle)                              UpdateCardTimer                                             OFFSET(getStruct<T>, {0x348, 8, 0, 0})
 
 
 	/// Functions
@@ -520,7 +520,7 @@ class UFortCollectionBookSectionCompletionRewardWidget : public UFortCollectionB
 public:
 	CMember(UCommonButtonLegacy*)                      RewardDetailsButton                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   RewardDetailsModalWidgetClass                               OFFSET(get<T>, {0x2F0, 32, 0, 0})
-	SMember(FText)                                     ModalTitle                                                  OFFSET(get<T>, {0x310, 24, 0, 0})
+	SMember(FText)                                     ModalTitle                                                  OFFSET(getStruct<T>, {0x310, 24, 0, 0})
 	CMember(UFortCollectionBookRewardModalWidget*)     RewardDetailsModalWidget                                    OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UFortCollectionBookSection*)               Section                                                     OFFSET(get<T>, {0x330, 8, 0, 0})
 
@@ -538,8 +538,8 @@ class UFortCollectionBookSectionPanel : public UCommonActivatablePanelLegacy
 	static inline constexpr uint64_t __MDKClassSize = 1776;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSectionCloseRequest                                       OFFSET(get<T>, {0x520, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPreviewXPChangeEvent                                      OFFSET(get<T>, {0x530, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSectionCloseRequest                                       OFFSET(getStruct<T>, {0x520, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreviewXPChangeEvent                                      OFFSET(getStruct<T>, {0x530, 16, 0, 0})
 	CMember(UCommonTextBlock*)                         SectionNameTextWidget                                       OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortCollectionBookSlotView*)              SlotViewWidget                                              OFFSET(get<T>, {0x548, 8, 0, 0})
 	CMember(UFortCollectionBookPicker*)                SlotItemPicker                                              OFFSET(get<T>, {0x550, 8, 0, 0})
@@ -553,26 +553,26 @@ public:
 	CMember(UCommonTextBlock*)                         PersonRecruitUnavailableMessageWidget                       OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         ItemResearchUnavailableMessageWidget                        OFFSET(get<T>, {0x598, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         UnslotUnavailableMessageWidget                              OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       BackActionRowHandle                                         OFFSET(get<T>, {0x5A8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       CloseActionRowHandle                                        OFFSET(get<T>, {0x5B8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       SlotItemActionRowHandle                                     OFFSET(get<T>, {0x5C8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectItemActionRowHandle                                  OFFSET(get<T>, {0x5D8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectCollectionBookItemActionRowHandle                    OFFSET(get<T>, {0x5E8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectPreviewItemActionRowHandle                           OFFSET(get<T>, {0x5F8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       OpenPickerActionRowHandle                                   OFFSET(get<T>, {0x608, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       LogAllowedItemsActionRowHandle                              OFFSET(get<T>, {0x618, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ResearchItemActionRowHandle                                 OFFSET(get<T>, {0x628, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       RecruitActionRowHandle                                      OFFSET(get<T>, {0x638, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       UnslotItemActionRowHandle                                   OFFSET(get<T>, {0x648, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackActionRowHandle                                         OFFSET(getStruct<T>, {0x5A8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CloseActionRowHandle                                        OFFSET(getStruct<T>, {0x5B8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       SlotItemActionRowHandle                                     OFFSET(getStruct<T>, {0x5C8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectItemActionRowHandle                                  OFFSET(getStruct<T>, {0x5D8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectCollectionBookItemActionRowHandle                    OFFSET(getStruct<T>, {0x5E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectPreviewItemActionRowHandle                           OFFSET(getStruct<T>, {0x5F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       OpenPickerActionRowHandle                                   OFFSET(getStruct<T>, {0x608, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       LogAllowedItemsActionRowHandle                              OFFSET(getStruct<T>, {0x618, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ResearchItemActionRowHandle                                 OFFSET(getStruct<T>, {0x628, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RecruitActionRowHandle                                      OFFSET(getStruct<T>, {0x638, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       UnslotItemActionRowHandle                                   OFFSET(getStruct<T>, {0x648, 16, 0, 0})
 	CMember(ECollectionBookSectionNavTarget)           CurrentNavTarget                                            OFFSET(get<T>, {0x658, 1, 0, 0})
 	CMember(UFortCollectionBookSection*)               AssociatedSection                                           OFFSET(get<T>, {0x660, 8, 0, 0})
 	DMember(bool)                                      bHasSummonedPanel                                           OFFSET(get<bool>, {0x668, 1, 0, 0})
-	SMember(FFortDialogExternalLatentActionHandle)     SlotConfirmationDialogLatentHandle                          OFFSET(get<T>, {0x66C, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnShowItemDetailEvent                                       OFFSET(get<T>, {0x670, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSlotItemConfirmEvent                                      OFFSET(get<T>, {0x680, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnResearchItemConfirmEvent                                  OFFSET(get<T>, {0x690, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUnslotItemConfirmEvent                                    OFFSET(get<T>, {0x6A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInspectItemEvent                                          OFFSET(get<T>, {0x6B0, 16, 0, 0})
+	SMember(FFortDialogExternalLatentActionHandle)     SlotConfirmationDialogLatentHandle                          OFFSET(getStruct<T>, {0x66C, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnShowItemDetailEvent                                       OFFSET(getStruct<T>, {0x670, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSlotItemConfirmEvent                                      OFFSET(getStruct<T>, {0x680, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnResearchItemConfirmEvent                                  OFFSET(getStruct<T>, {0x690, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUnslotItemConfirmEvent                                    OFFSET(getStruct<T>, {0x6A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInspectItemEvent                                          OFFSET(getStruct<T>, {0x6B0, 16, 0, 0})
 	CMember(UClass*)                                   SlotConfirmationModalClass                                  OFFSET(get<T>, {0x6E8, 8, 0, 0})
 
 
@@ -624,7 +624,7 @@ class UFortCollectionBookSectionTileWidget : public UCommonButtonLegacy
 
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   SlotWidgetClass                                             OFFSET(get<T>, {0x14C8, 32, 0, 0})
-	SMember(FMargin)                                   SlotWidgetPadding                                           OFFSET(get<T>, {0x14E8, 16, 0, 0})
+	SMember(FMargin)                                   SlotWidgetPadding                                           OFFSET(getStruct<T>, {0x14E8, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         SlotWidgetHorizontalAlignment                               OFFSET(get<T>, {0x14F8, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           SlotWidgetVerticalAlignment                                 OFFSET(get<T>, {0x14F9, 1, 0, 0})
 	DMember(int32_t)                                   MaxNumSlotsSupported                                        OFFSET(get<int32_t>, {0x14FC, 4, 0, 0})
@@ -741,15 +741,15 @@ public:
 	CMember(UWidget*)                                  UnslottedOverlayWidget                                      OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UWidget*)                                  ReadyToSlotOverlayWidget                                    OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UWidget*)                                  UnslottedButReadyOverlayWidget                              OFFSET(get<T>, {0x300, 8, 0, 0})
-	SMember(FName)                                     SlotRowName                                                 OFFSET(get<T>, {0x308, 4, 0, 0})
-	SMember(FText)                                     ItemAvailableToSlotText                                     OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FText)                                     NoItemsAvailableToSlotText                                  OFFSET(get<T>, {0x328, 24, 0, 0})
-	SMember(FText)                                     HigherQualityItemsAvailableToSlotAndUpgradeAvailableText    OFFSET(get<T>, {0x340, 24, 0, 0})
-	SMember(FText)                                     HigherQualityItemsAvailableToSlotAndEvolveAvailableText     OFFSET(get<T>, {0x358, 24, 0, 0})
-	SMember(FText)                                     HigherQualityItemsAvailableToSlotText                       OFFSET(get<T>, {0x370, 24, 0, 0})
-	SMember(FText)                                     ItemInSlotFullyUpgradedText                                 OFFSET(get<T>, {0x388, 24, 0, 0})
-	SMember(FText)                                     ItemInSlotCanBeUpgradedText                                 OFFSET(get<T>, {0x3A0, 24, 0, 0})
-	SMember(FText)                                     ItemInSlotCanBeEvolvedText                                  OFFSET(get<T>, {0x3B8, 24, 0, 0})
+	SMember(FName)                                     SlotRowName                                                 OFFSET(getStruct<T>, {0x308, 4, 0, 0})
+	SMember(FText)                                     ItemAvailableToSlotText                                     OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(FText)                                     NoItemsAvailableToSlotText                                  OFFSET(getStruct<T>, {0x328, 24, 0, 0})
+	SMember(FText)                                     HigherQualityItemsAvailableToSlotAndUpgradeAvailableText    OFFSET(getStruct<T>, {0x340, 24, 0, 0})
+	SMember(FText)                                     HigherQualityItemsAvailableToSlotAndEvolveAvailableText     OFFSET(getStruct<T>, {0x358, 24, 0, 0})
+	SMember(FText)                                     HigherQualityItemsAvailableToSlotText                       OFFSET(getStruct<T>, {0x370, 24, 0, 0})
+	SMember(FText)                                     ItemInSlotFullyUpgradedText                                 OFFSET(getStruct<T>, {0x388, 24, 0, 0})
+	SMember(FText)                                     ItemInSlotCanBeUpgradedText                                 OFFSET(getStruct<T>, {0x3A0, 24, 0, 0})
+	SMember(FText)                                     ItemInSlotCanBeEvolvedText                                  OFFSET(getStruct<T>, {0x3B8, 24, 0, 0})
 	CMember(UFortItem*)                                SlottedItemRepresentation                                   OFFSET(get<T>, {0x3D0, 8, 0, 0})
 
 
@@ -929,7 +929,7 @@ class UFortExpeditionBuildSquadWidget : public UCommonActivatablePanelLegacy
 
 public:
 	CMember(TWeakObjectPtr<UFortExpeditionItem*>)      Item                                                        OFFSET(get<T>, {0x520, 8, 0, 0})
-	SMember(FName)                                     CurrentSquadId                                              OFFSET(get<T>, {0x528, 4, 0, 0})
+	SMember(FName)                                     CurrentSquadId                                              OFFSET(getStruct<T>, {0x528, 4, 0, 0})
 	CMember(UFortSquadSlotsView*)                      ExpeditionSquadSlotsView                                    OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(UFortSquadSlotDetailsPanel*)               ExpeditionSquadSlotDetails                                  OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(UFortSquadSlotItemPicker*)                 ExpeditionSquadSlotPicker                                   OFFSET(get<T>, {0x540, 8, 0, 0})
@@ -968,7 +968,7 @@ class UFortExpeditionDetailsWidget : public UCommonUserWidget
 public:
 	CMember(TWeakObjectPtr<UFortExpeditionItem*>)      Item                                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UFortSquadSlotsView*)                      ExpeditionSquadSlotsView                                    OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(FName)                                     CurrentSquadId                                              OFFSET(get<T>, {0x2E0, 4, 0, 0})
+	SMember(FName)                                     CurrentSquadId                                              OFFSET(getStruct<T>, {0x2E0, 4, 0, 0})
 	CMember(UFortItemViewContext_ExpeditionSquadSlotsView*) ItemViewContext_ExpeditionSlotsView                    OFFSET(get<T>, {0x2E8, 8, 0, 0})
 
 
@@ -1025,10 +1025,10 @@ class UFortExpeditionListViewWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnExpeditionSelected                                        OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnExpeditionListViewRefreshed                               OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnExpeditionSelected                                        OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnExpeditionListViewRefreshed                               OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	CMember(UCommonListView*)                          ExpeditionListView                                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FName)                                     CurrentTabNameId                                            OFFSET(get<T>, {0x2F8, 4, 0, 0})
+	SMember(FName)                                     CurrentTabNameId                                            OFFSET(getStruct<T>, {0x2F8, 4, 0, 0})
 	CMember(EFortExpeditionListSort)                   SortType                                                    OFFSET(get<T>, {0x2FC, 1, 0, 0})
 
 
@@ -1118,7 +1118,7 @@ class UFortExpeditionRewardsWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnAllExpeditionsCollected                                   OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAllExpeditionsCollected                                   OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 	CMember(UCommonTileView*)                          RewardsTileView                                             OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	DMember(bool)                                      bPendingCollection                                          OFFSET(get<bool>, {0x2E8, 1, 0, 0})
 
@@ -1465,7 +1465,7 @@ class UFortItemManagementInventoryPanel_STW : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 1192;
 
 public:
-	SMember(FName)                                     CurrentFilterName                                           OFFSET(get<T>, {0x320, 4, 0, 0})
+	SMember(FName)                                     CurrentFilterName                                           OFFSET(getStruct<T>, {0x320, 4, 0, 0})
 	CMember(EInventoryContentSortType)                 CurrentSortType                                             OFFSET(get<T>, {0x324, 1, 0, 0})
 	CMember(UClass*)                                   FilterTabButtonType                                         OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UClass*)                                   FilterTabButtonStyle                                        OFFSET(get<T>, {0x330, 8, 0, 0})
@@ -1701,7 +1701,7 @@ class UFortItemManagementScreen_STW : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1344;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnItemViewRefreshed                                         OFFSET(get<T>, {0x3F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnItemViewRefreshed                                         OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
 	CMember(EFortItemManagementMode)                   Mode                                                        OFFSET(get<T>, {0x4C0, 1, 0, 0})
 	CMember(EFortFrontendInventoryFilter)              FrontendInventoryFilter                                     OFFSET(get<T>, {0x4C1, 1, 0, 0})
 	DMember(bool)                                      bReadOnlyModeWIFE                                           OFFSET(get<bool>, {0x4C2, 1, 0, 0})
@@ -1829,7 +1829,7 @@ class UMainMenu_STW : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1304;
 
 public:
-	SMember(FText)                                     DefaultHelpText                                             OFFSET(get<T>, {0x3E8, 24, 0, 0})
+	SMember(FText)                                     DefaultHelpText                                             OFFSET(getStruct<T>, {0x3E8, 24, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_CountDownTimer                                         OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_LeaveExperience                                      OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonUserWidget*)                        Button_Leave                                                OFFSET(get<T>, {0x410, 8, 0, 0})
@@ -1842,13 +1842,13 @@ public:
 	CMember(UCommonButtonBase*)                        Button_Support                                              OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_Exit                                                 OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_Settings                                             OFFSET(get<T>, {0x458, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       CloseMenuAction                                             OFFSET(get<T>, {0x460, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       SwitchProfileAction                                         OFFSET(get<T>, {0x470, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CloseMenuAction                                             OFFSET(getStruct<T>, {0x460, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       SwitchProfileAction                                         OFFSET(getStruct<T>, {0x470, 16, 0, 0})
 	CMember(UClass*)                                   SettingsScreenClass                                         OFFSET(get<T>, {0x480, 8, 0, 0})
-	SMember(FText)                                     LogoutTitle                                                 OFFSET(get<T>, {0x488, 24, 0, 0})
-	SMember(FText)                                     LogoutDescription                                           OFFSET(get<T>, {0x4A0, 24, 0, 0})
-	SMember(FText)                                     ExitTitle                                                   OFFSET(get<T>, {0x4B8, 24, 0, 0})
-	SMember(FText)                                     ExitDescription                                             OFFSET(get<T>, {0x4D0, 24, 0, 0})
+	SMember(FText)                                     LogoutTitle                                                 OFFSET(getStruct<T>, {0x488, 24, 0, 0})
+	SMember(FText)                                     LogoutDescription                                           OFFSET(getStruct<T>, {0x4A0, 24, 0, 0})
+	SMember(FText)                                     ExitTitle                                                   OFFSET(getStruct<T>, {0x4B8, 24, 0, 0})
+	SMember(FText)                                     ExitDescription                                             OFFSET(getStruct<T>, {0x4D0, 24, 0, 0})
 	DMember(bool)                                      bIsMainMenuOpen                                             OFFSET(get<bool>, {0x4E8, 1, 0, 0})
 	CMember(UFortCampaignTabsScreenBase*)              MainTabsScreen                                              OFFSET(get<T>, {0x510, 8, 0, 0})
 
@@ -1890,7 +1890,7 @@ class UFortUIStateWidget_STWJoinServer : public UFortUIStateWidgetBase
 
 public:
 	CMember(UFortRejoinWindowBase*)                    RejoinWindow                                                OFFSET(get<T>, {0x400, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       TutorialCompleteStatHandle                                  OFFSET(get<T>, {0x408, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       TutorialCompleteStatHandle                                  OFFSET(getStruct<T>, {0x408, 16, 0, 0})
 	CMember(UClass*)                                   RejoinWindowClass                                           OFFSET(get<T>, {0x418, 8, 0, 0})
 
 
@@ -1962,7 +1962,7 @@ class UFortHeroLoadoutHeroPicker : public UFortItemPickerBase
 public:
 	CMember(UFortTabListWidgetBase_Legacy*)            ExternalFilterTabList                                       OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortCampaignHeroLoadoutItem*>) TargetLoadoutItem                                       OFFSET(get<T>, {0x410, 8, 0, 0})
-	SMember(FName)                                     TargetSlotName                                              OFFSET(get<T>, {0x418, 4, 0, 0})
+	SMember(FName)                                     TargetSlotName                                              OFFSET(getStruct<T>, {0x418, 4, 0, 0})
 	CMember(UClass*)                                   FilterTabButtonType                                         OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(TMap<FName, FFortTabButtonLabelInfo>)      TabButtonLabelInfoMap                                       OFFSET(get<T>, {0x428, 80, 0, 0})
 
@@ -2003,16 +2003,16 @@ class UFortHeroLoadoutScreenBase : public UCommonActivatableWidget
 
 public:
 	CMember(UFortItemView*)                            ItemViewObject                                              OFFSET(get<T>, {0x3F0, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       BackInputAction                                             OFFSET(get<T>, {0x3F8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       HelpInputAction                                             OFFSET(get<T>, {0x408, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       CancelInputAction                                           OFFSET(get<T>, {0x418, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ToggleDetailInputAction                                     OFFSET(get<T>, {0x428, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ClearAllInputAction                                         OFFSET(get<T>, {0x438, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ShowAllStatsInputAction                                     OFFSET(get<T>, {0x448, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectRootSlotsInputAction                                 OFFSET(get<T>, {0x458, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       CyclePickerSortModeInputAction                              OFFSET(get<T>, {0x468, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectPickerInputAction                                    OFFSET(get<T>, {0x478, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ToggleDescInputAction                                       OFFSET(get<T>, {0x488, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackInputAction                                             OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       HelpInputAction                                             OFFSET(getStruct<T>, {0x408, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CancelInputAction                                           OFFSET(getStruct<T>, {0x418, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ToggleDetailInputAction                                     OFFSET(getStruct<T>, {0x428, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ClearAllInputAction                                         OFFSET(getStruct<T>, {0x438, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ShowAllStatsInputAction                                     OFFSET(getStruct<T>, {0x448, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectRootSlotsInputAction                                 OFFSET(getStruct<T>, {0x458, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CyclePickerSortModeInputAction                              OFFSET(getStruct<T>, {0x468, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectPickerInputAction                                    OFFSET(getStruct<T>, {0x478, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ToggleDescInputAction                                       OFFSET(getStruct<T>, {0x488, 16, 0, 0})
 	DMember(bool)                                      AllowItemRotation                                           OFFSET(get<bool>, {0x538, 1, 0, 0})
 	DMember(bool)                                      AllowItemZooming                                            OFFSET(get<bool>, {0x539, 1, 0, 0})
 	DMember(bool)                                      AutomaticallyRegisterCameraView                             OFFSET(get<bool>, {0x53A, 1, 0, 0})
@@ -2083,11 +2083,11 @@ class UFortHeroLoadoutSlotButton : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5376;
 
 public:
-	SMember(FName)                                     SlotName                                                    OFFSET(get<T>, {0x14C0, 4, 0, 0})
+	SMember(FName)                                     SlotName                                                    OFFSET(getStruct<T>, {0x14C0, 4, 0, 0})
 	DMember(int32_t)                                   SlotIndex                                                   OFFSET(get<int32_t>, {0x14C4, 4, 0, 0})
 	CMember(EHeroLoadoutSlotType)                      SlotType                                                    OFFSET(get<T>, {0x14C8, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRequestChangeHero                                         OFFSET(get<T>, {0x14D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnContextMenuOpenChanged                                    OFFSET(get<T>, {0x14E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestChangeHero                                         OFFSET(getStruct<T>, {0x14D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnContextMenuOpenChanged                                    OFFSET(getStruct<T>, {0x14E0, 16, 0, 0})
 	CMember(UMenuAnchor*)                              ContextMenuAnchor                                           OFFSET(get<T>, {0x14F0, 8, 0, 0})
 
 
@@ -2185,7 +2185,7 @@ class UStoreCardObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FCard)                                     Card                                                        OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FCard)                                     Card                                                        OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(int32_t)                                   OriginalIndex                                               OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 };
 
@@ -2411,8 +2411,8 @@ public:
 	CMember(URichTextBlock*)                           Text_Description                                            OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UFortLazyImage*)                           Image_PerkIcon                                              OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UHorizontalBox*)                           Hbox_PerkDetails                                            OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FText)                                     ActiveText                                                  OFFSET(get<T>, {0x2F8, 24, 0, 0})
-	SMember(FText)                                     InactiveText                                                OFFSET(get<T>, {0x310, 24, 0, 0})
+	SMember(FText)                                     ActiveText                                                  OFFSET(getStruct<T>, {0x2F8, 24, 0, 0})
+	SMember(FText)                                     InactiveText                                                OFFSET(getStruct<T>, {0x310, 24, 0, 0})
 	DMember(float)                                     InactiveOpacity                                             OFFSET(get<float>, {0x328, 4, 0, 0})
 	DMember(float)                                     ActiveOpacity                                               OFFSET(get<float>, {0x32C, 4, 0, 0})
 	CMember(UFortAbilityKit*)                          AbilityKit                                                  OFFSET(get<T>, {0x330, 8, 0, 0})
@@ -2460,7 +2460,7 @@ public:
 	CMember(UFortItemDetailsHostPanel*)                ItemInspectionMainItemDetailsHostPanel                      OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UFortItemDetailsHostPanel*)                AlterationsExtraDetailsPanel                                OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UClass*)                                   AlterationModOptinScreenClass                               OFFSET(get<T>, {0x578, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       BackInputAction                                             OFFSET(get<T>, {0x580, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackInputAction                                             OFFSET(getStruct<T>, {0x580, 16, 0, 0})
 	CMember(TWeakObjectPtr<UFortAlterableItem*>)       AlterableItem                                               OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(UFortAlterationOption*)                    CurrentAlterationOptionInternal                             OFFSET(get<T>, {0x598, 8, 0, 0})
 
@@ -2507,7 +2507,7 @@ public:
 	DMember(bool)                                      IsPreviewing                                                OFFSET(get<bool>, {0x6B0, 1, 0, 0})
 	DMember(bool)                                      bHasSeenRefundHelpPrompt                                    OFFSET(get<bool>, {0x6B1, 1, 0, 0})
 	CMember(UFortItemInspectCycleWidget*)              CycleWidget                                                 OFFSET(get<T>, {0x6B8, 8, 0, 0})
-	SMember(FGameplayTagQuery)                         InspectAnimationTag                                         OFFSET(get<T>, {0x6C0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         InspectAnimationTag                                         OFFSET(getStruct<T>, {0x6C0, 72, 0, 0})
 	CMember(UClass*)                                   AlterationModOptinScreenClass                               OFFSET(get<T>, {0x708, 8, 0, 0})
 	CMember(UClass*)                                   AlterationModScreenClass                                    OFFSET(get<T>, {0x710, 8, 0, 0})
 	CMember(TWeakObjectPtr<UDataTable*>)               RefundDescriptionsDataTable                                 OFFSET(get<T>, {0x718, 32, 0, 0})
@@ -2560,11 +2560,11 @@ class UFortItemInspectCycleWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnItemToRepresentChanged                                    OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnItemToRepresentChanged                                    OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 	CMember(TWeakObjectPtr<UFortItemTileView*>)        ItemTileView                                                OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortItem*>)                ItemToRepresent                                             OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       PreviousItemActionRowHandle                                 OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       NextItemActionRowHandle                                     OFFSET(get<T>, {0x300, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PreviousItemActionRowHandle                                 OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       NextItemActionRowHandle                                     OFFSET(getStruct<T>, {0x300, 16, 0, 0})
 
 
 	/// Functions
@@ -2594,7 +2594,7 @@ class UFortAlterationOption : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5376;
 
 public:
-	SMember(FAlterationOption)                         AlterationOption                                            OFFSET(get<T>, {0x14C8, 48, 0, 0})
+	SMember(FAlterationOption)                         AlterationOption                                            OFFSET(getStruct<T>, {0x14C8, 48, 0, 0})
 
 
 	/// Functions
@@ -2627,7 +2627,7 @@ public:
 	CMember(UFortAlterableItem*)                       Item                                                        OFFSET(get<T>, {0x310, 8, 0, 0})
 	DMember(int32_t)                                   SlotIndex                                                   OFFSET(get<int32_t>, {0x318, 4, 0, 0})
 	DMember(bool)                                      bUpgradeOptionExists                                        OFFSET(get<bool>, {0x31C, 1, 0, 0})
-	SMember(FAlterationOption)                         UpgradeOption                                               OFFSET(get<T>, {0x320, 48, 0, 0})
+	SMember(FAlterationOption)                         UpgradeOption                                               OFFSET(getStruct<T>, {0x320, 48, 0, 0})
 	CMember(TArray<FAlterationOption>)                 RespecOptions                                               OFFSET(get<T>, {0x350, 16, 0, 0})
 
 
@@ -2754,7 +2754,7 @@ class UFortMissionActivationWidgetSTW : public UCommonActivatableWidget
 
 public:
 	CMember(UFortMissionActivationInfoSTW*)            InfoObject                                                  OFFSET(get<T>, {0x3E8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ReadyUpObjectiveHandle                                      OFFSET(get<T>, {0x3F0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ReadyUpObjectiveHandle                                      OFFSET(getStruct<T>, {0x3F0, 32, 0, 0})
 	CMember(UCurveFloat*)                              DifficultyIncreaseBluGloCurve                               OFFSET(get<T>, {0x410, 8, 0, 0})
 
 
@@ -2859,7 +2859,7 @@ class UFortLayoutQuestNode : public UCommonUserWidget
 public:
 	CMember(UFortQuestMapQuestTile*)                   QuestTile                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(int32_t)                                   QuestNodeIndex                                              OFFSET(get<int32_t>, {0x2D8, 4, 0, 0})
-	SMember(FFortQuestMapNode)                         QuestMapNode                                                OFFSET(get<T>, {0x2E0, 24, 0, 0})
+	SMember(FFortQuestMapNode)                         QuestMapNode                                                OFFSET(getStruct<T>, {0x2E0, 24, 0, 0})
 };
 
 /// Class /Script/SaveTheWorldUI.FortLayoutQuestNode_Legacy
@@ -2872,7 +2872,7 @@ class UFortLayoutQuestNode_Legacy : public UCommonUserWidget
 public:
 	CMember(UFortQuestMapQuestTile_Legacy*)            QuestTile                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(int32_t)                                   QuestNodeIndex                                              OFFSET(get<int32_t>, {0x2D8, 4, 0, 0})
-	SMember(FFortQuestMapNode)                         QuestMapNode                                                OFFSET(get<T>, {0x2E0, 24, 0, 0})
+	SMember(FFortQuestMapNode)                         QuestMapNode                                                OFFSET(getStruct<T>, {0x2E0, 24, 0, 0})
 };
 
 /// Class /Script/SaveTheWorldUI.FortProgressArrowButton
@@ -2883,9 +2883,9 @@ class UFortProgressArrowButton : public UCommonButtonBase
 	static inline constexpr uint64_t __MDKClassSize = 5296;
 
 public:
-	SMember(FSlateColor)                               ArrowColor                                                  OFFSET(get<T>, {0x1470, 20, 0, 0})
-	SMember(FSlateColor)                               HoverColor                                                  OFFSET(get<T>, {0x1484, 20, 0, 0})
-	SMember(FSlateColor)                               ShadowColor                                                 OFFSET(get<T>, {0x1498, 20, 0, 0})
+	SMember(FSlateColor)                               ArrowColor                                                  OFFSET(getStruct<T>, {0x1470, 20, 0, 0})
+	SMember(FSlateColor)                               HoverColor                                                  OFFSET(getStruct<T>, {0x1484, 20, 0, 0})
+	SMember(FSlateColor)                               ShadowColor                                                 OFFSET(getStruct<T>, {0x1498, 20, 0, 0})
 
 
 	/// Functions
@@ -2907,9 +2907,9 @@ class UFortProgressArrowButton_Legacy : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5376;
 
 public:
-	SMember(FSlateColor)                               ArrowColor                                                  OFFSET(get<T>, {0x14C0, 20, 0, 0})
-	SMember(FSlateColor)                               HoverColor                                                  OFFSET(get<T>, {0x14D4, 20, 0, 0})
-	SMember(FSlateColor)                               ShadowColor                                                 OFFSET(get<T>, {0x14E8, 20, 0, 0})
+	SMember(FSlateColor)                               ArrowColor                                                  OFFSET(getStruct<T>, {0x14C0, 20, 0, 0})
+	SMember(FSlateColor)                               HoverColor                                                  OFFSET(getStruct<T>, {0x14D4, 20, 0, 0})
+	SMember(FSlateColor)                               ShadowColor                                                 OFFSET(getStruct<T>, {0x14E8, 20, 0, 0})
 
 
 	/// Functions
@@ -2961,7 +2961,7 @@ class UFortQuestMapDetailsPanelBase : public UCommonUserWidget
 public:
 	CMember(UClass*)                                   QuestConversationClass                                      OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(float)                                     QuestUpdateDelayTime                                        OFFSET(get<float>, {0x2D8, 4, 0, 0})
-	SMember(FTimerHandle)                              QuestUpdateTimerHandle                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	SMember(FTimerHandle)                              QuestUpdateTimerHandle                                      OFFSET(getStruct<T>, {0x2E0, 8, 0, 0})
 
 
 	/// Functions
@@ -2981,7 +2981,7 @@ class UFortQuestMapDetailsPanel : public UFortQuestMapDetailsPanelBase
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	SMember(FDataTableRowHandle)                       PlayButtonTriggeringAction                                  OFFSET(get<T>, {0x2E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PlayButtonTriggeringAction                                  OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
 	CMember(TArray<UClass*>)                           PriorityActivatableWidgetClassList                          OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	CMember(UClass*)                                   CurrentQuestBorder                                          OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UClass*)                                   CompletedQuestBorder                                        OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -3010,7 +3010,7 @@ class UFortQuestMapDetailsPanel_Legacy : public UFortQuestMapDetailsPanelBase
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	SMember(FDataTableRowHandle)                       PlayButtonTriggeringAction                                  OFFSET(get<T>, {0x2E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PlayButtonTriggeringAction                                  OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
 	CMember(TArray<UClass*>)                           PriorityActivatablePanelClassList                           OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	CMember(UClass*)                                   CurrentQuestBorder                                          OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UClass*)                                   CompletedQuestBorder                                        OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -3257,10 +3257,10 @@ public:
 	CMember(UCommonTextBlock*)                         Text_SideQuestTitle                                         OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UImage*)                                   Image_Arrow                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UImage*)                                   Image_QuestComplete                                         OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FMargin)                                   RewardPadding                                               OFFSET(get<T>, {0x2F8, 16, 0, 0})
+	SMember(FMargin)                                   RewardPadding                                               OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 CurrentQuestItemDef                                         OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UFortQuestItem*)                           CurrentQuestItem                                            OFFSET(get<T>, {0x310, 8, 0, 0})
-	SMember(FTimerHandle)                              RewardAnimationTimer                                        OFFSET(get<T>, {0x318, 8, 0, 0})
+	SMember(FTimerHandle)                              RewardAnimationTimer                                        OFFSET(getStruct<T>, {0x318, 8, 0, 0})
 	CMember(TArray<UFortQuestObjectiveInfo*>)          SideQuestObjectives                                         OFFSET(get<T>, {0x320, 16, 0, 0})
 };
 
@@ -3277,11 +3277,11 @@ public:
 	CMember(UCommonTextBlock*)                         Text_SideQuestTitle                                         OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UImage*)                                   Image_Arrow                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UImage*)                                   Image_QuestComplete                                         OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FMargin)                                   RewardPadding                                               OFFSET(get<T>, {0x2F8, 16, 0, 0})
+	SMember(FMargin)                                   RewardPadding                                               OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 CurrentQuestItemDef                                         OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UFortQuestItem*)                           CurrentQuestItem                                            OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(TArray<UCommonWidgetSwitcherLegacy*>)      RewardSwitchers                                             OFFSET(get<T>, {0x318, 16, 0, 0})
-	SMember(FTimerHandle)                              RewardAnimationTimer                                        OFFSET(get<T>, {0x328, 8, 0, 0})
+	SMember(FTimerHandle)                              RewardAnimationTimer                                        OFFSET(getStruct<T>, {0x328, 8, 0, 0})
 	CMember(TArray<UFortQuestObjectiveInfo*>)          SideQuestObjectives                                         OFFSET(get<T>, {0x330, 16, 0, 0})
 };
 
@@ -3364,7 +3364,7 @@ class UFortQuestMapQuestTile : public UCommonUserWidget
 
 public:
 	CMember(UCommonButtonBase*)                        QuestButton                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	SMember(FFortQuestMapNode)                         QuestNodeData                                               OFFSET(get<T>, {0x2D8, 24, 0, 0})
+	SMember(FFortQuestMapNode)                         QuestNodeData                                               OFFSET(getStruct<T>, {0x2D8, 24, 0, 0})
 
 
 	/// Functions
@@ -3385,7 +3385,7 @@ class UFortQuestMapQuestTile_Legacy : public UCommonUserWidget
 
 public:
 	CMember(UCommonButtonLegacy*)                      QuestButton                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	SMember(FFortQuestMapNode)                         QuestNodeData                                               OFFSET(get<T>, {0x2D8, 24, 0, 0})
+	SMember(FFortQuestMapNode)                         QuestNodeData                                               OFFSET(getStruct<T>, {0x2D8, 24, 0, 0})
 
 
 	/// Functions
@@ -3416,9 +3416,9 @@ public:
 	CMember(UFortQuestMapDataAsset*)                   CurrentQuestMapDataTable                                    OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UClass*)                                   CampaignNewsModalClass                                      OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UClass*)                                   QuestLogScreenClass                                         OFFSET(get<T>, {0x458, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       CurrentQuestAction                                          OFFSET(get<T>, {0x460, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       STWNewsAction                                               OFFSET(get<T>, {0x470, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(get<T>, {0x480, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CurrentQuestAction                                          OFFSET(getStruct<T>, {0x460, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       STWNewsAction                                               OFFSET(getStruct<T>, {0x470, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(getStruct<T>, {0x480, 16, 0, 0})
 
 
 	/// Functions
@@ -3654,16 +3654,16 @@ public:
 	CMember(UCommonTreeView*)                          TreeView_Quests                                             OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	CMember(UScrollBox*)                               ScrollBox_QuestDetails                                      OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	CMember(UClass*)                                   QuestManagerComponentClass                                  OFFSET(get<T>, {0x3F8, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(get<T>, {0x400, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       LeaveInventoryAction                                        OFFSET(get<T>, {0x410, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       PlayQuestAction                                             OFFSET(get<T>, {0x420, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       AbandonQuestAction                                          OFFSET(get<T>, {0x430, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ClaimRewardAction                                           OFFSET(get<T>, {0x440, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ReplayIntroAction                                           OFFSET(get<T>, {0x450, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ReplayOutroAction                                           OFFSET(get<T>, {0x460, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       PinQuestAction                                              OFFSET(get<T>, {0x470, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       UnpinQuestAction                                            OFFSET(get<T>, {0x480, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       StopConversationAction                                      OFFSET(get<T>, {0x490, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(getStruct<T>, {0x400, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       LeaveInventoryAction                                        OFFSET(getStruct<T>, {0x410, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PlayQuestAction                                             OFFSET(getStruct<T>, {0x420, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       AbandonQuestAction                                          OFFSET(getStruct<T>, {0x430, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ClaimRewardAction                                           OFFSET(getStruct<T>, {0x440, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ReplayIntroAction                                           OFFSET(getStruct<T>, {0x450, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ReplayOutroAction                                           OFFSET(getStruct<T>, {0x460, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PinQuestAction                                              OFFSET(getStruct<T>, {0x470, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       UnpinQuestAction                                            OFFSET(getStruct<T>, {0x480, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       StopConversationAction                                      OFFSET(getStruct<T>, {0x490, 16, 0, 0})
 
 
 	/// Functions
@@ -3751,11 +3751,11 @@ class UFortResearchStatTileWidget : public UUserWidget
 public:
 	CMember(UFortStatItemDefinition*)                  PersonalStatItemDefinition                                  OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UFortStatItemDefinition*)                  TeamStatItemDefinition                                      OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FName)                                     StatCostCurveName                                           OFFSET(get<T>, {0x2B8, 4, 0, 0})
-	SMember(FName)                                     StatPersonalDeltaCurveName                                  OFFSET(get<T>, {0x2BC, 4, 0, 0})
-	SMember(FName)                                     StatPersonalCumulativeCurveName                             OFFSET(get<T>, {0x2C0, 4, 0, 0})
-	SMember(FName)                                     StatTeamDeltaCurveName                                      OFFSET(get<T>, {0x2C4, 4, 0, 0})
-	SMember(FName)                                     StatTeamCumulativeCurveName                                 OFFSET(get<T>, {0x2C8, 4, 0, 0})
+	SMember(FName)                                     StatCostCurveName                                           OFFSET(getStruct<T>, {0x2B8, 4, 0, 0})
+	SMember(FName)                                     StatPersonalDeltaCurveName                                  OFFSET(getStruct<T>, {0x2BC, 4, 0, 0})
+	SMember(FName)                                     StatPersonalCumulativeCurveName                             OFFSET(getStruct<T>, {0x2C0, 4, 0, 0})
+	SMember(FName)                                     StatTeamDeltaCurveName                                      OFFSET(getStruct<T>, {0x2C4, 4, 0, 0})
+	SMember(FName)                                     StatTeamCumulativeCurveName                                 OFFSET(getStruct<T>, {0x2C8, 4, 0, 0})
 
 
 	/// Functions
@@ -3809,7 +3809,7 @@ class UFortRewardCollectionBookData : public UFortRewardNotificationData
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FFortCollectionBookRewards)                CollectionBookRewards                                       OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FFortCollectionBookRewards)                CollectionBookRewards                                       OFFSET(getStruct<T>, {0x30, 96, 0, 0})
 };
 
 /// Class /Script/SaveTheWorldUI.FortRewardNotificationSubWidget
@@ -3820,8 +3820,8 @@ class UFortRewardNotificationSubWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTransitionInComplete                                      OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTransitionOutComplete                                     OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTransitionInComplete                                      OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTransitionOutComplete                                     OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 
 
 	/// Functions
@@ -3921,7 +3921,7 @@ class UFortRewardExpeditionWidget : public UFortRewardNotificationSubWidget
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMcpError                                                  OFFSET(get<T>, {0x2F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMcpError                                                  OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
 
 
 	/// Functions
@@ -3993,7 +3993,7 @@ class UFortRewardNotificationWidget : public UCommonActivatablePanelLegacy
 public:
 	CMember(TArray<UFortRewardNotificationData*>)      NotificationDataList                                        OFFSET(get<T>, {0x528, 16, 0, 0})
 	CMember(UOverlay*)                                 OverlayMain                                                 OFFSET(get<T>, {0x548, 8, 0, 0})
-	SMember(FFortSwipeDetector)                        SwipeDetector                                               OFFSET(get<T>, {0x550, 144, 0, 0})
+	SMember(FFortSwipeDetector)                        SwipeDetector                                               OFFSET(getStruct<T>, {0x550, 144, 0, 0})
 	CMember(UClass*)                                   MulchConfirmationModalClass                                 OFFSET(get<T>, {0x600, 8, 0, 0})
 	CMember(UFortMulchConfirmationModalWidget*)        MulchConfirmationModal                                      OFFSET(get<T>, {0x608, 8, 0, 0})
 
@@ -4205,18 +4205,18 @@ public:
 	CMember(UFortSquadSlotsView*)                      SquadSlotsView                                              OFFSET(get<T>, {0x578, 8, 0, 0})
 	CMember(UFortSquadSlotDetailsPanel*)               SelectedSlotDetailsPanel                                    OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(UFortSquadSlotItemPicker*)                 SelectedSlotItemPicker                                      OFFSET(get<T>, {0x588, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       InspectInputActionRowHandle                                 OFFSET(get<T>, {0x590, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ManageInputActionRowHandle                                  OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       BackInputActionRowHandle                                    OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InventoryInputActionRowHandle                               OFFSET(get<T>, {0x5C0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       InventoryCloseInputActionRowHandle                          OFFSET(get<T>, {0x5D0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ClosePickerInputActionRowHandle                             OFFSET(get<T>, {0x5E0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       SelectPickerSlotActionRowHandle                             OFFSET(get<T>, {0x5F0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       CyclePickerSortActionRowHandle                              OFFSET(get<T>, {0x600, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       PreviousSquadActionRowHandle                                OFFSET(get<T>, {0x610, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       NextSquadActionRowHandle                                    OFFSET(get<T>, {0x620, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ClearAllActionRowHandle                                     OFFSET(get<T>, {0x630, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       HelpScreenActionRowHandle                                   OFFSET(get<T>, {0x640, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InspectInputActionRowHandle                                 OFFSET(getStruct<T>, {0x590, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ManageInputActionRowHandle                                  OFFSET(getStruct<T>, {0x5A0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackInputActionRowHandle                                    OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InventoryInputActionRowHandle                               OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InventoryCloseInputActionRowHandle                          OFFSET(getStruct<T>, {0x5D0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ClosePickerInputActionRowHandle                             OFFSET(getStruct<T>, {0x5E0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       SelectPickerSlotActionRowHandle                             OFFSET(getStruct<T>, {0x5F0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CyclePickerSortActionRowHandle                              OFFSET(getStruct<T>, {0x600, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PreviousSquadActionRowHandle                                OFFSET(getStruct<T>, {0x610, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       NextSquadActionRowHandle                                    OFFSET(getStruct<T>, {0x620, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ClearAllActionRowHandle                                     OFFSET(getStruct<T>, {0x630, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       HelpScreenActionRowHandle                                   OFFSET(getStruct<T>, {0x640, 16, 0, 0})
 	CMember(UClass*)                                   DisableAutoSlottingToClearSquadPromptAction                 OFFSET(get<T>, {0x650, 8, 0, 0})
 	CMember(UFortItemViewContext_SquadSlotsView*)      ItemViewContext_SquadSlotsView                              OFFSET(get<T>, {0x668, 8, 0, 0})
 	CMember(UFortItemViewContext_SquadSlotItemPicker*) ItemViewContext_SquadSlotItemPicker                         OFFSET(get<T>, {0x670, 8, 0, 0})
@@ -4301,7 +4301,7 @@ class UFortHeroSquadManagementScreen : public UFortSquadManagementScreenBase
 	static inline constexpr uint64_t __MDKClassSize = 1688;
 
 public:
-	SMember(FDataTableRowHandle)                       ManageDefendersInputActionRowHandle                         OFFSET(get<T>, {0x678, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ManageDefendersInputActionRowHandle                         OFFSET(getStruct<T>, {0x678, 16, 0, 0})
 	CMember(UFortHeroSquadBonusPerksWidgetBase*)       BonusPerksWidget                                            OFFSET(get<T>, {0x688, 8, 0, 0})
 
 
@@ -4318,7 +4318,7 @@ class UFortSquadIcon : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x2D0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x2D0, 4, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x2D4, 1, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
 
@@ -4511,7 +4511,7 @@ class UFortSquadSlotItemPicker : public UFortItemPickerBase
 	static inline constexpr uint64_t __MDKClassSize = 1232;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSortChanged                                               OFFSET(get<T>, {0x440, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSortChanged                                               OFFSET(getStruct<T>, {0x440, 16, 0, 0})
 
 
 	/// Functions
@@ -4584,8 +4584,8 @@ class UFortSquadSlotSelectorButton : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5440;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRequestOpenSquadSlotEvent                                 OFFSET(get<T>, {0x14E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRequestViewInAllEvent                                     OFFSET(get<T>, {0x14F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestOpenSquadSlotEvent                                 OFFSET(getStruct<T>, {0x14E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestViewInAllEvent                                     OFFSET(getStruct<T>, {0x14F0, 16, 0, 0})
 	CMember(UFortSquadSlotWidget*)                     SquadSlotWidget                                             OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UMenuAnchor*)                              PopupMenuAnchor                                             OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   ItemViewContext                                             OFFSET(get<T>, {0x1510, 16, 0, 0})
@@ -4622,9 +4622,9 @@ class UFortSquadSlotsView : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 968;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnDifferentSquadSlotSelectedEvent                           OFFSET(get<T>, {0x2E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRequestOpenSquadSlotEvent                                 OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRequestViewInAllEvent                                     OFFSET(get<T>, {0x300, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDifferentSquadSlotSelectedEvent                           OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestOpenSquadSlotEvent                                 OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestViewInAllEvent                                     OFFSET(getStruct<T>, {0x300, 16, 0, 0})
 	DMember(bool)                                      bReadOnlyModeWIFE                                           OFFSET(get<bool>, {0x310, 1, 0, 0})
 	DMember(int32_t)                                   IndexOfSelectedSquadSlot                                    OFFSET(get<int32_t>, {0x314, 4, 0, 0})
 	DMember(bool)                                      bSlotButtonsRequireSelection                                OFFSET(get<bool>, {0x318, 1, 0, 0})
@@ -4729,8 +4729,8 @@ class UFortSquadStatValueWithIcon : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x2D0, 56, 0, 0})
-	SMember(FGameplayAttribute)                        TeamAttribute                                               OFFSET(get<T>, {0x308, 56, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(getStruct<T>, {0x2D0, 56, 0, 0})
+	SMember(FGameplayAttribute)                        TeamAttribute                                               OFFSET(getStruct<T>, {0x308, 56, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x340, 1, 0, 0})
 	CMember(UCommonNumericTextBlock*)                  Value                                                       OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x350, 8, 0, 0})
@@ -4751,7 +4751,7 @@ class UFortSquadTypeLandingPageBase : public UFortActivatablePanel
 public:
 	DMember(bool)                                      bReadOnlyModeWIFE                                           OFFSET(get<bool>, {0x558, 1, 0, 0})
 	CMember(EFortHomebaseSquadType)                    SquadType                                                   OFFSET(get<T>, {0x559, 1, 0, 0})
-	SMember(FDataTableRowHandle)                       BackInputActionRowHandle                                    OFFSET(get<T>, {0x560, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackInputActionRowHandle                                    OFFSET(getStruct<T>, {0x560, 16, 0, 0})
 	CMember(EFortFrontendInventoryFilter)              ItemManagementScreenFilter                                  OFFSET(get<T>, {0x570, 1, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    SquadSelectorButtons                                        OFFSET(get<T>, {0x578, 16, 0, 0})
 
@@ -4777,7 +4777,7 @@ class UFortStatIcon : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x2D0, 56, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(getStruct<T>, {0x2D0, 56, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x308, 1, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x310, 8, 0, 0})
 
@@ -4838,7 +4838,7 @@ class UFortSurvivorSquadStatMatchBase : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 1952;
 
 public:
-	SMember(FFortUISurvivorSquadStatMatch)             StatMatch                                                   OFFSET(get<T>, {0x2E0, 1216, 0, 0})
+	SMember(FFortUISurvivorSquadStatMatch)             StatMatch                                                   OFFSET(getStruct<T>, {0x2E0, 1216, 0, 0})
 
 
 	/// Functions
@@ -4901,7 +4901,7 @@ class UFortWorkerSetBonusIcon : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(get<T>, {0x2D0, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(getStruct<T>, {0x2D0, 4, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x2D4, 1, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
 
@@ -4943,7 +4943,7 @@ class UFortLlamaStoreData : public UPrimaryDataAsset
 
 public:
 	CMember(TArray<FText>)                             RandomLoadingTexts                                          OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FName)                                     NotEnoughCurrencyDialogCloseAction                          OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FName)                                     NotEnoughCurrencyDialogCloseAction                          OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 	CMember(UClass*)                                   InspectWidgetClass                                          OFFSET(get<T>, {0x48, 8, 0, 0})
 	DMember(float)                                     ShowOfferDelay                                              OFFSET(get<float>, {0x50, 4, 0, 0})
 	CMember(UClass*)                                   StoreOpeningCardPackClass                                   OFFSET(get<T>, {0x58, 8, 0, 0})
@@ -4960,8 +4960,8 @@ class UFortLlamaStoreBase : public UFortDirectAcquisitionWidgetBase
 
 public:
 	CMember(TArray<FOfferGroup>)                       OfferCategoriesToDisplay                                    OFFSET(get<T>, {0x4C8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       TencentDetailsActionData                                    OFFSET(get<T>, {0x4D8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       AddVBucksActionData                                         OFFSET(get<T>, {0x4E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       TencentDetailsActionData                                    OFFSET(getStruct<T>, {0x4D8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       AddVBucksActionData                                         OFFSET(getStruct<T>, {0x4E8, 16, 0, 0})
 	DMember(bool)                                      bShouldShowAddVBucksAction                                  OFFSET(get<bool>, {0x4F8, 1, 0, 0})
 	CMember(UDynamicEntryBox*)                         OfferEntryBox                                               OFFSET(get<T>, {0x500, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   OfferButtonGroup                                            OFFSET(get<T>, {0x508, 8, 0, 0})
@@ -5083,7 +5083,7 @@ public:
 	CMember(UCommonListView*)                          CardPackList                                                OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      OpenAllButton                                               OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      CancelButton                                                OFFSET(get<T>, {0x568, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BPOnRequestOpenCardPack                                     OFFSET(get<T>, {0x570, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BPOnRequestOpenCardPack                                     OFFSET(getStruct<T>, {0x570, 16, 0, 0})
 };
 
 /// Class /Script/SaveTheWorldUI.FortOpenCardPackModal_Legacy
@@ -5097,7 +5097,7 @@ public:
 	CMember(UCommonListView*)                          CardPackList                                                OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      OpenAllButton                                               OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      CancelButton                                                OFFSET(get<T>, {0x568, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BPOnRequestOpenCardPack                                     OFFSET(get<T>, {0x570, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BPOnRequestOpenCardPack                                     OFFSET(getStruct<T>, {0x570, 16, 0, 0})
 };
 
 /// Class /Script/SaveTheWorldUI.StWHUD
@@ -5115,7 +5115,7 @@ public:
 	CMember(TWeakObjectPtr<UClass*>)                   MissionActivationWidgetClass                                OFFSET(get<T>, {0x470, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   PostGameScreenClass                                         OFFSET(get<T>, {0x490, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   DefenderConfigPanelClass                                    OFFSET(get<T>, {0x4B0, 32, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSTWHUDMenuStackChanged                                    OFFSET(get<T>, {0x4D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSTWHUDMenuStackChanged                                    OFFSET(getStruct<T>, {0x4D0, 16, 0, 0})
 	DMember(int32_t)                                   ReticleExtensionSize                                        OFFSET(get<int32_t>, {0x4E0, 4, 0, 0})
 	CMember(UCommonUserWidget*)                        BottomBarWidget                                             OFFSET(get<T>, {0x4E8, 8, 0, 0})
 	CMember(UOverlay*)                                 PersistentHUDContent                                        OFFSET(get<T>, {0x4F0, 8, 0, 0})
@@ -5381,8 +5381,9 @@ public:
 
 /// Struct /Script/SaveTheWorldUI.SquadSlotSortTypes
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSquadSlotSortTypes : public MDKStruct
+class FSquadSlotSortTypes : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -5392,20 +5393,22 @@ public:
 
 /// Struct /Script/SaveTheWorldUI.ExpeditionTabInfo
 /// Size: 0x0100 (0x000000 - 0x000100)
-class FExpeditionTabInfo : public MDKStruct
+class FExpeditionTabInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabLabelInfo                                                OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabLabelInfo                                                OFFSET(getStruct<T>, {0x10, 240, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.ConsumedCriteriaData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FConsumedCriteriaData : public MDKStruct
+class FConsumedCriteriaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -5416,20 +5419,22 @@ public:
 
 /// Struct /Script/SaveTheWorldUI.FortHeroLoadoutHeroPickerTabConfiguration
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FFortHeroLoadoutHeroPickerTabConfiguration : public MDKStruct
+class FFortHeroLoadoutHeroPickerTabConfiguration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FFortItemFilterDefinition)                 Filter                                                      OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FFortItemSorterDefinition)                 Sorter                                                      OFFSET(get<T>, {0x60, 80, 0, 0})
+	SMember(FFortItemFilterDefinition)                 Filter                                                      OFFSET(getStruct<T>, {0x0, 96, 0, 0})
+	SMember(FFortItemSorterDefinition)                 Sorter                                                      OFFSET(getStruct<T>, {0x60, 80, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.FortInGamePerkDisplayData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortInGamePerkDisplayData : public MDKStruct
+class FFortInGamePerkDisplayData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -5444,19 +5449,21 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FFortRefundDescriptionsData : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   SearchString                                                OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   TargetReleaseVersion                                        OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FText)                                     RefundDescriptionText                                       OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FString)                                   SearchString                                                OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   TargetReleaseVersion                                        OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FText)                                     RefundDescriptionText                                       OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.FortQuestMapEventQuestSideBarData
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FFortQuestMapEventQuestSideBarData : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -5469,35 +5476,38 @@ public:
 
 /// Struct /Script/SaveTheWorldUI.FortLandingPageDefenderSummaryInfo
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortLandingPageDefenderSummaryInfo : public MDKStruct
+class FFortLandingPageDefenderSummaryInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     SquadId                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     TheaterDisplayName                                          OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FString)                                   TheaterUniqueId                                             OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FName)                                     SquadId                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     TheaterDisplayName                                          OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FString)                                   TheaterUniqueId                                             OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.FortAttributeModifierAccumulation
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FFortAttributeModifierAccumulation : public MDKStruct
+class FFortAttributeModifierAccumulation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x8, 56, 0, 0})
+	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(getStruct<T>, {0x8, 56, 0, 0})
 	CMember(TEnumAsByte<EGameplayModOp>)               ModifierOp                                                  OFFSET(get<T>, {0x40, 1, 0, 0})
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0x44, 4, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.FortSurvivorSquadSlottingFeedbackData
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FFortSurvivorSquadSlottingFeedbackData : public MDKStruct
+class FFortSurvivorSquadSlottingFeedbackData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -5512,25 +5522,27 @@ public:
 
 /// Struct /Script/SaveTheWorldUI.FortSurvivorSquadSelectorButtonSummaryStats
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FFortSurvivorSquadSelectorButtonSummaryStats : public MDKStruct
+class FFortSurvivorSquadSelectorButtonSummaryStats : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     SquadId                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayAttribute)                        FortAttribute                                               OFFSET(get<T>, {0x8, 56, 0, 0})
+	SMember(FName)                                     SquadId                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayAttribute)                        FortAttribute                                               OFFSET(getStruct<T>, {0x8, 56, 0, 0})
 	DMember(float)                                     FortAttributeValue                                          OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FGameplayAttribute)                        FortTeamAttribute                                           OFFSET(get<T>, {0x48, 56, 0, 0})
+	SMember(FGameplayAttribute)                        FortTeamAttribute                                           OFFSET(getStruct<T>, {0x48, 56, 0, 0})
 	DMember(float)                                     TeamFortAttributeValue                                      OFFSET(get<float>, {0x80, 4, 0, 0})
 	DMember(float)                                     SquadPowerValue                                             OFFSET(get<float>, {0x84, 4, 0, 0})
-	SMember(FText)                                     FortAttributeName                                           OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FText)                                     FortAttributeName                                           OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.FortSurvivorSquadSelectorButtonPersonalityMatches
 /// Size: 0x0490 (0x000000 - 0x000490)
-class FFortSurvivorSquadSelectorButtonPersonalityMatches : public MDKStruct
+class FFortSurvivorSquadSelectorButtonPersonalityMatches : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1168;
 
@@ -5538,20 +5550,21 @@ public:
 	DMember(int32_t)                                   NumPersonalityMatches                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   TotalNonLeaderSquadMembers                                  OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(bool)                                      HavePersonalityIcons                                        OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FFortMultiSizeBrush)                       PersonalityIcons                                            OFFSET(get<T>, {0x10, 1152, 0, 0})
+	SMember(FFortMultiSizeBrush)                       PersonalityIcons                                            OFFSET(getStruct<T>, {0x10, 1152, 0, 0})
 };
 
 /// Struct /Script/SaveTheWorldUI.FortUISurvivorSquadStatMatch
 /// Size: 0x04C0 (0x000000 - 0x0004C0)
-class FFortUISurvivorSquadStatMatch : public MDKStruct
+class FFortUISurvivorSquadStatMatch : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1216;
 
 public:
-	SMember(FFortMultiSizeBrush)                       Icons                                                       OFFSET(get<T>, {0x0, 1152, 0, 0})
-	SMember(FText)                                     MagnitudeText                                               OFFSET(get<T>, {0x480, 24, 0, 0})
-	SMember(FText)                                     AttributeDisplayName                                        OFFSET(get<T>, {0x498, 24, 0, 0})
+	SMember(FFortMultiSizeBrush)                       Icons                                                       OFFSET(getStruct<T>, {0x0, 1152, 0, 0})
+	SMember(FText)                                     MagnitudeText                                               OFFSET(getStruct<T>, {0x480, 24, 0, 0})
+	SMember(FText)                                     AttributeDisplayName                                        OFFSET(getStruct<T>, {0x498, 24, 0, 0})
 	DMember(int32_t)                                   NumMembersMeetingCriteria                                   OFFSET(get<int32_t>, {0x4B0, 4, 0, 0})
 	DMember(int32_t)                                   NumMembersRequired                                          OFFSET(get<int32_t>, {0x4B4, 4, 0, 0})
 	CMember(EFortUISurvivorSquadMatchType)             MatchType                                                   OFFSET(get<T>, {0x4B8, 1, 0, 0})
@@ -5560,13 +5573,14 @@ public:
 
 /// Struct /Script/SaveTheWorldUI.OfferGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOfferGroup : public MDKStruct
+class FOfferGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   MaxNumberToShow                                             OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
@@ -5574,12 +5588,13 @@ public:
 /// Size: 0x0078 (0x000008 - 0x000080)
 class FHomebaseNodeDisplayData : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               LargePreviewImage                                           OFFSET(get<T>, {0x38, 32, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               SmallPreviewImage                                           OFFSET(get<T>, {0x58, 32, 0, 0})
 	CMember(UMediaSource*)                             PreviewVideoMediaSource                                     OFFSET(get<T>, {0x78, 8, 0, 0})

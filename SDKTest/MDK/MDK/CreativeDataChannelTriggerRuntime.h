@@ -28,9 +28,9 @@ class ACreativeDataChannelTarget : public AElectraDataChannelTarget
 
 public:
 	DMember(int8_t)                                    VersionByte                                                 OFFSET(get<int8_t>, {0x310, 1, 0, 0})
-	SMember(FCreativeDataChannelEvents)                Events                                                      OFFSET(get<T>, {0x318, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEventsRep                                                 OFFSET(get<T>, {0x328, 16, 0, 0})
-	SMember(FCreativeDataChannelEvents)                EventsCache                                                 OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FCreativeDataChannelEvents)                Events                                                      OFFSET(getStruct<T>, {0x318, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEventsRep                                                 OFFSET(getStruct<T>, {0x328, 16, 0, 0})
+	SMember(FCreativeDataChannelEvents)                EventsCache                                                 OFFSET(getStruct<T>, {0x338, 16, 0, 0})
 
 
 	/// Functions
@@ -51,33 +51,33 @@ class ACreativeDataChannelTargetFN : public AElectraDataChannelTarget
 
 public:
 	DMember(int32_t)                                   VersionByte                                                 OFFSET(get<int32_t>, {0x310, 4, 0, 0})
-	SMember(FCDCInt)                                   VersionByteTracker                                          OFFSET(get<T>, {0x314, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VersionByteEvent                                            OFFSET(get<T>, {0x318, 16, 0, 0})
-	SMember(FString)                                   LeaderBoard                                                 OFFSET(get<T>, {0x328, 16, 0, 0})
+	SMember(FCDCInt)                                   VersionByteTracker                                          OFFSET(getStruct<T>, {0x314, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VersionByteEvent                                            OFFSET(getStruct<T>, {0x318, 16, 0, 0})
+	SMember(FString)                                   LeaderBoard                                                 OFFSET(getStruct<T>, {0x328, 16, 0, 0})
 	DMember(int64_t)                                   StormCircleSize                                             OFFSET(get<int64_t>, {0x338, 8, 0, 0})
-	SMember(FCDCLargeInt)                              StormCircleSizeTracker                                      OFFSET(get<T>, {0x340, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  StormCircleSizeEvent                                        OFFSET(get<T>, {0x348, 16, 0, 0})
+	SMember(FCDCLargeInt)                              StormCircleSizeTracker                                      OFFSET(getStruct<T>, {0x340, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  StormCircleSizeEvent                                        OFFSET(getStruct<T>, {0x348, 16, 0, 0})
 	CMember(TArray<float>)                             StormCircleLocation                                         OFFSET(get<T>, {0x358, 16, 0, 0})
-	SMember(FCDCFloatArray)                            StormCircleLocationTracker                                  OFFSET(get<T>, {0x368, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  StormCircleLocationEvent                                    OFFSET(get<T>, {0x378, 16, 0, 0})
-	SMember(FString)                                   PlayerLocation                                              OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FCDCStringFloatArrayMap)                   PlayerLocationTracker                                       OFFSET(get<T>, {0x398, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayerLocationEvent                                         OFFSET(get<T>, {0x3E8, 16, 0, 0})
-	SMember(FString)                                   ArenaPointLeaderBoard                                       OFFSET(get<T>, {0x3F8, 16, 0, 0})
-	SMember(FCDCStringStringMap)                       ArenaPointLeaderBoardTracker                                OFFSET(get<T>, {0x408, 160, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ArenaPointLeaderBoardEvent                                  OFFSET(get<T>, {0x4A8, 16, 0, 0})
-	SMember(FString)                                   CashCupDataAllTimeEarners                                   OFFSET(get<T>, {0x4B8, 16, 0, 0})
-	SMember(FCDCStringFloatMap)                        CashCupDataAllTimeEanersTracker                             OFFSET(get<T>, {0x4C8, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CashCupDataAllTimeEarnersEvent                              OFFSET(get<T>, {0x518, 16, 0, 0})
-	SMember(FString)                                   MythicBossEliminatedPlayer                                  OFFSET(get<T>, {0x528, 16, 0, 0})
-	SMember(FCDCString)                                MythicBossEliminatedPlayerTracker                           OFFSET(get<T>, {0x538, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  MythicBossEliminatedPlayerEvent                             OFFSET(get<T>, {0x548, 16, 0, 0})
-	SMember(FString)                                   MythicWeaponPlayer                                          OFFSET(get<T>, {0x558, 16, 0, 0})
-	SMember(FCDCString)                                MythicWeaponPlayerTracker                                   OFFSET(get<T>, {0x568, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  MythicWeaponPlayerEvent                                     OFFSET(get<T>, {0x578, 16, 0, 0})
-	SMember(FString)                                   PlayerInfo                                                  OFFSET(get<T>, {0x588, 16, 0, 0})
-	SMember(FCDCStringArray)                           PlayerInfoTracker                                           OFFSET(get<T>, {0x598, 24, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayerInfoEvent                                             OFFSET(get<T>, {0x5B0, 16, 0, 0})
+	SMember(FCDCFloatArray)                            StormCircleLocationTracker                                  OFFSET(getStruct<T>, {0x368, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  StormCircleLocationEvent                                    OFFSET(getStruct<T>, {0x378, 16, 0, 0})
+	SMember(FString)                                   PlayerLocation                                              OFFSET(getStruct<T>, {0x388, 16, 0, 0})
+	SMember(FCDCStringFloatArrayMap)                   PlayerLocationTracker                                       OFFSET(getStruct<T>, {0x398, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayerLocationEvent                                         OFFSET(getStruct<T>, {0x3E8, 16, 0, 0})
+	SMember(FString)                                   ArenaPointLeaderBoard                                       OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
+	SMember(FCDCStringStringMap)                       ArenaPointLeaderBoardTracker                                OFFSET(getStruct<T>, {0x408, 160, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ArenaPointLeaderBoardEvent                                  OFFSET(getStruct<T>, {0x4A8, 16, 0, 0})
+	SMember(FString)                                   CashCupDataAllTimeEarners                                   OFFSET(getStruct<T>, {0x4B8, 16, 0, 0})
+	SMember(FCDCStringFloatMap)                        CashCupDataAllTimeEanersTracker                             OFFSET(getStruct<T>, {0x4C8, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CashCupDataAllTimeEarnersEvent                              OFFSET(getStruct<T>, {0x518, 16, 0, 0})
+	SMember(FString)                                   MythicBossEliminatedPlayer                                  OFFSET(getStruct<T>, {0x528, 16, 0, 0})
+	SMember(FCDCString)                                MythicBossEliminatedPlayerTracker                           OFFSET(getStruct<T>, {0x538, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MythicBossEliminatedPlayerEvent                             OFFSET(getStruct<T>, {0x548, 16, 0, 0})
+	SMember(FString)                                   MythicWeaponPlayer                                          OFFSET(getStruct<T>, {0x558, 16, 0, 0})
+	SMember(FCDCString)                                MythicWeaponPlayerTracker                                   OFFSET(getStruct<T>, {0x568, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MythicWeaponPlayerEvent                                     OFFSET(getStruct<T>, {0x578, 16, 0, 0})
+	SMember(FString)                                   PlayerInfo                                                  OFFSET(getStruct<T>, {0x588, 16, 0, 0})
+	SMember(FCDCStringArray)                           PlayerInfoTracker                                           OFFSET(getStruct<T>, {0x598, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayerInfoEvent                                             OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
 };
 
 /// Class /Script/CreativeDataChannelTriggerRuntime.CreativeDataChannelTargetRL
@@ -89,56 +89,56 @@ class ACreativeDataChannelTargetRL : public AElectraDataChannelTarget
 
 public:
 	DMember(int32_t)                                   VersionByte                                                 OFFSET(get<int32_t>, {0x310, 4, 0, 0})
-	SMember(FCDCInt)                                   VersionByteTracker                                          OFFSET(get<T>, {0x314, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VersionByteEvent                                            OFFSET(get<T>, {0x318, 16, 0, 0})
+	SMember(FCDCInt)                                   VersionByteTracker                                          OFFSET(getStruct<T>, {0x314, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VersionByteEvent                                            OFFSET(getStruct<T>, {0x318, 16, 0, 0})
 	DMember(int32_t)                                   ScoreTeam                                                   OFFSET(get<int32_t>, {0x328, 4, 0, 0})
-	SMember(FCDCString)                                ScoreTeamTracker                                            OFFSET(get<T>, {0x330, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ScoreTeamEvent                                              OFFSET(get<T>, {0x340, 16, 0, 0})
-	SMember(FString)                                   ScoreTotal                                                  OFFSET(get<T>, {0x350, 16, 0, 0})
-	SMember(FCDCStringIntMap)                          ScoreTotalTracker                                           OFFSET(get<T>, {0x360, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ScoreTotalEvent                                             OFFSET(get<T>, {0x3B0, 16, 0, 0})
+	SMember(FCDCString)                                ScoreTeamTracker                                            OFFSET(getStruct<T>, {0x330, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ScoreTeamEvent                                              OFFSET(getStruct<T>, {0x340, 16, 0, 0})
+	SMember(FString)                                   ScoreTotal                                                  OFFSET(getStruct<T>, {0x350, 16, 0, 0})
+	SMember(FCDCStringIntMap)                          ScoreTotalTracker                                           OFFSET(getStruct<T>, {0x360, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ScoreTotalEvent                                             OFFSET(getStruct<T>, {0x3B0, 16, 0, 0})
 	DMember(int64_t)                                   ScoreboardTimeLeft                                          OFFSET(get<int64_t>, {0x3C0, 8, 0, 0})
-	SMember(FCDCLargeInt)                              ScoreboardTimeLeftTracker                                   OFFSET(get<T>, {0x3C8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ScoreboardTimeLeftEvent                                     OFFSET(get<T>, {0x3D0, 16, 0, 0})
-	SMember(FString)                                   ScoreboardBestOf                                            OFFSET(get<T>, {0x3E0, 16, 0, 0})
-	SMember(FCDCStringIntMap)                          ScoreboardBestOfTracker                                     OFFSET(get<T>, {0x3F0, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ScoreboardBestOfEvent                                       OFFSET(get<T>, {0x440, 16, 0, 0})
+	SMember(FCDCLargeInt)                              ScoreboardTimeLeftTracker                                   OFFSET(getStruct<T>, {0x3C8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ScoreboardTimeLeftEvent                                     OFFSET(getStruct<T>, {0x3D0, 16, 0, 0})
+	SMember(FString)                                   ScoreboardBestOf                                            OFFSET(getStruct<T>, {0x3E0, 16, 0, 0})
+	SMember(FCDCStringIntMap)                          ScoreboardBestOfTracker                                     OFFSET(getStruct<T>, {0x3F0, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ScoreboardBestOfEvent                                       OFFSET(getStruct<T>, {0x440, 16, 0, 0})
 	DMember(int32_t)                                   OverTime                                                    OFFSET(get<int32_t>, {0x450, 4, 0, 0})
-	SMember(FCDCInt)                                   OvertimeTracker                                             OFFSET(get<T>, {0x454, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OvertimeEvent                                               OFFSET(get<T>, {0x458, 16, 0, 0})
-	SMember(FString)                                   TeamNames                                                   OFFSET(get<T>, {0x468, 16, 0, 0})
-	SMember(FCDCStringArray)                           TeamNamesTracker                                            OFFSET(get<T>, {0x478, 24, 0, 0})
-	SMember(FMulticastInlineDelegate)                  TeamNamesEvent                                              OFFSET(get<T>, {0x490, 16, 0, 0})
-	SMember(FString)                                   PlayerNames                                                 OFFSET(get<T>, {0x4A0, 16, 0, 0})
-	SMember(FCDCStringArray)                           PlayerNamesTracker                                          OFFSET(get<T>, {0x4B0, 24, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayerNamesEvent                                            OFFSET(get<T>, {0x4C8, 16, 0, 0})
-	SMember(FString)                                   PlayerBoost                                                 OFFSET(get<T>, {0x4D8, 16, 0, 0})
-	SMember(FCDCStringIntMap)                          PlayerBoostTracker                                          OFFSET(get<T>, {0x4E8, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayerBoostEvent                                            OFFSET(get<T>, {0x538, 16, 0, 0})
-	SMember(FString)                                   PlayerBoostCollected                                        OFFSET(get<T>, {0x548, 16, 0, 0})
-	SMember(FCDCStringStringMap)                       PlayerBoostCollectedTracker                                 OFFSET(get<T>, {0x558, 160, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayerBoostCollectedEvent                                   OFFSET(get<T>, {0x5F8, 16, 0, 0})
-	SMember(FString)                                   PlayerCoords                                                OFFSET(get<T>, {0x608, 16, 0, 0})
-	SMember(FCDCStringFloatArrayMap)                   PlayerCoordsTracker                                         OFFSET(get<T>, {0x618, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayerCoordsEvent                                           OFFSET(get<T>, {0x668, 16, 0, 0})
-	SMember(FString)                                   BallCoords                                                  OFFSET(get<T>, {0x678, 16, 0, 0})
-	SMember(FCDCFloatArray)                            BallCoordsTracker                                           OFFSET(get<T>, {0x688, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BallCoordsEvent                                             OFFSET(get<T>, {0x698, 16, 0, 0})
-	SMember(FString)                                   MediaStart                                                  OFFSET(get<T>, {0x6A8, 16, 0, 0})
-	SMember(FCDCStringStringMap)                       MediaStartTracker                                           OFFSET(get<T>, {0x6B8, 160, 0, 0})
-	SMember(FMulticastInlineDelegate)                  MediaStartEvent                                             OFFSET(get<T>, {0x758, 16, 0, 0})
+	SMember(FCDCInt)                                   OvertimeTracker                                             OFFSET(getStruct<T>, {0x454, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OvertimeEvent                                               OFFSET(getStruct<T>, {0x458, 16, 0, 0})
+	SMember(FString)                                   TeamNames                                                   OFFSET(getStruct<T>, {0x468, 16, 0, 0})
+	SMember(FCDCStringArray)                           TeamNamesTracker                                            OFFSET(getStruct<T>, {0x478, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  TeamNamesEvent                                              OFFSET(getStruct<T>, {0x490, 16, 0, 0})
+	SMember(FString)                                   PlayerNames                                                 OFFSET(getStruct<T>, {0x4A0, 16, 0, 0})
+	SMember(FCDCStringArray)                           PlayerNamesTracker                                          OFFSET(getStruct<T>, {0x4B0, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayerNamesEvent                                            OFFSET(getStruct<T>, {0x4C8, 16, 0, 0})
+	SMember(FString)                                   PlayerBoost                                                 OFFSET(getStruct<T>, {0x4D8, 16, 0, 0})
+	SMember(FCDCStringIntMap)                          PlayerBoostTracker                                          OFFSET(getStruct<T>, {0x4E8, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayerBoostEvent                                            OFFSET(getStruct<T>, {0x538, 16, 0, 0})
+	SMember(FString)                                   PlayerBoostCollected                                        OFFSET(getStruct<T>, {0x548, 16, 0, 0})
+	SMember(FCDCStringStringMap)                       PlayerBoostCollectedTracker                                 OFFSET(getStruct<T>, {0x558, 160, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayerBoostCollectedEvent                                   OFFSET(getStruct<T>, {0x5F8, 16, 0, 0})
+	SMember(FString)                                   PlayerCoords                                                OFFSET(getStruct<T>, {0x608, 16, 0, 0})
+	SMember(FCDCStringFloatArrayMap)                   PlayerCoordsTracker                                         OFFSET(getStruct<T>, {0x618, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayerCoordsEvent                                           OFFSET(getStruct<T>, {0x668, 16, 0, 0})
+	SMember(FString)                                   BallCoords                                                  OFFSET(getStruct<T>, {0x678, 16, 0, 0})
+	SMember(FCDCFloatArray)                            BallCoordsTracker                                           OFFSET(getStruct<T>, {0x688, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BallCoordsEvent                                             OFFSET(getStruct<T>, {0x698, 16, 0, 0})
+	SMember(FString)                                   MediaStart                                                  OFFSET(getStruct<T>, {0x6A8, 16, 0, 0})
+	SMember(FCDCStringStringMap)                       MediaStartTracker                                           OFFSET(getStruct<T>, {0x6B8, 160, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MediaStartEvent                                             OFFSET(getStruct<T>, {0x758, 16, 0, 0})
 	DMember(int32_t)                                   MediaStop                                                   OFFSET(get<int32_t>, {0x768, 4, 0, 0})
-	SMember(FCDCInt)                                   MediaStopTracker                                            OFFSET(get<T>, {0x76C, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  MediaStopEvent                                              OFFSET(get<T>, {0x770, 16, 0, 0})
+	SMember(FCDCInt)                                   MediaStopTracker                                            OFFSET(getStruct<T>, {0x76C, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MediaStopEvent                                              OFFSET(getStruct<T>, {0x770, 16, 0, 0})
 	DMember(int32_t)                                   SeriesState                                                 OFFSET(get<int32_t>, {0x780, 4, 0, 0})
-	SMember(FCDCInt)                                   SeriesStateTracker                                          OFFSET(get<T>, {0x784, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SeriesStateEvent                                            OFFSET(get<T>, {0x788, 16, 0, 0})
+	SMember(FCDCInt)                                   SeriesStateTracker                                          OFFSET(getStruct<T>, {0x784, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SeriesStateEvent                                            OFFSET(getStruct<T>, {0x788, 16, 0, 0})
 	DMember(int32_t)                                   MatchState                                                  OFFSET(get<int32_t>, {0x798, 4, 0, 0})
-	SMember(FCDCInt)                                   MatchStateTracker                                           OFFSET(get<T>, {0x79C, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  MatchStateEvent                                             OFFSET(get<T>, {0x7A0, 16, 0, 0})
+	SMember(FCDCInt)                                   MatchStateTracker                                           OFFSET(getStruct<T>, {0x79C, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MatchStateEvent                                             OFFSET(getStruct<T>, {0x7A0, 16, 0, 0})
 	DMember(int32_t)                                   FinaleState                                                 OFFSET(get<int32_t>, {0x7B0, 4, 0, 0})
-	SMember(FCDCInt)                                   FinaleStateTracker                                          OFFSET(get<T>, {0x7B4, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  FinaleStateEvent                                            OFFSET(get<T>, {0x7B8, 16, 0, 0})
+	SMember(FCDCInt)                                   FinaleStateTracker                                          OFFSET(getStruct<T>, {0x7B4, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  FinaleStateEvent                                            OFFSET(getStruct<T>, {0x7B8, 16, 0, 0})
 
 
 	/// Functions
@@ -182,8 +182,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCStringFloatArrayMap
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCDCStringFloatArrayMap : public MDKStruct
+class FCDCStringFloatArrayMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -193,8 +194,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCFloatArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCDCFloatArray : public MDKStruct
+class FCDCFloatArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -204,8 +206,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCStringFloatMap
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCDCStringFloatMap : public MDKStruct
+class FCDCStringFloatMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -215,8 +218,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCStringIntMap
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCDCStringIntMap : public MDKStruct
+class FCDCStringIntMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -226,8 +230,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCInt
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCDCInt : public MDKStruct
+class FCDCInt : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -237,8 +242,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCLargeInt
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FCDCLargeInt : public MDKStruct
+class FCDCLargeInt : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -248,8 +254,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCStringStringMap
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FCDCStringStringMap : public MDKStruct
+class FCDCStringStringMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -260,19 +267,21 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCString
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCDCString : public MDKStruct
+class FCDCString : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Data                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Data                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCStringArray
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCDCStringArray : public MDKStruct
+class FCDCStringArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -283,8 +292,9 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CreativeDataChannelEvents
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCreativeDataChannelEvents : public MDKStruct
+class FCreativeDataChannelEvents : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -294,14 +304,15 @@ public:
 
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CreativeDataChannelEvent
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FCreativeDataChannelEvent : public MDKStruct
+class FCreativeDataChannelEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     EventName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Parameters                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     TriggerCondition                                            OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     EventName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Parameters                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     TriggerCondition                                            OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 

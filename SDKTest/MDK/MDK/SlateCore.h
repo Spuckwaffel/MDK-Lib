@@ -86,14 +86,15 @@ class USlateThemeManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 2496;
 
 public:
-	SMember(FGuid)                                     CurrentThemeId                                              OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FStyleColorList)                           ActiveColors                                                OFFSET(get<T>, {0x38, 2440, 0, 0})
+	SMember(FGuid)                                     CurrentThemeId                                              OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FStyleColorList)                           ActiveColors                                                OFFSET(getStruct<T>, {0x38, 2440, 0, 0})
 };
 
 /// Struct /Script/SlateCore.Geometry
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FGeometry : public MDKStruct
+class FGeometry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -102,8 +103,9 @@ public:
 
 /// Struct /Script/SlateCore.SlateBrush
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FSlateBrush : public MDKStruct
+class FSlateBrush : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
@@ -114,25 +116,26 @@ public:
 	CMember(TEnumAsByte<ESlateBrushTileType>)          Tiling                                                      OFFSET(get<T>, {0x12, 1, 0, 0})
 	CMember(TEnumAsByte<ESlateBrushMirrorType>)        Mirroring                                                   OFFSET(get<T>, {0x13, 1, 0, 0})
 	CMember(TEnumAsByte<ESlateBrushImageType>)         ImageType                                                   OFFSET(get<T>, {0x14, 1, 0, 0})
-	SMember(FDeprecateSlateVector2D)                   ImageSize                                                   OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FMargin)                                   Margin                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FSlateColor)                               TintColor                                                   OFFSET(get<T>, {0x30, 20, 0, 0})
-	SMember(FSlateBrushOutlineSettings)                OutlineSettings                                             OFFSET(get<T>, {0x50, 64, 0, 0})
+	SMember(FDeprecateSlateVector2D)                   ImageSize                                                   OFFSET(getStruct<T>, {0x18, 8, 0, 0})
+	SMember(FMargin)                                   Margin                                                      OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FSlateColor)                               TintColor                                                   OFFSET(getStruct<T>, {0x30, 20, 0, 0})
+	SMember(FSlateBrushOutlineSettings)                OutlineSettings                                             OFFSET(getStruct<T>, {0x50, 64, 0, 0})
 	CMember(UObject*)                                  ResourceObject                                              OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FName)                                     ResourceName                                                OFFSET(get<T>, {0x98, 4, 0, 0})
-	SMember(FBox2f)                                    UVRegion                                                    OFFSET(get<T>, {0x9C, 20, 0, 0})
+	SMember(FName)                                     ResourceName                                                OFFSET(getStruct<T>, {0x98, 4, 0, 0})
+	SMember(FBox2f)                                    UVRegion                                                    OFFSET(getStruct<T>, {0x9C, 20, 0, 0})
 };
 
 /// Struct /Script/SlateCore.SlateBrushOutlineSettings
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSlateBrushOutlineSettings : public MDKStruct
+class FSlateBrushOutlineSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector4)                                  CornerRadii                                                 OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FSlateColor)                               Color                                                       OFFSET(get<T>, {0x20, 20, 0, 0})
+	SMember(FVector4)                                  CornerRadii                                                 OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FSlateColor)                               Color                                                       OFFSET(getStruct<T>, {0x20, 20, 0, 0})
 	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
 	CMember(TEnumAsByte<ESlateBrushRoundingType>)      RoundingType                                                OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(bool)                                      bUseBrushTransparency                                       OFFSET(get<bool>, {0x39, 1, 0, 0})
@@ -140,20 +143,22 @@ public:
 
 /// Struct /Script/SlateCore.SlateColor
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FSlateColor : public MDKStruct
+class FSlateColor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FLinearColor)                              SpecifiedColor                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              SpecifiedColor                                              OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(ESlateColorStylingMode)                    ColorUseRule                                                OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/SlateCore.Margin
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMargin : public MDKStruct
+class FMargin : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -168,6 +173,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FDeprecateSlateVector2D : public FVector2f
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -176,8 +182,9 @@ public:
 
 /// Struct /Script/SlateCore.InputEvent
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FInputEvent : public MDKStruct
+class FInputEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -188,6 +195,7 @@ public:
 /// Size: 0x0058 (0x000020 - 0x000078)
 class FPointerEvent : public FInputEvent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
@@ -196,8 +204,9 @@ public:
 
 /// Struct /Script/SlateCore.SlateWidgetStyle
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSlateWidgetStyle : public MDKStruct
+class FSlateWidgetStyle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -208,19 +217,20 @@ public:
 /// Size: 0x06D8 (0x000008 - 0x0006E0)
 class FScrollBarStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1760;
 
 public:
-	SMember(FSlateBrush)                               HorizontalBackgroundImage                                   OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               VerticalBackgroundImage                                     OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               VerticalTopSlotImage                                        OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               HorizontalTopSlotImage                                      OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               VerticalBottomSlotImage                                     OFFSET(get<T>, {0x310, 192, 0, 0})
-	SMember(FSlateBrush)                               HorizontalBottomSlotImage                                   OFFSET(get<T>, {0x3D0, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalThumbImage                                            OFFSET(get<T>, {0x490, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredThumbImage                                           OFFSET(get<T>, {0x550, 192, 0, 0})
-	SMember(FSlateBrush)                               DraggedThumbImage                                           OFFSET(get<T>, {0x610, 192, 0, 0})
+	SMember(FSlateBrush)                               HorizontalBackgroundImage                                   OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               VerticalBackgroundImage                                     OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               VerticalTopSlotImage                                        OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               HorizontalTopSlotImage                                      OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               VerticalBottomSlotImage                                     OFFSET(getStruct<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               HorizontalBottomSlotImage                                   OFFSET(getStruct<T>, {0x3D0, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalThumbImage                                            OFFSET(getStruct<T>, {0x490, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredThumbImage                                           OFFSET(getStruct<T>, {0x550, 192, 0, 0})
+	SMember(FSlateBrush)                               DraggedThumbImage                                           OFFSET(getStruct<T>, {0x610, 192, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x6D0, 4, 0, 0})
 };
 
@@ -228,50 +238,53 @@ public:
 /// Size: 0x0C48 (0x000008 - 0x000C50)
 class FTableRowStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3152;
 
 public:
-	SMember(FSlateBrush)                               SelectorFocusedBrush                                        OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               ActiveHoveredBrush                                          OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               ActiveBrush                                                 OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               InactiveHoveredBrush                                        OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               InactiveBrush                                               OFFSET(get<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               SelectorFocusedBrush                                        OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               ActiveHoveredBrush                                          OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               ActiveBrush                                                 OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               InactiveHoveredBrush                                        OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               InactiveBrush                                               OFFSET(getStruct<T>, {0x310, 192, 0, 0})
 	DMember(bool)                                      bUseParentRowBrush                                          OFFSET(get<bool>, {0x3D0, 1, 0, 0})
-	SMember(FSlateBrush)                               ParentRowBackgroundBrush                                    OFFSET(get<T>, {0x3E0, 192, 0, 0})
-	SMember(FSlateBrush)                               ParentRowBackgroundHoveredBrush                             OFFSET(get<T>, {0x4A0, 192, 0, 0})
-	SMember(FSlateBrush)                               EvenRowBackgroundHoveredBrush                               OFFSET(get<T>, {0x560, 192, 0, 0})
-	SMember(FSlateBrush)                               EvenRowBackgroundBrush                                      OFFSET(get<T>, {0x620, 192, 0, 0})
-	SMember(FSlateBrush)                               OddRowBackgroundHoveredBrush                                OFFSET(get<T>, {0x6E0, 192, 0, 0})
-	SMember(FSlateBrush)                               OddRowBackgroundBrush                                       OFFSET(get<T>, {0x7A0, 192, 0, 0})
-	SMember(FSlateColor)                               TextColor                                                   OFFSET(get<T>, {0x860, 20, 0, 0})
-	SMember(FSlateColor)                               SelectedTextColor                                           OFFSET(get<T>, {0x874, 20, 0, 0})
-	SMember(FSlateBrush)                               DropIndicator_Above                                         OFFSET(get<T>, {0x890, 192, 0, 0})
-	SMember(FSlateBrush)                               DropIndicator_Onto                                          OFFSET(get<T>, {0x950, 192, 0, 0})
-	SMember(FSlateBrush)                               DropIndicator_Below                                         OFFSET(get<T>, {0xA10, 192, 0, 0})
-	SMember(FSlateBrush)                               ActiveHighlightedBrush                                      OFFSET(get<T>, {0xAD0, 192, 0, 0})
-	SMember(FSlateBrush)                               InactiveHighlightedBrush                                    OFFSET(get<T>, {0xB90, 192, 0, 0})
+	SMember(FSlateBrush)                               ParentRowBackgroundBrush                                    OFFSET(getStruct<T>, {0x3E0, 192, 0, 0})
+	SMember(FSlateBrush)                               ParentRowBackgroundHoveredBrush                             OFFSET(getStruct<T>, {0x4A0, 192, 0, 0})
+	SMember(FSlateBrush)                               EvenRowBackgroundHoveredBrush                               OFFSET(getStruct<T>, {0x560, 192, 0, 0})
+	SMember(FSlateBrush)                               EvenRowBackgroundBrush                                      OFFSET(getStruct<T>, {0x620, 192, 0, 0})
+	SMember(FSlateBrush)                               OddRowBackgroundHoveredBrush                                OFFSET(getStruct<T>, {0x6E0, 192, 0, 0})
+	SMember(FSlateBrush)                               OddRowBackgroundBrush                                       OFFSET(getStruct<T>, {0x7A0, 192, 0, 0})
+	SMember(FSlateColor)                               TextColor                                                   OFFSET(getStruct<T>, {0x860, 20, 0, 0})
+	SMember(FSlateColor)                               SelectedTextColor                                           OFFSET(getStruct<T>, {0x874, 20, 0, 0})
+	SMember(FSlateBrush)                               DropIndicator_Above                                         OFFSET(getStruct<T>, {0x890, 192, 0, 0})
+	SMember(FSlateBrush)                               DropIndicator_Onto                                          OFFSET(getStruct<T>, {0x950, 192, 0, 0})
+	SMember(FSlateBrush)                               DropIndicator_Below                                         OFFSET(getStruct<T>, {0xA10, 192, 0, 0})
+	SMember(FSlateBrush)                               ActiveHighlightedBrush                                      OFFSET(getStruct<T>, {0xAD0, 192, 0, 0})
+	SMember(FSlateBrush)                               InactiveHighlightedBrush                                    OFFSET(getStruct<T>, {0xB90, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.ComboBoxStyle
 /// Size: 0x05F8 (0x000008 - 0x000600)
 class FComboBoxStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1536;
 
 public:
-	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(get<T>, {0x10, 1440, 0, 0})
-	SMember(FSlateSound)                               PressedSlateSound                                           OFFSET(get<T>, {0x5B0, 24, 0, 0})
-	SMember(FSlateSound)                               SelectionChangeSlateSound                                   OFFSET(get<T>, {0x5C8, 24, 0, 0})
-	SMember(FMargin)                                   ContentPadding                                              OFFSET(get<T>, {0x5E0, 16, 0, 0})
-	SMember(FMargin)                                   MenuRowPadding                                              OFFSET(get<T>, {0x5F0, 16, 0, 0})
+	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(getStruct<T>, {0x10, 1440, 0, 0})
+	SMember(FSlateSound)                               PressedSlateSound                                           OFFSET(getStruct<T>, {0x5B0, 24, 0, 0})
+	SMember(FSlateSound)                               SelectionChangeSlateSound                                   OFFSET(getStruct<T>, {0x5C8, 24, 0, 0})
+	SMember(FMargin)                                   ContentPadding                                              OFFSET(getStruct<T>, {0x5E0, 16, 0, 0})
+	SMember(FMargin)                                   MenuRowPadding                                              OFFSET(getStruct<T>, {0x5F0, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.SlateSound
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSlateSound : public MDKStruct
+class FSlateSound : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -283,18 +296,19 @@ public:
 /// Size: 0x0598 (0x000008 - 0x0005A0)
 class FComboButtonStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1440;
 
 public:
-	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(get<T>, {0x10, 944, 0, 0})
-	SMember(FSlateBrush)                               DownArrowImage                                              OFFSET(get<T>, {0x3C0, 192, 0, 0})
-	SMember(FDeprecateSlateVector2D)                   ShadowOffset                                                OFFSET(get<T>, {0x480, 8, 0, 0})
-	SMember(FLinearColor)                              ShadowColorAndOpacity                                       OFFSET(get<T>, {0x488, 16, 0, 0})
-	SMember(FSlateBrush)                               MenuBorderBrush                                             OFFSET(get<T>, {0x4A0, 192, 0, 0})
-	SMember(FMargin)                                   MenuBorderPadding                                           OFFSET(get<T>, {0x560, 16, 0, 0})
-	SMember(FMargin)                                   ContentPadding                                              OFFSET(get<T>, {0x570, 16, 0, 0})
-	SMember(FMargin)                                   DownArrowPadding                                            OFFSET(get<T>, {0x580, 16, 0, 0})
+	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(getStruct<T>, {0x10, 944, 0, 0})
+	SMember(FSlateBrush)                               DownArrowImage                                              OFFSET(getStruct<T>, {0x3C0, 192, 0, 0})
+	SMember(FDeprecateSlateVector2D)                   ShadowOffset                                                OFFSET(getStruct<T>, {0x480, 8, 0, 0})
+	SMember(FLinearColor)                              ShadowColorAndOpacity                                       OFFSET(getStruct<T>, {0x488, 16, 0, 0})
+	SMember(FSlateBrush)                               MenuBorderBrush                                             OFFSET(getStruct<T>, {0x4A0, 192, 0, 0})
+	SMember(FMargin)                                   MenuBorderPadding                                           OFFSET(getStruct<T>, {0x560, 16, 0, 0})
+	SMember(FMargin)                                   ContentPadding                                              OFFSET(getStruct<T>, {0x570, 16, 0, 0})
+	SMember(FMargin)                                   DownArrowPadding                                            OFFSET(getStruct<T>, {0x580, 16, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           DownArrowAlign                                              OFFSET(get<T>, {0x590, 1, 0, 0})
 };
 
@@ -302,36 +316,38 @@ public:
 /// Size: 0x03A8 (0x000008 - 0x0003B0)
 class FButtonStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FSlateBrush)                               Normal                                                      OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               Hovered                                                     OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               Pressed                                                     OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               Disabled                                                    OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateColor)                               NormalForeground                                            OFFSET(get<T>, {0x310, 20, 0, 0})
-	SMember(FSlateColor)                               HoveredForeground                                           OFFSET(get<T>, {0x324, 20, 0, 0})
-	SMember(FSlateColor)                               PressedForeground                                           OFFSET(get<T>, {0x338, 20, 0, 0})
-	SMember(FSlateColor)                               DisabledForeground                                          OFFSET(get<T>, {0x34C, 20, 0, 0})
-	SMember(FMargin)                                   NormalPadding                                               OFFSET(get<T>, {0x360, 16, 0, 0})
-	SMember(FMargin)                                   PressedPadding                                              OFFSET(get<T>, {0x370, 16, 0, 0})
-	SMember(FSlateSound)                               PressedSlateSound                                           OFFSET(get<T>, {0x380, 24, 0, 0})
-	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(get<T>, {0x398, 24, 0, 0})
+	SMember(FSlateBrush)                               Normal                                                      OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               Hovered                                                     OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               Pressed                                                     OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               Disabled                                                    OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateColor)                               NormalForeground                                            OFFSET(getStruct<T>, {0x310, 20, 0, 0})
+	SMember(FSlateColor)                               HoveredForeground                                           OFFSET(getStruct<T>, {0x324, 20, 0, 0})
+	SMember(FSlateColor)                               PressedForeground                                           OFFSET(getStruct<T>, {0x338, 20, 0, 0})
+	SMember(FSlateColor)                               DisabledForeground                                          OFFSET(getStruct<T>, {0x34C, 20, 0, 0})
+	SMember(FMargin)                                   NormalPadding                                               OFFSET(getStruct<T>, {0x360, 16, 0, 0})
+	SMember(FMargin)                                   PressedPadding                                              OFFSET(getStruct<T>, {0x370, 16, 0, 0})
+	SMember(FSlateSound)                               PressedSlateSound                                           OFFSET(getStruct<T>, {0x380, 24, 0, 0})
+	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(getStruct<T>, {0x398, 24, 0, 0})
 };
 
 /// Struct /Script/SlateCore.SlateFontInfo
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FSlateFontInfo : public MDKStruct
+class FSlateFontInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	CMember(UObject*)                                  FontObject                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UObject*)                                  FontMaterial                                                OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FFontOutlineSettings)                      OutlineSettings                                             OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FName)                                     TypefaceFontName                                            OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FFontOutlineSettings)                      OutlineSettings                                             OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FName)                                     TypefaceFontName                                            OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 	DMember(float)                                     Size                                                        OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(int32_t)                                   LetterSpacing                                               OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(float)                                     SkewAmount                                                  OFFSET(get<float>, {0x4C, 4, 0, 0})
@@ -339,8 +355,9 @@ public:
 
 /// Struct /Script/SlateCore.FontOutlineSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFontOutlineSettings : public MDKStruct
+class FFontOutlineSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -349,64 +366,67 @@ public:
 	DMember(bool)                                      bSeparateFillAlpha                                          OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bApplyOutlineToDropShadows                                  OFFSET(get<bool>, {0x5, 1, 0, 0})
 	CMember(UObject*)                                  OutlineMaterial                                             OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FLinearColor)                              OutlineColor                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FLinearColor)                              OutlineColor                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.EditableTextStyle
 /// Size: 0x02B8 (0x000008 - 0x0002C0)
 class FEditableTextStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x8, 88, 0, 0})
-	SMember(FSlateColor)                               ColorAndOpacity                                             OFFSET(get<T>, {0x60, 20, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImageSelected                                     OFFSET(get<T>, {0x80, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImageComposing                                    OFFSET(get<T>, {0x140, 192, 0, 0})
-	SMember(FSlateBrush)                               CaretImage                                                  OFFSET(get<T>, {0x200, 192, 0, 0})
+	SMember(FSlateFontInfo)                            Font                                                        OFFSET(getStruct<T>, {0x8, 88, 0, 0})
+	SMember(FSlateColor)                               ColorAndOpacity                                             OFFSET(getStruct<T>, {0x60, 20, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImageSelected                                     OFFSET(getStruct<T>, {0x80, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImageComposing                                    OFFSET(getStruct<T>, {0x140, 192, 0, 0})
+	SMember(FSlateBrush)                               CaretImage                                                  OFFSET(getStruct<T>, {0x200, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.EditableTextBoxStyle
 /// Size: 0x0D78 (0x000008 - 0x000D80)
 class FEditableTextBoxStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3456;
 
 public:
-	SMember(FSlateBrush)                               BackgroundImageNormal                                       OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImageHovered                                      OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImageFocused                                      OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImageReadOnly                                     OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x310, 16, 0, 0})
-	SMember(FTextBlockStyle)                           TextStyle                                                   OFFSET(get<T>, {0x320, 784, 0, 0})
-	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(get<T>, {0x630, 20, 0, 0})
-	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(get<T>, {0x644, 20, 0, 0})
-	SMember(FSlateColor)                               ReadOnlyForegroundColor                                     OFFSET(get<T>, {0x658, 20, 0, 0})
-	SMember(FSlateColor)                               FocusedForegroundColor                                      OFFSET(get<T>, {0x66C, 20, 0, 0})
-	SMember(FMargin)                                   HScrollBarPadding                                           OFFSET(get<T>, {0x680, 16, 0, 0})
-	SMember(FMargin)                                   VScrollBarPadding                                           OFFSET(get<T>, {0x690, 16, 0, 0})
-	SMember(FScrollBarStyle)                           ScrollBarStyle                                              OFFSET(get<T>, {0x6A0, 1760, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImageNormal                                       OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImageHovered                                      OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImageFocused                                      OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImageReadOnly                                     OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x310, 16, 0, 0})
+	SMember(FTextBlockStyle)                           TextStyle                                                   OFFSET(getStruct<T>, {0x320, 784, 0, 0})
+	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(getStruct<T>, {0x630, 20, 0, 0})
+	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(getStruct<T>, {0x644, 20, 0, 0})
+	SMember(FSlateColor)                               ReadOnlyForegroundColor                                     OFFSET(getStruct<T>, {0x658, 20, 0, 0})
+	SMember(FSlateColor)                               FocusedForegroundColor                                      OFFSET(getStruct<T>, {0x66C, 20, 0, 0})
+	SMember(FMargin)                                   HScrollBarPadding                                           OFFSET(getStruct<T>, {0x680, 16, 0, 0})
+	SMember(FMargin)                                   VScrollBarPadding                                           OFFSET(getStruct<T>, {0x690, 16, 0, 0})
+	SMember(FScrollBarStyle)                           ScrollBarStyle                                              OFFSET(getStruct<T>, {0x6A0, 1760, 0, 0})
 };
 
 /// Struct /Script/SlateCore.TextBlockStyle
 /// Size: 0x0308 (0x000008 - 0x000310)
 class FTextBlockStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x8, 88, 0, 0})
-	SMember(FSlateColor)                               ColorAndOpacity                                             OFFSET(get<T>, {0x60, 20, 0, 0})
-	SMember(FDeprecateSlateVector2D)                   ShadowOffset                                                OFFSET(get<T>, {0x74, 8, 0, 0})
-	SMember(FLinearColor)                              ShadowColorAndOpacity                                       OFFSET(get<T>, {0x7C, 16, 0, 0})
-	SMember(FSlateColor)                               SelectedBackgroundColor                                     OFFSET(get<T>, {0x8C, 20, 0, 0})
-	SMember(FSlateColor)                               HighlightColor                                              OFFSET(get<T>, {0xA0, 20, 0, 0})
-	SMember(FSlateBrush)                               HighlightShape                                              OFFSET(get<T>, {0xC0, 192, 0, 0})
-	SMember(FSlateBrush)                               StrikeBrush                                                 OFFSET(get<T>, {0x180, 192, 0, 0})
-	SMember(FSlateBrush)                               UnderlineBrush                                              OFFSET(get<T>, {0x240, 192, 0, 0})
+	SMember(FSlateFontInfo)                            Font                                                        OFFSET(getStruct<T>, {0x8, 88, 0, 0})
+	SMember(FSlateColor)                               ColorAndOpacity                                             OFFSET(getStruct<T>, {0x60, 20, 0, 0})
+	SMember(FDeprecateSlateVector2D)                   ShadowOffset                                                OFFSET(getStruct<T>, {0x74, 8, 0, 0})
+	SMember(FLinearColor)                              ShadowColorAndOpacity                                       OFFSET(getStruct<T>, {0x7C, 16, 0, 0})
+	SMember(FSlateColor)                               SelectedBackgroundColor                                     OFFSET(getStruct<T>, {0x8C, 20, 0, 0})
+	SMember(FSlateColor)                               HighlightColor                                              OFFSET(getStruct<T>, {0xA0, 20, 0, 0})
+	SMember(FSlateBrush)                               HighlightShape                                              OFFSET(getStruct<T>, {0xC0, 192, 0, 0})
+	SMember(FSlateBrush)                               StrikeBrush                                                 OFFSET(getStruct<T>, {0x180, 192, 0, 0})
+	SMember(FSlateBrush)                               UnderlineBrush                                              OFFSET(getStruct<T>, {0x240, 192, 0, 0})
 	CMember(ETextTransformPolicy)                      TransformPolicy                                             OFFSET(get<T>, {0x300, 1, 0, 0})
 	CMember(ETextOverflowPolicy)                       OverflowPolicy                                              OFFSET(get<T>, {0x301, 1, 0, 0})
 };
@@ -415,26 +435,28 @@ public:
 /// Size: 0x0588 (0x000008 - 0x000590)
 class FSpinBoxStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               ActiveBackgroundBrush                                       OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredBackgroundBrush                                      OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               ActiveFillBrush                                             OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredFillBrush                                            OFFSET(get<T>, {0x310, 192, 0, 0})
-	SMember(FSlateBrush)                               InactiveFillBrush                                           OFFSET(get<T>, {0x3D0, 192, 0, 0})
-	SMember(FSlateBrush)                               ArrowsImage                                                 OFFSET(get<T>, {0x490, 192, 0, 0})
-	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(get<T>, {0x550, 20, 0, 0})
-	SMember(FMargin)                                   TextPadding                                                 OFFSET(get<T>, {0x564, 16, 0, 0})
-	SMember(FMargin)                                   InsetPadding                                                OFFSET(get<T>, {0x574, 16, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               ActiveBackgroundBrush                                       OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredBackgroundBrush                                      OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               ActiveFillBrush                                             OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredFillBrush                                            OFFSET(getStruct<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               InactiveFillBrush                                           OFFSET(getStruct<T>, {0x3D0, 192, 0, 0})
+	SMember(FSlateBrush)                               ArrowsImage                                                 OFFSET(getStruct<T>, {0x490, 192, 0, 0})
+	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(getStruct<T>, {0x550, 20, 0, 0})
+	SMember(FMargin)                                   TextPadding                                                 OFFSET(getStruct<T>, {0x564, 16, 0, 0})
+	SMember(FMargin)                                   InsetPadding                                                OFFSET(getStruct<T>, {0x574, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.CharacterEvent
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FCharacterEvent : public FInputEvent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -445,6 +467,7 @@ public:
 /// Size: 0x0020 (0x000020 - 0x000040)
 class FKeyEvent : public FInputEvent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -455,6 +478,7 @@ public:
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FNavigationEvent : public FInputEvent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -465,6 +489,7 @@ public:
 /// Size: 0x0008 (0x000040 - 0x000048)
 class FAnalogInputEvent : public FKeyEvent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -473,8 +498,9 @@ public:
 
 /// Struct /Script/SlateCore.FocusEvent
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFocusEvent : public MDKStruct
+class FFocusEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -485,6 +511,7 @@ public:
 /// Size: 0x0060 (0x000020 - 0x000080)
 class FMotionEvent : public FInputEvent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -495,22 +522,24 @@ public:
 /// Size: 0x00C8 (0x000008 - 0x0000D0)
 class FTableViewStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x10, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.FontData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FFontData : public MDKStruct
+class FFontData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   FontFilename                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   FontFilename                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EFontHinting)                              Hinting                                                     OFFSET(get<T>, {0x14, 1, 0, 0})
 	CMember(EFontLoadingPolicy)                        LoadingPolicy                                               OFFSET(get<T>, {0x15, 1, 0, 0})
 	DMember(int32_t)                                   SubFaceIndex                                                OFFSET(get<int32_t>, {0x18, 4, 0, 0})
@@ -519,20 +548,22 @@ public:
 
 /// Struct /Script/SlateCore.TypefaceEntry
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FTypefaceEntry : public MDKStruct
+class FTypefaceEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FFontData)                                 Font                                                        OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FFontData)                                 Font                                                        OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/SlateCore.Typeface
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FTypeface : public MDKStruct
+class FTypeface : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -542,13 +573,14 @@ public:
 
 /// Struct /Script/SlateCore.CompositeFallbackFont
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCompositeFallbackFont : public MDKStruct
+class FCompositeFallbackFont : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FTypeface)                                 Typeface                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FTypeface)                                 Typeface                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(float)                                     ScalingFactor                                               OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
@@ -556,32 +588,35 @@ public:
 /// Size: 0x0020 (0x000018 - 0x000038)
 class FCompositeSubFont : public FCompositeFallbackFont
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(TArray<FInt32Range>)                       CharacterRanges                                             OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Cultures                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Cultures                                                    OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.CompositeFont
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCompositeFont : public MDKStruct
+class FCompositeFont : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FTypeface)                                 DefaultTypeface                                             OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FCompositeFallbackFont)                    FallbackTypeface                                            OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FTypeface)                                 DefaultTypeface                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FCompositeFallbackFont)                    FallbackTypeface                                            OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	CMember(TArray<FCompositeSubFont>)                 SubTypefaces                                                OFFSET(get<T>, {0x28, 16, 0, 0})
 	DMember(bool)                                      bEnableAscentDescentOverride                                OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/SlateCore.CaptureLostEvent
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FCaptureLostEvent : public MDKStruct
+class FCaptureLostEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -592,88 +627,93 @@ public:
 /// Size: 0x1F08 (0x000008 - 0x001F10)
 class FSegmentedControlStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 7952;
 
 public:
-	SMember(FCheckBoxStyle)                            ControlStyle                                                OFFSET(get<T>, {0x10, 2576, 0, 0})
-	SMember(FCheckBoxStyle)                            FirstControlStyle                                           OFFSET(get<T>, {0xA20, 2576, 0, 0})
-	SMember(FCheckBoxStyle)                            LastControlStyle                                            OFFSET(get<T>, {0x1430, 2576, 0, 0})
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0x1E40, 192, 0, 0})
-	SMember(FMargin)                                   UniformPadding                                              OFFSET(get<T>, {0x1F00, 16, 0, 0})
+	SMember(FCheckBoxStyle)                            ControlStyle                                                OFFSET(getStruct<T>, {0x10, 2576, 0, 0})
+	SMember(FCheckBoxStyle)                            FirstControlStyle                                           OFFSET(getStruct<T>, {0xA20, 2576, 0, 0})
+	SMember(FCheckBoxStyle)                            LastControlStyle                                            OFFSET(getStruct<T>, {0x1430, 2576, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x1E40, 192, 0, 0})
+	SMember(FMargin)                                   UniformPadding                                              OFFSET(getStruct<T>, {0x1F00, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.CheckBoxStyle
 /// Size: 0x0A08 (0x000008 - 0x000A10)
 class FCheckBoxStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2576;
 
 public:
 	CMember(TEnumAsByte<ESlateCheckBoxType>)           CheckBoxType                                                OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FSlateBrush)                               UncheckedImage                                              OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               UncheckedHoveredImage                                       OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               UncheckedPressedImage                                       OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               CheckedImage                                                OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               CheckedHoveredImage                                         OFFSET(get<T>, {0x310, 192, 0, 0})
-	SMember(FSlateBrush)                               CheckedPressedImage                                         OFFSET(get<T>, {0x3D0, 192, 0, 0})
-	SMember(FSlateBrush)                               UndeterminedImage                                           OFFSET(get<T>, {0x490, 192, 0, 0})
-	SMember(FSlateBrush)                               UndeterminedHoveredImage                                    OFFSET(get<T>, {0x550, 192, 0, 0})
-	SMember(FSlateBrush)                               UndeterminedPressedImage                                    OFFSET(get<T>, {0x610, 192, 0, 0})
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x6D0, 16, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImage                                             OFFSET(get<T>, {0x6E0, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundHoveredImage                                      OFFSET(get<T>, {0x7A0, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundPressedImage                                      OFFSET(get<T>, {0x860, 192, 0, 0})
-	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(get<T>, {0x920, 20, 0, 0})
-	SMember(FSlateColor)                               HoveredForeground                                           OFFSET(get<T>, {0x934, 20, 0, 0})
-	SMember(FSlateColor)                               PressedForeground                                           OFFSET(get<T>, {0x948, 20, 0, 0})
-	SMember(FSlateColor)                               CheckedForeground                                           OFFSET(get<T>, {0x95C, 20, 0, 0})
-	SMember(FSlateColor)                               CheckedHoveredForeground                                    OFFSET(get<T>, {0x970, 20, 0, 0})
-	SMember(FSlateColor)                               CheckedPressedForeground                                    OFFSET(get<T>, {0x984, 20, 0, 0})
-	SMember(FSlateColor)                               UndeterminedForeground                                      OFFSET(get<T>, {0x998, 20, 0, 0})
-	SMember(FSlateColor)                               BorderBackgroundColor                                       OFFSET(get<T>, {0x9AC, 20, 0, 0})
-	SMember(FSlateSound)                               CheckedSlateSound                                           OFFSET(get<T>, {0x9C0, 24, 0, 0})
-	SMember(FSlateSound)                               UncheckedSlateSound                                         OFFSET(get<T>, {0x9D8, 24, 0, 0})
-	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(get<T>, {0x9F0, 24, 0, 0})
+	SMember(FSlateBrush)                               UncheckedImage                                              OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               UncheckedHoveredImage                                       OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               UncheckedPressedImage                                       OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               CheckedImage                                                OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               CheckedHoveredImage                                         OFFSET(getStruct<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               CheckedPressedImage                                         OFFSET(getStruct<T>, {0x3D0, 192, 0, 0})
+	SMember(FSlateBrush)                               UndeterminedImage                                           OFFSET(getStruct<T>, {0x490, 192, 0, 0})
+	SMember(FSlateBrush)                               UndeterminedHoveredImage                                    OFFSET(getStruct<T>, {0x550, 192, 0, 0})
+	SMember(FSlateBrush)                               UndeterminedPressedImage                                    OFFSET(getStruct<T>, {0x610, 192, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x6D0, 16, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImage                                             OFFSET(getStruct<T>, {0x6E0, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundHoveredImage                                      OFFSET(getStruct<T>, {0x7A0, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundPressedImage                                      OFFSET(getStruct<T>, {0x860, 192, 0, 0})
+	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(getStruct<T>, {0x920, 20, 0, 0})
+	SMember(FSlateColor)                               HoveredForeground                                           OFFSET(getStruct<T>, {0x934, 20, 0, 0})
+	SMember(FSlateColor)                               PressedForeground                                           OFFSET(getStruct<T>, {0x948, 20, 0, 0})
+	SMember(FSlateColor)                               CheckedForeground                                           OFFSET(getStruct<T>, {0x95C, 20, 0, 0})
+	SMember(FSlateColor)                               CheckedHoveredForeground                                    OFFSET(getStruct<T>, {0x970, 20, 0, 0})
+	SMember(FSlateColor)                               CheckedPressedForeground                                    OFFSET(getStruct<T>, {0x984, 20, 0, 0})
+	SMember(FSlateColor)                               UndeterminedForeground                                      OFFSET(getStruct<T>, {0x998, 20, 0, 0})
+	SMember(FSlateColor)                               BorderBackgroundColor                                       OFFSET(getStruct<T>, {0x9AC, 20, 0, 0})
+	SMember(FSlateSound)                               CheckedSlateSound                                           OFFSET(getStruct<T>, {0x9C0, 24, 0, 0})
+	SMember(FSlateSound)                               UncheckedSlateSound                                         OFFSET(getStruct<T>, {0x9D8, 24, 0, 0})
+	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(getStruct<T>, {0x9F0, 24, 0, 0})
 };
 
 /// Struct /Script/SlateCore.HyperlinkStyle
 /// Size: 0x06D8 (0x000008 - 0x0006E0)
 class FHyperlinkStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1760;
 
 public:
-	SMember(FButtonStyle)                              UnderlineStyle                                              OFFSET(get<T>, {0x10, 944, 0, 0})
-	SMember(FTextBlockStyle)                           TextStyle                                                   OFFSET(get<T>, {0x3C0, 784, 0, 0})
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x6D0, 16, 0, 0})
+	SMember(FButtonStyle)                              UnderlineStyle                                              OFFSET(getStruct<T>, {0x10, 944, 0, 0})
+	SMember(FTextBlockStyle)                           TextStyle                                                   OFFSET(getStruct<T>, {0x3C0, 784, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x6D0, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.InlineEditableTextBlockStyle
 /// Size: 0x1098 (0x000008 - 0x0010A0)
 class FInlineEditableTextBlockStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4256;
 
 public:
-	SMember(FEditableTextBoxStyle)                     EditableTextBoxStyle                                        OFFSET(get<T>, {0x10, 3456, 0, 0})
-	SMember(FTextBlockStyle)                           TextStyle                                                   OFFSET(get<T>, {0xD90, 784, 0, 0})
+	SMember(FEditableTextBoxStyle)                     EditableTextBoxStyle                                        OFFSET(getStruct<T>, {0x10, 3456, 0, 0})
+	SMember(FTextBlockStyle)                           TextStyle                                                   OFFSET(getStruct<T>, {0xD90, 784, 0, 0})
 };
 
 /// Struct /Script/SlateCore.ProgressBarStyle
 /// Size: 0x0258 (0x000008 - 0x000260)
 class FProgressBarStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FSlateBrush)                               BackgroundImage                                             OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               FillImage                                                   OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               MarqueeImage                                                OFFSET(get<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImage                                             OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               FillImage                                                   OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               MarqueeImage                                                OFFSET(getStruct<T>, {0x190, 192, 0, 0})
 	DMember(bool)                                      EnableFillAnimation                                         OFFSET(get<bool>, {0x250, 1, 0, 0})
 };
 
@@ -681,12 +721,13 @@ public:
 /// Size: 0x0198 (0x000008 - 0x0001A0)
 class FExpandableAreaStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FSlateBrush)                               CollapsedImage                                              OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               ExpandedImage                                               OFFSET(get<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               CollapsedImage                                              OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               ExpandedImage                                               OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
 	DMember(float)                                     RolloutAnimationSeconds                                     OFFSET(get<float>, {0x190, 4, 0, 0})
 };
 
@@ -694,17 +735,18 @@ public:
 /// Size: 0x1108 (0x000008 - 0x001110)
 class FSearchBoxStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4368;
 
 public:
-	SMember(FEditableTextBoxStyle)                     TextBoxStyle                                                OFFSET(get<T>, {0x10, 3456, 0, 0})
-	SMember(FSlateFontInfo)                            ActiveFontInfo                                              OFFSET(get<T>, {0xD90, 88, 0, 0})
-	SMember(FSlateBrush)                               UpArrowImage                                                OFFSET(get<T>, {0xDF0, 192, 0, 0})
-	SMember(FSlateBrush)                               DownArrowImage                                              OFFSET(get<T>, {0xEB0, 192, 0, 0})
-	SMember(FSlateBrush)                               GlassImage                                                  OFFSET(get<T>, {0xF70, 192, 0, 0})
-	SMember(FSlateBrush)                               ClearImage                                                  OFFSET(get<T>, {0x1030, 192, 0, 0})
-	SMember(FMargin)                                   ImagePadding                                                OFFSET(get<T>, {0x10F0, 16, 0, 0})
+	SMember(FEditableTextBoxStyle)                     TextBoxStyle                                                OFFSET(getStruct<T>, {0x10, 3456, 0, 0})
+	SMember(FSlateFontInfo)                            ActiveFontInfo                                              OFFSET(getStruct<T>, {0xD90, 88, 0, 0})
+	SMember(FSlateBrush)                               UpArrowImage                                                OFFSET(getStruct<T>, {0xDF0, 192, 0, 0})
+	SMember(FSlateBrush)                               DownArrowImage                                              OFFSET(getStruct<T>, {0xEB0, 192, 0, 0})
+	SMember(FSlateBrush)                               GlassImage                                                  OFFSET(getStruct<T>, {0xF70, 192, 0, 0})
+	SMember(FSlateBrush)                               ClearImage                                                  OFFSET(getStruct<T>, {0x1030, 192, 0, 0})
+	SMember(FMargin)                                   ImagePadding                                                OFFSET(getStruct<T>, {0x10F0, 16, 0, 0})
 	DMember(bool)                                      bLeftAlignButtons                                           OFFSET(get<bool>, {0x1100, 1, 0, 0})
 	DMember(bool)                                      bLeftAlignSearchResultButtons                               OFFSET(get<bool>, {0x1101, 1, 0, 0})
 	DMember(bool)                                      bLeftAlignGlassImageAndClearButton                          OFFSET(get<bool>, {0x1102, 1, 0, 0})
@@ -714,16 +756,17 @@ public:
 /// Size: 0x0498 (0x000008 - 0x0004A0)
 class FSliderStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1184;
 
 public:
-	SMember(FSlateBrush)                               NormalBarImage                                              OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredBarImage                                             OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               DisabledBarImage                                            OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalThumbImage                                            OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredThumbImage                                           OFFSET(get<T>, {0x310, 192, 0, 0})
-	SMember(FSlateBrush)                               DisabledThumbImage                                          OFFSET(get<T>, {0x3D0, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalBarImage                                              OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredBarImage                                             OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               DisabledBarImage                                            OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalThumbImage                                            OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredThumbImage                                           OFFSET(getStruct<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               DisabledThumbImage                                          OFFSET(getStruct<T>, {0x3D0, 192, 0, 0})
 	DMember(float)                                     BarThickness                                                OFFSET(get<float>, {0x490, 4, 0, 0})
 };
 
@@ -731,27 +774,29 @@ public:
 /// Size: 0x0868 (0x000008 - 0x000870)
 class FVolumeControlStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2160;
 
 public:
-	SMember(FSliderStyle)                              SliderStyle                                                 OFFSET(get<T>, {0x10, 1184, 0, 0})
-	SMember(FSlateBrush)                               HighVolumeImage                                             OFFSET(get<T>, {0x4B0, 192, 0, 0})
-	SMember(FSlateBrush)                               MidVolumeImage                                              OFFSET(get<T>, {0x570, 192, 0, 0})
-	SMember(FSlateBrush)                               LowVolumeImage                                              OFFSET(get<T>, {0x630, 192, 0, 0})
-	SMember(FSlateBrush)                               NoVolumeImage                                               OFFSET(get<T>, {0x6F0, 192, 0, 0})
-	SMember(FSlateBrush)                               MutedImage                                                  OFFSET(get<T>, {0x7B0, 192, 0, 0})
+	SMember(FSliderStyle)                              SliderStyle                                                 OFFSET(getStruct<T>, {0x10, 1184, 0, 0})
+	SMember(FSlateBrush)                               HighVolumeImage                                             OFFSET(getStruct<T>, {0x4B0, 192, 0, 0})
+	SMember(FSlateBrush)                               MidVolumeImage                                              OFFSET(getStruct<T>, {0x570, 192, 0, 0})
+	SMember(FSlateBrush)                               LowVolumeImage                                              OFFSET(getStruct<T>, {0x630, 192, 0, 0})
+	SMember(FSlateBrush)                               NoVolumeImage                                               OFFSET(getStruct<T>, {0x6F0, 192, 0, 0})
+	SMember(FSlateBrush)                               MutedImage                                                  OFFSET(getStruct<T>, {0x7B0, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.InlineTextImageStyle
 /// Size: 0x00D8 (0x000008 - 0x0000E0)
 class FInlineTextImageStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FSlateBrush)                               Image                                                       OFFSET(get<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               Image                                                       OFFSET(getStruct<T>, {0x10, 192, 0, 0})
 	DMember(int16_t)                                   Baseline                                                    OFFSET(get<int16_t>, {0xD0, 2, 0, 0})
 };
 
@@ -759,48 +804,51 @@ public:
 /// Size: 0x0188 (0x000008 - 0x000190)
 class FSplitterStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FSlateBrush)                               HandleNormalBrush                                           OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               HandleHighlightBrush                                        OFFSET(get<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               HandleNormalBrush                                           OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               HandleHighlightBrush                                        OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.TableColumnHeaderStyle
 /// Size: 0x06C8 (0x000008 - 0x0006D0)
 class FTableColumnHeaderStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1744;
 
 public:
-	SMember(FSlateBrush)                               SortPrimaryAscendingImage                                   OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               SortPrimaryDescendingImage                                  OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               SortSecondaryAscendingImage                                 OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               SortSecondaryDescendingImage                                OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalBrush                                                 OFFSET(get<T>, {0x310, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredBrush                                                OFFSET(get<T>, {0x3D0, 192, 0, 0})
-	SMember(FSlateBrush)                               MenuDropdownImage                                           OFFSET(get<T>, {0x490, 192, 0, 0})
-	SMember(FSlateBrush)                               MenuDropdownNormalBorderBrush                               OFFSET(get<T>, {0x550, 192, 0, 0})
-	SMember(FSlateBrush)                               MenuDropdownHoveredBorderBrush                              OFFSET(get<T>, {0x610, 192, 0, 0})
+	SMember(FSlateBrush)                               SortPrimaryAscendingImage                                   OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               SortPrimaryDescendingImage                                  OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               SortSecondaryAscendingImage                                 OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               SortSecondaryDescendingImage                                OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalBrush                                                 OFFSET(getStruct<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredBrush                                                OFFSET(getStruct<T>, {0x3D0, 192, 0, 0})
+	SMember(FSlateBrush)                               MenuDropdownImage                                           OFFSET(getStruct<T>, {0x490, 192, 0, 0})
+	SMember(FSlateBrush)                               MenuDropdownNormalBorderBrush                               OFFSET(getStruct<T>, {0x550, 192, 0, 0})
+	SMember(FSlateBrush)                               MenuDropdownHoveredBorderBrush                              OFFSET(getStruct<T>, {0x610, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.HeaderRowStyle
 /// Size: 0x10F8 (0x000008 - 0x001100)
 class FHeaderRowStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4352;
 
 public:
-	SMember(FTableColumnHeaderStyle)                   ColumnStyle                                                 OFFSET(get<T>, {0x10, 1744, 0, 0})
-	SMember(FTableColumnHeaderStyle)                   LastColumnStyle                                             OFFSET(get<T>, {0x6E0, 1744, 0, 0})
-	SMember(FSplitterStyle)                            ColumnSplitterStyle                                         OFFSET(get<T>, {0xDB0, 400, 0, 0})
+	SMember(FTableColumnHeaderStyle)                   ColumnStyle                                                 OFFSET(getStruct<T>, {0x10, 1744, 0, 0})
+	SMember(FTableColumnHeaderStyle)                   LastColumnStyle                                             OFFSET(getStruct<T>, {0x6E0, 1744, 0, 0})
+	SMember(FSplitterStyle)                            ColumnSplitterStyle                                         OFFSET(getStruct<T>, {0xDB0, 400, 0, 0})
 	DMember(float)                                     SplitterHandleSize                                          OFFSET(get<float>, {0xF40, 4, 0, 0})
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0xF50, 192, 0, 0})
-	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(get<T>, {0x1010, 20, 0, 0})
-	SMember(FSlateBrush)                               HorizontalSeparatorBrush                                    OFFSET(get<T>, {0x1030, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0xF50, 192, 0, 0})
+	SMember(FSlateColor)                               ForegroundColor                                             OFFSET(getStruct<T>, {0x1010, 20, 0, 0})
+	SMember(FSlateBrush)                               HorizontalSeparatorBrush                                    OFFSET(getStruct<T>, {0x1030, 192, 0, 0})
 	DMember(float)                                     HorizontalSeparatorThickness                                OFFSET(get<float>, {0x10F0, 4, 0, 0})
 };
 
@@ -808,27 +856,28 @@ public:
 /// Size: 0x0C98 (0x000008 - 0x000CA0)
 class FDockTabStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3232;
 
 public:
-	SMember(FButtonStyle)                              CloseButtonStyle                                            OFFSET(get<T>, {0x10, 944, 0, 0})
-	SMember(FSlateBrush)                               NormalBrush                                                 OFFSET(get<T>, {0x3C0, 192, 0, 0})
-	SMember(FSlateBrush)                               ColorOverlayTabBrush                                        OFFSET(get<T>, {0x480, 192, 0, 0})
-	SMember(FSlateBrush)                               ColorOverlayIconBrush                                       OFFSET(get<T>, {0x540, 192, 0, 0})
-	SMember(FSlateBrush)                               ForegroundBrush                                             OFFSET(get<T>, {0x600, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredBrush                                                OFFSET(get<T>, {0x6C0, 192, 0, 0})
-	SMember(FSlateBrush)                               ContentAreaBrush                                            OFFSET(get<T>, {0x780, 192, 0, 0})
-	SMember(FSlateBrush)                               TabWellBrush                                                OFFSET(get<T>, {0x840, 192, 0, 0})
-	SMember(FTextBlockStyle)                           TabTextStyle                                                OFFSET(get<T>, {0x900, 784, 0, 0})
-	SMember(FMargin)                                   TabPadding                                                  OFFSET(get<T>, {0xC10, 16, 0, 0})
-	SMember(FDeprecateSlateVector2D)                   IconSize                                                    OFFSET(get<T>, {0xC20, 8, 0, 0})
+	SMember(FButtonStyle)                              CloseButtonStyle                                            OFFSET(getStruct<T>, {0x10, 944, 0, 0})
+	SMember(FSlateBrush)                               NormalBrush                                                 OFFSET(getStruct<T>, {0x3C0, 192, 0, 0})
+	SMember(FSlateBrush)                               ColorOverlayTabBrush                                        OFFSET(getStruct<T>, {0x480, 192, 0, 0})
+	SMember(FSlateBrush)                               ColorOverlayIconBrush                                       OFFSET(getStruct<T>, {0x540, 192, 0, 0})
+	SMember(FSlateBrush)                               ForegroundBrush                                             OFFSET(getStruct<T>, {0x600, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredBrush                                                OFFSET(getStruct<T>, {0x6C0, 192, 0, 0})
+	SMember(FSlateBrush)                               ContentAreaBrush                                            OFFSET(getStruct<T>, {0x780, 192, 0, 0})
+	SMember(FSlateBrush)                               TabWellBrush                                                OFFSET(getStruct<T>, {0x840, 192, 0, 0})
+	SMember(FTextBlockStyle)                           TabTextStyle                                                OFFSET(getStruct<T>, {0x900, 784, 0, 0})
+	SMember(FMargin)                                   TabPadding                                                  OFFSET(getStruct<T>, {0xC10, 16, 0, 0})
+	SMember(FDeprecateSlateVector2D)                   IconSize                                                    OFFSET(getStruct<T>, {0xC20, 8, 0, 0})
 	DMember(float)                                     OverlapWidth                                                OFFSET(get<float>, {0xC28, 4, 0, 0})
-	SMember(FSlateColor)                               FlashColor                                                  OFFSET(get<T>, {0xC2C, 20, 0, 0})
-	SMember(FSlateColor)                               NormalForegroundColor                                       OFFSET(get<T>, {0xC40, 20, 0, 0})
-	SMember(FSlateColor)                               HoveredForegroundColor                                      OFFSET(get<T>, {0xC54, 20, 0, 0})
-	SMember(FSlateColor)                               ActiveForegroundColor                                       OFFSET(get<T>, {0xC68, 20, 0, 0})
-	SMember(FSlateColor)                               ForegroundForegroundColor                                   OFFSET(get<T>, {0xC7C, 20, 0, 0})
+	SMember(FSlateColor)                               FlashColor                                                  OFFSET(getStruct<T>, {0xC2C, 20, 0, 0})
+	SMember(FSlateColor)                               NormalForegroundColor                                       OFFSET(getStruct<T>, {0xC40, 20, 0, 0})
+	SMember(FSlateColor)                               HoveredForegroundColor                                      OFFSET(getStruct<T>, {0xC54, 20, 0, 0})
+	SMember(FSlateColor)                               ActiveForegroundColor                                       OFFSET(getStruct<T>, {0xC68, 20, 0, 0})
+	SMember(FSlateColor)                               ForegroundForegroundColor                                   OFFSET(getStruct<T>, {0xC7C, 20, 0, 0})
 	DMember(float)                                     IconBorderPadding                                           OFFSET(get<float>, {0xC90, 4, 0, 0})
 };
 
@@ -836,73 +885,78 @@ public:
 /// Size: 0x0328 (0x000008 - 0x000330)
 class FScrollBoxStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
 	DMember(float)                                     BarThickness                                                OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FSlateBrush)                               TopShadowBrush                                              OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               BottomShadowBrush                                           OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               LeftShadowBrush                                             OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               RightShadowBrush                                            OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FMargin)                                   HorizontalScrolledContentPadding                            OFFSET(get<T>, {0x310, 16, 0, 0})
-	SMember(FMargin)                                   VerticalScrolledContentPadding                              OFFSET(get<T>, {0x320, 16, 0, 0})
+	SMember(FSlateBrush)                               TopShadowBrush                                              OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               BottomShadowBrush                                           OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               LeftShadowBrush                                             OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               RightShadowBrush                                            OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FMargin)                                   HorizontalScrolledContentPadding                            OFFSET(getStruct<T>, {0x310, 16, 0, 0})
+	SMember(FMargin)                                   VerticalScrolledContentPadding                              OFFSET(getStruct<T>, {0x320, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.ScrollBorderStyle
 /// Size: 0x0188 (0x000008 - 0x000190)
 class FScrollBorderStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FSlateBrush)                               TopShadowBrush                                              OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               BottomShadowBrush                                           OFFSET(get<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               TopShadowBrush                                              OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               BottomShadowBrush                                           OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
 };
 
 /// Struct /Script/SlateCore.WindowStyle
 /// Size: 0x1798 (0x000008 - 0x0017A0)
 class FWindowStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 6048;
 
 public:
-	SMember(FButtonStyle)                              MinimizeButtonStyle                                         OFFSET(get<T>, {0x10, 944, 0, 0})
-	SMember(FButtonStyle)                              MaximizeButtonStyle                                         OFFSET(get<T>, {0x3C0, 944, 0, 0})
-	SMember(FButtonStyle)                              RestoreButtonStyle                                          OFFSET(get<T>, {0x770, 944, 0, 0})
-	SMember(FButtonStyle)                              CloseButtonStyle                                            OFFSET(get<T>, {0xB20, 944, 0, 0})
-	SMember(FTextBlockStyle)                           TitleTextStyle                                              OFFSET(get<T>, {0xED0, 784, 0, 0})
-	SMember(FSlateBrush)                               ActiveTitleBrush                                            OFFSET(get<T>, {0x11E0, 192, 0, 0})
-	SMember(FSlateBrush)                               InactiveTitleBrush                                          OFFSET(get<T>, {0x12A0, 192, 0, 0})
-	SMember(FSlateBrush)                               FlashTitleBrush                                             OFFSET(get<T>, {0x1360, 192, 0, 0})
-	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(get<T>, {0x1420, 20, 0, 0})
-	SMember(FSlateBrush)                               OutlineBrush                                                OFFSET(get<T>, {0x1440, 192, 0, 0})
-	SMember(FSlateColor)                               OutlineColor                                                OFFSET(get<T>, {0x1500, 20, 0, 0})
-	SMember(FSlateBrush)                               BorderBrush                                                 OFFSET(get<T>, {0x1520, 192, 0, 0})
-	SMember(FSlateColor)                               BorderColor                                                 OFFSET(get<T>, {0x15E0, 20, 0, 0})
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0x1600, 192, 0, 0})
-	SMember(FSlateBrush)                               ChildBackgroundBrush                                        OFFSET(get<T>, {0x16C0, 192, 0, 0})
+	SMember(FButtonStyle)                              MinimizeButtonStyle                                         OFFSET(getStruct<T>, {0x10, 944, 0, 0})
+	SMember(FButtonStyle)                              MaximizeButtonStyle                                         OFFSET(getStruct<T>, {0x3C0, 944, 0, 0})
+	SMember(FButtonStyle)                              RestoreButtonStyle                                          OFFSET(getStruct<T>, {0x770, 944, 0, 0})
+	SMember(FButtonStyle)                              CloseButtonStyle                                            OFFSET(getStruct<T>, {0xB20, 944, 0, 0})
+	SMember(FTextBlockStyle)                           TitleTextStyle                                              OFFSET(getStruct<T>, {0xED0, 784, 0, 0})
+	SMember(FSlateBrush)                               ActiveTitleBrush                                            OFFSET(getStruct<T>, {0x11E0, 192, 0, 0})
+	SMember(FSlateBrush)                               InactiveTitleBrush                                          OFFSET(getStruct<T>, {0x12A0, 192, 0, 0})
+	SMember(FSlateBrush)                               FlashTitleBrush                                             OFFSET(getStruct<T>, {0x1360, 192, 0, 0})
+	SMember(FSlateColor)                               BackgroundColor                                             OFFSET(getStruct<T>, {0x1420, 20, 0, 0})
+	SMember(FSlateBrush)                               OutlineBrush                                                OFFSET(getStruct<T>, {0x1440, 192, 0, 0})
+	SMember(FSlateColor)                               OutlineColor                                                OFFSET(getStruct<T>, {0x1500, 20, 0, 0})
+	SMember(FSlateBrush)                               BorderBrush                                                 OFFSET(getStruct<T>, {0x1520, 192, 0, 0})
+	SMember(FSlateColor)                               BorderColor                                                 OFFSET(getStruct<T>, {0x15E0, 20, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x1600, 192, 0, 0})
+	SMember(FSlateBrush)                               ChildBackgroundBrush                                        OFFSET(getStruct<T>, {0x16C0, 192, 0, 0})
 	DMember(int32_t)                                   WindowCornerRadius                                          OFFSET(get<int32_t>, {0x1780, 4, 0, 0})
-	SMember(FMargin)                                   BorderPadding                                               OFFSET(get<T>, {0x1784, 16, 0, 0})
+	SMember(FMargin)                                   BorderPadding                                               OFFSET(getStruct<T>, {0x1784, 16, 0, 0})
 };
 
 /// Struct /Script/SlateCore.StyleColorList
 /// Size: 0x0988 (0x000000 - 0x000988)
-class FStyleColorList : public MDKStruct
+class FStyleColorList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2440;
 
 public:
-	SMember(FLinearColor)                              StyleColors                                                 OFFSET(get<T>, {0x0, 976, 0, 0})
+	SMember(FLinearColor)                              StyleColors                                                 OFFSET(getStruct<T>, {0x0, 976, 0, 0})
 };
 
 /// Struct /Script/SlateCore.StyleTheme
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FStyleTheme : public MDKStruct
+class FStyleTheme : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -913,39 +967,40 @@ public:
 /// Size: 0x3A68 (0x000008 - 0x003A70)
 class FToolBarStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 14960;
 
 public:
-	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               ExpandBrush                                                 OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               SeparatorBrush                                              OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FTextBlockStyle)                           LabelStyle                                                  OFFSET(get<T>, {0x250, 784, 0, 0})
-	SMember(FEditableTextBoxStyle)                     EditableTextStyle                                           OFFSET(get<T>, {0x560, 3456, 0, 0})
-	SMember(FCheckBoxStyle)                            ToggleButton                                                OFFSET(get<T>, {0x12E0, 2576, 0, 0})
-	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(get<T>, {0x1CF0, 1440, 0, 0})
-	SMember(FButtonStyle)                              SettingsButtonStyle                                         OFFSET(get<T>, {0x2290, 944, 0, 0})
-	SMember(FComboButtonStyle)                         SettingsComboButton                                         OFFSET(get<T>, {0x2640, 1440, 0, 0})
-	SMember(FCheckBoxStyle)                            SettingsToggleButton                                        OFFSET(get<T>, {0x2BE0, 2576, 0, 0})
-	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(get<T>, {0x35F0, 944, 0, 0})
-	SMember(FMargin)                                   LabelPadding                                                OFFSET(get<T>, {0x39A0, 16, 0, 0})
+	SMember(FSlateBrush)                               BackgroundBrush                                             OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               ExpandBrush                                                 OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               SeparatorBrush                                              OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FTextBlockStyle)                           LabelStyle                                                  OFFSET(getStruct<T>, {0x250, 784, 0, 0})
+	SMember(FEditableTextBoxStyle)                     EditableTextStyle                                           OFFSET(getStruct<T>, {0x560, 3456, 0, 0})
+	SMember(FCheckBoxStyle)                            ToggleButton                                                OFFSET(getStruct<T>, {0x12E0, 2576, 0, 0})
+	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(getStruct<T>, {0x1CF0, 1440, 0, 0})
+	SMember(FButtonStyle)                              SettingsButtonStyle                                         OFFSET(getStruct<T>, {0x2290, 944, 0, 0})
+	SMember(FComboButtonStyle)                         SettingsComboButton                                         OFFSET(getStruct<T>, {0x2640, 1440, 0, 0})
+	SMember(FCheckBoxStyle)                            SettingsToggleButton                                        OFFSET(getStruct<T>, {0x2BE0, 2576, 0, 0})
+	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(getStruct<T>, {0x35F0, 944, 0, 0})
+	SMember(FMargin)                                   LabelPadding                                                OFFSET(getStruct<T>, {0x39A0, 16, 0, 0})
 	DMember(float)                                     UniformBlockWidth                                           OFFSET(get<float>, {0x39B0, 4, 0, 0})
 	DMember(float)                                     UniformBlockHeight                                          OFFSET(get<float>, {0x39B4, 4, 0, 0})
 	DMember(int32_t)                                   NumColumns                                                  OFFSET(get<int32_t>, {0x39B8, 4, 0, 0})
-	SMember(FMargin)                                   IconPadding                                                 OFFSET(get<T>, {0x39BC, 16, 0, 0})
-	SMember(FMargin)                                   SeparatorPadding                                            OFFSET(get<T>, {0x39CC, 16, 0, 0})
-	SMember(FMargin)                                   ComboButtonPadding                                          OFFSET(get<T>, {0x39DC, 16, 0, 0})
-	SMember(FMargin)                                   ButtonPadding                                               OFFSET(get<T>, {0x39EC, 16, 0, 0})
-	SMember(FMargin)                                   CheckBoxPadding                                             OFFSET(get<T>, {0x39FC, 16, 0, 0})
-	SMember(FMargin)                                   BlockPadding                                                OFFSET(get<T>, {0x3A0C, 16, 0, 0})
-	SMember(FMargin)                                   IndentedBlockPadding                                        OFFSET(get<T>, {0x3A1C, 16, 0, 0})
-	SMember(FMargin)                                   BackgroundPadding                                           OFFSET(get<T>, {0x3A2C, 16, 0, 0})
-	SMember(FDeprecateSlateVector2D)                   IconSize                                                    OFFSET(get<T>, {0x3A3C, 8, 0, 0})
+	SMember(FMargin)                                   IconPadding                                                 OFFSET(getStruct<T>, {0x39BC, 16, 0, 0})
+	SMember(FMargin)                                   SeparatorPadding                                            OFFSET(getStruct<T>, {0x39CC, 16, 0, 0})
+	SMember(FMargin)                                   ComboButtonPadding                                          OFFSET(getStruct<T>, {0x39DC, 16, 0, 0})
+	SMember(FMargin)                                   ButtonPadding                                               OFFSET(getStruct<T>, {0x39EC, 16, 0, 0})
+	SMember(FMargin)                                   CheckBoxPadding                                             OFFSET(getStruct<T>, {0x39FC, 16, 0, 0})
+	SMember(FMargin)                                   BlockPadding                                                OFFSET(getStruct<T>, {0x3A0C, 16, 0, 0})
+	SMember(FMargin)                                   IndentedBlockPadding                                        OFFSET(getStruct<T>, {0x3A1C, 16, 0, 0})
+	SMember(FMargin)                                   BackgroundPadding                                           OFFSET(getStruct<T>, {0x3A2C, 16, 0, 0})
+	SMember(FDeprecateSlateVector2D)                   IconSize                                                    OFFSET(getStruct<T>, {0x3A3C, 8, 0, 0})
 	DMember(bool)                                      bShowLabels                                                 OFFSET(get<bool>, {0x3A44, 1, 0, 0})
 	DMember(float)                                     ButtonContentMaxWidth                                       OFFSET(get<float>, {0x3A48, 4, 0, 0})
 	DMember(float)                                     ButtonContentFillWidth                                      OFFSET(get<float>, {0x3A4C, 4, 0, 0})
-	SMember(FMargin)                                   IconPaddingWithVisibleLabel                                 OFFSET(get<T>, {0x3A50, 16, 0, 0})
-	SMember(FMargin)                                   IconPaddingWithCollapsedLabel                               OFFSET(get<T>, {0x3A60, 16, 0, 0})
+	SMember(FMargin)                                   IconPaddingWithVisibleLabel                                 OFFSET(getStruct<T>, {0x3A50, 16, 0, 0})
+	SMember(FMargin)                                   IconPaddingWithCollapsedLabel                               OFFSET(getStruct<T>, {0x3A60, 16, 0, 0})
 };
 
 /// Enum /Script/SlateCore.EUINavigationRule

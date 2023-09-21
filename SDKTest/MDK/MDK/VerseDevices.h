@@ -18,7 +18,7 @@ class UVerseCreativePropAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     AssetPathName                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     AssetPathName                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(ULevelSaveRecord*)                         LevelSaveRecord                                             OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  OFFSET(get<T>, {0x38, 32, 0, 0})
 };
@@ -136,6 +136,7 @@ public:
 /// Size: 0x0008 (0x000098 - 0x0000A0)
 class FPlaylistOptionScriptValue : public FPlaylistOptionValue
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -145,8 +146,9 @@ public:
 
 /// Struct /Script/VerseDevices.VerseDeviceFunctionPayload
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FVerseDeviceFunctionPayload : public MDKStruct
+class FVerseDeviceFunctionPayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

@@ -17,27 +17,27 @@ class UFortComponent_Energy : public UPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEnergyCompletelyDrained                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnergyRechargeComplete                                    OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         RechargeDisabledQuery                                       OFFSET(get<T>, {0xC0, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         EnergyUseDisabledQuery                                      OFFSET(get<T>, {0x118, 72, 0, 0})
-	SMember(FTimerHandle)                              BeginRechargeTimerHandle                                    OFFSET(get<T>, {0x160, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     EnergyTypeIdentifierTagContainer                            OFFSET(get<T>, {0x168, 32, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnergyCompletelyDrained                                   OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnergyRechargeComplete                                    OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FGameplayTagQuery)                         RechargeDisabledQuery                                       OFFSET(getStruct<T>, {0xC0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         EnergyUseDisabledQuery                                      OFFSET(getStruct<T>, {0x118, 72, 0, 0})
+	SMember(FTimerHandle)                              BeginRechargeTimerHandle                                    OFFSET(getStruct<T>, {0x160, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     EnergyTypeIdentifierTagContainer                            OFFSET(getStruct<T>, {0x168, 32, 0, 0})
 	DMember(float)                                     CurrentEnergy                                               OFFSET(get<float>, {0x188, 4, 0, 0})
 	DMember(float)                                     NetEnergyDeltaPerSecond                                     OFFSET(get<float>, {0x18C, 4, 0, 0})
-	SMember(FScalableFloat)                            MaxEnergy                                                   OFFSET(get<T>, {0x198, 40, 0, 0})
-	SMember(FScalableFloat)                            MinEnergyForUsing                                           OFFSET(get<T>, {0x1C0, 40, 0, 0})
-	SMember(FScalableFloat)                            RechargeAmountPerSecond                                     OFFSET(get<T>, {0x1E8, 40, 0, 0})
-	SMember(FScalableFloat)                            RechargeDelayInSeconds                                      OFFSET(get<T>, {0x210, 40, 0, 0})
-	SMember(FScalableFloat)                            RechargePercentageLimit                                     OFFSET(get<T>, {0x238, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxEnergy                                                   OFFSET(getStruct<T>, {0x198, 40, 0, 0})
+	SMember(FScalableFloat)                            MinEnergyForUsing                                           OFFSET(getStruct<T>, {0x1C0, 40, 0, 0})
+	SMember(FScalableFloat)                            RechargeAmountPerSecond                                     OFFSET(getStruct<T>, {0x1E8, 40, 0, 0})
+	SMember(FScalableFloat)                            RechargeDelayInSeconds                                      OFFSET(getStruct<T>, {0x210, 40, 0, 0})
+	SMember(FScalableFloat)                            RechargePercentageLimit                                     OFFSET(getStruct<T>, {0x238, 40, 0, 0})
 	CMember(TArray<FEnergyChannelingData>)             ActiveEnergyChannels                                        OFFSET(get<T>, {0x260, 16, 0, 0})
 	CMember(TArray<FEnergyChannelingData>)             NewActiveEnergyChannels                                     OFFSET(get<T>, {0x270, 16, 0, 0})
 	CMember(TArray<FEnergyRegenOverrideData>)          EnergyRegenOverrides                                        OFFSET(get<T>, {0x280, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCurrentEnergyChanged                                      OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnergyRechargeBegun                                       OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnergyRechargeInterrupted                                 OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnergyReachedMax                                          OFFSET(get<T>, {0x2C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnergyReachedMinForUsing                                  OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCurrentEnergyChanged                                      OFFSET(getStruct<T>, {0x290, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnergyRechargeBegun                                       OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnergyRechargeInterrupted                                 OFFSET(getStruct<T>, {0x2B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnergyReachedMax                                          OFFSET(getStruct<T>, {0x2C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnergyReachedMinForUsing                                  OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 	DMember(bool)                                      bRechargingEnabled                                          OFFSET(get<bool>, {0x2E0, 1, 1, 0})
 	DMember(bool)                                      bIsRecharging                                               OFFSET(get<bool>, {0x2E0, 1, 1, 1})
 	DMember(bool)                                      bIsUsingEnergy                                              OFFSET(get<bool>, {0x2E0, 1, 1, 2})
@@ -80,27 +80,29 @@ public:
 
 /// Struct /Script/EnergyRuntime.EnergyChannelingData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FEnergyChannelingData : public MDKStruct
+class FEnergyChannelingData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(float)                                     EnergyPerSecond                                             OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FGameplayTag)                              EnergyChannelingPurposeIdentifier                           OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              EnergyChannelingPurposeIdentifier                           OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(UObject*)                                  OptionalEnergyChannelingSource                              OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bShouldStopApplyingNextTick                                 OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/EnergyRuntime.EnergyRegenOverrideData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEnergyRegenOverrideData : public MDKStruct
+class FEnergyRegenOverrideData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              EnergyRegenIdentifier                                       OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              EnergyRegenIdentifier                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     RechargeAmountPerSecond                                     OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     RechargeDelayInSeconds                                      OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     RechargePercentageLimit                                     OFFSET(get<float>, {0xC, 4, 0, 0})

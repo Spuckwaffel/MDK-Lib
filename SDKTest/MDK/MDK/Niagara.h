@@ -20,7 +20,7 @@ class UNDIRenderTargetVolumeSimCacheData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     CompressionType                                             OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     CompressionType                                             OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(TArray<FNDIRenderTargetVolumeSimCacheFrame>) Frames                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
@@ -151,8 +151,8 @@ public:
 	DMember(bool)                                      bKeepPreviousFrameData                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(bool)                                      bEnforceTickGroupReadWriteOrder                             OFFSET(get<bool>, {0x39, 1, 0, 0})
 	CMember(TEnumAsByte<ETickingGroup>)                FinalWriteTickGroup                                         OFFSET(get<T>, {0x3A, 1, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               CompiledData                                                OFFSET(get<T>, {0x40, 64, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               CompiledDataGPU                                             OFFSET(get<T>, {0x80, 64, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               CompiledData                                                OFFSET(getStruct<T>, {0x40, 64, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               CompiledDataGPU                                             OFFSET(getStruct<T>, {0x80, 64, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataChannel_Global
@@ -184,12 +184,12 @@ class UNiagaraDataChannel_Islands : public UNiagaraDataChannel
 
 public:
 	CMember(ENiagraDataChannel_IslandMode)             Mode                                                        OFFSET(get<T>, {0x120, 1, 0, 0})
-	SMember(FVector)                                   InitialExtents                                              OFFSET(get<T>, {0x128, 24, 0, 0})
-	SMember(FVector)                                   MaxExtents                                                  OFFSET(get<T>, {0x140, 24, 0, 0})
-	SMember(FVector)                                   PerElementExtents                                           OFFSET(get<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   InitialExtents                                              OFFSET(getStruct<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   MaxExtents                                                  OFFSET(getStruct<T>, {0x140, 24, 0, 0})
+	SMember(FVector)                                   PerElementExtents                                           OFFSET(getStruct<T>, {0x158, 24, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    Systems                                                     OFFSET(get<T>, {0x170, 16, 0, 0})
 	DMember(int32_t)                                   IslandPoolSize                                              OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	SMember(FNDCIslandDebugDrawSettings)               DebugDrawSettings                                           OFFSET(get<T>, {0x184, 4, 0, 0})
+	SMember(FNDCIslandDebugDrawSettings)               DebugDrawSettings                                           OFFSET(getStruct<T>, {0x184, 4, 0, 0})
 	CMember(TArray<UNiagaraSystem*>)                   SystemsInternal                                             OFFSET(get<T>, {0x188, 16, 0, 0})
 };
 
@@ -235,12 +235,12 @@ class UNiagaraDataInterfaceDataChannelRead : public UNiagaraDataInterfaceRWBase
 
 public:
 	CMember(UNiagaraDataChannelAsset*)                 Channel                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraDataInterfaceEmitterBinding)       EmitterBinding                                              OFFSET(get<T>, {0x40, 8, 0, 0})
+	SMember(FNiagaraDataInterfaceEmitterBinding)       EmitterBinding                                              OFFSET(getStruct<T>, {0x40, 8, 0, 0})
 	DMember(bool)                                      bReadCurrentFrame                                           OFFSET(get<bool>, {0x48, 1, 0, 0})
 	DMember(bool)                                      bUpdateSourceDataEveryTick                                  OFFSET(get<bool>, {0x49, 1, 0, 0})
 	DMember(bool)                                      bOverrideSpawnGroupToDataChannelIndex                       OFFSET(get<bool>, {0x4A, 1, 0, 0})
-	SMember(FName)                                     SpawnInfoName                                               OFFSET(get<T>, {0x4C, 4, 0, 0})
-	SMember(FNDIDataChannelCompiledData)               CompiledData                                                OFFSET(get<T>, {0x50, 104, 0, 0})
+	SMember(FName)                                     SpawnInfoName                                               OFFSET(getStruct<T>, {0x4C, 4, 0, 0})
+	SMember(FNDIDataChannelCompiledData)               CompiledData                                                OFFSET(getStruct<T>, {0x50, 104, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceDataChannelWrite
@@ -258,7 +258,7 @@ public:
 	DMember(bool)                                      bPublishToGPU                                               OFFSET(get<bool>, {0x42, 1, 0, 0})
 	DMember(bool)                                      bUpdateDestinationDataEveryTick                             OFFSET(get<bool>, {0x43, 1, 0, 0})
 	CMember(UNiagaraDataChannelAsset*)                 Channel                                                     OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FNDIDataChannelWriteCompiledData)          CompiledData                                                OFFSET(get<T>, {0x50, 168, 0, 0})
+	SMember(FNDIDataChannelWriteCompiledData)          CompiledData                                                OFFSET(getStruct<T>, {0x50, 168, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraMessageDataBase
@@ -314,9 +314,9 @@ public:
 	DMember(bool)                                      bExperimentalVMEnabled                                      OFFSET(get<bool>, {0x32, 1, 0, 0})
 	DMember(bool)                                      bLimitDeltaTime                                             OFFSET(get<bool>, {0x33, 1, 0, 0})
 	DMember(float)                                     MaxDeltaTimePerTick                                         OFFSET(get<float>, {0x34, 4, 0, 0})
-	SMember(FSoftObjectPath)                           DefaultEffectType                                           OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FSoftObjectPath)                           RequiredEffectType                                          OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FLinearColor)                              PositionPinTypeColor                                        OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FSoftObjectPath)                           DefaultEffectType                                           OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FSoftObjectPath)                           RequiredEffectType                                          OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FLinearColor)                              PositionPinTypeColor                                        OFFSET(getStruct<T>, {0x68, 16, 0, 0})
 	CMember(TArray<FText>)                             QualityLevels                                               OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(TMap<FString, FText>)                      ComponentRendererWarningsPerClass                           OFFSET(get<T>, {0x88, 80, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   DefaultRenderTargetFormat                                   OFFSET(get<T>, {0xD8, 1, 0, 0})
@@ -331,7 +331,7 @@ public:
 	CMember(TEnumAsByte<ENDISkelMesh_AdjacencyTriangleIndexFormat>) NDISkelMesh_AdjacencyTriangleIndexFormat       OFFSET(get<T>, {0xEA, 1, 0, 0})
 	DMember(bool)                                      NDIStaticMesh_AllowDistanceFields                           OFFSET(get<bool>, {0xEB, 1, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       NDICollisionQuery_AsyncGpuTraceProviderOrder                OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FString)                                   SimCacheAuxiliaryFileBasePath                               OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FString)                                   SimCacheAuxiliaryFileBasePath                               OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 	DMember(int64_t)                                   SimCacheMaxCPUMemoryVolumetrics                             OFFSET(get<int64_t>, {0x110, 8, 0, 0})
 	CMember(TArray<FNiagaraPlatformSetRedirect>)       PlatformSetRedirects                                        OFFSET(get<T>, {0x118, 16, 0, 0})
 };
@@ -368,7 +368,7 @@ public:
 	CMember(ENDIActorComponentSourceMode)              SourceMode                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(int32_t)                                   LocalPlayerIndex                                            OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	CMember(TLazyObjectPtr<AActor*>)                   SourceActor                                                 OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              ActorOrComponentParameter                                   OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              ActorOrComponentParameter                                   OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 	DMember(bool)                                      bRequireCurrentFrameData                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
@@ -411,7 +411,7 @@ public:
 	DMember(bool)                                      bHasColors                                                  OFFSET(get<bool>, {0x68, 1, 0, 0})
 	DMember(bool)                                      bHasTangentBasis                                            OFFSET(get<bool>, {0x69, 1, 0, 0})
 	DMember(bool)                                      bClearTrianglesPerFrame                                     OFFSET(get<bool>, {0x6A, 1, 0, 0})
-	SMember(FBox)                                      DefaultBounds                                               OFFSET(get<T>, {0x70, 56, 0, 0})
+	SMember(FBox)                                      DefaultBounds                                               OFFSET(getStruct<T>, {0x70, 56, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceEmitterProperties
@@ -422,7 +422,7 @@ class UNiagaraDataInterfaceEmitterProperties : public UNiagaraDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FNiagaraDataInterfaceEmitterBinding)       EmitterBinding                                              OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FNiagaraDataInterfaceEmitterBinding)       EmitterBinding                                              OFFSET(getStruct<T>, {0x38, 8, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGBuffer
@@ -445,7 +445,7 @@ class UNiagaraDataInterfacePhysicsAsset : public UNiagaraDataInterface
 public:
 	CMember(UPhysicsAsset*)                            DefaultSource                                               OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   SoftSourceActor                                             OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              MeshUserParameter                                           OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MeshUserParameter                                           OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraPhysicsAssetDICollectorInterface
@@ -467,14 +467,14 @@ class UNiagaraDataInterfaceSceneCapture2D : public UNiagaraDataInterface
 
 public:
 	CMember(ENDISceneCapture2DSourceMode)              SourceMode                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              SceneCaptureUserParameter                                   OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              SceneCaptureUserParameter                                   OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(bool)                                      bAutoMoveWithComponent                                      OFFSET(get<bool>, {0x58, 1, 0, 0})
 	CMember(ENDISceneCapture2DOffsetMode)              AutoMoveOffsetLocationMode                                  OFFSET(get<T>, {0x59, 1, 0, 0})
-	SMember(FVector)                                   AutoMoveOffsetLocation                                      OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   AutoMoveOffsetLocation                                      OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 	CMember(ENDISceneCapture2DOffsetMode)              AutoMoveOffsetRotationMode                                  OFFSET(get<T>, {0x78, 1, 0, 0})
-	SMember(FRotator)                                  AutoMoveOffsetRotation                                      OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FRotator)                                  AutoMoveOffsetRotation                                      OFFSET(getStruct<T>, {0x80, 24, 0, 0})
 	CMember(TEnumAsByte<ESceneCaptureSource>)          ManagedCaptureSource                                        OFFSET(get<T>, {0x98, 1, 0, 0})
-	SMember(FIntPoint)                                 ManagedTextureSize                                          OFFSET(get<T>, {0x9C, 8, 0, 0})
+	SMember(FIntPoint)                                 ManagedTextureSize                                          OFFSET(getStruct<T>, {0x9C, 8, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   ManagedTextureFormat                                        OFFSET(get<T>, {0xA4, 1, 0, 0})
 	CMember(TEnumAsByte<ECameraProjectionMode>)        ManagedProjectionType                                       OFFSET(get<T>, {0xA5, 1, 0, 0})
 	DMember(float)                                     ManagedFOVAngle                                             OFFSET(get<float>, {0xA8, 4, 0, 0})
@@ -498,9 +498,9 @@ class UNiagaraDataInterfaceSimCacheReader : public UNiagaraDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FNiagaraUserParameterBinding)              SimCacheBinding                                             OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              SimCacheBinding                                             OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	CMember(UNiagaraSimCache*)                         SimCache                                                    OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FName)                                     EmitterBinding                                              OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FName)                                     EmitterBinding                                              OFFSET(getStruct<T>, {0x58, 4, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSimpleCounter
@@ -527,12 +527,12 @@ public:
 	CMember(UStaticMesh*)                              DefaultMesh                                                 OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   SoftSourceActor                                             OFFSET(get<T>, {0x48, 32, 0, 0})
 	CMember(UStaticMeshComponent*)                     SourceComponent                                             OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FNDIStaticMeshSectionFilter)               SectionFilter                                               OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FNDIStaticMeshSectionFilter)               SectionFilter                                               OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bCaptureTransformsPerFrame                                  OFFSET(get<bool>, {0x80, 1, 0, 0})
 	DMember(bool)                                      bUsePhysicsBodyVelocity                                     OFFSET(get<bool>, {0x81, 1, 0, 0})
 	DMember(bool)                                      bAllowSamplingFromStreamingLODs                             OFFSET(get<bool>, {0x82, 1, 0, 0})
 	DMember(int32_t)                                   LODIndex                                                    OFFSET(get<int32_t>, {0x84, 4, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              LODIndexUserParameter                                       OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              LODIndexUserParameter                                       OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 	DMember(int32_t)                                   InstanceIndex                                               OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
 	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xA8, 16, 0, 0})
 
@@ -553,7 +553,7 @@ class UNiagaraDataInterfaceUObjectPropertyReader : public UNiagaraDataInterface
 
 public:
 	CMember(ENDIObjectPropertyReaderSourceMode)        SourceMode                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              UObjectParameterBinding                                     OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              UObjectParameterBinding                                     OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	CMember(TArray<FNiagaraUObjectPropertyReaderRemap>) PropertyRemap                                              OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   SourceActor                                                 OFFSET(get<T>, {0x68, 32, 0, 0})
 	CMember(UClass*)                                   SourceActorComponentClass                                   OFFSET(get<T>, {0x88, 8, 0, 0})
@@ -573,7 +573,7 @@ class UNiagaraDataInterfaceVirtualTexture : public UNiagaraDataInterface
 
 public:
 	CMember(URuntimeVirtualTexture*)                   Texture                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraSystemSpawnSection
@@ -620,7 +620,7 @@ class UMovieSceneNiagaraParameterTrack : public UMovieSceneNiagaraTrack
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FNiagaraVariable)                          Parameter                                                   OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FNiagaraVariable)                          Parameter                                                   OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.MovieSceneNiagaraBoolParameterTrack
@@ -703,7 +703,7 @@ class UNiagaraBakerOutput : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   OutputName                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   OutputName                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraBakerOutputSimCache
@@ -714,8 +714,8 @@ class UNiagaraBakerOutputSimCache : public UNiagaraBakerOutput
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   SimCacheAssetPathFormat                                     OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FNiagaraSimCacheCreateParameters)          CreateParameters                                            OFFSET(get<T>, {0x48, 88, 0, 0})
+	SMember(FString)                                   SimCacheAssetPathFormat                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FNiagaraSimCacheCreateParameters)          CreateParameters                                            OFFSET(getStruct<T>, {0x48, 88, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraBakerOutputTexture2D
@@ -726,19 +726,19 @@ class UNiagaraBakerOutputTexture2D : public UNiagaraBakerOutput
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(bool)                                      bGenerateAtlas                                              OFFSET(get<bool>, {0x50, 1, 1, 0})
 	DMember(bool)                                      bGenerateFrames                                             OFFSET(get<bool>, {0x50, 1, 1, 1})
 	DMember(bool)                                      bExportFrames                                               OFFSET(get<bool>, {0x50, 1, 1, 2})
 	DMember(bool)                                      bSetTextureAddressX                                         OFFSET(get<bool>, {0x50, 1, 1, 3})
 	DMember(bool)                                      bSetTextureAddressY                                         OFFSET(get<bool>, {0x50, 1, 1, 4})
-	SMember(FIntPoint)                                 FrameSize                                                   OFFSET(get<T>, {0x54, 8, 0, 0})
-	SMember(FIntPoint)                                 AtlasTextureSize                                            OFFSET(get<T>, {0x5C, 8, 0, 0})
+	SMember(FIntPoint)                                 FrameSize                                                   OFFSET(getStruct<T>, {0x54, 8, 0, 0})
+	SMember(FIntPoint)                                 AtlasTextureSize                                            OFFSET(getStruct<T>, {0x5C, 8, 0, 0})
 	CMember(TEnumAsByte<TextureAddress>)               TextureAddressX                                             OFFSET(get<T>, {0x6C, 1, 0, 0})
 	CMember(TEnumAsByte<TextureAddress>)               TextureAddressY                                             OFFSET(get<T>, {0x6D, 1, 0, 0})
-	SMember(FString)                                   AtlasAssetPathFormat                                        OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FString)                                   FramesAssetPathFormat                                       OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FString)                                   FramesExportPathFormat                                      OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FString)                                   AtlasAssetPathFormat                                        OFFSET(getStruct<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   FramesAssetPathFormat                                       OFFSET(getStruct<T>, {0x80, 16, 0, 0})
+	SMember(FString)                                   FramesExportPathFormat                                      OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraBakerOutputVolumeTexture
@@ -749,13 +749,13 @@ class UNiagaraBakerOutputVolumeTexture : public UNiagaraBakerOutput
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(bool)                                      bGenerateAtlas                                              OFFSET(get<bool>, {0x50, 1, 1, 0})
 	DMember(bool)                                      bGenerateFrames                                             OFFSET(get<bool>, {0x50, 1, 1, 1})
 	DMember(bool)                                      bExportFrames                                               OFFSET(get<bool>, {0x50, 1, 1, 2})
-	SMember(FString)                                   AtlasAssetPathFormat                                        OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FString)                                   FramesAssetPathFormat                                       OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FString)                                   FramesExportPathFormat                                      OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   AtlasAssetPathFormat                                        OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   FramesAssetPathFormat                                       OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   FramesExportPathFormat                                      OFFSET(getStruct<T>, {0x78, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraBakerSettings
@@ -770,16 +770,16 @@ public:
 	DMember(float)                                     DurationSeconds                                             OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(int32_t)                                   FramesPerSecond                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(bool)                                      bPreviewLooping                                             OFFSET(get<bool>, {0x34, 1, 1, 0})
-	SMember(FIntPoint)                                 FramesPerDimension                                          OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FIntPoint)                                 FramesPerDimension                                          OFFSET(getStruct<T>, {0x38, 8, 0, 0})
 	CMember(TArray<UNiagaraBakerOutput*>)              Outputs                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<FNiagaraBakerCameraSettings>)       CameraSettings                                              OFFSET(get<T>, {0x50, 16, 0, 0})
 	DMember(int32_t)                                   CurrentCameraIndex                                          OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	SMember(FName)                                     BakeQualityLevel                                            OFFSET(get<T>, {0x64, 4, 0, 0})
+	SMember(FName)                                     BakeQualityLevel                                            OFFSET(getStruct<T>, {0x64, 4, 0, 0})
 	DMember(bool)                                      bRenderComponentOnly                                        OFFSET(get<bool>, {0x68, 1, 1, 0})
 	CMember(TArray<FNiagaraBakerTextureSettings>)      OutputTextures                                              OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(ENiagaraBakerViewMode)                     CameraViewportMode                                          OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FVector)                                   CameraViewportLocation                                      OFFSET(get<T>, {0x88, 168, 0, 0})
-	SMember(FRotator)                                  CameraViewportRotation                                      OFFSET(get<T>, {0x130, 168, 0, 0})
+	SMember(FVector)                                   CameraViewportLocation                                      OFFSET(getStruct<T>, {0x88, 168, 0, 0})
+	SMember(FRotator)                                  CameraViewportRotation                                      OFFSET(getStruct<T>, {0x130, 168, 0, 0})
 	DMember(float)                                     CameraOrbitDistance                                         OFFSET(get<float>, {0x1D8, 4, 0, 0})
 	DMember(float)                                     CameraFOV                                                   OFFSET(get<float>, {0x1DC, 4, 0, 0})
 	DMember(float)                                     CameraOrthoWidth                                            OFFSET(get<float>, {0x1E0, 4, 0, 0})
@@ -798,7 +798,7 @@ public:
 	CMember(UNiagaraSystem*)                           Asset                                                       OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(ENiagaraTickBehavior)                      TickBehavior                                                OFFSET(get<T>, {0x570, 1, 0, 0})
 	DMember(int32_t)                                   RandomSeedOffset                                            OFFSET(get<int32_t>, {0x574, 4, 0, 0})
-	SMember(FNiagaraUserRedirectionParameterStore)     OverrideParameters                                          OFFSET(get<T>, {0x578, 216, 0, 0})
+	SMember(FNiagaraUserRedirectionParameterStore)     OverrideParameters                                          OFFSET(getStruct<T>, {0x578, 216, 0, 0})
 	DMember(bool)                                      bForceSolo                                                  OFFSET(get<bool>, {0x650, 1, 1, 0})
 	DMember(bool)                                      bEnableGpuComputeDebug                                      OFFSET(get<bool>, {0x650, 1, 1, 1})
 	DMember(bool)                                      bOverrideWarmupSettings                                     OFFSET(get<bool>, {0x650, 1, 1, 2})
@@ -810,9 +810,9 @@ public:
 	DMember(bool)                                      bAutoAttachWeldSimulatedBodies                              OFFSET(get<bool>, {0x690, 1, 1, 3})
 	DMember(float)                                     MaxTimeBeforeForceUpdateTransform                           OFFSET(get<float>, {0x694, 4, 0, 0})
 	CMember(ENiagaraOcclusionQueryMode)                OcclusionQueryMode                                          OFFSET(get<T>, {0x699, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSystemFinished                                            OFFSET(get<T>, {0x6A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSystemFinished                                            OFFSET(getStruct<T>, {0x6A0, 16, 0, 0})
 	CMember(TWeakObjectPtr<USceneComponent*>)          AutoAttachParent                                            OFFSET(get<T>, {0x6B0, 8, 0, 0})
-	SMember(FName)                                     AutoAttachSocketName                                        OFFSET(get<T>, {0x6B8, 4, 0, 0})
+	SMember(FName)                                     AutoAttachSocketName                                        OFFSET(getStruct<T>, {0x6B8, 4, 0, 0})
 	CMember(EAttachmentRule)                           AutoAttachLocationRule                                      OFFSET(get<T>, {0x6BC, 1, 0, 0})
 	CMember(EAttachmentRule)                           AutoAttachRotationRule                                      OFFSET(get<T>, {0x6BD, 1, 0, 0})
 	CMember(EAttachmentRule)                           AutoAttachScaleRule                                         OFFSET(get<T>, {0x6BE, 1, 0, 0})
@@ -1007,13 +1007,13 @@ class UNiagaraRendererProperties : public UNiagaraMergeable
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(get<T>, {0x28, 48, 0, 0})
+	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(getStruct<T>, {0x28, 48, 0, 0})
 	DMember(int32_t)                                   SortOrderHint                                               OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 	CMember(ENiagaraRendererMotionVectorSetting)       MotionVectorSetting                                         OFFSET(get<T>, {0x5C, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererEnabledBinding                                      OFFSET(get<T>, {0x60, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererEnabledBinding                                      OFFSET(getStruct<T>, {0x60, 40, 0, 0})
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x88, 1, 0, 0})
 	DMember(bool)                                      bAllowInCullProxies                                         OFFSET(get<bool>, {0x89, 1, 0, 0})
-	SMember(FGuid)                                     OuterEmitterVersion                                         OFFSET(get<T>, {0x8C, 16, 0, 0})
+	SMember(FGuid)                                     OuterEmitterVersion                                         OFFSET(getStruct<T>, {0x8C, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraComponentRendererProperties
@@ -1026,8 +1026,8 @@ class UNiagaraComponentRendererProperties : public UNiagaraRendererProperties
 public:
 	CMember(UClass*)                                   ComponentType                                               OFFSET(get<T>, {0xB0, 8, 0, 0})
 	DMember(uint32_t)                                  ComponentCountLimit                                         OFFSET(get<uint32_t>, {0xB8, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(get<T>, {0xC0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0xE8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(getStruct<T>, {0xC0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0xE8, 40, 0, 0})
 	DMember(bool)                                      bAssignComponentsOnParticleID                               OFFSET(get<bool>, {0x110, 1, 0, 0})
 	DMember(bool)                                      bCreateComponentFirstParticleFrame                          OFFSET(get<bool>, {0x111, 1, 0, 0})
 	DMember(bool)                                      bOnlyActivateNewlyAquiredComponents                         OFFSET(get<bool>, {0x112, 1, 0, 0})
@@ -1066,7 +1066,7 @@ class UNiagaraDataInterface2DArrayTexture : public UNiagaraDataInterface
 
 public:
 	CMember(UTexture*)                                 Texture                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceArray
@@ -1258,7 +1258,7 @@ public:
 	DMember(bool)                                      bOverrideConcurrency                                        OFFSET(get<bool>, {0x28, 1, 0, 0})
 	CMember(USoundConcurrency*)                        Concurrency                                                 OFFSET(get<T>, {0x30, 8, 0, 0})
 	DMember(bool)                                      bOverrideAttenuationSettings                                OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FSoundAttenuationSettings)                 AttenuationSettings                                         OFFSET(get<T>, {0x40, 976, 0, 0})
+	SMember(FSoundAttenuationSettings)                 AttenuationSettings                                         OFFSET(getStruct<T>, {0x40, 976, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceAudioPlayer
@@ -1273,7 +1273,7 @@ public:
 	CMember(USoundAttenuation*)                        Attenuation                                                 OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(USoundConcurrency*)                        Concurrency                                                 OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(TArray<FName>)                             ParameterNames                                              OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              ConfigurationUserParameter                                  OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              ConfigurationUserParameter                                  OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 	DMember(bool)                                      bLimitPlaysPerTick                                          OFFSET(get<bool>, {0x78, 1, 0, 0})
 	DMember(int32_t)                                   MaxPlaysPerTick                                             OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
 	DMember(bool)                                      bStopWhenComponentIsDestroyed                               OFFSET(get<bool>, {0x80, 1, 0, 0})
@@ -1331,7 +1331,7 @@ public:
 	DMember(float)                                     LUTNumSamplesMinusOne                                       OFFSET(get<float>, {0x54, 4, 0, 0})
 	DMember(bool)                                      bUseLUT                                                     OFFSET(get<bool>, {0x5C, 1, 1, 0})
 	DMember(bool)                                      bExposeCurve                                                OFFSET(get<bool>, {0x5C, 1, 1, 1})
-	SMember(FName)                                     ExposedName                                                 OFFSET(get<T>, {0x60, 4, 0, 0})
+	SMember(FName)                                     ExposedName                                                 OFFSET(getStruct<T>, {0x60, 4, 0, 0})
 	CMember(UTexture2D*)                               ExposedTexture                                              OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
@@ -1343,10 +1343,10 @@ class UNiagaraDataInterfaceColorCurve : public UNiagaraDataInterfaceCurveBase
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FRichCurve)                                RedCurve                                                    OFFSET(get<T>, {0x70, 128, 0, 0})
-	SMember(FRichCurve)                                GreenCurve                                                  OFFSET(get<T>, {0xF0, 128, 0, 0})
-	SMember(FRichCurve)                                BlueCurve                                                   OFFSET(get<T>, {0x170, 128, 0, 0})
-	SMember(FRichCurve)                                AlphaCurve                                                  OFFSET(get<T>, {0x1F0, 128, 0, 0})
+	SMember(FRichCurve)                                RedCurve                                                    OFFSET(getStruct<T>, {0x70, 128, 0, 0})
+	SMember(FRichCurve)                                GreenCurve                                                  OFFSET(getStruct<T>, {0xF0, 128, 0, 0})
+	SMember(FRichCurve)                                BlueCurve                                                   OFFSET(getStruct<T>, {0x170, 128, 0, 0})
+	SMember(FRichCurve)                                AlphaCurve                                                  OFFSET(getStruct<T>, {0x1F0, 128, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCubeTexture
@@ -1358,7 +1358,7 @@ class UNiagaraDataInterfaceCubeTexture : public UNiagaraDataInterface
 
 public:
 	CMember(UTexture*)                                 Texture                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceCurlNoise
@@ -1380,7 +1380,7 @@ class UNiagaraDataInterfaceCurve : public UNiagaraDataInterfaceCurveBase
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FRichCurve)                                Curve                                                       OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FRichCurve)                                Curve                                                       OFFSET(getStruct<T>, {0x70, 128, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraParticleCallbackHandler
@@ -1401,7 +1401,7 @@ class UNiagaraDataInterfaceExport : public UNiagaraDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FNiagaraUserParameterBinding)              CallbackHandlerParameter                                    OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              CallbackHandlerParameter                                    OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	CMember(ENDIExport_GPUAllocationMode)              GPUAllocationMode                                           OFFSET(get<T>, {0x50, 1, 0, 0})
 	DMember(int32_t)                                   GPUAllocationFixedSize                                      OFFSET(get<int32_t>, {0x54, 4, 0, 0})
 	DMember(float)                                     GPUAllocationPerParticleSize                                OFFSET(get<float>, {0x58, 4, 0, 0})
@@ -1421,7 +1421,7 @@ public:
 	DMember(int32_t)                                   NumCellsMaxAxis                                             OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 	DMember(int32_t)                                   NumAttributes                                               OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(bool)                                      SetGridFromMaxAxis                                          OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	SMember(FVector2D)                                 WorldBBoxSize                                               OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FVector2D)                                 WorldBBoxSize                                               OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollection
@@ -1432,7 +1432,7 @@ class UNiagaraDataInterfaceGrid2DCollection : public UNiagaraDataInterfaceGrid2D
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 	CMember(ENiagaraGpuBufferFormat)                   OverrideBufferFormat                                        OFFSET(get<T>, {0x78, 1, 0, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x79, 1, 1, 0})
 	CMember(TMap<uint64_t, UTextureRenderTarget2DArray*>) ManagedRenderTargets                                     OFFSET(get<T>, {0xD0, 80, 0, 0})
@@ -1457,8 +1457,8 @@ class UNiagaraDataInterfaceGrid2DCollectionReader : public UNiagaraDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FString)                                   EmitterName                                                 OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FString)                                   DIName                                                      OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FString)                                   EmitterName                                                 OFFSET(getStruct<T>, {0x120, 16, 0, 0})
+	SMember(FString)                                   DIName                                                      OFFSET(getStruct<T>, {0x130, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3D
@@ -1470,11 +1470,11 @@ class UNiagaraDataInterfaceGrid3D : public UNiagaraDataInterfaceRWBase
 
 public:
 	DMember(bool)                                      ClearBeforeNonIterationStage                                OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FIntVector)                                NumCells                                                    OFFSET(get<T>, {0x3C, 12, 0, 0})
+	SMember(FIntVector)                                NumCells                                                    OFFSET(getStruct<T>, {0x3C, 12, 0, 0})
 	DMember(float)                                     CellSize                                                    OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   NumCellsMaxAxis                                             OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 	CMember(ESetResolutionMethod)                      SetResolutionMethod                                         OFFSET(get<T>, {0x50, 4, 0, 0})
-	SMember(FVector)                                   WorldBBoxSize                                               OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   WorldBBoxSize                                               OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3DCollection
@@ -1486,7 +1486,7 @@ class UNiagaraDataInterfaceGrid3DCollection : public UNiagaraDataInterfaceGrid3D
 
 public:
 	DMember(int32_t)                                   NumAttributes                                               OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	CMember(ENiagaraGpuBufferFormat)                   OverrideBufferFormat                                        OFFSET(get<T>, {0x90, 1, 0, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x91, 1, 1, 0})
 
@@ -1510,8 +1510,8 @@ class UNiagaraDataInterfaceGrid3DCollectionReader : public UNiagaraDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FString)                                   EmitterName                                                 OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FString)                                   DIName                                                      OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FString)                                   EmitterName                                                 OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FString)                                   DIName                                                      OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceIntRenderTarget2D
@@ -1522,8 +1522,8 @@ class UNiagaraDataInterfaceIntRenderTarget2D : public UNiagaraDataInterfaceRWBas
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FIntPoint)                                 Size                                                        OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FIntPoint)                                 Size                                                        OFFSET(getStruct<T>, {0x38, 8, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceLandscape
@@ -1579,7 +1579,7 @@ class UNiagaraDataInterfaceParticleRead : public UNiagaraDataInterfaceRWBase
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   EmitterName                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   EmitterName                                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfacePlatformSet
@@ -1590,7 +1590,7 @@ class UNiagaraDataInterfacePlatformSet : public UNiagaraDataInterface
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(get<T>, {0x38, 48, 0, 0})
+	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(getStruct<T>, {0x38, 48, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRasterizationGrid3D
@@ -1614,14 +1614,14 @@ class UNiagaraDataInterfaceRenderTarget2D : public UNiagaraDataInterfaceRWBase
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FIntPoint)                                 Size                                                        OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FIntPoint)                                 Size                                                        OFFSET(getStruct<T>, {0x38, 8, 0, 0})
 	CMember(ENiagaraMipMapGeneration)                  MipMapGeneration                                            OFFSET(get<T>, {0x40, 1, 0, 0})
 	CMember(ENiagaraMipMapGenerationType)              MipMapGenerationType                                        OFFSET(get<T>, {0x41, 1, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   OverrideRenderTargetFormat                                  OFFSET(get<T>, {0x42, 1, 0, 0})
 	CMember(TEnumAsByte<TextureFilter>)                OverrideRenderTargetFilter                                  OFFSET(get<T>, {0x43, 1, 0, 0})
 	DMember(bool)                                      bInheritUserParameterSettings                               OFFSET(get<bool>, {0x44, 1, 1, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x44, 1, 1, 1})
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRenderTarget2DArray
@@ -1632,12 +1632,12 @@ class UNiagaraDataInterfaceRenderTarget2DArray : public UNiagaraDataInterfaceRWB
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FIntVector)                                Size                                                        OFFSET(get<T>, {0x38, 12, 0, 0})
+	SMember(FIntVector)                                Size                                                        OFFSET(getStruct<T>, {0x38, 12, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   OverrideRenderTargetFormat                                  OFFSET(get<T>, {0x44, 1, 0, 0})
 	CMember(TEnumAsByte<TextureFilter>)                OverrideRenderTargetFilter                                  OFFSET(get<T>, {0x45, 1, 0, 0})
 	DMember(bool)                                      bInheritUserParameterSettings                               OFFSET(get<bool>, {0x46, 1, 1, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x46, 1, 1, 1})
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRenderTargetCube
@@ -1653,7 +1653,7 @@ public:
 	CMember(TEnumAsByte<TextureFilter>)                OverrideRenderTargetFilter                                  OFFSET(get<T>, {0x3D, 1, 0, 0})
 	DMember(bool)                                      bInheritUserParameterSettings                               OFFSET(get<bool>, {0x3E, 1, 1, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x3E, 1, 1, 1})
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRenderTargetVolume
@@ -1664,12 +1664,12 @@ class UNiagaraDataInterfaceRenderTargetVolume : public UNiagaraDataInterfaceRWBa
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FIntVector)                                Size                                                        OFFSET(get<T>, {0x40, 12, 0, 0})
+	SMember(FIntVector)                                Size                                                        OFFSET(getStruct<T>, {0x40, 12, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   OverrideRenderTargetFormat                                  OFFSET(get<T>, {0x4C, 1, 0, 0})
 	CMember(TEnumAsByte<TextureFilter>)                OverrideRenderTargetFilter                                  OFFSET(get<T>, {0x4D, 1, 0, 0})
 	DMember(bool)                                      bInheritUserParameterSettings                               OFFSET(get<bool>, {0x4E, 1, 1, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x4E, 1, 1, 1})
-	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceRigidMeshCollisionQuery
@@ -1713,13 +1713,13 @@ public:
 	CMember(TWeakObjectPtr<AActor*>)                   SoftSourceActor                                             OFFSET(get<T>, {0x40, 32, 0, 0})
 	CMember(TArray<FName>)                             ComponentTags                                               OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(USkeletalMeshComponent*)                   SourceComponent                                             OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              MeshUserParameter                                           OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MeshUserParameter                                           OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	CMember(ENDISkeletalMesh_SkinningMode)             SkinningMode                                                OFFSET(get<T>, {0x90, 1, 0, 0})
 	CMember(TArray<FName>)                             SamplingRegions                                             OFFSET(get<T>, {0x98, 16, 0, 0})
 	DMember(int32_t)                                   WholeMeshLOD                                                OFFSET(get<int32_t>, {0xA8, 4, 0, 0})
 	CMember(TArray<FName>)                             FilteredBones                                               OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FName)                                     ExcludeBoneName                                             OFFSET(get<T>, {0xD0, 4, 0, 0})
+	SMember(FName)                                     ExcludeBoneName                                             OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
 	DMember(bool)                                      bExcludeBone                                                OFFSET(get<bool>, {0xD4, 1, 1, 0})
 	DMember(int32_t)                                   UvSetIndex                                                  OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
 	DMember(bool)                                      bRequireCurrentFrameData                                    OFFSET(get<bool>, {0xDC, 1, 0, 0})
@@ -1739,7 +1739,7 @@ class UNiagaraDataInterfaceSparseVolumeTexture : public UNiagaraDataInterface
 
 public:
 	CMember(USparseVolumeTexture*)                     SparseVolumeTexture                                         OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              SparseVolumeTextureUserParameter                            OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              SparseVolumeTextureUserParameter                            OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceSpline
@@ -1751,7 +1751,7 @@ class UNiagaraDataInterfaceSpline : public UNiagaraDataInterface
 
 public:
 	CMember(AActor*)                                   Source                                                      OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              SplineUserParameter                                         OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              SplineUserParameter                                         OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(bool)                                      bUseLUT                                                     OFFSET(get<bool>, {0x58, 1, 0, 0})
 	DMember(int32_t)                                   NumLUTSteps                                                 OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
 };
@@ -1776,7 +1776,7 @@ class UNiagaraDataInterfaceTexture : public UNiagaraDataInterface
 
 public:
 	CMember(UTexture*)                                 Texture                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVector2DCurve
@@ -1787,8 +1787,8 @@ class UNiagaraDataInterfaceVector2DCurve : public UNiagaraDataInterfaceCurveBase
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FRichCurve)                                XCurve                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
-	SMember(FRichCurve)                                YCurve                                                      OFFSET(get<T>, {0xF0, 128, 0, 0})
+	SMember(FRichCurve)                                XCurve                                                      OFFSET(getStruct<T>, {0x70, 128, 0, 0})
+	SMember(FRichCurve)                                YCurve                                                      OFFSET(getStruct<T>, {0xF0, 128, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVector4Curve
@@ -1799,10 +1799,10 @@ class UNiagaraDataInterfaceVector4Curve : public UNiagaraDataInterfaceCurveBase
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FRichCurve)                                XCurve                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
-	SMember(FRichCurve)                                YCurve                                                      OFFSET(get<T>, {0xF0, 128, 0, 0})
-	SMember(FRichCurve)                                ZCurve                                                      OFFSET(get<T>, {0x170, 128, 0, 0})
-	SMember(FRichCurve)                                WCurve                                                      OFFSET(get<T>, {0x1F0, 128, 0, 0})
+	SMember(FRichCurve)                                XCurve                                                      OFFSET(getStruct<T>, {0x70, 128, 0, 0})
+	SMember(FRichCurve)                                YCurve                                                      OFFSET(getStruct<T>, {0xF0, 128, 0, 0})
+	SMember(FRichCurve)                                ZCurve                                                      OFFSET(getStruct<T>, {0x170, 128, 0, 0})
+	SMember(FRichCurve)                                WCurve                                                      OFFSET(getStruct<T>, {0x1F0, 128, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVectorCurve
@@ -1813,9 +1813,9 @@ class UNiagaraDataInterfaceVectorCurve : public UNiagaraDataInterfaceCurveBase
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FRichCurve)                                XCurve                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
-	SMember(FRichCurve)                                YCurve                                                      OFFSET(get<T>, {0xF0, 128, 0, 0})
-	SMember(FRichCurve)                                ZCurve                                                      OFFSET(get<T>, {0x170, 128, 0, 0})
+	SMember(FRichCurve)                                XCurve                                                      OFFSET(getStruct<T>, {0x70, 128, 0, 0})
+	SMember(FRichCurve)                                YCurve                                                      OFFSET(getStruct<T>, {0xF0, 128, 0, 0})
+	SMember(FRichCurve)                                ZCurve                                                      OFFSET(getStruct<T>, {0x170, 128, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDataInterfaceVectorField
@@ -1852,7 +1852,7 @@ class UNiagaraDataInterfaceVolumeTexture : public UNiagaraDataInterface
 
 public:
 	CMember(UTexture*)                                 Texture                                                     OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              TextureUserParameter                                        OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDebugHUDSettings
@@ -1863,7 +1863,7 @@ class UNiagaraDebugHUDSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	SMember(FNiagaraDebugHUDSettingsData)              Data                                                        OFFSET(get<T>, {0x48, 584, 0, 0})
+	SMember(FNiagaraDebugHUDSettingsData)              Data                                                        OFFSET(getStruct<T>, {0x48, 584, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraDecalRendererProperties
@@ -1875,19 +1875,19 @@ class UNiagaraDecalRendererProperties : public UNiagaraRendererProperties
 
 public:
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FNiagaraParameterBinding)                  MaterialParameterBinding                                    OFFSET(get<T>, {0xB8, 8, 0, 0})
+	SMember(FNiagaraParameterBinding)                  MaterialParameterBinding                                    OFFSET(getStruct<T>, {0xB8, 8, 0, 0})
 	CMember(ENiagaraRendererSourceDataMode)            SourceMode                                                  OFFSET(get<T>, {0xC0, 1, 0, 0})
 	DMember(int32_t)                                   RendererVisibility                                          OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
 	DMember(float)                                     DecalScreenSizeFade                                         OFFSET(get<float>, {0xC8, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DecalOrientationBinding                                     OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DecalSizeBinding                                            OFFSET(get<T>, {0x120, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DecalFadeBinding                                            OFFSET(get<T>, {0x148, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DecalSortOrderBinding                                       OFFSET(get<T>, {0x170, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DecalColorBinding                                           OFFSET(get<T>, {0x198, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DecalVisibleBinding                                         OFFSET(get<T>, {0x1C0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x1E8, 40, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x210, 80, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DecalOrientationBinding                                     OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DecalSizeBinding                                            OFFSET(getStruct<T>, {0x120, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DecalFadeBinding                                            OFFSET(getStruct<T>, {0x148, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DecalSortOrderBinding                                       OFFSET(getStruct<T>, {0x170, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DecalColorBinding                                           OFFSET(getStruct<T>, {0x198, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DecalVisibleBinding                                         OFFSET(getStruct<T>, {0x1C0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x1E8, 40, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x210, 80, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraEditorDataBase
@@ -1953,11 +1953,11 @@ public:
 	CMember(ENiagaraCullReaction)                      CullReaction                                                OFFSET(get<T>, {0x30, 4, 0, 0})
 	CMember(UNiagaraSignificanceHandler*)              SignificanceHandler                                         OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<FNiagaraSystemScalabilitySettings>) DetailLevelScalabilitySettings                              OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FNiagaraSystemScalabilitySettingsArray)    SystemScalabilitySettings                                   OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FNiagaraEmitterScalabilitySettingsArray)   EmitterScalabilitySettings                                  OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FNiagaraSystemScalabilitySettingsArray)    SystemScalabilitySettings                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FNiagaraEmitterScalabilitySettingsArray)   EmitterScalabilitySettings                                  OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 	CMember(UNiagaraBaselineController*)               PerformanceBaselineController                               OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FNiagaraPerfBaselineStats)                 PerfBaselineStats                                           OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FGuid)                                     PerfBaselineVersion                                         OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FNiagaraPerfBaselineStats)                 PerfBaselineStats                                           OFFSET(getStruct<T>, {0x80, 16, 0, 0})
+	SMember(FGuid)                                     PerfBaselineVersion                                         OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraEmitter
@@ -1968,10 +1968,10 @@ class UNiagaraEmitter : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGuid)                                     ExposedVersion                                              OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FGuid)                                     ExposedVersion                                              OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	DMember(bool)                                      bVersioningEnabled                                          OFFSET(get<bool>, {0x40, 1, 0, 0})
 	CMember(TArray<FVersionedNiagaraEmitterData>)      VersionData                                                 OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FString)                                   UniqueEmitterName                                           OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   UniqueEmitterName                                           OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraEventReceiverEmitterAction
@@ -2013,7 +2013,7 @@ class ANiagaraLensEffectBase : public ANiagaraActor
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FTransform)                                DesiredRelativeTransform                                    OFFSET(get<T>, {0x2B0, 96, 0, 0})
+	SMember(FTransform)                                DesiredRelativeTransform                                    OFFSET(getStruct<T>, {0x2B0, 96, 0, 0})
 	DMember(float)                                     BaseAuthoredFOV                                             OFFSET(get<float>, {0x310, 4, 0, 0})
 	DMember(bool)                                      bAllowMultipleInstances                                     OFFSET(get<bool>, {0x314, 1, 1, 0})
 	DMember(bool)                                      bResetWhenRetriggered                                       OFFSET(get<bool>, {0x314, 1, 1, 1})
@@ -2036,16 +2036,16 @@ public:
 	DMember(bool)                                      bOverrideInverseExposureBlend                               OFFSET(get<bool>, {0xB4, 1, 1, 3})
 	DMember(float)                                     RadiusScale                                                 OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     DefaultExponent                                             OFFSET(get<float>, {0xBC, 4, 0, 0})
-	SMember(FVector3f)                                 ColorAdd                                                    OFFSET(get<T>, {0xC0, 12, 0, 0})
+	SMember(FVector3f)                                 ColorAdd                                                    OFFSET(getStruct<T>, {0xC0, 12, 0, 0})
 	DMember(float)                                     InverseExposureBlend                                        OFFSET(get<float>, {0xCC, 4, 0, 0})
 	DMember(int32_t)                                   RendererVisibility                                          OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          LightRenderingEnabledBinding                                OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          LightExponentBinding                                        OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(get<T>, {0x150, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RadiusBinding                                               OFFSET(get<T>, {0x178, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VolumetricScatteringBinding                                 OFFSET(get<T>, {0x1A0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x1C8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          LightRenderingEnabledBinding                                OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          LightExponentBinding                                        OFFSET(getStruct<T>, {0x100, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0x128, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(getStruct<T>, {0x150, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RadiusBinding                                               OFFSET(getStruct<T>, {0x178, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VolumetricScatteringBinding                                 OFFSET(getStruct<T>, {0x1A0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x1C8, 40, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraMeshRendererProperties
@@ -2071,36 +2071,36 @@ public:
 	DMember(bool)                                      bLockedAxisEnable                                           OFFSET(get<bool>, {0xC4, 1, 1, 7})
 	CMember(TArray<FNiagaraMeshMaterialOverride>)      OverrideMaterials                                           OFFSET(get<T>, {0xC8, 16, 0, 0})
 	CMember(TArray<FNiagaraMeshMICOverride>)           MICOverrideMaterials                                        OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FVector2D)                                 SubImageSize                                                OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FVector)                                   LockedAxis                                                  OFFSET(get<T>, {0xF8, 24, 0, 0})
-	SMember(FVector)                                   MeshBoundsScale                                             OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FVector2D)                                 SubImageSize                                                OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FVector)                                   LockedAxis                                                  OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
+	SMember(FVector)                                   MeshBoundsScale                                             OFFSET(getStruct<T>, {0x110, 24, 0, 0})
 	CMember(ENiagaraMeshFacingMode)                    FacingMode                                                  OFFSET(get<T>, {0x128, 1, 0, 0})
 	CMember(ENiagaraMeshLockedAxisSpace)               LockedAxisSpace                                             OFFSET(get<T>, {0x129, 1, 0, 0})
 	DMember(float)                                     MinCameraDistance                                           OFFSET(get<float>, {0x12C, 4, 0, 0})
 	DMember(float)                                     MaxCameraDistance                                           OFFSET(get<float>, {0x130, 4, 0, 0})
 	DMember(uint32_t)                                  RendererVisibility                                          OFFSET(get<uint32_t>, {0x134, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0x138, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(get<T>, {0x160, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(get<T>, {0x188, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MeshOrientationBinding                                      OFFSET(get<T>, {0x1B0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(get<T>, {0x1D8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SubImageIndexBinding                                        OFFSET(get<T>, {0x200, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(get<T>, {0x228, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(get<T>, {0x250, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(get<T>, {0x278, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(get<T>, {0x2A0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(get<T>, {0x2C8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          CustomSortingBinding                                        OFFSET(get<T>, {0x2F0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(get<T>, {0x318, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          CameraOffsetBinding                                         OFFSET(get<T>, {0x340, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x368, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MeshIndexBinding                                            OFFSET(get<T>, {0x390, 40, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x3B8, 80, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(get<T>, {0x408, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevScaleBinding                                            OFFSET(get<T>, {0x430, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevMeshOrientationBinding                                  OFFSET(get<T>, {0x458, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevCameraOffsetBinding                                     OFFSET(get<T>, {0x480, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevVelocityBinding                                         OFFSET(get<T>, {0x4A8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0x138, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(getStruct<T>, {0x160, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(getStruct<T>, {0x188, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MeshOrientationBinding                                      OFFSET(getStruct<T>, {0x1B0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SubImageIndexBinding                                        OFFSET(getStruct<T>, {0x200, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(getStruct<T>, {0x228, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(getStruct<T>, {0x250, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(getStruct<T>, {0x278, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(getStruct<T>, {0x2A0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(getStruct<T>, {0x2C8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          CustomSortingBinding                                        OFFSET(getStruct<T>, {0x2F0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(getStruct<T>, {0x318, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          CameraOffsetBinding                                         OFFSET(getStruct<T>, {0x340, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x368, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MeshIndexBinding                                            OFFSET(getStruct<T>, {0x390, 40, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x3B8, 80, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(getStruct<T>, {0x408, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevScaleBinding                                            OFFSET(getStruct<T>, {0x430, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevMeshOrientationBinding                                  OFFSET(getStruct<T>, {0x458, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevCameraOffsetBinding                                     OFFSET(getStruct<T>, {0x480, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevVelocityBinding                                         OFFSET(getStruct<T>, {0x4A8, 40, 0, 0})
 	DMember(uint32_t)                                  MaterialParamValidMask                                      OFFSET(get<uint32_t>, {0x4D0, 4, 0, 0})
 };
 
@@ -2114,7 +2114,7 @@ class UNiagaraParameterCollectionInstance : public UObject
 public:
 	CMember(UNiagaraParameterCollection*)              Collection                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TArray<FNiagaraVariable>)                  OverridenParameters                                         OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FNiagaraParameterStore)                    ParameterStorage                                            OFFSET(get<T>, {0x40, 136, 0, 0})
+	SMember(FNiagaraParameterStore)                    ParameterStorage                                            OFFSET(getStruct<T>, {0x40, 136, 0, 0})
 
 
 	/// Functions
@@ -2160,11 +2160,11 @@ class UNiagaraParameterCollection : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FName)                                     Namespace                                                   OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     Namespace                                                   OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(TArray<FNiagaraVariable>)                  Parameters                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(UMaterialParameterCollection*)             SourceMaterialCollection                                    OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(UNiagaraParameterCollectionInstance*)      DefaultInstance                                             OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FGuid)                                     CompileId                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FGuid)                                     CompileId                                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraBaselineController
@@ -2258,7 +2258,7 @@ class UNiagaraPreviewAxis_InterpParamBase : public UNiagaraPreviewAxis
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     Param                                                       OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     Param                                                       OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 };
 
@@ -2294,8 +2294,8 @@ class UNiagaraPreviewAxis_InterpParamVector2D : public UNiagaraPreviewAxis_Inter
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector2D)                                 min                                                         OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FVector2D)                                 max                                                         OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FVector2D)                                 min                                                         OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FVector2D)                                 max                                                         OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamVector
@@ -2306,8 +2306,8 @@ class UNiagaraPreviewAxis_InterpParamVector : public UNiagaraPreviewAxis_InterpP
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   min                                                         OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   max                                                         OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   min                                                         OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   max                                                         OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamVector4
@@ -2318,8 +2318,8 @@ class UNiagaraPreviewAxis_InterpParamVector4 : public UNiagaraPreviewAxis_Interp
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector4)                                  min                                                         OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FVector4)                                  max                                                         OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FVector4)                                  min                                                         OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FVector4)                                  max                                                         OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraPreviewAxis_InterpParamLinearColor
@@ -2330,8 +2330,8 @@ class UNiagaraPreviewAxis_InterpParamLinearColor : public UNiagaraPreviewAxis_In
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FLinearColor)                              min                                                         OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FLinearColor)                              max                                                         OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FLinearColor)                              min                                                         OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FLinearColor)                              max                                                         OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraPreviewGrid
@@ -2374,9 +2374,9 @@ class UNiagaraRibbonRendererProperties : public UNiagaraRendererProperties
 
 public:
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              MaterialUserParamBinding                                    OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FNiagaraRibbonUVSettings)                  UV0Settings                                                 OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FNiagaraRibbonUVSettings)                  UV1Settings                                                 OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MaterialUserParamBinding                                    OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FNiagaraRibbonUVSettings)                  UV0Settings                                                 OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
+	SMember(FNiagaraRibbonUVSettings)                  UV1Settings                                                 OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
 	CMember(ENiagaraRibbonFacingMode)                  FacingMode                                                  OFFSET(get<T>, {0x120, 1, 0, 0})
 	DMember(int32_t)                                   MaxNumRibbons                                               OFFSET(get<int32_t>, {0x124, 4, 0, 0})
 	CMember(ENiagaraRibbonDrawDirection)               DrawDirection                                               OFFSET(get<T>, {0x128, 1, 0, 0})
@@ -2395,30 +2395,30 @@ public:
 	DMember(float)                                     CurveTension                                                OFFSET(get<float>, {0x14C, 4, 0, 0})
 	DMember(int32_t)                                   TessellationFactor                                          OFFSET(get<int32_t>, {0x150, 4, 0, 0})
 	DMember(float)                                     TessellationAngle                                           OFFSET(get<float>, {0x154, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0x158, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(get<T>, {0x180, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(get<T>, {0x1A8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(get<T>, {0x1D0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RibbonTwistBinding                                          OFFSET(get<T>, {0x1F8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RibbonWidthBinding                                          OFFSET(get<T>, {0x220, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RibbonFacingBinding                                         OFFSET(get<T>, {0x248, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RibbonIdBinding                                             OFFSET(get<T>, {0x270, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RibbonLinkOrderBinding                                      OFFSET(get<T>, {0x298, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(get<T>, {0x2C0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(get<T>, {0x2E8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(get<T>, {0x310, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(get<T>, {0x338, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(get<T>, {0x360, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RibbonUVDistance                                            OFFSET(get<T>, {0x388, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          U0OverrideBinding                                           OFFSET(get<T>, {0x3B0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          V0RangeOverrideBinding                                      OFFSET(get<T>, {0x3D8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          U1OverrideBinding                                           OFFSET(get<T>, {0x400, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          V1RangeOverrideBinding                                      OFFSET(get<T>, {0x428, 40, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x450, 80, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(get<T>, {0x4A0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevRibbonWidthBinding                                      OFFSET(get<T>, {0x4C8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevRibbonFacingBinding                                     OFFSET(get<T>, {0x4F0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevRibbonTwistBinding                                      OFFSET(get<T>, {0x518, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0x158, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(getStruct<T>, {0x180, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(getStruct<T>, {0x1A8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(getStruct<T>, {0x1D0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RibbonTwistBinding                                          OFFSET(getStruct<T>, {0x1F8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RibbonWidthBinding                                          OFFSET(getStruct<T>, {0x220, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RibbonFacingBinding                                         OFFSET(getStruct<T>, {0x248, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RibbonIdBinding                                             OFFSET(getStruct<T>, {0x270, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RibbonLinkOrderBinding                                      OFFSET(getStruct<T>, {0x298, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(getStruct<T>, {0x2C0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(getStruct<T>, {0x2E8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(getStruct<T>, {0x310, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(getStruct<T>, {0x338, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(getStruct<T>, {0x360, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RibbonUVDistance                                            OFFSET(getStruct<T>, {0x388, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          U0OverrideBinding                                           OFFSET(getStruct<T>, {0x3B0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          V0RangeOverrideBinding                                      OFFSET(getStruct<T>, {0x3D8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          U1OverrideBinding                                           OFFSET(getStruct<T>, {0x400, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          V1RangeOverrideBinding                                      OFFSET(getStruct<T>, {0x428, 40, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x450, 80, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(getStruct<T>, {0x4A0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevRibbonWidthBinding                                      OFFSET(getStruct<T>, {0x4C8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevRibbonFacingBinding                                     OFFSET(getStruct<T>, {0x4F0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevRibbonTwistBinding                                      OFFSET(getStruct<T>, {0x518, 40, 0, 0})
 	DMember(uint32_t)                                  MaterialParamValidMask                                      OFFSET(get<uint32_t>, {0x540, 4, 0, 0})
 };
 
@@ -2441,12 +2441,12 @@ class UNiagaraScript : public UNiagaraScriptBase
 
 public:
 	CMember(ENiagaraScriptUsage)                       Usage                                                       OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FGuid)                                     UsageId                                                     OFFSET(get<T>, {0x34, 16, 0, 0})
-	SMember(FNiagaraParameterStore)                    RapidIterationParameters                                    OFFSET(get<T>, {0x48, 136, 0, 0})
-	SMember(FNiagaraScriptExecutionParameterStore)     ScriptExecutionParamStore                                   OFFSET(get<T>, {0xD0, 168, 0, 0})
+	SMember(FGuid)                                     UsageId                                                     OFFSET(getStruct<T>, {0x34, 16, 0, 0})
+	SMember(FNiagaraParameterStore)                    RapidIterationParameters                                    OFFSET(getStruct<T>, {0x48, 136, 0, 0})
+	SMember(FNiagaraScriptExecutionParameterStore)     ScriptExecutionParamStore                                   OFFSET(getStruct<T>, {0xD0, 168, 0, 0})
 	CMember(TArray<FNiagaraBoundParameter>)            ScriptExecutionBoundParameters                              OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FNiagaraVMExecutableDataId)                CachedScriptVMId                                            OFFSET(get<T>, {0x188, 88, 0, 0})
-	SMember(FNiagaraVMExecutableData)                  CachedScriptVM                                              OFFSET(get<T>, {0x1F8, 416, 0, 0})
+	SMember(FNiagaraVMExecutableDataId)                CachedScriptVMId                                            OFFSET(getStruct<T>, {0x188, 88, 0, 0})
+	SMember(FNiagaraVMExecutableData)                  CachedScriptVM                                              OFFSET(getStruct<T>, {0x1F8, 416, 0, 0})
 	CMember(TArray<UNiagaraParameterCollection*>)      CachedParameterCollectionReferences                         OFFSET(get<T>, {0x398, 16, 0, 0})
 	CMember(TArray<FNiagaraScriptResolvedDataInterfaceInfo>) ResolvedDataInterfaces                                OFFSET(get<T>, {0x3A8, 16, 0, 0})
 	CMember(TArray<FNiagaraResolvedUserDataInterfaceBinding>) ResolvedUserDataInterfaceBindings                    OFFSET(get<T>, {0x3B8, 16, 0, 0})
@@ -2466,13 +2466,13 @@ class UNiagaraSimCache : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FGuid)                                     CacheGuid                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FGuid)                                     CacheGuid                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TWeakObjectPtr<UNiagaraSystem*>)           SoftNiagaraSystem                                           OFFSET(get<T>, {0x38, 32, 0, 0})
 	DMember(float)                                     StartSeconds                                                OFFSET(get<float>, {0x58, 4, 0, 0})
 	DMember(float)                                     DurationSeconds                                             OFFSET(get<float>, {0x5C, 4, 0, 0})
-	SMember(FNiagaraSimCacheCreateParameters)          CreateParameters                                            OFFSET(get<T>, {0x60, 88, 0, 0})
+	SMember(FNiagaraSimCacheCreateParameters)          CreateParameters                                            OFFSET(getStruct<T>, {0x60, 88, 0, 0})
 	DMember(bool)                                      bNeedsReadComponentMappingRecache                           OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	SMember(FNiagaraSimCacheLayout)                    CacheLayout                                                 OFFSET(get<T>, {0xC0, 192, 0, 0})
+	SMember(FNiagaraSimCacheLayout)                    CacheLayout                                                 OFFSET(getStruct<T>, {0xC0, 192, 0, 0})
 	CMember(TArray<FNiagaraSimCacheFrame>)             CacheFrames                                                 OFFSET(get<T>, {0x180, 16, 0, 0})
 	CMember(TMap<FNiagaraVariableBase, UObject*>)      DataInterfaceStorage                                        OFFSET(get<T>, {0x190, 80, 0, 0})
 
@@ -2528,7 +2528,7 @@ class UAsyncNiagaraCaptureSimCache : public UCancellableAsyncAction
 public:
 	CMember(UNiagaraSimCache*)                         CaptureSimCache                                             OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        CaptureComponent                                            OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CaptureComplete                                             OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CaptureComplete                                             OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -2561,7 +2561,7 @@ class UNiagaraSimulationStageBase : public UNiagaraMergeable
 
 public:
 	CMember(UNiagaraScript*)                           Script                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FName)                                     SimulationStageName                                         OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     SimulationStageName                                         OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x34, 1, 1, 0})
 };
 
@@ -2573,25 +2573,25 @@ class UNiagaraSimulationStageGeneric : public UNiagaraSimulationStageBase
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(get<T>, {0x38, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(getStruct<T>, {0x38, 40, 0, 0})
 	CMember(ENiagaraIterationSource)                   IterationSource                                             OFFSET(get<T>, {0x60, 1, 0, 0})
-	SMember(FNiagaraParameterBindingWithValue)         NumIterations                                               OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         NumIterations                                               OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	CMember(ENiagaraSimStageExecuteBehavior)           ExecuteBehavior                                             OFFSET(get<T>, {0x80, 1, 0, 0})
 	DMember(bool)                                      bDisablePartialParticleUpdate                               OFFSET(get<bool>, {0x84, 1, 1, 0})
-	SMember(FNiagaraVariableDataInterfaceBinding)      DataInterface                                               OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FNiagaraVariableDataInterfaceBinding)      DataInterface                                               OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 	DMember(bool)                                      bParticleIterationStateEnabled                              OFFSET(get<bool>, {0xA0, 1, 1, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ParticleIterationStateBinding                               OFFSET(get<T>, {0xA8, 40, 0, 0})
-	SMember(FIntPoint)                                 ParticleIterationStateRange                                 OFFSET(get<T>, {0xD0, 8, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ParticleIterationStateBinding                               OFFSET(getStruct<T>, {0xA8, 40, 0, 0})
+	SMember(FIntPoint)                                 ParticleIterationStateRange                                 OFFSET(getStruct<T>, {0xD0, 8, 0, 0})
 	DMember(bool)                                      bGpuDispatchForceLinear                                     OFFSET(get<bool>, {0xD8, 1, 1, 0})
 	DMember(bool)                                      bOverrideGpuDispatchNumThreads                              OFFSET(get<bool>, {0xD8, 1, 1, 1})
-	SMember(FNiagaraParameterBindingWithValue)         OverrideGpuDispatchNumThreadsX                              OFFSET(get<T>, {0xE0, 24, 0, 0})
-	SMember(FNiagaraParameterBindingWithValue)         OverrideGpuDispatchNumThreadsY                              OFFSET(get<T>, {0xF8, 24, 0, 0})
-	SMember(FNiagaraParameterBindingWithValue)         OverrideGpuDispatchNumThreadsZ                              OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         OverrideGpuDispatchNumThreadsX                              OFFSET(getStruct<T>, {0xE0, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         OverrideGpuDispatchNumThreadsY                              OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         OverrideGpuDispatchNumThreadsZ                              OFFSET(getStruct<T>, {0x110, 24, 0, 0})
 	CMember(ENiagaraGpuDispatchType)                   DirectDispatchType                                          OFFSET(get<T>, {0x128, 1, 0, 0})
 	CMember(ENiagaraDirectDispatchElementType)         DirectDispatchElementType                                   OFFSET(get<T>, {0x129, 1, 0, 0})
-	SMember(FNiagaraParameterBindingWithValue)         ElementCountX                                               OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FNiagaraParameterBindingWithValue)         ElementCountY                                               OFFSET(get<T>, {0x148, 24, 0, 0})
-	SMember(FNiagaraParameterBindingWithValue)         ElementCountZ                                               OFFSET(get<T>, {0x160, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         ElementCountX                                               OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         ElementCountY                                               OFFSET(getStruct<T>, {0x148, 24, 0, 0})
+	SMember(FNiagaraParameterBindingWithValue)         ElementCountZ                                               OFFSET(getStruct<T>, {0x160, 24, 0, 0})
 };
 
 /// Class /Script/Niagara.NiagaraSpriteRendererProperties
@@ -2603,14 +2603,14 @@ class UNiagaraSpriteRendererProperties : public UNiagaraRendererProperties
 
 public:
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              MaterialUserParamBinding                                    OFFSET(get<T>, {0xB8, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MaterialUserParamBinding                                    OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
 	CMember(ENiagaraRendererSourceDataMode)            SourceMode                                                  OFFSET(get<T>, {0xD0, 1, 0, 0})
 	CMember(ENiagaraSpriteAlignment)                   Alignment                                                   OFFSET(get<T>, {0xD1, 1, 0, 0})
 	CMember(ENiagaraSpriteFacingMode)                  FacingMode                                                  OFFSET(get<T>, {0xD2, 1, 0, 0})
 	CMember(ENiagaraSortMode)                          SortMode                                                    OFFSET(get<T>, {0xD3, 1, 0, 0})
 	DMember(float)                                     MacroUVRadius                                               OFFSET(get<float>, {0xD4, 4, 0, 0})
-	SMember(FVector2D)                                 PivotInUVSpace                                              OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FVector2D)                                 SubImageSize                                                OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FVector2D)                                 PivotInUVSpace                                              OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
+	SMember(FVector2D)                                 SubImageSize                                                OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
 	DMember(bool)                                      bSubImageBlend                                              OFFSET(get<bool>, {0xF8, 1, 1, 0})
 	DMember(bool)                                      bRemoveHMDRollInVR                                          OFFSET(get<bool>, {0xF8, 1, 1, 1})
 	DMember(bool)                                      bSortOnlyWhenTranslucent                                    OFFSET(get<bool>, {0xF8, 1, 1, 2})
@@ -2624,34 +2624,34 @@ public:
 	DMember(float)                                     MinCameraDistance                                           OFFSET(get<float>, {0x108, 4, 0, 0})
 	DMember(float)                                     MaxCameraDistance                                           OFFSET(get<float>, {0x10C, 4, 0, 0})
 	DMember(uint32_t)                                  RendererVisibility                                          OFFSET(get<uint32_t>, {0x110, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0x118, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(get<T>, {0x140, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(get<T>, {0x168, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SpriteRotationBinding                                       OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SpriteSizeBinding                                           OFFSET(get<T>, {0x1B8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SpriteFacingBinding                                         OFFSET(get<T>, {0x1E0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SpriteAlignmentBinding                                      OFFSET(get<T>, {0x208, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          SubImageIndexBinding                                        OFFSET(get<T>, {0x230, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(get<T>, {0x258, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(get<T>, {0x280, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(get<T>, {0x2A8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(get<T>, {0x2D0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          CameraOffsetBinding                                         OFFSET(get<T>, {0x2F8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          UVScaleBinding                                              OFFSET(get<T>, {0x320, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PivotOffsetBinding                                          OFFSET(get<T>, {0x348, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(get<T>, {0x370, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          CustomSortingBinding                                        OFFSET(get<T>, {0x398, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(get<T>, {0x3C0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x3E8, 40, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x410, 80, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(get<T>, {0x460, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevVelocityBinding                                         OFFSET(get<T>, {0x488, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteRotationBinding                                   OFFSET(get<T>, {0x4B0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteSizeBinding                                       OFFSET(get<T>, {0x4D8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteFacingBinding                                     OFFSET(get<T>, {0x500, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteAlignmentBinding                                  OFFSET(get<T>, {0x528, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevCameraOffsetBinding                                     OFFSET(get<T>, {0x550, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PrevPivotOffsetBinding                                      OFFSET(get<T>, {0x578, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0x118, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ColorBinding                                                OFFSET(getStruct<T>, {0x140, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VelocityBinding                                             OFFSET(getStruct<T>, {0x168, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SpriteRotationBinding                                       OFFSET(getStruct<T>, {0x190, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SpriteSizeBinding                                           OFFSET(getStruct<T>, {0x1B8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SpriteFacingBinding                                         OFFSET(getStruct<T>, {0x1E0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SpriteAlignmentBinding                                      OFFSET(getStruct<T>, {0x208, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          SubImageIndexBinding                                        OFFSET(getStruct<T>, {0x230, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterialBinding                                      OFFSET(getStruct<T>, {0x258, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial1Binding                                     OFFSET(getStruct<T>, {0x280, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial2Binding                                     OFFSET(getStruct<T>, {0x2A8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          DynamicMaterial3Binding                                     OFFSET(getStruct<T>, {0x2D0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          CameraOffsetBinding                                         OFFSET(getStruct<T>, {0x2F8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          UVScaleBinding                                              OFFSET(getStruct<T>, {0x320, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PivotOffsetBinding                                          OFFSET(getStruct<T>, {0x348, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          MaterialRandomBinding                                       OFFSET(getStruct<T>, {0x370, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          CustomSortingBinding                                        OFFSET(getStruct<T>, {0x398, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          NormalizedAgeBinding                                        OFFSET(getStruct<T>, {0x3C0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x3E8, 40, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x410, 80, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevPositionBinding                                         OFFSET(getStruct<T>, {0x460, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevVelocityBinding                                         OFFSET(getStruct<T>, {0x488, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteRotationBinding                                   OFFSET(getStruct<T>, {0x4B0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteSizeBinding                                       OFFSET(getStruct<T>, {0x4D8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteFacingBinding                                     OFFSET(getStruct<T>, {0x500, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevSpriteAlignmentBinding                                  OFFSET(getStruct<T>, {0x528, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevCameraOffsetBinding                                     OFFSET(getStruct<T>, {0x550, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PrevPivotOffsetBinding                                      OFFSET(getStruct<T>, {0x578, 40, 0, 0})
 	DMember(uint32_t)                                  MaterialParamValidMask                                      OFFSET(get<uint32_t>, {0x5A0, 4, 0, 0})
 };
 
@@ -2687,15 +2687,15 @@ public:
 	DMember(bool)                                      bOverrideScalabilitySettings                                OFFSET(get<bool>, {0x68, 1, 0, 0})
 	DMember(bool)                                      bOverrideAllowCullingForLocalPlayers                        OFFSET(get<bool>, {0x6C, 1, 1, 0})
 	DMember(bool)                                      bAllowCullingForLocalPlayersOverride                        OFFSET(get<bool>, {0x6C, 1, 1, 1})
-	SMember(FNiagaraSystemScalabilityOverrides)        SystemScalabilityOverrides                                  OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(get<T>, {0x80, 48, 0, 0})
+	SMember(FNiagaraSystemScalabilityOverrides)        SystemScalabilityOverrides                                  OFFSET(getStruct<T>, {0x70, 16, 0, 0})
+	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(getStruct<T>, {0x80, 48, 0, 0})
 	CMember(TArray<FNiagaraEmitterHandle>)             EmitterHandles                                              OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<UNiagaraParameterCollectionInstance*>) ParameterCollectionOverrides                             OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(UNiagaraScript*)                           SystemSpawnScript                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(UNiagaraScript*)                           SystemUpdateScript                                          OFFSET(get<T>, {0xD8, 8, 0, 0})
-	SMember(FNiagaraSystemCompiledData)                SystemCompiledData                                          OFFSET(get<T>, {0xF0, 552, 0, 0})
-	SMember(FNiagaraUserRedirectionParameterStore)     ExposedParameters                                           OFFSET(get<T>, {0x318, 216, 0, 0})
-	SMember(FBox)                                      FixedBounds                                                 OFFSET(get<T>, {0x3F0, 56, 0, 0})
+	SMember(FNiagaraSystemCompiledData)                SystemCompiledData                                          OFFSET(getStruct<T>, {0xF0, 552, 0, 0})
+	SMember(FNiagaraUserRedirectionParameterStore)     ExposedParameters                                           OFFSET(getStruct<T>, {0x318, 216, 0, 0})
+	SMember(FBox)                                      FixedBounds                                                 OFFSET(getStruct<T>, {0x3F0, 56, 0, 0})
 	DMember(bool)                                      bAutoDeactivate                                             OFFSET(get<bool>, {0x428, 1, 0, 0})
 	DMember(bool)                                      bDeterminism                                                OFFSET(get<bool>, {0x429, 1, 0, 0})
 	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x42C, 4, 0, 0})
@@ -2726,16 +2726,16 @@ class UNiagaraVolumeRendererProperties : public UNiagaraRendererProperties
 
 public:
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FNiagaraParameterBinding)                  MaterialParameterBinding                                    OFFSET(get<T>, {0xB8, 8, 0, 0})
+	SMember(FNiagaraParameterBinding)                  MaterialParameterBinding                                    OFFSET(getStruct<T>, {0xB8, 8, 0, 0})
 	DMember(int32_t)                                   RendererVisibility                                          OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
 	DMember(float)                                     StepFactor                                                  OFFSET(get<float>, {0xC8, 4, 0, 0})
 	DMember(float)                                     LightingDownsampleFactor                                    OFFSET(get<float>, {0xCC, 4, 0, 0})
 	DMember(float)                                     ShadowStepFactor                                            OFFSET(get<float>, {0xD0, 4, 0, 0})
 	DMember(float)                                     ShadowBiasFactor                                            OFFSET(get<float>, {0xD4, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x150, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VolumeResolutionMaxAxisBinding                              OFFSET(get<T>, {0x178, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          VolumeWorldSpaceSizeBinding                                 OFFSET(get<T>, {0x1A0, 40, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x1C8, 80, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x150, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VolumeResolutionMaxAxisBinding                              OFFSET(getStruct<T>, {0x178, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          VolumeWorldSpaceSizeBinding                                 OFFSET(getStruct<T>, {0x1A0, 40, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x1C8, 80, 0, 0})
 };
 
 /// Class /Script/Niagara.VolumeCache
@@ -2746,17 +2746,18 @@ class UVolumeCache : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   FilePath                                                    OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(EVolumeCacheType)                          CacheType                                                   OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FIntVector)                                Resolution                                                  OFFSET(get<T>, {0x3C, 12, 0, 0})
+	SMember(FIntVector)                                Resolution                                                  OFFSET(getStruct<T>, {0x3C, 12, 0, 0})
 	DMember(int32_t)                                   FrameRangeStart                                             OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   FrameRangeEnd                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSimCacheCaptureParameters
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FNiagaraSimCacheCaptureParameters : public MDKStruct
+class FNiagaraSimCacheCaptureParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -2773,8 +2774,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSimCacheCreateParameters
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FNiagaraSimCacheCreateParameters : public MDKStruct
+class FNiagaraSimCacheCreateParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -2793,13 +2795,14 @@ public:
 
 /// Struct /Script/Niagara.NDIRenderTargetVolumeSimCacheFrame
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FNDIRenderTargetVolumeSimCacheFrame : public MDKStruct
+class FNDIRenderTargetVolumeSimCacheFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FIntVector)                                Size                                                        OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FIntVector)                                Size                                                        OFFSET(getStruct<T>, {0x0, 12, 0, 0})
 	CMember(TEnumAsByte<EPixelFormat>)                 Format                                                      OFFSET(get<T>, {0xC, 1, 0, 0})
 	DMember(int32_t)                                   UncompressedSize                                            OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 	DMember(int32_t)                                   CompressedSize                                              OFFSET(get<int32_t>, {0x14, 4, 0, 0})
@@ -2807,44 +2810,48 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDataSetID
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraDataSetID : public MDKStruct
+class FNiagaraDataSetID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(ENiagaraDataSetType)                       Type                                                        OFFSET(get<T>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDataSetProperties
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraDataSetProperties : public MDKStruct
+class FNiagaraDataSetProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FNiagaraDataSetID)                         ID                                                          OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FNiagaraDataSetID)                         ID                                                          OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	CMember(TArray<FNiagaraVariableBase>)              Variables                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVariableBase
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraVariableBase : public MDKStruct
+class FNiagaraVariableBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FNiagaraTypeDefinitionHandle)              TypeDefHandle                                               OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FNiagaraTypeDefinitionHandle)              TypeDefHandle                                               OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraTypeDefinitionHandle
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNiagaraTypeDefinitionHandle : public MDKStruct
+class FNiagaraTypeDefinitionHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2854,8 +2861,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScriptDataUsageInfo
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraScriptDataUsageInfo : public MDKStruct
+class FNiagaraScriptDataUsageInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -2865,16 +2873,17 @@ public:
 
 /// Struct /Script/Niagara.NiagaraFunctionSignature
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FNiagaraFunctionSignature : public MDKStruct
+class FNiagaraFunctionSignature : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FNiagaraVariable>)                  Inputs                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FNiagaraVariable>)                  Outputs                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FName)                                     OwnerName                                                   OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     OwnerName                                                   OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(bool)                                      bRequiresContext                                            OFFSET(get<bool>, {0x2C, 1, 1, 0})
 	DMember(bool)                                      bRequiresExecPin                                            OFFSET(get<bool>, {0x2C, 1, 1, 1})
 	DMember(bool)                                      bMemberFunction                                             OFFSET(get<bool>, {0x2C, 1, 1, 2})
@@ -2898,6 +2907,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FNiagaraVariable : public FNiagaraVariableBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2907,66 +2917,71 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScriptUObjectCompileInfo
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraScriptUObjectCompileInfo : public MDKStruct
+class FNiagaraScriptUObjectCompileInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FNiagaraVariableBase)                      Variable                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      Variable                                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FSoftObjectPath)                           ObjectPath                                                  OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FName)                                     RegisteredParameterMapRead                                  OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FSoftObjectPath)                           ObjectPath                                                  OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FName)                                     RegisteredParameterMapRead                                  OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(TArray<FName>)                             RegisteredParameterMapWrites                                OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraResolvedUObjectInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraResolvedUObjectInfo : public MDKStruct
+class FNiagaraResolvedUObjectInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     ReadVariableName                                            OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FNiagaraVariableBase)                      ResolvedVariable                                            OFFSET(get<T>, {0x4, 8, 0, 0})
+	SMember(FName)                                     ReadVariableName                                            OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FNiagaraVariableBase)                      ResolvedVariable                                            OFFSET(getStruct<T>, {0x4, 8, 0, 0})
 	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraExternalUObjectInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraExternalUObjectInfo : public MDKStruct
+class FNiagaraExternalUObjectInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FNiagaraVariableBase)                      Variable                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     ExternalName                                                OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FNiagaraVariableBase)                      Variable                                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     ExternalName                                                OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraScriptDataInterfaceInfo
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraScriptDataInterfaceInfo : public MDKStruct
+class FNiagaraScriptDataInterfaceInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(UNiagaraDataInterface*)                    DataInterface                                               OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     CompileName                                                 OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     CompileName                                                 OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(int32_t)                                   UserPtrIdx                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FNiagaraTypeDefinition)                    Type                                                        OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FName)                                     RegisteredParameterMapRead                                  OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     RegisteredParameterMapWrite                                 OFFSET(get<T>, {0x2C, 4, 0, 0})
-	SMember(FString)                                   SourceEmitterName                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FNiagaraTypeDefinition)                    Type                                                        OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FName)                                     RegisteredParameterMapRead                                  OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     RegisteredParameterMapWrite                                 OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
+	SMember(FString)                                   SourceEmitterName                                           OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraTypeDefinition
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraTypeDefinition : public MDKStruct
+class FNiagaraTypeDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2978,8 +2993,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraResolvedUserDataInterfaceBinding
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraResolvedUserDataInterfaceBinding : public MDKStruct
+class FNiagaraResolvedUserDataInterfaceBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2988,17 +3004,18 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScriptResolvedDataInterfaceInfo
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraScriptResolvedDataInterfaceInfo : public MDKStruct
+class FNiagaraScriptResolvedDataInterfaceInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     CompileName                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FString)                                   ResolvedSourceEmitterName                                   OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FNiagaraVariableBase)                      ResolvedVariable                                            OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FNiagaraVariableBase)                      ParameterStoreVariable                                      OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CompileName                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FString)                                   ResolvedSourceEmitterName                                   OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FNiagaraVariableBase)                      ResolvedVariable                                            OFFSET(getStruct<T>, {0x18, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      ParameterStoreVariable                                      OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 	DMember(bool)                                      bIsInternal                                                 OFFSET(get<bool>, {0x28, 1, 0, 0})
 	CMember(UNiagaraDataInterface*)                    ResolvedDataInterface                                       OFFSET(get<T>, {0x30, 8, 0, 0})
 	DMember(int32_t)                                   UserPtrIdx                                                  OFFSET(get<int32_t>, {0x38, 4, 0, 0})
@@ -3006,55 +3023,59 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScriptDataInterfaceCompileInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FNiagaraScriptDataInterfaceCompileInfo : public MDKStruct
+class FNiagaraScriptDataInterfaceCompileInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   UserPtrIdx                                                  OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FNiagaraTypeDefinition)                    Type                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FName)                                     RegisteredParameterMapRead                                  OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     RegisteredParameterMapWrite                                 OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FNiagaraTypeDefinition)                    Type                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     RegisteredParameterMapRead                                  OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     RegisteredParameterMapWrite                                 OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 	DMember(bool)                                      bIsPlaceholder                                              OFFSET(get<bool>, {0x20, 1, 0, 0})
-	SMember(FString)                                   SourceEmitterName                                           OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   SourceEmitterName                                           OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraStatScope
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraStatScope : public MDKStruct
+class FNiagaraStatScope : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     FullName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     FriendlyName                                                OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     FullName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     FriendlyName                                                OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.VMFunctionSpecifier
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FVMFunctionSpecifier : public MDKStruct
+class FVMFunctionSpecifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Value                                                       OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Value                                                       OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.VMExternalFunctionBindingInfo
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FVMExternalFunctionBindingInfo : public MDKStruct
+class FVMExternalFunctionBindingInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     OwnerName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     OwnerName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(TArray<bool>)                              InputParamLocations                                         OFFSET(get<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   NumOutputs                                                  OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	CMember(TArray<FVMFunctionSpecifier>)              FunctionSpecifiers                                          OFFSET(get<T>, {0x20, 16, 0, 0})
@@ -3064,8 +3085,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSystemUpdateContext
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FNiagaraSystemUpdateContext : public MDKStruct
+class FNiagaraSystemUpdateContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
@@ -3079,28 +3101,30 @@ public:
 
 /// Struct /Script/Niagara.NiagaraVariableInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FNiagaraVariableInfo : public MDKStruct
+class FNiagaraVariableInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FNiagaraVariable)                          Variable                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     Definition                                                  OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FNiagaraVariable)                          Variable                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     Definition                                                  OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	CMember(UNiagaraDataInterface*)                    DataInterface                                               OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVariableAttributeBinding
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraVariableAttributeBinding : public MDKStruct
+class FNiagaraVariableAttributeBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FNiagaraVariable)                          RootVariable                                                OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FNiagaraVariableBase)                      ParamMapVariable                                            OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FName)                                     DataSetName                                                 OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FNiagaraVariable)                          RootVariable                                                OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FNiagaraVariableBase)                      ParamMapVariable                                            OFFSET(getStruct<T>, {0x18, 8, 0, 0})
+	SMember(FName)                                     DataSetName                                                 OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 	CMember(TEnumAsByte<ENiagaraBindingSource>)        BindingSourceMode                                           OFFSET(get<T>, {0x24, 1, 0, 0})
 	DMember(bool)                                      bBindingExistsOnSource                                      OFFSET(get<bool>, {0x25, 1, 1, 0})
 	DMember(bool)                                      bIsCachedParticleValue                                      OFFSET(get<bool>, {0x25, 1, 1, 1})
@@ -3108,71 +3132,77 @@ public:
 
 /// Struct /Script/Niagara.NiagaraMaterialAttributeBinding
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FNiagaraMaterialAttributeBinding : public MDKStruct
+class FNiagaraMaterialAttributeBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FName)                                     MaterialParameterName                                       OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FNiagaraVariableBase)                      NiagaraVariable                                             OFFSET(get<T>, {0x4, 8, 0, 0})
-	SMember(FNiagaraVariableBase)                      ResolvedNiagaraVariable                                     OFFSET(get<T>, {0xC, 8, 0, 0})
-	SMember(FNiagaraVariableBase)                      NiagaraChildVariable                                        OFFSET(get<T>, {0x14, 8, 0, 0})
+	SMember(FName)                                     MaterialParameterName                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FNiagaraVariableBase)                      NiagaraVariable                                             OFFSET(getStruct<T>, {0x4, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      ResolvedNiagaraVariable                                     OFFSET(getStruct<T>, {0xC, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      NiagaraChildVariable                                        OFFSET(getStruct<T>, {0x14, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVariableDataInterfaceBinding
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraVariableDataInterfaceBinding : public MDKStruct
+class FNiagaraVariableDataInterfaceBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FNiagaraVariable)                          BoundVariable                                               OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FNiagaraVariable)                          BoundVariable                                               OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraScriptVariableBinding
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNiagaraScriptVariableBinding : public MDKStruct
+class FNiagaraScriptVariableBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraUserParameterBinding
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraUserParameterBinding : public MDKStruct
+class FNiagaraUserParameterBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FNiagaraVariable)                          Parameter                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FNiagaraVariable)                          Parameter                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraCompileDependency
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraCompileDependency : public MDKStruct
+class FNiagaraCompileDependency : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   LinkerErrorMessage                                          OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     NodeGUID                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FGuid)                                     PinGuid                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   LinkerErrorMessage                                          OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     NodeGUID                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     PinGuid                                                     OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FGuid>)                             StackGuids                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FNiagaraVariableBase)                      DependentVariable                                           OFFSET(get<T>, {0x40, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      DependentVariable                                           OFFSET(getStruct<T>, {0x40, 8, 0, 0})
 	DMember(bool)                                      bDependentVariableFromCustomIterationNamespace              OFFSET(get<bool>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraScriptAsyncCompileData
 /// Size: 0x00F8 (0x000000 - 0x0000F8)
-class FNiagaraScriptAsyncCompileData : public MDKStruct
+class FNiagaraScriptAsyncCompileData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
@@ -3183,8 +3213,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSystemAsyncCompileResults
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FNiagaraSystemAsyncCompileResults : public MDKStruct
+class FNiagaraSystemAsyncCompileResults : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -3195,33 +3226,36 @@ public:
 
 /// Struct /Script/Niagara.NiagaraCompileHashVisitorDebugInfo
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNiagaraCompileHashVisitorDebugInfo : public MDKStruct
+class FNiagaraCompileHashVisitorDebugInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Object                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Object                                                      OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FString>)                           PropertyKeys                                                OFFSET(get<T>, {0x10, 16, 0, 0})
 	CMember(TArray<FString>)                           PropertyValues                                              OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDataChannelSearchParameters
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraDataChannelSearchParameters : public MDKStruct
+class FNiagaraDataChannelSearchParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(USceneComponent*)                          OwningComponent                                             OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDataChannelGameDataLayout
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNiagaraDataChannelGameDataLayout : public MDKStruct
+class FNiagaraDataChannelGameDataLayout : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -3232,8 +3266,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraLwcStructConverter
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraLwcStructConverter : public MDKStruct
+class FNiagaraLwcStructConverter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3245,8 +3280,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraStructConversionStep
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNiagaraStructConversionStep : public MDKStruct
+class FNiagaraStructConversionStep : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -3260,21 +3296,23 @@ public:
 
 /// Struct /Script/Niagara.NDCIsland
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FNDCIsland : public MDKStruct
+class FNDCIsland : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UNiagaraDataChannelHandler_Islands*)       Owner                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FBoxSphereBounds)                          Bounds                                                      OFFSET(get<T>, {0x8, 56, 0, 0})
+	SMember(FBoxSphereBounds)                          Bounds                                                      OFFSET(getStruct<T>, {0x8, 56, 0, 0})
 	CMember(TArray<UNiagaraComponent*>)                NiagaraSystems                                              OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NDCIslandDebugDrawSettings
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNDCIslandDebugDrawSettings : public MDKStruct
+class FNDCIslandDebugDrawSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -3285,21 +3323,23 @@ public:
 
 /// Struct /Script/Niagara.NDIDataChannelFunctionInfo
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNDIDataChannelFunctionInfo : public MDKStruct
+class FNDIDataChannelFunctionInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     FunctionName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     FunctionName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FNiagaraVariableBase>)              Inputs                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FNiagaraVariableBase>)              Outputs                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NDIDataChannel_GPUScriptParameterAccessInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNDIDataChannel_GPUScriptParameterAccessInfo : public MDKStruct
+class FNDIDataChannel_GPUScriptParameterAccessInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3309,8 +3349,9 @@ public:
 
 /// Struct /Script/Niagara.NDIDataChannelCompiledData
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FNDIDataChannelCompiledData : public MDKStruct
+class FNDIDataChannelCompiledData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -3326,24 +3367,26 @@ public:
 /// Size: 0x0040 (0x000068 - 0x0000A8)
 class FNDIDataChannelWriteCompiledData : public FNDIDataChannelCompiledData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FNiagaraDataSetCompiledData)               DataLayout                                                  OFFSET(get<T>, {0x68, 64, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               DataLayout                                                  OFFSET(getStruct<T>, {0x68, 64, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDataSetCompiledData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraDataSetCompiledData : public MDKStruct
+class FNiagaraDataSetCompiledData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(TArray<FNiagaraVariableBase>)              Variables                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FNiagaraVariableLayoutInfo>)        VariableLayouts                                             OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FNiagaraDataSetID)                         ID                                                          OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FNiagaraDataSetID)                         ID                                                          OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 	DMember(uint32_t)                                  TotalFloatComponents                                        OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
 	DMember(uint32_t)                                  TotalInt32Components                                        OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
 	DMember(uint32_t)                                  TotalHalfComponents                                         OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
@@ -3353,8 +3396,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraVariableLayoutInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraVariableLayoutInfo : public MDKStruct
+class FNiagaraVariableLayoutInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -3362,13 +3406,14 @@ public:
 	DMember(uint16_t)                                  FloatComponentStart                                         OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
 	DMember(uint16_t)                                  Int32ComponentStart                                         OFFSET(get<uint16_t>, {0x2, 2, 0, 0})
 	DMember(uint16_t)                                  HalfComponentStart                                          OFFSET(get<uint16_t>, {0x4, 2, 0, 0})
-	SMember(FNiagaraTypeLayoutInfo)                    LayoutInfo                                                  OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FNiagaraTypeLayoutInfo)                    LayoutInfo                                                  OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraTypeLayoutInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraTypeLayoutInfo : public MDKStruct
+class FNiagaraTypeLayoutInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3381,8 +3426,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraMessageStore
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraMessageStore : public MDKStruct
+class FNiagaraMessageStore : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -3391,19 +3437,21 @@ public:
 
 /// Struct /Script/Niagara.NiagaraParameterBinding
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraParameterBinding : public MDKStruct
+class FNiagaraParameterBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FNiagaraVariableBase)                      ResolvedParameter                                           OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      ResolvedParameter                                           OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraParameterBindingWithValue
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FNiagaraParameterBindingWithValue : public FNiagaraParameterBinding
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3413,8 +3461,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScalabilityState
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraScalabilityState : public MDKStruct
+class FNiagaraScalabilityState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -3433,23 +3482,25 @@ public:
 
 /// Struct /Script/Niagara.NiagaraStackSection
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraStackSection : public MDKStruct
+class FNiagaraStackSection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     SectionIdentifier                                           OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     SectionDisplayName                                          OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     SectionIdentifier                                           OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     SectionDisplayName                                          OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TArray<FText>)                             Categories                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FText)                                     ToolTip                                                     OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FText)                                     ToolTip                                                     OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDynamicMeshSection
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraDynamicMeshSection : public MDKStruct
+class FNiagaraDynamicMeshSection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -3460,20 +3511,22 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDynamicMeshMaterial
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraDynamicMeshMaterial : public MDKStruct
+class FNiagaraDynamicMeshMaterial : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              MaterialUserParamBinding                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              MaterialUserParamBinding                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NDIStaticMeshSectionFilter
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNDIStaticMeshSectionFilter : public MDKStruct
+class FNDIStaticMeshSectionFilter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3483,20 +3536,22 @@ public:
 
 /// Struct /Script/Niagara.NiagaraUObjectPropertyReaderRemap
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraUObjectPropertyReaderRemap : public MDKStruct
+class FNiagaraUObjectPropertyReaderRemap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     GraphName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     RemapName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     GraphName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     RemapName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraSystemTrackTemplate
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FMovieSceneNiagaraSystemTrackTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -3507,12 +3562,13 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FMovieSceneNiagaraSystemTrackImplementation : public FMovieSceneTrackImplementation
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FFrameNumber)                              SpawnSectionStartFrame                                      OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FFrameNumber)                              SpawnSectionEndFrame                                        OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FFrameNumber)                              SpawnSectionStartFrame                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	SMember(FFrameNumber)                              SpawnSectionEndFrame                                        OFFSET(getStruct<T>, {0x14, 4, 0, 0})
 	CMember(ENiagaraSystemSpawnSectionStartBehavior)   SpawnSectionStartBehavior                                   OFFSET(get<T>, {0x18, 4, 0, 0})
 	CMember(ENiagaraSystemSpawnSectionEvaluateBehavior) SpawnSectionEvaluateBehavior                               OFFSET(get<T>, {0x1C, 4, 0, 0})
 	CMember(ENiagaraSystemSpawnSectionEndBehavior)     SpawnSectionEndBehavior                                     OFFSET(get<T>, {0x20, 4, 0, 0})
@@ -3524,76 +3580,83 @@ public:
 /// Size: 0x0018 (0x000020 - 0x000038)
 class FMovieSceneNiagaraParameterSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FNiagaraVariable)                          Parameter                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FNiagaraVariable)                          Parameter                                                   OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraBoolParameterSectionTemplate
 /// Size: 0x0100 (0x000038 - 0x000138)
 class FMovieSceneNiagaraBoolParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FMovieSceneBoolChannel)                    BoolChannel                                                 OFFSET(get<T>, {0x38, 256, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    BoolChannel                                                 OFFSET(getStruct<T>, {0x38, 256, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraColorParameterSectionTemplate
 /// Size: 0x0440 (0x000038 - 0x000478)
 class FMovieSceneNiagaraColorParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1144;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   RedChannel                                                  OFFSET(get<T>, {0x38, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   GreenChannel                                                OFFSET(get<T>, {0x148, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   BlueChannel                                                 OFFSET(get<T>, {0x258, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   AlphaChannel                                                OFFSET(get<T>, {0x368, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   RedChannel                                                  OFFSET(getStruct<T>, {0x38, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   GreenChannel                                                OFFSET(getStruct<T>, {0x148, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   BlueChannel                                                 OFFSET(getStruct<T>, {0x258, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   AlphaChannel                                                OFFSET(getStruct<T>, {0x368, 272, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraFloatParameterSectionTemplate
 /// Size: 0x0110 (0x000038 - 0x000148)
 class FMovieSceneNiagaraFloatParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   FloatChannel                                                OFFSET(get<T>, {0x38, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatChannel                                                OFFSET(getStruct<T>, {0x38, 272, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraIntegerParameterSectionTemplate
 /// Size: 0x0100 (0x000038 - 0x000138)
 class FMovieSceneNiagaraIntegerParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FMovieSceneIntegerChannel)                 IntegerChannel                                              OFFSET(get<T>, {0x38, 256, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 IntegerChannel                                              OFFSET(getStruct<T>, {0x38, 256, 0, 0})
 };
 
 /// Struct /Script/Niagara.MovieSceneNiagaraVectorParameterSectionTemplate
 /// Size: 0x0448 (0x000038 - 0x000480)
 class FMovieSceneNiagaraVectorParameterSectionTemplate : public FMovieSceneNiagaraParameterSectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1152;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   VectorChannels                                              OFFSET(get<T>, {0x38, 1088, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   VectorChannels                                              OFFSET(getStruct<T>, {0x38, 1088, 0, 0})
 	DMember(int32_t)                                   ChannelsUsed                                                OFFSET(get<int32_t>, {0x478, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.EmitterCompiledScriptPair
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FEmitterCompiledScriptPair : public MDKStruct
+class FEmitterCompiledScriptPair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -3602,27 +3665,29 @@ public:
 
 /// Struct /Script/Niagara.NiagaraBakerTextureSource
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraBakerTextureSource : public MDKStruct
+class FNiagaraBakerTextureSource : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   DisplayString                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     SourceName                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   DisplayString                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     SourceName                                                  OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraBakerCameraSettings
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraBakerCameraSettings : public MDKStruct
+class FNiagaraBakerCameraSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(ENiagaraBakerViewMode)                     ViewMode                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   ViewportLocation                                            OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  ViewportRotation                                            OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   ViewportLocation                                            OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  ViewportRotation                                            OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     OrbitDistance                                               OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     FOV                                                         OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     OrthoWidth                                                  OFFSET(get<float>, {0x40, 4, 0, 0})
@@ -3632,24 +3697,26 @@ public:
 
 /// Struct /Script/Niagara.NiagaraBakerTextureSettings
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraBakerTextureSettings : public MDKStruct
+class FNiagaraBakerTextureSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     OutputName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     OutputName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FNiagaraBakerTextureSource)                SourceBinding                                               OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(bool)                                      bUseFrameSize                                               OFFSET(get<bool>, {0x20, 1, 1, 0})
-	SMember(FIntPoint)                                 FrameSize                                                   OFFSET(get<T>, {0x24, 8, 0, 0})
-	SMember(FIntPoint)                                 TextureSize                                                 OFFSET(get<T>, {0x2C, 8, 0, 0})
+	SMember(FIntPoint)                                 FrameSize                                                   OFFSET(getStruct<T>, {0x24, 8, 0, 0})
+	SMember(FIntPoint)                                 TextureSize                                                 OFFSET(getStruct<T>, {0x2C, 8, 0, 0})
 	CMember(UTexture2D*)                               GeneratedTexture                                            OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NCPoolElement
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNCPoolElement : public MDKStruct
+class FNCPoolElement : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3659,8 +3726,9 @@ public:
 
 /// Struct /Script/Niagara.NCPool
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNCPool : public MDKStruct
+class FNCPool : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3670,23 +3738,25 @@ public:
 
 /// Struct /Script/Niagara.NiagaraComponentPropertyBinding
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FNiagaraComponentPropertyBinding : public MDKStruct
+class FNiagaraComponentPropertyBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FNiagaraVariableAttributeBinding)          AttributeBinding                                            OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FNiagaraTypeDefinition)                    PropertyType                                                OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FName)                                     MetadataSetterName                                          OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          AttributeBinding                                            OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FNiagaraTypeDefinition)                    PropertyType                                                OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FName)                                     MetadataSetterName                                          OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 	CMember(TMap<FString, FString>)                    PropertySetterParameterDefaults                             OFFSET(get<T>, {0x48, 80, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraCulledComponentInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraCulledComponentInfo : public MDKStruct
+class FNiagaraCulledComponentInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -3695,45 +3765,49 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDataInterfaceEmitterBinding
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraDataInterfaceEmitterBinding : public MDKStruct
+class FNiagaraDataInterfaceEmitterBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
 	CMember(ENiagaraDataInterfaceEmitterBindingMode)   BindingMode                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     EmitterName                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     EmitterName                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.BasicParticleData
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FBasicParticleData : public MDKStruct
+class FBasicParticleData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     Size                                                        OFFSET(get<float>, {0x18, 4, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.MeshTriCoordinate
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMeshTriCoordinate : public MDKStruct
+class FMeshTriCoordinate : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	DMember(int32_t)                                   Tri                                                         OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FVector3f)                                 BaryCoord                                                   OFFSET(get<T>, {0x4, 12, 0, 0})
+	SMember(FVector3f)                                 BaryCoord                                                   OFFSET(getStruct<T>, {0x4, 12, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDataInterfaceSplineLUT
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraDataInterfaceSplineLUT : public MDKStruct
+class FNiagaraDataInterfaceSplineLUT : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -3749,8 +3823,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraOutlinerTimingData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraOutlinerTimingData : public MDKStruct
+class FNiagaraOutlinerTimingData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -3761,13 +3836,14 @@ public:
 
 /// Struct /Script/Niagara.NiagaraOutlinerEmitterInstanceData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraOutlinerEmitterInstanceData : public MDKStruct
+class FNiagaraOutlinerEmitterInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   EmitterName                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   EmitterName                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(ENiagaraSimTarget)                         SimTarget                                                   OFFSET(get<T>, {0x10, 1, 0, 0})
 	CMember(ENiagaraExecutionState)                    ExecState                                                   OFFSET(get<T>, {0x14, 4, 0, 0})
 	DMember(int32_t)                                   NumParticles                                                OFFSET(get<int32_t>, {0x18, 4, 0, 0})
@@ -3776,23 +3852,24 @@ public:
 
 /// Struct /Script/Niagara.NiagaraOutlinerSystemInstanceData
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FNiagaraOutlinerSystemInstanceData : public MDKStruct
+class FNiagaraOutlinerSystemInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   ComponentName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector3f)                                 LWCTile                                                     OFFSET(get<T>, {0x10, 12, 0, 0})
+	SMember(FString)                                   ComponentName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector3f)                                 LWCTile                                                     OFFSET(getStruct<T>, {0x10, 12, 0, 0})
 	CMember(TArray<FNiagaraOutlinerEmitterInstanceData>) Emitters                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
 	CMember(ENiagaraExecutionState)                    ActualExecutionState                                        OFFSET(get<T>, {0x30, 4, 0, 0})
 	CMember(ENiagaraExecutionState)                    RequestedExecutionState                                     OFFSET(get<T>, {0x34, 4, 0, 0})
-	SMember(FNiagaraScalabilityState)                  ScalabilityState                                            OFFSET(get<T>, {0x38, 12, 0, 0})
+	SMember(FNiagaraScalabilityState)                  ScalabilityState                                            OFFSET(getStruct<T>, {0x38, 12, 0, 0})
 	DMember(bool)                                      bPendingKill                                                OFFSET(get<bool>, {0x44, 1, 1, 0})
 	DMember(bool)                                      bUsingCullProxy                                             OFFSET(get<bool>, {0x44, 1, 1, 1})
 	CMember(ENCPoolMethod)                             PoolMethod                                                  OFFSET(get<T>, {0x48, 1, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                AverageTime                                                 OFFSET(get<T>, {0x4C, 8, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                MaxTime                                                     OFFSET(get<T>, {0x54, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                AverageTime                                                 OFFSET(getStruct<T>, {0x4C, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                MaxTime                                                     OFFSET(getStruct<T>, {0x54, 8, 0, 0})
 	CMember(TEnumAsByte<ETickingGroup>)                TickGroup                                                   OFFSET(get<T>, {0x5C, 1, 0, 0})
 	CMember(TEnumAsByte<ENiagaraGpuComputeTickStage>)  GpuTickStage                                                OFFSET(get<T>, {0x5D, 1, 0, 0})
 	DMember(bool)                                      bIsSolo                                                     OFFSET(get<bool>, {0x60, 1, 1, 0})
@@ -3805,23 +3882,25 @@ public:
 
 /// Struct /Script/Niagara.NiagaraOutlinerSystemData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNiagaraOutlinerSystemData : public MDKStruct
+class FNiagaraOutlinerSystemData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TArray<FNiagaraOutlinerSystemInstanceData>) SystemInstances                                            OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                AveragePerFrameTime                                         OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                MaxPerFrameTime                                             OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                AveragePerInstanceTime                                      OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                MaxPerInstanceTime                                          OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                AveragePerFrameTime                                         OFFSET(getStruct<T>, {0x10, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                MaxPerFrameTime                                             OFFSET(getStruct<T>, {0x18, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                AveragePerInstanceTime                                      OFFSET(getStruct<T>, {0x20, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                MaxPerInstanceTime                                          OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraOutlinerWorldData
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FNiagaraOutlinerWorldData : public MDKStruct
+class FNiagaraOutlinerWorldData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -3830,14 +3909,15 @@ public:
 	DMember(bool)                                      bHasBegunPlay                                               OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(char)                                      WorldType                                                   OFFSET(get<char>, {0x51, 1, 0, 0})
 	DMember(char)                                      NetMode                                                     OFFSET(get<char>, {0x52, 1, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                AveragePerFrameTime                                         OFFSET(get<T>, {0x54, 8, 0, 0})
-	SMember(FNiagaraOutlinerTimingData)                MaxPerFrameTime                                             OFFSET(get<T>, {0x5C, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                AveragePerFrameTime                                         OFFSET(getStruct<T>, {0x54, 8, 0, 0})
+	SMember(FNiagaraOutlinerTimingData)                MaxPerFrameTime                                             OFFSET(getStruct<T>, {0x5C, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraOutlinerData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraOutlinerData : public MDKStruct
+class FNiagaraOutlinerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -3847,67 +3927,73 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDebuggerRequestConnection
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraDebuggerRequestConnection : public MDKStruct
+class FNiagaraDebuggerRequestConnection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     SessionId                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     InstanceID                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     SessionId                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     InstanceID                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebuggerAcceptConnection
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraDebuggerAcceptConnection : public MDKStruct
+class FNiagaraDebuggerAcceptConnection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     SessionId                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     InstanceID                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     SessionId                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     InstanceID                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebuggerConnectionClosed
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraDebuggerConnectionClosed : public MDKStruct
+class FNiagaraDebuggerConnectionClosed : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FGuid)                                     SessionId                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGuid)                                     InstanceID                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     SessionId                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     InstanceID                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebuggerExecuteConsoleCommand
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraDebuggerExecuteConsoleCommand : public MDKStruct
+class FNiagaraDebuggerExecuteConsoleCommand : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Command                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Command                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bRequiresWorld                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebuggerOutlinerUpdate
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraDebuggerOutlinerUpdate : public MDKStruct
+class FNiagaraDebuggerOutlinerUpdate : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FNiagaraOutlinerData)                      OutlinerData                                                OFFSET(get<T>, {0x0, 80, 0, 0})
+	SMember(FNiagaraOutlinerData)                      OutlinerData                                                OFFSET(getStruct<T>, {0x0, 80, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebugHudTextOptions
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraDebugHudTextOptions : public MDKStruct
+class FNiagaraDebugHudTextOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3915,25 +4001,27 @@ public:
 	CMember(ENiagaraDebugHudFont)                      Font                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
 	CMember(ENiagaraDebugHudHAlign)                    HorizontalAlignment                                         OFFSET(get<T>, {0x4, 1, 0, 0})
 	CMember(ENiagaraDebugHudVAlign)                    VerticalAlignment                                           OFFSET(get<T>, {0x5, 1, 0, 0})
-	SMember(FVector2D)                                 ScreenOffset                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 ScreenOffset                                                OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebugHUDVariable
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraDebugHUDVariable : public MDKStruct
+class FNiagaraDebugHUDVariable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraDebugHUDSettingsData
 /// Size: 0x0248 (0x000000 - 0x000248)
-class FNiagaraDebugHUDSettingsData : public MDKStruct
+class FNiagaraDebugHUDSettingsData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 584;
 
@@ -3949,16 +4037,16 @@ public:
 	CMember(ENiagaraDebugHUDOverviewMode)              OverviewMode                                                OFFSET(get<T>, {0x10, 4, 0, 0})
 	CMember(ENiagaraDebugHUDDOverviewSort)             OverviewSortMode                                            OFFSET(get<T>, {0x14, 4, 0, 0})
 	CMember(ENiagaraDebugHudFont)                      OverviewFont                                                OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FVector2D)                                 OverviewLocation                                            OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVector2D)                                 OverviewLocation                                            OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	DMember(bool)                                      bShowRegisteredComponents                                   OFFSET(get<bool>, {0x30, 1, 0, 0})
 	DMember(bool)                                      bOverviewShowFilteredSystemOnly                             OFFSET(get<bool>, {0x31, 1, 0, 0})
-	SMember(FString)                                   ActorFilter                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ActorFilter                                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(bool)                                      bComponentFilterEnabled                                     OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FString)                                   ComponentFilter                                             OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   ComponentFilter                                             OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 	DMember(bool)                                      bSystemFilterEnabled                                        OFFSET(get<bool>, {0x60, 1, 0, 0})
-	SMember(FString)                                   SystemFilter                                                OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   SystemFilter                                                OFFSET(getStruct<T>, {0x68, 16, 0, 0})
 	DMember(bool)                                      bEmitterFilterEnabled                                       OFFSET(get<bool>, {0x78, 1, 0, 0})
-	SMember(FString)                                   EmitterFilter                                               OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FString)                                   EmitterFilter                                               OFFSET(getStruct<T>, {0x80, 16, 0, 0})
 	DMember(bool)                                      bActorFilterEnabled                                         OFFSET(get<bool>, {0x90, 1, 0, 0})
 	CMember(ENiagaraDebugHudVerbosity)                 SystemDebugVerbosity                                        OFFSET(get<T>, {0x94, 4, 0, 0})
 	CMember(ENiagaraDebugHudVerbosity)                 SystemEmitterVerbosity                                      OFFSET(get<T>, {0x98, 4, 0, 0})
@@ -3968,17 +4056,17 @@ public:
 	DMember(bool)                                      bSystemShowActiveOnlyInWorld                                OFFSET(get<bool>, {0xA8, 1, 0, 0})
 	DMember(bool)                                      bShowSystemVariables                                        OFFSET(get<bool>, {0xA9, 1, 0, 0})
 	CMember(TArray<FNiagaraDebugHUDVariable>)          SystemVariables                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FNiagaraDebugHudTextOptions)               SystemTextOptions                                           OFFSET(get<T>, {0xC0, 24, 0, 0})
+	SMember(FNiagaraDebugHudTextOptions)               SystemTextOptions                                           OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
 	DMember(bool)                                      bShowParticleVariables                                      OFFSET(get<bool>, {0xD8, 1, 0, 0})
 	DMember(bool)                                      bEnableGpuParticleReadback                                  OFFSET(get<bool>, {0xD9, 1, 0, 0})
 	DMember(bool)                                      bShowParticleIndex                                          OFFSET(get<bool>, {0xDA, 1, 0, 0})
 	CMember(TArray<FNiagaraDebugHUDVariable>)          ParticlesVariables                                          OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FNiagaraDebugHudTextOptions)               ParticleTextOptions                                         OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FNiagaraDebugHudTextOptions)               ParticleTextOptions                                         OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	DMember(bool)                                      bShowParticlesVariablesWithSystem                           OFFSET(get<bool>, {0x108, 1, 0, 0})
 	DMember(bool)                                      bShowParticleVariablesVertical                              OFFSET(get<bool>, {0x109, 1, 0, 0})
 	DMember(bool)                                      bUseMaxParticlesToDisplay                                   OFFSET(get<bool>, {0x10A, 1, 0, 0})
 	DMember(bool)                                      bUseParticleDisplayClip                                     OFFSET(get<bool>, {0x10B, 1, 0, 0})
-	SMember(FVector2D)                                 ParticleDisplayClip                                         OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FVector2D)                                 ParticleDisplayClip                                         OFFSET(getStruct<T>, {0x110, 16, 0, 0})
 	DMember(bool)                                      bUseParticleDisplayCenterRadius                             OFFSET(get<bool>, {0x120, 1, 0, 0})
 	DMember(float)                                     ParticleDisplayCenterRadius                                 OFFSET(get<float>, {0x124, 4, 0, 0})
 	DMember(int32_t)                                   MaxParticlesToDisplay                                       OFFSET(get<int32_t>, {0x128, 4, 0, 0})
@@ -3987,23 +4075,23 @@ public:
 	CMember(ENiagaraDebugHUDPerfGraphMode)             PerfGraphMode                                               OFFSET(get<T>, {0x134, 4, 0, 0})
 	DMember(int32_t)                                   PerfHistoryFrames                                           OFFSET(get<int32_t>, {0x138, 4, 0, 0})
 	DMember(float)                                     PerfGraphTimeRange                                          OFFSET(get<float>, {0x13C, 4, 0, 0})
-	SMember(FVector2D)                                 PerfGraphSize                                               OFFSET(get<T>, {0x140, 16, 0, 0})
-	SMember(FLinearColor)                              PerfGraphAxisColor                                          OFFSET(get<T>, {0x150, 16, 0, 0})
+	SMember(FVector2D)                                 PerfGraphSize                                               OFFSET(getStruct<T>, {0x140, 16, 0, 0})
+	SMember(FLinearColor)                              PerfGraphAxisColor                                          OFFSET(getStruct<T>, {0x150, 16, 0, 0})
 	DMember(bool)                                      bEnableSmoothing                                            OFFSET(get<bool>, {0x160, 1, 0, 0})
 	DMember(int32_t)                                   SmoothingWidth                                              OFFSET(get<int32_t>, {0x164, 4, 0, 0})
-	SMember(FLinearColor)                              DefaultBackgroundColor                                      OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FLinearColor)                              OverviewHeadingColor                                        OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FLinearColor)                              OverviewDetailColor                                         OFFSET(get<T>, {0x188, 16, 0, 0})
-	SMember(FLinearColor)                              OverviewDetailHighlightColor                                OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(FLinearColor)                              InWorldErrorTextColor                                       OFFSET(get<T>, {0x1A8, 16, 0, 0})
-	SMember(FLinearColor)                              InWorldTextColor                                            OFFSET(get<T>, {0x1B8, 16, 0, 0})
-	SMember(FLinearColor)                              MessageInfoTextColor                                        OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	SMember(FLinearColor)                              MessageWarningTextColor                                     OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(FLinearColor)                              MessageErrorTextColor                                       OFFSET(get<T>, {0x1E8, 16, 0, 0})
+	SMember(FLinearColor)                              DefaultBackgroundColor                                      OFFSET(getStruct<T>, {0x168, 16, 0, 0})
+	SMember(FLinearColor)                              OverviewHeadingColor                                        OFFSET(getStruct<T>, {0x178, 16, 0, 0})
+	SMember(FLinearColor)                              OverviewDetailColor                                         OFFSET(getStruct<T>, {0x188, 16, 0, 0})
+	SMember(FLinearColor)                              OverviewDetailHighlightColor                                OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	SMember(FLinearColor)                              InWorldErrorTextColor                                       OFFSET(getStruct<T>, {0x1A8, 16, 0, 0})
+	SMember(FLinearColor)                              InWorldTextColor                                            OFFSET(getStruct<T>, {0x1B8, 16, 0, 0})
+	SMember(FLinearColor)                              MessageInfoTextColor                                        OFFSET(getStruct<T>, {0x1C8, 16, 0, 0})
+	SMember(FLinearColor)                              MessageWarningTextColor                                     OFFSET(getStruct<T>, {0x1D8, 16, 0, 0})
+	SMember(FLinearColor)                              MessageErrorTextColor                                       OFFSET(getStruct<T>, {0x1E8, 16, 0, 0})
 	DMember(float)                                     SystemColorTableOpacity                                     OFFSET(get<float>, {0x1F8, 4, 0, 0})
 	DMember(uint32_t)                                  SystemColorSeed                                             OFFSET(get<uint32_t>, {0x1FC, 4, 0, 0})
-	SMember(FVector)                                   SystemColorHSVMin                                           OFFSET(get<T>, {0x200, 24, 0, 0})
-	SMember(FVector)                                   SystemColorHSVMax                                           OFFSET(get<T>, {0x218, 24, 0, 0})
+	SMember(FVector)                                   SystemColorHSVMin                                           OFFSET(getStruct<T>, {0x200, 24, 0, 0})
+	SMember(FVector)                                   SystemColorHSVMax                                           OFFSET(getStruct<T>, {0x218, 24, 0, 0})
 	CMember(ENiagaraDebugPlaybackMode)                 PlaybackMode                                                OFFSET(get<T>, {0x230, 1, 0, 0})
 	DMember(bool)                                      bPlaybackRateEnabled                                        OFFSET(get<bool>, {0x231, 1, 0, 0})
 	DMember(float)                                     PlaybackRate                                                OFFSET(get<float>, {0x234, 4, 0, 0})
@@ -4014,8 +4102,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraRequestSimpleClientInfoMessage
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraRequestSimpleClientInfoMessage : public MDKStruct
+class FNiagaraRequestSimpleClientInfoMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -4024,8 +4113,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraOutlinerCaptureSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraOutlinerCaptureSettings : public MDKStruct
+class FNiagaraOutlinerCaptureSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4038,8 +4128,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSimpleClientInfo
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraSimpleClientInfo : public MDKStruct
+class FNiagaraSimpleClientInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -4052,46 +4143,50 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSystemSimCacheCaptureRequest
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraSystemSimCacheCaptureRequest : public MDKStruct
+class FNiagaraSystemSimCacheCaptureRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ComponentName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ComponentName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(uint32_t)                                  CaptureDelayFrames                                          OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
 	DMember(uint32_t)                                  CaptureFrames                                               OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSystemSimCacheCaptureReply
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraSystemSimCacheCaptureReply : public MDKStruct
+class FNiagaraSystemSimCacheCaptureReply : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     ComponentName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ComponentName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<char>)                              SimCacheData                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraGraphViewSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraGraphViewSettings : public MDKStruct
+class FNiagaraGraphViewSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector2D)                                 Location                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 Location                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(float)                                     Zoom                                                        OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bIsValid                                                    OFFSET(get<bool>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraLinearRamp
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraLinearRamp : public MDKStruct
+class FNiagaraLinearRamp : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4104,8 +4199,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraGlobalBudgetScaling
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FNiagaraGlobalBudgetScaling : public MDKStruct
+class FNiagaraGlobalBudgetScaling : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4115,15 +4211,16 @@ public:
 	DMember(bool)                                      bScaleMaxInstanceCountByGlobalBudgetUse                     OFFSET(get<bool>, {0x0, 1, 1, 2})
 	DMember(bool)                                      bScaleSystemInstanceCountByGlobalBudgetUse                  OFFSET(get<bool>, {0x0, 1, 1, 3})
 	DMember(float)                                     MaxGlobalBudgetUsage                                        OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FNiagaraLinearRamp)                        MaxDistanceScaleByGlobalBudgetUse                           OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FNiagaraLinearRamp)                        MaxInstanceCountScaleByGlobalBudgetUse                      OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FNiagaraLinearRamp)                        MaxSystemInstanceCountScaleByGlobalBudgetUse                OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FNiagaraLinearRamp)                        MaxDistanceScaleByGlobalBudgetUse                           OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FNiagaraLinearRamp)                        MaxInstanceCountScaleByGlobalBudgetUse                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FNiagaraLinearRamp)                        MaxSystemInstanceCountScaleByGlobalBudgetUse                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSystemVisibilityCullingSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraSystemVisibilityCullingSettings : public MDKStruct
+class FNiagaraSystemVisibilityCullingSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -4137,13 +4234,14 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSystemScalabilitySettings
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FNiagaraSystemScalabilitySettings : public MDKStruct
+class FNiagaraSystemScalabilitySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	DMember(bool)                                      bCullByDistance                                             OFFSET(get<bool>, {0x30, 1, 1, 0})
 	DMember(bool)                                      bCullMaxInstanceCount                                       OFFSET(get<bool>, {0x30, 1, 1, 1})
 	DMember(bool)                                      bCullPerSystemMaxInstanceCount                              OFFSET(get<bool>, {0x30, 1, 1, 2})
@@ -4154,14 +4252,15 @@ public:
 	DMember(float)                                     MaxTimeWithoutRender                                        OFFSET(get<float>, {0x44, 4, 0, 0})
 	CMember(ENiagaraCullProxyMode)                     CullProxyMode                                               OFFSET(get<T>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   MaxSystemProxies                                            OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
-	SMember(FNiagaraSystemVisibilityCullingSettings)   VisibilityCulling                                           OFFSET(get<T>, {0x50, 12, 0, 0})
-	SMember(FNiagaraGlobalBudgetScaling)               BudgetScaling                                               OFFSET(get<T>, {0x5C, 56, 0, 0})
+	SMember(FNiagaraSystemVisibilityCullingSettings)   VisibilityCulling                                           OFFSET(getStruct<T>, {0x50, 12, 0, 0})
+	SMember(FNiagaraGlobalBudgetScaling)               BudgetScaling                                               OFFSET(getStruct<T>, {0x5C, 56, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraPlatformSet
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNiagaraPlatformSet : public MDKStruct
+class FNiagaraPlatformSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -4173,13 +4272,14 @@ public:
 
 /// Struct /Script/Niagara.NiagaraPlatformSetCVarCondition
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNiagaraPlatformSetCVarCondition : public MDKStruct
+class FNiagaraPlatformSetCVarCondition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     CVarName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CVarName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(ENiagaraCVarConditionResponse)             PassResponse                                                OFFSET(get<T>, {0x4, 1, 0, 0})
 	CMember(ENiagaraCVarConditionResponse)             FailResponse                                                OFFSET(get<T>, {0x5, 1, 0, 0})
 	DMember(bool)                                      Value                                                       OFFSET(get<bool>, {0x6, 1, 0, 0})
@@ -4195,21 +4295,23 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDeviceProfileStateEntry
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraDeviceProfileStateEntry : public MDKStruct
+class FNiagaraDeviceProfileStateEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ProfileName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ProfileName                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(uint32_t)                                  QualityLevelMask                                            OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
 	DMember(uint32_t)                                  SetQualityLevelMask                                         OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSystemScalabilitySettingsArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraSystemScalabilitySettingsArray : public MDKStruct
+class FNiagaraSystemScalabilitySettingsArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4221,6 +4323,7 @@ public:
 /// Size: 0x0008 (0x000098 - 0x0000A0)
 class FNiagaraSystemScalabilityOverride : public FNiagaraSystemScalabilitySettings
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -4235,21 +4338,23 @@ public:
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilitySettings
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FNiagaraEmitterScalabilitySettings : public MDKStruct
+class FNiagaraEmitterScalabilitySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	DMember(bool)                                      bScaleSpawnCount                                            OFFSET(get<bool>, {0x30, 1, 1, 0})
 	DMember(float)                                     SpawnCountScale                                             OFFSET(get<float>, {0x34, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilitySettingsArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraEmitterScalabilitySettingsArray : public MDKStruct
+class FNiagaraEmitterScalabilitySettingsArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4261,6 +4366,7 @@ public:
 /// Size: 0x0008 (0x000038 - 0x000040)
 class FNiagaraEmitterScalabilityOverride : public FNiagaraEmitterScalabilitySettings
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -4270,8 +4376,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraEmitterScalabilityOverrides
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraEmitterScalabilityOverrides : public MDKStruct
+class FNiagaraEmitterScalabilityOverrides : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4281,34 +4388,37 @@ public:
 
 /// Struct /Script/Niagara.NiagaraEventReceiverProperties
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraEventReceiverProperties : public MDKStruct
+class FNiagaraEventReceiverProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     SourceEventGenerator                                        OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     SourceEmitter                                               OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     SourceEventGenerator                                        OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     SourceEmitter                                               OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraEventGeneratorProperties
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FNiagaraEventGeneratorProperties : public MDKStruct
+class FNiagaraEventGeneratorProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	DMember(int32_t)                                   MaxEventsPerFrame                                           OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ID                                                          OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               DataSetCompiledData                                         OFFSET(get<T>, {0x8, 64, 0, 0})
+	SMember(FName)                                     ID                                                          OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               DataSetCompiledData                                         OFFSET(getStruct<T>, {0x8, 64, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterScriptProperties
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraEmitterScriptProperties : public MDKStruct
+class FNiagaraEmitterScriptProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4322,6 +4432,7 @@ public:
 /// Size: 0x0030 (0x000028 - 0x000058)
 class FNiagaraEventScriptProperties : public FNiagaraEmitterScriptProperties
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -4329,8 +4440,8 @@ public:
 	CMember(EScriptExecutionMode)                      ExecutionMode                                               OFFSET(get<T>, {0x28, 1, 0, 0})
 	DMember(uint32_t)                                  SpawnNumber                                                 OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
 	DMember(uint32_t)                                  MaxEventsPerFrame                                           OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
-	SMember(FGuid)                                     SourceEmitterID                                             OFFSET(get<T>, {0x34, 16, 0, 0})
-	SMember(FName)                                     SourceEventName                                             OFFSET(get<T>, {0x44, 4, 0, 0})
+	SMember(FGuid)                                     SourceEmitterID                                             OFFSET(getStruct<T>, {0x34, 16, 0, 0})
+	SMember(FName)                                     SourceEventName                                             OFFSET(getStruct<T>, {0x44, 4, 0, 0})
 	DMember(bool)                                      bRandomSpawnNumber                                          OFFSET(get<bool>, {0x48, 1, 0, 0})
 	DMember(uint32_t)                                  MinSpawnNumber                                              OFFSET(get<uint32_t>, {0x4C, 4, 0, 0})
 	DMember(bool)                                      UpdateAttributeInitialValues                                OFFSET(get<bool>, {0x50, 1, 0, 0})
@@ -4338,8 +4449,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDetailsLevelScaleOverrides
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNiagaraDetailsLevelScaleOverrides : public MDKStruct
+class FNiagaraDetailsLevelScaleOverrides : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -4353,45 +4465,47 @@ public:
 
 /// Struct /Script/Niagara.VersionedNiagaraEmitterData
 /// Size: 0x0340 (0x000000 - 0x000340)
-class FVersionedNiagaraEmitterData : public MDKStruct
+class FVersionedNiagaraEmitterData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	SMember(FNiagaraAssetVersion)                      Version                                                     OFFSET(get<T>, {0x0, 28, 0, 0})
+	SMember(FNiagaraAssetVersion)                      Version                                                     OFFSET(getStruct<T>, {0x0, 28, 0, 0})
 	DMember(bool)                                      bDeprecated                                                 OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	SMember(FText)                                     DeprecationMessage                                          OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     DeprecationMessage                                          OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      bLocalSpace                                                 OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(bool)                                      bDeterminism                                                OFFSET(get<bool>, {0x39, 1, 0, 0})
 	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(bool)                                      bInterpolatedSpawning                                       OFFSET(get<bool>, {0x40, 1, 1, 0})
 	CMember(ENiagaraSimTarget)                         SimTarget                                                   OFFSET(get<T>, {0x44, 1, 0, 0})
 	CMember(ENiagaraEmitterCalculateBoundMode)         CalculateBoundsMode                                         OFFSET(get<T>, {0x45, 1, 0, 0})
-	SMember(FBox)                                      FixedBounds                                                 OFFSET(get<T>, {0x48, 56, 0, 0})
+	SMember(FBox)                                      FixedBounds                                                 OFFSET(getStruct<T>, {0x48, 56, 0, 0})
 	DMember(bool)                                      bRequiresPersistentIDs                                      OFFSET(get<bool>, {0x80, 1, 1, 0})
 	CMember(TArray<FNiagaraEventScriptProperties>)     EventHandlerScriptProps                                     OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(get<T>, {0x98, 48, 0, 0})
-	SMember(FNiagaraEmitterScalabilityOverrides)       ScalabilityOverrides                                        OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FNiagaraPlatformSet)                       Platforms                                                   OFFSET(getStruct<T>, {0x98, 48, 0, 0})
+	SMember(FNiagaraEmitterScalabilityOverrides)       ScalabilityOverrides                                        OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 	DMember(int32_t)                                   MaxGPUParticlesSpawnPerFrame                                OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
 	CMember(EParticleAllocationMode)                   AllocationMode                                              OFFSET(get<T>, {0xDC, 1, 0, 0})
 	DMember(int32_t)                                   PreAllocationCount                                          OFFSET(get<int32_t>, {0xE0, 4, 0, 0})
-	SMember(FNiagaraEmitterScriptProperties)           UpdateScriptProps                                           OFFSET(get<T>, {0xE8, 40, 0, 0})
-	SMember(FNiagaraEmitterScriptProperties)           SpawnScriptProps                                            OFFSET(get<T>, {0x110, 40, 0, 0})
-	SMember(FNiagaraParameterStore)                    RendererBindings                                            OFFSET(get<T>, {0x138, 136, 0, 0})
+	SMember(FNiagaraEmitterScriptProperties)           UpdateScriptProps                                           OFFSET(getStruct<T>, {0xE8, 40, 0, 0})
+	SMember(FNiagaraEmitterScriptProperties)           SpawnScriptProps                                            OFFSET(getStruct<T>, {0x110, 40, 0, 0})
+	SMember(FNiagaraParameterStore)                    RendererBindings                                            OFFSET(getStruct<T>, {0x138, 136, 0, 0})
 	CMember(TArray<FNiagaraExternalUObjectInfo>)       RendererBindingsExternalObjects                             OFFSET(get<T>, {0x1C0, 16, 0, 0})
 	CMember(TMap<FNiagaraVariableBase, FNiagaraVariableBase>) ResolvedDIBindings                                   OFFSET(get<T>, {0x1D0, 80, 0, 0})
 	CMember(TArray<UNiagaraRendererProperties*>)       RendererProperties                                          OFFSET(get<T>, {0x220, 16, 0, 0})
 	CMember(TArray<UNiagaraSimulationStageBase*>)      SimulationStages                                            OFFSET(get<T>, {0x230, 16, 0, 0})
 	CMember(UNiagaraScript*)                           GPUComputeScript                                            OFFSET(get<T>, {0x240, 8, 0, 0})
 	CMember(TArray<FName>)                             SharedEventGeneratorIds                                     OFFSET(get<T>, {0x248, 16, 0, 0})
-	SMember(FNiagaraEmitterScalabilitySettings)        CurrentScalabilitySettings                                  OFFSET(get<T>, {0x258, 56, 0, 0})
+	SMember(FNiagaraEmitterScalabilitySettings)        CurrentScalabilitySettings                                  OFFSET(getStruct<T>, {0x258, 56, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraParameterStore
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FNiagaraParameterStore : public MDKStruct
+class FNiagaraParameterStore : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -4406,88 +4520,95 @@ public:
 
 /// Struct /Script/Niagara.NiagaraPositionSource
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraPositionSource : public MDKStruct
+class FNiagaraPositionSource : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVariableWithOffset
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FNiagaraVariableWithOffset : public FNiagaraVariableBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(int32_t)                                   Offset                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FNiagaraLwcStructConverter)                StructConverter                                             OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FNiagaraLwcStructConverter)                StructConverter                                             OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraAssetVersion
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FNiagaraAssetVersion : public MDKStruct
+class FNiagaraAssetVersion : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
 	DMember(int32_t)                                   MajorVersion                                                OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   MinorVersion                                                OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     VersionGuid                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGuid)                                     VersionGuid                                                 OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(bool)                                      bIsVisibleInVersionSelector                                 OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterHandle
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FNiagaraEmitterHandle : public MDKStruct
+class FNiagaraEmitterHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     IdName                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     IdName                                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FVersionedNiagaraEmitter)                  VersionedInstance                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FVersionedNiagaraEmitter)                  VersionedInstance                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.VersionedNiagaraEmitter
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FVersionedNiagaraEmitter : public MDKStruct
+class FVersionedNiagaraEmitter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UNiagaraEmitter*)                          Emitter                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGuid)                                     Version                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGuid)                                     Version                                                     OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraCollisionEventPayload
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraCollisionEventPayload : public MDKStruct
+class FNiagaraCollisionEventPayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   CollisionPos                                                OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   CollisionNormal                                             OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   CollisionVelocity                                           OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   CollisionPos                                                OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   CollisionNormal                                             OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   CollisionVelocity                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   PhysicalMaterialIndex                                       OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraMeshMICOverride
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraMeshMICOverride : public MDKStruct
+class FNiagaraMeshMICOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4498,36 +4619,39 @@ public:
 
 /// Struct /Script/Niagara.NiagaraMeshMaterialOverride
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraMeshMaterialOverride : public MDKStruct
+class FNiagaraMeshMaterialOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UMaterialInterface*)                       ExplicitMat                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              UserParamBinding                                            OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              UserParamBinding                                            OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraMeshRendererMeshProperties
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNiagaraMeshRendererMeshProperties : public MDKStruct
+class FNiagaraMeshRendererMeshProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FNiagaraParameterBinding)                  MeshParameterBinding                                        OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   PivotOffset                                                 OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraParameterBinding)                  MeshParameterBinding                                        OFFSET(getStruct<T>, {0x8, 8, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   PivotOffset                                                 OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	CMember(ENiagaraMeshPivotOffsetSpace)              PivotOffsetSpace                                            OFFSET(get<T>, {0x58, 1, 0, 0})
 };
 
 /// Struct /Script/Niagara.ParameterDefinitionsSubscription
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FParameterDefinitionsSubscription : public MDKStruct
+class FParameterDefinitionsSubscription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -4536,8 +4660,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraParameters
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraParameters : public MDKStruct
+class FNiagaraParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4547,21 +4672,23 @@ public:
 
 /// Struct /Script/Niagara.NiagaraBoundParameter
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraBoundParameter : public MDKStruct
+class FNiagaraBoundParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FNiagaraVariableBase)                      Parameter                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      Parameter                                                   OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	DMember(int32_t)                                   SrcOffset                                                   OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   DestOffset                                                  OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraPerfBaselineStats
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraPerfBaselineStats : public MDKStruct
+class FNiagaraPerfBaselineStats : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4574,20 +4701,22 @@ public:
 
 /// Struct /Script/Niagara.NiagaraPlatformSetConflictEntry
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraPlatformSetConflictEntry : public MDKStruct
+class FNiagaraPlatformSetConflictEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     ProfileName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ProfileName                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   QualityLevelMask                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraPlatformSetConflictInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraPlatformSetConflictInfo : public MDKStruct
+class FNiagaraPlatformSetConflictInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -4599,71 +4728,77 @@ public:
 
 /// Struct /Script/Niagara.NiagaraPlatformSetRedirect
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FNiagaraPlatformSetRedirect : public MDKStruct
+class FNiagaraPlatformSetRedirect : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	CMember(TArray<FName>)                             ProfileNames                                                OFFSET(get<T>, {0x0, 16, 0, 0})
 	CMember(ENiagaraDeviceProfileRedirectMode)         Mode                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FName)                                     RedirectProfileName                                         OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FNiagaraPlatformSetCVarCondition)          CVarConditionEnabled                                        OFFSET(get<T>, {0x18, 48, 0, 0})
-	SMember(FNiagaraPlatformSetCVarCondition)          CVarConditionDisabled                                       OFFSET(get<T>, {0x48, 48, 0, 0})
+	SMember(FName)                                     RedirectProfileName                                         OFFSET(getStruct<T>, {0x14, 4, 0, 0})
+	SMember(FNiagaraPlatformSetCVarCondition)          CVarConditionEnabled                                        OFFSET(getStruct<T>, {0x18, 48, 0, 0})
+	SMember(FNiagaraPlatformSetCVarCondition)          CVarConditionDisabled                                       OFFSET(getStruct<T>, {0x48, 48, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraRendererMaterialScalarParameter
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraRendererMaterialScalarParameter : public MDKStruct
+class FNiagaraRendererMaterialScalarParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     MaterialParameterName                                       OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     MaterialParameterName                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraRendererMaterialVectorParameter
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNiagaraRendererMaterialVectorParameter : public MDKStruct
+class FNiagaraRendererMaterialVectorParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FName)                                     MaterialParameterName                                       OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x4, 16, 0, 0})
+	SMember(FName)                                     MaterialParameterName                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(getStruct<T>, {0x4, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraRendererMaterialTextureParameter
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraRendererMaterialTextureParameter : public MDKStruct
+class FNiagaraRendererMaterialTextureParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     MaterialParameterName                                       OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     MaterialParameterName                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UTexture*)                                 Texture                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraRendererMaterialStaticBoolParameter
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraRendererMaterialStaticBoolParameter : public MDKStruct
+class FNiagaraRendererMaterialStaticBoolParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     MaterialParameterName                                       OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     StaticVariableName                                          OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     MaterialParameterName                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     StaticVariableName                                          OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraRendererMaterialParameters
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FNiagaraRendererMaterialParameters : public MDKStruct
+class FNiagaraRendererMaterialParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4677,21 +4812,23 @@ public:
 
 /// Struct /Script/Niagara.NiagaraRibbonShapeCustomVertex
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNiagaraRibbonShapeCustomVertex : public MDKStruct
+class FNiagaraRibbonShapeCustomVertex : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FVector2f)                                 Position                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector2f)                                 Normal                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FVector2f)                                 Position                                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FVector2f)                                 Normal                                                      OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 	DMember(float)                                     TextureV                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraRibbonUVSettings
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraRibbonUVSettings : public MDKStruct
+class FNiagaraRibbonUVSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4702,14 +4839,15 @@ public:
 	DMember(bool)                                      bEnablePerParticleUOverride                                 OFFSET(get<bool>, {0x3, 1, 1, 0})
 	DMember(bool)                                      bEnablePerParticleVRangeOverride                            OFFSET(get<bool>, {0x3, 1, 1, 1})
 	DMember(float)                                     TilingLength                                                OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FVector2D)                                 Offset                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 Scale                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector2D)                                 Offset                                                      OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 Scale                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraScalabilityManager
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FNiagaraScalabilityManager : public MDKStruct
+class FNiagaraScalabilityManager : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
@@ -4720,56 +4858,60 @@ public:
 
 /// Struct /Script/Niagara.NiagaraModuleDependency
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNiagaraModuleDependency : public MDKStruct
+class FNiagaraModuleDependency : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FName)                                     ID                                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ID                                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(ENiagaraModuleDependencyType)              Type                                                        OFFSET(get<T>, {0x4, 1, 0, 0})
 	CMember(ENiagaraModuleDependencyScriptConstraint)  ScriptConstraint                                            OFFSET(get<T>, {0x5, 1, 0, 0})
-	SMember(FString)                                   RequiredVersion                                             OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   RequiredVersion                                             OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   OnlyEvaluateInScriptUsage                                   OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraCompilerTag
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraCompilerTag : public MDKStruct
+class FNiagaraCompilerTag : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FNiagaraVariable)                          Variable                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   StringValue                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FNiagaraVariable)                          Variable                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   StringValue                                                 OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVMExecutableDataId
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FNiagaraVMExecutableDataId : public MDKStruct
+class FNiagaraVMExecutableDataId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FGuid)                                     CompilerVersionID                                           OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     CompilerVersionID                                           OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(ENiagaraScriptUsage)                       ScriptUsageType                                             OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FGuid)                                     ScriptUsageTypeID                                           OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FGuid)                                     ScriptUsageTypeID                                           OFFSET(getStruct<T>, {0x14, 16, 0, 0})
 	DMember(bool)                                      bUsesRapidIterationParams                                   OFFSET(get<bool>, {0x24, 1, 1, 0})
 	DMember(bool)                                      bDisableDebugSwitches                                       OFFSET(get<bool>, {0x24, 1, 1, 1})
 	DMember(bool)                                      bInterpolatedSpawn                                          OFFSET(get<bool>, {0x24, 1, 1, 2})
 	DMember(bool)                                      bRequiresPersistentIDs                                      OFFSET(get<bool>, {0x24, 1, 1, 3})
-	SMember(FGuid)                                     BaseScriptID                                                OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FNiagaraCompileHash)                       BaseScriptCompileHash                                       OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FGuid)                                     ScriptVersionID                                             OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FGuid)                                     BaseScriptID                                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FNiagaraCompileHash)                       BaseScriptCompileHash                                       OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FGuid)                                     ScriptVersionID                                             OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVMExecutableByteCode
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraVMExecutableByteCode : public MDKStruct
+class FNiagaraVMExecutableByteCode : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -4780,27 +4922,28 @@ public:
 
 /// Struct /Script/Niagara.NiagaraVMExecutableData
 /// Size: 0x01A0 (0x000000 - 0x0001A0)
-class FNiagaraVMExecutableData : public MDKStruct
+class FNiagaraVMExecutableData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FNiagaraVMExecutableByteCode)              ByteCode                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FNiagaraVMExecutableByteCode)              OptimizedByteCode                                           OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FNiagaraVMExecutableByteCode)              ByteCode                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FNiagaraVMExecutableByteCode)              OptimizedByteCode                                           OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	DMember(int32_t)                                   NumTempRegisters                                            OFFSET(get<int32_t>, {0x68, 4, 0, 0})
 	DMember(int32_t)                                   NumUserPtrs                                                 OFFSET(get<int32_t>, {0x6C, 4, 0, 0})
 	CMember(TArray<FNiagaraCompilerTag>)               CompileTags                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(TArray<char>)                              ScriptLiterals                                              OFFSET(get<T>, {0x80, 16, 0, 0})
 	CMember(TArray<FNiagaraVariableBase>)              Attributes                                                  OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FNiagaraScriptDataUsageInfo)               DataUsage                                                   OFFSET(get<T>, {0xA0, 1, 0, 0})
+	SMember(FNiagaraScriptDataUsageInfo)               DataUsage                                                   OFFSET(getStruct<T>, {0xA0, 1, 0, 0})
 	CMember(TArray<FNiagaraScriptUObjectCompileInfo>)  UObjectInfos                                                OFFSET(get<T>, {0xA8, 16, 0, 0})
 	CMember(TArray<FNiagaraScriptDataInterfaceCompileInfo>) DataInterfaceInfo                                      OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(TArray<FVMExternalFunctionBindingInfo>)    CalledVMExternalFunctions                                   OFFSET(get<T>, {0xC8, 16, 0, 0})
 	CMember(TArray<FNiagaraDataSetID>)                 ReadDataSets                                                OFFSET(get<T>, {0xE8, 16, 0, 0})
 	CMember(TArray<FNiagaraDataSetProperties>)         WriteDataSets                                               OFFSET(get<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<FNiagaraStatScope>)                 StatScopes                                                  OFFSET(get<T>, {0x108, 16, 0, 0})
-	SMember(FNiagaraShaderScriptParametersMetadata)    ShaderScriptParametersMetadata                              OFFSET(get<T>, {0x118, 88, 0, 0})
+	SMember(FNiagaraShaderScriptParametersMetadata)    ShaderScriptParametersMetadata                              OFFSET(getStruct<T>, {0x118, 88, 0, 0})
 	CMember(ENiagaraScriptCompileStatus)               LastCompileStatus                                           OFFSET(get<T>, {0x170, 1, 0, 0})
 	CMember(TArray<FSimulationStageMetaData>)          SimulationStageMetaData                                     OFFSET(get<T>, {0x178, 16, 0, 0})
 	CMember(TArray<char>)                              ExperimentalContextData                                     OFFSET(get<T>, {0x188, 16, 0, 0})
@@ -4810,8 +4953,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraInlineDynamicInputFormatToken
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraInlineDynamicInputFormatToken : public MDKStruct
+class FNiagaraInlineDynamicInputFormatToken : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -4820,8 +4964,9 @@ public:
 
 /// Struct /Script/Niagara.VersionedNiagaraScriptData
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FVersionedNiagaraScriptData : public MDKStruct
+class FVersionedNiagaraScriptData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -4830,8 +4975,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScriptExecutionPaddingInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraScriptExecutionPaddingInfo : public MDKStruct
+class FNiagaraScriptExecutionPaddingInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -4846,6 +4992,7 @@ public:
 /// Size: 0x0020 (0x000088 - 0x0000A8)
 class FNiagaraScriptExecutionParameterStore : public FNiagaraParameterStore
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
@@ -4860,6 +5007,7 @@ public:
 /// Size: 0x0010 (0x000088 - 0x000098)
 class FNiagaraScriptInstanceParameterStore : public FNiagaraParameterStore
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
@@ -4868,20 +5016,22 @@ public:
 
 /// Struct /Script/Niagara.NiagaraScriptHighlight
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraScriptHighlight : public MDKStruct
+class FNiagaraScriptHighlight : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSimCacheDataBuffers
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNiagaraSimCacheDataBuffers : public MDKStruct
+class FNiagaraSimCacheDataBuffers : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -4897,54 +5047,58 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSimCacheEmitterFrame
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FNiagaraSimCacheEmitterFrame : public MDKStruct
+class FNiagaraSimCacheEmitterFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FBox)                                      LocalBounds                                                 OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FBox)                                      LocalBounds                                                 OFFSET(getStruct<T>, {0x0, 56, 0, 0})
 	DMember(int32_t)                                   TotalSpawnedParticles                                       OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	SMember(FNiagaraSimCacheDataBuffers)               ParticleDataBuffers                                         OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FNiagaraSimCacheDataBuffers)               ParticleDataBuffers                                         OFFSET(getStruct<T>, {0x40, 96, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSimCacheSystemFrame
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FNiagaraSimCacheSystemFrame : public MDKStruct
+class FNiagaraSimCacheSystemFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FBox)                                      LocalBounds                                                 OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FNiagaraSimCacheDataBuffers)               SystemDataBuffers                                           OFFSET(get<T>, {0x38, 96, 0, 0})
+	SMember(FBox)                                      LocalBounds                                                 OFFSET(getStruct<T>, {0x0, 56, 0, 0})
+	SMember(FNiagaraSimCacheDataBuffers)               SystemDataBuffers                                           OFFSET(getStruct<T>, {0x38, 96, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSimCacheFrame
 /// Size: 0x0120 (0x000000 - 0x000120)
-class FNiagaraSimCacheFrame : public MDKStruct
+class FNiagaraSimCacheFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FTransform)                                LocalToWorld                                                OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FVector3f)                                 LWCTile                                                     OFFSET(get<T>, {0x60, 12, 0, 0})
+	SMember(FTransform)                                LocalToWorld                                                OFFSET(getStruct<T>, {0x0, 96, 0, 0})
+	SMember(FVector3f)                                 LWCTile                                                     OFFSET(getStruct<T>, {0x60, 12, 0, 0})
 	DMember(float)                                     SimulationAge                                               OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(int32_t)                                   SimulationTickCount                                         OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	SMember(FNiagaraSimCacheSystemFrame)               SystemData                                                  OFFSET(get<T>, {0x78, 152, 0, 0})
+	SMember(FNiagaraSimCacheSystemFrame)               SystemData                                                  OFFSET(getStruct<T>, {0x78, 152, 0, 0})
 	CMember(TArray<FNiagaraSimCacheEmitterFrame>)      EmitterData                                                 OFFSET(get<T>, {0x110, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSimCacheVariable
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNiagaraSimCacheVariable : public MDKStruct
+class FNiagaraSimCacheVariable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FNiagaraVariableBase)                      Variable                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FNiagaraVariableBase)                      Variable                                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	DMember(uint16_t)                                  FloatOffset                                                 OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
 	DMember(uint16_t)                                  FloatCount                                                  OFFSET(get<uint16_t>, {0xA, 2, 0, 0})
 	DMember(uint16_t)                                  HalfOffset                                                  OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
@@ -4955,13 +5109,14 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSimCacheDataBuffersLayout
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FNiagaraSimCacheDataBuffersLayout : public MDKStruct
+class FNiagaraSimCacheDataBuffersLayout : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     LayoutName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     LayoutName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(ENiagaraSimTarget)                         SimTarget                                                   OFFSET(get<T>, {0x4, 1, 0, 0})
 	CMember(TArray<FNiagaraSimCacheVariable>)          Variables                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 	DMember(uint16_t)                                  FloatCount                                                  OFFSET(get<uint16_t>, {0x18, 2, 0, 0})
@@ -4977,39 +5132,42 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSimCacheLayout
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FNiagaraSimCacheLayout : public MDKStruct
+class FNiagaraSimCacheLayout : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FNiagaraSimCacheDataBuffersLayout)         SystemLayout                                                OFFSET(get<T>, {0x0, 176, 0, 0})
+	SMember(FNiagaraSimCacheDataBuffersLayout)         SystemLayout                                                OFFSET(getStruct<T>, {0x0, 176, 0, 0})
 	CMember(TArray<FNiagaraSimCacheDataBuffersLayout>) EmitterLayouts                                              OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraEmitterCompiledData
 /// Size: 0x00F8 (0x000000 - 0x0000F8)
-class FNiagaraEmitterCompiledData : public MDKStruct
+class FNiagaraEmitterCompiledData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
 	CMember(TArray<FName>)                             SpawnAttributes                                             OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterSpawnIntervalVar                                     OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterInterpSpawnStartDTVar                                OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterSpawnGroupVar                                        OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterAgeVar                                               OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterRandomSeedVar                                        OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterInstanceSeedVar                                      OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FNiagaraVariable)                          EmitterTotalSpawnedParticlesVar                             OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               DataSetCompiledData                                         OFFSET(get<T>, {0xB8, 64, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterSpawnIntervalVar                                     OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterInterpSpawnStartDTVar                                OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterSpawnGroupVar                                        OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterAgeVar                                               OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterRandomSeedVar                                        OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterInstanceSeedVar                                      OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FNiagaraVariable)                          EmitterTotalSpawnedParticlesVar                             OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               DataSetCompiledData                                         OFFSET(getStruct<T>, {0xB8, 64, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraParameterDataSetBinding
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraParameterDataSetBinding : public MDKStruct
+class FNiagaraParameterDataSetBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5020,8 +5178,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraParameterDataSetBindingCollection
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraParameterDataSetBindingCollection : public MDKStruct
+class FNiagaraParameterDataSetBindingCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5032,30 +5191,32 @@ public:
 
 /// Struct /Script/Niagara.NiagaraSystemCompiledData
 /// Size: 0x0228 (0x000000 - 0x000228)
-class FNiagaraSystemCompiledData : public MDKStruct
+class FNiagaraSystemCompiledData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FNiagaraParameterStore)                    InstanceParamStore                                          OFFSET(get<T>, {0x0, 136, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               DataSetCompiledData                                         OFFSET(get<T>, {0x88, 64, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               SpawnInstanceParamsDataSetCompiledData                      OFFSET(get<T>, {0xC8, 64, 0, 0})
-	SMember(FNiagaraDataSetCompiledData)               UpdateInstanceParamsDataSetCompiledData                     OFFSET(get<T>, {0x108, 64, 0, 0})
-	SMember(FNiagaraParameterDataSetBindingCollection) SpawnInstanceGlobalBinding                                  OFFSET(get<T>, {0x148, 32, 0, 0})
-	SMember(FNiagaraParameterDataSetBindingCollection) SpawnInstanceSystemBinding                                  OFFSET(get<T>, {0x168, 32, 0, 0})
-	SMember(FNiagaraParameterDataSetBindingCollection) SpawnInstanceOwnerBinding                                   OFFSET(get<T>, {0x188, 32, 0, 0})
+	SMember(FNiagaraParameterStore)                    InstanceParamStore                                          OFFSET(getStruct<T>, {0x0, 136, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               DataSetCompiledData                                         OFFSET(getStruct<T>, {0x88, 64, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               SpawnInstanceParamsDataSetCompiledData                      OFFSET(getStruct<T>, {0xC8, 64, 0, 0})
+	SMember(FNiagaraDataSetCompiledData)               UpdateInstanceParamsDataSetCompiledData                     OFFSET(getStruct<T>, {0x108, 64, 0, 0})
+	SMember(FNiagaraParameterDataSetBindingCollection) SpawnInstanceGlobalBinding                                  OFFSET(getStruct<T>, {0x148, 32, 0, 0})
+	SMember(FNiagaraParameterDataSetBindingCollection) SpawnInstanceSystemBinding                                  OFFSET(getStruct<T>, {0x168, 32, 0, 0})
+	SMember(FNiagaraParameterDataSetBindingCollection) SpawnInstanceOwnerBinding                                   OFFSET(getStruct<T>, {0x188, 32, 0, 0})
 	CMember(TArray<FNiagaraParameterDataSetBindingCollection>) SpawnInstanceEmitterBindings                        OFFSET(get<T>, {0x1A8, 16, 0, 0})
-	SMember(FNiagaraParameterDataSetBindingCollection) UpdateInstanceGlobalBinding                                 OFFSET(get<T>, {0x1B8, 32, 0, 0})
-	SMember(FNiagaraParameterDataSetBindingCollection) UpdateInstanceSystemBinding                                 OFFSET(get<T>, {0x1D8, 32, 0, 0})
-	SMember(FNiagaraParameterDataSetBindingCollection) UpdateInstanceOwnerBinding                                  OFFSET(get<T>, {0x1F8, 32, 0, 0})
+	SMember(FNiagaraParameterDataSetBindingCollection) UpdateInstanceGlobalBinding                                 OFFSET(getStruct<T>, {0x1B8, 32, 0, 0})
+	SMember(FNiagaraParameterDataSetBindingCollection) UpdateInstanceSystemBinding                                 OFFSET(getStruct<T>, {0x1D8, 32, 0, 0})
+	SMember(FNiagaraParameterDataSetBindingCollection) UpdateInstanceOwnerBinding                                  OFFSET(getStruct<T>, {0x1F8, 32, 0, 0})
 	CMember(TArray<FNiagaraParameterDataSetBindingCollection>) UpdateInstanceEmitterBindings                       OFFSET(get<T>, {0x218, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSystemScalabilityOverrides
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraSystemScalabilityOverrides : public MDKStruct
+class FNiagaraSystemScalabilityOverrides : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -5065,8 +5226,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraWildcard
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraWildcard : public MDKStruct
+class FNiagaraWildcard : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -5075,8 +5237,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraFloat
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNiagaraFloat : public MDKStruct
+class FNiagaraFloat : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -5086,8 +5249,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraInt32
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNiagaraInt32 : public MDKStruct
+class FNiagaraInt32 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -5097,8 +5261,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraBool
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNiagaraBool : public MDKStruct
+class FNiagaraBool : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -5110,6 +5275,7 @@ public:
 /// Size: 0x0000 (0x00000C - 0x00000C)
 class FNiagaraPosition : public FVector3f
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -5118,8 +5284,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraHalf
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FNiagaraHalf : public MDKStruct
+class FNiagaraHalf : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -5129,8 +5296,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraHalfVector2
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNiagaraHalfVector2 : public MDKStruct
+class FNiagaraHalfVector2 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -5141,8 +5309,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraHalfVector3
 /// Size: 0x0006 (0x000000 - 0x000006)
-class FNiagaraHalfVector3 : public MDKStruct
+class FNiagaraHalfVector3 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
@@ -5154,8 +5323,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraHalfVector4
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraHalfVector4 : public MDKStruct
+class FNiagaraHalfVector4 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5168,8 +5338,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraNumeric
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraNumeric : public MDKStruct
+class FNiagaraNumeric : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -5178,8 +5349,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraParameterMap
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNiagaraParameterMap : public MDKStruct
+class FNiagaraParameterMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -5188,8 +5360,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraDouble
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraDouble : public MDKStruct
+class FNiagaraDouble : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5199,22 +5372,24 @@ public:
 
 /// Struct /Script/Niagara.NiagaraMatrix
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraMatrix : public MDKStruct
+class FNiagaraMatrix : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector4f)                                 Row0                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector4f)                                 Row1                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector4f)                                 Row2                                                        OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FVector4f)                                 Row3                                                        OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FVector4f)                                 Row0                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector4f)                                 Row1                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FVector4f)                                 Row2                                                        OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FVector4f)                                 Row3                                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraSpawnInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraSpawnInfo : public MDKStruct
+class FNiagaraSpawnInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -5227,8 +5402,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraID
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNiagaraID : public MDKStruct
+class FNiagaraID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5239,8 +5415,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraRandInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNiagaraRandInfo : public MDKStruct
+class FNiagaraRandInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -5252,59 +5429,64 @@ public:
 
 /// Struct /Script/Niagara.NiagaraInputConditionMetadata
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNiagaraInputConditionMetadata : public MDKStruct
+class FNiagaraInputConditionMetadata : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     InputName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     InputName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FString>)                           TargetValues                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraEnumParameterMetaData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraEnumParameterMetaData : public MDKStruct
+class FNiagaraEnumParameterMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     OverrideName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     OverrideName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UTexture2D*)                               IconOverride                                                OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bUseColorOverride                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FLinearColor)                              ColorOverride                                               OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FLinearColor)                              ColorOverride                                               OFFSET(getStruct<T>, {0x14, 16, 0, 0})
 };
 
 /// Struct /Script/Niagara.WidgetNamedInputValue
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FWidgetNamedInputValue : public MDKStruct
+class FWidgetNamedInputValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FText)                                     ToolTip                                                     OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     ToolTip                                                     OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraWidgetNamedIntegerInputValue
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNiagaraWidgetNamedIntegerInputValue : public MDKStruct
+class FNiagaraWidgetNamedIntegerInputValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     ToolTip                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     ToolTip                                                     OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraInputParameterCustomization
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraInputParameterCustomization : public MDKStruct
+class FNiagaraInputParameterCustomization : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -5323,47 +5505,49 @@ public:
 
 /// Struct /Script/Niagara.NiagaraBoolParameterMetaData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNiagaraBoolParameterMetaData : public MDKStruct
+class FNiagaraBoolParameterMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(ENiagaraBoolDisplayMode)                   DisplayMode                                                 OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FName)                                     OverrideNameTrue                                            OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     OverrideNameFalse                                           OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     OverrideNameTrue                                            OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     OverrideNameFalse                                           OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	CMember(UTexture2D*)                               IconOverrideTrue                                            OFFSET(get<T>, {0x10, 8, 0, 0})
 	CMember(UTexture2D*)                               IconOverrideFalse                                           OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/Niagara.NiagaraVariableMetaData
 /// Size: 0x0180 (0x000000 - 0x000180)
-class FNiagaraVariableMetaData : public MDKStruct
+class FNiagaraVariableMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     CategoryName                                                OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     CategoryName                                                OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	CMember(EUnit)                                     DisplayUnit                                                 OFFSET(get<T>, {0x30, 1, 0, 0})
 	DMember(bool)                                      bAdvancedDisplay                                            OFFSET(get<bool>, {0x31, 1, 0, 0})
 	DMember(bool)                                      bDisplayInOverviewStack                                     OFFSET(get<bool>, {0x32, 1, 0, 0})
 	DMember(int32_t)                                   InlineParameterSortPriority                                 OFFSET(get<int32_t>, {0x34, 4, 0, 0})
 	DMember(bool)                                      bOverrideColor                                              OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FLinearColor)                              InlineParameterColorOverride                                OFFSET(get<T>, {0x3C, 16, 0, 0})
+	SMember(FLinearColor)                              InlineParameterColorOverride                                OFFSET(getStruct<T>, {0x3C, 16, 0, 0})
 	CMember(TArray<FNiagaraEnumParameterMetaData>)     InlineParameterEnumOverrides                                OFFSET(get<T>, {0x50, 16, 0, 0})
 	DMember(bool)                                      bEnableBoolOverride                                         OFFSET(get<bool>, {0x60, 1, 0, 0})
-	SMember(FNiagaraBoolParameterMetaData)             InlineParameterBoolOverride                                 OFFSET(get<T>, {0x68, 32, 0, 0})
+	SMember(FNiagaraBoolParameterMetaData)             InlineParameterBoolOverride                                 OFFSET(getStruct<T>, {0x68, 32, 0, 0})
 	DMember(int32_t)                                   EditorSortPriority                                          OFFSET(get<int32_t>, {0x88, 4, 0, 0})
 	DMember(bool)                                      bInlineEditConditionToggle                                  OFFSET(get<bool>, {0x8C, 1, 0, 0})
-	SMember(FNiagaraInputConditionMetadata)            EditCondition                                               OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FNiagaraInputConditionMetadata)            VisibleCondition                                            OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FNiagaraInputConditionMetadata)            EditCondition                                               OFFSET(getStruct<T>, {0x90, 24, 0, 0})
+	SMember(FNiagaraInputConditionMetadata)            VisibleCondition                                            OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 	CMember(TMap<FName, FString>)                      PropertyMetaData                                            OFFSET(get<T>, {0xC0, 80, 0, 0})
-	SMember(FName)                                     ParentAttribute                                             OFFSET(get<T>, {0x110, 4, 0, 0})
+	SMember(FName)                                     ParentAttribute                                             OFFSET(getStruct<T>, {0x110, 4, 0, 0})
 	CMember(TArray<FName>)                             AlternateAliases                                            OFFSET(get<T>, {0x118, 16, 0, 0})
-	SMember(FNiagaraInputParameterCustomization)       WidgetCustomization                                         OFFSET(get<T>, {0x128, 64, 0, 0})
-	SMember(FGuid)                                     VariableGuid                                                OFFSET(get<T>, {0x168, 16, 0, 0})
+	SMember(FNiagaraInputParameterCustomization)       WidgetCustomization                                         OFFSET(getStruct<T>, {0x128, 64, 0, 0})
+	SMember(FGuid)                                     VariableGuid                                                OFFSET(getStruct<T>, {0x168, 16, 0, 0})
 	DMember(bool)                                      bIsStaticSwitch                                             OFFSET(get<bool>, {0x178, 1, 0, 0})
 	DMember(int32_t)                                   StaticSwitchDefaultValue                                    OFFSET(get<int32_t>, {0x17C, 4, 0, 0})
 };
@@ -5372,6 +5556,7 @@ public:
 /// Size: 0x0050 (0x000088 - 0x0000D8)
 class FNiagaraUserRedirectionParameterStore : public FNiagaraParameterStore
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
@@ -5381,8 +5566,9 @@ public:
 
 /// Struct /Script/Niagara.NiagaraVariant
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNiagaraVariant : public MDKStruct
+class FNiagaraVariant : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -5397,6 +5583,7 @@ public:
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FNiagaraWorldManagerTickFunction : public FTickFunction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 

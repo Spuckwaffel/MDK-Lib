@@ -37,7 +37,7 @@ class UGenlockedFixedRateCustomTimeStep : public UGenlockedCustomTimeStep
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FFrameRate)                                FrameRate                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FFrameRate)                                FrameRate                                                   OFFSET(getStruct<T>, {0x30, 8, 0, 0})
 	DMember(bool)                                      bShouldBlock                                                OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(bool)                                      bForceSingleFrameDeltaTime                                  OFFSET(get<bool>, {0x39, 1, 0, 0})
 };
@@ -77,8 +77,9 @@ public:
 
 /// Struct /Script/TimeManagement.TimedDataChannelSampleTime
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTimedDataChannelSampleTime : public MDKStruct
+class FTimedDataChannelSampleTime : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -87,8 +88,9 @@ public:
 
 /// Struct /Script/TimeManagement.TimedDataInputEvaluationData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FTimedDataInputEvaluationData : public MDKStruct
+class FTimedDataInputEvaluationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

@@ -20,36 +20,36 @@ class UFortEventScreenData : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	SMember(FString)                                   EventCMSId                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   AccountResourceName                                         OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   LevelOfferId                                                OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FString)                                   PremiumTrackOfferId                                         OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   EventCMSId                                                  OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   AccountResourceName                                         OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   LevelOfferId                                                OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   PremiumTrackOfferId                                         OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 	CMember(UFortTokenType*)                           PremiumTrackPurchasedToken                                  OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FGameplayTag)                              VaultWorldTag                                               OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FVaultWorldBackgroundData)                 PreviewScreenBackgroundData                                 OFFSET(get<T>, {0x80, 88, 0, 0})
+	SMember(FGameplayTag)                              VaultWorldTag                                               OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FVaultWorldBackgroundData)                 PreviewScreenBackgroundData                                 OFFSET(getStruct<T>, {0x80, 88, 0, 0})
 	CMember(TWeakObjectPtr<UFortChallengeBundleItemDefinition*>) QuestBundle                                       OFFSET(get<T>, {0xD8, 32, 0, 0})
 	CMember(TWeakObjectPtr<UFortItemDefinition*>)      SpecialRewardItem                                           OFFSET(get<T>, {0xF8, 32, 0, 0})
 	CMember(TWeakObjectPtr<UFortItemDefinition*>)      SpecialPremiumRewardItem                                    OFFSET(get<T>, {0x118, 32, 0, 0})
 	CMember(TArray<FEventItemOverride>)                ItemOverrides                                               OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FEventScreenTrackData)                     FreeTrackData                                               OFFSET(get<T>, {0x148, 32, 0, 0})
-	SMember(FEventScreenTrackData)                     PremiumTrackData                                            OFFSET(get<T>, {0x168, 32, 0, 0})
-	SMember(FGameplayTag)                              QuestCategoryTag                                            OFFSET(get<T>, {0x188, 4, 0, 0})
+	SMember(FEventScreenTrackData)                     FreeTrackData                                               OFFSET(getStruct<T>, {0x148, 32, 0, 0})
+	SMember(FEventScreenTrackData)                     PremiumTrackData                                            OFFSET(getStruct<T>, {0x168, 32, 0, 0})
+	SMember(FGameplayTag)                              QuestCategoryTag                                            OFFSET(getStruct<T>, {0x188, 4, 0, 0})
 	CMember(TArray<UClass*>)                           RichTextDecorators                                          OFFSET(get<T>, {0x190, 16, 0, 0})
 	CMember(UMaterialInterface*)                       EventBackgroundMaterial                                     OFFSET(get<T>, {0x1A0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       ProgressBarMaterial                                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	SMember(FSlateBrush)                               CurrencyBrush                                               OFFSET(get<T>, {0x1B0, 192, 0, 0})
-	SMember(FSlateBrush)                               CompletionBannerBrush                                       OFFSET(get<T>, {0x270, 192, 0, 0})
-	SMember(FSlateBrush)                               GlowForeground                                              OFFSET(get<T>, {0x330, 192, 0, 0})
-	SMember(FSlateBrush)                               GlowBackground                                              OFFSET(get<T>, {0x3F0, 192, 0, 0})
-	SMember(FLinearColor)                              EventBackgroundColor1                                       OFFSET(get<T>, {0x4B0, 16, 0, 0})
-	SMember(FLinearColor)                              EventBackgroundColor2                                       OFFSET(get<T>, {0x4C0, 16, 0, 0})
-	SMember(FLinearColor)                              RewardBackgroundColor1                                      OFFSET(get<T>, {0x4D0, 16, 0, 0})
-	SMember(FLinearColor)                              RewardBackgroundColor2                                      OFFSET(get<T>, {0x4E0, 16, 0, 0})
-	SMember(FLinearColor)                              RewardBackgroundColor3                                      OFFSET(get<T>, {0x4F0, 16, 0, 0})
-	SMember(FLinearColor)                              AccentColor                                                 OFFSET(get<T>, {0x500, 16, 0, 0})
+	SMember(FSlateBrush)                               CurrencyBrush                                               OFFSET(getStruct<T>, {0x1B0, 192, 0, 0})
+	SMember(FSlateBrush)                               CompletionBannerBrush                                       OFFSET(getStruct<T>, {0x270, 192, 0, 0})
+	SMember(FSlateBrush)                               GlowForeground                                              OFFSET(getStruct<T>, {0x330, 192, 0, 0})
+	SMember(FSlateBrush)                               GlowBackground                                              OFFSET(getStruct<T>, {0x3F0, 192, 0, 0})
+	SMember(FLinearColor)                              EventBackgroundColor1                                       OFFSET(getStruct<T>, {0x4B0, 16, 0, 0})
+	SMember(FLinearColor)                              EventBackgroundColor2                                       OFFSET(getStruct<T>, {0x4C0, 16, 0, 0})
+	SMember(FLinearColor)                              RewardBackgroundColor1                                      OFFSET(getStruct<T>, {0x4D0, 16, 0, 0})
+	SMember(FLinearColor)                              RewardBackgroundColor2                                      OFFSET(getStruct<T>, {0x4E0, 16, 0, 0})
+	SMember(FLinearColor)                              RewardBackgroundColor3                                      OFFSET(getStruct<T>, {0x4F0, 16, 0, 0})
+	SMember(FLinearColor)                              AccentColor                                                 OFFSET(getStruct<T>, {0x500, 16, 0, 0})
 	CMember(TMap<FName, FLinearColor>)                 RewardTileBackgroundColors                                  OFFSET(get<T>, {0x510, 80, 0, 0})
-	SMember(FText)                                     TimeRemainingFormat                                         OFFSET(get<T>, {0x560, 24, 0, 0})
-	SMember(FText)                                     CurrencyFormat                                              OFFSET(get<T>, {0x578, 24, 0, 0})
+	SMember(FText)                                     TimeRemainingFormat                                         OFFSET(getStruct<T>, {0x560, 24, 0, 0})
+	SMember(FText)                                     CurrencyFormat                                              OFFSET(getStruct<T>, {0x578, 24, 0, 0})
 	CMember(USoundBase*)                               DefaultHoveredSound                                         OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(USoundBase*)                               DefaultPressedSound                                         OFFSET(get<T>, {0x598, 8, 0, 0})
 	CMember(USoundBase*)                               BuyPressedSound                                             OFFSET(get<T>, {0x5A0, 8, 0, 0})
@@ -378,10 +378,10 @@ class UEventScreenListView : public UListViewBase
 	static inline constexpr uint64_t __MDKClassSize = 1144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnProgressBarAnimationStartedEvent                          OFFSET(get<T>, {0x380, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnProgressBarAnimationCompletedEvent                        OFFSET(get<T>, {0x390, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnProgressBarAnimationInterruptedEvent                      OFFSET(get<T>, {0x3A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnResourcePreviewOffsetAnimationEvent                       OFFSET(get<T>, {0x3B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnProgressBarAnimationStartedEvent                          OFFSET(getStruct<T>, {0x380, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnProgressBarAnimationCompletedEvent                        OFFSET(getStruct<T>, {0x390, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnProgressBarAnimationInterruptedEvent                      OFFSET(getStruct<T>, {0x3A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnResourcePreviewOffsetAnimationEvent                       OFFSET(getStruct<T>, {0x3B0, 16, 0, 0})
 	CMember(UClass*)                                   RewardTrackWidgetClass                                      OFFSET(get<T>, {0x3E0, 8, 0, 0})
 	CMember(UClass*)                                   SpacerWidgetClass                                           OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	DMember(float)                                     EntrySpacing                                                OFFSET(get<float>, {0x3F0, 4, 0, 0})
@@ -530,8 +530,8 @@ class UFortEventTrackerModule_PremiumUpsell : public UFortEventTrackerModule
 
 public:
 	CMember(UFortCTAButton*)                           Button_Prompt                                               OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FText)                                     PromptTextUnowned                                           OFFSET(get<T>, {0x2B8, 24, 0, 0})
-	SMember(FText)                                     PromptTextOwned                                             OFFSET(get<T>, {0x2D0, 24, 0, 0})
+	SMember(FText)                                     PromptTextUnowned                                           OFFSET(getStruct<T>, {0x2B8, 24, 0, 0})
+	SMember(FText)                                     PromptTextOwned                                             OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
 
 
 	/// Functions
@@ -555,8 +555,9 @@ public:
 
 /// Struct /Script/EventScreenBase.EventItemOverride
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FEventItemOverride : public MDKStruct
+class FEventItemOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -569,86 +570,91 @@ public:
 
 /// Struct /Script/EventScreenBase.EventScreenTrackData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FEventScreenTrackData : public MDKStruct
+class FEventScreenTrackData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FLinearColor)                              TrackColorPrimary                                           OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FLinearColor)                              TrackColorSecondary                                         OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FLinearColor)                              TrackColorPrimary                                           OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              TrackColorSecondary                                         OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EventScreenBase.EventScreenMoreInfoGroup
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FEventScreenMoreInfoGroup : public MDKStruct
+class FEventScreenMoreInfoGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FText)                                     Header                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     Body                                                        OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FString)                                   IconURL                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FText)                                     Header                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     Body                                                        OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FString)                                   IconURL                                                     OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/EventScreenBase.EventScreenCMSResourceGroupOverride
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FEventScreenCMSResourceGroupOverride : public MDKStruct
+class FEventScreenCMSResourceGroupOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(int32_t)                                   ResourceValue                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   KeyArtOverrideURL                                           OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   KeyArtOverrideURL                                           OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/EventScreenBase.EventScreenCMSData
 /// Size: 0x02A8 (0x000000 - 0x0002A8)
-class FEventScreenCMSData : public MDKStruct
+class FEventScreenCMSData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 680;
 
 public:
-	SMember(FString)                                   EventCMSId                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FText)                                     EventName                                                   OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FText)                                     EventDescription                                            OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FText)                                     ResourceHeader                                              OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FText)                                     StarterHeader                                               OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FText)                                     CompletionHeader                                            OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FText)                                     EventCTA                                                    OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FText)                                     EventCTACompleted                                           OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FText)                                     HeaderCTA                                                   OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FText)                                     ItemShopCallout                                             OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FString)                                   CTAIconURL                                                  OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FString)                                   KeyArtURL                                                   OFFSET(get<T>, {0xF8, 16, 0, 0})
-	SMember(FText)                                     MoreInfoHeader                                              OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FText)                                     MoreInfoSubHeader                                           OFFSET(get<T>, {0x120, 24, 0, 0})
-	SMember(FText)                                     MoreInfoLegal                                               OFFSET(get<T>, {0x138, 24, 0, 0})
+	SMember(FString)                                   EventCMSId                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FText)                                     EventName                                                   OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FText)                                     EventDescription                                            OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FText)                                     ResourceHeader                                              OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FText)                                     StarterHeader                                               OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FText)                                     CompletionHeader                                            OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FText)                                     EventCTA                                                    OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FText)                                     EventCTACompleted                                           OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FText)                                     HeaderCTA                                                   OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FText)                                     ItemShopCallout                                             OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FString)                                   CTAIconURL                                                  OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FString)                                   KeyArtURL                                                   OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
+	SMember(FText)                                     MoreInfoHeader                                              OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FText)                                     MoreInfoSubHeader                                           OFFSET(getStruct<T>, {0x120, 24, 0, 0})
+	SMember(FText)                                     MoreInfoLegal                                               OFFSET(getStruct<T>, {0x138, 24, 0, 0})
 	CMember(TArray<FEventScreenMoreInfoGroup>)         MoreInfoGroups                                              OFFSET(get<T>, {0x150, 16, 0, 0})
-	SMember(FText)                                     PurchaseLegal                                               OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FText)                                     RewardTrackLegal                                            OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FString)                                   ItemShopOfferId                                             OFFSET(get<T>, {0x190, 16, 0, 0})
-	SMember(FText)                                     PremiumUpsellUnownedHeader                                  OFFSET(get<T>, {0x1A0, 24, 0, 0})
-	SMember(FText)                                     PremiumUpsellUnownedBody                                    OFFSET(get<T>, {0x1B8, 24, 0, 0})
-	SMember(FText)                                     PremiumUpsellOwnedHeader                                    OFFSET(get<T>, {0x1D0, 24, 0, 0})
-	SMember(FText)                                     PremiumUpsellOwnedBody                                      OFFSET(get<T>, {0x1E8, 24, 0, 0})
-	SMember(FString)                                   PremiumUpsellIconURL                                        OFFSET(get<T>, {0x200, 16, 0, 0})
-	SMember(FText)                                     PurchasePremiumTrackHeader                                  OFFSET(get<T>, {0x210, 24, 0, 0})
+	SMember(FText)                                     PurchaseLegal                                               OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FText)                                     RewardTrackLegal                                            OFFSET(getStruct<T>, {0x178, 24, 0, 0})
+	SMember(FString)                                   ItemShopOfferId                                             OFFSET(getStruct<T>, {0x190, 16, 0, 0})
+	SMember(FText)                                     PremiumUpsellUnownedHeader                                  OFFSET(getStruct<T>, {0x1A0, 24, 0, 0})
+	SMember(FText)                                     PremiumUpsellUnownedBody                                    OFFSET(getStruct<T>, {0x1B8, 24, 0, 0})
+	SMember(FText)                                     PremiumUpsellOwnedHeader                                    OFFSET(getStruct<T>, {0x1D0, 24, 0, 0})
+	SMember(FText)                                     PremiumUpsellOwnedBody                                      OFFSET(getStruct<T>, {0x1E8, 24, 0, 0})
+	SMember(FString)                                   PremiumUpsellIconURL                                        OFFSET(getStruct<T>, {0x200, 16, 0, 0})
+	SMember(FText)                                     PurchasePremiumTrackHeader                                  OFFSET(getStruct<T>, {0x210, 24, 0, 0})
 	CMember(TArray<FText>)                             PurchasePremiumTrackBodyList                                OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(FText)                                     InspectSpecialItemUnowned                                   OFFSET(get<T>, {0x238, 24, 0, 0})
-	SMember(FText)                                     InspectSpecialItemOwned                                     OFFSET(get<T>, {0x250, 24, 0, 0})
-	SMember(FText)                                     InspectSpecialPremiumItemUnowned                            OFFSET(get<T>, {0x268, 24, 0, 0})
-	SMember(FText)                                     InspectSpecialPremiumItemOwned                              OFFSET(get<T>, {0x280, 24, 0, 0})
+	SMember(FText)                                     InspectSpecialItemUnowned                                   OFFSET(getStruct<T>, {0x238, 24, 0, 0})
+	SMember(FText)                                     InspectSpecialItemOwned                                     OFFSET(getStruct<T>, {0x250, 24, 0, 0})
+	SMember(FText)                                     InspectSpecialPremiumItemUnowned                            OFFSET(getStruct<T>, {0x268, 24, 0, 0})
+	SMember(FText)                                     InspectSpecialPremiumItemOwned                              OFFSET(getStruct<T>, {0x280, 24, 0, 0})
 	CMember(TArray<FEventScreenCMSResourceGroupOverride>) ResourceGroupOverrides                                   OFFSET(get<T>, {0x298, 16, 0, 0})
 };
 
 /// Struct /Script/EventScreenBase.EventScreenCMSGroup
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEventScreenCMSGroup : public MDKStruct
+class FEventScreenCMSGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

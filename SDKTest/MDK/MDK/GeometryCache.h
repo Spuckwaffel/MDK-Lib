@@ -95,7 +95,7 @@ public:
 	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x60C, 4, 0, 0})
 	DMember(bool)                                      bManualTick                                                 OFFSET(get<bool>, {0x610, 1, 0, 0})
 	DMember(bool)                                      bOverrideWireframeColor                                     OFFSET(get<bool>, {0x611, 1, 0, 0})
-	SMember(FLinearColor)                              WireframeOverrideColor                                      OFFSET(get<T>, {0x614, 16, 0, 0})
+	SMember(FLinearColor)                              WireframeOverrideColor                                      OFFSET(getStruct<T>, {0x614, 16, 0, 0})
 
 
 	/// Functions
@@ -228,22 +228,23 @@ public:
 	CMember(ENiagaraRendererSourceDataMode)            SourceMode                                                  OFFSET(get<T>, {0xC0, 1, 0, 0})
 	DMember(bool)                                      bIsLooping                                                  OFFSET(get<bool>, {0xC1, 1, 0, 0})
 	DMember(uint32_t)                                  ComponentCountLimit                                         OFFSET(get<uint32_t>, {0xC4, 4, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(get<T>, {0xC8, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RotationBinding                                             OFFSET(get<T>, {0xF0, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(get<T>, {0x118, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ElapsedTimeBinding                                          OFFSET(get<T>, {0x140, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(get<T>, {0x168, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          ArrayIndexBinding                                           OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(get<T>, {0x1B8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          PositionBinding                                             OFFSET(getStruct<T>, {0xC8, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RotationBinding                                             OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ScaleBinding                                                OFFSET(getStruct<T>, {0x118, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ElapsedTimeBinding                                          OFFSET(getStruct<T>, {0x140, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          EnabledBinding                                              OFFSET(getStruct<T>, {0x168, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          ArrayIndexBinding                                           OFFSET(getStruct<T>, {0x190, 40, 0, 0})
+	SMember(FNiagaraVariableAttributeBinding)          RendererVisibilityTagBinding                                OFFSET(getStruct<T>, {0x1B8, 40, 0, 0})
 	DMember(int32_t)                                   RendererVisibility                                          OFFSET(get<int32_t>, {0x1E0, 4, 0, 0})
 	DMember(bool)                                      bAssignComponentsOnParticleID                               OFFSET(get<bool>, {0x1E4, 1, 0, 0})
-	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(get<T>, {0x1E8, 80, 0, 0})
+	SMember(FNiagaraRendererMaterialParameters)        MaterialParameters                                          OFFSET(getStruct<T>, {0x1E8, 80, 0, 0})
 };
 
 /// Struct /Script/GeometryCache.TrackRenderData
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FTrackRenderData : public MDKStruct
+class FTrackRenderData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
@@ -252,8 +253,9 @@ public:
 
 /// Struct /Script/GeometryCache.GeometryCacheMeshBatchInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FGeometryCacheMeshBatchInfo : public MDKStruct
+class FGeometryCacheMeshBatchInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -262,8 +264,9 @@ public:
 
 /// Struct /Script/GeometryCache.GeometryCacheVertexInfo
 /// Size: 0x0009 (0x000000 - 0x000009)
-class FGeometryCacheVertexInfo : public MDKStruct
+class FGeometryCacheVertexInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -272,8 +275,9 @@ public:
 
 /// Struct /Script/GeometryCache.GeometryCacheMeshData
 /// Size: 0x00C8 (0x000000 - 0x0000C8)
-class FGeometryCacheMeshData : public MDKStruct
+class FGeometryCacheMeshData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
@@ -282,8 +286,9 @@ public:
 
 /// Struct /Script/GeometryCache.NiagaraGeometryCacheMICOverride
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraGeometryCacheMICOverride : public MDKStruct
+class FNiagaraGeometryCacheMICOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -294,14 +299,15 @@ public:
 
 /// Struct /Script/GeometryCache.NiagaraGeometryCacheReference
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FNiagaraGeometryCacheReference : public MDKStruct
+class FNiagaraGeometryCacheReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(UGeometryCache*)                           GeometryCache                                               OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FNiagaraUserParameterBinding)              GeometryCacheUserParamBinding                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FNiagaraUserParameterBinding)              GeometryCacheUserParamBinding                               OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               OverrideMaterials                                           OFFSET(get<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FNiagaraGeometryCacheMICOverride>)  MICOverrideMaterials                                        OFFSET(get<T>, {0x30, 16, 0, 0})
 };

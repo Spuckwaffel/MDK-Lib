@@ -8,8 +8,9 @@
 
 /// Struct /Script/VerseInterface.SolarisDebugMessage
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSolarisDebugMessage : public MDKStruct
+class FSolarisDebugMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

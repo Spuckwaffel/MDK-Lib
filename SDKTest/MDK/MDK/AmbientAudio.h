@@ -20,8 +20,8 @@ public:
 	CMember(UAmbientAudioDataAsset*)                   AmbientAsset                                                OFFSET(get<T>, {0xB0, 8, 0, 0})
 	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0xB8, 4, 0, 0})
 	DMember(float)                                     CrossfadeTime                                               OFFSET(get<float>, {0xBC, 4, 0, 0})
-	SMember(FGuid)                                     AmbientGuid                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0xD0, 4, 0, 0})
+	SMember(FGuid)                                     AmbientGuid                                                 OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
 
 
 	/// Functions
@@ -54,8 +54,8 @@ class UAmbientAudioSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 600;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTagChanged                                                OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEntryChanged                                              OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTagChanged                                                OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEntryChanged                                              OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	CMember(TArray<UAmbientAudioComponent*>)           AmbientComponents                                           OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(AAmbientAudioParameterActor*)              ParameterActor                                              OFFSET(get<T>, {0x68, 8, 0, 0})
 
@@ -86,21 +86,23 @@ public:
 
 /// Struct /Script/AmbientAudio.AmbientAudioBase
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FAmbientAudioBase : public MDKStruct
+class FAmbientAudioBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
 	CMember(TWeakObjectPtr<USoundBase*>)               sound                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         Requirements                                                OFFSET(get<T>, {0x20, 72, 0, 0})
-	SMember(FAudioGameplayRequirements)                PlaybackRequirements                                        OFFSET(get<T>, {0x68, 80, 0, 0})
+	SMember(FGameplayTagQuery)                         Requirements                                                OFFSET(getStruct<T>, {0x20, 72, 0, 0})
+	SMember(FAudioGameplayRequirements)                PlaybackRequirements                                        OFFSET(getStruct<T>, {0x68, 80, 0, 0})
 };
 
 /// Struct /Script/AmbientAudio.AmbientAudioLoop
 /// Size: 0x0000 (0x0000B8 - 0x0000B8)
 class FAmbientAudioLoop : public FAmbientAudioBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
@@ -111,12 +113,13 @@ public:
 /// Size: 0x0020 (0x0000B8 - 0x0000D8)
 class FAmbientAudioOneShot : public FAmbientAudioBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FVector2D)                                 RetriggerTimeRange                                          OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FVector2D)                                 TriggerDistanceRange                                        OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FVector2D)                                 RetriggerTimeRange                                          OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FVector2D)                                 TriggerDistanceRange                                        OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 };
 
 /// Enum /Script/AmbientAudio.EAmbientAudioEntryActionType

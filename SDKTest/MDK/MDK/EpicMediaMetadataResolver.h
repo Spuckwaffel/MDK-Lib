@@ -16,9 +16,9 @@ class UEpicMediaMetadataResolver : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  MetadataResultExt                                           OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MetadataResultExt                                           OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(UEpicMediaCDNHostnames*)                   CDNHostNames                                                OFFSET(get<T>, {0xD0, 8, 0, 0})
 
 

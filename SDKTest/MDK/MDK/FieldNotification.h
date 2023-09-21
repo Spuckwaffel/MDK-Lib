@@ -19,12 +19,13 @@ public:
 
 /// Struct /Script/FieldNotification.FieldNotificationId
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FFieldNotificationId : public MDKStruct
+class FFieldNotificationId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     FieldName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     FieldName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 

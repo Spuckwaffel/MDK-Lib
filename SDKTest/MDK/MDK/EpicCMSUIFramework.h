@@ -19,9 +19,9 @@ class UEpicCMSImage : public UCommonLazyImage
 	static inline constexpr uint64_t __MDKClassSize = 1184;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnImageLoadingComplete                                      OFFSET(get<T>, {0x3B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnImageLoadingComplete                                      OFFSET(getStruct<T>, {0x3B0, 16, 0, 0})
 	DMember(bool)                                      bMatchImageSize                                             OFFSET(get<bool>, {0x3C0, 1, 0, 0})
-	SMember(FSlateBrush)                               LoadingFailFallback                                         OFFSET(get<T>, {0x3D0, 192, 0, 0})
+	SMember(FSlateBrush)                               LoadingFailFallback                                         OFFSET(getStruct<T>, {0x3D0, 192, 0, 0})
 	CMember(UTexture2D*)                               ExternalMedia                                               OFFSET(get<T>, {0x490, 8, 0, 0})
 	DMember(bool)                                      bDownloadingExternalMedia                                   OFFSET(get<bool>, {0x498, 1, 0, 0})
 
@@ -61,7 +61,7 @@ class UEpicCMSScreenBase : public UCommonActivatablePanelLegacy
 	static inline constexpr uint64_t __MDKClassSize = 1432;
 
 public:
-	SMember(FString)                                   TileSetFieldName                                            OFFSET(get<T>, {0x520, 16, 0, 0})
+	SMember(FString)                                   TileSetFieldName                                            OFFSET(getStruct<T>, {0x520, 16, 0, 0})
 	CMember(TWeakObjectPtr<UDataTable*>)               TileTypeToTileClassDataTable                                OFFSET(get<T>, {0x530, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   LayoutErrorClass                                            OFFSET(get<T>, {0x550, 32, 0, 0})
 	CMember(TWeakObjectPtr<UDataTable*>)               LayoutTypeToLayoutClassDataTable                            OFFSET(get<T>, {0x570, 32, 0, 0})
@@ -90,8 +90,8 @@ class UEpicCMSTileBase : public UCommonButtonLegacy
 public:
 	CMember(UClass*)                                   DefaultTitleTextStyle                                       OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UClass*)                                   FeaturedTitleTextStyle                                      OFFSET(get<T>, {0x14D0, 8, 0, 0})
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x14D8, 24, 0, 0})
-	SMember(FString)                                   Link                                                        OFFSET(get<T>, {0x14F0, 16, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x14D8, 24, 0, 0})
+	SMember(FString)                                   Link                                                        OFFSET(getStruct<T>, {0x14F0, 16, 0, 0})
 	DMember(bool)                                      bDownloadingExternalMedia                                   OFFSET(get<bool>, {0x1500, 1, 0, 0})
 	DMember(bool)                                      bRefreshingMcpCatalog                                       OFFSET(get<bool>, {0x1501, 1, 0, 0})
 	CMember(UTexture2D*)                               ExternalMedia                                               OFFSET(get<T>, {0x1508, 8, 0, 0})
@@ -114,8 +114,8 @@ class UEpicCMSTileCarousel : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	SMember(FSlateSound)                               PreviousButtonSound                                         OFFSET(get<T>, {0x2A8, 24, 0, 0})
-	SMember(FSlateSound)                               NextButtonSound                                             OFFSET(get<T>, {0x2C0, 24, 0, 0})
+	SMember(FSlateSound)                               PreviousButtonSound                                         OFFSET(getStruct<T>, {0x2A8, 24, 0, 0})
+	SMember(FSlateSound)                               NextButtonSound                                             OFFSET(getStruct<T>, {0x2C0, 24, 0, 0})
 	CMember(UCommonWidgetCarousel*)                    Carousel                                                    OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UWidget*)                                  NextPageButton                                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UWidget*)                                  PreviousPageButton                                          OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -147,6 +147,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FEpicCMSTileTypeMapping : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -156,13 +157,14 @@ public:
 
 /// Struct /Script/EpicCMSUIFramework.SlotDescription
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSlotDescription : public MDKStruct
+class FSlotDescription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     SlotName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     SlotName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   ColumnCount                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   RowCount                                                    OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(bool)                                      bUseFeaturedTextStyle                                       OFFSET(get<bool>, {0xC, 1, 0, 0})
@@ -171,8 +173,9 @@ public:
 
 /// Struct /Script/EpicCMSUIFramework.EpicCMSPage
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FEpicCMSPage : public MDKStruct
+class FEpicCMSPage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -183,6 +186,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FEpicCMSLayoutTypeMapping : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -192,21 +196,22 @@ public:
 
 /// Struct /Script/EpicCMSUIFramework.TileDefinition
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FTileDefinition : public MDKStruct
+class FTileDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FString)                                   TypeString                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Subtitle                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   Eyebrow                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   Link                                                        OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FDateTime)                                 Countdown                                                   OFFSET(get<T>, {0x60, 8, 0, 0})
+	SMember(FString)                                   TypeString                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Subtitle                                                    OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Eyebrow                                                     OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Link                                                        OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FDateTime)                                 Countdown                                                   OFFSET(getStruct<T>, {0x60, 8, 0, 0})
 	CMember(EDateType)                                 CountdownType                                               OFFSET(get<T>, {0x68, 1, 0, 0})
-	SMember(FString)                                   MediaUrl                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   MediaUrl                                                    OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      IsVisible                                                   OFFSET(get<bool>, {0x80, 1, 0, 0})
 };
 

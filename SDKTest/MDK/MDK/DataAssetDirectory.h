@@ -36,14 +36,14 @@ class UDataAssetDirectoryTestPODAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FString)                                   AssetName                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   AssetName                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(EDataAssetDirectoryTestEnum)               EnumProperty                                                OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(int32_t)                                   IntProperty                                                 OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(float)                                     FloatProperty                                               OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(bool)                                      BoolProperty                                                OFFSET(get<bool>, {0x44, 1, 0, 0})
-	SMember(FString)                                   StringProperty                                              OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FName)                                     NameProperty                                                OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FText)                                     TextProperty                                                OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FString)                                   StringProperty                                              OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FName)                                     NameProperty                                                OFFSET(getStruct<T>, {0x58, 4, 0, 0})
+	SMember(FText)                                     TextProperty                                                OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestStructAsset
@@ -54,7 +54,7 @@ class UDataAssetDirectoryTestStructAsset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FDataAssetDirectoryTestPODStruct)          TestStruct                                                  OFFSET(get<T>, {0x28, 64, 0, 0})
+	SMember(FDataAssetDirectoryTestPODStruct)          TestStruct                                                  OFFSET(getStruct<T>, {0x28, 64, 0, 0})
 };
 
 /// Class /Script/DataAssetDirectory.DataAssetDirectoryTestArrayAsset
@@ -103,7 +103,7 @@ class UDataAssetDirectoryManager : public UObject
 
 public:
 	CMember(TArray<UObject*>)                          PatchedAssets                                               OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(get<T>, {0x1B0, 8, 0, 0})
+	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(getStruct<T>, {0x1B0, 8, 0, 0})
 	DMember(uint32_t)                                  UpdateCheckLimitSeconds                                     OFFSET(get<uint32_t>, {0x1B8, 4, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1BC, 1, 0, 0})
 	DMember(bool)                                      bFailOnError                                                OFFSET(get<bool>, {0x1BD, 1, 0, 0})
@@ -122,8 +122,9 @@ public:
 
 /// Struct /Script/DataAssetDirectory.DataAssetDirectoryTestPODStruct
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FDataAssetDirectoryTestPODStruct : public MDKStruct
+class FDataAssetDirectoryTestPODStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -132,15 +133,16 @@ public:
 	DMember(int32_t)                                   IntProperty                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(float)                                     FloatProperty                                               OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(bool)                                      BoolProperty                                                OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FString)                                   StringProperty                                              OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FName)                                     NameProperty                                                OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FText)                                     TextProperty                                                OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FString)                                   StringProperty                                              OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     NameProperty                                                OFFSET(getStruct<T>, {0x20, 4, 0, 0})
+	SMember(FText)                                     TextProperty                                                OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/DataAssetDirectory.DataAssetDirectoryTestSimpleStruct
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FDataAssetDirectoryTestSimpleStruct : public MDKStruct
+class FDataAssetDirectoryTestSimpleStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 

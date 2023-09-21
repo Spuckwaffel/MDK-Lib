@@ -29,7 +29,7 @@ class UGameHubPlayerSpawningComponent : public UPlayspaceComponent_PlayerSpawnin
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FGameplayTagContainer)                     PlayerStartRequirements                                     OFFSET(get<T>, {0xB0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlayerStartRequirements                                     OFFSET(getStruct<T>, {0xB0, 32, 0, 0})
 };
 
 /// Class /Script/GameHubRuntime.GameHubPlayspace
@@ -41,6 +41,6 @@ class AGameHubPlayspace : public AFortPlayspace
 
 public:
 	DMember(bool)                                      bSimulatePlayerDamage                                       OFFSET(get<bool>, {0x698, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     PlayerStartRequirements                                     OFFSET(get<T>, {0x6A0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlayerStartRequirements                                     OFFSET(getStruct<T>, {0x6A0, 32, 0, 0})
 };
 

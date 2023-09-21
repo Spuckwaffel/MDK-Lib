@@ -46,10 +46,10 @@ class UAudioComponentGroup : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 1104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStopped                                                   OFFSET(get<T>, {0x2A8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnKilled                                                    OFFSET(get<T>, {0x2B8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnVirtualized                                               OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUnvirtualized                                             OFFSET(get<T>, {0x2D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStopped                                                   OFFSET(getStruct<T>, {0x2A8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnKilled                                                    OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnVirtualized                                               OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUnvirtualized                                             OFFSET(getStruct<T>, {0x2D8, 16, 0, 0})
 	CMember(TArray<UAudioComponent*>)                  Components                                                  OFFSET(get<T>, {0x2E8, 16, 0, 0})
 	CMember(TArray<FAudioParameter>)                   ParamsToSet                                                 OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	CMember(TArray<FAudioParameter>)                   PersistentParams                                            OFFSET(get<T>, {0x308, 16, 0, 0})
@@ -121,7 +121,7 @@ class UAudioRequirementPreset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FGameplayTagQuery)                         Query                                                       OFFSET(get<T>, {0x30, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         Query                                                       OFFSET(getStruct<T>, {0x30, 72, 0, 0})
 };
 
 /// Class /Script/AudioGameplay.AudioParameterComponent
@@ -143,13 +143,14 @@ public:
 
 /// Struct /Script/AudioGameplay.AudioGameplayRequirements
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FAudioGameplayRequirements : public MDKStruct
+class FAudioGameplayRequirements : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(UAudioRequirementPreset*)                  Preset                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagQuery)                         Custom                                                      OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         Custom                                                      OFFSET(getStruct<T>, {0x8, 72, 0, 0})
 };
 

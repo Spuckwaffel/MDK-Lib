@@ -80,13 +80,14 @@ class UCreativeVideoPlayerWorldSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnNotifyFullscreenChange                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNotifyFullscreenChange                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenOptions
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FCreativeVideoPlayerFullscreenOptions : public MDKStruct
+class FCreativeVideoPlayerFullscreenOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 

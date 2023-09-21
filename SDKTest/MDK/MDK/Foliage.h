@@ -16,10 +16,10 @@ class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStatic
 	static inline constexpr uint64_t __MDKClassSize = 2352;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnInstanceTakePointDamage                                   OFFSET(get<T>, {0x8F8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInstanceTakeRadialDamage                                  OFFSET(get<T>, {0x908, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInstanceTakePointDamage                                   OFFSET(getStruct<T>, {0x8F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInstanceTakeRadialDamage                                  OFFSET(getStruct<T>, {0x908, 16, 0, 0})
 	DMember(bool)                                      bEnableDiscardOnLoad                                        OFFSET(get<bool>, {0x918, 1, 0, 0})
-	SMember(FGuid)                                     GenerationGuid                                              OFFSET(get<T>, {0x91C, 16, 0, 0})
+	SMember(FGuid)                                     GenerationGuid                                              OFFSET(getStruct<T>, {0x91C, 16, 0, 0})
 };
 
 /// Class /Script/Foliage.FoliageType
@@ -30,41 +30,41 @@ class UFoliageType : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 1208;
 
 public:
-	SMember(FGuid)                                     UpdateGuid                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FGuid)                                     UpdateGuid                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(float)                                     Density                                                     OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     DensityAdjustmentFactor                                     OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(bool)                                      bSingleInstanceModeOverrideRadius                           OFFSET(get<bool>, {0x44, 1, 0, 0})
 	DMember(float)                                     SingleInstanceModeRadius                                    OFFSET(get<float>, {0x48, 4, 0, 0})
 	CMember(EFoliageScaling)                           Scaling                                                     OFFSET(get<T>, {0x4C, 1, 0, 0})
-	SMember(FFloatInterval)                            ScaleX                                                      OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FFloatInterval)                            ScaleY                                                      OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FFloatInterval)                            ScaleZ                                                      OFFSET(get<T>, {0x60, 8, 0, 0})
-	SMember(FFoliageVertexColorChannelMask)            VertexColorMaskByChannel                                    OFFSET(get<T>, {0x68, 48, 0, 0})
+	SMember(FFloatInterval)                            ScaleX                                                      OFFSET(getStruct<T>, {0x50, 8, 0, 0})
+	SMember(FFloatInterval)                            ScaleY                                                      OFFSET(getStruct<T>, {0x58, 8, 0, 0})
+	SMember(FFloatInterval)                            ScaleZ                                                      OFFSET(getStruct<T>, {0x60, 8, 0, 0})
+	SMember(FFoliageVertexColorChannelMask)            VertexColorMaskByChannel                                    OFFSET(getStruct<T>, {0x68, 48, 0, 0})
 	CMember(TEnumAsByte<FoliageVertexColorMask>)       VertexColorMask                                             OFFSET(get<T>, {0x98, 1, 0, 0})
 	DMember(float)                                     VertexColorMaskThreshold                                    OFFSET(get<float>, {0x9C, 4, 0, 0})
 	DMember(bool)                                      VertexColorMaskInvert                                       OFFSET(get<bool>, {0xA0, 1, 1, 0})
-	SMember(FFloatInterval)                            ZOffset                                                     OFFSET(get<T>, {0xA4, 8, 0, 0})
+	SMember(FFloatInterval)                            ZOffset                                                     OFFSET(getStruct<T>, {0xA4, 8, 0, 0})
 	DMember(bool)                                      AlignToNormal                                               OFFSET(get<bool>, {0xAC, 1, 1, 0})
 	DMember(bool)                                      AverageNormal                                               OFFSET(get<bool>, {0xAC, 1, 1, 1})
 	DMember(bool)                                      AverageNormalSingleComponent                                OFFSET(get<bool>, {0xAC, 1, 1, 2})
 	DMember(float)                                     AlignMaxAngle                                               OFFSET(get<float>, {0xB0, 4, 0, 0})
 	DMember(bool)                                      RandomYaw                                                   OFFSET(get<bool>, {0xB4, 1, 1, 0})
 	DMember(float)                                     RandomPitchAngle                                            OFFSET(get<float>, {0xB8, 4, 0, 0})
-	SMember(FFloatInterval)                            GroundSlopeAngle                                            OFFSET(get<T>, {0xBC, 8, 0, 0})
-	SMember(FFloatInterval)                            Height                                                      OFFSET(get<T>, {0xC4, 8, 0, 0})
+	SMember(FFloatInterval)                            GroundSlopeAngle                                            OFFSET(getStruct<T>, {0xBC, 8, 0, 0})
+	SMember(FFloatInterval)                            Height                                                      OFFSET(getStruct<T>, {0xC4, 8, 0, 0})
 	CMember(TArray<FName>)                             LandscapeLayers                                             OFFSET(get<T>, {0xD0, 16, 0, 0})
 	DMember(float)                                     MinimumLayerWeight                                          OFFSET(get<float>, {0xE0, 4, 0, 0})
 	CMember(TArray<FName>)                             ExclusionLandscapeLayers                                    OFFSET(get<T>, {0xE8, 16, 0, 0})
 	DMember(float)                                     MinimumExclusionLayerWeight                                 OFFSET(get<float>, {0xF8, 4, 0, 0})
-	SMember(FName)                                     LandscapeLayer                                              OFFSET(get<T>, {0xFC, 4, 0, 0})
+	SMember(FName)                                     LandscapeLayer                                              OFFSET(getStruct<T>, {0xFC, 4, 0, 0})
 	DMember(bool)                                      CollisionWithWorld                                          OFFSET(get<bool>, {0x100, 1, 1, 0})
-	SMember(FVector)                                   CollisionScale                                              OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FVector)                                   CollisionScale                                              OFFSET(getStruct<T>, {0x108, 24, 0, 0})
 	DMember(int32_t)                                   AverageNormalSampleCount                                    OFFSET(get<int32_t>, {0x120, 4, 0, 0})
-	SMember(FBoxSphereBounds)                          MeshBounds                                                  OFFSET(get<T>, {0x128, 56, 0, 0})
-	SMember(FVector)                                   LowBoundOriginRadius                                        OFFSET(get<T>, {0x160, 24, 0, 0})
+	SMember(FBoxSphereBounds)                          MeshBounds                                                  OFFSET(getStruct<T>, {0x128, 56, 0, 0})
+	SMember(FVector)                                   LowBoundOriginRadius                                        OFFSET(getStruct<T>, {0x160, 24, 0, 0})
 	CMember(TEnumAsByte<EComponentMobility>)           Mobility                                                    OFFSET(get<T>, {0x178, 1, 0, 0})
-	SMember(FInt32Interval)                            CullDistance                                                OFFSET(get<T>, {0x17C, 8, 0, 0})
+	SMember(FInt32Interval)                            CullDistance                                                OFFSET(getStruct<T>, {0x17C, 8, 0, 0})
 	DMember(bool)                                      bEnableStaticLighting                                       OFFSET(get<bool>, {0x184, 1, 1, 0})
 	DMember(bool)                                      CastShadow                                                  OFFSET(get<bool>, {0x184, 1, 1, 1})
 	DMember(bool)                                      bAffectDynamicIndirectLighting                              OFFSET(get<bool>, {0x184, 1, 1, 2})
@@ -82,9 +82,9 @@ public:
 	DMember(bool)                                      bVisibleInRayTracing                                        OFFSET(get<bool>, {0x1A0, 1, 1, 0})
 	DMember(bool)                                      bEvaluateWorldPositionOffset                                OFFSET(get<bool>, {0x1A0, 1, 1, 1})
 	DMember(int32_t)                                   WorldPositionOffsetDisableDistance                          OFFSET(get<int32_t>, {0x1A4, 4, 0, 0})
-	SMember(FBodyInstance)                             BodyInstance                                                OFFSET(get<T>, {0x1A8, 392, 0, 0})
+	SMember(FBodyInstance)                             BodyInstance                                                OFFSET(getStruct<T>, {0x1A8, 392, 0, 0})
 	CMember(TEnumAsByte<EHasCustomNavigableGeometry>)  CustomNavigableGeometry                                     OFFSET(get<T>, {0x330, 1, 0, 0})
-	SMember(FLightingChannels)                         LightingChannels                                            OFFSET(get<T>, {0x331, 1, 0, 0})
+	SMember(FLightingChannels)                         LightingChannels                                            OFFSET(getStruct<T>, {0x331, 1, 0, 0})
 	DMember(bool)                                      bRenderCustomDepth                                          OFFSET(get<bool>, {0x334, 1, 1, 0})
 	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 OFFSET(get<T>, {0x338, 1, 0, 0})
 	DMember(int32_t)                                   CustomDepthStencilValue                                     OFFSET(get<int32_t>, {0x33C, 4, 0, 0})
@@ -103,9 +103,9 @@ public:
 	DMember(float)                                     MaxInitialAge                                               OFFSET(get<float>, {0x36C, 4, 0, 0})
 	DMember(float)                                     MaxAge                                                      OFFSET(get<float>, {0x370, 4, 0, 0})
 	DMember(float)                                     OverlapPriority                                             OFFSET(get<float>, {0x374, 4, 0, 0})
-	SMember(FFloatInterval)                            ProceduralScale                                             OFFSET(get<T>, {0x378, 8, 0, 0})
-	SMember(FRuntimeFloatCurve)                        ScaleCurve                                                  OFFSET(get<T>, {0x380, 136, 0, 0})
-	SMember(FFoliageDensityFalloff)                    DensityFalloff                                              OFFSET(get<T>, {0x408, 144, 0, 0})
+	SMember(FFloatInterval)                            ProceduralScale                                             OFFSET(getStruct<T>, {0x378, 8, 0, 0})
+	SMember(FRuntimeFloatCurve)                        ScaleCurve                                                  OFFSET(getStruct<T>, {0x380, 136, 0, 0})
+	SMember(FFoliageDensityFalloff)                    DensityFalloff                                              OFFSET(getStruct<T>, {0x408, 144, 0, 0})
 	DMember(int32_t)                                   ChangeCount                                                 OFFSET(get<int32_t>, {0x498, 4, 0, 0})
 	DMember(bool)                                      ReapplyDensity                                              OFFSET(get<bool>, {0x49C, 1, 1, 0})
 	DMember(bool)                                      ReapplyRadius                                               OFFSET(get<bool>, {0x49C, 1, 1, 1})
@@ -207,10 +207,10 @@ class AInteractiveFoliageActor : public AStaticMeshActor
 
 public:
 	CMember(UCapsuleComponent*)                        CapsuleComponent                                            OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FVector)                                   TouchingActorEntryPosition                                  OFFSET(get<T>, {0x2A8, 24, 0, 0})
-	SMember(FVector)                                   FoliageVelocity                                             OFFSET(get<T>, {0x2C0, 24, 0, 0})
-	SMember(FVector)                                   FoliageForce                                                OFFSET(get<T>, {0x2D8, 24, 0, 0})
-	SMember(FVector)                                   FoliagePosition                                             OFFSET(get<T>, {0x2F0, 24, 0, 0})
+	SMember(FVector)                                   TouchingActorEntryPosition                                  OFFSET(getStruct<T>, {0x2A8, 24, 0, 0})
+	SMember(FVector)                                   FoliageVelocity                                             OFFSET(getStruct<T>, {0x2C0, 24, 0, 0})
+	SMember(FVector)                                   FoliageForce                                                OFFSET(getStruct<T>, {0x2D8, 24, 0, 0})
+	SMember(FVector)                                   FoliagePosition                                             OFFSET(getStruct<T>, {0x2F0, 24, 0, 0})
 	DMember(float)                                     FoliageDamageImpulseScale                                   OFFSET(get<float>, {0x308, 4, 0, 0})
 	DMember(float)                                     FoliageTouchImpulseScale                                    OFFSET(get<float>, {0x30C, 4, 0, 0})
 	DMember(float)                                     FoliageStiffness                                            OFFSET(get<float>, {0x310, 4, 0, 0})
@@ -236,7 +236,7 @@ class AProceduralFoliageBlockingVolume : public AVolume
 
 public:
 	CMember(AProceduralFoliageVolume*)                 ProceduralFoliageVolume                                     OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FFoliageDensityFalloff)                    DensityFalloff                                              OFFSET(get<T>, {0x2D0, 144, 0, 0})
+	SMember(FFoliageDensityFalloff)                    DensityFalloff                                              OFFSET(getStruct<T>, {0x2D0, 144, 0, 0})
 };
 
 /// Class /Script/Foliage.ProceduralFoliageComponent
@@ -250,7 +250,7 @@ public:
 	CMember(UProceduralFoliageSpawner*)                FoliageSpawner                                              OFFSET(get<T>, {0xA0, 8, 0, 0})
 	DMember(float)                                     TileOverlap                                                 OFFSET(get<float>, {0xA8, 4, 0, 0})
 	CMember(AVolume*)                                  SpawningVolume                                              OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FGuid)                                     ProceduralGuid                                              OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FGuid)                                     ProceduralGuid                                              OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 };
 
 /// Class /Script/Foliage.ProceduralFoliageSpawner
@@ -300,8 +300,9 @@ public:
 
 /// Struct /Script/Foliage.FoliageVertexColorChannelMask
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FFoliageVertexColorChannelMask : public MDKStruct
+class FFoliageVertexColorChannelMask : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -313,20 +314,22 @@ public:
 
 /// Struct /Script/Foliage.FoliageDensityFalloff
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FFoliageDensityFalloff : public MDKStruct
+class FFoliageDensityFalloff : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	DMember(bool)                                      bUseFalloffCurve                                            OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FRuntimeFloatCurve)                        FalloffCurve                                                OFFSET(get<T>, {0x8, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        FalloffCurve                                                OFFSET(getStruct<T>, {0x8, 136, 0, 0})
 };
 
 /// Struct /Script/Foliage.FoliageTypeObject
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFoliageTypeObject : public MDKStruct
+class FFoliageTypeObject : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -339,16 +342,17 @@ public:
 
 /// Struct /Script/Foliage.ProceduralFoliageInstance
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FProceduralFoliageInstance : public MDKStruct
+class FProceduralFoliageInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     Age                                                         OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x58, 4, 0, 0})
 	CMember(UFoliageType*)                             Type                                                        OFFSET(get<T>, {0x60, 8, 0, 0})
 };

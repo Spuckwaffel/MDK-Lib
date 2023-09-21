@@ -18,7 +18,7 @@ class UFortSportbikeAnimInstance : public UFortMotorcycleVehicleAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 1680;
 
 public:
-	SMember(FRotator)                                  LimitedWheelRotationFR                                      OFFSET(get<T>, {0x668, 24, 0, 0})
+	SMember(FRotator)                                  LimitedWheelRotationFR                                      OFFSET(getStruct<T>, {0x668, 24, 0, 0})
 	DMember(bool)                                      HasPassenger                                                OFFSET(get<bool>, {0x680, 1, 0, 0})
 	DMember(bool)                                      ShouldPlayGroundTrick                                       OFFSET(get<bool>, {0x681, 1, 0, 0})
 	DMember(bool)                                      IsWheelie                                                   OFFSET(get<bool>, {0x682, 1, 0, 0})

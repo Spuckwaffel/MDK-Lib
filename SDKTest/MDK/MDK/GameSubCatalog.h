@@ -17,73 +17,78 @@ class UMcpVerifierModeSelector : public UObject
 public:
 	DMember(uint32_t)                                  RangeStart                                                  OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
 	DMember(uint32_t)                                  RangeEnd                                                    OFFSET(get<uint32_t>, {0x2C, 4, 0, 0})
-	SMember(FString)                                   Salt                                                        OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Salt                                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	CMember(EVerifierModeOverride)                     VerifierModeOverride                                        OFFSET(get<T>, {0x40, 1, 0, 0})
 	DMember(int32_t)                                   ReceiptRefactorVersionOverride                              OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.StoreOfferInfo
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FStoreOfferInfo : public MDKStruct
+class FStoreOfferInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Storefront                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   StoreId                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   GroupId                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Storefront                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   StoreId                                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   GroupId                                                     OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogItemPrice
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCatalogItemPrice : public MDKStruct
+class FCatalogItemPrice : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(TEnumAsByte<EStoreCurrencyType>)           CurrencyType                                                OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FString)                                   CurrencySubType                                             OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   CurrencySubType                                             OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   RegularPrice                                                OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	DMember(int32_t)                                   FinalPrice                                                  OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	SMember(FText)                                     PriceTextOverride                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     PriceTextOverride                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(TEnumAsByte<ECatalogSaleType>)             SaleType                                                    OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FDateTime)                                 SaleExpiration                                              OFFSET(get<T>, {0x40, 8, 0, 0})
+	SMember(FDateTime)                                 SaleExpiration                                              OFFSET(getStruct<T>, {0x40, 8, 0, 0})
 	CMember(EAppStore)                                 AppStoreId                                                  OFFSET(get<T>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.ItemQuantity
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FItemQuantity : public MDKStruct
+class FItemQuantity : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   TemplateId                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TemplateId                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   Quantity                                                    OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FJsonObjectWrapper)                        Attributes                                                  OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FJsonObjectWrapper)                        Attributes                                                  OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogItemSalePrice
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCatalogItemSalePrice : public MDKStruct
+class FCatalogItemSalePrice : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(int32_t)                                   SalePrice                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	CMember(TEnumAsByte<ECatalogSaleType>)             SaleType                                                    OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FDateTime)                                 StartTime                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FDateTime)                                 EndTime                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FDateTime)                                 StartTime                                                   OFFSET(getStruct<T>, {0x8, 8, 0, 0})
+	SMember(FDateTime)                                 EndTime                                                     OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.AppStoreCheckoutConfig
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FAppStoreCheckoutConfig : public MDKStruct
+class FAppStoreCheckoutConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -96,19 +101,21 @@ public:
 /// Size: 0x0030 (0x000030 - 0x000060)
 class FCatalogPurchaseAdditionalData : public FStoreOfferInfo
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   Playlist                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   IslandId                                                    OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   IslandTitle                                                 OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   Playlist                                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   IslandId                                                    OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   IslandTitle                                                 OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogRedeemRealMoneyPurchasesInfo
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FCatalogRedeemRealMoneyPurchasesInfo : public MDKStruct
+class FCatalogRedeemRealMoneyPurchasesInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
@@ -119,106 +126,113 @@ public:
 	CMember(ERedeemRealMoneyPurchaseRefreshType)       RefreshType                                                 OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(EVerifierModeOverride)                     VerifierModeOverride                                        OFFSET(get<T>, {0x29, 1, 0, 0})
 	DMember(int32_t)                                   ReceiptRefactorVersionOverride                              OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	SMember(FString)                                   PurchaseCorrelationId                                       OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FCatalogPurchaseAdditionalData)            AdditionalData                                              OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FString)                                   PurchaseCorrelationId                                       OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FCatalogPurchaseAdditionalData)            AdditionalData                                              OFFSET(getStruct<T>, {0x40, 96, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogReceiptInfo
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCatalogReceiptInfo : public MDKStruct
+class FCatalogReceiptInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(EAppStore)                                 AppStore                                                    OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FString)                                   AppStoreId                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   ReceiptId                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   ReceiptInfo                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   PurchaseCorrelationId                                       OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   AppStoreId                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ReceiptId                                                   OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ReceiptInfo                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   PurchaseCorrelationId                                       OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogPurchaseInfo
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FCatalogPurchaseInfo : public MDKStruct
+class FCatalogPurchaseInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   OfferId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   OfferId                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   PurchaseQuantity                                            OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 	CMember(TEnumAsByte<EStoreCurrencyType>)           Currency                                                    OFFSET(get<T>, {0x14, 1, 0, 0})
-	SMember(FString)                                   CurrencySubType                                             OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   CurrencySubType                                             OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(int32_t)                                   ExpectedTotalPrice                                          OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	SMember(FString)                                   GameContext                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FCatalogPurchaseAdditionalData)            AdditionalData                                              OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FString)                                   GameContext                                                 OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FCatalogPurchaseAdditionalData)            AdditionalData                                              OFFSET(getStruct<T>, {0x40, 96, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogPurchaseInfoGift
 /// Size: 0x00D0 (0x000000 - 0x0000D0)
-class FCatalogPurchaseInfoGift : public MDKStruct
+class FCatalogPurchaseInfoGift : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FString)                                   OfferId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   OfferId                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TEnumAsByte<EStoreCurrencyType>)           Currency                                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FString)                                   CurrencySubType                                             OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   CurrencySubType                                             OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(int32_t)                                   ExpectedTotalPrice                                          OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	SMember(FString)                                   GameContext                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   GameContext                                                 OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	CMember(TArray<FString>)                           ReceiverAccountIds                                          OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   GiftWrapTemplateId                                          OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FString)                                   PersonalMessage                                             OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FCatalogPurchaseAdditionalData)            AdditionalData                                              OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FString)                                   GiftWrapTemplateId                                          OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   PersonalMessage                                             OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FCatalogPurchaseAdditionalData)            AdditionalData                                              OFFSET(getStruct<T>, {0x70, 96, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogKeyValue
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCatalogKeyValue : public MDKStruct
+class FCatalogKeyValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogMetaAssetInfo
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FCatalogMetaAssetInfo : public MDKStruct
+class FCatalogMetaAssetInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   StructName                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FJsonObjectWrapper)                        Payload                                                     OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FString)                                   StructName                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FJsonObjectWrapper)                        Payload                                                     OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogDynamicBundleItem
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FCatalogDynamicBundleItem : public MDKStruct
+class FCatalogDynamicBundleItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FItemQuantity)                             Item                                                        OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FItemQuantity)                             Item                                                        OFFSET(getStruct<T>, {0x0, 56, 0, 0})
 	DMember(bool)                                      bCanOwnMultiple                                             OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(int32_t)                                   RegularPrice                                                OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(int32_t)                                   DiscountedPrice                                             OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	DMember(int32_t)                                   AlreadyOwnedPriceReduction                                  OFFSET(get<int32_t>, {0x44, 4, 0, 0})
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogDynamicBundle
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCatalogDynamicBundle : public MDKStruct
+class FCatalogDynamicBundle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -227,125 +241,133 @@ public:
 	DMember(int32_t)                                   RegularBasePrice                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   FloorPrice                                                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	CMember(TEnumAsByte<EStoreCurrencyType>)           CurrencyType                                                OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FString)                                   CurrencySubType                                             OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   CurrencySubType                                             OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(TEnumAsByte<ECatalogSaleType>)             DisplayType                                                 OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(TArray<FCatalogDynamicBundleItem>)         BundleItems                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogOfferRequirement
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCatalogOfferRequirement : public MDKStruct
+class FCatalogOfferRequirement : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(ECatalogRequirementType)                   RequirementType                                             OFFSET(get<T>, {0x0, 1, 0, 0})
 	DMember(int32_t)                                   MinQuantity                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FString)                                   RequiredId                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   RequiredId                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogGiftInfo
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FCatalogGiftInfo : public MDKStruct
+class FCatalogGiftInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FString)                                   ForcedGiftBoxTemplateId                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ForcedGiftBoxTemplateId                                     OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FCatalogOfferRequirement>)          PurchaseRequirements                                        OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogOffer
 /// Size: 0x0260 (0x000000 - 0x000260)
-class FCatalogOffer : public MDKStruct
+class FCatalogOffer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FString)                                   OfferId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DevName                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   OfferId                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DevName                                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(TArray<FCatalogKeyValue>)                  MetaInfo                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
 	CMember(ECatalogOfferType)                         OfferType                                                   OFFSET(get<T>, {0x30, 1, 0, 0})
 	CMember(TArray<FCatalogItemPrice>)                 Prices                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FCatalogDynamicBundle)                     DynamicBundleInfo                                           OFFSET(get<T>, {0x48, 56, 0, 0})
+	SMember(FCatalogDynamicBundle)                     DynamicBundleInfo                                           OFFSET(getStruct<T>, {0x48, 56, 0, 0})
 	DMember(int32_t)                                   DailyLimit                                                  OFFSET(get<int32_t>, {0x80, 4, 0, 0})
 	DMember(int32_t)                                   WeeklyLimit                                                 OFFSET(get<int32_t>, {0x84, 4, 0, 0})
 	DMember(int32_t)                                   MonthlyLimit                                                OFFSET(get<int32_t>, {0x88, 4, 0, 0})
 	CMember(TArray<FString>)                           Categories                                                  OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FString)                                   CatalogGroup                                                OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FString)                                   CatalogGroup                                                OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	DMember(int32_t)                                   CatalogGroupPriority                                        OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
 	DMember(int32_t)                                   SortPriority                                                OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FText)                                     ShortDescription                                            OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FString)                                   AppStoreId                                                  OFFSET(get<T>, {0x100, 192, 0, 0})
-	SMember(FCatalogMetaAssetInfo)                     MetaAssetInfo                                               OFFSET(get<T>, {0x1C0, 48, 0, 0})
-	SMember(FString)                                   DisplayAssetPath                                            OFFSET(get<T>, {0x1F0, 16, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FText)                                     ShortDescription                                            OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FString)                                   AppStoreId                                                  OFFSET(getStruct<T>, {0x100, 192, 0, 0})
+	SMember(FCatalogMetaAssetInfo)                     MetaAssetInfo                                               OFFSET(getStruct<T>, {0x1C0, 48, 0, 0})
+	SMember(FString)                                   DisplayAssetPath                                            OFFSET(getStruct<T>, {0x1F0, 16, 0, 0})
 	CMember(TArray<FItemQuantity>)                     ItemGrants                                                  OFFSET(get<T>, {0x200, 16, 0, 0})
 	CMember(TArray<FCatalogOfferRequirement>)          Requirements                                                OFFSET(get<T>, {0x210, 16, 0, 0})
-	SMember(FCatalogGiftInfo)                          GiftInfo                                                    OFFSET(get<T>, {0x220, 40, 0, 0})
+	SMember(FCatalogGiftInfo)                          GiftInfo                                                    OFFSET(getStruct<T>, {0x220, 40, 0, 0})
 	DMember(bool)                                      Refundable                                                  OFFSET(get<bool>, {0x248, 1, 0, 0})
 	CMember(TArray<FString>)                           DenyItemTemplateIds                                         OFFSET(get<T>, {0x250, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.Storefront
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FStorefront : public MDKStruct
+class FStorefront : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FCatalogOffer>)                     CatalogEntries                                              OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogDownload
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCatalogDownload : public MDKStruct
+class FCatalogDownload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   RefreshIntervalHrs                                          OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   DailyPurchaseHrs                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FDateTime)                                 Expiration                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FDateTime)                                 Expiration                                                  OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 	CMember(TArray<FStorefront>)                       Storefronts                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.CatalogPurchaseNotification
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCatalogPurchaseNotification : public MDKStruct
+class FCatalogPurchaseNotification : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FMcpLootResult)                            LootResult                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FMcpLootResult)                            LootResult                                                  OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.McpEntitlementRefreshTimerInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMcpEntitlementRefreshTimerInfo : public MDKStruct
+class FMcpEntitlementRefreshTimerInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FDateTime)                                 NextEntitlementRefresh                                      OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FDateTime)                                 MustRefreshAuthBy                                           OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FDateTime)                                 LastAuthRefresh                                             OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FDateTime)                                 NextEntitlementRefresh                                      OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FDateTime)                                 MustRefreshAuthBy                                           OFFSET(getStruct<T>, {0x8, 8, 0, 0})
+	SMember(FDateTime)                                 LastAuthRefresh                                             OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/GameSubCatalog.McpProcessedConsumables
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMcpProcessedConsumables : public MDKStruct
+class FMcpProcessedConsumables : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -356,8 +378,9 @@ public:
 
 /// Struct /Script/GameSubCatalog.McpInAppPurchases
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FMcpInAppPurchases : public MDKStruct
+class FMcpInAppPurchases : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
@@ -372,8 +395,9 @@ public:
 
 /// Struct /Script/GameSubCatalog.KeychainDownload
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FKeychainDownload : public MDKStruct
+class FKeychainDownload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

@@ -38,8 +38,9 @@ public:
 
 /// Struct /Script/AnimationBudgetAllocator.AnimationBudgetAllocatorParameters
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FAnimationBudgetAllocatorParameters : public MDKStruct
+class FAnimationBudgetAllocatorParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 

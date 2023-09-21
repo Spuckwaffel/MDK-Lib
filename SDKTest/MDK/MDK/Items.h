@@ -94,7 +94,7 @@ class UVictoryCrownComponent_C : public UFortControllerComponent_VictoryCrowns
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x268, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x268, 8, 0, 0})
 
 
 	/// Functions
@@ -112,8 +112,8 @@ class UVictoryCrownFrontEndPawnComponent_C : public UFortPawnComponent_VictoryCr
 	static inline constexpr uint64_t __MDKClassSize = 218;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC0, 8, 0, 0})
-	SMember(FGameplayTag)                              CrownFXCueTag                                               OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC0, 8, 0, 0})
+	SMember(FGameplayTag)                              CrownFXCueTag                                               OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     AthenaPawn                                                  OFFSET(get<T>, {0xD0, 8, 0, 0})
 	DMember(bool)                                      AccountHasCrown                                             OFFSET(get<bool>, {0xD8, 1, 0, 0})
 	DMember(bool)                                      AppliedCrownFX                                              OFFSET(get<bool>, {0xD9, 1, 0, 0})
@@ -153,8 +153,8 @@ class ABP_RocketRam_CameraLens_Booster_C : public ABP_NS_ExampleCameraEffect_C
 
 public:
 	CMember(UMaterialInstanceDynamic*)                 Dynamic_instance_setting                                    OFFSET(get<T>, {0x330, 8, 0, 0})
-	SMember(FPostProcessSettings)                      Post_Process_Settings                                       OFFSET(get<T>, {0x340, 1760, 0, 0})
-	SMember(FVector4)                                  Saturation                                                  OFFSET(get<T>, {0xA20, 32, 0, 0})
+	SMember(FPostProcessSettings)                      Post_Process_Settings                                       OFFSET(getStruct<T>, {0x340, 1760, 0, 0})
+	SMember(FVector4)                                  Saturation                                                  OFFSET(getStruct<T>, {0xA20, 32, 0, 0})
 };
 
 /// Class /RocketRamGameplay/Items/RocketRam/GameplayCues/GCNL_RocketRam_FreeFalling.GCNL_RocketRam_FreeFalling_C
@@ -165,7 +165,7 @@ class AGCNL_RocketRam_FreeFalling_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2488;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             FortSoundIndicator_InAir                                    OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(USoundBase*)                               WindDownSoundCue                                            OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UAudioComponent*)                          WindDownAudioComponent                                      OFFSET(get<T>, {0x9A8, 8, 0, 0})
@@ -193,7 +193,7 @@ class AGCNL_RocketRam_ActiveThrusting_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             FortSoundIndicator_InAir                                    OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          FireAudioComponent                                          OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(USoundBase*)                               FireSoundCue                                                OFFSET(get<T>, {0x9A8, 8, 0, 0})

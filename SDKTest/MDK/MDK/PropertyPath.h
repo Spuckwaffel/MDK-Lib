@@ -21,11 +21,11 @@ public:
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumThree                                                   OFFSET(get<T>, {0x2B, 1, 0, 0})
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumFour                                                    OFFSET(get<T>, {0x2C, 1, 0, 0})
 	DMember(int32_t)                                   Integer                                                     OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	SMember(FString)                                   String                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   String                                                      OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(float)                                     float_                                                      OFFSET(get<float>, {0x48, 4, 0, 0})
-	SMember(FPropertyPathTestStruct)                   Struct                                                      OFFSET(get<T>, {0x50, 80, 0, 0})
-	SMember(FPropertyPathTestStruct)                   StructRef                                                   OFFSET(get<T>, {0xA0, 80, 0, 0})
-	SMember(FPropertyPathTestStruct)                   StructConstRef                                              OFFSET(get<T>, {0xF0, 80, 0, 0})
+	SMember(FPropertyPathTestStruct)                   Struct                                                      OFFSET(getStruct<T>, {0x50, 80, 0, 0})
+	SMember(FPropertyPathTestStruct)                   StructRef                                                   OFFSET(getStruct<T>, {0xA0, 80, 0, 0})
+	SMember(FPropertyPathTestStruct)                   StructConstRef                                              OFFSET(getStruct<T>, {0xF0, 80, 0, 0})
 	CMember(UPropertyPathTestObject*)                  InnerObject                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 
 
@@ -50,21 +50,23 @@ public:
 
 /// Struct /Script/PropertyPath.PropertyPathSegment
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPropertyPathSegment : public MDKStruct
+class FPropertyPathSegment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   ArrayIndex                                                  OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	CMember(UStruct*)                                  Struct                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/PropertyPath.CachedPropertyPath
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCachedPropertyPath : public MDKStruct
+class FCachedPropertyPath : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -75,8 +77,9 @@ public:
 
 /// Struct /Script/PropertyPath.PropertyPathTestInnerStruct
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FPropertyPathTestInnerStruct : public MDKStruct
+class FPropertyPathTestInnerStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -88,13 +91,14 @@ public:
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumThree                                                   OFFSET(get<T>, {0x7, 1, 0, 0})
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumFour                                                    OFFSET(get<T>, {0x8, 1, 0, 0})
 	DMember(int32_t)                                   Integer                                                     OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FString)                                   String                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   String                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/PropertyPath.PropertyPathTestStruct
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FPropertyPathTestStruct : public MDKStruct
+class FPropertyPathTestStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -105,24 +109,25 @@ public:
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumTwo                                                     OFFSET(get<T>, {0x9, 1, 0, 0})
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumThree                                                   OFFSET(get<T>, {0xA, 1, 0, 0})
 	CMember(TEnumAsByte<EPropertyPathTestEnum>)        EnumFour                                                    OFFSET(get<T>, {0xB, 1, 0, 0})
-	SMember(FString)                                   String                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   String                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(float)                                     float_                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FPropertyPathTestInnerStruct)              InnerStruct                                                 OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FPropertyPathTestInnerStruct)              InnerStruct                                                 OFFSET(getStruct<T>, {0x28, 32, 0, 0})
 	CMember(UPropertyPathTestObject*)                  InnerObject                                                 OFFSET(get<T>, {0x48, 8, 0, 0})
 };
 
 /// Struct /Script/PropertyPath.PropertyPathTestBed
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FPropertyPathTestBed : public MDKStruct
+class FPropertyPathTestBed : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
 	CMember(UPropertyPathTestObject*)                  Object                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UPropertyPathTestObject*)                  ModifiedObject                                              OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FPropertyPathTestStruct)                   ModifiedStruct                                              OFFSET(get<T>, {0x10, 80, 0, 0})
-	SMember(FPropertyPathTestStruct)                   DefaultStruct                                               OFFSET(get<T>, {0x60, 80, 0, 0})
+	SMember(FPropertyPathTestStruct)                   ModifiedStruct                                              OFFSET(getStruct<T>, {0x10, 80, 0, 0})
+	SMember(FPropertyPathTestStruct)                   DefaultStruct                                               OFFSET(getStruct<T>, {0x60, 80, 0, 0})
 };
 
 /// Enum /Script/PropertyPath.EPropertyPathTestEnum

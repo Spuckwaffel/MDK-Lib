@@ -115,7 +115,7 @@ class APlayerPawn_Generic_Parent_C : public AFortPlayerPawn
 	static inline constexpr uint64_t __MDKClassSize = 19232;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4A40, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4A40, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               Default_Weapon_Materials                                    OFFSET(get<T>, {0x4A48, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         PawnBackpackMaterials                                       OFFSET(get<T>, {0x4A58, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         PawnHatMaterials                                            OFFSET(get<T>, {0x4A68, 16, 0, 0})
@@ -130,7 +130,7 @@ public:
 	CMember(AActor*)                                   CurrentWaterMeshActor                                       OFFSET(get<T>, {0x4AE8, 8, 0, 0})
 	DMember(bool)                                      IsInWater                                                   OFFSET(get<bool>, {0x4AF0, 1, 0, 0})
 	DMember(double)                                    Time_when_you_ll_be_able_to_splash_again                    OFFSET(get<double>, {0x4AF8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverlapWaterVolume                                        OFFSET(get<T>, {0x4B00, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverlapWaterVolume                                        OFFSET(getStruct<T>, {0x4B00, 16, 0, 0})
 	CMember(TArray<FCharacterPartMidArrayStruct>)      PawnPartMaterials                                           OFFSET(get<T>, {0x4B10, 16, 0, 0})
 
 
@@ -179,18 +179,18 @@ class UGAB_GenericApplyFullBodyHit_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2968;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UClass*)                                   GE_FullBodyHitActiveEffect                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FVector)                                   HitImpulse                                                  OFFSET(get<T>, {0xB38, 24, 0, 0})
+	SMember(FVector)                                   HitImpulse                                                  OFFSET(getStruct<T>, {0xB38, 24, 0, 0})
 	CMember(UClass*)                                   GE_RestoreControlResistance                                 OFFSET(get<T>, {0xB50, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               ActiveImpactImmunity                                        OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               ActiveImpactImmunity                                        OFFSET(getStruct<T>, {0xB58, 8, 0, 0})
 	CMember(UClass*)                                   GE_ImpactImmunity                                           OFFSET(get<T>, {0xB60, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               ActiveFullBodyHit                                           OFFSET(get<T>, {0xB68, 8, 0, 0})
-	SMember(FGameplayTag)                              Event_Triggered_FullBodyHit                                 OFFSET(get<T>, {0xB70, 4, 0, 0})
-	SMember(FGameplayTag)                              Event_Control_Ended                                         OFFSET(get<T>, {0xB74, 4, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               ActiveFullBodyHit                                           OFFSET(getStruct<T>, {0xB68, 8, 0, 0})
+	SMember(FGameplayTag)                              Event_Triggered_FullBodyHit                                 OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
+	SMember(FGameplayTag)                              Event_Control_Ended                                         OFFSET(getStruct<T>, {0xB74, 4, 0, 0})
 	CMember(UClass*)                                   GE_TransferFullBodyHit                                      OFFSET(get<T>, {0xB78, 8, 0, 0})
 	CMember(UAnimMontage*)                             FullBodyHitMontage                                          OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FName)                                     FullBodyHitMontageSection                                   OFFSET(get<T>, {0xB88, 4, 0, 0})
+	SMember(FName)                                     FullBodyHitMontageSection                                   OFFSET(getStruct<T>, {0xB88, 4, 0, 0})
 	DMember(bool)                                      EndAbilityOnBlendOut                                        OFFSET(get<bool>, {0xB8C, 1, 0, 0})
 	DMember(double)                                    Duration_NoAnim                                             OFFSET(get<double>, {0xB90, 8, 0, 0})
 
@@ -256,8 +256,8 @@ class UGA_TrapBuildGeneric_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2868;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              PlacedCue                                                   OFFSET(get<T>, {0xB30, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              PlacedCue                                                   OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
 
 
 	/// Functions
@@ -295,7 +295,7 @@ class UGCNS_GM_OnDisplayChatEmoji_C : public UFortGameplayCueNotify_Simple
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   ParticleRelativeOffset                                      OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   ParticleRelativeOffset                                      OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	CMember(USoundBase*)                               BubbleSound                                                 OFFSET(get<T>, {0x80, 8, 0, 0})
 
 
@@ -320,7 +320,7 @@ class AGCN_Athena_Bush_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2592;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     OwningPlayer_BushMesh                                       OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow2                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x9A8, 8, 0, 0})
@@ -334,7 +334,7 @@ public:
 	CMember(UMaterialInstanceDynamic*)                 MID_Bush                                                    OFFSET(get<T>, {0x9E0, 8, 0, 0})
 	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x9E8, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 MID_OwningClientBush                                        OFFSET(get<T>, {0x9F0, 8, 0, 0})
-	SMember(FCurveTableRowHandle)                      ClientBushOpacity                                           OFFSET(get<T>, {0x9F8, 16, 0, 0})
+	SMember(FCurveTableRowHandle)                      ClientBushOpacity                                           OFFSET(getStruct<T>, {0x9F8, 16, 0, 0})
 	DMember(double)                                    TargetOpacity                                               OFFSET(get<double>, {0xA08, 8, 0, 0})
 	CMember(UParticleSystem*)                          BushDestructionVFX                                          OFFSET(get<T>, {0xA10, 8, 0, 0})
 	CMember(USoundBase*)                               BushDestructionSFX                                          OFFSET(get<T>, {0xA18, 8, 0, 0})
@@ -365,7 +365,7 @@ class APlayerPawn_Generic_C : public APlayerPawn_Generic_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 20760;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4B20, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4B20, 8, 0, 0})
 	CMember(UMotionWarpingComponent*)                  MotionWarping                                               OFFSET(get<T>, {0x4B28, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 SplashEffectsForEnteringOrExitingWater                      OFFSET(get<T>, {0x4B30, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 GamplayWindInteractionEffects                               OFFSET(get<T>, {0x4B38, 8, 0, 0})
@@ -389,13 +389,13 @@ public:
 	DMember(double)                                    Run_Particle_Activate_Speed                                 OFFSET(get<double>, {0x4BB8, 8, 0, 0})
 	DMember(double)                                    Walk_Dust_Activate_Speed                                    OFFSET(get<double>, {0x4BC0, 8, 0, 0})
 	DMember(double)                                    Walk_Particle_Reset_Speed                                   OFFSET(get<double>, {0x4BC8, 8, 0, 0})
-	SMember(FVector)                                   PreviousVelocityVector                                      OFFSET(get<T>, {0x4BD0, 24, 0, 0})
+	SMember(FVector)                                   PreviousVelocityVector                                      OFFSET(getStruct<T>, {0x4BD0, 24, 0, 0})
 	DMember(bool)                                      CanSpawnRunKickupFX_                                        OFFSET(get<bool>, {0x4BE8, 1, 0, 0})
 	DMember(bool)                                      CanSpawnWalkKickupFX_                                       OFFSET(get<bool>, {0x4BE9, 1, 0, 0})
 	DMember(bool)                                      CanSpawnDustLandFX_                                         OFFSET(get<bool>, {0x4BEA, 1, 0, 0})
-	SMember(FRotator)                                  RunWalkParticleRotation                                     OFFSET(get<T>, {0x4BF0, 24, 0, 0})
+	SMember(FRotator)                                  RunWalkParticleRotation                                     OFFSET(getStruct<T>, {0x4BF0, 24, 0, 0})
 	DMember(bool)                                      IsNinjaInShadowStance_                                      OFFSET(get<bool>, {0x4C08, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTagsForHitByHuskMeleeSound                          OFFSET(get<T>, {0x4C10, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTagsForHitByHuskMeleeSound                          OFFSET(getStruct<T>, {0x4C10, 32, 0, 0})
 	CMember(UMaterialInterface*)                       Shield_Material                                             OFFSET(get<T>, {0x4C30, 8, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         BodyShieldMIDArray                                          OFFSET(get<T>, {0x4C38, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         HeadShieldMIDArray                                          OFFSET(get<T>, {0x4C48, 16, 0, 0})
@@ -413,7 +413,7 @@ public:
 	DMember(bool)                                      ShieldVisible_Shatter                                       OFFSET(get<bool>, {0x4CA2, 1, 0, 0})
 	DMember(bool)                                      ShieldVisible_FullHealth                                    OFFSET(get<bool>, {0x4CA3, 1, 0, 0})
 	DMember(double)                                    Fully_Regened_Shield_health_Opacity                         OFFSET(get<double>, {0x4CA8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_GameplayCueDamageShielded                                OFFSET(get<T>, {0x4CB0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_GameplayCueDamageShielded                                OFFSET(getStruct<T>, {0x4CB0, 32, 0, 0})
 	DMember(bool)                                      LatestDamageIsShieldDamage                                  OFFSET(get<bool>, {0x4CD0, 1, 0, 0})
 	DMember(double)                                    Damage_Taken                                                OFFSET(get<double>, {0x4CD8, 8, 0, 0})
 	DMember(double)                                    Last_Shield_Damage_Time                                     OFFSET(get<double>, {0x4CE0, 8, 0, 0})
@@ -425,9 +425,9 @@ public:
 	DMember(bool)                                      CharmValid                                                  OFFSET(get<bool>, {0x4CFC, 1, 0, 0})
 	DMember(bool)                                      HeadValid                                                   OFFSET(get<bool>, {0x4CFD, 1, 0, 0})
 	DMember(bool)                                      On_Player_Built_Floor                                       OFFSET(get<bool>, {0x4CFE, 1, 0, 0})
-	SMember(FGameplayTag)                              Event_NeedRoadsActive                                       OFFSET(get<T>, {0x4D00, 4, 0, 0})
-	SMember(FGameplayTag)                              Event_NeedRoadsDeactive                                     OFFSET(get<T>, {0x4D04, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_WhereWereGoingWeNeedRoads                                OFFSET(get<T>, {0x4D08, 32, 0, 0})
+	SMember(FGameplayTag)                              Event_NeedRoadsActive                                       OFFSET(getStruct<T>, {0x4D00, 4, 0, 0})
+	SMember(FGameplayTag)                              Event_NeedRoadsDeactive                                     OFFSET(getStruct<T>, {0x4D04, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_WhereWereGoingWeNeedRoads                                OFFSET(getStruct<T>, {0x4D08, 32, 0, 0})
 	CMember(UParticleSystem*)                          Effect_Player_LandedDust                                    OFFSET(get<T>, {0x4D28, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   Shield_BodySkeletalMesh                                     OFFSET(get<T>, {0x4D30, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   Shield_HeadSkeletalMesh                                     OFFSET(get<T>, {0x4D38, 8, 0, 0})
@@ -436,10 +436,10 @@ public:
 	CMember(UForceFeedbackEffect*)                     DamageForceFeedback                                         OFFSET(get<T>, {0x4D50, 8, 0, 0})
 	CMember(UParticleSystem*)                          Effect_Player_Landed_WindVector_P                           OFFSET(get<T>, {0x4D58, 8, 0, 0})
 	CMember(UClass*)                                   SpeechBubbleWidgetClass                                     OFFSET(get<T>, {0x4D60, 8, 0, 0})
-	SMember(FText)                                     LastSpeechText                                              OFFSET(get<T>, {0x4D68, 24, 0, 0})
+	SMember(FText)                                     LastSpeechText                                              OFFSET(getStruct<T>, {0x4D68, 24, 0, 0})
 	CMember(UClass*)                                   DamageCameraShake                                           OFFSET(get<T>, {0x4D80, 8, 0, 0})
 	DMember(bool)                                      UseAnimTrailsNotifies                                       OFFSET(get<bool>, {0x4D88, 1, 0, 0})
-	SMember(FVector)                                   StableVelocityVector                                        OFFSET(get<T>, {0x4D90, 24, 0, 0})
+	SMember(FVector)                                   StableVelocityVector                                        OFFSET(getStruct<T>, {0x4D90, 24, 0, 0})
 	DMember(bool)                                      TickWaterLevel                                              OFFSET(get<bool>, {0x4DA8, 1, 0, 0})
 	CMember(UTextureRenderTarget2D*)                   WetnessDepthTexture                                         OFFSET(get<T>, {0x4DB0, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 WaterLevelMID                                               OFFSET(get<T>, {0x4DB8, 8, 0, 0})
@@ -448,8 +448,8 @@ public:
 	DMember(bool)                                      Is_the_Wind_Water_Scene_Capture_Enabled                     OFFSET(get<bool>, {0x4DC9, 1, 0, 0})
 	CMember(AActor*)                                   CachedEffect                                                OFFSET(get<T>, {0x4DD0, 8, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         WaterInteractionWakeMIDS                                    OFFSET(get<T>, {0x4DD8, 16, 0, 0})
-	SMember(FLinearColor)                              WaterTraceImpactNormalAndZHeightLocation                    OFFSET(get<T>, {0x4DE8, 16, 0, 0})
-	SMember(FVector)                                   PlayerVelocity                                              OFFSET(get<T>, {0x4DF8, 24, 0, 0})
+	SMember(FLinearColor)                              WaterTraceImpactNormalAndZHeightLocation                    OFFSET(getStruct<T>, {0x4DE8, 16, 0, 0})
+	SMember(FVector)                                   PlayerVelocity                                              OFFSET(getStruct<T>, {0x4DF8, 24, 0, 0})
 	DMember(bool)                                      EnableRunWalkWaterGroundFX                                  OFFSET(get<bool>, {0x4E10, 1, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Previous_MID                                                OFFSET(get<T>, {0x4E18, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Previous_Weapon_MID                                         OFFSET(get<T>, {0x4E28, 16, 0, 0})
@@ -460,25 +460,25 @@ public:
 	CMember(TArray<UMaterialInstanceDynamic*>)         Previous_Backpack_MID                                       OFFSET(get<T>, {0x4E70, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Previous_Charm_MID                                          OFFSET(get<T>, {0x4E80, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Previous_Face_MID                                           OFFSET(get<T>, {0x4E90, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingRight                                                  OFFSET(get<T>, {0x4EA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingRightEnd                                               OFFSET(get<T>, {0x4EB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingLeft                                                   OFFSET(get<T>, {0x4EC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingLeftEnd                                                OFFSET(get<T>, {0x4ED0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  AnimNotify_Begin                                            OFFSET(get<T>, {0x4EE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  AnimNotify_End                                              OFFSET(get<T>, {0x4EF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingRight                                                  OFFSET(getStruct<T>, {0x4EA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingRightEnd                                               OFFSET(getStruct<T>, {0x4EB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingLeft                                                   OFFSET(getStruct<T>, {0x4EC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingLeftEnd                                                OFFSET(getStruct<T>, {0x4ED0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  AnimNotify_Begin                                            OFFSET(getStruct<T>, {0x4EE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  AnimNotify_End                                              OFFSET(getStruct<T>, {0x4EF0, 16, 0, 0})
 	CMember(UFXSystemComponent*)                       OverrideAnimTrail                                           OFFSET(get<T>, {0x4F00, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingRight2                                                 OFFSET(get<T>, {0x4F08, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingLeft2                                                  OFFSET(get<T>, {0x4F18, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingRight2                                                 OFFSET(getStruct<T>, {0x4F08, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingLeft2                                                  OFFSET(getStruct<T>, {0x4F18, 16, 0, 0})
 	CMember(UFXSystemComponent*)                       AnimTrailFX                                                 OFFSET(get<T>, {0x4F28, 8, 0, 0})
 	DMember(bool)                                      BlockedByPawns                                              OFFSET(get<bool>, {0x4F30, 1, 0, 0})
-	SMember(FGameplayAttribute)                        Attribute_CurrentShield_Const                               OFFSET(get<T>, {0x4F38, 56, 0, 0})
-	SMember(FGameplayAttribute)                        Attribute_Shield_Const                                      OFFSET(get<T>, {0x4F70, 56, 0, 0})
-	SMember(FGameplayAttribute)                        Attribute_CurrentHealth_Const                               OFFSET(get<T>, {0x4FA8, 56, 0, 0})
-	SMember(FGameplayAttribute)                        Attribute_Max_Health_Const                                  OFFSET(get<T>, {0x4FE0, 56, 0, 0})
-	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_PlayerHealthDamage                 OFFSET(get<T>, {0x5018, 8, 0, 0})
-	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_PlayerShieldDamage                 OFFSET(get<T>, {0x5020, 8, 0, 0})
-	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_Directional_PlayerShieldDamage     OFFSET(get<T>, {0x5028, 8, 0, 0})
-	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_Directional_PlayerHealthDamage     OFFSET(get<T>, {0x5030, 8, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute_CurrentShield_Const                               OFFSET(getStruct<T>, {0x4F38, 56, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute_Shield_Const                                      OFFSET(getStruct<T>, {0x4F70, 56, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute_CurrentHealth_Const                               OFFSET(getStruct<T>, {0x4FA8, 56, 0, 0})
+	SMember(FGameplayAttribute)                        Attribute_Max_Health_Const                                  OFFSET(getStruct<T>, {0x4FE0, 56, 0, 0})
+	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_PlayerHealthDamage                 OFFSET(getStruct<T>, {0x5018, 8, 0, 0})
+	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_PlayerShieldDamage                 OFFSET(getStruct<T>, {0x5020, 8, 0, 0})
+	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_Directional_PlayerShieldDamage     OFFSET(getStruct<T>, {0x5028, 8, 0, 0})
+	SMember(FCameraLensInterfaceClassSupport)          LensEffectInterfaceClass_Directional_PlayerHealthDamage     OFFSET(getStruct<T>, {0x5030, 8, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Temp_DIM_Array                                              OFFSET(get<T>, {0x5038, 16, 0, 0})
 	CMember(TMap<TEnumAsByte, bool>)                   PartValid                                                   OFFSET(get<T>, {0x5048, 80, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       ShieldPartList                                              OFFSET(get<T>, {0x5098, 16, 0, 0})
@@ -681,7 +681,7 @@ class AGCNL_Athena_Tether_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2584;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UFortLayeredAudioComponent*)               FortLayeredAudio                                            OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        LandFX                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        WaterFX                                                     OFFSET(get<T>, {0x9A8, 8, 0, 0})
@@ -695,7 +695,7 @@ public:
 	DMember(double)                                    NormalizedSpeed                                             OFFSET(get<double>, {0x9E0, 8, 0, 0})
 	DMember(double)                                    TurnSpeed                                                   OFFSET(get<double>, {0x9E8, 8, 0, 0})
 	DMember(double)                                    ForceFeedbackIntensity                                      OFFSET(get<double>, {0x9F0, 8, 0, 0})
-	SMember(FTimerHandle)                              ScaleInSkisTimerHandle                                      OFFSET(get<T>, {0x9F8, 8, 0, 0})
+	SMember(FTimerHandle)                              ScaleInSkisTimerHandle                                      OFFSET(getStruct<T>, {0x9F8, 8, 0, 0})
 	DMember(double)                                    SkiScaleInDelay                                             OFFSET(get<double>, {0xA00, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   CameraLensEffectInterface                                   OFFSET(get<T>, {0xA08, 16, 0, 0})
 
@@ -743,16 +743,16 @@ class UGAB_Emote_Generic_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2945;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
 	DMember(double)                                    PostTriggerCancelDelay                                      OFFSET(get<double>, {0xB38, 8, 0, 0})
 	DMember(bool)                                      HideReticle                                                 OFFSET(get<bool>, {0xB40, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     ReticleHUDElementTags                                       OFFSET(get<T>, {0xB48, 32, 0, 0})
-	SMember(FName)                                     MontageOverrideSection                                      OFFSET(get<T>, {0xB68, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     ReticleHUDElementTags                                       OFFSET(getStruct<T>, {0xB48, 32, 0, 0})
+	SMember(FName)                                     MontageOverrideSection                                      OFFSET(getStruct<T>, {0xB68, 4, 0, 0})
 	DMember(bool)                                      bAbilityStopped                                             OFFSET(get<bool>, {0xB6C, 1, 0, 0})
-	SMember(FName)                                     EmoteHolsterId                                              OFFSET(get<T>, {0xB70, 4, 0, 0})
+	SMember(FName)                                     EmoteHolsterId                                              OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
 	DMember(bool)                                      bHolstered                                                  OFFSET(get<bool>, {0xB74, 1, 0, 0})
-	SMember(FName)                                     HUDElementVisibilityReasonName                              OFFSET(get<T>, {0xB78, 4, 0, 0})
+	SMember(FName)                                     HUDElementVisibilityReasonName                              OFFSET(getStruct<T>, {0xB78, 4, 0, 0})
 	DMember(int32_t)                                   WaitForLoadedCount                                          OFFSET(get<int32_t>, {0xB7C, 4, 0, 0})
 	DMember(bool)                                      bClearInteractOnActivate                                    OFFSET(get<bool>, {0xB80, 1, 0, 0})
 
@@ -804,7 +804,7 @@ class UGAB_Spray_Generic_C : public UGAB_Emote_Generic_C
 	static inline constexpr uint64_t __MDKClassSize = 3048;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB88, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB88, 8, 0, 0})
 	DMember(double)                                    DecalSize                                                   OFFSET(get<double>, {0xB90, 8, 0, 0})
 	CMember(UAthenaSprayItemDefinition*)               MySpray                                                     OFFSET(get<T>, {0xB98, 8, 0, 0})
 	DMember(double)                                    DecalTraceDistance                                          OFFSET(get<double>, {0xBA0, 8, 0, 0})
@@ -871,7 +871,7 @@ class UGA_Athena_Player_PreSlideFeedback_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -973,8 +973,8 @@ class UGA_Interrogate_GC_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2868;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              Cue                                                         OFFSET(get<T>, {0xB30, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              Cue                                                         OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
 
 
 	/// Functions
@@ -1054,7 +1054,7 @@ class UCameraModifier_Athena_Sliding_C : public USlidingCameraModifier
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x100, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x100, 8, 0, 0})
 
 
 	/// Functions
@@ -1082,8 +1082,8 @@ class UGAT_TriggeredAbility_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2869;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              TC_AbilitiesGenericTriggeredAbilityActivate                 OFFSET(get<T>, {0xB30, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              TC_AbilitiesGenericTriggeredAbilityActivate                 OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
 	DMember(bool)                                      bPlayerHolsterState                                         OFFSET(get<bool>, {0xB34, 1, 0, 0})
 
 
@@ -1118,44 +1118,44 @@ class UGAB_GenericApplyKnockback_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3153;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UClass*)                                   GE_TransferKnockback                                        OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UClass*)                                   GE_KnockbackActive                                          OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(double)                                    KnockbackPropagationThreshold                               OFFSET(get<double>, {0xB40, 8, 0, 0})
 	CMember(UAnimMontage*)                             KnockbackUpMontage                                          OFFSET(get<T>, {0xB48, 8, 0, 0})
-	SMember(FName)                                     KnockbackUpMontageSection                                   OFFSET(get<T>, {0xB50, 4, 0, 0})
+	SMember(FName)                                     KnockbackUpMontageSection                                   OFFSET(getStruct<T>, {0xB50, 4, 0, 0})
 	CMember(UAnimMontage*)                             KnockbackDownMontage                                        OFFSET(get<T>, {0xB58, 8, 0, 0})
-	SMember(FName)                                     KnockbackDownMontageSection                                 OFFSET(get<T>, {0xB60, 4, 0, 0})
+	SMember(FName)                                     KnockbackDownMontageSection                                 OFFSET(getStruct<T>, {0xB60, 4, 0, 0})
 	CMember(UAnimMontage*)                             KnockbackLandMontage                                        OFFSET(get<T>, {0xB68, 8, 0, 0})
-	SMember(FName)                                     KnockbackLandMontageSection                                 OFFSET(get<T>, {0xB70, 4, 0, 0})
+	SMember(FName)                                     KnockbackLandMontageSection                                 OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
 	CMember(UAnimMontage*)                             KnockbackLandToIdleMontage                                  OFFSET(get<T>, {0xB78, 8, 0, 0})
-	SMember(FName)                                     KnockbackLandToIdleMontageSection                           OFFSET(get<T>, {0xB80, 4, 0, 0})
+	SMember(FName)                                     KnockbackLandToIdleMontageSection                           OFFSET(getStruct<T>, {0xB80, 4, 0, 0})
 	CMember(UAnimMontage*)                             KnockbackLandToStunMontage                                  OFFSET(get<T>, {0xB88, 8, 0, 0})
-	SMember(FName)                                     KnockbackLandToStunMontageSection                           OFFSET(get<T>, {0xB90, 4, 0, 0})
+	SMember(FName)                                     KnockbackLandToStunMontageSection                           OFFSET(getStruct<T>, {0xB90, 4, 0, 0})
 	DMember(bool)                                      DebugDraw                                                   OFFSET(get<bool>, {0xB94, 1, 0, 0})
 	DMember(bool)                                      DebugNumbers                                                OFFSET(get<bool>, {0xB95, 1, 0, 0})
 	DMember(bool)                                      DebugForceKnockbackValues                                   OFFSET(get<bool>, {0xB96, 1, 0, 0})
 	DMember(bool)                                      bOrientToImpulse                                            OFFSET(get<bool>, {0xB97, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               ActiveKnockback                                             OFFSET(get<T>, {0xB98, 8, 0, 0})
-	SMember(FVector)                                   OrientDirection                                             OFFSET(get<T>, {0xBA0, 24, 0, 0})
-	SMember(FVector)                                   HitDirection                                                OFFSET(get<T>, {0xBB8, 24, 0, 0})
-	SMember(FVector)                                   ImpulseDirectionVelocityOrRotation                          OFFSET(get<T>, {0xBD0, 24, 0, 0})
-	SMember(FVector)                                   DebugLastLocation                                           OFFSET(get<T>, {0xBE8, 24, 0, 0})
-	SMember(FGameplayTag)                              TC_NPCStatusLockedInPlace                                   OFFSET(get<T>, {0xC00, 4, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               ActiveKnockback                                             OFFSET(getStruct<T>, {0xB98, 8, 0, 0})
+	SMember(FVector)                                   OrientDirection                                             OFFSET(getStruct<T>, {0xBA0, 24, 0, 0})
+	SMember(FVector)                                   HitDirection                                                OFFSET(getStruct<T>, {0xBB8, 24, 0, 0})
+	SMember(FVector)                                   ImpulseDirectionVelocityOrRotation                          OFFSET(getStruct<T>, {0xBD0, 24, 0, 0})
+	SMember(FVector)                                   DebugLastLocation                                           OFFSET(getStruct<T>, {0xBE8, 24, 0, 0})
+	SMember(FGameplayTag)                              TC_NPCStatusLockedInPlace                                   OFFSET(getStruct<T>, {0xC00, 4, 0, 0})
 	DMember(double)                                    LockedInPlaceKnockbackAngle                                 OFFSET(get<double>, {0xC08, 8, 0, 0})
 	DMember(double)                                    LockedInPlaceKnockbackMagnitude                             OFFSET(get<double>, {0xC10, 8, 0, 0})
 	CMember(UClass*)                                   GE_RestoreControlResistance                                 OFFSET(get<T>, {0xC18, 8, 0, 0})
 	CMember(UClass*)                                   GE_ImpactImmunity                                           OFFSET(get<T>, {0xC20, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               ActiveImpactImmunity                                        OFFSET(get<T>, {0xC28, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               ActiveImpactImmunity                                        OFFSET(getStruct<T>, {0xC28, 8, 0, 0})
 	DMember(bool)                                      bHasImpactImmunity                                          OFFSET(get<bool>, {0xC30, 1, 0, 0})
 	DMember(double)                                    F_OneFrameDelay                                             OFFSET(get<double>, {0xC38, 8, 0, 0})
-	SMember(FGameplayTag)                              Event_Triggered_Knockback                                   OFFSET(get<T>, {0xC40, 4, 0, 0})
+	SMember(FGameplayTag)                              Event_Triggered_Knockback                                   OFFSET(getStruct<T>, {0xC40, 4, 0, 0})
 	DMember(bool)                                      KnockbackFromFloorTrap                                      OFFSET(get<bool>, {0xC44, 1, 0, 0})
 	DMember(bool)                                      KnockbackFromFloorTrap_PlayUpMontage                        OFFSET(get<bool>, {0xC45, 1, 0, 0})
 	DMember(bool)                                      KnockbackFromFloorTrap_PlayDownMontage                      OFFSET(get<bool>, {0xC46, 1, 0, 0})
 	DMember(bool)                                      KnockbackFromFloorTrap_PlayLandMontage                      OFFSET(get<bool>, {0xC47, 1, 0, 0})
-	SMember(FGameplayTag)                              Event_Control_Ended                                         OFFSET(get<T>, {0xC48, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_TrapKnockback_Tag                                        OFFSET(get<T>, {0xC4C, 4, 0, 0})
+	SMember(FGameplayTag)                              Event_Control_Ended                                         OFFSET(getStruct<T>, {0xC48, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_TrapKnockback_Tag                                        OFFSET(getStruct<T>, {0xC4C, 4, 0, 0})
 	DMember(bool)                                      AllowKnockbackAnimation                                     OFFSET(get<bool>, {0xC50, 1, 0, 0})
 
 
@@ -1270,7 +1270,7 @@ class UGA_DefaultPlayer_PetOtherPet_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -1316,7 +1316,7 @@ class UGA_DefaultPlayer_InteractUse_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -1352,13 +1352,13 @@ class AB_Prj_Commando_FragGrenade_Cluster_C : public AFortProjectileBase
 	static inline constexpr uint64_t __MDKClassSize = 2784;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA88, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA88, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 ParticleSystem1                                             OFFSET(get<T>, {0xA90, 8, 0, 0})
 	CMember(UAudioComponent*)                          Audio1                                                      OFFSET(get<T>, {0xA98, 8, 0, 0})
 	CMember(USoundBase*)                               BounceSound                                                 OFFSET(get<T>, {0xAA0, 8, 0, 0})
 	CMember(UParticleSystem*)                          P_Explosion                                                 OFFSET(get<T>, {0xAA8, 8, 0, 0})
 	CMember(USoundBase*)                               ExplosionSound                                              OFFSET(get<T>, {0xAB0, 8, 0, 0})
-	SMember(FVector)                                   ExplosionLocation                                           OFFSET(get<T>, {0xAB8, 24, 0, 0})
+	SMember(FVector)                                   ExplosionLocation                                           OFFSET(getStruct<T>, {0xAB8, 24, 0, 0})
 	DMember(double)                                    MinExplosionDelay                                           OFFSET(get<double>, {0xAD0, 8, 0, 0})
 	DMember(double)                                    MaxExplosionDelay                                           OFFSET(get<double>, {0xAD8, 8, 0, 0})
 
@@ -1384,11 +1384,11 @@ class UGAB_CarryPlayer_C : public UFortGameplayAbility_CarryPlayer
 	static inline constexpr uint64_t __MDKClassSize = 2956;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB58, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
-	SMember(FName)                                     DBNOCarryHolster                                            OFFSET(get<T>, {0xB68, 4, 0, 0})
+	SMember(FName)                                     DBNOCarryHolster                                            OFFSET(getStruct<T>, {0xB68, 4, 0, 0})
 	DMember(bool)                                      bCompletedPickup                                            OFFSET(get<bool>, {0xB6C, 1, 0, 0})
-	SMember(FVector)                                   PickupLocation                                              OFFSET(get<T>, {0xB70, 24, 0, 0})
+	SMember(FVector)                                   PickupLocation                                              OFFSET(getStruct<T>, {0xB70, 24, 0, 0})
 	DMember(int32_t)                                   CarryLongDistanceThreshold                                  OFFSET(get<int32_t>, {0xB88, 4, 0, 0})
 
 
@@ -1419,7 +1419,7 @@ class UGAB_DropPlayer_C : public UFortGameplayAbility_CarryPlayer
 	static inline constexpr uint64_t __MDKClassSize = 2920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB58, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
 
 
@@ -1446,7 +1446,7 @@ class UGAB_ThrowPlayer_C : public UFortGameplayAbility_CarryPlayer
 	static inline constexpr uint64_t __MDKClassSize = 2920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB58, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
 
 
@@ -1473,13 +1473,13 @@ class UGAT_ActiveAbility_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2896;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              TC_AbilitiesGenericActiveAbilityActivate                    OFFSET(get<T>, {0xB30, 4, 0, 0})
-	SMember(FName)                                     N_SavedCollisionChannel                                     OFFSET(get<T>, {0xB34, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              TC_AbilitiesGenericActiveAbilityActivate                    OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
+	SMember(FName)                                     N_SavedCollisionChannel                                     OFFSET(getStruct<T>, {0xB34, 4, 0, 0})
 	CMember(UClass*)                                   GE_KnockBackImmunity                                        OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GEH_KnockBackImmunity                                       OFFSET(get<T>, {0xB40, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GEH_KnockBackImmunity                                       OFFSET(getStruct<T>, {0xB40, 8, 0, 0})
 	DMember(bool)                                      bPlayerHolsterState                                         OFFSET(get<bool>, {0xB48, 1, 0, 0})
-	SMember(FGameplayTag)                              TC_AbilitiesGenericActiveAbilityEndAbility                  OFFSET(get<T>, {0xB4C, 4, 0, 0})
+	SMember(FGameplayTag)                              TC_AbilitiesGenericActiveAbilityEndAbility                  OFFSET(getStruct<T>, {0xB4C, 4, 0, 0})
 
 
 	/// Functions
@@ -1513,13 +1513,13 @@ class AAOE_Commando_KeepOutExplosion_C : public AFortAreaOfEffectCloud
 	static inline constexpr uint64_t __MDKClassSize = 2768;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6D0, 8, 0, 0})
 	CMember(UAudioComponent*)                          AOE_Audio_Effect                                            OFFSET(get<T>, {0x6D8, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 P_Grenade_Linger                                            OFFSET(get<T>, {0x6E0, 8, 0, 0})
 	CMember(USphereComponent*)                         DamageArea                                                  OFFSET(get<T>, {0x6E8, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x6F0, 8, 0, 0})
 	DMember(double)                                    Radius                                                      OFFSET(get<double>, {0x6F8, 8, 0, 0})
-	SMember(FSoundAttenuationSettings)                 AOE_Sound_Attenuation_Based_On_Radius                       OFFSET(get<T>, {0x700, 976, 0, 0})
+	SMember(FSoundAttenuationSettings)                 AOE_Sound_Attenuation_Based_On_Radius                       OFFSET(getStruct<T>, {0x700, 976, 0, 0})
 
 
 	/// Functions
@@ -1543,7 +1543,7 @@ class UGAT_ActiveAbility_Hero_C : public UGAT_ActiveAbility_C
 	static inline constexpr uint64_t __MDKClassSize = 2944;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB50, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB50, 8, 0, 0})
 	DMember(bool)                                      UseHeroLoadoutSystem                                        OFFSET(get<bool>, {0xB58, 1, 0, 0})
 	DMember(bool)                                      bUseMidAbilityCosts                                         OFFSET(get<bool>, {0xB59, 1, 0, 0})
 	DMember(bool)                                      bTriggerCooldownOnAbilityEnd                                OFFSET(get<bool>, {0xB5A, 1, 0, 0})
@@ -1573,8 +1573,8 @@ class UGAT_CommandoActiveAbility_C : public UGAT_ActiveAbility_Hero_C
 	static inline constexpr uint64_t __MDKClassSize = 3138;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FGameplayEventData)                        Event_Data                                                  OFFSET(get<T>, {0xB88, 176, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB80, 8, 0, 0})
+	SMember(FGameplayEventData)                        Event_Data                                                  OFFSET(getStruct<T>, {0xB88, 176, 0, 0})
 	CMember(AFortPawn*)                                CommandoPlayerPawn                                          OFFSET(get<T>, {0xC38, 8, 0, 0})
 	DMember(bool)                                      isAutoCommitted                                             OFFSET(get<bool>, {0xC40, 1, 0, 0})
 	DMember(bool)                                      isStaminaLockedOut                                          OFFSET(get<bool>, {0xC41, 1, 0, 0})
@@ -1595,7 +1595,7 @@ class AB_Prj_Commando_FragGrenade_C : public AFortProjectileBase
 	static inline constexpr uint64_t __MDKClassSize = 3452;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA88, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA88, 8, 0, 0})
 	CMember(URotatingMovementComponent*)               RotatingMovement                                            OFFSET(get<T>, {0xA90, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Fuse_Particle                                               OFFSET(get<T>, {0xA98, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Mesh                                                        OFFSET(get<T>, {0xAA0, 8, 0, 0})
@@ -1612,17 +1612,17 @@ public:
 	CMember(UForceFeedbackEffect*)                     ExplosionForceFeedbackNear                                  OFFSET(get<T>, {0xAF0, 8, 0, 0})
 	CMember(UForceFeedbackEffect*)                     ExplosionForceFeedbackFar                                   OFFSET(get<T>, {0xAF8, 8, 0, 0})
 	DMember(int32_t)                                   MaxClusterGrenades                                          OFFSET(get<int32_t>, {0xB00, 4, 0, 0})
-	SMember(FGameplayTag)                              EC_ClusterExplosion                                         OFFSET(get<T>, {0xB04, 4, 0, 0})
+	SMember(FGameplayTag)                              EC_ClusterExplosion                                         OFFSET(getStruct<T>, {0xB04, 4, 0, 0})
 	DMember(bool)                                      bHasCluster                                                 OFFSET(get<bool>, {0xB08, 1, 0, 0})
 	CMember(UClass*)                                   Prj_Cluster                                                 OFFSET(get<T>, {0xB10, 8, 0, 0})
-	SMember(FFortGameplayEffectContainerSpec)          ClusterContainerSpec                                        OFFSET(get<T>, {0xB18, 184, 0, 0})
+	SMember(FFortGameplayEffectContainerSpec)          ClusterContainerSpec                                        OFFSET(getStruct<T>, {0xB18, 184, 0, 0})
 	DMember(bool)                                      bHasKeepOut                                                 OFFSET(get<bool>, {0xBD0, 1, 0, 0})
-	SMember(FFortGameplayEffectContainerSpec)          KeepOutContainerSpec                                        OFFSET(get<T>, {0xBD8, 184, 0, 0})
+	SMember(FFortGameplayEffectContainerSpec)          KeepOutContainerSpec                                        OFFSET(getStruct<T>, {0xBD8, 184, 0, 0})
 	CMember(UClass*)                                   AOE_KeepOut                                                 OFFSET(get<T>, {0xC90, 8, 0, 0})
 	DMember(bool)                                      bHasClusterTactical                                         OFFSET(get<bool>, {0xC98, 1, 0, 0})
-	SMember(FFortGameplayEffectContainerSpec)          Cluster_Tactical_Container_Spec                             OFFSET(get<T>, {0xCA0, 184, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_ActorTagsThatShouldExplodeOnOverlap                      OFFSET(get<T>, {0xD58, 32, 0, 0})
-	SMember(FGameplayTag)                              T_Event_GrenadeExploded                                     OFFSET(get<T>, {0xD78, 4, 0, 0})
+	SMember(FFortGameplayEffectContainerSpec)          Cluster_Tactical_Container_Spec                             OFFSET(getStruct<T>, {0xCA0, 184, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_ActorTagsThatShouldExplodeOnOverlap                      OFFSET(getStruct<T>, {0xD58, 32, 0, 0})
+	SMember(FGameplayTag)                              T_Event_GrenadeExploded                                     OFFSET(getStruct<T>, {0xD78, 4, 0, 0})
 
 
 	/// Functions
@@ -1688,26 +1688,26 @@ class UGA_Commando_FragGrenade_WithTrajectory_C : public UGAT_CommandoActiveAbil
 	static inline constexpr uint64_t __MDKClassSize = 3960;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC48, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC48, 8, 0, 0})
 	CMember(UClass*)                                   Prj_Grenade                                                 OFFSET(get<T>, {0xC50, 8, 0, 0})
 	DMember(double)                                    GrenadeSpeedMin                                             OFFSET(get<double>, {0xC58, 8, 0, 0})
 	DMember(double)                                    GrenadeSpeedMax                                             OFFSET(get<double>, {0xC60, 8, 0, 0})
 	DMember(double)                                    GravityScale                                                OFFSET(get<double>, {0xC68, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_ClusterBomb                                              OFFSET(get<T>, {0xC70, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_BiggerIsBetter                                           OFFSET(get<T>, {0xC90, 32, 0, 0})
-	SMember(FGameplayTag)                              T_GEContainer_Explosion                                     OFFSET(get<T>, {0xCB0, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_ClusterBomb                                              OFFSET(getStruct<T>, {0xC70, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_BiggerIsBetter                                           OFFSET(getStruct<T>, {0xC90, 32, 0, 0})
+	SMember(FGameplayTag)                              T_GEContainer_Explosion                                     OFFSET(getStruct<T>, {0xCB0, 4, 0, 0})
 	DMember(double)                                    ExplosionRadius                                             OFFSET(get<double>, {0xCB8, 8, 0, 0})
 	DMember(double)                                    AdditionalThrowAngle                                        OFFSET(get<double>, {0xCC0, 8, 0, 0})
-	SMember(FGameplayTag)                              EC_ClusterExplosion                                         OFFSET(get<T>, {0xCC8, 4, 0, 0})
-	SMember(FFortFeedbackHandle)                       GrenadeDialogFeedback                                       OFFSET(get<T>, {0xCD0, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_KeepOut                                                  OFFSET(get<T>, {0xCE0, 32, 0, 0})
-	SMember(FGameplayTag)                              EC_KeepOut                                                  OFFSET(get<T>, {0xD00, 4, 0, 0})
+	SMember(FGameplayTag)                              EC_ClusterExplosion                                         OFFSET(getStruct<T>, {0xCC8, 4, 0, 0})
+	SMember(FFortFeedbackHandle)                       GrenadeDialogFeedback                                       OFFSET(getStruct<T>, {0xCD0, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_KeepOut                                                  OFFSET(getStruct<T>, {0xCE0, 32, 0, 0})
+	SMember(FGameplayTag)                              EC_KeepOut                                                  OFFSET(getStruct<T>, {0xD00, 4, 0, 0})
 	DMember(bool)                                      BiggerIsBetter                                              OFFSET(get<bool>, {0xD04, 1, 0, 0})
 	DMember(bool)                                      ClusterBomb                                                 OFFSET(get<bool>, {0xD05, 1, 0, 0})
 	DMember(bool)                                      KeepOut                                                     OFFSET(get<bool>, {0xD06, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_GrenadeAmmo                                              OFFSET(get<T>, {0xD08, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_GrenadeCost                                              OFFSET(get<T>, {0xD28, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_GrenadeDamage                                            OFFSET(get<T>, {0xD48, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_GrenadeAmmo                                              OFFSET(getStruct<T>, {0xD08, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_GrenadeCost                                              OFFSET(getStruct<T>, {0xD28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_GrenadeDamage                                            OFFSET(getStruct<T>, {0xD48, 32, 0, 0})
 	DMember(bool)                                      GrenadeAmmo                                                 OFFSET(get<bool>, {0xD68, 1, 0, 0})
 	DMember(bool)                                      GrenadeCost                                                 OFFSET(get<bool>, {0xD69, 1, 0, 0})
 	DMember(bool)                                      GrenadeDamage                                               OFFSET(get<bool>, {0xD6A, 1, 0, 0})
@@ -1717,11 +1717,11 @@ public:
 	DMember(int32_t)                                   ExplosionRadiusTooltip                                      OFFSET(get<int32_t>, {0xD78, 4, 0, 0})
 	DMember(int32_t)                                   ExplosionRadiusDefault                                      OFFSET(get<int32_t>, {0xD7C, 4, 0, 0})
 	DMember(int32_t)                                   ExplosionRadiusUpgrade                                      OFFSET(get<int32_t>, {0xD80, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_PlasmaGrenades                                           OFFSET(get<T>, {0xD88, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_PlasmaGrenades                                           OFFSET(getStruct<T>, {0xD88, 32, 0, 0})
 	DMember(bool)                                      PlasmaGrenades                                              OFFSET(get<bool>, {0xDA8, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_Flashbang                                                OFFSET(get<T>, {0xDB0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_Flashbang                                                OFFSET(getStruct<T>, {0xDB0, 32, 0, 0})
 	DMember(bool)                                      Flashbang                                                   OFFSET(get<bool>, {0xDD0, 1, 0, 0})
-	SMember(FVector)                                   GrenadeTargetingOriginOffset                                OFFSET(get<T>, {0xDD8, 24, 0, 0})
+	SMember(FVector)                                   GrenadeTargetingOriginOffset                                OFFSET(getStruct<T>, {0xDD8, 24, 0, 0})
 	DMember(bool)                                      DummyShouldBounce                                           OFFSET(get<bool>, {0xDF0, 1, 0, 0})
 	DMember(double)                                    DummyBounciness                                             OFFSET(get<double>, {0xDF8, 8, 0, 0})
 	DMember(double)                                    DummyFriction                                               OFFSET(get<double>, {0xE00, 8, 0, 0})
@@ -1733,31 +1733,31 @@ public:
 	DMember(bool)                                      InThrowWindup                                               OFFSET(get<bool>, {0xE30, 1, 0, 0})
 	CMember(ABP_ProjectileTrajectory_C*)               TrajectoryIndicator                                         OFFSET(get<T>, {0xE38, 8, 0, 0})
 	CMember(UClass*)                                   TrajectoryIndicatorClass                                    OFFSET(get<T>, {0xE40, 8, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           ThrowWindupMontage                                          OFFSET(get<T>, {0xE48, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           ThrowWindupMontage                                          OFFSET(getStruct<T>, {0xE48, 88, 0, 0})
 	DMember(bool)                                      AbilityKeyPressed                                           OFFSET(get<bool>, {0xEA0, 1, 0, 0})
 	DMember(double)                                    MaxSpeedPitch                                               OFFSET(get<double>, {0xEA8, 8, 0, 0})
 	DMember(double)                                    MinSpeedPitch                                               OFFSET(get<double>, {0xEB0, 8, 0, 0})
 	DMember(double)                                    MaxTossPitch                                                OFFSET(get<double>, {0xEB8, 8, 0, 0})
 	DMember(int32_t)                                   MaxTrajectoryBounces                                        OFFSET(get<int32_t>, {0xEC0, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_Tactical_Clusterbomb                                     OFFSET(get<T>, {0xEC8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_Tactical_Clusterbomb                                     OFFSET(getStruct<T>, {0xEC8, 32, 0, 0})
 	DMember(bool)                                      Tactical_Clusterbomb                                        OFFSET(get<bool>, {0xEE8, 1, 0, 0})
-	SMember(FGameplayTag)                              EC_ClusterExplosion_Tactical                                OFFSET(get<T>, {0xEEC, 4, 0, 0})
+	SMember(FGameplayTag)                              EC_ClusterExplosion_Tactical                                OFFSET(getStruct<T>, {0xEEC, 4, 0, 0})
 	DMember(double)                                    F_FrameDelay                                                OFFSET(get<double>, {0xEF0, 8, 0, 0})
 	DMember(bool)                                      BiggerIsBetter_T01                                          OFFSET(get<bool>, {0xEF8, 1, 0, 0})
 	DMember(bool)                                      BiggerIsBetter_T02                                          OFFSET(get<bool>, {0xEF9, 1, 0, 0})
 	DMember(bool)                                      ClusterBomb_T01                                             OFFSET(get<bool>, {0xEFA, 1, 0, 0})
 	DMember(bool)                                      ClusterBomb_T02                                             OFFSET(get<bool>, {0xEFB, 1, 0, 0})
-	SMember(FGameplayTag)                              T_BiggerIsBetter_T01                                        OFFSET(get<T>, {0xEFC, 4, 0, 0})
-	SMember(FGameplayTag)                              T_BiggerIsBetter_T02                                        OFFSET(get<T>, {0xF00, 4, 0, 0})
-	SMember(FGameplayTag)                              T_ClusterBomb_T01                                           OFFSET(get<T>, {0xF04, 4, 0, 0})
-	SMember(FGameplayTag)                              T_ClusterBomb_T02                                           OFFSET(get<T>, {0xF08, 4, 0, 0})
-	SMember(FScalableFloat)                            SF_BiggerIsBetterRadius_T01                                 OFFSET(get<T>, {0xF10, 40, 0, 0})
+	SMember(FGameplayTag)                              T_BiggerIsBetter_T01                                        OFFSET(getStruct<T>, {0xEFC, 4, 0, 0})
+	SMember(FGameplayTag)                              T_BiggerIsBetter_T02                                        OFFSET(getStruct<T>, {0xF00, 4, 0, 0})
+	SMember(FGameplayTag)                              T_ClusterBomb_T01                                           OFFSET(getStruct<T>, {0xF04, 4, 0, 0})
+	SMember(FGameplayTag)                              T_ClusterBomb_T02                                           OFFSET(getStruct<T>, {0xF08, 4, 0, 0})
+	SMember(FScalableFloat)                            SF_BiggerIsBetterRadius_T01                                 OFFSET(getStruct<T>, {0xF10, 40, 0, 0})
 	CMember(UAnimMontage*)                             ThrowMontage                                                OFFSET(get<T>, {0xF38, 8, 0, 0})
-	SMember(FGameplayTag)                              T_Event_Activate                                            OFFSET(get<T>, {0xF40, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Event_Deactivate                                          OFFSET(get<T>, {0xF44, 4, 0, 0})
-	SMember(FScalableFloat)                            SF_BiggerIsBetterRadius_T02                                 OFFSET(get<T>, {0xF48, 40, 0, 0})
+	SMember(FGameplayTag)                              T_Event_Activate                                            OFFSET(getStruct<T>, {0xF40, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Event_Deactivate                                          OFFSET(getStruct<T>, {0xF44, 4, 0, 0})
+	SMember(FScalableFloat)                            SF_BiggerIsBetterRadius_T02                                 OFFSET(getStruct<T>, {0xF48, 40, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            DummyCollisionChannel                                       OFFSET(get<T>, {0xF70, 1, 0, 0})
-	SMember(FGameplayTag)                              ThrowCue                                                    OFFSET(get<T>, {0xF74, 4, 0, 0})
+	SMember(FGameplayTag)                              ThrowCue                                                    OFFSET(getStruct<T>, {0xF74, 4, 0, 0})
 
 
 	/// Functions
@@ -1819,13 +1819,13 @@ class UGAB_GenericDeath_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3324;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UAnimMontage*)                             DeathMontage                                                OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FName)                                     DeathMontageSectionName                                     OFFSET(get<T>, {0xB38, 4, 0, 0})
-	SMember(FVector)                                   DeathHitDirection                                           OFFSET(get<T>, {0xB40, 24, 0, 0})
-	SMember(FHitResult)                                DeathHitResult                                              OFFSET(get<T>, {0xB58, 224, 0, 0})
-	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0xC38, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SpawnDroneTags                                              OFFSET(get<T>, {0xC58, 32, 0, 0})
+	SMember(FName)                                     DeathMontageSectionName                                     OFFSET(getStruct<T>, {0xB38, 4, 0, 0})
+	SMember(FVector)                                   DeathHitDirection                                           OFFSET(getStruct<T>, {0xB40, 24, 0, 0})
+	SMember(FHitResult)                                DeathHitResult                                              OFFSET(getStruct<T>, {0xB58, 224, 0, 0})
+	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(getStruct<T>, {0xC38, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SpawnDroneTags                                              OFFSET(getStruct<T>, {0xC58, 32, 0, 0})
 	CMember(UAnimMontage*)                             Front                                                       OFFSET(get<T>, {0xC78, 8, 0, 0})
 	CMember(UAnimMontage*)                             Left                                                        OFFSET(get<T>, {0xC80, 8, 0, 0})
 	CMember(UAnimMontage*)                             Right                                                       OFFSET(get<T>, {0xC88, 8, 0, 0})
@@ -1842,15 +1842,15 @@ public:
 	DMember(int32_t)                                   Head_LeftSectionNameCount                                   OFFSET(get<int32_t>, {0xCCC, 4, 0, 0})
 	DMember(int32_t)                                   Head_RightSectionNameCount                                  OFFSET(get<int32_t>, {0xCD0, 4, 0, 0})
 	DMember(int32_t)                                   Head_BackSectionNameCount                                   OFFSET(get<int32_t>, {0xCD4, 4, 0, 0})
-	SMember(FName)                                     FrontMontageSectionPrefix                                   OFFSET(get<T>, {0xCD8, 4, 0, 0})
-	SMember(FName)                                     BackMontageSectionPrefix                                    OFFSET(get<T>, {0xCDC, 4, 0, 0})
-	SMember(FName)                                     LeftMontageSectionPrefix                                    OFFSET(get<T>, {0xCE0, 4, 0, 0})
-	SMember(FName)                                     RightMontageSectionPrefix                                   OFFSET(get<T>, {0xCE4, 4, 0, 0})
-	SMember(FName)                                     HeadFrontMontageSectionPrefix                               OFFSET(get<T>, {0xCE8, 4, 0, 0})
-	SMember(FName)                                     HeadBackMontageSectionPrefix                                OFFSET(get<T>, {0xCEC, 4, 0, 0})
-	SMember(FName)                                     HeadLeftMontageSectionPrefix                                OFFSET(get<T>, {0xCF0, 4, 0, 0})
-	SMember(FName)                                     HeadRightMontageSectionPrefix                               OFFSET(get<T>, {0xCF4, 4, 0, 0})
-	SMember(FGameplayTag)                              TeleportOutCue                                              OFFSET(get<T>, {0xCF8, 4, 0, 0})
+	SMember(FName)                                     FrontMontageSectionPrefix                                   OFFSET(getStruct<T>, {0xCD8, 4, 0, 0})
+	SMember(FName)                                     BackMontageSectionPrefix                                    OFFSET(getStruct<T>, {0xCDC, 4, 0, 0})
+	SMember(FName)                                     LeftMontageSectionPrefix                                    OFFSET(getStruct<T>, {0xCE0, 4, 0, 0})
+	SMember(FName)                                     RightMontageSectionPrefix                                   OFFSET(getStruct<T>, {0xCE4, 4, 0, 0})
+	SMember(FName)                                     HeadFrontMontageSectionPrefix                               OFFSET(getStruct<T>, {0xCE8, 4, 0, 0})
+	SMember(FName)                                     HeadBackMontageSectionPrefix                                OFFSET(getStruct<T>, {0xCEC, 4, 0, 0})
+	SMember(FName)                                     HeadLeftMontageSectionPrefix                                OFFSET(getStruct<T>, {0xCF0, 4, 0, 0})
+	SMember(FName)                                     HeadRightMontageSectionPrefix                               OFFSET(getStruct<T>, {0xCF4, 4, 0, 0})
+	SMember(FGameplayTag)                              TeleportOutCue                                              OFFSET(getStruct<T>, {0xCF8, 4, 0, 0})
 
 
 	/// Functions
@@ -1884,9 +1884,9 @@ class UGA_DefaultPlayer_Death_C : public UGAB_GenericDeath_C
 	static inline constexpr uint64_t __MDKClassSize = 3344;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xD00, 8, 0, 0})
-	SMember(FGameplayTag)                              FadeCapsuleStWCue                                           OFFSET(get<T>, {0xD08, 4, 0, 0})
-	SMember(FGameplayTag)                              FadeCapsuleAthenaCue                                        OFFSET(get<T>, {0xD0C, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xD00, 8, 0, 0})
+	SMember(FGameplayTag)                              FadeCapsuleStWCue                                           OFFSET(getStruct<T>, {0xD08, 4, 0, 0})
+	SMember(FGameplayTag)                              FadeCapsuleAthenaCue                                        OFFSET(getStruct<T>, {0xD0C, 4, 0, 0})
 
 
 	/// Functions
@@ -1904,28 +1904,28 @@ class UGAB_InterrogatePlayer_Search_C : public UFortGameplayAbility_CarryPlayer
 	static inline constexpr uint64_t __MDKClassSize = 3184;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB58, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
 	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xB68, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          InterrogatedPlayer                                          OFFSET(get<T>, {0xB70, 8, 0, 0})
 	CMember(UAnimMontage*)                             Anim_Search                                                 OFFSET(get<T>, {0xB78, 8, 0, 0})
-	SMember(FName)                                     InterrogateHolster                                          OFFSET(get<T>, {0xB80, 4, 0, 0})
-	SMember(FName)                                     LootTierGroupName                                           OFFSET(get<T>, {0xB84, 4, 0, 0})
+	SMember(FName)                                     InterrogateHolster                                          OFFSET(getStruct<T>, {0xB80, 4, 0, 0})
+	SMember(FName)                                     LootTierGroupName                                           OFFSET(getStruct<T>, {0xB84, 4, 0, 0})
 	CMember(UFortWorldItemDefinition*)                 ItemDefinition                                              OFFSET(get<T>, {0xB88, 8, 0, 0})
 	DMember(int32_t)                                   NumberToSpawn                                               OFFSET(get<int32_t>, {0xB90, 4, 0, 0})
-	SMember(FVector)                                   LootSpawnOffset                                             OFFSET(get<T>, {0xB98, 24, 0, 0})
-	SMember(FScalableFloat)                            MaxDropsInstance                                            OFFSET(get<T>, {0xBB0, 40, 0, 0})
+	SMember(FVector)                                   LootSpawnOffset                                             OFFSET(getStruct<T>, {0xB98, 24, 0, 0})
+	SMember(FScalableFloat)                            MaxDropsInstance                                            OFFSET(getStruct<T>, {0xBB0, 40, 0, 0})
 	DMember(int32_t)                                   NumDropsInstance                                            OFFSET(get<int32_t>, {0xBD8, 4, 0, 0})
-	SMember(FScalableFloat)                            KeycardDropBias                                             OFFSET(get<T>, {0xBE0, 40, 0, 0})
+	SMember(FScalableFloat)                            KeycardDropBias                                             OFFSET(getStruct<T>, {0xBE0, 40, 0, 0})
 	CMember(TArray<UFortWorldItemDefinition*>)         KeycardItemDefinitions                                      OFFSET(get<T>, {0xC08, 16, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_Yacht                                             OFFSET(get<T>, {0xC18, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_OilRig                                            OFFSET(get<T>, {0xC1C, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_SharkIsland                                       OFFSET(get<T>, {0xC20, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_HQ                                                OFFSET(get<T>, {0xC24, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_MountainBase                                      OFFSET(get<T>, {0xC28, 4, 0, 0})
-	SMember(FTimerHandle)                              Timer_Interrogation                                         OFFSET(get<T>, {0xC30, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(get<T>, {0xC38, 32, 0, 0})
-	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(get<T>, {0xC58, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_Yacht                                             OFFSET(getStruct<T>, {0xC18, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_OilRig                                            OFFSET(getStruct<T>, {0xC1C, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_SharkIsland                                       OFFSET(getStruct<T>, {0xC20, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_HQ                                                OFFSET(getStruct<T>, {0xC24, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_MountainBase                                      OFFSET(getStruct<T>, {0xC28, 4, 0, 0})
+	SMember(FTimerHandle)                              Timer_Interrogation                                         OFFSET(getStruct<T>, {0xC30, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(getStruct<T>, {0xC38, 32, 0, 0})
+	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(getStruct<T>, {0xC58, 4, 0, 0})
 	CMember(UClass*)                                   GE_Cooldown                                                 OFFSET(get<T>, {0xC60, 8, 0, 0})
 	CMember(UClass*)                                   GE_PickedUp                                                 OFFSET(get<T>, {0xC68, 8, 0, 0})
 
@@ -1975,50 +1975,50 @@ class UGAB_InterrogatePlayer_Reveal_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 4008;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          InterrogatedPlayer                                          OFFSET(get<T>, {0xB40, 8, 0, 0})
 	CMember(UAnimMontage*)                             Anim_Reveal                                                 OFFSET(get<T>, {0xB48, 8, 0, 0})
 	CMember(UAnimMontage*)                             Anim_End                                                    OFFSET(get<T>, {0xB50, 8, 0, 0})
-	SMember(FName)                                     RevealHolster                                               OFFSET(get<T>, {0xB58, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Reveal                                                   OFFSET(get<T>, {0xB5C, 4, 0, 0})
-	SMember(FScalableFloat)                            MarkDurationPlayer                                          OFFSET(get<T>, {0xB60, 40, 0, 0})
-	SMember(FScalableFloat)                            MarkDurationNPC                                             OFFSET(get<T>, {0xB88, 40, 0, 0})
-	SMember(FScalableFloat)                            MarkRadius                                                  OFFSET(get<T>, {0xBB0, 40, 0, 0})
+	SMember(FName)                                     RevealHolster                                               OFFSET(getStruct<T>, {0xB58, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Reveal                                                   OFFSET(getStruct<T>, {0xB5C, 4, 0, 0})
+	SMember(FScalableFloat)                            MarkDurationPlayer                                          OFFSET(getStruct<T>, {0xB60, 40, 0, 0})
+	SMember(FScalableFloat)                            MarkDurationNPC                                             OFFSET(getStruct<T>, {0xB88, 40, 0, 0})
+	SMember(FScalableFloat)                            MarkRadius                                                  OFFSET(getStruct<T>, {0xBB0, 40, 0, 0})
 	CMember(TArray<AActor*>)                           SquadmatesToMark                                            OFFSET(get<T>, {0xBD8, 16, 0, 0})
-	SMember(FTimerHandle)                              Timer_Reveal                                                OFFSET(get<T>, {0xBE8, 8, 0, 0})
-	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(get<T>, {0xBF0, 4, 0, 0})
+	SMember(FTimerHandle)                              Timer_Reveal                                                OFFSET(getStruct<T>, {0xBE8, 8, 0, 0})
+	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(getStruct<T>, {0xBF0, 4, 0, 0})
 	DMember(double)                                    RevealDuration                                              OFFSET(get<double>, {0xBF8, 8, 0, 0})
 	DMember(double)                                    EndAbilityDelay                                             OFFSET(get<double>, {0xC00, 8, 0, 0})
 	DMember(double)                                    SweepDelay                                                  OFFSET(get<double>, {0xC08, 8, 0, 0})
 	DMember(bool)                                      Cancelled                                                   OFFSET(get<bool>, {0xC10, 1, 0, 0})
 	DMember(bool)                                      Ending                                                      OFFSET(get<bool>, {0xC11, 1, 0, 0})
-	SMember(FString)                                   IndicatorGroup                                              OFFSET(get<T>, {0xC18, 16, 0, 0})
+	SMember(FString)                                   IndicatorGroup                                              OFFSET(getStruct<T>, {0xC18, 16, 0, 0})
 	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0xC28, 8, 0, 0})
 	CMember(TArray<AActor*>)                           ActorsToMark                                                OFFSET(get<T>, {0xC30, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(get<T>, {0xC40, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     NPCTagsToMark                                               OFFSET(get<T>, {0xC60, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ChestTagsToMark                                             OFFSET(get<T>, {0xC80, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayItemTagsToMark                                      OFFSET(get<T>, {0xCA0, 32, 0, 0})
-	SMember(FName)                                     ParticleSystemParamName                                     OFFSET(get<T>, {0xCC0, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(getStruct<T>, {0xC40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     NPCTagsToMark                                               OFFSET(getStruct<T>, {0xC60, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ChestTagsToMark                                             OFFSET(getStruct<T>, {0xC80, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayItemTagsToMark                                      OFFSET(getStruct<T>, {0xCA0, 32, 0, 0})
+	SMember(FName)                                     ParticleSystemParamName                                     OFFSET(getStruct<T>, {0xCC0, 4, 0, 0})
 	CMember(UParticleSystem*)                          IndicatedPS                                                 OFFSET(get<T>, {0xCC8, 8, 0, 0})
 	CMember(USoundBase*)                               IndicatedSound                                              OFFSET(get<T>, {0xCD0, 8, 0, 0})
-	SMember(FVector)                                   PSOffset                                                    OFFSET(get<T>, {0xCD8, 24, 0, 0})
-	SMember(FName)                                     PSVectorParamName                                           OFFSET(get<T>, {0xCF0, 4, 0, 0})
-	SMember(FVector)                                   PSDBNOOffset                                                OFFSET(get<T>, {0xCF8, 24, 0, 0})
-	SMember(FName)                                     EnemyStencilName                                            OFFSET(get<T>, {0xD10, 4, 0, 0})
-	SMember(FName)                                     TreasureChestStencilName                                    OFFSET(get<T>, {0xD14, 4, 0, 0})
+	SMember(FVector)                                   PSOffset                                                    OFFSET(getStruct<T>, {0xCD8, 24, 0, 0})
+	SMember(FName)                                     PSVectorParamName                                           OFFSET(getStruct<T>, {0xCF0, 4, 0, 0})
+	SMember(FVector)                                   PSDBNOOffset                                                OFFSET(getStruct<T>, {0xCF8, 24, 0, 0})
+	SMember(FName)                                     EnemyStencilName                                            OFFSET(getStruct<T>, {0xD10, 4, 0, 0})
+	SMember(FName)                                     TreasureChestStencilName                                    OFFSET(getStruct<T>, {0xD14, 4, 0, 0})
 	DMember(double)                                    StepTime                                                    OFFSET(get<double>, {0xD18, 8, 0, 0})
 	DMember(bool)                                      testbool                                                    OFFSET(get<bool>, {0xD20, 1, 0, 0})
-	SMember(FScalableFloat)                            EnemyStencilID                                              OFFSET(get<T>, {0xD28, 40, 0, 0})
-	SMember(FScalableFloat)                            StencilStepTime                                             OFFSET(get<T>, {0xD50, 40, 0, 0})
-	SMember(FScalableFloat)                            bUseDefaultStencil                                          OFFSET(get<T>, {0xD78, 40, 0, 0})
-	SMember(FScalableFloat)                            IndicatorStepTime                                           OFFSET(get<T>, {0xDA0, 40, 0, 0})
-	SMember(FGameplayTagQuery)                         NPCGameplayTagQuery                                         OFFSET(get<T>, {0xDC8, 72, 0, 0})
-	SMember(FIndicatedActorData)                       IndicatedActorDataPlayers                                   OFFSET(get<T>, {0xE10, 248, 0, 0})
-	SMember(FStenciledActorData)                       StenciledActorDataPlayers                                   OFFSET(get<T>, {0xF08, 128, 0, 0})
-	SMember(FGameplayTagContainer)                     T_QuestTagContainer                                         OFFSET(get<T>, {0xF88, 32, 0, 0})
+	SMember(FScalableFloat)                            EnemyStencilID                                              OFFSET(getStruct<T>, {0xD28, 40, 0, 0})
+	SMember(FScalableFloat)                            StencilStepTime                                             OFFSET(getStruct<T>, {0xD50, 40, 0, 0})
+	SMember(FScalableFloat)                            bUseDefaultStencil                                          OFFSET(getStruct<T>, {0xD78, 40, 0, 0})
+	SMember(FScalableFloat)                            IndicatorStepTime                                           OFFSET(getStruct<T>, {0xDA0, 40, 0, 0})
+	SMember(FGameplayTagQuery)                         NPCGameplayTagQuery                                         OFFSET(getStruct<T>, {0xDC8, 72, 0, 0})
+	SMember(FIndicatedActorData)                       IndicatedActorDataPlayers                                   OFFSET(getStruct<T>, {0xE10, 248, 0, 0})
+	SMember(FStenciledActorData)                       StenciledActorDataPlayers                                   OFFSET(getStruct<T>, {0xF08, 128, 0, 0})
+	SMember(FGameplayTagContainer)                     T_QuestTagContainer                                         OFFSET(getStruct<T>, {0xF88, 32, 0, 0})
 
 
 	/// Functions
@@ -2068,11 +2068,11 @@ class UGAB_AthenaDBNORevive_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              EC_AppliedEffect                                            OFFSET(get<T>, {0xB30, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              EC_AppliedEffect                                            OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FGameplayTag)                              ResurrectCue                                                OFFSET(get<T>, {0xB40, 4, 0, 0})
-	SMember(FGameplayTag)                              ResurrectAthenaCue                                          OFFSET(get<T>, {0xB44, 4, 0, 0})
+	SMember(FGameplayTag)                              ResurrectCue                                                OFFSET(getStruct<T>, {0xB40, 4, 0, 0})
+	SMember(FGameplayTag)                              ResurrectAthenaCue                                          OFFSET(getStruct<T>, {0xB44, 4, 0, 0})
 	CMember(UAnimMontage*)                             DBNOMontageOutro                                            OFFSET(get<T>, {0xB48, 8, 0, 0})
 	CMember(UAnimMontage*)                             DBNOMontageOutroSwimming                                    OFFSET(get<T>, {0xB50, 8, 0, 0})
 
@@ -2108,17 +2108,17 @@ class UGA_DefaultPlayer_InteractSearch_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3344;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FGameplayTag)                              RefillGasTankTag                                            OFFSET(get<T>, {0xB38, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RefillGasTankMontage                                        OFFSET(get<T>, {0xB40, 88, 0, 0})
-	SMember(FGameplayTag)                              CatchFireflyTag                                             OFFSET(get<T>, {0xB98, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           FireflyCatchMontage                                         OFFSET(get<T>, {0xBA0, 88, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RefillVehicleFuelMontage                                    OFFSET(get<T>, {0xBF8, 88, 0, 0})
-	SMember(FGameplayTag)                              GasCanRefillVehicleTag                                      OFFSET(get<T>, {0xC50, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           DBNOMontageInfo                                             OFFSET(get<T>, {0xC58, 88, 0, 0})
-	SMember(FGameplayTag)                              Tag_UseOverrideSearchMontage                                OFFSET(get<T>, {0xCB0, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverrideSearchMontageInfo                                   OFFSET(get<T>, {0xCB8, 88, 0, 0})
+	SMember(FGameplayTag)                              RefillGasTankTag                                            OFFSET(getStruct<T>, {0xB38, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RefillGasTankMontage                                        OFFSET(getStruct<T>, {0xB40, 88, 0, 0})
+	SMember(FGameplayTag)                              CatchFireflyTag                                             OFFSET(getStruct<T>, {0xB98, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           FireflyCatchMontage                                         OFFSET(getStruct<T>, {0xBA0, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RefillVehicleFuelMontage                                    OFFSET(getStruct<T>, {0xBF8, 88, 0, 0})
+	SMember(FGameplayTag)                              GasCanRefillVehicleTag                                      OFFSET(getStruct<T>, {0xC50, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           DBNOMontageInfo                                             OFFSET(getStruct<T>, {0xC58, 88, 0, 0})
+	SMember(FGameplayTag)                              Tag_UseOverrideSearchMontage                                OFFSET(getStruct<T>, {0xCB0, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverrideSearchMontageInfo                                   OFFSET(getStruct<T>, {0xCB8, 88, 0, 0})
 
 
 	/// Functions
@@ -2178,29 +2178,29 @@ class UGA_Athena_Player_Slide_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 6528;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UClass*)                                   CameraShake                                                 OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UClass*)                                   Camera_Mode_Class                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FGameplayTag)                              CameraShakeGCNL                                             OFFSET(get<T>, {0xB40, 4, 0, 0})
+	SMember(FGameplayTag)                              CameraShakeGCNL                                             OFFSET(getStruct<T>, {0xB40, 4, 0, 0})
 	CMember(UClass*)                                   CameraModifier                                              OFFSET(get<T>, {0xB48, 8, 0, 0})
 	DMember(double)                                    MinAngleForMomentum                                         OFFSET(get<double>, {0xB50, 8, 0, 0})
-	SMember(FGameplayTag)                              SpeedlinesCue                                               OFFSET(get<T>, {0xB58, 4, 0, 0})
+	SMember(FGameplayTag)                              SpeedlinesCue                                               OFFSET(getStruct<T>, {0xB58, 4, 0, 0})
 	CMember(UClass*)                                   StartSlideCameraShake                                       OFFSET(get<T>, {0xB60, 8, 0, 0})
 	DMember(double)                                    AdditionalLaunchVelocityOffRamp                             OFFSET(get<double>, {0xB68, 8, 0, 0})
-	SMember(FSlidingControlParams)                     DefaultSlidingParams                                        OFFSET(get<T>, {0xB70, 1688, 0, 0})
-	SMember(FSlidingControlParams)                     PostDashGroundSlidingParams                                 OFFSET(get<T>, {0x1208, 1688, 0, 0})
+	SMember(FSlidingControlParams)                     DefaultSlidingParams                                        OFFSET(getStruct<T>, {0xB70, 1688, 0, 0})
+	SMember(FSlidingControlParams)                     PostDashGroundSlidingParams                                 OFFSET(getStruct<T>, {0x1208, 1688, 0, 0})
 	DMember(double)                                    LevelGroundSlideDuration                                    OFFSET(get<double>, {0x18A0, 8, 0, 0})
-	SMember(FTimerHandle)                              EndLevelGroundSlideTimerHandle                              OFFSET(get<T>, {0x18A8, 8, 0, 0})
-	SMember(FScalableFloat)                            DashDuration                                                OFFSET(get<T>, {0x18B0, 40, 0, 0})
-	SMember(FTimerHandle)                              CameraFXDelay                                               OFFSET(get<T>, {0x18D8, 8, 0, 0})
-	SMember(FGameplayTag)                              PlayerGameplayCue                                           OFFSET(get<T>, {0x18E0, 4, 0, 0})
+	SMember(FTimerHandle)                              EndLevelGroundSlideTimerHandle                              OFFSET(getStruct<T>, {0x18A8, 8, 0, 0})
+	SMember(FScalableFloat)                            DashDuration                                                OFFSET(getStruct<T>, {0x18B0, 40, 0, 0})
+	SMember(FTimerHandle)                              CameraFXDelay                                               OFFSET(getStruct<T>, {0x18D8, 8, 0, 0})
+	SMember(FGameplayTag)                              PlayerGameplayCue                                           OFFSET(getStruct<T>, {0x18E0, 4, 0, 0})
 	DMember(double)                                    CameraShakeDelay                                            OFFSET(get<double>, {0x18E8, 8, 0, 0})
-	SMember(FScalableFloat)                            MinAdditionalMomentum                                       OFFSET(get<T>, {0x18F0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxAdditionalMomentum                                       OFFSET(get<T>, {0x1918, 40, 0, 0})
-	SMember(FScalableFloat)                            MinAngleForAdditionalMomentum                               OFFSET(get<T>, {0x1940, 40, 0, 0})
+	SMember(FScalableFloat)                            MinAdditionalMomentum                                       OFFSET(getStruct<T>, {0x18F0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAdditionalMomentum                                       OFFSET(getStruct<T>, {0x1918, 40, 0, 0})
+	SMember(FScalableFloat)                            MinAngleForAdditionalMomentum                               OFFSET(getStruct<T>, {0x1940, 40, 0, 0})
 	DMember(bool)                                      Prev_FallingGracePeriodState                                OFFSET(get<bool>, {0x1968, 1, 0, 0})
 	CMember(UCameraModifier*)                          SlideCameraModifier                                         OFFSET(get<T>, {0x1970, 8, 0, 0})
-	SMember(FTimerHandle)                              AddMomentumTimerHandle                                      OFFSET(get<T>, {0x1978, 8, 0, 0})
+	SMember(FTimerHandle)                              AddMomentumTimerHandle                                      OFFSET(getStruct<T>, {0x1978, 8, 0, 0})
 
 
 	/// Functions
@@ -2236,21 +2236,21 @@ class UGAB_AthenaDBNO_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3289;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UAnimMontage*)                             DeathMontage                                                OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FVector)                                   DeathHitDirection                                           OFFSET(get<T>, {0xB38, 24, 0, 0})
-	SMember(FHitResult)                                DeathHitResult                                              OFFSET(get<T>, {0xB50, 224, 0, 0})
-	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0xC30, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayStatusAfflicted                                     OFFSET(get<T>, {0xC50, 32, 0, 0})
+	SMember(FVector)                                   DeathHitDirection                                           OFFSET(getStruct<T>, {0xB38, 24, 0, 0})
+	SMember(FHitResult)                                DeathHitResult                                              OFFSET(getStruct<T>, {0xB50, 224, 0, 0})
+	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(getStruct<T>, {0xC30, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayStatusAfflicted                                     OFFSET(getStruct<T>, {0xC50, 32, 0, 0})
 	CMember(UAnimMontage*)                             DeathMontageSkydive                                         OFFSET(get<T>, {0xC70, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               DBNOBleedGEHandle                                           OFFSET(get<T>, {0xC78, 8, 0, 0})
-	SMember(FName)                                     HolsterId                                                   OFFSET(get<T>, {0xC80, 4, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               DBNOBleedGEHandle                                           OFFSET(getStruct<T>, {0xC78, 8, 0, 0})
+	SMember(FName)                                     HolsterId                                                   OFFSET(getStruct<T>, {0xC80, 4, 0, 0})
 	CMember(UAnimMontage*)                             DeathMontageSwimming                                        OFFSET(get<T>, {0xC88, 8, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    FortPlayerPawn                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
 	CMember(UClass*)                                   DBNOStart_GE_Class                                          OFFSET(get<T>, {0xC98, 8, 0, 0})
 	DMember(bool)                                      ImprovedDBNO                                                OFFSET(get<bool>, {0xCA0, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     Old_DBNO_Block_Tags                                         OFFSET(get<T>, {0xCA8, 32, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_Handle__Health_Bonus                                     OFFSET(get<T>, {0xCC8, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     Old_DBNO_Block_Tags                                         OFFSET(getStruct<T>, {0xCA8, 32, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_Handle__Health_Bonus                                     OFFSET(getStruct<T>, {0xCC8, 8, 0, 0})
 	DMember(double)                                    TenacityAmount                                              OFFSET(get<double>, {0xCD0, 8, 0, 0})
 	CMember(ETenacityType)                             TenacityType                                                OFFSET(get<T>, {0xCD8, 1, 0, 0})
 
@@ -2330,11 +2330,11 @@ class AGCN_Athena_LowGravity_C : public AFortGameplayCueNotifyLoop_LowGravity
 	static inline constexpr uint64_t __MDKClassSize = 1024;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3C8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3C8, 8, 0, 0})
 	CMember(AActor*)                                   MyTargetCached                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
-	SMember(FTimerHandle)                              ExpireTellDelayTimer                                        OFFSET(get<T>, {0x3D8, 8, 0, 0})
+	SMember(FTimerHandle)                              ExpireTellDelayTimer                                        OFFSET(getStruct<T>, {0x3D8, 8, 0, 0})
 	DMember(double)                                    ExpirationSoundPeriod                                       OFFSET(get<double>, {0x3E0, 8, 0, 0})
-	SMember(FTimerHandle)                              ExpirationSoundTimer                                        OFFSET(get<T>, {0x3E8, 8, 0, 0})
+	SMember(FTimerHandle)                              ExpirationSoundTimer                                        OFFSET(getStruct<T>, {0x3E8, 8, 0, 0})
 	DMember(double)                                    MaxDrawDistance                                             OFFSET(get<double>, {0x3F0, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       LoopingFX                                                   OFFSET(get<T>, {0x3F8, 8, 0, 0})
 
@@ -2368,7 +2368,7 @@ class AGCNL_PurpleStuff_C : public AFortGameplayCueNotify_Looping
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
 	CMember(APlayerPawn_Athena_Generic_C*)             PlayerActor                                                 OFFSET(get<T>, {0x388, 8, 0, 0})
 
 
@@ -2393,7 +2393,7 @@ class AGCNL_Creative_PossessProp_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2464;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x998, 8, 0, 0})
 
 
@@ -2416,7 +2416,7 @@ class AGCN_Athena_LowGravity_ZipLine_C : public AGCN_Athena_LowGravity_C
 	static inline constexpr uint64_t __MDKClassSize = 1032;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x400, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x400, 8, 0, 0})
 
 
 	/// Functions
@@ -2500,12 +2500,12 @@ class UGA_NPC_Irwin_Prey_Burt_Charge_RidingHelper_C : public UFortGameplayAbilit
 	static inline constexpr uint64_t __MDKClassSize = 2912;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UControllableRidableComponent*)            ControllableRidableComponent_Cached                         OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(AFortAIPawn*)                              FortAIPawnCached                                            OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(double)                                    InitialMaxAcceleration                                      OFFSET(get<double>, {0xB40, 8, 0, 0})
 	DMember(double)                                    MaxRotationRateYaw                                          OFFSET(get<double>, {0xB48, 8, 0, 0})
-	SMember(FGameplayTag)                              GCN_BoostTag                                                OFFSET(get<T>, {0xB50, 4, 0, 0})
+	SMember(FGameplayTag)                              GCN_BoostTag                                                OFFSET(getStruct<T>, {0xB50, 4, 0, 0})
 	CMember(UFortGameplayAbility*)                     TargetAbilityCached                                         OFFSET(get<T>, {0xB58, 8, 0, 0})
 
 
@@ -2556,11 +2556,11 @@ class UGA_NPC_Parent_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3680;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortAIPawn*)                              NPC_ActivatingFortAIPawn                                    OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(TEnumAsByte<EFortMovementUrgency>)         NPC_InitialMovementUrgency                                  OFFSET(get<T>, {0xB38, 1, 0, 0})
 	DMember(bool)                                      NPC_DebugAbility                                            OFFSET(get<bool>, {0xB39, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     NPC_IgnoreDamageAndOnlyDoKnockbackIfTheseAbilitiesAreActive OFFSET(get<T>, {0xB40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     NPC_IgnoreDamageAndOnlyDoKnockbackIfTheseAbilitiesAreActive OFFSET(getStruct<T>, {0xB40, 32, 0, 0})
 	DMember(bool)                                      NPC_DebugFreezeFrameEnabled                                 OFFSET(get<bool>, {0xB60, 1, 0, 0})
 	DMember(bool)                                      NPC_DebugFreezeFrameOnlyWhenAbilityTargetHit                OFFSET(get<bool>, {0xB61, 1, 0, 0})
 	DMember(bool)                                      NPC_DebugFreezeFrameOnlyWhenWeHaveSomeTarget                OFFSET(get<bool>, {0xB62, 1, 0, 0})
@@ -2570,31 +2570,31 @@ public:
 	DMember(double)                                    NPC_CanActivateAbility_MaxTargetZDistanceAbove              OFFSET(get<double>, {0xB80, 8, 0, 0})
 	DMember(double)                                    NPC_CanActivateAbility_MaxTargetZDistanceAbove_ForIntentionalFailedAttack OFFSET(get<double>, {0xB88, 8, 0, 0})
 	CMember(TArray<AActor*>)                           BuildingTargetingHitActors                                  OFFSET(get<T>, {0xB90, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_NPC_FrustrationTagsToClearForGoals                       OFFSET(get<T>, {0xBA0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_NPC_FrustrationTagsToClearForGoals                       OFFSET(getStruct<T>, {0xBA0, 32, 0, 0})
 	CMember(TEnumAsByte<Enum_NPC_AlertLevel>)          NPC_AlertLevelGoalIsFortPawn                                OFFSET(get<T>, {0xBC0, 1, 0, 0})
 	CMember(TEnumAsByte<Enum_NPC_AlertLevel>)          NPC_AlertLevelGoalIsOther                                   OFFSET(get<T>, {0xBC1, 1, 0, 0})
 	CMember(TEnumAsByte<Enum_NPC_AlertLevel>)          NPC_AlertLevelGoalIsNotValid                                OFFSET(get<T>, {0xBC2, 1, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageKnockbackVelocityHF                               OFFSET(get<T>, {0xBC8, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageKnockbackVerticalAngleHF                          OFFSET(get<T>, {0xBF0, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageKnockbackMinimumYawValueHF                        OFFSET(get<T>, {0xC18, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageCanAttackDBNOPlayersHF                            OFFSET(get<T>, {0xC40, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageKnockbackVelocityVehicleHF                        OFFSET(get<T>, {0xC68, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageKnockbackVerticalAngleVehicleHF                   OFFSET(get<T>, {0xC90, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageKnockbackMinimumYawValueVehicleHF                 OFFSET(get<T>, {0xCB8, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DamageChanceToEjectFromVehicleHF                        OFFSET(get<T>, {0xCE0, 40, 0, 0})
-	SMember(FGameplayTag)                              DestroyBuildingGC                                           OFFSET(get<T>, {0xD08, 4, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageKnockbackVelocityHF                               OFFSET(getStruct<T>, {0xBC8, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageKnockbackVerticalAngleHF                          OFFSET(getStruct<T>, {0xBF0, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageKnockbackMinimumYawValueHF                        OFFSET(getStruct<T>, {0xC18, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageCanAttackDBNOPlayersHF                            OFFSET(getStruct<T>, {0xC40, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageKnockbackVelocityVehicleHF                        OFFSET(getStruct<T>, {0xC68, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageKnockbackVerticalAngleVehicleHF                   OFFSET(getStruct<T>, {0xC90, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageKnockbackMinimumYawValueVehicleHF                 OFFSET(getStruct<T>, {0xCB8, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DamageChanceToEjectFromVehicleHF                        OFFSET(getStruct<T>, {0xCE0, 40, 0, 0})
+	SMember(FGameplayTag)                              DestroyBuildingGC                                           OFFSET(getStruct<T>, {0xD08, 4, 0, 0})
 	CMember(UClass*)                                   DestroyBuildingGE                                           OFFSET(get<T>, {0xD10, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_NPC_FrustrationTagsToClearForMovement                    OFFSET(get<T>, {0xD18, 32, 0, 0})
-	SMember(FGameplayTag)                              TC_NPC_FrustrationBuildDueToGoal                            OFFSET(get<T>, {0xD38, 4, 0, 0})
-	SMember(FGameplayTag)                              TC_NPC_FrustrationBuildDueToMovement                        OFFSET(get<T>, {0xD3C, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         TQ_NPC_RequirementsToBuildFrustrationDueToGoal              OFFSET(get<T>, {0xD40, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         TQ_NPC_RequirementsToBuildFrustrationDueToMovement          OFFSET(get<T>, {0xD88, 72, 0, 0})
-	SMember(FScalableFloat)                            NPC_BodyBumpBuildingsWhenBuildingMovementFrustrationHF      OFFSET(get<T>, {0xDD0, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_FrustrationBodyBumpOnlyDestroyPlayerBuildingsHF         OFFSET(get<T>, {0xDF8, 40, 0, 0})
-	SMember(FGameplayTag)                              TC_NPC_EffectContainer_BodyBumpBuildingsWhenBuildingMovementFrustration OFFSET(get<T>, {0xE20, 4, 0, 0})
-	SMember(FGameplayAbilityTargetDataHandle)          BuildingTargetingTargetData                                 OFFSET(get<T>, {0xE28, 40, 0, 0})
-	SMember(FGameplayTag)                              BuildingTargetingApplicationTag                             OFFSET(get<T>, {0xE50, 4, 0, 0})
-	SMember(FGameplayTag)                              TC_BuildingTypePlayer                                       OFFSET(get<T>, {0xE54, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_NPC_FrustrationTagsToClearForMovement                    OFFSET(getStruct<T>, {0xD18, 32, 0, 0})
+	SMember(FGameplayTag)                              TC_NPC_FrustrationBuildDueToGoal                            OFFSET(getStruct<T>, {0xD38, 4, 0, 0})
+	SMember(FGameplayTag)                              TC_NPC_FrustrationBuildDueToMovement                        OFFSET(getStruct<T>, {0xD3C, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         TQ_NPC_RequirementsToBuildFrustrationDueToGoal              OFFSET(getStruct<T>, {0xD40, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TQ_NPC_RequirementsToBuildFrustrationDueToMovement          OFFSET(getStruct<T>, {0xD88, 72, 0, 0})
+	SMember(FScalableFloat)                            NPC_BodyBumpBuildingsWhenBuildingMovementFrustrationHF      OFFSET(getStruct<T>, {0xDD0, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_FrustrationBodyBumpOnlyDestroyPlayerBuildingsHF         OFFSET(getStruct<T>, {0xDF8, 40, 0, 0})
+	SMember(FGameplayTag)                              TC_NPC_EffectContainer_BodyBumpBuildingsWhenBuildingMovementFrustration OFFSET(getStruct<T>, {0xE20, 4, 0, 0})
+	SMember(FGameplayAbilityTargetDataHandle)          BuildingTargetingTargetData                                 OFFSET(getStruct<T>, {0xE28, 40, 0, 0})
+	SMember(FGameplayTag)                              BuildingTargetingApplicationTag                             OFFSET(getStruct<T>, {0xE50, 4, 0, 0})
+	SMember(FGameplayTag)                              TC_BuildingTypePlayer                                       OFFSET(getStruct<T>, {0xE54, 4, 0, 0})
 	CMember(UClass*)                                   GE_NPC_MMR_Scaling_AbilityCooldown                          OFFSET(get<T>, {0xE58, 8, 0, 0})
 
 
@@ -2677,7 +2677,7 @@ class UGA_Riding_Creature_EnergyDepleted_Base_C : public UGA_NPC_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 3688;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xE60, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xE60, 8, 0, 0})
 
 
 	/// Functions
@@ -2739,7 +2739,7 @@ class AGCNL_Athena_AppleSun_Bounced_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          InUseLoopAudio                                              OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(AActor*)                                   Target                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
 
@@ -2757,8 +2757,9 @@ public:
 
 /// Struct /Game/Abilities/Player/Pawns/CharacterPartMidArrayStruct.CharacterPartMidArrayStruct
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCharacterPartMidArrayStruct : public MDKStruct
+class FCharacterPartMidArrayStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3177,45 +3178,45 @@ class UMANG_PatrolLayerAnimBP_C : public UFortPatrolAnimLayer
 	static inline constexpr uint64_t __MDKClassSize = 4256;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4D0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(get<T>, {0x4D8, 28, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x4F8, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x500, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x508, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x528, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(get<T>, {0x5D8, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(get<T>, {0x5F8, 176, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(get<T>, {0x6A8, 72, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(get<T>, {0x6F0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(get<T>, {0x718, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(get<T>, {0x740, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(get<T>, {0x768, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(get<T>, {0x790, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(get<T>, {0x7B8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(get<T>, {0x7E0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(get<T>, {0x808, 40, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(get<T>, {0x830, 112, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(get<T>, {0x8A0, 240, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(get<T>, {0x990, 40, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(get<T>, {0x9B8, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(get<T>, {0x9D8, 40, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(get<T>, {0xA00, 32, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(get<T>, {0xA20, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(get<T>, {0xA90, 200, 0, 0})
-	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(get<T>, {0xB58, 240, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(get<T>, {0xC48, 40, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(get<T>, {0xC70, 112, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(get<T>, {0xCE0, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(get<T>, {0xD00, 40, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(get<T>, {0xD28, 200, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(get<T>, {0xDF0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(get<T>, {0xE38, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0xE58, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0xF20, 120, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose4                                OFFSET(get<T>, {0xF98, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(get<T>, {0xFC0, 72, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(get<T>, {0x1008, 120, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(get<T>, {0x1080, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4D0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x4D8, 28, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x4F8, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x500, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x508, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x528, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(getStruct<T>, {0x5D8, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose1                              OFFSET(getStruct<T>, {0x5F8, 176, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0x6A8, 72, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(getStruct<T>, {0x6F0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(getStruct<T>, {0x718, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(getStruct<T>, {0x740, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(getStruct<T>, {0x768, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(getStruct<T>, {0x790, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(getStruct<T>, {0x7B8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(getStruct<T>, {0x7E0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(getStruct<T>, {0x808, 40, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(getStruct<T>, {0x830, 112, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend                              OFFSET(getStruct<T>, {0x8A0, 240, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x990, 40, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(getStruct<T>, {0x9B8, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x9D8, 40, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(getStruct<T>, {0xA00, 32, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(getStruct<T>, {0xA20, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(getStruct<T>, {0xA90, 200, 0, 0})
+	SMember(FAnimNode_LayeredBoneBlend)                AnimGraphNode_LayeredBoneBlend1                             OFFSET(getStruct<T>, {0xB58, 240, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0xC48, 40, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer2                             OFFSET(getStruct<T>, {0xC70, 112, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(getStruct<T>, {0xCE0, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(getStruct<T>, {0xD00, 40, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(getStruct<T>, {0xD28, 200, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(getStruct<T>, {0xDF0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(getStruct<T>, {0xE38, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(getStruct<T>, {0xE58, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0xF20, 120, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose4                                OFFSET(getStruct<T>, {0xF98, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(getStruct<T>, {0xFC0, 72, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(getStruct<T>, {0x1008, 120, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(getStruct<T>, {0x1080, 32, 0, 0})
 
 
 	/// Functions
@@ -3307,10 +3308,10 @@ class UMultiInteractActorComponent_C : public UFortActorComponent_MultiInteract
 	static inline constexpr uint64_t __MDKClassSize = 377;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x158, 8, 0, 0})
-	SMember(FGameplayTag)                              RemoveInteractPlayerTag                                     OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FGameplayTag)                              AddInteractPlayerTag                                        OFFSET(get<T>, {0x164, 4, 0, 0})
-	SMember(FGameplayTag)                              LoopingMultiInteractTag                                     OFFSET(get<T>, {0x168, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x158, 8, 0, 0})
+	SMember(FGameplayTag)                              RemoveInteractPlayerTag                                     OFFSET(getStruct<T>, {0x160, 4, 0, 0})
+	SMember(FGameplayTag)                              AddInteractPlayerTag                                        OFFSET(getStruct<T>, {0x164, 4, 0, 0})
+	SMember(FGameplayTag)                              LoopingMultiInteractTag                                     OFFSET(getStruct<T>, {0x168, 4, 0, 0})
 	DMember(double)                                    RequiredDuration                                            OFFSET(get<double>, {0x170, 8, 0, 0})
 	DMember(bool)                                      GCNLApplied                                                 OFFSET(get<bool>, {0x178, 1, 0, 0})
 
@@ -3342,8 +3343,8 @@ class UGA_Athena_Lockout_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2880;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FTimerHandle)                              Timer_LockoutFailsafe                                       OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FTimerHandle)                              Timer_LockoutFailsafe                                       OFFSET(getStruct<T>, {0xB30, 8, 0, 0})
 	DMember(double)                                    LockoutFailsafeTime                                         OFFSET(get<double>, {0xB38, 8, 0, 0})
 
 
@@ -3398,17 +3399,17 @@ class UGA_Athena_TillLandFallDamageImmunity_Parent_C : public UFortGameplayAbili
 	static inline constexpr uint64_t __MDKClassSize = 2968;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UClass*)                                   GE_FallDamageImmunity                                       OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GEH_FallDamageImmunity                                      OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GEH_FallDamageImmunity                                      OFFSET(getStruct<T>, {0xB38, 8, 0, 0})
 	DMember(double)                                    Delay_PostLand                                              OFFSET(get<double>, {0xB40, 8, 0, 0})
-	SMember(FGameplayTag)                              Tag_SurfaceSwimming                                         OFFSET(get<T>, {0xB48, 4, 0, 0})
-	SMember(FGameplayTag)                              Tag_Sliding                                                 OFFSET(get<T>, {0xB4C, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_IgnoreApplication                                        OFFSET(get<T>, {0xB50, 32, 0, 0})
-	SMember(FGameplayTag)                              Tag_InVehicle                                               OFFSET(get<T>, {0xB70, 4, 0, 0})
+	SMember(FGameplayTag)                              Tag_SurfaceSwimming                                         OFFSET(getStruct<T>, {0xB48, 4, 0, 0})
+	SMember(FGameplayTag)                              Tag_Sliding                                                 OFFSET(getStruct<T>, {0xB4C, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_IgnoreApplication                                        OFFSET(getStruct<T>, {0xB50, 32, 0, 0})
+	SMember(FGameplayTag)                              Tag_InVehicle                                               OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
 	DMember(double)                                    Delay_WaterSwimBind                                         OFFSET(get<double>, {0xB78, 8, 0, 0})
 	DMember(bool)                                      ApplyInAirOnly                                              OFFSET(get<bool>, {0xB80, 1, 0, 0})
-	SMember(FGameplayTag)                              TagIsRiding                                                 OFFSET(get<T>, {0xB84, 4, 0, 0})
+	SMember(FGameplayTag)                              TagIsRiding                                                 OFFSET(getStruct<T>, {0xB84, 4, 0, 0})
 	CMember(TArray<UAbilityTask_WaitGameplayTagAdded*>) WaitTagAsyncTasks                                          OFFSET(get<T>, {0xB88, 16, 0, 0})
 
 
@@ -3537,13 +3538,13 @@ class UConvertedMarkerInfo_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 968;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UImage*)                                   Image_Avatar                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UImage*)                                   Image_Command                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonVisibilitySwitcher*)                ImageSwitcher                                               OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UImage*)                                   SquadMarker                                                 OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FTimerHandle)                              DBNOPulseTimer                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     RelevantPlaylistTags                                        OFFSET(get<T>, {0x300, 32, 0, 0})
+	SMember(FTimerHandle)                              DBNOPulseTimer                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     RelevantPlaylistTags                                        OFFSET(getStruct<T>, {0x300, 32, 0, 0})
 	DMember(bool)                                      bIsTalking                                                  OFFSET(get<bool>, {0x320, 1, 0, 0})
 	DMember(bool)                                      bShowBackgroundOverridden                                   OFFSET(get<bool>, {0x321, 1, 0, 0})
 	DMember(bool)                                      bEnemyVersion                                               OFFSET(get<bool>, {0x322, 1, 0, 0})
@@ -3583,24 +3584,24 @@ class UNPCStatusWidgetBar_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 921;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(USizeBox*)                                 BarSizeBox                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UImage*)                                   Image_BarBG                                                 OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UImage*)                                   Image_CastShadow                                            OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             ProgressBarDelta                                            OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             ProgressBarFill                                             OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	SMember(FLinearColor)                              FillColor1                                                  OFFSET(get<T>, {0x2D8, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor2                                                  OFFSET(get<T>, {0x2E8, 16, 0, 0})
-	SMember(FLinearColor)                              Delta1                                                      OFFSET(get<T>, {0x2F8, 16, 0, 0})
-	SMember(FLinearColor)                              Delta2                                                      OFFSET(get<T>, {0x308, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor1_75Percent                                        OFFSET(get<T>, {0x318, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor2_75Percent                                        OFFSET(get<T>, {0x328, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor1_50Percent                                        OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor2_50Percent                                        OFFSET(get<T>, {0x348, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor1_25Percent                                        OFFSET(get<T>, {0x358, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor2_25Percent                                        OFFSET(get<T>, {0x368, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor1_100Percent                                       OFFSET(get<T>, {0x378, 16, 0, 0})
-	SMember(FLinearColor)                              FillColor2_100Percent                                       OFFSET(get<T>, {0x388, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor1                                                  OFFSET(getStruct<T>, {0x2D8, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor2                                                  OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
+	SMember(FLinearColor)                              Delta1                                                      OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
+	SMember(FLinearColor)                              Delta2                                                      OFFSET(getStruct<T>, {0x308, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor1_75Percent                                        OFFSET(getStruct<T>, {0x318, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor2_75Percent                                        OFFSET(getStruct<T>, {0x328, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor1_50Percent                                        OFFSET(getStruct<T>, {0x338, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor2_50Percent                                        OFFSET(getStruct<T>, {0x348, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor1_25Percent                                        OFFSET(getStruct<T>, {0x358, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor2_25Percent                                        OFFSET(getStruct<T>, {0x368, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor1_100Percent                                       OFFSET(getStruct<T>, {0x378, 16, 0, 0})
+	SMember(FLinearColor)                              FillColor2_100Percent                                       OFFSET(getStruct<T>, {0x388, 16, 0, 0})
 	DMember(bool)                                      DifferentProgressColors                                     OFFSET(get<bool>, {0x398, 1, 0, 0})
 
 
@@ -3625,13 +3626,13 @@ class UNPCStatusWidget_C : public UNPCStatusWidgetBase
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x388, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x388, 8, 0, 0})
 	CMember(UNPCStatusWidgetBar_C*)                    Bar_Health                                                  OFFSET(get<T>, {0x390, 8, 0, 0})
 	CMember(UNPCStatusWidgetBar_C*)                    Bar_Shield                                                  OFFSET(get<T>, {0x398, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_BarsPrefix                                          OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_BarExtensions                                   OFFSET(get<T>, {0x3A8, 8, 0, 0})
-	SMember(FTimerHandle)                              VisibiltyTimer                                              OFFSET(get<T>, {0x3B0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VisibilityChanged                                           OFFSET(get<T>, {0x3B8, 16, 0, 0})
+	SMember(FTimerHandle)                              VisibiltyTimer                                              OFFSET(getStruct<T>, {0x3B0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VisibilityChanged                                           OFFSET(getStruct<T>, {0x3B8, 16, 0, 0})
 	DMember(double)                                    StatusWidgetVisibleDuration                                 OFFSET(get<double>, {0x3C8, 8, 0, 0})
 	DMember(double)                                    CurrentHealthPercent                                        OFFSET(get<double>, {0x3D0, 8, 0, 0})
 	DMember(double)                                    CurrentShieldPercent                                        OFFSET(get<double>, {0x3D8, 8, 0, 0})
@@ -3670,13 +3671,13 @@ class UNPCStatusWidget_AIBoss_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 812;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UImage*)                                   Background                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UNPCStatusWidgetBar_C*)                    Bar_Health                                                  OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UNPCStatusWidgetBar_C*)                    Bar_Shield                                                  OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Health                                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FTimerHandle)                              VisibiltyTimer                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  VisibilityChanged                                           OFFSET(get<T>, {0x2D8, 16, 0, 0})
+	SMember(FTimerHandle)                              VisibiltyTimer                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  VisibilityChanged                                           OFFSET(getStruct<T>, {0x2D8, 16, 0, 0})
 	DMember(double)                                    StatusWidgetVisibleDuration                                 OFFSET(get<double>, {0x2E8, 8, 0, 0})
 	DMember(double)                                    CurrentHealthPercent                                        OFFSET(get<double>, {0x2F0, 8, 0, 0})
 	DMember(double)                                    CurrentShieldPercent                                        OFFSET(get<double>, {0x2F8, 8, 0, 0})
@@ -3779,12 +3780,12 @@ class ABP_BotController_NPC_Base_C : public ABP_PhoebeController_NonParticipant_
 	static inline constexpr uint64_t __MDKClassSize = 6048;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1750, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1750, 8, 0, 0})
 	CMember(UFortAthenaNpcPatrollingComponent*)        FortAthenaNpcPatrolling                                     OFFSET(get<T>, {0x1758, 8, 0, 0})
 	CMember(UClass*)                                   GE_Patrolling                                               OFFSET(get<T>, {0x1760, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_PatrollingSpeedHandle                                    OFFSET(get<T>, {0x1768, 8, 0, 0})
-	SMember(FRotator)                                  SavedRotationRate                                           OFFSET(get<T>, {0x1770, 24, 0, 0})
-	SMember(FRotator)                                  PatrollingRotationRate                                      OFFSET(get<T>, {0x1788, 24, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_PatrollingSpeedHandle                                    OFFSET(getStruct<T>, {0x1768, 8, 0, 0})
+	SMember(FRotator)                                  SavedRotationRate                                           OFFSET(getStruct<T>, {0x1770, 24, 0, 0})
+	SMember(FRotator)                                  PatrollingRotationRate                                      OFFSET(getStruct<T>, {0x1788, 24, 0, 0})
 
 
 	/// Functions
@@ -3814,18 +3815,18 @@ class UBP_AmbientAudioController_C : public UFortAmbientAudioController
 	static inline constexpr uint64_t __MDKClassSize = 392;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC8, 8, 0, 0})
 	DMember(double)                                    CheckFrequency                                              OFFSET(get<double>, {0xD0, 8, 0, 0})
 	DMember(bool)                                      bInSnowCurrent                                              OFFSET(get<bool>, {0xD8, 1, 0, 0})
 	CMember(UAmbientAudioDataAsset*)                   WinterAudioBank                                             OFFSET(get<T>, {0xE0, 8, 0, 0})
 	DMember(bool)                                      bSnowEnabled                                                OFFSET(get<bool>, {0xE8, 1, 0, 0})
 	CMember(UAmbientAudioDataAsset*)                   StormAudioBank                                              OFFSET(get<T>, {0xF0, 8, 0, 0})
-	SMember(FGameplayTag)                              AmbientAudioInsideTag                                       OFFSET(get<T>, {0xF8, 4, 0, 0})
+	SMember(FGameplayTag)                              AmbientAudioInsideTag                                       OFFSET(getStruct<T>, {0xF8, 4, 0, 0})
 	CMember(UAmbientAudioDataAsset*)                   CurieAudioBank                                              OFFSET(get<T>, {0x100, 8, 0, 0})
-	SMember(FVector)                                   SnowOriginWorldLoc                                          OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FVector)                                   SnowOriginWorldLoc                                          OFFSET(getStruct<T>, {0x108, 24, 0, 0})
 	DMember(double)                                    SnowRadius                                                  OFFSET(get<double>, {0x120, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      SnowTagsToApply                                             OFFSET(get<T>, {0x128, 16, 0, 0})
-	SMember(FName)                                     SnowEntryName                                               OFFSET(get<T>, {0x138, 4, 0, 0})
+	SMember(FName)                                     SnowEntryName                                               OFFSET(getStruct<T>, {0x138, 4, 0, 0})
 	CMember(AActor*)                                   CurrViewTarget                                              OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      GenericTagsToApply                                          OFFSET(get<T>, {0x148, 16, 0, 0})
 	DMember(bool)                                      bTagApplicationEnabled                                      OFFSET(get<bool>, {0x158, 1, 0, 0})
@@ -3867,7 +3868,7 @@ class APlayerPawn_Athena_Generic_Parent_C : public AFortPlayerPawnAthena
 	static inline constexpr uint64_t __MDKClassSize = 23408;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5A80, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5A80, 8, 0, 0})
 	CMember(UMotionWarpingComponent*)                  MotionWarping                                               OFFSET(get<T>, {0x5A88, 8, 0, 0})
 	CMember(UMultiInteractActorComponent_C*)           MultiInteractActorComponent                                 OFFSET(get<T>, {0x5A90, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               Default_Weapon_Materials                                    OFFSET(get<T>, {0x5A98, 16, 0, 0})
@@ -3880,10 +3881,10 @@ public:
 	CMember(UPostProcessComponent*)                    PlayerPostProcessFX                                         OFFSET(get<T>, {0x5B08, 8, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           SkeletalMeshes                                              OFFSET(get<T>, {0x5B10, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         PawnMaterials_ALL                                           OFFSET(get<T>, {0x5B20, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ShootingTargetReactToJump                                   OFFSET(get<T>, {0x5B30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlayHit                                                   OFFSET(get<T>, {0x5B40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnteredVehicleDispatcher                                  OFFSET(get<T>, {0x5B50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnExitedVehicleDispatcher                                   OFFSET(get<T>, {0x5B60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ShootingTargetReactToJump                                   OFFSET(getStruct<T>, {0x5B30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayHit                                                   OFFSET(getStruct<T>, {0x5B40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnteredVehicleDispatcher                                  OFFSET(getStruct<T>, {0x5B50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnExitedVehicleDispatcher                                   OFFSET(getStruct<T>, {0x5B60, 16, 0, 0})
 
 
 	/// Functions
@@ -3919,7 +3920,7 @@ class AAthena_GameState_C : public AFortGameStateBR
 	static inline constexpr uint64_t __MDKClassSize = 13000;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x32B0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x32B0, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x32B8, 8, 0, 0})
 	CMember(USoundBase*)                               Victory_Royale_Sound                                        OFFSET(get<T>, {0x32C0, 8, 0, 0})
 
@@ -3979,11 +3980,11 @@ class APlayerPawn_Athena_Generic_C : public APlayerPawn_Athena_Generic_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 24136;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5B70, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5B70, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Effect_WaterInteraction_FX                                  OFFSET(get<T>, {0x5B78, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 AnimTrailPS                                                 OFFSET(get<T>, {0x5B80, 8, 0, 0})
 	DMember(bool)                                      IsInWater                                                   OFFSET(get<bool>, {0x5B88, 1, 0, 0})
-	SMember(FRotator)                                  RunWalkParticleRotation                                     OFFSET(get<T>, {0x5B90, 24, 0, 0})
+	SMember(FRotator)                                  RunWalkParticleRotation                                     OFFSET(getStruct<T>, {0x5B90, 24, 0, 0})
 	DMember(int32_t)                                   WaterCounter                                                OFFSET(get<int32_t>, {0x5BA8, 4, 0, 0})
 	DMember(double)                                    Tick_Delta_Seconds                                          OFFSET(get<double>, {0x5BB0, 8, 0, 0})
 	CMember(USoundBase*)                               Sound_Shield_Impact                                         OFFSET(get<T>, {0x5BB8, 8, 0, 0})
@@ -4000,12 +4001,12 @@ public:
 	CMember(TArray<UMaterialInstanceDynamic*>)         TempArray                                                   OFFSET(get<T>, {0x5BE8, 16, 0, 0})
 	CMember(USceneComponent*)                          Sound_Player_Hit                                            OFFSET(get<T>, {0x5BF8, 8, 0, 0})
 	CMember(UClass*)                                   SpeechBubbleWidgetClass                                     OFFSET(get<T>, {0x5C00, 8, 0, 0})
-	SMember(FText)                                     LastSpeechText                                              OFFSET(get<T>, {0x5C08, 24, 0, 0})
+	SMember(FText)                                     LastSpeechText                                              OFFSET(getStruct<T>, {0x5C08, 24, 0, 0})
 	DMember(bool)                                      UseAnimTrailsNotifies                                       OFFSET(get<bool>, {0x5C20, 1, 0, 0})
 	DMember(double)                                    Time_when_you_ll_be_able_to_splash_again                    OFFSET(get<double>, {0x5C28, 8, 0, 0})
 	CMember(AActor*)                                   CurrentWaterMeshActor                                       OFFSET(get<T>, {0x5C30, 8, 0, 0})
-	SMember(FHitResult)                                WaterTraceHitLocation                                       OFFSET(get<T>, {0x5C38, 224, 0, 0})
-	SMember(FVector)                                   StableVelocityVector                                        OFFSET(get<T>, {0x5D18, 24, 0, 0})
+	SMember(FHitResult)                                WaterTraceHitLocation                                       OFFSET(getStruct<T>, {0x5C38, 224, 0, 0})
+	SMember(FVector)                                   StableVelocityVector                                        OFFSET(getStruct<T>, {0x5D18, 24, 0, 0})
 	CMember(UParticleSystem*)                          PlayerRunTemplate_Ground                                    OFFSET(get<T>, {0x5D30, 8, 0, 0})
 	CMember(UParticleSystem*)                          PlayerWalkTemplate_Ground                                   OFFSET(get<T>, {0x5D38, 8, 0, 0})
 	CMember(UParticleSystem*)                          PlayerRunTemplate_Water                                     OFFSET(get<T>, {0x5D40, 8, 0, 0})
@@ -4027,16 +4028,16 @@ public:
 	CMember(UParticleSystem*)                          Effect_PLayer_ShieldBreak                                   OFFSET(get<T>, {0x5DB8, 8, 0, 0})
 	DMember(bool)                                      GhostMode                                                   OFFSET(get<bool>, {0x5DC0, 1, 0, 0})
 	CMember(UFXSystemComponent*)                       OverrideAnimTrail                                           OFFSET(get<T>, {0x5DC8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  AnimNotify_Begin                                            OFFSET(get<T>, {0x5DD0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  AnimNotify_End                                              OFFSET(get<T>, {0x5DE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  AnimNotify_Begin                                            OFFSET(getStruct<T>, {0x5DD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  AnimNotify_End                                              OFFSET(getStruct<T>, {0x5DE0, 16, 0, 0})
 	CMember(USoundBase*)                               Sound_Shield_Destroyed_2D                                   OFFSET(get<T>, {0x5DF0, 8, 0, 0})
 	CMember(USoundBase*)                               Sound_Shield_Destroyed_Crit_2D                              OFFSET(get<T>, {0x5DF8, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       AnimTrailFX                                                 OFFSET(get<T>, {0x5E00, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  PlayDamageEffect                                            OFFSET(get<T>, {0x5E08, 16, 0, 0})
-	SMember(FName)                                     Component_Tag_AnimTrailFX_Const                             OFFSET(get<T>, {0x5E18, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PlayDamageEffect                                            OFFSET(getStruct<T>, {0x5E08, 16, 0, 0})
+	SMember(FName)                                     Component_Tag_AnimTrailFX_Const                             OFFSET(getStruct<T>, {0x5E18, 4, 0, 0})
 	DMember(double)                                    ReppedCapsuleExtraHalfHeight                                OFFSET(get<double>, {0x5E20, 8, 0, 0})
 	DMember(double)                                    CachedCapsuleHalfHeight                                     OFFSET(get<double>, {0x5E28, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCharacterPartsMIDInitialized                              OFFSET(get<T>, {0x5E30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCharacterPartsMIDInitialized                              OFFSET(getStruct<T>, {0x5E30, 16, 0, 0})
 	CMember(USkeletalMeshComponent*)                   NullPart_Mesh                                               OFFSET(get<T>, {0x5E40, 8, 0, 0})
 
 
@@ -4143,7 +4144,7 @@ class APlayerPawn_Athena_C : public APlayerPawn_Athena_Generic_C
 	static inline constexpr uint64_t __MDKClassSize = 26424;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5E48, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5E48, 8, 0, 0})
 	CMember(UFortContrailsComponent*)                  FortContrails                                               OFFSET(get<T>, {0x5E50, 8, 0, 0})
 	CMember(UFortUnderwaterDamageComponent*)           FortUnderwaterDamage                                        OFFSET(get<T>, {0x5E58, 8, 0, 0})
 	DMember(float)                                     Timeline_0_BlendWeight_A4943458400C3662DB243099F9EAC7E8     OFFSET(get<float>, {0x5E60, 4, 0, 0})
@@ -4153,19 +4154,19 @@ public:
 	CMember(USkeletalMeshComponent*)                   TargetBody                                                  OFFSET(get<T>, {0x5E78, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               PawnHeadMaterials                                           OFFSET(get<T>, {0x5E80, 16, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               PawnBodyMaterials                                           OFFSET(get<T>, {0x5E90, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_FlakVest                                                 OFFSET(get<T>, {0x5EA0, 32, 0, 0})
-	SMember(FGameplayEventData)                        Event_Data                                                  OFFSET(get<T>, {0x5EC0, 176, 0, 0})
-	SMember(FGameplayTag)                              EventSpawnEffect                                            OFFSET(get<T>, {0x5F70, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_FlakVest                                                 OFFSET(getStruct<T>, {0x5EA0, 32, 0, 0})
+	SMember(FGameplayEventData)                        Event_Data                                                  OFFSET(getStruct<T>, {0x5EC0, 176, 0, 0})
+	SMember(FGameplayTag)                              EventSpawnEffect                                            OFFSET(getStruct<T>, {0x5F70, 4, 0, 0})
 	DMember(bool)                                      IsMale                                                      OFFSET(get<bool>, {0x5F74, 1, 0, 0})
 	CMember(AFortWeapon*)                              MenuGoingCommandowWeapon                                    OFFSET(get<T>, {0x5F78, 8, 0, 0})
 	CMember(USoundBase*)                               SafeZonePassThroughSound                                    OFFSET(get<T>, {0x5F80, 8, 0, 0})
 	DMember(bool)                                      bHasBeenOutsideSafeZone                                     OFFSET(get<bool>, {0x5F88, 1, 0, 0})
-	SMember(FLinearColor)                              ThreatColor                                                 OFFSET(get<T>, {0x5F8C, 16, 0, 0})
+	SMember(FLinearColor)                              ThreatColor                                                 OFFSET(getStruct<T>, {0x5F8C, 16, 0, 0})
 	CMember(USoundBase*)                               PlayerKilledSound                                           OFFSET(get<T>, {0x5FA0, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 WindDebrisParticles                                         OFFSET(get<T>, {0x5FA8, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 FallingRainParticles                                        OFFSET(get<T>, {0x5FB0, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 StormAuraParticles                                          OFFSET(get<T>, {0x5FB8, 8, 0, 0})
-	SMember(FVector)                                   LightningSpawnLocation                                      OFFSET(get<T>, {0x5FC0, 24, 0, 0})
+	SMember(FVector)                                   LightningSpawnLocation                                      OFFSET(getStruct<T>, {0x5FC0, 24, 0, 0})
 	DMember(double)                                    LightningIntensityMin                                       OFFSET(get<double>, {0x5FD8, 8, 0, 0})
 	DMember(double)                                    LightningIntensityMax                                       OFFSET(get<double>, {0x5FE0, 8, 0, 0})
 	CMember(AActor*)                                   SafeZoneActor                                               OFFSET(get<T>, {0x5FE8, 8, 0, 0})
@@ -4197,90 +4198,90 @@ public:
 	DMember(bool)                                      bQueueRezOut                                                OFFSET(get<bool>, {0x60C0, 1, 0, 0})
 	DMember(bool)                                      bWasEverInWarmUp                                            OFFSET(get<bool>, {0x60C1, 1, 0, 0})
 	DMember(bool)                                      bStormAudioCleanedUp                                        OFFSET(get<bool>, {0x60C2, 1, 0, 0})
-	SMember(FTransform)                                Box_Local_Transform                                         OFFSET(get<T>, {0x60D0, 96, 0, 0})
+	SMember(FTransform)                                Box_Local_Transform                                         OFFSET(getStruct<T>, {0x60D0, 96, 0, 0})
 	DMember(double)                                    BoundsRadius                                                OFFSET(get<double>, {0x6130, 8, 0, 0})
 	CMember(UPointLightComponent*)                     TeleportationPointLight                                     OFFSET(get<T>, {0x6138, 8, 0, 0})
 	DMember(double)                                    MaxLightIntensity                                           OFFSET(get<double>, {0x6140, 8, 0, 0})
-	SMember(FName)                                     Socket_MeshTop                                              OFFSET(get<T>, {0x6148, 4, 0, 0})
-	SMember(FName)                                     Socket_MeshBot                                              OFFSET(get<T>, {0x614C, 4, 0, 0})
-	SMember(FName)                                     MIDParam_Transition                                         OFFSET(get<T>, {0x6150, 4, 0, 0})
-	SMember(FName)                                     MIDParam_DissolvePercent                                    OFFSET(get<T>, {0x6154, 4, 0, 0})
-	SMember(FName)                                     MIDParam_DissolveDirection                                  OFFSET(get<T>, {0x6158, 4, 0, 0})
-	SMember(FName)                                     MIDParam_DissolveBaseLoc                                    OFFSET(get<T>, {0x615C, 4, 0, 0})
-	SMember(FName)                                     MIDParam_DissolveDistance                                   OFFSET(get<T>, {0x6160, 4, 0, 0})
-	SMember(FName)                                     MIDParam_DissolveFirstSpawn                                 OFFSET(get<T>, {0x6164, 4, 0, 0})
+	SMember(FName)                                     Socket_MeshTop                                              OFFSET(getStruct<T>, {0x6148, 4, 0, 0})
+	SMember(FName)                                     Socket_MeshBot                                              OFFSET(getStruct<T>, {0x614C, 4, 0, 0})
+	SMember(FName)                                     MIDParam_Transition                                         OFFSET(getStruct<T>, {0x6150, 4, 0, 0})
+	SMember(FName)                                     MIDParam_DissolvePercent                                    OFFSET(getStruct<T>, {0x6154, 4, 0, 0})
+	SMember(FName)                                     MIDParam_DissolveDirection                                  OFFSET(getStruct<T>, {0x6158, 4, 0, 0})
+	SMember(FName)                                     MIDParam_DissolveBaseLoc                                    OFFSET(getStruct<T>, {0x615C, 4, 0, 0})
+	SMember(FName)                                     MIDParam_DissolveDistance                                   OFFSET(getStruct<T>, {0x6160, 4, 0, 0})
+	SMember(FName)                                     MIDParam_DissolveFirstSpawn                                 OFFSET(getStruct<T>, {0x6164, 4, 0, 0})
 	CMember(UMaterialInterface*)                       Mat_CharacterDissolve                                       OFFSET(get<T>, {0x6168, 8, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         DissolveMIDs                                                OFFSET(get<T>, {0x6170, 16, 0, 0})
 	DMember(bool)                                      bUseNewTeleportFX                                           OFFSET(get<bool>, {0x6180, 1, 0, 0})
-	SMember(FGameplayTag)                              OutsideSafeZoneGameplayCueTag                               OFFSET(get<T>, {0x6184, 4, 0, 0})
+	SMember(FGameplayTag)                              OutsideSafeZoneGameplayCueTag                               OFFSET(getStruct<T>, {0x6184, 4, 0, 0})
 	DMember(int32_t)                                   SafeZonePhase                                               OFFSET(get<int32_t>, {0x6188, 4, 0, 0})
 	DMember(int32_t)                                   WhichSafeZoneTag                                            OFFSET(get<int32_t>, {0x618C, 4, 0, 0})
 	DMember(bool)                                      bOutsideSafeZoneGameplayCueActive                           OFFSET(get<bool>, {0x6190, 1, 0, 0})
-	SMember(FScalableFloat)                            SafeZoneDamageScalableFloat                                 OFFSET(get<T>, {0x6198, 40, 0, 0})
+	SMember(FScalableFloat)                            SafeZoneDamageScalableFloat                                 OFFSET(getStruct<T>, {0x6198, 40, 0, 0})
 	DMember(bool)                                      bFrontendPartyInProgress                                    OFFSET(get<bool>, {0x61C0, 1, 0, 0})
 	DMember(bool)                                      bLockOnInteractionComplete                                  OFFSET(get<bool>, {0x61C1, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ResIn                                                       OFFSET(get<T>, {0x61C8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ResOut                                                      OFFSET(get<T>, {0x61D8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingRight                                                  OFFSET(get<T>, {0x61E8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingLeft                                                   OFFSET(get<T>, {0x61F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ResIn                                                       OFFSET(getStruct<T>, {0x61C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ResOut                                                      OFFSET(getStruct<T>, {0x61D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingRight                                                  OFFSET(getStruct<T>, {0x61E8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingLeft                                                   OFFSET(getStruct<T>, {0x61F8, 16, 0, 0})
 	DMember(bool)                                      bSkeletalArrayReady                                         OFFSET(get<bool>, {0x6208, 1, 0, 0})
 	DMember(int32_t)                                   CurDissolveSetupAttempt                                     OFFSET(get<int32_t>, {0x620C, 4, 0, 0})
 	CMember(USoundBase*)                               DBNOEnterSound                                              OFFSET(get<T>, {0x6210, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  onFadeToWhiteTeleported                                     OFFSET(get<T>, {0x6218, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  onFadeToWhiteTeleported                                     OFFSET(getStruct<T>, {0x6218, 16, 0, 0})
 	DMember(bool)                                      Is_Ashton                                                   OFFSET(get<bool>, {0x6228, 1, 0, 0})
 	CMember(UParticleSystemComponent*)                 Ashton                                                      OFFSET(get<T>, {0x6230, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingRightEnd                                               OFFSET(get<T>, {0x6238, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingLeftEnd                                                OFFSET(get<T>, {0x6248, 16, 0, 0})
-	SMember(FGameplayTag)                              PhoneGhostCue                                               OFFSET(get<T>, {0x6258, 4, 0, 0})
-	SMember(FGameplayTag)                              WhiteoutCue                                                 OFFSET(get<T>, {0x625C, 4, 0, 0})
-	SMember(FGameplayTag)                              OutsideSafeZoneCue                                          OFFSET(get<T>, {0x6260, 4, 0, 0})
-	SMember(FGameplayTag)                              OutsideSafeZone2Cue                                         OFFSET(get<T>, {0x6264, 4, 0, 0})
-	SMember(FGameplayTag)                              OutsideSafeZone3Cue                                         OFFSET(get<T>, {0x6268, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingRightEnd                                               OFFSET(getStruct<T>, {0x6238, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingLeftEnd                                                OFFSET(getStruct<T>, {0x6248, 16, 0, 0})
+	SMember(FGameplayTag)                              PhoneGhostCue                                               OFFSET(getStruct<T>, {0x6258, 4, 0, 0})
+	SMember(FGameplayTag)                              WhiteoutCue                                                 OFFSET(getStruct<T>, {0x625C, 4, 0, 0})
+	SMember(FGameplayTag)                              OutsideSafeZoneCue                                          OFFSET(getStruct<T>, {0x6260, 4, 0, 0})
+	SMember(FGameplayTag)                              OutsideSafeZone2Cue                                         OFFSET(getStruct<T>, {0x6264, 4, 0, 0})
+	SMember(FGameplayTag)                              OutsideSafeZone3Cue                                         OFFSET(getStruct<T>, {0x6268, 4, 0, 0})
 	DMember(bool)                                      PlayRespawnFXOnSpawn                                        OFFSET(get<bool>, {0x626C, 1, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    PlayerPawnAthena                                            OFFSET(get<T>, {0x6270, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingRight2                                                 OFFSET(get<T>, {0x6278, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SwingLeft2                                                  OFFSET(get<T>, {0x6288, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingRight2                                                 OFFSET(getStruct<T>, {0x6278, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SwingLeft2                                                  OFFSET(getStruct<T>, {0x6288, 16, 0, 0})
 	DMember(bool)                                      TestProceduralWaterInIsolation                              OFFSET(get<bool>, {0x6298, 1, 0, 0})
 	DMember(bool)                                      NewVar                                                      OFFSET(get<bool>, {0x6299, 1, 0, 0})
 	DMember(bool)                                      Is_First_Water_Body                                         OFFSET(get<bool>, {0x629A, 1, 0, 0})
 	DMember(bool)                                      Is_Last_Water_Body                                          OFFSET(get<bool>, {0x629B, 1, 0, 0})
 	DMember(double)                                    AccumulatedNormalizedDiveSpeed                              OFFSET(get<double>, {0x62A0, 8, 0, 0})
-	SMember(FGameplayTag)                              WaterSprintBoostTag                                         OFFSET(get<T>, {0x62A8, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CCPM_isHiddenInProp                                         OFFSET(get<T>, {0x62B0, 16, 0, 0})
+	SMember(FGameplayTag)                              WaterSprintBoostTag                                         OFFSET(getStruct<T>, {0x62A8, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CCPM_isHiddenInProp                                         OFFSET(getStruct<T>, {0x62B0, 16, 0, 0})
 	CMember(TMap<UObject*, FPawnHighlight>)            PawnHighlights                                              OFFSET(get<T>, {0x62C0, 80, 0, 0})
 	CMember(UObject*)                                  Current_Highlight_Source                                    OFFSET(get<T>, {0x6310, 8, 0, 0})
 	DMember(double)                                    Current_Highlight_Priority                                  OFFSET(get<double>, {0x6318, 8, 0, 0})
-	SMember(FPawnHighlight)                            Invulnerable_Highlight                                      OFFSET(get<T>, {0x6320, 48, 0, 0})
+	SMember(FPawnHighlight)                            Invulnerable_Highlight                                      OFFSET(getStruct<T>, {0x6320, 48, 0, 0})
 	DMember(bool)                                      IsGalileo                                                   OFFSET(get<bool>, {0x6350, 1, 0, 0})
-	SMember(FScalableFloat)                            HotFixSnow                                                  OFFSET(get<T>, {0x6358, 40, 0, 0})
+	SMember(FScalableFloat)                            HotFixSnow                                                  OFFSET(getStruct<T>, {0x6358, 40, 0, 0})
 	CMember(TSet<FName>)                               NoSnowPlaylists                                             OFFSET(get<T>, {0x6380, 80, 0, 0})
-	SMember(FGameplayTag)                              GalileoPlaylistTag                                          OFFSET(get<T>, {0x63D0, 4, 0, 0})
+	SMember(FGameplayTag)                              GalileoPlaylistTag                                          OFFSET(getStruct<T>, {0x63D0, 4, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         WeaponMIDs                                                  OFFSET(get<T>, {0x63D8, 16, 0, 0})
 	DMember(int32_t)                                   AmountOfTimesToAttemptRestoreMats                           OFFSET(get<int32_t>, {0x63E8, 4, 0, 0})
-	SMember(FGameplayTag)                              TC_PawnAthenaNPC                                            OFFSET(get<T>, {0x63EC, 4, 0, 0})
+	SMember(FGameplayTag)                              TC_PawnAthenaNPC                                            OFFSET(getStruct<T>, {0x63EC, 4, 0, 0})
 	DMember(double)                                    HitGlowBrightnessScalar                                     OFFSET(get<double>, {0x63F0, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               CurrentWeaponMaterials                                      OFFSET(get<T>, {0x63F8, 16, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           CurrentWeaponMeshes                                         OFFSET(get<T>, {0x6408, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         WeaponDissolveMIDs                                          OFFSET(get<T>, {0x6418, 16, 0, 0})
 	DMember(double)                                    HitGlowBrightnessScalar_Mobile                              OFFSET(get<double>, {0x6428, 8, 0, 0})
-	SMember(FGameplayTag)                              TC_PawnAthenaDecoy                                          OFFSET(get<T>, {0x6430, 4, 0, 0})
+	SMember(FGameplayTag)                              TC_PawnAthenaDecoy                                          OFFSET(getStruct<T>, {0x6430, 4, 0, 0})
 	DMember(double)                                    ScaleRate                                                   OFFSET(get<double>, {0x6438, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TetherQuestTag                                              OFFSET(get<T>, {0x6440, 32, 0, 0})
-	SMember(FName)                                     FirefliesTag                                                OFFSET(get<T>, {0x6460, 4, 0, 0})
-	SMember(FTransform)                                RightSideRim_Transform                                      OFFSET(get<T>, {0x6470, 96, 0, 0})
+	SMember(FGameplayTagContainer)                     TetherQuestTag                                              OFFSET(getStruct<T>, {0x6440, 32, 0, 0})
+	SMember(FName)                                     FirefliesTag                                                OFFSET(getStruct<T>, {0x6460, 4, 0, 0})
+	SMember(FTransform)                                RightSideRim_Transform                                      OFFSET(getStruct<T>, {0x6470, 96, 0, 0})
 	CMember(USpotLightComponent*)                      Right_Side_Rim_Light                                        OFFSET(get<T>, {0x64D0, 8, 0, 0})
 	DMember(double)                                    Rim_light_Shadow_Bias                                       OFFSET(get<double>, {0x64D8, 8, 0, 0})
 	DMember(double)                                    Rim_Light_Intensity                                         OFFSET(get<double>, {0x64E0, 8, 0, 0})
-	SMember(FRotator)                                  PlayerAimRotation                                           OFFSET(get<T>, {0x64E8, 24, 0, 0})
-	SMember(FScalableFloat)                            ControlRotationReplicationTickRate                          OFFSET(get<T>, {0x6500, 40, 0, 0})
-	SMember(FGameplayTag)                              Elimination_Rez_Sequence_GC                                 OFFSET(get<T>, {0x6528, 4, 0, 0})
-	SMember(FGameplayTag)                              Creative_Respawn_Teleportation_GC                           OFFSET(get<T>, {0x652C, 4, 0, 0})
-	SMember(FGameplayTag)                              Teleport_In_GC                                              OFFSET(get<T>, {0x6530, 4, 0, 0})
+	SMember(FRotator)                                  PlayerAimRotation                                           OFFSET(getStruct<T>, {0x64E8, 24, 0, 0})
+	SMember(FScalableFloat)                            ControlRotationReplicationTickRate                          OFFSET(getStruct<T>, {0x6500, 40, 0, 0})
+	SMember(FGameplayTag)                              Elimination_Rez_Sequence_GC                                 OFFSET(getStruct<T>, {0x6528, 4, 0, 0})
+	SMember(FGameplayTag)                              Creative_Respawn_Teleportation_GC                           OFFSET(getStruct<T>, {0x652C, 4, 0, 0})
+	SMember(FGameplayTag)                              Teleport_In_GC                                              OFFSET(getStruct<T>, {0x6530, 4, 0, 0})
 	DMember(double)                                    RimlightDistanceFromCamera                                  OFFSET(get<double>, {0x6538, 8, 0, 0})
-	SMember(FLinearColor)                              Rim_Light_Color___Night                                     OFFSET(get<T>, {0x6540, 16, 0, 0})
-	SMember(FLinearColor)                              Rim_Light_Color___Day                                       OFFSET(get<T>, {0x6550, 16, 0, 0})
-	SMember(FGameplayTag)                              PhoneModeratorModeGameplayCue                               OFFSET(get<T>, {0x6560, 4, 0, 0})
-	SMember(FGameplayTag)                              PhoneInvulnerableGameplayCue                                OFFSET(get<T>, {0x6564, 4, 0, 0})
+	SMember(FLinearColor)                              Rim_Light_Color___Night                                     OFFSET(getStruct<T>, {0x6540, 16, 0, 0})
+	SMember(FLinearColor)                              Rim_Light_Color___Day                                       OFFSET(getStruct<T>, {0x6550, 16, 0, 0})
+	SMember(FGameplayTag)                              PhoneModeratorModeGameplayCue                               OFFSET(getStruct<T>, {0x6560, 4, 0, 0})
+	SMember(FGameplayTag)                              PhoneInvulnerableGameplayCue                                OFFSET(getStruct<T>, {0x6564, 4, 0, 0})
 	DMember(bool)                                      Swinging_HandsUp                                            OFFSET(get<bool>, {0x6568, 1, 0, 0})
 	DMember(bool)                                      Swinging_LockedToHip                                        OFFSET(get<bool>, {0x6569, 1, 0, 0})
 	DMember(double)                                    InputDragCoefficient                                        OFFSET(get<double>, {0x6570, 8, 0, 0})
@@ -4288,32 +4289,32 @@ public:
 	CMember(UAudioComponent*)                          SwingingSound                                               OFFSET(get<T>, {0x6580, 8, 0, 0})
 	CMember(UCurveFloat*)                              Swinging_ReelingInCurve                                     OFFSET(get<T>, {0x6588, 8, 0, 0})
 	CMember(UCurveFloat*)                              Swinging_NotReelingInCurve                                  OFFSET(get<T>, {0x6590, 8, 0, 0})
-	SMember(FVector)                                   Swinging_OriginalVecToTarget                                OFFSET(get<T>, {0x6598, 24, 0, 0})
+	SMember(FVector)                                   Swinging_OriginalVecToTarget                                OFFSET(getStruct<T>, {0x6598, 24, 0, 0})
 	DMember(bool)                                      Swinging_ReelingIn                                          OFFSET(get<bool>, {0x65B0, 1, 0, 0})
 	DMember(double)                                    Swinging_Goal_Length                                        OFFSET(get<double>, {0x65B8, 8, 0, 0})
 	CMember(UCurveFloat*)                              Swinging_ReelingTimeCurve                                   OFFSET(get<T>, {0x65C0, 8, 0, 0})
 	DMember(bool)                                      Swinging_ColliderBigger                                     OFFSET(get<bool>, {0x65C8, 1, 0, 0})
 	CMember(TArray<FAudioParameter>)                   SoundParams                                                 OFFSET(get<T>, {0x65D0, 16, 0, 0})
 	DMember(bool)                                      Swinging_UseNewRotationAlgorithm                            OFFSET(get<bool>, {0x65E0, 1, 0, 0})
-	SMember(FVector)                                   AttachedWallInverseNormal                                   OFFSET(get<T>, {0x65E8, 24, 0, 0})
+	SMember(FVector)                                   AttachedWallInverseNormal                                   OFFSET(getStruct<T>, {0x65E8, 24, 0, 0})
 	DMember(double)                                    WallCheckDistance                                           OFFSET(get<double>, {0x6600, 8, 0, 0})
-	SMember(FVector)                                   VelocityOnSlideStart                                        OFFSET(get<T>, {0x6608, 24, 0, 0})
+	SMember(FVector)                                   VelocityOnSlideStart                                        OFFSET(getStruct<T>, {0x6608, 24, 0, 0})
 	DMember(double)                                    SlideStartTime                                              OFFSET(get<double>, {0x6620, 8, 0, 0})
 	DMember(double)                                    MaxSlideTime                                                OFFSET(get<double>, {0x6628, 8, 0, 0})
 	CMember(UCurveVector*)                             WallSlidingVelocityMultiplierCurve                          OFFSET(get<T>, {0x6630, 8, 0, 0})
 	CMember(UCurveFloat*)                              WallSlidingAddedDownwardVelocityMultiplierCurve             OFFSET(get<T>, {0x6638, 8, 0, 0})
 	DMember(double)                                    WallSlidingAddedDownwardVelocityMax                         OFFSET(get<double>, {0x6640, 8, 0, 0})
-	SMember(FVector)                                   AttachedWallNormal                                          OFFSET(get<T>, {0x6648, 24, 0, 0})
-	SMember(FVector)                                   WallSlidingVelocity                                         OFFSET(get<T>, {0x6660, 24, 0, 0})
+	SMember(FVector)                                   AttachedWallNormal                                          OFFSET(getStruct<T>, {0x6648, 24, 0, 0})
+	SMember(FVector)                                   WallSlidingVelocity                                         OFFSET(getStruct<T>, {0x6660, 24, 0, 0})
 	DMember(double)                                    DesiredDistanceToAttachedWall                               OFFSET(get<double>, {0x6678, 8, 0, 0})
 	DMember(double)                                    MinGroundSlopeToLeaveAttachedWall                           OFFSET(get<double>, {0x6680, 8, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverrideSearchMontageInfo                                   OFFSET(get<T>, {0x6688, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverrideSearchMontageInfo                                   OFFSET(getStruct<T>, {0x6688, 88, 0, 0})
 	DMember(bool)                                      Is_Hidding_CharacterParrts                                  OFFSET(get<bool>, {0x66E0, 1, 0, 0})
 	DMember(double)                                    RimlightCVARBoost                                           OFFSET(get<double>, {0x66E8, 8, 0, 0})
 	DMember(bool)                                      Rimlight_Enabled                                            OFFSET(get<bool>, {0x66F0, 1, 0, 0})
-	SMember(FString)                                   LCVar_Name                                                  OFFSET(get<T>, {0x66F8, 16, 0, 0})
+	SMember(FString)                                   LCVar_Name                                                  OFFSET(getStruct<T>, {0x66F8, 16, 0, 0})
 	CMember(APhysicalRimlight_C*)                      PhysicalRimlightActor                                       OFFSET(get<T>, {0x6708, 8, 0, 0})
-	SMember(FScalableFloat)                            UGC_RimLightIntensity                                       OFFSET(get<T>, {0x6710, 40, 0, 0})
+	SMember(FScalableFloat)                            UGC_RimLightIntensity                                       OFFSET(getStruct<T>, {0x6710, 40, 0, 0})
 
 
 	/// Functions
@@ -4627,8 +4628,8 @@ class ABP_PlayerPawn_Athena_Phoebe_C : public APlayerPawn_Athena_C
 	static inline constexpr uint64_t __MDKClassSize = 26444;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6738, 8, 0, 0})
-	SMember(FName)                                     AIEvaluator_CharacterLaunchedKeyName                        OFFSET(get<T>, {0x6740, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6738, 8, 0, 0})
+	SMember(FName)                                     AIEvaluator_CharacterLaunchedKeyName                        OFFSET(getStruct<T>, {0x6740, 4, 0, 0})
 	DMember(bool)                                      bUseCosmeticVariants                                        OFFSET(get<bool>, {0x6744, 1, 0, 0})
 	DMember(int32_t)                                   CosmeticVariantID                                           OFFSET(get<int32_t>, {0x6748, 4, 0, 0})
 
@@ -4664,7 +4665,7 @@ class ABP_PlayerPawn_NonParticipant_C : public ABP_PlayerPawn_Athena_Phoebe_C
 	static inline constexpr uint64_t __MDKClassSize = 26992;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6750, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6750, 8, 0, 0})
 	CMember(UFortAthenaAlertStateComponent*)           FortAthenaAlertState                                        OFFSET(get<T>, {0x6758, 8, 0, 0})
 	CMember(UAudioComponent*)                          VOAudioComponent                                            OFFSET(get<T>, {0x6760, 8, 0, 0})
 	DMember(bool)                                      UseAlertness                                                OFFSET(get<bool>, {0x6768, 1, 0, 0})
@@ -4676,23 +4677,23 @@ public:
 	DMember(bool)                                      UseAlertSound                                               OFFSET(get<bool>, {0x676E, 1, 0, 0})
 	CMember(EAlertLevel)                               AlertLevel                                                  OFFSET(get<T>, {0x676F, 1, 0, 0})
 	CMember(EAlertLevel)                               OldAlertLevel                                               OFFSET(get<T>, {0x6770, 1, 0, 0})
-	SMember(FGameplayTag)                              GameplayCueAlertState                                       OFFSET(get<T>, {0x6774, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueAlertState                                       OFFSET(getStruct<T>, {0x6774, 4, 0, 0})
 	CMember(UClass*)                                   GE_NPC_Status_Stressed_Infinite                             OFFSET(get<T>, {0x6778, 8, 0, 0})
 	CMember(UClass*)                                   GE_NPC_Status_Stressed_Cooldown                             OFFSET(get<T>, {0x6780, 8, 0, 0})
 	DMember(double)                                    MinDistanceToTargetToPlayCombatAlertAnimation               OFFSET(get<double>, {0x6788, 8, 0, 0})
-	SMember(FScalableFloat)                            MinIdleVODelay                                              OFFSET(get<T>, {0x6790, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxIdleVODelay                                              OFFSET(get<T>, {0x67B8, 40, 0, 0})
-	SMember(FName)                                     LootTierNameToSpawnWhenDead                                 OFFSET(get<T>, {0x67E0, 4, 0, 0})
-	SMember(FName)                                     LootTier_Medium                                             OFFSET(get<T>, {0x67E4, 4, 0, 0})
-	SMember(FName)                                     LootTier_Shell                                              OFFSET(get<T>, {0x67E8, 4, 0, 0})
-	SMember(FName)                                     LootTier_Heavy                                              OFFSET(get<T>, {0x67EC, 4, 0, 0})
-	SMember(FName)                                     LootTier_Light                                              OFFSET(get<T>, {0x67F0, 4, 0, 0})
-	SMember(FName)                                     LootTier_Rockets                                            OFFSET(get<T>, {0x67F4, 4, 0, 0})
+	SMember(FScalableFloat)                            MinIdleVODelay                                              OFFSET(getStruct<T>, {0x6790, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxIdleVODelay                                              OFFSET(getStruct<T>, {0x67B8, 40, 0, 0})
+	SMember(FName)                                     LootTierNameToSpawnWhenDead                                 OFFSET(getStruct<T>, {0x67E0, 4, 0, 0})
+	SMember(FName)                                     LootTier_Medium                                             OFFSET(getStruct<T>, {0x67E4, 4, 0, 0})
+	SMember(FName)                                     LootTier_Shell                                              OFFSET(getStruct<T>, {0x67E8, 4, 0, 0})
+	SMember(FName)                                     LootTier_Heavy                                              OFFSET(getStruct<T>, {0x67EC, 4, 0, 0})
+	SMember(FName)                                     LootTier_Light                                              OFFSET(getStruct<T>, {0x67F0, 4, 0, 0})
+	SMember(FName)                                     LootTier_Rockets                                            OFFSET(getStruct<T>, {0x67F4, 4, 0, 0})
 	CMember(UFortGameplayDataTrackerComponentManager*) DataTrackerComponentManager                                 OFFSET(get<T>, {0x67F8, 8, 0, 0})
-	SMember(FGameplayTag)                              AlertLevelUnawareTag                                        OFFSET(get<T>, {0x6800, 4, 0, 0})
-	SMember(FGameplayTag)                              AlertLevelAlertedTag                                        OFFSET(get<T>, {0x6804, 4, 0, 0})
-	SMember(FGameplayTag)                              AlertLevelAggressiveTag                                     OFFSET(get<T>, {0x6808, 4, 0, 0})
-	SMember(FGameplayTag)                              TC_DisguiseTag                                              OFFSET(get<T>, {0x680C, 4, 0, 0})
+	SMember(FGameplayTag)                              AlertLevelUnawareTag                                        OFFSET(getStruct<T>, {0x6800, 4, 0, 0})
+	SMember(FGameplayTag)                              AlertLevelAlertedTag                                        OFFSET(getStruct<T>, {0x6804, 4, 0, 0})
+	SMember(FGameplayTag)                              AlertLevelAggressiveTag                                     OFFSET(getStruct<T>, {0x6808, 4, 0, 0})
+	SMember(FGameplayTag)                              TC_DisguiseTag                                              OFFSET(getStruct<T>, {0x680C, 4, 0, 0})
 	CMember(UClass*)                                   GE_RemoveDisguise                                           OFFSET(get<T>, {0x6810, 8, 0, 0})
 	CMember(UFortAbilitySet*)                          HitReactAbilitySet                                          OFFSET(get<T>, {0x6818, 8, 0, 0})
 	CMember(UAnimMontage*)                             DefaultFullbodyHitReactionMontage                           OFFSET(get<T>, {0x6820, 8, 0, 0})
@@ -4700,27 +4701,27 @@ public:
 	CMember(UClass*)                                   PatrolLayerAnimBP                                           OFFSET(get<T>, {0x6830, 8, 0, 0})
 	CMember(TArray<FFortPatrolAnimSetWeaponPair>)      PatrolAnimSetPairs                                          OFFSET(get<T>, {0x6838, 16, 0, 0})
 	DMember(bool)                                      bShouldDoFullAnimationUpdate                                OFFSET(get<bool>, {0x6848, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GEDuelHandle                                                OFFSET(get<T>, {0x684C, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GEDuelHandle                                                OFFSET(getStruct<T>, {0x684C, 8, 0, 0})
 	CMember(UClass*)                                   GE_DuelTag                                                  OFFSET(get<T>, {0x6858, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          Challenger                                                  OFFSET(get<T>, {0x6860, 8, 0, 0})
 	CMember(UClass*)                                   OverrideLayerAnimBP                                         OFFSET(get<T>, {0x6868, 8, 0, 0})
 	CMember(UFortPatrolAnimAsset*)                     FallbackPatrolAnimAsset                                     OFFSET(get<T>, {0x6870, 8, 0, 0})
 	DMember(bool)                                      bIsInVehicleThatSupportsNoAlertState                        OFFSET(get<bool>, {0x6878, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_Quest_Converted_Handle                                   OFFSET(get<T>, {0x687C, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_Quest_Converted_Handle                                   OFFSET(getStruct<T>, {0x687C, 8, 0, 0})
 	CMember(UClass*)                                   GE_Quest_Converted_HireNPC                                  OFFSET(get<T>, {0x6888, 8, 0, 0})
 	CMember(USoundBase*)                               DeathFX_Sound                                               OFFSET(get<T>, {0x6890, 8, 0, 0})
 	CMember(AFortPawn*)                                PawnConverter                                               OFFSET(get<T>, {0x6898, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TagsToApplyOnConvertedPawn                                  OFFSET(get<T>, {0x68A0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TagsToApplyOnConvertingPawn                                 OFFSET(get<T>, {0x68C0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagsToApplyOnConvertedPawn                                  OFFSET(getStruct<T>, {0x68A0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagsToApplyOnConvertingPawn                                 OFFSET(getStruct<T>, {0x68C0, 32, 0, 0})
 	CMember(USoundLibrary*)                            PawnSoundLibrary                                            OFFSET(get<T>, {0x68E0, 8, 0, 0})
 	CMember(UFortAbilitySet*)                          GASToApplyOnConvertedPawn                                   OFFSET(get<T>, {0x68E8, 8, 0, 0})
 	DMember(bool)                                      RemoveGASOnUnconverted                                      OFFSET(get<bool>, {0x68F0, 1, 0, 0})
-	SMember(FFortAbilitySetHandle)                     HNDL_EquippedAbilitySet                                     OFFSET(get<T>, {0x68F8, 56, 0, 0})
+	SMember(FFortAbilitySetHandle)                     HNDL_EquippedAbilitySet                                     OFFSET(getStruct<T>, {0x68F8, 56, 0, 0})
 	CMember(AActor*)                                   NewTargetActor                                              OFFSET(get<T>, {0x6930, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTargetChanged                                             OFFSET(get<T>, {0x6938, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAlertLevelChanged                                         OFFSET(get<T>, {0x6948, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnDeath                                                     OFFSET(get<T>, {0x6958, 16, 0, 0})
-	SMember(FTimerHandle)                              IdleVOTimerHandle                                           OFFSET(get<T>, {0x6968, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTargetChanged                                             OFFSET(getStruct<T>, {0x6938, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAlertLevelChanged                                         OFFSET(getStruct<T>, {0x6948, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDeath                                                     OFFSET(getStruct<T>, {0x6958, 16, 0, 0})
+	SMember(FTimerHandle)                              IdleVOTimerHandle                                           OFFSET(getStruct<T>, {0x6968, 8, 0, 0})
 
 
 	/// Functions
@@ -4840,7 +4841,7 @@ class ANPC_Pawn_Parent_C : public AFortAIPawn
 	static inline constexpr uint64_t __MDKClassSize = 15596;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3480, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3480, 8, 0, 0})
 	CMember(USoundLibraryComponent*)                   SoundLibrary                                                OFFSET(get<T>, {0x3488, 8, 0, 0})
 	CMember(UFortPawnComponent_CustomDepth*)           FortPawnComponent_CustomDepth                               OFFSET(get<T>, {0x3490, 8, 0, 0})
 	CMember(UCapsuleComponent*)                        WeaponCapsuleCollision                                      OFFSET(get<T>, {0x3498, 8, 0, 0})
@@ -4859,114 +4860,114 @@ public:
 	CMember(TEnumAsByte<Enum_NPC_AlertLevel>)          NPC_AlertLevelPrevious                                      OFFSET(get<T>, {0x34F1, 1, 0, 0})
 	CMember(TMap<TEnumAsByte, FGameplayTag>)           NPC_AlertLevelToTagMap                                      OFFSET(get<T>, {0x34F8, 80, 0, 0})
 	DMember(bool)                                      NPC_StatusWidgetHealthBarDisabled                           OFFSET(get<bool>, {0x3548, 1, 0, 0})
-	SMember(FGameplayTag)                              GameplayCue_PickupGrabbed                                   OFFSET(get<T>, {0x354C, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCue_PickupGrabbed                                   OFFSET(getStruct<T>, {0x354C, 4, 0, 0})
 	CMember(EFortRarity)                               NPC_BestLootRarityInInventory                               OFFSET(get<T>, {0x3550, 1, 0, 0})
 	DMember(bool)                                      NPC_DebugPawn                                               OFFSET(get<bool>, {0x3551, 1, 0, 0})
 	DMember(bool)                                      NPC_ShowInventoryRarityVisuals                              OFFSET(get<bool>, {0x3552, 1, 0, 0})
 	DMember(double)                                    InventoryGlowDelay                                          OFFSET(get<double>, {0x3558, 8, 0, 0})
-	SMember(FScalableFloat)                            NPC_NumberOfInventoryItemsToDeliverHF                       OFFSET(get<T>, {0x3560, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_NumberOfInventoryItemsToDeliverHF                       OFFSET(getStruct<T>, {0x3560, 40, 0, 0})
 	DMember(bool)                                      NPC_SpawnInvisible                                          OFFSET(get<bool>, {0x3588, 1, 0, 0})
 	DMember(bool)                                      NPC_ScaleMeshInOnSpawn                                      OFFSET(get<bool>, {0x3589, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_NPC_SpawnAbilityTag                                      OFFSET(get<T>, {0x3590, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_NPC_AlternateSpawnAbilityTag                             OFFSET(get<T>, {0x35B0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_NPC_SpawnAbilityTag                                      OFFSET(getStruct<T>, {0x3590, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_NPC_AlternateSpawnAbilityTag                             OFFSET(getStruct<T>, {0x35B0, 32, 0, 0})
 	DMember(bool)                                      NPC_IsSpawning                                              OFFSET(get<bool>, {0x35D0, 1, 0, 0})
 	DMember(double)                                    NPC_OriginalGravityScale                                    OFFSET(get<double>, {0x35D8, 8, 0, 0})
-	SMember(FRotator)                                  NPC_OriginalRotationRate                                    OFFSET(get<T>, {0x35E0, 24, 0, 0})
+	SMember(FRotator)                                  NPC_OriginalRotationRate                                    OFFSET(getStruct<T>, {0x35E0, 24, 0, 0})
 	DMember(bool)                                      NPC_HasPawnGoal                                             OFFSET(get<bool>, {0x35F8, 1, 0, 0})
 	CMember(AActor*)                                   NPC_PawnGoalActor                                           OFFSET(get<T>, {0x3600, 8, 0, 0})
-	SMember(FScalableFloat)                            NPC_NumberOfInventoryItemsToConsumeBeforeFullHF             OFFSET(get<T>, {0x3608, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_NumberOfInventoryItemsToConsumeBeforeFullHF             OFFSET(getStruct<T>, {0x3608, 40, 0, 0})
 	DMember(bool)                                      NPC_PawnIsDestroyingBuildingForNavigation                   OFFSET(get<bool>, {0x3630, 1, 0, 0})
-	SMember(FScalableFloat)                            MaxIdleVODelay                                              OFFSET(get<T>, {0x3638, 40, 0, 0})
-	SMember(FScalableFloat)                            MinIdleVODelay                                              OFFSET(get<T>, {0x3660, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DeathDropLootDelay                                      OFFSET(get<T>, {0x3688, 40, 0, 0})
-	SMember(FName)                                     NPC_DeathDropLootTierGroupName                              OFFSET(get<T>, {0x36B0, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     NPC_DeathDropLootRequiredDamageTags                         OFFSET(get<T>, {0x36B8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     NPC_DeathDropLootForbiddenDamageTags                        OFFSET(get<T>, {0x36D8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GrantStartingItemsAbilityTC                                 OFFSET(get<T>, {0x36F8, 32, 0, 0})
+	SMember(FScalableFloat)                            MaxIdleVODelay                                              OFFSET(getStruct<T>, {0x3638, 40, 0, 0})
+	SMember(FScalableFloat)                            MinIdleVODelay                                              OFFSET(getStruct<T>, {0x3660, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DeathDropLootDelay                                      OFFSET(getStruct<T>, {0x3688, 40, 0, 0})
+	SMember(FName)                                     NPC_DeathDropLootTierGroupName                              OFFSET(getStruct<T>, {0x36B0, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     NPC_DeathDropLootRequiredDamageTags                         OFFSET(getStruct<T>, {0x36B8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     NPC_DeathDropLootForbiddenDamageTags                        OFFSET(getStruct<T>, {0x36D8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GrantStartingItemsAbilityTC                                 OFFSET(getStruct<T>, {0x36F8, 32, 0, 0})
 	DMember(bool)                                      NPC_HasItemInInventory                                      OFFSET(get<bool>, {0x3718, 1, 0, 0})
-	SMember(FGameplayTag)                              VoiceTag_FullAlertIdle                                      OFFSET(get<T>, {0x371C, 4, 0, 0})
-	SMember(FGameplayTag)                              VoiceTag_Idle                                               OFFSET(get<T>, {0x3720, 4, 0, 0})
-	SMember(FGameplayTag)                              VoiceTag_ReturnToIdle                                       OFFSET(get<T>, {0x3724, 4, 0, 0})
-	SMember(FGameplayTag)                              VoiceTag_LostTarget                                         OFFSET(get<T>, {0x3728, 4, 0, 0})
-	SMember(FGameplayTag)                              VoiceTag_Suspicious                                         OFFSET(get<T>, {0x372C, 4, 0, 0})
-	SMember(FGameplayTag)                              VoiceTag_FullAlert                                          OFFSET(get<T>, {0x3730, 4, 0, 0})
+	SMember(FGameplayTag)                              VoiceTag_FullAlertIdle                                      OFFSET(getStruct<T>, {0x371C, 4, 0, 0})
+	SMember(FGameplayTag)                              VoiceTag_Idle                                               OFFSET(getStruct<T>, {0x3720, 4, 0, 0})
+	SMember(FGameplayTag)                              VoiceTag_ReturnToIdle                                       OFFSET(getStruct<T>, {0x3724, 4, 0, 0})
+	SMember(FGameplayTag)                              VoiceTag_LostTarget                                         OFFSET(getStruct<T>, {0x3728, 4, 0, 0})
+	SMember(FGameplayTag)                              VoiceTag_Suspicious                                         OFFSET(getStruct<T>, {0x372C, 4, 0, 0})
+	SMember(FGameplayTag)                              VoiceTag_FullAlert                                          OFFSET(getStruct<T>, {0x3730, 4, 0, 0})
 	CMember(TArray<FStruct_NPC_TargetSlots>)           NPC_TargetSlotsHF                                           OFFSET(get<T>, {0x3738, 16, 0, 0})
 	DMember(bool)                                      NPC_DamageCanCancelIntroPhase                               OFFSET(get<bool>, {0x3748, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         TQ_NPC_DamageTagsThatCanCancelIntroPhase                    OFFSET(get<T>, {0x3750, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TQ_NPC_DamageTagsThatCanCancelIntroPhase                    OFFSET(getStruct<T>, {0x3750, 72, 0, 0})
 	CMember(UClass*)                                   GE_NPC_IntroPhaseBehaviorCooldown                           OFFSET(get<T>, {0x3798, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_IntroBehaviorActive                                      OFFSET(get<T>, {0x37A0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_IntroBehaviorActive                                      OFFSET(getStruct<T>, {0x37A0, 32, 0, 0})
 	DMember(bool)                                      Debug_NPC_AlertLevelForced                                  OFFSET(get<bool>, {0x37C0, 1, 0, 0})
 	DMember(bool)                                      NPC_PawnCanInteractInternal                                 OFFSET(get<bool>, {0x37C1, 1, 0, 0})
-	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatSetRandomlyInRange                     OFFSET(get<T>, {0x37C8, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatIndexHF                                OFFSET(get<T>, {0x37F0, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatMinRangeHF                             OFFSET(get<T>, {0x3818, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatMaxRangeHF                             OFFSET(get<T>, {0x3840, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatSetRandomlyInRange                     OFFSET(getStruct<T>, {0x37C8, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatIndexHF                                OFFSET(getStruct<T>, {0x37F0, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatMinRangeHF                             OFFSET(getStruct<T>, {0x3818, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_PrimtiveDataFloatMaxRangeHF                             OFFSET(getStruct<T>, {0x3840, 40, 0, 0})
 	CMember(AActor*)                                   NPC_Leader                                                  OFFSET(get<T>, {0x3868, 8, 0, 0})
-	SMember(FGameplayTag)                              GameplayCue_LeaderSet                                       OFFSET(get<T>, {0x3870, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCue_LeaderSet                                       OFFSET(getStruct<T>, {0x3870, 4, 0, 0})
 	DMember(double)                                    NPC_Skeletal_Mesh_Index                                     OFFSET(get<double>, {0x3878, 8, 0, 0})
 	CMember(USoundBase*)                               TamedSound                                                  OFFSET(get<T>, {0x3880, 8, 0, 0})
 	CMember(UAudioComponent*)                          StateChangeSound                                            OFFSET(get<T>, {0x3888, 8, 0, 0})
-	SMember(FScalableFloat)                            NPC_ShouldDespawnFromStormHF                                OFFSET(get<T>, {0x3890, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_DespawnTimerHF                                          OFFSET(get<T>, {0x38B8, 40, 0, 0})
-	SMember(FGameplayTag)                              NPC_DespawnGameplayTag                                      OFFSET(get<T>, {0x38E0, 4, 0, 0})
-	SMember(FTimerHandle)                              NPC_TestIsInSafeZoneTimer                                   OFFSET(get<T>, {0x38E8, 8, 0, 0})
-	SMember(FTimerHandle)                              NPC_DespawnFromStormTimer                                   OFFSET(get<T>, {0x38F0, 8, 0, 0})
+	SMember(FScalableFloat)                            NPC_ShouldDespawnFromStormHF                                OFFSET(getStruct<T>, {0x3890, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_DespawnTimerHF                                          OFFSET(getStruct<T>, {0x38B8, 40, 0, 0})
+	SMember(FGameplayTag)                              NPC_DespawnGameplayTag                                      OFFSET(getStruct<T>, {0x38E0, 4, 0, 0})
+	SMember(FTimerHandle)                              NPC_TestIsInSafeZoneTimer                                   OFFSET(getStruct<T>, {0x38E8, 8, 0, 0})
+	SMember(FTimerHandle)                              NPC_DespawnFromStormTimer                                   OFFSET(getStruct<T>, {0x38F0, 8, 0, 0})
 	DMember(bool)                                      NPC_isTryingToDespawn                                       OFFSET(get<bool>, {0x38F8, 1, 0, 0})
-	SMember(FGameplayTag)                              NPC_ResetIntroGameplayTags                                  OFFSET(get<T>, {0x38FC, 4, 0, 0})
+	SMember(FGameplayTag)                              NPC_ResetIntroGameplayTags                                  OFFSET(getStruct<T>, {0x38FC, 4, 0, 0})
 	DMember(double)                                    SelectedPrimitiveDataFloat                                  OFFSET(get<double>, {0x3900, 8, 0, 0})
-	SMember(FGameplayTag)                              GameplayCue_Death                                           OFFSET(get<T>, {0x3908, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCue_Death                                           OFFSET(getStruct<T>, {0x3908, 4, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               OG_Materials                                                OFFSET(get<T>, {0x3910, 16, 0, 0})
 	DMember(bool)                                      NPC_Apply_GE_for_Swimming                                   OFFSET(get<bool>, {0x3920, 1, 0, 0})
 	CMember(UClass*)                                   NPC_GE_ClassToApplyForSwimming                              OFFSET(get<T>, {0x3928, 8, 0, 0})
 	DMember(bool)                                      NPC_Apply_Water_Enter_Exit_Burst_GC                         OFFSET(get<bool>, {0x3930, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               NPC_GE_AppliedForSwimming                                   OFFSET(get<T>, {0x3934, 8, 0, 0})
-	SMember(FName)                                     GoalActorBBKey                                              OFFSET(get<T>, {0x393C, 4, 0, 0})
-	SMember(FGameplayTag)                              GameplayCueLureInterest                                     OFFSET(get<T>, {0x3940, 4, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               NPC_GE_AppliedForSwimming                                   OFFSET(getStruct<T>, {0x3934, 8, 0, 0})
+	SMember(FName)                                     GoalActorBBKey                                              OFFSET(getStruct<T>, {0x393C, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCueLureInterest                                     OFFSET(getStruct<T>, {0x3940, 4, 0, 0})
 	CMember(UObject*)                                  NPC_PreviousLureGoal                                        OFFSET(get<T>, {0x3948, 8, 0, 0})
-	SMember(FGameplayTag)                              Exit_Water                                                  OFFSET(get<T>, {0x3950, 4, 0, 0})
-	SMember(FGameplayTag)                              Enter_Water                                                 OFFSET(get<T>, {0x3954, 4, 0, 0})
-	SMember(FScalableFloat)                            NPC_MaxDistanceFromDamagedNPCToDrawHeallthBarHF             OFFSET(get<T>, {0x3958, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_HealthBarHideTimeAfterDeathHF                           OFFSET(get<T>, {0x3980, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_PlayEffectWhenLuredHF                                   OFFSET(get<T>, {0x39A8, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_PawnCanInteractHF                                       OFFSET(get<T>, {0x39D0, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_AllowInteractOnlyWhenUnawareHF                          OFFSET(get<T>, {0x39F8, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_AllowInteractWhenHasLeaderHF                            OFFSET(get<T>, {0x3A20, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_AllowDrownInShallowWaterHF                              OFFSET(get<T>, {0x3A48, 40, 0, 0})
+	SMember(FGameplayTag)                              Exit_Water                                                  OFFSET(getStruct<T>, {0x3950, 4, 0, 0})
+	SMember(FGameplayTag)                              Enter_Water                                                 OFFSET(getStruct<T>, {0x3954, 4, 0, 0})
+	SMember(FScalableFloat)                            NPC_MaxDistanceFromDamagedNPCToDrawHeallthBarHF             OFFSET(getStruct<T>, {0x3958, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_HealthBarHideTimeAfterDeathHF                           OFFSET(getStruct<T>, {0x3980, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_PlayEffectWhenLuredHF                                   OFFSET(getStruct<T>, {0x39A8, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_PawnCanInteractHF                                       OFFSET(getStruct<T>, {0x39D0, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_AllowInteractOnlyWhenUnawareHF                          OFFSET(getStruct<T>, {0x39F8, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_AllowInteractWhenHasLeaderHF                            OFFSET(getStruct<T>, {0x3A20, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_AllowDrownInShallowWaterHF                              OFFSET(getStruct<T>, {0x3A48, 40, 0, 0})
 	DMember(bool)                                      NPC_IsInventoryInitialized                                  OFFSET(get<bool>, {0x3A70, 1, 0, 0})
 	DMember(float)                                     LeaderClearedCueDelay                                       OFFSET(get<float>, {0x3A74, 4, 0, 0})
-	SMember(FGameplayTag)                              GameplayCue_LeaderCleared                                   OFFSET(get<T>, {0x3A78, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayCue_LeaderCleared                                   OFFSET(getStruct<T>, {0x3A78, 4, 0, 0})
 	DMember(bool)                                      isGCForLeaderSetLooping                                     OFFSET(get<bool>, {0x3A7C, 1, 0, 0})
-	SMember(FGameplayTag)                              NPC_DeathByStormTag                                         OFFSET(get<T>, {0x3A80, 4, 0, 0})
+	SMember(FGameplayTag)                              NPC_DeathByStormTag                                         OFFSET(getStruct<T>, {0x3A80, 4, 0, 0})
 	DMember(bool)                                      NPC_TryDespawnAbility                                       OFFSET(get<bool>, {0x3A84, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GeOutsideSafeZoneDamageHandle                               OFFSET(get<T>, {0x3A88, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GeOutsideSafeZoneDamageHandle                               OFFSET(getStruct<T>, {0x3A88, 8, 0, 0})
 	DMember(bool)                                      IsGEStormDamageInit                                         OFFSET(get<bool>, {0x3A90, 1, 0, 0})
 	DMember(bool)                                      NPC_MeshScalingInProgress                                   OFFSET(get<bool>, {0x3A91, 1, 0, 0})
 	DMember(bool)                                      NPC_DisableCapsuleOverlapsWhenScalingOut                    OFFSET(get<bool>, {0x3A92, 1, 0, 0})
-	SMember(FVector)                                   NPC_OriginalMeshScale                                       OFFSET(get<T>, {0x3A98, 24, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NPCScaleMeshInCompleted                                     OFFSET(get<T>, {0x3AB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NPCScaleMeshOutCompleted                                    OFFSET(get<T>, {0x3AC0, 16, 0, 0})
+	SMember(FVector)                                   NPC_OriginalMeshScale                                       OFFSET(getStruct<T>, {0x3A98, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NPCScaleMeshInCompleted                                     OFFSET(getStruct<T>, {0x3AB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NPCScaleMeshOutCompleted                                    OFFSET(getStruct<T>, {0x3AC0, 16, 0, 0})
 	DMember(bool)                                      NPC_CanDropLoot                                             OFFSET(get<bool>, {0x3AD0, 1, 0, 0})
-	SMember(FScalableFloat)                            NPC_StaleDespawnTestDistance_HF                             OFFSET(get<T>, {0x3AD8, 40, 0, 0})
-	SMember(FScalableFloat)                            NPC_StaleDespawnTimeThreshold_HF                            OFFSET(get<T>, {0x3B00, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_StaleDespawnTestDistance_HF                             OFFSET(getStruct<T>, {0x3AD8, 40, 0, 0})
+	SMember(FScalableFloat)                            NPC_StaleDespawnTimeThreshold_HF                            OFFSET(getStruct<T>, {0x3B00, 40, 0, 0})
 	DMember(double)                                    NPC_LastNonStaleCheckTime                                   OFFSET(get<double>, {0x3B28, 8, 0, 0})
 	DMember(bool)                                      bCanBeDamagedByNullInstigator                               OFFSET(get<bool>, {0x3B30, 1, 0, 0})
 	DMember(bool)                                      IsEnteringWater                                             OFFSET(get<bool>, {0x3B31, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NPCPawnInteractWithDispatcher                               OFFSET(get<T>, {0x3B38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NPCPawnInteractWithDispatcher                               OFFSET(getStruct<T>, {0x3B38, 16, 0, 0})
 	DMember(bool)                                      NPCDynamicBlockConversionOnInteract                         OFFSET(get<bool>, {0x3B48, 1, 0, 0})
 	DMember(bool)                                      NPC_TempInteractOverride                                    OFFSET(get<bool>, {0x3B49, 1, 0, 0})
 	CMember(USoundBase*)                               HeadShot_Sound                                              OFFSET(get<T>, {0x3B50, 8, 0, 0})
-	SMember(FName)                                     Headshot_FX_Socket                                          OFFSET(get<T>, {0x3B58, 4, 0, 0})
+	SMember(FName)                                     Headshot_FX_Socket                                          OFFSET(getStruct<T>, {0x3B58, 4, 0, 0})
 	DMember(bool)                                      UseHeadShotFX                                               OFFSET(get<bool>, {0x3B5C, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_WeaponTypesAllowedForHeadshotFX                          OFFSET(get<T>, {0x3B60, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_WeaponTypesAllowedForHeadshotFX                          OFFSET(getStruct<T>, {0x3B60, 32, 0, 0})
 	DMember(bool)                                      AllowHeadshot                                               OFFSET(get<bool>, {0x3B80, 1, 0, 0})
 	DMember(double)                                    AdditiveHitReactRetriggerDelay                              OFFSET(get<double>, {0x3B88, 8, 0, 0})
 	CMember(UAnimMontage*)                             Additive_Hit_React_Montage                                  OFFSET(get<T>, {0x3B90, 8, 0, 0})
 	CMember(USoundBase*)                               Death_Normal_Sound                                          OFFSET(get<T>, {0x3B98, 8, 0, 0})
 	CMember(UParticleSystem*)                          HeadshotFXEmitterTemplate                                   OFFSET(get<T>, {0x3BA0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     Sound_Library_Collection_Tags                               OFFSET(get<T>, {0x3BA8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     Sound_Library_Default_Tags                                  OFFSET(get<T>, {0x3BC8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     Sound_Library_Alert_Tags                                    OFFSET(get<T>, {0x3BE8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     Sound_Library_Aggressive_Tags                               OFFSET(get<T>, {0x3C08, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Sound_Library_Collection_Tags                               OFFSET(getStruct<T>, {0x3BA8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Sound_Library_Default_Tags                                  OFFSET(getStruct<T>, {0x3BC8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Sound_Library_Alert_Tags                                    OFFSET(getStruct<T>, {0x3BE8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Sound_Library_Aggressive_Tags                               OFFSET(getStruct<T>, {0x3C08, 32, 0, 0})
 	CMember(TArray<USoundLibrary*>)                    SoundLibs_Default                                           OFFSET(get<T>, {0x3C28, 16, 0, 0})
 	CMember(TArray<USoundLibrary*>)                    SoundLibs_Alert                                             OFFSET(get<T>, {0x3C38, 16, 0, 0})
 	CMember(USoundLibrary*)                            CurrentSoundLib                                             OFFSET(get<T>, {0x3C48, 8, 0, 0})
@@ -4977,13 +4978,13 @@ public:
 	DMember(double)                                    Custom_Depth_Update_Rate                                    OFFSET(get<double>, {0x3C88, 8, 0, 0})
 	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x3C90, 8, 0, 0})
 	CMember(UClass*)                                   GE_Converted                                                OFFSET(get<T>, {0x3C98, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_Converted_Handle                                         OFFSET(get<T>, {0x3CA0, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_Converted_Handle                                         OFFSET(getStruct<T>, {0x3CA0, 8, 0, 0})
 	DMember(double)                                    NPC_Death_Time                                              OFFSET(get<double>, {0x3CA8, 8, 0, 0})
 	DMember(float)                                     ScaleMeshInOrOutPlayRate                                    OFFSET(get<float>, {0x3CB0, 4, 0, 0})
 	DMember(bool)                                      AllowSkipScaleOutIfNotRecentlyRendered                      OFFSET(get<bool>, {0x3CB4, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NPCAlertLevelUpdated                                        OFFSET(get<T>, {0x3CB8, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTagsToBlockHitReact                                 OFFSET(get<T>, {0x3CC8, 32, 0, 0})
-	SMember(FGameplayTag)                              GCInstantDeathTag                                           OFFSET(get<T>, {0x3CE8, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NPCAlertLevelUpdated                                        OFFSET(getStruct<T>, {0x3CB8, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTagsToBlockHitReact                                 OFFSET(getStruct<T>, {0x3CC8, 32, 0, 0})
+	SMember(FGameplayTag)                              GCInstantDeathTag                                           OFFSET(getStruct<T>, {0x3CE8, 4, 0, 0})
 
 
 	/// Functions
@@ -5251,13 +5252,13 @@ class ABP_PlayerPawn_Tandem_C : public ABP_PlayerPawn_NonParticipant_C
 	static inline constexpr uint64_t __MDKClassSize = 27114;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6970, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6970, 8, 0, 0})
 	CMember(UFortWidgetComponent*)                     NPCStatusWidget                                             OFFSET(get<T>, {0x6978, 8, 0, 0})
 	DMember(bool)                                      IsConverted                                                 OFFSET(get<bool>, {0x6980, 1, 0, 0})
 	DMember(char)                                      Leader_Team                                                 OFFSET(get<char>, {0x6981, 1, 0, 0})
-	SMember(FStruct_NPC_HealthInfo)                    HealthInfo                                                  OFFSET(get<T>, {0x6988, 32, 0, 0})
+	SMember(FStruct_NPC_HealthInfo)                    HealthInfo                                                  OFFSET(getStruct<T>, {0x6988, 32, 0, 0})
 	DMember(bool)                                      NPCStatusWidgetHealthBarDisabled                            OFFSET(get<bool>, {0x69A8, 1, 0, 0})
-	SMember(FScalableFloat)                            ShowHealth                                                  OFFSET(get<T>, {0x69B0, 40, 0, 0})
+	SMember(FScalableFloat)                            ShowHealth                                                  OFFSET(getStruct<T>, {0x69B0, 40, 0, 0})
 	DMember(double)                                    NPCHealthBarHideTimeAfterDeath                              OFFSET(get<double>, {0x69D8, 8, 0, 0})
 	DMember(double)                                    NPCMaxDistanceFromDamageINstigatorToDrawHealthBar           OFFSET(get<double>, {0x69E0, 8, 0, 0})
 	DMember(bool)                                      IsHealthCheatEnabled                                        OFFSET(get<bool>, {0x69E8, 1, 0, 0})
@@ -5311,10 +5312,10 @@ class UNPCConvertedIndicatorMarker_C : public UAthenaMarkedActorIndicator
 	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x628, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x628, 8, 0, 0})
 	CMember(UImage*)                                   IrwinIndicator                                              OFFSET(get<T>, {0x630, 8, 0, 0})
 	CMember(UConvertedMarkerInfo_C*)                   RidingMarkerInfo                                            OFFSET(get<T>, {0x638, 8, 0, 0})
-	SMember(FLinearColor)                              CachedColor                                                 OFFSET(get<T>, {0x640, 16, 0, 0})
+	SMember(FLinearColor)                              CachedColor                                                 OFFSET(getStruct<T>, {0x640, 16, 0, 0})
 
 
 	/// Functions
@@ -5334,7 +5335,7 @@ class ANPC_Pawn_Wildlife_Parent_C : public ANPC_Pawn_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 16016;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3CF0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3CF0, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        Wildlife_FootDust                                           OFFSET(get<T>, {0x3CF8, 8, 0, 0})
 	CMember(UFortPawnComponent_Convert*)               ConvertComponent                                            OFFSET(get<T>, {0x3D00, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   Layer_Idle                                                  OFFSET(get<T>, {0x3D08, 32, 0, 0})
@@ -5343,31 +5344,31 @@ public:
 	DMember(char)                                      LeaderTeam                                                  OFFSET(get<char>, {0x3D68, 1, 0, 0})
 	CMember(USoundEffectSourcePresetChain*)            VocalSourceEffectChainOverride                              OFFSET(get<T>, {0x3D70, 8, 0, 0})
 	DMember(bool)                                      bTamingEnabled                                              OFFSET(get<bool>, {0x3D78, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPickupGrabbed_Destroyed                                   OFFSET(get<T>, {0x3D80, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPickupGrabbed_Destroyed                                   OFFSET(getStruct<T>, {0x3D80, 16, 0, 0})
 	DMember(bool)                                      bCanBeInteractedWithWhileTamed                              OFFSET(get<bool>, {0x3D90, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_Quest_Converted_Handle                                   OFFSET(get<T>, {0x3D94, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_Quest_Converted_Handle                                   OFFSET(getStruct<T>, {0x3D94, 8, 0, 0})
 	CMember(UClass*)                                   GE_Quest_Converted_Irwin                                    OFFSET(get<T>, {0x3DA0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ConvertedDispatcher                                         OFFSET(get<T>, {0x3DA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ConvertedDispatcher                                         OFFSET(getStruct<T>, {0x3DA8, 16, 0, 0})
 	DMember(bool)                                      bIsBeingRidden                                              OFFSET(get<bool>, {0x3DB8, 1, 0, 0})
 	DMember(bool)                                      NPCStatusWidgetShouldDisplayDamage                          OFFSET(get<bool>, {0x3DB9, 1, 0, 0})
 	CMember(UClass*)                                   GE_GoalSelectionWhileTamed                                  OFFSET(get<T>, {0x3DC0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     T_GoalSelectionWhileTamed                                   OFFSET(get<T>, {0x3DC8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     T_GoalSelectionWhileTamed                                   OFFSET(getStruct<T>, {0x3DC8, 32, 0, 0})
 	DMember(double)                                    CurrentEnergy                                               OFFSET(get<double>, {0x3DE8, 8, 0, 0})
-	SMember(FGameplayTag)                              IrwinSlidingGC                                              OFFSET(get<T>, {0x3DF0, 4, 0, 0})
+	SMember(FGameplayTag)                              IrwinSlidingGC                                              OFFSET(getStruct<T>, {0x3DF0, 4, 0, 0})
 	DMember(bool)                                      bLeaderSetSuccess                                           OFFSET(get<bool>, {0x3DF4, 1, 0, 0})
-	SMember(FGameplayTag)                              JumpLandSoundLibTag                                         OFFSET(get<T>, {0x3DF8, 4, 0, 0})
-	SMember(FGameplayTag)                              TameSoundLibTag                                             OFFSET(get<T>, {0x3DFC, 4, 0, 0})
+	SMember(FGameplayTag)                              JumpLandSoundLibTag                                         OFFSET(getStruct<T>, {0x3DF8, 4, 0, 0})
+	SMember(FGameplayTag)                              TameSoundLibTag                                             OFFSET(getStruct<T>, {0x3DFC, 4, 0, 0})
 	CMember(USoundBase*)                               SoundIndicatorSound_Unridden                                OFFSET(get<T>, {0x3E00, 8, 0, 0})
 	CMember(USoundBase*)                               SoundIndicatorSound_Ridden                                  OFFSET(get<T>, {0x3E08, 8, 0, 0})
 	DMember(bool)                                      OverrideIncomingDmg                                         OFFSET(get<bool>, {0x3E10, 1, 0, 0})
 	DMember(double)                                    OverridenIncomingDmgAmount                                  OFFSET(get<double>, {0x3E18, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnModifiedDamageReceived                                    OFFSET(get<T>, {0x3E20, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnModifiedDamageReceived                                    OFFSET(getStruct<T>, {0x3E20, 16, 0, 0})
 	DMember(double)                                    ColorVariation                                              OFFSET(get<double>, {0x3E30, 8, 0, 0})
 	DMember(char)                                      Default_Unconvert_Reason                                    OFFSET(get<char>, {0x3E38, 1, 0, 0})
-	SMember(FScalableFloat)                            StuckBouncing_UnstuckEnabled                                OFFSET(get<T>, {0x3E40, 40, 0, 0})
+	SMember(FScalableFloat)                            StuckBouncing_UnstuckEnabled                                OFFSET(getStruct<T>, {0x3E40, 40, 0, 0})
 	DMember(int32_t)                                   StuckBouncing_LaunchCount                                   OFFSET(get<int32_t>, {0x3E68, 4, 0, 0})
 	DMember(int32_t)                                   StuckBouncing_MinLaunchCount                                OFFSET(get<int32_t>, {0x3E6C, 4, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               StuckBouncing_GeHandle                                      OFFSET(get<T>, {0x3E70, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               StuckBouncing_GeHandle                                      OFFSET(getStruct<T>, {0x3E70, 8, 0, 0})
 	CMember(UClass*)                                   StuckBouncing_GE                                            OFFSET(get<T>, {0x3E78, 8, 0, 0})
 	DMember(double)                                    StuckBouncing_UnstuckVelocityMaxZRotationAngle              OFFSET(get<double>, {0x3E80, 8, 0, 0})
 	DMember(double)                                    StuckBouncing_UnstuckVelocity                               OFFSET(get<double>, {0x3E88, 8, 0, 0})
@@ -5486,7 +5487,7 @@ class ABP_SprayDecal_C : public AFortSprayDecalInstance
 	static inline constexpr uint64_t __MDKClassSize = 3170;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBB0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBB0, 8, 0, 0})
 	DMember(double)                                    DecalFadeoutTime                                            OFFSET(get<double>, {0xBB8, 8, 0, 0})
 	CMember(UDecalComponent*)                          EmissiveDecal                                               OFFSET(get<T>, {0xBC0, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 EmissiveDecalMID                                            OFFSET(get<T>, {0xBC8, 8, 0, 0})
@@ -5497,8 +5498,8 @@ public:
 	DMember(int32_t)                                   LoadsOutstanding                                            OFFSET(get<int32_t>, {0xBF0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               DecalTextureOverrideSoft                                    OFFSET(get<T>, {0xBF8, 32, 0, 0})
 	CMember(UTexture2D*)                               DecalTextureOverride                                        OFFSET(get<T>, {0xC18, 8, 0, 0})
-	SMember(FLinearColor)                              BannerPrimaryColor                                          OFFSET(get<T>, {0xC20, 16, 0, 0})
-	SMember(FLinearColor)                              BannerSecondaryColor                                        OFFSET(get<T>, {0xC30, 16, 0, 0})
+	SMember(FLinearColor)                              BannerPrimaryColor                                          OFFSET(getStruct<T>, {0xC20, 16, 0, 0})
+	SMember(FLinearColor)                              BannerSecondaryColor                                        OFFSET(getStruct<T>, {0xC30, 16, 0, 0})
 	CMember(AFortPlayerController*)                    SpawningPlayerController                                    OFFSET(get<T>, {0xC40, 8, 0, 0})
 	CMember(TArray<AActor*>)                           NearbyBuildingActors                                        OFFSET(get<T>, {0xC48, 16, 0, 0})
 	DMember(double)                                    SpawnStartTimeDelay                                         OFFSET(get<double>, {0xC58, 8, 0, 0})
@@ -5641,7 +5642,7 @@ class UGA_Athena_HidingProp_BlockMovement_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -5709,10 +5710,10 @@ class UGA_Athena_Tethered_PassiveTriggered_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2876;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              GCN_BoostTag                                                OFFSET(get<T>, {0xB30, 4, 0, 0})
-	SMember(FGameplayTag)                              GCN_JumpTag                                                 OFFSET(get<T>, {0xB34, 4, 0, 0})
-	SMember(FGameplayTag)                              ZiplineExit                                                 OFFSET(get<T>, {0xB38, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              GCN_BoostTag                                                OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
+	SMember(FGameplayTag)                              GCN_JumpTag                                                 OFFSET(getStruct<T>, {0xB34, 4, 0, 0})
+	SMember(FGameplayTag)                              ZiplineExit                                                 OFFSET(getStruct<T>, {0xB38, 4, 0, 0})
 
 
 	/// Functions
@@ -5750,7 +5751,7 @@ class UGA_AthenaEnterVehicle_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -5768,9 +5769,9 @@ class UGA_AthenaExitVehicle_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              Keep_DBNO_players_in_Vehicles                               OFFSET(get<T>, {0xB30, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     Event_Damage_Died_Tags                                      OFFSET(get<T>, {0xB38, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              Keep_DBNO_players_in_Vehicles                               OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     Event_Damage_Died_Tags                                      OFFSET(getStruct<T>, {0xB38, 32, 0, 0})
 
 
 	/// Functions
@@ -5798,7 +5799,7 @@ class UGA_Athena_RemoveIceFeetOnWater_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2872;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          Fort_Player_Pawn                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
 
 
@@ -5821,9 +5822,9 @@ class UGA_Vehicle_ExitHoldEvent_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FGameplayTag)                              EquippingCue                                                OFFSET(get<T>, {0xB38, 4, 0, 0})
+	SMember(FGameplayTag)                              EquippingCue                                                OFFSET(getStruct<T>, {0xB38, 4, 0, 0})
 	CMember(AFortPlayerController*)                    PlayerController                                            OFFSET(get<T>, {0xB40, 8, 0, 0})
 	CMember(UAbilityTask_WaitGameplayEvent*)           OnHoldExitStartedAsyncTask                                  OFFSET(get<T>, {0xB48, 8, 0, 0})
 	CMember(UAbilityTask_WaitGameplayEvent*)           OnHoldExitStoppedAsyncTask                                  OFFSET(get<T>, {0xB50, 8, 0, 0})
@@ -5858,7 +5859,7 @@ class AB_WilliePete_WaterBodyChild_C : public AFortWaterBodyActor
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3D0, 8, 0, 0})
 	CMember(UArrowComponent*)                          Debug                                                       OFFSET(get<T>, {0x3D8, 8, 0, 0})
 
 
@@ -5877,10 +5878,10 @@ class UGA_SurfaceChange_Ice_IceCheckOnTimer_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2888;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          FortPlayerPawn                                              OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FTimerHandle)                              TraceTimer                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FTimerHandle)                              OffIceTimer                                                 OFFSET(get<T>, {0xB40, 8, 0, 0})
+	SMember(FTimerHandle)                              TraceTimer                                                  OFFSET(getStruct<T>, {0xB38, 8, 0, 0})
+	SMember(FTimerHandle)                              OffIceTimer                                                 OFFSET(getStruct<T>, {0xB40, 8, 0, 0})
 
 
 	/// Functions
@@ -5924,7 +5925,7 @@ class UGA_DuelObserver_C : public UFortGameplayAbility_ObserveDuels
 	static inline constexpr uint64_t __MDKClassSize = 2880;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB38, 8, 0, 0})
 
 
 	/// Functions
@@ -5984,8 +5985,8 @@ class UGA_Athena_HidingProp_LandedOn_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FScalableFloat)                            HidingEnabled                                               OFFSET(get<T>, {0xB30, 40, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FScalableFloat)                            HidingEnabled                                               OFFSET(getStruct<T>, {0xB30, 40, 0, 0})
 
 
 	/// Functions
@@ -6033,15 +6034,15 @@ class UGA_Athena_ZipLine_ReachedEnd_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3104;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FScalableFloat)                            MaxLateralSpeed                                             OFFSET(get<T>, {0xB38, 40, 0, 0})
-	SMember(FVector)                                   ImpulseVec                                                  OFFSET(get<T>, {0xB60, 24, 0, 0})
-	SMember(FScalableFloat)                            JumpVertStrength                                            OFFSET(get<T>, {0xB78, 40, 0, 0})
-	SMember(FScalableFloat)                            LateralDamping                                              OFFSET(get<T>, {0xBA0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxZiplineVel                                               OFFSET(get<T>, {0xBC8, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxLateralSpeed                                             OFFSET(getStruct<T>, {0xB38, 40, 0, 0})
+	SMember(FVector)                                   ImpulseVec                                                  OFFSET(getStruct<T>, {0xB60, 24, 0, 0})
+	SMember(FScalableFloat)                            JumpVertStrength                                            OFFSET(getStruct<T>, {0xB78, 40, 0, 0})
+	SMember(FScalableFloat)                            LateralDamping                                              OFFSET(getStruct<T>, {0xBA0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxZiplineVel                                               OFFSET(getStruct<T>, {0xBC8, 40, 0, 0})
 	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0xBF0, 1, 0, 0})
-	SMember(FScalableFloat)                            MinJumpVertStrength                                         OFFSET(get<T>, {0xBF8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinJumpVertStrength                                         OFFSET(getStruct<T>, {0xBF8, 40, 0, 0})
 
 
 	/// Functions
@@ -6087,7 +6088,7 @@ class UGAT_Athena_PurpleStuff_C : public UGAT_TriggeredAbility_C
 	static inline constexpr uint64_t __MDKClassSize = 2888;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB38, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB40, 8, 0, 0})
 
 
@@ -6116,8 +6117,8 @@ class UGA_AthenaInVehicle_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2896;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ExitTag                                                     OFFSET(get<T>, {0xB30, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ExitTag                                                     OFFSET(getStruct<T>, {0xB30, 32, 0, 0})
 
 
 	/// Functions
@@ -6167,9 +6168,9 @@ class UGA_Athena_HidingProp_HidingInProp_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2936;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(get<T>, {0xB30, 32, 0, 0})
-	SMember(FScalableFloat)                            Row_bDisablePlayerCollision                                 OFFSET(get<T>, {0xB50, 40, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(getStruct<T>, {0xB30, 32, 0, 0})
+	SMember(FScalableFloat)                            Row_bDisablePlayerCollision                                 OFFSET(getStruct<T>, {0xB50, 40, 0, 0})
 
 
 	/// Functions
@@ -6221,15 +6222,15 @@ class UGA_DudeBro_Vent_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2924;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   VehicleSkelMesh                                             OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(double)                                    GravFloorAltitude                                           OFFSET(get<double>, {0xB40, 8, 0, 0})
 	DMember(double)                                    UpwardLaunchVelocity                                        OFFSET(get<double>, {0xB48, 8, 0, 0})
 	CMember(TArray<AActor*>)                           VentsHitBeforeLanding                                       OFFSET(get<T>, {0xB50, 16, 0, 0})
 	DMember(int32_t)                                   NumVentsToHitForQuest                                       OFFSET(get<int32_t>, {0xB60, 4, 0, 0})
-	SMember(FGameplayTag)                              Tag_to_Check                                                OFFSET(get<T>, {0xB64, 4, 0, 0})
-	SMember(FGameplayTag)                              VentBlocked                                                 OFFSET(get<T>, {0xB68, 4, 0, 0})
+	SMember(FGameplayTag)                              Tag_to_Check                                                OFFSET(getStruct<T>, {0xB64, 4, 0, 0})
+	SMember(FGameplayTag)                              VentBlocked                                                 OFFSET(getStruct<T>, {0xB68, 4, 0, 0})
 
 
 	/// Functions
@@ -6287,33 +6288,33 @@ class UGAB_SurfaceChange_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3528;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0xB30, 1, 0, 0})
-	SMember(FScalableFloat)                            RemovalDelay                                                OFFSET(get<T>, {0xB38, 40, 0, 0})
-	SMember(FScalableFloat)                            IcySurfacesEnabled                                          OFFSET(get<T>, {0xB60, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     HasIce                                                      OFFSET(get<T>, {0xB88, 32, 0, 0})
+	SMember(FScalableFloat)                            RemovalDelay                                                OFFSET(getStruct<T>, {0xB38, 40, 0, 0})
+	SMember(FScalableFloat)                            IcySurfacesEnabled                                          OFFSET(getStruct<T>, {0xB60, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     HasIce                                                      OFFSET(getStruct<T>, {0xB88, 32, 0, 0})
 	CMember(UClass*)                                   GE_SurfaceChange_Ice                                        OFFSET(get<T>, {0xBA8, 8, 0, 0})
 	CMember(UClass*)                                   GE_SurfaceChange_Snow                                       OFFSET(get<T>, {0xBB0, 8, 0, 0})
 	CMember(UClass*)                                   GE_SurfaceChange_Lava                                       OFFSET(get<T>, {0xBB8, 8, 0, 0})
 	CMember(AFortPawn*)                                AvatarPawn                                                  OFFSET(get<T>, {0xBC0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     IceTags                                                     OFFSET(get<T>, {0xBC8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     LavaTags                                                    OFFSET(get<T>, {0xBE8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SnowTags                                                    OFFSET(get<T>, {0xC08, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SandTags                                                    OFFSET(get<T>, {0xC28, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ChromeTags                                                  OFFSET(get<T>, {0xC48, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     IceTags                                                     OFFSET(getStruct<T>, {0xBC8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     LavaTags                                                    OFFSET(getStruct<T>, {0xBE8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SnowTags                                                    OFFSET(getStruct<T>, {0xC08, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SandTags                                                    OFFSET(getStruct<T>, {0xC28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ChromeTags                                                  OFFSET(getStruct<T>, {0xC48, 32, 0, 0})
 	DMember(double)                                    LavaBounceMultiplier                                        OFFSET(get<double>, {0xC68, 8, 0, 0})
 	DMember(double)                                    RandomAngleOffset                                           OFFSET(get<double>, {0xC70, 8, 0, 0})
-	SMember(FScalableFloat)                            RandomConeAngle                                             OFFSET(get<T>, {0xC78, 40, 0, 0})
-	SMember(FScalableFloat)                            FacingAngleVelocityComponent                                OFFSET(get<T>, {0xCA0, 40, 0, 0})
-	SMember(FScalableFloat)                            BaseVerticalBounceVelocity                                  OFFSET(get<T>, {0xCC8, 40, 0, 0})
-	SMember(FScalableFloat)                            BaseLateralBounceVelocity                                   OFFSET(get<T>, {0xCF0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxBounceMultiplier                                         OFFSET(get<T>, {0xD18, 40, 0, 0})
-	SMember(FScalableFloat)                            BounceMultiplierStepAmount                                  OFFSET(get<T>, {0xD40, 40, 0, 0})
-	SMember(FRandomStream)                             RandomAngleStream                                           OFFSET(get<T>, {0xD68, 8, 0, 0})
-	SMember(FGameplayTag)                              LavaBounceCue                                               OFFSET(get<T>, {0xD70, 4, 0, 0})
-	SMember(FGameplayTag)                              EventTag_SandUnburrow                                       OFFSET(get<T>, {0xD74, 4, 0, 0})
-	SMember(FScalableFloat)                            IceLingerDuration                                           OFFSET(get<T>, {0xD78, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     PreviousSurfaceTagContainer                                 OFFSET(get<T>, {0xDA0, 32, 0, 0})
+	SMember(FScalableFloat)                            RandomConeAngle                                             OFFSET(getStruct<T>, {0xC78, 40, 0, 0})
+	SMember(FScalableFloat)                            FacingAngleVelocityComponent                                OFFSET(getStruct<T>, {0xCA0, 40, 0, 0})
+	SMember(FScalableFloat)                            BaseVerticalBounceVelocity                                  OFFSET(getStruct<T>, {0xCC8, 40, 0, 0})
+	SMember(FScalableFloat)                            BaseLateralBounceVelocity                                   OFFSET(getStruct<T>, {0xCF0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxBounceMultiplier                                         OFFSET(getStruct<T>, {0xD18, 40, 0, 0})
+	SMember(FScalableFloat)                            BounceMultiplierStepAmount                                  OFFSET(getStruct<T>, {0xD40, 40, 0, 0})
+	SMember(FRandomStream)                             RandomAngleStream                                           OFFSET(getStruct<T>, {0xD68, 8, 0, 0})
+	SMember(FGameplayTag)                              LavaBounceCue                                               OFFSET(getStruct<T>, {0xD70, 4, 0, 0})
+	SMember(FGameplayTag)                              EventTag_SandUnburrow                                       OFFSET(getStruct<T>, {0xD74, 4, 0, 0})
+	SMember(FScalableFloat)                            IceLingerDuration                                           OFFSET(getStruct<T>, {0xD78, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     PreviousSurfaceTagContainer                                 OFFSET(getStruct<T>, {0xDA0, 32, 0, 0})
 	CMember(UAsyncAction_StartListeningToStatefulEvent*) GamePhaseUpdatedAsyncTask                                 OFFSET(get<T>, {0xDC0, 8, 0, 0})
 
 
@@ -6354,12 +6355,12 @@ class UGA_Athena_ZipLine_Jump_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3016;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FScalableFloat)                            MaxLateralSpeed                                             OFFSET(get<T>, {0xB38, 40, 0, 0})
-	SMember(FVector)                                   ImpulseVec                                                  OFFSET(get<T>, {0xB60, 24, 0, 0})
-	SMember(FScalableFloat)                            JumpVertStrength                                            OFFSET(get<T>, {0xB78, 40, 0, 0})
-	SMember(FScalableFloat)                            JumpLateralDamper                                           OFFSET(get<T>, {0xBA0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxLateralSpeed                                             OFFSET(getStruct<T>, {0xB38, 40, 0, 0})
+	SMember(FVector)                                   ImpulseVec                                                  OFFSET(getStruct<T>, {0xB60, 24, 0, 0})
+	SMember(FScalableFloat)                            JumpVertStrength                                            OFFSET(getStruct<T>, {0xB78, 40, 0, 0})
+	SMember(FScalableFloat)                            JumpLateralDamper                                           OFFSET(getStruct<T>, {0xBA0, 40, 0, 0})
 
 
 	/// Functions
@@ -6389,22 +6390,22 @@ class ABP_Athena_Environmental_ZipLine_Spline_C : public AFortAthenaSplineZiplin
 	static inline constexpr uint64_t __MDKClassSize = 3512;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC90, 8, 0, 0})
 	CMember(USphereComponent*)                         EndPointInteractSphere                                      OFFSET(get<T>, {0xC98, 8, 0, 0})
 	CMember(USphereComponent*)                         StartPointInteractSphere                                    OFFSET(get<T>, {0xCA0, 8, 0, 0})
 	CMember(UStaticMesh*)                              SplineStaticMesh                                            OFFSET(get<T>, {0xCA8, 8, 0, 0})
 	DMember(double)                                    TangentSmoothStrength                                       OFFSET(get<double>, {0xCB0, 8, 0, 0})
 	DMember(bool)                                      AutoSmoothTangents                                          OFFSET(get<bool>, {0xCB8, 1, 0, 0})
 	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardMeshAxis                                             OFFSET(get<T>, {0xCB9, 1, 0, 0})
-	SMember(FVector)                                   MotorOffset                                                 OFFSET(get<T>, {0xCC0, 24, 0, 0})
+	SMember(FVector)                                   MotorOffset                                                 OFFSET(getStruct<T>, {0xCC0, 24, 0, 0})
 	CMember(ABuildingActor*)                           PoleA                                                       OFFSET(get<T>, {0xCD8, 8, 0, 0})
 	CMember(ABuildingActor*)                           PoleB                                                       OFFSET(get<T>, {0xCE0, 8, 0, 0})
-	SMember(FVector)                                   PoleASocketLocation                                         OFFSET(get<T>, {0xCE8, 24, 0, 0})
-	SMember(FVector)                                   PoleBSocketLocation                                         OFFSET(get<T>, {0xD00, 24, 0, 0})
+	SMember(FVector)                                   PoleASocketLocation                                         OFFSET(getStruct<T>, {0xCE8, 24, 0, 0})
+	SMember(FVector)                                   PoleBSocketLocation                                         OFFSET(getStruct<T>, {0xD00, 24, 0, 0})
 	DMember(int32_t)                                   LowerPointID                                                OFFSET(get<int32_t>, {0xD18, 4, 0, 0})
 	DMember(int32_t)                                   HigherPointID                                               OFFSET(get<int32_t>, {0xD1C, 4, 0, 0})
-	SMember(FVector)                                   HigherEndLocation                                           OFFSET(get<T>, {0xD20, 24, 0, 0})
-	SMember(FVector)                                   LowerEndLocation                                            OFFSET(get<T>, {0xD38, 24, 0, 0})
+	SMember(FVector)                                   HigherEndLocation                                           OFFSET(getStruct<T>, {0xD20, 24, 0, 0})
+	SMember(FVector)                                   LowerEndLocation                                            OFFSET(getStruct<T>, {0xD38, 24, 0, 0})
 	DMember(double)                                    AutoLinearFactorLow                                         OFFSET(get<double>, {0xD50, 8, 0, 0})
 	DMember(double)                                    AutoLinearFactorHigh                                        OFFSET(get<double>, {0xD58, 8, 0, 0})
 	DMember(double)                                    AutoSplineTangentLengthCoef                                 OFFSET(get<double>, {0xD60, 8, 0, 0})
@@ -6413,7 +6414,7 @@ public:
 	DMember(bool)                                      Auto_Set_Spline_Ends                                        OFFSET(get<bool>, {0xD78, 1, 0, 0})
 	DMember(bool)                                      Auto_Set_Spline_Mids                                        OFFSET(get<bool>, {0xD79, 1, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         SplineMaterials                                             OFFSET(get<T>, {0xD80, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(get<T>, {0xD90, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(getStruct<T>, {0xD90, 32, 0, 0})
 	DMember(double)                                    TilingDivisor                                               OFFSET(get<double>, {0xDB0, 8, 0, 0})
 
 
@@ -6464,20 +6465,20 @@ class APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C : public AFortAthenaSplineZi
 	static inline constexpr uint64_t __MDKClassSize = 3529;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC90, 8, 0, 0})
 	CMember(UStaticMesh*)                              SplineStaticMesh                                            OFFSET(get<T>, {0xC98, 8, 0, 0})
 	DMember(double)                                    TangentSmoothStrength                                       OFFSET(get<double>, {0xCA0, 8, 0, 0})
 	DMember(bool)                                      AutoSmoothTangents                                          OFFSET(get<bool>, {0xCA8, 1, 0, 0})
 	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardMeshAxis                                             OFFSET(get<T>, {0xCA9, 1, 0, 0})
-	SMember(FVector)                                   MotorOffset                                                 OFFSET(get<T>, {0xCB0, 24, 0, 0})
+	SMember(FVector)                                   MotorOffset                                                 OFFSET(getStruct<T>, {0xCB0, 24, 0, 0})
 	CMember(AActor*)                                   PoleA                                                       OFFSET(get<T>, {0xCC8, 8, 0, 0})
 	CMember(AActor*)                                   PoleB                                                       OFFSET(get<T>, {0xCD0, 8, 0, 0})
-	SMember(FVector)                                   PoleASocketLocation                                         OFFSET(get<T>, {0xCD8, 24, 0, 0})
-	SMember(FVector)                                   PoleBSocketLocation                                         OFFSET(get<T>, {0xCF0, 24, 0, 0})
+	SMember(FVector)                                   PoleASocketLocation                                         OFFSET(getStruct<T>, {0xCD8, 24, 0, 0})
+	SMember(FVector)                                   PoleBSocketLocation                                         OFFSET(getStruct<T>, {0xCF0, 24, 0, 0})
 	DMember(int32_t)                                   LowerPointID                                                OFFSET(get<int32_t>, {0xD08, 4, 0, 0})
 	DMember(int32_t)                                   HigherPointID                                               OFFSET(get<int32_t>, {0xD0C, 4, 0, 0})
-	SMember(FVector)                                   HigherEndLocation                                           OFFSET(get<T>, {0xD10, 24, 0, 0})
-	SMember(FVector)                                   LowerEndLocation                                            OFFSET(get<T>, {0xD28, 24, 0, 0})
+	SMember(FVector)                                   HigherEndLocation                                           OFFSET(getStruct<T>, {0xD10, 24, 0, 0})
+	SMember(FVector)                                   LowerEndLocation                                            OFFSET(getStruct<T>, {0xD28, 24, 0, 0})
 	DMember(double)                                    AutoLinearFactorLow                                         OFFSET(get<double>, {0xD40, 8, 0, 0})
 	DMember(double)                                    AutoLinearFactorHigh                                        OFFSET(get<double>, {0xD48, 8, 0, 0})
 	DMember(double)                                    AutoSplineTangentLengthCoef                                 OFFSET(get<double>, {0xD50, 8, 0, 0})
@@ -6486,7 +6487,7 @@ public:
 	DMember(bool)                                      Auto_Set_Spline_Ends                                        OFFSET(get<bool>, {0xD68, 1, 0, 0})
 	DMember(bool)                                      Auto_Set_Spline_Mids                                        OFFSET(get<bool>, {0xD69, 1, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         SplineMaterials                                             OFFSET(get<T>, {0xD70, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(get<T>, {0xD80, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(getStruct<T>, {0xD80, 32, 0, 0})
 	DMember(double)                                    TilingDivisor                                               OFFSET(get<double>, {0xDA0, 8, 0, 0})
 	CMember(TArray<USplineMeshComponent*>)             SplineMeshComponents                                        OFFSET(get<T>, {0xDA8, 16, 0, 0})
 	CMember(TArray<AFortPlayerPawn*>)                  PlayerPawnArray                                             OFFSET(get<T>, {0xDB8, 16, 0, 0})
@@ -6538,20 +6539,20 @@ class UGA_Athena_Consumable_Throw_Parent_C : public UFortGameplayAbility_ThrowTr
 	static inline constexpr uint64_t __MDKClassSize = 4048;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB88, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB88, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB90, 8, 0, 0})
 	DMember(bool)                                      AbilityKeyPressed                                           OFFSET(get<bool>, {0xB98, 1, 0, 0})
 	DMember(bool)                                      InThrowWindup                                               OFFSET(get<bool>, {0xB99, 1, 0, 0})
 	DMember(double)                                    AdditionalThrowAngle                                        OFFSET(get<double>, {0xBA0, 8, 0, 0})
 	DMember(double)                                    MaxTossPitch                                                OFFSET(get<double>, {0xBA8, 8, 0, 0})
 	CMember(AFortProjectileBase*)                      SpawnedProjectile                                           OFFSET(get<T>, {0xBB0, 8, 0, 0})
-	SMember(FScalableFloat)                            bIsEnabled                                                  OFFSET(get<T>, {0xBB8, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     Tag_BlockAbilityActivation                                  OFFSET(get<T>, {0xBE0, 32, 0, 0})
+	SMember(FScalableFloat)                            bIsEnabled                                                  OFFSET(getStruct<T>, {0xBB8, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     Tag_BlockAbilityActivation                                  OFFSET(getStruct<T>, {0xBE0, 32, 0, 0})
 	CMember(UClass*)                                   ThrownProjectileClass                                       OFFSET(get<T>, {0xC00, 8, 0, 0})
 	DMember(bool)                                      bIsSecondaryFire                                            OFFSET(get<bool>, {0xC08, 1, 0, 0})
 	DMember(bool)                                      bThrowInstantly                                             OFFSET(get<bool>, {0xC09, 1, 0, 0})
-	SMember(FScalableFloat)                            ProjectileGravityScale                                      OFFSET(get<T>, {0xC10, 40, 0, 0})
-	SMember(FScalableFloat)                            ProjectileSpeed                                             OFFSET(get<T>, {0xC38, 40, 0, 0})
+	SMember(FScalableFloat)                            ProjectileGravityScale                                      OFFSET(getStruct<T>, {0xC10, 40, 0, 0})
+	SMember(FScalableFloat)                            ProjectileSpeed                                             OFFSET(getStruct<T>, {0xC38, 40, 0, 0})
 	CMember(ABP_ProjectileTrajectory_C*)               TrajectoryIndicator                                         OFFSET(get<T>, {0xC60, 8, 0, 0})
 	CMember(UClass*)                                   TrajectoryIndicatorClass                                    OFFSET(get<T>, {0xC68, 8, 0, 0})
 	DMember(double)                                    TrajectoryUpdateInterval                                    OFFSET(get<double>, {0xC70, 8, 0, 0})
@@ -6559,34 +6560,34 @@ public:
 	CMember(UAnimMontage*)                             CookMontage1P                                               OFFSET(get<T>, {0xC80, 8, 0, 0})
 	CMember(UAnimMontage*)                             ThrowMontage                                                OFFSET(get<T>, {0xC88, 8, 0, 0})
 	CMember(UAnimMontage*)                             ThrowMontage1P                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
-	SMember(FGameplayTag)                              GC_OnThrow                                                  OFFSET(get<T>, {0xC98, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_OnThrow                                                  OFFSET(getStruct<T>, {0xC98, 4, 0, 0})
 	DMember(double)                                    TrajectoryTimeStep                                          OFFSET(get<double>, {0xCA0, 8, 0, 0})
 	DMember(int32_t)                                   TrajectoryMaxSteps                                          OFFSET(get<int32_t>, {0xCA8, 4, 0, 0})
-	SMember(FName)                                     TrajectoryCollisionProfileName                              OFFSET(get<T>, {0xCAC, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_CookLoop                                                 OFFSET(get<T>, {0xCB0, 4, 0, 0})
+	SMember(FName)                                     TrajectoryCollisionProfileName                              OFFSET(getStruct<T>, {0xCAC, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_CookLoop                                                 OFFSET(getStruct<T>, {0xCB0, 4, 0, 0})
 	CMember(UClass*)                                   GE_InWindup                                                 OFFSET(get<T>, {0xCB8, 8, 0, 0})
 	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0xCC0, 8, 0, 0})
-	SMember(FGameplayTag)                              EC_DefaultExplosion                                         OFFSET(get<T>, {0xCC8, 4, 0, 0})
+	SMember(FGameplayTag)                              EC_DefaultExplosion                                         OFFSET(getStruct<T>, {0xCC8, 4, 0, 0})
 	DMember(int32_t)                                   ExplosionEffectLevel                                        OFFSET(get<int32_t>, {0xCCC, 4, 0, 0})
-	SMember(FGameplayTag)                              EC_DefaultHit                                               OFFSET(get<T>, {0xCD0, 4, 0, 0})
+	SMember(FGameplayTag)                              EC_DefaultHit                                               OFFSET(getStruct<T>, {0xCD0, 4, 0, 0})
 	DMember(int32_t)                                   HitEffectLevel                                              OFFSET(get<int32_t>, {0xCD4, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnProjectileSpawn                                           OFFSET(get<T>, {0xCD8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnProjectileSpawn                                           OFFSET(getStruct<T>, {0xCD8, 16, 0, 0})
 	DMember(bool)                                      HasAdditionalExplosion                                      OFFSET(get<bool>, {0xCE8, 1, 0, 0})
-	SMember(FGameplayTag)                              EC_AdditionalExplosion                                      OFFSET(get<T>, {0xCEC, 4, 0, 0})
+	SMember(FGameplayTag)                              EC_AdditionalExplosion                                      OFFSET(getStruct<T>, {0xCEC, 4, 0, 0})
 	DMember(int32_t)                                   AdditionalExplodeLevel                                      OFFSET(get<int32_t>, {0xCF0, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     QuestCreditTargetTag                                        OFFSET(get<T>, {0xCF8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     QuestCreditTargetTag                                        OFFSET(getStruct<T>, {0xCF8, 32, 0, 0})
 	DMember(bool)                                      ReturnPhysicalMaterial                                      OFFSET(get<bool>, {0xD18, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     Tags_UseNullFailedActivateReason                            OFFSET(get<T>, {0xD20, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags_UseNullFailedActivateReason                            OFFSET(getStruct<T>, {0xD20, 32, 0, 0})
 	DMember(bool)                                      bIsThrowing                                                 OFFSET(get<bool>, {0xD40, 1, 0, 0})
 	DMember(bool)                                      SpawnedOnEquip                                              OFFSET(get<bool>, {0xD41, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               Handle_GE_InWindup                                          OFFSET(get<T>, {0xD44, 8, 0, 0})
-	SMember(FFortGameplayEffectContainerSpec)          HitContainerSpec                                            OFFSET(get<T>, {0xD50, 184, 0, 0})
-	SMember(FFortGameplayEffectContainerSpec)          ExplosionContainerSpec                                      OFFSET(get<T>, {0xE08, 184, 0, 0})
-	SMember(FFortGameplayEffectContainerSpec)          AdditionalExplosionContainerSpec                            OFFSET(get<T>, {0xEC0, 184, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               Handle_GE_InWindup                                          OFFSET(getStruct<T>, {0xD44, 8, 0, 0})
+	SMember(FFortGameplayEffectContainerSpec)          HitContainerSpec                                            OFFSET(getStruct<T>, {0xD50, 184, 0, 0})
+	SMember(FFortGameplayEffectContainerSpec)          ExplosionContainerSpec                                      OFFSET(getStruct<T>, {0xE08, 184, 0, 0})
+	SMember(FFortGameplayEffectContainerSpec)          AdditionalExplosionContainerSpec                            OFFSET(getStruct<T>, {0xEC0, 184, 0, 0})
 	DMember(bool)                                      bPreventDeploymentInBlockAreas                              OFFSET(get<bool>, {0xF78, 1, 0, 0})
 	DMember(float)                                     DeployableBlockingAreaCheckRadius                           OFFSET(get<float>, {0xF7C, 4, 0, 0})
-	SMember(FVector)                                   DeployableBlockingAreaCheckOffset                           OFFSET(get<T>, {0xF80, 24, 0, 0})
-	SMember(FFortProjectileTrajectoryData)             Projectile_Trajectory_Data                                  OFFSET(get<T>, {0xF98, 32, 0, 0})
+	SMember(FVector)                                   DeployableBlockingAreaCheckOffset                           OFFSET(getStruct<T>, {0xF80, 24, 0, 0})
+	SMember(FFortProjectileTrajectoryData)             Projectile_Trajectory_Data                                  OFFSET(getStruct<T>, {0xF98, 32, 0, 0})
 	DMember(float)                                     Trajectory_Max_Distance_Between_Spline_Points               OFFSET(get<float>, {0xFB8, 4, 0, 0})
 	DMember(int32_t)                                   Trajectory_Max_Bounces                                      OFFSET(get<int32_t>, {0xFBC, 4, 0, 0})
 	DMember(float)                                     Trajectory_Initial_Distance                                 OFFSET(get<float>, {0xFC0, 4, 0, 0})
@@ -6727,16 +6728,16 @@ class UGA_Athena_Tethered_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2996;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_TetheredHandle                                           OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_TetheredHandle                                           OFFSET(getStruct<T>, {0xB30, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          OwningFortPlayerPawn                                        OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(double)                                    maxSpeedToPlayGCN                                           OFFSET(get<double>, {0xB40, 8, 0, 0})
-	SMember(FGameplayTag)                              GCTagPlayerLand                                             OFFSET(get<T>, {0xB48, 4, 0, 0})
+	SMember(FGameplayTag)                              GCTagPlayerLand                                             OFFSET(getStruct<T>, {0xB48, 4, 0, 0})
 	CMember(UClass*)                                   StructureDamageGE                                           OFFSET(get<T>, {0xB50, 8, 0, 0})
-	SMember(FGameplayTag)                              SmashGC                                                     OFFSET(get<T>, {0xB58, 4, 0, 0})
-	SMember(FScalableFloat)                            BreakStructuresOnTetherEnabled                              OFFSET(get<T>, {0xB60, 40, 0, 0})
-	SMember(FScalableFloat)                            BreakStructuresOnTetherRange                                OFFSET(get<T>, {0xB88, 40, 0, 0})
-	SMember(FGameplayTag)                              Event_FishingForceEnd                                       OFFSET(get<T>, {0xBB0, 4, 0, 0})
+	SMember(FGameplayTag)                              SmashGC                                                     OFFSET(getStruct<T>, {0xB58, 4, 0, 0})
+	SMember(FScalableFloat)                            BreakStructuresOnTetherEnabled                              OFFSET(getStruct<T>, {0xB60, 40, 0, 0})
+	SMember(FScalableFloat)                            BreakStructuresOnTetherRange                                OFFSET(getStruct<T>, {0xB88, 40, 0, 0})
+	SMember(FGameplayTag)                              Event_FishingForceEnd                                       OFFSET(getStruct<T>, {0xBB0, 4, 0, 0})
 
 
 	/// Functions
@@ -6762,7 +6763,7 @@ class URebootCardIndicator_C : public UAthenaRebootCardIndicator
 	static inline constexpr uint64_t __MDKClassSize = 1672;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x658, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x658, 8, 0, 0})
 	CMember(UBorder*)                                  Border_Nameplate                                            OFFSET(get<T>, {0x660, 8, 0, 0})
 	CMember(UImage*)                                   burst                                                       OFFSET(get<T>, {0x668, 8, 0, 0})
 	CMember(UImage*)                                   Image_RebootIcon                                            OFFSET(get<T>, {0x670, 8, 0, 0})
@@ -6787,23 +6788,23 @@ class UGA_Rift_Athena_Skydive_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3104;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UAnimMontage*)                             FallingAnimation                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
 	DMember(double)                                    Hangtimee                                                   OFFSET(get<double>, {0xB38, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   VehicleSkelMesh                                             OFFSET(get<T>, {0xB40, 8, 0, 0})
-	SMember(FScalableFloat)                            HangTime                                                    OFFSET(get<T>, {0xB48, 40, 0, 0})
-	SMember(FGameplayTag)                              EventTag                                                    OFFSET(get<T>, {0xB70, 4, 0, 0})
-	SMember(FScalableFloat)                            KickFromVehicle_                                            OFFSET(get<T>, {0xB78, 40, 0, 0})
+	SMember(FScalableFloat)                            HangTime                                                    OFFSET(getStruct<T>, {0xB48, 40, 0, 0})
+	SMember(FGameplayTag)                              EventTag                                                    OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
+	SMember(FScalableFloat)                            KickFromVehicle_                                            OFFSET(getStruct<T>, {0xB78, 40, 0, 0})
 	CMember(USoundBase*)                               LocalPlayerSound                                            OFFSET(get<T>, {0xBA0, 8, 0, 0})
 	CMember(UClass*)                                   GameplayCueGE                                               OFFSET(get<T>, {0xBA8, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xBB0, 8, 0, 0})
 	DMember(bool)                                      bHolstered                                                  OFFSET(get<bool>, {0xBB8, 1, 0, 0})
-	SMember(FName)                                     RiftSkydiveHolster                                          OFFSET(get<T>, {0xBBC, 4, 0, 0})
-	SMember(FVector)                                   ImpulseStrength                                             OFFSET(get<T>, {0xBC0, 24, 0, 0})
+	SMember(FName)                                     RiftSkydiveHolster                                          OFFSET(getStruct<T>, {0xBBC, 4, 0, 0})
+	SMember(FVector)                                   ImpulseStrength                                             OFFSET(getStruct<T>, {0xBC0, 24, 0, 0})
 	DMember(bool)                                      bNeedsInputEnable                                           OFFSET(get<bool>, {0xBD8, 1, 0, 0})
-	SMember(FTimerHandle)                              SafetyTimer                                                 OFFSET(get<T>, {0xBE0, 8, 0, 0})
-	SMember(FVector)                                   NewVar                                                      OFFSET(get<T>, {0xBE8, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     UnblockTagsIfPassenger                                      OFFSET(get<T>, {0xC00, 32, 0, 0})
+	SMember(FTimerHandle)                              SafetyTimer                                                 OFFSET(getStruct<T>, {0xBE0, 8, 0, 0})
+	SMember(FVector)                                   NewVar                                                      OFFSET(getStruct<T>, {0xBE8, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     UnblockTagsIfPassenger                                      OFFSET(getStruct<T>, {0xC00, 32, 0, 0})
 
 
 	/// Functions
@@ -6845,7 +6846,7 @@ class UAthenaEliminationIndicator_C : public UAthenaEliminationIndicator
 	static inline constexpr uint64_t __MDKClassSize = 1624;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x630, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x630, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro                                                       OFFSET(get<T>, {0x638, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x640, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x648, 8, 0, 0})
@@ -6867,11 +6868,11 @@ class UGA_Athena_Slurp_OLD_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
 	DMember(int32_t)                                   IncreCheck                                                  OFFSET(get<int32_t>, {0xB38, 4, 0, 0})
 	DMember(double)                                    MaxTicks                                                    OFFSET(get<double>, {0xB40, 8, 0, 0})
-	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(get<T>, {0xB48, 8, 0, 0})
+	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(getStruct<T>, {0xB48, 8, 0, 0})
 	DMember(double)                                    TickRate                                                    OFFSET(get<double>, {0xB50, 8, 0, 0})
 
 
@@ -6894,7 +6895,7 @@ class AB_Prj_Athena_Grenade_Base_C : public AFortProjectileBase
 	static inline constexpr uint64_t __MDKClassSize = 3085;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA88, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA88, 8, 0, 0})
 	CMember(UFortCollisionAudioComponent*)             FortCollisionAudio                                          OFFSET(get<T>, {0xA90, 8, 0, 0})
 	CMember(URotatingMovementComponent*)               RotatingMovement                                            OFFSET(get<T>, {0xA98, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Fuse_Particle                                               OFFSET(get<T>, {0xAA0, 8, 0, 0})
@@ -6914,18 +6915,18 @@ public:
 	CMember(UClass*)                                   ExplosionCameraShake                                        OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(double)                                    FuseTime                                                    OFFSET(get<double>, {0xB40, 8, 0, 0})
 	DMember(double)                                    ExplosionRadius                                             OFFSET(get<double>, {0xB48, 8, 0, 0})
-	SMember(FRotator)                                  Explosion_Rotation                                          OFFSET(get<T>, {0xB50, 24, 0, 0})
+	SMember(FRotator)                                  Explosion_Rotation                                          OFFSET(getStruct<T>, {0xB50, 24, 0, 0})
 	CMember(UAudioComponent*)                          WaterFuseAudioComponent                                     OFFSET(get<T>, {0xB68, 8, 0, 0})
 	CMember(USoundBase*)                               Water_Debris_Explosion                                      OFFSET(get<T>, {0xB70, 8, 0, 0})
 	CMember(USoundBase*)                               Splash_Sound                                                OFFSET(get<T>, {0xB78, 8, 0, 0})
 	CMember(UTexture*)                                 SoundIndicatorIcon                                          OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FTimerHandle)                              FuseIndicatorTimer                                          OFFSET(get<T>, {0xB88, 8, 0, 0})
+	SMember(FTimerHandle)                              FuseIndicatorTimer                                          OFFSET(getStruct<T>, {0xB88, 8, 0, 0})
 	CMember(TWeakObjectPtr<UNiagaraSystem*>)           NS_Explosion                                                OFFSET(get<T>, {0xB90, 32, 0, 0})
 	CMember(TWeakObjectPtr<UNiagaraSystem*>)           NS_Explosion_Water                                          OFFSET(get<T>, {0xBB0, 32, 0, 0})
 	CMember(EFXType)                                   FXType                                                      OFFSET(get<T>, {0xBD0, 1, 0, 0})
 	CMember(UFXSystemAsset*)                           VFX_Explosion                                               OFFSET(get<T>, {0xBD8, 8, 0, 0})
 	CMember(UFXSystemAsset*)                           VFX_Explosion_Water                                         OFFSET(get<T>, {0xBE0, 8, 0, 0})
-	SMember(FTimerHandle)                              FuseTimer_                                                  OFFSET(get<T>, {0xBE8, 8, 0, 0})
+	SMember(FTimerHandle)                              FuseTimer_                                                  OFFSET(getStruct<T>, {0xBE8, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           NS_HitWater                                                 OFFSET(get<T>, {0xBF0, 8, 0, 0})
 	CMember(USoundBase*)                               WaterFuseSound                                              OFFSET(get<T>, {0xBF8, 8, 0, 0})
 	CMember(UFXSystemAsset*)                           FX_Physical_Surface                                         OFFSET(get<T>, {0xC00, 8, 0, 0})
@@ -6984,13 +6985,13 @@ class AB_Prj_Athena_FragGrenade_C : public AB_Prj_Athena_Grenade_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 3144;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC10, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC10, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NS_Object_FloatingInWater                                   OFFSET(get<T>, {0xC18, 8, 0, 0})
 	CMember(UBP_SurfaceTypeSoundComponent_C*)          BP_SurfaceTypeSoundComponent                                OFFSET(get<T>, {0xC20, 8, 0, 0})
 	DMember(float)                                     PreExploWarning_PreExplo_E5859FFE443F57359EC2C0AB73DFA4CD   OFFSET(get<float>, {0xC28, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           PreExploWarning__Direction_E5859FFE443F57359EC2C0AB73DFA4CD OFFSET(get<T>, {0xC2C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       PreExploWarning                                             OFFSET(get<T>, {0xC30, 8, 0, 0})
-	SMember(FGameplayTag)                              FeedbackCue                                                 OFFSET(get<T>, {0xC38, 4, 0, 0})
+	SMember(FGameplayTag)                              FeedbackCue                                                 OFFSET(getStruct<T>, {0xC38, 4, 0, 0})
 	CMember(UNiagaraSystem*)                           Niagara_Bounse                                              OFFSET(get<T>, {0xC40, 8, 0, 0})
 
 
@@ -7025,10 +7026,10 @@ class UGA_Athena_Grenade_Rethrow_C : public UGA_Athena_Consumable_Throw_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 4088;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xFD0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xFD0, 8, 0, 0})
 	CMember(AFortProjectileBase*)                      Projectile                                                  OFFSET(get<T>, {0xFD8, 8, 0, 0})
 	DMember(double)                                    TossDelay                                                   OFFSET(get<double>, {0xFE0, 8, 0, 0})
-	SMember(FName)                                     HolsterId                                                   OFFSET(get<T>, {0xFE8, 4, 0, 0})
+	SMember(FName)                                     HolsterId                                                   OFFSET(getStruct<T>, {0xFE8, 4, 0, 0})
 	DMember(double)                                    PostThrowEndDelay                                           OFFSET(get<double>, {0xFF0, 8, 0, 0})
 
 
@@ -7067,7 +7068,7 @@ class UGA_Athena_ZipLine_SmashParent_C : public UFortGameplayAbility_ZiplineSmas
 	static inline constexpr uint64_t __MDKClassSize = 3056;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB40, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB40, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB48, 8, 0, 0})
 	DMember(double)                                    UpdateIntervalForSmashVolume                                OFFSET(get<double>, {0xB50, 8, 0, 0})
 	CMember(UClass*)                                   StructureDamageGE                                           OFFSET(get<T>, {0xB58, 8, 0, 0})
@@ -7075,16 +7076,16 @@ public:
 	CMember(AFortAthenaZipline*)                       Zipline                                                     OFFSET(get<T>, {0xB68, 8, 0, 0})
 	CMember(UPrimitiveComponent*)                      ZiplineInteractComponent                                    OFFSET(get<T>, {0xB70, 8, 0, 0})
 	CMember(TEnumAsByte<EFortCustomMovement>)          DrivingCustomMovementMode                                   OFFSET(get<T>, {0xB78, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               FallImmunityGEFX                                            OFFSET(get<T>, {0xB7C, 8, 0, 0})
-	SMember(FGameplayTag)                              AttachVFXCue                                                OFFSET(get<T>, {0xB84, 4, 0, 0})
-	SMember(FGameplayTag)                              SmashCue                                                    OFFSET(get<T>, {0xB88, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Swimming                                                  OFFSET(get<T>, {0xB8C, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Falling                                                   OFFSET(get<T>, {0xB90, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TagsThatBlockFallImmunityRemoval                            OFFSET(get<T>, {0xB98, 32, 0, 0})
-	SMember(FTimerHandle)                              TH_DelayFallDamageRemoval                                   OFFSET(get<T>, {0xBB8, 8, 0, 0})
-	SMember(FTimerHandle)                              SurroundingsCheckTimerHandle                                OFFSET(get<T>, {0xBC0, 8, 0, 0})
-	SMember(FGameplayTag)                              ZiplineExitTag                                              OFFSET(get<T>, {0xBC8, 4, 0, 0})
-	SMember(FVector)                                   Smash_Box_Extent                                            OFFSET(get<T>, {0xBD0, 24, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               FallImmunityGEFX                                            OFFSET(getStruct<T>, {0xB7C, 8, 0, 0})
+	SMember(FGameplayTag)                              AttachVFXCue                                                OFFSET(getStruct<T>, {0xB84, 4, 0, 0})
+	SMember(FGameplayTag)                              SmashCue                                                    OFFSET(getStruct<T>, {0xB88, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Swimming                                                  OFFSET(getStruct<T>, {0xB8C, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Falling                                                   OFFSET(getStruct<T>, {0xB90, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TagsThatBlockFallImmunityRemoval                            OFFSET(getStruct<T>, {0xB98, 32, 0, 0})
+	SMember(FTimerHandle)                              TH_DelayFallDamageRemoval                                   OFFSET(getStruct<T>, {0xBB8, 8, 0, 0})
+	SMember(FTimerHandle)                              SurroundingsCheckTimerHandle                                OFFSET(getStruct<T>, {0xBC0, 8, 0, 0})
+	SMember(FGameplayTag)                              ZiplineExitTag                                              OFFSET(getStruct<T>, {0xBC8, 4, 0, 0})
+	SMember(FVector)                                   Smash_Box_Extent                                            OFFSET(getStruct<T>, {0xBD0, 24, 0, 0})
 	DMember(double)                                    SmashBoxPosAdditionalZ                                      OFFSET(get<double>, {0xBE8, 8, 0, 0})
 
 
@@ -7191,7 +7192,7 @@ class AAthena_Prop_ParentBuildingContainerBlueprint_C : public ABuildingProp
 	static inline constexpr uint64_t __MDKClassSize = 3272;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBB8, 8, 0, 0})
 	DMember(bool)                                      DebugWind                                                   OFFSET(get<bool>, {0xBC0, 1, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               IntenseWindMaterialsForPreview                              OFFSET(get<T>, {0xBC8, 16, 0, 0})
 	CMember(UStaticMeshComponent*)                     Wind_Intensity_Debug_Mesh                                   OFFSET(get<T>, {0xBD8, 8, 0, 0})
@@ -7208,9 +7209,9 @@ public:
 	DMember(bool)                                      Animate_Emissive_and_Lights_Over_Time                       OFFSET(get<bool>, {0xC28, 1, 0, 0})
 	CMember(TArray<FLinearColor>)                      CodeControlled_EmissiveColor                                OFFSET(get<T>, {0xC30, 16, 0, 0})
 	CMember(TArray<double>)                            CodeControlled_LightConeOpacity                             OFFSET(get<T>, {0xC40, 16, 0, 0})
-	SMember(FDayPhaseFloats)                           Light_Intensity_Over_Time_of_Day_                           OFFSET(get<T>, {0xC50, 16, 0, 0})
+	SMember(FDayPhaseFloats)                           Light_Intensity_Over_Time_of_Day_                           OFFSET(getStruct<T>, {0xC50, 16, 0, 0})
 	DMember(double)                                    Day_Phase_Transition_Length                                 OFFSET(get<double>, {0xC60, 8, 0, 0})
-	SMember(FDayPhaseFloats)                           Emissive_Intensity_Over_Time_of_Day                         OFFSET(get<T>, {0xC68, 16, 0, 0})
+	SMember(FDayPhaseFloats)                           Emissive_Intensity_Over_Time_of_Day                         OFFSET(getStruct<T>, {0xC68, 16, 0, 0})
 	DMember(double)                                    Volumetric_Light_Scattering_Intensity                       OFFSET(get<double>, {0xC78, 8, 0, 0})
 	DMember(bool)                                      Cast_Volumetric_Shadows                                     OFFSET(get<bool>, {0xC80, 1, 0, 0})
 	DMember(bool)                                      Animate_Lights_With_A_Curve___Disables_time_of_day_light_controls OFFSET(get<bool>, {0xC81, 1, 0, 0})
@@ -7251,7 +7252,7 @@ class ABGA_Athena_SCMachine_Pickup_C : public ABuildingGameplayActorSpawnChip
 	static inline constexpr uint64_t __MDKClassSize = 2931;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA80, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA80, 8, 0, 0})
 	CMember(UCapsuleComponent*)                        OverlapCollision                                            OFFSET(get<T>, {0xA88, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     ParentMesh                                                  OFFSET(get<T>, {0xA90, 8, 0, 0})
 	CMember(UFortLinkToActorComponent*)                FortLinkToActor                                             OFFSET(get<T>, {0xA98, 8, 0, 0})
@@ -7262,16 +7263,16 @@ public:
 	DMember(int32_t)                                   UnHide                                                      OFFSET(get<int32_t>, {0xAC0, 4, 0, 0})
 	DMember(double)                                    DelayBeforeUnhide                                           OFFSET(get<double>, {0xAC8, 8, 0, 0})
 	DMember(char)                                      OwnerTeam                                                   OFFSET(get<char>, {0xAD0, 1, 0, 0})
-	SMember(FTimerHandle)                              Timer_DestroyPickup                                         OFFSET(get<T>, {0xAD8, 8, 0, 0})
-	SMember(FScalableFloat)                            Row_PickupLife                                              OFFSET(get<T>, {0xAE0, 40, 0, 0})
-	SMember(FText)                                     InteractText                                                OFFSET(get<T>, {0xB08, 24, 0, 0})
+	SMember(FTimerHandle)                              Timer_DestroyPickup                                         OFFSET(getStruct<T>, {0xAD8, 8, 0, 0})
+	SMember(FScalableFloat)                            Row_PickupLife                                              OFFSET(getStruct<T>, {0xAE0, 40, 0, 0})
+	SMember(FText)                                     InteractText                                                OFFSET(getStruct<T>, {0xB08, 24, 0, 0})
 	CMember(UParticleSystem*)                          SpawnOutParticle                                            OFFSET(get<T>, {0xB20, 8, 0, 0})
 	CMember(USoundBase*)                               PickupSound                                                 OFFSET(get<T>, {0xB28, 8, 0, 0})
 	DMember(bool)                                      SpawnSoundPlayed                                            OFFSET(get<bool>, {0xB30, 1, 0, 0})
 	CMember(USoundBase*)                               SpawnInSound                                                OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(bool)                                      IsPendingKill                                               OFFSET(get<bool>, {0xB40, 1, 0, 0})
 	DMember(bool)                                      HideAndKill                                                 OFFSET(get<bool>, {0xB41, 1, 0, 0})
-	SMember(FScalableFloat)                            Row_PickUpInteractTime                                      OFFSET(get<T>, {0xB48, 40, 0, 0})
+	SMember(FScalableFloat)                            Row_PickUpInteractTime                                      OFFSET(getStruct<T>, {0xB48, 40, 0, 0})
 	DMember(bool)                                      IsDelayingDeath                                             OFFSET(get<bool>, {0xB70, 1, 0, 0})
 	DMember(bool)                                      OwnerDiedInVortex                                           OFFSET(get<bool>, {0xB71, 1, 0, 0})
 	DMember(bool)                                      CollectedPickup                                             OFFSET(get<bool>, {0xB72, 1, 0, 0})
@@ -7334,11 +7335,11 @@ class UGA_Athena_SCMachine_Passive_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2944;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FVector)                                   SpawnZOffset                                                OFFSET(get<T>, {0xB38, 24, 0, 0})
-	SMember(FGameplayTag)                              BlockChipSpawnTag                                           OFFSET(get<T>, {0xB50, 4, 0, 0})
-	SMember(FScalableFloat)                            DropRebootCards                                             OFFSET(get<T>, {0xB58, 40, 0, 0})
+	SMember(FVector)                                   SpawnZOffset                                                OFFSET(getStruct<T>, {0xB38, 24, 0, 0})
+	SMember(FGameplayTag)                              BlockChipSpawnTag                                           OFFSET(getStruct<T>, {0xB50, 4, 0, 0})
+	SMember(FScalableFloat)                            DropRebootCards                                             OFFSET(getStruct<T>, {0xB58, 40, 0, 0})
 
 
 	/// Functions
@@ -7364,7 +7365,7 @@ class URebootVanIndicator_C : public UAthenaRebootVanIndicator
 	static inline constexpr uint64_t __MDKClassSize = 1656;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x638, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x638, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x640, 8, 0, 0})
 	CMember(UBorder*)                                  Border_Nameplate                                            OFFSET(get<T>, {0x648, 8, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x650, 8, 0, 0})
@@ -7389,7 +7390,7 @@ class UContextTutorialIndicator_C : public UAthenaContextTutorialIndicator
 	static inline constexpr uint64_t __MDKClassSize = 1913;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x668, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x668, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ST_in_bounce                                                OFFSET(get<T>, {0x670, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ST_Text_Out_Fast                                            OFFSET(get<T>, {0x678, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ST_Marker_Out02                                             OFFSET(get<T>, {0x680, 8, 0, 0})
@@ -7467,7 +7468,7 @@ class AB_HidingProp_C : public AFortHidingProp
 	static inline constexpr uint64_t __MDKClassSize = 4480;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC10, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC10, 8, 0, 0})
 	CMember(USceneComponent*)                          ProjectileLocation_ForwardVector                            OFFSET(get<T>, {0xC18, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     LandedOnCollisionMesh                                       OFFSET(get<T>, {0xC20, 8, 0, 0})
 	CMember(USphereComponent*)                         Sphere                                                      OFFSET(get<T>, {0xC28, 8, 0, 0})
@@ -7476,42 +7477,42 @@ public:
 	DMember(float)                                     Loot_MovementTimeline_Z_0FC694AE4A45D691CB6BD5A8CD00E521    OFFSET(get<float>, {0xC3C, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Loot_MovementTimeline__Direction_0FC694AE4A45D691CB6BD5A8CD00E521 OFFSET(get<T>, {0xC40, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Loot_MovementTimeline                                       OFFSET(get<T>, {0xC48, 8, 0, 0})
-	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0xC50, 40, 0, 0})
-	SMember(FScalableFloat)                            HidingEnabled                                               OFFSET(get<T>, {0xC78, 40, 0, 0})
-	SMember(FScalableFloat)                            PlayerLimit                                                 OFFSET(get<T>, {0xCA0, 40, 0, 0})
-	SMember(FScalableFloat)                            TeleportEnabled                                             OFFSET(get<T>, {0xCC8, 40, 0, 0})
-	SMember(FScalableFloat)                            CanTeleport                                                 OFFSET(get<T>, {0xCF0, 40, 0, 0})
+	SMember(FScalableFloat)                            Enabled                                                     OFFSET(getStruct<T>, {0xC50, 40, 0, 0})
+	SMember(FScalableFloat)                            HidingEnabled                                               OFFSET(getStruct<T>, {0xC78, 40, 0, 0})
+	SMember(FScalableFloat)                            PlayerLimit                                                 OFFSET(getStruct<T>, {0xCA0, 40, 0, 0})
+	SMember(FScalableFloat)                            TeleportEnabled                                             OFFSET(getStruct<T>, {0xCC8, 40, 0, 0})
+	SMember(FScalableFloat)                            CanTeleport                                                 OFFSET(getStruct<T>, {0xCF0, 40, 0, 0})
 	CMember(TArray<AFortPawn*>)                        HidingPlayers                                               OFFSET(get<T>, {0xD18, 16, 0, 0})
-	SMember(FGameplayTag)                              EnterGameplayCue                                            OFFSET(get<T>, {0xD28, 4, 0, 0})
-	SMember(FGameplayTag)                              ExitGameplayCue                                             OFFSET(get<T>, {0xD2C, 4, 0, 0})
-	SMember(FGameplayTag)                              LandedOnGameplayCue                                         OFFSET(get<T>, {0xD30, 4, 0, 0})
+	SMember(FGameplayTag)                              EnterGameplayCue                                            OFFSET(getStruct<T>, {0xD28, 4, 0, 0})
+	SMember(FGameplayTag)                              ExitGameplayCue                                             OFFSET(getStruct<T>, {0xD2C, 4, 0, 0})
+	SMember(FGameplayTag)                              LandedOnGameplayCue                                         OFFSET(getStruct<T>, {0xD30, 4, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 Mid                                                         OFFSET(get<T>, {0xD38, 8, 0, 0})
-	SMember(FGameplayTag)                              RustleGameplayCue                                           OFFSET(get<T>, {0xD40, 4, 0, 0})
-	SMember(FGameplayTag)                              ExitGameplayCue_Player                                      OFFSET(get<T>, {0xD44, 4, 0, 0})
-	SMember(FGameplayTag)                              WhileEnteringGameplayCue                                    OFFSET(get<T>, {0xD48, 4, 0, 0})
+	SMember(FGameplayTag)                              RustleGameplayCue                                           OFFSET(getStruct<T>, {0xD40, 4, 0, 0})
+	SMember(FGameplayTag)                              ExitGameplayCue_Player                                      OFFSET(getStruct<T>, {0xD44, 4, 0, 0})
+	SMember(FGameplayTag)                              WhileEnteringGameplayCue                                    OFFSET(getStruct<T>, {0xD48, 4, 0, 0})
 	DMember(double)                                    ObstructionTraceLength                                      OFFSET(get<double>, {0xD50, 8, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       DestroyObjectTypes                                          OFFSET(get<T>, {0xD58, 16, 0, 0})
 	CMember(TArray<AFortPawn*>)                        Array                                                       OFFSET(get<T>, {0xD68, 16, 0, 0})
 	DMember(int32_t)                                   Int                                                         OFFSET(get<int32_t>, {0xD78, 4, 0, 0})
-	SMember(FVector)                                   DeimosPropSpawnerOffset                                     OFFSET(get<T>, {0xD80, 24, 0, 0})
+	SMember(FVector)                                   DeimosPropSpawnerOffset                                     OFFSET(getStruct<T>, {0xD80, 24, 0, 0})
 	DMember(bool)                                      FixedEntranceDirection                                      OFFSET(get<bool>, {0xD98, 1, 0, 0})
 	DMember(double)                                    MaxInteractAngle                                            OFFSET(get<double>, {0xDA0, 8, 0, 0})
-	SMember(FVector)                                   WobbleLocationOffset                                        OFFSET(get<T>, {0xDA8, 24, 0, 0})
+	SMember(FVector)                                   WobbleLocationOffset                                        OFFSET(getStruct<T>, {0xDA8, 24, 0, 0})
 	DMember(double)                                    InteractBelowPropDistance                                   OFFSET(get<double>, {0xDC0, 8, 0, 0})
 	CMember(TMap<AFortPawn*, double>)                  HiddenPlayersAndEnterTimes                                  OFFSET(get<T>, {0xDC8, 80, 0, 0})
 	CMember(AFortPawn*)                                LastPawnToInteract                                          OFFSET(get<T>, {0xE18, 8, 0, 0})
 	CMember(AB_HidingProp_C*)                          TargetTeleporter                                            OFFSET(get<T>, {0xE20, 8, 0, 0})
-	SMember(FGameplayTag)                              TeleporterEnterGameplayCue                                  OFFSET(get<T>, {0xE28, 4, 0, 0})
-	SMember(FGameplayTag)                              TeleporterExitGameplayCue                                   OFFSET(get<T>, {0xE2C, 4, 0, 0})
-	SMember(FGameplayTag)                              LoopingTeleportingCue                                       OFFSET(get<T>, {0xE30, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Wobble                                                   OFFSET(get<T>, {0xE34, 4, 0, 0})
-	SMember(FTimerHandle)                              WobbleTimerHandle                                           OFFSET(get<T>, {0xE38, 8, 0, 0})
+	SMember(FGameplayTag)                              TeleporterEnterGameplayCue                                  OFFSET(getStruct<T>, {0xE28, 4, 0, 0})
+	SMember(FGameplayTag)                              TeleporterExitGameplayCue                                   OFFSET(getStruct<T>, {0xE2C, 4, 0, 0})
+	SMember(FGameplayTag)                              LoopingTeleportingCue                                       OFFSET(getStruct<T>, {0xE30, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Wobble                                                   OFFSET(getStruct<T>, {0xE34, 4, 0, 0})
+	SMember(FTimerHandle)                              WobbleTimerHandle                                           OFFSET(getStruct<T>, {0xE38, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      BlockEntranceTags                                           OFFSET(get<T>, {0xE40, 16, 0, 0})
 	CMember(TArray<FGameplayTag>)                      BlockExitTags                                               OFFSET(get<T>, {0xE50, 16, 0, 0})
 	CMember(UAnimMontage*)                             EnterAnimMontage                                            OFFSET(get<T>, {0xE60, 8, 0, 0})
 	CMember(UAnimMontage*)                             ExitAnimMontage                                             OFFSET(get<T>, {0xE68, 8, 0, 0})
 	CMember(AFortPawn*)                                LastPawnToHide                                              OFFSET(get<T>, {0xE70, 8, 0, 0})
-	SMember(FGameplayTag)                              TeleportingStateGC                                          OFFSET(get<T>, {0xE78, 4, 0, 0})
+	SMember(FGameplayTag)                              TeleportingStateGC                                          OFFSET(getStruct<T>, {0xE78, 4, 0, 0})
 	DMember(bool)                                      RandomWobbleNormal                                          OFFSET(get<bool>, {0xE7C, 1, 0, 0})
 	DMember(bool)                                      SingleOccupant                                              OFFSET(get<bool>, {0xE7D, 1, 0, 0})
 	DMember(bool)                                      Teleporting                                                 OFFSET(get<bool>, {0xE7E, 1, 0, 0})
@@ -7520,35 +7521,35 @@ public:
 	DMember(bool)                                      DestroyInNonSpyLTM                                          OFFSET(get<bool>, {0xE88, 1, 0, 0})
 	DMember(bool)                                      ActiveInSpyLTM                                              OFFSET(get<bool>, {0xE89, 1, 0, 0})
 	CMember(TArray<FGameplayTag>)                      ForceAllowInteractTags                                      OFFSET(get<T>, {0xE90, 16, 0, 0})
-	SMember(FGameplayTag)                              IsTeleporter                                                OFFSET(get<T>, {0xEA0, 4, 0, 0})
-	SMember(FGameplayTag)                              ContainsPlayerRepNof                                        OFFSET(get<T>, {0xEA4, 4, 0, 0})
-	SMember(FVector)                                   ObstructionTraceExtents                                     OFFSET(get<T>, {0xEA8, 24, 0, 0})
-	SMember(FVector)                                   ObstructionTraceStartOffSet                                 OFFSET(get<T>, {0xEC0, 24, 0, 0})
+	SMember(FGameplayTag)                              IsTeleporter                                                OFFSET(getStruct<T>, {0xEA0, 4, 0, 0})
+	SMember(FGameplayTag)                              ContainsPlayerRepNof                                        OFFSET(getStruct<T>, {0xEA4, 4, 0, 0})
+	SMember(FVector)                                   ObstructionTraceExtents                                     OFFSET(getStruct<T>, {0xEA8, 24, 0, 0})
+	SMember(FVector)                                   ObstructionTraceStartOffSet                                 OFFSET(getStruct<T>, {0xEC0, 24, 0, 0})
 	DMember(double)                                    ExitLaunchVelocity                                          OFFSET(get<double>, {0xED8, 8, 0, 0})
-	SMember(FVector)                                   AdditionalLaunchVelocity                                    OFFSET(get<T>, {0xEE0, 24, 0, 0})
-	SMember(FVector)                                   FixedEntraceObstructionTraceEndOffset                       OFFSET(get<T>, {0xEF8, 24, 0, 0})
+	SMember(FVector)                                   AdditionalLaunchVelocity                                    OFFSET(getStruct<T>, {0xEE0, 24, 0, 0})
+	SMember(FVector)                                   FixedEntraceObstructionTraceEndOffset                       OFFSET(getStruct<T>, {0xEF8, 24, 0, 0})
 	DMember(bool)                                      isActiveTeleportExit                                        OFFSET(get<bool>, {0xF10, 1, 0, 0})
 	CMember(UClass*)                                   GE_TeleportAbilityGranted                                   OFFSET(get<T>, {0xF18, 8, 0, 0})
 	DMember(bool)                                      DisableWhenSubmergedInWater                                 OFFSET(get<bool>, {0xF20, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     DisableWhenSubmergedExceptionTags                           OFFSET(get<T>, {0xF28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DisableWhenSubmergedExceptionTags                           OFFSET(getStruct<T>, {0xF28, 32, 0, 0})
 	CMember(TArray<AFortPawn*>)                        NonCosmeticPawns                                            OFFSET(get<T>, {0xF48, 16, 0, 0})
 	CMember(UClass*)                                   CameraModifier                                              OFFSET(get<T>, {0xF58, 8, 0, 0})
-	SMember(FVector)                                   NewVar                                                      OFFSET(get<T>, {0xF60, 24, 0, 0})
+	SMember(FVector)                                   NewVar                                                      OFFSET(getStruct<T>, {0xF60, 24, 0, 0})
 	CMember(AActor*)                                   Pawn                                                        OFFSET(get<T>, {0xF78, 8, 0, 0})
-	SMember(FVector)                                   Loot_CachedActorForward                                     OFFSET(get<T>, {0xF80, 24, 0, 0})
+	SMember(FVector)                                   Loot_CachedActorForward                                     OFFSET(getStruct<T>, {0xF80, 24, 0, 0})
 	CMember(TArray<FVector>)                           Loot_VectorOffsets                                          OFFSET(get<T>, {0xF98, 16, 0, 0})
 	DMember(bool)                                      SpawnedLoot                                                 OFFSET(get<bool>, {0xFA8, 1, 0, 0})
 	DMember(double)                                    Loot_MoveForwardDistance                                    OFFSET(get<double>, {0xFB0, 8, 0, 0})
 	DMember(double)                                    Loot_MoveUpDistance                                         OFFSET(get<double>, {0xFB8, 8, 0, 0})
 	DMember(double)                                    Loot_SpawnRadius                                            OFFSET(get<double>, {0xFC0, 8, 0, 0})
-	SMember(FVector)                                   Loot_SpawnOffset                                            OFFSET(get<T>, {0xFC8, 24, 0, 0})
+	SMember(FVector)                                   Loot_SpawnOffset                                            OFFSET(getStruct<T>, {0xFC8, 24, 0, 0})
 	DMember(bool)                                      ShouldSpawnLoot                                             OFFSET(get<bool>, {0xFE0, 1, 0, 0})
-	SMember(FString)                                   Loot_Tier_Group                                             OFFSET(get<T>, {0xFE8, 16, 0, 0})
+	SMember(FString)                                   Loot_Tier_Group                                             OFFSET(getStruct<T>, {0xFE8, 16, 0, 0})
 	DMember(bool)                                      SetEntranceRotation                                         OFFSET(get<bool>, {0xFF8, 1, 0, 0})
 	CMember(UClass*)                                   PropSpecificEffectToApplyToHiders                           OFFSET(get<T>, {0x1000, 8, 0, 0})
-	SMember(FScalableFloat)                            RustlesPerWobble                                            OFFSET(get<T>, {0x1008, 40, 0, 0})
-	SMember(FScalableFloat)                            RustleWobbleRadius                                          OFFSET(get<T>, {0x1030, 40, 0, 0})
-	SMember(FScalableFloat)                            EnterWobbleRadius                                           OFFSET(get<T>, {0x1058, 40, 0, 0})
+	SMember(FScalableFloat)                            RustlesPerWobble                                            OFFSET(getStruct<T>, {0x1008, 40, 0, 0})
+	SMember(FScalableFloat)                            RustleWobbleRadius                                          OFFSET(getStruct<T>, {0x1030, 40, 0, 0})
+	SMember(FScalableFloat)                            EnterWobbleRadius                                           OFFSET(getStruct<T>, {0x1058, 40, 0, 0})
 	DMember(double)                                    NonJumpExitDistance                                         OFFSET(get<double>, {0x1080, 8, 0, 0})
 	CMember(UClass*)                                   Camera_Mode                                                 OFFSET(get<T>, {0x1088, 8, 0, 0})
 	DMember(bool)                                      MoveToActorOnEnter                                          OFFSET(get<bool>, {0x1090, 1, 0, 0})
@@ -7556,11 +7557,11 @@ public:
 	DMember(bool)                                      bCanRustleAndWobble                                         OFFSET(get<bool>, {0x1092, 1, 0, 0})
 	DMember(bool)                                      SkipRestoreCameraViewTargetOnStopHiding                     OFFSET(get<bool>, {0x1093, 1, 0, 0})
 	DMember(bool)                                      SkipRootMotionMovementOnStopHiding                          OFFSET(get<bool>, {0x1094, 1, 0, 0})
-	SMember(FRotator)                                  AddedSetEntranceRotation                                    OFFSET(get<T>, {0x1098, 24, 0, 0})
+	SMember(FRotator)                                  AddedSetEntranceRotation                                    OFFSET(getStruct<T>, {0x1098, 24, 0, 0})
 	DMember(double)                                    MoveToActorDelayOnEnter                                     OFFSET(get<double>, {0x10B0, 8, 0, 0})
 	DMember(double)                                    MoveToActorDurationOverride                                 OFFSET(get<double>, {0x10B8, 8, 0, 0})
-	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(get<T>, {0x10C0, 168, 0, 0})
-	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(get<T>, {0x1168, 24, 0, 0})
+	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(getStruct<T>, {0x10C0, 168, 0, 0})
+	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(getStruct<T>, {0x1168, 24, 0, 0})
 
 
 	/// Functions
@@ -7682,7 +7683,7 @@ class AB_HidingProp_WilliePete_C : public AB_HidingProp_C
 	static inline constexpr uint64_t __MDKClassSize = 5042;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1180, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1180, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     overlapCylinder                                             OFFSET(get<T>, {0x1188, 8, 0, 0})
 	CMember(UAudioComponent*)                          WilliePete_Ambient_Loop                                     OFFSET(get<T>, {0x1190, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Geyser                                                      OFFSET(get<T>, {0x1198, 8, 0, 0})
@@ -7691,22 +7692,22 @@ public:
 	CMember(UFortProjectileMovementComponent*)         OverlappedFortProjectileMovementComponent                   OFFSET(get<T>, {0x11B0, 8, 0, 0})
 	CMember(UProjectileMovementComponent*)             OverlappedStandardProjectileMovementComponent               OFFSET(get<T>, {0x11B8, 8, 0, 0})
 	CMember(AActor*)                                   TeleportingNonPawn                                          OFFSET(get<T>, {0x11C0, 8, 0, 0})
-	SMember(FHitResult)                                SphereOverlapResult                                         OFFSET(get<T>, {0x11C8, 224, 0, 0})
+	SMember(FHitResult)                                SphereOverlapResult                                         OFFSET(getStruct<T>, {0x11C8, 224, 0, 0})
 	DMember(double)                                    ProjectileSpeedCeiling                                      OFFSET(get<double>, {0x12A8, 8, 0, 0})
-	SMember(FRotator)                                  ProjectileExitFVectorRotation                               OFFSET(get<T>, {0x12B0, 24, 0, 0})
+	SMember(FRotator)                                  ProjectileExitFVectorRotation                               OFFSET(getStruct<T>, {0x12B0, 24, 0, 0})
 	DMember(int32_t)                                   WaterLevel                                                  OFFSET(get<int32_t>, {0x12C8, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Exit                                                     OFFSET(get<T>, {0x12CC, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Enter                                                    OFFSET(get<T>, {0x12D0, 4, 0, 0})
-	SMember(FScalableFloat)                            EnabledValue                                                OFFSET(get<T>, {0x12D8, 40, 0, 0})
-	SMember(FScalableFloat)                            LaunchHeightValue                                           OFFSET(get<T>, {0x1300, 40, 0, 0})
+	SMember(FGameplayTag)                              GC_Exit                                                     OFFSET(getStruct<T>, {0x12CC, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Enter                                                    OFFSET(getStruct<T>, {0x12D0, 4, 0, 0})
+	SMember(FScalableFloat)                            EnabledValue                                                OFFSET(getStruct<T>, {0x12D8, 40, 0, 0})
+	SMember(FScalableFloat)                            LaunchHeightValue                                           OFFSET(getStruct<T>, {0x1300, 40, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    LaunchPawn                                                  OFFSET(get<T>, {0x1328, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               LaunchGrantedEffectHandle                                   OFFSET(get<T>, {0x1330, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     T_Quest                                                     OFFSET(get<T>, {0x1338, 32, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               LaunchGrantedEffectHandle                                   OFFSET(getStruct<T>, {0x1330, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     T_Quest                                                     OFFSET(getStruct<T>, {0x1338, 32, 0, 0})
 	CMember(UClass*)                                   SpawnedWaterBody                                            OFFSET(get<T>, {0x1358, 8, 0, 0})
-	SMember(FGameplayTag)                              GC_ScreenFX                                                 OFFSET(get<T>, {0x1360, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_ScreenFX                                                 OFFSET(getStruct<T>, {0x1360, 4, 0, 0})
 	DMember(bool)                                      isOnTestMap                                                 OFFSET(get<bool>, {0x1364, 1, 0, 0})
 	CMember(USoundBase*)                               Launch_Sound                                                OFFSET(get<T>, {0x1368, 8, 0, 0})
-	SMember(FVector)                                   AdjustedLocation                                            OFFSET(get<T>, {0x1370, 24, 0, 0})
+	SMember(FVector)                                   AdjustedLocation                                            OFFSET(getStruct<T>, {0x1370, 24, 0, 0})
 	DMember(bool)                                      skipAnimForLaunch                                           OFFSET(get<bool>, {0x1388, 1, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    ExitingPawn                                                 OFFSET(get<T>, {0x1390, 8, 0, 0})
 	CMember(UMovementComponent*)                       OverlappedMovementComponent                                 OFFSET(get<T>, {0x1398, 8, 0, 0})
@@ -7777,12 +7778,12 @@ class UGA_WilliePete_PlayerLaunch_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2976;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    OwningPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UAnimMontage*)                             ExitMontage                                                 OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FScalableFloat)                            LaunchHeightValue                                           OFFSET(get<T>, {0xB40, 40, 0, 0})
+	SMember(FScalableFloat)                            LaunchHeightValue                                           OFFSET(getStruct<T>, {0xB40, 40, 0, 0})
 	CMember(AB_HidingProp_WilliePete_C*)               WilliePeteLauncher                                          OFFSET(get<T>, {0xB68, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     PlayerLaunchTag                                             OFFSET(get<T>, {0xB70, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlayerLaunchTag                                             OFFSET(getStruct<T>, {0xB70, 32, 0, 0})
 	CMember(UClass*)                                   GE_WilliePete_PlayerLaunch_ApplyGC                          OFFSET(get<T>, {0xB90, 8, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    TeleportExitPlayer                                          OFFSET(get<T>, {0xB98, 8, 0, 0})
 
@@ -7826,19 +7827,19 @@ class UGA_Athena_HidingProp_Teleport_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3008;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0xB30, 16, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(getStruct<T>, {0xB30, 16, 0, 0})
 	CMember(AB_HidingProp_C*)                          HidingProp                                                  OFFSET(get<T>, {0xB40, 8, 0, 0})
 	CMember(AB_HidingProp_C*)                          TargetTeleporter                                            OFFSET(get<T>, {0xB48, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     T_HudElementToHide                                          OFFSET(get<T>, {0xB50, 32, 0, 0})
-	SMember(FGameplayTag)                              TargetPropTeleportingCue                                    OFFSET(get<T>, {0xB70, 4, 0, 0})
-	SMember(FTimerHandle)                              WobbleHandle                                                OFFSET(get<T>, {0xB78, 8, 0, 0})
-	SMember(FGameplayTag)                              WobbleCue                                                   OFFSET(get<T>, {0xB80, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     T_HudElementToHide                                          OFFSET(getStruct<T>, {0xB50, 32, 0, 0})
+	SMember(FGameplayTag)                              TargetPropTeleportingCue                                    OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
+	SMember(FTimerHandle)                              WobbleHandle                                                OFFSET(getStruct<T>, {0xB78, 8, 0, 0})
+	SMember(FGameplayTag)                              WobbleCue                                                   OFFSET(getStruct<T>, {0xB80, 4, 0, 0})
 	DMember(double)                                    ServerWorldTime                                             OFFSET(get<double>, {0xB88, 8, 0, 0})
-	SMember(FGameplayTag)                              EnterCue                                                    OFFSET(get<T>, {0xB90, 4, 0, 0})
-	SMember(FGameplayTag)                              HidingInPropTag                                             OFFSET(get<T>, {0xB94, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(get<T>, {0xB98, 32, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               TeleportingGEOnPlayer                                       OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	SMember(FGameplayTag)                              EnterCue                                                    OFFSET(getStruct<T>, {0xB90, 4, 0, 0})
+	SMember(FGameplayTag)                              HidingInPropTag                                             OFFSET(getStruct<T>, {0xB94, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(getStruct<T>, {0xB98, 32, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               TeleportingGEOnPlayer                                       OFFSET(getStruct<T>, {0xBB8, 8, 0, 0})
 
 
 	/// Functions
@@ -7882,7 +7883,7 @@ class UGA_Athena_HidingProp_JumpOut_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -7902,26 +7903,26 @@ class UGA_Athena_HidingProp_Hide_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3224;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(AB_HidingProp_C*)                          HidingProp                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(UAnimMontage*)                             Enter_Anim_Montage                                          OFFSET(get<T>, {0xB40, 8, 0, 0})
-	SMember(FGameplayTag)                              GC_Wobble                                                   OFFSET(get<T>, {0xB48, 4, 0, 0})
-	SMember(FScalableFloat)                            ExitBlockShootDelay                                         OFFSET(get<T>, {0xB50, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_Quest                                                    OFFSET(get<T>, {0xB78, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_PlayerOwned                                              OFFSET(get<T>, {0xB98, 32, 0, 0})
-	SMember(FScalableFloat)                            RustleMinDelay                                              OFFSET(get<T>, {0xBB8, 40, 0, 0})
-	SMember(FScalableFloat)                            RustleMaxDelay                                              OFFSET(get<T>, {0xBE0, 40, 0, 0})
+	SMember(FGameplayTag)                              GC_Wobble                                                   OFFSET(getStruct<T>, {0xB48, 4, 0, 0})
+	SMember(FScalableFloat)                            ExitBlockShootDelay                                         OFFSET(getStruct<T>, {0xB50, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_Quest                                                    OFFSET(getStruct<T>, {0xB78, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_PlayerOwned                                              OFFSET(getStruct<T>, {0xB98, 32, 0, 0})
+	SMember(FScalableFloat)                            RustleMinDelay                                              OFFSET(getStruct<T>, {0xBB8, 40, 0, 0})
+	SMember(FScalableFloat)                            RustleMaxDelay                                              OFFSET(getStruct<T>, {0xBE0, 40, 0, 0})
 	CMember(AFortPlayerController*)                    PlayerController                                            OFFSET(get<T>, {0xC08, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     HidingInPropTag                                             OFFSET(get<T>, {0xC10, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GettingInPropTag                                            OFFSET(get<T>, {0xC30, 32, 0, 0})
-	SMember(FGameplayTag)                              CurieBurningTag                                             OFFSET(get<T>, {0xC50, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     HidingInPropTag                                             OFFSET(getStruct<T>, {0xC10, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GettingInPropTag                                            OFFSET(getStruct<T>, {0xC30, 32, 0, 0})
+	SMember(FGameplayTag)                              CurieBurningTag                                             OFFSET(getStruct<T>, {0xC50, 4, 0, 0})
 	DMember(bool)                                      AllowCosmetics                                              OFFSET(get<bool>, {0xC54, 1, 0, 0})
-	SMember(FGameplayTag)                              DisallowCosmeticsTag                                        OFFSET(get<T>, {0xC58, 4, 0, 0})
+	SMember(FGameplayTag)                              DisallowCosmeticsTag                                        OFFSET(getStruct<T>, {0xC58, 4, 0, 0})
 	DMember(bool)                                      LandedOnProp                                                OFFSET(get<bool>, {0xC5C, 1, 0, 0})
-	SMember(FTimerHandle)                              LockOnTimer                                                 OFFSET(get<T>, {0xC60, 8, 0, 0})
-	SMember(FVector)                                   HideLocationForwardVectorWorldPos                           OFFSET(get<T>, {0xC68, 24, 0, 0})
-	SMember(FRotator)                                  HideLocationForwardVectorWorldRot                           OFFSET(get<T>, {0xC80, 24, 0, 0})
+	SMember(FTimerHandle)                              LockOnTimer                                                 OFFSET(getStruct<T>, {0xC60, 8, 0, 0})
+	SMember(FVector)                                   HideLocationForwardVectorWorldPos                           OFFSET(getStruct<T>, {0xC68, 24, 0, 0})
+	SMember(FRotator)                                  HideLocationForwardVectorWorldRot                           OFFSET(getStruct<T>, {0xC80, 24, 0, 0})
 
 
 	/// Functions
@@ -8018,7 +8019,7 @@ class UPreviewUnbindAction_C : public UFortSettingsPreviewActionUnbind
 	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
 	CMember(UCommonBorder*)                            BorderFrame                                                 OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(USizeBox*)                                 PrimaryKeybindTextSizeBox                                   OFFSET(get<T>, {0x2D8, 8, 0, 0})
@@ -8076,7 +8077,7 @@ class UControllerActionsMenu_C : public UFortControllerActionsMenu
 	static inline constexpr uint64_t __MDKClassSize = 1360;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 
 
 	/// Functions
@@ -8094,7 +8095,7 @@ class USettingsRotator_Narrow_C : public UFortSettingsRotator
 	static inline constexpr uint64_t __MDKClassSize = 5352;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         RotatorHover                                                OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UBorder*)                                  Background                                                  OFFSET(get<T>, {0x14E0, 8, 0, 0})
 
@@ -8122,7 +8123,7 @@ class USettingsRotator_C : public UFortSettingsRotator
 	static inline constexpr uint64_t __MDKClassSize = 5344;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UBorder*)                                  Background                                                  OFFSET(get<T>, {0x14D8, 8, 0, 0})
 
 
@@ -8145,10 +8146,10 @@ class USettingEntryBackground_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UNamedSlot*)                               Content                                                     OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMouseEnterChanged                                         OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMouseEnterChanged                                         OFFSET(getStruct<T>, {0x2C0, 16, 0, 0})
 
 
 	/// Functions
@@ -8170,7 +8171,7 @@ class USettingsListEntry_Discrete_Narrow_C : public UFortSettingsListEntrySettin
 	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x340, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x340, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        Button_FirstOption                                          OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        Button_SecondOption                                         OFFSET(get<T>, {0x358, 8, 0, 0})
@@ -8197,7 +8198,7 @@ class USettingsListEntry_Missing_C : public UFortSettingsListEntry_Setting
 	static inline constexpr uint64_t __MDKClassSize = 808;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x310, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x310, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_SettingName                                            OFFSET(get<T>, {0x320, 8, 0, 0})
 
@@ -8219,7 +8220,7 @@ class USettingsListEntry_Discrete_C : public UFortSettingsListEntrySetting_Discr
 	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x340, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x340, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        Button_FirstOption                                          OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        Button_SecondOption                                         OFFSET(get<T>, {0x358, 8, 0, 0})
@@ -8246,7 +8247,7 @@ class USettingsListEntry_Scalar_Narrow_C : public UFortSettingsListEntrySetting_
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x330, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x330, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UImage*)                                   DefaultValueLayer                                           OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             Progress                                                    OFFSET(get<T>, {0x348, 8, 0, 0})
@@ -8275,7 +8276,7 @@ class USettingsListEntry_Scalar_C : public UFortSettingsListEntrySetting_Scalar
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x330, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x330, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UImage*)                                   DefaultValueLayer                                           OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             Progress                                                    OFFSET(get<T>, {0x348, 8, 0, 0})
@@ -8304,7 +8305,7 @@ class USettingsListEntry_Action_C : public UFortSettingsListEntrySetting_Action
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x320, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x320, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x328, 8, 0, 0})
 
 
@@ -8329,7 +8330,7 @@ class USettingsListEntry_SubCollection_C : public UFortSettingsListEntrySetting_
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x320, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x320, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x328, 8, 0, 0})
 
 
@@ -8354,7 +8355,7 @@ class UKeyboardPresetRotator_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UPanelButton_C*)                           ButtonLeft                                                  OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UPanelButton_C*)                           ButtonRight                                                 OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Description                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -8398,7 +8399,7 @@ class UJoinVoiceChannelButton_C : public UFortJoinVoiceChannelButton
 	static inline constexpr uint64_t __MDKClassSize = 5328;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 
 
@@ -8419,7 +8420,7 @@ class ULeavePlatformPartyButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5336;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock                                             OFFSET(get<T>, {0x14D0, 8, 0, 0})
 
@@ -8443,7 +8444,7 @@ class USettingsListEntry_KeyboardInput_C : public UFortSettingsListEntrySetting_
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x350, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x350, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x358, 8, 0, 0})
 
 
@@ -8466,7 +8467,7 @@ class USettingsListEntry_ControllerButton_C : public UFortSettingsListEntrySetti
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x330, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x330, 8, 0, 0})
 	CMember(USimpleCommonButton_C*)                    Button_ControllerAction                                     OFFSET(get<T>, {0x338, 8, 0, 0})
 
 
@@ -8508,7 +8509,7 @@ class UTabGamepadBindings_New_C : public UFortTabGamepadButtonMappingOptions_Tem
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8528,7 +8529,7 @@ class UTabMouseAndKeyboardOptions_New_C : public UFortTabMouseAndKeyboardOptions
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8548,7 +8549,7 @@ class UTabTouchOptions_New_C : public UFortTabTouchOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8572,7 +8573,7 @@ class UTabAccountOptions_New_C : public UFortTabAccountOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8598,7 +8599,7 @@ class UTabTouchWeaponOptions_New_C : public UFortTabTouchWeaponOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8618,7 +8619,7 @@ class UTabAudioOptions_New_C : public UFortTabAudioOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8638,7 +8639,7 @@ class UTabHUDOptions_New_C : public UFortTabHUDOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8658,7 +8659,7 @@ class UTabVideoOptions_New_C : public UFortTabVideoOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8682,7 +8683,7 @@ class UTabControllerSettings_New_C : public UFortTabGamepadOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8702,7 +8703,7 @@ class UTabMouseAndKeyboardBindingOptions_New_C : public UFortTabMouseAndKeyboard
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 
 
 	/// Functions
@@ -8728,7 +8729,7 @@ class UTabGameplayOptions_New_C : public UFortTabGameplayOptions_TempNew
 	static inline constexpr uint64_t __MDKClassSize = 1088;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 	CMember(UFortHUDElementWrapper_C*)                 FortHUDElementWrapper                                       OFFSET(get<T>, {0x438, 8, 0, 0})
 
 
@@ -8775,9 +8776,9 @@ class UGA_BoostJumpPack_JumpHover_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     RequiredTags                                                OFFSET(get<T>, {0xB30, 32, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_Hover_Instance                                           OFFSET(get<T>, {0xB50, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     RequiredTags                                                OFFSET(getStruct<T>, {0xB30, 32, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_Hover_Instance                                           OFFSET(getStruct<T>, {0xB50, 8, 0, 0})
 	DMember(double)                                    RequiredFuelToActivate                                      OFFSET(get<double>, {0xB58, 8, 0, 0})
 	CMember(UClass*)                                   GE_Hover                                                    OFFSET(get<T>, {0xB60, 8, 0, 0})
 
@@ -8855,43 +8856,43 @@ class UGA_BoostJumpPack_C : public UFortGameplayAbility_JumpBoostPack
 	static inline constexpr uint64_t __MDKClassSize = 3452;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB48, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB48, 8, 0, 0})
 	DMember(double)                                    Jump_Multiple                                               OFFSET(get<double>, {0xB50, 8, 0, 0})
-	SMember(FVector)                                   Basic_Jump_Z_Adjust                                         OFFSET(get<T>, {0xB58, 24, 0, 0})
-	SMember(FVector)                                   FinalJumpHeight                                             OFFSET(get<T>, {0xB70, 24, 0, 0})
-	SMember(FGameplayEventData)                        EventTriggerData                                            OFFSET(get<T>, {0xB88, 176, 0, 0})
+	SMember(FVector)                                   Basic_Jump_Z_Adjust                                         OFFSET(getStruct<T>, {0xB58, 24, 0, 0})
+	SMember(FVector)                                   FinalJumpHeight                                             OFFSET(getStruct<T>, {0xB70, 24, 0, 0})
+	SMember(FGameplayEventData)                        EventTriggerData                                            OFFSET(getStruct<T>, {0xB88, 176, 0, 0})
 	DMember(bool)                                      bJumpButtonHeld                                             OFFSET(get<bool>, {0xC38, 1, 0, 0})
 	DMember(bool)                                      bHoverButtonHeld                                            OFFSET(get<bool>, {0xC39, 1, 0, 0})
 	DMember(bool)                                      bAtApex                                                     OFFSET(get<bool>, {0xC3A, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               JetpackEffectHandle                                         OFFSET(get<T>, {0xC3C, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               JetpackEffectHandle                                         OFFSET(getStruct<T>, {0xC3C, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          FortPlayerPawn                                              OFFSET(get<T>, {0xC48, 8, 0, 0})
 	DMember(double)                                    FuelFudge                                                   OFFSET(get<double>, {0xC50, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               RegenEffectHandle                                           OFFSET(get<T>, {0xC58, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               RegenEffectHandle                                           OFFSET(getStruct<T>, {0xC58, 8, 0, 0})
 	DMember(bool)                                      bRegenEffectActive                                          OFFSET(get<bool>, {0xC60, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     BoostExecuteTags                                            OFFSET(get<T>, {0xC68, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BoostExecuteTags                                            OFFSET(getStruct<T>, {0xC68, 32, 0, 0})
 	DMember(int32_t)                                   HoverButtonHeldCount                                        OFFSET(get<int32_t>, {0xC88, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     HoverExecuteTags                                            OFFSET(get<T>, {0xC90, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     HoverExecuteTags                                            OFFSET(getStruct<T>, {0xC90, 32, 0, 0})
 	DMember(int32_t)                                   JumpButtonHeldCount                                         OFFSET(get<int32_t>, {0xCB0, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     HoverReleaseTags                                            OFFSET(get<T>, {0xCB8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     HoverReleaseTags                                            OFFSET(getStruct<T>, {0xCB8, 32, 0, 0})
 	DMember(double)                                    TimeStartedHovering                                         OFFSET(get<double>, {0xCD8, 8, 0, 0})
 	DMember(double)                                    TimeStartedFalling                                          OFFSET(get<double>, {0xCE0, 8, 0, 0})
 	DMember(double)                                    EndHoverDelay                                               OFFSET(get<double>, {0xCE8, 8, 0, 0})
 	DMember(double)                                    EndFallingDelay                                             OFFSET(get<double>, {0xCF0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     BoostReleaseTags                                            OFFSET(get<T>, {0xCF8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BoostReleaseTags                                            OFFSET(getStruct<T>, {0xCF8, 32, 0, 0})
 	DMember(bool)                                      bHasDied                                                    OFFSET(get<bool>, {0xD18, 1, 0, 0})
-	SMember(FGameplayTag)                              BoostCue                                                    OFFSET(get<T>, {0xD1C, 4, 0, 0})
-	SMember(FGameplayTag)                              BoostJumpPackCue                                            OFFSET(get<T>, {0xD20, 4, 0, 0})
+	SMember(FGameplayTag)                              BoostCue                                                    OFFSET(getStruct<T>, {0xD1C, 4, 0, 0})
+	SMember(FGameplayTag)                              BoostJumpPackCue                                            OFFSET(getStruct<T>, {0xD20, 4, 0, 0})
 	CMember(UClass*)                                   JetpackInUseEffect                                          OFFSET(get<T>, {0xD28, 8, 0, 0})
 	DMember(bool)                                      TriggeredByJump                                             OFFSET(get<bool>, {0xD30, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockExecuteTags                                            OFFSET(get<T>, {0xD38, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockExecuteTags                                            OFFSET(getStruct<T>, {0xD38, 32, 0, 0})
 	CMember(UClass*)                                   JetpackInUseEffect_Alt                                      OFFSET(get<T>, {0xD58, 8, 0, 0})
-	SMember(FGameplayTag)                              HidingPropTag                                               OFFSET(get<T>, {0xD60, 4, 0, 0})
-	SMember(FGameplayTag)                              ZiplineTag                                                  OFFSET(get<T>, {0xD64, 4, 0, 0})
-	SMember(FGameplayTag)                              GliderRedeployTag                                           OFFSET(get<T>, {0xD68, 4, 0, 0})
-	SMember(FGameplayTag)                              InitialBoostCue                                             OFFSET(get<T>, {0xD6C, 4, 0, 0})
+	SMember(FGameplayTag)                              HidingPropTag                                               OFFSET(getStruct<T>, {0xD60, 4, 0, 0})
+	SMember(FGameplayTag)                              ZiplineTag                                                  OFFSET(getStruct<T>, {0xD64, 4, 0, 0})
+	SMember(FGameplayTag)                              GliderRedeployTag                                           OFFSET(getStruct<T>, {0xD68, 4, 0, 0})
+	SMember(FGameplayTag)                              InitialBoostCue                                             OFFSET(getStruct<T>, {0xD6C, 4, 0, 0})
 	DMember(bool)                                      bFirstBoost                                                 OFFSET(get<bool>, {0xD70, 1, 0, 0})
-	SMember(FGameplayTag)                              BoostEndCue                                                 OFFSET(get<T>, {0xD74, 4, 0, 0})
-	SMember(FGameplayTag)                              BoostOutOfFuelEndCue                                        OFFSET(get<T>, {0xD78, 4, 0, 0})
+	SMember(FGameplayTag)                              BoostEndCue                                                 OFFSET(getStruct<T>, {0xD74, 4, 0, 0})
+	SMember(FGameplayTag)                              BoostOutOfFuelEndCue                                        OFFSET(getStruct<T>, {0xD78, 4, 0, 0})
 
 
 	/// Functions
@@ -9039,7 +9040,7 @@ class AGCL_BoostJumpPack_FuelRegen_C : public AGameplayCueNotify_Jetpack_FuelReg
 	static inline constexpr uint64_t __MDKClassSize = 1208;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4A0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4A0, 8, 0, 0})
 	DMember(float)                                     FullBlinkTimeline_Blink_108772B949790E60DC9BE1BAC70C2EA1    OFFSET(get<float>, {0x4A8, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           FullBlinkTimeline__Direction_108772B949790E60DC9BE1BAC70C2EA1 OFFSET(get<T>, {0x4AC, 1, 0, 0})
 	CMember(UTimelineComponent*)                       FullBlinkTimeline                                           OFFSET(get<T>, {0x4B0, 8, 0, 0})
@@ -9064,7 +9065,7 @@ class AGCL_BoostJumpPack_Hovering_C : public AGameplayCueNotify_Jetpack_Hovering
 	static inline constexpr uint64_t __MDKClassSize = 2968;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xAD0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xAD0, 8, 0, 0})
 	DMember(bool)                                      bJetpackAudioEnabled                                        OFFSET(get<bool>, {0xAD8, 1, 0, 0})
 	CMember(USoundBase*)                               SoundOnStart                                                OFFSET(get<T>, {0xAE0, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnStop                                                 OFFSET(get<T>, {0xAE8, 8, 0, 0})
@@ -9076,8 +9077,8 @@ public:
 	CMember(UParticleSystemComponent*)                 GroundInteract                                              OFFSET(get<T>, {0xB18, 8, 0, 0})
 	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   Milo_Check                                                  OFFSET(get<T>, {0xB20, 32, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  Milo_Backpack                                               OFFSET(get<T>, {0xB40, 32, 0, 0})
-	SMember(FVector)                                   Milo_LightScale                                             OFFSET(get<T>, {0xB60, 24, 0, 0})
-	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0xB78, 4, 0, 0})
+	SMember(FVector)                                   Milo_LightScale                                             OFFSET(getStruct<T>, {0xB60, 24, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(getStruct<T>, {0xB78, 4, 0, 0})
 	CMember(UFXSystemComponent*)                       VFX                                                         OFFSET(get<T>, {0xB80, 8, 0, 0})
 	CMember(UParticleSystem*)                          P_GroundInteraction                                         OFFSET(get<T>, {0xB88, 8, 0, 0})
 	CMember(UFXSystemAsset*)                           NS_Hover                                                    OFFSET(get<T>, {0xB90, 8, 0, 0})
@@ -9112,7 +9113,7 @@ class UGA_BoostJumpPack_Equip_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2872;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
 
 
@@ -9139,8 +9140,8 @@ class ADA_Glider_Item_C : public AFortCustomizableAbilityDecoTool
 	static inline constexpr uint64_t __MDKClassSize = 4792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1290, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(get<T>, {0x1298, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1290, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(getStruct<T>, {0x1298, 32, 0, 0})
 
 
 	/// Functions
@@ -9162,9 +9163,9 @@ class ADA_BoostJumpPack_C : public AFortCustomizableAbilityDecoTool
 	static inline constexpr uint64_t __MDKClassSize = 4824;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1290, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(get<T>, {0x1298, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ErrorReasonGamepad                                          OFFSET(get<T>, {0x12B8, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1290, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(getStruct<T>, {0x1298, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ErrorReasonGamepad                                          OFFSET(getStruct<T>, {0x12B8, 32, 0, 0})
 
 
 	/// Functions
@@ -9199,7 +9200,7 @@ class ABP_Frontend_ShopBG_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StandardBackgroundPlane1                                    OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StandardBackgroundPlane                                     OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Cone                                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -9209,20 +9210,20 @@ public:
 	CMember(UStaticMeshComponent*)                     VeryLargeBackgroundPlane                                    OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(USceneComponent*)                          Scene_Signal                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(FRotator)                                  Rot_Intro                                                   OFFSET(get<T>, {0x2E0, 24, 0, 0})
-	SMember(FRotator)                                  NextRot                                                     OFFSET(get<T>, {0x2F8, 24, 0, 0})
-	SMember(FRotator)                                  Rot                                                         OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FRotator)                                  Rot1                                                        OFFSET(get<T>, {0x328, 24, 0, 0})
+	SMember(FRotator)                                  Rot_Intro                                                   OFFSET(getStruct<T>, {0x2E0, 24, 0, 0})
+	SMember(FRotator)                                  NextRot                                                     OFFSET(getStruct<T>, {0x2F8, 24, 0, 0})
+	SMember(FRotator)                                  Rot                                                         OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(FRotator)                                  Rot1                                                        OFFSET(getStruct<T>, {0x328, 24, 0, 0})
 	DMember(double)                                    PlayRate                                                    OFFSET(get<double>, {0x340, 8, 0, 0})
-	SMember(FRotator)                                  Rot_IntroStart                                              OFFSET(get<T>, {0x348, 24, 0, 0})
+	SMember(FRotator)                                  Rot_IntroStart                                              OFFSET(getStruct<T>, {0x348, 24, 0, 0})
 	DMember(bool)                                      bHasEvent                                                   OFFSET(get<bool>, {0x360, 1, 0, 0})
 	DMember(double)                                    YInitial                                                    OFFSET(get<double>, {0x368, 8, 0, 0})
 	DMember(double)                                    YEnd                                                        OFFSET(get<double>, {0x370, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 Mid                                                         OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(ACMSLobbyDirector_C*)                      CMSDirector                                                 OFFSET(get<T>, {0x380, 8, 0, 0})
-	SMember(FString)                                   BPEnvName                                                   OFFSET(get<T>, {0x388, 16, 0, 0})
+	SMember(FString)                                   BPEnvName                                                   OFFSET(getStruct<T>, {0x388, 16, 0, 0})
 	DMember(bool)                                      ShopEntered                                                 OFFSET(get<bool>, {0x398, 1, 0, 0})
-	SMember(FTimerHandle)                              DonutSeqTimerHandle                                         OFFSET(get<T>, {0x3A0, 8, 0, 0})
+	SMember(FTimerHandle)                              DonutSeqTimerHandle                                         OFFSET(getStruct<T>, {0x3A0, 8, 0, 0})
 	CMember(AActor*)                                   DomeObstruction                                             OFFSET(get<T>, {0x3A8, 8, 0, 0})
 
 
@@ -9257,13 +9258,13 @@ class AB_EmotePreviewDisplay_C : public AFortEmotePreviewActor
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UAthenaEmojiItemDefinition*)               EmojiItemDefinition                                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UAnimMontage*>)             Animation                                                   OFFSET(get<T>, {0x2C0, 32, 0, 0})
 	CMember(UFortMontageItemDefinitionBase*)           DanceOrEmojiItemDefinition                                  OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	SMember(FName)                                     StartSectionName                                            OFFSET(get<T>, {0x2E8, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEmoteSetupFinished                                        OFFSET(get<T>, {0x2F0, 16, 0, 0})
+	SMember(FName)                                     StartSectionName                                            OFFSET(getStruct<T>, {0x2E8, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEmoteSetupFinished                                        OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
 	CMember(UAthenaShoutItemDefinition*)               ShoutItemDefinition                                         OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(TArray<UAudioComponent*>)                  DynamicallySpawnedSounds                                    OFFSET(get<T>, {0x308, 16, 0, 0})
 
@@ -9297,7 +9298,7 @@ class UAthenaItemTextureVariantPicker_C : public UFortVariantItemTexturePicker
 	static inline constexpr uint64_t __MDKClassSize = 1224;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4B0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4B0, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     TextBlock_AllItemsArchived                                  OFFSET(get<T>, {0x4B8, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          WidgetSwitcher_AvailableItems                               OFFSET(get<T>, {0x4C0, 8, 0, 0})
 
@@ -9339,7 +9340,7 @@ class UAthenaVariantTileButton_C : public UFortVariantTileButton
 	static inline constexpr uint64_t __MDKClassSize = 5496;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1560, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         WarningPulse                                                OFFSET(get<T>, {0x1568, 8, 0, 0})
 	CMember(UImage*)                                   Image_Conflict                                              OFFSET(get<T>, {0x1570, 8, 0, 0})
 
@@ -9383,7 +9384,7 @@ class UAthenaFloatSliderVariantPicker_C : public UFortFloatSliderVariantPicker
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3D8, 8, 0, 0})
 	CMember(UOverlay*)                                 Panel_Value                                                 OFFSET(get<T>, {0x3E0, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             Progress                                                    OFFSET(get<T>, {0x3E8, 8, 0, 0})
 
@@ -9613,11 +9614,11 @@ class AGCN_Loop_PlayerWorldPFX_Persistent_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2496;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NS_Loop_WorldFX_Persistent_Motes01                          OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NS_Loop_WorldFX_Persistent                                  OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(AActor*)                                   My_Target                                                   OFFSET(get<T>, {0x9A8, 8, 0, 0})
-	SMember(FTimerHandle)                              Timer                                                       OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	SMember(FTimerHandle)                              Timer                                                       OFFSET(getStruct<T>, {0x9B0, 8, 0, 0})
 	DMember(double)                                    LoopingCheckTime                                            OFFSET(get<double>, {0x9B8, 8, 0, 0})
 
 
@@ -9644,12 +9645,12 @@ class AGCN_Loop_GhostMode_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2560;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(float)                                     FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E       OFFSET(get<float>, {0x998, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E OFFSET(get<T>, {0x99C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       FadeMaterialsTL                                             OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	SMember(FLinearColor)                              HitGlowColor                                                OFFSET(get<T>, {0x9A8, 16, 0, 0})
-	SMember(FLinearColor)                              HotGlowOuterColor                                           OFFSET(get<T>, {0x9B8, 16, 0, 0})
+	SMember(FLinearColor)                              HitGlowColor                                                OFFSET(getStruct<T>, {0x9A8, 16, 0, 0})
+	SMember(FLinearColor)                              HotGlowOuterColor                                           OFFSET(getStruct<T>, {0x9B8, 16, 0, 0})
 	DMember(double)                                    HitGlowFresnelBrightness                                    OFFSET(get<double>, {0x9C8, 8, 0, 0})
 	DMember(double)                                    HitGlowFresnelExponent                                      OFFSET(get<double>, {0x9D0, 8, 0, 0})
 	DMember(double)                                    Glow_Priority                                               OFFSET(get<double>, {0x9D8, 8, 0, 0})
@@ -9727,7 +9728,7 @@ class AGCNL_Vent_Enter_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2497;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(float)                                     FadePPVol_LERP_6D28D8B64202D10F474B48B80194DA6D             OFFSET(get<float>, {0x9A0, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           FadePPVol__Direction_6D28D8B64202D10F474B48B80194DA6D       OFFSET(get<T>, {0x9A4, 1, 0, 0})
@@ -9798,7 +9799,7 @@ class AGCL_BoostJumpPack_Hovering_Infinite_C : public AGameplayCueNotify_Jetpack
 	static inline constexpr uint64_t __MDKClassSize = 2832;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xAD0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xAD0, 8, 0, 0})
 	DMember(bool)                                      bJetpackAudioEnabled                                        OFFSET(get<bool>, {0xAD8, 1, 0, 0})
 	CMember(USoundBase*)                               SoundOnStart                                                OFFSET(get<T>, {0xAE0, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnStop                                                 OFFSET(get<T>, {0xAE8, 8, 0, 0})
@@ -9839,7 +9840,7 @@ class AGCNL_Athena_HidingProp_Collision_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2456;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 
 
 	/// Functions
@@ -9859,7 +9860,7 @@ class AGCNL_Athena_HidingProp_PropTeleporting_C : public AFortGameplayCueNotify_
 	static inline constexpr uint64_t __MDKClassSize = 2456;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 
 
 	/// Functions
@@ -9877,7 +9878,7 @@ class AGCNL_Athena_Surface_Parent_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2466;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          TargetPawn                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0x9A0, 1, 0, 0})
 	DMember(bool)                                      Is_in_Water                                                 OFFSET(get<bool>, {0x9A1, 1, 0, 0})
@@ -9912,11 +9913,11 @@ class AGCNL_EnvCampFire_Doused_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2512;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(float)                                     Fade_Doused_Smoke_Fade_50A77D974140FDA04967E2BABB987458     OFFSET(get<float>, {0x998, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Fade_Doused_Smoke__Direction_50A77D974140FDA04967E2BABB987458 OFFSET(get<T>, {0x99C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Fade_Doused_Smoke                                           OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	SMember(FScalableFloat)                            Row_Duration                                                OFFSET(get<T>, {0x9A8, 40, 0, 0})
+	SMember(FScalableFloat)                            Row_Duration                                                OFFSET(getStruct<T>, {0x9A8, 40, 0, 0})
 
 
 	/// Functions
@@ -9942,9 +9943,9 @@ class AGCNL_EnvCampFire_Stoke_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2536;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	SMember(FScalableFloat)                            Row_TickInterval                                            OFFSET(get<T>, {0x998, 40, 0, 0})
-	SMember(FScalableFloat)                            Row_MaxHeals                                                OFFSET(get<T>, {0x9C0, 40, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
+	SMember(FScalableFloat)                            Row_TickInterval                                            OFFSET(getStruct<T>, {0x998, 40, 0, 0})
+	SMember(FScalableFloat)                            Row_MaxHeals                                                OFFSET(getStruct<T>, {0x9C0, 40, 0, 0})
 
 
 	/// Functions
@@ -10122,7 +10123,7 @@ class UGCN_BoostJumpPack_Boost_C : public UFortGameplayCueNotify_Simple
 	static inline constexpr uint64_t __MDKClassSize = 108;
 
 public:
-	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 
 
 	/// Functions
@@ -10148,7 +10149,7 @@ class AGCN_Loop_Ice_Feet_Environmental_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(TArray<UFXSystemComponent*>)               SpawnedEmitters                                             OFFSET(get<T>, {0x9A0, 16, 0, 0})
 	CMember(UFortCollisionAudioComponent*)             CollisionAudioComp                                          OFFSET(get<T>, {0x9B0, 8, 0, 0})
@@ -10180,7 +10181,7 @@ class AGCN_Loop_SnowFlakes_CameraAttached_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2456;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 
 
 	/// Functions
@@ -10198,7 +10199,7 @@ class AGCN_Loop_SnowFlakes_CameraAttached_Niagara_C : public AFortGameplayCueNot
 	static inline constexpr uint64_t __MDKClassSize = 2468;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        ReturnValue                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(int32_t)                                   NewVar                                                      OFFSET(get<int32_t>, {0x9A0, 4, 0, 0})
 
@@ -10218,7 +10219,7 @@ class AGCN_Loop_Snow_Whiteout_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(float)                                     FadeinOut_Post_BDCA5FC943E3CD00D42B59A9A0D1C530             OFFSET(get<float>, {0x9A0, 4, 0, 0})
 	DMember(float)                                     FadeinOut_Fade_BDCA5FC943E3CD00D42B59A9A0D1C530             OFFSET(get<float>, {0x9A4, 4, 0, 0})
@@ -10281,7 +10282,7 @@ class AB_PhysicsTree_Reporter_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(TArray<FPhysicsLogAnalyticsStruct>)        PhysicsLogData                                              OFFSET(get<T>, {0x2A0, 16, 0, 0})
 	CMember(UAsyncAction_StartListeningToStatefulEvent*) GamePhaseUpdatedAsyncTask                                 OFFSET(get<T>, {0x2B0, 8, 0, 0})
@@ -10368,7 +10369,7 @@ class AGCNL_Athena_HidingProp_Teleporting_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2520;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(float)                                     Timeline_0_LerpWhiteWash_3C12694840EC8C9B33E562A2C6B279BA   OFFSET(get<float>, {0x998, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_3C12694840EC8C9B33E562A2C6B279BA      OFFSET(get<T>, {0x99C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
@@ -10402,7 +10403,7 @@ class AGCNL_Athena_HidingProp_Teleporting_WilliePete_C : public AFortGameplayCue
 	static inline constexpr uint64_t __MDKClassSize = 2520;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(float)                                     Timeline_0_LerpWhiteWash_7F6EEB5A42EA09E354D8B4A32C35C459   OFFSET(get<float>, {0x998, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_7F6EEB5A42EA09E354D8B4A32C35C459      OFFSET(get<T>, {0x99C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
@@ -10464,7 +10465,7 @@ class AGCNL_Athena_UnderwaterDamage_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2488;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(double)                                    Intensity                                                   OFFSET(get<double>, {0x998, 8, 0, 0})
 	CMember(USoundBase*)                               DamageTickSound                                             OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(USoundMix*)                                DrownSoundMix                                               OFFSET(get<T>, {0x9A8, 8, 0, 0})
@@ -10490,7 +10491,7 @@ class AGCN_Loop_Shadow_Bomb_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2912;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(float)                                     Timeline_0_Visbility_E1DFEC9547FE3FAED2AFF3B0D8598182       OFFSET(get<float>, {0x998, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_E1DFEC9547FE3FAED2AFF3B0D8598182      OFFSET(get<T>, {0x99C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
@@ -10500,22 +10501,22 @@ public:
 	CMember(TArray<UParticleSystemComponent*>)         AttachedFX                                                  OFFSET(get<T>, {0x9C0, 16, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           PlayerSkeletalMeshes                                        OFFSET(get<T>, {0x9D0, 16, 0, 0})
 	DMember(bool)                                      FriendlyPlayer                                              OFFSET(get<bool>, {0x9E0, 1, 0, 0})
-	SMember(FTimerHandle)                              ExpireTellDelayTimer                                        OFFSET(get<T>, {0x9E8, 8, 0, 0})
-	SMember(FTimerHandle)                              ExpirationSoundTimer                                        OFFSET(get<T>, {0x9F0, 8, 0, 0})
+	SMember(FTimerHandle)                              ExpireTellDelayTimer                                        OFFSET(getStruct<T>, {0x9E8, 8, 0, 0})
+	SMember(FTimerHandle)                              ExpirationSoundTimer                                        OFFSET(getStruct<T>, {0x9F0, 8, 0, 0})
 	DMember(double)                                    VisbilityLevel                                              OFFSET(get<double>, {0x9F8, 8, 0, 0})
 	DMember(double)                                    WalkVisMultiplier                                           OFFSET(get<double>, {0xA00, 8, 0, 0})
 	DMember(double)                                    SprintVisMultiplier                                         OFFSET(get<double>, {0xA08, 8, 0, 0})
 	DMember(double)                                    MinFriendlyOpacity                                          OFFSET(get<double>, {0xA10, 8, 0, 0})
 	DMember(double)                                    InteractVisibility                                          OFFSET(get<double>, {0xA18, 8, 0, 0})
-	SMember(FScalableFloat)                            DataDuration                                                OFFSET(get<T>, {0xA20, 40, 0, 0})
-	SMember(FScalableFloat)                            DataTellDuration                                            OFFSET(get<T>, {0xA48, 40, 0, 0})
-	SMember(FScalableFloat)                            DataWalkVisMult                                             OFFSET(get<T>, {0xA70, 40, 0, 0})
-	SMember(FScalableFloat)                            DataSprintVisMult                                           OFFSET(get<T>, {0xA98, 40, 0, 0})
-	SMember(FScalableFloat)                            DataFriendlyVisMult                                         OFFSET(get<T>, {0xAC0, 40, 0, 0})
-	SMember(FScalableFloat)                            DataShadowPlaneOpacity                                      OFFSET(get<T>, {0xAE8, 40, 0, 0})
+	SMember(FScalableFloat)                            DataDuration                                                OFFSET(getStruct<T>, {0xA20, 40, 0, 0})
+	SMember(FScalableFloat)                            DataTellDuration                                            OFFSET(getStruct<T>, {0xA48, 40, 0, 0})
+	SMember(FScalableFloat)                            DataWalkVisMult                                             OFFSET(getStruct<T>, {0xA70, 40, 0, 0})
+	SMember(FScalableFloat)                            DataSprintVisMult                                           OFFSET(getStruct<T>, {0xA98, 40, 0, 0})
+	SMember(FScalableFloat)                            DataFriendlyVisMult                                         OFFSET(getStruct<T>, {0xAC0, 40, 0, 0})
+	SMember(FScalableFloat)                            DataShadowPlaneOpacity                                      OFFSET(getStruct<T>, {0xAE8, 40, 0, 0})
 	CMember(UTimelineComponent*)                       FadeInOut                                                   OFFSET(get<T>, {0xB10, 8, 0, 0})
 	DMember(bool)                                      TickENabled                                                 OFFSET(get<bool>, {0xB18, 1, 0, 0})
-	SMember(FScalableFloat)                            SmokeBombDuration                                           OFFSET(get<T>, {0xB20, 40, 0, 0})
+	SMember(FScalableFloat)                            SmokeBombDuration                                           OFFSET(getStruct<T>, {0xB20, 40, 0, 0})
 	DMember(double)                                    TellDuration                                                OFFSET(get<double>, {0xB48, 8, 0, 0})
 	DMember(double)                                    ExpireTellOpacity                                           OFFSET(get<double>, {0xB50, 8, 0, 0})
 	DMember(double)                                    SmokeBombDurationUserSpecified                              OFFSET(get<double>, {0xB58, 8, 0, 0})
@@ -10566,7 +10567,7 @@ class AGCN_Loop_SpookyMist_C : public AFortGameplayCueNotifyLoop_SpookyMist
 	static inline constexpr uint64_t __MDKClassSize = 2896;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB30, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0xB38, 8, 0, 0})
 	DMember(float)                                     Timeline_Interaction_Fade_In_Out_Visbility_5529D6B24898E091AFB4668B43CFAB50 OFFSET(get<float>, {0xB40, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_Interaction_Fade_In_Out__Direction_5529D6B24898E091AFB4668B43CFAB50 OFFSET(get<T>, {0xB44, 1, 0, 0})
@@ -10618,11 +10619,11 @@ class AGCNL_AthenaAI_NonParticipant_AlertState_C : public AFortGameplayCueNotify
 	static inline constexpr uint64_t __MDKClassSize = 2680;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA20, 8, 0, 0})
-	SMember(FLinearColor)                              IconColorAlert                                              OFFSET(get<T>, {0xA28, 16, 0, 0})
-	SMember(FLinearColor)                              IconColorThreatend                                          OFFSET(get<T>, {0xA38, 16, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA20, 8, 0, 0})
+	SMember(FLinearColor)                              IconColorAlert                                              OFFSET(getStruct<T>, {0xA28, 16, 0, 0})
+	SMember(FLinearColor)                              IconColorThreatend                                          OFFSET(getStruct<T>, {0xA38, 16, 0, 0})
 	DMember(double)                                    AnimationLength                                             OFFSET(get<double>, {0xA48, 8, 0, 0})
-	SMember(FLinearColor)                              IconColorAlertInner                                         OFFSET(get<T>, {0xA50, 16, 0, 0})
+	SMember(FLinearColor)                              IconColorAlertInner                                         OFFSET(getStruct<T>, {0xA50, 16, 0, 0})
 	CMember(USoundBase*)                               Aggro_Sound                                                 OFFSET(get<T>, {0xA60, 8, 0, 0})
 	CMember(USoundBase*)                               SearchingSound                                              OFFSET(get<T>, {0xA68, 8, 0, 0})
 	CMember(AFortPawn*)                                Pawn_Converter                                              OFFSET(get<T>, {0xA70, 8, 0, 0})
@@ -10645,7 +10646,7 @@ class AGCNL_Athena_ChromeSurface_C : public AGCNL_Athena_Surface_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 2488;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x9A8, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          LocalTarget                                                 OFFSET(get<T>, {0x9B0, 8, 0, 0})
 
 
@@ -10695,13 +10696,13 @@ class AGCNL_Athena_MultiInteract_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2584;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          Audio                                                       OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(double)                                    CurrentPitch                                                OFFSET(get<double>, {0x9A0, 8, 0, 0})
 	DMember(double)                                    TargetPitch                                                 OFFSET(get<double>, {0x9A8, 8, 0, 0})
 	CMember(TMap<int32_t, double>)                     Player_Pitch_Map                                            OFFSET(get<T>, {0x9B0, 80, 0, 0})
 	DMember(double)                                    PreviousPitch                                               OFFSET(get<double>, {0xA00, 8, 0, 0})
-	SMember(FTimerHandle)                              TargetProgressHandle                                        OFFSET(get<T>, {0xA08, 8, 0, 0})
+	SMember(FTimerHandle)                              TargetProgressHandle                                        OFFSET(getStruct<T>, {0xA08, 8, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     Effect_Causer_Pawn                                          OFFSET(get<T>, {0xA10, 8, 0, 0})
 
 
@@ -10726,10 +10727,10 @@ class AProp_PhysicsBoulder_Parent_C : public ABuildingProp
 	static inline constexpr uint64_t __MDKClassSize = 3128;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBB8, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             Sound_Indicator                                             OFFSET(get<T>, {0xBC0, 8, 0, 0})
-	SMember(FVector)                                   LastImpactNormal                                            OFFSET(get<T>, {0xBC8, 24, 0, 0})
-	SMember(FScalableFloat)                            VerticalImpulseRatio                                        OFFSET(get<T>, {0xBE0, 40, 0, 0})
+	SMember(FVector)                                   LastImpactNormal                                            OFFSET(getStruct<T>, {0xBC8, 24, 0, 0})
+	SMember(FScalableFloat)                            VerticalImpulseRatio                                        OFFSET(getStruct<T>, {0xBE0, 40, 0, 0})
 	DMember(double)                                    NextPotentialLaunchTime                                     OFFSET(get<double>, {0xC08, 8, 0, 0})
 	DMember(double)                                    LaunchDelay                                                 OFFSET(get<double>, {0xC10, 8, 0, 0})
 	CMember(TArray<FScalableFloat>)                    PlayerImpactTiers                                           OFFSET(get<T>, {0xC18, 16, 0, 0})
@@ -10755,9 +10756,9 @@ class AProp_PhysicsBoulder_Granite_C : public AProp_PhysicsBoulder_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 3168;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC38, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC38, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           NS_RollingEffects                                           OFFSET(get<T>, {0xC40, 8, 0, 0})
-	SMember(FName)                                     RollingEffectsVector3VarName                                OFFSET(get<T>, {0xC48, 4, 0, 0})
+	SMember(FName)                                     RollingEffectsVector3VarName                                OFFSET(getStruct<T>, {0xC48, 4, 0, 0})
 	CMember(UNiagaraSystem*)                           OnSpawnFX_One                                               OFFSET(get<T>, {0xC50, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           OnSpawnFX_Two                                               OFFSET(get<T>, {0xC58, 8, 0, 0})
 
@@ -10781,7 +10782,7 @@ class AGCNL_Jetpack_Hover_Lateral_C : public AGameplayCueNotify_Jetpack_Hovering
 	static inline constexpr uint64_t __MDKClassSize = 2984;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xAD0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xAD0, 8, 0, 0})
 	DMember(bool)                                      bJetpackAudioEnabled                                        OFFSET(get<bool>, {0xAD8, 1, 0, 0})
 	CMember(USoundBase*)                               SoundOnStart                                                OFFSET(get<T>, {0xAE0, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnStop                                                 OFFSET(get<T>, {0xAE8, 8, 0, 0})
@@ -10794,9 +10795,9 @@ public:
 	CMember(UParticleSystemComponent*)                 GroundInteract                                              OFFSET(get<T>, {0xB20, 8, 0, 0})
 	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   Milo_Check                                                  OFFSET(get<T>, {0xB28, 32, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  Milo_Backpack                                               OFFSET(get<T>, {0xB48, 32, 0, 0})
-	SMember(FVector)                                   Milo_LightScale                                             OFFSET(get<T>, {0xB68, 24, 0, 0})
+	SMember(FVector)                                   Milo_LightScale                                             OFFSET(getStruct<T>, {0xB68, 24, 0, 0})
 	CMember(UParticleSystem*)                          HoverEffect                                                 OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0xB88, 4, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(getStruct<T>, {0xB88, 4, 0, 0})
 	CMember(UParticleSystem*)                          P_GroundInteract                                            OFFSET(get<T>, {0xB90, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       HoverFXSystem                                               OFFSET(get<T>, {0xB98, 8, 0, 0})
 	CMember(UFXSystemAsset*)                           NS_Hover                                                    OFFSET(get<T>, {0xBA0, 8, 0, 0})
@@ -10829,7 +10830,7 @@ class AGCNL_Status_DanceStunned_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2464;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Active_Confetti                                             OFFSET(get<T>, {0x998, 8, 0, 0})
 
 
@@ -10850,12 +10851,12 @@ class AGCNL_Athena_SnowSurface_C : public AGCNL_Athena_Surface_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 2712;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x9A8, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        FootStepFX                                                  OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(bool)                                      bNotValid                                                   OFFSET(get<bool>, {0x9B8, 1, 0, 0})
 	DMember(bool)                                      bReplayMode                                                 OFFSET(get<bool>, {0x9B9, 1, 0, 0})
 	CMember(AFortReplaySpectatorAthena*)               ReplayController                                            OFFSET(get<T>, {0x9C0, 8, 0, 0})
-	SMember(FGameplayCueParameters)                    GCParameters                                                OFFSET(get<T>, {0x9C8, 208, 0, 0})
+	SMember(FGameplayCueParameters)                    GCParameters                                                OFFSET(getStruct<T>, {0x9C8, 208, 0, 0})
 
 
 	/// Functions
@@ -10881,7 +10882,7 @@ class AGCNL_Athena_SandSurface_C : public AGCNL_Athena_Surface_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 2504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x9A8, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        FootStepFX                                                  OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(bool)                                      bNotValid                                                   OFFSET(get<bool>, {0x9B8, 1, 0, 0})
 	DMember(bool)                                      bReplayMode                                                 OFFSET(get<bool>, {0x9B9, 1, 0, 0})
@@ -10915,10 +10916,10 @@ class ABP_FluidSim_FN_C : public ABP_FluidSim_01_C
 	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x570, 8, 0, 0})
-	SMember(FFluidForceDynamic)                        BoatForceSettings                                           OFFSET(get<T>, {0x578, 112, 0, 0})
-	SMember(FFluidForceDynamic)                        PlayerForceSettings                                         OFFSET(get<T>, {0x5E8, 112, 0, 0})
-	SMember(FFluidForceDynamic)                        MechForceSettings                                           OFFSET(get<T>, {0x658, 112, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x570, 8, 0, 0})
+	SMember(FFluidForceDynamic)                        BoatForceSettings                                           OFFSET(getStruct<T>, {0x578, 112, 0, 0})
+	SMember(FFluidForceDynamic)                        PlayerForceSettings                                         OFFSET(getStruct<T>, {0x5E8, 112, 0, 0})
+	SMember(FFluidForceDynamic)                        MechForceSettings                                           OFFSET(getStruct<T>, {0x658, 112, 0, 0})
 	CMember(TArray<AFortPawn*>)                        RelevantFortPawns                                           OFFSET(get<T>, {0x6C8, 16, 0, 0})
 	DMember(bool)                                      Use_FN_Pawn_Forces                                          OFFSET(get<bool>, {0x6D8, 1, 0, 0})
 	CMember(TMap<FGameplayTag, FFluidForceDynamic>)    VehicleTypeMap                                              OFFSET(get<T>, {0x6E0, 80, 0, 0})
@@ -10943,7 +10944,7 @@ class ABGA_PhysicsTreeLog_C : public ABuildingProp
 	static inline constexpr uint64_t __MDKClassSize = 3704;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBB8, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NS_Physics_Tree_InWater_Ripples                             OFFSET(get<T>, {0xBC0, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             FortSoundIndicator                                          OFFSET(get<T>, {0xBC8, 8, 0, 0})
 	CMember(UCapsuleComponent*)                        WaterInteractMiddle                                         OFFSET(get<T>, {0xBD0, 8, 0, 0})
@@ -10952,8 +10953,8 @@ public:
 	CMember(UNiagaraComponent*)                        NS_Physics_Tree_Environment_Impact                          OFFSET(get<T>, {0xBE8, 8, 0, 0})
 	CMember(TArray<FScalableFloat>)                    PlayerImpactTiers                                           OFFSET(get<T>, {0xBF0, 16, 0, 0})
 	CMember(TArray<FScalableFloat>)                    PlayerImpulseTiers                                          OFFSET(get<T>, {0xC00, 16, 0, 0})
-	SMember(FVector)                                   LastImpactNormal                                            OFFSET(get<T>, {0xC10, 24, 0, 0})
-	SMember(FScalableFloat)                            VerticalImpulseRatio                                        OFFSET(get<T>, {0xC28, 40, 0, 0})
+	SMember(FVector)                                   LastImpactNormal                                            OFFSET(getStruct<T>, {0xC10, 24, 0, 0})
+	SMember(FScalableFloat)                            VerticalImpulseRatio                                        OFFSET(getStruct<T>, {0xC28, 40, 0, 0})
 	CMember(UBuoyancyComponent*)                       BuoyancyComponent                                           OFFSET(get<T>, {0xC50, 8, 0, 0})
 	DMember(double)                                    NextImminentCollisionTime                                   OFFSET(get<double>, {0xC58, 8, 0, 0})
 	DMember(double)                                    TimeBetweenImminentCollisions                               OFFSET(get<double>, {0xC60, 8, 0, 0})
@@ -10961,26 +10962,26 @@ public:
 	DMember(double)                                    BreakTreeDamage                                             OFFSET(get<double>, {0xC70, 8, 0, 0})
 	DMember(double)                                    NextPotentialLaunchTime                                     OFFSET(get<double>, {0xC78, 8, 0, 0})
 	DMember(double)                                    LaunchDelay                                                 OFFSET(get<double>, {0xC80, 8, 0, 0})
-	SMember(FGameplayTag)                              TreeDestructionBurstCue                                     OFFSET(get<T>, {0xC88, 4, 0, 0})
-	SMember(FTransform)                                TreeDestructionTransform                                    OFFSET(get<T>, {0xC90, 96, 0, 0})
+	SMember(FGameplayTag)                              TreeDestructionBurstCue                                     OFFSET(getStruct<T>, {0xC88, 4, 0, 0})
+	SMember(FTransform)                                TreeDestructionTransform                                    OFFSET(getStruct<T>, {0xC90, 96, 0, 0})
 	DMember(int32_t)                                   CachedDamageValue                                           OFFSET(get<int32_t>, {0xCF0, 4, 0, 0})
 	DMember(double)                                    SnowTimerValue                                              OFFSET(get<double>, {0xCF8, 8, 0, 0})
-	SMember(FTimerHandle)                              SnowRemovalTimerHandle                                      OFFSET(get<T>, {0xD00, 8, 0, 0})
+	SMember(FTimerHandle)                              SnowRemovalTimerHandle                                      OFFSET(getStruct<T>, {0xD00, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       WaterFxPhysicsTreeMiddle                                    OFFSET(get<T>, {0xD08, 8, 0, 0})
 	CMember(TArray<UFXSystemComponent*>)               FxSystemArray                                               OFFSET(get<T>, {0xD10, 16, 0, 0})
 	DMember(double)                                    WaterFxPlaneDepth                                           OFFSET(get<double>, {0xD20, 8, 0, 0})
-	SMember(FVector)                                   WaterFxPlaneLocation                                        OFFSET(get<T>, {0xD28, 24, 0, 0})
+	SMember(FVector)                                   WaterFxPlaneLocation                                        OFFSET(getStruct<T>, {0xD28, 24, 0, 0})
 	DMember(int32_t)                                   WaterFxIndex                                                OFFSET(get<int32_t>, {0xD40, 4, 0, 0})
 	CMember(UFXSystemComponent*)                       WaterFxPhysicsTreeTop                                       OFFSET(get<T>, {0xD48, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       WaterFxPhysicsTreeBottom                                    OFFSET(get<T>, {0xD50, 8, 0, 0})
-	SMember(FTimerHandle)                              WaterSurfaceInfoTimer                                       OFFSET(get<T>, {0xD58, 8, 0, 0})
-	SMember(FVector)                                   WaterFxPlaneNormal                                          OFFSET(get<T>, {0xD60, 24, 0, 0})
+	SMember(FTimerHandle)                              WaterSurfaceInfoTimer                                       OFFSET(getStruct<T>, {0xD58, 8, 0, 0})
+	SMember(FVector)                                   WaterFxPlaneNormal                                          OFFSET(getStruct<T>, {0xD60, 24, 0, 0})
 	CMember(ABP_FluidSim_FN_C*)                        FluidSim                                                    OFFSET(get<T>, {0xD78, 8, 0, 0})
 	CMember(TMap<FName, FName>)                        Sockets_And_Endpoints                                       OFFSET(get<T>, {0xD80, 80, 0, 0})
-	SMember(FFluidForceDynamic)                        Fluid_Force_Dynamic                                         OFFSET(get<T>, {0xDD0, 112, 0, 0})
+	SMember(FFluidForceDynamic)                        Fluid_Force_Dynamic                                         OFFSET(getStruct<T>, {0xDD0, 112, 0, 0})
 	DMember(double)                                    LogLength                                                   OFFSET(get<double>, {0xE40, 8, 0, 0})
 	DMember(bool)                                      CanPlayDeathEffects                                         OFFSET(get<bool>, {0xE48, 1, 0, 0})
-	SMember(FScalableFloat)                            bSplitWhenCutBySaber                                        OFFSET(get<T>, {0xE50, 40, 0, 0})
+	SMember(FScalableFloat)                            bSplitWhenCutBySaber                                        OFFSET(getStruct<T>, {0xE50, 40, 0, 0})
 
 
 	/// Functions
@@ -11036,7 +11037,7 @@ class AGC_Athena_OutsideSafeZone_C : public AFortGameplayCueNotifyLoop_OutsideSa
 	static inline constexpr uint64_t __MDKClassSize = 2625;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UPointLightComponent*)                     Random_Lighting_Light                                       OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(float)                                     LightningFlashTL_LERP_3FDEC95248645BE865DCD0840F99915A      OFFSET(get<float>, {0x9A0, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           LightningFlashTL__Direction_3FDEC95248645BE865DCD0840F99915A OFFSET(get<T>, {0x9A4, 1, 0, 0})
@@ -11044,7 +11045,7 @@ public:
 	CMember(USoundBase*)                               Storm_Sound                                                 OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(double)                                    LightningFlashDiameter                                      OFFSET(get<double>, {0x9B8, 8, 0, 0})
 	DMember(double)                                    LightningFlashHeight                                        OFFSET(get<double>, {0x9C0, 8, 0, 0})
-	SMember(FVector)                                   Lightning_Spawn_Location                                    OFFSET(get<T>, {0x9C8, 24, 0, 0})
+	SMember(FVector)                                   Lightning_Spawn_Location                                    OFFSET(getStruct<T>, {0x9C8, 24, 0, 0})
 	DMember(double)                                    _ChanceOfLightningMesh                                      OFFSET(get<double>, {0x9E0, 8, 0, 0})
 	DMember(double)                                    Lightning_Intensity                                         OFFSET(get<double>, {0x9E8, 8, 0, 0})
 	DMember(double)                                    LightningIntensityMin                                       OFFSET(get<double>, {0x9F0, 8, 0, 0})
@@ -11055,9 +11056,9 @@ public:
 	DMember(double)                                    LightningFlashRepeatDelayMin                                OFFSET(get<double>, {0xA18, 8, 0, 0})
 	DMember(double)                                    LightningFlashRepeatDelayMax                                OFFSET(get<double>, {0xA20, 8, 0, 0})
 	DMember(int32_t)                                   Storm_Stage                                                 OFFSET(get<int32_t>, {0xA28, 4, 0, 0})
-	SMember(FGameplayTag)                              StormAudioTag_Low                                           OFFSET(get<T>, {0xA2C, 4, 0, 0})
-	SMember(FGameplayTag)                              StormAudioTag_Medium                                        OFFSET(get<T>, {0xA30, 4, 0, 0})
-	SMember(FGameplayTag)                              StormAudioTag_High                                          OFFSET(get<T>, {0xA34, 4, 0, 0})
+	SMember(FGameplayTag)                              StormAudioTag_Low                                           OFFSET(getStruct<T>, {0xA2C, 4, 0, 0})
+	SMember(FGameplayTag)                              StormAudioTag_Medium                                        OFFSET(getStruct<T>, {0xA30, 4, 0, 0})
+	SMember(FGameplayTag)                              StormAudioTag_High                                          OFFSET(getStruct<T>, {0xA34, 4, 0, 0})
 	CMember(UAmbientAudioDataAsset*)                   StormAudioBank                                              OFFSET(get<T>, {0xA38, 8, 0, 0})
 	DMember(bool)                                      StormEffectsEnabled                                         OFFSET(get<bool>, {0xA40, 1, 0, 0})
 
@@ -11101,7 +11102,7 @@ class AGC_Athena_OutsideSafeZone_Stage03_C : public AGC_Athena_OutsideSafeZone_C
 	static inline constexpr uint64_t __MDKClassSize = 2640;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA48, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA48, 8, 0, 0})
 
 
 	/// Functions
@@ -11121,7 +11122,7 @@ class AProp_PhysicsBoulder_Desert_01_C : public AProp_PhysicsBoulder_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 3136;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC38, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC38, 8, 0, 0})
 
 
 	/// Functions
@@ -11143,7 +11144,7 @@ class AGCNL_RollingEffects_Parent_C : public AFortGameplayCueNotifyLoop_PhysicsO
 	static inline constexpr uint64_t __MDKClassSize = 2840;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xAF0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xAF0, 8, 0, 0})
 	CMember(USoundBase*)                               SoundAssetDefault                                           OFFSET(get<T>, {0xAF8, 8, 0, 0})
 	CMember(USoundBase*)                               SoundAssetSmall                                             OFFSET(get<T>, {0xB00, 8, 0, 0})
 	CMember(USoundBase*)                               SoundAssetMedium                                            OFFSET(get<T>, {0xB08, 8, 0, 0})
@@ -11181,7 +11182,7 @@ class AGCNL_RollingEffects_PhysicsTree_C : public AGCNL_RollingEffects_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 2848;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB18, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB18, 8, 0, 0})
 
 
 	/// Functions
@@ -11201,7 +11202,7 @@ class AGCN_Loop_Hot_Feet_Environmental_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2544;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          TargetPlayer                                                OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(TArray<UParticleSystemComponent*>)         SpawnedEmitters                                             OFFSET(get<T>, {0x9A0, 16, 0, 0})
 	CMember(USoundBase*)                               SC_Footstep_Local                                           OFFSET(get<T>, {0x9B0, 8, 0, 0})
@@ -11361,7 +11362,7 @@ class AGCNL_Zipline_Travel_C : public AFortGameplayCueNotifyLoop_ZiplineTravel
 	static inline constexpr uint64_t __MDKClassSize = 2704;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA70, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA70, 8, 0, 0})
 	CMember(UAudioComponent*)                          AttachSoundAudioComp                                        OFFSET(get<T>, {0xA78, 8, 0, 0})
 	CMember(TArray<bool>)                              NewVar                                                      OFFSET(get<T>, {0xA80, 16, 0, 0})
 
@@ -11413,14 +11414,14 @@ class AGCNL_Zipline_Downhill_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2512;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(ULegacyCameraShake*)                       matineeCamShake                                             OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	DMember(double)                                    MinCamShakeAmp                                              OFFSET(get<double>, {0x9A8, 8, 0, 0})
 	DMember(double)                                    MaxCamShakeAmp                                              OFFSET(get<double>, {0x9B0, 8, 0, 0})
 	DMember(double)                                    MinCamShakeFreq                                             OFFSET(get<double>, {0x9B8, 8, 0, 0})
 	DMember(double)                                    MaxCamShakeFreq                                             OFFSET(get<double>, {0x9C0, 8, 0, 0})
-	SMember(FTimerHandle)                              CameraShakeTimerHandle                                      OFFSET(get<T>, {0x9C8, 8, 0, 0})
+	SMember(FTimerHandle)                              CameraShakeTimerHandle                                      OFFSET(getStruct<T>, {0x9C8, 8, 0, 0})
 
 
 	/// Functions
@@ -11442,7 +11443,7 @@ class AGCNL_Athena_Player_Sliding_CameraShake_C : public AFortGameplayCueNotify_
 	static inline constexpr uint64_t __MDKClassSize = 2577;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(float)                                     Timeline_0_BlendWeight_11D30796436EDF3C6112C3BD3BA47DBC     OFFSET(get<float>, {0x9A0, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_11D30796436EDF3C6112C3BD3BA47DBC      OFFSET(get<T>, {0x9A4, 1, 0, 0})
@@ -11453,7 +11454,7 @@ public:
 	DMember(double)                                    MaxCamShakeAmp                                              OFFSET(get<double>, {0x9C8, 8, 0, 0})
 	DMember(double)                                    MinCamShakeFreq                                             OFFSET(get<double>, {0x9D0, 8, 0, 0})
 	DMember(double)                                    MaxCamShakeFreq                                             OFFSET(get<double>, {0x9D8, 8, 0, 0})
-	SMember(FScalableFloat)                            MaxSlideSpeed                                               OFFSET(get<T>, {0x9E0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxSlideSpeed                                               OFFSET(getStruct<T>, {0x9E0, 40, 0, 0})
 	DMember(double)                                    CameraShakeSpeed                                            OFFSET(get<double>, {0xA08, 8, 0, 0})
 	DMember(bool)                                      bIsSuperHigh                                                OFFSET(get<bool>, {0xA10, 1, 0, 0})
 
@@ -11483,14 +11484,14 @@ class AGCNL_Athena_Player_Sliding_Speedlines_C : public AFortGameplayCueNotify_L
 	static inline constexpr uint64_t __MDKClassSize = 2504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       DustFX                                                      OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UFortMovementComp_Character*)              CachedMovementCmponent                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(AFortPlayerController*)                    CachedLocalViewingPlayerController                          OFFSET(get<T>, {0x9A8, 8, 0, 0})
 	CMember(APawn*)                                    CachedPlayerPawn                                            OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(bool)                                      bIsGraceFalling                                             OFFSET(get<bool>, {0x9B8, 1, 0, 0})
 	DMember(bool)                                      bTickFree                                                   OFFSET(get<bool>, {0x9B9, 1, 0, 0})
-	SMember(FTimerHandle)                              DustStateTimerHandle                                        OFFSET(get<T>, {0x9C0, 8, 0, 0})
+	SMember(FTimerHandle)                              DustStateTimerHandle                                        OFFSET(getStruct<T>, {0x9C0, 8, 0, 0})
 
 
 	/// Functions
@@ -11636,7 +11637,7 @@ class AGCNL_RollingEffects_Stone_C : public AGCNL_RollingEffects_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 2848;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB18, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB18, 8, 0, 0})
 
 
 	/// Functions
@@ -11656,16 +11657,16 @@ class AGCN_Athena_Interrogation_Reveal_Stencil_Latent_C : public AFortGameplayCu
 	static inline constexpr uint64_t __MDKClassSize = 1480;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
 	DMember(double)                                    SweepDuration                                               OFFSET(get<double>, {0x558, 8, 0, 0})
-	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(get<T>, {0x560, 8, 0, 0})
+	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(getStruct<T>, {0x560, 8, 0, 0})
 	DMember(double)                                    SweepRadius                                                 OFFSET(get<double>, {0x568, 8, 0, 0})
-	SMember(FVector)                                   LocalPlayerLocation                                         OFFSET(get<T>, {0x570, 24, 0, 0})
+	SMember(FVector)                                   LocalPlayerLocation                                         OFFSET(getStruct<T>, {0x570, 24, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x588, 8, 0, 0})
 	DMember(double)                                    DelayBeforeSweep                                            OFFSET(get<double>, {0x590, 8, 0, 0})
-	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(get<T>, {0x5A0, 40, 0, 0})
+	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(getStruct<T>, {0x598, 8, 0, 0})
+	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(getStruct<T>, {0x5A0, 40, 0, 0})
 
 
 	/// Functions
@@ -11691,18 +11692,18 @@ class AGCN_Athena_Interrogation_Reveal_Latent_C : public AFortGameplayCueNotify_
 	static inline constexpr uint64_t __MDKClassSize = 1513;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
 	DMember(double)                                    SweepDuration                                               OFFSET(get<double>, {0x558, 8, 0, 0})
-	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(get<T>, {0x560, 8, 0, 0})
+	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(getStruct<T>, {0x560, 8, 0, 0})
 	DMember(double)                                    SweepRadius                                                 OFFSET(get<double>, {0x568, 8, 0, 0})
-	SMember(FVector)                                   SourceObjectLocation                                        OFFSET(get<T>, {0x570, 24, 0, 0})
+	SMember(FVector)                                   SourceObjectLocation                                        OFFSET(getStruct<T>, {0x570, 24, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x588, 8, 0, 0})
 	DMember(double)                                    DelayBeforeSweep                                            OFFSET(get<double>, {0x590, 8, 0, 0})
-	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(FVector)                                   ParticleRelativeLocation                                    OFFSET(get<T>, {0x5A0, 24, 0, 0})
+	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(getStruct<T>, {0x598, 8, 0, 0})
+	SMember(FVector)                                   ParticleRelativeLocation                                    OFFSET(getStruct<T>, {0x5A0, 24, 0, 0})
 	CMember(USoundMix*)                                RevealSoundMix                                              OFFSET(get<T>, {0x5B8, 8, 0, 0})
-	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(get<T>, {0x5C0, 40, 0, 0})
+	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(getStruct<T>, {0x5C0, 40, 0, 0})
 	DMember(bool)                                      bShouldPlayParticleEffectOnHand                             OFFSET(get<bool>, {0x5E8, 1, 0, 0})
 
 
@@ -11729,21 +11730,21 @@ class AGCNL_Athena_Player_Sliding_Player_C : public AFortGameplayCueNotifyLoop_S
 	static inline constexpr uint64_t __MDKClassSize = 2712;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA20, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA20, 8, 0, 0})
 	CMember(UFortCollisionAudioComponent*)             FortCollisionAudio                                          OFFSET(get<T>, {0xA28, 8, 0, 0})
 	DMember(bool)                                      bUpdateAudioParams                                          OFFSET(get<bool>, {0xA30, 1, 0, 0})
 	DMember(double)                                    VelocityLengthAudioParam                                    OFFSET(get<double>, {0xA38, 8, 0, 0})
 	DMember(double)                                    ZVelocityAudioParam                                         OFFSET(get<double>, {0xA40, 8, 0, 0})
 	CMember(USoundBase*)                               StopSlideSound                                              OFFSET(get<T>, {0xA48, 8, 0, 0})
 	CMember(UAudioComponent*)                          Stop_Slide_Audio                                            OFFSET(get<T>, {0xA50, 8, 0, 0})
-	SMember(FTimerHandle)                              SlidingFailsafeTimerHandle                                  OFFSET(get<T>, {0xA58, 8, 0, 0})
+	SMember(FTimerHandle)                              SlidingFailsafeTimerHandle                                  OFFSET(getStruct<T>, {0xA58, 8, 0, 0})
 	CMember(USoundBase*)                               StartSlideSound                                             OFFSET(get<T>, {0xA60, 8, 0, 0})
 	CMember(UFortMovementComp_Character*)              Cached_Movement_ComponentRef                                OFFSET(get<T>, {0xA68, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       Dust_FX                                                     OFFSET(get<T>, {0xA70, 8, 0, 0})
 	DMember(bool)                                      bIsGraceFalling                                             OFFSET(get<bool>, {0xA78, 1, 0, 0})
-	SMember(FTimerHandle)                              SpeedLineTimerHandle                                        OFFSET(get<T>, {0xA80, 8, 0, 0})
+	SMember(FTimerHandle)                              SpeedLineTimerHandle                                        OFFSET(getStruct<T>, {0xA80, 8, 0, 0})
 	DMember(int32_t)                                   SurfaceTypeInt                                              OFFSET(get<int32_t>, {0xA88, 4, 0, 0})
-	SMember(FTimerHandle)                              SlideAudioTimerHandle                                       OFFSET(get<T>, {0xA90, 8, 0, 0})
+	SMember(FTimerHandle)                              SlideAudioTimerHandle                                       OFFSET(getStruct<T>, {0xA90, 8, 0, 0})
 
 
 	/// Functions
@@ -11893,7 +11894,7 @@ class ABGA_LinkedActorWithGravity_Parent_C : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x978, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x978, 8, 0, 0})
 	CMember(UFortWaterInteractionComponent*)           FortWaterInteraction                                        OFFSET(get<T>, {0x980, 8, 0, 0})
 	CMember(UCapsuleComponent*)                        FallingCollisionCapsule                                     OFFSET(get<T>, {0x988, 8, 0, 0})
 	CMember(UFortLinkToActorComponent*)                FortLinkToActor                                             OFFSET(get<T>, {0x990, 8, 0, 0})
@@ -11901,7 +11902,7 @@ public:
 	DMember(bool)                                      SimulateOnBeginPlay                                         OFFSET(get<bool>, {0x9A0, 1, 0, 0})
 	DMember(bool)                                      HideOnDeath                                                 OFFSET(get<bool>, {0x9A1, 1, 0, 0})
 	DMember(bool)                                      bAttached                                                   OFFSET(get<bool>, {0x9A2, 1, 0, 0})
-	SMember(FGameplayTag)                              GC_Death                                                    OFFSET(get<T>, {0x9A4, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Death                                                    OFFSET(getStruct<T>, {0x9A4, 4, 0, 0})
 
 
 	/// Functions
@@ -11943,33 +11944,33 @@ class ABGA_HeldObject_Parent_C : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 2992;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x978, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x978, 8, 0, 0})
 	CMember(UFortWaterInteractionComponent*)           FortWaterInteraction                                        OFFSET(get<T>, {0x980, 8, 0, 0})
 	CMember(UFortLinkToActorComponent*)                FortLinkToActor                                             OFFSET(get<T>, {0x988, 8, 0, 0})
 	CMember(UFortHeldObjectComponent*)                 FortHeldObject                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UFortProjectileMovementComponent*)         FortProjectileMovement                                      OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UCapsuleComponent*)                        Capsule                                                     OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	DMember(int32_t)                                   RepStartMoving                                              OFFSET(get<int32_t>, {0x9A8, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_HitPlayer                                                OFFSET(get<T>, {0x9AC, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_HitWorld                                                 OFFSET(get<T>, {0x9B0, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Throw                                                    OFFSET(get<T>, {0x9B4, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_EnterWater                                               OFFSET(get<T>, {0x9B8, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Pickup                                                   OFFSET(get<T>, {0x9BC, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Death                                                    OFFSET(get<T>, {0x9C0, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_HitPlayer                                                OFFSET(getStruct<T>, {0x9AC, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_HitWorld                                                 OFFSET(getStruct<T>, {0x9B0, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Throw                                                    OFFSET(getStruct<T>, {0x9B4, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_EnterWater                                               OFFSET(getStruct<T>, {0x9B8, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Pickup                                                   OFFSET(getStruct<T>, {0x9BC, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Death                                                    OFFSET(getStruct<T>, {0x9C0, 4, 0, 0})
 	DMember(bool)                                      PlayDeathGC                                                 OFFSET(get<bool>, {0x9C4, 1, 0, 0})
 	DMember(bool)                                      RepHideActor                                                OFFSET(get<bool>, {0x9C5, 1, 0, 0})
 	DMember(bool)                                      SetHideActorOnDeath                                         OFFSET(get<bool>, {0x9C6, 1, 0, 0})
 	DMember(bool)                                      IsDestructable                                              OFFSET(get<bool>, {0x9C7, 1, 0, 0})
-	SMember(FGameplayTag)                              GC_GenericDeath                                             OFFSET(get<T>, {0x9C8, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_GenericDeath                                             OFFSET(getStruct<T>, {0x9C8, 4, 0, 0})
 	DMember(double)                                    WorldStopSlop                                               OFFSET(get<double>, {0x9D0, 8, 0, 0})
 	DMember(bool)                                      AttachToWallsAndCeilings                                    OFFSET(get<bool>, {0x9D8, 1, 0, 0})
 	CMember(TMap<ELinkToDirection, FVector>)           Map_DirectionToRelativeVector                               OFFSET(get<T>, {0x9E0, 80, 0, 0})
 	CMember(ELinkToDirection)                          DirectionToAttach                                           OFFSET(get<T>, {0xA30, 1, 0, 0})
 	CMember(AActor*)                                   EmptyAttachLinkActor                                        OFFSET(get<T>, {0xA38, 8, 0, 0})
-	SMember(FTransform)                                AttachRelativeTrans                                         OFFSET(get<T>, {0xA40, 96, 0, 0})
-	SMember(FTransform)                                AttachTransform                                             OFFSET(get<T>, {0xAA0, 96, 0, 0})
-	SMember(FText)                                     FirstInteractString                                         OFFSET(get<T>, {0xB00, 24, 0, 0})
-	SMember(FText)                                     SecondInteractString                                        OFFSET(get<T>, {0xB18, 24, 0, 0})
+	SMember(FTransform)                                AttachRelativeTrans                                         OFFSET(getStruct<T>, {0xA40, 96, 0, 0})
+	SMember(FTransform)                                AttachTransform                                             OFFSET(getStruct<T>, {0xAA0, 96, 0, 0})
+	SMember(FText)                                     FirstInteractString                                         OFFSET(getStruct<T>, {0xB00, 24, 0, 0})
+	SMember(FText)                                     SecondInteractString                                        OFFSET(getStruct<T>, {0xB18, 24, 0, 0})
 	DMember(double)                                    SecondInteractTime                                          OFFSET(get<double>, {0xB30, 8, 0, 0})
 	DMember(double)                                    FirstInteractTime                                           OFFSET(get<double>, {0xB38, 8, 0, 0})
 	DMember(bool)                                      EverBeenThrownPlaced                                        OFFSET(get<bool>, {0xB40, 1, 0, 0})
@@ -11977,8 +11978,8 @@ public:
 	DMember(bool)                                      AlreadySavedDefaultTransform                                OFFSET(get<bool>, {0xB42, 1, 0, 0})
 	CMember(TEnumAsByte<Enum_HeldObject_GenericWeights>) ObjectWeights                                             OFFSET(get<T>, {0xB43, 1, 0, 0})
 	DMember(bool)                                      StopOnFlatSurface                                           OFFSET(get<bool>, {0xB44, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     ThrownQuestCreditTargetTag                                  OFFSET(get<T>, {0xB48, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TC_BlockPickup                                              OFFSET(get<T>, {0xB68, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ThrownQuestCreditTargetTag                                  OFFSET(getStruct<T>, {0xB48, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TC_BlockPickup                                              OFFSET(getStruct<T>, {0xB68, 32, 0, 0})
 	DMember(double)                                    Hit_Velocity_Threshold                                      OFFSET(get<double>, {0xB88, 8, 0, 0})
 	DMember(bool)                                      ShouldKillWhenSpawningUnderwater                            OFFSET(get<bool>, {0xB90, 1, 0, 0})
 	CMember(UPrimitiveComponent*)                      HitComponentToAttachTo                                      OFFSET(get<T>, {0xB98, 8, 0, 0})
@@ -12079,7 +12080,7 @@ class AFortWaterBodyBP_C : public AFortWaterBodyActor
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3D0, 8, 0, 0})
 	CMember(ABP_FluidSim_FN_C*)                        FluidSimBP                                                  OFFSET(get<T>, {0x3D8, 8, 0, 0})
 
 
@@ -12100,15 +12101,15 @@ class ABGA_Athena_WithGravity_Parent_C : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 3121;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x978, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x978, 8, 0, 0})
 	CMember(UFortWaterInteractionComponent*)           FortWaterInteraction                                        OFFSET(get<T>, {0x980, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StaticMesh                                                  OFFSET(get<T>, {0x988, 8, 0, 0})
 	CMember(UProjectileMovementComponent*)             ProjectileMovement                                          OFFSET(get<T>, {0x990, 8, 0, 0})
 	DMember(bool)                                      ResumeGravSimOnBegin                                        OFFSET(get<bool>, {0x998, 1, 0, 0})
 	DMember(bool)                                      bResumeSimulation                                           OFFSET(get<bool>, {0x999, 1, 0, 0})
-	SMember(FHitResult)                                NullHit                                                     OFFSET(get<T>, {0x9A0, 224, 0, 0})
-	SMember(FVector)                                   GravImpact_Loc                                              OFFSET(get<T>, {0xA80, 24, 0, 0})
-	SMember(FVector)                                   GravHitNormal                                               OFFSET(get<T>, {0xA98, 24, 0, 0})
+	SMember(FHitResult)                                NullHit                                                     OFFSET(getStruct<T>, {0x9A0, 224, 0, 0})
+	SMember(FVector)                                   GravImpact_Loc                                              OFFSET(getStruct<T>, {0xA80, 24, 0, 0})
+	SMember(FVector)                                   GravHitNormal                                               OFFSET(getStruct<T>, {0xA98, 24, 0, 0})
 	DMember(double)                                    GravMaxSlope                                                OFFSET(get<double>, {0xAB0, 8, 0, 0})
 	DMember(bool)                                      CheckForBounce                                              OFFSET(get<bool>, {0xAB8, 1, 0, 0})
 	DMember(double)                                    ForcedBounceExtraZ                                          OFFSET(get<double>, {0xAC0, 8, 0, 0})
@@ -12130,8 +12131,8 @@ public:
 	DMember(bool)                                      BlockStoppingSim                                            OFFSET(get<bool>, {0xB2B, 1, 0, 0})
 	DMember(bool)                                      DeactivatePawnAndVehicleCollisionOnStop                     OFFSET(get<bool>, {0xB2C, 1, 0, 0})
 	DMember(bool)                                      AllowReattachmentToActors                                   OFFSET(get<bool>, {0xB2D, 1, 0, 0})
-	SMember(FHitResult)                                StopSimHitResult                                            OFFSET(get<T>, {0xB30, 224, 0, 0})
-	SMember(FVector)                                   StopSimServerLocation                                       OFFSET(get<T>, {0xC10, 24, 0, 0})
+	SMember(FHitResult)                                StopSimHitResult                                            OFFSET(getStruct<T>, {0xB30, 224, 0, 0})
+	SMember(FVector)                                   StopSimServerLocation                                       OFFSET(getStruct<T>, {0xC10, 24, 0, 0})
 	DMember(double)                                    BounceAwayFromLocation_MinSpeed                             OFFSET(get<double>, {0xC28, 8, 0, 0})
 	DMember(bool)                                      BounceOffTires                                              OFFSET(get<bool>, {0xC30, 1, 0, 0})
 
@@ -12219,7 +12220,7 @@ class ABGA_RiftPortal_Item_Athena_C : public AFortAthenaRiftPortal
 	static inline constexpr uint64_t __MDKClassSize = 3200;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA10, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA10, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             SoundIndicator                                              OFFSET(get<T>, {0xA18, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    RiftPostProcess                                             OFFSET(get<T>, {0xA20, 8, 0, 0})
 	CMember(USphereComponent*)                         PostProcessRadius                                           OFFSET(get<T>, {0xA28, 8, 0, 0})
@@ -12243,29 +12244,29 @@ public:
 	CMember(USoundBase*)                               EnteredRift                                                 OFFSET(get<T>, {0xAA0, 8, 0, 0})
 	CMember(USoundBase*)                               RiftDestroyed                                               OFFSET(get<T>, {0xAA8, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xAB0, 8, 0, 0})
-	SMember(FVector)                                   TeleportLocation                                            OFFSET(get<T>, {0xAB8, 24, 0, 0})
+	SMember(FVector)                                   TeleportLocation                                            OFFSET(getStruct<T>, {0xAB8, 24, 0, 0})
 	CMember(UParticleSystem*)                          EnterRift                                                   OFFSET(get<T>, {0xAD0, 8, 0, 0})
 	DMember(bool)                                      PortalOpen                                                  OFFSET(get<bool>, {0xAD8, 1, 0, 0})
 	CMember(UAnimMontage*)                             FallingAnimation                                            OFFSET(get<T>, {0xAE0, 8, 0, 0})
-	SMember(FScalableFloat)                            TeleportHeight                                              OFFSET(get<T>, {0xAE8, 40, 0, 0})
-	SMember(FScalableFloat)                            ActiveDuration                                              OFFSET(get<T>, {0xB10, 40, 0, 0})
-	SMember(FScalableFloat)                            HangTime                                                    OFFSET(get<T>, {0xB38, 40, 0, 0})
+	SMember(FScalableFloat)                            TeleportHeight                                              OFFSET(getStruct<T>, {0xAE8, 40, 0, 0})
+	SMember(FScalableFloat)                            ActiveDuration                                              OFFSET(getStruct<T>, {0xB10, 40, 0, 0})
+	SMember(FScalableFloat)                            HangTime                                                    OFFSET(getStruct<T>, {0xB38, 40, 0, 0})
 	DMember(double)                                    TeleportDelay                                               OFFSET(get<double>, {0xB60, 8, 0, 0})
 	CMember(TArray<AFortPlayerPawn*>)                  PassengerArray                                              OFFSET(get<T>, {0xB68, 16, 0, 0})
 	CMember(UParticleSystem*)                          CrackExitRift                                               OFFSET(get<T>, {0xB78, 8, 0, 0})
 	CMember(USoundBase*)                               PlayerExitSkyCrack                                          OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FVector)                                   ActorOriginalLocation                                       OFFSET(get<T>, {0xB88, 24, 0, 0})
+	SMember(FVector)                                   ActorOriginalLocation                                       OFFSET(getStruct<T>, {0xB88, 24, 0, 0})
 	DMember(int32_t)                                   MaxSpawnHeightMultiplier                                    OFFSET(get<int32_t>, {0xBA0, 4, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 QuestItem                                                   OFFSET(get<T>, {0xBA8, 8, 0, 0})
-	SMember(FName)                                     ObjectiveBackendName                                        OFFSET(get<T>, {0xBB0, 4, 0, 0})
+	SMember(FName)                                     ObjectiveBackendName                                        OFFSET(getStruct<T>, {0xBB0, 4, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 RiftPortalLocationsQuest                                    OFFSET(get<T>, {0xBB8, 8, 0, 0})
 	DMember(bool)                                      CreativeMode                                                OFFSET(get<bool>, {0xBC0, 1, 0, 0})
 	CMember(AActor*)                                   OverlapActor                                                OFFSET(get<T>, {0xBC8, 8, 0, 0})
 	DMember(int32_t)                                   RiftLocationNum                                             OFFSET(get<int32_t>, {0xBD0, 4, 0, 0})
-	SMember(FRotator)                                  ActorRotation                                               OFFSET(get<T>, {0xBD8, 24, 0, 0})
+	SMember(FRotator)                                  ActorRotation                                               OFFSET(getStruct<T>, {0xBD8, 24, 0, 0})
 	CMember(TScriptInterface<Class>)                   VehicleInterface                                            OFFSET(get<T>, {0xBF0, 16, 0, 0})
-	SMember(FVector)                                   Player_Location                                             OFFSET(get<T>, {0xC00, 24, 0, 0})
-	SMember(FVector)                                   TeleportLocationOffset                                      OFFSET(get<T>, {0xC18, 24, 0, 0})
+	SMember(FVector)                                   Player_Location                                             OFFSET(getStruct<T>, {0xC00, 24, 0, 0})
+	SMember(FVector)                                   TeleportLocationOffset                                      OFFSET(getStruct<T>, {0xC18, 24, 0, 0})
 	CMember(TSet<AActor*>)                             BeganOverlapList                                            OFFSET(get<T>, {0xC30, 80, 0, 0})
 
 
@@ -12474,16 +12475,17 @@ public:
 
 /// Struct /Game/Athena/AI/Pawns/NPC/Parents/Struct_NPC_TargetSlots.Struct_NPC_TargetSlots
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FStruct_NPC_TargetSlots : public MDKStruct
+class FStruct_NPC_TargetSlots : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	CMember(TEnumAsByte<Enum_NPC_TargetSlots>)         TargetSlotType_6_B268C50140F4F849CE916EA5DB4A30E7           OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(UClass*)                                   TargetSlotCountingGE_7_F6007B01441781AB71302C91A1C4CFD2     OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FScalableFloat)                            AITargetSlotSizeHF_8_E81162534B067D58D70AE9AC8B4B1F98       OFFSET(get<T>, {0x10, 40, 0, 0})
-	SMember(FScalableFloat)                            AITargetSlotDurationHF_14_A9B6ED4D4072D7BB507AA5A14118FA5B  OFFSET(get<T>, {0x38, 40, 0, 0})
+	SMember(FScalableFloat)                            AITargetSlotSizeHF_8_E81162534B067D58D70AE9AC8B4B1F98       OFFSET(getStruct<T>, {0x10, 40, 0, 0})
+	SMember(FScalableFloat)                            AITargetSlotDurationHF_14_A9B6ED4D4072D7BB507AA5A14118FA5B  OFFSET(getStruct<T>, {0x38, 40, 0, 0})
 	CMember(UClass*)                                   TargetSlotOverrideGE_11_6C40525043B50B2B696580B362A65DB3    OFFSET(get<T>, {0x60, 8, 0, 0})
 	CMember(UClass*)                                   TargetSlotOwnerGE_17_19F50D8848750D3BC118D9BBD861CAA1       OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UClass*)                                   TargetSlotCountingMaxedGE_19_BF1E1EF24CCA642F87D4379BB916F271 OFFSET(get<T>, {0x70, 8, 0, 0})
@@ -12493,46 +12495,48 @@ public:
 /// Size: 0x0157 (0x000001 - 0x000158)
 class FAnimBlueprintGeneratedConstantData : public FAnimBlueprintConstantData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FName)                                     __NameProperty                                              OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     __NameProperty1                                             OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     __NameProperty2                                             OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     __NameProperty                                              OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     __NameProperty1                                             OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     __NameProperty2                                             OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	CMember(UBlendProfile*)                            __BlendProfile                                              OFFSET(get<T>, {0x10, 8, 0, 0})
 	CMember(UCurveFloat*)                              __CurveFloat                                                OFFSET(get<T>, {0x18, 8, 0, 0})
 	CMember(EAlphaBlendOption)                         __EnumProperty                                              OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(EBlendListTransitionType)                  __EnumProperty1                                             OFFSET(get<T>, {0x21, 1, 0, 0})
 	CMember(TArray<float>)                             __ArrayProperty                                             OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FName)                                     __NameProperty3                                             OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FName)                                     __NameProperty3                                             OFFSET(getStruct<T>, {0x38, 4, 0, 0})
 	DMember(int32_t)                                   __IntProperty                                               OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
-	SMember(FName)                                     __NameProperty4                                             OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FName)                                     __NameProperty4                                             OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 	DMember(int32_t)                                   __IntProperty1                                              OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 	CMember(EAnimSyncMethod)                           __EnumProperty2                                             OFFSET(get<T>, {0x48, 1, 0, 0})
-	SMember(FName)                                     __NameProperty5                                             OFFSET(get<T>, {0x4C, 4, 0, 0})
-	SMember(FName)                                     __NameProperty6                                             OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FName)                                     __NameProperty5                                             OFFSET(getStruct<T>, {0x4C, 4, 0, 0})
+	SMember(FName)                                     __NameProperty6                                             OFFSET(getStruct<T>, {0x50, 4, 0, 0})
 	DMember(int32_t)                                   __IntProperty2                                              OFFSET(get<int32_t>, {0x54, 4, 0, 0})
-	SMember(FName)                                     __NameProperty7                                             OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FName)                                     __NameProperty7                                             OFFSET(getStruct<T>, {0x58, 4, 0, 0})
 	DMember(int32_t)                                   __IntProperty3                                              OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
 	DMember(bool)                                      __BoolProperty                                              OFFSET(get<bool>, {0x60, 1, 0, 0})
 	DMember(float)                                     __FloatProperty                                             OFFSET(get<float>, {0x64, 4, 0, 0})
-	SMember(FInputScaleBiasClampConstants)             __StructProperty                                            OFFSET(get<T>, {0x68, 44, 0, 0})
+	SMember(FInputScaleBiasClampConstants)             __StructProperty                                            OFFSET(getStruct<T>, {0x68, 44, 0, 0})
 	DMember(float)                                     __FloatProperty1                                            OFFSET(get<float>, {0x94, 4, 0, 0})
 	DMember(bool)                                      __BoolProperty1                                             OFFSET(get<bool>, {0x98, 1, 0, 0})
 	CMember(EAnimSyncMethod)                           __EnumProperty3                                             OFFSET(get<T>, {0x99, 1, 0, 0})
 	CMember(TEnumAsByte<EAnimGroupRole>)               __ByteProperty                                              OFFSET(get<T>, {0x9A, 1, 0, 0})
-	SMember(FAnimNodeFunctionRef)                      __StructProperty1                                           OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FName)                                     __NameProperty8                                             OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     __NameProperty9                                             OFFSET(get<T>, {0xBC, 4, 0, 0})
-	SMember(FAnimSubsystem_PropertyAccess)             AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0xC0, 128, 0, 0})
-	SMember(FAnimSubsystem_Base)                       AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x140, 24, 0, 0})
+	SMember(FAnimNodeFunctionRef)                      __StructProperty1                                           OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FName)                                     __NameProperty8                                             OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     __NameProperty9                                             OFFSET(getStruct<T>, {0xBC, 4, 0, 0})
+	SMember(FAnimSubsystem_PropertyAccess)             AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0xC0, 128, 0, 0})
+	SMember(FAnimSubsystem_Base)                       AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x140, 24, 0, 0})
 };
 
 /// Struct /Game/Athena/AI/MANG/AnimSet/MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.AnimBlueprintGeneratedMutableData
 /// Size: 0x001B (0x000001 - 0x00001C)
 class FAnimBlueprintGeneratedMutableData : public FAnimBlueprintMutableData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -12548,8 +12552,9 @@ public:
 
 /// Struct /Game/Athena/AI/NPCs/Base/Struct_NPC_HealthInfo.Struct_NPC_HealthInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FStruct_NPC_HealthInfo : public MDKStruct
+class FStruct_NPC_HealthInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -12562,17 +12567,18 @@ public:
 
 /// Struct /Game/Athena/Items/PhysicsActors/PhysicsTreeLog/PhysicsLogAnalyticsStruct.PhysicsLogAnalyticsStruct
 /// Size: 0x006C (0x000000 - 0x00006C)
-class FPhysicsLogAnalyticsStruct : public MDKStruct
+class FPhysicsLogAnalyticsStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 108;
 
 public:
-	SMember(FString)                                   InstanceName_29_E13A3CF84B9151E7004D9B8C51FD00B9            OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   FelledBy_2_076924F44337FDE90F8B5C9C7645CDF2                 OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector)                                   FelledAtLocation_7_87D469DB42BC3085780226AC3B154AD1         OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FString)                                   InstanceName_29_E13A3CF84B9151E7004D9B8C51FD00B9            OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   FelledBy_2_076924F44337FDE90F8B5C9C7645CDF2                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FVector)                                   FelledAtLocation_7_87D469DB42BC3085780226AC3B154AD1         OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     FelledAtMatchTime_17_701A35DB42F8DA247CDC50AC58CCCD4E       OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FVector)                                   DestroyedAtLocation_33_93747681485FCEB2F9D50B8F2C9BA72B     OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   DestroyedAtLocation_33_93747681485FCEB2F9D50B8F2C9BA72B     OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(float)                                     DestroyedAtMatchTime_31_1DCF4002426A45C86050D4B13C85632F    OFFSET(get<float>, {0x58, 4, 0, 0})
 	DMember(float)                                     DamageToPlayers_20_F701392440AAC7AC33A8B2BCAEB3C5D0         OFFSET(get<float>, {0x5C, 4, 0, 0})
 	DMember(float)                                     DamageToStructures_22_636FABDE409E1A51BAF808863B05D213      OFFSET(get<float>, {0x60, 4, 0, 0})
@@ -13168,7 +13174,7 @@ class ABP_TeleportationDrone_C : public APawn
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x318, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x318, 8, 0, 0})
 	CMember(USkeletalMeshComponentBudgeted*)           SkeletalMeshComponentBudgeted                               OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x328, 8, 0, 0})
 	DMember(double)                                    AnimPlayRate                                                OFFSET(get<double>, {0x330, 8, 0, 0})
@@ -13204,10 +13210,10 @@ class ABP_VictoryDrone_C : public APawn
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x318, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x318, 8, 0, 0})
 	CMember(USkeletalMeshComponentBudgeted*)           SkeletalMeshComponentBudgeted                               OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x328, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SpawnOutAnimEndedDispatcher                                 OFFSET(get<T>, {0x330, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SpawnOutAnimEndedDispatcher                                 OFFSET(getStruct<T>, {0x330, 16, 0, 0})
 	DMember(double)                                    AnimPlayRate                                                OFFSET(get<double>, {0x340, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 StaticMeshMID                                               OFFSET(get<T>, {0x348, 8, 0, 0})
 	DMember(bool)                                      TeleportIn                                                  OFFSET(get<bool>, {0x350, 1, 0, 0})
@@ -13216,7 +13222,7 @@ public:
 	CMember(UParticleSystemComponent*)                 CharacterAttached                                           OFFSET(get<T>, {0x360, 8, 0, 0})
 	DMember(bool)                                      InLobby                                                     OFFSET(get<bool>, {0x368, 1, 0, 0})
 	DMember(bool)                                      isNPC                                                       OFFSET(get<bool>, {0x369, 1, 0, 0})
-	SMember(FName)                                     AttachPoint                                                 OFFSET(get<T>, {0x36C, 4, 0, 0})
+	SMember(FName)                                     AttachPoint                                                 OFFSET(getStruct<T>, {0x36C, 4, 0, 0})
 	DMember(bool)                                      isDecoy                                                     OFFSET(get<bool>, {0x370, 1, 0, 0})
 	CMember(USkeletalMeshComponent*)                   Mesh_for_Attachment                                         OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnNPCDeath                                             OFFSET(get<T>, {0x380, 8, 0, 0})
@@ -13265,13 +13271,13 @@ class ALandscapeWaterInfo_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
 	DMember(double)                                    Flood_Water_Level                                           OFFSET(get<double>, {0x2A0, 8, 0, 0})
 	CMember(UTexture2D*)                               Game_Texture__Water_Velocity_and_Height                     OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FTransform)                                LS_Transform                                                OFFSET(get<T>, {0x2B0, 96, 0, 0})
-	SMember(FIntPoint)                                 LS_RT_Res                                                   OFFSET(get<T>, {0x310, 8, 0, 0})
-	SMember(FVector2D)                                 Quad_Size                                                   OFFSET(get<T>, {0x318, 16, 0, 0})
+	SMember(FTransform)                                LS_Transform                                                OFFSET(getStruct<T>, {0x2B0, 96, 0, 0})
+	SMember(FIntPoint)                                 LS_RT_Res                                                   OFFSET(getStruct<T>, {0x310, 8, 0, 0})
+	SMember(FVector2D)                                 Quad_Size                                                   OFFSET(getStruct<T>, {0x318, 16, 0, 0})
 	DMember(bool)                                      Use_Terrain_Velocity_and_Height_Texture                     OFFSET(get<bool>, {0x328, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 External_Water_MID_To_Update                                OFFSET(get<T>, {0x330, 8, 0, 0})
 
@@ -13343,7 +13349,7 @@ class UGA_GrindRail_KeybindDisplay_C : public UFortGameplayAbility_KeybindDispla
 	static inline constexpr uint64_t __MDKClassSize = 2896;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB48, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB48, 8, 0, 0})
 
 
 	/// Functions
@@ -13381,7 +13387,7 @@ class ABGA_GrindRail_C : public AFortGrindRail
 	static inline constexpr uint64_t __MDKClassSize = 3744;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBD0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBD0, 8, 0, 0})
 	CMember(UInstancedStaticMeshComponent*)            booster_InstancedStaticMesh                                 OFFSET(get<T>, {0xBD8, 8, 0, 0})
 	CMember(USplineComponent*)                         Spline                                                      OFFSET(get<T>, {0xBE0, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0xBE8, 8, 0, 0})
@@ -13390,16 +13396,16 @@ public:
 	DMember(bool)                                      Full_Circle                                                 OFFSET(get<bool>, {0xC08, 1, 0, 0})
 	CMember(UStaticMeshComponent*)                     StartTip                                                    OFFSET(get<T>, {0xC10, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     EndTip                                                      OFFSET(get<T>, {0xC18, 8, 0, 0})
-	SMember(FGrindRail_TipOptions)                     Tip_Caps                                                    OFFSET(get<T>, {0xC20, 2, 0, 0})
-	SMember(FVector4)                                  EmissiveColor                                               OFFSET(get<T>, {0xC30, 32, 0, 0})
-	SMember(FLinearColor)                              RedColor                                                    OFFSET(get<T>, {0xC50, 16, 0, 0})
-	SMember(FLinearColor)                              GreenColor                                                  OFFSET(get<T>, {0xC60, 16, 0, 0})
-	SMember(FLinearColor)                              BlueColor                                                   OFFSET(get<T>, {0xC70, 16, 0, 0})
-	SMember(FLinearColor)                              YellowColor                                                 OFFSET(get<T>, {0xC80, 16, 0, 0})
+	SMember(FGrindRail_TipOptions)                     Tip_Caps                                                    OFFSET(getStruct<T>, {0xC20, 2, 0, 0})
+	SMember(FVector4)                                  EmissiveColor                                               OFFSET(getStruct<T>, {0xC30, 32, 0, 0})
+	SMember(FLinearColor)                              RedColor                                                    OFFSET(getStruct<T>, {0xC50, 16, 0, 0})
+	SMember(FLinearColor)                              GreenColor                                                  OFFSET(getStruct<T>, {0xC60, 16, 0, 0})
+	SMember(FLinearColor)                              BlueColor                                                   OFFSET(getStruct<T>, {0xC70, 16, 0, 0})
+	SMember(FLinearColor)                              YellowColor                                                 OFFSET(getStruct<T>, {0xC80, 16, 0, 0})
 	CMember(USkeletalMeshComponent*)                   Player_Mesh                                                 OFFSET(get<T>, {0xC90, 8, 0, 0})
 	CMember(UBP_GrindingComponent_C*)                  Grinding_compoent                                           OFFSET(get<T>, {0xC98, 8, 0, 0})
-	SMember(FLinearColor)                              SkyBlue                                                     OFFSET(get<T>, {0xCA0, 16, 0, 0})
-	SMember(FLinearColor)                              Purple                                                      OFFSET(get<T>, {0xCB0, 16, 0, 0})
+	SMember(FLinearColor)                              SkyBlue                                                     OFFSET(getStruct<T>, {0xCA0, 16, 0, 0})
+	SMember(FLinearColor)                              Purple                                                      OFFSET(getStruct<T>, {0xCB0, 16, 0, 0})
 	DMember(float)                                     Glow_start_Radius                                           OFFSET(get<float>, {0xCC0, 4, 0, 0})
 	DMember(float)                                     Glow_End_Radius                                             OFFSET(get<float>, {0xCC4, 4, 0, 0})
 	DMember(float)                                     Glow_start__Intensity                                       OFFSET(get<float>, {0xCC8, 4, 0, 0})
@@ -13409,7 +13415,7 @@ public:
 	DMember(bool)                                      _Glow_start_and_End                                         OFFSET(get<bool>, {0xCE8, 1, 0, 0})
 	DMember(int32_t)                                   Last_Index                                                  OFFSET(get<int32_t>, {0xCEC, 4, 0, 0})
 	CMember(TEnumAsByte<ColorSelect>)                  Color_Select_Enum                                           OFFSET(get<T>, {0xCF0, 1, 0, 0})
-	SMember(FLinearColor)                              Orange                                                      OFFSET(get<T>, {0xCF4, 16, 0, 0})
+	SMember(FLinearColor)                              Orange                                                      OFFSET(getStruct<T>, {0xCF4, 16, 0, 0})
 	CMember(TArray<UStaticMeshComponent*>)             BoosterMeshes                                               OFFSET(get<T>, {0xD08, 16, 0, 0})
 	DMember(bool)                                      IgnoreEmissiveDistanceFade                                  OFFSET(get<bool>, {0xD18, 1, 0, 0})
 	CMember(UInstancedStaticMeshComponent*)            Target                                                      OFFSET(get<T>, {0xD20, 8, 0, 0})
@@ -13434,22 +13440,22 @@ public:
 	DMember(double)                                    BoosterLocalPostionZ                                        OFFSET(get<double>, {0xDD8, 8, 0, 0})
 	DMember(double)                                    BoosterLocalPostionX                                        OFFSET(get<double>, {0xDE0, 8, 0, 0})
 	DMember(double)                                    BoosterLocalPostionY_Offset                                 OFFSET(get<double>, {0xDE8, 8, 0, 0})
-	SMember(FGameplayTag)                              GC_Sprinting                                                OFFSET(get<T>, {0xDF0, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_SlowBoosting                                             OFFSET(get<T>, {0xDF4, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_FastBoosting                                             OFFSET(get<T>, {0xDF8, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_LandOnRail                                               OFFSET(get<T>, {0xDFC, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_ImpactPlayer                                             OFFSET(get<T>, {0xE00, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Sprinting                                                OFFSET(getStruct<T>, {0xDF0, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_SlowBoosting                                             OFFSET(getStruct<T>, {0xDF4, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_FastBoosting                                             OFFSET(getStruct<T>, {0xDF8, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_LandOnRail                                               OFFSET(getStruct<T>, {0xDFC, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_ImpactPlayer                                             OFFSET(getStruct<T>, {0xE00, 4, 0, 0})
 	CMember(UClass*)                                   GE_GrindingIncludingInAir                                   OFFSET(get<T>, {0xE08, 8, 0, 0})
 	CMember(USoundLibrary*)                            GrindRailSoundLibrary                                       OFFSET(get<T>, {0xE10, 8, 0, 0})
 	CMember(UClass*)                                   GrindRail_TipComponent_Class                                OFFSET(get<T>, {0xE18, 8, 0, 0})
 	CMember(USoundMix*)                                GrindingSoundMixMusic                                       OFFSET(get<T>, {0xE20, 8, 0, 0})
 	CMember(UMaterialInterface*)                       SplineVineMaterial                                          OFFSET(get<T>, {0xE28, 8, 0, 0})
-	SMember(FVector)                                   BoosterScale                                                OFFSET(get<T>, {0xE30, 24, 0, 0})
+	SMember(FVector)                                   BoosterScale                                                OFFSET(getStruct<T>, {0xE30, 24, 0, 0})
 	DMember(float)                                     ColorDesaturationAmount                                     OFFSET(get<float>, {0xE48, 4, 0, 0})
-	SMember(FRotator)                                  ManualTipRotation                                           OFFSET(get<T>, {0xE50, 24, 0, 0})
+	SMember(FRotator)                                  ManualTipRotation                                           OFFSET(getStruct<T>, {0xE50, 24, 0, 0})
 	DMember(bool)                                      Allow_Manual_Tip_Rotation                                   OFFSET(get<bool>, {0xE68, 1, 0, 0})
 	DMember(double)                                    JumpingOffDirectionDetectionTolerance                       OFFSET(get<double>, {0xE70, 8, 0, 0})
-	SMember(FScalableFloat)                            MaxAngleBetweenVelocityAndNormalForExitDetection            OFFSET(get<T>, {0xE78, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAngleBetweenVelocityAndNormalForExitDetection            OFFSET(getStruct<T>, {0xE78, 40, 0, 0})
 
 
 	/// Functions
@@ -13565,13 +13571,13 @@ class UBP_GrindingComponent_C : public UFortPawnComponent_GrindRail
 	static inline constexpr uint64_t __MDKClassSize = 3976;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xC28, 8, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     Player                                                      OFFSET(get<T>, {0xC30, 8, 0, 0})
 	CMember(UCharacterMovementComponent*)              MovementComponent                                           OFFSET(get<T>, {0xC38, 8, 0, 0})
 	DMember(bool)                                      Grinding                                                    OFFSET(get<bool>, {0xC40, 1, 0, 0})
 	DMember(float)                                     Delta_Seconds                                               OFFSET(get<float>, {0xC44, 4, 0, 0})
 	CMember(UTacticalSprintEnergyComponent_C*)         SprintComponent                                             OFFSET(get<T>, {0xC48, 8, 0, 0})
-	SMember(FGameplayTag)                              GC_Sprint                                                   OFFSET(get<T>, {0xC50, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Sprint                                                   OFFSET(getStruct<T>, {0xC50, 4, 0, 0})
 	CMember(USkeletalMeshComponent*)                   PlayerMesh                                                  OFFSET(get<T>, {0xC58, 8, 0, 0})
 	DMember(bool)                                      CurrentlyADS                                                OFFSET(get<bool>, {0xC60, 1, 0, 0})
 	DMember(double)                                    _new__CurrentSidewaysLeanBoostAmount                        OFFSET(get<double>, {0xC68, 8, 0, 0})
@@ -13580,48 +13586,48 @@ public:
 	DMember(bool)                                      HitObstacle                                                 OFFSET(get<bool>, {0xC80, 1, 0, 0})
 	DMember(bool)                                      AnimLayerActive                                             OFFSET(get<bool>, {0xC81, 1, 0, 0})
 	DMember(double)                                    LastRailSwitchTime                                          OFFSET(get<double>, {0xC88, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  JumpedOff                                                   OFFSET(get<T>, {0xC90, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  JumpedOff                                                   OFFSET(getStruct<T>, {0xC90, 16, 0, 0})
 	CMember(ABGA_GrindRail_C*)                         CurrentRail                                                 OFFSET(get<T>, {0xCA0, 8, 0, 0})
 	DMember(double)                                    MaximumAngleForSideJump                                     OFFSET(get<double>, {0xCA8, 8, 0, 0})
 	DMember(int32_t)                                   SideJump_NumberOfNewLocationsToTry                          OFFSET(get<int32_t>, {0xCB0, 4, 0, 0})
 	DMember(double)                                    SideJump_MinSpeedPercentToMaintain                          OFFSET(get<double>, {0xCB8, 8, 0, 0})
 	DMember(double)                                    SideJump_MaxSpeedWithoutAnchor                              OFFSET(get<double>, {0xCC0, 8, 0, 0})
 	DMember(bool)                                      DrawAnchorDebug                                             OFFSET(get<bool>, {0xCC8, 1, 0, 0})
-	SMember(FScalableFloat)                            SF_Sprinting_EnergyToUsePerSecond                           OFFSET(get<T>, {0xCD0, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_Sprinting_EnergyToUsePerSecond_Creative                  OFFSET(get<T>, {0xCF8, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_LandingSpeedBoost                                        OFFSET(get<T>, {0xD20, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_SameRailAnchoring_MaxForwardDistanceMultiplier           OFFSET(get<T>, {0xD48, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_SameRailAnchoring_MaxAngle                               OFFSET(get<T>, {0xD70, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_InfluenceOfMomentumOnAnchorJump                          OFFSET(get<T>, {0xD98, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_NoAnchorJumpDistanceMultiplier                           OFFSET(get<T>, {0xDC0, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_MinJumpOffSpeed                                          OFFSET(get<T>, {0xDE8, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_JumpHeight                                               OFFSET(get<T>, {0xE10, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_JumpDistanceMultiplier                                   OFFSET(get<T>, {0xE38, 40, 0, 0})
-	SMember(FScalableFloat)                            SF_SpeedMultiplierWhenImpactedPlayer                        OFFSET(get<T>, {0xE60, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_Sprinting_EnergyToUsePerSecond                           OFFSET(getStruct<T>, {0xCD0, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_Sprinting_EnergyToUsePerSecond_Creative                  OFFSET(getStruct<T>, {0xCF8, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_LandingSpeedBoost                                        OFFSET(getStruct<T>, {0xD20, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_SameRailAnchoring_MaxForwardDistanceMultiplier           OFFSET(getStruct<T>, {0xD48, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_SameRailAnchoring_MaxAngle                               OFFSET(getStruct<T>, {0xD70, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_InfluenceOfMomentumOnAnchorJump                          OFFSET(getStruct<T>, {0xD98, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_NoAnchorJumpDistanceMultiplier                           OFFSET(getStruct<T>, {0xDC0, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_MinJumpOffSpeed                                          OFFSET(getStruct<T>, {0xDE8, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_JumpHeight                                               OFFSET(getStruct<T>, {0xE10, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_JumpDistanceMultiplier                                   OFFSET(getStruct<T>, {0xE38, 40, 0, 0})
+	SMember(FScalableFloat)                            SF_SpeedMultiplierWhenImpactedPlayer                        OFFSET(getStruct<T>, {0xE60, 40, 0, 0})
 	DMember(float)                                     SF_SideJump_HorizontalAngleMultiplier                       OFFSET(get<float>, {0xE88, 4, 0, 0})
 	CMember(UAudioComponent*)                          JumpOnAudio                                                 OFFSET(get<T>, {0xE90, 8, 0, 0})
 	DMember(double)                                    LastJumpedTime                                              OFFSET(get<double>, {0xE98, 8, 0, 0})
 	CMember(EGrindRailBoosterMode)                     _new__PreviousBoosterMode                                   OFFSET(get<T>, {0xEA0, 1, 0, 0})
 	DMember(bool)                                      _new__GenerallyAccelerating                                 OFFSET(get<bool>, {0xEA1, 1, 0, 0})
-	SMember(FGameplayTag)                              GC_GenerallyAccelerating                                    OFFSET(get<T>, {0xEA4, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     BeginGrindBlockTags                                         OFFSET(get<T>, {0xEA8, 32, 0, 0})
-	SMember(FVector)                                   CameraLocationOnStartedGrinding                             OFFSET(get<T>, {0xEC8, 24, 0, 0})
+	SMember(FGameplayTag)                              GC_GenerallyAccelerating                                    OFFSET(getStruct<T>, {0xEA4, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     BeginGrindBlockTags                                         OFFSET(getStruct<T>, {0xEA8, 32, 0, 0})
+	SMember(FVector)                                   CameraLocationOnStartedGrinding                             OFFSET(getStruct<T>, {0xEC8, 24, 0, 0})
 	CMember(AFortGrindRail*)                           WaitingForCamera_SavedGrindRail                             OFFSET(get<T>, {0xEE0, 8, 0, 0})
 	DMember(bool)                                      WaitingForCamera                                            OFFSET(get<bool>, {0xEE8, 1, 0, 0})
 	CMember(UCameraModifier_Grinding_C*)               CameraModifier                                              OFFSET(get<T>, {0xEF0, 8, 0, 0})
 	DMember(bool)                                      StartedGrindFromLand                                        OFFSET(get<bool>, {0xEF8, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFeetLanded                                                OFFSET(get<T>, {0xF00, 16, 0, 0})
-	SMember(FScalableFloat)                            SF_MinBounceOffPlayerSpeed                                  OFFSET(get<T>, {0xF10, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFeetLanded                                                OFFSET(getStruct<T>, {0xF00, 16, 0, 0})
+	SMember(FScalableFloat)                            SF_MinBounceOffPlayerSpeed                                  OFFSET(getStruct<T>, {0xF10, 40, 0, 0})
 	DMember(bool)                                      IgnoreStaticPlacedBuilding                                  OFFSET(get<bool>, {0xF38, 1, 0, 0})
 	DMember(bool)                                      UseNativizedGrindingIgnoreActors                            OFFSET(get<bool>, {0xF39, 1, 0, 0})
 	DMember(bool)                                      UseNativizedSprintInput                                     OFFSET(get<bool>, {0xF3A, 1, 0, 0})
-	SMember(FGameplayTag)                              Start_Grinding_Event_Tag                                    OFFSET(get<T>, {0xF3C, 4, 0, 0})
-	SMember(FGameplayTag)                              Stop_Grinding_Event_Tag                                     OFFSET(get<T>, {0xF40, 4, 0, 0})
-	SMember(FGameplayTag)                              Start_Sprinting_Event_Tag                                   OFFSET(get<T>, {0xF44, 4, 0, 0})
+	SMember(FGameplayTag)                              Start_Grinding_Event_Tag                                    OFFSET(getStruct<T>, {0xF3C, 4, 0, 0})
+	SMember(FGameplayTag)                              Stop_Grinding_Event_Tag                                     OFFSET(getStruct<T>, {0xF40, 4, 0, 0})
+	SMember(FGameplayTag)                              Start_Sprinting_Event_Tag                                   OFFSET(getStruct<T>, {0xF44, 4, 0, 0})
 	DMember(double)                                    SF_SpeedMultiplierOnHitRailCap                              OFFSET(get<double>, {0xF48, 8, 0, 0})
 	DMember(double)                                    SF_MinSpeedAfterBouncedOffRailCap                           OFFSET(get<double>, {0xF50, 8, 0, 0})
-	SMember(FScalableFloat)                            SF_RemoveGASmashAfterDelay                                  OFFSET(get<T>, {0xF58, 40, 0, 0})
-	SMember(FTimerHandle)                              RemoveIsGrindingTimer                                       OFFSET(get<T>, {0xF80, 8, 0, 0})
+	SMember(FScalableFloat)                            SF_RemoveGASmashAfterDelay                                  OFFSET(getStruct<T>, {0xF58, 40, 0, 0})
+	SMember(FTimerHandle)                              RemoveIsGrindingTimer                                       OFFSET(getStruct<T>, {0xF80, 8, 0, 0})
 
 
 	/// Functions
@@ -13741,11 +13747,11 @@ class UGA_GrindRail_Smash_C : public UFortGameplayAbility_ZiplineSmashBase
 	static inline constexpr uint64_t __MDKClassSize = 2960;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB40, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB40, 8, 0, 0})
 	DMember(float)                                     SF_IntervalSmash                                            OFFSET(get<float>, {0xB48, 4, 0, 0})
-	SMember(FTimerHandle)                              SurroundingCheckTimer                                       OFFSET(get<T>, {0xB50, 8, 0, 0})
+	SMember(FTimerHandle)                              SurroundingCheckTimer                                       OFFSET(getStruct<T>, {0xB50, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB58, 8, 0, 0})
-	SMember(FVector)                                   SmashBoxExtent                                              OFFSET(get<T>, {0xB60, 24, 0, 0})
+	SMember(FVector)                                   SmashBoxExtent                                              OFFSET(getStruct<T>, {0xB60, 24, 0, 0})
 	CMember(UBP_GrindingComponent_C*)                  GrindingComp                                                OFFSET(get<T>, {0xB78, 8, 0, 0})
 	DMember(bool)                                      bSmashNonPlayerBuilt                                        OFFSET(get<bool>, {0xB80, 1, 0, 0})
 	CMember(UClass*)                                   DeviceDamageEffect                                          OFFSET(get<T>, {0xB88, 8, 0, 0})
@@ -13784,9 +13790,9 @@ class UGA_Action_ADS_GrindRail_C : public UFortGameplayAbility_Action
 	static inline constexpr uint64_t __MDKClassSize = 2960;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB58, 8, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     Player                                                      OFFSET(get<T>, {0xB60, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockingTags                                                OFFSET(get<T>, {0xB68, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockingTags                                                OFFSET(getStruct<T>, {0xB68, 32, 0, 0})
 	CMember(UBP_GrindingComponent_C*)                  GrindingComponent                                           OFFSET(get<T>, {0xB88, 8, 0, 0})
 
 
@@ -13817,30 +13823,30 @@ class UCameraModifier_Grinding_C : public UFortCameraModifier_Grinding
 	static inline constexpr uint64_t __MDKClassSize = 2920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x9C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x9C0, 8, 0, 0})
 	CMember(UBP_GrindingComponent_C*)                  GrindingComp                                                OFFSET(get<T>, {0x9C8, 8, 0, 0})
 	DMember(double)                                    CurrentForward                                              OFFSET(get<double>, {0x9D0, 8, 0, 0})
 	DMember(double)                                    CurrentRight                                                OFFSET(get<double>, {0x9D8, 8, 0, 0})
 	DMember(double)                                    CurrentLean                                                 OFFSET(get<double>, {0x9E0, 8, 0, 0})
 	DMember(double)                                    CurrentFOV                                                  OFFSET(get<double>, {0x9E8, 8, 0, 0})
 	DMember(double)                                    CurrentOffset                                               OFFSET(get<double>, {0x9F0, 8, 0, 0})
-	SMember(FVector)                                   CurrentOffset_Vec                                           OFFSET(get<T>, {0x9F8, 24, 0, 0})
+	SMember(FVector)                                   CurrentOffset_Vec                                           OFFSET(getStruct<T>, {0x9F8, 24, 0, 0})
 	DMember(double)                                    CurrentUp                                                   OFFSET(get<double>, {0xA10, 8, 0, 0})
-	SMember(FVector)                                   SavedLocation                                               OFFSET(get<T>, {0xA18, 24, 0, 0})
+	SMember(FVector)                                   SavedLocation                                               OFFSET(getStruct<T>, {0xA18, 24, 0, 0})
 	DMember(bool)                                      LocationLocked                                              OFFSET(get<bool>, {0xA30, 1, 0, 0})
 	DMember(double)                                    TimeWhenLocked                                              OFFSET(get<double>, {0xA38, 8, 0, 0})
 	DMember(double)                                    TimeWhenUnlocked                                            OFFSET(get<double>, {0xA40, 8, 0, 0})
 	DMember(float)                                     ADS_Alpha                                                   OFFSET(get<float>, {0xA48, 4, 0, 0})
 	CMember(UCurveFloat*)                              AlphaCurve                                                  OFFSET(get<T>, {0xA50, 8, 0, 0})
-	SMember(FVector)                                   StartingLocation                                            OFFSET(get<T>, {0xA58, 24, 0, 0})
+	SMember(FVector)                                   StartingLocation                                            OFFSET(getStruct<T>, {0xA58, 24, 0, 0})
 	DMember(bool)                                      TurningOff                                                  OFFSET(get<bool>, {0xA70, 1, 0, 0})
 	DMember(bool)                                      SF_SnapToGrindingLocation                                   OFFSET(get<bool>, {0xA71, 1, 0, 0})
-	SMember(FScalableFloat)                            BaseRightOffsetMultiplier                                   OFFSET(get<T>, {0xA78, 40, 0, 0})
-	SMember(FScalableFloat)                            SprintingRightOffsetMultiplier                              OFFSET(get<T>, {0xAA0, 40, 0, 0})
-	SMember(FScalableFloat)                            BoostedRightOffsetMultiplier                                OFFSET(get<T>, {0xAC8, 40, 0, 0})
-	SMember(FScalableFloat)                            BaseUpOffsetMultiplier                                      OFFSET(get<T>, {0xAF0, 40, 0, 0})
-	SMember(FScalableFloat)                            SprintingUpOffsetMultiplier                                 OFFSET(get<T>, {0xB18, 40, 0, 0})
-	SMember(FScalableFloat)                            BoostedUpOffsetMultiplier                                   OFFSET(get<T>, {0xB40, 40, 0, 0})
+	SMember(FScalableFloat)                            BaseRightOffsetMultiplier                                   OFFSET(getStruct<T>, {0xA78, 40, 0, 0})
+	SMember(FScalableFloat)                            SprintingRightOffsetMultiplier                              OFFSET(getStruct<T>, {0xAA0, 40, 0, 0})
+	SMember(FScalableFloat)                            BoostedRightOffsetMultiplier                                OFFSET(getStruct<T>, {0xAC8, 40, 0, 0})
+	SMember(FScalableFloat)                            BaseUpOffsetMultiplier                                      OFFSET(getStruct<T>, {0xAF0, 40, 0, 0})
+	SMember(FScalableFloat)                            SprintingUpOffsetMultiplier                                 OFFSET(getStruct<T>, {0xB18, 40, 0, 0})
+	SMember(FScalableFloat)                            BoostedUpOffsetMultiplier                                   OFFSET(getStruct<T>, {0xB40, 40, 0, 0})
 
 
 	/// Functions
@@ -13888,8 +13894,9 @@ public:
 
 /// Struct /GrindRail/Blueprints/GrindRail_TipOptions.GrindRail_TipOptions
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FGrindRail_TipOptions : public MDKStruct
+class FGrindRail_TipOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -13900,8 +13907,9 @@ public:
 
 /// Struct /GrindRail/Blueprints/GrindRail_Booster_Directional.GrindRail_Booster_Directional
 /// Size: 0x0013 (0x000000 - 0x000013)
-class FGrindRail_Booster_Directional : public MDKStruct
+class FGrindRail_Booster_Directional : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 19;
 

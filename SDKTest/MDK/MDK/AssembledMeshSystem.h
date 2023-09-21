@@ -27,14 +27,14 @@ class UAssembledMeshSchema : public UPrimaryDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	SMember(FGameplayTag)                              MeshSchemaTag                                               OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FGameplayTag)                              MeshSchemaTag                                               OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	CMember(TWeakObjectPtr<UCustomizableObjectInstance*>) CustomizableObjectInstance                               OFFSET(get<T>, {0x38, 32, 0, 0})
 	CMember(TWeakObjectPtr<UCustomizableObject*>)      CustomizableObject                                          OFFSET(get<T>, {0x58, 32, 0, 0})
 	CMember(TMap<FString, FString>)                    SelectedIntParams                                           OFFSET(get<T>, {0x78, 80, 0, 0})
 	CMember(TMap<FString, float>)                      SelectedFloatParams                                         OFFSET(get<T>, {0xC8, 80, 0, 0})
-	SMember(FAssembledMeshAttachmentRules)             AttachmentRules                                             OFFSET(get<T>, {0x118, 80, 0, 0})
+	SMember(FAssembledMeshAttachmentRules)             AttachmentRules                                             OFFSET(getStruct<T>, {0x118, 80, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   AnimClass                                                   OFFSET(get<T>, {0x168, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SoundLibraryTags                                            OFFSET(get<T>, {0x188, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SoundLibraryTags                                            OFFSET(getStruct<T>, {0x188, 32, 0, 0})
 };
 
 /// Class /Script/AssembledMeshSystem.AssembledMeshUserComponent
@@ -67,33 +67,36 @@ public:
 
 /// Struct /Script/AssembledMeshSystem.AssembledMeshAttachmentRules
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FAssembledMeshAttachmentRules : public MDKStruct
+class FAssembledMeshAttachmentRules : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   AttachOffset                                                OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  AttachRotation                                              OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   AttachScale                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   AttachOffset                                                OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  AttachRotation                                              OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   AttachScale                                                 OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.BaseParamData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FBaseParamData : public MDKStruct
+class FBaseParamData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   ParamName                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParamName                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/AssembledMeshSystem.IntParamData
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FIntParamData : public FBaseParamData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -105,6 +108,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FFloatParamData : public FBaseParamData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -116,8 +120,9 @@ public:
 
 /// Struct /Script/AssembledMeshSystem.AssembledComponentReferences
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FAssembledComponentReferences : public MDKStruct
+class FAssembledComponentReferences : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

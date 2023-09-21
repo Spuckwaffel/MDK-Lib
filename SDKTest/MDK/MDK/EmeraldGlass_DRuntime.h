@@ -65,8 +65,9 @@ public:
 
 /// Struct /Script/EmeraldGlass_DRuntime.SereneYardWeaponData
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FSereneYardWeaponData : public MDKStruct
+class FSereneYardWeaponData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 

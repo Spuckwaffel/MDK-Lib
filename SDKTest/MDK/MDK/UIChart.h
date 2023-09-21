@@ -67,8 +67,8 @@ class UContextSetterUIStateComponentConfiguration : public UUIStateComponentConf
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FContextSetterChanges)                     ActivationChanges                                           OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FContextSetterChanges)                     DeactivationChanges                                         OFFSET(get<T>, {0x48, 32, 0, 0})
+	SMember(FContextSetterChanges)                     ActivationChanges                                           OFFSET(getStruct<T>, {0x28, 32, 0, 0})
+	SMember(FContextSetterChanges)                     DeactivationChanges                                         OFFSET(getStruct<T>, {0x48, 32, 0, 0})
 };
 
 /// Class /Script/UIChart.GlobalViewModelUIStateComponent
@@ -184,10 +184,10 @@ public:
 	CMember(UUIStateChart*)                            PlayerStateChart                                            OFFSET(get<T>, {0x28, 8, 0, 0})
 	DMember(bool)                                      bIgnoreTransitionParametersOnActivation                     OFFSET(get<bool>, {0x30, 1, 0, 0})
 	CMember(EUIStateTransitionUrgency)                 UrgencyOnPlayerAdd                                          OFFSET(get<T>, {0x31, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     AnimationHintsOnPlayerAdd                                   OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AnimationHintsOnPlayerAdd                                   OFFSET(getStruct<T>, {0x38, 32, 0, 0})
 	DMember(bool)                                      bIgnoreTransitionParametersOnDeactivation                   OFFSET(get<bool>, {0x58, 1, 0, 0})
 	CMember(EUIStateTransitionUrgency)                 UrgencyOnPlayerRemove                                       OFFSET(get<T>, {0x59, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     AnimationHintsOnPlayerRemove                                OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AnimationHintsOnPlayerRemove                                OFFSET(getStruct<T>, {0x60, 32, 0, 0})
 };
 
 /// Class /Script/UIChart.StackingUIStateComponentSharedData
@@ -209,8 +209,8 @@ class UUIStateConfiguration : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     StateTags                                                   OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     StateTags                                                   OFFSET(getStruct<T>, {0x38, 32, 0, 0})
 	DMember(int32_t)                                   ID                                                          OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 	CMember(TArray<UUIStateConfiguration*>)            Children                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<UUIStateConfiguration*>)            ParallelRegions                                             OFFSET(get<T>, {0x70, 16, 0, 0})
@@ -304,7 +304,7 @@ class UUIStateChartContextEntry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FString)                                   CommonValue                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   CommonValue                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TMap<ULocalPlayer*, FUIStateChartContextEntryOverride>) PlayerOverrides                                OFFSET(get<T>, {0x38, 80, 0, 0})
 
 
@@ -394,10 +394,10 @@ class UUIStateBacktrackStep : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FGameplayTag)                              TransitionTag                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              TransitionTag                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(UUIState*)                                 ReturnState                                                 OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(UUIState*)                                 AvailableState                                              OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FUIStateChartContextChangeSet)             ReverseContextChanges                                       OFFSET(get<T>, {0x40, 80, 0, 0})
+	SMember(FUIStateChartContextChangeSet)             ReverseContextChanges                                       OFFSET(getStruct<T>, {0x40, 80, 0, 0})
 	CMember(TArray<UUIStateBacktrackStep*>)            AvailablePaths                                              OFFSET(get<T>, {0x90, 16, 0, 0})
 };
 
@@ -419,7 +419,7 @@ public:
 	CMember(UUIStateChartTransitionOperation*)         QueuedTransitionOperation                                   OFFSET(get<T>, {0xB0, 8, 0, 0})
 	CMember(TArray<UUIStateBacktrackStep*>)            AvailableBacktrackPaths                                     OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(UUIStateBacktrackStep*)                    ActiveTransitionBacktrackStep                               OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FString)                                   ChartName                                                   OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FString)                                   ChartName                                                   OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 };
 
 /// Class /Script/UIChart.UIStateChartResourceCollection
@@ -460,7 +460,7 @@ public:
 	CMember(TArray<UUIState*>)                         KnownStatesToActivate                                       OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TArray<UUIState*>)                         StatesToDeactivate                                          OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(UUIStateChartTransitionOperationGroup*)    Group                                                       OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FUIStateRelay)                             StateRelay                                                  OFFSET(get<T>, {0x80, 40, 0, 0})
+	SMember(FUIStateRelay)                             StateRelay                                                  OFFSET(getStruct<T>, {0x80, 40, 0, 0})
 	CMember(UUIState*)                                 BacktrackReturnState                                        OFFSET(get<T>, {0xB0, 8, 0, 0})
 };
 
@@ -476,51 +476,55 @@ public:
 	CMember(TSet<UUIStateChartTransitionOperation*>)   OperationsReadyForContextUpdate                             OFFSET(get<T>, {0x78, 80, 0, 0})
 	CMember(UUIStateChartContext*)                     Context                                                     OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(ULocalPlayer*)                             LocalPlayer                                                 OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FUIStateChartContextChangeSet)             ContextChanges                                              OFFSET(get<T>, {0xD8, 80, 0, 0})
-	SMember(FUIStateChartContextChangeSet)             ReverseContextChanges                                       OFFSET(get<T>, {0x128, 80, 0, 0})
-	SMember(FUIStateChartTransitionOperationParameters) Parameters                                                 OFFSET(get<T>, {0x178, 40, 0, 0})
-	SMember(FGameplayTag)                              TransitionEventTag                                          OFFSET(get<T>, {0x1A0, 4, 0, 0})
+	SMember(FUIStateChartContextChangeSet)             ContextChanges                                              OFFSET(getStruct<T>, {0xD8, 80, 0, 0})
+	SMember(FUIStateChartContextChangeSet)             ReverseContextChanges                                       OFFSET(getStruct<T>, {0x128, 80, 0, 0})
+	SMember(FUIStateChartTransitionOperationParameters) Parameters                                                 OFFSET(getStruct<T>, {0x178, 40, 0, 0})
+	SMember(FGameplayTag)                              TransitionEventTag                                          OFFSET(getStruct<T>, {0x1A0, 4, 0, 0})
 };
 
 /// Struct /Script/UIChart.UIStateChartTransitionOperationParameters
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FUIStateChartTransitionOperationParameters : public MDKStruct
+class FUIStateChartTransitionOperationParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     AnimationHints                                              OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AnimationHints                                              OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	CMember(EUIStateTransitionUrgency)                 Urgency                                                     OFFSET(get<T>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/UIChart.ContextSetterSetEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FContextSetterSetEntry : public MDKStruct
+class FContextSetterSetEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayTag)                              Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/UIChart.ContextSetterClearEntry
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FContextSetterClearEntry : public MDKStruct
+class FContextSetterClearEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FGameplayTag)                              Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/UIChart.ContextSetterChanges
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FContextSetterChanges : public MDKStruct
+class FContextSetterChanges : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -531,8 +535,9 @@ public:
 
 /// Struct /Script/UIChart.UIStateComponentInstanceStack
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FUIStateComponentInstanceStack : public MDKStruct
+class FUIStateComponentInstanceStack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -542,8 +547,9 @@ public:
 
 /// Struct /Script/UIChart.UIStateConfigurationChildReference
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FUIStateConfigurationChildReference : public MDKStruct
+class FUIStateConfigurationChildReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -553,46 +559,50 @@ public:
 
 /// Struct /Script/UIChart.UIStateAutomationRule
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FUIStateAutomationRule : public MDKStruct
+class FUIStateAutomationRule : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(TArray<FUIStateChartContextCondition>)     ContextConditions                                           OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FUIStateConfigurationChildReference)       ChildStateReference                                         OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FUIStateConfigurationChildReference)       ChildStateReference                                         OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/UIChart.UIStateChartContextCondition
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FUIStateChartContextCondition : public MDKStruct
+class FUIStateChartContextCondition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(EUIStateChartContextConditionType)         ConditionType                                               OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FString)                                   ComparisonConstant                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ComparisonConstant                                          OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/UIChart.UIStateTransitionData
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FUIStateTransitionData : public MDKStruct
+class FUIStateTransitionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FGameplayTag)                              TriggerTag                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              TriggerTag                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   SourceStateId                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   TargetStateId                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/UIChart.UIStateChartContextChangeSet
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FUIStateChartContextChangeSet : public MDKStruct
+class FUIStateChartContextChangeSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -602,19 +612,21 @@ public:
 
 /// Struct /Script/UIChart.UIStateChartContextEntryOverride
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FUIStateChartContextEntryOverride : public MDKStruct
+class FUIStateChartContextEntryOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   OverrideValue                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   OverrideValue                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/UIChart.UIStateChartManagerChartDeactivationRequest
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FUIStateChartManagerChartDeactivationRequest : public MDKStruct
+class FUIStateChartManagerChartDeactivationRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -623,8 +635,9 @@ public:
 
 /// Struct /Script/UIChart.UIStateRelayBaton
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FUIStateRelayBaton : public MDKStruct
+class FUIStateRelayBaton : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -636,8 +649,9 @@ public:
 
 /// Struct /Script/UIChart.UIStateRelay
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FUIStateRelay : public MDKStruct
+class FUIStateRelay : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 

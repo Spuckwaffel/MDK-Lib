@@ -36,8 +36,8 @@ class UFortValetPassengerAnimInstance : public UFortVehicleOccupantAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2160;
 
 public:
-	SMember(FCachedAnimRelevancyData)                  IntoVehicleCachedData                                       OFFSET(get<T>, {0x810, 20, 0, 0})
-	SMember(FCachedAnimRelevancyData)                  OutOfVehicleCachedData                                      OFFSET(get<T>, {0x824, 20, 0, 0})
+	SMember(FCachedAnimRelevancyData)                  IntoVehicleCachedData                                       OFFSET(getStruct<T>, {0x810, 20, 0, 0})
+	SMember(FCachedAnimRelevancyData)                  OutOfVehicleCachedData                                      OFFSET(getStruct<T>, {0x824, 20, 0, 0})
 	CMember(TWeakObjectPtr<AFortDagwoodVehicle*>)      DagwoodVehicleInstance                                      OFFSET(get<T>, {0x838, 32, 0, 0})
 	DMember(float)                                     TurnYaw                                                     OFFSET(get<float>, {0x858, 4, 0, 0})
 	DMember(float)                                     InTime                                                      OFFSET(get<float>, {0x85C, 4, 0, 0})
@@ -75,11 +75,11 @@ class UDagwoodNetworkPhysicsComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 3664;
 
 public:
-	SMember(FNetworkPhysicsState)                      NetworkPhysicsState                                         OFFSET(get<T>, {0xA0, 144, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnGeneratedLocalInputCmd                                    OFFSET(get<T>, {0x130, 16, 0, 0})
-	SMember(FDagwoodManagedState)                      ReplicatedManagedState                                      OFFSET(get<T>, {0x140, 1112, 0, 0})
-	SMember(FDagwoodManagedState)                      InManagedState                                              OFFSET(get<T>, {0x598, 1112, 0, 0})
-	SMember(FDagwoodManagedState)                      OutManagedState                                             OFFSET(get<T>, {0x9F0, 1112, 0, 0})
+	SMember(FNetworkPhysicsState)                      NetworkPhysicsState                                         OFFSET(getStruct<T>, {0xA0, 144, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnGeneratedLocalInputCmd                                    OFFSET(getStruct<T>, {0x130, 16, 0, 0})
+	SMember(FDagwoodManagedState)                      ReplicatedManagedState                                      OFFSET(getStruct<T>, {0x140, 1112, 0, 0})
+	SMember(FDagwoodManagedState)                      InManagedState                                              OFFSET(getStruct<T>, {0x598, 1112, 0, 0})
+	SMember(FDagwoodManagedState)                      OutManagedState                                             OFFSET(getStruct<T>, {0x9F0, 1112, 0, 0})
 
 
 	/// Functions
@@ -115,8 +115,8 @@ class AFortAthenaMutator_OverrideValetVehicleParameters : public AFortAthenaMuta
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FScalableFloat)                            MinInitialVehicleFuelPercent                                OFFSET(get<T>, {0x338, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxInitialVehicleFuelPercent                                OFFSET(get<T>, {0x360, 40, 0, 0})
+	SMember(FScalableFloat)                            MinInitialVehicleFuelPercent                                OFFSET(getStruct<T>, {0x338, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxInitialVehicleFuelPercent                                OFFSET(getStruct<T>, {0x360, 40, 0, 0})
 
 
 	/// Functions
@@ -177,9 +177,9 @@ class AFortDagwoodVehicle : public AFortAthenaSKMotorVehicle
 	static inline constexpr uint64_t __MDKClassSize = 8768;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStartHandbrakeDelegate                                    OFFSET(get<T>, {0x1BF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStopHandbrakeDelegate                                     OFFSET(get<T>, {0x1C00, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStartHandBrakeCatchupForceDelegate                        OFFSET(get<T>, {0x1C10, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartHandbrakeDelegate                                    OFFSET(getStruct<T>, {0x1BF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStopHandbrakeDelegate                                     OFFSET(getStruct<T>, {0x1C00, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartHandBrakeCatchupForceDelegate                        OFFSET(getStruct<T>, {0x1C10, 16, 0, 0})
 	CMember(UClass*)                                   HardLandingCameraShake                                      OFFSET(get<T>, {0x1C20, 8, 0, 0})
 	CMember(UClass*)                                   DriverCamShakeClass                                         OFFSET(get<T>, {0x1C28, 8, 0, 0})
 	CMember(UClass*)                                   HandBrakeCamShakeClass                                      OFFSET(get<T>, {0x1C30, 8, 0, 0})
@@ -188,10 +188,10 @@ public:
 	DMember(float)                                     FadeDuration                                                OFFSET(get<float>, {0x1C40, 4, 0, 0})
 	DMember(float)                                     MinBrakeForceForSkid                                        OFFSET(get<float>, {0x1C44, 4, 0, 0})
 	DMember(float)                                     MinForwardSpeedForSkid                                      OFFSET(get<float>, {0x1C48, 4, 0, 0})
-	SMember(FGameplayTag)                              SpeedLinesCueTag                                            OFFSET(get<T>, {0x1C4C, 4, 0, 0})
+	SMember(FGameplayTag)                              SpeedLinesCueTag                                            OFFSET(getStruct<T>, {0x1C4C, 4, 0, 0})
 	DMember(float)                                     FadeStartTime                                               OFFSET(get<float>, {0x1C50, 4, 0, 0})
 	CMember(UDagwoodNetworkPhysicsComponent*)          NetworkPhysicsComponent                                     OFFSET(get<T>, {0x1C58, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTireModHealthChanged                                      OFFSET(get<T>, {0x1CD8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTireModHealthChanged                                      OFFSET(getStruct<T>, {0x1CD8, 16, 0, 0})
 	DMember(float)                                     RechargeableBoostPercent                                    OFFSET(get<float>, {0x1CE8, 4, 0, 0})
 	CMember(UFortSplatterSourceComponent*)             SplatterSourceComp                                          OFFSET(get<T>, {0x1CF0, 8, 0, 0})
 	DMember(bool)                                      bEnableNativizedTick                                        OFFSET(get<bool>, {0x1CF8, 1, 0, 0})
@@ -202,12 +202,12 @@ public:
 	CMember(TArray<FName>)                             WheelSocketNames                                            OFFSET(get<T>, {0x1D30, 16, 0, 0})
 	CMember(UFortDagwoodVehicleConfigs*)               FortDagwoodVehicleConfigs                                   OFFSET(get<T>, {0x1D40, 8, 0, 0})
 	CMember(TArray<int32_t>)                           RearShocks                                                  OFFSET(get<T>, {0x1D48, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     OffroadEnvironmentDamageTags                                OFFSET(get<T>, {0x1D58, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     FireDamageTags                                              OFFSET(get<T>, {0x1D78, 32, 0, 0})
-	SMember(FVector)                                   NativeWheelScaleRear                                        OFFSET(get<T>, {0x1D98, 24, 0, 0})
-	SMember(FVector)                                   NativeWheelScaleFront                                       OFFSET(get<T>, {0x1DB0, 24, 0, 0})
-	SMember(FVector)                                   NativeTireScaleRear                                         OFFSET(get<T>, {0x1DC8, 24, 0, 0})
-	SMember(FVector)                                   NativeTireScaleFront                                        OFFSET(get<T>, {0x1DE0, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     OffroadEnvironmentDamageTags                                OFFSET(getStruct<T>, {0x1D58, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FireDamageTags                                              OFFSET(getStruct<T>, {0x1D78, 32, 0, 0})
+	SMember(FVector)                                   NativeWheelScaleRear                                        OFFSET(getStruct<T>, {0x1D98, 24, 0, 0})
+	SMember(FVector)                                   NativeWheelScaleFront                                       OFFSET(getStruct<T>, {0x1DB0, 24, 0, 0})
+	SMember(FVector)                                   NativeTireScaleRear                                         OFFSET(getStruct<T>, {0x1DC8, 24, 0, 0})
+	SMember(FVector)                                   NativeTireScaleFront                                        OFFSET(getStruct<T>, {0x1DE0, 24, 0, 0})
 	DMember(bool)                                      bTireSmokeActive                                            OFFSET(get<bool>, {0x1DF8, 1, 0, 0})
 	DMember(bool)                                      bBoostFailed                                                OFFSET(get<bool>, {0x1DF9, 1, 0, 0})
 	DMember(bool)                                      bCanBoostPitch                                              OFFSET(get<bool>, {0x1DFA, 1, 0, 0})
@@ -216,10 +216,10 @@ public:
 	DMember(uint64_t)                                  BrakeForceFeedbackHandle                                    OFFSET(get<uint64_t>, {0x1E10, 8, 0, 0})
 	DMember(uint64_t)                                  HandBrakeForceFeedbackHandle                                OFFSET(get<uint64_t>, {0x1E18, 8, 0, 0})
 	DMember(bool)                                      bSpeedLinesActive                                           OFFSET(get<bool>, {0x1E20, 1, 0, 0})
-	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(get<T>, {0x1E40, 112, 0, 0})
+	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(getStruct<T>, {0x1E40, 112, 0, 0})
 	CMember(TArray<FAttachedWheel>)                    ServerRepWheelData                                          OFFSET(get<T>, {0x1EB0, 16, 0, 0})
-	SMember(FVector)                                   FlipYawForwardTargetDirection                               OFFSET(get<T>, {0x1F10, 24, 0, 0})
-	SMember(FVector)                                   FlipYawOriginalForward                                      OFFSET(get<T>, {0x1F28, 24, 0, 0})
+	SMember(FVector)                                   FlipYawForwardTargetDirection                               OFFSET(getStruct<T>, {0x1F10, 24, 0, 0})
+	SMember(FVector)                                   FlipYawOriginalForward                                      OFFSET(getStruct<T>, {0x1F28, 24, 0, 0})
 	CMember(ETireLocations)                            LastPoppedTire                                              OFFSET(get<T>, {0x1F40, 1, 0, 0})
 	DMember(float)                                     RoadTopSpeedMultiplier                                      OFFSET(get<float>, {0x1F44, 4, 0, 0})
 	DMember(float)                                     CurrentBumpiness                                            OFFSET(get<float>, {0x1F48, 4, 0, 0})
@@ -268,8 +268,8 @@ public:
 	CMember(UNiagaraSystem*)                           NativeSys_SpeedLines                                        OFFSET(get<T>, {0x2000, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           NativeSys_TireSkid                                          OFFSET(get<T>, {0x2008, 8, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       RoadAndExhaustSurfaceTypeArrayForFX                         OFFSET(get<T>, {0x2010, 16, 0, 0})
-	SMember(FName)                                     RoadAndExhaustPeelOutColorIndexName                         OFFSET(get<T>, {0x2020, 4, 0, 0})
-	SMember(FName)                                     BrakeLightsName                                             OFFSET(get<T>, {0x2024, 4, 0, 0})
+	SMember(FName)                                     RoadAndExhaustPeelOutColorIndexName                         OFFSET(getStruct<T>, {0x2020, 4, 0, 0})
+	SMember(FName)                                     BrakeLightsName                                             OFFSET(getStruct<T>, {0x2024, 4, 0, 0})
 	CMember(TArray<ETireStates>)                       FakeTireStates                                              OFFSET(get<T>, {0x2040, 16, 0, 0})
 	CMember(EPoppedTireReactionStates)                 ActivePoppedTireReaction                                    OFFSET(get<T>, {0x2050, 1, 0, 0})
 	CMember(EPoppedTireReactionStates)                 ReplicatedPoppedTireReaction                                OFFSET(get<T>, {0x2051, 1, 0, 0})
@@ -278,7 +278,7 @@ public:
 	CMember(TArray<UStaticMeshComponent*>)             FakeTireMeshes                                              OFFSET(get<T>, {0x2070, 16, 0, 0})
 	DMember(bool)                                      bIsInoperable                                               OFFSET(get<bool>, {0x2084, 1, 0, 0})
 	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x2088, 4, 0, 0})
-	SMember(FRandomStream)                             RandStream                                                  OFFSET(get<T>, {0x208C, 8, 0, 0})
+	SMember(FRandomStream)                             RandStream                                                  OFFSET(getStruct<T>, {0x208C, 8, 0, 0})
 	DMember(bool)                                      bHasTraction                                                OFFSET(get<bool>, {0x2094, 1, 0, 0})
 	DMember(bool)                                      bStartHandBrakeCatchupForce                                 OFFSET(get<bool>, {0x2095, 1, 0, 0})
 	DMember(bool)                                      bSelfDestructEnabled                                        OFFSET(get<bool>, {0x21A0, 1, 1, 0})
@@ -392,10 +392,10 @@ class UFortDagwoodVehicleAnimInstance : public UFortVehicleAnimInstance
 
 public:
 	CMember(AFortDagwoodVehicle*)                      Dagwood                                                     OFFSET(get<T>, {0x5F8, 8, 0, 0})
-	SMember(FVector)                                   GlassScale_FR                                               OFFSET(get<T>, {0x600, 24, 0, 0})
-	SMember(FVector)                                   GlassScale_FL                                               OFFSET(get<T>, {0x618, 24, 0, 0})
-	SMember(FVector)                                   GlassScale_BR                                               OFFSET(get<T>, {0x630, 24, 0, 0})
-	SMember(FVector)                                   GlassScale_BL                                               OFFSET(get<T>, {0x648, 24, 0, 0})
+	SMember(FVector)                                   GlassScale_FR                                               OFFSET(getStruct<T>, {0x600, 24, 0, 0})
+	SMember(FVector)                                   GlassScale_FL                                               OFFSET(getStruct<T>, {0x618, 24, 0, 0})
+	SMember(FVector)                                   GlassScale_BR                                               OFFSET(getStruct<T>, {0x630, 24, 0, 0})
+	SMember(FVector)                                   GlassScale_BL                                               OFFSET(getStruct<T>, {0x648, 24, 0, 0})
 };
 
 /// Class /Script/ValetRuntime.FortDagwoodVehicleConfigs
@@ -519,8 +519,8 @@ public:
 	DMember(float)                                     RechargeableBoostMaxPercent                                 OFFSET(get<float>, {0xA68, 4, 0, 0})
 	DMember(float)                                     RechargeableBoostMinPercent                                 OFFSET(get<float>, {0xA6C, 4, 0, 0})
 	DMember(float)                                     AnalogDriftStickThreshold                                   OFFSET(get<float>, {0xA70, 4, 0, 0})
-	SMember(FName)                                     TireBootRightSocketName                                     OFFSET(get<T>, {0xA74, 4, 0, 0})
-	SMember(FName)                                     TireBootLeftSocketName                                      OFFSET(get<T>, {0xA78, 4, 0, 0})
+	SMember(FName)                                     TireBootRightSocketName                                     OFFSET(getStruct<T>, {0xA74, 4, 0, 0})
+	SMember(FName)                                     TireBootLeftSocketName                                      OFFSET(getStruct<T>, {0xA78, 4, 0, 0})
 	DMember(float)                                     TireBootRelativeDistance                                    OFFSET(get<float>, {0xA7C, 4, 0, 0})
 	DMember(float)                                     BoostForceInAir                                             OFFSET(get<float>, {0xA80, 4, 0, 0})
 	DMember(float)                                     BoostAirMaxSpeed                                            OFFSET(get<float>, {0xA84, 4, 0, 0})
@@ -565,9 +565,9 @@ class AFortValetAudioController : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEngineLoadChanged                                         OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnShiftGearCompleted                                        OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnShiftGearDelegate                                         OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEngineLoadChanged                                         OFFSET(getStruct<T>, {0x290, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnShiftGearCompleted                                        OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnShiftGearDelegate                                         OFFSET(getStruct<T>, {0x2B0, 16, 0, 0})
 	DMember(float)                                     RPMResetTime_Native                                         OFFSET(get<float>, {0x2C0, 4, 0, 0})
 	DMember(float)                                     JitterAmount_Native                                         OFFSET(get<float>, {0x2C4, 4, 0, 0})
 	DMember(float)                                     ShiftTimeThreshold_Native                                   OFFSET(get<float>, {0x2C8, 4, 0, 0})
@@ -617,8 +617,8 @@ public:
 	DMember(float)                                     AngleForSkidding_Native                                     OFFSET(get<float>, {0x378, 4, 0, 0})
 	DMember(float)                                     SpringCompressionMultiplier                                 OFFSET(get<float>, {0x37C, 4, 0, 0})
 	DMember(float)                                     MotoSynthMaxVolume_Native                                   OFFSET(get<float>, {0x380, 4, 0, 0})
-	SMember(FVector2D)                                 MotoSynthTimeInVehicleTimeRange                             OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FVector2D)                                 MotoSynthTimeInVehicleVolumeRange                           OFFSET(get<T>, {0x398, 16, 0, 0})
+	SMember(FVector2D)                                 MotoSynthTimeInVehicleTimeRange                             OFFSET(getStruct<T>, {0x388, 16, 0, 0})
+	SMember(FVector2D)                                 MotoSynthTimeInVehicleVolumeRange                           OFFSET(getStruct<T>, {0x398, 16, 0, 0})
 	CMember(TWeakObjectPtr<AFortDagwoodVehicle*>)      ValetVehicle                                                OFFSET(get<T>, {0x3A8, 8, 0, 0})
 	CMember(UFortLayeredAudioComponent*)               Engine_Native                                               OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(UAudioComponent*)                          BoostAudioComponent_Native                                  OFFSET(get<T>, {0x3B8, 8, 0, 0})
@@ -652,8 +652,9 @@ public:
 
 /// Struct /Script/ValetRuntime.FortDagwoodCmd
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortDagwoodCmd : public MDKStruct
+class FFortDagwoodCmd : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -661,7 +662,7 @@ public:
 	DMember(float)                                     ForwardAlpha                                                OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     RightAlpha                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     AccelerationAlpha                                           OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector_NetQuantize100)                    MovementDir                                                 OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector_NetQuantize100)                    MovementDir                                                 OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	DMember(bool)                                      bBoost                                                      OFFSET(get<bool>, {0x28, 1, 1, 0})
 	DMember(bool)                                      bHandbrake                                                  OFFSET(get<bool>, {0x28, 1, 1, 1})
 };
@@ -670,25 +671,27 @@ public:
 /// Size: 0x00C0 (0x000188 - 0x000248)
 class FDagwoodInPersistent : public FFortVehicleInPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 584;
 
 public:
 	CMember(UFortDagwoodVehicleConfigs*)               FortDagwoodVehicleConfigs                                   OFFSET(get<T>, {0x188, 8, 0, 0})
-	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(get<T>, {0x190, 112, 0, 0})
+	SMember(FDagwoodRuntimeModifiers)                  DagwoodRuntimeModifiedProperties                            OFFSET(getStruct<T>, {0x190, 112, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.DagwoodRuntimeModifiers
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FDagwoodRuntimeModifiers : public MDKStruct
+class FDagwoodRuntimeModifiers : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FRuntimeBoostInfo)                         BoostInfo                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRuntimeFuelInfo)                          FuelInfo                                                    OFFSET(get<T>, {0x18, 12, 0, 0})
-	SMember(FRuntimeSpringsInfo)                       SpringsInfo                                                 OFFSET(get<T>, {0x24, 32, 0, 0})
+	SMember(FRuntimeBoostInfo)                         BoostInfo                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FRuntimeFuelInfo)                          FuelInfo                                                    OFFSET(getStruct<T>, {0x18, 12, 0, 0})
+	SMember(FRuntimeSpringsInfo)                       SpringsInfo                                                 OFFSET(getStruct<T>, {0x24, 32, 0, 0})
 	DMember(bool)                                      bDamageFriendlyVehicles                                     OFFSET(get<bool>, {0x44, 1, 0, 0})
 	DMember(bool)                                      bDamageOtherVehicles                                        OFFSET(get<bool>, {0x45, 1, 0, 0})
 	DMember(bool)                                      bDamageOwnVehicle                                           OFFSET(get<bool>, {0x46, 1, 0, 0})
@@ -697,7 +700,7 @@ public:
 	DMember(float)                                     MaxInclineAngle                                             OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     MaxTiltAngle                                                OFFSET(get<float>, {0x50, 4, 0, 0})
 	CMember(TArray<FRuntimeGearInfo>)                  GearInfos                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FGameplayTag)                              TireModTag                                                  OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FGameplayTag)                              TireModTag                                                  OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	DMember(char)                                      TireModVersion                                              OFFSET(get<char>, {0x6C, 1, 0, 0})
 	DMember(bool)                                      bTireModAdjustsPosition                                     OFFSET(get<bool>, {0x6D, 1, 0, 0})
 	DMember(char)                                      DataVersion                                                 OFFSET(get<char>, {0x6E, 1, 0, 0})
@@ -705,8 +708,9 @@ public:
 
 /// Struct /Script/ValetRuntime.RuntimeGearInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRuntimeGearInfo : public MDKStruct
+class FRuntimeGearInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -719,8 +723,9 @@ public:
 
 /// Struct /Script/ValetRuntime.RuntimeFuelInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FRuntimeFuelInfo : public MDKStruct
+class FRuntimeFuelInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -732,8 +737,9 @@ public:
 
 /// Struct /Script/ValetRuntime.RuntimeBoostInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FRuntimeBoostInfo : public MDKStruct
+class FRuntimeBoostInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -749,15 +755,16 @@ public:
 
 /// Struct /Script/ValetRuntime.DagwoodState_PT
 /// Size: 0x01B8 (0x000000 - 0x0001B8)
-class FDagwoodState_PT : public MDKStruct
+class FDagwoodState_PT : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 440;
 
 public:
-	SMember(FDagwoodInternal)                          Internal                                                    OFFSET(get<T>, {0x0, 312, 0, 0})
-	SMember(FDagwoodOutPersistent)                     OutPersistent                                               OFFSET(get<T>, {0x138, 48, 0, 0})
-	SMember(FDagwoodOutContinuous)                     OutContinuous                                               OFFSET(get<T>, {0x168, 72, 0, 0})
+	SMember(FDagwoodInternal)                          Internal                                                    OFFSET(getStruct<T>, {0x0, 312, 0, 0})
+	SMember(FDagwoodOutPersistent)                     OutPersistent                                               OFFSET(getStruct<T>, {0x138, 48, 0, 0})
+	SMember(FDagwoodOutContinuous)                     OutContinuous                                               OFFSET(getStruct<T>, {0x168, 72, 0, 0})
 	DMember(bool)                                      bOutValid                                                   OFFSET(get<bool>, {0x1B0, 1, 0, 0})
 };
 
@@ -765,6 +772,7 @@ public:
 /// Size: 0x0010 (0x000038 - 0x000048)
 class FDagwoodOutContinuous : public FFortVehicleOutContinuous
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -775,6 +783,7 @@ public:
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FDagwoodOutPersistent : public FFortVehicleOutPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -787,6 +796,7 @@ public:
 /// Size: 0x00B8 (0x000080 - 0x000138)
 class FDagwoodInternal : public FFortVehicleInternalPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
@@ -795,36 +805,39 @@ public:
 
 /// Struct /Script/ValetRuntime.DagwoodManagedState
 /// Size: 0x0458 (0x000000 - 0x000458)
-class FDagwoodManagedState : public MDKStruct
+class FDagwoodManagedState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1112;
 
 public:
 	DMember(int32_t)                                   Frame                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FFortDagwoodCmd)                           InputCmd                                                    OFFSET(get<T>, {0x8, 48, 0, 0})
-	SMember(FDagwoodInPersistent)                      GT_State                                                    OFFSET(get<T>, {0x38, 584, 0, 0})
-	SMember(FDagwoodState_PT)                          PT_State                                                    OFFSET(get<T>, {0x280, 440, 0, 0})
+	SMember(FFortDagwoodCmd)                           InputCmd                                                    OFFSET(getStruct<T>, {0x8, 48, 0, 0})
+	SMember(FDagwoodInPersistent)                      GT_State                                                    OFFSET(getStruct<T>, {0x38, 584, 0, 0})
+	SMember(FDagwoodState_PT)                          PT_State                                                    OFFSET(getStruct<T>, {0x280, 440, 0, 0})
 	CMember(APlayerController*)                        PC                                                          OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(TArray<FDagwoodFutureClientInput>)         FutureInputs                                                OFFSET(get<T>, {0x448, 16, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.DagwoodFutureClientInput
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FDagwoodFutureClientInput : public MDKStruct
+class FDagwoodFutureClientInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	DMember(int32_t)                                   Frame                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FFortDagwoodCmd)                           InputCmd                                                    OFFSET(get<T>, {0x8, 48, 0, 0})
+	SMember(FFortDagwoodCmd)                           InputCmd                                                    OFFSET(getStruct<T>, {0x8, 48, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.NetworkPhysicsState
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FNetworkPhysicsState : public MDKStruct
+class FNetworkPhysicsState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -833,16 +846,17 @@ public:
 
 /// Struct /Script/ValetRuntime.NetworkPhysicsStateNetSerializerState
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FNetworkPhysicsStateNetSerializerState : public MDKStruct
+class FNetworkPhysicsStateNetSerializerState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LinearVelocity                                              OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LinearVelocity                                              OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 	DMember(int32_t)                                   NetworkHandle                                               OFFSET(get<int32_t>, {0x70, 4, 0, 0})
 	DMember(int32_t)                                   Frame                                                       OFFSET(get<int32_t>, {0x74, 4, 0, 0})
 	DMember(char)                                      ObjectState                                                 OFFSET(get<char>, {0x78, 1, 0, 0})
@@ -850,33 +864,36 @@ public:
 
 /// Struct /Script/ValetRuntime.NetworkPhysicsStateNetSerializerDebugData
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNetworkPhysicsStateNetSerializerDebugData : public MDKStruct
+class FNetworkPhysicsStateNetSerializerDebugData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   Force                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Torque                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   LinearImpulse                                               OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   AngularImpulse                                              OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Force                                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Torque                                                      OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   LinearImpulse                                               OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   AngularImpulse                                              OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.NetworkPhysicsStateNetSerializerDebugState
 /// Size: 0x0120 (0x000000 - 0x000120)
-class FNetworkPhysicsStateNetSerializerDebugState : public MDKStruct
+class FNetworkPhysicsStateNetSerializerDebugState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FNetworkPhysicsStateNetSerializerDebugData) DebugData                                                  OFFSET(get<T>, {0x0, 288, 0, 0})
+	SMember(FNetworkPhysicsStateNetSerializerDebugData) DebugData                                                  OFFSET(getStruct<T>, {0x0, 288, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.NetworkPhysicsStateNetSerializerConfig
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FNetworkPhysicsStateNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -885,21 +902,23 @@ public:
 
 /// Struct /Script/ValetRuntime.VehicleAttachment
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVehicleAttachment : public MDKStruct
+class FVehicleAttachment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     ModName                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ModName                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(USkeletalMesh*)                            SkeletalMesh                                                OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/ValetRuntime.DagwoodActionDefForUI
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDagwoodActionDefForUI : public MDKStruct
+class FDagwoodActionDefForUI : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -909,13 +928,14 @@ public:
 
 /// Struct /Script/ValetRuntime.TireSimulationRuntimeData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FTireSimulationRuntimeData : public MDKStruct
+class FTireSimulationRuntimeData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRuntimeTerrainHandlingInfo)               HandlingInfo                                                OFFSET(get<T>, {0x0, 20, 0, 0})
+	SMember(FRuntimeTerrainHandlingInfo)               HandlingInfo                                                OFFSET(getStruct<T>, {0x0, 20, 0, 0})
 	DMember(float)                                     PoppedTireSpringLength                                      OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     PoppedTireSpringStiff                                       OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     PoppedTireSpringDamp                                        OFFSET(get<float>, {0x1C, 4, 0, 0})
@@ -923,8 +943,9 @@ public:
 
 /// Struct /Script/ValetRuntime.ValetUpdateContext
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FValetUpdateContext : public MDKStruct
+class FValetUpdateContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -933,15 +954,16 @@ public:
 
 /// Struct /Script/ValetRuntime.VehiclePropReplacementData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FVehiclePropReplacementData : public MDKStruct
+class FVehiclePropReplacementData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(TWeakObjectPtr<UFortVehicleItemDefinition*>) FortVehicleItemDefinition                                 OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   TransOffset                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FRotator)                                  RotOffset                                                   OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   TransOffset                                                 OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FRotator)                                  RotOffset                                                   OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Enum /Script/ValetRuntime.EFortDagwoodSimEvent

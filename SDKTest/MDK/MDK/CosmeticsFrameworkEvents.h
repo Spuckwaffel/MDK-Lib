@@ -49,8 +49,9 @@ public:
 
 /// Struct /Script/CosmeticsFrameworkEvents.CosmeticsEventHandle
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FCosmeticsEventHandle : public MDKStruct
+class FCosmeticsEventHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

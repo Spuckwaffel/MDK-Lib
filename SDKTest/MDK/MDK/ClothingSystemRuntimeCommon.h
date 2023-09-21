@@ -65,14 +65,15 @@ class UClothLODDataCommon_Legacy : public UObject
 
 public:
 	CMember(UClothPhysicalMeshDataBase_Legacy*)        PhysicalMeshData                                            OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FClothPhysicalMeshData)                    ClothPhysicalMeshData                                       OFFSET(get<T>, {0x30, 216, 0, 0})
-	SMember(FClothCollisionData)                       CollisionData                                               OFFSET(get<T>, {0x108, 64, 0, 0})
+	SMember(FClothPhysicalMeshData)                    ClothPhysicalMeshData                                       OFFSET(getStruct<T>, {0x30, 216, 0, 0})
+	SMember(FClothCollisionData)                       CollisionData                                               OFFSET(getStruct<T>, {0x108, 64, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeCommon.ClothConstraintSetup_Legacy
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FClothConstraintSetup_Legacy : public MDKStruct
+class FClothConstraintSetup_Legacy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -85,33 +86,34 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeCommon.ClothConfig_Legacy
 /// Size: 0x0130 (0x000000 - 0x000130)
-class FClothConfig_Legacy : public MDKStruct
+class FClothConfig_Legacy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 	CMember(EClothingWindMethod_Legacy)                WindMethod                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              VerticalConstraintConfig                                    OFFSET(get<T>, {0x4, 16, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              HorizontalConstraintConfig                                  OFFSET(get<T>, {0x14, 16, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              BendConstraintConfig                                        OFFSET(get<T>, {0x24, 16, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              ShearConstraintConfig                                       OFFSET(get<T>, {0x34, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              VerticalConstraintConfig                                    OFFSET(getStruct<T>, {0x4, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              HorizontalConstraintConfig                                  OFFSET(getStruct<T>, {0x14, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              BendConstraintConfig                                        OFFSET(getStruct<T>, {0x24, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              ShearConstraintConfig                                       OFFSET(getStruct<T>, {0x34, 16, 0, 0})
 	DMember(float)                                     SelfCollisionRadius                                         OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(float)                                     SelfCollisionStiffness                                      OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(float)                                     SelfCollisionCullScale                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
-	SMember(FVector)                                   Damping                                                     OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Damping                                                     OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	DMember(float)                                     Friction                                                    OFFSET(get<float>, {0x68, 4, 0, 0})
 	DMember(float)                                     WindDragCoefficient                                         OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(float)                                     WindLiftCoefficient                                         OFFSET(get<float>, {0x70, 4, 0, 0})
-	SMember(FVector)                                   LinearDrag                                                  OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FVector)                                   AngularDrag                                                 OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FVector)                                   LinearInertiaScale                                          OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FVector)                                   AngularInertiaScale                                         OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FVector)                                   CentrifugalInertiaScale                                     OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FVector)                                   LinearDrag                                                  OFFSET(getStruct<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   AngularDrag                                                 OFFSET(getStruct<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   LinearInertiaScale                                          OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   AngularInertiaScale                                         OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FVector)                                   CentrifugalInertiaScale                                     OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
 	DMember(float)                                     SolverFrequency                                             OFFSET(get<float>, {0xF0, 4, 0, 0})
 	DMember(float)                                     StiffnessFrequency                                          OFFSET(get<float>, {0xF4, 4, 0, 0})
 	DMember(float)                                     GravityScale                                                OFFSET(get<float>, {0xF8, 4, 0, 0})
-	SMember(FVector)                                   GravityOverride                                             OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   GravityOverride                                             OFFSET(getStruct<T>, {0x100, 24, 0, 0})
 	DMember(bool)                                      bUseGravityOverride                                         OFFSET(get<bool>, {0x118, 1, 0, 0})
 	DMember(float)                                     TetherStiffness                                             OFFSET(get<float>, {0x11C, 4, 0, 0})
 	DMember(float)                                     TetherLimit                                                 OFFSET(get<float>, {0x120, 4, 0, 0})
@@ -122,8 +124,9 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeCommon.PointWeightMap
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPointWeightMap : public MDKStruct
+class FPointWeightMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -133,14 +136,15 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeCommon.ClothLODDataCommon
 /// Size: 0x0148 (0x000000 - 0x000148)
-class FClothLODDataCommon : public MDKStruct
+class FClothLODDataCommon : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FClothPhysicalMeshData)                    PhysicalMeshData                                            OFFSET(get<T>, {0x0, 216, 0, 0})
-	SMember(FClothCollisionData)                       CollisionData                                               OFFSET(get<T>, {0xD8, 64, 0, 0})
+	SMember(FClothPhysicalMeshData)                    PhysicalMeshData                                            OFFSET(getStruct<T>, {0x0, 216, 0, 0})
+	SMember(FClothCollisionData)                       CollisionData                                               OFFSET(getStruct<T>, {0xD8, 64, 0, 0})
 	DMember(bool)                                      bUseMultipleInfluences                                      OFFSET(get<bool>, {0x118, 1, 0, 0})
 	DMember(float)                                     SkinningKernelRadius                                        OFFSET(get<float>, {0x11C, 4, 0, 0})
 	DMember(bool)                                      bSmoothTransition                                           OFFSET(get<bool>, {0x120, 1, 0, 0})
@@ -148,8 +152,9 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeCommon.ClothPhysicalMeshData
 /// Size: 0x00D8 (0x000000 - 0x0000D8)
-class FClothPhysicalMeshData : public MDKStruct
+class FClothPhysicalMeshData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
@@ -161,16 +166,17 @@ public:
 	CMember(TArray<float>)                             InverseMasses                                               OFFSET(get<T>, {0x80, 16, 0, 0})
 	CMember(TArray<FClothVertBoneData>)                BoneData                                                    OFFSET(get<T>, {0x90, 16, 0, 0})
 	CMember(TArray<uint32_t>)                          SelfCollisionIndices                                        OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FClothTetherData)                          EuclideanTethers                                            OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FClothTetherData)                          GeodesicTethers                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FClothTetherData)                          EuclideanTethers                                            OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FClothTetherData)                          GeodesicTethers                                             OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	DMember(int32_t)                                   MaxBoneWeights                                              OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
 	DMember(int32_t)                                   NumFixedVerts                                               OFFSET(get<int32_t>, {0xD4, 4, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeCommon.ClothTetherData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FClothTetherData : public MDKStruct
+class FClothTetherData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -179,13 +185,14 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeCommon.ClothParameterMask_Legacy
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FClothParameterMask_Legacy : public MDKStruct
+class FClothParameterMask_Legacy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     MaskName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     MaskName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(EWeightMapTargetCommon)                    CurrentTarget                                               OFFSET(get<T>, {0x4, 1, 0, 0})
 	DMember(float)                                     MaxValue                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     MinValue                                                    OFFSET(get<float>, {0xC, 4, 0, 0})

@@ -88,7 +88,7 @@ class UWBP_UIKit_ButtonCTA_Base_C : public UFortCTAButton
 	static inline constexpr uint64_t __MDKClassSize = 6640;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1480, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1480, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Pressed_Base                                           OFFSET(get<T>, {0x1488, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Focused_Base                                           OFFSET(get<T>, {0x1490, 8, 0, 0})
 	CMember(UWBP_UIKit_ButtonBackground_CTA_C*)        Background                                                  OFFSET(get<T>, {0x1498, 8, 0, 0})
@@ -101,8 +101,8 @@ public:
 	CMember(UWBP_UIKit_ButtonText_CTA_C*)              TextBlock                                                   OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_Text                                            OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(TEnumAsByte<ModularButtonSize>)            ButtonSize                                                  OFFSET(get<T>, {0x14E0, 1, 0, 0})
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x14E8, 24, 0, 0})
-	SMember(FText)                                     TextSecondary                                               OFFSET(get<T>, {0x1500, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x14E8, 24, 0, 0})
+	SMember(FText)                                     TextSecondary                                               OFFSET(getStruct<T>, {0x1500, 24, 0, 0})
 	CMember(TArray<UWBP_UIKit_Block_Base_C*>)          ModularBlocks                                               OFFSET(get<T>, {0x1518, 16, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 InputActionProgressMaterial                                 OFFSET(get<T>, {0x1528, 8, 0, 0})
 	CMember(UMaterialInstance*)                        BackgroundMaterial                                          OFFSET(get<T>, {0x1530, 8, 0, 0})
@@ -111,26 +111,26 @@ public:
 	DMember(int32_t)                                   LargeHeight                                                 OFFSET(get<int32_t>, {0x1544, 4, 0, 0})
 	DMember(int32_t)                                   MediumHeight                                                OFFSET(get<int32_t>, {0x1548, 4, 0, 0})
 	DMember(int32_t)                                   SmallHeight                                                 OFFSET(get<int32_t>, {0x154C, 4, 0, 0})
-	SMember(FMargin)                                   SingleTextLargePadding                                      OFFSET(get<T>, {0x1550, 16, 0, 0})
-	SMember(FMargin)                                   SingleTextMediumPadding                                     OFFSET(get<T>, {0x1560, 16, 0, 0})
-	SMember(FMargin)                                   SingleTextSmallPadding                                      OFFSET(get<T>, {0x1570, 16, 0, 0})
-	SMember(FMargin)                                   DoubleTextLargePadding                                      OFFSET(get<T>, {0x1580, 16, 0, 0})
-	SMember(FMargin)                                   DoubleTextMediumPadding                                     OFFSET(get<T>, {0x1590, 16, 0, 0})
-	SMember(FMargin)                                   DoubleTextSmallPadding                                      OFFSET(get<T>, {0x15A0, 16, 0, 0})
-	SMember(FMargin)                                   DoubleTextSecondaryLargePadding                             OFFSET(get<T>, {0x15B0, 16, 0, 0})
-	SMember(FMargin)                                   DoubleTextSecondaryMediumPadding                            OFFSET(get<T>, {0x15C0, 16, 0, 0})
-	SMember(FMargin)                                   DoubleTextSecondarySmallPadding                             OFFSET(get<T>, {0x15D0, 16, 0, 0})
+	SMember(FMargin)                                   SingleTextLargePadding                                      OFFSET(getStruct<T>, {0x1550, 16, 0, 0})
+	SMember(FMargin)                                   SingleTextMediumPadding                                     OFFSET(getStruct<T>, {0x1560, 16, 0, 0})
+	SMember(FMargin)                                   SingleTextSmallPadding                                      OFFSET(getStruct<T>, {0x1570, 16, 0, 0})
+	SMember(FMargin)                                   DoubleTextLargePadding                                      OFFSET(getStruct<T>, {0x1580, 16, 0, 0})
+	SMember(FMargin)                                   DoubleTextMediumPadding                                     OFFSET(getStruct<T>, {0x1590, 16, 0, 0})
+	SMember(FMargin)                                   DoubleTextSmallPadding                                      OFFSET(getStruct<T>, {0x15A0, 16, 0, 0})
+	SMember(FMargin)                                   DoubleTextSecondaryLargePadding                             OFFSET(getStruct<T>, {0x15B0, 16, 0, 0})
+	SMember(FMargin)                                   DoubleTextSecondaryMediumPadding                            OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
+	SMember(FMargin)                                   DoubleTextSecondarySmallPadding                             OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
 	DMember(int32_t)                                   GridUnit                                                    OFFSET(get<int32_t>, {0x15E0, 4, 0, 0})
-	SMember(FSlateFontInfo)                            LargePrimaryFont                                            OFFSET(get<T>, {0x15E8, 88, 0, 0})
-	SMember(FSlateFontInfo)                            MediumPrimaryFont                                           OFFSET(get<T>, {0x1640, 88, 0, 0})
-	SMember(FSlateFontInfo)                            SmallPrimaryFont                                            OFFSET(get<T>, {0x1698, 88, 0, 0})
-	SMember(FSlateFontInfo)                            LargeSecondaryFont                                          OFFSET(get<T>, {0x16F0, 88, 0, 0})
-	SMember(FSlateFontInfo)                            MeduimSecondaryFont                                         OFFSET(get<T>, {0x1748, 88, 0, 0})
-	SMember(FSlateFontInfo)                            SmallSecondaryFont                                          OFFSET(get<T>, {0x17A0, 88, 0, 0})
-	SMember(FWidgetTransform)                          LeftToRightTransform                                        OFFSET(get<T>, {0x17F8, 56, 0, 0})
-	SMember(FWidgetTransform)                          RightToLeftTransform                                        OFFSET(get<T>, {0x1830, 56, 0, 0})
+	SMember(FSlateFontInfo)                            LargePrimaryFont                                            OFFSET(getStruct<T>, {0x15E8, 88, 0, 0})
+	SMember(FSlateFontInfo)                            MediumPrimaryFont                                           OFFSET(getStruct<T>, {0x1640, 88, 0, 0})
+	SMember(FSlateFontInfo)                            SmallPrimaryFont                                            OFFSET(getStruct<T>, {0x1698, 88, 0, 0})
+	SMember(FSlateFontInfo)                            LargeSecondaryFont                                          OFFSET(getStruct<T>, {0x16F0, 88, 0, 0})
+	SMember(FSlateFontInfo)                            MeduimSecondaryFont                                         OFFSET(getStruct<T>, {0x1748, 88, 0, 0})
+	SMember(FSlateFontInfo)                            SmallSecondaryFont                                          OFFSET(getStruct<T>, {0x17A0, 88, 0, 0})
+	SMember(FWidgetTransform)                          LeftToRightTransform                                        OFFSET(getStruct<T>, {0x17F8, 56, 0, 0})
+	SMember(FWidgetTransform)                          RightToLeftTransform                                        OFFSET(getStruct<T>, {0x1830, 56, 0, 0})
 	DMember(bool)                                      SingleText                                                  OFFSET(get<bool>, {0x1868, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFocusChanged                                              OFFSET(get<T>, {0x1870, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFocusChanged                                              OFFSET(getStruct<T>, {0x1870, 16, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierLarge                               OFFSET(get<double>, {0x1880, 8, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierMedium                              OFFSET(get<double>, {0x1888, 8, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierSmall                               OFFSET(get<double>, {0x1890, 8, 0, 0})
@@ -140,15 +140,15 @@ public:
 	DMember(int32_t)                                   MobileLargeHeight                                           OFFSET(get<int32_t>, {0x18A4, 4, 0, 0})
 	DMember(int32_t)                                   MobileMediumHeight                                          OFFSET(get<int32_t>, {0x18A8, 4, 0, 0})
 	DMember(int32_t)                                   MobileSmallHeight                                           OFFSET(get<int32_t>, {0x18AC, 4, 0, 0})
-	SMember(FMargin)                                   MobileSingleTextLargePadding                                OFFSET(get<T>, {0x18B0, 16, 0, 0})
-	SMember(FMargin)                                   MobileSingleTextMediumPadding                               OFFSET(get<T>, {0x18C0, 16, 0, 0})
-	SMember(FMargin)                                   MobileSingleTextSmallPadding                                OFFSET(get<T>, {0x18D0, 16, 0, 0})
-	SMember(FMargin)                                   MobileDoubleTextLargePadding                                OFFSET(get<T>, {0x18E0, 16, 0, 0})
-	SMember(FMargin)                                   MobileDoubleTextMediumPadding                               OFFSET(get<T>, {0x18F0, 16, 0, 0})
-	SMember(FMargin)                                   MobileDoubleTextSmallPadding                                OFFSET(get<T>, {0x1900, 16, 0, 0})
-	SMember(FMargin)                                   MobileDoubleTextSecondaryLargePadding                       OFFSET(get<T>, {0x1910, 16, 0, 0})
-	SMember(FMargin)                                   MobileDoubleTextSecondaryMediumPadding                      OFFSET(get<T>, {0x1920, 16, 0, 0})
-	SMember(FMargin)                                   MobileDoubleTextSecondarySmallPadding                       OFFSET(get<T>, {0x1930, 16, 0, 0})
+	SMember(FMargin)                                   MobileSingleTextLargePadding                                OFFSET(getStruct<T>, {0x18B0, 16, 0, 0})
+	SMember(FMargin)                                   MobileSingleTextMediumPadding                               OFFSET(getStruct<T>, {0x18C0, 16, 0, 0})
+	SMember(FMargin)                                   MobileSingleTextSmallPadding                                OFFSET(getStruct<T>, {0x18D0, 16, 0, 0})
+	SMember(FMargin)                                   MobileDoubleTextLargePadding                                OFFSET(getStruct<T>, {0x18E0, 16, 0, 0})
+	SMember(FMargin)                                   MobileDoubleTextMediumPadding                               OFFSET(getStruct<T>, {0x18F0, 16, 0, 0})
+	SMember(FMargin)                                   MobileDoubleTextSmallPadding                                OFFSET(getStruct<T>, {0x1900, 16, 0, 0})
+	SMember(FMargin)                                   MobileDoubleTextSecondaryLargePadding                       OFFSET(getStruct<T>, {0x1910, 16, 0, 0})
+	SMember(FMargin)                                   MobileDoubleTextSecondaryMediumPadding                      OFFSET(getStruct<T>, {0x1920, 16, 0, 0})
+	SMember(FMargin)                                   MobileDoubleTextSecondarySmallPadding                       OFFSET(getStruct<T>, {0x1930, 16, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierSecondaryLarge                      OFFSET(get<double>, {0x1940, 8, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierSecondaryMedium                     OFFSET(get<double>, {0x1948, 8, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierSecondarySmall                      OFFSET(get<double>, {0x1950, 8, 0, 0})
@@ -162,7 +162,7 @@ public:
 	CMember(ECommonInputType)                          CurrentInputType                                            OFFSET(get<T>, {0x1990, 1, 0, 0})
 	DMember(bool)                                      OverrideSecondaryTextSize                                   OFFSET(get<bool>, {0x1991, 1, 0, 0})
 	DMember(double)                                    OverrideSecondaryTextSizeMultiplier                         OFFSET(get<double>, {0x1998, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHoldCompleted                                             OFFSET(get<T>, {0x19A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHoldCompleted                                             OFFSET(getStruct<T>, {0x19A0, 16, 0, 0})
 	DMember(double)                                    MobileFontSizeMultiplierSecondaryOverride                   OFFSET(get<double>, {0x19B0, 8, 0, 0})
 	CMember(USoundBase*)                               HoldPressedSound                                            OFFSET(get<T>, {0x19B8, 8, 0, 0})
 	CMember(USoundBase*)                               HoldSound                                                   OFFSET(get<T>, {0x19C0, 8, 0, 0})
@@ -278,14 +278,14 @@ class UWBP_UIKit_Scrim_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_FadeOut                                                OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_FadeIn                                                 OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UBackgroundBlur*)                          BlurWidget                                                  OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UButton*)                                  ClickCatcher                                                OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(UBorder*)                                  DimBorder                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(double)                                    Blur                                                        OFFSET(get<double>, {0x2D8, 8, 0, 0})
-	SMember(FLinearColor)                              Dim_Color                                                   OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FLinearColor)                              Dim_Color                                                   OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	CMember(UMaterialInstance*)                        Dim_Material                                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
 
 
@@ -308,7 +308,7 @@ class UWBP_UIKit_Dialog_Base_C : public UUIKitDialogBase
 	static inline constexpr uint64_t __MDKClassSize = 2336;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3E8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3E8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_OnDeactivate_Base                                      OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_OnActivate_Base                                        OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UHorizontalBox*)                           ButtonsContainer                                            OFFSET(get<T>, {0x400, 8, 0, 0})
@@ -326,8 +326,8 @@ public:
 	CMember(UCommonTextBlock*)                         Text_Title                                                  OFFSET(get<T>, {0x460, 8, 0, 0})
 	CMember(TArray<UWBP_UIKit_ButtonCTA_Base_C*>)      ButtonWidgets                                               OFFSET(get<T>, {0x468, 16, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup                                                 OFFSET(get<T>, {0x478, 8, 0, 0})
-	SMember(FS_UI_DialogStyle)                         DialogStyle                                                 OFFSET(get<T>, {0x480, 1152, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DialogButtonClickedDispatcher                               OFFSET(get<T>, {0x900, 16, 0, 0})
+	SMember(FS_UI_DialogStyle)                         DialogStyle                                                 OFFSET(getStruct<T>, {0x480, 1152, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DialogButtonClickedDispatcher                               OFFSET(getStruct<T>, {0x900, 16, 0, 0})
 	DMember(int32_t)                                   StartFocusButton                                            OFFSET(get<int32_t>, {0x910, 4, 0, 0})
 	DMember(bool)                                      ImageMatchTextureSize                                       OFFSET(get<bool>, {0x914, 1, 0, 0})
 	CMember(UDataTable*)                               DefaultInputActionDataTable                                 OFFSET(get<T>, {0x918, 8, 0, 0})
@@ -390,8 +390,9 @@ public:
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_SizeBox.S_UI_SizeBox
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FS_UI_SizeBox : public MDKStruct
+class FS_UI_SizeBox : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -416,8 +417,9 @@ public:
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_GridCell.S_UI_GridCell
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FS_UI_GridCell : public MDKStruct
+class FS_UI_GridCell : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -427,34 +429,36 @@ public:
 	DMember(int32_t)                                   Column_19_EE61B90B4EE25EADECB506AEC3137A46                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   ColumnSpan_21_37271BC54501DA614C3829B82CDFEA3E              OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(int32_t)                                   Layer_23_5EB8311C4EBCD402805DEE9E676A7772                   OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FVector2D)                                 Nudge_26_A5E5651A47EF74CCA30424AB0F22341D                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector2D)                                 Nudge_26_A5E5651A47EF74CCA30424AB0F22341D                   OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_Placement.S_UI_Placement
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FS_UI_Placement : public MDKStruct
+class FS_UI_Placement : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment_4_A94CBD4C4E96C298CF51F6B49895AE3D      OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment_5_BC3E4CD143DBC026850F4BAE098F6937        OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FMargin)                                   Padding_8_030D86C14EBE7996733C89A951279A61                  OFFSET(get<T>, {0x4, 16, 0, 0})
-	SMember(FS_UI_GridCell)                            Grid_19_3148B55D43C5889FC5D1FF82667A7D01                    OFFSET(get<T>, {0x18, 40, 0, 0})
+	SMember(FMargin)                                   Padding_8_030D86C14EBE7996733C89A951279A61                  OFFSET(getStruct<T>, {0x4, 16, 0, 0})
+	SMember(FS_UI_GridCell)                            Grid_19_3148B55D43C5889FC5D1FF82667A7D01                    OFFSET(getStruct<T>, {0x18, 40, 0, 0})
 };
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogText.S_UI_DialogText
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FS_UI_DialogText : public MDKStruct
+class FS_UI_DialogText : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FS_UI_Placement)                           Placement_67_A94CBD4C4E96C298CF51F6B49895AE3D               OFFSET(get<T>, {0x0, 64, 0, 0})
-	SMember(FSlateFontInfo)                            Font_45_B587C32B43943172D2272F8558ACC8B2                    OFFSET(get<T>, {0x40, 88, 0, 0})
-	SMember(FSlateColor)                               Color_65_9CB9A5174FD065187E30878106948A3B                   OFFSET(get<T>, {0x98, 20, 0, 0})
+	SMember(FS_UI_Placement)                           Placement_67_A94CBD4C4E96C298CF51F6B49895AE3D               OFFSET(getStruct<T>, {0x0, 64, 0, 0})
+	SMember(FSlateFontInfo)                            Font_45_B587C32B43943172D2272F8558ACC8B2                    OFFSET(getStruct<T>, {0x40, 88, 0, 0})
+	SMember(FSlateColor)                               Color_65_9CB9A5174FD065187E30878106948A3B                   OFFSET(getStruct<T>, {0x98, 20, 0, 0})
 	CMember(ETextTransformPolicy)                      TransformPolicy_49_52395AC7440E291527A8768E37D08B2A         OFFSET(get<T>, {0xAC, 1, 0, 0})
 	CMember(TEnumAsByte<ETextJustify>)                 Justification_52_5897D4F946C704E9C5D67E9DD207EF16           OFFSET(get<T>, {0xAD, 1, 0, 0})
 	DMember(double)                                    LineHeightPercentage_55_2509C2B04F6144283C7BADBF36AAA8F6    OFFSET(get<double>, {0xB0, 8, 0, 0})
@@ -464,25 +468,27 @@ public:
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogImage.S_UI_DialogImage
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FS_UI_DialogImage : public MDKStruct
+class FS_UI_DialogImage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FS_UI_Placement)                           Placement_67_A94CBD4C4E96C298CF51F6B49895AE3D               OFFSET(get<T>, {0x0, 64, 0, 0})
-	SMember(FVector2D)                                 ImageSize_72_3E7C183E49CE6543B65BBEB8E5C3DEF9               OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FS_UI_Placement)                           Placement_67_A94CBD4C4E96C298CF51F6B49895AE3D               OFFSET(getStruct<T>, {0x0, 64, 0, 0})
+	SMember(FVector2D)                                 ImageSize_72_3E7C183E49CE6543B65BBEB8E5C3DEF9               OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogButtons.S_UI_DialogButtons
 /// Size: 0x0064 (0x000000 - 0x000064)
-class FS_UI_DialogButtons : public MDKStruct
+class FS_UI_DialogButtons : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 100;
 
 public:
-	SMember(FS_UI_Placement)                           GroupPlacement_71_A94CBD4C4E96C298CF51F6B49895AE3D          OFFSET(get<T>, {0x0, 64, 0, 0})
+	SMember(FS_UI_Placement)                           GroupPlacement_71_A94CBD4C4E96C298CF51F6B49895AE3D          OFFSET(getStruct<T>, {0x0, 64, 0, 0})
 	DMember(double)                                    SpaceBetweenButtons_62_39091237442DEAE1CAFAE3AB75A757F1     OFFSET(get<double>, {0x40, 8, 0, 0})
 	CMember(TEnumAsByte<ModularButtonSize>)            EachButtonSize_74_7A1E34E243F1F10533E9EA910463B328          OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         EachButtonHorizontalAlignment_67_3A1B89E0481CE49778D5E39C0BD7E90C OFFSET(get<T>, {0x49, 1, 0, 0})
@@ -494,20 +500,21 @@ public:
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/S_UI_DialogStyle.S_UI_DialogStyle
 /// Size: 0x0478 (0x000000 - 0x000478)
-class FS_UI_DialogStyle : public MDKStruct
+class FS_UI_DialogStyle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1144;
 
 public:
-	SMember(FS_UI_SizeBox)                             DialogSize_55_CE6987424DF46947352F678CF5E52CC1              OFFSET(get<T>, {0x0, 128, 0, 0})
-	SMember(FS_UI_Placement)                           DialogPlacement_65_59E2551640BABE52A5754CA2E5941FCF         OFFSET(get<T>, {0x80, 64, 0, 0})
-	SMember(FSlateBrush)                               BackgroundMaterial_52_853CB3A44926A4DC7A0AF6AFEDF77E4A      OFFSET(get<T>, {0xC0, 192, 0, 0})
-	SMember(FSlateBrush)                               BottomBarMaterial_72_59B1CCA84957A7878829E9819798B47E       OFFSET(get<T>, {0x180, 192, 0, 0})
-	SMember(FS_UI_DialogText)                          Title_47_7E0D422D440CE71F166354B2BFE6C254                   OFFSET(get<T>, {0x240, 192, 0, 0})
-	SMember(FS_UI_DialogText)                          Text_48_23B8288A403C2D3FE669F581F37D77B0                    OFFSET(get<T>, {0x300, 192, 0, 0})
-	SMember(FS_UI_DialogImage)                         Image_69_F993EDF444B2B22A5DEFDDBA00055A97                   OFFSET(get<T>, {0x3C0, 80, 0, 0})
-	SMember(FS_UI_DialogButtons)                       ButtonsGroup_66_9B96F603486F8FBAC3896087AA45CDDB            OFFSET(get<T>, {0x410, 104, 0, 0})
+	SMember(FS_UI_SizeBox)                             DialogSize_55_CE6987424DF46947352F678CF5E52CC1              OFFSET(getStruct<T>, {0x0, 128, 0, 0})
+	SMember(FS_UI_Placement)                           DialogPlacement_65_59E2551640BABE52A5754CA2E5941FCF         OFFSET(getStruct<T>, {0x80, 64, 0, 0})
+	SMember(FSlateBrush)                               BackgroundMaterial_52_853CB3A44926A4DC7A0AF6AFEDF77E4A      OFFSET(getStruct<T>, {0xC0, 192, 0, 0})
+	SMember(FSlateBrush)                               BottomBarMaterial_72_59B1CCA84957A7878829E9819798B47E       OFFSET(getStruct<T>, {0x180, 192, 0, 0})
+	SMember(FS_UI_DialogText)                          Title_47_7E0D422D440CE71F166354B2BFE6C254                   OFFSET(getStruct<T>, {0x240, 192, 0, 0})
+	SMember(FS_UI_DialogText)                          Text_48_23B8288A403C2D3FE669F581F37D77B0                    OFFSET(getStruct<T>, {0x300, 192, 0, 0})
+	SMember(FS_UI_DialogImage)                         Image_69_F993EDF444B2B22A5DEFDDBA00055A97                   OFFSET(getStruct<T>, {0x3C0, 80, 0, 0})
+	SMember(FS_UI_DialogButtons)                       ButtonsGroup_66_9B96F603486F8FBAC3896087AA45CDDB            OFFSET(getStruct<T>, {0x410, 104, 0, 0})
 };
 
 /// Enum /FortUILibrary/Systems/ModularButton/Data/E_UI_CTAButtonType.E_UI_CTAButtonType

@@ -17,7 +17,7 @@ class UDanceSynchronizerComponent : public UActorComponent
 
 public:
 	DMember(bool)                                      bShouldHalfOrDoubleTimeDances                               OFFSET(get<bool>, {0xA0, 1, 1, 0})
-	SMember(FDanceBeatInfo)                            BeatInfo                                                    OFFSET(get<T>, {0xA4, 8, 0, 0})
+	SMember(FDanceBeatInfo)                            BeatInfo                                                    OFFSET(getStruct<T>, {0xA4, 8, 0, 0})
 	CMember(EDanceBeatSyncMode)                        SyncMode                                                    OFFSET(get<T>, {0xAC, 1, 0, 0})
 	DMember(float)                                     Tempo                                                       OFFSET(get<float>, {0xB0, 4, 0, 0})
 	CMember(AFortPlayerPawn*)                          OwnerPlayerPawn                                             OFFSET(get<T>, {0xB8, 8, 0, 0})
@@ -58,8 +58,9 @@ public:
 
 /// Struct /Script/DanceVolume.DanceBeatInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FDanceBeatInfo : public MDKStruct
+class FDanceBeatInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

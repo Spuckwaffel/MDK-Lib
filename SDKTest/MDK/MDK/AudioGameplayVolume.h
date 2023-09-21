@@ -56,8 +56,8 @@ class AAudioGameplayVolume : public AVolume
 public:
 	CMember(UAudioGameplayVolumeComponent*)            AGVComponent                                                OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x2D0, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnListenerEnterEvent                                        OFFSET(get<T>, {0x2D8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnListenerExitEvent                                         OFFSET(get<T>, {0x2E8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnListenerEnterEvent                                        OFFSET(getStruct<T>, {0x2D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnListenerExitEvent                                         OFFSET(getStruct<T>, {0x2E8, 16, 0, 0})
 
 
 	/// Functions
@@ -79,8 +79,8 @@ class UAudioGameplayVolumeComponent : public UAudioGameplayComponent
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnProxyEnter                                                OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnProxyExit                                                 OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnProxyEnter                                                OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnProxyExit                                                 OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 	CMember(UAudioGameplayVolumeProxy*)                Proxy                                                       OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
@@ -164,7 +164,7 @@ class UReverbVolumeComponent : public UAudioGameplayVolumeMutator
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FReverbSettings)                           ReverbSettings                                              OFFSET(get<T>, {0xB0, 32, 0, 0})
+	SMember(FReverbSettings)                           ReverbSettings                                              OFFSET(getStruct<T>, {0xB0, 32, 0, 0})
 
 
 	/// Functions

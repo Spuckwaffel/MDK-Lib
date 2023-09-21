@@ -55,7 +55,7 @@ class UMotionWarpingComponent : public UActorComponent
 
 public:
 	DMember(bool)                                      bSearchForWindowsInAnimsWithinMontages                      OFFSET(get<bool>, {0xA0, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPreUpdate                                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreUpdate                                                 OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 	CMember(TWeakObjectPtr<ACharacter*>)               CharacterOwner                                              OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(TArray<URootMotionModifier*>)              Modifiers                                                   OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<FMotionWarpingTarget>)              WarpTargets                                                 OFFSET(get<T>, {0xD0, 16, 0, 0})
@@ -92,11 +92,11 @@ public:
 	DMember(float)                                     PreviousPosition                                            OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     CurrentPosition                                             OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FTransform)                                StartTransform                                              OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FTransform)                                StartTransform                                              OFFSET(getStruct<T>, {0x50, 96, 0, 0})
 	DMember(float)                                     ActualStartTime                                             OFFSET(get<float>, {0xB0, 4, 0, 0})
-	SMember(FDelegateProperty)                         OnActivateDelegate                                          OFFSET(get<T>, {0xB4, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnUpdateDelegate                                            OFFSET(get<T>, {0xC0, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnDeactivateDelegate                                        OFFSET(get<T>, {0xCC, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnActivateDelegate                                          OFFSET(getStruct<T>, {0xB4, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnUpdateDelegate                                            OFFSET(getStruct<T>, {0xC0, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnDeactivateDelegate                                        OFFSET(getStruct<T>, {0xCC, 12, 0, 0})
 	CMember(ERootMotionModifierState)                  State                                                       OFFSET(get<T>, {0xD8, 1, 0, 0})
 };
 
@@ -108,10 +108,10 @@ class URootMotionModifier_Warp : public URootMotionModifier
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FName)                                     WarpTargetName                                              OFFSET(get<T>, {0xE0, 4, 0, 0})
+	SMember(FName)                                     WarpTargetName                                              OFFSET(getStruct<T>, {0xE0, 4, 0, 0})
 	CMember(EWarpPointAnimProvider)                    WarpPointAnimProvider                                       OFFSET(get<T>, {0xE4, 1, 0, 0})
-	SMember(FTransform)                                WarpPointAnimTransform                                      OFFSET(get<T>, {0xF0, 96, 0, 0})
-	SMember(FName)                                     WarpPointAnimBoneName                                       OFFSET(get<T>, {0x150, 4, 0, 0})
+	SMember(FTransform)                                WarpPointAnimTransform                                      OFFSET(getStruct<T>, {0xF0, 96, 0, 0})
+	SMember(FName)                                     WarpPointAnimBoneName                                       OFFSET(getStruct<T>, {0x150, 4, 0, 0})
 	DMember(bool)                                      bWarpTranslation                                            OFFSET(get<bool>, {0x154, 1, 0, 0})
 	DMember(bool)                                      bIgnoreZAxis                                                OFFSET(get<bool>, {0x155, 1, 0, 0})
 	CMember(EAlphaBlendOption)                         AddTranslationEasingFunc                                    OFFSET(get<T>, {0x156, 1, 0, 0})
@@ -121,7 +121,7 @@ public:
 	CMember(EMotionWarpRotationMethod)                 RotationMethod                                              OFFSET(get<T>, {0x162, 1, 0, 0})
 	DMember(float)                                     WarpRotationTimeMultiplier                                  OFFSET(get<float>, {0x164, 4, 0, 0})
 	DMember(float)                                     WarpMaxRotationRate                                         OFFSET(get<float>, {0x168, 4, 0, 0})
-	SMember(FTransform)                                CachedTargetTransform                                       OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(FTransform)                                CachedTargetTransform                                       OFFSET(getStruct<T>, {0x170, 96, 0, 0})
 };
 
 /// Class /Script/MotionWarping.RootMotionModifier_SimpleWarp
@@ -142,7 +142,7 @@ class URootMotionModifier_Scale : public URootMotionModifier
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0xE0, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0xE0, 24, 0, 0})
 
 
 	/// Functions
@@ -160,10 +160,10 @@ class URootMotionModifier_AdjustmentBlendWarp : public URootMotionModifier_Warp
 public:
 	DMember(bool)                                      bWarpIKBones                                                OFFSET(get<bool>, {0x240, 1, 0, 0})
 	CMember(TArray<FName>)                             IKBones                                                     OFFSET(get<T>, {0x248, 16, 0, 0})
-	SMember(FTransform)                                CachedMeshTransform                                         OFFSET(get<T>, {0x260, 96, 0, 0})
-	SMember(FTransform)                                CachedMeshRelativeTransform                                 OFFSET(get<T>, {0x2C0, 96, 0, 0})
-	SMember(FTransform)                                CachedRootMotion                                            OFFSET(get<T>, {0x320, 96, 0, 0})
-	SMember(FAnimSequenceTrackContainer)               Result                                                      OFFSET(get<T>, {0x380, 32, 0, 0})
+	SMember(FTransform)                                CachedMeshTransform                                         OFFSET(getStruct<T>, {0x260, 96, 0, 0})
+	SMember(FTransform)                                CachedMeshRelativeTransform                                 OFFSET(getStruct<T>, {0x2C0, 96, 0, 0})
+	SMember(FTransform)                                CachedRootMotion                                            OFFSET(getStruct<T>, {0x320, 96, 0, 0})
+	SMember(FAnimSequenceTrackContainer)               Result                                                      OFFSET(getStruct<T>, {0x380, 32, 0, 0})
 };
 
 /// Class /Script/MotionWarping.RootMotionModifier_SkewWarp
@@ -178,8 +178,9 @@ public:
 
 /// Struct /Script/MotionWarping.MotionWarpingWindowData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMotionWarpingWindowData : public MDKStruct
+class FMotionWarpingWindowData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -191,8 +192,9 @@ public:
 
 /// Struct /Script/MotionWarping.MotionWarpingUpdateContext
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FMotionWarpingUpdateContext : public MDKStruct
+class FMotionWarpingUpdateContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -207,24 +209,26 @@ public:
 
 /// Struct /Script/MotionWarping.MotionWarpingTarget
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FMotionWarpingTarget : public MDKStruct
+class FMotionWarpingTarget : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(TWeakObjectPtr<USceneComponent*>)          Component                                                   OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 	DMember(bool)                                      bFollowComponent                                            OFFSET(get<bool>, {0x44, 1, 0, 0})
 };
 
 /// Struct /Script/MotionWarping.MotionDeltaTrack
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FMotionDeltaTrack : public MDKStruct
+class FMotionDeltaTrack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -232,14 +236,15 @@ public:
 	CMember(TArray<FTransform>)                        BoneTransformTrack                                          OFFSET(get<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FVector>)                           DeltaTranslationTrack                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 	CMember(TArray<FRotator>)                          DeltaRotationTrack                                          OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FVector)                                   TotalTranslation                                            OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FRotator)                                  TotalRotation                                               OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   TotalTranslation                                            OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FRotator)                                  TotalRotation                                               OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/MotionWarping.MotionDeltaTrackContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMotionDeltaTrackContainer : public MDKStruct
+class FMotionDeltaTrackContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

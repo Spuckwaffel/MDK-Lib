@@ -20,7 +20,7 @@ class UDefaultLevelSequenceInstanceData : public UObject
 
 public:
 	CMember(AActor*)                                   TransformOriginActor                                        OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FTransform)                                TransformOrigin                                             OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FTransform)                                TransformOrigin                                             OFFSET(getStruct<T>, {0x40, 96, 0, 0})
 };
 
 /// Class /Script/LevelSequence.AnimSequenceLevelSequenceLink
@@ -31,8 +31,8 @@ class UAnimSequenceLevelSequenceLink : public UAssetUserData
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGuid)                                     SkelTrackGuid                                               OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FSoftObjectPath)                           PathToLevelSequence                                         OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FGuid)                                     SkelTrackGuid                                               OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FSoftObjectPath)                           PathToLevelSequence                                         OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Class /Script/LevelSequence.LevelSequence
@@ -44,8 +44,8 @@ class ULevelSequence : public UMovieSceneSequence
 
 public:
 	CMember(UMovieScene*)                              MovieScene                                                  OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FLevelSequenceObjectReferenceMap)          ObjectReferences                                            OFFSET(get<T>, {0x78, 80, 0, 0})
-	SMember(FLevelSequenceBindingReferences)           BindingReferences                                           OFFSET(get<T>, {0xC8, 240, 0, 0})
+	SMember(FLevelSequenceObjectReferenceMap)          ObjectReferences                                            OFFSET(getStruct<T>, {0x78, 80, 0, 0})
+	SMember(FLevelSequenceBindingReferences)           BindingReferences                                           OFFSET(getStruct<T>, {0xC8, 240, 0, 0})
 	CMember(TMap<FString, FLevelSequenceObject>)       PossessedObjects                                            OFFSET(get<T>, {0x1B8, 80, 0, 0})
 	CMember(UClass*)                                   DirectorClass                                               OFFSET(get<T>, {0x208, 8, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x210, 16, 0, 0})
@@ -81,7 +81,7 @@ class ULevelSequenceBurnInOptions : public UObject
 
 public:
 	DMember(bool)                                      bUseBurnIn                                                  OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FSoftClassPath)                            BurnInClass                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FSoftClassPath)                            BurnInClass                                                 OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(ULevelSequenceBurnInInitSettings*)         Settings                                                    OFFSET(get<T>, {0x48, 8, 0, 0})
 
 
@@ -98,10 +98,10 @@ class ALevelSequenceActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(get<T>, {0x2A8, 32, 0, 0})
+	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x2A8, 32, 0, 0})
 	CMember(ULevelSequencePlayer*)                     SequencePlayer                                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(ULevelSequence*)                           LevelSequenceAsset                                          OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	SMember(FLevelSequenceCameraSettings)              CameraSettings                                              OFFSET(get<T>, {0x2D8, 2, 0, 0})
+	SMember(FLevelSequenceCameraSettings)              CameraSettings                                              OFFSET(getStruct<T>, {0x2D8, 2, 0, 0})
 	CMember(ULevelSequenceBurnInOptions*)              BurnInOptions                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UMovieSceneBindingOverrides*)              BindingOverrides                                            OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	DMember(bool)                                      bAutoPlay                                                   OFFSET(get<bool>, {0x2F0, 1, 1, 0})
@@ -110,7 +110,7 @@ public:
 	CMember(UObject*)                                  DefaultInstanceData                                         OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(ULevelSequenceBurnIn*)                     BurnInInstance                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      bShowBurnin                                                 OFFSET(get<bool>, {0x308, 1, 0, 0})
-	SMember(FWorldPartitionResolveData)                WorldPartitionResolveData                                   OFFSET(get<T>, {0x310, 32, 0, 0})
+	SMember(FWorldPartitionResolveData)                WorldPartitionResolveData                                   OFFSET(getStruct<T>, {0x310, 32, 0, 0})
 
 
 	/// Functions
@@ -179,7 +179,7 @@ class ULevelSequenceBurnIn : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
-	SMember(FLevelSequencePlayerSnapshot)              FrameInformation                                            OFFSET(get<T>, {0x2A8, 192, 0, 0})
+	SMember(FLevelSequencePlayerSnapshot)              FrameInformation                                            OFFSET(getStruct<T>, {0x2A8, 192, 0, 0})
 	CMember(ALevelSequenceActor*)                      LevelSequenceActor                                          OFFSET(get<T>, {0x368, 8, 0, 0})
 
 
@@ -242,7 +242,7 @@ class ULevelSequencePlayer : public UMovieSceneSequencePlayer
 	static inline constexpr uint64_t __MDKClassSize = 1528;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCameraCut                                                 OFFSET(get<T>, {0x4C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCameraCut                                                 OFFSET(getStruct<T>, {0x4C8, 16, 0, 0})
 
 
 	/// Functions
@@ -261,8 +261,8 @@ class ULevelSequenceProjectSettings : public UDeveloperSettings
 
 public:
 	DMember(bool)                                      bDefaultLockEngineToDisplayRate                             OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FString)                                   DefaultDisplayRate                                          OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   DefaultTickResolution                                       OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   DefaultDisplayRate                                          OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DefaultTickResolution                                       OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	CMember(EUpdateClockSource)                        DefaultClockSource                                          OFFSET(get<T>, {0x58, 1, 0, 0})
 };
 
@@ -294,8 +294,9 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceCameraSettings
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FLevelSequenceCameraSettings : public MDKStruct
+class FLevelSequenceCameraSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -306,8 +307,9 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceLegacyObjectReference
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FLevelSequenceLegacyObjectReference : public MDKStruct
+class FLevelSequenceLegacyObjectReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -316,8 +318,9 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceObjectReferenceMap
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FLevelSequenceObjectReferenceMap : public MDKStruct
+class FLevelSequenceObjectReferenceMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -326,8 +329,9 @@ public:
 
 /// Struct /Script/LevelSequence.BoundActorProxy
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FBoundActorProxy : public MDKStruct
+class FBoundActorProxy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -336,14 +340,15 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceAnimSequenceLinkItem
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FLevelSequenceAnimSequenceLinkItem : public MDKStruct
+class FLevelSequenceAnimSequenceLinkItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGuid)                                     SkelTrackGuid                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSoftObjectPath)                           PathToAnimSequence                                          OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FGuid)                                     SkelTrackGuid                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSoftObjectPath)                           PathToAnimSequence                                          OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	DMember(bool)                                      bExportTransforms                                           OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(bool)                                      bExportMorphTargets                                         OFFSET(get<bool>, {0x29, 1, 0, 0})
 	DMember(bool)                                      bExportAttributeCurves                                      OFFSET(get<bool>, {0x2A, 1, 0, 0})
@@ -356,21 +361,23 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceBindingReference
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FLevelSequenceBindingReference : public MDKStruct
+class FLevelSequenceBindingReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   PackageName                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSoftObjectPath)                           ExternalObjectPath                                          OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FString)                                   ObjectPath                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   PackageName                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSoftObjectPath)                           ExternalObjectPath                                          OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FString)                                   ObjectPath                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/LevelSequence.LevelSequenceBindingReferenceArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLevelSequenceBindingReferenceArray : public MDKStruct
+class FLevelSequenceBindingReferenceArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -380,8 +387,9 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceBindingReferences
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FLevelSequenceBindingReferences : public MDKStruct
+class FLevelSequenceBindingReferences : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
@@ -393,36 +401,38 @@ public:
 
 /// Struct /Script/LevelSequence.LevelSequenceObject
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FLevelSequenceObject : public MDKStruct
+class FLevelSequenceObject : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TLazyObjectPtr<UObject*>)                  ObjectOrOwner                                               OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   ComponentName                                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ComponentName                                               OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  CachedComponent                                             OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/LevelSequence.LevelSequencePlayerSnapshot
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FLevelSequencePlayerSnapshot : public MDKStruct
+class FLevelSequencePlayerSnapshot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FString)                                   RootName                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FQualifiedFrameTime)                       RootTime                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FQualifiedFrameTime)                       SourceTime                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   CurrentShotName                                             OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FQualifiedFrameTime)                       CurrentShotLocalTime                                        OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FQualifiedFrameTime)                       CurrentShotSourceTime                                       OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FString)                                   SourceTimecode                                              OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   RootName                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       RootTime                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       SourceTime                                                  OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   CurrentShotName                                             OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       CurrentShotLocalTime                                        OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       CurrentShotSourceTime                                       OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   SourceTimecode                                              OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 	CMember(TWeakObjectPtr<UCameraComponent*>)         CameraComponent                                             OFFSET(get<T>, {0x70, 32, 0, 0})
 	CMember(ULevelSequence*)                           ActiveShot                                                  OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMovieSceneSequenceID)                     ShotID                                                      OFFSET(get<T>, {0x98, 4, 0, 0})
-	SMember(FString)                                   MasterName                                                  OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FQualifiedFrameTime)                       MasterTime                                                  OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMovieSceneSequenceID)                     ShotID                                                      OFFSET(getStruct<T>, {0x98, 4, 0, 0})
+	SMember(FString)                                   MasterName                                                  OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       MasterTime                                                  OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 };
 

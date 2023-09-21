@@ -27,7 +27,7 @@ class URigVMBlueprintGeneratedClass : public UBlueprintGeneratedClass
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FRigVMGraphFunctionStore)                  GraphFunctionStore                                          OFFSET(get<T>, {0x370, 32, 0, 0})
+	SMember(FRigVMGraphFunctionStore)                  GraphFunctionStore                                          OFFSET(getStruct<T>, {0x370, 32, 0, 0})
 };
 
 /// Class /Script/RigVM.RigVM
@@ -41,8 +41,8 @@ public:
 	CMember(URigVMMemoryStorage*)                      WorkMemoryStorageObject                                     OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(URigVMMemoryStorage*)                      LiteralMemoryStorageObject                                  OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(URigVMMemoryStorage*)                      DebugMemoryStorageObject                                    OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FRigVMByteCode)                            ByteCodeStorage                                             OFFSET(get<T>, {0x60, 160, 0, 0})
-	SMember(FRigVMInstructionArray)                    Instructions                                                OFFSET(get<T>, {0x108, 16, 0, 0})
+	SMember(FRigVMByteCode)                            ByteCodeStorage                                             OFFSET(getStruct<T>, {0x60, 160, 0, 0})
+	SMember(FRigVMInstructionArray)                    Instructions                                                OFFSET(getStruct<T>, {0x108, 16, 0, 0})
 	CMember(TArray<FName>)                             FunctionNamesStorage                                        OFFSET(get<T>, {0x120, 16, 0, 0})
 	CMember(TArray<FRigVMParameter>)                   Parameters                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
 	CMember(TMap<FName, int32_t>)                      ParametersNameMap                                           OFFSET(get<T>, {0x178, 80, 0, 0})
@@ -108,7 +108,7 @@ class UNameSpacedUserData : public UAssetUserData
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FString)                                   Namespace                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Namespace                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/RigVM.DataAssetLink
@@ -168,7 +168,7 @@ class URigVMUserWorkflowOptions : public UObject
 
 public:
 	CMember(UObject*)                                  Subject                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FRigVMUserWorkflow)                        Workflow                                                    OFFSET(get<T>, {0x30, 88, 0, 0})
+	SMember(FRigVMUserWorkflow)                        Workflow                                                    OFFSET(getStruct<T>, {0x30, 88, 0, 0})
 
 
 	/// Functions
@@ -192,10 +192,10 @@ class URigVMHost : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FRigVMRuntimeSettings)                     VMRuntimeSettings                                           OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FRigVMRuntimeSettings)                     VMRuntimeSettings                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(URigVM*)                                   VM                                                          OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FRigVMExtendedExecuteContext)              ExtendedExecuteContext                                      OFFSET(get<T>, {0x60, 440, 0, 0})
-	SMember(FRigVMDrawContainer)                       DrawContainer                                               OFFSET(get<T>, {0x218, 24, 0, 0})
+	SMember(FRigVMExtendedExecuteContext)              ExtendedExecuteContext                                      OFFSET(getStruct<T>, {0x60, 440, 0, 0})
+	SMember(FRigVMDrawContainer)                       DrawContainer                                               OFFSET(getStruct<T>, {0x218, 24, 0, 0})
 	CMember(TArray<FName>)                             EventQueue                                                  OFFSET(get<T>, {0x248, 16, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x2E8, 16, 0, 0})
 
@@ -259,8 +259,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMExtendedExecuteContext
 /// Size: 0x01B8 (0x000000 - 0x0001B8)
-class FRigVMExtendedExecuteContext : public MDKStruct
+class FRigVMExtendedExecuteContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 440;
 
@@ -272,8 +273,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMDrawContainer
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FRigVMDrawContainer : public MDKStruct
+class FRigVMDrawContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -283,24 +285,26 @@ public:
 
 /// Struct /Script/RigVM.RigVMDrawInstruction
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FRigVMDrawInstruction : public MDKStruct
+class FRigVMDrawInstruction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TEnumAsByte<ERigVMDrawSettings>)           PrimitiveType                                               OFFSET(get<T>, {0x4, 1, 0, 0})
 	CMember(TArray<FVector>)                           Positions                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x30, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMRuntimeSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FRigVMRuntimeSettings : public MDKStruct
+class FRigVMRuntimeSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -310,8 +314,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMStruct
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FRigVMStruct : public MDKStruct
+class FRigVMStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -322,6 +327,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMDecorator : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -330,8 +336,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMExternalVariableDef
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FRigVMExternalVariableDef : public MDKStruct
+class FRigVMExternalVariableDef : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -342,6 +349,7 @@ public:
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FRigVMExternalVariable : public FRigVMExternalVariableDef
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -352,6 +360,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_AnimBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -362,6 +371,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_DebugBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -372,17 +382,19 @@ public:
 /// Size: 0x00F8 (0x000008 - 0x000100)
 class FRigVMStructMutable : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(getStruct<T>, {0x10, 240, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMExecuteContext
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FRigVMExecuteContext : public MDKStruct
+class FRigVMExecuteContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
@@ -393,6 +405,7 @@ public:
 /// Size: 0x0000 (0x000100 - 0x000100)
 class FRigVMFunction_DebugBaseMutable : public FRigVMStructMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -403,6 +416,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -413,6 +427,7 @@ public:
 /// Size: 0x0000 (0x000100 - 0x000100)
 class FRigVMFunction_MathMutableBase : public FRigVMStructMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -423,19 +438,21 @@ public:
 /// Size: 0x02D8 (0x000008 - 0x0002E0)
 class FRigVMFunction_Sequence : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      A                                                           OFFSET(get<T>, {0x100, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      B                                                           OFFSET(get<T>, {0x1F0, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(getStruct<T>, {0x10, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      A                                                           OFFSET(getStruct<T>, {0x100, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      B                                                           OFFSET(getStruct<T>, {0x1F0, 240, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMDispatchFactory
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FRigVMDispatchFactory : public MDKStruct
+class FRigVMDispatchFactory : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -444,8 +461,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMUnknownType
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FRigVMUnknownType : public MDKStruct
+class FRigVMUnknownType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -457,6 +475,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_SimBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -467,6 +486,7 @@ public:
 /// Size: 0x0000 (0x000100 - 0x000100)
 class FRigVMFunction_SimBaseMutable : public FRigVMStructMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -475,8 +495,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMGraphFunctionStore
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FRigVMGraphFunctionStore : public MDKStruct
+class FRigVMGraphFunctionStore : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -487,26 +508,28 @@ public:
 
 /// Struct /Script/RigVM.RigVMGraphFunctionData
 /// Size: 0x0338 (0x000000 - 0x000338)
-class FRigVMGraphFunctionData : public MDKStruct
+class FRigVMGraphFunctionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FRigVMGraphFunctionHeader)                 Header                                                      OFFSET(get<T>, {0x0, 256, 0, 0})
-	SMember(FRigVMFunctionCompilationData)             CompilationData                                             OFFSET(get<T>, {0x100, 552, 0, 0})
-	SMember(FString)                                   SerializedCollapsedNode                                     OFFSET(get<T>, {0x328, 16, 0, 0})
+	SMember(FRigVMGraphFunctionHeader)                 Header                                                      OFFSET(getStruct<T>, {0x0, 256, 0, 0})
+	SMember(FRigVMFunctionCompilationData)             CompilationData                                             OFFSET(getStruct<T>, {0x100, 552, 0, 0})
+	SMember(FString)                                   SerializedCollapsedNode                                     OFFSET(getStruct<T>, {0x328, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunctionCompilationData
 /// Size: 0x0228 (0x000000 - 0x000228)
-class FRigVMFunctionCompilationData : public MDKStruct
+class FRigVMFunctionCompilationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FRigVMByteCode)                            ByteCode                                                    OFFSET(get<T>, {0x0, 160, 0, 0})
+	SMember(FRigVMByteCode)                            ByteCode                                                    OFFSET(getStruct<T>, {0x0, 160, 0, 0})
 	CMember(TArray<FName>)                             FunctionNames                                               OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<FRigVMFunctionCompilationPropertyDescription>) WorkPropertyDescriptions                         OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FRigVMFunctionCompilationPropertyPath>) WorkPropertyPathDescriptions                            OFFSET(get<T>, {0xC0, 16, 0, 0})
@@ -523,8 +546,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMOperand
 /// Size: 0x0006 (0x000000 - 0x000006)
-class FRigVMOperand : public MDKStruct
+class FRigVMOperand : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
@@ -536,35 +560,38 @@ public:
 
 /// Struct /Script/RigVM.RigVMFunctionCompilationPropertyPath
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FRigVMFunctionCompilationPropertyPath : public MDKStruct
+class FRigVMFunctionCompilationPropertyPath : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(int32_t)                                   PropertyIndex                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   HeadCPPType                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   SegmentPath                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   HeadCPPType                                                 OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   SegmentPath                                                 OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunctionCompilationPropertyDescription
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FRigVMFunctionCompilationPropertyDescription : public MDKStruct
+class FRigVMFunctionCompilationPropertyDescription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   CPPType                                                     OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   CPPType                                                     OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  CPPTypeObject                                               OFFSET(get<T>, {0x18, 32, 0, 0})
-	SMember(FString)                                   DefaultValue                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DefaultValue                                                OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMByteCode
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FRigVMByteCode : public MDKStruct
+class FRigVMByteCode : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -578,8 +605,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMPredicateBranch
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FRigVMPredicateBranch : public MDKStruct
+class FRigVMPredicateBranch : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -588,14 +616,15 @@ public:
 
 /// Struct /Script/RigVM.RigVMBranchInfo
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FRigVMBranchInfo : public MDKStruct
+class FRigVMBranchInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
 	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FName)                                     Label                                                       OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Label                                                       OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   InstructionIndex                                            OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   ArgumentIndex                                               OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(uint16_t)                                  FirstInstruction                                            OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
@@ -604,31 +633,33 @@ public:
 
 /// Struct /Script/RigVM.RigVMByteCodeEntry
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FRigVMByteCodeEntry : public MDKStruct
+class FRigVMByteCodeEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   InstructionIndex                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMGraphFunctionHeader
 /// Size: 0x0100 (0x000000 - 0x000100)
-class FRigVMGraphFunctionHeader : public MDKStruct
+class FRigVMGraphFunctionHeader : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FRigVMGraphFunctionIdentifier)             LibraryPointer                                              OFFSET(get<T>, {0x0, 48, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FString)                                   NodeTitle                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FLinearColor)                              NodeColor                                                   OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FText)                                     ToolTip                                                     OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FString)                                   category                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FString)                                   Keywords                                                    OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FRigVMGraphFunctionIdentifier)             LibraryPointer                                              OFFSET(getStruct<T>, {0x0, 48, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x30, 4, 0, 0})
+	SMember(FString)                                   NodeTitle                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FLinearColor)                              NodeColor                                                   OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FText)                                     ToolTip                                                     OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FString)                                   category                                                    OFFSET(getStruct<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   Keywords                                                    OFFSET(getStruct<T>, {0x80, 16, 0, 0})
 	CMember(TArray<FRigVMGraphFunctionArgument>)       Arguments                                                   OFFSET(get<T>, {0x90, 16, 0, 0})
 	CMember(TMap<FRigVMGraphFunctionIdentifier, uint32_t>) Dependencies                                            OFFSET(get<T>, {0xA0, 80, 0, 0})
 	CMember(TArray<FRigVMExternalVariable>)            ExternalVariables                                           OFFSET(get<T>, {0xF0, 16, 0, 0})
@@ -636,39 +667,42 @@ public:
 
 /// Struct /Script/RigVM.RigVMGraphFunctionIdentifier
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FRigVMGraphFunctionIdentifier : public MDKStruct
+class FRigVMGraphFunctionIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FSoftObjectPath)                           LibraryNode                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSoftObjectPath)                           HostObject                                                  OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSoftObjectPath)                           LibraryNode                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           HostObject                                                  OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMGraphFunctionArgument
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FRigVMGraphFunctionArgument : public MDKStruct
+class FRigVMGraphFunctionArgument : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  CPPTypeObject                                               OFFSET(get<T>, {0x10, 32, 0, 0})
 	DMember(bool)                                      bIsArray                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
 	CMember(ERigVMPinDirection)                        Direction                                                   OFFSET(get<T>, {0x31, 1, 0, 0})
-	SMember(FString)                                   DefaultValue                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DefaultValue                                                OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(bool)                                      bIsConst                                                    OFFSET(get<bool>, {0x48, 1, 0, 0})
 	CMember(TMap<FString, FText>)                      PathToTooltip                                               OFFSET(get<T>, {0x50, 80, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMMemoryStatistics
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FRigVMMemoryStatistics : public MDKStruct
+class FRigVMMemoryStatistics : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -680,8 +714,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMByteCodeStatistics
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FRigVMByteCodeStatistics : public MDKStruct
+class FRigVMByteCodeStatistics : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -692,41 +727,44 @@ public:
 
 /// Struct /Script/RigVM.RigVMStatistics
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FRigVMStatistics : public MDKStruct
+class FRigVMStatistics : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	DMember(int32_t)                                   BytesForCDO                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   BytesPerInstance                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FRigVMMemoryStatistics)                    LiteralMemory                                               OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FRigVMMemoryStatistics)                    WorkMemory                                                  OFFSET(get<T>, {0x14, 12, 0, 0})
-	SMember(FRigVMMemoryStatistics)                    DebugMemory                                                 OFFSET(get<T>, {0x20, 12, 0, 0})
+	SMember(FRigVMMemoryStatistics)                    LiteralMemory                                               OFFSET(getStruct<T>, {0x8, 12, 0, 0})
+	SMember(FRigVMMemoryStatistics)                    WorkMemory                                                  OFFSET(getStruct<T>, {0x14, 12, 0, 0})
+	SMember(FRigVMMemoryStatistics)                    DebugMemory                                                 OFFSET(getStruct<T>, {0x20, 12, 0, 0})
 	DMember(int32_t)                                   BytesForCaching                                             OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	SMember(FRigVMByteCodeStatistics)                  ByteCode                                                    OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FRigVMByteCodeStatistics)                  ByteCode                                                    OFFSET(getStruct<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMParameter
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FRigVMParameter : public MDKStruct
+class FRigVMParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(ERigVMParameterType)                       Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   RegisterIndex                                               OFFSET(get<int32_t>, {0x8, 4, 0, 0})
-	SMember(FString)                                   CPPType                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   CPPType                                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(UScriptStruct*)                            ScriptStruct                                                OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FName)                                     ScriptStructPath                                            OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     ScriptStructPath                                            OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMBaseOp
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FRigVMBaseOp : public MDKStruct
+class FRigVMBaseOp : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -737,6 +775,7 @@ public:
 /// Size: 0x0009 (0x000001 - 0x00000A)
 class FRigVMExecuteOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
@@ -747,6 +786,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FRigVMUnaryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -757,6 +797,7 @@ public:
 /// Size: 0x000D (0x000001 - 0x00000E)
 class FRigVMBinaryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 14;
 
@@ -767,6 +808,7 @@ public:
 /// Size: 0x0013 (0x000001 - 0x000014)
 class FRigVMTernaryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -777,6 +819,7 @@ public:
 /// Size: 0x0019 (0x000001 - 0x00001A)
 class FRigVMQuaternaryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 26;
 
@@ -787,6 +830,7 @@ public:
 /// Size: 0x001F (0x000001 - 0x000020)
 class FRigVMQuinaryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -797,6 +841,7 @@ public:
 /// Size: 0x0025 (0x000001 - 0x000026)
 class FRigVMSenaryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 38;
 
@@ -807,6 +852,7 @@ public:
 /// Size: 0x0011 (0x000001 - 0x000012)
 class FRigVMCopyOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -817,6 +863,7 @@ public:
 /// Size: 0x0013 (0x000001 - 0x000014)
 class FRigVMComparisonOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -827,6 +874,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FRigVMJumpOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -837,6 +885,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMJumpIfOp : public FRigVMUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -847,6 +896,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMChangeTypeOp : public FRigVMUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -857,6 +907,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FRigVMInvokeEntryOp : public FRigVMBaseOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -867,6 +918,7 @@ public:
 /// Size: 0x0004 (0x000008 - 0x00000C)
 class FRigVMJumpToBranchOp : public FRigVMUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -875,8 +927,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMInstruction
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRigVMInstruction : public MDKStruct
+class FRigVMInstruction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -888,8 +941,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMInstructionArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRigVMInstructionArray : public MDKStruct
+class FRigVMInstructionArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -899,8 +953,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMBreakpoint
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FRigVMBreakpoint : public MDKStruct
+class FRigVMBreakpoint : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -909,8 +964,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMDebugInfo
 /// Size: 0x00F8 (0x000000 - 0x0000F8)
-class FRigVMDebugInfo : public MDKStruct
+class FRigVMDebugInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
@@ -921,6 +977,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMDrawInterface : public FRigVMDrawContainer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -929,8 +986,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMSlice
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FRigVMSlice : public MDKStruct
+class FRigVMSlice : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -939,8 +997,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMRegister
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FRigVMRegister : public MDKStruct
+class FRigVMRegister : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -952,7 +1011,7 @@ public:
 	DMember(uint16_t)                                  SliceCount                                                  OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
 	DMember(char)                                      AlignmentBytes                                              OFFSET(get<char>, {0xE, 1, 0, 0})
 	DMember(uint16_t)                                  TrailingBytes                                               OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x14, 4, 0, 0})
 	DMember(int32_t)                                   ScriptStructIndex                                           OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	DMember(bool)                                      bIsArray                                                    OFFSET(get<bool>, {0x1C, 1, 0, 0})
 	DMember(bool)                                      bIsDynamic                                                  OFFSET(get<bool>, {0x1D, 1, 0, 0})
@@ -960,26 +1019,28 @@ public:
 
 /// Struct /Script/RigVM.RigVMRegisterOffset
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FRigVMRegisterOffset : public MDKStruct
+class FRigVMRegisterOffset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(TArray<int32_t>)                           Segments                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
 	CMember(ERigVMRegisterType)                        Type                                                        OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(getStruct<T>, {0x14, 4, 0, 0})
 	CMember(UScriptStruct*)                            ScriptStruct                                                OFFSET(get<T>, {0x18, 8, 0, 0})
 	CMember(UScriptStruct*)                            ParentScriptStruct                                          OFFSET(get<T>, {0x20, 8, 0, 0})
 	DMember(int32_t)                                   ArrayIndex                                                  OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 	DMember(uint16_t)                                  ElementSize                                                 OFFSET(get<uint16_t>, {0x2C, 2, 0, 0})
-	SMember(FString)                                   CachedSegmentPath                                           OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   CachedSegmentPath                                           OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMMemoryContainer
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FRigVMMemoryContainer : public MDKStruct
+class FRigVMMemoryContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -996,28 +1057,30 @@ public:
 
 /// Struct /Script/RigVM.RigVMTemplateArgumentType
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRigVMTemplateArgumentType : public MDKStruct
+class FRigVMTemplateArgumentType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     CPPType                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CPPType                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UObject*)                                  CPPTypeObject                                               OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMUserWorkflow
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FRigVMUserWorkflow : public MDKStruct
+class FRigVMUserWorkflow : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   Title                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   ToolTip                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Title                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ToolTip                                                     OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(ERigVMUserWorkflowType)                    Type                                                        OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FDelegateProperty)                         PerformDynamicDelegate                                      OFFSET(get<T>, {0x40, 12, 0, 0})
+	SMember(FDelegateProperty)                         PerformDynamicDelegate                                      OFFSET(getStruct<T>, {0x40, 12, 0, 0})
 	CMember(UClass*)                                   OptionsClass                                                OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
@@ -1025,6 +1088,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_AnimEasingType : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1036,6 +1100,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_AnimEasing : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1053,12 +1118,13 @@ public:
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_AnimEvalRichCurve : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        Curve                                                       OFFSET(get<T>, {0x10, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        Curve                                                       OFFSET(getStruct<T>, {0x10, 136, 0, 0})
 	DMember(float)                                     SourceMinimum                                               OFFSET(get<float>, {0x98, 4, 0, 0})
 	DMember(float)                                     SourceMaximum                                               OFFSET(get<float>, {0x9C, 4, 0, 0})
 	DMember(float)                                     TargetMinimum                                               OFFSET(get<float>, {0xA0, 4, 0, 0})
@@ -1070,17 +1136,19 @@ public:
 /// Size: 0x0088 (0x000008 - 0x000090)
 class FRigVMFunction_AnimRichCurve : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRuntimeFloatCurve)                        Curve                                                       OFFSET(get<T>, {0x8, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        Curve                                                       OFFSET(getStruct<T>, {0x8, 136, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_GetDeltaTime
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_GetDeltaTime : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1092,6 +1160,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_GetWorldTime : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1110,6 +1179,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_FramesToSeconds : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1122,6 +1192,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_SecondsToFrames : public FRigVMFunction_AnimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1134,15 +1205,16 @@ public:
 /// Size: 0x00C0 (0x000100 - 0x0001C0)
 class FRigVMFunction_DebugLineNoSpace : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x130, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x140, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x150, 96, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x150, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1B0, 1, 0, 0})
 };
 
@@ -1150,14 +1222,15 @@ public:
 /// Size: 0x00A0 (0x000100 - 0x0001A0)
 class FRigVMFunction_DebugLineStripNoSpace : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
 	CMember(TArray<FVector>)                           Points                                                      OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x110, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x120, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x130, 96, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x130, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x190, 1, 0, 0})
 };
 
@@ -1165,17 +1238,18 @@ public:
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_DebugPoint : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(ERigUnitDebugPointMode)                    Mode                                                        OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x24, 16, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x3C, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x40, 96, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x40, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
@@ -1183,17 +1257,18 @@ public:
 /// Size: 0x00B0 (0x000100 - 0x0001B0)
 class FRigVMFunction_DebugPointMutable : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(getStruct<T>, {0x100, 24, 0, 0})
 	CMember(ERigUnitDebugPointMode)                    Mode                                                        OFFSET(get<T>, {0x118, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x11C, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x11C, 16, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x12C, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x130, 4, 0, 0})
-	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x134, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x140, 96, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(getStruct<T>, {0x134, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x140, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
@@ -1201,16 +1276,17 @@ public:
 /// Size: 0x00F0 (0x000100 - 0x0001F0)
 class FRigVMFunction_DebugRectangle : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x160, 16, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x170, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
-	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x178, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(getStruct<T>, {0x178, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x180, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
@@ -1218,15 +1294,16 @@ public:
 /// Size: 0x00F0 (0x000100 - 0x0001F0)
 class FRigVMFunction_DebugRectangleNoSpace : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x160, 16, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x170, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x180, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
@@ -1234,19 +1311,20 @@ public:
 /// Size: 0x0100 (0x000100 - 0x000200)
 class FRigVMFunction_DebugArc : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x160, 16, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
 	DMember(float)                                     MinimumDegrees                                              OFFSET(get<float>, {0x174, 4, 0, 0})
 	DMember(float)                                     MaximumDegrees                                              OFFSET(get<float>, {0x178, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x17C, 4, 0, 0})
 	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	SMember(FName)                                     Space                                                       OFFSET(get<T>, {0x184, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	SMember(FName)                                     Space                                                       OFFSET(getStruct<T>, {0x184, 4, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x190, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
@@ -1254,18 +1332,19 @@ public:
 /// Size: 0x0100 (0x000100 - 0x000200)
 class FRigVMFunction_DebugArcNoSpace : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x100, 96, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x160, 16, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x170, 4, 0, 0})
 	DMember(float)                                     MinimumDegrees                                              OFFSET(get<float>, {0x174, 4, 0, 0})
 	DMember(float)                                     MaximumDegrees                                              OFFSET(get<float>, {0x178, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x17C, 4, 0, 0})
 	DMember(int32_t)                                   Detail                                                      OFFSET(get<int32_t>, {0x180, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x190, 96, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x190, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 };
 
@@ -1273,23 +1352,25 @@ public:
 /// Size: 0x00F0 (0x000100 - 0x0001F0)
 class FRigVMFunction_DebugTransformMutableNoSpace : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x100, 96, 0, 0})
 	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x160, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x164, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x164, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x174, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x178, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x180, 96, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x180, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DebugTransformArrayMutable_WorkData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRigVMFunction_DebugTransformArrayMutable_WorkData : public MDKStruct
+class FRigVMFunction_DebugTransformArrayMutable_WorkData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1301,6 +1382,7 @@ public:
 /// Size: 0x00B0 (0x000100 - 0x0001B0)
 class FRigVMFunction_DebugTransformArrayMutableNoSpace : public FRigVMFunction_DebugBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
@@ -1308,10 +1390,10 @@ public:
 	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x100, 16, 0, 0})
 	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x110, 16, 0, 0})
 	CMember(ERigUnitDebugTransformMode)                Mode                                                        OFFSET(get<T>, {0x120, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x124, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x124, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x134, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x138, 4, 0, 0})
-	SMember(FTransform)                                WorldOffset                                                 OFFSET(get<T>, {0x140, 96, 0, 0})
+	SMember(FTransform)                                WorldOffset                                                 OFFSET(getStruct<T>, {0x140, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
@@ -1319,31 +1401,33 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_VisualDebugVector : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
 	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x24, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugVectorNoSpace
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_VisualDebugVectorNoSpace : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
 	CMember(ERigUnitVisualDebugPointMode)              Mode                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x24, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x24, 16, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
 };
@@ -1352,26 +1436,28 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_VisualDebugQuat : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugQuatNoSpace
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_VisualDebugQuatNoSpace : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
@@ -1381,26 +1467,28 @@ public:
 /// Size: 0x0078 (0x000008 - 0x000080)
 class FRigVMFunction_VisualDebugTransform : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x74, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FName)                                     BoneSpace                                                   OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     BoneSpace                                                   OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_VisualDebugTransformNoSpace
 /// Size: 0x0078 (0x000008 - 0x000080)
 class FRigVMFunction_VisualDebugTransformNoSpace : public FRigVMFunction_DebugBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x74, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
@@ -1410,33 +1498,36 @@ public:
 /// Size: 0x0100 (0x000100 - 0x000200)
 class FRigVMFunction_ForLoopCount : public FRigVMStructMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FName)                                     BlockToRun                                                  OFFSET(get<T>, {0x100, 4, 0, 0})
+	SMember(FName)                                     BlockToRun                                                  OFFSET(getStruct<T>, {0x100, 4, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x104, 4, 0, 0})
 	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x108, 4, 0, 0})
 	DMember(float)                                     Ratio                                                       OFFSET(get<float>, {0x10C, 4, 0, 0})
-	SMember(FRigVMExecuteContext)                      Completed                                                   OFFSET(get<T>, {0x110, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      Completed                                                   OFFSET(getStruct<T>, {0x110, 240, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_UserDefinedEvent
 /// Size: 0x0108 (0x000008 - 0x000110)
 class FRigVMFunction_UserDefinedEvent : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
-	SMember(FName)                                     EventName                                                   OFFSET(get<T>, {0x100, 4, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(getStruct<T>, {0x10, 240, 0, 0})
+	SMember(FName)                                     EventName                                                   OFFSET(getStruct<T>, {0x100, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathBoolBase
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathBoolBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1447,6 +1538,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolConstant : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1458,6 +1550,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolUnaryOp : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1470,6 +1563,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolBinaryOp : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1483,6 +1577,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolBinaryAggregateOp : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1496,6 +1591,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolMake : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1507,6 +1603,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolConstTrue : public FRigVMFunction_MathBoolConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1517,6 +1614,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolConstFalse : public FRigVMFunction_MathBoolConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1527,6 +1625,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolNot : public FRigVMFunction_MathBoolUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1537,6 +1636,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolAnd : public FRigVMFunction_MathBoolBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1547,6 +1647,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolNand : public FRigVMFunction_MathBoolBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1557,6 +1658,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolNand2 : public FRigVMFunction_MathBoolBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1567,6 +1669,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathBoolOr : public FRigVMFunction_MathBoolBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1577,6 +1680,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolEquals : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1590,6 +1694,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolNotEquals : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1603,6 +1708,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolToggled : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1617,6 +1723,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathBoolFlipFlop : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1632,6 +1739,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathBoolOnce : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1646,6 +1754,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolToFloat : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1658,6 +1767,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathBoolToInteger : public FRigVMFunction_MathBoolBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1670,6 +1780,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathColorBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1680,32 +1791,35 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_MathColorBinaryOp : public FRigVMFunction_MathColorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FLinearColor)                              A                                                           OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              B                                                           OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorBinaryAggregateOp
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_MathColorBinaryAggregateOp : public FRigVMFunction_MathColorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FLinearColor)                              A                                                           OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              B                                                           OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorMake
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathColorMake : public FRigVMFunction_MathColorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1714,37 +1828,40 @@ public:
 	DMember(float)                                     G                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     B                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(float)                                     A                                                           OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorFromFloat
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathColorFromFloat : public FRigVMFunction_MathColorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0xC, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(getStruct<T>, {0xC, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorFromDouble
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathColorFromDouble : public FRigVMFunction_MathColorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
-	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathColorAdd
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathColorAdd : public FRigVMFunction_MathColorBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1755,6 +1872,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathColorSub : public FRigVMFunction_MathColorBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1765,6 +1883,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathColorMul : public FRigVMFunction_MathColorBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1775,20 +1894,22 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathColorLerp : public FRigVMFunction_MathColorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FLinearColor)                              A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLinearColor)                              B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              A                                                           OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FLinearColor)                              B                                                           OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(float)                                     T                                                           OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FLinearColor)                              Result                                                      OFFSET(get<T>, {0x2C, 16, 0, 0})
+	SMember(FLinearColor)                              Result                                                      OFFSET(getStruct<T>, {0x2C, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathDoubleBase
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathDoubleBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1799,6 +1920,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathDoubleConstant : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1810,6 +1932,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathDoubleUnaryOp : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1822,6 +1945,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleBinaryOp : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1835,6 +1959,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleBinaryAggregateOp : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1848,6 +1973,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathDoubleMake : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1859,6 +1985,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathDoubleConstPi : public FRigVMFunction_MathDoubleConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1869,6 +1996,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathDoubleConstHalfPi : public FRigVMFunction_MathDoubleConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1879,6 +2007,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathDoubleConstTwoPi : public FRigVMFunction_MathDoubleConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1889,6 +2018,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathDoubleConstE : public FRigVMFunction_MathDoubleConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1899,6 +2029,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleAdd : public FRigVMFunction_MathDoubleBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1909,6 +2040,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleSub : public FRigVMFunction_MathDoubleBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1919,6 +2051,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleMul : public FRigVMFunction_MathDoubleBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1929,6 +2062,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleDiv : public FRigVMFunction_MathDoubleBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1939,6 +2073,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleMod : public FRigVMFunction_MathDoubleBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1949,6 +2084,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleMin : public FRigVMFunction_MathDoubleBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1959,6 +2095,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoubleMax : public FRigVMFunction_MathDoubleBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1969,6 +2106,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FRigVMFunction_MathDoublePow : public FRigVMFunction_MathDoubleBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1979,6 +2117,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleSqrt : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1989,6 +2128,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleNegate : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1999,6 +2139,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleAbs : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2009,6 +2150,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleFloor : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2022,6 +2164,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleCeil : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2035,6 +2178,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleRound : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2048,6 +2192,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathDoubleToInt : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2060,6 +2205,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleSign : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2070,6 +2216,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathDoubleClamp : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2084,6 +2231,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathDoubleLerp : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2098,6 +2246,7 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathDoubleRemap : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -2115,6 +2264,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleEquals : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2128,6 +2278,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleNotEquals : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2141,6 +2292,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleGreater : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2154,6 +2306,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleLess : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2167,6 +2320,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleGreaterEqual : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2180,6 +2334,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleLessEqual : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2193,6 +2348,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleIsNearlyZero : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2206,6 +2362,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathDoubleIsNearlyEqual : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2220,6 +2377,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleDeg : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2230,6 +2388,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleRad : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2240,6 +2399,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleSin : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2250,6 +2410,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleCos : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2260,6 +2421,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleTan : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2270,6 +2432,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleAsin : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2280,6 +2443,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleAcos : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2290,6 +2454,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleAtan : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2300,6 +2465,7 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathDoubleLawOfCosine : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -2317,6 +2483,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathDoubleExponential : public FRigVMFunction_MathDoubleUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2327,6 +2494,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleArraySum : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2339,6 +2507,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathDoubleArrayAverage : public FRigVMFunction_MathDoubleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2351,6 +2520,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathFloatBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2361,6 +2531,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathFloatConstant : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2372,6 +2543,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathFloatUnaryOp : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2384,6 +2556,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatBinaryOp : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2397,6 +2570,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatBinaryAggregateOp : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2410,6 +2584,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathFloatMake : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2421,6 +2596,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatConstPi : public FRigVMFunction_MathFloatConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2431,6 +2607,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatConstHalfPi : public FRigVMFunction_MathFloatConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2441,6 +2618,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatConstTwoPi : public FRigVMFunction_MathFloatConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2451,6 +2629,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatConstE : public FRigVMFunction_MathFloatConstant
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2461,6 +2640,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatAdd : public FRigVMFunction_MathFloatBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2471,6 +2651,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatSub : public FRigVMFunction_MathFloatBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2481,6 +2662,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatMul : public FRigVMFunction_MathFloatBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2491,6 +2673,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatDiv : public FRigVMFunction_MathFloatBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2501,6 +2684,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatMod : public FRigVMFunction_MathFloatBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2511,6 +2695,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatMin : public FRigVMFunction_MathFloatBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2521,6 +2706,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatMax : public FRigVMFunction_MathFloatBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2531,6 +2717,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathFloatPow : public FRigVMFunction_MathFloatBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2541,6 +2728,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatSqrt : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2551,6 +2739,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatNegate : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2561,6 +2750,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatAbs : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2571,6 +2761,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatFloor : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2584,6 +2775,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatCeil : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2597,6 +2789,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatRound : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2610,6 +2803,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathFloatToInt : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2622,6 +2816,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatSign : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2632,6 +2827,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatClamp : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2646,6 +2842,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatLerp : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2660,6 +2857,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathFloatRemap : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2677,6 +2875,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatEquals : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2690,6 +2889,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatNotEquals : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2703,6 +2903,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatGreater : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2716,6 +2917,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatLess : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2729,6 +2931,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatGreaterEqual : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2742,6 +2945,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatLessEqual : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2755,6 +2959,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatIsNearlyZero : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2768,6 +2973,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatIsNearlyEqual : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2782,6 +2988,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathFloatSelectBool : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2796,6 +3003,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatDeg : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2806,6 +3014,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatRad : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2816,6 +3025,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatSin : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2826,6 +3036,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatCos : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2836,6 +3047,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatTan : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2846,6 +3058,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatAsin : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2856,6 +3069,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatAcos : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2866,6 +3080,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatAtan : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2876,6 +3091,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathFloatLawOfCosine : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2893,6 +3109,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathFloatExponential : public FRigVMFunction_MathFloatUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2903,6 +3120,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathFloatArraySum : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2915,6 +3133,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathFloatArrayAverage : public FRigVMFunction_MathFloatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2927,6 +3146,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathIntBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2937,6 +3157,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathIntUnaryOp : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2949,6 +3170,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntBinaryOp : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2962,6 +3184,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntBinaryAggregateOp : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2975,6 +3198,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathIntMake : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2986,6 +3210,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntAdd : public FRigVMFunction_MathIntBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2996,6 +3221,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntSub : public FRigVMFunction_MathIntBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3006,6 +3232,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntMul : public FRigVMFunction_MathIntBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3016,6 +3243,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntDiv : public FRigVMFunction_MathIntBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3026,6 +3254,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntMod : public FRigVMFunction_MathIntBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3036,6 +3265,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntMin : public FRigVMFunction_MathIntBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3046,6 +3276,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntMax : public FRigVMFunction_MathIntBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3056,6 +3287,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FRigVMFunction_MathIntPow : public FRigVMFunction_MathIntBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3066,6 +3298,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathIntNegate : public FRigVMFunction_MathIntUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3076,6 +3309,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathIntAbs : public FRigVMFunction_MathIntUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3086,6 +3320,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathIntToFloat : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3098,6 +3333,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntToDouble : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3110,6 +3346,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRigVMFunction_MathIntSign : public FRigVMFunction_MathIntUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3120,6 +3357,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntClamp : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3134,6 +3372,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntEquals : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3147,6 +3386,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntNotEquals : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3160,6 +3400,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntGreater : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3173,6 +3414,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntLess : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3186,6 +3428,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntGreaterEqual : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3199,6 +3442,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntLessEqual : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3212,6 +3456,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathIntArraySum : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -3224,6 +3469,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathIntArrayAverage : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -3236,32 +3482,35 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_MathIntToString : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   Number                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   PaddedSize                                                  OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntToName
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_MathIntToName : public FRigVMFunction_MathIntBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(int32_t)                                   Number                                                      OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   PaddedSize                                                  OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixBase
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathMatrixBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -3272,110 +3521,119 @@ public:
 /// Size: 0x0108 (0x000008 - 0x000110)
 class FRigVMFunction_MathMatrixUnaryOp : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FMatrix)                                   Value                                                       OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x90, 128, 0, 0})
+	SMember(FMatrix)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 128, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(getStruct<T>, {0x90, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixBinaryOp
 /// Size: 0x0188 (0x000008 - 0x000190)
 class FRigVMFunction_MathMatrixBinaryOp : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FMatrix)                                   A                                                           OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FMatrix)                                   B                                                           OFFSET(get<T>, {0x90, 128, 0, 0})
-	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x110, 128, 0, 0})
+	SMember(FMatrix)                                   A                                                           OFFSET(getStruct<T>, {0x10, 128, 0, 0})
+	SMember(FMatrix)                                   B                                                           OFFSET(getStruct<T>, {0x90, 128, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(getStruct<T>, {0x110, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixBinaryAggregateOp
 /// Size: 0x0188 (0x000008 - 0x000190)
 class FRigVMFunction_MathMatrixBinaryAggregateOp : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FMatrix)                                   A                                                           OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FMatrix)                                   B                                                           OFFSET(get<T>, {0x90, 128, 0, 0})
-	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x110, 128, 0, 0})
+	SMember(FMatrix)                                   A                                                           OFFSET(getStruct<T>, {0x10, 128, 0, 0})
+	SMember(FMatrix)                                   B                                                           OFFSET(getStruct<T>, {0x90, 128, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(getStruct<T>, {0x110, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixToTransform
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FRigVMFunction_MathMatrixToTransform : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMatrix)                                   Value                                                       OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x90, 96, 0, 0})
+	SMember(FMatrix)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 128, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x90, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixFromTransform
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FRigVMFunction_MathMatrixFromTransform : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(getStruct<T>, {0x70, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixFromTransformV2
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FRigVMFunction_MathMatrixFromTransformV2 : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(getStruct<T>, {0x70, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixToVectors
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FRigVMFunction_MathMatrixToVectors : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMatrix)                                   Value                                                       OFFSET(get<T>, {0x10, 128, 0, 0})
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FVector)                                   X                                                           OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FVector)                                   Y                                                           OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FVector)                                   Z                                                           OFFSET(get<T>, {0xD8, 24, 0, 0})
+	SMember(FMatrix)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 128, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   X                                                           OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Y                                                           OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FVector)                                   Z                                                           OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixFromVectors
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FRigVMFunction_MathMatrixFromVectors : public FRigVMFunction_MathMatrixBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   X                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Y                                                           OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Z                                                           OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FMatrix)                                   Result                                                      OFFSET(get<T>, {0x70, 128, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   X                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Y                                                           OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Z                                                           OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FMatrix)                                   Result                                                      OFFSET(getStruct<T>, {0x70, 128, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathMatrixMul
 /// Size: 0x0000 (0x000190 - 0x000190)
 class FRigVMFunction_MathMatrixMul : public FRigVMFunction_MathMatrixBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
@@ -3386,6 +3644,7 @@ public:
 /// Size: 0x0000 (0x000110 - 0x000110)
 class FRigVMFunction_MathMatrixInverse : public FRigVMFunction_MathMatrixUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
@@ -3396,6 +3655,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathQuaternionBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -3406,44 +3666,48 @@ public:
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionUnaryOp : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionBinaryOp
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_MathQuaternionBinaryOp : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionBinaryAggregateOp
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_MathQuaternionBinaryAggregateOp : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMake
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathQuaternionMake : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -3452,82 +3716,88 @@ public:
 	DMember(float)                                     Y                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(float)                                     W                                                           OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromAxisAndAngle
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionFromAxisAndAngle : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromEuler
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionFromEuler : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Euler                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Euler                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromRotator
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathQuaternionFromRotator : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRotator)                                  Rotator                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FRotator)                                  Rotator                                                     OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromRotatorV2
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathQuaternionFromRotatorV2 : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionFromTwoVectors
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FRigVMFunction_MathQuaternionFromTwoVectors : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionToAxisAndAngle
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionToAxisAndAngle : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
 };
 
@@ -3535,11 +3805,12 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathQuaternionScale : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
@@ -3547,44 +3818,48 @@ public:
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FRigVMFunction_MathQuaternionScaleV2 : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	DMember(float)                                     Factor                                                      OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionToEuler
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionToEuler : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionToRotator
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionToRotator : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FRotator)                                  Result                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FRotator)                                  Result                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMul
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMFunction_MathQuaternionMul : public FRigVMFunction_MathQuaternionBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -3595,6 +3870,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathQuaternionInverse : public FRigVMFunction_MathQuaternionUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -3605,26 +3881,28 @@ public:
 /// Size: 0x0078 (0x000008 - 0x000080)
 class FRigVMFunction_MathQuaternionSlerp : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(float)                                     T                                                           OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x60, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionEquals
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FRigVMFunction_MathQuaternionEquals : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x50, 1, 0, 0})
 };
 
@@ -3632,12 +3910,13 @@ public:
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FRigVMFunction_MathQuaternionNotEquals : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x50, 1, 0, 0})
 };
 
@@ -3645,26 +3924,28 @@ public:
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_MathQuaternionSelectBool : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FQuat)                                     IfTrue                                                      OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     IfFalse                                                     OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     IfTrue                                                      OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     IfFalse                                                     OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionDot
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FRigVMFunction_MathQuaternionDot : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     A                                                           OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     B                                                           OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     A                                                           OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     B                                                           OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x50, 4, 0, 0})
 };
 
@@ -3672,6 +3953,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathQuaternionUnit : public FRigVMFunction_MathQuaternionUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -3682,46 +3964,50 @@ public:
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FRigVMFunction_MathQuaternionRotateVector : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FQuat)                                     Transform                                                   OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FQuat)                                     Transform                                                   OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionGetAxis
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathQuaternionGetAxis : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQuat)                                     Quaternion                                                  OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Quaternion                                                  OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        Axis                                                        OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionSwingTwist
 /// Size: 0x0088 (0x000008 - 0x000090)
 class FRigVMFunction_MathQuaternionSwingTwist : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FQuat)                                     Swing                                                       OFFSET(get<T>, {0x50, 32, 0, 0})
-	SMember(FQuat)                                     Twist                                                       OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FQuat)                                     Swing                                                       OFFSET(getStruct<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Twist                                                       OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionRotationOrder
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FRigVMFunction_MathQuaternionRotationOrder : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -3733,47 +4019,51 @@ public:
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_MathQuaternionMakeRelative : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     Global                                                      OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Parent                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Local                                                       OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Global                                                      OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Parent                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Local                                                       OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMakeAbsolute
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_MathQuaternionMakeAbsolute : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FQuat)                                     Local                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Parent                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     Global                                                      OFFSET(get<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Local                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Parent                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Global                                                      OFFSET(getStruct<T>, {0x50, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathQuaternionMirrorTransform
 /// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FRigVMFunction_MathQuaternionMirrorTransform : public FRigVMFunction_MathQuaternionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x30, 1, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x31, 1, 0, 0})
-	SMember(FTransform)                                CentralTransform                                            OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0xA0, 32, 0, 0})
+	SMember(FTransform)                                CentralTransform                                            OFFSET(getStruct<T>, {0x40, 96, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatWorkData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FRigVMFunction_MathRBFInterpolateQuatWorkData : public MDKStruct
+class FRigVMFunction_MathRBFInterpolateQuatWorkData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -3782,8 +4072,9 @@ public:
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorWorkData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FRigVMFunction_MathRBFInterpolateVectorWorkData : public MDKStruct
+class FRigVMFunction_MathRBFInterpolateVectorWorkData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -3794,6 +4085,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathRBFInterpolateBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -3804,44 +4096,47 @@ public:
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FRigVMFunction_MathRBFInterpolateQuatBase : public FRigVMFunction_MathRBFInterpolateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FQuat)                                     Input                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Input                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	CMember(ERBFQuatDistanceType)                      DistanceFunction                                            OFFSET(get<T>, {0x30, 1, 0, 0})
 	CMember(ERBFKernelType)                            SmoothingFunction                                           OFFSET(get<T>, {0x31, 1, 0, 0})
 	DMember(float)                                     SmoothingAngle                                              OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(bool)                                      bNormalizeOutput                                            OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   TwistAxis                                                   OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FRigVMFunction_MathRBFInterpolateQuatWorkData) WorkData                                                OFFSET(get<T>, {0x60, 144, 0, 0})
+	SMember(FVector)                                   TwistAxis                                                   OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FRigVMFunction_MathRBFInterpolateQuatWorkData) WorkData                                                OFFSET(getStruct<T>, {0x60, 144, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorBase
 /// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FRigVMFunction_MathRBFInterpolateVectorBase : public FRigVMFunction_MathRBFInterpolateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Input                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Input                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(ERBFVectorDistanceType)                    DistanceFunction                                            OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(ERBFKernelType)                            SmoothingFunction                                           OFFSET(get<T>, {0x21, 1, 0, 0})
 	DMember(float)                                     SmoothingRadius                                             OFFSET(get<float>, {0x24, 4, 0, 0})
 	DMember(bool)                                      bNormalizeOutput                                            OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FRigVMFunction_MathRBFInterpolateVectorWorkData) WorkData                                              OFFSET(get<T>, {0x30, 144, 0, 0})
+	SMember(FRigVMFunction_MathRBFInterpolateVectorWorkData) WorkData                                              OFFSET(getStruct<T>, {0x30, 144, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatFloat_Target
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMathRBFInterpolateQuatFloat_Target : public MDKStruct
+class FMathRBFInterpolateQuatFloat_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
@@ -3849,6 +4144,7 @@ public:
 /// Size: 0x0020 (0x0000F0 - 0x000110)
 class FRigVMFunction_MathRBFInterpolateQuatFloat : public FRigVMFunction_MathRBFInterpolateQuatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
@@ -3859,109 +4155,118 @@ public:
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatVector_Target
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMathRBFInterpolateQuatVector_Target : public MDKStruct
+class FMathRBFInterpolateQuatVector_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatVector
 /// Size: 0x0030 (0x0000F0 - 0x000120)
 class FRigVMFunction_MathRBFInterpolateQuatVector : public FRigVMFunction_MathRBFInterpolateQuatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
 	CMember(TArray<FMathRBFInterpolateQuatVector_Target>) Targets                                                  OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FVector)                                   Output                                                      OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   Output                                                      OFFSET(getStruct<T>, {0x100, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatColor_Target
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMathRBFInterpolateQuatColor_Target : public MDKStruct
+class FMathRBFInterpolateQuatColor_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatColor
 /// Size: 0x0020 (0x0000F0 - 0x000110)
 class FRigVMFunction_MathRBFInterpolateQuatColor : public FRigVMFunction_MathRBFInterpolateQuatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	CMember(TArray<FMathRBFInterpolateQuatColor_Target>) Targets                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FLinearColor)                              Output                                                      OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FLinearColor)                              Output                                                      OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatQuat_Target
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMathRBFInterpolateQuatQuat_Target : public MDKStruct
+class FMathRBFInterpolateQuatQuat_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatQuat
 /// Size: 0x0030 (0x0000F0 - 0x000120)
 class FRigVMFunction_MathRBFInterpolateQuatQuat : public FRigVMFunction_MathRBFInterpolateQuatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
 	CMember(TArray<FMathRBFInterpolateQuatQuat_Target>) Targets                                                    OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FQuat)                                     Output                                                      OFFSET(get<T>, {0x100, 32, 0, 0})
+	SMember(FQuat)                                     Output                                                      OFFSET(getStruct<T>, {0x100, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateQuatXform_Target
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FMathRBFInterpolateQuatXform_Target : public MDKStruct
+class FMathRBFInterpolateQuatXform_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FQuat)                                     Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FQuat)                                     Target                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateQuatXform
 /// Size: 0x0070 (0x0000F0 - 0x000160)
 class FRigVMFunction_MathRBFInterpolateQuatXform : public FRigVMFunction_MathRBFInterpolateQuatBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
 	CMember(TArray<FMathRBFInterpolateQuatXform_Target>) Targets                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FTransform)                                Output                                                      OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FTransform)                                Output                                                      OFFSET(getStruct<T>, {0x100, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorFloat_Target
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMathRBFInterpolateVectorFloat_Target : public MDKStruct
+class FMathRBFInterpolateVectorFloat_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
@@ -3969,6 +4274,7 @@ public:
 /// Size: 0x0020 (0x0000C0 - 0x0000E0)
 class FRigVMFunction_MathRBFInterpolateVectorFloat : public FRigVMFunction_MathRBFInterpolateVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
@@ -3979,104 +4285,113 @@ public:
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorVector_Target
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMathRBFInterpolateVectorVector_Target : public MDKStruct
+class FMathRBFInterpolateVectorVector_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorVector
 /// Size: 0x0030 (0x0000C0 - 0x0000F0)
 class FRigVMFunction_MathRBFInterpolateVectorVector : public FRigVMFunction_MathRBFInterpolateVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
 	CMember(TArray<FMathRBFInterpolateVectorVector_Target>) Targets                                                OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FVector)                                   Output                                                      OFFSET(get<T>, {0xD0, 24, 0, 0})
+	SMember(FVector)                                   Output                                                      OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorColor_Target
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMathRBFInterpolateVectorColor_Target : public MDKStruct
+class FMathRBFInterpolateVectorColor_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorColor
 /// Size: 0x0020 (0x0000C0 - 0x0000E0)
 class FRigVMFunction_MathRBFInterpolateVectorColor : public FRigVMFunction_MathRBFInterpolateVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
 	CMember(TArray<FMathRBFInterpolateVectorColor_Target>) Targets                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FLinearColor)                              Output                                                      OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FLinearColor)                              Output                                                      OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorQuat_Target
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMathRBFInterpolateVectorQuat_Target : public MDKStruct
+class FMathRBFInterpolateVectorQuat_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorQuat
 /// Size: 0x0030 (0x0000C0 - 0x0000F0)
 class FRigVMFunction_MathRBFInterpolateVectorQuat : public FRigVMFunction_MathRBFInterpolateVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
 	CMember(TArray<FMathRBFInterpolateVectorQuat_Target>) Targets                                                  OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FQuat)                                     Output                                                      OFFSET(get<T>, {0xD0, 32, 0, 0})
+	SMember(FQuat)                                     Output                                                      OFFSET(getStruct<T>, {0xD0, 32, 0, 0})
 };
 
 /// Struct /Script/RigVM.MathRBFInterpolateVectorXform_Target
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FMathRBFInterpolateVectorXform_Target : public MDKStruct
+class FMathRBFInterpolateVectorXform_Target : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x20, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathRBFInterpolateVectorXform
 /// Size: 0x0070 (0x0000C0 - 0x000130)
 class FRigVMFunction_MathRBFInterpolateVectorXform : public FRigVMFunction_MathRBFInterpolateVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 	CMember(TArray<FMathRBFInterpolateVectorXform_Target>) Targets                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FTransform)                                Output                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Output                                                      OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformBase
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathTransformBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -4087,6 +4402,7 @@ public:
 /// Size: 0x0000 (0x000100 - 0x000100)
 class FRigVMFunction_MathTransformMutableBase : public FRigVMFunction_MathMutableBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -4097,94 +4413,102 @@ public:
 /// Size: 0x00C8 (0x000008 - 0x0000D0)
 class FRigVMFunction_MathTransformUnaryOp : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x70, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformBinaryOp
 /// Size: 0x0128 (0x000008 - 0x000130)
 class FRigVMFunction_MathTransformBinaryOp : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                A                                                           OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                B                                                           OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                A                                                           OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                B                                                           OFFSET(getStruct<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformBinaryAggregateOp
 /// Size: 0x0128 (0x000008 - 0x000130)
 class FRigVMFunction_MathTransformBinaryAggregateOp : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                A                                                           OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                B                                                           OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                A                                                           OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                B                                                           OFFSET(getStruct<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMake
 /// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FRigVMFunction_MathTransformMake : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Translation                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FVector)                                   Translation                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x60, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformFromEulerTransform
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_MathTransformFromEulerTransform : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FEulerTransform)                           EulerTransform                                              OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FEulerTransform)                           EulerTransform                                              OFFSET(getStruct<T>, {0x8, 72, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x50, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformFromEulerTransformV2
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_MathTransformFromEulerTransformV2 : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FEulerTransform)                           Value                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x50, 96, 0, 0})
+	SMember(FEulerTransform)                           Value                                                       OFFSET(getStruct<T>, {0x8, 72, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x50, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformToEulerTransform
 /// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FRigVMFunction_MathTransformToEulerTransform : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FEulerTransform)                           Result                                                      OFFSET(get<T>, {0x70, 72, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FEulerTransform)                           Result                                                      OFFSET(getStruct<T>, {0x70, 72, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMul
 /// Size: 0x0000 (0x000130 - 0x000130)
 class FRigVMFunction_MathTransformMul : public FRigVMFunction_MathTransformBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
@@ -4195,39 +4519,42 @@ public:
 /// Size: 0x0128 (0x000008 - 0x000130)
 class FRigVMFunction_MathTransformMakeRelative : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                Global                                                      OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Parent                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Local                                                       OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Global                                                      OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Parent                                                      OFFSET(getStruct<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Local                                                       OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMakeAbsolute
 /// Size: 0x0128 (0x000008 - 0x000130)
 class FRigVMFunction_MathTransformMakeAbsolute : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FTransform)                                Local                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Parent                                                      OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Global                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Local                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Parent                                                      OFFSET(getStruct<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Global                                                      OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformAccumulateArray
 /// Size: 0x0090 (0x000100 - 0x000190)
 class FRigVMFunction_MathTransformAccumulateArray : public FRigVMFunction_MathTransformMutableBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
 	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x100, 16, 0, 0})
 	CMember(ERigVMTransformSpace)                      TargetSpace                                                 OFFSET(get<T>, {0x110, 1, 0, 0})
-	SMember(FTransform)                                Root                                                        OFFSET(get<T>, {0x120, 96, 0, 0})
+	SMember(FTransform)                                Root                                                        OFFSET(getStruct<T>, {0x120, 96, 0, 0})
 	CMember(TArray<int32_t>)                           ParentIndices                                               OFFSET(get<T>, {0x180, 16, 0, 0})
 };
 
@@ -4235,6 +4562,7 @@ public:
 /// Size: 0x0000 (0x0000D0 - 0x0000D0)
 class FRigVMFunction_MathTransformInverse : public FRigVMFunction_MathTransformUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
@@ -4245,76 +4573,82 @@ public:
 /// Size: 0x0138 (0x000008 - 0x000140)
 class FRigVMFunction_MathTransformLerp : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FTransform)                                A                                                           OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                B                                                           OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                A                                                           OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                B                                                           OFFSET(getStruct<T>, {0x70, 96, 0, 0})
 	DMember(float)                                     T                                                           OFFSET(get<float>, {0xD0, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xE0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformSelectBool
 /// Size: 0x0128 (0x000008 - 0x000130)
 class FRigVMFunction_MathTransformSelectBool : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FTransform)                                IfTrue                                                      OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                IfFalse                                                     OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                IfTrue                                                      OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                IfFalse                                                     OFFSET(getStruct<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformRotateVector
 /// Size: 0x0098 (0x000008 - 0x0000A0)
 class FRigVMFunction_MathTransformRotateVector : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FVector)                                   Vector                                                      OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FVector)                                   Vector                                                      OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformTransformVector
 /// Size: 0x0098 (0x000008 - 0x0000A0)
 class FRigVMFunction_MathTransformTransformVector : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformFromSRT
 /// Size: 0x0108 (0x000008 - 0x000110)
 class FRigVMFunction_MathTransformFromSRT : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Rotation                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Rotation                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(EEulerRotationOrder)                       RotationOrder                                               OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x60, 96, 0, 0})
-	SMember(FEulerTransform)                           EulerTransform                                              OFFSET(get<T>, {0xC0, 72, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x60, 96, 0, 0})
+	SMember(FEulerTransform)                           EulerTransform                                              OFFSET(getStruct<T>, {0xC0, 72, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformArrayToSRT
 /// Size: 0x0040 (0x000008 - 0x000048)
 class FRigVMFunction_MathTransformArrayToSRT : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -4329,41 +4663,44 @@ public:
 /// Size: 0x0158 (0x000008 - 0x000160)
 class FRigVMFunction_MathTransformClampSpatially : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        Axis                                                        OFFSET(get<T>, {0x70, 1, 0, 0})
 	CMember(TEnumAsByte<ERigVMClampSpatialMode>)       Type                                                        OFFSET(get<T>, {0x71, 1, 0, 0})
 	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x74, 4, 0, 0})
 	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FTransform)                                Space                                                       OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                Space                                                       OFFSET(getStruct<T>, {0x80, 96, 0, 0})
 	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0xE0, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0xE4, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0xE4, 16, 0, 0})
 	DMember(float)                                     DebugThickness                                              OFFSET(get<float>, {0xF4, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x100, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathTransformMirrorTransform
 /// Size: 0x0138 (0x000008 - 0x000140)
 class FRigVMFunction_MathTransformMirrorTransform : public FRigVMFunction_MathTransformBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x70, 1, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x71, 1, 0, 0})
-	SMember(FTransform)                                CentralTransform                                            OFFSET(get<T>, {0x80, 96, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                CentralTransform                                            OFFSET(getStruct<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xE0, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBase
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_MathVectorBase : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -4374,44 +4711,48 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_MathVectorUnaryOp : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBinaryOp
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathVectorBinaryOp : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorBinaryAggregateOp
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathVectorBinaryAggregateOp : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMake
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_MathVectorMake : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -4419,37 +4760,40 @@ public:
 	DMember(float)                                     X                                                           OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     Y                                                           OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     Z                                                           OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorFromFloat
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathVectorFromFloat : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorFromDouble
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathVectorFromDouble : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorAdd
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorAdd : public FRigVMFunction_MathVectorBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4460,6 +4804,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorSub : public FRigVMFunction_MathVectorBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4470,6 +4815,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorMul : public FRigVMFunction_MathVectorBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4480,19 +4826,21 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorScale : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Factor                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorDiv
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorDiv : public FRigVMFunction_MathVectorBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4503,6 +4851,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorMod : public FRigVMFunction_MathVectorBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4513,6 +4862,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorMin : public FRigVMFunction_MathVectorBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4523,6 +4873,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorMax : public FRigVMFunction_MathVectorBinaryAggregateOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4533,6 +4884,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorNegate : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4543,6 +4895,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorAbs : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4553,6 +4906,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorFloor : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4563,6 +4917,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorCeil : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4573,6 +4928,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorRound : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4583,6 +4939,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorSign : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4593,57 +4950,61 @@ public:
 /// Size: 0x0060 (0x000008 - 0x000068)
 class FRigVMFunction_MathVectorClamp : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Minimum                                                     OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Maximum                                                     OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Minimum                                                     OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Maximum                                                     OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorLerp
 /// Size: 0x0050 (0x000008 - 0x000058)
 class FRigVMFunction_MathVectorLerp : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     T                                                           OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorRemap
 /// Size: 0x0098 (0x000008 - 0x0000A0)
 class FRigVMFunction_MathVectorRemap : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   SourceMinimum                                               OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   SourceMaximum                                               OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   TargetMinimum                                               OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   TargetMaximum                                               OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   SourceMinimum                                               OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   SourceMaximum                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   TargetMinimum                                               OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   TargetMaximum                                               OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	DMember(bool)                                      bClamp                                                      OFFSET(get<bool>, {0x80, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorEquals
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorEquals : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
@@ -4651,12 +5012,13 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorNotEquals : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
@@ -4664,11 +5026,12 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathVectorIsNearlyZero : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Tolerance                                                   OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x24, 1, 0, 0})
 };
@@ -4677,12 +5040,13 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorIsNearlyEqual : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     Tolerance                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x3C, 1, 0, 0})
 };
@@ -4691,20 +5055,22 @@ public:
 /// Size: 0x0050 (0x000008 - 0x000058)
 class FRigVMFunction_MathVectorSelectBool : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FVector)                                   IfTrue                                                      OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   IfFalse                                                     OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   IfTrue                                                      OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   IfFalse                                                     OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorDeg
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorDeg : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4715,6 +5081,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorRad : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4725,11 +5092,12 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathVectorLengthSquared : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
@@ -4737,11 +5105,12 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_MathVectorLength : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
@@ -4749,12 +5118,13 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorDistance : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
@@ -4762,6 +5132,7 @@ public:
 /// Size: 0x0000 (0x000050 - 0x000050)
 class FRigVMFunction_MathVectorCross : public FRigVMFunction_MathVectorBinaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4772,12 +5143,13 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorDot : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
@@ -4785,6 +5157,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FRigVMFunction_MathVectorUnit : public FRigVMFunction_MathVectorUnaryOp
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -4795,52 +5168,56 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorSetLength : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorClampLength
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorClampLength : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     MinimumLength                                               OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     MaximumLength                                               OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMirror
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathVectorMirror : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorAngle
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorAngle : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
@@ -4848,12 +5225,13 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorParallel : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
@@ -4861,12 +5239,13 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_MathVectorOrthogonal : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
@@ -4874,74 +5253,79 @@ public:
 /// Size: 0x0098 (0x000008 - 0x0000A0)
 class FRigVMFunction_MathVectorBezierFourPoint : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x8, 96, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(getStruct<T>, {0x8, 96, 0, 0})
 	DMember(float)                                     T                                                           OFFSET(get<float>, {0x68, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   Tangent                                                     OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Tangent                                                     OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFourPointBezier
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FRigVMFourPointBezier : public MDKStruct
+class FRigVMFourPointBezier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   C                                                           OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   D                                                           OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   C                                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   D                                                           OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMakeBezierFourPoint
 /// Size: 0x0060 (0x000008 - 0x000068)
 class FRigVMFunction_MathVectorMakeBezierFourPoint : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(get<T>, {0x8, 96, 0, 0})
+	SMember(FRigVMFourPointBezier)                     Bezier                                                      OFFSET(getStruct<T>, {0x8, 96, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorClampSpatially
 /// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FRigVMFunction_MathVectorClampSpatially : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        Axis                                                        OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(TEnumAsByte<ERigVMClampSpatialMode>)       Type                                                        OFFSET(get<T>, {0x21, 1, 0, 0})
 	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x24, 4, 0, 0})
 	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FTransform)                                Space                                                       OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FTransform)                                Space                                                       OFFSET(getStruct<T>, {0x30, 96, 0, 0})
 	DMember(bool)                                      bDrawDebug                                                  OFFSET(get<bool>, {0x90, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x94, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0x94, 16, 0, 0})
 	DMember(float)                                     DebugThickness                                              OFFSET(get<float>, {0xA4, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathIntersectPlane
 /// Size: 0x0080 (0x000008 - 0x000088)
 class FRigVMFunction_MathIntersectPlane : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   Start                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PlanePoint                                                  OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   PlaneNormal                                                 OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Start                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PlanePoint                                                  OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   PlaneNormal                                                 OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x80, 4, 0, 0})
 };
 
@@ -4949,14 +5333,15 @@ public:
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_MathDistanceToPlane : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Point                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   PlanePoint                                                  OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PlaneNormal                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   ClosestPointOnPlane                                         OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Point                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   PlanePoint                                                  OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PlaneNormal                                                 OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   ClosestPointOnPlane                                         OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	DMember(float)                                     SignedDistance                                              OFFSET(get<float>, {0x68, 4, 0, 0})
 };
 
@@ -4964,71 +5349,77 @@ public:
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathVectorMakeRelative : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Global                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Parent                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Local                                                       OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Global                                                      OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Parent                                                      OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Local                                                       OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMakeAbsolute
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRigVMFunction_MathVectorMakeAbsolute : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Local                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Parent                                                      OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Global                                                      OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Local                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Parent                                                      OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Global                                                      OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorMirrorTransform
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_MathVectorMirrorTransform : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x21, 1, 0, 0})
-	SMember(FTransform)                                CentralTransform                                            OFFSET(get<T>, {0x30, 96, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FTransform)                                CentralTransform                                            OFFSET(getStruct<T>, {0x30, 96, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x90, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorArraySum
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_MathVectorArraySum : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TArray<FVector>)                           Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector)                                   Sum                                                         OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Sum                                                         OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_MathVectorArrayAverage
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_MathVectorArrayAverage : public FRigVMFunction_MathVectorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TArray<FVector>)                           Array                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector)                                   Average                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Average                                                     OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NoiseFloat
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_NoiseFloat : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -5046,6 +5437,7 @@ public:
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_NoiseDouble : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -5063,40 +5455,43 @@ public:
 /// Size: 0x0080 (0x000008 - 0x000088)
 class FRigVMFunction_NoiseVector : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Speed                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Frequency                                                   OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Speed                                                       OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Frequency                                                   OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x54, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FVector)                                   Time                                                        OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   Time                                                        OFFSET(getStruct<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NoiseVector2
 /// Size: 0x0088 (0x000008 - 0x000090)
 class FRigVMFunction_NoiseVector2 : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Speed                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Frequency                                                   OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Speed                                                       OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Frequency                                                   OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(double)                                    Minimum                                                     OFFSET(get<double>, {0x50, 8, 0, 0})
 	DMember(double)                                    Maximum                                                     OFFSET(get<double>, {0x58, 8, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   Time                                                        OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Time                                                        OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_RandomFloat
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_RandomFloat : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -5116,6 +5511,7 @@ public:
 /// Size: 0x0050 (0x000008 - 0x000058)
 class FRigVMFunction_RandomVector : public FRigVMFunction_MathBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -5124,8 +5520,8 @@ public:
 	DMember(float)                                     Minimum                                                     OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     Maximum                                                     OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   LastResult                                                  OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   LastResult                                                  OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(int32_t)                                   LastSeed                                                    OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   BaseSeed                                                    OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 	DMember(float)                                     TimeLeft                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
@@ -5133,22 +5529,24 @@ public:
 
 /// Struct /Script/RigVM.RigVMMirrorSettings
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FRigVMMirrorSettings : public MDKStruct
+class FRigVMMirrorSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TEnumAsByte<EAxis>)                        MirrorAxis                                                  OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        AxisToFlip                                                  OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FString)                                   SearchString                                                OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   ReplaceString                                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   SearchString                                                OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   ReplaceString                                               OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMSimPoint
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FRigVMSimPoint : public MDKStruct
+class FRigVMSimPoint : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -5157,14 +5555,15 @@ public:
 	DMember(float)                                     Size                                                        OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     LinearDamping                                               OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     InheritMotion                                               OFFSET(get<float>, {0xC, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   LinearVelocity                                              OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   LinearVelocity                                              OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMDispatch_CoreBase
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_CoreBase : public FRigVMDispatchFactory
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5175,6 +5574,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayBase : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5185,6 +5585,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayBaseMutable : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5195,6 +5596,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayMake : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5205,6 +5607,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayReset : public FRigVMDispatch_ArrayBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5215,6 +5618,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayGetNum : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5225,6 +5629,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArraySetNum : public FRigVMDispatch_ArrayBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5235,6 +5640,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayGetAtIndex : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5245,6 +5651,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArraySetAtIndex : public FRigVMDispatch_ArrayBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5255,6 +5662,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayAdd : public FRigVMDispatch_ArraySetAtIndex
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5265,6 +5673,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayInsert : public FRigVMDispatch_ArraySetAtIndex
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5275,6 +5684,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayRemove : public FRigVMDispatch_ArrayBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5285,6 +5695,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayReverse : public FRigVMDispatch_ArrayReset
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5295,6 +5706,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayFind : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5305,6 +5717,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayAppend : public FRigVMDispatch_ArrayBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5315,6 +5728,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayClone : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5325,6 +5739,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayUnion : public FRigVMDispatch_ArrayAppend
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5335,6 +5750,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayDifference : public FRigVMDispatch_ArrayBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5345,6 +5761,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayIntersection : public FRigVMDispatch_ArrayDifference
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5355,6 +5772,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_ArrayIterator : public FRigVMDispatch_ArrayBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5365,6 +5783,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_Constant : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5375,6 +5794,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_CoreEquals : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5385,6 +5805,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_CoreNotEquals : public FRigVMDispatch_CoreEquals
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5395,6 +5816,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_If : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5405,6 +5827,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_MakeStruct : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5415,6 +5838,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_BreakStruct : public FRigVMDispatch_MakeStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5425,6 +5849,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_Print : public FRigVMDispatchFactory
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5435,6 +5860,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_SelectInt32 : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5445,6 +5871,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigVMDispatch_SwitchInt32 : public FRigVMDispatch_CoreBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5455,6 +5882,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_ControlFlowBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5465,22 +5893,24 @@ public:
 /// Size: 0x03E8 (0x000008 - 0x0003F0)
 class FRigVMFunction_ControlFlowBranch : public FRigVMFunction_ControlFlowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      ExecuteContext                                              OFFSET(getStruct<T>, {0x10, 240, 0, 0})
 	DMember(bool)                                      Condition                                                   OFFSET(get<bool>, {0x100, 1, 0, 0})
-	SMember(FRigVMExecuteContext)                      TRUE_                                                       OFFSET(get<T>, {0x110, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      FALSE_                                                      OFFSET(get<T>, {0x200, 240, 0, 0})
-	SMember(FRigVMExecuteContext)                      Completed                                                   OFFSET(get<T>, {0x2F0, 240, 0, 0})
-	SMember(FName)                                     BlockToRun                                                  OFFSET(get<T>, {0x3E0, 4, 0, 0})
+	SMember(FRigVMExecuteContext)                      TRUE_                                                       OFFSET(getStruct<T>, {0x110, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      FALSE_                                                      OFFSET(getStruct<T>, {0x200, 240, 0, 0})
+	SMember(FRigVMExecuteContext)                      Completed                                                   OFFSET(getStruct<T>, {0x2F0, 240, 0, 0})
+	SMember(FName)                                     BlockToRun                                                  OFFSET(getStruct<T>, {0x3E0, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NameBase
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_NameBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5491,54 +5921,58 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_NameConcat : public FRigVMFunction_NameBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     A                                                           OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     B                                                           OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     A                                                           OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     B                                                           OFFSET(getStruct<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NameTruncate
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_NameTruncate : public FRigVMFunction_NameBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(bool)                                      FromEnd                                                     OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FName)                                     Remainder                                                   OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FName)                                     Chopped                                                     OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     Remainder                                                   OFFSET(getStruct<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     Chopped                                                     OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_NameReplace
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_NameReplace : public FRigVMFunction_NameBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Old                                                         OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FName)                                     New                                                         OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FName)                                     Result                                                      OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Old                                                         OFFSET(getStruct<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     New                                                         OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     Result                                                      OFFSET(getStruct<T>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_EndsWith
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_EndsWith : public FRigVMFunction_NameBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Ending                                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Ending                                                      OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
@@ -5546,12 +5980,13 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_StartsWith : public FRigVMFunction_NameBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Start                                                       OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Start                                                       OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
@@ -5559,12 +5994,13 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_Contains : public FRigVMFunction_NameBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     Search                                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Search                                                      OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
@@ -5572,6 +6008,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_StringBase : public FRigVMStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5582,54 +6019,58 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_StringConcat : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   A                                                           OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   B                                                           OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   A                                                           OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   B                                                           OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringTruncate
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FRigVMFunction_StringTruncate : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	DMember(bool)                                      FromEnd                                                     OFFSET(get<bool>, {0x1C, 1, 0, 0})
-	SMember(FString)                                   Remainder                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   Chopped                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Remainder                                                   OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Chopped                                                     OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringReplace
 /// Size: 0x0040 (0x000008 - 0x000048)
 class FRigVMFunction_StringReplace : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Old                                                         OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   New                                                         OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Old                                                         OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   New                                                         OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringEndsWith
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringEndsWith : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Ending                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Ending                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
@@ -5637,12 +6078,13 @@ public:
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringStartsWith : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Start                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Start                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
@@ -5650,12 +6092,13 @@ public:
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringContains : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Search                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Search                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      Result                                                      OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
@@ -5663,11 +6106,12 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_StringLength : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   Length                                                      OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
@@ -5675,100 +6119,108 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_StringTrimWhitespace : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringToUppercase
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_StringToUppercase : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringToLowercase
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_StringToLowercase : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringReverse
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_StringReverse : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Reverse                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Reverse                                                     OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringLeft
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringLeft : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringRight
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringRight : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringMiddle
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringMiddle : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   Start                                                       OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	DMember(int32_t)                                   Count                                                       OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringFind
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_StringFind : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Search                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Search                                                      OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      Found                                                       OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 };
@@ -5777,12 +6229,13 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_StringSplit : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Separator                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   Separator                                                   OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(TArray<FString>)                           Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
@@ -5790,32 +6243,35 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_StringJoin : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(TArray<FString>)                           Values                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FString)                                   Separator                                                   OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Separator                                                   OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_StringPadInteger
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_StringPadInteger : public FRigVMFunction_StringBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   Digits                                                      OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FString)                                   Result                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Result                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigDispatch_ToString
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigDispatch_ToString : public FRigVMDispatchFactory
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5826,6 +6282,7 @@ public:
 /// Size: 0x0000 (0x000070 - 0x000070)
 class FRigDispatch_FromString : public FRigVMDispatchFactory
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -5836,6 +6293,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FRigVMFunction_AccumulateBase : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5846,6 +6304,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_AccumulateFloatAdd : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5862,15 +6321,16 @@ public:
 /// Size: 0x0070 (0x000008 - 0x000078)
 class FRigVMFunction_AccumulateVectorAdd : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Increment                                                   OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Increment                                                   OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedValue                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedValue                                            OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
@@ -5878,6 +6338,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_AccumulateFloatMul : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5894,15 +6355,16 @@ public:
 /// Size: 0x0070 (0x000008 - 0x000078)
 class FRigVMFunction_AccumulateVectorMul : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Multiplier                                                  OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Multiplier                                                  OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedValue                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedValue                                            OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
@@ -5910,16 +6372,17 @@ public:
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_AccumulateQuatMul : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FQuat)                                     Multiplier                                                  OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     InitialValue                                                OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Multiplier                                                  OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     InitialValue                                                OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(bool)                                      bFlipOrder                                                  OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x51, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FQuat)                                     AccumulatedValue                                            OFFSET(get<T>, {0x80, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x60, 32, 0, 0})
+	SMember(FQuat)                                     AccumulatedValue                                            OFFSET(getStruct<T>, {0x80, 32, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
@@ -5927,16 +6390,17 @@ public:
 /// Size: 0x01A8 (0x000008 - 0x0001B0)
 class FRigVMFunction_AccumulateTransformMul : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FTransform)                                Multiplier                                                  OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                InitialValue                                                OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                Multiplier                                                  OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                InitialValue                                                OFFSET(getStruct<T>, {0x70, 96, 0, 0})
 	DMember(bool)                                      bFlipOrder                                                  OFFSET(get<bool>, {0xD0, 1, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0xD1, 1, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
-	SMember(FTransform)                                AccumulatedValue                                            OFFSET(get<T>, {0x140, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                AccumulatedValue                                            OFFSET(getStruct<T>, {0x140, 96, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
@@ -5944,6 +6408,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRigVMFunction_AccumulateFloatLerp : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -5961,16 +6426,17 @@ public:
 /// Size: 0x0070 (0x000008 - 0x000078)
 class FRigVMFunction_AccumulateVectorLerp : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   TargetValue                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   InitialValue                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   TargetValue                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   InitialValue                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x3C, 1, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedValue                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedValue                                            OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
 
@@ -5978,16 +6444,17 @@ public:
 /// Size: 0x00A8 (0x000008 - 0x0000B0)
 class FRigVMFunction_AccumulateQuatLerp : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FQuat)                                     TargetValue                                                 OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     InitialValue                                                OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     TargetValue                                                 OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     InitialValue                                                OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0x54, 1, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FQuat)                                     AccumulatedValue                                            OFFSET(get<T>, {0x80, 32, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x60, 32, 0, 0})
+	SMember(FQuat)                                     AccumulatedValue                                            OFFSET(getStruct<T>, {0x80, 32, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
@@ -5995,16 +6462,17 @@ public:
 /// Size: 0x01A8 (0x000008 - 0x0001B0)
 class FRigVMFunction_AccumulateTransformLerp : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FTransform)                                TargetValue                                                 OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                InitialValue                                                OFFSET(get<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                TargetValue                                                 OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                InitialValue                                                OFFSET(getStruct<T>, {0x70, 96, 0, 0})
 	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0xD0, 4, 0, 0})
 	DMember(bool)                                      bIntegrateDeltaTime                                         OFFSET(get<bool>, {0xD4, 1, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0xE0, 96, 0, 0})
-	SMember(FTransform)                                AccumulatedValue                                            OFFSET(get<T>, {0x140, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0xE0, 96, 0, 0})
+	SMember(FTransform)                                AccumulatedValue                                            OFFSET(getStruct<T>, {0x140, 96, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1A0, 1, 0, 0})
 };
 
@@ -6012,6 +6480,7 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_AccumulateFloatRange : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -6028,15 +6497,16 @@ public:
 /// Size: 0x0080 (0x000008 - 0x000088)
 class FRigVMFunction_AccumulateVectorRange : public FRigVMFunction_AccumulateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Minimum                                                     OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Maximum                                                     OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedMinimum                                          OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedMaximum                                          OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Minimum                                                     OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Maximum                                                     OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedMinimum                                          OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedMaximum                                          OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x80, 1, 0, 0})
 };
 
@@ -6044,6 +6514,7 @@ public:
 /// Size: 0x0070 (0x000008 - 0x000078)
 class FRigVMFunction_AlphaInterp : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
@@ -6052,8 +6523,8 @@ public:
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     Bias                                                        OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bMapRange                                                   OFFSET(get<bool>, {0x14, 1, 0, 0})
-	SMember(FInputRange)                               InRange                                                     OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FInputRange)                               OutRange                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FInputRange)                               InRange                                                     OFFSET(getStruct<T>, {0x18, 8, 0, 0})
+	SMember(FInputRange)                               OutRange                                                    OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 	DMember(bool)                                      bClampResult                                                OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(float)                                     ClampMin                                                    OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(float)                                     ClampMax                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
@@ -6061,61 +6532,64 @@ public:
 	DMember(float)                                     InterpSpeedIncreasing                                       OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     InterpSpeedDecreasing                                       OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Result                                                      OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(get<T>, {0x44, 48, 0, 0})
+	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(getStruct<T>, {0x44, 48, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AlphaInterpVector
 /// Size: 0x0098 (0x000008 - 0x0000A0)
 class FRigVMFunction_AlphaInterpVector : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     Bias                                                        OFFSET(get<float>, {0x24, 4, 0, 0})
 	DMember(bool)                                      bMapRange                                                   OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FInputRange)                               InRange                                                     OFFSET(get<T>, {0x2C, 8, 0, 0})
-	SMember(FInputRange)                               OutRange                                                    OFFSET(get<T>, {0x34, 8, 0, 0})
+	SMember(FInputRange)                               InRange                                                     OFFSET(getStruct<T>, {0x2C, 8, 0, 0})
+	SMember(FInputRange)                               OutRange                                                    OFFSET(getStruct<T>, {0x34, 8, 0, 0})
 	DMember(bool)                                      bClampResult                                                OFFSET(get<bool>, {0x3C, 1, 0, 0})
 	DMember(float)                                     ClampMin                                                    OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(float)                                     ClampMax                                                    OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(bool)                                      bInterpResult                                               OFFSET(get<bool>, {0x48, 1, 0, 0})
 	DMember(float)                                     InterpSpeedIncreasing                                       OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     InterpSpeedDecreasing                                       OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(get<T>, {0x70, 48, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(getStruct<T>, {0x70, 48, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_AlphaInterpQuat
 /// Size: 0x00B8 (0x000008 - 0x0000C0)
 class FRigVMFunction_AlphaInterpQuat : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     Bias                                                        OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(bool)                                      bMapRange                                                   OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FInputRange)                               InRange                                                     OFFSET(get<T>, {0x3C, 8, 0, 0})
-	SMember(FInputRange)                               OutRange                                                    OFFSET(get<T>, {0x44, 8, 0, 0})
+	SMember(FInputRange)                               InRange                                                     OFFSET(getStruct<T>, {0x3C, 8, 0, 0})
+	SMember(FInputRange)                               OutRange                                                    OFFSET(getStruct<T>, {0x44, 8, 0, 0})
 	DMember(bool)                                      bClampResult                                                OFFSET(get<bool>, {0x4C, 1, 0, 0})
 	DMember(float)                                     ClampMin                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     ClampMax                                                    OFFSET(get<float>, {0x54, 4, 0, 0})
 	DMember(bool)                                      bInterpResult                                               OFFSET(get<bool>, {0x58, 1, 0, 0})
 	DMember(float)                                     InterpSpeedIncreasing                                       OFFSET(get<float>, {0x5C, 4, 0, 0})
 	DMember(float)                                     InterpSpeedDecreasing                                       OFFSET(get<float>, {0x60, 4, 0, 0})
-	SMember(FQuat)                                     Result                                                      OFFSET(get<T>, {0x70, 32, 0, 0})
-	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(get<T>, {0x90, 48, 0, 0})
+	SMember(FQuat)                                     Result                                                      OFFSET(getStruct<T>, {0x70, 32, 0, 0})
+	SMember(FInputScaleBiasClamp)                      ScaleBiasClamp                                              OFFSET(getStruct<T>, {0x90, 48, 0, 0})
 };
 
 /// Struct /Script/RigVM.RigVMFunction_DeltaFromPreviousFloat
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FRigVMFunction_DeltaFromPreviousFloat : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -6131,14 +6605,15 @@ public:
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_DeltaFromPreviousVector : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Delta                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PreviousValue                                               OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Cache                                                       OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Delta                                                       OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PreviousValue                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Cache                                                       OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
@@ -6146,14 +6621,15 @@ public:
 /// Size: 0x0098 (0x000008 - 0x0000A0)
 class FRigVMFunction_DeltaFromPreviousQuat : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FQuat)                                     Value                                                       OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FQuat)                                     Delta                                                       OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FQuat)                                     PreviousValue                                               OFFSET(get<T>, {0x50, 32, 0, 0})
-	SMember(FQuat)                                     Cache                                                       OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FQuat)                                     Value                                                       OFFSET(getStruct<T>, {0x10, 32, 0, 0})
+	SMember(FQuat)                                     Delta                                                       OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     PreviousValue                                               OFFSET(getStruct<T>, {0x50, 32, 0, 0})
+	SMember(FQuat)                                     Cache                                                       OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x90, 1, 0, 0})
 };
 
@@ -6161,14 +6637,15 @@ public:
 /// Size: 0x0198 (0x000008 - 0x0001A0)
 class FRigVMFunction_DeltaFromPreviousTransform : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FTransform)                                Delta                                                       OFFSET(get<T>, {0x70, 96, 0, 0})
-	SMember(FTransform)                                PreviousValue                                               OFFSET(get<T>, {0xD0, 96, 0, 0})
-	SMember(FTransform)                                Cache                                                       OFFSET(get<T>, {0x130, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Delta                                                       OFFSET(getStruct<T>, {0x70, 96, 0, 0})
+	SMember(FTransform)                                PreviousValue                                               OFFSET(getStruct<T>, {0xD0, 96, 0, 0})
+	SMember(FTransform)                                Cache                                                       OFFSET(getStruct<T>, {0x130, 96, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x190, 1, 0, 0})
 };
 
@@ -6176,6 +6653,7 @@ public:
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FRigVMFunction_KalmanFloat : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -6191,13 +6669,14 @@ public:
 /// Size: 0x0050 (0x000008 - 0x000058)
 class FRigVMFunction_KalmanVector : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	CMember(TArray<FVector>)                           Buffer                                                      OFFSET(get<T>, {0x40, 16, 0, 0})
 	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x50, 4, 0, 0})
 };
@@ -6206,13 +6685,14 @@ public:
 /// Size: 0x00F8 (0x000008 - 0x000100)
 class FRigVMFunction_KalmanTransform : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x80, 96, 0, 0})
 	CMember(TArray<FTransform>)                        Buffer                                                      OFFSET(get<T>, {0xE0, 16, 0, 0})
 	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0xF0, 4, 0, 0})
 };
@@ -6221,6 +6701,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FRigVMFunction_Timeline : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -6235,6 +6716,7 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FRigVMFunction_TimeLoop : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -6256,6 +6738,7 @@ public:
 /// Size: 0x0040 (0x000008 - 0x000048)
 class FRigVMFunction_TimeOffsetFloat : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -6275,15 +6758,16 @@ public:
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FRigVMFunction_TimeOffsetVector : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     SecondsAgo                                                  OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x24, 4, 0, 0})
 	DMember(float)                                     TimeRange                                                   OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FVector)                                   Result                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Result                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(TArray<FVector>)                           Buffer                                                      OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<float>)                             DeltaTimes                                                  OFFSET(get<T>, {0x58, 16, 0, 0})
 	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x68, 4, 0, 0})
@@ -6294,15 +6778,16 @@ public:
 /// Size: 0x0108 (0x000008 - 0x000110)
 class FRigVMFunction_TimeOffsetTransform : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FTransform)                                Value                                                       OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                Value                                                       OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(float)                                     SecondsAgo                                                  OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(int32_t)                                   BufferSize                                                  OFFSET(get<int32_t>, {0x74, 4, 0, 0})
 	DMember(float)                                     TimeRange                                                   OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FTransform)                                Result                                                      OFFSET(get<T>, {0x80, 96, 0, 0})
+	SMember(FTransform)                                Result                                                      OFFSET(getStruct<T>, {0x80, 96, 0, 0})
 	CMember(TArray<FTransform>)                        Buffer                                                      OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(TArray<float>)                             DeltaTimes                                                  OFFSET(get<T>, {0xF0, 16, 0, 0})
 	DMember(int32_t)                                   LastInsertIndex                                             OFFSET(get<int32_t>, {0x100, 4, 0, 0})
@@ -6313,19 +6798,20 @@ public:
 /// Size: 0x00D0 (0x000008 - 0x0000D8)
 class FRigVMFunction_VerletIntegrateVector : public FRigVMFunction_SimBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FVector)                                   Target                                                      OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Target                                                      OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     Damp                                                        OFFSET(get<float>, {0x24, 4, 0, 0})
 	DMember(float)                                     Blend                                                       OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FVector)                                   Force                                                       OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   Acceleration                                                OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FRigVMSimPoint)                            Point                                                       OFFSET(get<T>, {0x90, 64, 0, 0})
+	SMember(FVector)                                   Force                                                       OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Acceleration                                                OFFSET(getStruct<T>, {0x78, 24, 0, 0})
+	SMember(FRigVMSimPoint)                            Point                                                       OFFSET(getStruct<T>, {0x90, 64, 0, 0})
 	DMember(bool)                                      bInitialized                                                OFFSET(get<bool>, {0xD0, 1, 0, 0})
 };
 

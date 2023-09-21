@@ -29,8 +29,9 @@ public:
 
 /// Struct /Script/MeshDescription.ElementID
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FElementID : public MDKStruct
+class FElementID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -42,6 +43,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FVertexID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -52,6 +54,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FVertexInstanceID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -62,6 +65,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FEdgeID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -72,6 +76,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FUVID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -82,6 +87,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FTriangleID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -92,6 +98,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FPolygonGroupID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -102,6 +109,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FPolygonID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -112,6 +120,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FBoneID : public FElementID
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 

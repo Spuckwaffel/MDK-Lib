@@ -20,7 +20,7 @@ class AGCNL_Irwin_Player_Prey_Nug_Float_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2464;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          FloatSound                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 
 
@@ -53,7 +53,7 @@ class AGCNL_Irwin_Slide_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(USoundBase*)                               SlideSound                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          SlidingSoundComponent                                       OFFSET(get<T>, {0x9A0, 8, 0, 0})
 
@@ -117,7 +117,7 @@ class AGCN_BurtCharging_Player_Latent_C : public AFortGameplayCueNotify_BurstLat
 	static inline constexpr uint64_t __MDKClassSize = 1400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	CMember(APlayerController*)                        GCPlayerController                                          OFFSET(get<T>, {0x550, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          FortPlayerPawn                                              OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(USoundBase*)                               BoostSound                                                  OFFSET(get<T>, {0x560, 8, 0, 0})
@@ -144,14 +144,14 @@ class AGCNL_PlayerIsRiding_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2656;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(USoundBase*)                               RidingSoundLoop                                             OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          RidingSoundLoopComp                                         OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	SMember(FTimerHandle)                              VelocityTimerHandle                                         OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	SMember(FTimerHandle)                              VelocityTimerHandle                                         OFFSET(getStruct<T>, {0x9A8, 8, 0, 0})
 	CMember(AActor*)                                   Player                                                      OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(double)                                    Speed                                                       OFFSET(get<double>, {0x9B8, 8, 0, 0})
 	CMember(TEnumAsByte<EFortTeamAffiliation>)         TeamAffiliation                                             OFFSET(get<T>, {0x9C0, 1, 0, 0})
-	SMember(FVector)                                   Previous                                                    OFFSET(get<T>, {0x9C8, 24, 0, 0})
+	SMember(FVector)                                   Previous                                                    OFFSET(getStruct<T>, {0x9C8, 24, 0, 0})
 	CMember(USoundBase*)                               Enemy_RidingSoundLoop                                       OFFSET(get<T>, {0x9E0, 8, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    As_Fort_Player_Pawn_Athena                                  OFFSET(get<T>, {0x9E8, 8, 0, 0})
 	DMember(double)                                    JumpParamTarget                                             OFFSET(get<double>, {0x9F0, 8, 0, 0})
@@ -159,9 +159,9 @@ public:
 	DMember(bool)                                      bIsFalling                                                  OFFSET(get<bool>, {0xA00, 1, 0, 0})
 	DMember(bool)                                      bCanResetJump                                               OFFSET(get<bool>, {0xA01, 1, 0, 0})
 	CMember(UPawnMovementComponent*)                   CreatureMovementComponent                                   OFFSET(get<T>, {0xA08, 8, 0, 0})
-	SMember(FTimerHandle)                              JumpResetTimerHandle                                        OFFSET(get<T>, {0xA10, 8, 0, 0})
+	SMember(FTimerHandle)                              JumpResetTimerHandle                                        OFFSET(getStruct<T>, {0xA10, 8, 0, 0})
 	DMember(double)                                    JumpPitchInterpSpeed                                        OFFSET(get<double>, {0xA18, 8, 0, 0})
-	SMember(FCurveTableRowHandle)                      RidingCurveTable                                            OFFSET(get<T>, {0xA20, 16, 0, 0})
+	SMember(FCurveTableRowHandle)                      RidingCurveTable                                            OFFSET(getStruct<T>, {0xA20, 16, 0, 0})
 	DMember(double)                                    BoarSprintSpeed                                             OFFSET(get<double>, {0xA30, 8, 0, 0})
 	DMember(double)                                    CurrentVelocity                                             OFFSET(get<double>, {0xA38, 8, 0, 0})
 	DMember(double)                                    MaxNormalRunSpeed                                           OFFSET(get<double>, {0xA40, 8, 0, 0})
@@ -225,7 +225,7 @@ class AGCNL_Riding_Sprint_CameraShake_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2480;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(AFortPlayerController*)                    FortPlayerController                                        OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UCameraShakeBase*)                         FOVFlare                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UCameraShakeBase*)                         ShakeNoise                                                  OFFSET(get<T>, {0x9A8, 8, 0, 0})
@@ -248,7 +248,7 @@ class AGCNL_RidingSprint_SpeedLines_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(USoundBase*)                               SpeedLinesAudio                                             OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          SpeedlinesAudioComp                                         OFFSET(get<T>, {0x9A0, 8, 0, 0})
 
@@ -270,8 +270,8 @@ class AGCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C : public AFortGam
 	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	SMember(FGameplayTag)                              TacticalSprintTag                                           OFFSET(get<T>, {0x998, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
+	SMember(FGameplayTag)                              TacticalSprintTag                                           OFFSET(getStruct<T>, {0x998, 4, 0, 0})
 	CMember(UFXSystemComponent*)                       MainNS                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
 
 
@@ -334,8 +334,8 @@ class UGCN_Burst_LandOnRail_C : public UFortGameplayCueNotify_Burst
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FGameplayTag)                              JumpLand                                                    OFFSET(get<T>, {0x218, 4, 0, 0})
-	SMember(FGameplayTag)                              StartLand                                                   OFFSET(get<T>, {0x21C, 4, 0, 0})
+	SMember(FGameplayTag)                              JumpLand                                                    OFFSET(getStruct<T>, {0x218, 4, 0, 0})
+	SMember(FGameplayTag)                              StartLand                                                   OFFSET(getStruct<T>, {0x21C, 4, 0, 0})
 
 
 	/// Functions
@@ -351,7 +351,7 @@ class AGCNL_Grinding_C : public AFortGameplayCueNotifyLoop_Grinding
 	static inline constexpr uint64_t __MDKClassSize = 2993;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB20, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB20, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             FortSoundIndicator                                          OFFSET(get<T>, {0xB28, 8, 0, 0})
 	DMember(float)                                     AlphaCurve_AlphaCurve_9B7371B340D33525AE3B1686831C0FC6      OFFSET(get<float>, {0xB30, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           AlphaCurve__Direction_9B7371B340D33525AE3B1686831C0FC6      OFFSET(get<T>, {0xB34, 1, 0, 0})
@@ -414,7 +414,7 @@ class AGCNL_GrindSprinting_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2472;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          BoostAudio                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          BoostEndAudio                                               OFFSET(get<T>, {0x9A0, 8, 0, 0})
 
@@ -456,11 +456,11 @@ class AGCNL_Athena_VictoryCrown_CrownWearer_Looping_C : public AFortGameplayCueN
 	static inline constexpr uint64_t __MDKClassSize = 2768;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA48, 8, 0, 0})
-	SMember(FScalableFloat)                            Audio_Vizualizer_Shown_On_Wearer_                           OFFSET(get<T>, {0xA50, 40, 0, 0})
-	SMember(FScalableFloat)                            Audio_Vizualizer_Range                                      OFFSET(get<T>, {0xA78, 40, 0, 0})
-	SMember(FScalableFloat)                            Audio_Vizualizer_Ping_Frequency                             OFFSET(get<T>, {0xAA0, 40, 0, 0})
-	SMember(FTimerHandle)                              timer_handle                                                OFFSET(get<T>, {0xAC8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA48, 8, 0, 0})
+	SMember(FScalableFloat)                            Audio_Vizualizer_Shown_On_Wearer_                           OFFSET(getStruct<T>, {0xA50, 40, 0, 0})
+	SMember(FScalableFloat)                            Audio_Vizualizer_Range                                      OFFSET(getStruct<T>, {0xA78, 40, 0, 0})
+	SMember(FScalableFloat)                            Audio_Vizualizer_Ping_Frequency                             OFFSET(getStruct<T>, {0xAA0, 40, 0, 0})
+	SMember(FTimerHandle)                              timer_handle                                                OFFSET(getStruct<T>, {0xAC8, 8, 0, 0})
 
 
 	/// Functions
@@ -482,14 +482,14 @@ class AGCNL_Ascender_Ascent_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2544;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(double)                                    MinCamShakeAmp                                              OFFSET(get<double>, {0x9A0, 8, 0, 0})
 	DMember(double)                                    MaxCamShakeAmp                                              OFFSET(get<double>, {0x9A8, 8, 0, 0})
 	DMember(double)                                    MinCamShakeFreq                                             OFFSET(get<double>, {0x9B0, 8, 0, 0})
 	DMember(double)                                    MaxCamShakeFreq                                             OFFSET(get<double>, {0x9B8, 8, 0, 0})
 	CMember(ULegacyCameraShake*)                       matineeCamShake                                             OFFSET(get<T>, {0x9C0, 8, 0, 0})
-	SMember(FScalableFloat)                            MaxAscenderSpeed                                            OFFSET(get<T>, {0x9C8, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAscenderSpeed                                            OFFSET(getStruct<T>, {0x9C8, 40, 0, 0})
 
 
 	/// Functions
@@ -559,8 +559,8 @@ class AGCNL_Ascender_Descent_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2488;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	SMember(FTimerHandle)                              SoundVisualizerHandle                                       OFFSET(get<T>, {0x998, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
+	SMember(FTimerHandle)                              SoundVisualizerHandle                                       OFFSET(getStruct<T>, {0x998, 8, 0, 0})
 	CMember(AActor*)                                   My_Target                                                   OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
 	CMember(UTexture*)                                 Override_Icon                                               OFFSET(get<T>, {0x9B0, 8, 0, 0})
@@ -585,8 +585,8 @@ class AGCN_MMObj_RadioTower_NotificationSuccess_C : public AFortGameplayCueNotif
 	static inline constexpr uint64_t __MDKClassSize = 1364;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
-	SMember(FGameplayTag)                              SuccessNotificationTag                                      OFFSET(get<T>, {0x550, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
+	SMember(FGameplayTag)                              SuccessNotificationTag                                      OFFSET(getStruct<T>, {0x550, 4, 0, 0})
 
 
 	/// Functions

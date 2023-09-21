@@ -37,7 +37,7 @@ class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(get<T>, {0x30, 944, 0, 0})
+	SMember(FButtonStyle)                              ButtonStyle                                                 OFFSET(getStruct<T>, {0x30, 944, 0, 0})
 };
 
 /// Class /Script/Slate.CheckBoxWidgetStyle
@@ -48,7 +48,7 @@ class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 2624;
 
 public:
-	SMember(FCheckBoxStyle)                            CheckBoxStyle                                               OFFSET(get<T>, {0x30, 2576, 0, 0})
+	SMember(FCheckBoxStyle)                            CheckBoxStyle                                               OFFSET(getStruct<T>, {0x30, 2576, 0, 0})
 };
 
 /// Class /Script/Slate.ComboBoxWidgetStyle
@@ -59,7 +59,7 @@ class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1584;
 
 public:
-	SMember(FComboBoxStyle)                            ComboBoxStyle                                               OFFSET(get<T>, {0x30, 1536, 0, 0})
+	SMember(FComboBoxStyle)                            ComboBoxStyle                                               OFFSET(getStruct<T>, {0x30, 1536, 0, 0})
 };
 
 /// Class /Script/Slate.ComboButtonWidgetStyle
@@ -70,7 +70,7 @@ class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1488;
 
 public:
-	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(get<T>, {0x30, 1440, 0, 0})
+	SMember(FComboButtonStyle)                         ComboButtonStyle                                            OFFSET(getStruct<T>, {0x30, 1440, 0, 0})
 };
 
 /// Class /Script/Slate.EditableTextBoxWidgetStyle
@@ -81,7 +81,7 @@ class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 3504;
 
 public:
-	SMember(FEditableTextBoxStyle)                     EditableTextBoxStyle                                        OFFSET(get<T>, {0x30, 3456, 0, 0})
+	SMember(FEditableTextBoxStyle)                     EditableTextBoxStyle                                        OFFSET(getStruct<T>, {0x30, 3456, 0, 0})
 };
 
 /// Class /Script/Slate.EditableTextWidgetStyle
@@ -92,7 +92,7 @@ class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FEditableTextStyle)                        EditableTextStyle                                           OFFSET(get<T>, {0x30, 704, 0, 0})
+	SMember(FEditableTextStyle)                        EditableTextStyle                                           OFFSET(getStruct<T>, {0x30, 704, 0, 0})
 };
 
 /// Class /Script/Slate.ProgressWidgetStyle
@@ -103,7 +103,7 @@ class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	SMember(FProgressBarStyle)                         ProgressBarStyle                                            OFFSET(get<T>, {0x30, 608, 0, 0})
+	SMember(FProgressBarStyle)                         ProgressBarStyle                                            OFFSET(getStruct<T>, {0x30, 608, 0, 0})
 };
 
 /// Class /Script/Slate.ScrollBarWidgetStyle
@@ -114,7 +114,7 @@ class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1808;
 
 public:
-	SMember(FScrollBarStyle)                           ScrollBarStyle                                              OFFSET(get<T>, {0x30, 1760, 0, 0})
+	SMember(FScrollBarStyle)                           ScrollBarStyle                                              OFFSET(getStruct<T>, {0x30, 1760, 0, 0})
 };
 
 /// Class /Script/Slate.ScrollBoxWidgetStyle
@@ -125,7 +125,7 @@ class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FScrollBoxStyle)                           ScrollBoxStyle                                              OFFSET(get<T>, {0x30, 816, 0, 0})
+	SMember(FScrollBoxStyle)                           ScrollBoxStyle                                              OFFSET(getStruct<T>, {0x30, 816, 0, 0})
 };
 
 /// Class /Script/Slate.SpinBoxWidgetStyle
@@ -136,7 +136,7 @@ class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 1472;
 
 public:
-	SMember(FSpinBoxStyle)                             SpinBoxStyle                                                OFFSET(get<T>, {0x30, 1424, 0, 0})
+	SMember(FSpinBoxStyle)                             SpinBoxStyle                                                OFFSET(getStruct<T>, {0x30, 1424, 0, 0})
 };
 
 /// Class /Script/Slate.TextBlockWidgetStyle
@@ -147,13 +147,14 @@ class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	SMember(FTextBlockStyle)                           TextBlockStyle                                              OFFSET(get<T>, {0x30, 784, 0, 0})
+	SMember(FTextBlockStyle)                           TextBlockStyle                                              OFFSET(getStruct<T>, {0x30, 784, 0, 0})
 };
 
 /// Struct /Script/Slate.VirtualKeyboardOptions
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FVirtualKeyboardOptions : public MDKStruct
+class FVirtualKeyboardOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -163,13 +164,14 @@ public:
 
 /// Struct /Script/Slate.InputChord
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FInputChord : public MDKStruct
+class FInputChord : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      bShift                                                      OFFSET(get<bool>, {0x18, 1, 1, 0})
 	DMember(bool)                                      bCtrl                                                       OFFSET(get<bool>, {0x18, 1, 1, 1})
 	DMember(bool)                                      bAlt                                                        OFFSET(get<bool>, {0x18, 1, 1, 2})
@@ -178,20 +180,22 @@ public:
 
 /// Struct /Script/Slate.Anchors
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FAnchors : public MDKStruct
+class FAnchors : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector2D)                                 Minimum                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 Maximum                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 Minimum                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 Maximum                                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Slate.CharRange
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCharRange : public MDKStruct
+class FCharRange : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -202,8 +206,9 @@ public:
 
 /// Struct /Script/Slate.CharRangeList
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCharRangeList : public MDKStruct
+class FCharRangeList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -213,8 +218,9 @@ public:
 
 /// Struct /Script/Slate.CustomizedToolMenuEntry
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCustomizedToolMenuEntry : public MDKStruct
+class FCustomizedToolMenuEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -224,8 +230,9 @@ public:
 
 /// Struct /Script/Slate.CustomizedToolMenuSection
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCustomizedToolMenuSection : public MDKStruct
+class FCustomizedToolMenuSection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -235,8 +242,9 @@ public:
 
 /// Struct /Script/Slate.CustomizedToolMenuNameArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCustomizedToolMenuNameArray : public MDKStruct
+class FCustomizedToolMenuNameArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -246,13 +254,14 @@ public:
 
 /// Struct /Script/Slate.CustomizedToolMenu
 /// Size: 0x0200 (0x000000 - 0x000200)
-class FCustomizedToolMenu : public MDKStruct
+class FCustomizedToolMenu : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TMap<FName, FCustomizedToolMenuEntry>)     Entries                                                     OFFSET(get<T>, {0x8, 80, 0, 0})
 	CMember(TMap<FName, FCustomizedToolMenuSection>)   Sections                                                    OFFSET(get<T>, {0x58, 80, 0, 0})
 	CMember(TMap<FName, FCustomizedToolMenuNameArray>) EntryOrder                                                  OFFSET(get<T>, {0xA8, 80, 0, 0})

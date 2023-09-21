@@ -38,8 +38,8 @@ class UEOSSettings : public URuntimeOptionsBase
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   CacheDir                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   DefaultArtifactName                                         OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   CacheDir                                                    OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DefaultArtifactName                                         OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	DMember(int32_t)                                   TickBudgetInMilliseconds                                    OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 	DMember(bool)                                      bEnableOverlay                                              OFFSET(get<bool>, {0x5C, 1, 0, 0})
 	DMember(bool)                                      bEnableSocialOverlay                                        OFFSET(get<bool>, {0x5D, 1, 0, 0})
@@ -59,18 +59,19 @@ public:
 
 /// Struct /Script/OnlineSubsystemEOS.ArtifactSettings
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FArtifactSettings : public MDKStruct
+class FArtifactSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   ArtifactName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ClientId                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   ClientSecret                                                OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   ProductId                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   SandboxId                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   DeploymentId                                                OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FString)                                   ClientEncryptionKey                                         OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   ArtifactName                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ClientId                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ClientSecret                                                OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ProductId                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   SandboxId                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   DeploymentId                                                OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   ClientEncryptionKey                                         OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 };
 

@@ -36,9 +36,9 @@ class URetargetChainSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FName)                                     SourceChain                                                 OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     TargetChain                                                 OFFSET(get<T>, {0x2C, 4, 0, 0})
-	SMember(FTargetChainSettings)                      Settings                                                    OFFSET(get<T>, {0x30, 168, 0, 0})
+	SMember(FName)                                     SourceChain                                                 OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     TargetChain                                                 OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
+	SMember(FTargetChainSettings)                      Settings                                                    OFFSET(getStruct<T>, {0x30, 168, 0, 0})
 };
 
 /// Class /Script/IKRig.RetargetRootSettings
@@ -49,7 +49,7 @@ class URetargetRootSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FTargetRootSettings)                       Settings                                                    OFFSET(get<T>, {0x28, 104, 0, 0})
+	SMember(FTargetRootSettings)                       Settings                                                    OFFSET(getStruct<T>, {0x28, 104, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRetargetGlobalSettings
@@ -60,7 +60,7 @@ class UIKRetargetGlobalSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FRetargetGlobalSettings)                   Settings                                                    OFFSET(get<T>, {0x28, 28, 0, 0})
+	SMember(FRetargetGlobalSettings)                   Settings                                                    OFFSET(getStruct<T>, {0x28, 28, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRetargeter
@@ -78,13 +78,13 @@ public:
 	CMember(URetargetRootSettings*)                    RootSettings                                                OFFSET(get<T>, {0x88, 8, 0, 0})
 	CMember(UIKRetargetGlobalSettings*)                GlobalSettings                                              OFFSET(get<T>, {0x90, 8, 0, 0})
 	CMember(TMap<FName, FRetargetProfile>)             Profiles                                                    OFFSET(get<T>, {0x98, 80, 0, 0})
-	SMember(FName)                                     CurrentProfile                                              OFFSET(get<T>, {0xE8, 4, 0, 0})
+	SMember(FName)                                     CurrentProfile                                              OFFSET(getStruct<T>, {0xE8, 4, 0, 0})
 	CMember(TMap<FName, FIKRetargetPose>)              SourceRetargetPoses                                         OFFSET(get<T>, {0xF0, 80, 0, 0})
 	CMember(TMap<FName, FIKRetargetPose>)              TargetRetargetPoses                                         OFFSET(get<T>, {0x140, 80, 0, 0})
-	SMember(FName)                                     CurrentSourceRetargetPose                                   OFFSET(get<T>, {0x190, 4, 0, 0})
-	SMember(FName)                                     CurrentTargetRetargetPose                                   OFFSET(get<T>, {0x194, 4, 0, 0})
+	SMember(FName)                                     CurrentSourceRetargetPose                                   OFFSET(getStruct<T>, {0x190, 4, 0, 0})
+	SMember(FName)                                     CurrentTargetRetargetPose                                   OFFSET(getStruct<T>, {0x194, 4, 0, 0})
 	CMember(TMap<FName, FIKRetargetPose>)              RetargetPoses                                               OFFSET(get<T>, {0x198, 80, 0, 0})
-	SMember(FName)                                     CurrentRetargetPose                                         OFFSET(get<T>, {0x1E8, 4, 0, 0})
+	SMember(FName)                                     CurrentRetargetPose                                         OFFSET(getStruct<T>, {0x1E8, 4, 0, 0})
 
 
 	/// Functions
@@ -135,12 +135,12 @@ class UIKRigEffectorGoal : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	DMember(float)                                     PositionAlpha                                               OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     RotationAlpha                                               OFFSET(get<float>, {0x34, 4, 0, 0})
-	SMember(FTransform)                                CurrentTransform                                            OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0xA0, 96, 0, 0})
+	SMember(FTransform)                                CurrentTransform                                            OFFSET(getStruct<T>, {0x40, 96, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0xA0, 96, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRigDefinition
@@ -152,10 +152,10 @@ class UIKRigDefinition : public UObject
 
 public:
 	CMember(TWeakObjectPtr<USkeletalMesh*>)            PreviewSkeletalMesh                                         OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FIKRigSkeleton)                            Skeleton                                                    OFFSET(get<T>, {0x50, 112, 0, 0})
+	SMember(FIKRigSkeleton)                            Skeleton                                                    OFFSET(getStruct<T>, {0x50, 112, 0, 0})
 	CMember(TArray<UIKRigEffectorGoal*>)               Goals                                                       OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<UIKRigSolver*>)                     Solvers                                                     OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FRetargetDefinition)                       RetargetDefinition                                          OFFSET(get<T>, {0xE0, 24, 0, 0})
+	SMember(FRetargetDefinition)                       RetargetDefinition                                          OFFSET(getStruct<T>, {0xE0, 24, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRigProcessor
@@ -188,8 +188,8 @@ class UIKRig_BodyMoverEffector : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	DMember(float)                                     InfluenceMultiplier                                         OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
@@ -201,7 +201,7 @@ class UIKRig_BodyMover : public UIKRigSolver
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     RootBone                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     RootBone                                                    OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	DMember(float)                                     PositionAlpha                                               OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     PositionPositiveX                                           OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     PositionNegativeX                                           OFFSET(get<float>, {0x3C, 4, 0, 0})
@@ -224,8 +224,8 @@ class UIKRig_LimbEffector : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRig_LimbSolver
@@ -236,7 +236,7 @@ class UIKRig_LimbSolver : public UIKRigSolver
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     RootName                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     RootName                                                    OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	DMember(float)                                     ReachPrecision                                              OFFSET(get<float>, {0x34, 4, 0, 0})
 	CMember(TEnumAsByte<EAxis>)                        HingeRotationAxis                                           OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(int32_t)                                   MaxIterations                                               OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
@@ -258,8 +258,8 @@ class UIKRig_FBIKEffector : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	DMember(float)                                     StrengthAlpha                                               OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     PullChainAlpha                                              OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     PinRotation                                                 OFFSET(get<float>, {0x38, 4, 0, 0})
@@ -274,7 +274,7 @@ class UIKRig_FBIKBoneSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(float)                                     RotationStiffness                                           OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(float)                                     PositionStiffness                                           OFFSET(get<float>, {0x30, 4, 0, 0})
 	CMember(EPBIKLimitType)                            X                                                           OFFSET(get<T>, {0x34, 1, 0, 0})
@@ -287,7 +287,7 @@ public:
 	DMember(float)                                     MinZ                                                        OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     MaxZ                                                        OFFSET(get<float>, {0x54, 4, 0, 0})
 	DMember(bool)                                      bUsePreferredAngles                                         OFFSET(get<bool>, {0x58, 1, 0, 0})
-	SMember(FVector)                                   PreferredAngles                                             OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   PreferredAngles                                             OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/IKRig.IKRigFBIKSolver
@@ -298,12 +298,12 @@ class UIKRigFBIKSolver : public UIKRigSolver
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FName)                                     RootBone                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     RootBone                                                    OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0x34, 4, 0, 0})
 	DMember(float)                                     MassMultiplier                                              OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(bool)                                      bAllowStretch                                               OFFSET(get<bool>, {0x3C, 1, 0, 0})
 	CMember(EPBIKRootBehavior)                         RootBehavior                                                OFFSET(get<T>, {0x3D, 1, 0, 0})
-	SMember(FRootPrePullSettings)                      PrePullRootSettings                                         OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FRootPrePullSettings)                      PrePullRootSettings                                         OFFSET(getStruct<T>, {0x40, 32, 0, 0})
 	DMember(float)                                     PullChainAlpha                                              OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(float)                                     MaxAngle                                                    OFFSET(get<float>, {0x64, 4, 0, 0})
 	DMember(float)                                     OverRelaxation                                              OFFSET(get<float>, {0x68, 4, 0, 0})
@@ -320,8 +320,8 @@ class UIKRig_PoleSolverEffector : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     GoalName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     GoalName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
@@ -333,8 +333,8 @@ class UIKRig_PoleSolver : public UIKRigSolver
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FName)                                     RootName                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FName)                                     EndName                                                     OFFSET(get<T>, {0x34, 4, 0, 0})
+	SMember(FName)                                     RootName                                                    OFFSET(getStruct<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     EndName                                                     OFFSET(getStruct<T>, {0x34, 4, 0, 0})
 	CMember(UIKRig_PoleSolverEffector*)                Effector                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
@@ -359,35 +359,37 @@ class UIKRig_SetTransform : public UIKRigSolver
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FName)                                     Goal                                                        OFFSET(get<T>, {0x30, 4, 0, 0})
-	SMember(FName)                                     RootBone                                                    OFFSET(get<T>, {0x34, 4, 0, 0})
+	SMember(FName)                                     Goal                                                        OFFSET(getStruct<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     RootBone                                                    OFFSET(getStruct<T>, {0x34, 4, 0, 0})
 	CMember(UIKRig_SetTransformEffector*)              Effector                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
 /// Struct /Script/IKRig.RetargetProfile
 /// Size: 0x00F8 (0x000000 - 0x0000F8)
-class FRetargetProfile : public MDKStruct
+class FRetargetProfile : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
 	DMember(bool)                                      bApplyTargetRetargetPose                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     TargetRetargetPoseName                                      OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     TargetRetargetPoseName                                      OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bApplySourceRetargetPose                                    OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FName)                                     SourceRetargetPoseName                                      OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     SourceRetargetPoseName                                      OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(bool)                                      bApplyChainSettings                                         OFFSET(get<bool>, {0x10, 1, 0, 0})
 	CMember(TMap<FName, FTargetChainSettings>)         ChainSettings                                               OFFSET(get<T>, {0x18, 80, 0, 0})
 	DMember(bool)                                      bApplyRootSettings                                          OFFSET(get<bool>, {0x68, 1, 0, 0})
-	SMember(FTargetRootSettings)                       RootSettings                                                OFFSET(get<T>, {0x70, 104, 0, 0})
+	SMember(FTargetRootSettings)                       RootSettings                                                OFFSET(getStruct<T>, {0x70, 104, 0, 0})
 	DMember(bool)                                      bApplyGlobalSettings                                        OFFSET(get<bool>, {0xD8, 1, 0, 0})
-	SMember(FRetargetGlobalSettings)                   GlobalSettings                                              OFFSET(get<T>, {0xDC, 28, 0, 0})
+	SMember(FRetargetGlobalSettings)                   GlobalSettings                                              OFFSET(getStruct<T>, {0xDC, 28, 0, 0})
 };
 
 /// Struct /Script/IKRig.RetargetGlobalSettings
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FRetargetGlobalSettings : public MDKStruct
+class FRetargetGlobalSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -398,7 +400,7 @@ public:
 	DMember(bool)                                      bWarping                                                    OFFSET(get<bool>, {0x3, 1, 0, 0})
 	CMember(EWarpingDirectionSource)                   DirectionSource                                             OFFSET(get<T>, {0x4, 4, 0, 0})
 	CMember(EBasicAxis)                                ForwardDirection                                            OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FName)                                     DirectionChain                                              OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FName)                                     DirectionChain                                              OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(float)                                     WarpForwards                                                OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(float)                                     SidewaysOffset                                              OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     WarpSplay                                                   OFFSET(get<float>, {0x18, 4, 0, 0})
@@ -406,8 +408,9 @@ public:
 
 /// Struct /Script/IKRig.TargetRootSettings
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FTargetRootSettings : public MDKStruct
+class FTargetRootSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -415,38 +418,40 @@ public:
 	DMember(float)                                     RotationAlpha                                               OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     TranslationAlpha                                            OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     BlendToSource                                               OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   BlendToSourceWeights                                        OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   BlendToSourceWeights                                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	DMember(float)                                     ScaleHorizontal                                             OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     ScaleVertical                                               OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FVector)                                   TranslationOffset                                           OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FRotator)                                  RotationOffset                                              OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   TranslationOffset                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FRotator)                                  RotationOffset                                              OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(float)                                     AffectIKHorizontal                                          OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(float)                                     AffectIKVertical                                            OFFSET(get<float>, {0x64, 4, 0, 0})
 };
 
 /// Struct /Script/IKRig.TargetChainSettings
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FTargetChainSettings : public MDKStruct
+class FTargetChainSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FTargetChainFKSettings)                    FK                                                          OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTargetChainIKSettings)                    IK                                                          OFFSET(get<T>, {0x18, 120, 0, 0})
-	SMember(FTargetChainSpeedPlantSettings)            SpeedPlanting                                               OFFSET(get<T>, {0x90, 20, 0, 0})
+	SMember(FTargetChainFKSettings)                    FK                                                          OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTargetChainIKSettings)                    IK                                                          OFFSET(getStruct<T>, {0x18, 120, 0, 0})
+	SMember(FTargetChainSpeedPlantSettings)            SpeedPlanting                                               OFFSET(getStruct<T>, {0x90, 20, 0, 0})
 };
 
 /// Struct /Script/IKRig.TargetChainSpeedPlantSettings
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FTargetChainSpeedPlantSettings : public MDKStruct
+class FTargetChainSpeedPlantSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
 	DMember(bool)                                      EnableSpeedPlanting                                         OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     SpeedCurveName                                              OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     SpeedCurveName                                              OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(float)                                     SpeedThreshold                                              OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     UnplantStiffness                                            OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     UnplantCriticalDamping                                      OFFSET(get<float>, {0x10, 4, 0, 0})
@@ -454,18 +459,19 @@ public:
 
 /// Struct /Script/IKRig.TargetChainIKSettings
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FTargetChainIKSettings : public MDKStruct
+class FTargetChainIKSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	DMember(bool)                                      EnableIK                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
 	DMember(float)                                     BlendToSource                                               OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FVector)                                   BlendToSourceWeights                                        OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   StaticOffset                                                OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   StaticLocalOffset                                           OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FRotator)                                  StaticRotationOffset                                        OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   BlendToSourceWeights                                        OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   StaticOffset                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   StaticLocalOffset                                           OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FRotator)                                  StaticRotationOffset                                        OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	DMember(float)                                     ScaleVertical                                               OFFSET(get<float>, {0x68, 4, 0, 0})
 	DMember(float)                                     Extension                                                   OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(bool)                                      bAffectedByIKWarping                                        OFFSET(get<bool>, {0x70, 1, 0, 0})
@@ -473,8 +479,9 @@ public:
 
 /// Struct /Script/IKRig.TargetChainFKSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTargetChainFKSettings : public MDKStruct
+class FTargetChainFKSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -492,50 +499,53 @@ public:
 /// Size: 0x0188 (0x000058 - 0x0001E0)
 class FAnimNode_IKRig : public FAnimNode_CustomProperty
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	CMember(UIKRigDefinition*)                         RigDefinitionAsset                                          OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(TArray<FIKRigGoal>)                        Goals                                                       OFFSET(get<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bStartFromRefPose                                           OFFSET(get<bool>, {0x80, 1, 0, 0})
 	CMember(EAnimAlphaInputType)                       AlphaInputType                                              OFFSET(get<T>, {0x81, 1, 0, 0})
 	DMember(bool)                                      bAlphaBoolEnabled                                           OFFSET(get<bool>, {0x82, 1, 0, 0})
 	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x84, 4, 0, 0})
-	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(get<T>, {0x90, 72, 0, 0})
-	SMember(FName)                                     AlphaCurveName                                              OFFSET(get<T>, {0xD8, 4, 0, 0})
-	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(get<T>, {0xDC, 48, 0, 0})
+	SMember(FInputScaleBias)                           AlphaScaleBias                                              OFFSET(getStruct<T>, {0x88, 8, 0, 0})
+	SMember(FInputAlphaBoolBlend)                      AlphaBoolBlend                                              OFFSET(getStruct<T>, {0x90, 72, 0, 0})
+	SMember(FName)                                     AlphaCurveName                                              OFFSET(getStruct<T>, {0xD8, 4, 0, 0})
+	SMember(FInputScaleBiasClamp)                      AlphaScaleBiasClamp                                         OFFSET(getStruct<T>, {0xDC, 48, 0, 0})
 	CMember(UIKRigProcessor*)                          IKRigProcessor                                              OFFSET(get<T>, {0x110, 8, 0, 0})
 	DMember(float)                                     ActualAlpha                                                 OFFSET(get<float>, {0x1D8, 4, 0, 0})
 };
 
 /// Struct /Script/IKRig.IKRigGoal
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FIKRigGoal : public MDKStruct
+class FIKRigGoal : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(EIKRigGoalTransformSource)                 TransformSource                                             OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FBoneReference)                            SourceBone                                                  OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FBoneReference)                            SourceBone                                                  OFFSET(getStruct<T>, {0x8, 12, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(float)                                     PositionAlpha                                               OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(float)                                     RotationAlpha                                               OFFSET(get<float>, {0x4C, 4, 0, 0})
 	CMember(EIKRigGoalSpace)                           PositionSpace                                               OFFSET(get<T>, {0x50, 1, 0, 0})
 	CMember(EIKRigGoalSpace)                           RotationSpace                                               OFFSET(get<T>, {0x51, 1, 0, 0})
-	SMember(FVector)                                   FinalBlendedPosition                                        OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FQuat)                                     FinalBlendedRotation                                        OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FVector)                                   FinalBlendedPosition                                        OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FQuat)                                     FinalBlendedRotation                                        OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 };
 
 /// Struct /Script/IKRig.AnimNode_RetargetPoseFromMesh
 /// Size: 0x01B8 (0x000010 - 0x0001C8)
 class FAnimNode_RetargetPoseFromMesh : public FAnimNode_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
@@ -543,7 +553,7 @@ public:
 	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   SourceMeshComponent                                         OFFSET(get<T>, {0x10, 8, 0, 0})
 	DMember(bool)                                      bUseAttachedParent                                          OFFSET(get<bool>, {0x18, 1, 0, 0})
 	CMember(UIKRetargeter*)                            IKRetargeterAsset                                           OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FRetargetProfile)                          CustomRetargetProfile                                       OFFSET(get<T>, {0x28, 248, 0, 0})
+	SMember(FRetargetProfile)                          CustomRetargetProfile                                       OFFSET(getStruct<T>, {0x28, 248, 0, 0})
 	DMember(bool)                                      bSuppressWarnings                                           OFFSET(get<bool>, {0x120, 1, 0, 0})
 	DMember(bool)                                      bCopyCurves                                                 OFFSET(get<bool>, {0x121, 1, 0, 0})
 	CMember(UIKRetargetProcessor*)                     Processor                                                   OFFSET(get<T>, {0x128, 8, 0, 0})
@@ -551,32 +561,35 @@ public:
 
 /// Struct /Script/IKRig.RetargetChainMap
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FRetargetChainMap : public MDKStruct
+class FRetargetChainMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     SourceChain                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     TargetChain                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     SourceChain                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     TargetChain                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/IKRig.IKRetargetPose
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FIKRetargetPose : public MDKStruct
+class FIKRetargetPose : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVector)                                   RootTranslationOffset                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   RootTranslationOffset                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(TMap<FName, FQuat>)                        BoneRotationOffsets                                         OFFSET(get<T>, {0x18, 80, 0, 0})
 };
 
 /// Struct /Script/IKRig.IKRigGoalContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FIKRigGoalContainer : public MDKStruct
+class FIKRigGoalContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -585,34 +598,37 @@ public:
 
 /// Struct /Script/IKRig.BoneChain
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FBoneChain : public MDKStruct
+class FBoneChain : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     ChainName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FBoneReference)                            StartBone                                                   OFFSET(get<T>, {0x4, 12, 0, 0})
-	SMember(FBoneReference)                            EndBone                                                     OFFSET(get<T>, {0x10, 12, 0, 0})
-	SMember(FName)                                     IKGoalName                                                  OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FName)                                     ChainName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FBoneReference)                            StartBone                                                   OFFSET(getStruct<T>, {0x4, 12, 0, 0})
+	SMember(FBoneReference)                            EndBone                                                     OFFSET(getStruct<T>, {0x10, 12, 0, 0})
+	SMember(FName)                                     IKGoalName                                                  OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/IKRig.RetargetDefinition
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FRetargetDefinition : public MDKStruct
+class FRetargetDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     RootBone                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     RootBone                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FBoneChain>)                        BoneChains                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/IKRig.GoalBone
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FGoalBone : public MDKStruct
+class FGoalBone : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -621,8 +637,9 @@ public:
 
 /// Struct /Script/IKRig.IKRigInputSkeleton
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FIKRigInputSkeleton : public MDKStruct
+class FIKRigInputSkeleton : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -631,8 +648,9 @@ public:
 
 /// Struct /Script/IKRig.IKRigSkeleton
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FIKRigSkeleton : public MDKStruct
+class FIKRigSkeleton : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -647,8 +665,9 @@ public:
 
 /// Struct /Script/IKRig.LimbSolverSettings
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FLimbSolverSettings : public MDKStruct
+class FLimbSolverSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
@@ -667,8 +686,9 @@ public:
 
 /// Struct /Script/IKRig.LimbLink
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FLimbLink : public MDKStruct
+class FLimbLink : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -677,8 +697,9 @@ public:
 
 /// Struct /Script/IKRig.LimbSolver
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLimbSolver : public MDKStruct
+class FLimbSolver : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

@@ -17,7 +17,7 @@ class ABP_ZipLine_Athena_Harness_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 P_Zipline_AttachedToPlayer                                  OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     SM_Zipline_Magnet                                           OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -32,24 +32,24 @@ public:
 	CMember(AFortPlayerPawn*)                          AttachedPlayer                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	DMember(bool)                                      HasHitAnotherPlayer                                         OFFSET(get<bool>, {0x2F8, 1, 0, 0})
 	DMember(double)                                    ZiplineChimeVisualUpdate                                    OFFSET(get<double>, {0x300, 8, 0, 0})
-	SMember(FTimerHandle)                              ChimeTimer                                                  OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(FVector)                                   ZiplineDirection                                            OFFSET(get<T>, {0x310, 24, 0, 0})
+	SMember(FTimerHandle)                              ChimeTimer                                                  OFFSET(getStruct<T>, {0x308, 8, 0, 0})
+	SMember(FVector)                                   ZiplineDirection                                            OFFSET(getStruct<T>, {0x310, 24, 0, 0})
 	CMember(ABP_Athena_Environmental_ZipLine_Spline_C*) EnvZiplineSpline                                           OFFSET(get<T>, {0x328, 8, 0, 0})
 	DMember(double)                                    SplineRotationUpdateSeconds                                 OFFSET(get<double>, {0x330, 8, 0, 0})
-	SMember(FTimerHandle)                              MotorUpdateTimer                                            OFFSET(get<T>, {0x338, 8, 0, 0})
+	SMember(FTimerHandle)                              MotorUpdateTimer                                            OFFSET(getStruct<T>, {0x338, 8, 0, 0})
 	CMember(AFortAthenaZipline*)                       AttachedZipline                                             OFFSET(get<T>, {0x340, 8, 0, 0})
 	DMember(bool)                                      debugOutput                                                 OFFSET(get<bool>, {0x348, 1, 0, 0})
 	DMember(bool)                                      IsReversingMomentum                                         OFFSET(get<bool>, {0x349, 1, 0, 0})
 	DMember(bool)                                      bIsTravelingUphill                                          OFFSET(get<bool>, {0x34A, 1, 0, 0})
 	DMember(bool)                                      bIsTravelingDownhill                                        OFFSET(get<bool>, {0x34B, 1, 0, 0})
-	SMember(FGameplayTag)                              GCNTag_Travel                                               OFFSET(get<T>, {0x34C, 4, 0, 0})
+	SMember(FGameplayTag)                              GCNTag_Travel                                               OFFSET(getStruct<T>, {0x34C, 4, 0, 0})
 	CMember(USoundBase*)                               TravelSound                                                 OFFSET(get<T>, {0x350, 8, 0, 0})
-	SMember(FGameplayTag)                              GCNTag_HighSpeed                                            OFFSET(get<T>, {0x358, 4, 0, 0})
-	SMember(FGameplayTag)                              GCNTag_ZiplineBraking                                       OFFSET(get<T>, {0x35C, 4, 0, 0})
+	SMember(FGameplayTag)                              GCNTag_HighSpeed                                            OFFSET(getStruct<T>, {0x358, 4, 0, 0})
+	SMember(FGameplayTag)                              GCNTag_ZiplineBraking                                       OFFSET(getStruct<T>, {0x35C, 4, 0, 0})
 	DMember(bool)                                      bLoopingDownhillGCN                                         OFFSET(get<bool>, {0x360, 1, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               DownhillTravelGE                                            OFFSET(get<T>, {0x364, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               DownhillTravelGE                                            OFFSET(getStruct<T>, {0x364, 8, 0, 0})
 	DMember(bool)                                      UseMeshAttachment                                           OFFSET(get<bool>, {0x36C, 1, 0, 0})
-	SMember(FVector)                                   CurrentDesired_Zipline_Offset                               OFFSET(get<T>, {0x370, 24, 0, 0})
+	SMember(FVector)                                   CurrentDesired_Zipline_Offset                               OFFSET(getStruct<T>, {0x370, 24, 0, 0})
 	CMember(APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C*) DynamicZiplineSpline                                   OFFSET(get<T>, {0x388, 8, 0, 0})
 	CMember(USplineComponent*)                         NewVar                                                      OFFSET(get<T>, {0x390, 8, 0, 0})
 
@@ -97,7 +97,7 @@ class ABP_ZipLine_Athena_Harness_Yellow_C : public ABP_ZipLine_Athena_Harness_C
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x398, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x398, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NS_Zipline_Pulley_SpeedLines_Converted                      OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NS_Zipline_Speedline                                        OFFSET(get<T>, {0x3A8, 8, 0, 0})
 	DMember(float)                                     Alpha_NewTrack_0_AF34CA1D47D28FE19CCA3C98688125DE           OFFSET(get<float>, {0x3B0, 4, 0, 0})
@@ -149,14 +149,14 @@ class UFringe_Plank_AnimBP_C : public UAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 3536;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x350, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x358, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x360, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x368, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x388, 176, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x440, 2384, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0xD90, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0xDB0, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x350, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x358, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x360, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x368, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x388, 176, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0x440, 2384, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0xD90, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0xDB0, 32, 0, 0})
 
 
 	/// Functions

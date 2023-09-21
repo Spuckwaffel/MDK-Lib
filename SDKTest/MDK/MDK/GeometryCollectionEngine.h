@@ -41,16 +41,16 @@ public:
 	DMember(bool)                                      bIsBreakingEventListeningEnabled                            OFFSET(get<bool>, {0x2A0, 1, 1, 1})
 	DMember(bool)                                      bIsTrailingEventListeningEnabled                            OFFSET(get<bool>, {0x2A0, 1, 1, 2})
 	DMember(bool)                                      bIsRemovalEventListeningEnabled                             OFFSET(get<bool>, {0x2A0, 1, 1, 3})
-	SMember(FChaosCollisionEventRequestSettings)       CollisionEventRequestSettings                               OFFSET(get<T>, {0x2A4, 24, 0, 0})
-	SMember(FChaosBreakingEventRequestSettings)        BreakingEventRequestSettings                                OFFSET(get<T>, {0x2BC, 24, 0, 0})
-	SMember(FChaosTrailingEventRequestSettings)        TrailingEventRequestSettings                                OFFSET(get<T>, {0x2D4, 24, 0, 0})
-	SMember(FChaosRemovalEventRequestSettings)         RemovalEventRequestSettings                                 OFFSET(get<T>, {0x2EC, 16, 0, 0})
+	SMember(FChaosCollisionEventRequestSettings)       CollisionEventRequestSettings                               OFFSET(getStruct<T>, {0x2A4, 24, 0, 0})
+	SMember(FChaosBreakingEventRequestSettings)        BreakingEventRequestSettings                                OFFSET(getStruct<T>, {0x2BC, 24, 0, 0})
+	SMember(FChaosTrailingEventRequestSettings)        TrailingEventRequestSettings                                OFFSET(getStruct<T>, {0x2D4, 24, 0, 0})
+	SMember(FChaosRemovalEventRequestSettings)         RemovalEventRequestSettings                                 OFFSET(getStruct<T>, {0x2EC, 16, 0, 0})
 	CMember(TSet<AChaosSolverActor*>)                  ChaosSolverActors                                           OFFSET(get<T>, {0x300, 80, 0, 0})
 	CMember(TSet<AGeometryCollectionActor*>)           GeometryCollectionActors                                    OFFSET(get<T>, {0x350, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCollisionEvents                                           OFFSET(get<T>, {0x3A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnBreakingEvents                                            OFFSET(get<T>, {0x3B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTrailingEvents                                            OFFSET(get<T>, {0x3C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemovalEvents                                             OFFSET(get<T>, {0x3D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCollisionEvents                                           OFFSET(getStruct<T>, {0x3A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnBreakingEvents                                            OFFSET(getStruct<T>, {0x3B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTrailingEvents                                            OFFSET(getStruct<T>, {0x3C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemovalEvents                                             OFFSET(getStruct<T>, {0x3D0, 16, 0, 0})
 
 
 	/// Functions
@@ -115,9 +115,9 @@ class UGeometryCollectionCache : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FRecordedTransformTrack)                   RecordedData                                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FRecordedTransformTrack)                   RecordedData                                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(UGeometryCollection*)                      SupportedCollection                                         OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FGuid)                                     CompatibleCollectionState                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FGuid)                                     CompatibleCollectionState                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionComponent
@@ -142,7 +142,7 @@ public:
 	CMember(EDamageModelTypeEnum)                      DamageModel                                                 OFFSET(get<T>, {0x6C8, 1, 0, 0})
 	CMember(TArray<float>)                             DamageThreshold                                             OFFSET(get<T>, {0x6D0, 16, 0, 0})
 	DMember(bool)                                      bUseSizeSpecificDamageThreshold                             OFFSET(get<bool>, {0x6E0, 1, 0, 0})
-	SMember(FGeometryCollectionDamagePropagationData)  DamagePropagationData                                       OFFSET(get<T>, {0x6E4, 12, 0, 0})
+	SMember(FGeometryCollectionDamagePropagationData)  DamagePropagationData                                       OFFSET(getStruct<T>, {0x6E4, 12, 0, 0})
 	DMember(bool)                                      bEnableDamageFromCollision                                  OFFSET(get<bool>, {0x6F0, 1, 0, 0})
 	DMember(bool)                                      bAllowRemovalOnSleep                                        OFFSET(get<bool>, {0x6F1, 1, 0, 0})
 	DMember(bool)                                      bAllowRemovalOnBreak                                        OFFSET(get<bool>, {0x6F2, 1, 0, 0})
@@ -153,19 +153,19 @@ public:
 	DMember(float)                                     AngularEtherDrag                                            OFFSET(get<float>, {0x700, 4, 0, 0})
 	CMember(UChaosPhysicalMaterial*)                   PhysicalMaterial                                            OFFSET(get<T>, {0x708, 8, 0, 0})
 	CMember(EInitialVelocityTypeEnum)                  InitialVelocityType                                         OFFSET(get<T>, {0x710, 1, 0, 0})
-	SMember(FVector)                                   InitialLinearVelocity                                       OFFSET(get<T>, {0x718, 24, 0, 0})
-	SMember(FVector)                                   InitialAngularVelocity                                      OFFSET(get<T>, {0x730, 24, 0, 0})
+	SMember(FVector)                                   InitialLinearVelocity                                       OFFSET(getStruct<T>, {0x718, 24, 0, 0})
+	SMember(FVector)                                   InitialAngularVelocity                                      OFFSET(getStruct<T>, {0x730, 24, 0, 0})
 	CMember(UPhysicalMaterial*)                        PhysicalMaterialOverride                                    OFFSET(get<T>, {0x748, 8, 0, 0})
-	SMember(FGeomComponentCacheParameters)             CacheParameters                                             OFFSET(get<T>, {0x750, 80, 0, 0})
+	SMember(FGeomComponentCacheParameters)             CacheParameters                                             OFFSET(getStruct<T>, {0x750, 80, 0, 0})
 	CMember(TArray<FTransform>)                        RestTransforms                                              OFFSET(get<T>, {0x7A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyGeometryCollectionPhysicsStateChange                  OFFSET(get<T>, {0x7B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyGeometryCollectionPhysicsLoadingStateChange           OFFSET(get<T>, {0x7C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnChaosBreakEvent                                           OFFSET(get<T>, {0x7E8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnChaosRemovalEvent                                         OFFSET(get<T>, {0x7F8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnChaosCrumblingEvent                                       OFFSET(get<T>, {0x808, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyGeometryCollectionPhysicsStateChange                  OFFSET(getStruct<T>, {0x7B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyGeometryCollectionPhysicsLoadingStateChange           OFFSET(getStruct<T>, {0x7C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChaosBreakEvent                                           OFFSET(getStruct<T>, {0x7E8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChaosRemovalEvent                                         OFFSET(getStruct<T>, {0x7F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChaosCrumblingEvent                                       OFFSET(getStruct<T>, {0x808, 16, 0, 0})
 	DMember(float)                                     DesiredCacheTime                                            OFFSET(get<float>, {0x828, 4, 0, 0})
 	DMember(bool)                                      CachePlayback                                               OFFSET(get<bool>, {0x82C, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnChaosPhysicsCollision                                     OFFSET(get<T>, {0x830, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnChaosPhysicsCollision                                     OFFSET(getStruct<T>, {0x830, 16, 0, 0})
 	DMember(bool)                                      bNotifyBreaks                                               OFFSET(get<bool>, {0x840, 1, 0, 0})
 	DMember(bool)                                      bNotifyCollisions                                           OFFSET(get<bool>, {0x841, 1, 0, 0})
 	DMember(bool)                                      bNotifyTrailing                                             OFFSET(get<bool>, {0x842, 1, 0, 0})
@@ -188,12 +188,12 @@ public:
 	CMember(UGeometryCollectionExternalRenderInterface*) CustomRenderer                                            OFFSET(get<T>, {0x868, 8, 0, 0})
 	DMember(bool)                                      bEnableReplication                                          OFFSET(get<bool>, {0x870, 1, 0, 0})
 	DMember(bool)                                      bEnableAbandonAfterLevel                                    OFFSET(get<bool>, {0x871, 1, 0, 0})
-	SMember(FName)                                     AbandonedCollisionProfileName                               OFFSET(get<T>, {0x874, 4, 0, 0})
+	SMember(FName)                                     AbandonedCollisionProfileName                               OFFSET(getStruct<T>, {0x874, 4, 0, 0})
 	CMember(TArray<FName>)                             CollisionProfilePerLevel                                    OFFSET(get<T>, {0x878, 16, 0, 0})
 	DMember(int32_t)                                   ReplicationAbandonClusterLevel                              OFFSET(get<int32_t>, {0x898, 4, 0, 0})
 	DMember(int32_t)                                   ReplicationAbandonAfterLevel                                OFFSET(get<int32_t>, {0x89C, 4, 0, 0})
 	DMember(int32_t)                                   ReplicationMaxPositionAndVelocityCorrectionLevel            OFFSET(get<int32_t>, {0x8A0, 4, 0, 0})
-	SMember(FGeometryCollectionRepData)                RepData                                                     OFFSET(get<T>, {0x8A8, 56, 0, 0})
+	SMember(FGeometryCollectionRepData)                RepData                                                     OFFSET(getStruct<T>, {0x8A8, 56, 0, 0})
 	CMember(UBodySetup*)                               DummyBodySetup                                              OFFSET(get<T>, {0xB80, 8, 0, 0})
 	CMember(UChaosGameplayEventDispatcher*)            EventDispatcher                                             OFFSET(get<T>, {0xB88, 8, 0, 0})
 	CMember(TArray<UInstancedStaticMeshComponent*>)    EmbeddedGeometryComponents                                  OFFSET(get<T>, {0xB90, 16, 0, 0})
@@ -296,8 +296,8 @@ class AGeometryCollectionDebugDrawActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FGeometryCollectionDebugDrawWarningMessage) WarningMessage                                             OFFSET(get<T>, {0x290, 1, 0, 0})
-	SMember(FGeometryCollectionDebugDrawActorSelectedRigidBody) SelectedRigidBody                                  OFFSET(get<T>, {0x298, 24, 0, 0})
+	SMember(FGeometryCollectionDebugDrawWarningMessage) WarningMessage                                             OFFSET(getStruct<T>, {0x290, 1, 0, 0})
+	SMember(FGeometryCollectionDebugDrawActorSelectedRigidBody) SelectedRigidBody                                  OFFSET(getStruct<T>, {0x298, 24, 0, 0})
 	DMember(bool)                                      bDebugDrawWholeCollection                                   OFFSET(get<bool>, {0x2B0, 1, 0, 0})
 	DMember(bool)                                      bDebugDrawHierarchy                                         OFFSET(get<bool>, {0x2B1, 1, 0, 0})
 	DMember(bool)                                      bDebugDrawClustering                                        OFFSET(get<bool>, {0x2B2, 1, 0, 0})
@@ -334,28 +334,28 @@ public:
 	DMember(float)                                     NormalScale                                                 OFFSET(get<float>, {0x2E0, 4, 0, 0})
 	DMember(float)                                     AxisScale                                                   OFFSET(get<float>, {0x2E4, 4, 0, 0})
 	DMember(float)                                     ArrowScale                                                  OFFSET(get<float>, {0x2E8, 4, 0, 0})
-	SMember(FColor)                                    RigidBodyIdColor                                            OFFSET(get<T>, {0x2EC, 4, 0, 0})
+	SMember(FColor)                                    RigidBodyIdColor                                            OFFSET(getStruct<T>, {0x2EC, 4, 0, 0})
 	DMember(float)                                     RigidBodyTransformScale                                     OFFSET(get<float>, {0x2F0, 4, 0, 0})
-	SMember(FColor)                                    RigidBodyCollisionColor                                     OFFSET(get<T>, {0x2F4, 4, 0, 0})
-	SMember(FColor)                                    RigidBodyInertiaColor                                       OFFSET(get<T>, {0x2F8, 4, 0, 0})
-	SMember(FColor)                                    RigidBodyVelocityColor                                      OFFSET(get<T>, {0x2FC, 4, 0, 0})
-	SMember(FColor)                                    RigidBodyForceColor                                         OFFSET(get<T>, {0x300, 4, 0, 0})
-	SMember(FColor)                                    RigidBodyInfoColor                                          OFFSET(get<T>, {0x304, 4, 0, 0})
-	SMember(FColor)                                    TransformIndexColor                                         OFFSET(get<T>, {0x308, 4, 0, 0})
+	SMember(FColor)                                    RigidBodyCollisionColor                                     OFFSET(getStruct<T>, {0x2F4, 4, 0, 0})
+	SMember(FColor)                                    RigidBodyInertiaColor                                       OFFSET(getStruct<T>, {0x2F8, 4, 0, 0})
+	SMember(FColor)                                    RigidBodyVelocityColor                                      OFFSET(getStruct<T>, {0x2FC, 4, 0, 0})
+	SMember(FColor)                                    RigidBodyForceColor                                         OFFSET(getStruct<T>, {0x300, 4, 0, 0})
+	SMember(FColor)                                    RigidBodyInfoColor                                          OFFSET(getStruct<T>, {0x304, 4, 0, 0})
+	SMember(FColor)                                    TransformIndexColor                                         OFFSET(getStruct<T>, {0x308, 4, 0, 0})
 	DMember(float)                                     TransformScale                                              OFFSET(get<float>, {0x30C, 4, 0, 0})
-	SMember(FColor)                                    LevelColor                                                  OFFSET(get<T>, {0x310, 4, 0, 0})
-	SMember(FColor)                                    ParentColor                                                 OFFSET(get<T>, {0x314, 4, 0, 0})
+	SMember(FColor)                                    LevelColor                                                  OFFSET(getStruct<T>, {0x310, 4, 0, 0})
+	SMember(FColor)                                    ParentColor                                                 OFFSET(getStruct<T>, {0x314, 4, 0, 0})
 	DMember(float)                                     ConnectivityEdgeThickness                                   OFFSET(get<float>, {0x318, 4, 0, 0})
-	SMember(FColor)                                    GeometryIndexColor                                          OFFSET(get<T>, {0x31C, 4, 0, 0})
+	SMember(FColor)                                    GeometryIndexColor                                          OFFSET(getStruct<T>, {0x31C, 4, 0, 0})
 	DMember(float)                                     GeometryTransformScale                                      OFFSET(get<float>, {0x320, 4, 0, 0})
-	SMember(FColor)                                    BoundingBoxColor                                            OFFSET(get<T>, {0x324, 4, 0, 0})
-	SMember(FColor)                                    FaceColor                                                   OFFSET(get<T>, {0x328, 4, 0, 0})
-	SMember(FColor)                                    FaceIndexColor                                              OFFSET(get<T>, {0x32C, 4, 0, 0})
-	SMember(FColor)                                    FaceNormalColor                                             OFFSET(get<T>, {0x330, 4, 0, 0})
-	SMember(FColor)                                    SingleFaceColor                                             OFFSET(get<T>, {0x334, 4, 0, 0})
-	SMember(FColor)                                    VertexColor                                                 OFFSET(get<T>, {0x338, 4, 0, 0})
-	SMember(FColor)                                    VertexIndexColor                                            OFFSET(get<T>, {0x33C, 4, 0, 0})
-	SMember(FColor)                                    VertexNormalColor                                           OFFSET(get<T>, {0x340, 4, 0, 0})
+	SMember(FColor)                                    BoundingBoxColor                                            OFFSET(getStruct<T>, {0x324, 4, 0, 0})
+	SMember(FColor)                                    FaceColor                                                   OFFSET(getStruct<T>, {0x328, 4, 0, 0})
+	SMember(FColor)                                    FaceIndexColor                                              OFFSET(getStruct<T>, {0x32C, 4, 0, 0})
+	SMember(FColor)                                    FaceNormalColor                                             OFFSET(getStruct<T>, {0x330, 4, 0, 0})
+	SMember(FColor)                                    SingleFaceColor                                             OFFSET(getStruct<T>, {0x334, 4, 0, 0})
+	SMember(FColor)                                    VertexColor                                                 OFFSET(getStruct<T>, {0x338, 4, 0, 0})
+	SMember(FColor)                                    VertexIndexColor                                            OFFSET(getStruct<T>, {0x33C, 4, 0, 0})
+	SMember(FColor)                                    VertexNormalColor                                           OFFSET(getStruct<T>, {0x340, 4, 0, 0})
 	CMember(UBillboardComponent*)                      SpriteComponent                                             OFFSET(get<T>, {0x348, 8, 0, 0})
 };
 
@@ -419,7 +419,7 @@ public:
 	CMember(TArray<float>)                             DamageThreshold                                             OFFSET(get<T>, {0x48, 16, 0, 0})
 	DMember(bool)                                      bUseSizeSpecificDamageThreshold                             OFFSET(get<bool>, {0x58, 1, 0, 0})
 	DMember(bool)                                      PerClusterOnlyDamageThreshold                               OFFSET(get<bool>, {0x59, 1, 0, 0})
-	SMember(FGeometryCollectionDamagePropagationData)  DamagePropagationData                                       OFFSET(get<T>, {0x5C, 12, 0, 0})
+	SMember(FGeometryCollectionDamagePropagationData)  DamagePropagationData                                       OFFSET(getStruct<T>, {0x5C, 12, 0, 0})
 	CMember(EClusterConnectionTypeEnum)                ClusterConnectionType                                       OFFSET(get<T>, {0x68, 1, 0, 0})
 	DMember(float)                                     ConnectionGraphBoundsFilteringMargin                        OFFSET(get<float>, {0x6C, 4, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               Materials                                                   OFFSET(get<T>, {0x70, 16, 0, 0})
@@ -428,7 +428,7 @@ public:
 	DMember(bool)                                      bStripOnCook                                                OFFSET(get<bool>, {0x91, 1, 0, 0})
 	DMember(bool)                                      bStripRenderDataOnCook                                      OFFSET(get<bool>, {0x92, 1, 0, 0})
 	CMember(UClass*)                                   CustomRendererType                                          OFFSET(get<T>, {0x98, 8, 0, 0})
-	SMember(FGeometryCollectionProxyMeshData)          RootProxyData                                               OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FGeometryCollectionProxyMeshData)          RootProxyData                                               OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<FGeometryCollectionAutoInstanceMesh>) AutoInstanceMeshes                                        OFFSET(get<T>, {0xB0, 16, 0, 0})
 	DMember(bool)                                      EnableNanite                                                OFFSET(get<bool>, {0xC0, 1, 0, 0})
 	DMember(bool)                                      bConvertVertexColorsToSRGB                                  OFFSET(get<bool>, {0xC1, 1, 0, 0})
@@ -440,18 +440,18 @@ public:
 	DMember(bool)                                      bImportCollisionFromSource                                  OFFSET(get<bool>, {0xDC, 1, 0, 0})
 	DMember(bool)                                      bScaleOnRemoval                                             OFFSET(get<bool>, {0xDD, 1, 0, 0})
 	DMember(bool)                                      bRemoveOnMaxSleep                                           OFFSET(get<bool>, {0xDE, 1, 0, 0})
-	SMember(FVector2D)                                 MaximumSleepTime                                            OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FVector2D)                                 RemovalDuration                                             OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FVector2D)                                 MaximumSleepTime                                            OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
+	SMember(FVector2D)                                 RemovalDuration                                             OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
 	DMember(bool)                                      bSlowMovingAsSleeping                                       OFFSET(get<bool>, {0x100, 1, 0, 0})
 	DMember(float)                                     SlowMovingVelocityThreshold                                 OFFSET(get<float>, {0x104, 4, 0, 0})
 	CMember(TArray<FGeometryCollectionSizeSpecificData>) SizeSpecificData                                          OFFSET(get<T>, {0x108, 16, 0, 0})
 	DMember(bool)                                      EnableRemovePiecesOnFracture                                OFFSET(get<bool>, {0x118, 1, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               RemoveOnFractureMaterials                                   OFFSET(get<T>, {0x120, 16, 0, 0})
 	CMember(UDataflow*)                                DataflowAsset                                               OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FString)                                   DataflowTerminal                                            OFFSET(get<T>, {0x138, 16, 0, 0})
+	SMember(FString)                                   DataflowTerminal                                            OFFSET(getStruct<T>, {0x138, 16, 0, 0})
 	CMember(TMap<FString, FString>)                    Overrides                                                   OFFSET(get<T>, {0x148, 80, 0, 0})
-	SMember(FGuid)                                     PersistentGuid                                              OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(FGuid)                                     StateGuid                                                   OFFSET(get<T>, {0x1A8, 16, 0, 0})
+	SMember(FGuid)                                     PersistentGuid                                              OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	SMember(FGuid)                                     StateGuid                                                   OFFSET(getStruct<T>, {0x1A8, 16, 0, 0})
 	DMember(int32_t)                                   RootIndex                                                   OFFSET(get<int32_t>, {0x1B8, 4, 0, 0})
 	DMember(int32_t)                                   BoneSelectedMaterialIndex                                   OFFSET(get<int32_t>, {0x1BC, 4, 0, 0})
 	CMember(UMaterialInterface*)                       BoneSelectedMaterial                                        OFFSET(get<T>, {0x1C0, 8, 0, 0})
@@ -497,66 +497,71 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.ChaosBreakingEventData
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FChaosBreakingEventData : public MDKStruct
+class FChaosBreakingEventData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosCollisionEventData
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FChaosCollisionEventData : public MDKStruct
+class FChaosCollisionEventData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   Velocity1                                                   OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Velocity2                                                   OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Velocity1                                                   OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Velocity2                                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(float)                                     Mass1                                                       OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(float)                                     Mass2                                                       OFFSET(get<float>, {0x64, 4, 0, 0})
-	SMember(FVector)                                   Impulse                                                     OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   Impulse                                                     OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosRemovalEventData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FChaosRemovalEventData : public MDKStruct
+class FChaosRemovalEventData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.ChaosTrailingEventData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FChaosTrailingEventData : public MDKStruct
+class FChaosTrailingEventData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionRepData
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FGeometryCollectionRepData : public MDKStruct
+class FGeometryCollectionRepData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -565,8 +570,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeomComponentCacheParameters
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FGeomComponentCacheParameters : public MDKStruct
+class FGeomComponentCacheParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -595,8 +601,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionDamagePropagationData
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FGeometryCollectionDamagePropagationData : public MDKStruct
+class FGeometryCollectionDamagePropagationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -608,8 +615,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.ChaosBreakingEventRequestSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FChaosBreakingEventRequestSettings : public MDKStruct
+class FChaosBreakingEventRequestSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -624,8 +632,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.ChaosCollisionEventRequestSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FChaosCollisionEventRequestSettings : public MDKStruct
+class FChaosCollisionEventRequestSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -640,8 +649,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.ChaosRemovalEventRequestSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FChaosRemovalEventRequestSettings : public MDKStruct
+class FChaosRemovalEventRequestSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -654,8 +664,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.ChaosTrailingEventRequestSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FChaosTrailingEventRequestSettings : public MDKStruct
+class FChaosTrailingEventRequestSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -670,8 +681,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionDebugDrawWarningMessage
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGeometryCollectionDebugDrawWarningMessage : public MDKStruct
+class FGeometryCollectionDebugDrawWarningMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -680,8 +692,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionDebugDrawActorSelectedRigidBody
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGeometryCollectionDebugDrawActorSelectedRigidBody : public MDKStruct
+class FGeometryCollectionDebugDrawActorSelectedRigidBody : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -693,14 +706,15 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionSource
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FGeometryCollectionSource : public MDKStruct
+class FGeometryCollectionSource : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FSoftObjectPath)                           SourceGeometryObject                                        OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FSoftObjectPath)                           SourceGeometryObject                                        OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(getStruct<T>, {0x20, 96, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               SourceMaterial                                              OFFSET(get<T>, {0x80, 16, 0, 0})
 	CMember(TArray<float>)                             InstanceCustomData                                          OFFSET(get<T>, {0x90, 16, 0, 0})
 	DMember(bool)                                      bAddInternalMaterials                                       OFFSET(get<bool>, {0xA0, 1, 0, 0})
@@ -710,8 +724,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionAutoInstanceMesh
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FGeometryCollectionAutoInstanceMesh : public MDKStruct
+class FGeometryCollectionAutoInstanceMesh : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -724,13 +739,14 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionEmbeddedExemplar
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGeometryCollectionEmbeddedExemplar : public MDKStruct
+class FGeometryCollectionEmbeddedExemplar : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSoftObjectPath)                           StaticMeshExemplar                                          OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           StaticMeshExemplar                                          OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     StartCullDistance                                           OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     EndCullDistance                                             OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(int32_t)                                   InstanceCount                                               OFFSET(get<int32_t>, {0x20, 4, 0, 0})
@@ -738,8 +754,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionLevelSetData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGeometryCollectionLevelSetData : public MDKStruct
+class FGeometryCollectionLevelSetData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -752,8 +769,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionCollisionParticleData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FGeometryCollectionCollisionParticleData : public MDKStruct
+class FGeometryCollectionCollisionParticleData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -764,24 +782,26 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionCollisionTypeData
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FGeometryCollectionCollisionTypeData : public MDKStruct
+class FGeometryCollectionCollisionTypeData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
 public:
 	CMember(ECollisionTypeEnum)                        CollisionType                                               OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(EImplicitTypeEnum)                         ImplicitType                                                OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FGeometryCollectionLevelSetData)           LevelSet                                                    OFFSET(get<T>, {0x4, 16, 0, 0})
-	SMember(FGeometryCollectionCollisionParticleData)  CollisionParticles                                          OFFSET(get<T>, {0x14, 8, 0, 0})
+	SMember(FGeometryCollectionLevelSetData)           LevelSet                                                    OFFSET(getStruct<T>, {0x4, 16, 0, 0})
+	SMember(FGeometryCollectionCollisionParticleData)  CollisionParticles                                          OFFSET(getStruct<T>, {0x14, 8, 0, 0})
 	DMember(float)                                     CollisionObjectReductionPercentage                          OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(float)                                     CollisionMarginFraction                                     OFFSET(get<float>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionSizeSpecificData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FGeometryCollectionSizeSpecificData : public MDKStruct
+class FGeometryCollectionSizeSpecificData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -793,8 +813,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionProxyMeshData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGeometryCollectionProxyMeshData : public MDKStruct
+class FGeometryCollectionProxyMeshData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -804,8 +825,9 @@ public:
 
 /// Struct /Script/GeometryCollectionEngine.GeometryCollectionRenderResourceSizeInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGeometryCollectionRenderResourceSizeInfo : public MDKStruct
+class FGeometryCollectionRenderResourceSizeInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

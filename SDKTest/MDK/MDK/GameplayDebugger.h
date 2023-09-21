@@ -19,9 +19,9 @@ class AGameplayDebuggerCategoryReplicator : public AActor
 public:
 	CMember(APlayerController*)                        OwnerPC                                                     OFFSET(get<T>, {0x290, 8, 0, 0})
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x298, 1, 0, 0})
-	SMember(FGameplayDebuggerNetPack)                  ReplicatedData                                              OFFSET(get<T>, {0x2A0, 24, 0, 0})
-	SMember(FGameplayDebuggerDebugActor)               DebugActor                                                  OFFSET(get<T>, {0x2B8, 16, 0, 0})
-	SMember(FGameplayDebuggerVisLogSync)               VisLogSync                                                  OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	SMember(FGameplayDebuggerNetPack)                  ReplicatedData                                              OFFSET(getStruct<T>, {0x2A0, 24, 0, 0})
+	SMember(FGameplayDebuggerDebugActor)               DebugActor                                                  OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
+	SMember(FGameplayDebuggerVisLogSync)               VisLogSync                                                  OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
 	CMember(UGameplayDebuggerRenderingComponent*)      RenderingComp                                               OFFSET(get<T>, {0x2D8, 8, 0, 0})
 
 
@@ -54,19 +54,19 @@ class UGameplayDebuggerConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 600;
 
 public:
-	SMember(FKey)                                      ActivationKey                                               OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FKey)                                      CategoryRowNextKey                                          OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FKey)                                      CategoryRowPrevKey                                          OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot0                                               OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot1                                               OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot2                                               OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot3                                               OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot4                                               OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot5                                               OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot6                                               OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot7                                               OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot8                                               OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FKey)                                      CategorySlot9                                               OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FKey)                                      ActivationKey                                               OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FKey)                                      CategoryRowNextKey                                          OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FKey)                                      CategoryRowPrevKey                                          OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot0                                               OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot1                                               OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot2                                               OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot3                                               OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot4                                               OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot5                                               OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot6                                               OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot7                                               OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot8                                               OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FKey)                                      CategorySlot9                                               OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 	DMember(float)                                     DebugCanvasPaddingLeft                                      OFFSET(get<float>, {0x160, 4, 0, 0})
 	DMember(float)                                     DebugCanvasPaddingRight                                     OFFSET(get<float>, {0x164, 4, 0, 0})
 	DMember(float)                                     DebugCanvasPaddingTop                                       OFFSET(get<float>, {0x168, 4, 0, 0})
@@ -128,22 +128,24 @@ public:
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerDataPackRPCParams
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameplayDebuggerDataPackRPCParams : public MDKStruct
+class FGameplayDebuggerDataPackRPCParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     CategoryName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CategoryName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   DataPackIdx                                                 OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FGameplayDebuggerDataPackHeader)           Header                                                      OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayDebuggerDataPackHeader)           Header                                                      OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(TArray<char>)                              Data                                                        OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerDataPackHeader
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGameplayDebuggerDataPackHeader : public MDKStruct
+class FGameplayDebuggerDataPackHeader : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -157,13 +159,14 @@ public:
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerCategoryData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FGameplayDebuggerCategoryData : public MDKStruct
+class FGameplayDebuggerCategoryData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     CategoryName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CategoryName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FString>)                           TextLines                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FGameplayDebuggerShape>)            Shapes                                                      OFFSET(get<T>, {0x18, 16, 0, 0})
 	CMember(TArray<FGameplayDebuggerDataPackHeader>)   DataPacks                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
@@ -172,22 +175,24 @@ public:
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerShape
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameplayDebuggerShape : public MDKStruct
+class FGameplayDebuggerShape : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TArray<FVector>)                           ShapeData                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Description                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FColor)                                    Color                                                       OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FString)                                   Description                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FColor)                                    Color                                                       OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 	CMember(EGameplayDebuggerShape)                    Type                                                        OFFSET(get<T>, {0x24, 1, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerNetPack
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGameplayDebuggerNetPack : public MDKStruct
+class FGameplayDebuggerNetPack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -198,38 +203,41 @@ public:
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerDebugActor
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGameplayDebuggerDebugActor : public MDKStruct
+class FGameplayDebuggerDebugActor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     ActorName                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     ActorName                                                   OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(int16_t)                                   SyncCounter                                                 OFFSET(get<int16_t>, {0xC, 2, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerVisLogSync
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGameplayDebuggerVisLogSync : public MDKStruct
+class FGameplayDebuggerVisLogSync : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   DeviceIDs                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DeviceIDs                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerInputConfig
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FGameplayDebuggerInputConfig : public MDKStruct
+class FGameplayDebuggerInputConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ConfigName                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FString)                                   ConfigName                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	DMember(bool)                                      bModShift                                                   OFFSET(get<bool>, {0x28, 1, 1, 0})
 	DMember(bool)                                      bModCtrl                                                    OFFSET(get<bool>, {0x28, 1, 1, 1})
 	DMember(bool)                                      bModAlt                                                     OFFSET(get<bool>, {0x28, 1, 1, 2})
@@ -238,13 +246,14 @@ public:
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerCategoryConfig
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FGameplayDebuggerCategoryConfig : public MDKStruct
+class FGameplayDebuggerCategoryConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   CategoryName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   CategoryName                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   SlotIdx                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 	CMember(EGameplayDebuggerOverrideMode)             ActiveInGame                                                OFFSET(get<T>, {0x14, 1, 0, 0})
 	CMember(EGameplayDebuggerOverrideMode)             ActiveInSimulate                                            OFFSET(get<T>, {0x15, 1, 0, 0})
@@ -255,21 +264,23 @@ public:
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerExtensionConfig
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameplayDebuggerExtensionConfig : public MDKStruct
+class FGameplayDebuggerExtensionConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   ExtensionName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ExtensionName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EGameplayDebuggerOverrideMode)             UseExtension                                                OFFSET(get<T>, {0x10, 1, 0, 0})
 	CMember(TArray<FGameplayDebuggerInputConfig>)      InputHandlers                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayDebugger.GameplayDebuggerPlayerData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGameplayDebuggerPlayerData : public MDKStruct
+class FGameplayDebuggerPlayerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

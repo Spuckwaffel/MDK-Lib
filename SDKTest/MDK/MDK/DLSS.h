@@ -35,10 +35,10 @@ public:
 	DMember(bool)                                      bEnableDLSSInEditorViewports                                OFFSET(get<bool>, {0x2B, 1, 0, 0})
 	DMember(bool)                                      bEnableDLSSInPlayInEditorViewports                          OFFSET(get<bool>, {0x2C, 1, 0, 0})
 	DMember(bool)                                      bShowDLSSSDebugOnScreenMessages                             OFFSET(get<bool>, {0x2D, 1, 0, 0})
-	SMember(FString)                                   GenericDLSSBinaryPath                                       OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   GenericDLSSBinaryPath                                       OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	DMember(bool)                                      bGenericDLSSBinaryExists                                    OFFSET(get<bool>, {0x40, 1, 0, 0})
 	DMember(uint32_t)                                  NVIDIANGXApplicationId                                      OFFSET(get<uint32_t>, {0x44, 4, 0, 0})
-	SMember(FString)                                   CustomDLSSBinaryPath                                        OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   CustomDLSSBinaryPath                                        OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	DMember(bool)                                      bCustomDLSSBinaryExists                                     OFFSET(get<bool>, {0x58, 1, 0, 0})
 };
 

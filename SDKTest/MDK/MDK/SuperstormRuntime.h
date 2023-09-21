@@ -24,25 +24,25 @@ public:
 	CMember(UTargetingPreset*)                         LightningBoltTargetingPreset                                OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(UEnvQuery*)                                FindTargetablePawnsQuery                                    OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(UEnvQuery*)                                FindTargetableLocationQuery                                 OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FName)                                     EnvironmentQueryParamName_LightningRadius                   OFFSET(get<T>, {0xD0, 4, 0, 0})
-	SMember(FName)                                     EnvironmentQueryParamName_MinLightningTargetDistance        OFFSET(get<T>, {0xD4, 4, 0, 0})
-	SMember(FScalableFloat)                            LightningCloudHeight                                        OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningRadius                                             OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FScalableFloat)                            MinLightningTargetDistance                                  OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningFrequencyMin                                       OFFSET(get<T>, {0x150, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningFrequencyMax                                       OFFSET(get<T>, {0x178, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltsMin                                           OFFSET(get<T>, {0x1A0, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltsMax                                           OFFSET(get<T>, {0x1C8, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltIntervalMin                                    OFFSET(get<T>, {0x1F0, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltIntervalMax                                    OFFSET(get<T>, {0x218, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltSeparationDistance                             OFFSET(get<T>, {0x240, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningStruckPawnReselectionInterval                      OFFSET(get<T>, {0x268, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltTelegraphDuration                              OFFSET(get<T>, {0x290, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltImpactIgnitionRadius                           OFFSET(get<T>, {0x2B8, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltGrassIgnitionRadius                            OFFSET(get<T>, {0x2E0, 40, 0, 0})
-	SMember(FScalableFloat)                            LightningBoltGrassFirePropagationFuel                       OFFSET(get<T>, {0x308, 40, 0, 0})
-	SMember(FGameplayTag)                              LightningAreaTargetTelegraphCue                             OFFSET(get<T>, {0x330, 4, 0, 0})
-	SMember(FGameplayTag)                              LightningBoltTargetTelegraphCue                             OFFSET(get<T>, {0x334, 4, 0, 0})
+	SMember(FName)                                     EnvironmentQueryParamName_LightningRadius                   OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
+	SMember(FName)                                     EnvironmentQueryParamName_MinLightningTargetDistance        OFFSET(getStruct<T>, {0xD4, 4, 0, 0})
+	SMember(FScalableFloat)                            LightningCloudHeight                                        OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningRadius                                             OFFSET(getStruct<T>, {0x100, 40, 0, 0})
+	SMember(FScalableFloat)                            MinLightningTargetDistance                                  OFFSET(getStruct<T>, {0x128, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningFrequencyMin                                       OFFSET(getStruct<T>, {0x150, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningFrequencyMax                                       OFFSET(getStruct<T>, {0x178, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltsMin                                           OFFSET(getStruct<T>, {0x1A0, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltsMax                                           OFFSET(getStruct<T>, {0x1C8, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltIntervalMin                                    OFFSET(getStruct<T>, {0x1F0, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltIntervalMax                                    OFFSET(getStruct<T>, {0x218, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltSeparationDistance                             OFFSET(getStruct<T>, {0x240, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningStruckPawnReselectionInterval                      OFFSET(getStruct<T>, {0x268, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltTelegraphDuration                              OFFSET(getStruct<T>, {0x290, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltImpactIgnitionRadius                           OFFSET(getStruct<T>, {0x2B8, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltGrassIgnitionRadius                            OFFSET(getStruct<T>, {0x2E0, 40, 0, 0})
+	SMember(FScalableFloat)                            LightningBoltGrassFirePropagationFuel                       OFFSET(getStruct<T>, {0x308, 40, 0, 0})
+	SMember(FGameplayTag)                              LightningAreaTargetTelegraphCue                             OFFSET(getStruct<T>, {0x330, 4, 0, 0})
+	SMember(FGameplayTag)                              LightningBoltTargetTelegraphCue                             OFFSET(getStruct<T>, {0x334, 4, 0, 0})
 	CMember(TArray<FTempestLightningBoltData>)         LightningBoltData                                           OFFSET(get<T>, {0x338, 16, 0, 0})
 
 
@@ -61,26 +61,26 @@ class UTempestTornadoForcesComponent : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 1328;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnActorAddedToTornadoForces                                 OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorRemovedFromTornadoForces                             OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ConfigHandle                                                OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorAddedToTornadoForces                                 OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorRemovedFromTornadoForces                             OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ConfigHandle                                                OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<FGameplayTag>)                      PhysicsPresetTagsAngularDampingToOverride                   OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FScalableFloat)                            AngularDampingOverride                                      OFFSET(get<T>, {0xE0, 40, 0, 0})
+	SMember(FScalableFloat)                            AngularDampingOverride                                      OFFSET(getStruct<T>, {0xE0, 40, 0, 0})
 	CMember(UClass*)                                   PawnInGE                                                    OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(TMap<EFortPhysicsObjectType, FScalableFloat>) ObjectTypeToMaxCapCount                                  OFFSET(get<T>, {0x110, 80, 0, 0})
-	SMember(FGameplayTagContainer)                     TagsToIgnore                                                OFFSET(get<T>, {0x160, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagsToIgnore                                                OFFSET(getStruct<T>, {0x160, 32, 0, 0})
 	CMember(UClass*)                                   RecentlyRemovedGE                                           OFFSET(get<T>, {0x180, 8, 0, 0})
 	CMember(UTargetingPreset*)                         TargetingPreset                                             OFFSET(get<T>, {0x188, 8, 0, 0})
-	SMember(FGameplayTag)                              DamageSetByCallerTag                                        OFFSET(get<T>, {0x190, 4, 0, 0})
+	SMember(FGameplayTag)                              DamageSetByCallerTag                                        OFFSET(getStruct<T>, {0x190, 4, 0, 0})
 	CMember(UClass*)                                   PeriodicDamageGE                                            OFFSET(get<T>, {0x198, 8, 0, 0})
 	CMember(UClass*)                                   BurstDamageGE                                               OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	SMember(FGameplayTag)                              TornadoActiveCue                                            OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FGameplayTag)                              PlayerNearCue                                               OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FGameplayTag)                              PawnInCue                                                   OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FScalableFloat)                            PlayerNearRange                                             OFFSET(get<T>, {0x1B8, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockAbilitiesWithTag                                       OFFSET(get<T>, {0x1E0, 32, 0, 0})
-	SMember(FTornadoClientSimulationArray)             ActorsToClientSimulate                                      OFFSET(get<T>, {0x200, 280, 0, 0})
-	SMember(FTargetingRequestHandle)                   AsyncTargetingHandle                                        OFFSET(get<T>, {0x430, 4, 0, 0})
+	SMember(FGameplayTag)                              TornadoActiveCue                                            OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FGameplayTag)                              PlayerNearCue                                               OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FGameplayTag)                              PawnInCue                                                   OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FScalableFloat)                            PlayerNearRange                                             OFFSET(getStruct<T>, {0x1B8, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockAbilitiesWithTag                                       OFFSET(getStruct<T>, {0x1E0, 32, 0, 0})
+	SMember(FTornadoClientSimulationArray)             ActorsToClientSimulate                                      OFFSET(getStruct<T>, {0x200, 280, 0, 0})
+	SMember(FTargetingRequestHandle)                   AsyncTargetingHandle                                        OFFSET(getStruct<T>, {0x430, 4, 0, 0})
 	CMember(TSet<AFortPlayerPawn*>)                    PreviouslyNearPlayers                                       OFFSET(get<T>, {0x438, 80, 0, 0})
 
 
@@ -112,20 +112,22 @@ public:
 
 /// Struct /Script/SuperstormRuntime.TempestLightningBoltEffectContainer
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FTempestLightningBoltEffectContainer : public MDKStruct
+class FTempestLightningBoltEffectContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayTagQuery)                         TargetFilter                                                OFFSET(get<T>, {0x0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TargetFilter                                                OFFSET(getStruct<T>, {0x0, 72, 0, 0})
 	CMember(UClass*)                                   GameplayEffect                                              OFFSET(get<T>, {0x48, 8, 0, 0})
 };
 
 /// Struct /Script/SuperstormRuntime.TempestLightningBoltData
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FTempestLightningBoltData : public MDKStruct
+class FTempestLightningBoltData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
@@ -138,8 +140,9 @@ public:
 
 /// Struct /Script/SuperstormRuntime.TornadoActorInfo
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FTornadoActorInfo : public MDKStruct
+class FTornadoActorInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -148,8 +151,9 @@ public:
 
 /// Struct /Script/SuperstormRuntime.TornadoObjectForceModifiers
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FTornadoObjectForceModifiers : public MDKStruct
+class FTornadoObjectForceModifiers : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -164,6 +168,7 @@ public:
 /// Size: 0x0130 (0x000008 - 0x000138)
 class FTornadoConfigEntry : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
@@ -213,6 +218,7 @@ public:
 /// Size: 0x0034 (0x00000C - 0x000040)
 class FTornadoSimulationData : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -223,13 +229,14 @@ public:
 	DMember(float)                                     TangentAccel                                                OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(float)                                     HeightVelocity                                              OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     HeightAccel                                                 OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FVector)                                   Torque                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Torque                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/SuperstormRuntime.TornadoTelemetryStats
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FTornadoTelemetryStats : public MDKStruct
+class FTornadoTelemetryStats : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
@@ -244,6 +251,7 @@ public:
 /// Size: 0x0010 (0x000108 - 0x000118)
 class FTornadoClientSimulationArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 

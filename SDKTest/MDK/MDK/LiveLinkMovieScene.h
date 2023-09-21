@@ -17,12 +17,12 @@ class UMovieSceneLiveLinkSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FLiveLinkSubjectPreset)                    SubjectPreset                                               OFFSET(get<T>, {0xF0, 56, 0, 0})
+	SMember(FLiveLinkSubjectPreset)                    SubjectPreset                                               OFFSET(getStruct<T>, {0xF0, 56, 0, 0})
 	CMember(TArray<bool>)                              ChannelMask                                                 OFFSET(get<T>, {0x128, 16, 0, 0})
 	CMember(TArray<UMovieSceneLiveLinkSubSection*>)    Subsections                                                 OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FName)                                     SubjectName                                                 OFFSET(get<T>, {0x158, 4, 0, 0})
-	SMember(FLiveLinkFrameData)                        TemplateToPush                                              OFFSET(get<T>, {0x160, 144, 0, 0})
-	SMember(FLiveLinkRefSkeleton)                      RefSkeleton                                                 OFFSET(get<T>, {0x1F0, 32, 0, 0})
+	SMember(FName)                                     SubjectName                                                 OFFSET(getStruct<T>, {0x158, 4, 0, 0})
+	SMember(FLiveLinkFrameData)                        TemplateToPush                                              OFFSET(getStruct<T>, {0x160, 144, 0, 0})
+	SMember(FLiveLinkRefSkeleton)                      RefSkeleton                                                 OFFSET(getStruct<T>, {0x1F0, 32, 0, 0})
 	CMember(TArray<FName>)                             CurveNames                                                  OFFSET(get<T>, {0x210, 16, 0, 0})
 	CMember(TArray<FMovieSceneFloatChannel>)           PropertyFloatChannels                                       OFFSET(get<T>, {0x220, 16, 0, 0})
 };
@@ -35,7 +35,7 @@ class UMovieSceneLiveLinkSubSection : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FLiveLinkSubSectionData)                   SubSectionData                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FLiveLinkSubSectionData)                   SubSectionData                                              OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(UClass*)                                   SubjectRole                                                 OFFSET(get<T>, {0x38, 8, 0, 0})
 };
 
@@ -84,19 +84,21 @@ public:
 /// Size: 0x0080 (0x000038 - 0x0000B8)
 class FMovieSceneLiveLinkSectionTemplate : public FMovieScenePropertySectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FLiveLinkSubjectPreset)                    SubjectPreset                                               OFFSET(get<T>, {0x38, 56, 0, 0})
+	SMember(FLiveLinkSubjectPreset)                    SubjectPreset                                               OFFSET(getStruct<T>, {0x38, 56, 0, 0})
 	CMember(TArray<bool>)                              ChannelMask                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(TArray<FLiveLinkSubSectionData>)           SubSectionsData                                             OFFSET(get<T>, {0x80, 16, 0, 0})
 };
 
 /// Struct /Script/LiveLinkMovieScene.LiveLinkSubSectionData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLiveLinkSubSectionData : public MDKStruct
+class FLiveLinkSubSectionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -106,13 +108,14 @@ public:
 
 /// Struct /Script/LiveLinkMovieScene.LiveLinkPropertyData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FLiveLinkPropertyData : public MDKStruct
+class FLiveLinkPropertyData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FMovieSceneFloatChannel>)           FloatChannel                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FMovieSceneStringChannel>)          StringChannel                                               OFFSET(get<T>, {0x18, 16, 0, 0})
 	CMember(TArray<FMovieSceneIntegerChannel>)         IntegerChannel                                              OFFSET(get<T>, {0x28, 16, 0, 0})

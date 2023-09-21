@@ -28,7 +28,7 @@ class UAnalogSlider : public USlider
 	static inline constexpr uint64_t __MDKClassSize = 1760;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnAnalogCapture                                             OFFSET(get<T>, {0x6C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAnalogCapture                                             OFFSET(getStruct<T>, {0x6C0, 16, 0, 0})
 };
 
 /// Class /Script/CommonUI.CommonActionHandlerInterface
@@ -49,10 +49,10 @@ class UCommonActionWidget : public UWidget
 	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnInputMethodChanged                                        OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FSlateBrush)                               ProgressMaterialBrush                                       OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FName)                                     ProgressMaterialParam                                       OFFSET(get<T>, {0x250, 4, 0, 0})
-	SMember(FSlateBrush)                               IconRimBrush                                                OFFSET(get<T>, {0x260, 192, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInputMethodChanged                                        OFFSET(getStruct<T>, {0x178, 16, 0, 0})
+	SMember(FSlateBrush)                               ProgressMaterialBrush                                       OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FName)                                     ProgressMaterialParam                                       OFFSET(getStruct<T>, {0x250, 4, 0, 0})
+	SMember(FSlateBrush)                               IconRimBrush                                                OFFSET(getStruct<T>, {0x260, 192, 0, 0})
 	CMember(TArray<FDataTableRowHandle>)               InputActions                                                OFFSET(get<T>, {0x320, 16, 0, 0})
 	CMember(UInputAction*)                             EnhancedInputAction                                         OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 ProgressDynamicMaterial                                     OFFSET(get<T>, {0x340, 8, 0, 0})
@@ -112,8 +112,8 @@ public:
 	CMember(UInputMappingContext*)                     InputMapping                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	DMember(int32_t)                                   InputMappingPriority                                        OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UCommonInputActionDomain*>) ActionDomainOverride                                        OFFSET(get<T>, {0x2E8, 32, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BP_OnWidgetActivated                                        OFFSET(get<T>, {0x308, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BP_OnWidgetDeactivated                                      OFFSET(get<T>, {0x318, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnWidgetActivated                                        OFFSET(getStruct<T>, {0x308, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnWidgetDeactivated                                      OFFSET(getStruct<T>, {0x318, 16, 0, 0})
 	DMember(bool)                                      bIsActive                                                   OFFSET(get<bool>, {0x328, 1, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    VisibilityBoundWidgets                                      OFFSET(get<T>, {0x330, 16, 0, 0})
 	DMember(bool)                                      bSetVisibilityOnActivated                                   OFFSET(get<bool>, {0x3E0, 1, 0, 0})
@@ -193,7 +193,7 @@ class UCommonBorderStyle : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FSlateBrush)                               Background                                                  OFFSET(get<T>, {0x30, 192, 0, 0})
+	SMember(FSlateBrush)                               Background                                                  OFFSET(getStruct<T>, {0x30, 192, 0, 0})
 
 
 	/// Functions
@@ -211,7 +211,7 @@ class UCommonBorder : public UBorder
 public:
 	CMember(UClass*)                                   style                                                       OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      bReducePaddingBySafezone                                    OFFSET(get<bool>, {0x308, 1, 0, 0})
-	SMember(FMargin)                                   MinimumPadding                                              OFFSET(get<T>, {0x30C, 16, 0, 0})
+	SMember(FMargin)                                   MinimumPadding                                              OFFSET(getStruct<T>, {0x30C, 16, 0, 0})
 
 
 	/// Functions
@@ -228,16 +228,16 @@ class UCommonButtonStyle : public UObject
 
 public:
 	DMember(bool)                                      bSingleMaterial                                             OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FSlateBrush)                               SingleMaterialBrush                                         OFFSET(get<T>, {0x30, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalBase                                                  OFFSET(get<T>, {0xF0, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalHovered                                               OFFSET(get<T>, {0x1B0, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalPressed                                               OFFSET(get<T>, {0x270, 192, 0, 0})
-	SMember(FSlateBrush)                               SelectedBase                                                OFFSET(get<T>, {0x330, 192, 0, 0})
-	SMember(FSlateBrush)                               SelectedHovered                                             OFFSET(get<T>, {0x3F0, 192, 0, 0})
-	SMember(FSlateBrush)                               SelectedPressed                                             OFFSET(get<T>, {0x4B0, 192, 0, 0})
-	SMember(FSlateBrush)                               Disabled                                                    OFFSET(get<T>, {0x570, 192, 0, 0})
-	SMember(FMargin)                                   ButtonPadding                                               OFFSET(get<T>, {0x630, 16, 0, 0})
-	SMember(FMargin)                                   CustomPadding                                               OFFSET(get<T>, {0x640, 16, 0, 0})
+	SMember(FSlateBrush)                               SingleMaterialBrush                                         OFFSET(getStruct<T>, {0x30, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalBase                                                  OFFSET(getStruct<T>, {0xF0, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalHovered                                               OFFSET(getStruct<T>, {0x1B0, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalPressed                                               OFFSET(getStruct<T>, {0x270, 192, 0, 0})
+	SMember(FSlateBrush)                               SelectedBase                                                OFFSET(getStruct<T>, {0x330, 192, 0, 0})
+	SMember(FSlateBrush)                               SelectedHovered                                             OFFSET(getStruct<T>, {0x3F0, 192, 0, 0})
+	SMember(FSlateBrush)                               SelectedPressed                                             OFFSET(getStruct<T>, {0x4B0, 192, 0, 0})
+	SMember(FSlateBrush)                               Disabled                                                    OFFSET(getStruct<T>, {0x570, 192, 0, 0})
+	SMember(FMargin)                                   ButtonPadding                                               OFFSET(getStruct<T>, {0x630, 16, 0, 0})
+	SMember(FMargin)                                   CustomPadding                                               OFFSET(getStruct<T>, {0x640, 16, 0, 0})
 	DMember(int32_t)                                   MinWidth                                                    OFFSET(get<int32_t>, {0x650, 4, 0, 0})
 	DMember(int32_t)                                   MinHeight                                                   OFFSET(get<int32_t>, {0x654, 4, 0, 0})
 	CMember(UClass*)                                   NormalTextStyle                                             OFFSET(get<T>, {0x658, 8, 0, 0})
@@ -245,12 +245,12 @@ public:
 	CMember(UClass*)                                   SelectedTextStyle                                           OFFSET(get<T>, {0x668, 8, 0, 0})
 	CMember(UClass*)                                   SelectedHoveredTextStyle                                    OFFSET(get<T>, {0x670, 8, 0, 0})
 	CMember(UClass*)                                   DisabledTextStyle                                           OFFSET(get<T>, {0x678, 8, 0, 0})
-	SMember(FSlateSound)                               PressedSlateSound                                           OFFSET(get<T>, {0x680, 24, 0, 0})
-	SMember(FCommonButtonStyleOptionalSlateSound)      SelectedPressedSlateSound                                   OFFSET(get<T>, {0x698, 32, 0, 0})
-	SMember(FCommonButtonStyleOptionalSlateSound)      LockedPressedSlateSound                                     OFFSET(get<T>, {0x6B8, 32, 0, 0})
-	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(get<T>, {0x6D8, 24, 0, 0})
-	SMember(FCommonButtonStyleOptionalSlateSound)      SelectedHoveredSlateSound                                   OFFSET(get<T>, {0x6F0, 32, 0, 0})
-	SMember(FCommonButtonStyleOptionalSlateSound)      LockedHoveredSlateSound                                     OFFSET(get<T>, {0x710, 32, 0, 0})
+	SMember(FSlateSound)                               PressedSlateSound                                           OFFSET(getStruct<T>, {0x680, 24, 0, 0})
+	SMember(FCommonButtonStyleOptionalSlateSound)      SelectedPressedSlateSound                                   OFFSET(getStruct<T>, {0x698, 32, 0, 0})
+	SMember(FCommonButtonStyleOptionalSlateSound)      LockedPressedSlateSound                                     OFFSET(getStruct<T>, {0x6B8, 32, 0, 0})
+	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(getStruct<T>, {0x6D8, 24, 0, 0})
+	SMember(FCommonButtonStyleOptionalSlateSound)      SelectedHoveredSlateSound                                   OFFSET(getStruct<T>, {0x6F0, 32, 0, 0})
+	SMember(FCommonButtonStyleOptionalSlateSound)      LockedHoveredSlateSound                                     OFFSET(getStruct<T>, {0x710, 32, 0, 0})
 
 
 	/// Functions
@@ -294,7 +294,7 @@ class UCommonButtonInternalBase : public UButton
 	static inline constexpr uint64_t __MDKClassSize = 1600;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnDoubleClicked                                             OFFSET(get<T>, {0x5D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDoubleClicked                                             OFFSET(getStruct<T>, {0x5D8, 16, 0, 0})
 	DMember(int32_t)                                   MinWidth                                                    OFFSET(get<int32_t>, {0x608, 4, 0, 0})
 	DMember(int32_t)                                   MinHeight                                                   OFFSET(get<int32_t>, {0x60C, 4, 0, 0})
 	DMember(bool)                                      bButtonEnabled                                              OFFSET(get<bool>, {0x610, 1, 0, 0})
@@ -309,17 +309,17 @@ class UCommonButtonBase : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 5232;
 
 public:
-	SMember(FWidgetEventField)                         ClickEvent                                                  OFFSET(get<T>, {0x2D0, 1, 0, 0})
+	SMember(FWidgetEventField)                         ClickEvent                                                  OFFSET(getStruct<T>, {0x2D0, 1, 0, 0})
 	DMember(int32_t)                                   MinWidth                                                    OFFSET(get<int32_t>, {0x2D4, 4, 0, 0})
 	DMember(int32_t)                                   MinHeight                                                   OFFSET(get<int32_t>, {0x2D8, 4, 0, 0})
 	CMember(UClass*)                                   style                                                       OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	DMember(bool)                                      bHideInputAction                                            OFFSET(get<bool>, {0x2E8, 1, 0, 0})
-	SMember(FSlateSound)                               PressedSlateSoundOverride                                   OFFSET(get<T>, {0x2F0, 24, 0, 0})
-	SMember(FSlateSound)                               HoveredSlateSoundOverride                                   OFFSET(get<T>, {0x308, 24, 0, 0})
-	SMember(FSlateSound)                               SelectedPressedSlateSoundOverride                           OFFSET(get<T>, {0x320, 24, 0, 0})
-	SMember(FSlateSound)                               SelectedHoveredSlateSoundOverride                           OFFSET(get<T>, {0x338, 24, 0, 0})
-	SMember(FSlateSound)                               LockedPressedSlateSoundOverride                             OFFSET(get<T>, {0x350, 24, 0, 0})
-	SMember(FSlateSound)                               LockedHoveredSlateSoundOverride                             OFFSET(get<T>, {0x368, 24, 0, 0})
+	SMember(FSlateSound)                               PressedSlateSoundOverride                                   OFFSET(getStruct<T>, {0x2F0, 24, 0, 0})
+	SMember(FSlateSound)                               HoveredSlateSoundOverride                                   OFFSET(getStruct<T>, {0x308, 24, 0, 0})
+	SMember(FSlateSound)                               SelectedPressedSlateSoundOverride                           OFFSET(getStruct<T>, {0x320, 24, 0, 0})
+	SMember(FSlateSound)                               SelectedHoveredSlateSoundOverride                           OFFSET(getStruct<T>, {0x338, 24, 0, 0})
+	SMember(FSlateSound)                               LockedPressedSlateSoundOverride                             OFFSET(getStruct<T>, {0x350, 24, 0, 0})
+	SMember(FSlateSound)                               LockedHoveredSlateSoundOverride                             OFFSET(getStruct<T>, {0x368, 24, 0, 0})
 	DMember(bool)                                      bApplyAlphaOnDisable                                        OFFSET(get<bool>, {0x380, 1, 1, 0})
 	DMember(bool)                                      bLocked                                                     OFFSET(get<bool>, {0x380, 1, 1, 1})
 	DMember(bool)                                      bSelectable                                                 OFFSET(get<bool>, {0x380, 1, 1, 2})
@@ -337,20 +337,20 @@ public:
 	CMember(TEnumAsByte<EButtonTouchMethod>)           TouchMethod                                                 OFFSET(get<T>, {0x393, 1, 0, 0})
 	CMember(TEnumAsByte<EButtonPressMethod>)           PressMethod                                                 OFFSET(get<T>, {0x394, 1, 0, 0})
 	DMember(int32_t)                                   InputPriority                                               OFFSET(get<int32_t>, {0x398, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       TriggeringInputAction                                       OFFSET(get<T>, {0x3A0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       TriggeringInputAction                                       OFFSET(getStruct<T>, {0x3A0, 16, 0, 0})
 	CMember(UInputAction*)                             TriggeringEnhancedInputAction                               OFFSET(get<T>, {0x3B0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSelectedChangedBase                                       OFFSET(get<T>, {0x3C8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonBaseClicked                                         OFFSET(get<T>, {0x3D8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonBaseDoubleClicked                                   OFFSET(get<T>, {0x3E8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonBaseHovered                                         OFFSET(get<T>, {0x3F8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonBaseUnhovered                                       OFFSET(get<T>, {0x408, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectedChangedBase                                       OFFSET(getStruct<T>, {0x3C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonBaseClicked                                         OFFSET(getStruct<T>, {0x3D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonBaseDoubleClicked                                   OFFSET(getStruct<T>, {0x3E8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonBaseHovered                                         OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonBaseUnhovered                                       OFFSET(getStruct<T>, {0x408, 16, 0, 0})
 	DMember(bool)                                      bIsPersistentBinding                                        OFFSET(get<bool>, {0x448, 1, 0, 0})
 	CMember(ECommonInputMode)                          InputModeOverride                                           OFFSET(get<T>, {0x449, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 SingleMaterialStyleMID                                      OFFSET(get<T>, {0x480, 8, 0, 0})
-	SMember(FButtonStyle)                              NormalStyle                                                 OFFSET(get<T>, {0x490, 944, 0, 0})
-	SMember(FButtonStyle)                              SelectedStyle                                               OFFSET(get<T>, {0x840, 944, 0, 0})
-	SMember(FButtonStyle)                              DisabledStyle                                               OFFSET(get<T>, {0xBF0, 944, 0, 0})
-	SMember(FButtonStyle)                              LockedStyle                                                 OFFSET(get<T>, {0xFA0, 944, 0, 0})
+	SMember(FButtonStyle)                              NormalStyle                                                 OFFSET(getStruct<T>, {0x490, 944, 0, 0})
+	SMember(FButtonStyle)                              SelectedStyle                                               OFFSET(getStruct<T>, {0x840, 944, 0, 0})
+	SMember(FButtonStyle)                              DisabledStyle                                               OFFSET(getStruct<T>, {0xBF0, 944, 0, 0})
+	SMember(FButtonStyle)                              LockedStyle                                                 OFFSET(getStruct<T>, {0xFA0, 944, 0, 0})
 	DMember(bool)                                      bStopDoubleClickPropagation                                 OFFSET(get<bool>, {0x1350, 1, 1, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget                                           OFFSET(get<T>, {0x1468, 8, 0, 0})
 
@@ -534,7 +534,7 @@ class UCommonCustomNavigation : public UBorder
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FDelegateProperty)                         OnNavigationEvent                                           OFFSET(get<T>, {0x300, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnNavigationEvent                                           OFFSET(getStruct<T>, {0x300, 12, 0, 0})
 };
 
 /// Class /Script/CommonUI.CommonTextBlock
@@ -604,7 +604,7 @@ class UCommonHardwareVisibilityBorder : public UCommonBorder
 	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
-	SMember(FGameplayTagQuery)                         VisibilityQuery                                             OFFSET(get<T>, {0x320, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         VisibilityQuery                                             OFFSET(getStruct<T>, {0x320, 72, 0, 0})
 	CMember(ESlateVisibility)                          VisibleType                                                 OFFSET(get<T>, {0x368, 1, 0, 0})
 	CMember(ESlateVisibility)                          HiddenType                                                  OFFSET(get<T>, {0x369, 1, 0, 0})
 };
@@ -627,9 +627,9 @@ class UCommonLazyImage : public UImage
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(get<T>, {0x2B0, 192, 0, 0})
-	SMember(FName)                                     MaterialTextureParamName                                    OFFSET(get<T>, {0x370, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(get<T>, {0x378, 16, 0, 0})
+	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(getStruct<T>, {0x2B0, 192, 0, 0})
+	SMember(FName)                                     MaterialTextureParamName                                    OFFSET(getStruct<T>, {0x370, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(getStruct<T>, {0x378, 16, 0, 0})
 
 
 	/// Functions
@@ -653,9 +653,9 @@ class UCommonLazyWidget : public UWidget
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(get<T>, {0x180, 192, 0, 0})
+	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(getStruct<T>, {0x180, 192, 0, 0})
 	CMember(UUserWidget*)                              Content                                                     OFFSET(get<T>, {0x240, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(get<T>, {0x270, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(getStruct<T>, {0x270, 16, 0, 0})
 
 
 	/// Functions
@@ -685,7 +685,7 @@ class ULoadGuardSlot : public UPanelSlot
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x49, 1, 0, 0})
 
@@ -707,13 +707,13 @@ class UCommonLoadGuard : public UContentWidget
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(get<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(getStruct<T>, {0x190, 192, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         ThrobberAlignment                                           OFFSET(get<T>, {0x250, 1, 0, 0})
-	SMember(FMargin)                                   ThrobberPadding                                             OFFSET(get<T>, {0x254, 16, 0, 0})
-	SMember(FText)                                     LoadingText                                                 OFFSET(get<T>, {0x268, 24, 0, 0})
+	SMember(FMargin)                                   ThrobberPadding                                             OFFSET(getStruct<T>, {0x254, 16, 0, 0})
+	SMember(FText)                                     LoadingText                                                 OFFSET(getStruct<T>, {0x268, 24, 0, 0})
 	CMember(UClass*)                                   TextStyle                                                   OFFSET(get<T>, {0x280, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(get<T>, {0x288, 16, 0, 0})
-	SMember(FSoftObjectPath)                           SpinnerMaterialPath                                         OFFSET(get<T>, {0x298, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(getStruct<T>, {0x288, 16, 0, 0})
+	SMember(FSoftObjectPath)                           SpinnerMaterialPath                                         OFFSET(getStruct<T>, {0x298, 24, 0, 0})
 
 
 	/// Functions
@@ -737,13 +737,13 @@ class UCommonNumericTextBlock : public UCommonTextBlock
 	static inline constexpr uint64_t __MDKClassSize = 1056;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnInterpolationStartedEvent                                 OFFSET(get<T>, {0x378, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInterpolationUpdatedEvent                                 OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOutroEvent                                                OFFSET(get<T>, {0x398, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInterpolationEndedEvent                                   OFFSET(get<T>, {0x3A8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInterpolationStartedEvent                                 OFFSET(getStruct<T>, {0x378, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInterpolationUpdatedEvent                                 OFFSET(getStruct<T>, {0x388, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOutroEvent                                                OFFSET(getStruct<T>, {0x398, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInterpolationEndedEvent                                   OFFSET(getStruct<T>, {0x3A8, 16, 0, 0})
 	DMember(float)                                     CurrentNumericValue                                         OFFSET(get<float>, {0x3B8, 4, 0, 0})
 	CMember(ECommonNumericType)                        NumericType                                                 OFFSET(get<T>, {0x3BC, 1, 0, 0})
-	SMember(FCommonNumberFormattingOptions)            FormattingSpecification                                     OFFSET(get<T>, {0x3C0, 20, 0, 0})
+	SMember(FCommonNumberFormattingOptions)            FormattingSpecification                                     OFFSET(getStruct<T>, {0x3C0, 20, 0, 0})
 	DMember(float)                                     EaseOutInterpolationExponent                                OFFSET(get<float>, {0x3D4, 4, 0, 0})
 	DMember(float)                                     InterpolationUpdateInterval                                 OFFSET(get<float>, {0x3D8, 4, 0, 0})
 	DMember(float)                                     PostInterpolationShrinkDuration                             OFFSET(get<float>, {0x3DC, 4, 0, 0})
@@ -813,7 +813,7 @@ class UCommonRotator : public UCommonButtonBase
 	static inline constexpr uint64_t __MDKClassSize = 5328;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRotated                                                   OFFSET(get<T>, {0x1480, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRotated                                                   OFFSET(getStruct<T>, {0x1480, 16, 0, 0})
 	CMember(UCommonTextBlock*)                         MyText                                                      OFFSET(get<T>, {0x14A8, 8, 0, 0})
 
 
@@ -844,12 +844,12 @@ class UCommonTabListWidgetBase : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTabSelected                                               OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTabButtonCreation                                         OFFSET(get<T>, {0x2E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTabButtonRemoval                                          OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTabListRebuilt                                            OFFSET(get<T>, {0x300, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       NextTabInputActionData                                      OFFSET(get<T>, {0x310, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       PreviousTabInputActionData                                  OFFSET(get<T>, {0x320, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTabSelected                                               OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTabButtonCreation                                         OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTabButtonRemoval                                          OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTabListRebuilt                                            OFFSET(getStruct<T>, {0x300, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       NextTabInputActionData                                      OFFSET(getStruct<T>, {0x310, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PreviousTabInputActionData                                  OFFSET(getStruct<T>, {0x320, 16, 0, 0})
 	CMember(UInputAction*)                             NextTabEnhancedInputAction                                  OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UInputAction*)                             PreviousTabEnhancedInputAction                              OFFSET(get<T>, {0x338, 8, 0, 0})
 	DMember(bool)                                      bAutoListenForInput                                         OFFSET(get<bool>, {0x340, 1, 0, 0})
@@ -924,13 +924,13 @@ class UCommonTextStyle : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 416;
 
 public:
-	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x28, 88, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FSlateFontInfo)                            Font                                                        OFFSET(getStruct<T>, {0x28, 88, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x80, 16, 0, 0})
 	DMember(bool)                                      bUsesDropShadow                                             OFFSET(get<bool>, {0x90, 1, 0, 0})
-	SMember(FVector2D)                                 ShadowOffset                                                OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FLinearColor)                              ShadowColor                                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMargin)                                   Margin                                                      OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FSlateBrush)                               StrikeBrush                                                 OFFSET(get<T>, {0xD0, 192, 0, 0})
+	SMember(FVector2D)                                 ShadowOffset                                                OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FLinearColor)                              ShadowColor                                                 OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMargin)                                   Margin                                                      OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FSlateBrush)                               StrikeBrush                                                 OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
 	DMember(float)                                     LineHeightPercentage                                        OFFSET(get<float>, {0x190, 4, 0, 0})
 
 
@@ -1035,7 +1035,7 @@ public:
 	CMember(TArray<FGameplayTag>)                      PlatformTraits                                              OFFSET(get<T>, {0x90, 16, 0, 0})
 	CMember(UObject*)                                  DefaultImageResourceObjectInstance                          OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultThrobberMaterialInstance                             OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FSlateBrush)                               DefaultThrobberBrush                                        OFFSET(get<T>, {0xE0, 192, 0, 0})
+	SMember(FSlateBrush)                               DefaultThrobberBrush                                        OFFSET(getStruct<T>, {0xE0, 192, 0, 0})
 	CMember(UCommonUIRichTextData*)                    RichTextDataInstance                                        OFFSET(get<T>, {0x1A0, 8, 0, 0})
 };
 
@@ -1106,7 +1106,7 @@ public:
 	CMember(UMediaTexture*)                            MediaTexture                                                OFFSET(get<T>, {0x188, 8, 0, 0})
 	CMember(UMaterial*)                                VideoMaterial                                               OFFSET(get<T>, {0x190, 8, 0, 0})
 	CMember(UMediaSoundComponent*)                     SoundComponent                                              OFFSET(get<T>, {0x198, 8, 0, 0})
-	SMember(FSlateBrush)                               VideoBrush                                                  OFFSET(get<T>, {0x1A0, 192, 0, 0})
+	SMember(FSlateBrush)                               VideoBrush                                                  OFFSET(getStruct<T>, {0x1A0, 192, 0, 0})
 };
 
 /// Class /Script/CommonUI.CommonVisibilitySwitcher
@@ -1181,7 +1181,7 @@ class UCommonVisualAttachment : public USizeBox
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FVector2D)                                 ContentAnchor                                               OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	SMember(FVector2D)                                 ContentAnchor                                               OFFSET(getStruct<T>, {0x1C8, 16, 0, 0})
 };
 
 /// Class /Script/CommonUI.CommonWidgetCarousel
@@ -1193,7 +1193,7 @@ class UCommonWidgetCarousel : public UPanelWidget
 
 public:
 	DMember(int32_t)                                   ActiveWidgetIndex                                           OFFSET(get<int32_t>, {0x190, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCurrentPageIndexChanged                                   OFFSET(get<T>, {0x198, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCurrentPageIndexChanged                                   OFFSET(getStruct<T>, {0x198, 16, 0, 0})
 
 
 	/// Functions
@@ -1224,7 +1224,7 @@ class UCommonWidgetCarouselNavBar : public UWidget
 
 public:
 	CMember(UClass*)                                   ButtonWidgetType                                            OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(FMargin)                                   ButtonPadding                                               OFFSET(get<T>, {0x180, 16, 0, 0})
+	SMember(FMargin)                                   ButtonPadding                                               OFFSET(getStruct<T>, {0x180, 16, 0, 0})
 	CMember(UCommonWidgetCarousel*)                    LinkedCarousel                                              OFFSET(get<T>, {0x1A0, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup                                                 OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(TArray<UCommonButtonBase*>)                Buttons                                                     OFFSET(get<T>, {0x1B0, 16, 0, 0})
@@ -1257,11 +1257,11 @@ class UCommonButtonGroupBase : public UCommonWidgetGroupBase
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSelectedButtonBaseChanged                                 OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHoveredButtonBaseChanged                                  OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonBaseClicked                                         OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonBaseDoubleClicked                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSelectionCleared                                          OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectedButtonBaseChanged                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHoveredButtonBaseChanged                                  OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonBaseClicked                                         OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonBaseDoubleClicked                                   OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectionCleared                                          OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 	DMember(bool)                                      bSelectionRequired                                          OFFSET(get<bool>, {0xF0, 1, 0, 0})
 
 
@@ -1378,7 +1378,7 @@ public:
 	DMember(int32_t)                                   UIActionProcessingPriority                                  OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 	CMember(TArray<FUIInputAction>)                    InputActions                                                OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TArray<FUIInputAction>)                    ActionOverrides                                             OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FCommonAnalogCursorSettings)               AnalogCursorSettings                                        OFFSET(get<T>, {0x50, 36, 0, 0})
+	SMember(FCommonAnalogCursorSettings)               AnalogCursorSettings                                        OFFSET(getStruct<T>, {0x50, 36, 0, 0})
 };
 
 /// Class /Script/CommonUI.CommonActivatableWidgetContainerBase
@@ -1394,7 +1394,7 @@ public:
 	DMember(float)                                     TransitionDuration                                          OFFSET(get<float>, {0x194, 4, 0, 0})
 	CMember(TArray<UCommonActivatableWidget*>)         WidgetList                                                  OFFSET(get<T>, {0x198, 16, 0, 0})
 	CMember(UCommonActivatableWidget*)                 DisplayedWidget                                             OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	SMember(FUserWidgetPool)                           GeneratedWidgetsPool                                        OFFSET(get<T>, {0x1B0, 136, 0, 0})
+	SMember(FUserWidgetPool)                           GeneratedWidgetsPool                                        OFFSET(getStruct<T>, {0x1B0, 136, 0, 0})
 
 
 	/// Functions
@@ -1436,8 +1436,9 @@ public:
 
 /// Struct /Script/CommonUI.CommonNumberFormattingOptions
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FCommonNumberFormattingOptions : public MDKStruct
+class FCommonNumberFormattingOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -1452,8 +1453,9 @@ public:
 
 /// Struct /Script/CommonUI.CommonRegisteredTabInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCommonRegisteredTabInfo : public MDKStruct
+class FCommonRegisteredTabInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1465,8 +1467,9 @@ public:
 
 /// Struct /Script/CommonUI.UIInputConfig
 /// Size: 0x0005 (0x000000 - 0x000005)
-class FUIInputConfig : public MDKStruct
+class FUIInputConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 5;
 
@@ -1480,13 +1483,14 @@ public:
 
 /// Struct /Script/CommonUI.CommonInputActionHandlerData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCommonInputActionHandlerData : public MDKStruct
+class FCommonInputActionHandlerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       InputActionRow                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       InputActionRow                                              OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EInputActionState)                         State                                                       OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
@@ -1494,6 +1498,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FUITag : public FGameplayTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1504,6 +1509,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FUIActionTag : public FUITag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1512,92 +1518,99 @@ public:
 
 /// Struct /Script/CommonUI.CommonButtonStyleOptionalSlateSound
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCommonButtonStyleOptionalSlateSound : public MDKStruct
+class FCommonButtonStyleOptionalSlateSound : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(bool)                                      bHasSound                                                   OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FSlateSound)                               sound                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FSlateSound)                               sound                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/CommonUI.RichTextIconData
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FRichTextIconData : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  ResourceObject                                              OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector2D)                                 ImageSize                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FVector2D)                                 ImageSize                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /Script/CommonUI.CommonInputTypeInfo
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FCommonInputTypeInfo : public MDKStruct
+class FCommonInputTypeInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(EInputActionState)                         OverrrideState                                              OFFSET(get<T>, {0x18, 1, 0, 0})
 	DMember(bool)                                      bActionRequiresHold                                         OFFSET(get<bool>, {0x19, 1, 0, 0})
 	DMember(float)                                     HoldTime                                                    OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(float)                                     HoldRollbackTime                                            OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FSlateBrush)                               OverrideBrush                                               OFFSET(get<T>, {0x30, 192, 0, 0})
+	SMember(FSlateBrush)                               OverrideBrush                                               OFFSET(getStruct<T>, {0x30, 192, 0, 0})
 };
 
 /// Struct /Script/CommonUI.CommonInputActionDataBase
 /// Size: 0x0358 (0x000008 - 0x000360)
 class FCommonInputActionDataBase : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FText)                                     HoldDisplayName                                             OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     HoldDisplayName                                             OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(int32_t)                                   NavBarPriority                                              OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	SMember(FCommonInputTypeInfo)                      KeyboardInputTypeInfo                                       OFFSET(get<T>, {0x40, 240, 0, 0})
-	SMember(FCommonInputTypeInfo)                      DefaultGamepadInputTypeInfo                                 OFFSET(get<T>, {0x130, 240, 0, 0})
+	SMember(FCommonInputTypeInfo)                      KeyboardInputTypeInfo                                       OFFSET(getStruct<T>, {0x40, 240, 0, 0})
+	SMember(FCommonInputTypeInfo)                      DefaultGamepadInputTypeInfo                                 OFFSET(getStruct<T>, {0x130, 240, 0, 0})
 	CMember(TMap<FName, FCommonInputTypeInfo>)         GamepadInputOverrides                                       OFFSET(get<T>, {0x220, 80, 0, 0})
-	SMember(FCommonInputTypeInfo)                      TouchInputTypeInfo                                          OFFSET(get<T>, {0x270, 240, 0, 0})
+	SMember(FCommonInputTypeInfo)                      TouchInputTypeInfo                                          OFFSET(getStruct<T>, {0x270, 240, 0, 0})
 };
 
 /// Struct /Script/CommonUI.UIActionKeyMapping
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FUIActionKeyMapping : public MDKStruct
+class FUIActionKeyMapping : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FKey)                                      Key                                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FKey)                                      Key                                                         OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     HoldTime                                                    OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     HoldRollbackTime                                            OFFSET(get<float>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/CommonUI.UIInputAction
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FUIInputAction : public MDKStruct
+class FUIInputAction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FUIActionTag)                              ActionTag                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     DefaultDisplayName                                          OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FUIActionTag)                              ActionTag                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     DefaultDisplayName                                          OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TArray<FUIActionKeyMapping>)               KeyMappings                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/CommonUI.CommonAnalogCursorSettings
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FCommonAnalogCursorSettings : public MDKStruct
+class FCommonAnalogCursorSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 

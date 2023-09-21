@@ -18,20 +18,20 @@ class UGravityGunTargetTrackingComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FScalableFloat)                            AllowLargeObjects                                           OFFSET(get<T>, {0xA0, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowMultipleGrabbers                                       OFFSET(get<T>, {0xC8, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowVehicles                                               OFFSET(get<T>, {0xF0, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowPickups                                                OFFSET(get<T>, {0x118, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowProjectiles                                            OFFSET(get<T>, {0x140, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowForay                                                  OFFSET(get<T>, {0x168, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowWhileInVehicle                                         OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FName)                                     GrabbedByGravityGunTagName                                  OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     InvalidTargetTags                                           OFFSET(get<T>, {0x1C0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetIsPlayerTag                                           OFFSET(get<T>, {0x1E0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetIsAlreadyGrabbedTag                                   OFFSET(get<T>, {0x200, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetIsOwnVehicleTag                                       OFFSET(get<T>, {0x220, 32, 0, 0})
-	SMember(FMulticastInlineDelegate)                  FoundTargetDelegate                                         OFFSET(get<T>, {0x240, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DeactivateReticleDelegate                                   OFFSET(get<T>, {0x250, 16, 0, 0})
+	SMember(FScalableFloat)                            AllowLargeObjects                                           OFFSET(getStruct<T>, {0xA0, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowMultipleGrabbers                                       OFFSET(getStruct<T>, {0xC8, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowVehicles                                               OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowPickups                                                OFFSET(getStruct<T>, {0x118, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowProjectiles                                            OFFSET(getStruct<T>, {0x140, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowForay                                                  OFFSET(getStruct<T>, {0x168, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowWhileInVehicle                                         OFFSET(getStruct<T>, {0x190, 40, 0, 0})
+	SMember(FName)                                     GrabbedByGravityGunTagName                                  OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     InvalidTargetTags                                           OFFSET(getStruct<T>, {0x1C0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetIsPlayerTag                                           OFFSET(getStruct<T>, {0x1E0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetIsAlreadyGrabbedTag                                   OFFSET(getStruct<T>, {0x200, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetIsOwnVehicleTag                                       OFFSET(getStruct<T>, {0x220, 32, 0, 0})
+	SMember(FMulticastInlineDelegate)                  FoundTargetDelegate                                         OFFSET(getStruct<T>, {0x240, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DeactivateReticleDelegate                                   OFFSET(getStruct<T>, {0x250, 16, 0, 0})
 
 
 	/// Functions
@@ -68,11 +68,11 @@ public:
 	DMember(float)                                     LockedRoll                                                  OFFSET(get<float>, {0x44C, 4, 0, 0})
 	DMember(bool)                                      bHeadShouldBend                                             OFFSET(get<bool>, {0x450, 1, 0, 0})
 	DMember(bool)                                      bFootShouldBend                                             OFFSET(get<bool>, {0x451, 1, 0, 0})
-	SMember(FVector)                                   BodyGroundOffset                                            OFFSET(get<T>, {0x458, 24, 0, 0})
-	SMember(FVector2D)                                 MinClampPitchInRange                                        OFFSET(get<T>, {0x470, 16, 0, 0})
-	SMember(FVector2D)                                 MinClampPitchOutRange                                       OFFSET(get<T>, {0x480, 16, 0, 0})
-	SMember(FVector2D)                                 MaxClampPitchInRange                                        OFFSET(get<T>, {0x490, 16, 0, 0})
-	SMember(FVector2D)                                 MaxClampPitchOutRange                                       OFFSET(get<T>, {0x4A0, 16, 0, 0})
+	SMember(FVector)                                   BodyGroundOffset                                            OFFSET(getStruct<T>, {0x458, 24, 0, 0})
+	SMember(FVector2D)                                 MinClampPitchInRange                                        OFFSET(getStruct<T>, {0x470, 16, 0, 0})
+	SMember(FVector2D)                                 MinClampPitchOutRange                                       OFFSET(getStruct<T>, {0x480, 16, 0, 0})
+	SMember(FVector2D)                                 MaxClampPitchInRange                                        OFFSET(getStruct<T>, {0x490, 16, 0, 0})
+	SMember(FVector2D)                                 MaxClampPitchOutRange                                       OFFSET(getStruct<T>, {0x4A0, 16, 0, 0})
 	DMember(float)                                     HeadAlphaInterpSpeed                                        OFFSET(get<float>, {0x4B0, 4, 0, 0})
 };
 
@@ -84,9 +84,9 @@ class AFortGameplayCueNotifyLoop_Goop : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2512;
 
 public:
-	SMember(FName)                                     SpeedParamName                                              OFFSET(get<T>, {0x990, 4, 0, 0})
-	SMember(FName)                                     IsFallingParamName                                          OFFSET(get<T>, {0x994, 4, 0, 0})
-	SMember(FGoopAudioMapRangeClamped)                 SpeedMapRangeClamped                                        OFFSET(get<T>, {0x998, 32, 0, 0})
+	SMember(FName)                                     SpeedParamName                                              OFFSET(getStruct<T>, {0x990, 4, 0, 0})
+	SMember(FName)                                     IsFallingParamName                                          OFFSET(getStruct<T>, {0x994, 4, 0, 0})
+	SMember(FGoopAudioMapRangeClamped)                 SpeedMapRangeClamped                                        OFFSET(getStruct<T>, {0x998, 32, 0, 0})
 	DMember(float)                                     InterpSpeed                                                 OFFSET(get<float>, {0x9B8, 4, 0, 0})
 	CMember(UAudioComponent*)                          LoopingAudioComponent                                       OFFSET(get<T>, {0x9C0, 8, 0, 0})
 };
@@ -111,9 +111,9 @@ class AReactorGradeGameplayCue_ChargeUp : public AFortGameplayCueNotify_Loop
 public:
 	CMember(AFortPawn*)                                Pawn                                                        OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UFortWeaponFxComponent_ChargeAimLocation*) CachedAimLocationComponent                                  OFFSET(get<T>, {0x998, 8, 0, 0})
-	SMember(FVector)                                   FoundEndPoint                                               OFFSET(get<T>, {0x9A0, 24, 0, 0})
-	SMember(FScalableFloat)                            MinHitDistance                                              OFFSET(get<T>, {0x9B8, 40, 0, 0})
-	SMember(FScalableFloat)                            HitObjectsLimit                                             OFFSET(get<T>, {0x9E0, 40, 0, 0})
+	SMember(FVector)                                   FoundEndPoint                                               OFFSET(getStruct<T>, {0x9A0, 24, 0, 0})
+	SMember(FScalableFloat)                            MinHitDistance                                              OFFSET(getStruct<T>, {0x9B8, 40, 0, 0})
+	SMember(FScalableFloat)                            HitObjectsLimit                                             OFFSET(getStruct<T>, {0x9E0, 40, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                OFFSET(get<T>, {0xA0C, 1, 0, 0})
 
 
@@ -128,8 +128,9 @@ public:
 
 /// Struct /Script/MotherGameplayRuntime.GravyGoblinActivatable_Event
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGravyGoblinActivatable_Event : public MDKStruct
+class FGravyGoblinActivatable_Event : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -139,8 +140,9 @@ public:
 
 /// Struct /Script/MotherGameplayRuntime.GravyGoblinRotatable_Event
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGravyGoblinRotatable_Event : public MDKStruct
+class FGravyGoblinRotatable_Event : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -150,25 +152,27 @@ public:
 
 /// Struct /Script/MotherGameplayRuntime.GoopAudioMapRangeClamped
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FGoopAudioMapRangeClamped : public MDKStruct
+class FGoopAudioMapRangeClamped : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector2D)                                 InRange                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 OutRange                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 InRange                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 OutRange                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/MotherGameplayRuntime.PaddleGingerPropData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FPaddleGingerPropData : public MDKStruct
+class FPaddleGingerPropData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FText)                                     CategoryLabelText                                           OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     CategoryLabelText                                           OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(int32_t)                                   PropIndex                                                   OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	DMember(int32_t)                                   MaxPropCount                                                OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
 	DMember(int32_t)                                   CategoryIndex                                               OFFSET(get<int32_t>, {0x20, 4, 0, 0})
@@ -178,8 +182,9 @@ public:
 
 /// Struct /Script/MotherGameplayRuntime.PaddleGingerPropActivatedData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPaddleGingerPropActivatedData : public MDKStruct
+class FPaddleGingerPropActivatedData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

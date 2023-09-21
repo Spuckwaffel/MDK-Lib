@@ -48,8 +48,8 @@ class UInterchangeProjectSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	SMember(FInterchangeContentImportSettings)         ContentImportSettings                                       OFFSET(get<T>, {0x30, 288, 0, 0})
-	SMember(FInterchangeImportSettings)                SceneImportSettings                                         OFFSET(get<T>, {0x150, 128, 0, 0})
+	SMember(FInterchangeContentImportSettings)         ContentImportSettings                                       OFFSET(getStruct<T>, {0x30, 288, 0, 0})
+	SMember(FInterchangeImportSettings)                SceneImportSettings                                         OFFSET(getStruct<T>, {0x150, 128, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   FilePickerClass                                             OFFSET(get<T>, {0x1D0, 32, 0, 0})
 	DMember(bool)                                      bStaticMeshUseSmoothEdgesIfSmoothingInformationIsMissing    OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   GenericPipelineClass                                        OFFSET(get<T>, {0x1F8, 32, 0, 0})
@@ -75,7 +75,7 @@ class UInterchangePythonPipelineAsset : public UObject
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   PythonClass                                                 OFFSET(get<T>, {0x28, 32, 0, 0})
 	CMember(UInterchangePythonPipelineBase*)           GeneratedPipeline                                           OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FString)                                   JsonDefaultProperties                                       OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   JsonDefaultProperties                                       OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeEngine.InterchangeSceneImportAsset
@@ -96,8 +96,8 @@ class UInterchangeAssetImportData : public UAssetImportData
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FSoftObjectPath)                           SceneImportAsset                                            OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FString)                                   NodeUniqueID                                                OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FSoftObjectPath)                           SceneImportAsset                                            OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FString)                                   NodeUniqueID                                                OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	CMember(UInterchangeBaseNodeContainer*)            NodeContainer                                               OFFSET(get<T>, {0x50, 8, 0, 0})
 	CMember(TArray<UObject*>)                          Pipelines                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(UInterchangeBaseNodeContainer*)            TransientNodeContainer                                      OFFSET(get<T>, {0x68, 8, 0, 0})
@@ -189,33 +189,36 @@ public:
 
 /// Struct /Script/InterchangeEngine.InterchangeFilePickerParameters
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FInterchangeFilePickerParameters : public MDKStruct
+class FInterchangeFilePickerParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	DMember(bool)                                      bAllowMultipleFiles                                         OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FString)                                   DefaultPath                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FString)                                   DefaultPath                                                 OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/InterchangeEngine.InterchangeStackInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FInterchangeStackInfo : public MDKStruct
+class FInterchangeStackInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     StackName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     StackName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<UInterchangePipelineBase*>)         Pipelines                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/InterchangeEngine.InterchangeTranslatorPipelines
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FInterchangeTranslatorPipelines : public MDKStruct
+class FInterchangeTranslatorPipelines : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -226,8 +229,9 @@ public:
 
 /// Struct /Script/InterchangeEngine.InterchangePipelineStack
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FInterchangePipelineStack : public MDKStruct
+class FInterchangePipelineStack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -238,14 +242,15 @@ public:
 
 /// Struct /Script/InterchangeEngine.InterchangeImportSettings
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FInterchangeImportSettings : public MDKStruct
+class FInterchangeImportSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(TMap<FName, FInterchangePipelineStack>)    PipelineStacks                                              OFFSET(get<T>, {0x0, 80, 0, 0})
-	SMember(FName)                                     DefaultPipelineStack                                        OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FName)                                     DefaultPipelineStack                                        OFFSET(getStruct<T>, {0x50, 4, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   PipelineConfigurationDialogClass                            OFFSET(get<T>, {0x58, 32, 0, 0})
 	DMember(bool)                                      bShowPipelineStacksConfigurationDialog                      OFFSET(get<bool>, {0x78, 1, 0, 0})
 };
@@ -254,6 +259,7 @@ public:
 /// Size: 0x00A0 (0x000080 - 0x000120)
 class FInterchangeContentImportSettings : public FInterchangeImportSettings
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -264,8 +270,9 @@ public:
 
 /// Struct /Script/InterchangeEngine.PropertyData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPropertyData : public MDKStruct
+class FPropertyData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -274,8 +281,9 @@ public:
 
 /// Struct /Script/InterchangeEngine.ImportAssetParameters
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FImportAssetParameters : public MDKStruct
+class FImportAssetParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
@@ -285,10 +293,10 @@ public:
 	DMember(bool)                                      bIsAutomated                                                OFFSET(get<bool>, {0xC, 1, 0, 0})
 	DMember(bool)                                      bFollowRedirectors                                          OFFSET(get<bool>, {0xD, 1, 0, 0})
 	CMember(TArray<FSoftObjectPath>)                   OverridePipelines                                           OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FDelegateProperty)                         OnAssetDone                                                 OFFSET(get<T>, {0x20, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnAssetsImportDone                                          OFFSET(get<T>, {0x40, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnSceneObjectDone                                           OFFSET(get<T>, {0x60, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnSceneImportDone                                           OFFSET(get<T>, {0x80, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnAssetDone                                                 OFFSET(getStruct<T>, {0x20, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnAssetsImportDone                                          OFFSET(getStruct<T>, {0x40, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnSceneObjectDone                                           OFFSET(getStruct<T>, {0x60, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnSceneImportDone                                           OFFSET(getStruct<T>, {0x80, 12, 0, 0})
 };
 
 /// Enum /Script/InterchangeEngine.EInterchangePipelineConfigurationDialogResult

@@ -32,10 +32,10 @@ public:
 	CMember(TMap<FUniqueNetIdRepl, UAudioComponent*>)  PlayerAudioComponents                                       OFFSET(get<T>, {0xD8, 80, 0, 0})
 	CMember(ACreativeAudioPlayerReplicationProxy*)     ClientCachedProxy                                           OFFSET(get<T>, {0x128, 8, 0, 0})
 	CMember(USoundBase*)                               LastSoundPlayed                                             OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FCreativeAudioPlayerData)                  ServerInstigatorData                                        OFFSET(get<T>, {0x138, 64, 0, 0})
+	SMember(FCreativeAudioPlayerData)                  ServerInstigatorData                                        OFFSET(getStruct<T>, {0x138, 64, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x178, 1, 0, 0})
 	DMember(bool)                                      bAudioLoaded                                                OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	SMember(FCreativeAudioPlayerData)                  CachedInstigatorData                                        OFFSET(get<T>, {0x1A8, 64, 0, 0})
+	SMember(FCreativeAudioPlayerData)                  CachedInstigatorData                                        OFFSET(getStruct<T>, {0x1A8, 64, 0, 0})
 	CMember(TArray<FUniqueNetIdRepl>)                  RegisteredPlayerIds                                         OFFSET(get<T>, {0x1E8, 16, 0, 0})
 	CMember(TArray<FUniqueNetIdRepl>)                  NonRegisteredPlayerIds                                      OFFSET(get<T>, {0x1F8, 16, 0, 0})
 	CMember(EAutoplayOptions)                          CurrentAutoplayState                                        OFFSET(get<T>, {0x208, 1, 0, 0})
@@ -90,18 +90,19 @@ class ACreativeAudioPlayerReplicationProxy : public ACreativePlayerReplicationPr
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	SMember(FCreativeAudioPlayerData)                  InstigatorData                                              OFFSET(get<T>, {0x298, 64, 0, 0})
+	SMember(FCreativeAudioPlayerData)                  InstigatorData                                              OFFSET(getStruct<T>, {0x298, 64, 0, 0})
 };
 
 /// Struct /Script/CRD_AudioPlayerRuntime.CreativeAudioPlayerData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCreativeAudioPlayerData : public MDKStruct
+class FCreativeAudioPlayerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FUniqueNetIdRepl)                          NetId                                                       OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          NetId                                                       OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	CMember(APawn*)                                    Pawn                                                        OFFSET(get<T>, {0x30, 8, 0, 0})
 	DMember(float)                                     ServerAudioStartTime                                        OFFSET(get<float>, {0x38, 4, 0, 0})
 };

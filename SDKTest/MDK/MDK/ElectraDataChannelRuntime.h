@@ -16,7 +16,7 @@ class AElectraDataChannelPlayer : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTerminalError                                             OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTerminalError                                             OFFSET(getStruct<T>, {0x290, 16, 0, 0})
 
 
 	/// Functions

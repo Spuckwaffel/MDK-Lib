@@ -22,7 +22,7 @@ public:
 	CMember(UInputComponent*)                          MatchmakingPortalInputComponent                             OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	CMember(UFortActivityScalingTextBlock*)            Text_IslandName                                             OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	DMember(float)                                     CountdownTime                                               OFFSET(get<float>, {0x400, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedCountdown                                         OFFSET(get<T>, {0x408, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedCountdown                                         OFFSET(getStruct<T>, {0x408, 16, 0, 0})
 
 
 	/// Functions
@@ -42,7 +42,7 @@ class UFortMatchmakingPortalModal : public UFortActivityView
 	static inline constexpr uint64_t __MDKClassSize = 2072;
 
 public:
-	SMember(FTimerHandle)                              MatchmakingStartTimerHandle                                 OFFSET(get<T>, {0x438, 8, 0, 0})
+	SMember(FTimerHandle)                              MatchmakingStartTimerHandle                                 OFFSET(getStruct<T>, {0x438, 8, 0, 0})
 	CMember(TArray<FString>)                           XpTagMnemonicWhitelist                                      OFFSET(get<T>, {0x7A8, 16, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_ActivityOrigin                                         OFFSET(get<T>, {0x7B8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_LinkCode                                               OFFSET(get<T>, {0x7C0, 8, 0, 0})
@@ -97,12 +97,12 @@ public:
 	CMember(UFortMatchmakingPortalModal*)              MatchmakingPortalModalWidget                                OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UClass*)                                   MatchmakingFeedbackClass                                    OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UClass*)                                   MatchmakingCountdownClass                                   OFFSET(get<T>, {0x418, 8, 0, 0})
-	SMember(FVector)                                   WorldPointerLocation                                        OFFSET(get<T>, {0x420, 24, 0, 0})
-	SMember(FText)                                     CreatorNameTextFormat                                       OFFSET(get<T>, {0x438, 24, 0, 0})
+	SMember(FVector)                                   WorldPointerLocation                                        OFFSET(getStruct<T>, {0x420, 24, 0, 0})
+	SMember(FText)                                     CreatorNameTextFormat                                       OFFSET(getStruct<T>, {0x438, 24, 0, 0})
 	CMember(TWeakObjectPtr<UHeaderDescriptionHUDComponent*>) CachedHUDComponent                                    OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UClass*)                                   IslandModal                                                 OFFSET(get<T>, {0x458, 8, 0, 0})
-	SMember(FMatchmakingPortalPopupData)               CachedIslandData                                            OFFSET(get<T>, {0x460, 96, 0, 0})
-	SMember(FText)                                     InvalidLinkCodeWarningText                                  OFFSET(get<T>, {0x4C0, 24, 0, 0})
+	SMember(FMatchmakingPortalPopupData)               CachedIslandData                                            OFFSET(getStruct<T>, {0x460, 96, 0, 0})
+	SMember(FText)                                     InvalidLinkCodeWarningText                                  OFFSET(getStruct<T>, {0x4C0, 24, 0, 0})
 	DMember(float)                                     MatchmakingFeedbackDelayTime                                OFFSET(get<float>, {0x4D8, 4, 0, 0})
 	DMember(bool)                                      bIsWithinPortalRange                                        OFFSET(get<bool>, {0x4DC, 1, 1, 0})
 	CMember(UFortMatchmakingPortalCountdown*)          MatchmakingCountdownWidget                                  OFFSET(get<T>, {0x4E0, 8, 0, 0})

@@ -18,14 +18,14 @@ class UAvocadoEaterHealthBarWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FEventMessageTag)                          AttachedMessageTag                                          OFFSET(get<T>, {0x310, 4, 0, 0})
+	SMember(FEventMessageTag)                          AttachedMessageTag                                          OFFSET(getStruct<T>, {0x310, 4, 0, 0})
 	CMember(UScriptStruct*)                            AttachedMessageType                                         OFFSET(get<T>, {0x318, 8, 0, 0})
-	SMember(FEventMessageTag)                          DetachedMessageTag                                          OFFSET(get<T>, {0x320, 4, 0, 0})
+	SMember(FEventMessageTag)                          DetachedMessageTag                                          OFFSET(getStruct<T>, {0x320, 4, 0, 0})
 	CMember(UScriptStruct*)                            DetachedMessageType                                         OFFSET(get<T>, {0x328, 8, 0, 0})
-	SMember(FEventMessageTag)                          SetMarkerPositionMessageTag                                 OFFSET(get<T>, {0x330, 4, 0, 0})
+	SMember(FEventMessageTag)                          SetMarkerPositionMessageTag                                 OFFSET(getStruct<T>, {0x330, 4, 0, 0})
 	CMember(UScriptStruct*)                            SetMarkerPositionMessageType                                OFFSET(get<T>, {0x338, 8, 0, 0})
-	SMember(FName)                                     SetMarkerPositionMessagePropertyName                        OFFSET(get<T>, {0x340, 4, 0, 0})
-	SMember(FEventMessageTag)                          TargetDamagedMessageTag                                     OFFSET(get<T>, {0x344, 4, 0, 0})
+	SMember(FName)                                     SetMarkerPositionMessagePropertyName                        OFFSET(getStruct<T>, {0x340, 4, 0, 0})
+	SMember(FEventMessageTag)                          TargetDamagedMessageTag                                     OFFSET(getStruct<T>, {0x344, 4, 0, 0})
 	CMember(UScriptStruct*)                            TargetDamagedMessageType                                    OFFSET(get<T>, {0x348, 8, 0, 0})
 
 
@@ -98,6 +98,6 @@ class UFortMobileActionBBE_GravyGoblinRotate : public UFortMobileActionButtonBeh
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FGameplayTag)                              GravyGoblinTag                                              OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FGameplayTag)                              GravyGoblinTag                                              OFFSET(getStruct<T>, {0x80, 4, 0, 0})
 };
 

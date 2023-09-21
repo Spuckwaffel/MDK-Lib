@@ -47,9 +47,9 @@ class UBaseDynamicMeshComponent : public UMeshComponent
 
 public:
 	DMember(bool)                                      bExplicitShowWireframe                                      OFFSET(get<bool>, {0x5C0, 1, 0, 0})
-	SMember(FLinearColor)                              WireframeColor                                              OFFSET(get<T>, {0x5C4, 16, 0, 0})
+	SMember(FLinearColor)                              WireframeColor                                              OFFSET(getStruct<T>, {0x5C4, 16, 0, 0})
 	CMember(EDynamicMeshComponentColorOverrideMode)    ColorMode                                                   OFFSET(get<T>, {0x5D4, 1, 0, 0})
-	SMember(FColor)                                    ConstantColor                                               OFFSET(get<T>, {0x5D8, 4, 0, 0})
+	SMember(FColor)                                    ConstantColor                                               OFFSET(getStruct<T>, {0x5D8, 4, 0, 0})
 	CMember(EDynamicMeshVertexColorTransformMode)      ColorSpaceMode                                              OFFSET(get<T>, {0x5DC, 1, 0, 0})
 	DMember(bool)                                      bEnableFlatShading                                          OFFSET(get<bool>, {0x5DD, 1, 0, 0})
 	DMember(bool)                                      bEnableViewModeOverrides                                    OFFSET(get<bool>, {0x5DE, 1, 0, 0})
@@ -129,7 +129,7 @@ public:
 	DMember(bool)                                      bEnableComplexCollision                                     OFFSET(get<bool>, {0x792, 1, 0, 0})
 	DMember(bool)                                      bDeferCollisionUpdates                                      OFFSET(get<bool>, {0x793, 1, 0, 0})
 	CMember(UBodySetup*)                               MeshBodySetup                                               OFFSET(get<T>, {0x798, 8, 0, 0})
-	SMember(FKAggregateGeom)                           AggGeom                                                     OFFSET(get<T>, {0x7D8, 120, 0, 0})
+	SMember(FKAggregateGeom)                           AggGeom                                                     OFFSET(getStruct<T>, {0x7D8, 120, 0, 0})
 	CMember(TArray<UBodySetup*>)                       AsyncBodySetupQueue                                         OFFSET(get<T>, {0x850, 16, 0, 0})
 
 
@@ -206,7 +206,7 @@ class UDynamicMesh : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  MeshModifiedBPEvent                                         OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  MeshModifiedBPEvent                                         OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	CMember(UDynamicMeshGenerator*)                    MeshGenerator                                               OFFSET(get<T>, {0xA0, 8, 0, 0})
 	DMember(bool)                                      bEnableMeshGenerator                                        OFFSET(get<bool>, {0xA8, 1, 0, 0})
 
@@ -247,8 +247,9 @@ public:
 
 /// Struct /Script/GeometryFramework.DynamicMeshChangeInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FDynamicMeshChangeInfo : public MDKStruct
+class FDynamicMeshChangeInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

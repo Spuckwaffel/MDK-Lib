@@ -44,11 +44,11 @@ class UFortPoiSwapManager : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPlayspaceLoadedContentDelegate                            OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlayspaceUnloadedContentDelegate                          OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPrePlayspaceContentUnloadDelegate                         OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayspaceLoadedContentDelegate                            OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayspaceUnloadedContentDelegate                          OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPrePlayspaceContentUnloadDelegate                         OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(TWeakObjectPtr<UFortMcpProfileCreative*>)  CachedIslandOwnerProfile                                    OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FVector)                                   PoiPlotLocationOffset                                       OFFSET(get<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   PoiPlotLocationOffset                                       OFFSET(getStruct<T>, {0x128, 24, 0, 0})
 
 
 	/// Functions
@@ -74,15 +74,15 @@ class AFortPoiSwapPlayspace : public AFortPlayspace
 	static inline constexpr uint64_t __MDKClassSize = 1864;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnContentStateChangedDelegate                               OFFSET(get<T>, {0x698, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPreContentUnloadDelegate                                  OFFSET(get<T>, {0x6A8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnContentStateChangedDelegate                               OFFSET(getStruct<T>, {0x698, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreContentUnloadDelegate                                  OFFSET(getStruct<T>, {0x6A8, 16, 0, 0})
 	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0x6B8, 8, 0, 0})
 	CMember(UFortLevelSaveComponent*)                  LevelSaveComponent                                          OFFSET(get<T>, {0x6C0, 8, 0, 0})
 	CMember(UPlaysetLevelStreamComponent*)             PlaysetLevelStreamComponent                                 OFFSET(get<T>, {0x6C8, 8, 0, 0})
 	CMember(TWeakObjectPtr<AFortPoiVolume*>)           PoiToReplace                                                OFFSET(get<T>, {0x6D0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortCreativeRealEstatePlotItem*>) PlotToLoad                                           OFFSET(get<T>, {0x6D8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortCreativeRealEstatePlotItem*>) LoadedPlot                                           OFFSET(get<T>, {0x6E0, 8, 0, 0})
-	SMember(FOnlineLinkId)                             LinkCodeToLoad                                              OFFSET(get<T>, {0x6E8, 24, 0, 0})
+	SMember(FOnlineLinkId)                             LinkCodeToLoad                                              OFFSET(getStruct<T>, {0x6E8, 24, 0, 0})
 	CMember(TArray<AActor*>)                           SpawnedActors                                               OFFSET(get<T>, {0x700, 16, 0, 0})
 
 
@@ -101,9 +101,9 @@ class UAthenaAIServicePlayerBots_CreativeRoyale : public UAthenaAIServiceCreativ
 	static inline constexpr uint64_t __MDKClassSize = 4992;
 
 public:
-	SMember(FScalableFloat)                            PlayerBotsEnabled                                           OFFSET(get<T>, {0x1308, 40, 0, 0})
-	SMember(FScalableFloat)                            BotsAllowedOnHumanTeam                                      OFFSET(get<T>, {0x1330, 40, 0, 0})
-	SMember(FScalableFloat)                            ForceAllPlayerBotsToOneTeam                                 OFFSET(get<T>, {0x1358, 40, 0, 0})
+	SMember(FScalableFloat)                            PlayerBotsEnabled                                           OFFSET(getStruct<T>, {0x1308, 40, 0, 0})
+	SMember(FScalableFloat)                            BotsAllowedOnHumanTeam                                      OFFSET(getStruct<T>, {0x1330, 40, 0, 0})
+	SMember(FScalableFloat)                            ForceAllPlayerBotsToOneTeam                                 OFFSET(getStruct<T>, {0x1358, 40, 0, 0})
 
 
 	/// Functions
@@ -183,9 +183,9 @@ class UCreativeRoyalePlayspaceComponent_LoadingScreen : public UPlayspaceCompone
 
 public:
 	DMember(bool)                                      bShouldDisplayLoadingScreenDuringPostGame                   OFFSET(get<bool>, {0xA0, 1, 0, 0})
-	SMember(FText)                                     PlotNotFinishedLoadingContext                               OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FText)                                     MinigameResetContext                                        OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FScalableFloat)                            FailsafeTimeoutLength                                       OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FText)                                     PlotNotFinishedLoadingContext                               OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
+	SMember(FText)                                     MinigameResetContext                                        OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FScalableFloat)                            FailsafeTimeoutLength                                       OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
 
 
 	/// Functions
@@ -271,7 +271,7 @@ class UFortCheatManager_CreativeRoyale : public UFortCheatManager_Coupled
 
 public:
 	CMember(UFortCreativeRealEstatePlotItemDefinition*) CreativeRoyaleEditPlotDefinition                           OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FGameplayTag)                              CreativeRoyaleVolumeTag                                     OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FGameplayTag)                              CreativeRoyaleVolumeTag                                     OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 
 
 	/// Functions
@@ -305,8 +305,9 @@ public:
 
 /// Struct /Script/CreativeRoyaleRuntime.AttachedBuildingActorGuids
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FAttachedBuildingActorGuids : public MDKStruct
+class FAttachedBuildingActorGuids : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -316,15 +317,16 @@ public:
 
 /// Struct /Script/CreativeRoyaleRuntime.SpawnBuildingActorParameters
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FSpawnBuildingActorParameters : public MDKStruct
+class FSpawnBuildingActorParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UClass*)                                   SpawnClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(TWeakObjectPtr<ULevel*>)                   SpawnLevel                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FTransform)                                SpawnTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                SpawnTransform                                              OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Enum /Script/CreativeRoyaleRuntime.EFortPoiSwapUserContentState

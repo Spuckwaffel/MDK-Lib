@@ -140,7 +140,7 @@ class Utask_Concurrency_awaitable_Await : public UConcurrency_task
 
 public:
 	CMember(UConcurrency_awaitable*)                   _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -157,7 +157,7 @@ class Utask_Concurrency_task_Await : public UConcurrency_task
 
 public:
 	CMember(UConcurrency_task*)                        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -225,7 +225,7 @@ class Utask_EpicGames_Input_verse_ue_input_component_WaitForAction_L_Nverse__ue_
 
 public:
 	CMember(UEpicGames_Input_verse_ue_input_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lverse__ue__input__component_M_Kchar_Minput__event_R) __verse_0xB2CDDD72_Argument               OFFSET(get<T>, {0x148, 32, 0, 0})
+	SMember(Ftuple_Lverse__ue__input__component_M_Kchar_Minput__event_R) __verse_0xB2CDDD72_Argument               OFFSET(getStruct<T>, {0x148, 32, 0, 0})
 
 
 	/// Functions
@@ -251,153 +251,153 @@ class UColors_NamedColors : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 3568;
 
 public:
-	SMember(FColors_color)                             __verse_0x9FBDE6AE_AliceBlue                                OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xB3F7599D_AntiqueWhite                             OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x37EE68B4_Aqua                                     OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA52EBB79_Aquamarine                               OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xD06EFB2A_Azure                                    OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x8CE5D6D0_Beige                                    OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC6B3972A_Bisque                                   OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x65E4346F_Black                                    OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x513D3B5F_BlanchedAlmond                           OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x80217580_Blue                                     OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x31D0653D_BlueViolet                               OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xAD308F8F_Brown                                    OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xED3A42A8_Burlywood                                OFFSET(get<T>, {0x148, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x921A6303_CadetBlue                                OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x9E2BDE1B_Chartreuse                               OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x082AED19_Chocolate                                OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x196BEF87_Coral                                    OFFSET(get<T>, {0x1A8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC6BCD84F_CornflowerBlue                           OFFSET(get<T>, {0x1C0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xEE818697_Cornsilk                                 OFFSET(get<T>, {0x1D8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6733DEF7_Crimson                                  OFFSET(get<T>, {0x1F0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2D925695_Cyan                                     OFFSET(get<T>, {0x208, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x935B7248_DarkBlue                                 OFFSET(get<T>, {0x220, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x3EE8515D_DarkCyan                                 OFFSET(get<T>, {0x238, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x5817F032_DarkGoldenrod                            OFFSET(get<T>, {0x250, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x916F3C35_DarkGray                                 OFFSET(get<T>, {0x268, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x37F798B1_DarkGreen                                OFFSET(get<T>, {0x280, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6B6176B1_DarkGrey                                 OFFSET(get<T>, {0x298, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x9A5F61FB_DarkKhaki                                OFFSET(get<T>, {0x2B0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x97899EDF_DarkMagenta                              OFFSET(get<T>, {0x2C8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC2E62C73_DarkOliveGreen                           OFFSET(get<T>, {0x2E0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x7431D49D_DarkOrange                               OFFSET(get<T>, {0x2F8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA0C47F58_DarkOrchid                               OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA3246E28_DarkRed                                  OFFSET(get<T>, {0x328, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x5A06EB6C_DarkSalmon                               OFFSET(get<T>, {0x340, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xF141484E_DarkSeaGreen                             OFFSET(get<T>, {0x358, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4167AB57_DarkSlateBlue                            OFFSET(get<T>, {0x370, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4353E52A_DarkSlateGray                            OFFSET(get<T>, {0x388, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xB95DAFAE_DarkSlateGrey                            OFFSET(get<T>, {0x3A0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x26DA5155_DarkTurquoise                            OFFSET(get<T>, {0x3B8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x3E781A05_DarkViolet                               OFFSET(get<T>, {0x3D0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x53E148EA_DeepPink                                 OFFSET(get<T>, {0x3E8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA474CD21_DeepSkyBlue                              OFFSET(get<T>, {0x400, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xEC312FE8_DimGray                                  OFFSET(get<T>, {0x418, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x163F656C_DimGrey                                  OFFSET(get<T>, {0x430, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x617B6862_DodgerBlue                               OFFSET(get<T>, {0x448, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC636E104_Firebrick                                OFFSET(get<T>, {0x460, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x06164DB2_FloralWhite                              OFFSET(get<T>, {0x478, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4939E624_ForestGreen                              OFFSET(get<T>, {0x490, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x8069E472_Fuchsia                                  OFFSET(get<T>, {0x4A8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x71D0705F_Gainsboro                                OFFSET(get<T>, {0x4C0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x1EDD5A5B_GhostWhite                               OFFSET(get<T>, {0x4D8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x0363FA56_Gold                                     OFFSET(get<T>, {0x4F0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x13A0B098_Goldenrod                                OFFSET(get<T>, {0x508, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x82153BFD_Gray                                     OFFSET(get<T>, {0x520, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x853EAC70_Green                                    OFFSET(get<T>, {0x538, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x94CAEBA0_GreenYellow                              OFFSET(get<T>, {0x550, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x781B7179_Grey                                     OFFSET(get<T>, {0x568, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6FB30324_Honeydew                                 OFFSET(get<T>, {0x580, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2D404B19_Hotpink                                  OFFSET(get<T>, {0x598, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2CE09720_IndianRed                                OFFSET(get<T>, {0x5B0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x180B2901_Indigo                                   OFFSET(get<T>, {0x5C8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x1086E2EC_Ivory                                    OFFSET(get<T>, {0x5E0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2896553A_Khaki                                    OFFSET(get<T>, {0x5F8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xB93AFCDC_Lavender                                 OFFSET(get<T>, {0x610, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4CF8F931_LavenderBlush                            OFFSET(get<T>, {0x628, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x08B4792E_LawnGreen                                OFFSET(get<T>, {0x640, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xCC22276F_LemonChiffon                             OFFSET(get<T>, {0x658, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x607C97F4_LightBlue                                OFFSET(get<T>, {0x670, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x89B3D40E_LightCoral                               OFFSET(get<T>, {0x688, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xCDCFB4E1_LightCyan                                OFFSET(get<T>, {0x6A0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6C11FD65_LightGoldenrodYellow                     OFFSET(get<T>, {0x6B8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6248D989_LightGray                                OFFSET(get<T>, {0x6D0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x15E697F9_LightGreen                               OFFSET(get<T>, {0x6E8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x9846930D_LightGrey                                OFFSET(get<T>, {0x700, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC34ABDCC_LightPink                                OFFSET(get<T>, {0x718, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC57DAB84_LightSalmon                              OFFSET(get<T>, {0x730, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x0FE57B41_LightSeaGreen                            OFFSET(get<T>, {0x748, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4077C098_LightSkyBlue                             OFFSET(get<T>, {0x760, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xCABFF9F6_LightSlateGray                           OFFSET(get<T>, {0x778, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x30B1B372_LightSlateGrey                           OFFSET(get<T>, {0x790, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xEFD2DF75_LightSteelBlue                           OFFSET(get<T>, {0x7A8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x5732C477_LightYellow                              OFFSET(get<T>, {0x7C0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA58A0A97_Lime                                     OFFSET(get<T>, {0x7D8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC8D6E552_LimeGreen                                OFFSET(get<T>, {0x7F0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xD014B08F_Linen                                    OFFSET(get<T>, {0x808, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC5065659_Magenta                                  OFFSET(get<T>, {0x820, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2C6B6225_Maroon                                   OFFSET(get<T>, {0x838, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x603DC640_MediumAquamarine                         OFFSET(get<T>, {0x850, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x03344EDD_MediumBlue                               OFFSET(get<T>, {0x868, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xEB235F60_MediumOrchid                             OFFSET(get<T>, {0x880, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x80AC62AF_MediumPurple                             OFFSET(get<T>, {0x898, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA2F1456A_MediumSeaGreen                           OFFSET(get<T>, {0x8B0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x81A3E0C2_MediumSlateBlue                          OFFSET(get<T>, {0x8C8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x8259C923_MediumSpringGreen                        OFFSET(get<T>, {0x8E0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xE61E1AC0_MediumTurquoise                          OFFSET(get<T>, {0x8F8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x750A73D1_MediumVioletRed                          OFFSET(get<T>, {0x910, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x54B068FD_MidnightBlue                             OFFSET(get<T>, {0x928, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2D5517E3_MintCream                                OFFSET(get<T>, {0x940, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC9B38859_MistyRose                                OFFSET(get<T>, {0x958, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x045E548D_Moccasin                                 OFFSET(get<T>, {0x970, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x66A473BA_NavajoWhite                              OFFSET(get<T>, {0x988, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x621CB82D_Navy                                     OFFSET(get<T>, {0x9A0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4433768E_OldLace                                  OFFSET(get<T>, {0x9B8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4ADCED0B_Olive                                    OFFSET(get<T>, {0x9D0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x662F5053_OliveDrab                                OFFSET(get<T>, {0x9E8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x7B1B98E3_Orange                                   OFFSET(get<T>, {0xA00, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x31DF128E_OrangeRed                                OFFSET(get<T>, {0xA18, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xAFEE3326_Orchid                                   OFFSET(get<T>, {0xA30, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA90612F2_PaleGoldenrod                            OFFSET(get<T>, {0xA48, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6494F519_PaleGreen                                OFFSET(get<T>, {0xA60, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xD7CBB395_PaleTurquoise                            OFFSET(get<T>, {0xA78, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xBC04EB9C_PaleVioletred                            OFFSET(get<T>, {0xA90, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x1267A5CE_PapayaWhip                               OFFSET(get<T>, {0xAA8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x5B815063_PeachPuff                                OFFSET(get<T>, {0xAC0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6A5E8726_Peru                                     OFFSET(get<T>, {0xAD8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x23175FB8_Pink                                     OFFSET(get<T>, {0xAF0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x92124624_Plum                                     OFFSET(get<T>, {0xB08, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x315A9690_PowderBlue                               OFFSET(get<T>, {0xB20, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC4610EE9_Purple                                   OFFSET(get<T>, {0xB38, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x77CCDA87_Red                                      OFFSET(get<T>, {0xB50, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xFB01846B_RosyBrown                                OFFSET(get<T>, {0xB68, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xA95C80D8_RoyalBlue                                OFFSET(get<T>, {0xB80, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xFCC2BB8C_SaddleBrown                              OFFSET(get<T>, {0xB98, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x552CA712_Salmon                                   OFFSET(get<T>, {0xBB0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xE1C22521_SandyBrown                               OFFSET(get<T>, {0xBC8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x36A1DDC2_SeaGreen                                 OFFSET(get<T>, {0xBE0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x58B624CB_SeaShell                                 OFFSET(get<T>, {0xBF8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x013650B1_Sienna                                   OFFSET(get<T>, {0xC10, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xFA47F979_Silver                                   OFFSET(get<T>, {0xC28, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x1EAB27FD_SkyBlue                                  OFFSET(get<T>, {0xC40, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x0AD0EBFD_SlateBlue                                OFFSET(get<T>, {0xC58, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x08E4A580_SlateGray                                OFFSET(get<T>, {0xC70, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xF2EAEF04_SlateGrey                                OFFSET(get<T>, {0xC88, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xE7A26A33_Snow                                     OFFSET(get<T>, {0xCA0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2CD5AEB9_SpringGreen                              OFFSET(get<T>, {0xCB8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x2D898303_SteelBlue                                OFFSET(get<T>, {0xCD0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x09871083_Tan                                      OFFSET(get<T>, {0xCE8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x303C932D_Teal                                     OFFSET(get<T>, {0xD00, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x303F6677_Thistle                                  OFFSET(get<T>, {0xD18, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x4DC64808_Tomato                                   OFFSET(get<T>, {0xD30, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x6D6D11FF_Turquoise                                OFFSET(get<T>, {0xD48, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x3152567B_Violet                                   OFFSET(get<T>, {0xD60, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x13A81039_Wheat                                    OFFSET(get<T>, {0xD78, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x27EAE4E0_White                                    OFFSET(get<T>, {0xD90, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xBE90A762_WhiteSmoke                               OFFSET(get<T>, {0xDA8, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xC763C8E1_Yellow                                   OFFSET(get<T>, {0xDC0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0xF10B434A_YellowGreen                              OFFSET(get<T>, {0xDD8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x9FBDE6AE_AliceBlue                                OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xB3F7599D_AntiqueWhite                             OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x37EE68B4_Aqua                                     OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA52EBB79_Aquamarine                               OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xD06EFB2A_Azure                                    OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x8CE5D6D0_Beige                                    OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC6B3972A_Bisque                                   OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x65E4346F_Black                                    OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x513D3B5F_BlanchedAlmond                           OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x80217580_Blue                                     OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x31D0653D_BlueViolet                               OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xAD308F8F_Brown                                    OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xED3A42A8_Burlywood                                OFFSET(getStruct<T>, {0x148, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x921A6303_CadetBlue                                OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x9E2BDE1B_Chartreuse                               OFFSET(getStruct<T>, {0x178, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x082AED19_Chocolate                                OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x196BEF87_Coral                                    OFFSET(getStruct<T>, {0x1A8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC6BCD84F_CornflowerBlue                           OFFSET(getStruct<T>, {0x1C0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xEE818697_Cornsilk                                 OFFSET(getStruct<T>, {0x1D8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6733DEF7_Crimson                                  OFFSET(getStruct<T>, {0x1F0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2D925695_Cyan                                     OFFSET(getStruct<T>, {0x208, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x935B7248_DarkBlue                                 OFFSET(getStruct<T>, {0x220, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x3EE8515D_DarkCyan                                 OFFSET(getStruct<T>, {0x238, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x5817F032_DarkGoldenrod                            OFFSET(getStruct<T>, {0x250, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x916F3C35_DarkGray                                 OFFSET(getStruct<T>, {0x268, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x37F798B1_DarkGreen                                OFFSET(getStruct<T>, {0x280, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6B6176B1_DarkGrey                                 OFFSET(getStruct<T>, {0x298, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x9A5F61FB_DarkKhaki                                OFFSET(getStruct<T>, {0x2B0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x97899EDF_DarkMagenta                              OFFSET(getStruct<T>, {0x2C8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC2E62C73_DarkOliveGreen                           OFFSET(getStruct<T>, {0x2E0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x7431D49D_DarkOrange                               OFFSET(getStruct<T>, {0x2F8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA0C47F58_DarkOrchid                               OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA3246E28_DarkRed                                  OFFSET(getStruct<T>, {0x328, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x5A06EB6C_DarkSalmon                               OFFSET(getStruct<T>, {0x340, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xF141484E_DarkSeaGreen                             OFFSET(getStruct<T>, {0x358, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4167AB57_DarkSlateBlue                            OFFSET(getStruct<T>, {0x370, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4353E52A_DarkSlateGray                            OFFSET(getStruct<T>, {0x388, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xB95DAFAE_DarkSlateGrey                            OFFSET(getStruct<T>, {0x3A0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x26DA5155_DarkTurquoise                            OFFSET(getStruct<T>, {0x3B8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x3E781A05_DarkViolet                               OFFSET(getStruct<T>, {0x3D0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x53E148EA_DeepPink                                 OFFSET(getStruct<T>, {0x3E8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA474CD21_DeepSkyBlue                              OFFSET(getStruct<T>, {0x400, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xEC312FE8_DimGray                                  OFFSET(getStruct<T>, {0x418, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x163F656C_DimGrey                                  OFFSET(getStruct<T>, {0x430, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x617B6862_DodgerBlue                               OFFSET(getStruct<T>, {0x448, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC636E104_Firebrick                                OFFSET(getStruct<T>, {0x460, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x06164DB2_FloralWhite                              OFFSET(getStruct<T>, {0x478, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4939E624_ForestGreen                              OFFSET(getStruct<T>, {0x490, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x8069E472_Fuchsia                                  OFFSET(getStruct<T>, {0x4A8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x71D0705F_Gainsboro                                OFFSET(getStruct<T>, {0x4C0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x1EDD5A5B_GhostWhite                               OFFSET(getStruct<T>, {0x4D8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x0363FA56_Gold                                     OFFSET(getStruct<T>, {0x4F0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x13A0B098_Goldenrod                                OFFSET(getStruct<T>, {0x508, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x82153BFD_Gray                                     OFFSET(getStruct<T>, {0x520, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x853EAC70_Green                                    OFFSET(getStruct<T>, {0x538, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x94CAEBA0_GreenYellow                              OFFSET(getStruct<T>, {0x550, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x781B7179_Grey                                     OFFSET(getStruct<T>, {0x568, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6FB30324_Honeydew                                 OFFSET(getStruct<T>, {0x580, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2D404B19_Hotpink                                  OFFSET(getStruct<T>, {0x598, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2CE09720_IndianRed                                OFFSET(getStruct<T>, {0x5B0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x180B2901_Indigo                                   OFFSET(getStruct<T>, {0x5C8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x1086E2EC_Ivory                                    OFFSET(getStruct<T>, {0x5E0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2896553A_Khaki                                    OFFSET(getStruct<T>, {0x5F8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xB93AFCDC_Lavender                                 OFFSET(getStruct<T>, {0x610, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4CF8F931_LavenderBlush                            OFFSET(getStruct<T>, {0x628, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x08B4792E_LawnGreen                                OFFSET(getStruct<T>, {0x640, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xCC22276F_LemonChiffon                             OFFSET(getStruct<T>, {0x658, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x607C97F4_LightBlue                                OFFSET(getStruct<T>, {0x670, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x89B3D40E_LightCoral                               OFFSET(getStruct<T>, {0x688, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xCDCFB4E1_LightCyan                                OFFSET(getStruct<T>, {0x6A0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6C11FD65_LightGoldenrodYellow                     OFFSET(getStruct<T>, {0x6B8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6248D989_LightGray                                OFFSET(getStruct<T>, {0x6D0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x15E697F9_LightGreen                               OFFSET(getStruct<T>, {0x6E8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x9846930D_LightGrey                                OFFSET(getStruct<T>, {0x700, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC34ABDCC_LightPink                                OFFSET(getStruct<T>, {0x718, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC57DAB84_LightSalmon                              OFFSET(getStruct<T>, {0x730, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x0FE57B41_LightSeaGreen                            OFFSET(getStruct<T>, {0x748, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4077C098_LightSkyBlue                             OFFSET(getStruct<T>, {0x760, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xCABFF9F6_LightSlateGray                           OFFSET(getStruct<T>, {0x778, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x30B1B372_LightSlateGrey                           OFFSET(getStruct<T>, {0x790, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xEFD2DF75_LightSteelBlue                           OFFSET(getStruct<T>, {0x7A8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x5732C477_LightYellow                              OFFSET(getStruct<T>, {0x7C0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA58A0A97_Lime                                     OFFSET(getStruct<T>, {0x7D8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC8D6E552_LimeGreen                                OFFSET(getStruct<T>, {0x7F0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xD014B08F_Linen                                    OFFSET(getStruct<T>, {0x808, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC5065659_Magenta                                  OFFSET(getStruct<T>, {0x820, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2C6B6225_Maroon                                   OFFSET(getStruct<T>, {0x838, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x603DC640_MediumAquamarine                         OFFSET(getStruct<T>, {0x850, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x03344EDD_MediumBlue                               OFFSET(getStruct<T>, {0x868, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xEB235F60_MediumOrchid                             OFFSET(getStruct<T>, {0x880, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x80AC62AF_MediumPurple                             OFFSET(getStruct<T>, {0x898, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA2F1456A_MediumSeaGreen                           OFFSET(getStruct<T>, {0x8B0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x81A3E0C2_MediumSlateBlue                          OFFSET(getStruct<T>, {0x8C8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x8259C923_MediumSpringGreen                        OFFSET(getStruct<T>, {0x8E0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xE61E1AC0_MediumTurquoise                          OFFSET(getStruct<T>, {0x8F8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x750A73D1_MediumVioletRed                          OFFSET(getStruct<T>, {0x910, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x54B068FD_MidnightBlue                             OFFSET(getStruct<T>, {0x928, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2D5517E3_MintCream                                OFFSET(getStruct<T>, {0x940, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC9B38859_MistyRose                                OFFSET(getStruct<T>, {0x958, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x045E548D_Moccasin                                 OFFSET(getStruct<T>, {0x970, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x66A473BA_NavajoWhite                              OFFSET(getStruct<T>, {0x988, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x621CB82D_Navy                                     OFFSET(getStruct<T>, {0x9A0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4433768E_OldLace                                  OFFSET(getStruct<T>, {0x9B8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4ADCED0B_Olive                                    OFFSET(getStruct<T>, {0x9D0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x662F5053_OliveDrab                                OFFSET(getStruct<T>, {0x9E8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x7B1B98E3_Orange                                   OFFSET(getStruct<T>, {0xA00, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x31DF128E_OrangeRed                                OFFSET(getStruct<T>, {0xA18, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xAFEE3326_Orchid                                   OFFSET(getStruct<T>, {0xA30, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA90612F2_PaleGoldenrod                            OFFSET(getStruct<T>, {0xA48, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6494F519_PaleGreen                                OFFSET(getStruct<T>, {0xA60, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xD7CBB395_PaleTurquoise                            OFFSET(getStruct<T>, {0xA78, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xBC04EB9C_PaleVioletred                            OFFSET(getStruct<T>, {0xA90, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x1267A5CE_PapayaWhip                               OFFSET(getStruct<T>, {0xAA8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x5B815063_PeachPuff                                OFFSET(getStruct<T>, {0xAC0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6A5E8726_Peru                                     OFFSET(getStruct<T>, {0xAD8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x23175FB8_Pink                                     OFFSET(getStruct<T>, {0xAF0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x92124624_Plum                                     OFFSET(getStruct<T>, {0xB08, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x315A9690_PowderBlue                               OFFSET(getStruct<T>, {0xB20, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC4610EE9_Purple                                   OFFSET(getStruct<T>, {0xB38, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x77CCDA87_Red                                      OFFSET(getStruct<T>, {0xB50, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xFB01846B_RosyBrown                                OFFSET(getStruct<T>, {0xB68, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA95C80D8_RoyalBlue                                OFFSET(getStruct<T>, {0xB80, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xFCC2BB8C_SaddleBrown                              OFFSET(getStruct<T>, {0xB98, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x552CA712_Salmon                                   OFFSET(getStruct<T>, {0xBB0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xE1C22521_SandyBrown                               OFFSET(getStruct<T>, {0xBC8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x36A1DDC2_SeaGreen                                 OFFSET(getStruct<T>, {0xBE0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x58B624CB_SeaShell                                 OFFSET(getStruct<T>, {0xBF8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x013650B1_Sienna                                   OFFSET(getStruct<T>, {0xC10, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xFA47F979_Silver                                   OFFSET(getStruct<T>, {0xC28, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x1EAB27FD_SkyBlue                                  OFFSET(getStruct<T>, {0xC40, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x0AD0EBFD_SlateBlue                                OFFSET(getStruct<T>, {0xC58, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x08E4A580_SlateGray                                OFFSET(getStruct<T>, {0xC70, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xF2EAEF04_SlateGrey                                OFFSET(getStruct<T>, {0xC88, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xE7A26A33_Snow                                     OFFSET(getStruct<T>, {0xCA0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2CD5AEB9_SpringGreen                              OFFSET(getStruct<T>, {0xCB8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x2D898303_SteelBlue                                OFFSET(getStruct<T>, {0xCD0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x09871083_Tan                                      OFFSET(getStruct<T>, {0xCE8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x303C932D_Teal                                     OFFSET(getStruct<T>, {0xD00, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x303F6677_Thistle                                  OFFSET(getStruct<T>, {0xD18, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x4DC64808_Tomato                                   OFFSET(getStruct<T>, {0xD30, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x6D6D11FF_Turquoise                                OFFSET(getStruct<T>, {0xD48, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x3152567B_Violet                                   OFFSET(getStruct<T>, {0xD60, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x13A81039_Wheat                                    OFFSET(getStruct<T>, {0xD78, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x27EAE4E0_White                                    OFFSET(getStruct<T>, {0xD90, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xBE90A762_WhiteSmoke                               OFFSET(getStruct<T>, {0xDA8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xC763C8E1_Yellow                                   OFFSET(getStruct<T>, {0xDC0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xF10B434A_YellowGreen                              OFFSET(getStruct<T>, {0xDD8, 24, 0, 0})
 
 
 	/// Functions
@@ -424,7 +424,7 @@ class Utask_Verse_event_Await : public UConcurrency_task
 
 public:
 	CMember(UVerse_event*)                             _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -831,7 +831,7 @@ class UDiagnostics : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FColors_color)                             __verse_0x57D963B0_DefaultDebugDrawColor                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x57D963B0_DefaultDebugDrawColor                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	CMember(Diagnostics_debug_draw_duration_policy)    __verse_0xBB769F64_DefaultDebugDrawDurationPolicy           OFFSET(get<T>, {0x40, 1, 0, 0})
 	DMember(double)                                    __verse_0x455A65A8_DefaultDebugDrawDuration                 OFFSET(get<double>, {0x48, 8, 0, 0})
 	DMember(double)                                    __verse_0xD30692C9_DefaultDebugDrawSize                     OFFSET(get<double>, {0x50, 8, 0, 0})
@@ -980,7 +980,7 @@ class Utask_Restricted_sticky_event_Await : public UConcurrency_task
 
 public:
 	CMember(URestricted_sticky_event*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -1287,7 +1287,7 @@ class Utask_VerseEngine_subscribable_event_Await : public UConcurrency_task
 
 public:
 	CMember(UVerseEngine_subscribable_event*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -1614,7 +1614,7 @@ class Utask_VGameplayRst_Components_dynamic_activation_component_WaitForTransiti
 
 public:
 	CMember(UVGameplayRst_Components_dynamic_activation_component*) _Self                                          OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -1631,7 +1631,7 @@ class Utask_VGameplayRst_Components_dynamic_activation_component_WaitForTransiti
 
 public:
 	CMember(UVGameplayRst_Components_dynamic_activation_component*) _Self                                          OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -1664,7 +1664,7 @@ class Utask_VGameplayRst_Physics_collision_component_WaitBeginOverlap : public U
 
 public:
 	CMember(UVGameplayRst_Physics_collision_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UVGameplayRst_Physics_overlap_result*)     _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
 
 
@@ -1682,7 +1682,7 @@ class Utask_VGameplayRst_Physics_collision_component_WaitEndOverlap : public UCo
 
 public:
 	CMember(UVGameplayRst_Physics_collision_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UVGameplayRst_Physics_overlap_result*)     _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
 
 
@@ -1700,8 +1700,8 @@ class Utask_VGameplayRst_Physics_collision_component_WaitHit : public UConcurren
 
 public:
 	CMember(UVGameplayRst_Physics_collision_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FVGameplayRst_Physics_hit_result)          _RetVal                                                     OFFSET(get<T>, {0x150, 64, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FVGameplayRst_Physics_hit_result)          _RetVal                                                     OFFSET(getStruct<T>, {0x150, 64, 0, 0})
 
 
 	/// Functions
@@ -1718,7 +1718,7 @@ class Utask_VGameplayRst_Physics_physics_trace_WaitPhysicsTrace : public UConcur
 
 public:
 	CMember(UVGameplayRst_Physics_physics_trace*)      _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(TArray<FVGameplayRst_Physics_hit_result>)  _RetVal                                                     OFFSET(get<T>, {0x150, 16, 0, 0})
 
 
@@ -2328,8 +2328,8 @@ public:
 	DMember(int64_t)                                   __verse_0x592C3A0F_OtherEntityID                            OFFSET(get<int64_t>, {0x28, 8, 0, 0})
 	CMember(UVGameplayRst_Physics_collision_component*) __verse_0x15DAA648_OtherComponent                          OFFSET(get<T>, {0x30, 8, 0, 0})
 	DMember(bool)                                      __verse_0xCDE15551_FromSweep                                OFFSET(get<bool>, {0x38, 1, 1, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x02291CB0_SweepHitNormal                           OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xF4E2A3DA_SweepHitLocation                         OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x02291CB0_SweepHitNormal                           OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xF4E2A3DA_SweepHitLocation                         OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 
 
 	/// Functions
@@ -2599,7 +2599,7 @@ class UVerseMovement_VerseMovementUtil : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVerseMovement_move_config)                __verse_0x40F5E85A_CarConfig                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FVerseMovement_move_config)                __verse_0x40F5E85A_CarConfig                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 
 
 	/// Functions
@@ -2681,7 +2681,7 @@ class UUI_button : public UUI_widget
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FUI_button_slot)                           __verse_0x9693E4CD_Slot                                     OFFSET(get<T>, {0xB8, 48, 0, 0})
+	SMember(FUI_button_slot)                           __verse_0x9693E4CD_Slot                                     OFFSET(getStruct<T>, {0xB8, 48, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x6B2BB37E_OnClickInternal                          OFFSET(get<T>, {0xE8, 8, 0, 0})
 
 
@@ -2730,9 +2730,9 @@ class UUI_color_block : public UUI_widget
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FColors_color)                             __verse_0xA0FC371C_DefaultColor                             OFFSET(get<T>, {0xF8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xA0FC371C_DefaultColor                             OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
 	DMember(double)                                    __verse_0x5DA10C15_DefaultOpacity                           OFFSET(get<double>, {0x110, 8, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(getStruct<T>, {0x118, 16, 0, 0})
 
 
 	/// Functions
@@ -2765,8 +2765,8 @@ class UUI_material_block : public UUI_widget
 
 public:
 	CMember(UAssets_material*)                         __verse_0x800C064C_DefaultImage                             OFFSET(get<T>, {0xF8, 8, 0, 0})
-	SMember(FColors_color)                             __verse_0xC0C585F9_DefaultTint                              OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FColors_color)                             __verse_0xC0C585F9_DefaultTint                              OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(getStruct<T>, {0x118, 16, 0, 0})
 
 
 	/// Functions
@@ -2873,7 +2873,7 @@ class UUI_text_base : public UUI_widget
 
 public:
 	CMember(UVerse_message*)                           __verse_0xEDB05B46_DefaultText                              OFFSET(get<T>, {0x138, 8, 0, 0})
-	SMember(FColors_color)                             __verse_0x5DC97209_DefaultTextColor                         OFFSET(get<T>, {0x140, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x5DC97209_DefaultTextColor                         OFFSET(getStruct<T>, {0x140, 24, 0, 0})
 	DMember(double)                                    __verse_0x1EA9AC7C_DefaultTextOpacity                       OFFSET(get<double>, {0x158, 8, 0, 0})
 	CMember(UI_text_justification)                     __verse_0x616A37A2_DefaultJustification                     OFFSET(get<T>, {0x160, 1, 0, 0})
 	CMember(UI_text_overflow_policy)                   __verse_0x5C09BE1D_DefaultOverflowPolicy                    OFFSET(get<T>, {0x161, 1, 0, 0})
@@ -2927,8 +2927,8 @@ class UUI_texture_block : public UUI_widget
 
 public:
 	CMember(UAssets_texture*)                          __verse_0x800C064C_DefaultImage                             OFFSET(get<T>, {0x118, 8, 0, 0})
-	SMember(FColors_color)                             __verse_0xC0C585F9_DefaultTint                              OFFSET(get<T>, {0x120, 24, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(get<T>, {0x138, 16, 0, 0})
+	SMember(FColors_color)                             __verse_0xC0C585F9_DefaultTint                              OFFSET(getStruct<T>, {0x120, 24, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(getStruct<T>, {0x138, 16, 0, 0})
 	CMember(UI_image_tiling)                           __verse_0xAF9B7624_DefaultHorizontalTiling                  OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(UI_image_tiling)                           __verse_0xF679588B_DefaultVerticalTiling                    OFFSET(get<T>, {0x149, 1, 0, 0})
 
@@ -3080,7 +3080,7 @@ class Utask_Playspace_playspace_component___WaitForMatchBegin : public UConcurre
 
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -3097,7 +3097,7 @@ class Utask_Playspace_playspace_component___WaitForMatchEnd : public UConcurrenc
 
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -3114,7 +3114,7 @@ class Utask_Playspace_playspace_component___WaitForPlayerAdded : public UConcurr
 
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(USimulation_player_component*)             _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
 
 
@@ -3132,7 +3132,7 @@ class Utask_Playspace_playspace_component___WaitForPlayerRemoved : public UConcu
 
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(USimulation_player_component*)             _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
 
 
@@ -3150,7 +3150,7 @@ class Utask_Playspace_playspace_component___WaitForSetupComplete : public UConcu
 
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -3167,16 +3167,16 @@ class Utask_VerseBasicGameplay_PlayerManager_basic_player_manager_impl_BeginWait
 
 public:
 	CMember(UVerseBasicGameplay_PlayerManager_basic_player_manager_impl*) _Self                                    OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncEndCount                                              OFFSET(get<int64_t>, {0x150, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x158, 1, 1, 0})
 	CMember(USimulation_player*)                       __verse_0x31268F5C_PlayerAdded                              OFFSET(get<T>, {0x160, 8, 0, 0})
 	CMember(USimulation_player_component*)             __verse_0x00000000_                                         OFFSET(get<T>, {0x168, 8, 0, 0})
 	CMember(UPlayspace_playspace_component*)           __verse_0x00000000_1                                        OFFSET(get<T>, {0x170, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x190, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x190, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x198, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1B0, 1, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x8C908304_MulticastDelegate                        OFFSET(get<T>, {0x1B8, 8, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x00000000_2                                        OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x1D0, 1, 0, 0})
@@ -3185,9 +3185,9 @@ public:
 	CMember(USimulation_player_component*)             __verse_0x00000000_3                                        OFFSET(get<T>, {0x208, 8, 0, 0})
 	CMember(UPlayspace_playspace_component*)           __verse_0x00000000_4                                        OFFSET(get<T>, {0x210, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x218, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x230, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x230, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x238, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x250, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x250, 1, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x8C908304_MulticastDelegate1                       OFFSET(get<T>, {0x258, 8, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x00000000_5                                        OFFSET(get<T>, {0x268, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x270, 1, 0, 0})
@@ -3197,9 +3197,9 @@ public:
 	CMember(USimulation_player_component*)             __verse_0x00000000_6                                        OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UPlayspace_playspace_component*)           __verse_0x00000000_7                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x2D8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x2D8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x2E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x2F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x2F8, 1, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x8C908304_MulticastDelegate2                       OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x00000000_8                                        OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x318, 1, 0, 0})
@@ -3208,9 +3208,9 @@ public:
 	CMember(USimulation_player_component*)             __verse_0x00000000_9                                        OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UPlayspace_playspace_component*)           __verse_0x00000000_10                                       OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x360, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x378, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x378, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x380, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x398, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x398, 1, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x8C908304_MulticastDelegate3                       OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x00000000_11                                       OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x3B8, 1, 0, 0})
@@ -3648,7 +3648,7 @@ class Utask_AI_ai_behavior_OnBegin : public UConcurrency_task
 
 public:
 	CMember(UAI_ai_behavior*)                          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -3682,7 +3682,7 @@ class Utask_AI_focus_interface_MaintainFocus_L_Nvector3_R : public UConcurrency_
 
 public:
 	CMember(UAI_focus_interface*)                      _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 
 
 	/// Functions
@@ -3699,7 +3699,7 @@ class Utask_AI_navigatable_NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfl
 
 public:
 	CMember(UAI_navigatable*)                          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x148, 32, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x168, 1, 0, 0})
 
 
@@ -3930,7 +3930,7 @@ class Utask_Game_Abilities_ability_component_ActivateAbility_L_Ngameplay__abilit
 
 public:
 	CMember(UGame_Abilities_ability_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument   OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument   OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 	CMember(Game_Abilities_activate_ability_result)    _RetVal                                                     OFFSET(get<T>, {0x160, 1, 0, 0})
 
 
@@ -3948,7 +3948,7 @@ class Utask_VerseAIBase_fort_character_actions_interface_AttackObstacle_L_Nfort_
 
 public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
 
 
@@ -3966,7 +3966,7 @@ class Utask_VerseAIBase_fort_character_actions_interface_AttackThreat_L_Nfort__t
 
 public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x180, 1, 0, 0})
 
 
@@ -3984,7 +3984,7 @@ class Utask_VerseAIBase_fort_character_actions_interface_LootObject_L_Nfort__loo
 
 public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FVerseAIBase_fort_loot_info)               __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FVerseAIBase_fort_loot_info)               __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
 
 
@@ -4002,7 +4002,7 @@ class Utask_VerseAIBase_fort_character_actions_interface_PlayRandomEmote : publi
 
 public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4038,7 +4038,7 @@ class Utask_VerseAIBase_fort_character_movement_interface_Crouch : public UConcu
 
 public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4056,7 +4056,7 @@ class Utask_VerseAIBase_fort_character_movement_interface_Jump : public UConcurr
 
 public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4074,7 +4074,7 @@ class Utask_VerseAIBase_fort_character_movement_interface_Slide : public UConcur
 
 public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4092,7 +4092,7 @@ class Utask_VerseAIBase_fort_character_movement_interface_Sprint : public UConcu
 
 public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4110,7 +4110,7 @@ class Utask_VerseAIBase_fort_character_movement_interface_TacticalSprint : publi
 
 public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4128,7 +4128,7 @@ class Utask_VerseAIBase_fort_character_movement_interface_Walk : public UConcurr
 
 public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4146,7 +4146,7 @@ class Utask_VerseAIBase_fort_navigatable_MoveInRangeToAttack : public UConcurren
 
 public:
 	CMember(UVerseAIBase_fort_navigatable*)            _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4164,7 +4164,7 @@ class Utask_VerseAIBase_fort_navigatable_RoamAround : public UConcurrency_task
 
 public:
 	CMember(UVerseAIBase_fort_navigatable*)            _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4529,7 +4529,7 @@ class Utask_VerseCreature_creature_component_MaintainFocus_L_Nvector3_R : public
 
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 
 
 	/// Functions
@@ -4546,7 +4546,7 @@ class Utask_VerseCreature_creature_component_MoveInRangeToAttack : public UConcu
 
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4564,7 +4564,7 @@ class Utask_VerseCreature_creature_component_NavigateTo_L_Nnavigation__target_M_
 
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x148, 32, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x168, 1, 0, 0})
 
 
@@ -4582,7 +4582,7 @@ class Utask_VerseCreature_creature_component_RoamAround : public UConcurrency_ta
 
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4674,7 +4674,7 @@ class Utask_VerseNPC_npc_component_AttackObstacle_L_Nfort__obstacle__info_R : pu
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
 
 
@@ -4692,7 +4692,7 @@ class Utask_VerseNPC_npc_component_AttackThreat_L_Nfort__threat__info_R : public
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x180, 1, 0, 0})
 
 
@@ -4710,7 +4710,7 @@ class Utask_VerseNPC_npc_component_Crouch : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4728,7 +4728,7 @@ class Utask_VerseNPC_npc_component_Jump : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4746,7 +4746,7 @@ class Utask_VerseNPC_npc_component_LootObject_L_Nfort__loot__info_R : public UCo
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FVerseAIBase_fort_loot_info)               __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FVerseAIBase_fort_loot_info)               __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
 
 
@@ -4781,7 +4781,7 @@ class Utask_VerseNPC_npc_component_MaintainFocus_L_Nvector3_R : public UConcurre
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 
 
 	/// Functions
@@ -4798,7 +4798,7 @@ class Utask_VerseNPC_npc_component_MoveInRangeToAttack : public UConcurrency_tas
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4816,7 +4816,7 @@ class Utask_VerseNPC_npc_component_NavigateTo_L_Nnavigation__target_M_N_QReachRa
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x148, 32, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x168, 1, 0, 0})
 
 
@@ -4834,7 +4834,7 @@ class Utask_VerseNPC_npc_component_PlayRandomEmote : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4870,7 +4870,7 @@ class Utask_VerseNPC_npc_component_RoamAround : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4888,7 +4888,7 @@ class Utask_VerseNPC_npc_component_Slide : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4906,7 +4906,7 @@ class Utask_VerseNPC_npc_component_Sprint : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4924,7 +4924,7 @@ class Utask_VerseNPC_npc_component_TacticalSprint : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -4958,7 +4958,7 @@ class Utask_VerseNPC_npc_component_Walk : public UConcurrency_task
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -5156,7 +5156,7 @@ public:
 	CMember(UDiagnostics_log*)                         __verse_0xF524C2AC_Logger                                   OFFSET(get<T>, {0xE0, 8, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x8E43B8AF_DebugDraw                                OFFSET(get<T>, {0xE8, 8, 0, 0})
 	DMember(bool)                                      __verse_0x4222121E_DebugDisplay                             OFFSET(get<bool>, {0xF0, 1, 1, 0})
-	SMember(FColors_color)                             __verse_0x71320F52_DebugScreenColor                         OFFSET(get<T>, {0xF8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x71320F52_DebugScreenColor                         OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
 	DMember(double)                                    __verse_0x2D4D6684_DebugScreenDuration                      OFFSET(get<double>, {0x110, 8, 0, 0})
 	DMember(double)                                    __verse_0x5155C58D_GoToLeashDistance                        OFFSET(get<double>, {0x118, 8, 0, 0})
 	DMember(double)                                    __verse_0x4D92C49B_GoToAttackTargetDistance                 OFFSET(get<double>, {0x120, 8, 0, 0})
@@ -5291,7 +5291,7 @@ public:
 	CMember(UDiagnostics_log*)                         __verse_0xF524C2AC_Logger                                   OFFSET(get<T>, {0xE0, 8, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x8E43B8AF_DebugDraw                                OFFSET(get<T>, {0xE8, 8, 0, 0})
 	DMember(bool)                                      __verse_0x4222121E_DebugDisplay                             OFFSET(get<bool>, {0xF0, 1, 1, 0})
-	SMember(FColors_color)                             __verse_0x71320F52_DebugScreenColor                         OFFSET(get<T>, {0xF8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x71320F52_DebugScreenColor                         OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
 	DMember(double)                                    __verse_0x2D4D6684_DebugScreenDuration                      OFFSET(get<double>, {0x110, 8, 0, 0})
 	DMember(double)                                    __verse_0x474367D7_EngageThreatsWithinDistance              OFFSET(get<double>, {0x118, 8, 0, 0})
 
@@ -5512,125 +5512,125 @@ class Utask_CompanionAI_companion_ai_OnBegin : public UConcurrency_task
 
 public:
 	CMember(UCompanionAI_companion_ai*)                _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_                                         OFFSET(get<T>, {0x150, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x170, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x963EC691_Character                                OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult1                                                OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1C0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x1C1, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x1C2, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult1                                                OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x1C1, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x1C2, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xD2827887_Navigatable                              OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult5                                          OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x1F8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x1F9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult5                                          OFFSET(getStruct<T>, {0x1E8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x1F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x1F9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xA4160F11_Leashable                                OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult8                                          OFFSET(get<T>, {0x220, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x230, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x231, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult8                                          OFFSET(getStruct<T>, {0x220, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x230, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x231, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x47B0B441_CharacterMovement                        OFFSET(get<T>, {0x238, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult11                                         OFFSET(get<T>, {0x258, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x268, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x269, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult11                                         OFFSET(getStruct<T>, {0x258, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x268, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x269, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x3FE20196_FortPing                                 OFFSET(get<T>, {0x270, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult14                                         OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x2A0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(get<T>, {0x2A1, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult14                                         OFFSET(getStruct<T>, {0x290, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x2A0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(getStruct<T>, {0x2A1, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x03CEBA4E_CharacterActions                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult17                                         OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(get<T>, {0x2D8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x2D9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult17                                         OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(getStruct<T>, {0x2D8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x2D9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xF161303F_WeaponActions                            OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult20                                         OFFSET(get<T>, {0x300, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(get<T>, {0x310, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0x311, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult20                                         OFFSET(getStruct<T>, {0x300, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(getStruct<T>, {0x310, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(getStruct<T>, {0x311, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x0F05355D_ThreatPerception                         OFFSET(get<T>, {0x318, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult23                                         OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(get<T>, {0x348, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(get<T>, {0x349, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult23                                         OFFSET(getStruct<T>, {0x338, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(getStruct<T>, {0x348, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(getStruct<T>, {0x349, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00C33D6C_ObstaclePerception                       OFFSET(get<T>, {0x350, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult26                                         OFFSET(get<T>, {0x370, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult27                                               OFFSET(get<T>, {0x380, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult28                                               OFFSET(get<T>, {0x381, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult26                                         OFFSET(getStruct<T>, {0x370, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult27                                               OFFSET(getStruct<T>, {0x380, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult28                                               OFFSET(getStruct<T>, {0x381, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x27386837_TargetSelection                          OFFSET(get<T>, {0x388, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult29                                         OFFSET(get<T>, {0x3A8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(get<T>, {0x3B8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(get<T>, {0x3B9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult29                                         OFFSET(getStruct<T>, {0x3A8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(getStruct<T>, {0x3B8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(getStruct<T>, {0x3B9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x6F5C8C64_FocusInterface                           OFFSET(get<T>, {0x3C0, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult32                                         OFFSET(get<T>, {0x3E0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult33                                               OFFSET(get<T>, {0x3F0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult34                                               OFFSET(get<T>, {0x3F1, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult32                                         OFFSET(getStruct<T>, {0x3E0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult33                                               OFFSET(getStruct<T>, {0x3F0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult34                                               OFFSET(getStruct<T>, {0x3F1, 1, 0, 0})
 	CMember(UCompanionAI_companion_ai_runtime*)        __verse_0x2B0A024B_CompanionAIRuntime                       OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UCompanionAI_companion_ai_runtime*)        __verse_0x00000000_1                                        OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x408, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(get<T>, {0x420, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(getStruct<T>, {0x420, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x428, 8, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_2                                        OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x448, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult36                                 OFFSET(get<T>, {0x460, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult36                                 OFFSET(getStruct<T>, {0x460, 24, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x47A, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R) _ExprResult37 OFFSET(get<T>, {0x490, 64, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R) __verse_0x00000000_3                              OFFSET(get<T>, {0x4D0, 64, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R) _ExprResult37 OFFSET(getStruct<T>, {0x490, 64, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R) __verse_0x00000000_3                              OFFSET(getStruct<T>, {0x4D0, 64, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x560, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult38                                               OFFSET(get<T>, {0x578, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult38                                               OFFSET(getStruct<T>, {0x578, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x963EC691_Character1                               OFFSET(get<T>, {0x580, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult39                                               OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult40                                               OFFSET(get<T>, {0x5C8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult41                                               OFFSET(get<T>, {0x5C9, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult42                                               OFFSET(get<T>, {0x5CA, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult39                                               OFFSET(getStruct<T>, {0x5A0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult40                                               OFFSET(getStruct<T>, {0x5C8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult41                                               OFFSET(getStruct<T>, {0x5C9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult42                                               OFFSET(getStruct<T>, {0x5CA, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xD2827887_Navigatable1                             OFFSET(get<T>, {0x5D0, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult43                                         OFFSET(get<T>, {0x5F0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult44                                               OFFSET(get<T>, {0x600, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult45                                               OFFSET(get<T>, {0x601, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult43                                         OFFSET(getStruct<T>, {0x5F0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult44                                               OFFSET(getStruct<T>, {0x600, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult45                                               OFFSET(getStruct<T>, {0x601, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xA4160F11_Leashable1                               OFFSET(get<T>, {0x608, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult46                                         OFFSET(get<T>, {0x628, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult47                                               OFFSET(get<T>, {0x638, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult48                                               OFFSET(get<T>, {0x639, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult46                                         OFFSET(getStruct<T>, {0x628, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult47                                               OFFSET(getStruct<T>, {0x638, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult48                                               OFFSET(getStruct<T>, {0x639, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x47B0B441_CharacterMovement1                       OFFSET(get<T>, {0x640, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult49                                         OFFSET(get<T>, {0x660, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult50                                               OFFSET(get<T>, {0x670, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult51                                               OFFSET(get<T>, {0x671, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult49                                         OFFSET(getStruct<T>, {0x660, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult50                                               OFFSET(getStruct<T>, {0x670, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult51                                               OFFSET(getStruct<T>, {0x671, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x3FE20196_FortPing1                                OFFSET(get<T>, {0x678, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult52                                         OFFSET(get<T>, {0x698, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult53                                               OFFSET(get<T>, {0x6A8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult54                                               OFFSET(get<T>, {0x6A9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult52                                         OFFSET(getStruct<T>, {0x698, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult53                                               OFFSET(getStruct<T>, {0x6A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult54                                               OFFSET(getStruct<T>, {0x6A9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x03CEBA4E_CharacterActions1                        OFFSET(get<T>, {0x6B0, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult55                                         OFFSET(get<T>, {0x6D0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult56                                               OFFSET(get<T>, {0x6E0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult57                                               OFFSET(get<T>, {0x6E1, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult55                                         OFFSET(getStruct<T>, {0x6D0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult56                                               OFFSET(getStruct<T>, {0x6E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult57                                               OFFSET(getStruct<T>, {0x6E1, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xF161303F_WeaponActions1                           OFFSET(get<T>, {0x6E8, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult58                                         OFFSET(get<T>, {0x708, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult59                                               OFFSET(get<T>, {0x718, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult60                                               OFFSET(get<T>, {0x719, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult58                                         OFFSET(getStruct<T>, {0x708, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult59                                               OFFSET(getStruct<T>, {0x718, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult60                                               OFFSET(getStruct<T>, {0x719, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x0F05355D_ThreatPerception1                        OFFSET(get<T>, {0x720, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult61                                         OFFSET(get<T>, {0x740, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult62                                               OFFSET(get<T>, {0x750, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult63                                               OFFSET(get<T>, {0x751, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult61                                         OFFSET(getStruct<T>, {0x740, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult62                                               OFFSET(getStruct<T>, {0x750, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult63                                               OFFSET(getStruct<T>, {0x751, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00C33D6C_ObstaclePerception1                      OFFSET(get<T>, {0x758, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult64                                         OFFSET(get<T>, {0x778, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult65                                               OFFSET(get<T>, {0x788, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult66                                               OFFSET(get<T>, {0x789, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult64                                         OFFSET(getStruct<T>, {0x778, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult65                                               OFFSET(getStruct<T>, {0x788, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult66                                               OFFSET(getStruct<T>, {0x789, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x27386837_TargetSelection1                         OFFSET(get<T>, {0x790, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult67                                         OFFSET(get<T>, {0x7B0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult68                                               OFFSET(get<T>, {0x7C0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult69                                               OFFSET(get<T>, {0x7C1, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult67                                         OFFSET(getStruct<T>, {0x7B0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult68                                               OFFSET(getStruct<T>, {0x7C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult69                                               OFFSET(getStruct<T>, {0x7C1, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x6F5C8C64_FocusInterface1                          OFFSET(get<T>, {0x7C8, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult70                                         OFFSET(get<T>, {0x7E8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult71                                               OFFSET(get<T>, {0x7F8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult72                                               OFFSET(get<T>, {0x7F9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult70                                         OFFSET(getStruct<T>, {0x7E8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult71                                               OFFSET(getStruct<T>, {0x7F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult72                                               OFFSET(getStruct<T>, {0x7F9, 1, 0, 0})
 	CMember(UCompanionAI_companion_ai_runtime*)        __verse_0x2B0A024B_CompanionAIRuntime1                      OFFSET(get<T>, {0x800, 8, 0, 0})
 	CMember(UCompanionAI_companion_ai_runtime*)        __verse_0x00000000_5                                        OFFSET(get<T>, {0x808, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x810, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult73                                               OFFSET(get<T>, {0x828, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult73                                               OFFSET(getStruct<T>, {0x828, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x830, 8, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_6                                        OFFSET(get<T>, {0x848, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x850, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult74                                 OFFSET(get<T>, {0x868, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult74                                 OFFSET(getStruct<T>, {0x868, 24, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x882, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R) _ExprResult75 OFFSET(get<T>, {0x898, 64, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R) __verse_0x00000000_7                              OFFSET(get<T>, {0x8D8, 64, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R) _ExprResult75 OFFSET(getStruct<T>, {0x898, 64, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R) __verse_0x00000000_7                              OFFSET(getStruct<T>, {0x8D8, 64, 0, 0})
 
 
 	/// Functions
@@ -5647,86 +5647,86 @@ class Utask_CompanionAI_companion_ai_runtime_CheckForReviveTeamMembers_L_Nping__
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	DMember(bool)                                      _RetVal                                                     OFFSET(get<bool>, {0x180, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x181, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x6B4100B8_EmitterCharacter                         OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1E8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1E9, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(getStruct<T>, {0x1D8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1E9, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xC487D1E7_EmitterAgent                             OFFSET(get<T>, {0x1F0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 	DMember(double)                                    _ExprResultStack                                            OFFSET(get<double>, {0x230, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(get<T>, {0x248, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult5                                                OFFSET(get<T>, {0x280, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(getStruct<T>, {0x248, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult5                                                OFFSET(getStruct<T>, {0x280, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x2F8, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult7                                                OFFSET(get<T>, {0x300, 96, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x2F8, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult7                                                OFFSET(getStruct<T>, {0x300, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x360, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x378, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x378, 1, 0, 0})
 	DMember(bool)                                      __verse_0xC96E9091_HasRevivedEmitter                        OFFSET(get<bool>, {0x379, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x380, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x398, 8, 0, 0})
 	CMember(TArray<USimulation_agent*>)                __verse_0xBFBCE682_TeamMembers                              OFFSET(get<T>, {0x3A8, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult9                                                OFFSET(get<T>, {0x3C8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x3D8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x3D9, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult9                                                OFFSET(getStruct<T>, {0x3C8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x3D8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x3D9, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x3E0, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x3E8, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xAE35E375_TeamMember                               OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	DMember(double)                                    _ExprResultStack1                                           OFFSET(get<double>, {0x408, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult12                                               OFFSET(get<T>, {0x420, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult13                                               OFFSET(get<T>, {0x450, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult12                                               OFFSET(getStruct<T>, {0x420, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult13                                               OFFSET(getStruct<T>, {0x450, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x4B0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult14                                               OFFSET(get<T>, {0x4D0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x4E0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(get<T>, {0x4E1, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(get<T>, {0x4F8, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult18                                               OFFSET(get<T>, {0x500, 96, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult14                                               OFFSET(getStruct<T>, {0x4D0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x4E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(getStruct<T>, {0x4E1, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(getStruct<T>, {0x4F8, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult18                                               OFFSET(getStruct<T>, {0x500, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x560, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x578, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x578, 1, 0, 0})
 	DMember(bool)                                      __verse_0x87226150_HasRevivedTeamMember                     OFFSET(get<bool>, {0x579, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x592, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x5B8, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter1                                 OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x6B4100B8_EmitterCharacter1                        OFFSET(get<T>, {0x5F0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult20                                               OFFSET(get<T>, {0x610, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(get<T>, {0x620, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0x621, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult20                                               OFFSET(getStruct<T>, {0x610, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(getStruct<T>, {0x620, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(getStruct<T>, {0x621, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xC487D1E7_EmitterAgent1                            OFFSET(get<T>, {0x628, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x630, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult23                                               OFFSET(get<T>, {0x650, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult23                                               OFFSET(getStruct<T>, {0x650, 1, 0, 0})
 	DMember(double)                                    _ExprResultStack2                                           OFFSET(get<double>, {0x668, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult24                                               OFFSET(get<T>, {0x680, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult25                                               OFFSET(get<T>, {0x6B0, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult24                                               OFFSET(getStruct<T>, {0x680, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult25                                               OFFSET(getStruct<T>, {0x6B0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_6                                        OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult26                                               OFFSET(get<T>, {0x728, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult27                                               OFFSET(get<T>, {0x730, 96, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult26                                               OFFSET(getStruct<T>, {0x728, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult27                                               OFFSET(getStruct<T>, {0x730, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_7                                        OFFSET(get<T>, {0x790, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult28                                               OFFSET(get<T>, {0x7A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult28                                               OFFSET(getStruct<T>, {0x7A8, 1, 0, 0})
 	DMember(bool)                                      __verse_0xC96E9091_HasRevivedEmitter1                       OFFSET(get<bool>, {0x7A9, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x7B0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x7C8, 8, 0, 0})
 	CMember(TArray<USimulation_agent*>)                __verse_0xBFBCE682_TeamMembers1                             OFFSET(get<T>, {0x7D8, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult29                                               OFFSET(get<T>, {0x7F8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(get<T>, {0x808, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(get<T>, {0x809, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult29                                               OFFSET(getStruct<T>, {0x7F8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(getStruct<T>, {0x808, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(getStruct<T>, {0x809, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex1                                                  OFFSET(get<int64_t>, {0x810, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength1                                                 OFFSET(get<int64_t>, {0x818, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xAE35E375_TeamMember1                              OFFSET(get<T>, {0x820, 8, 0, 0})
 	DMember(double)                                    _ExprResultStack3                                           OFFSET(get<double>, {0x838, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult32                                               OFFSET(get<T>, {0x850, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult33                                               OFFSET(get<T>, {0x880, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult32                                               OFFSET(getStruct<T>, {0x850, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult33                                               OFFSET(getStruct<T>, {0x880, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_8                                        OFFSET(get<T>, {0x8E0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult34                                               OFFSET(get<T>, {0x900, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(get<T>, {0x910, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult36                                               OFFSET(get<T>, {0x911, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult37                                               OFFSET(get<T>, {0x928, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult38                                               OFFSET(get<T>, {0x930, 96, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult34                                               OFFSET(getStruct<T>, {0x900, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(getStruct<T>, {0x910, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult36                                               OFFSET(getStruct<T>, {0x911, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult37                                               OFFSET(getStruct<T>, {0x928, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult38                                               OFFSET(getStruct<T>, {0x930, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_9                                        OFFSET(get<T>, {0x990, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult39                                               OFFSET(get<T>, {0x9A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult39                                               OFFSET(getStruct<T>, {0x9A8, 1, 0, 0})
 	DMember(bool)                                      __verse_0x87226150_HasRevivedTeamMember1                    OFFSET(get<bool>, {0x9A9, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x9C2, 1, 0, 0})
 
@@ -5745,15 +5745,15 @@ class Utask_CompanionAI_companion_ai_runtime_CrouchService : public UConcurrency
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x150, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x168, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x170, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x188, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x188, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x1A0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1B8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1C0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1D8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1D8, 1, 0, 0})
 
 
 	/// Functions
@@ -5770,7 +5770,7 @@ class Utask_CompanionAI_companion_ai_runtime_CrouchUntilHit : public UConcurrenc
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x149, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x170, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x171, 1, 1, 0})
@@ -5779,15 +5779,15 @@ public:
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1A8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x1B0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1D0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1D8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x1E0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x1E8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x200, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x200, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x208, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x210, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x218, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x230, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x230, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x238, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x240, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x268, 1, 0, 0})
@@ -5798,15 +5798,15 @@ public:
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x2C8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x2D0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2F0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2F0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x2F8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount8                                           OFFSET(get<bool>, {0x300, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x320, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x320, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x328, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount9                                           OFFSET(get<bool>, {0x330, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x338, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x350, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x350, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x358, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x360, 1, 0, 0})
 
@@ -5825,25 +5825,25 @@ class Utask_CompanionAI_companion_ai_runtime_DrawSphere_L_Nvector3_M_Nfloat_M_Nc
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_                                         OFFSET(get<T>, {0x188, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x190, 1, 0, 0})
-	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult OFFSET(get<T>, {0x1A8, 128, 0, 0})
-	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_1 OFFSET(get<T>, {0x228, 112, 0, 0})
+	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult OFFSET(getStruct<T>, {0x1A8, 128, 0, 0})
+	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_1 OFFSET(getStruct<T>, {0x228, 112, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x318, 8, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x328, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x340, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x340, 1, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x350, 1, 0, 0})
-	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult2 OFFSET(get<T>, {0x368, 128, 0, 0})
-	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_4 OFFSET(get<T>, {0x3E8, 112, 0, 0})
+	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult2 OFFSET(getStruct<T>, {0x368, 128, 0, 0})
+	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_4 OFFSET(getStruct<T>, {0x3E8, 112, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x4D8, 8, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x4E0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x4E8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x500, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x500, 1, 0, 0})
 
 
 	/// Functions
@@ -5860,29 +5860,29 @@ class Utask_CompanionAI_companion_ai_runtime_GameLoop : public UConcurrency_task
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	DMember(bool)                                      _ExprResult                                                 OFFSET(get<bool>, {0x188, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x190, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1A8, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1E0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1E8, 8, 0, 0})
 	DMember(bool)                                      _ExprResult3                                                OFFSET(get<bool>, {0x232, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x238, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x240, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x258, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x258, 1, 0, 0})
 	CMember(UObject*)                                  _InvokeSureResultDummy                                      OFFSET(get<T>, {0x260, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x278, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x280, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x298, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x298, 1, 0, 0})
 	CMember(UObject*)                                  _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0x78680F6D_CurrentCommand                           OFFSET(get<T>, {0x2B8, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0x78680F6D_CurrentCommand                           OFFSET(getStruct<T>, {0x2B8, 56, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x330, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x331, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_6                                        OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x380, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x398, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x398, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x3A0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x3A8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x3B0, 8, 0, 0})
@@ -5894,35 +5894,35 @@ public:
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x436, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_8                                        OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x440, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x458, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x458, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x460, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x468, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_9                                        OFFSET(get<T>, {0x4B0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x4B8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x4D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x4D0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x4D8, 8, 0, 0})
 	DMember(bool)                                      _ExprResult10                                               OFFSET(get<bool>, {0x518, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_10                                       OFFSET(get<T>, {0x520, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x538, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x538, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_11                                       OFFSET(get<T>, {0x550, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x558, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x570, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x570, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x578, 8, 0, 0})
 	DMember(bool)                                      _ExprResult13                                               OFFSET(get<bool>, {0x5C2, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_12                                       OFFSET(get<T>, {0x5C8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_13                                       OFFSET(get<T>, {0x5D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(get<T>, {0x5E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(getStruct<T>, {0x5E8, 1, 0, 0})
 	CMember(UObject*)                                  _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x5F0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_14                                       OFFSET(get<T>, {0x608, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_15                                       OFFSET(get<T>, {0x610, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x628, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x628, 1, 0, 0})
 	CMember(UObject*)                                  _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x630, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0x78680F6D_CurrentCommand1                          OFFSET(get<T>, {0x648, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0x78680F6D_CurrentCommand1                          OFFSET(getStruct<T>, {0x648, 56, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x6C0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x6C1, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_16                                       OFFSET(get<T>, {0x708, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(get<T>, {0x728, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(getStruct<T>, {0x728, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x730, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount8                                           OFFSET(get<bool>, {0x738, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x740, 8, 0, 0})
@@ -5934,12 +5934,12 @@ public:
 	DMember(bool)                                      _AsyncBeginCount10                                          OFFSET(get<bool>, {0x7C6, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_18                                       OFFSET(get<T>, {0x7C8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask8                                                 OFFSET(get<T>, {0x7D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(get<T>, {0x7E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(getStruct<T>, {0x7E8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult8                                               OFFSET(get<int64_t>, {0x7F0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount11                                          OFFSET(get<bool>, {0x7F8, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_19                                       OFFSET(get<T>, {0x840, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask9                                                 OFFSET(get<T>, {0x848, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x860, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x860, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult9                                               OFFSET(get<int64_t>, {0x868, 8, 0, 0})
 
 
@@ -5957,56 +5957,56 @@ class Utask_CompanionAI_companion_ai_runtime_GetAttackCommandTarget_L_Nping__inf
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	DMember(bool)                                      _ExprResult                                                 OFFSET(get<bool>, {0x1F8, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x230, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x248, 8, 0, 0})
 	DMember(double)                                    __verse_0x0E44D420_ClosestTargetDistance                    OFFSET(get<double>, {0x250, 8, 0, 0})
 	DMember(bool)                                      _ExprResult2                                                OFFSET(get<bool>, {0x29A, 1, 1, 0})
 	CMember(TArray<FAI_fort_threat_info>)              _ForIterable                                                OFFSET(get<T>, {0x2A0, 16, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2E0, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x2E8, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x2F0, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat                                   OFFSET(get<T>, {0x2F8, 56, 0, 0})
-	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                 OFFSET(get<T>, {0x380, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x398, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x399, 1, 0, 0})
-	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult7                                                OFFSET(get<T>, {0x3C8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x3E0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x3E1, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat                                   OFFSET(getStruct<T>, {0x2F8, 56, 0, 0})
+	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                 OFFSET(getStruct<T>, {0x380, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x398, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x399, 1, 0, 0})
+	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult7                                                OFFSET(getStruct<T>, {0x3C8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x3E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x3E1, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x3E2, 1, 0, 0})
 	DMember(double)                                    __verse_0xD58F9071_TargetDistance                           OFFSET(get<double>, {0x408, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult10                                               OFFSET(get<T>, {0x420, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack                                            OFFSET(get<T>, {0x450, 24, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x19FFC917_AttackTarget                             OFFSET(get<T>, {0x4C8, 56, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult10                                               OFFSET(getStruct<T>, {0x420, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack                                            OFFSET(getStruct<T>, {0x450, 24, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x19FFC917_AttackTarget                             OFFSET(getStruct<T>, {0x4C8, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x540, 1, 0, 0})
 	DMember(bool)                                      _ExprResult11                                               OFFSET(get<bool>, {0x5B0, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x5B8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x5D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x5D0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x600, 8, 0, 0})
 	DMember(double)                                    __verse_0x0E44D420_ClosestTargetDistance1                   OFFSET(get<double>, {0x608, 8, 0, 0})
 	DMember(bool)                                      _ExprResult13                                               OFFSET(get<bool>, {0x652, 1, 1, 0})
 	CMember(TArray<FAI_fort_threat_info>)              _ForIterable1                                               OFFSET(get<T>, {0x658, 16, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x668, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(get<T>, {0x698, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(getStruct<T>, {0x698, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex1                                                  OFFSET(get<int64_t>, {0x6A0, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength1                                                 OFFSET(get<int64_t>, {0x6A8, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat1                                  OFFSET(get<T>, {0x6B0, 56, 0, 0})
-	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult15                                OFFSET(get<T>, {0x738, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(get<T>, {0x750, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(get<T>, {0x751, 1, 0, 0})
-	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult18                                               OFFSET(get<T>, {0x780, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x798, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult20                                               OFFSET(get<T>, {0x799, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat1                                  OFFSET(getStruct<T>, {0x6B0, 56, 0, 0})
+	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult15                                OFFSET(getStruct<T>, {0x738, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(getStruct<T>, {0x750, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(getStruct<T>, {0x751, 1, 0, 0})
+	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult18                                               OFFSET(getStruct<T>, {0x780, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x798, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult20                                               OFFSET(getStruct<T>, {0x799, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x79A, 1, 0, 0})
 	DMember(double)                                    __verse_0xD58F9071_TargetDistance1                          OFFSET(get<double>, {0x7C0, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult21                                               OFFSET(get<T>, {0x7D8, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x808, 24, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x19FFC917_AttackTarget1                            OFFSET(get<T>, {0x880, 56, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult21                                               OFFSET(getStruct<T>, {0x7D8, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(getStruct<T>, {0x808, 24, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x19FFC917_AttackTarget1                            OFFSET(getStruct<T>, {0x880, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x8F8, 1, 0, 0})
 
 
@@ -6024,20 +6024,20 @@ class Utask_CompanionAI_companion_ai_runtime_GetNewObstacle : public UConcurrenc
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo                             OFFSET(get<T>, {0x180, 40, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo                             OFFSET(getStruct<T>, {0x180, 40, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1C8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1C8, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1F8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x200, 8, 0, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo1                            OFFSET(get<T>, {0x208, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo1                            OFFSET(getStruct<T>, {0x208, 40, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x230, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x238, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x250, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x250, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x268, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x280, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x280, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x288, 8, 0, 0})
 
 
@@ -6055,20 +6055,20 @@ class Utask_CompanionAI_companion_ai_runtime_GetNewTargetPerception : public UCo
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(get<T>, {0x190, 56, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(getStruct<T>, {0x190, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1E8, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x220, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(get<T>, {0x228, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(getStruct<T>, {0x228, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x260, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x268, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x280, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x280, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
 
 
@@ -6086,20 +6086,20 @@ class Utask_CompanionAI_companion_ai_runtime_GetNewThreat : public UConcurrency_
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(get<T>, {0x190, 56, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(getStruct<T>, {0x190, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1E8, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x220, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(get<T>, {0x228, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(getStruct<T>, {0x228, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x260, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x268, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x280, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x280, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
 
 
@@ -6117,14 +6117,14 @@ class Utask_CompanionAI_companion_ai_runtime_GetObstacle : public UConcurrency_t
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo                             OFFSET(get<T>, {0x188, 40, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo                             OFFSET(getStruct<T>, {0x188, 40, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1F8, 1, 0, 0})
 	DMember(bool)                                      _ExprResult1                                                OFFSET(get<bool>, {0x1F9, 1, 1, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo1                            OFFSET(get<T>, {0x200, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x39C5E53E_ObstacleInfo1                            OFFSET(getStruct<T>, {0x200, 40, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x228, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x270, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x270, 1, 0, 0})
 	DMember(bool)                                      _ExprResult3                                                OFFSET(get<bool>, {0x271, 1, 1, 0})
 
 
@@ -6142,14 +6142,14 @@ class Utask_CompanionAI_companion_ai_runtime_GetThreat : public UConcurrency_tas
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(get<T>, {0x198, 56, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(getStruct<T>, {0x198, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x228, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x228, 1, 0, 0})
 	DMember(bool)                                      _ExprResult1                                                OFFSET(get<bool>, {0x229, 1, 1, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(get<T>, {0x230, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(getStruct<T>, {0x230, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x268, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x2C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x2C0, 1, 0, 0})
 	DMember(bool)                                      _ExprResult3                                                OFFSET(get<bool>, {0x2C1, 1, 1, 0})
 
 
@@ -6167,11 +6167,11 @@ class Utask_CompanionAI_companion_ai_runtime_GoToAndAttackTask_L_Nfort__threat__
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1A8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1C8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1C8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1D0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x1D8, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x1D9, 1, 1, 0})
@@ -6181,13 +6181,13 @@ public:
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x208, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x210, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x218, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x230, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x230, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x238, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x240, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x268, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x290, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x2B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x2C0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x2C1, 1, 1, 0})
@@ -6197,7 +6197,7 @@ public:
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x2F0, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x300, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x318, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x318, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x320, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x328, 1, 0, 0})
 
@@ -6216,13 +6216,13 @@ class Utask_CompanionAI_companion_ai_runtime_GoToPositionTask_L_Nvector3_M_N_Qag
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x148, 64, 0, 0})
 	DMember(bool)                                      _RetVal                                                     OFFSET(get<bool>, {0x188, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x189, 1, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array                                    OFFSET(get<T>, {0x1B0, 16, 0, 0})
 	CMember(TArray<TArray>)                            _ExprResult                                                 OFFSET(get<T>, {0x1D0, 16, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array1                                   OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1F0, 32, 0, 0})
+	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_                                         OFFSET(getStruct<T>, {0x1F0, 32, 0, 0})
 	CMember(TArray<TArray>)                            _ForResult                                                  OFFSET(get<T>, {0x280, 16, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x290, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x298, 8, 0, 0})
@@ -6236,19 +6236,19 @@ public:
 	DMember(char)                                      _ExprResult2                                                OFFSET(get<char>, {0x338, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x33B, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x340, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x358, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x358, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x360, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFE707B39_TargetCharacter                          OFFSET(get<T>, {0x368, 8, 0, 0})
 	CMember(AI_navigation_result)                      __verse_0x95D09D0E_Result                                   OFFSET(get<T>, {0x378, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x380, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x388, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult4            OFFSET(get<T>, {0x3A0, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult4            OFFSET(getStruct<T>, {0x3A0, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack                                            OFFSET(get<T>, {0x3C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x3F0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x440, 1, 0, 0})
 	CMember(AI_navigation_result)                      __verse_0x95D09D0E_Result1                                  OFFSET(get<T>, {0x468, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x470, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult5            OFFSET(get<T>, {0x488, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult5            OFFSET(getStruct<T>, {0x488, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack1                                           OFFSET(get<T>, {0x4A8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x520, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x548, 1, 0, 0})
@@ -6256,7 +6256,7 @@ public:
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array2                                   OFFSET(get<T>, {0x598, 16, 0, 0})
 	CMember(TArray<TArray>)                            _ExprResult6                                                OFFSET(get<T>, {0x5B8, 16, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array3                                   OFFSET(get<T>, {0x5C8, 16, 0, 0})
-	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x5D8, 32, 0, 0})
+	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_3                                        OFFSET(getStruct<T>, {0x5D8, 32, 0, 0})
 	CMember(TArray<TArray>)                            _ForResult2                                                 OFFSET(get<T>, {0x668, 16, 0, 0})
 	DMember(int64_t)                                   _ForIndex3                                                  OFFSET(get<int64_t>, {0x678, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength3                                                 OFFSET(get<int64_t>, {0x680, 8, 0, 0})
@@ -6270,19 +6270,19 @@ public:
 	DMember(char)                                      _ExprResult8                                                OFFSET(get<char>, {0x720, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x723, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x728, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x740, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x740, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x748, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFE707B39_TargetCharacter1                         OFFSET(get<T>, {0x750, 8, 0, 0})
 	CMember(AI_navigation_result)                      __verse_0x95D09D0E_Result2                                  OFFSET(get<T>, {0x760, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x768, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x770, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult10           OFFSET(get<T>, {0x788, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult10           OFFSET(getStruct<T>, {0x788, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack2                                           OFFSET(get<T>, {0x7A8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x7D8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x828, 1, 0, 0})
 	CMember(AI_navigation_result)                      __verse_0x95D09D0E_Result3                                  OFFSET(get<T>, {0x850, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x858, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult11           OFFSET(get<T>, {0x870, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R) _ExprResult11           OFFSET(getStruct<T>, {0x870, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack3                                           OFFSET(get<T>, {0x890, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0x908, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0x930, 1, 0, 0})
@@ -6302,41 +6302,41 @@ class Utask_CompanionAI_companion_ai_runtime_HandleBackToMeCommand_L_Nping__info
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x6B4100B8_EmitterCharacter                         OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1E8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1E9, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult3                                          OFFSET(get<T>, {0x240, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x250, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x251, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult6                                          OFFSET(get<T>, {0x280, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x290, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x291, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(getStruct<T>, {0x1D8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1E9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult3                                          OFFSET(getStruct<T>, {0x240, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x250, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x251, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult6                                          OFFSET(getStruct<T>, {0x280, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x290, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x291, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x292, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x298, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2B0, 8, 0, 0})
 	DMember(bool)                                      __verse_0x7EBDC403_HasReachedPosition                       OFFSET(get<bool>, {0x2B8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult9 OFFSET(get<T>, {0x2D8, 64, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult10                                               OFFSET(get<T>, {0x318, 24, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult9 OFFSET(getStruct<T>, {0x2D8, 64, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult10                                               OFFSET(getStruct<T>, {0x318, 24, 0, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint                                   OFFSET(get<bool>, {0x338, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x358, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x362, 1, 0, 0})
 	DMember(bool)                                      __verse_0x684D9F77_IsFollowingEnabled                       OFFSET(get<bool>, {0x388, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x390, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x3A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x3A8, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x3AB, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x3D0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x3D1, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x3D8, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mfloat_R)          _ExprResult12                                               OFFSET(get<T>, {0x3F0, 16, 0, 0})
+	SMember(Ftuple_Lfort__character_Mfloat_R)          _ExprResult12                                               OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x400, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x408, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x410, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x428, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x428, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x430, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x438, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x440, 8, 0, 0})
@@ -6351,37 +6351,37 @@ public:
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x4E8, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter1                                 OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x6B4100B8_EmitterCharacter1                        OFFSET(get<T>, {0x520, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult14                                               OFFSET(get<T>, {0x540, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x550, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(get<T>, {0x551, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult17                                         OFFSET(get<T>, {0x5A8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(get<T>, {0x5B8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x5B9, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult20                                         OFFSET(get<T>, {0x5E8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(get<T>, {0x5F8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0x5F9, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult14                                               OFFSET(getStruct<T>, {0x540, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x550, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(getStruct<T>, {0x551, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult17                                         OFFSET(getStruct<T>, {0x5A8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(getStruct<T>, {0x5B8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x5B9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult20                                         OFFSET(getStruct<T>, {0x5E8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(getStruct<T>, {0x5F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(getStruct<T>, {0x5F9, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x5FA, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x600, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x618, 8, 0, 0})
 	DMember(bool)                                      __verse_0x7EBDC403_HasReachedPosition1                      OFFSET(get<bool>, {0x620, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x628, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult23 OFFSET(get<T>, {0x640, 64, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult24                                               OFFSET(get<T>, {0x680, 24, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult23 OFFSET(getStruct<T>, {0x640, 64, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult24                                               OFFSET(getStruct<T>, {0x680, 24, 0, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint1                                  OFFSET(get<bool>, {0x6A0, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x6C0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0x6CA, 1, 0, 0})
 	DMember(bool)                                      __verse_0x684D9F77_IsFollowingEnabled1                      OFFSET(get<bool>, {0x6F0, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x6F8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(get<T>, {0x710, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(getStruct<T>, {0x710, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0x713, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x738, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount8                                           OFFSET(get<bool>, {0x739, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask8                                                 OFFSET(get<T>, {0x740, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mfloat_R)          _ExprResult26                                               OFFSET(get<T>, {0x758, 16, 0, 0})
+	SMember(Ftuple_Lfort__character_Mfloat_R)          _ExprResult26                                               OFFSET(getStruct<T>, {0x758, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult8                                               OFFSET(get<int64_t>, {0x768, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount9                                           OFFSET(get<bool>, {0x770, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask9                                                 OFFSET(get<T>, {0x778, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult27                                               OFFSET(get<T>, {0x790, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult27                                               OFFSET(getStruct<T>, {0x790, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult9                                               OFFSET(get<int64_t>, {0x798, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount10                                          OFFSET(get<bool>, {0x7A0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask10                                                OFFSET(get<T>, {0x7A8, 8, 0, 0})
@@ -6409,25 +6409,25 @@ class Utask_CompanionAI_companion_ai_runtime_HandleGoTo_L_Nping__info_R : public
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1A8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1B0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1C8, 8, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0x459049A1_Target                                   OFFSET(get<T>, {0x218, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x228, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult OFFSET(get<T>, {0x240, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_      OFFSET(get<T>, {0x280, 56, 0, 0})
-	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult1                                                OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x2E0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2E1, 1, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult OFFSET(getStruct<T>, {0x240, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_      OFFSET(getStruct<T>, {0x280, 56, 0, 0})
+	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult1                                                OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x2E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2E1, 1, 0, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint                                   OFFSET(get<bool>, {0x2E2, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x300, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x3E0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x3E1, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x3E8, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult4 OFFSET(get<T>, {0x400, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_1     OFFSET(get<T>, {0x440, 56, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult4 OFFSET(getStruct<T>, {0x400, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_1     OFFSET(getStruct<T>, {0x440, 56, 0, 0})
 	DMember(bool)                                      _ExprResult5                                                OFFSET(get<bool>, {0x482, 1, 1, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint1                                  OFFSET(get<bool>, {0x485, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x4A0, 8, 0, 0})
@@ -6437,8 +6437,8 @@ public:
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x4D2, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x4D3, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x4D8, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult6 OFFSET(get<T>, {0x4F0, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R) __verse_0x00000000_2          OFFSET(get<T>, {0x530, 56, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult6 OFFSET(getStruct<T>, {0x4F0, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R) __verse_0x00000000_2          OFFSET(getStruct<T>, {0x530, 56, 0, 0})
 	DMember(bool)                                      _ExprResult7                                                OFFSET(get<bool>, {0x572, 1, 1, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint2                                  OFFSET(get<bool>, {0x575, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x590, 8, 0, 0})
@@ -6448,8 +6448,8 @@ public:
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x5C0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount8                                           OFFSET(get<bool>, {0x5C1, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x5C8, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult8 OFFSET(get<T>, {0x5E0, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R) __verse_0x00000000_3     OFFSET(get<T>, {0x620, 56, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult8 OFFSET(getStruct<T>, {0x5E0, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R) __verse_0x00000000_3     OFFSET(getStruct<T>, {0x620, 56, 0, 0})
 	DMember(bool)                                      _ExprResult9                                                OFFSET(get<bool>, {0x662, 1, 1, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint3                                  OFFSET(get<bool>, {0x665, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x680, 8, 0, 0})
@@ -6463,18 +6463,18 @@ public:
 	DMember(int64_t)                                   _AsyncResult8                                               OFFSET(get<int64_t>, {0x720, 8, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0x459049A1_Target1                                  OFFSET(get<T>, {0x770, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask9                                                 OFFSET(get<T>, {0x780, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult10 OFFSET(get<T>, {0x798, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_4     OFFSET(get<T>, {0x7D8, 56, 0, 0})
-	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult11                                               OFFSET(get<T>, {0x828, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x838, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x839, 1, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult10 OFFSET(getStruct<T>, {0x798, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_4     OFFSET(getStruct<T>, {0x7D8, 56, 0, 0})
+	SMember(Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R)    _ExprResult11                                               OFFSET(getStruct<T>, {0x828, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x838, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x839, 1, 0, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint4                                  OFFSET(get<bool>, {0x83A, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult9                                               OFFSET(get<int64_t>, {0x858, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount11                                          OFFSET(get<bool>, {0x938, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount12                                          OFFSET(get<bool>, {0x939, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask10                                                OFFSET(get<T>, {0x940, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult14 OFFSET(get<T>, {0x958, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_5     OFFSET(get<T>, {0x998, 56, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult14 OFFSET(getStruct<T>, {0x958, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R) __verse_0x00000000_5     OFFSET(getStruct<T>, {0x998, 56, 0, 0})
 	DMember(bool)                                      _ExprResult15                                               OFFSET(get<bool>, {0x9DA, 1, 1, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint5                                  OFFSET(get<bool>, {0x9DD, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult10                                              OFFSET(get<int64_t>, {0x9F8, 8, 0, 0})
@@ -6484,8 +6484,8 @@ public:
 	DMember(bool)                                      _AsyncBeginCount14                                          OFFSET(get<bool>, {0xA2A, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount15                                          OFFSET(get<bool>, {0xA2B, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask12                                                OFFSET(get<T>, {0xA30, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult16 OFFSET(get<T>, {0xA48, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R) __verse_0x00000000_6          OFFSET(get<T>, {0xA88, 56, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult16 OFFSET(getStruct<T>, {0xA48, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R) __verse_0x00000000_6          OFFSET(getStruct<T>, {0xA88, 56, 0, 0})
 	DMember(bool)                                      _ExprResult17                                               OFFSET(get<bool>, {0xACA, 1, 1, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint6                                  OFFSET(get<bool>, {0xACD, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult12                                              OFFSET(get<int64_t>, {0xAE8, 8, 0, 0})
@@ -6495,8 +6495,8 @@ public:
 	DMember(bool)                                      _AsyncBeginCount17                                          OFFSET(get<bool>, {0xB18, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount18                                          OFFSET(get<bool>, {0xB19, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask14                                                OFFSET(get<T>, {0xB20, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult18 OFFSET(get<T>, {0xB38, 64, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R) __verse_0x00000000_7     OFFSET(get<T>, {0xB78, 56, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult18 OFFSET(getStruct<T>, {0xB38, 64, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R) __verse_0x00000000_7     OFFSET(getStruct<T>, {0xB78, 56, 0, 0})
 	DMember(bool)                                      _ExprResult19                                               OFFSET(get<bool>, {0xBBA, 1, 1, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint7                                  OFFSET(get<bool>, {0xBBD, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult14                                              OFFSET(get<int64_t>, {0xBD8, 8, 0, 0})
@@ -6520,7 +6520,7 @@ class Utask_CompanionAI_companion_ai_runtime_HandleGoToCommand_L_Nping__info_R :
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	DMember(bool)                                      _ExprResult                                                 OFFSET(get<bool>, {0x1EA, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1ED, 1, 1, 0})
@@ -6531,38 +6531,38 @@ public:
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter                                  OFFSET(get<T>, {0x258, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x268, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x270, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult1                                                OFFSET(get<T>, {0x288, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult1                                                OFFSET(getStruct<T>, {0x288, 40, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x2D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x328, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x328, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x329, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x32A, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x370, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x388, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x388, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x390, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x398, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x3E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x3F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x3F8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x400, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x408, 1, 1, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat                                   OFFSET(get<T>, {0x410, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat                                   OFFSET(getStruct<T>, {0x410, 56, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x490, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x4A8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x500, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R) _ExprResult6                            OFFSET(get<T>, {0x518, 40, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x500, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R) _ExprResult6                            OFFSET(getStruct<T>, {0x518, 40, 0, 0})
 	DMember(bool)                                      __verse_0xBC1095DF_HasRevived                               OFFSET(get<bool>, {0x540, 1, 1, 0})
 	DMember(double)                                    _ExprResultStack                                            OFFSET(get<double>, {0x570, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult7                                                OFFSET(get<T>, {0x588, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult8                                                OFFSET(get<T>, {0x5C0, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult7                                                OFFSET(getStruct<T>, {0x588, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult8                                                OFFSET(getStruct<T>, {0x5C0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x620, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x638, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x459049A1_Target                                   OFFSET(get<T>, {0x640, 56, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x638, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x459049A1_Target                                   OFFSET(getStruct<T>, {0x640, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x6B8, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFA2219CC_TargetAgent                              OFFSET(get<T>, {0x6E0, 8, 0, 0})
-	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult10                                OFFSET(get<T>, {0x700, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x718, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x719, 1, 0, 0})
+	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult10                                OFFSET(getStruct<T>, {0x700, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x718, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x719, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x720, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x728, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x740, 8, 0, 0})
@@ -6578,38 +6578,38 @@ public:
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter1                                 OFFSET(get<T>, {0x860, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount11                                          OFFSET(get<bool>, {0x870, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask8                                                 OFFSET(get<T>, {0x878, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult14                                               OFFSET(get<T>, {0x890, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult14                                               OFFSET(getStruct<T>, {0x890, 40, 0, 0})
 	DMember(int64_t)                                   _AsyncResult8                                               OFFSET(get<int64_t>, {0x8B8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask9                                                 OFFSET(get<T>, {0x8C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult9                                               OFFSET(get<int64_t>, {0x8D8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x930, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x930, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount12                                          OFFSET(get<bool>, {0x931, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount13                                          OFFSET(get<bool>, {0x932, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask10                                                OFFSET(get<T>, {0x978, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(get<T>, {0x990, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult16                                               OFFSET(getStruct<T>, {0x990, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult10                                              OFFSET(get<int64_t>, {0x998, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount14                                          OFFSET(get<bool>, {0x9A0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask11                                                OFFSET(get<T>, {0x9E8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(get<T>, {0xA00, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(getStruct<T>, {0xA00, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult11                                              OFFSET(get<int64_t>, {0xA08, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount15                                          OFFSET(get<bool>, {0xA10, 1, 1, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat1                                  OFFSET(get<T>, {0xA18, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xD4ED8431_Threat1                                  OFFSET(getStruct<T>, {0xA18, 56, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask12                                                OFFSET(get<T>, {0xA98, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult12                                              OFFSET(get<int64_t>, {0xAB0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(get<T>, {0xB08, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R) _ExprResult19                           OFFSET(get<T>, {0xB20, 40, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(getStruct<T>, {0xB08, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R) _ExprResult19                           OFFSET(getStruct<T>, {0xB20, 40, 0, 0})
 	DMember(bool)                                      __verse_0xBC1095DF_HasRevived1                              OFFSET(get<bool>, {0xB48, 1, 1, 0})
 	DMember(double)                                    _ExprResultStack1                                           OFFSET(get<double>, {0xB78, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult20                                               OFFSET(get<T>, {0xB90, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult21                                               OFFSET(get<T>, {0xBC0, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult20                                               OFFSET(getStruct<T>, {0xB90, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult21                                               OFFSET(getStruct<T>, {0xBC0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0xC20, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0xC38, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x459049A1_Target1                                  OFFSET(get<T>, {0xC40, 56, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(getStruct<T>, {0xC38, 1, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x459049A1_Target1                                  OFFSET(getStruct<T>, {0xC40, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0xCB8, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFA2219CC_TargetAgent1                             OFFSET(get<T>, {0xCE0, 8, 0, 0})
-	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult23                                OFFSET(get<T>, {0xD00, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(get<T>, {0xD18, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(get<T>, {0xD19, 1, 0, 0})
+	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult23                                OFFSET(getStruct<T>, {0xD00, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(getStruct<T>, {0xD18, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(getStruct<T>, {0xD19, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0xD20, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0xD28, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask13                                                OFFSET(get<T>, {0xD40, 8, 0, 0})
@@ -6631,34 +6631,34 @@ class Utask_CompanionAI_companion_ai_runtime_HandleHoldPositionCommand_L_Nping__
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1B8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C0, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult                                                 OFFSET(get<T>, {0x1D8, 40, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult1                                                OFFSET(get<T>, {0x200, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult                                                 OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult1                                                OFFSET(getStruct<T>, {0x200, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x260, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x278, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x278, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x280, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x288, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2A0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2A0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2A8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x2C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x2C0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x2C1, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x2E8, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter1                                 OFFSET(get<T>, {0x310, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x320, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x328, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult5                                                OFFSET(get<T>, {0x340, 40, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult6                                                OFFSET(get<T>, {0x370, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           _ExprResult5                                                OFFSET(getStruct<T>, {0x340, 40, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult6                                                OFFSET(getStruct<T>, {0x370, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x3D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x3E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x3E8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x3F0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x3F8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x410, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x410, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x418, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x430, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x430, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x431, 1, 0, 0})
 
 
@@ -6676,12 +6676,12 @@ class Utask_CompanionAI_companion_ai_runtime_HandleNPCCommand_L_Nping__info_R : 
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array                                    OFFSET(get<T>, {0x1A8, 16, 0, 0})
 	CMember(TArray<TArray>)                            _ExprResult                                                 OFFSET(get<T>, {0x1C8, 16, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array1                                   OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(Ftuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R)  __verse_0x00000000_                                         OFFSET(get<T>, {0x1E8, 64, 0, 0})
+	SMember(Ftuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R)  __verse_0x00000000_                                         OFFSET(getStruct<T>, {0x1E8, 64, 0, 0})
 	CMember(TArray<TArray>)                            _ForResult                                                  OFFSET(get<T>, {0x308, 16, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x318, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x320, 8, 0, 0})
@@ -6695,11 +6695,11 @@ public:
 	DMember(char)                                      _ExprResult2                                                OFFSET(get<char>, {0x3C0, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x418, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x430, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x430, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x438, 8, 0, 0})
 	DMember(bool)                                      _ExprResult4                                                OFFSET(get<bool>, {0x442, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x448, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x460, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x460, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x468, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x470, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x5E8, 8, 0, 0})
@@ -6709,7 +6709,7 @@ public:
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array2                                   OFFSET(get<T>, {0x658, 16, 0, 0})
 	CMember(TArray<TArray>)                            _ExprResult6                                                OFFSET(get<T>, {0x678, 16, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array3                                   OFFSET(get<T>, {0x688, 16, 0, 0})
-	SMember(Ftuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R)  __verse_0x00000000_5                                        OFFSET(get<T>, {0x698, 64, 0, 0})
+	SMember(Ftuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R)  __verse_0x00000000_5                                        OFFSET(getStruct<T>, {0x698, 64, 0, 0})
 	CMember(TArray<TArray>)                            _ForResult2                                                 OFFSET(get<T>, {0x7B8, 16, 0, 0})
 	DMember(int64_t)                                   _ForIndex3                                                  OFFSET(get<int64_t>, {0x7C8, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength3                                                 OFFSET(get<int64_t>, {0x7D0, 8, 0, 0})
@@ -6723,11 +6723,11 @@ public:
 	DMember(char)                                      _ExprResult8                                                OFFSET(get<char>, {0x870, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_6                                        OFFSET(get<T>, {0x8C0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x8C8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x8E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x8E0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x8E8, 8, 0, 0})
 	DMember(bool)                                      _ExprResult10                                               OFFSET(get<bool>, {0x8F2, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_7                                        OFFSET(get<T>, {0x8F8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x910, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x910, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_8                                        OFFSET(get<T>, {0x918, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x920, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_9                                        OFFSET(get<T>, {0xA98, 8, 0, 0})
@@ -6751,38 +6751,38 @@ public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x150, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1C0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1C8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1D0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x1D1, 1, 1, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x82A44C52_Obstacle                                 OFFSET(get<T>, {0x1D8, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x82A44C52_Obstacle                                 OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0xBD80729A_CurrentTarget                            OFFSET(get<T>, {0x230, 8, 0, 0})
 	DMember(bool)                                      _ExprResultStack                                            OFFSET(get<bool>, {0x242, 1, 1, 0})
-	SMember(Ftuple_Lfort__obstacle__info_Mentity_R)    _ExprResult1                                                OFFSET(get<T>, {0x258, 48, 0, 0})
+	SMember(Ftuple_Lfort__obstacle__info_Mentity_R)    _ExprResult1                                                OFFSET(getStruct<T>, {0x258, 48, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x288, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2A0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x2E0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x318, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x330, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x330, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x338, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x340, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x368, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x3C0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x3D8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x3D8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x3E0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x3E8, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x3E9, 1, 1, 0})
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x82A44C52_Obstacle1                                OFFSET(get<T>, {0x3F0, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x82A44C52_Obstacle1                                OFFSET(getStruct<T>, {0x3F0, 40, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0xBD80729A_CurrentTarget1                           OFFSET(get<T>, {0x448, 8, 0, 0})
 	DMember(bool)                                      _ExprResultStack1                                           OFFSET(get<bool>, {0x45A, 1, 1, 0})
-	SMember(Ftuple_Lfort__obstacle__info_Mentity_R)    _ExprResult4                                                OFFSET(get<T>, {0x470, 48, 0, 0})
+	SMember(Ftuple_Lfort__obstacle__info_Mentity_R)    _ExprResult4                                                OFFSET(getStruct<T>, {0x470, 48, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x4A0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x4B8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x4D0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x4F8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x530, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x548, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x548, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x550, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x558, 1, 0, 0})
 
@@ -6801,16 +6801,16 @@ class Utask_CompanionAI_companion_ai_runtime_HandleReviveCommand_L_Nping__info_R
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(FCompanionAI_ping_info)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xFD64D7AA_Emitter                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	DMember(bool)                                      __verse_0xC96E9091_HasRevivedEmitter                        OFFSET(get<bool>, {0x1B8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1D8, 8, 0, 0})
 	CMember(TArray<USimulation_agent*>)                __verse_0xBFBCE682_TeamMembers                              OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(get<T>, {0x208, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x218, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x219, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(getStruct<T>, {0x208, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x219, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x220, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x228, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xAE35E375_TeamMember                               OFFSET(get<T>, {0x230, 8, 0, 0})
@@ -6824,9 +6824,9 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2F8, 8, 0, 0})
 	CMember(TArray<USimulation_agent*>)                __verse_0xBFBCE682_TeamMembers1                             OFFSET(get<T>, {0x308, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult3                                                OFFSET(get<T>, {0x328, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x338, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x339, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult3                                                OFFSET(getStruct<T>, {0x328, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x338, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x339, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex1                                                  OFFSET(get<int64_t>, {0x340, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength1                                                 OFFSET(get<int64_t>, {0x348, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xAE35E375_TeamMember1                              OFFSET(get<T>, {0x350, 8, 0, 0})
@@ -6850,16 +6850,16 @@ class Utask_CompanionAI_companion_ai_runtime_LookAroundTask_L_Nvector3_M_Nfloat_
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Mfloat_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Mfloat_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x170, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x68BA2569_RandomOffset                             OFFSET(get<T>, {0x198, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x68BA2569_RandomOffset                             OFFSET(getStruct<T>, {0x198, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack                                            OFFSET(get<T>, {0x1B0, 80, 0, 0})
 	DMember(double)                                    _ExprResultStack1                                           OFFSET(get<double>, {0x230, 8, 0, 0})
-	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult                       OFFSET(get<T>, {0x248, 16, 0, 0})
+	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult                       OFFSET(getStruct<T>, {0x248, 16, 0, 0})
 	DMember(double)                                    _ExprResultStack2                                           OFFSET(get<double>, {0x258, 8, 0, 0})
-	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult1                      OFFSET(get<T>, {0x270, 16, 0, 0})
+	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult1                      OFFSET(getStruct<T>, {0x270, 16, 0, 0})
 	DMember(double)                                    _ExprResultStack3                                           OFFSET(get<double>, {0x280, 8, 0, 0})
-	SMember(Ftuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult2                         OFFSET(get<T>, {0x298, 16, 0, 0})
+	SMember(Ftuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult2                         OFFSET(getStruct<T>, {0x298, 16, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x2A8, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x2A9, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
@@ -6868,24 +6868,24 @@ public:
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x2E8, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack4                                           OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult3                                                OFFSET(get<T>, {0x338, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack4                                           OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult3                                                OFFSET(getStruct<T>, {0x338, 48, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x368, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x370, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x378, 8, 0, 0})
 	DMember(double)                                    _ExprResultStack5                                           OFFSET(get<double>, {0x390, 8, 0, 0})
-	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResult4                                                OFFSET(get<T>, {0x3A8, 16, 0, 0})
+	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResult4                                                OFFSET(getStruct<T>, {0x3A8, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x3B8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x3C0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x3E8, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x68BA2569_RandomOffset1                            OFFSET(get<T>, {0x410, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x68BA2569_RandomOffset1                            OFFSET(getStruct<T>, {0x410, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack6                                           OFFSET(get<T>, {0x428, 80, 0, 0})
 	DMember(double)                                    _ExprResultStack7                                           OFFSET(get<double>, {0x4A8, 8, 0, 0})
-	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult5                      OFFSET(get<T>, {0x4C0, 16, 0, 0})
+	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult5                      OFFSET(getStruct<T>, {0x4C0, 16, 0, 0})
 	DMember(double)                                    _ExprResultStack8                                           OFFSET(get<double>, {0x4D0, 8, 0, 0})
-	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult6                      OFFSET(get<T>, {0x4E8, 16, 0, 0})
+	SMember(Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R) _ExprResult6                      OFFSET(getStruct<T>, {0x4E8, 16, 0, 0})
 	DMember(double)                                    _ExprResultStack9                                           OFFSET(get<double>, {0x4F8, 8, 0, 0})
-	SMember(Ftuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult7                         OFFSET(get<T>, {0x510, 16, 0, 0})
+	SMember(Ftuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult7                         OFFSET(getStruct<T>, {0x510, 16, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x520, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x521, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x528, 8, 0, 0})
@@ -6894,13 +6894,13 @@ public:
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x560, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x570, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack10                                          OFFSET(get<T>, {0x588, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult8                                                OFFSET(get<T>, {0x5B0, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack10                                          OFFSET(getStruct<T>, {0x588, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult8                                                OFFSET(getStruct<T>, {0x5B0, 48, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x5E0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x5E8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x5F0, 8, 0, 0})
 	DMember(double)                                    _ExprResultStack11                                          OFFSET(get<double>, {0x608, 8, 0, 0})
-	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResult9                                                OFFSET(get<T>, {0x620, 16, 0, 0})
+	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResult9                                                OFFSET(getStruct<T>, {0x620, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x630, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x638, 1, 0, 0})
 
@@ -6919,20 +6919,20 @@ class Utask_CompanionAI_companion_ai_runtime_LookAtOrAttackTarget : public UConc
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x149, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1C8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1C8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1D0, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x26CBBAEB_CurrentThreatInfo                        OFFSET(get<T>, {0x1D8, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x26CBBAEB_CurrentThreatInfo                        OFFSET(getStruct<T>, {0x1D8, 56, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x250, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x251, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x2B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x2C0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x320, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x320, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x328, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x330, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x338, 8, 0, 0})
@@ -6940,27 +6940,27 @@ public:
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x358, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x359, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x360, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x378, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x378, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x380, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x388, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x390, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x398, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack                                            OFFSET(get<T>, {0x3B0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack                                            OFFSET(getStruct<T>, {0x3B0, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x3D8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x3E0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x408, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x470, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x488, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x488, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x490, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x26CBBAEB_CurrentThreatInfo1                       OFFSET(get<T>, {0x498, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x26CBBAEB_CurrentThreatInfo1                       OFFSET(getStruct<T>, {0x498, 56, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x510, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount8                                           OFFSET(get<bool>, {0x511, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x558, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x570, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x570, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x578, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount9                                           OFFSET(get<bool>, {0x580, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask8                                                 OFFSET(get<T>, {0x5C8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x5E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x5E0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult8                                               OFFSET(get<int64_t>, {0x5E8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount10                                          OFFSET(get<bool>, {0x5F0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask9                                                 OFFSET(get<T>, {0x5F8, 8, 0, 0})
@@ -6968,12 +6968,12 @@ public:
 	DMember(bool)                                      _AsyncBeginCount11                                          OFFSET(get<bool>, {0x618, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount12                                          OFFSET(get<bool>, {0x619, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask10                                                OFFSET(get<T>, {0x620, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x638, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x638, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult10                                              OFFSET(get<int64_t>, {0x640, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount13                                          OFFSET(get<bool>, {0x648, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x650, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask11                                                OFFSET(get<T>, {0x658, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x670, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(getStruct<T>, {0x670, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult11                                              OFFSET(get<int64_t>, {0x698, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x6A0, 1, 0, 0})
 
@@ -6992,49 +6992,49 @@ class Utask_CompanionAI_companion_ai_runtime_LookAtThreatTask : public UConcurre
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x149, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(get<T>, {0x170, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(getStruct<T>, {0x170, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x200, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x200, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x201, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x202, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x208, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x220, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x220, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x228, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x230, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x238, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x250, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x250, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x258, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x260, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x268, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x270, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack                                            OFFSET(get<T>, {0x288, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack                                            OFFSET(getStruct<T>, {0x288, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x2B0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x2E0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x2E8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x2F0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x318, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(get<T>, {0x340, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(getStruct<T>, {0x340, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x378, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x3D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x3D0, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x3D1, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x3D2, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x3D8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x3F0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x3F0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x3F8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x400, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x408, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x420, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x420, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x428, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x430, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x440, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x458, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(getStruct<T>, {0x458, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x480, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x498, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x4B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x4B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x4B8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x4C0, 1, 0, 0})
 
@@ -7057,40 +7057,40 @@ public:
 	DMember(bool)                                      _RetVal                                                     OFFSET(get<bool>, {0x150, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x151, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1A9, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x1C0, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                          OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult5                                                OFFSET(get<T>, {0x200, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x210, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x211, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x212, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x213, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1A9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x1C0, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                          OFFSET(getStruct<T>, {0x1D8, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult5                                                OFFSET(getStruct<T>, {0x200, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x210, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x211, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x212, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x213, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x214, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x218, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x230, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x230, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x238, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x240, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x241, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x248, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x260, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x268, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult11                                               OFFSET(get<T>, {0x288, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x298, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x299, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(get<T>, {0x2B0, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult15                                         OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult16                                               OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(get<T>, {0x300, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(get<T>, {0x301, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x302, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult20                                               OFFSET(get<T>, {0x303, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult11                                               OFFSET(getStruct<T>, {0x288, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x298, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x299, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(getStruct<T>, {0x2B0, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult15                                         OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult16                                               OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult17                                               OFFSET(getStruct<T>, {0x300, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(getStruct<T>, {0x301, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x302, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult20                                               OFFSET(getStruct<T>, {0x303, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x304, 1, 1, 0})
 	DMember(bool)                                      __verse_0x7EBDC403_HasReachedPosition                       OFFSET(get<bool>, {0x305, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult21 OFFSET(get<T>, {0x320, 64, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult22                                               OFFSET(get<T>, {0x360, 24, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult21 OFFSET(getStruct<T>, {0x320, 64, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult22                                               OFFSET(getStruct<T>, {0x360, 24, 0, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint                                   OFFSET(get<bool>, {0x380, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x3A0, 8, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        __verse_0x40FB4916_ReviveResult                             OFFSET(get<T>, {0x3AA, 1, 0, 0})
@@ -7098,40 +7098,40 @@ public:
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x410, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x438, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x460, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult23                                               OFFSET(get<T>, {0x480, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(get<T>, {0x490, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(get<T>, {0x491, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult26                                               OFFSET(get<T>, {0x4A8, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult27                                         OFFSET(get<T>, {0x4C0, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult28                                               OFFSET(get<T>, {0x4E8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult29                                               OFFSET(get<T>, {0x4F8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(get<T>, {0x4F9, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(get<T>, {0x4FA, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult32                                               OFFSET(get<T>, {0x4FB, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult23                                               OFFSET(getStruct<T>, {0x480, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(getStruct<T>, {0x490, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(getStruct<T>, {0x491, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult26                                               OFFSET(getStruct<T>, {0x4A8, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult27                                         OFFSET(getStruct<T>, {0x4C0, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult28                                               OFFSET(getStruct<T>, {0x4E8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult29                                               OFFSET(getStruct<T>, {0x4F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(getStruct<T>, {0x4F9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(getStruct<T>, {0x4FA, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult32                                               OFFSET(getStruct<T>, {0x4FB, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x4FC, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x500, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult33                                               OFFSET(get<T>, {0x518, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult33                                               OFFSET(getStruct<T>, {0x518, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x520, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x528, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x529, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x530, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x548, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x550, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult34                                               OFFSET(get<T>, {0x570, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(get<T>, {0x580, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult36                                               OFFSET(get<T>, {0x581, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult37                                               OFFSET(get<T>, {0x598, 1, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult38                                         OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult39                                               OFFSET(get<T>, {0x5D8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult40                                               OFFSET(get<T>, {0x5E8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult41                                               OFFSET(get<T>, {0x5E9, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult42                                               OFFSET(get<T>, {0x5EA, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult43                                               OFFSET(get<T>, {0x5EB, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult34                                               OFFSET(getStruct<T>, {0x570, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(getStruct<T>, {0x580, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult36                                               OFFSET(getStruct<T>, {0x581, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult37                                               OFFSET(getStruct<T>, {0x598, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult38                                         OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult39                                               OFFSET(getStruct<T>, {0x5D8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult40                                               OFFSET(getStruct<T>, {0x5E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult41                                               OFFSET(getStruct<T>, {0x5E9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult42                                               OFFSET(getStruct<T>, {0x5EA, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult43                                               OFFSET(getStruct<T>, {0x5EB, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x5EC, 1, 1, 0})
 	DMember(bool)                                      __verse_0x7EBDC403_HasReachedPosition1                      OFFSET(get<bool>, {0x5ED, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x5F0, 8, 0, 0})
-	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult44 OFFSET(get<T>, {0x608, 64, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult45                                               OFFSET(get<T>, {0x648, 24, 0, 0})
+	SMember(Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R) _ExprResult44 OFFSET(getStruct<T>, {0x608, 64, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult45                                               OFFSET(getStruct<T>, {0x648, 24, 0, 0})
 	DMember(bool)                                      __verse_0x19F8ABA1_Sprint1                                  OFFSET(get<bool>, {0x668, 1, 1, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x688, 8, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        __verse_0x40FB4916_ReviveResult1                            OFFSET(get<T>, {0x692, 1, 0, 0})
@@ -7153,12 +7153,12 @@ class Utask_CompanionAI_companion_ai_runtime_SetLeashPosition_L_Nvector3_M_Nfloa
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Magent_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x170, 1, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array                                    OFFSET(get<T>, {0x198, 16, 0, 0})
 	CMember(TArray<TArray>)                            _ExprResult                                                 OFFSET(get<T>, {0x1B8, 16, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array1                                   OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D8, 32, 0, 0})
+	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_                                         OFFSET(getStruct<T>, {0x1D8, 32, 0, 0})
 	CMember(TArray<TArray>)                            _ForResult                                                  OFFSET(get<T>, {0x248, 16, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x258, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x260, 8, 0, 0})
@@ -7172,30 +7172,30 @@ public:
 	DMember(char)                                      _ExprResult2                                                OFFSET(get<char>, {0x300, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x301, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           _ExprResult3                                                OFFSET(get<T>, {0x320, 56, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           _ExprResult3                                                OFFSET(getStruct<T>, {0x320, 56, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x358, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x360, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x368, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R) _ExprResult4                                     OFFSET(get<T>, {0x380, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R) _ExprResult4                                     OFFSET(getStruct<T>, {0x380, 40, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x3A8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x3C0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x3C8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x3D0, 1, 0, 0})
-	SMember(Ftuple_Lagent_Mfloat_Mfloat_R)             _ExprResult5                                                OFFSET(get<T>, {0x3E8, 24, 0, 0})
-	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack                                            OFFSET(get<T>, {0x400, 16, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult6                                          OFFSET(get<T>, {0x420, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x430, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x431, 1, 0, 0})
-	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack1                                           OFFSET(get<T>, {0x438, 16, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult9                                          OFFSET(get<T>, {0x458, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x468, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x469, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_Mfloat_R)             _ExprResult5                                                OFFSET(getStruct<T>, {0x3E8, 24, 0, 0})
+	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack                                            OFFSET(getStruct<T>, {0x400, 16, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult6                                          OFFSET(getStruct<T>, {0x420, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x430, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x431, 1, 0, 0})
+	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack1                                           OFFSET(getStruct<T>, {0x438, 16, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult9                                          OFFSET(getStruct<T>, {0x458, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x468, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x469, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x46A, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x490, 1, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array2                                   OFFSET(get<T>, {0x4B8, 16, 0, 0})
 	CMember(TArray<TArray>)                            _ExprResult12                                               OFFSET(get<T>, {0x4D8, 16, 0, 0})
 	CMember(TArray<__verse_0xFFC68BC5_Array>)          __verse_0xFFC68BC5_Array3                                   OFFSET(get<T>, {0x4E8, 16, 0, 0})
-	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x4F8, 32, 0, 0})
+	SMember(Ftuple_L_Kchar_M_Kchar_R)                  __verse_0x00000000_3                                        OFFSET(getStruct<T>, {0x4F8, 32, 0, 0})
 	CMember(TArray<TArray>)                            _ForResult2                                                 OFFSET(get<T>, {0x568, 16, 0, 0})
 	DMember(int64_t)                                   _ForIndex3                                                  OFFSET(get<int64_t>, {0x578, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength3                                                 OFFSET(get<int64_t>, {0x580, 8, 0, 0})
@@ -7209,24 +7209,24 @@ public:
 	DMember(char)                                      _ExprResult14                                               OFFSET(get<char>, {0x620, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x621, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x628, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           _ExprResult15                                               OFFSET(get<T>, {0x640, 56, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           _ExprResult15                                               OFFSET(getStruct<T>, {0x640, 56, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x678, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x680, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x688, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R) _ExprResult16                                    OFFSET(get<T>, {0x6A0, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R) _ExprResult16                                    OFFSET(getStruct<T>, {0x6A0, 40, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x6C8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x6E0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x6E8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0x6F0, 1, 0, 0})
-	SMember(Ftuple_Lagent_Mfloat_Mfloat_R)             _ExprResult17                                               OFFSET(get<T>, {0x708, 24, 0, 0})
-	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack2                                           OFFSET(get<T>, {0x720, 16, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult18                                         OFFSET(get<T>, {0x740, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x750, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult20                                               OFFSET(get<T>, {0x751, 1, 0, 0})
-	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack3                                           OFFSET(get<T>, {0x758, 16, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult21                                         OFFSET(get<T>, {0x778, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0x788, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult23                                               OFFSET(get<T>, {0x789, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_Mfloat_R)             _ExprResult17                                               OFFSET(getStruct<T>, {0x708, 24, 0, 0})
+	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack2                                           OFFSET(getStruct<T>, {0x720, 16, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult18                                         OFFSET(getStruct<T>, {0x740, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0x750, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult20                                               OFFSET(getStruct<T>, {0x751, 1, 0, 0})
+	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResultStack3                                           OFFSET(getStruct<T>, {0x758, 16, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult21                                         OFFSET(getStruct<T>, {0x778, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(getStruct<T>, {0x788, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult23                                               OFFSET(getStruct<T>, {0x789, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0x78A, 1, 0, 0})
 
 
@@ -7248,60 +7248,60 @@ public:
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x150, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x178, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x190, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(get<T>, {0x198, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(getStruct<T>, {0x198, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x228, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x228, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x229, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x22A, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x230, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x248, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x248, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x250, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x258, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x260, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x278, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x278, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x280, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x288, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x28D, 1, 0, 0})
 	DMember(double)                                    _ExprResultStack                                            OFFSET(get<double>, {0x2C0, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult3                                                OFFSET(get<T>, {0x2D8, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x308, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult4                                                OFFSET(get<T>, {0x330, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult3                                                OFFSET(getStruct<T>, {0x2D8, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(getStruct<T>, {0x308, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult4                                                OFFSET(getStruct<T>, {0x330, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x390, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x3A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x3A8, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 __verse_0x95D09D0E_Result                                   OFFSET(get<T>, {0x3A9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x3B8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x3D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x470, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x470, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x471, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x498, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x4D8, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(get<T>, {0x4E0, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(getStruct<T>, {0x4E0, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x518, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x570, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x570, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x571, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x572, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x578, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x590, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x590, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x598, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x5A0, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x5A8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x5C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x5C0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x5C8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x5D0, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x5D5, 1, 0, 0})
 	DMember(double)                                    _ExprResultStack2                                           OFFSET(get<double>, {0x608, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult10                                               OFFSET(get<T>, {0x620, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack3                                           OFFSET(get<T>, {0x650, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult11                                               OFFSET(get<T>, {0x680, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult10                                               OFFSET(getStruct<T>, {0x620, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack3                                           OFFSET(getStruct<T>, {0x650, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult11                                               OFFSET(getStruct<T>, {0x680, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x6E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x6F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x6F8, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 __verse_0x95D09D0E_Result1                                  OFFSET(get<T>, {0x6F9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x700, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x708, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x720, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x7C0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x7C0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x7C1, 1, 0, 0})
 
 
@@ -7319,14 +7319,14 @@ class Utask_CompanionAI_companion_ai_runtime_SprintService : public UConcurrency
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x150, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x158, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x170, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x178, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x180, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x188, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1A0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1A8, 8, 0, 0})
 
 
@@ -7344,14 +7344,14 @@ class Utask_CompanionAI_companion_ai_runtime_TacticalSprintService : public UCon
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x150, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x158, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x170, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x178, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x180, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x188, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1A0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1A8, 8, 0, 0})
 
 
@@ -7369,22 +7369,22 @@ class Utask_CompanionAI_companion_ai_runtime_WaitForDamageService : public UConc
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x149, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x170, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x171, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x178, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x180, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x198, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x198, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1B8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1B8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1C0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x1C8, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1F0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1F0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x210, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x210, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x218, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x220, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x248, 1, 0, 0})
@@ -7392,16 +7392,16 @@ public:
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x271, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x278, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x280, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x298, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x298, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x2B8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x2B8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x2C0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x2C8, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_6                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_7                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x2F0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x2F0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x310, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x310, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x318, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x320, 1, 0, 0})
 
@@ -7423,17 +7423,17 @@ public:
 	CMember(UObject*)                                  __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x150, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x4BB95041_Vehicle                                  OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult                                           OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x1A9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult                                           OFFSET(getStruct<T>, {0x198, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1A8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x1A9, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1B0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1C8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x1D0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x1F8, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x4BB95041_Vehicle1                                 OFFSET(get<T>, {0x220, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult3                                          OFFSET(get<T>, {0x240, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x250, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x251, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult3                                          OFFSET(getStruct<T>, {0x240, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x250, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x251, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x258, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x270, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x278, 1, 0, 0})
@@ -7453,27 +7453,27 @@ class Utask_CompanionAI_companion_ai_runtime_WaitForTargetMovementService_L_Nfor
 
 public:
 	CMember(UCompanionAI_companion_ai_runtime*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mfloat_R)          __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x455F599A_ReferencePosition                        OFFSET(get<T>, {0x158, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(Ftuple_Lfort__character_Mfloat_R)          __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 16, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x455F599A_ReferencePosition                        OFFSET(getStruct<T>, {0x158, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1E8, 1, 0, 0})
 	DMember(double)                                    __verse_0x525BA815_DistanceFromReferencePosition            OFFSET(get<double>, {0x1F0, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult2                                                OFFSET(get<T>, {0x208, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult3                                                OFFSET(get<T>, {0x240, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult2                                                OFFSET(getStruct<T>, {0x208, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult3                                                OFFSET(getStruct<T>, {0x240, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x2B8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x2B8, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2E8, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x455F599A_ReferencePosition1                       OFFSET(get<T>, {0x2F0, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult5                                                OFFSET(get<T>, {0x310, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x455F599A_ReferencePosition1                       OFFSET(getStruct<T>, {0x2F0, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult5                                                OFFSET(getStruct<T>, {0x310, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x370, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x388, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x388, 1, 0, 0})
 	DMember(double)                                    __verse_0x525BA815_DistanceFromReferencePosition1           OFFSET(get<double>, {0x390, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult7                                                OFFSET(get<T>, {0x3A8, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult8                                                OFFSET(get<T>, {0x3E0, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult7                                                OFFSET(getStruct<T>, {0x3A8, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult8                                                OFFSET(getStruct<T>, {0x3E0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x440, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x458, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x458, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x470, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x488, 8, 0, 0})
 
@@ -7492,25 +7492,25 @@ class Utask_CompanionAI_companion_creature_DrawSphere_L_Nvector3_M_Nfloat_M_Ncol
 
 public:
 	CMember(UCompanionAI_companion_creature*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
+	SMember(Ftuple_Lvector3_Mfloat_Mcolor_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 56, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_                                         OFFSET(get<T>, {0x188, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x190, 1, 0, 0})
-	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult OFFSET(get<T>, {0x1A8, 128, 0, 0})
-	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_1 OFFSET(get<T>, {0x228, 112, 0, 0})
+	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult OFFSET(getStruct<T>, {0x1A8, 128, 0, 0})
+	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_1 OFFSET(getStruct<T>, {0x228, 112, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x318, 8, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x328, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x340, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x340, 1, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x350, 1, 0, 0})
-	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult2 OFFSET(get<T>, {0x368, 128, 0, 0})
-	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_4 OFFSET(get<T>, {0x3E8, 112, 0, 0})
+	SMember(Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R) _ExprResult2 OFFSET(getStruct<T>, {0x368, 128, 0, 0})
+	SMember(Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R) __verse_0x00000000_4 OFFSET(getStruct<T>, {0x3E8, 112, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x4D8, 8, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x4E0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x4E8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x500, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x500, 1, 0, 0})
 
 
 	/// Functions
@@ -7527,97 +7527,97 @@ class Utask_CompanionAI_companion_creature_OnBegin : public UConcurrency_task
 
 public:
 	CMember(UCompanionAI_companion_creature*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_                                         OFFSET(get<T>, {0x150, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x170, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0x75EB3F0A_Agent                                    OFFSET(get<T>, {0x178, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x198, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x198, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x963EC691_Character                                OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult2                                                OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x1D1, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult2                                                OFFSET(getStruct<T>, {0x1C0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x1D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x1D1, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xD2827887_Navigatable                              OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult5                                          OFFSET(get<T>, {0x1F8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x208, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x209, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult5                                          OFFSET(getStruct<T>, {0x1F8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x208, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x209, 1, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x8FB74E85_AbilitySystemComponent                   OFFSET(get<T>, {0x210, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0xDE2F615F_Perception                               OFFSET(get<T>, {0x230, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult8                                          OFFSET(get<T>, {0x250, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x260, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x261, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult8                                          OFFSET(getStruct<T>, {0x250, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x260, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x261, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x8D6253CB_Focus                                    OFFSET(get<T>, {0x268, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult11                                         OFFSET(get<T>, {0x288, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x298, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x299, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult11                                         OFFSET(getStruct<T>, {0x288, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x298, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x299, 1, 0, 0})
 	CMember(UCompanionAI_companion_creature_runtime*)  __verse_0xEF3B3F75_Runtime                                  OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(UCompanionAI_companion_creature_runtime*)  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(get<T>, {0x2C8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(getStruct<T>, {0x2C8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2D0, 8, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_2                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x2E0, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult15                                 OFFSET(get<T>, {0x2F8, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult15                                 OFFSET(getStruct<T>, {0x2F8, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_3                                        OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x330, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult16                                 OFFSET(get<T>, {0x348, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult16                                 OFFSET(getStruct<T>, {0x348, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_4                                        OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x380, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult17                                 OFFSET(get<T>, {0x398, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult17                                 OFFSET(getStruct<T>, {0x398, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_5                                        OFFSET(get<T>, {0x3C8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x3D0, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult18                                 OFFSET(get<T>, {0x3E8, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult18                                 OFFSET(getStruct<T>, {0x3E8, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_6                                        OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x420, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult19                                 OFFSET(get<T>, {0x438, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult19                                 OFFSET(getStruct<T>, {0x438, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_7                                        OFFSET(get<T>, {0x468, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0x470, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult20                                 OFFSET(get<T>, {0x488, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult20                                 OFFSET(getStruct<T>, {0x488, 24, 0, 0})
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_8                                        OFFSET(get<T>, {0x4B8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0x4C0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(get<T>, {0x4D8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult21                                               OFFSET(getStruct<T>, {0x4D8, 1, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0x75EB3F0A_Agent1                                   OFFSET(get<T>, {0x4E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0x500, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(getStruct<T>, {0x500, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x963EC691_Character1                               OFFSET(get<T>, {0x508, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult23                                               OFFSET(get<T>, {0x528, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(get<T>, {0x538, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(get<T>, {0x539, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult23                                               OFFSET(getStruct<T>, {0x528, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult24                                               OFFSET(getStruct<T>, {0x538, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult25                                               OFFSET(getStruct<T>, {0x539, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0xD2827887_Navigatable1                             OFFSET(get<T>, {0x540, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult26                                         OFFSET(get<T>, {0x560, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult27                                               OFFSET(get<T>, {0x570, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult28                                               OFFSET(get<T>, {0x571, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult26                                         OFFSET(getStruct<T>, {0x560, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult27                                               OFFSET(getStruct<T>, {0x570, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult28                                               OFFSET(getStruct<T>, {0x571, 1, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x8FB74E85_AbilitySystemComponent1                  OFFSET(get<T>, {0x578, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0xDE2F615F_Perception1                              OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult29                                         OFFSET(get<T>, {0x5B8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(get<T>, {0x5C8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(get<T>, {0x5C9, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult29                                         OFFSET(getStruct<T>, {0x5B8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult30                                               OFFSET(getStruct<T>, {0x5C8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult31                                               OFFSET(getStruct<T>, {0x5C9, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x8D6253CB_Focus1                                   OFFSET(get<T>, {0x5D0, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult32                                         OFFSET(get<T>, {0x5F0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult33                                               OFFSET(get<T>, {0x600, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult34                                               OFFSET(get<T>, {0x601, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult32                                         OFFSET(getStruct<T>, {0x5F0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult33                                               OFFSET(getStruct<T>, {0x600, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult34                                               OFFSET(getStruct<T>, {0x601, 1, 0, 0})
 	CMember(UCompanionAI_companion_creature_runtime*)  __verse_0xEF3B3F75_Runtime1                                 OFFSET(get<T>, {0x608, 8, 0, 0})
 	CMember(UCompanionAI_companion_creature_runtime*)  __verse_0x00000000_9                                        OFFSET(get<T>, {0x610, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x618, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(get<T>, {0x630, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult35                                               OFFSET(getStruct<T>, {0x630, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x638, 8, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_10                                       OFFSET(get<T>, {0x640, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy8                                     OFFSET(get<T>, {0x648, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult36                                 OFFSET(get<T>, {0x660, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult36                                 OFFSET(getStruct<T>, {0x660, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_11                                       OFFSET(get<T>, {0x690, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy9                                     OFFSET(get<T>, {0x698, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult37                                 OFFSET(get<T>, {0x6B0, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult37                                 OFFSET(getStruct<T>, {0x6B0, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_12                                       OFFSET(get<T>, {0x6E0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy10                                    OFFSET(get<T>, {0x6E8, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult38                                 OFFSET(get<T>, {0x700, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult38                                 OFFSET(getStruct<T>, {0x700, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_13                                       OFFSET(get<T>, {0x730, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy11                                    OFFSET(get<T>, {0x738, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult39                                 OFFSET(get<T>, {0x750, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult39                                 OFFSET(getStruct<T>, {0x750, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_14                                       OFFSET(get<T>, {0x780, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy12                                    OFFSET(get<T>, {0x788, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult40                                 OFFSET(get<T>, {0x7A0, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult40                                 OFFSET(getStruct<T>, {0x7A0, 24, 0, 0})
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_15                                       OFFSET(get<T>, {0x7D0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy13                                    OFFSET(get<T>, {0x7D8, 1, 0, 0})
-	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult41                                 OFFSET(get<T>, {0x7F0, 24, 0, 0})
+	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult41                                 OFFSET(getStruct<T>, {0x7F0, 24, 0, 0})
 
 
 	/// Functions
@@ -7634,33 +7634,33 @@ class Utask_CompanionAI_companion_creature_runtime_ActivateAbilityWhenCloseEnoug
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mfloat_Mfloat_R) __verse_0xB2CDDD72_Argument                   OFFSET(get<T>, {0x148, 32, 0, 0})
+	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mfloat_Mfloat_R) __verse_0xB2CDDD72_Argument                   OFFSET(getStruct<T>, {0x148, 32, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x168, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot                                 OFFSET(get<T>, {0x190, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot                                 OFFSET(getStruct<T>, {0x190, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	DMember(double)                                    _ExprResultStack                                            OFFSET(get<double>, {0x230, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult                                                 OFFSET(get<T>, {0x248, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult1                                                OFFSET(get<T>, {0x280, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult                                                 OFFSET(getStruct<T>, {0x248, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult1                                                OFFSET(getStruct<T>, {0x280, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x2F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x2F8, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x2F9, 1, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_2                                        OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x328, 8, 0, 0})
-	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult3                  OFFSET(get<T>, {0x340, 24, 0, 0})
+	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult3                  OFFSET(getStruct<T>, {0x340, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x368, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x390, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x3B8, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot1                                OFFSET(get<T>, {0x3E0, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot1                                OFFSET(getStruct<T>, {0x3E0, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x418, 8, 0, 0})
 	DMember(double)                                    _ExprResultStack1                                           OFFSET(get<double>, {0x480, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(get<T>, {0x498, 48, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult5                                                OFFSET(get<T>, {0x4D0, 96, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(getStruct<T>, {0x498, 48, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult5                                                OFFSET(getStruct<T>, {0x4D0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x530, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x548, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x548, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x549, 1, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_5                                        OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x578, 8, 0, 0})
-	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult7                  OFFSET(get<T>, {0x590, 24, 0, 0})
+	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult7                  OFFSET(getStruct<T>, {0x590, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x5B8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x5E0, 1, 0, 0})
 
@@ -7679,21 +7679,21 @@ class Utask_CompanionAI_companion_creature_runtime_DetectMovement_L_Nvector3_M_N
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Magent_Mfloat_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Magent_Mfloat_R)           __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x170, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xE7A6CCE2_UpdatedSnapshot                          OFFSET(get<T>, {0x198, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xE7A6CCE2_UpdatedSnapshot                          OFFSET(getStruct<T>, {0x198, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	DMember(double)                                    __verse_0x06CF9E69_TargetDisplacement                       OFFSET(get<double>, {0x228, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult                                                 OFFSET(get<T>, {0x240, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult                                                 OFFSET(getStruct<T>, {0x240, 48, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x280, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2C0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x2C8, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x2F0, 1, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0xE7A6CCE2_UpdatedSnapshot1                         OFFSET(get<T>, {0x318, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0xE7A6CCE2_UpdatedSnapshot1                         OFFSET(getStruct<T>, {0x318, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x350, 8, 0, 0})
 	DMember(double)                                    __verse_0x06CF9E69_TargetDisplacement1                      OFFSET(get<double>, {0x3A8, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult1                                                OFFSET(get<T>, {0x3C0, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult1                                                OFFSET(getStruct<T>, {0x3C0, 48, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x400, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x428, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x440, 8, 0, 0})
@@ -7714,54 +7714,54 @@ class Utask_CompanionAI_companion_creature_runtime_DetectNewTarget : public UCon
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x5DB9D5B4_MyLocation                               OFFSET(get<T>, {0x180, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(get<T>, {0x1A0, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x5DB9D5B4_MyLocation                               OFFSET(getStruct<T>, {0x180, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(getStruct<T>, {0x1A0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 	DMember(double)                                    __verse_0xF8082B80_CurrentTargetBonusWeight                 OFFSET(get<double>, {0x220, 8, 0, 0})
 	DMember(double)                                    __verse_0xF868BEBF_TargetDistanceWeightMultiplier           OFFSET(get<double>, {0x228, 8, 0, 0})
 	DMember(double)                                    __verse_0x614F22D2_BestTargetWeight                         OFFSET(get<double>, {0x230, 8, 0, 0})
 	DMember(bool)                                      _ExprResult2                                                OFFSET(get<bool>, {0x242, 1, 1, 0})
 	CMember(TArray<FAI_fort_threat_info>)              _ForIterable                                                OFFSET(get<T>, {0x248, 16, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x258, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x288, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x288, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex                                                   OFFSET(get<int64_t>, {0x290, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength                                                  OFFSET(get<int64_t>, {0x298, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(get<T>, {0x2A0, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo                               OFFSET(getStruct<T>, {0x2A0, 56, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0x5AB0A628_ThreatInstigator                         OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                 OFFSET(get<T>, {0x2F8, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x310, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x311, 1, 0, 0})
+	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                 OFFSET(getStruct<T>, {0x2F8, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x310, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x311, 1, 0, 0})
 	DMember(double)                                    __verse_0x29AC0864_ThreatDistance                           OFFSET(get<double>, {0x318, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult7                                                OFFSET(get<T>, {0x330, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult7                                                OFFSET(getStruct<T>, {0x330, 48, 0, 0})
 	DMember(double)                                    __verse_0xC6D24390_Weight                                   OFFSET(get<double>, {0x360, 8, 0, 0})
 	DMember(double)                                    _ExprResult8                                                OFFSET(get<double>, {0x368, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x428, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x440, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x448, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x470, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x5DB9D5B4_MyLocation1                              OFFSET(get<T>, {0x498, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult9                                                OFFSET(get<T>, {0x4B0, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x5DB9D5B4_MyLocation1                              OFFSET(getStruct<T>, {0x498, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult9                                                OFFSET(getStruct<T>, {0x4B0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x510, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x528, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x528, 1, 0, 0})
 	DMember(double)                                    __verse_0xF8082B80_CurrentTargetBonusWeight1                OFFSET(get<double>, {0x530, 8, 0, 0})
 	DMember(double)                                    __verse_0xF868BEBF_TargetDistanceWeightMultiplier1          OFFSET(get<double>, {0x538, 8, 0, 0})
 	DMember(double)                                    __verse_0x614F22D2_BestTargetWeight1                        OFFSET(get<double>, {0x540, 8, 0, 0})
 	DMember(bool)                                      _ExprResult11                                               OFFSET(get<bool>, {0x552, 1, 1, 0})
 	CMember(TArray<FAI_fort_threat_info>)              _ForIterable1                                               OFFSET(get<T>, {0x558, 16, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x568, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x598, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x598, 1, 0, 0})
 	DMember(int64_t)                                   _ForIndex1                                                  OFFSET(get<int64_t>, {0x5A0, 8, 0, 0})
 	DMember(int64_t)                                   _ForLength1                                                 OFFSET(get<int64_t>, {0x5A8, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(get<T>, {0x5B0, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x1EB80E5B_ThreatInfo1                              OFFSET(getStruct<T>, {0x5B0, 56, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0x5AB0A628_ThreatInstigator1                        OFFSET(get<T>, {0x5E8, 8, 0, 0})
-	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult13                                OFFSET(get<T>, {0x608, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(get<T>, {0x620, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x621, 1, 0, 0})
+	SMember(Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R) _ExprResult13                                OFFSET(getStruct<T>, {0x608, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(getStruct<T>, {0x620, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x621, 1, 0, 0})
 	DMember(double)                                    __verse_0x29AC0864_ThreatDistance1                          OFFSET(get<double>, {0x628, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult16                                               OFFSET(get<T>, {0x640, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult16                                               OFFSET(getStruct<T>, {0x640, 48, 0, 0})
 	DMember(double)                                    __verse_0xC6D24390_Weight1                                  OFFSET(get<double>, {0x670, 8, 0, 0})
 	DMember(double)                                    _ExprResult17                                               OFFSET(get<double>, {0x678, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x738, 8, 0, 0})
@@ -7783,43 +7783,43 @@ class Utask_CompanionAI_companion_creature_runtime_EngageTarget_L_Nagent_M_Ngame
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 16, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x158, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x180, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x198, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x198, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1A0, 8, 0, 0})
 	DMember(double)                                    __verse_0xBF8FBE20_MeleeRange                               OFFSET(get<double>, {0x1A8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1B0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x1B1, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult1                                              OFFSET(get<T>, {0x1D0, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult1                                              OFFSET(getStruct<T>, {0x1D0, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1E0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x1E8, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x1F0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult2                                              OFFSET(get<T>, {0x208, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult2                                              OFFSET(getStruct<T>, {0x208, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x218, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x220, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x228, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R) _ExprResult3 OFFSET(get<T>, {0x240, 32, 0, 0})
+	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R) _ExprResult3 OFFSET(getStruct<T>, {0x240, 32, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x260, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x268, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x290, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x2D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x2D0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x2D8, 8, 0, 0})
 	DMember(double)                                    __verse_0xBF8FBE20_MeleeRange1                              OFFSET(get<double>, {0x2E0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x2E8, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x2E9, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult5                                              OFFSET(get<T>, {0x308, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult5                                              OFFSET(getStruct<T>, {0x308, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x318, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount6                                           OFFSET(get<bool>, {0x320, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask6                                                 OFFSET(get<T>, {0x328, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult6                                              OFFSET(get<T>, {0x340, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R) _ExprResult6                                              OFFSET(getStruct<T>, {0x340, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult6                                               OFFSET(get<int64_t>, {0x350, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount7                                           OFFSET(get<bool>, {0x358, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask7                                                 OFFSET(get<T>, {0x360, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R) _ExprResult7 OFFSET(get<T>, {0x378, 32, 0, 0})
+	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R) _ExprResult7 OFFSET(getStruct<T>, {0x378, 32, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x398, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x3A0, 1, 0, 0})
 
@@ -7838,17 +7838,17 @@ class Utask_CompanionAI_companion_creature_runtime_FaceLKP_L_Nagent_M_Nfloat_R :
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mfloat_R)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_R)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 16, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x158, 1, 0, 0})
 	DMember(double)                                    __verse_0x78468A3D_RangeThreshold                           OFFSET(get<double>, {0x180, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult                                                 OFFSET(get<T>, {0x1A0, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult                                                 OFFSET(getStruct<T>, {0x1A0, 16, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x1B0, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x1B1, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1B8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1D8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x1E0, 1, 1, 0})
-	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult1                                                OFFSET(get<T>, {0x1F8, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult1                                                OFFSET(getStruct<T>, {0x1F8, 16, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x208, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x220, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x228, 8, 0, 0})
@@ -7856,14 +7856,14 @@ public:
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x248, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x270, 1, 0, 0})
 	DMember(double)                                    __verse_0x78468A3D_RangeThreshold1                          OFFSET(get<double>, {0x298, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult2                                                OFFSET(get<T>, {0x2B8, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult2                                                OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x2C8, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x2C9, 1, 1, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x2F0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x2F8, 1, 1, 0})
-	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult3                                                OFFSET(get<T>, {0x310, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_R)                    _ExprResult3                                                OFFSET(getStruct<T>, {0x310, 16, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x320, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x338, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x340, 8, 0, 0})
@@ -7885,35 +7885,35 @@ class Utask_CompanionAI_companion_creature_runtime_GameLoop : public UConcurrenc
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UGame_Abilities_gameplay_ability_asset*)   __verse_0x7F5D3678_MeleeAttackAbility                       OFFSET(get<T>, {0x150, 8, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_                                         OFFSET(get<T>, {0x178, 8, 0, 0})
 	CMember(Game_Abilities_add_ability_result)         _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x198, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x199, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(get<T>, {0x1B8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult                                                 OFFSET(getStruct<T>, {0x1B8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1C0, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x1C8, 1, 1, 0})
 	CMember(USimulation_agent*)                        __verse_0x459049A1_Target                                   OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x1E0, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) _ExprResult1                                                OFFSET(get<T>, {0x1F8, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) _ExprResult1                                                OFFSET(getStruct<T>, {0x1F8, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x208, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x220, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x220, 1, 0, 0})
 	CMember(UGame_Abilities_gameplay_ability_asset*)   __verse_0x7F5D3678_MeleeAttackAbility1                      OFFSET(get<T>, {0x228, 8, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_1                                        OFFSET(get<T>, {0x250, 8, 0, 0})
 	CMember(Game_Abilities_add_ability_result)         _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x258, 1, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x270, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x271, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x278, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x290, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x290, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x298, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x2A0, 1, 1, 0})
 	CMember(USimulation_agent*)                        __verse_0x459049A1_Target1                                  OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) _ExprResult4                                                OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) _ExprResult4                                                OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x2E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x2F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x2F8, 1, 0, 0})
 
 
 	/// Functions
@@ -7930,20 +7930,20 @@ class Utask_CompanionAI_companion_creature_runtime_Howl : public UConcurrency_ta
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UGame_Abilities_gameplay_ability_asset*)   __verse_0xC4B561B1_HowlAbility                              OFFSET(get<T>, {0x150, 8, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_                                         OFFSET(get<T>, {0x178, 8, 0, 0})
 	CMember(Game_Abilities_add_ability_result)         _InvokeSureResultDummy                                      OFFSET(get<T>, {0x180, 1, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_1                                        OFFSET(get<T>, {0x198, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult                   OFFSET(get<T>, {0x1B8, 24, 0, 0})
+	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult                   OFFSET(getStruct<T>, {0x1B8, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x1E0, 8, 0, 0})
 	CMember(UGame_Abilities_gameplay_ability_asset*)   __verse_0xC4B561B1_HowlAbility1                             OFFSET(get<T>, {0x1E8, 8, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_2                                        OFFSET(get<T>, {0x210, 8, 0, 0})
 	CMember(Game_Abilities_add_ability_result)         _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x218, 1, 0, 0})
 	CMember(UGame_Abilities_ability_component*)        __verse_0x00000000_3                                        OFFSET(get<T>, {0x230, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x238, 8, 0, 0})
-	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult1                  OFFSET(get<T>, {0x250, 24, 0, 0})
+	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult1                  OFFSET(getStruct<T>, {0x250, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x278, 8, 0, 0})
 
 
@@ -7961,74 +7961,74 @@ class Utask_CompanionAI_companion_creature_runtime_PatrolAround : public UConcur
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xFE3AE8F0_OriginalPosition                         OFFSET(get<T>, {0x150, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(get<T>, {0x170, 96, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xFE3AE8F0_OriginalPosition                         OFFSET(getStruct<T>, {0x150, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1E8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x1E8, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1F0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult2 OFFSET(get<T>, {0x210, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult2 OFFSET(getStruct<T>, {0x210, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack                                            OFFSET(get<T>, {0x230, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x248, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult3                                                OFFSET(get<T>, {0x270, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult4                                                OFFSET(get<T>, {0x2A0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(getStruct<T>, {0x248, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult3                                                OFFSET(getStruct<T>, {0x270, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult4                                                OFFSET(getStruct<T>, {0x2A0, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack2                                           OFFSET(get<T>, {0x2B8, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x350, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x368, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult5 OFFSET(get<T>, {0x380, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult5 OFFSET(getStruct<T>, {0x380, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack3                                           OFFSET(get<T>, {0x3A0, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack4                                           OFFSET(get<T>, {0x3B8, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult6                                                OFFSET(get<T>, {0x3E0, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult7                                                OFFSET(get<T>, {0x410, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack4                                           OFFSET(getStruct<T>, {0x3B8, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult6                                                OFFSET(getStruct<T>, {0x3E0, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult7                                                OFFSET(getStruct<T>, {0x410, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack5                                           OFFSET(get<T>, {0x428, 80, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_3                                        OFFSET(get<T>, {0x4D0, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult8 OFFSET(get<T>, {0x4E8, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult8 OFFSET(getStruct<T>, {0x4E8, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack6                                           OFFSET(get<T>, {0x508, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack7                                           OFFSET(get<T>, {0x520, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult9                                                OFFSET(get<T>, {0x548, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult10                                               OFFSET(get<T>, {0x578, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack7                                           OFFSET(getStruct<T>, {0x520, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult9                                                OFFSET(getStruct<T>, {0x548, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult10                                               OFFSET(getStruct<T>, {0x578, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack8                                           OFFSET(get<T>, {0x590, 80, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x638, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult11 OFFSET(get<T>, {0x650, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult11 OFFSET(getStruct<T>, {0x650, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack9                                           OFFSET(get<T>, {0x670, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack10                                          OFFSET(get<T>, {0x688, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult12                                               OFFSET(get<T>, {0x6B0, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult13                                               OFFSET(get<T>, {0x6E0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack10                                          OFFSET(getStruct<T>, {0x688, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult12                                               OFFSET(getStruct<T>, {0x6B0, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult13                                               OFFSET(getStruct<T>, {0x6E0, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack11                                          OFFSET(get<T>, {0x6F8, 80, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xFE3AE8F0_OriginalPosition1                        OFFSET(get<T>, {0x7A0, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult14                                               OFFSET(get<T>, {0x7C0, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xFE3AE8F0_OriginalPosition1                        OFFSET(getStruct<T>, {0x7A0, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult14                                               OFFSET(getStruct<T>, {0x7C0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x820, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x838, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x838, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_6                                        OFFSET(get<T>, {0x840, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x848, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult16 OFFSET(get<T>, {0x860, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult16 OFFSET(getStruct<T>, {0x860, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack12                                          OFFSET(get<T>, {0x880, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack13                                          OFFSET(get<T>, {0x898, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult17                                               OFFSET(get<T>, {0x8C0, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult18                                               OFFSET(get<T>, {0x8F0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack13                                          OFFSET(getStruct<T>, {0x898, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult17                                               OFFSET(getStruct<T>, {0x8C0, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult18                                               OFFSET(getStruct<T>, {0x8F0, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack14                                          OFFSET(get<T>, {0x908, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x9A0, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_7                                        OFFSET(get<T>, {0x9B8, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult19 OFFSET(get<T>, {0x9D0, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult19 OFFSET(getStruct<T>, {0x9D0, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack15                                          OFFSET(get<T>, {0x9F0, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack16                                          OFFSET(get<T>, {0xA08, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult20                                               OFFSET(get<T>, {0xA30, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult21                                               OFFSET(get<T>, {0xA60, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack16                                          OFFSET(getStruct<T>, {0xA08, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult20                                               OFFSET(getStruct<T>, {0xA30, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult21                                               OFFSET(getStruct<T>, {0xA60, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack17                                          OFFSET(get<T>, {0xA78, 80, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_8                                        OFFSET(get<T>, {0xB20, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult22 OFFSET(get<T>, {0xB38, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult22 OFFSET(getStruct<T>, {0xB38, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack18                                          OFFSET(get<T>, {0xB58, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack19                                          OFFSET(get<T>, {0xB70, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult23                                               OFFSET(get<T>, {0xB98, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult24                                               OFFSET(get<T>, {0xBC8, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack19                                          OFFSET(getStruct<T>, {0xB70, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult23                                               OFFSET(getStruct<T>, {0xB98, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult24                                               OFFSET(getStruct<T>, {0xBC8, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack20                                          OFFSET(get<T>, {0xBE0, 80, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_9                                        OFFSET(get<T>, {0xC88, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult25 OFFSET(get<T>, {0xCA0, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult25 OFFSET(getStruct<T>, {0xCA0, 32, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack21                                          OFFSET(get<T>, {0xCC0, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack22                                          OFFSET(get<T>, {0xCD8, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult26                                               OFFSET(get<T>, {0xD00, 48, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResult27                                               OFFSET(get<T>, {0xD30, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack22                                          OFFSET(getStruct<T>, {0xCD8, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult26                                               OFFSET(getStruct<T>, {0xD00, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResult27                                               OFFSET(getStruct<T>, {0xD30, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack23                                          OFFSET(get<T>, {0xD48, 80, 0, 0})
 
 
@@ -8046,56 +8046,56 @@ class Utask_CompanionAI_companion_creature_runtime_SeekLKP_L_Nagent_M_Nfloat_R :
 
 public:
 	CMember(UCompanionAI_companion_creature_runtime*)  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mfloat_R)                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 16, 0, 0})
+	SMember(Ftuple_Lagent_Mfloat_R)                    __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 16, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy                                      OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x4550A2D9_MyPosition                               OFFSET(get<T>, {0x180, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(get<T>, {0x1A0, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x4550A2D9_MyPosition                               OFFSET(getStruct<T>, {0x180, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult                                                 OFFSET(getStruct<T>, {0x1A0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x218, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x218, 1, 0, 0})
 	DMember(double)                                    __verse_0xB9A22CCD_RenavigateThreshold                      OFFSET(get<double>, {0x220, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot                                 OFFSET(get<T>, {0x228, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot                                 OFFSET(getStruct<T>, {0x228, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x260, 8, 0, 0})
 	DMember(double)                                    __verse_0x47C7BD3D_DistanceToLKP                            OFFSET(get<double>, {0x2B8, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult2                                                OFFSET(get<T>, {0x2D0, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult2                                                OFFSET(getStruct<T>, {0x2D0, 48, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount                                            OFFSET(get<bool>, {0x310, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount1                                           OFFSET(get<bool>, {0x311, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x318, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Magent_Mfloat_R)           _ExprResult3                                                OFFSET(get<T>, {0x330, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Magent_Mfloat_R)           _ExprResult3                                                OFFSET(getStruct<T>, {0x330, 40, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x358, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount2                                           OFFSET(get<bool>, {0x360, 1, 1, 0})
 	DMember(double)                                    __verse_0xD93761B1_DistanceToLastKnownPosition              OFFSET(get<double>, {0x368, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(get<T>, {0x380, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(getStruct<T>, {0x380, 48, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_2                                        OFFSET(get<T>, {0x3C0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x3C8, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult5 OFFSET(get<T>, {0x3E0, 32, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_R) __verse_0x00000000_3                               OFFSET(get<T>, {0x400, 24, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult5 OFFSET(getStruct<T>, {0x3E0, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_R) __verse_0x00000000_3                               OFFSET(getStruct<T>, {0x400, 24, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack                                            OFFSET(get<T>, {0x418, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x448, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask2                                                 OFFSET(get<T>, {0x460, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult2                                               OFFSET(get<int64_t>, {0x478, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy1                                     OFFSET(get<T>, {0x480, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy2                                     OFFSET(get<T>, {0x4A8, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x4550A2D9_MyPosition1                              OFFSET(get<T>, {0x4D0, 24, 0, 0})
-	SMember(FSpatialMath_transform)                    _ExprResult6                                                OFFSET(get<T>, {0x4F0, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x4550A2D9_MyPosition1                              OFFSET(getStruct<T>, {0x4D0, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    _ExprResult6                                                OFFSET(getStruct<T>, {0x4F0, 96, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_4                                        OFFSET(get<T>, {0x550, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x568, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x568, 1, 0, 0})
 	DMember(double)                                    __verse_0xB9A22CCD_RenavigateThreshold1                     OFFSET(get<double>, {0x570, 8, 0, 0})
-	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot1                                OFFSET(get<T>, {0x578, 56, 0, 0})
+	SMember(FAI_fort_threat_info)                      __verse_0x08287148_Snapshot1                                OFFSET(getStruct<T>, {0x578, 56, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x5B0, 8, 0, 0})
 	DMember(double)                                    __verse_0x47C7BD3D_DistanceToLKP1                           OFFSET(get<double>, {0x608, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult8                                                OFFSET(get<T>, {0x620, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult8                                                OFFSET(getStruct<T>, {0x620, 48, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount3                                           OFFSET(get<bool>, {0x660, 1, 1, 0})
 	DMember(bool)                                      _AsyncBeginCount4                                           OFFSET(get<bool>, {0x661, 1, 1, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask3                                                 OFFSET(get<T>, {0x668, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Magent_Mfloat_R)           _ExprResult9                                                OFFSET(get<T>, {0x680, 40, 0, 0})
+	SMember(Ftuple_Lvector3_Magent_Mfloat_R)           _ExprResult9                                                OFFSET(getStruct<T>, {0x680, 40, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x6A8, 8, 0, 0})
 	DMember(bool)                                      _AsyncBeginCount5                                           OFFSET(get<bool>, {0x6B0, 1, 1, 0})
 	DMember(double)                                    __verse_0xD93761B1_DistanceToLastKnownPosition1             OFFSET(get<double>, {0x6B8, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult10                                               OFFSET(get<T>, {0x6D0, 48, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult10                                               OFFSET(getStruct<T>, {0x6D0, 48, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_6                                        OFFSET(get<T>, {0x710, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask4                                                 OFFSET(get<T>, {0x718, 8, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult11 OFFSET(get<T>, {0x730, 32, 0, 0})
-	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_R) __verse_0x00000000_7                               OFFSET(get<T>, {0x750, 24, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) _ExprResult11 OFFSET(getStruct<T>, {0x730, 32, 0, 0})
+	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_R) __verse_0x00000000_7                               OFFSET(getStruct<T>, {0x750, 24, 0, 0})
 	CMember(UAI_navigation_target*)                    _ExprResultStack1                                           OFFSET(get<T>, {0x768, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult4                                               OFFSET(get<int64_t>, {0x798, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x7B0, 8, 0, 0})
@@ -8117,32 +8117,32 @@ class Utask_CompanionAI_default_ai_behavior_OnBegin : public UConcurrency_task
 
 public:
 	CMember(UCompanionAI_default_ai_behavior*)         _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x963EC691_Character                                OFFSET(get<T>, {0x150, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x198, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x199, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x19A, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult                                                 OFFSET(getStruct<T>, {0x170, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x198, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x199, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(getStruct<T>, {0x19A, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x03CEBA4E_CharacterActions                         OFFSET(get<T>, {0x1A0, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                          OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x1D0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(get<T>, {0x1D1, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult4                                          OFFSET(getStruct<T>, {0x1C0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(getStruct<T>, {0x1D0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult6                                                OFFSET(getStruct<T>, {0x1D1, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_                                         OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1E0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x1F8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x1F8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x200, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x963EC691_Character1                               OFFSET(get<T>, {0x208, 8, 0, 0})
-	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult8                                                OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x250, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x251, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x252, 1, 0, 0})
+	SMember(Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R)     _ExprResult8                                                OFFSET(getStruct<T>, {0x228, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x250, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x251, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x252, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x03CEBA4E_CharacterActions1                        OFFSET(get<T>, {0x258, 8, 0, 0})
-	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult12                                         OFFSET(get<T>, {0x278, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x288, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(get<T>, {0x289, 1, 0, 0})
+	SMember(Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R) _ExprResult12                                         OFFSET(getStruct<T>, {0x278, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(getStruct<T>, {0x288, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult14                                               OFFSET(getStruct<T>, {0x289, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x290, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x2B0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(getStruct<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
 
 
@@ -8160,7 +8160,7 @@ class Utask_CompanionAI_fort_br_character_actions_interface_RunDefaultBehavior :
 
 public:
 	CMember(UCompanionAI_fort_br_character_actions_interface*) _Self                                               OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -8178,7 +8178,7 @@ class Utask_CompanionAI_fort_br_creature_actions_interface_RunDefaultBehavior : 
 
 public:
 	CMember(UCompanionAI_fort_br_creature_actions_interface*) _Self                                                OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -8196,7 +8196,7 @@ class Utask_CompanionAI_fort_creature_component_RunDefaultBehavior : public UCon
 
 public:
 	CMember(UCompanionAI_fort_creature_component*)     _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -8214,7 +8214,7 @@ class Utask_CompanionAI_fort_npc_component_RunDefaultBehavior : public UConcurre
 
 public:
 	CMember(UCompanionAI_fort_npc_component*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -8232,7 +8232,7 @@ class Utask_CompanionAI_fort_ping_interface_OnNPCCommand : public UConcurrency_t
 
 public:
 	CMember(UCompanionAI_fort_ping_interface*)         _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -8249,7 +8249,7 @@ class Utask_CompanionAI_ping_component_OnNPCCommand : public UConcurrency_task
 
 public:
 	CMember(UCompanionAI_ping_component*)              _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -8554,11 +8554,11 @@ class UDevices_CreativeAnimation_InterpolationTypes : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x9B27EB9D_Linear                          OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x9CD14C25_Ease                            OFFSET(get<T>, {0x48, 32, 0, 0})
-	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xB345298C_EaseIn                          OFFSET(get<T>, {0x68, 32, 0, 0})
-	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xF59E2BD2_EaseOut                         OFFSET(get<T>, {0x88, 32, 0, 0})
-	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x29A389AE_EaseInOut                       OFFSET(get<T>, {0xA8, 32, 0, 0})
+	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x9B27EB9D_Linear                          OFFSET(getStruct<T>, {0x28, 32, 0, 0})
+	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x9CD14C25_Ease                            OFFSET(getStruct<T>, {0x48, 32, 0, 0})
+	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xB345298C_EaseIn                          OFFSET(getStruct<T>, {0x68, 32, 0, 0})
+	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xF59E2BD2_EaseOut                         OFFSET(getStruct<T>, {0x88, 32, 0, 0})
+	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x29A389AE_EaseInOut                       OFFSET(getStruct<T>, {0xA8, 32, 0, 0})
 
 
 	/// Functions
@@ -9207,7 +9207,7 @@ class UDevices_function_parameter_color : public UDevices_function_parameter_bas
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FColors_color)                             __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x31A8F10C_Value                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 
 
 	/// Functions
@@ -9325,7 +9325,7 @@ class UDevices_function_parameter_vector3 : public UDevices_function_parameter_b
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x31A8F10C_Value                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 
 
 	/// Functions
@@ -9365,19 +9365,19 @@ class Utask_Devices_operator_U_2eMoveToInternal_U_L_Ncreative__movable__object__
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x140, 128, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x140, 128, 0, 0})
 	CMember(Devices_move_to_result)                    _RetVal                                                     OFFSET(get<T>, {0x1C0, 1, 0, 0})
 	CMember(Devices_move_to_internal_result)           __verse_0x95D09D0E_Result                                   OFFSET(get<T>, {0x1C1, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult           OFFSET(get<T>, {0x1E0, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x260, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult2                                                OFFSET(get<T>, {0x270, 112, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult           OFFSET(getStruct<T>, {0x1E0, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x260, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult2                                                OFFSET(getStruct<T>, {0x270, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2E0, 8, 0, 0})
 	CMember(Devices_move_to_internal_result)           __verse_0x95D09D0E_Result1                                  OFFSET(get<T>, {0x2F8, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x300, 8, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3          OFFSET(get<T>, {0x320, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x3A0, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x3B0, 112, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3          OFFSET(getStruct<T>, {0x320, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x3A0, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(getStruct<T>, {0x3B0, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x420, 8, 0, 0})
 
 
@@ -9394,25 +9394,25 @@ class Utask_Devices_operator_U_2eMoveToInternal_U_L_Ncreative__movable__object__
 	static inline constexpr uint64_t __MDKClassSize = 1288;
 
 public:
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x140, 96, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x140, 96, 0, 0})
 	CMember(Devices_move_to_result)                    _RetVal                                                     OFFSET(get<T>, {0x1A0, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x61C3007D_Transform                                OFFSET(get<T>, {0x1B0, 96, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult                           OFFSET(get<T>, {0x220, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x230, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x231, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x61C3007D_Transform                                OFFSET(getStruct<T>, {0x1B0, 96, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult                           OFFSET(getStruct<T>, {0x220, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x230, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x231, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x238, 8, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3          OFFSET(get<T>, {0x250, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x2D0, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x2E0, 112, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3          OFFSET(getStruct<T>, {0x250, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x2D0, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(getStruct<T>, {0x2E0, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x350, 8, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x61C3007D_Transform1                               OFFSET(get<T>, {0x360, 96, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult6                          OFFSET(get<T>, {0x3D0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x3E0, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x3E1, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x61C3007D_Transform1                               OFFSET(getStruct<T>, {0x360, 96, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult6                          OFFSET(getStruct<T>, {0x3D0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(getStruct<T>, {0x3E0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x3E1, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x3E8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult9          OFFSET(get<T>, {0x400, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x480, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult11                                               OFFSET(get<T>, {0x490, 112, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult9          OFFSET(getStruct<T>, {0x400, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(getStruct<T>, {0x480, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult11                                               OFFSET(getStruct<T>, {0x490, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x500, 8, 0, 0})
 
 
@@ -9429,60 +9429,60 @@ class Utask_Devices_operator_U_2eMoveToInternalImpl_U_L_Ncreative__movable__obje
 	static inline constexpr uint64_t __MDKClassSize = 3432;
 
 public:
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x140, 128, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) __verse_0xB2CDDD72_Argument OFFSET(getStruct<T>, {0x140, 128, 0, 0})
 	CMember(Devices_move_to_internal_result)           _RetVal                                                     OFFSET(get<T>, {0x1C0, 1, 0, 0})
-	SMember(Ftuple_L_Qanimation__controller_Mget__animation__controller__result_R) __verse_0xA8BECD0D_GetControllerResult OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	SMember(Ftuple_L_Qanimation__controller_Mget__animation__controller__result_R) __verse_0xA8BECD0D_GetControllerResult OFFSET(getStruct<T>, {0x1D8, 16, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x995129C4_Controller                        OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x80B800AD_CurrentTransform                         OFFSET(get<T>, {0x210, 96, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult                           OFFSET(get<T>, {0x280, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x290, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x291, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x80B800AD_CurrentTransform                         OFFSET(getStruct<T>, {0x210, 96, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult                           OFFSET(getStruct<T>, {0x280, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x290, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(getStruct<T>, {0x291, 1, 0, 0})
 	CMember(TArray<FDevices_CreativeAnimation_keyframe_delta>) __verse_0xB23BEFD6_KeyframeArray                    OFFSET(get<T>, {0x298, 16, 0, 0})
-	SMember(FDevices_CreativeAnimation_keyframe_delta) _ExprResult3                                                OFFSET(get<T>, {0x2B0, 128, 0, 0})
+	SMember(FDevices_CreativeAnimation_keyframe_delta) _ExprResult3                                                OFFSET(getStruct<T>, {0x2B0, 128, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack                                            OFFSET(get<T>, {0x330, 80, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x3D0, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(get<T>, {0x3F8, 48, 0, 0})
-	SMember(FVerseRotation)                            _ExprResultStack2                                           OFFSET(get<T>, {0x430, 32, 0, 0})
-	SMember(Ftuple_Lrotation_Mrotation_R)              _ExprResult5                                                OFFSET(get<T>, {0x460, 64, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack3                                           OFFSET(get<T>, {0x4A0, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult6                                                OFFSET(get<T>, {0x4C8, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(getStruct<T>, {0x3D0, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult4                                                OFFSET(getStruct<T>, {0x3F8, 48, 0, 0})
+	SMember(FVerseRotation)                            _ExprResultStack2                                           OFFSET(getStruct<T>, {0x430, 32, 0, 0})
+	SMember(Ftuple_Lrotation_Mrotation_R)              _ExprResult5                                                OFFSET(getStruct<T>, {0x460, 64, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack3                                           OFFSET(getStruct<T>, {0x4A0, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult6                                                OFFSET(getStruct<T>, {0x4C8, 48, 0, 0})
 	CMember(Devices_CreativeAnimation_set_animation_result) __verse_0xC40A5F4A_SetAnimationResult                  OFFSET(get<T>, {0x4F8, 1, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x00000000_                                  OFFSET(get<T>, {0x500, 8, 0, 0})
-	SMember(Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R) _ExprResult7                            OFFSET(get<T>, {0x518, 24, 0, 0})
+	SMember(Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R) _ExprResult7                            OFFSET(getStruct<T>, {0x518, 24, 0, 0})
 	CMember(Devices_CreativeAnimation_playstoppause_result) __verse_0x2BCA4545_PlayResult                          OFFSET(get<T>, {0x580, 1, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x00000000_1                                 OFFSET(get<T>, {0x588, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(get<T>, {0x5A0, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult8                                                OFFSET(getStruct<T>, {0x5A0, 1, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) __verse_0x95D09D0E_Result                        OFFSET(get<T>, {0x5F0, 1, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x00000000_2                                 OFFSET(get<T>, {0x5F8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x600, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x618, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(getStruct<T>, {0x618, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x620, 8, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) __verse_0x00000000_3                             OFFSET(get<T>, {0x628, 1, 0, 0})
-	SMember(Ftuple_L_Qanimation__controller_Mget__animation__controller__result_R) __verse_0xA8BECD0D_GetControllerResult1 OFFSET(get<T>, {0x7A8, 16, 0, 0})
+	SMember(Ftuple_L_Qanimation__controller_Mget__animation__controller__result_R) __verse_0xA8BECD0D_GetControllerResult1 OFFSET(getStruct<T>, {0x7A8, 16, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x995129C4_Controller1                       OFFSET(get<T>, {0x7C8, 8, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x80B800AD_CurrentTransform1                        OFFSET(get<T>, {0x7E0, 96, 0, 0})
-	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult10                         OFFSET(get<T>, {0x850, 16, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(get<T>, {0x860, 1, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(get<T>, {0x861, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x80B800AD_CurrentTransform1                        OFFSET(getStruct<T>, {0x7E0, 96, 0, 0})
+	SMember(Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R) _ExprResult10                         OFFSET(getStruct<T>, {0x850, 16, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult11                                               OFFSET(getStruct<T>, {0x860, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult12                                               OFFSET(getStruct<T>, {0x861, 1, 0, 0})
 	CMember(TArray<FDevices_CreativeAnimation_keyframe_delta>) __verse_0xB23BEFD6_KeyframeArray1                   OFFSET(get<T>, {0x868, 16, 0, 0})
-	SMember(FDevices_CreativeAnimation_keyframe_delta) _ExprResult13                                               OFFSET(get<T>, {0x880, 128, 0, 0})
+	SMember(FDevices_CreativeAnimation_keyframe_delta) _ExprResult13                                               OFFSET(getStruct<T>, {0x880, 128, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack4                                           OFFSET(get<T>, {0x900, 80, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack5                                           OFFSET(get<T>, {0x9A0, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult14                                               OFFSET(get<T>, {0x9C8, 48, 0, 0})
-	SMember(FVerseRotation)                            _ExprResultStack6                                           OFFSET(get<T>, {0xA00, 32, 0, 0})
-	SMember(Ftuple_Lrotation_Mrotation_R)              _ExprResult15                                               OFFSET(get<T>, {0xA30, 64, 0, 0})
-	SMember(FSpatialMath_vector3)                      _ExprResultStack7                                           OFFSET(get<T>, {0xA70, 24, 0, 0})
-	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult16                                               OFFSET(get<T>, {0xA98, 48, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack5                                           OFFSET(getStruct<T>, {0x9A0, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult14                                               OFFSET(getStruct<T>, {0x9C8, 48, 0, 0})
+	SMember(FVerseRotation)                            _ExprResultStack6                                           OFFSET(getStruct<T>, {0xA00, 32, 0, 0})
+	SMember(Ftuple_Lrotation_Mrotation_R)              _ExprResult15                                               OFFSET(getStruct<T>, {0xA30, 64, 0, 0})
+	SMember(FSpatialMath_vector3)                      _ExprResultStack7                                           OFFSET(getStruct<T>, {0xA70, 24, 0, 0})
+	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult16                                               OFFSET(getStruct<T>, {0xA98, 48, 0, 0})
 	CMember(Devices_CreativeAnimation_set_animation_result) __verse_0xC40A5F4A_SetAnimationResult1                 OFFSET(get<T>, {0xAC8, 1, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x00000000_4                                 OFFSET(get<T>, {0xAD0, 8, 0, 0})
-	SMember(Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R) _ExprResult17                           OFFSET(get<T>, {0xAE8, 24, 0, 0})
+	SMember(Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R) _ExprResult17                           OFFSET(getStruct<T>, {0xAE8, 24, 0, 0})
 	CMember(Devices_CreativeAnimation_playstoppause_result) __verse_0x2BCA4545_PlayResult1                         OFFSET(get<T>, {0xB50, 1, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x00000000_5                                 OFFSET(get<T>, {0xB58, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(get<T>, {0xB70, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult18                                               OFFSET(getStruct<T>, {0xB70, 1, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) __verse_0x95D09D0E_Result1                       OFFSET(get<T>, {0xBC0, 1, 0, 0})
 	CMember(UDevices_CreativeAnimation_animation_controller*) __verse_0x00000000_6                                 OFFSET(get<T>, {0xBC8, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0xBD0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0xBE8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(getStruct<T>, {0xBE8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0xBF0, 8, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) __verse_0x00000000_7                             OFFSET(get<T>, {0xBF8, 1, 0, 0})
 
@@ -9501,17 +9501,17 @@ class Utask_Devices_creative_device_MoveTo_L_Ntransform_M_Nfloat_R : public UCon
 
 public:
 	CMember(UDevices_creative_device*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x150, 112, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x150, 112, 0, 0})
 	CMember(Devices_move_to_result)                    _RetVal                                                     OFFSET(get<T>, {0x1C0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult                          OFFSET(get<T>, {0x1E0, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x260, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult2                                                OFFSET(get<T>, {0x270, 112, 0, 0})
+	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult                          OFFSET(getStruct<T>, {0x1E0, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x260, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult2                                                OFFSET(getStruct<T>, {0x270, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2E0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3                         OFFSET(get<T>, {0x300, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x380, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x390, 112, 0, 0})
+	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3                         OFFSET(getStruct<T>, {0x300, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x380, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(getStruct<T>, {0x390, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x400, 8, 0, 0})
 
 
@@ -9529,17 +9529,17 @@ class Utask_Devices_creative_device_MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R : p
 
 public:
 	CMember(UDevices_creative_device*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x150, 80, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x150, 80, 0, 0})
 	CMember(Devices_move_to_result)                    _RetVal                                                     OFFSET(get<T>, {0x1A0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult                  OFFSET(get<T>, {0x1C0, 96, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x220, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult2                                                OFFSET(get<T>, {0x230, 80, 0, 0})
+	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult                  OFFSET(getStruct<T>, {0x1C0, 96, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x220, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult2                                                OFFSET(getStruct<T>, {0x230, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x280, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x288, 8, 0, 0})
-	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult3                 OFFSET(get<T>, {0x2A0, 96, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x300, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult5                                                OFFSET(get<T>, {0x310, 80, 0, 0})
+	SMember(Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult3                 OFFSET(getStruct<T>, {0x2A0, 96, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x300, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult5                                                OFFSET(getStruct<T>, {0x310, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x360, 8, 0, 0})
 
 
@@ -9557,7 +9557,7 @@ class Utask_Devices_creative_device_OnBegin : public UConcurrency_task
 
 public:
 	CMember(UDevices_creative_device*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9574,17 +9574,17 @@ class Utask_Devices_creative_prop_MoveTo_L_Ntransform_M_Nfloat_R : public UConcu
 
 public:
 	CMember(UDevices_creative_prop*)                   _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x150, 112, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x150, 112, 0, 0})
 	CMember(Devices_move_to_result)                    _RetVal                                                     OFFSET(get<T>, {0x1C0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult                            OFFSET(get<T>, {0x1E0, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x260, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult2                                                OFFSET(get<T>, {0x270, 112, 0, 0})
+	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult                            OFFSET(getStruct<T>, {0x1E0, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x260, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult2                                                OFFSET(getStruct<T>, {0x270, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x2E0, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3                           OFFSET(get<T>, {0x300, 128, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x380, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x390, 112, 0, 0})
+	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R) _ExprResult3                           OFFSET(getStruct<T>, {0x300, 128, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x380, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(getStruct<T>, {0x390, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x400, 8, 0, 0})
 
 
@@ -9602,17 +9602,17 @@ class Utask_Devices_creative_prop_MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R : pub
 
 public:
 	CMember(UDevices_creative_prop*)                   _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x150, 80, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x150, 80, 0, 0})
 	CMember(Devices_move_to_result)                    _RetVal                                                     OFFSET(get<T>, {0x1A0, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask                                                  OFFSET(get<T>, {0x1A8, 8, 0, 0})
-	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult                    OFFSET(get<T>, {0x1C0, 96, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x220, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult2                                                OFFSET(get<T>, {0x230, 80, 0, 0})
+	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult                    OFFSET(getStruct<T>, {0x1C0, 96, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(getStruct<T>, {0x220, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult2                                                OFFSET(getStruct<T>, {0x230, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult                                                OFFSET(get<int64_t>, {0x280, 8, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x288, 8, 0, 0})
-	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult3                   OFFSET(get<T>, {0x2A0, 96, 0, 0})
-	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x300, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult5                                                OFFSET(get<T>, {0x310, 80, 0, 0})
+	SMember(Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R) _ExprResult3                   OFFSET(getStruct<T>, {0x2A0, 96, 0, 0})
+	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(getStruct<T>, {0x300, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult5                                                OFFSET(getStruct<T>, {0x310, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x360, 8, 0, 0})
 
 
@@ -9630,7 +9630,7 @@ class Utask_Devices_CreativeAnimation_animation_controller_AwaitNextKeyframe : p
 
 public:
 	CMember(UDevices_CreativeAnimation_animation_controller*) _Self                                                OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) _RetVal                                          OFFSET(get<T>, {0x149, 1, 0, 0})
 
 
@@ -9648,7 +9648,7 @@ class Utask_Devices_device_event_agent_Await : public UConcurrency_task
 
 public:
 	CMember(UDevices_device_event_agent*)              _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9665,7 +9665,7 @@ class Utask_Devices_device_event_agent_int_Await : public UConcurrency_task
 
 public:
 	CMember(UDevices_device_event_agent_int*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9682,7 +9682,7 @@ class Utask_Devices_device_event_ai_interaction_Await : public UConcurrency_task
 
 public:
 	CMember(UDevices_device_event_ai_interaction*)     _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9699,7 +9699,7 @@ class Utask_Devices_device_event_optional_agent_Await : public UConcurrency_task
 
 public:
 	CMember(UDevices_device_event_optional_agent*)     _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9716,7 +9716,7 @@ class Utask_Devices_device_event_optional_agent_int_Await : public UConcurrency_
 
 public:
 	CMember(UDevices_device_event_optional_agent_int*) _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9733,7 +9733,7 @@ class Utask_Devices_device_event_vehicle_Await : public UConcurrency_task
 
 public:
 	CMember(UDevices_device_event_vehicle*)            _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -9750,7 +9750,7 @@ class Utask_Devices_device_event_void_Await : public UConcurrency_task
 
 public:
 	CMember(UDevices_device_event_void*)               _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 
 
 	/// Functions
@@ -10244,7 +10244,7 @@ public:
 	DMember(double)                                    __verse_0x2C327F1D_maxMovementDistance                      OFFSET(get<double>, {0x60, 8, 0, 0})
 	DMember(double)                                    __verse_0xDA5EE7C4_minMovementDistancePercentage            OFFSET(get<double>, {0x68, 8, 0, 0})
 	DMember(double)                                    __verse_0x7B63CDBA_maxMovementDistancePercentage            OFFSET(get<double>, {0x70, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xD6F5A7B7_endLocation                              OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xD6F5A7B7_endLocation                              OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 
 
 	/// Functions
@@ -10264,7 +10264,7 @@ class UGame_team_stat_values : public UGame_stat_container
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FGame_Player_player_team)                  __verse_0x555B2F95_Team                                     OFFSET(get<T>, {0xE8, 4, 0, 0})
+	SMember(FGame_Player_player_team)                  __verse_0x555B2F95_Team                                     OFFSET(getStruct<T>, {0xE8, 4, 0, 0})
 
 
 	/// Functions
@@ -10301,7 +10301,7 @@ class Utask_Game_fort_playspace_component___WaitForPlayerEliminated : public UCo
 
 public:
 	CMember(UGame_fort_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(getStruct<T>, {0x148, 1, 0, 0})
 	CMember(UGame_player_eliminated_result*)           _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
 
 
@@ -10947,7 +10947,7 @@ class UUI_text_block : public UUI_text_base
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FColors_color)                             __verse_0xAD85CEA8_DefaultShadowColor                       OFFSET(get<T>, {0x1E0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0xAD85CEA8_DefaultShadowColor                       OFFSET(getStruct<T>, {0x1E0, 24, 0, 0})
 
 
 	/// Functions
@@ -11030,8 +11030,9 @@ public:
 
 /// Struct /Solaris/_Verse/VNI/VerseNative.tuple_L_R
 /// Size: 0x0001 (0x000000 - 0x000001)
-class Ftuple_L_R : public MDKStruct
+class Ftuple_L_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -11041,8 +11042,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_M_Kchar_M_Kverse__key_M_Qfloat_M_Q_Lfloat_Tvoid_R_R
 /// Size: 0x0058 (0x000000 - 0x000058)
-class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_M_Qfloat_M_Q_Lfloat_Tvoid_R_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_M_Qfloat_M_Q_Lfloat_Tvoid_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -11052,8 +11054,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_M_Kchar_M_Kverse__key_M_Qfloat_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_M_Qfloat_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_M_Qfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -11063,8 +11066,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_M_Kchar_M_Kverse__key_Minput__event_Mtuple_L_R_Tvoid_R
 /// Size: 0x0048 (0x000000 - 0x000048)
-class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_Minput__event_Mtuple_L_R_Tvoid_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_Minput__event_Mtuple_L_R_Tvoid_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -11075,8 +11079,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_M_Kchar_M_Kverse__key_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_M_Kverse__key_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -11086,8 +11091,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_M_Q_Lfloat_Tvoid_R_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_L_Kchar_M_Q_Lfloat_Tvoid_R_R : public MDKStruct
+class Ftuple_L_Kchar_M_Q_Lfloat_Tvoid_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -11096,8 +11102,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_Minput__event_Mtuple_L_R_Tvoid_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_L_Kchar_Minput__event_Mtuple_L_R_Tvoid_R : public MDKStruct
+class Ftuple_L_Kchar_Minput__event_Mtuple_L_R_Tvoid_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -11107,8 +11114,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_L_Kchar_Minput__event_R
 /// Size: 0x0011 (0x000000 - 0x000011)
-class Ftuple_L_Kchar_Minput__event_R : public MDKStruct
+class Ftuple_L_Kchar_Minput__event_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 17;
 
@@ -11118,8 +11126,9 @@ public:
 
 /// Struct /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.tuple_Lverse__ue__input__component_M_Kchar_Minput__event_R
 /// Size: 0x0019 (0x000000 - 0x000019)
-class Ftuple_Lverse__ue__input__component_M_Kchar_Minput__event_R : public MDKStruct
+class Ftuple_Lverse__ue__input__component_M_Kchar_Minput__event_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 25;
 
@@ -11130,8 +11139,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.Colors_color
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FColors_color : public MDKStruct
+class FColors_color : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11143,8 +11153,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_K_Kchar_M_Kchar_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_L_K_Kchar_M_Kchar_R : public MDKStruct
+class Ftuple_L_K_Kchar_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -11154,8 +11165,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_M_Kany_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_L_Kany_M_Kany_R : public MDKStruct
+class Ftuple_L_Kany_M_Kany_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -11166,111 +11178,120 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Many_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_L_Kany_Mtuple_L_R_Many_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Many_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mint_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_L_Kany_Mtuple_L_R_Mint_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
 	DMember(int64_t)                                   __verse_0x932BF92E_Elem2                                    OFFSET(get<int64_t>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mtuple_L_Kany_M_Kany_R_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_L_Kany_Mtuple_L_R_Mtuple_L_Kany_M_Kany_R_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mtuple_L_Kany_M_Kany_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_L_Kany_M_Kany_R)                    __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_L_Kany_M_Kany_R)                    __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mtuple_Lany_Many_R_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lany_Many_R_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lany_Many_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_Lany_Many_R)                        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_Lany_Many_R)                        __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mtuple_Lint_M_Kany_R_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lint_M_Kany_R_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lint_M_Kany_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_Lint_M_Kany_R)                      __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_Lint_M_Kany_R)                      __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mtuple_Lint_Many_R_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lint_Many_R_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lint_Many_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_Lint_Many_R)                        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_Lint_Many_R)                        __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mtuple_Lint_Mint_R_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lint_Mint_R_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Lint_Mint_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_Lint_Mint_R)                        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_Lint_Mint_R)                        __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kany_Mtuple_L_R_Mtuple_Ltype_7b0_7d_Mint_R_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Ltype_7b0_7d_Mint_R_R : public MDKStruct
+class Ftuple_L_Kany_Mtuple_L_R_Mtuple_Ltype_7b0_7d_Mint_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TArray<__verse_0x18E3F084_Elem0>)          __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_Ltype_7b0_7d_Mint_R)                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_Ltype_7b0_7d_Mint_R)                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kchar_M_Kchar_M_5b_Kchar_5dlocalizable__value_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_L_Kchar_M_Kchar_M_5b_Kchar_5dlocalizable__value_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_M_5b_Kchar_5dlocalizable__value_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -11280,8 +11301,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -11290,8 +11312,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_L_Kchar_M_QWhere_Nlocale_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_L_Kchar_M_QWhere_Nlocale_R : public MDKStruct
+class Ftuple_L_Kchar_M_QWhere_Nlocale_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -11300,8 +11323,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lany_Many_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lany_Many_R : public MDKStruct
+class Ftuple_Lany_Many_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -11310,44 +11334,48 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lcolor_Mcolor_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_Lcolor_Mcolor_R : public MDKStruct
+class Ftuple_Lcolor_Mcolor_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FColors_color)                             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FColors_color)                             __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lcolor_Mfloat_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lcolor_Mfloat_R : public MDKStruct
+class Ftuple_Lcolor_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FColors_color)                             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lcolor_Mint_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lcolor_Mint_R : public MDKStruct
+class Ftuple_Lcolor_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FColors_color)                             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(int64_t)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<int64_t>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lfloat_M_QWhere_Nlocale_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lfloat_M_QWhere_Nlocale_R : public MDKStruct
+class Ftuple_Lfloat_M_QWhere_Nlocale_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
@@ -11357,20 +11385,22 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lfloat_Mcolor_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lfloat_Mcolor_R : public MDKStruct
+class Ftuple_Lfloat_Mcolor_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(double)                                    __verse_0x18E3F084_Elem0                                    OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(FColors_color)                             __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lfloat_Mfloat_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lfloat_Mfloat_Mfloat_R : public MDKStruct
+class Ftuple_Lfloat_Mfloat_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11382,8 +11412,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lfloat_Mfloat_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lfloat_Mfloat_R : public MDKStruct
+class Ftuple_Lfloat_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11394,34 +11425,37 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lfloat_Mtuple_L_R_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lfloat_Mtuple_L_R_Mfloat_R : public MDKStruct
+class Ftuple_Lfloat_Mtuple_L_R_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(double)                                    __verse_0x18E3F084_Elem0                                    OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lfloat_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lfloat_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lfloat_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	DMember(double)                                    __verse_0x18E3F084_Elem0                                    OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lint_M_Kany_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lint_M_Kany_R : public MDKStruct
+class Ftuple_Lint_M_Kany_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11432,8 +11466,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lint_M_QWhere_Nlocale_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lint_M_QWhere_Nlocale_R : public MDKStruct
+class Ftuple_Lint_M_QWhere_Nlocale_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
@@ -11443,8 +11478,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lint_Many_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lint_Many_R : public MDKStruct
+class Ftuple_Lint_Many_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11454,20 +11490,22 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lint_Mcolor_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lint_Mcolor_R : public MDKStruct
+class Ftuple_Lint_Mcolor_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int64_t)                                   __verse_0x18E3F084_Elem0                                    OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	SMember(FColors_color)                             __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lint_Mint_Mint_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lint_Mint_Mint_R : public MDKStruct
+class Ftuple_Lint_Mint_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11479,8 +11517,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Lint_Mint_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lint_Mint_R : public MDKStruct
+class Ftuple_Lint_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11491,8 +11530,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.tuple_Ltype_7b0_7d_Mint_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Ltype_7b0_7d_Mint_R : public MDKStruct
+class Ftuple_Ltype_7b0_7d_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11503,8 +11543,9 @@ public:
 
 /// Struct /Verse/_Verse/VNI/Verse.Verse_locale
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FVerse_locale : public MDKStruct
+class FVerse_locale : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -11513,21 +11554,23 @@ public:
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.SpatialMath_transform
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FSpatialMath_transform : public MDKStruct
+class FSpatialMath_transform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0xA376805D_Scale                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x78C70FF3_Rotation                                 OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x4E05BF15_Translation                              OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xA376805D_Scale                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x78C70FF3_Rotation                                 OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x4E05BF15_Translation                              OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.SpatialMath_vector2
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSpatialMath_vector2 : public MDKStruct
+class FSpatialMath_vector2 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11538,8 +11581,9 @@ public:
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.SpatialMath_vector2i
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSpatialMath_vector2i : public MDKStruct
+class FSpatialMath_vector2i : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11550,8 +11594,9 @@ public:
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.SpatialMath_vector3
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSpatialMath_vector3 : public MDKStruct
+class FSpatialMath_vector3 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11563,283 +11608,306 @@ public:
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lfloat_Mvector2_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lfloat_Mvector2_R : public MDKStruct
+class Ftuple_Lfloat_Mvector2_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(double)                                    __verse_0x18E3F084_Elem0                                    OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lfloat_Mvector3_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lfloat_Mvector3_R : public MDKStruct
+class Ftuple_Lfloat_Mvector3_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(double)                                    __verse_0x18E3F084_Elem0                                    OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lint_Mvector2i_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lint_Mvector2i_R : public MDKStruct
+class Ftuple_Lint_Mvector2i_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(int64_t)                                   __verse_0x18E3F084_Elem0                                    OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-	SMember(FSpatialMath_vector2i)                     __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FSpatialMath_vector2i)                     __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lrotation_Mrotation_Mfloat_R
 /// Size: 0x0048 (0x000000 - 0x000048)
-class Ftuple_Lrotation_Mrotation_Mfloat_R : public MDKStruct
+class Ftuple_Lrotation_Mrotation_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x40, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lrotation_Mrotation_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_Lrotation_Mrotation_R : public MDKStruct
+class Ftuple_Lrotation_Mrotation_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lrotation_Mtuple_L_R_Mfloat_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_Lrotation_Mtuple_L_R_Mfloat_R : public MDKStruct
+class Ftuple_Lrotation_Mtuple_L_R_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 1, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 1, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x28, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lrotation_Mtuple_L_R_Mrotation_R
 /// Size: 0x0050 (0x000000 - 0x000050)
-class Ftuple_Lrotation_Mtuple_L_R_Mrotation_R : public MDKStruct
+class Ftuple_Lrotation_Mtuple_L_R_Mrotation_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 1, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lrotation_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x0022 (0x000000 - 0x000022)
-class Ftuple_Lrotation_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lrotation_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 34;
 
 public:
-	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x21, 1, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x21, 1, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lrotation_Mtuple_L_R_Mvector3_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_Lrotation_Mtuple_L_R_Mvector3_R : public MDKStruct
+class Ftuple_Lrotation_Mtuple_L_R_Mvector3_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 1, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Ltransform_Mvector3_R
 /// Size: 0x0078 (0x000000 - 0x000078)
-class Ftuple_Ltransform_Mvector3_R : public MDKStruct
+class Ftuple_Ltransform_Mvector3_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 96, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lvector2_Mfloat_R : public MDKStruct
+class Ftuple_Lvector2_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2_Mtuple_L_R_Mfloat_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lvector2_Mtuple_L_R_Mfloat_R : public MDKStruct
+class Ftuple_Lvector2_Mtuple_L_R_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_Lvector2_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lvector2_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
 public:
-	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x11, 1, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x11, 1, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2_Mvector2_Mfloat_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector2_Mvector2_Mfloat_R : public MDKStruct
+class Ftuple_Lvector2_Mvector2_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2_Mvector2_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lvector2_Mvector2_R : public MDKStruct
+class Ftuple_Lvector2_Mvector2_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2i_Mint_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lvector2i_Mint_R : public MDKStruct
+class Ftuple_Lvector2i_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSpatialMath_vector2i)                     __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSpatialMath_vector2i)                     __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int64_t)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<int64_t>, {0x10, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector2i_Mvector2i_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lvector2i_Mvector2i_R : public MDKStruct
+class Ftuple_Lvector2i_Mvector2i_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSpatialMath_vector2i)                     __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_vector2i)                     __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FSpatialMath_vector2i)                     __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSpatialMath_vector2i)                     __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector3_Mfloat_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lvector3_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector3_Mtuple_L_R_Mfloat_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_Mtuple_L_R_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Mtuple_L_R_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 1, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 1, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector3_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x001A (0x000000 - 0x00001A)
-class Ftuple_Lvector3_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lvector3_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 26;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x19, 1, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x19, 1, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector3_Mvector3_Mfloat_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lvector3_Mvector3_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x30, 8, 0, 0})
 };
 
 /// Struct /EpicGamesTemporary/_Verse/VNI/EpicGamesTemporary.tuple_Lvector3_Mvector3_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_Lvector3_Mvector3_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -11848,102 +11916,111 @@ public:
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0060 (0x000000 - 0x000060)
-class Ftuple_Lvector3_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0080 (0x000000 - 0x000080)
-class Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_Mrotation_M_QExtent_Nvector3_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class Ftuple_Lvector3_Mrotation_M_QExtent_Nvector3_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_Mrotation_M_QExtent_Nvector3_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_Mrotation_M_QHeight_Nfloat_20_3d_20_2e_2e_2e_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class Ftuple_Lvector3_Mrotation_M_QHeight_Nfloat_20_3d_20_2e_2e_2e_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_Mrotation_M_QHeight_Nfloat_20_3d_20_2e_2e_2e_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_Mvector3_M_QArrowSize_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0088 (0x000000 - 0x000088)
-class Ftuple_Lvector3_Mvector3_M_QArrowSize_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_M_QArrowSize_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_Mvector3_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0078 (0x000000 - 0x000078)
-class Ftuple_Lvector3_Mvector3_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_Mvector3_M_QHeight_Nfloat_20_3d_20_2e_2e_2e_M_QNumSides_Nint_20_3d_20_2e_2e_2e_M_QAngleWidthRadians_Nfloat_20_3d_20_2e_2e_2e_M_QAngleHeightRadians_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class Ftuple_Lvector3_Mvector3_M_QHeight_Nfloat_20_3d_20_2e_2e_2e_M_QNumSides_Nint_20_3d_20_2e_2e_2e_M_QAngleWidthRadians_Nfloat_20_3d_20_2e_2e_2e_M_QAngleHeightRadians_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_M_QHeight_Nfloat_20_3d_20_2e_2e_2e_M_QNumSides_Nint_20_3d_20_2e_2e_2e_M_QAngleWidthRadians_Nfloat_20_3d_20_2e_2e_2e_M_QAngleHeightRadians_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.tuple_Lvector3_Mvector3_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0098 (0x000000 - 0x000098)
-class Ftuple_Lvector3_Mvector3_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_M_QNumSegments_Nint_20_3d_20_2e_2e_2e_M_QRadius_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_M_QThickness_Nfloat_20_3d_20_2e_2e_2e_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_20_3d_20_2e_2e_2e_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.tuple_Ltag__container_Mtag__container_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Ltag__container_Mtag__container_R : public MDKStruct
+class Ftuple_Ltag__container_Mtag__container_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11954,8 +12031,9 @@ public:
 
 /// Struct /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.tuple_Ltag_Mtag_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Ltag_Mtag_R : public MDKStruct
+class Ftuple_Ltag_Mtag_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11966,8 +12044,9 @@ public:
 
 /// Struct /VerseEngine/_Verse/VNI/VerseAssets.tuple_Lany_M_Kchar_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lany_M_Kchar_R : public MDKStruct
+class Ftuple_Lany_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -11977,8 +12056,9 @@ public:
 
 /// Struct /VerseEngine/_Verse/VNI/VerseEngine.tuple_Lcomponent_Many_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lcomponent_Many_R : public MDKStruct
+class Ftuple_Lcomponent_Many_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -11989,8 +12069,9 @@ public:
 
 /// Struct /VerseSimulation/_Verse/VNI/VerseSimulation.tuple_Lplayer__component_Many_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lplayer__component_Many_R : public MDKStruct
+class Ftuple_Lplayer__component_Many_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12001,44 +12082,48 @@ public:
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Ldate__time_Mdate__time_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Ldate__time_Mdate__time_R : public MDKStruct
+class Ftuple_Ldate__time_Mdate__time_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FVerseExperimental_date_time)              __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVerseExperimental_date_time)              __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FVerseExperimental_date_time)              __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FVerseExperimental_date_time)              __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Ldate__time_Mtime__span_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Ldate__time_Mtime__span_R : public MDKStruct
+class Ftuple_Ldate__time_Mtime__span_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVerseExperimental_date_time)              __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVerseExperimental_date_time)              __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Lfloat_Mtime__span_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lfloat_Mtime__span_R : public MDKStruct
+class Ftuple_Lfloat_Mtime__span_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(double)                                    __verse_0x18E3F084_Elem0                                    OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Lint_Mint_Mint_Mint_Mint_Mint_Mint_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lint_Mint_Mint_Mint_Mint_Mint_Mint_R : public MDKStruct
+class Ftuple_Lint_Mint_Mint_Mint_Mint_Mint_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -12054,8 +12139,9 @@ public:
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Lint_Mint_Mint_Mint_Mint_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lint_Mint_Mint_Mint_Mint_R : public MDKStruct
+class Ftuple_Lint_Mint_Mint_Mint_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -12069,32 +12155,35 @@ public:
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Ltime__span_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Ltime__span_Mfloat_R : public MDKStruct
+class Ftuple_Ltime__span_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVerseExperimental_time_span)              __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x10, 8, 0, 0})
 };
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Ltime__span_Mtime__span_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Ltime__span_Mtime__span_R : public MDKStruct
+class Ftuple_Ltime__span_Mtime__span_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVerseExperimental_time_span)              __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_date_parts
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FVerseExperimental_date_parts : public MDKStruct
+class FVerseExperimental_date_parts : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12106,8 +12195,9 @@ public:
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_date_time
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FVerseExperimental_date_time : public MDKStruct
+class FVerseExperimental_date_time : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -12117,8 +12207,9 @@ public:
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_time_of_day_parts
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FVerseExperimental_time_of_day_parts : public MDKStruct
+class FVerseExperimental_time_of_day_parts : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -12133,8 +12224,9 @@ public:
 
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_time_span
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVerseExperimental_time_span : public MDKStruct
+class FVerseExperimental_time_span : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12144,62 +12236,67 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_L_Kchar_Mtransform_M_Kchar_R
 /// Size: 0x0080 (0x000000 - 0x000080)
-class Ftuple_L_Kchar_Mtransform_M_Kchar_R : public MDKStruct
+class Ftuple_L_Kchar_Mtransform_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_L_Ksubtype_Lcomponent_R_Mtransform_M_Kchar_Mmesh_Mmaterial_R
 /// Size: 0x0090 (0x000000 - 0x000090)
-class Ftuple_L_Ksubtype_Lcomponent_R_Mtransform_M_Kchar_Mmesh_Mmaterial_R : public MDKStruct
+class Ftuple_L_Ksubtype_Lcomponent_R_Mtransform_M_Kchar_Mmesh_Mmaterial_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	CMember(TArray<UClass*>)                           __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UAssets_material*)                         __verse_0x4F74920B_Elem4                                    OFFSET(get<T>, {0x88, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_L_Ksubtype_Lcomponent_R_Mtransform_M_Kchar_Mmesh_R
 /// Size: 0x0088 (0x000000 - 0x000088)
-class Ftuple_L_Ksubtype_Lcomponent_R_Mtransform_M_Kchar_Mmesh_R : public MDKStruct
+class Ftuple_L_Ksubtype_Lcomponent_R_Mtransform_M_Kchar_Mmesh_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
 	CMember(TArray<UClass*>)                           __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_L_Ksubtype_Lcomponent_R_Mvector3_Mrotation_Mvector3_M_Kchar_Mmesh_Mmaterial_R
 /// Size: 0x0088 (0x000000 - 0x000088)
-class Ftuple_L_Ksubtype_Lcomponent_R_Mvector3_Mrotation_Mvector3_M_Kchar_Mmesh_Mmaterial_R : public MDKStruct
+class Ftuple_L_Ksubtype_Lcomponent_R_Mvector3_Mrotation_Mvector3_M_Kchar_Mmesh_Mmaterial_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
 	CMember(TArray<UClass*>)                           __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xF64C4596_Elem3                                    OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0x2A132EB3_Elem5                                    OFFSET(get<T>, {0x78, 8, 0, 0})
 	CMember(UAssets_material*)                         __verse_0xC4BC9BA1_Elem6                                    OFFSET(get<T>, {0x80, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lcomponent_Mint_Many_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lcomponent_Mint_Many_R : public MDKStruct
+class Ftuple_Lcomponent_Mint_Many_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12211,8 +12308,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lcomponent_Mphysics__trace__category_Mphysics__trace__type_Mphysics__trace__shape_Mphysics__trace__channel_Mvector3_Mvector3_Mlogic_Mvector3_Mfloat_M_Kchar_R
 /// Size: 0x0078 (0x000000 - 0x000078)
-class Ftuple_Lcomponent_Mphysics__trace__category_Mphysics__trace__type_Mphysics__trace__shape_Mphysics__trace__channel_Mvector3_Mvector3_Mlogic_Mvector3_Mfloat_M_Kchar_R : public MDKStruct
+class Ftuple_Lcomponent_Mphysics__trace__category_Mphysics__trace__type_Mphysics__trace__shape_Mphysics__trace__channel_Mvector3_Mvector3_Mlogic_Mvector3_Mfloat_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
@@ -12222,17 +12320,18 @@ public:
 	CMember(VGameplayRst_Physics_physics_trace_type)   __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
 	CMember(VGameplayRst_Physics_physics_trace_shape)  __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0xA, 1, 0, 0})
 	CMember(VGameplayRst_Physics_physics_trace_channel) __verse_0x4F74920B_Elem4                                   OFFSET(get<T>, {0xB, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x2A132EB3_Elem5                                    OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xC4BC9BA1_Elem6                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x2A132EB3_Elem5                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xC4BC9BA1_Elem6                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(bool)                                      __verse_0xA1DB2719_Elem7                                    OFFSET(get<bool>, {0x40, 1, 1, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xF7CB4441_Elem8                                    OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xF7CB4441_Elem8                                    OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(double)                                    __verse_0x92ACF8F9_Elem9                                    OFFSET(get<double>, {0x60, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lentity_M_Ksubtype_Lcomponent_R_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lentity_M_Ksubtype_Lcomponent_R_R : public MDKStruct
+class Ftuple_Lentity_M_Ksubtype_Lcomponent_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12243,8 +12342,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lfloat_Mactivation__state_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_Lfloat_Mactivation__state_R : public MDKStruct
+class Ftuple_Lfloat_Mactivation__state_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -12255,8 +12355,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lfloat_Mlogic_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_Lfloat_Mlogic_R : public MDKStruct
+class Ftuple_Lfloat_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -12267,8 +12368,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lint_Mcomponent_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lint_Mcomponent_R : public MDKStruct
+class Ftuple_Lint_Mcomponent_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12279,20 +12381,22 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Llevel_Mtime__span_M_Kchar_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Llevel_Mtime__span_M_Kchar_R : public MDKStruct
+class Ftuple_Llevel_Mtime__span_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(UAssets_level*)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Llogic_Mlogic_R
 /// Size: 0x0002 (0x000000 - 0x000002)
-class Ftuple_Llogic_Mlogic_R : public MDKStruct
+class Ftuple_Llogic_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -12303,8 +12407,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lmaterial_Mint_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lmaterial_Mint_R : public MDKStruct
+class Ftuple_Lmaterial_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12315,8 +12420,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lplayer__component_M_Kchar_M_Kchar_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lplayer__component_M_Kchar_M_Kchar_R : public MDKStruct
+class Ftuple_Lplayer__component_M_Kchar_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -12326,8 +12432,9 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lplayer__component_M_Kchar_Mint_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lplayer__component_M_Kchar_Mint_R : public MDKStruct
+class Ftuple_Lplayer__component_M_Kchar_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -12338,135 +12445,146 @@ public:
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Ltime__span_M_Kchar_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Ltime__span_M_Kchar_R : public MDKStruct
+class Ftuple_Ltime__span_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVerseExperimental_time_span)              __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVerseExperimental_time_span)              __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Ltransform_M_Kchar_Mmesh_Mmaterial_R
 /// Size: 0x0080 (0x000000 - 0x000080)
-class Ftuple_Ltransform_M_Kchar_Mmesh_Mmaterial_R : public MDKStruct
+class Ftuple_Ltransform_M_Kchar_Mmesh_Mmaterial_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(UAssets_material*)                         __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Ltransform_M_Kchar_Mmesh_R
 /// Size: 0x0078 (0x000000 - 0x000078)
-class Ftuple_Ltransform_M_Kchar_Mmesh_R : public MDKStruct
+class Ftuple_Ltransform_M_Kchar_Mmesh_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Ltransform_M_Kchar_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_Ltransform_M_Kchar_R : public MDKStruct
+class Ftuple_Ltransform_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lvector3_M_Kchar_Mmesh_Mmaterial_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lvector3_M_Kchar_Mmesh_Mmaterial_R : public MDKStruct
+class Ftuple_Lvector3_M_Kchar_Mmesh_Mmaterial_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UAssets_material*)                         __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lvector3_M_Kchar_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_M_Kchar_R : public MDKStruct
+class Ftuple_Lvector3_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lvector3_Mrotation_M_Kchar_Mmesh_Mmaterial_R
 /// Size: 0x0060 (0x000000 - 0x000060)
-class Ftuple_Lvector3_Mrotation_M_Kchar_Mmesh_Mmaterial_R : public MDKStruct
+class Ftuple_Lvector3_Mrotation_M_Kchar_Mmesh_Mmaterial_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x50, 8, 0, 0})
 	CMember(UAssets_material*)                         __verse_0x4F74920B_Elem4                                    OFFSET(get<T>, {0x58, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lvector3_Mrotation_Mvector3_M_Kchar_Mmesh_Mmaterial_R
 /// Size: 0x0078 (0x000000 - 0x000078)
-class Ftuple_Lvector3_Mrotation_Mvector3_M_Kchar_Mmesh_Mmaterial_R : public MDKStruct
+class Ftuple_Lvector3_Mrotation_Mvector3_M_Kchar_Mmesh_Mmaterial_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	CMember(UAssets_mesh*)                             __verse_0x4F74920B_Elem4                                    OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UAssets_material*)                         __verse_0x2A132EB3_Elem5                                    OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_Lvector3_Mvector3_Mvector3_M_Kchar_R
 /// Size: 0x0058 (0x000000 - 0x000058)
-class Ftuple_Lvector3_Mvector3_Mvector3_M_Kchar_R : public MDKStruct
+class Ftuple_Lvector3_Mvector3_Mvector3_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics_hit_result
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FVGameplayRst_Physics_hit_result : public MDKStruct
+class FVGameplayRst_Physics_hit_result : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	DMember(int64_t)                                   __verse_0x592C3A0F_OtherEntityID                            OFFSET(get<int64_t>, {0x0, 8, 0, 0})
 	CMember(UVGameplayRst_Physics_collision_component*) __verse_0x15DAA648_OtherComponent                          OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xA0175DA6_HitNormal                                OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xE16733E1_HitLocation                              OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xA0175DA6_HitNormal                                OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xE16733E1_HitLocation                              OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_config
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVerseMovement_move_config : public MDKStruct
+class FVerseMovement_move_config : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12476,8 +12594,9 @@ public:
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_config_entry
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FVerseMovement_move_config_entry : public MDKStruct
+class FVerseMovement_move_config_entry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -12488,55 +12607,59 @@ public:
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_input_trigger_params
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FVerseMovement_move_input_trigger_params : public MDKStruct
+class FVerseMovement_move_input_trigger_params : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	DMember(bool)                                      __verse_0x7D5B20A2_IsAxis                                   OFFSET(get<bool>, {0x0, 1, 1, 0})
 	DMember(bool)                                      __verse_0xC35555B9_AccumulateAxisInput                      OFFSET(get<bool>, {0x20, 1, 1, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x9EA11583_ClampAxis                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x9EA11583_ClampAxis                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_physics_trigger_params
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FVerseMovement_move_physics_trigger_params : public MDKStruct
+class FVerseMovement_move_physics_trigger_params : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0xE78E15A1_SpeedInDirection                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xE78E15A1_SpeedInDirection                         OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_response
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FVerseMovement_move_response : public MDKStruct
+class FVerseMovement_move_response : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x0464FDB1_Vector                                   OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x0464FDB1_Vector                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0xA6A970E7_Magnitude                                OFFSET(get<double>, {0x18, 8, 0, 0})
 	CMember(VerseMovement_move_response_type)          __verse_0x72E298E9_Type                                     OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(VerseMovement_move_response_frame)         __verse_0x08A22912_Frame                                    OFFSET(get<T>, {0x29, 1, 0, 0})
 	CMember(VerseMovement_move_response_effect)        __verse_0xCDC901A6_Effect                                   OFFSET(get<T>, {0x2A, 1, 0, 0})
 	CMember(VerseMovement_move_response_modifier)      __verse_0xCDC9EFBD_Modifier                                 OFFSET(get<T>, {0x2B, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7B949B4B_ClampVector                              OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7B949B4B_ClampVector                              OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(VerseMovement_move_response_frame)         __verse_0x3B045791_ClampFrame                               OFFSET(get<T>, {0x48, 1, 0, 0})
 };
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_trace_trigger_params
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FVerseMovement_move_trace_trigger_params : public MDKStruct
+class FVerseMovement_move_trace_trigger_params : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x722EF6A3_Direction                                OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x722EF6A3_Direction                                OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(VerseMovement_move_response_frame)         __verse_0x08A22912_Frame                                    OFFSET(get<T>, {0x18, 1, 0, 0})
 	DMember(double)                                    __verse_0x2AC13C27_TraceLength                              OFFSET(get<double>, {0x20, 8, 0, 0})
 	DMember(bool)                                      __verse_0x99455FC7_ProportionalToHitDistance                OFFSET(get<bool>, {0x28, 1, 1, 0})
@@ -12544,22 +12667,24 @@ public:
 
 /// Struct /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_move_trigger
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FVerseMovement_move_trigger : public MDKStruct
+class FVerseMovement_move_trigger : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	CMember(VerseMovement_move_trigger_type)           __verse_0x72E298E9_Type                                     OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVerseMovement_move_input_trigger_params)  __verse_0xD3F71544_InputParams                              OFFSET(get<T>, {0x8, 56, 0, 0})
-	SMember(FVerseMovement_move_physics_trigger_params) __verse_0x4D939126_PhysicsParams                           OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVerseMovement_move_trace_trigger_params)  __verse_0x874565E7_TraceParams                              OFFSET(get<T>, {0x58, 56, 0, 0})
+	SMember(FVerseMovement_move_input_trigger_params)  __verse_0xD3F71544_InputParams                              OFFSET(getStruct<T>, {0x8, 56, 0, 0})
+	SMember(FVerseMovement_move_physics_trigger_params) __verse_0x4D939126_PhysicsParams                           OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FVerseMovement_move_trace_trigger_params)  __verse_0x874565E7_TraceParams                              OFFSET(getStruct<T>, {0x58, 56, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.tuple_Limage__tiling_Mimage__tiling_R
 /// Size: 0x0002 (0x000000 - 0x000002)
-class Ftuple_Limage__tiling_Mimage__tiling_R : public MDKStruct
+class Ftuple_Limage__tiling_Mimage__tiling_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -12570,44 +12695,48 @@ public:
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.tuple_Lwidget_Mplayer__ui__slot_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lwidget_Mplayer__ui__slot_R : public MDKStruct
+class Ftuple_Lwidget_Mplayer__ui__slot_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UUI_widget*)                               __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FUI_player_ui_slot)                        __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FUI_player_ui_slot)                        __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.tuple_Lwidget_Mvector2_M_QSize_Nvector2_20_3d_20_2e_2e_2e_M_QZOrder_Ntype_7b__X_Nint_20where_200_20_3c_3d_20__X_M_20__X_20_3c_3d_202147483647_7d_20_3d_20_2e_2e_2e_M_QAlignment_Nvector2_20_3d_20_2e_2e_2e_R
 /// Size: 0x0058 (0x000000 - 0x000058)
-class Ftuple_Lwidget_Mvector2_M_QSize_Nvector2_20_3d_20_2e_2e_2e_M_QZOrder_Ntype_7b__X_Nint_20where_200_20_3c_3d_20__X_M_20__X_20_3c_3d_202147483647_7d_20_3d_20_2e_2e_2e_M_QAlignment_Nvector2_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lwidget_Mvector2_M_QSize_Nvector2_20_3d_20_2e_2e_2e_M_QZOrder_Ntype_7b__X_Nint_20where_200_20_3c_3d_20__X_M_20__X_20_3c_3d_202147483647_7d_20_3d_20_2e_2e_2e_M_QAlignment_Nvector2_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	CMember(UUI_widget*)                               __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_anchors
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FUI_anchors : public MDKStruct
+class FUI_anchors : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSpatialMath_vector2)                      __verse_0x91692725_Minimum                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0xDF63CF93_Maximum                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0x91692725_Minimum                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0xDF63CF93_Maximum                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_button_slot
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FUI_button_slot : public MDKStruct
+class FUI_button_slot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -12615,29 +12744,31 @@ public:
 	CMember(UUI_widget*)                               __verse_0xA5B83AD1_Widget                                   OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UI_horizontal_alignment)                   __verse_0xF13651F1_HorizontalAlignment                      OFFSET(get<T>, {0x8, 1, 0, 0})
 	CMember(UI_vertical_alignment)                     __verse_0xA83057DE_VerticalAlignment                        OFFSET(get<T>, {0x9, 1, 0, 0})
-	SMember(FUI_margin)                                __verse_0x7F718DF5_Padding                                  OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FUI_margin)                                __verse_0x7F718DF5_Padding                                  OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_canvas_slot
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FUI_canvas_slot : public MDKStruct
+class FUI_canvas_slot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FUI_anchors)                               __verse_0x6C624651_Anchors                                  OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FUI_margin)                                __verse_0xAE9C7630_Offsets                                  OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FUI_anchors)                               __verse_0x6C624651_Anchors                                  OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FUI_margin)                                __verse_0xAE9C7630_Offsets                                  OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 	DMember(bool)                                      __verse_0x270727B9_SizeToContent                            OFFSET(get<bool>, {0x40, 1, 1, 0})
-	SMember(FSpatialMath_vector2)                      __verse_0xE9839A38_Alignment                                OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FSpatialMath_vector2)                      __verse_0xE9839A38_Alignment                                OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	DMember(int64_t)                                   __verse_0xEB688892_ZOrder                                   OFFSET(get<int64_t>, {0x58, 8, 0, 0})
 	CMember(UUI_widget*)                               __verse_0xA5B83AD1_Widget                                   OFFSET(get<T>, {0x60, 8, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_margin
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FUI_margin : public MDKStruct
+class FUI_margin : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -12650,8 +12781,9 @@ public:
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_overlay_slot
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FUI_overlay_slot : public MDKStruct
+class FUI_overlay_slot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -12659,13 +12791,14 @@ public:
 	CMember(UUI_widget*)                               __verse_0xA5B83AD1_Widget                                   OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UI_horizontal_alignment)                   __verse_0xF13651F1_HorizontalAlignment                      OFFSET(get<T>, {0x8, 1, 0, 0})
 	CMember(UI_vertical_alignment)                     __verse_0xA83057DE_VerticalAlignment                        OFFSET(get<T>, {0x9, 1, 0, 0})
-	SMember(FUI_margin)                                __verse_0x7F718DF5_Padding                                  OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FUI_margin)                                __verse_0x7F718DF5_Padding                                  OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_player_ui_slot
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FUI_player_ui_slot : public MDKStruct
+class FUI_player_ui_slot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12676,8 +12809,9 @@ public:
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_stack_box_slot
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FUI_stack_box_slot : public MDKStruct
+class FUI_stack_box_slot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -12685,13 +12819,14 @@ public:
 	CMember(UUI_widget*)                               __verse_0xA5B83AD1_Widget                                   OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UI_horizontal_alignment)                   __verse_0xF13651F1_HorizontalAlignment                      OFFSET(get<T>, {0x8, 1, 0, 0})
 	CMember(UI_vertical_alignment)                     __verse_0xA83057DE_VerticalAlignment                        OFFSET(get<T>, {0x9, 1, 0, 0})
-	SMember(FUI_margin)                                __verse_0x7F718DF5_Padding                                  OFFSET(get<T>, {0x10, 32, 0, 0})
+	SMember(FUI_margin)                                __verse_0x7F718DF5_Padding                                  OFFSET(getStruct<T>, {0x10, 32, 0, 0})
 };
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_user_widget_slot
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FUI_user_widget_slot : public MDKStruct
+class FUI_user_widget_slot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12701,8 +12836,9 @@ public:
 
 /// Struct /VerseUI/_Verse/VNI/VerseUI.UI_widget_message
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FUI_widget_message : public MDKStruct
+class FUI_widget_message : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12713,8 +12849,9 @@ public:
 
 /// Struct /VerseWorldPartition/_Verse/VNI/VerseWorldPartition.tuple_Ldata__layer__asset_Mdata__layer__runtime__state_Mlogic_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Ldata__layer__asset_Mdata__layer__runtime__state_Mlogic_R : public MDKStruct
+class Ftuple_Ldata__layer__asset_Mdata__layer__runtime__state_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
@@ -12726,21 +12863,23 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.AI_fort_threat_info
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FAI_fort_threat_info : public MDKStruct
+class FAI_fort_threat_info : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x4A328DE2_LastKnownPosition                        OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x4A328DE2_LastKnownPosition                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	DMember(bool)                                      __verse_0xAC2B8860_HasLineOfSight                           OFFSET(get<bool>, {0x28, 1, 1, 0})
 	DMember(bool)                                      __verse_0xABBA0802_IsThreatening                            OFFSET(get<bool>, {0x29, 1, 1, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.Characters_stasis_args
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FCharacters_stasis_args : public MDKStruct
+class FCharacters_stasis_args : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
@@ -12752,8 +12891,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.Game_damage_args
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGame_damage_args : public MDKStruct
+class FGame_damage_args : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12763,8 +12903,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.Game_damage_result
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FGame_damage_result : public MDKStruct
+class FGame_damage_result : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -12775,8 +12916,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.Game_elimination_result
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGame_elimination_result : public MDKStruct
+class FGame_elimination_result : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12786,8 +12928,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.Game_healing_args
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGame_healing_args : public MDKStruct
+class FGame_healing_args : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12797,8 +12940,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.Game_healing_result
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FGame_healing_result : public MDKStruct
+class FGame_healing_result : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -12809,8 +12953,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lagent_Magent_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lagent_Magent_R : public MDKStruct
+class Ftuple_Lagent_Magent_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12821,8 +12966,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lagent_Mfloat_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lagent_Mfloat_Mfloat_R : public MDKStruct
+class Ftuple_Lagent_Mfloat_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12834,8 +12980,9 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lagent_Mteam_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lagent_Mteam_R : public MDKStruct
+class Ftuple_Lagent_Mteam_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12846,60 +12993,65 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lagent_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lagent_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(USimulation_agent*)                        __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lagent_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R
 /// Size: 0x0050 (0x000000 - 0x000050)
-class Ftuple_Lagent_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKStruct
+class Ftuple_Lagent_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(USimulation_agent*)                        __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 64, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 64, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lfort__character_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UObject*)                                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lgame__action__instigator_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UObject*)                                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R
 /// Size: 0x001A (0x000000 - 0x00001A)
-class Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 26;
 
@@ -12909,34 +13061,37 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lplayer_Mtuple_L_R_Mplayer_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lplayer_Mtuple_L_R_Mplayer_R : public MDKStruct
+class Ftuple_Lplayer_Mtuple_L_R_Mplayer_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(USimulation_player*)                       __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
 	CMember(USimulation_player*)                       __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lplayer_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lplayer_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lplayer_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(USimulation_player*)                       __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lteam_Mteam_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lteam_Mteam_R : public MDKStruct
+class Ftuple_Lteam_Mteam_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12947,33 +13102,36 @@ public:
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lvector3_Mfloat_Mfloat_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_Mfloat_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Mfloat_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /VerseFortnite/_Verse/VNI/VerseFortnite.tuple_Lvector3_Mrotation_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_Lvector3_Mrotation_R : public MDKStruct
+class Ftuple_Lvector3_Mrotation_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.tuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -12983,8 +13141,9 @@ public:
 
 /// Struct /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.tuple_Lgameplay__effect__asset_Mfloat_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lgameplay__effect__asset_Mfloat_R : public MDKStruct
+class Ftuple_Lgameplay__effect__asset_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -12995,8 +13154,9 @@ public:
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.tuple_Lfort__inventory__item__asset_Mint_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lfort__inventory__item__asset_Mint_R : public MDKStruct
+class Ftuple_Lfort__inventory__item__asset_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13007,20 +13167,22 @@ public:
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.tuple_Lfort__item__descriptor_Mfort__item__tag_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lfort__item__descriptor_Mfort__item__tag_R : public MDKStruct
+class Ftuple_Lfort__item__descriptor_Mfort__item__tag_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVerseAIBase_fort_item_descriptor)         __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVerseAIBase_fort_item_descriptor)         __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(UVerseAIBase_fort_item_tag*)               __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.tuple_Lgameplay__ability__asset_M_Kchar_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lgameplay__ability__asset_M_Kchar_R : public MDKStruct
+class Ftuple_Lgameplay__ability__asset_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13030,8 +13192,9 @@ public:
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.VerseAIBase_fort_item_descriptor
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FVerseAIBase_fort_item_descriptor : public MDKStruct
+class FVerseAIBase_fort_item_descriptor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13041,34 +13204,37 @@ public:
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.VerseAIBase_fort_loot_info
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FVerseAIBase_fort_loot_info : public MDKStruct
+class FVerseAIBase_fort_loot_info : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0xB0C27E0A_Location                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xB0C27E0A_Location                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(VerseAIBase_fort_loot_type)                __verse_0x72E298E9_Type                                     OFFSET(get<T>, {0x18, 1, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0xC218B7D2_Loot                                     OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.VerseAIBase_fort_obstacle_info
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FVerseAIBase_fort_obstacle_info : public MDKStruct
+class FVerseAIBase_fort_obstacle_info : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0xB0C27E0A_Location                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xB0C27E0A_Location                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(VerseAIBase_fort_obstacle_status)          __verse_0xFA60180E_Status                                   OFFSET(get<T>, {0x18, 1, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0x82A44C52_Obstacle                                 OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /VerseAIBase/_Verse/VNI/VerseAIBase.VerseAIBase_fort_weapon_descriptor
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FVerseAIBase_fort_weapon_descriptor : public MDKStruct
+class FVerseAIBase_fort_weapon_descriptor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13080,22 +13246,24 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_ping_info
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCompanionAI_ping_info : public MDKStruct
+class FCompanionAI_ping_info : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(CompanionAI_PingCommand_command_type)      __verse_0x72E298E9_Type                                     OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(CompanionAI_PingCommand_entity_type)       __verse_0x6CF7C7E8_EntityType                               OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xB0C27E0A_Location                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xB0C27E0A_Location                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(bool)                                      __verse_0x0FA78E7E_LocationOnHorizontalSurface              OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_M_Kchar_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -13104,8 +13272,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_L_Kchar_M_Kchar_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_L_Kchar_M_Kchar_R : public MDKStruct
+class Ftuple_L_Kchar_M_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -13114,8 +13283,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R : public MDKStruct
+class Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -13124,8 +13294,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lagent_Mfloat_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lagent_Mfloat_R : public MDKStruct
+class Ftuple_Lagent_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13136,8 +13307,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lagent_Mgameplay__ability__asset_Mfloat_Mfloat_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lagent_Mgameplay__ability__asset_Mfloat_Mfloat_R : public MDKStruct
+class Ftuple_Lagent_Mgameplay__ability__asset_Mfloat_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -13150,8 +13322,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R : public MDKStruct
+class Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -13164,8 +13337,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lagent_Mgameplay__ability__asset_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lagent_Mgameplay__ability__asset_R : public MDKStruct
+class Ftuple_Lagent_Mgameplay__ability__asset_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13176,8 +13350,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R : public MDKStruct
+class Ftuple_Lagent_Mtype_7b2_2e000000e_2b02_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13188,21 +13363,23 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lentity_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lentity_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UVerseEngine_Entity_entity*)               __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lfort__character_Mfloat_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lfort__character_Mfloat_R : public MDKStruct
+class Ftuple_Lfort__character_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13213,20 +13390,22 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lfort__obstacle__info_Mentity_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_Lfort__obstacle__info_Mentity_R : public MDKStruct
+class Ftuple_Lfort__obstacle__info_Mentity_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 40, 0, 0})
 	CMember(UVerseEngine_Entity_entity*)               __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R
 /// Size: 0x001A (0x000000 - 0x00001A)
-class Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R : public MDKStruct
+class Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_M_QAllowPartialPath_Nlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 26;
 
@@ -13236,8 +13415,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lnavigation__target_M_QReachRadius_Nfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_R : public MDKStruct
+class Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13247,8 +13427,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R : public MDKStruct
+class Ftuple_Ltype_7b5_2e000000e_2b01_7d_Mtype_7b2_2e000000e_2b02_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13259,8 +13440,9 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R : public MDKStruct
+class Ftuple_Ltype_7b_2d1_2e000000e_2b03_7d_Mtype_7b1_2e000000e_2b03_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13271,156 +13453,169 @@ public:
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R
 /// Size: 0x003A (0x000000 - 0x00003A)
-class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 58;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R : public MDKStruct
+class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b10_2e000000_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R : public MDKStruct
+class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b1_2e000000e_2b02_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R
 /// Size: 0x003A (0x000000 - 0x00003A)
-class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R : public MDKStruct
+class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b2_2e000000e_2b02_7d_M_QAllowPartialPath_Nlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 58;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R : public MDKStruct
+class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b4_2e000000e_2b02_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R
 /// Size: 0x003A (0x000000 - 0x00003A)
-class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R : public MDKStruct
+class Ftuple_Lvector3_M_Qagent_Mlogic_M_QReachRadius_Ntype_7b5_2e000000e_2b01_7d_M_QAllowPartialPath_Nlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 58;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      __verse_0x932BF92E_Elem2                                    OFFSET(get<bool>, {0x20, 1, 1, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R : public MDKStruct
+class Ftuple_Lvector3_M_QColor_Ncolor_M_QRadius_Nfloat_M_QThickness_Ntype_7b3_2e000000_7d_M_QDrawDurationPolicy_Ndebug__draw__duration__policy_M_QNumSegments_Ntype_7b32_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_Magent_Mfloat_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_Magent_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Magent_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x18, 8, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_Mfloat_Magent_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_Mfloat_Magent_R : public MDKStruct
+class Ftuple_Lvector3_Mfloat_Magent_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_Mfloat_Mcolor_R
 /// Size: 0x0038 (0x000000 - 0x000038)
-class Ftuple_Lvector3_Mfloat_Mcolor_R : public MDKStruct
+class Ftuple_Lvector3_Mfloat_Mcolor_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
-	SMember(FColors_color)                             __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FColors_color)                             __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R : public MDKStruct
+class Ftuple_Lvector3_Mtype_7b0_2e500000_7d_Mtype_7b1_2e500000_7d_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /CompanionAI/_Verse/VNI/CompanionAI.tuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R
 /// Size: 0x0028 (0x000000 - 0x000028)
-class Ftuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Mtype_7b1_2e000000e_2b02_7d_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x18, 8, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x20, 8, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.Devices_CreativeAnimation_cubic_bezier_parameters
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FDevices_CreativeAnimation_cubic_bezier_parameters : public MDKStruct
+class FDevices_CreativeAnimation_cubic_bezier_parameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -13433,23 +13628,25 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.Devices_CreativeAnimation_keyframe_delta
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FDevices_CreativeAnimation_keyframe_delta : public MDKStruct
+class FDevices_CreativeAnimation_keyframe_delta : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0xC51B5857_DeltaLocation                            OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x0D1E29AE_DeltaRotation                            OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x97B35C4B_DeltaScale                               OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xC51B5857_DeltaLocation                            OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x0D1E29AE_DeltaRotation                            OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x97B35C4B_DeltaScale                               OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(double)                                    __verse_0x742B3E02_Time                                     OFFSET(get<double>, {0x58, 8, 0, 0})
-	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xB7FF3D07_Interpolation                   OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xB7FF3D07_Interpolation                   OFFSET(getStruct<T>, {0x60, 32, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_ai_interaction_result
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDevices_device_ai_interaction_result : public MDKStruct
+class FDevices_device_ai_interaction_result : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13458,8 +13655,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Kchar_M_QLevel_Nlog__level_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_L_Kchar_M_QLevel_Nlog__level_R : public MDKStruct
+class Ftuple_L_Kchar_M_QLevel_Nlog__level_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -13468,8 +13666,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Kchar_Mplaystoppause__result_R
 /// Size: 0x0011 (0x000000 - 0x000011)
-class Ftuple_L_Kchar_Mplaystoppause__result_R : public MDKStruct
+class Ftuple_L_Kchar_Mplaystoppause__result_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 17;
 
@@ -13479,8 +13678,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_20_3d_20_2e_2e_2e_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -13490,8 +13690,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R : public MDKStruct
+class Ftuple_L_Kkeyframe__delta_M_QAnimationMode_Nanimation__mode_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -13501,8 +13702,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Kkeyframe__delta_M_QMode_Nanimation__mode_R
 /// Size: 0x0012 (0x000000 - 0x000012)
-class Ftuple_L_Kkeyframe__delta_M_QMode_Nanimation__mode_R : public MDKStruct
+class Ftuple_L_Kkeyframe__delta_M_QMode_Nanimation__mode_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 18;
 
@@ -13512,8 +13714,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Qanimation__controller_Mget__animation__controller__result_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_L_Qanimation__controller_Mget__animation__controller__result_R : public MDKStruct
+class Ftuple_L_Qanimation__controller_Mget__animation__controller__result_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -13523,8 +13726,9 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_L_Qcreative__prop_Mspawn__prop__result_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_L_Qcreative__prop_Mspawn__prop__result_R : public MDKStruct
+class Ftuple_L_Qcreative__prop_Mspawn__prop__result_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -13534,254 +13738,274 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__device_Mtuple_L_R_Mtransform_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_Lcreative__device_Mtuple_L_R_Mtransform_R : public MDKStruct
+class Ftuple_Lcreative__device_Mtuple_L_R_Mtransform_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UDevices_creative_device*)                 __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__device_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UDevices_creative_device*)                 __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R
 /// Size: 0x0080 (0x000000 - 0x000080)
-class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R : public MDKStruct
+class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(UDevices_creative_device*)                 __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 112, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 112, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R
 /// Size: 0x0060 (0x000000 - 0x000060)
-class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R : public MDKStruct
+class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(UDevices_creative_device*)                 __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R
 /// Size: 0x0050 (0x000000 - 0x000050)
-class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKStruct
+class Ftuple_Lcreative__device_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(UDevices_creative_device*)                 __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 64, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 64, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__movable__object__base_Mtuple_L_R_Mtransform_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtransform_R : public MDKStruct
+class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtransform_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UVerseMovableObjectBase*)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UVerseMovableObjectBase*)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R
 /// Size: 0x0080 (0x000000 - 0x000080)
-class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R : public MDKStruct
+class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(UVerseMovableObjectBase*)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 112, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 112, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R
 /// Size: 0x0060 (0x000000 - 0x000060)
-class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R : public MDKStruct
+class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(UVerseMovableObjectBase*)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R
 /// Size: 0x0050 (0x000000 - 0x000050)
-class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKStruct
+class Ftuple_Lcreative__movable__object__base_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(UVerseMovableObjectBase*)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 64, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 64, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__object__interface_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lcreative__object__interface_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lcreative__object__interface_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UObject*)                                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__object_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lcreative__object_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lcreative__object_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UDevices_creative_object*)                 __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop__asset_Mtransform_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_Lcreative__prop__asset_Mtransform_R : public MDKStruct
+class Ftuple_Lcreative__prop__asset_Mtransform_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UDevices_creative_prop_asset*)             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop__asset_Mvector3_Mrotation_R
 /// Size: 0x0040 (0x000000 - 0x000040)
-class Ftuple_Lcreative__prop__asset_Mvector3_Mrotation_R : public MDKStruct
+class Ftuple_Lcreative__prop__asset_Mvector3_Mrotation_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(UDevices_creative_prop_asset*)             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop_Mtuple_L_R_Mtransform_R
 /// Size: 0x0070 (0x000000 - 0x000070)
-class Ftuple_Lcreative__prop_Mtuple_L_R_Mtransform_R : public MDKStruct
+class Ftuple_Lcreative__prop_Mtuple_L_R_Mtransform_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UDevices_creative_prop*)                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FSpatialMath_transform)                    __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UDevices_creative_prop*)                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R
 /// Size: 0x0080 (0x000000 - 0x000080)
-class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R : public MDKStruct
+class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Ltransform_Mfloat_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(UDevices_creative_prop*)                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 112, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Ltransform_Mfloat_R)                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 112, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R
 /// Size: 0x0060 (0x000000 - 0x000060)
-class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R : public MDKStruct
+class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_Mfloat_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(UDevices_creative_prop*)                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R
 /// Size: 0x0050 (0x000000 - 0x000050)
-class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKStruct
+class Ftuple_Lcreative__prop_Mtuple_L_R_Mtuple_Lvector3_Mrotation_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(UDevices_creative_prop*)                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 64, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_Lvector3_Mrotation_R)               __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x10, 64, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lmaterial_M_QIndex_Nint_20_3d_20_2e_2e_2e_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lmaterial_M_QIndex_Nint_20_3d_20_2e_2e_2e_R : public MDKStruct
+class Ftuple_Lmaterial_M_QIndex_Nint_20_3d_20_2e_2e_2e_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13791,33 +14015,36 @@ public:
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Ltransform_Mfloat_R
 /// Size: 0x0068 (0x000000 - 0x000068)
-class Ftuple_Ltransform_Mfloat_R : public MDKStruct
+class Ftuple_Ltransform_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FSpatialMath_transform)                    __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 	DMember(double)                                    __verse_0x7D844C3C_Elem1                                    OFFSET(get<double>, {0x60, 8, 0, 0})
 };
 
 /// Struct /VerseDevices/_Verse/VNI/VerseDevices.tuple_Lvector3_Mrotation_Mfloat_R
 /// Size: 0x0048 (0x000000 - 0x000048)
-class Ftuple_Lvector3_Mrotation_Mfloat_R : public MDKStruct
+class Ftuple_Lvector3_Mrotation_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVerseRotation)                            __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 	DMember(double)                                    __verse_0x932BF92E_Elem2                                    OFFSET(get<double>, {0x40, 8, 0, 0})
 };
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player_player_team
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FGame_Player_player_team : public MDKStruct
+class FGame_Player_player_team : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -13826,8 +14053,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lcomponent_M_K_Kchar_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lcomponent_M_K_Kchar_R : public MDKStruct
+class Ftuple_Lcomponent_M_K_Kchar_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13838,8 +14066,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lcomponent_Mcomponent_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lcomponent_Mcomponent_R : public MDKStruct
+class Ftuple_Lcomponent_Mcomponent_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13850,8 +14079,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lcomponent_Mfort__item__definition_Mint_Mvector3_R
 /// Size: 0x0030 (0x000000 - 0x000030)
-class Ftuple_Lcomponent_Mfort__item__definition_Mint_Mvector3_R : public MDKStruct
+class Ftuple_Lcomponent_Mfort__item__definition_Mint_Mvector3_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -13859,13 +14089,14 @@ public:
 	CMember(UEntityComponent*)                         __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UGame_fort_item_definition*)               __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(int64_t)                                   __verse_0x932BF92E_Elem2                                    OFFSET(get<int64_t>, {0x10, 8, 0, 0})
-	SMember(FSpatialMath_vector3)                      __verse_0xF64C4596_Elem3                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0xF64C4596_Elem3                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lcomponent_Mlogic_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_Lcomponent_Mlogic_R : public MDKStruct
+class Ftuple_Lcomponent_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -13876,8 +14107,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Litem__type_Mint_Mplayer__component_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Litem__type_Mint_Mplayer__component_R : public MDKStruct
+class Ftuple_Litem__type_Mint_Mplayer__component_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -13889,8 +14121,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer__component_Mplayer__start__component_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lplayer__component_Mplayer__start__component_R : public MDKStruct
+class Ftuple_Lplayer__component_Mplayer__start__component_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -13901,8 +14134,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer__component_Mplayer__status__type_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_Lplayer__component_Mplayer__status__type_R : public MDKStruct
+class Ftuple_Lplayer__component_Mplayer__status__type_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -13913,45 +14147,49 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer__team_Mint_Mint_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lplayer__team_Mint_Mint_R : public MDKStruct
+class Ftuple_Lplayer__team_Mint_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGame_Player_player_team)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGame_Player_player_team)                  __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int64_t)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 	DMember(int64_t)                                   __verse_0x932BF92E_Elem2                                    OFFSET(get<int64_t>, {0x10, 8, 0, 0})
 };
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer__team_Mint_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lplayer__team_Mint_R : public MDKStruct
+class Ftuple_Lplayer__team_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGame_Player_player_team)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGame_Player_player_team)                  __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int64_t)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<int64_t>, {0x8, 8, 0, 0})
 };
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer__team_Mplayer__team_R
 /// Size: 0x0008 (0x000000 - 0x000008)
-class Ftuple_Lplayer__team_Mplayer__team_R : public MDKStruct
+class Ftuple_Lplayer__team_Mplayer__team_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FGame_Player_player_team)                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGame_Player_player_team)                  __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGame_Player_player_team)                  __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGame_Player_player_team)                  __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_M_Kchar_Mint_Mlogic_R
 /// Size: 0x0021 (0x000000 - 0x000021)
-class Ftuple_Lplayer_M_Kchar_Mint_Mlogic_R : public MDKStruct
+class Ftuple_Lplayer_M_Kchar_Mint_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 33;
 
@@ -13963,8 +14201,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_M_Kchar_Mint_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lplayer_M_Kchar_Mint_R : public MDKStruct
+class Ftuple_Lplayer_M_Kchar_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -13975,8 +14214,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mfort__item__definition_Mint_Mlogic_R
 /// Size: 0x0019 (0x000000 - 0x000019)
-class Ftuple_Lplayer_Mfort__item__definition_Mint_Mlogic_R : public MDKStruct
+class Ftuple_Lplayer_Mfort__item__definition_Mint_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 25;
 
@@ -13989,8 +14229,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mint_Mint_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lplayer_Mint_Mint_R : public MDKStruct
+class Ftuple_Lplayer_Mint_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -14002,8 +14243,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mint_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lplayer_Mint_R : public MDKStruct
+class Ftuple_Lplayer_Mint_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -14014,8 +14256,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mlogic_Mlogic_Mlogic_R
 /// Size: 0x000B (0x000000 - 0x00000B)
-class Ftuple_Lplayer_Mlogic_Mlogic_Mlogic_R : public MDKStruct
+class Ftuple_Lplayer_Mlogic_Mlogic_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 11;
 
@@ -14028,8 +14271,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mlogic_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_Lplayer_Mlogic_R : public MDKStruct
+class Ftuple_Lplayer_Mlogic_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -14040,20 +14284,22 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mplayer__team_R
 /// Size: 0x000C (0x000000 - 0x00000C)
-class Ftuple_Lplayer_Mplayer__team_R : public MDKStruct
+class Ftuple_Lplayer_Mplayer__team_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 	CMember(USimulation_player*)                       __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGame_Player_player_team)                  __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGame_Player_player_team)                  __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_Mplayer_R
 /// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lplayer_Mplayer_R : public MDKStruct
+class Ftuple_Lplayer_Mplayer_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -14064,8 +14310,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_MPlayerAttribute_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lplayer_MPlayerAttribute_Mfloat_R : public MDKStruct
+class Ftuple_Lplayer_MPlayerAttribute_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -14077,8 +14324,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_MPlayerAttribute_MPlayerAttributeOperation_Mfloat_R
 /// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lplayer_MPlayerAttribute_MPlayerAttributeOperation_Mfloat_R : public MDKStruct
+class Ftuple_Lplayer_MPlayerAttribute_MPlayerAttributeOperation_Mfloat_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -14091,8 +14339,9 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lplayer_MPlayerAttribute_R
 /// Size: 0x0009 (0x000000 - 0x000009)
-class Ftuple_Lplayer_MPlayerAttribute_R : public MDKStruct
+class Ftuple_Lplayer_MPlayerAttribute_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 9;
 
@@ -14103,38 +14352,41 @@ public:
 
 /// Struct /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.tuple_Lvector3_M_Qplayer__component_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lvector3_M_Qplayer__component_R : public MDKStruct
+class Ftuple_Lvector3_M_Qplayer__component_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSpatialMath_vector3)                      __verse_0x18E3F084_Elem0                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.tuple_Lfort__playspace_Mtuple_L_R_Mtuple_L_R_R
 /// Size: 0x000A (0x000000 - 0x00000A)
-class Ftuple_Lfort__playspace_Mtuple_L_R_Mtuple_L_R_R : public MDKStruct
+class Ftuple_Lfort__playspace_Mtuple_L_R_Mtuple_L_R_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 10;
 
 public:
 	CMember(UObject*)                                  __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x9, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x932BF92E_Elem2                                    OFFSET(getStruct<T>, {0x9, 1, 0, 0})
 };
 
 /// Struct /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.tuple_Lplayer__ui_Mtuple_L_R_M_Khud__element__identifier_R
 /// Size: 0x0020 (0x000000 - 0x000020)
-class Ftuple_Lplayer__ui_Mtuple_L_R_M_Khud__element__identifier_R : public MDKStruct
+class Ftuple_Lplayer__ui_Mtuple_L_R_M_Khud__element__identifier_R : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UUI_player_ui*)                            __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 1, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0x7D844C3C_Elem1                                    OFFSET(getStruct<T>, {0x8, 1, 0, 0})
 	CMember(TArray<UUI_hud_element_identifier*>)       __verse_0x932BF92E_Elem2                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 

@@ -17,8 +17,8 @@ class UGameplayState : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FGameplayTag)                              StateId                                                     OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     StateRuntimeTags                                            OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FGameplayTag)                              StateId                                                     OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     StateRuntimeTags                                            OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(bool)                                      bEvaluateTransition                                         OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(bool)                                      bReplicates                                                 OFFSET(get<bool>, {0x51, 1, 0, 0})
 	DMember(bool)                                      bStateBegun                                                 OFFSET(get<bool>, {0x52, 1, 0, 0})
@@ -83,10 +83,10 @@ class UGameplayStateMachine : public UGameplayState
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FGameplayTag)                              StateMachineId                                              OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FActiveGameplayStateData)                  ActiveGameplayStateData                                     OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FGameplayTag)                              StateMachineId                                              OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+	SMember(FActiveGameplayStateData)                  ActiveGameplayStateData                                     OFFSET(getStruct<T>, {0x98, 24, 0, 0})
 	CMember(TArray<FGameplayStateSettings>)            GameplayStateSettings                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FGameplayTag)                              InitialGameplayStateId                                      OFFSET(get<T>, {0xC0, 4, 0, 0})
+	SMember(FGameplayTag)                              InitialGameplayStateId                                      OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
 
 
 	/// Functions
@@ -112,45 +112,48 @@ class UGameplayStateMachineManager : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FGameplayStateMachineArray)                StateMachineList                                            OFFSET(get<T>, {0xA0, 288, 0, 0})
+	SMember(FGameplayStateMachineArray)                StateMachineList                                            OFFSET(getStruct<T>, {0xA0, 288, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.GameplayStateTransition
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameplayStateTransition : public MDKStruct
+class FGameplayStateTransition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     TransitionConditionTags                                     OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTag)                              TransitionStateTag                                          OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TransitionConditionTags                                     OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTag)                              TransitionStateTag                                          OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 	DMember(float)                                     BeginStateDelay                                             OFFSET(get<float>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.GameplayStateSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FGameplayStateSettings : public MDKStruct
+class FGameplayStateSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UClass*)                                   StateClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              StateId                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              StateId                                                     OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	CMember(TArray<FGameplayStateTransition>)          StateTransitions                                            OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/GameplayStateMachine.ActiveGameplayStateData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FActiveGameplayStateData : public MDKStruct
+class FActiveGameplayStateData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UGameplayState*)                           GameplayState                                               OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              PreviousStateId                                             OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              PreviousStateId                                             OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(float)                                     BeginStateDelay                                             OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     InitializationTime                                          OFFSET(get<float>, {0x10, 4, 0, 0})
 };
@@ -159,6 +162,7 @@ public:
 /// Size: 0x0014 (0x00000C - 0x000020)
 class FGameplayStateMachineItem : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -172,6 +176,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FGameplayStateMachineArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 

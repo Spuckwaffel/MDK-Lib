@@ -38,7 +38,7 @@ class ABuildingGameplayActorRadioTower : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 2464;
 
 public:
-	SMember(FScalableFloat)                            MarkLinkedRadioTowerTerminal                                OFFSET(get<T>, {0x978, 40, 0, 0})
+	SMember(FScalableFloat)                            MarkLinkedRadioTowerTerminal                                OFFSET(getStruct<T>, {0x978, 40, 0, 0})
 
 
 	/// Functions

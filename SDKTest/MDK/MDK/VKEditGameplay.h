@@ -87,7 +87,7 @@ class UPlayspaceComponent_EditConnectionManager : public UFortPlayspaceComponent
 public:
 	DMember(int32_t)                                   EditConnections                                             OFFSET(get<int32_t>, {0x158, 4, 0, 0})
 	CMember(EVkEditStatus)                             VkEditStatus                                                OFFSET(get<T>, {0x15C, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     UITagsToHide                                                OFFSET(get<T>, {0x160, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     UITagsToHide                                                OFFSET(getStruct<T>, {0x160, 32, 0, 0})
 
 
 	/// Functions

@@ -17,9 +17,9 @@ class UAsyncAction_RegisterGameplayMessageReceiver : public UBlueprintAsyncActio
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMessageReceived                                           OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HandleSavedState                                            OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HandleStateCleared                                          OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMessageReceived                                           OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HandleSavedState                                            OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HandleStateCleared                                          OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 
 
 	/// Functions
@@ -75,6 +75,7 @@ public:
 /// Size: 0x0000 (0x000004 - 0x000004)
 class FEventMessageTag : public FGameplayTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -83,8 +84,9 @@ public:
 
 /// Struct /Script/GameplayMessages.ReplicatedMessageData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FReplicatedMessageData : public MDKStruct
+class FReplicatedMessageData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -94,8 +96,9 @@ public:
 
 /// Struct /Script/GameplayMessages.ReplicatedMessage
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FReplicatedMessage : public MDKStruct
+class FReplicatedMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -104,21 +107,23 @@ public:
 
 /// Struct /Script/GameplayMessages.GameplayMessageReceiverHandle
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGameplayMessageReceiverHandle : public MDKStruct
+class FGameplayMessageReceiverHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(TWeakObjectPtr<UGameplayMessageRouter*>)   Subsystem                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FEventMessageTag)                          Channel                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FEventMessageTag)                          Channel                                                     OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   ID                                                          OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/GameplayMessages.GameplayMessageReceiverData
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FGameplayMessageReceiverData : public MDKStruct
+class FGameplayMessageReceiverData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 

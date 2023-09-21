@@ -28,7 +28,7 @@ class UTickableConstraint : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FConstraintTickFunction)                   ConstraintTick                                              OFFSET(get<T>, {0x28, 64, 0, 0})
+	SMember(FConstraintTickFunction)                   ConstraintTick                                              OFFSET(getStruct<T>, {0x28, 64, 0, 0})
 	DMember(bool)                                      Active                                                      OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
@@ -40,8 +40,8 @@ class UConstraintsManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FMulticastSparseDelegate)                  OnConstraintAdded_BP                                        OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FMulticastSparseDelegate)                  OnConstraintRemoved_BP                                      OFFSET(get<T>, {0x29, 1, 0, 0})
+	SMember(FMulticastSparseDelegate)                  OnConstraintAdded_BP                                        OFFSET(getStruct<T>, {0x28, 1, 0, 0})
+	SMember(FMulticastSparseDelegate)                  OnConstraintRemoved_BP                                      OFFSET(getStruct<T>, {0x29, 1, 0, 0})
 	CMember(TArray<UTickableConstraint*>)              Constraints                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
@@ -63,7 +63,7 @@ class UTransformableHandle : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FMovieSceneObjectBindingID)                ConstraintBindingID                                         OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                ConstraintBindingID                                         OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/Constraints.TransformableComponentHandle
@@ -75,7 +75,7 @@ class UTransformableComponentHandle : public UTransformableHandle
 
 public:
 	CMember(TWeakObjectPtr<USceneComponent*>)          Component                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x60, 4, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(getStruct<T>, {0x60, 4, 0, 0})
 };
 
 /// Class /Script/Constraints.TickableTransformConstraint
@@ -102,8 +102,8 @@ class UTickableTranslationConstraint : public UTickableTransformConstraint
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FVector)                                   OffsetTranslation                                           OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FFilterOptionPerAxis)                      AxisFilter                                                  OFFSET(get<T>, {0xB0, 3, 0, 0})
+	SMember(FVector)                                   OffsetTranslation                                           OFFSET(getStruct<T>, {0x98, 24, 0, 0})
+	SMember(FFilterOptionPerAxis)                      AxisFilter                                                  OFFSET(getStruct<T>, {0xB0, 3, 0, 0})
 };
 
 /// Class /Script/Constraints.TickableRotationConstraint
@@ -114,8 +114,8 @@ class UTickableRotationConstraint : public UTickableTransformConstraint
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FQuat)                                     OffsetRotation                                              OFFSET(get<T>, {0xA0, 32, 0, 0})
-	SMember(FFilterOptionPerAxis)                      AxisFilter                                                  OFFSET(get<T>, {0xC0, 3, 0, 0})
+	SMember(FQuat)                                     OffsetRotation                                              OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
+	SMember(FFilterOptionPerAxis)                      AxisFilter                                                  OFFSET(getStruct<T>, {0xC0, 3, 0, 0})
 };
 
 /// Class /Script/Constraints.TickableScaleConstraint
@@ -126,8 +126,8 @@ class UTickableScaleConstraint : public UTickableTransformConstraint
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FVector)                                   OffsetScale                                                 OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FFilterOptionPerAxis)                      AxisFilter                                                  OFFSET(get<T>, {0xB0, 3, 0, 0})
+	SMember(FVector)                                   OffsetScale                                                 OFFSET(getStruct<T>, {0x98, 24, 0, 0})
+	SMember(FFilterOptionPerAxis)                      AxisFilter                                                  OFFSET(getStruct<T>, {0xB0, 3, 0, 0})
 };
 
 /// Class /Script/Constraints.TickableParentConstraint
@@ -138,9 +138,9 @@ class UTickableParentConstraint : public UTickableTransformConstraint
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FTransform)                                OffsetTransform                                             OFFSET(get<T>, {0xA0, 96, 0, 0})
+	SMember(FTransform)                                OffsetTransform                                             OFFSET(getStruct<T>, {0xA0, 96, 0, 0})
 	DMember(bool)                                      bScaling                                                    OFFSET(get<bool>, {0x100, 1, 0, 0})
-	SMember(FTransformFilter)                          TransformFilter                                             OFFSET(get<T>, {0x101, 9, 0, 0})
+	SMember(FTransformFilter)                          TransformFilter                                             OFFSET(getStruct<T>, {0x101, 9, 0, 0})
 };
 
 /// Class /Script/Constraints.TickableLookAtConstraint
@@ -151,13 +151,14 @@ class UTickableLookAtConstraint : public UTickableTransformConstraint
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FVector)                                   Axis                                                        OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   Axis                                                        OFFSET(getStruct<T>, {0x90, 24, 0, 0})
 };
 
 /// Struct /Script/Constraints.MovieSceneConstraintChannel
 /// Size: 0x0000 (0x000100 - 0x000100)
 class FMovieSceneConstraintChannel : public FMovieSceneBoolChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -166,14 +167,15 @@ public:
 
 /// Struct /Script/Constraints.ConstraintAndActiveChannel
 /// Size: 0x0128 (0x000000 - 0x000128)
-class FConstraintAndActiveChannel : public MDKStruct
+class FConstraintAndActiveChannel : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
 	CMember(TWeakObjectPtr<UTickableConstraint*>)      Constraint                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FMovieSceneConstraintChannel)              ActiveChannel                                               OFFSET(get<T>, {0x20, 256, 0, 0})
+	SMember(FMovieSceneConstraintChannel)              ActiveChannel                                               OFFSET(getStruct<T>, {0x20, 256, 0, 0})
 	CMember(UTickableConstraint*)                      ConstraintCopyToSpawn                                       OFFSET(get<T>, {0x120, 8, 0, 0})
 };
 
@@ -181,6 +183,7 @@ public:
 /// Size: 0x0018 (0x000028 - 0x000040)
 class FConstraintTickFunction : public FTickFunction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 

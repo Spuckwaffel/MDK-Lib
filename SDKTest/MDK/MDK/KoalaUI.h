@@ -21,7 +21,7 @@ class UFortGameSettingRegistryExtension_Koala : public UFortGameSettingRegistryE
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FFortSettingNameExtensions)                SettingExtensions                                           OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FFortSettingNameExtensions)                SettingExtensions                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Class /Script/KoalaUI.FortSidebarPanelKoala
@@ -34,7 +34,7 @@ class UFortSidebarPanelKoala : public UCommonActivatableWidget
 public:
 	CMember(UCommonButtonBase*)                        Button_KoalaDummy                                           OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UFortLazyImage*)                           QrCodeImage                                                 OFFSET(get<T>, {0x408, 8, 0, 0})
-	SMember(FString)                                   QRCodeURL                                                   OFFSET(get<T>, {0x410, 16, 0, 0})
+	SMember(FString)                                   QRCodeURL                                                   OFFSET(getStruct<T>, {0x410, 16, 0, 0})
 
 
 	/// Functions
@@ -80,7 +80,7 @@ public:
 	DMember(float)                                     EliminationClipReminderDelayTime                            OFFSET(get<float>, {0x400, 4, 0, 0})
 	CMember(USoundSubmix*)                             ClipAudioSubmix                                             OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      ClipActionWidget                                            OFFSET(get<T>, {0x410, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       ClipObjectInputAction                                       OFFSET(get<T>, {0x418, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ClipObjectInputAction                                       OFFSET(getStruct<T>, {0x418, 16, 0, 0})
 	CMember(TMap<int32_t, FKoalaClipInfo>)             ClipTracker                                                 OFFSET(get<T>, {0x430, 80, 0, 0})
 	DMember(int32_t)                                   LastClipID                                                  OFFSET(get<int32_t>, {0x488, 4, 0, 0})
 	CMember(EKoalaMockClipMode)                        MockClipMode                                                OFFSET(get<T>, {0x4A2, 1, 0, 0})
@@ -147,8 +147,9 @@ public:
 
 /// Struct /Script/KoalaUI.KoalaClipInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FKoalaClipInfo : public MDKStruct
+class FKoalaClipInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

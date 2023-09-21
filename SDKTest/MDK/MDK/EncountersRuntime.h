@@ -24,7 +24,7 @@ class AEncounterMobAnchor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 688;
 
 public:
-	SMember(FGameplayTagContainer)                     FilterTags                                                  OFFSET(get<T>, {0x290, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FilterTags                                                  OFFSET(getStruct<T>, {0x290, 32, 0, 0})
 };
 
 /// Class /Script/EncountersRuntime.EncounterMobManagerComponent
@@ -37,15 +37,15 @@ class UEncounterMobManagerComponent : public UGameFrameworkComponent
 public:
 	CMember(TArray<FEncounterMobInstance>)             SpawnedMobs                                                 OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<FEncounterMobSpawnData>)            MobEncounterSpawnData                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FEncounterMobSpawnInfo)                    DefaultMobSpawnInfo                                         OFFSET(get<T>, {0xC0, 160, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityWeight                                            OFFSET(get<T>, {0x160, 40, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityRange                                             OFFSET(get<T>, {0x188, 40, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterStarted                                          OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterPaused                                           OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterResumed                                          OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterActorSpawned                                     OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterActorDead                                        OFFSET(get<T>, {0x1F0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEncounterEnded                                            OFFSET(get<T>, {0x200, 16, 0, 0})
+	SMember(FEncounterMobSpawnInfo)                    DefaultMobSpawnInfo                                         OFFSET(getStruct<T>, {0xC0, 160, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityWeight                                            OFFSET(getStruct<T>, {0x160, 40, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityRange                                             OFFSET(getStruct<T>, {0x188, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterStarted                                          OFFSET(getStruct<T>, {0x1B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterPaused                                           OFFSET(getStruct<T>, {0x1C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterResumed                                          OFFSET(getStruct<T>, {0x1D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterActorSpawned                                     OFFSET(getStruct<T>, {0x1E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterActorDead                                        OFFSET(getStruct<T>, {0x1F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEncounterEnded                                            OFFSET(getStruct<T>, {0x200, 16, 0, 0})
 	CMember(TWeakObjectPtr<ALivingWorldEncounterPrefab*>) EncounterPrefab                                          OFFSET(get<T>, {0x210, 8, 0, 0})
 
 
@@ -98,7 +98,7 @@ class UEncounterActorSpawnerData : public UFortAthenaActorSpawnerData
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FEncounterPrefabEntry)                     EncounterEntry                                              OFFSET(get<T>, {0x50, 56, 0, 0})
+	SMember(FEncounterPrefabEntry)                     EncounterEntry                                              OFFSET(getStruct<T>, {0x50, 56, 0, 0})
 };
 
 /// Class /Script/EncountersRuntime.EncounterBlueprintLibrary
@@ -120,7 +120,7 @@ class AEncounterGameplayVolume : public AGameplayVolume
 
 public:
 	DMember(bool)                                      bShouldPersist                                              OFFSET(get<bool>, {0x348, 1, 0, 0})
-	SMember(FGuid)                                     SavedActorGuid                                              OFFSET(get<T>, {0x368, 16, 0, 0})
+	SMember(FGuid)                                     SavedActorGuid                                              OFFSET(getStruct<T>, {0x368, 16, 0, 0})
 	CMember(UEncounterStateTreeComponent*)             EncounterStateTreeComponent                                 OFFSET(get<T>, {0x378, 8, 0, 0})
 
 
@@ -155,18 +155,18 @@ public:
 	DMember(bool)                                      bAutoHandleSuccessFailure                                   OFFSET(get<bool>, {0x378, 1, 0, 0})
 	CMember(TWeakObjectPtr<UWorld*>)                   Level                                                       OFFSET(get<T>, {0x380, 32, 0, 0})
 	CMember(UStateTree*)                               StateTreeOverride                                           OFFSET(get<T>, {0x3A0, 8, 0, 0})
-	SMember(FGameplayCueTag)                           ProximityGameplayCueTag                                     OFFSET(get<T>, {0x3A8, 4, 0, 0})
-	SMember(FGameplayCueTag)                           ActorCleanupGameplayCueTag                                  OFFSET(get<T>, {0x3AC, 4, 0, 0})
+	SMember(FGameplayCueTag)                           ProximityGameplayCueTag                                     OFFSET(getStruct<T>, {0x3A8, 4, 0, 0})
+	SMember(FGameplayCueTag)                           ActorCleanupGameplayCueTag                                  OFFSET(getStruct<T>, {0x3AC, 4, 0, 0})
 	CMember(TArray<FName>)                             SuccessRewards                                              OFFSET(get<T>, {0x3B0, 16, 0, 0})
-	SMember(FEncounterRewardBehavior)                  SuccessRewardBehavior                                       OFFSET(get<T>, {0x3C0, 56, 0, 0})
-	SMember(FGameplayCueTag)                           ActorSuccessGameplayCueTag                                  OFFSET(get<T>, {0x3F8, 4, 0, 0})
-	SMember(FGameplayCueTag)                           PlayerSuccessGameplayCueTag                                 OFFSET(get<T>, {0x3FC, 4, 0, 0})
+	SMember(FEncounterRewardBehavior)                  SuccessRewardBehavior                                       OFFSET(getStruct<T>, {0x3C0, 56, 0, 0})
+	SMember(FGameplayCueTag)                           ActorSuccessGameplayCueTag                                  OFFSET(getStruct<T>, {0x3F8, 4, 0, 0})
+	SMember(FGameplayCueTag)                           PlayerSuccessGameplayCueTag                                 OFFSET(getStruct<T>, {0x3FC, 4, 0, 0})
 	CMember(TArray<FName>)                             FailureRewards                                              OFFSET(get<T>, {0x400, 16, 0, 0})
-	SMember(FEncounterRewardBehavior)                  FailureRewardBehavior                                       OFFSET(get<T>, {0x410, 56, 0, 0})
-	SMember(FGameplayCueTag)                           ActorFailureGameplayCueTag                                  OFFSET(get<T>, {0x448, 4, 0, 0})
-	SMember(FGameplayCueTag)                           PlayerFailureGameplayCueTag                                 OFFSET(get<T>, {0x44C, 4, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityWeight                                            OFFSET(get<T>, {0x450, 40, 0, 0})
-	SMember(FScalableFloat)                            LWMDensityRange                                             OFFSET(get<T>, {0x478, 40, 0, 0})
+	SMember(FEncounterRewardBehavior)                  FailureRewardBehavior                                       OFFSET(getStruct<T>, {0x410, 56, 0, 0})
+	SMember(FGameplayCueTag)                           ActorFailureGameplayCueTag                                  OFFSET(getStruct<T>, {0x448, 4, 0, 0})
+	SMember(FGameplayCueTag)                           PlayerFailureGameplayCueTag                                 OFFSET(getStruct<T>, {0x44C, 4, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityWeight                                            OFFSET(getStruct<T>, {0x450, 40, 0, 0})
+	SMember(FScalableFloat)                            LWMDensityRange                                             OFFSET(getStruct<T>, {0x478, 40, 0, 0})
 	CMember(TArray<FInstancedStruct>)                  Vars                                                        OFFSET(get<T>, {0x4A0, 16, 0, 0})
 };
 
@@ -241,17 +241,18 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterMobSpawnInfo
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FEncounterMobSpawnInfo : public MDKStruct
+class FEncounterMobSpawnInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FScalableFloat)                            LeashRadiusInner                                            OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            LeashRadiusOuter                                            OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusInner                                            OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusOuter                                            OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 	CMember(TWeakObjectPtr<AEncounterMobAnchor*>)      EncounterAnchorPoint                                        OFFSET(get<T>, {0x50, 8, 0, 0})
 	CMember(EEncounterMobSpawnType)                    MobSpawnType                                                OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     PointProviderFilterTags                                     OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PointProviderFilterTags                                     OFFSET(getStruct<T>, {0x60, 32, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    StaticPointProviders                                        OFFSET(get<T>, {0x80, 16, 0, 0})
 	CMember(UEnvQuery*)                                PointProviderEQS                                            OFFSET(get<T>, {0x90, 8, 0, 0})
 	CMember(UClass*)                                   PointProviderVolumeClass                                    OFFSET(get<T>, {0x98, 8, 0, 0})
@@ -259,24 +260,26 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterMobSpawnData
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FEncounterMobSpawnData : public MDKStruct
+class FEncounterMobSpawnData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FString)                                   DevNotes                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   DevNotes                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bActiveOnStart                                              OFFSET(get<bool>, {0x14, 1, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) MobEncounterData                                     OFFSET(get<T>, {0x18, 32, 0, 0})
 	DMember(bool)                                      bOverrideDefaultSpawnInfo                                   OFFSET(get<bool>, {0x38, 1, 0, 0})
-	SMember(FEncounterMobSpawnInfo)                    MobSpawnInfo                                                OFFSET(get<T>, {0x40, 160, 0, 0})
+	SMember(FEncounterMobSpawnInfo)                    MobSpawnInfo                                                OFFSET(getStruct<T>, {0x40, 160, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterMobInstance
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FEncounterMobInstance : public MDKStruct
+class FEncounterMobInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -287,13 +290,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableBoolStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEncounterGetVariableBoolStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableBoolStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bValue                                                      OFFSET(get<bool>, {0x4, 1, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
@@ -302,6 +306,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableBoolStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -310,13 +315,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableFloatStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEncounterGetVariableFloatStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableFloatStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x4, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
@@ -325,6 +331,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableFloatStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -333,14 +340,15 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableGameplayTagStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEncounterGetVariableGameplayTagStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableGameplayTagStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTag)                              Value                                                       OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              Value                                                       OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
@@ -348,6 +356,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableGameplayTagStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -356,13 +365,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableIntStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEncounterGetVariableIntStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableIntStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
@@ -371,6 +381,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableIntStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -379,13 +390,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableItemDefinitionStateTreeTaskInstanceData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FEncounterGetVariableItemDefinitionStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableItemDefinitionStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) Value                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
 };
@@ -394,6 +406,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableItemDefinitionStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -402,13 +415,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableLWMEncounterStateTreeTaskInstanceData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FEncounterGetVariableLWMEncounterStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableLWMEncounterStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) Value                                                OFFSET(get<T>, {0x8, 32, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x28, 8, 0, 0})
 };
@@ -417,6 +431,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableLWMEncounterStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -425,14 +440,15 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterGetVariableTagQueryStateTreeTaskInstanceData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FEncounterGetVariableTagQueryStateTreeTaskInstanceData : public MDKStruct
+class FEncounterGetVariableTagQueryStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         Value                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FGameplayTag)                              VariableIdentifier                                          OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         Value                                                       OFFSET(getStruct<T>, {0x8, 72, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x50, 8, 0, 0})
 };
 
@@ -440,6 +456,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEncounterGetVariableTagQueryStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -448,109 +465,119 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterPrefabEntry
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FEncounterPrefabEntry : public MDKStruct
+class FEncounterPrefabEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(UEncounterItemDefinition*)                 EncounterDefinition                                         OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              EncounterIdentifierTag                                      OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FScalableFloat)                            Weight                                                      OFFSET(get<T>, {0x10, 40, 0, 0})
+	SMember(FGameplayTag)                              EncounterIdentifierTag                                      OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FScalableFloat)                            Weight                                                      OFFSET(getStruct<T>, {0x10, 40, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEncounterVariable : public MDKStruct
+class FEncounterVariable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              VarName                                                     OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              VarName                                                     OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_Boolean
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_Boolean : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_Float
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_Float : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_GameplayTag
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_GameplayTag : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_Integer
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_Integer : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_ItemDefinition
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_ItemDefinition : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_LWMEncounter
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_LWMEncounter : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVariable_TagQuery
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEncounterVariable_TagQuery : public FEncounterVariable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RowValue                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_Boolean
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FEncounterVarRow_Boolean : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -562,6 +589,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FEncounterVarRow_Float : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -573,17 +601,19 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FEncounterVarRow_GameplayTag : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              Value                                                       OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              Value                                                       OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EncounterVarRow_Integer
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FEncounterVarRow_Integer : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -595,6 +625,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FEncounterVarRow_ItemDefinition : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -606,6 +637,7 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FEncounterVarRow_LWMEncounter : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -617,17 +649,19 @@ public:
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FEncounterVarRow_TagQuery : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayTagQuery)                         Value                                                       OFFSET(get<T>, {0x8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         Value                                                       OFFSET(getStruct<T>, {0x8, 72, 0, 0})
 };
 
 /// Struct /Script/EncountersRuntime.EndAllMobEncountersStateTreeTaskInstanceData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FEndAllMobEncountersStateTreeTaskInstanceData : public MDKStruct
+class FEndAllMobEncountersStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -639,6 +673,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FEndAllMobEncountersStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -647,13 +682,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.PauseMobEncounterStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPauseMobEncounterStateTreeTaskInstanceData : public MDKStruct
+class FPauseMobEncounterStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
@@ -661,6 +697,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FPauseMobEncounterStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -669,13 +706,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.ResumeMobEncounterStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FResumeMobEncounterStateTreeTaskInstanceData : public MDKStruct
+class FResumeMobEncounterStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
@@ -683,6 +721,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FResumeMobEncounterStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -691,17 +730,18 @@ public:
 
 /// Struct /Script/EncountersRuntime.StartLWMEncounterStateTreeTaskInstanceData
 /// Size: 0x0130 (0x000000 - 0x000130)
-class FStartLWMEncounterStateTreeTaskInstanceData : public MDKStruct
+class FStartLWMEncounterStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounter*>) LWMEncounter                                         OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         PointProviderTagQuery                                       OFFSET(get<T>, {0x20, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         AnchorPointTagQuery                                         OFFSET(get<T>, {0x68, 72, 0, 0})
-	SMember(FScalableFloat)                            LeashRadiusInner                                            OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FScalableFloat)                            LeashRadiusOuter                                            OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FGameplayTagQuery)                         PointProviderTagQuery                                       OFFSET(getStruct<T>, {0x20, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         AnchorPointTagQuery                                         OFFSET(getStruct<T>, {0x68, 72, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusInner                                            OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
+	SMember(FScalableFloat)                            LeashRadiusOuter                                            OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x100, 8, 0, 0})
 	CMember(UStartLWMEncounterDelegateHandler*)        DelegateHandler                                             OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEncounterInstance*>) LWMInstance                                  OFFSET(get<T>, {0x110, 8, 0, 0})
@@ -713,6 +753,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FStartLWMEncounterStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -721,13 +762,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.StartMobEncounterStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FStartMobEncounterStateTreeTaskInstanceData : public MDKStruct
+class FStartMobEncounterStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
@@ -735,6 +777,7 @@ public:
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FStartMobEncounterStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -744,13 +787,14 @@ public:
 
 /// Struct /Script/EncountersRuntime.StopMobEncounterStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FStopMobEncounterStateTreeTaskInstanceData : public MDKStruct
+class FStopMobEncounterStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              MobIdentifier                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
@@ -758,6 +802,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FStopMobEncounterStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -766,14 +811,15 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterRewardBehavior
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FEncounterRewardBehavior : public MDKStruct
+class FEncounterRewardBehavior : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   RewardOffset                                                OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   RewardDirection                                             OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   RewardOffset                                                OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   RewardDirection                                             OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	DMember(float)                                     RewardConeAngle                                             OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     RewardFlingMagnitude                                        OFFSET(get<float>, {0x34, 4, 0, 0})
 };
@@ -782,6 +828,7 @@ public:
 /// Size: 0x0010 (0x000060 - 0x000070)
 class FEncounterObjectiveFilterCache : public FEventObjectiveFilterCache
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -790,8 +837,9 @@ public:
 
 /// Struct /Script/EncountersRuntime.EncounterVerbTransitionStateTreeTaskInstanceData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FEncounterVerbTransitionStateTreeTaskInstanceData : public MDKStruct
+class FEncounterVerbTransitionStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -803,11 +851,12 @@ public:
 /// Size: 0x0020 (0x000020 - 0x000040)
 class FEncounterVerbTransitionStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FStateTreeStateLink)                       TransitionTo                                                OFFSET(get<T>, {0x20, 2, 0, 0})
+	SMember(FStateTreeStateLink)                       TransitionTo                                                OFFSET(getStruct<T>, {0x20, 2, 0, 0})
 	CMember(TArray<FInstancedStruct>)                  Verbs                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 	DMember(int32_t)                                   ValueThreshold                                              OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 };

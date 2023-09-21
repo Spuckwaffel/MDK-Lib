@@ -58,7 +58,7 @@ class UGA_Riding_Creature_Burt_SprintCharge_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -90,7 +90,7 @@ class UGA_Riding_Player_StopRidingOnTriggered_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 
 
 	/// Functions
@@ -138,7 +138,7 @@ class UGA_Riding_Player_Petting_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(URidableComponent*)                        Active_Ridable                                              OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UClass*)                                   GE_PlayerPetting                                            OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      TagsToCancelPetting                                         OFFSET(get<T>, {0xB40, 16, 0, 0})
@@ -178,7 +178,7 @@ class UGA_Riding_Creature_IsBeingRidden_Passive_C : public UGA_NPC_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 3688;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xE60, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xE60, 8, 0, 0})
 
 
 	/// Functions
@@ -210,7 +210,7 @@ class UGA_Riding_Creature_IsBeingRidden_C : public UGA_NPC_Parent_C
 	static inline constexpr uint64_t __MDKClassSize = 3688;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xE60, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xE60, 8, 0, 0})
 
 
 	/// Functions
@@ -252,7 +252,7 @@ class UGA_Riding_Player_IsRiding_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2880;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(UAnimMontage*)                             SettleMontageRef                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UFortAbilityTask_PlayMontageWaitTarget*)   settleMontageTask                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
 
@@ -286,8 +286,8 @@ class UGA_Riding_Creature_EatToRefuel_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     Slap_Berry_Tags                                             OFFSET(get<T>, {0xB30, 32, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     Slap_Berry_Tags                                             OFFSET(getStruct<T>, {0xB30, 32, 0, 0})
 	CMember(UClass*)                                   Slap_Berry_Gameplay_Effect                                  OFFSET(get<T>, {0xB50, 8, 0, 0})
 
 
@@ -316,7 +316,7 @@ class UGA_Riding_Player_Sprint_C : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2881;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB28, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      Tags_to_cancel_sprinting                                    OFFSET(get<T>, {0xB30, 16, 0, 0})
 	DMember(bool)                                      ShouldCancelSprint                                          OFFSET(get<bool>, {0xB40, 1, 0, 0})
 
@@ -464,7 +464,7 @@ class AB_Athena_Zipline_Ascender_C : public AFortAscenderZipline
 	static inline constexpr uint64_t __MDKClassSize = 4496;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xFE8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xFE8, 8, 0, 0})
 	CMember(UAudioParameterComponent*)                 AudioParameter                                              OFFSET(get<T>, {0xFF0, 8, 0, 0})
 	CMember(UCapsuleComponent*)                        Capsule                                                     OFFSET(get<T>, {0xFF8, 8, 0, 0})
 	CMember(UFortSoundIndicatorComponent*)             FortSoundIndicator                                          OFFSET(get<T>, {0x1000, 8, 0, 0})
@@ -477,7 +477,7 @@ public:
 	CMember(USphereComponent*)                         HandleInteractVolume                                        OFFSET(get<T>, {0x1038, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Handle                                                      OFFSET(get<T>, {0x1040, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Top                                                         OFFSET(get<T>, {0x1048, 8, 0, 0})
-	SMember(FScalableFloat)                            Hotfix                                                      OFFSET(get<T>, {0x1050, 40, 0, 0})
+	SMember(FScalableFloat)                            Hotfix                                                      OFFSET(getStruct<T>, {0x1050, 40, 0, 0})
 	CMember(USoundBase*)                               StartHandleSound                                            OFFSET(get<T>, {0x1078, 8, 0, 0})
 	CMember(USoundBase*)                               StopHandleSound                                             OFFSET(get<T>, {0x1080, 8, 0, 0})
 	CMember(USoundBase*)                               StopPoleMotorSoundSkid                                      OFFSET(get<T>, {0x1088, 8, 0, 0})
@@ -488,20 +488,20 @@ public:
 	DMember(double)                                    MaxWobbleAnimationLength                                    OFFSET(get<double>, {0x10B0, 8, 0, 0})
 	DMember(double)                                    LastWobbleActivationTime                                    OFFSET(get<double>, {0x10B8, 8, 0, 0})
 	DMember(double)                                    TilingDivisor                                               OFFSET(get<double>, {0x10C0, 8, 0, 0})
-	SMember(FVector)                                   HandleAnimOffset                                            OFFSET(get<T>, {0x10C8, 24, 0, 0})
-	SMember(FVector)                                   SlideAnimOffset                                             OFFSET(get<T>, {0x10E0, 24, 0, 0})
+	SMember(FVector)                                   HandleAnimOffset                                            OFFSET(getStruct<T>, {0x10C8, 24, 0, 0})
+	SMember(FVector)                                   SlideAnimOffset                                             OFFSET(getStruct<T>, {0x10E0, 24, 0, 0})
 	CMember(USoundBase*)                               PlayerGrabBeginDecentSound                                  OFFSET(get<T>, {0x10F8, 8, 0, 0})
 	CMember(UAudioComponent*)                          HandleStart                                                 OFFSET(get<T>, {0x1100, 8, 0, 0})
-	SMember(FVector)                                   EndCapRelativeScale                                         OFFSET(get<T>, {0x1108, 24, 0, 0})
+	SMember(FVector)                                   EndCapRelativeScale                                         OFFSET(getStruct<T>, {0x1108, 24, 0, 0})
 	CMember(UClass*)                                   StructureDamageGE                                           OFFSET(get<T>, {0x1120, 8, 0, 0})
-	SMember(FTimerHandle)                              AudioVisualizerHandle                                       OFFSET(get<T>, {0x1128, 8, 0, 0})
+	SMember(FTimerHandle)                              AudioVisualizerHandle                                       OFFSET(getStruct<T>, {0x1128, 8, 0, 0})
 	CMember(TArray<AFortPlayerPawn*>)                  PlayersOnAscender                                           OFFSET(get<T>, {0x1130, 16, 0, 0})
 	CMember(USoundBase*)                               TravelSound                                                 OFFSET(get<T>, {0x1140, 8, 0, 0})
 	DMember(bool)                                      ShouldPlayWhoosh                                            OFFSET(get<bool>, {0x1148, 1, 0, 0})
 	CMember(USoundBase*)                               AscendWhooshSound                                           OFFSET(get<T>, {0x1150, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0x1158, 8, 0, 0})
-	SMember(FTimerHandle)                              WhooshHandle                                                OFFSET(get<T>, {0x1160, 8, 0, 0})
-	SMember(FGameplayTag)                              LinkToDestroyedGC                                           OFFSET(get<T>, {0x1168, 4, 0, 0})
+	SMember(FTimerHandle)                              WhooshHandle                                                OFFSET(getStruct<T>, {0x1160, 8, 0, 0})
+	SMember(FGameplayTag)                              LinkToDestroyedGC                                           OFFSET(getStruct<T>, {0x1168, 4, 0, 0})
 	DMember(bool)                                      BeDestroy                                                   OFFSET(get<bool>, {0x116C, 1, 0, 0})
 	CMember(APlayerState*)                             PlayerStateUsingHandleComponent                             OFFSET(get<T>, {0x1170, 8, 0, 0})
 	CMember(TArray<FAudioParameter>)                   AudioParameters                                             OFFSET(get<T>, {0x1178, 16, 0, 0})
@@ -603,17 +603,17 @@ class UGA_Athena_Ascender_Smash_C : public UGA_Athena_ZipLine_SmashParent_C
 	static inline constexpr uint64_t __MDKClassSize = 3145;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBF0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xBF0, 8, 0, 0})
 	CMember(UPrimitiveComponent*)                      ZiplineInteractComponent                                    OFFSET(get<T>, {0xBF8, 8, 0, 0})
 	CMember(AB_Athena_Zipline_Ascender_C*)             AscenderZipline                                             OFFSET(get<T>, {0xC00, 8, 0, 0})
-	SMember(FGameplayTag)                              DescendingTag                                               OFFSET(get<T>, {0xC08, 4, 0, 0})
+	SMember(FGameplayTag)                              DescendingTag                                               OFFSET(getStruct<T>, {0xC08, 4, 0, 0})
 	CMember(UAnimMontage*)                             M_AscendingAnim                                             OFFSET(get<T>, {0xC10, 8, 0, 0})
 	CMember(UAnimMontage*)                             M_DescendingAnim                                            OFFSET(get<T>, {0xC18, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               DescendingGE_Handle                                         OFFSET(get<T>, {0xC20, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               AscendingGE_Handle                                          OFFSET(get<T>, {0xC28, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               DescendingGE_Handle                                         OFFSET(getStruct<T>, {0xC20, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               AscendingGE_Handle                                          OFFSET(getStruct<T>, {0xC28, 8, 0, 0})
 	CMember(UAnimMontage*)                             F_AscendingAnim                                             OFFSET(get<T>, {0xC30, 8, 0, 0})
 	CMember(UAnimMontage*)                             F_DescendingAnim                                            OFFSET(get<T>, {0xC38, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               ZiplinePassiveGE                                            OFFSET(get<T>, {0xC40, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               ZiplinePassiveGE                                            OFFSET(getStruct<T>, {0xC40, 8, 0, 0})
 	DMember(bool)                                      bHolsterApplied                                             OFFSET(get<bool>, {0xC48, 1, 0, 0})
 
 
@@ -684,8 +684,8 @@ class UB_MMObj_ObjectiveNotificationControllerComponent_C : public UActorCompone
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnBroadcastNotification                                     OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnBroadcastNotification                                     OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 
 
 	/// Functions

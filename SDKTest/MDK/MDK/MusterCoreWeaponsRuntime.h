@@ -17,14 +17,14 @@ class AFortMusterExplosiveARProjectile : public AFortProjectileAthena
 	static inline constexpr uint64_t __MDKClassSize = 3224;
 
 public:
-	SMember(FVector)                                   HitLocation                                                 OFFSET(get<T>, {0xC08, 24, 0, 0})
-	SMember(FRotator)                                  HitRotation                                                 OFFSET(get<T>, {0xC20, 24, 0, 0})
+	SMember(FVector)                                   HitLocation                                                 OFFSET(getStruct<T>, {0xC08, 24, 0, 0})
+	SMember(FRotator)                                  HitRotation                                                 OFFSET(getStruct<T>, {0xC20, 24, 0, 0})
 	DMember(bool)                                      bHitPlayer                                                  OFFSET(get<bool>, {0xC38, 1, 0, 0})
 	DMember(float)                                     DrawDistance                                                OFFSET(get<float>, {0xC3C, 4, 0, 0})
 	CMember(UParticleSystemComponent*)                 ProjectileTrail                                             OFFSET(get<T>, {0xC40, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           NS_Explosion                                                OFFSET(get<T>, {0xC48, 8, 0, 0})
-	SMember(FGameplayTag)                              FeedbackCue                                                 OFFSET(get<T>, {0xC50, 4, 0, 0})
-	SMember(FVector)                                   DecalSize                                                   OFFSET(get<T>, {0xC58, 24, 0, 0})
+	SMember(FGameplayTag)                              FeedbackCue                                                 OFFSET(getStruct<T>, {0xC50, 4, 0, 0})
+	SMember(FVector)                                   DecalSize                                                   OFFSET(getStruct<T>, {0xC58, 24, 0, 0})
 	DMember(float)                                     DecalLifeSpan                                               OFFSET(get<float>, {0xC70, 4, 0, 0})
 	DMember(float)                                     TimebeforeDecalFadeOut                                      OFFSET(get<float>, {0xC74, 4, 0, 0})
 	DMember(float)                                     DecalFadeOutDuration                                        OFFSET(get<float>, {0xC78, 4, 0, 0})
@@ -72,15 +72,15 @@ class AFortExCaliberProjectile : public AFortProjectileAthena
 
 public:
 	DMember(bool)                                      bSimulationRunning                                          OFFSET(get<bool>, {0xC08, 1, 0, 0})
-	SMember(FScalableFloat)                            TimeToExplode                                               OFFSET(get<T>, {0xC10, 40, 0, 0})
+	SMember(FScalableFloat)                            TimeToExplode                                               OFFSET(getStruct<T>, {0xC10, 40, 0, 0})
 	DMember(bool)                                      bHasStopped                                                 OFFSET(get<bool>, {0xC38, 1, 0, 0})
-	SMember(FVector)                                   HitNormal                                                   OFFSET(get<T>, {0xC40, 24, 0, 0})
+	SMember(FVector)                                   HitNormal                                                   OFFSET(getStruct<T>, {0xC40, 24, 0, 0})
 	CMember(TEnumAsByte<EPhysicalSurface>)             SurfaceType                                                 OFFSET(get<T>, {0xC58, 1, 0, 0})
-	SMember(FName)                                     SwordRevealMaterialParam                                    OFFSET(get<T>, {0xC5C, 4, 0, 0})
-	SMember(FName)                                     EmissiveColorMaterialParam                                  OFFSET(get<T>, {0xC60, 4, 0, 0})
-	SMember(FName)                                     HDRMultiplierMaterialParam                                  OFFSET(get<T>, {0xC64, 4, 0, 0})
-	SMember(FLinearColor)                              EmissiveBlueColor                                           OFFSET(get<T>, {0xC68, 16, 0, 0})
-	SMember(FLinearColor)                              EmissivePurpleColor                                         OFFSET(get<T>, {0xC78, 16, 0, 0})
+	SMember(FName)                                     SwordRevealMaterialParam                                    OFFSET(getStruct<T>, {0xC5C, 4, 0, 0})
+	SMember(FName)                                     EmissiveColorMaterialParam                                  OFFSET(getStruct<T>, {0xC60, 4, 0, 0})
+	SMember(FName)                                     HDRMultiplierMaterialParam                                  OFFSET(getStruct<T>, {0xC64, 4, 0, 0})
+	SMember(FLinearColor)                              EmissiveBlueColor                                           OFFSET(getStruct<T>, {0xC68, 16, 0, 0})
+	SMember(FLinearColor)                              EmissivePurpleColor                                         OFFSET(getStruct<T>, {0xC78, 16, 0, 0})
 	DMember(float)                                     MinPitchForRotationAdjustment                               OFFSET(get<float>, {0xC88, 4, 0, 0})
 	DMember(float)                                     MaxPitchForRotationAdjustment                               OFFSET(get<float>, {0xC8C, 4, 0, 0})
 

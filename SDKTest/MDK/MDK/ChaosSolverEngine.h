@@ -81,7 +81,7 @@ class AChaosSolverActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FChaosSolverConfiguration)                 Properties                                                  OFFSET(get<T>, {0x290, 104, 0, 0})
+	SMember(FChaosSolverConfiguration)                 Properties                                                  OFFSET(getStruct<T>, {0x290, 104, 0, 0})
 	DMember(float)                                     TimeStepMultiplier                                          OFFSET(get<float>, {0x2F8, 4, 0, 0})
 	DMember(int32_t)                                   CollisionIterations                                         OFFSET(get<int32_t>, {0x2FC, 4, 0, 0})
 	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x300, 4, 0, 0})
@@ -89,15 +89,15 @@ public:
 	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x308, 4, 0, 0})
 	CMember(EClusterConnectionTypeEnum)                ClusterUnionConnectionType                                  OFFSET(get<T>, {0x30C, 1, 0, 0})
 	DMember(bool)                                      DoGenerateCollisionData                                     OFFSET(get<bool>, {0x30D, 1, 0, 0})
-	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(get<T>, {0x310, 16, 0, 0})
+	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(getStruct<T>, {0x310, 16, 0, 0})
 	DMember(bool)                                      DoGenerateBreakingData                                      OFFSET(get<bool>, {0x320, 1, 0, 0})
-	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(get<T>, {0x324, 16, 0, 0})
+	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(getStruct<T>, {0x324, 16, 0, 0})
 	DMember(bool)                                      DoGenerateTrailingData                                      OFFSET(get<bool>, {0x334, 1, 0, 0})
-	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(getStruct<T>, {0x338, 16, 0, 0})
 	DMember(float)                                     MassScale                                                   OFFSET(get<float>, {0x348, 4, 0, 0})
 	DMember(bool)                                      bHasFloor                                                   OFFSET(get<bool>, {0x34C, 1, 0, 0})
 	DMember(float)                                     FloorHeight                                                 OFFSET(get<float>, {0x350, 4, 0, 0})
-	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    OFFSET(get<T>, {0x354, 3, 0, 0})
+	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    OFFSET(getStruct<T>, {0x354, 3, 0, 0})
 	CMember(UBillboardComponent*)                      SpriteComponent                                             OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UChaosGameplayEventDispatcher*)            GameplayEventDispatcherComponent                            OFFSET(get<T>, {0x378, 8, 0, 0})
 
@@ -117,34 +117,36 @@ class UChaosSolverSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSoftClassPath)                            DefaultChaosSolverActorClass                                OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FSoftClassPath)                            DefaultChaosSolverActorClass                                OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/ChaosSolverEngine.ChaosPhysicsCollisionInfo
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FChaosPhysicsCollisionInfo : public MDKStruct
+class FChaosPhysicsCollisionInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 	CMember(UPrimitiveComponent*)                      Component                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UPrimitiveComponent*)                      OtherComponent                                              OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FVector)                                   OtherVelocity                                               OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FVector)                                   OtherAngularVelocity                                        OFFSET(get<T>, {0xA0, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   OtherVelocity                                               OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   OtherAngularVelocity                                        OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     OtherMass                                                   OFFSET(get<float>, {0xBC, 4, 0, 0})
 };
 
 /// Struct /Script/ChaosSolverEngine.BreakEventCallbackWrapper
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FBreakEventCallbackWrapper : public MDKStruct
+class FBreakEventCallbackWrapper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -153,8 +155,9 @@ public:
 
 /// Struct /Script/ChaosSolverEngine.RemovalEventCallbackWrapper
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FRemovalEventCallbackWrapper : public MDKStruct
+class FRemovalEventCallbackWrapper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -163,8 +166,9 @@ public:
 
 /// Struct /Script/ChaosSolverEngine.CrumblingEventCallbackWrapper
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCrumblingEventCallbackWrapper : public MDKStruct
+class FCrumblingEventCallbackWrapper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -173,8 +177,9 @@ public:
 
 /// Struct /Script/ChaosSolverEngine.ChaosHandlerSet
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FChaosHandlerSet : public MDKStruct
+class FChaosHandlerSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -184,8 +189,9 @@ public:
 
 /// Struct /Script/ChaosSolverEngine.ChaosDebugSubstepControl
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FChaosDebugSubstepControl : public MDKStruct
+class FChaosDebugSubstepControl : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 

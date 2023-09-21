@@ -102,10 +102,10 @@ class ULoudnessAnalyzer : public UAudioAnalyzer
 
 public:
 	CMember(ULoudnessSettings*)                        Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverallLoudnessResults                                    OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerChannelLoudnessResults                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestOverallLoudnessResults                              OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelLoudnessResults                           OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverallLoudnessResults                                    OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerChannelLoudnessResults                                 OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestOverallLoudnessResults                              OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelLoudnessResults                           OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.LoudnessNRTSettings
@@ -170,10 +170,10 @@ class UMeterAnalyzer : public UAudioAnalyzer
 
 public:
 	CMember(UMeterSettings*)                           Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnOverallMeterResults                                       OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerChannelMeterResults                                    OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestOverallMeterResults                                 OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelMeterResults                              OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnOverallMeterResults                                       OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerChannelMeterResults                                    OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestOverallMeterResults                                 OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestPerChannelMeterResults                              OFFSET(getStruct<T>, {0x110, 16, 0, 0})
 };
 
 /// Class /Script/AudioSynesthesia.OnsetNRTSettings
@@ -233,8 +233,8 @@ class USynesthesiaSpectrumAnalyzer : public UAudioAnalyzer
 
 public:
 	CMember(USynesthesiaSpectrumAnalysisSettings*)     Settings                                                    OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSpectrumResults                                           OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLatestSpectrumResults                                     OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSpectrumResults                                           OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLatestSpectrumResults                                     OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 
 
 	/// Functions
@@ -246,8 +246,9 @@ public:
 
 /// Struct /Script/AudioSynesthesia.LoudnessResults
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLoudnessResults : public MDKStruct
+class FLoudnessResults : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -260,8 +261,9 @@ public:
 
 /// Struct /Script/AudioSynesthesia.MeterResults
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FMeterResults : public MDKStruct
+class FMeterResults : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -275,8 +277,9 @@ public:
 
 /// Struct /Script/AudioSynesthesia.SynesthesiaSpectrumResults
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSynesthesiaSpectrumResults : public MDKStruct
+class FSynesthesiaSpectrumResults : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

@@ -42,19 +42,19 @@ class ABuildingGameplayActorLaserGrid : public ABuildingGameplayActor
 	static inline constexpr uint64_t __MDKClassSize = 3472;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnLaserGridTriggered                                        OFFSET(get<T>, {0x978, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLaserGridOutletDestroyed                                  OFFSET(get<T>, {0x988, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLaserGridTriggered                                        OFFSET(getStruct<T>, {0x978, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLaserGridOutletDestroyed                                  OFFSET(getStruct<T>, {0x988, 16, 0, 0})
 	CMember(TArray<FLaserGridPattern>)                 LaserGridPatterns                                           OFFSET(get<T>, {0x998, 16, 0, 0})
 	DMember(float)                                     LaserPatternChangeWarningTime                               OFFSET(get<float>, {0x9A8, 4, 0, 0})
 	CMember(TMap<int32_t, ABuildingActor*>)            LaserOutletToBuildingAttachmentMap                          OFFSET(get<T>, {0x9B0, 80, 0, 0})
-	SMember(FGameplayTagContainer)                     IgnoreActorTags                                             OFFSET(get<T>, {0xA00, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     IgnoreActorTags                                             OFFSET(getStruct<T>, {0xA00, 32, 0, 0})
 	CMember(UClass*)                                   LaserCapsuleComponentClass                                  OFFSET(get<T>, {0xA20, 8, 0, 0})
-	SMember(FRotator)                                  LaserCapsuleCollisionRotationOffset                         OFFSET(get<T>, {0xA28, 24, 0, 0})
+	SMember(FRotator)                                  LaserCapsuleCollisionRotationOffset                         OFFSET(getStruct<T>, {0xA28, 24, 0, 0})
 	DMember(int32_t)                                   LaserCustomDataIndexForRandomizedVisuals                    OFFSET(get<int32_t>, {0xA40, 4, 0, 0})
-	SMember(FLaserGridConnectionArray)                 LaserGridConnections                                        OFFSET(get<T>, {0xA48, 280, 0, 0})
+	SMember(FLaserGridConnectionArray)                 LaserGridConnections                                        OFFSET(getStruct<T>, {0xA48, 280, 0, 0})
 	CMember(TArray<FLaserGridConnectionEntry>)         LocalLaserGridConnections                                   OFFSET(get<T>, {0xB60, 16, 0, 0})
-	SMember(FTransform)                                LaserConnectionOffset                                       OFFSET(get<T>, {0xB70, 96, 0, 0})
-	SMember(FVector)                                   LaserOutletConnectionOffset                                 OFFSET(get<T>, {0xBD0, 24, 0, 0})
+	SMember(FTransform)                                LaserConnectionOffset                                       OFFSET(getStruct<T>, {0xB70, 96, 0, 0})
+	SMember(FVector)                                   LaserOutletConnectionOffset                                 OFFSET(getStruct<T>, {0xBD0, 24, 0, 0})
 	CMember(USoundBase*)                               SoundOutletTransitionOn                                     OFFSET(get<T>, {0xBE8, 8, 0, 0})
 	CMember(USoundBase*)                               SoundLaserTransitionPrimaryOutlet                           OFFSET(get<T>, {0xBF0, 8, 0, 0})
 	CMember(USoundBase*)                               SoundLaserTransitionSecondaryOutlet                         OFFSET(get<T>, {0xBF8, 8, 0, 0})
@@ -64,18 +64,18 @@ public:
 	DMember(int32_t)                                   OutletMaterialCustomDataIndex_AnimTimestamp                 OFFSET(get<int32_t>, {0xC10, 4, 0, 0})
 	DMember(int32_t)                                   OutletMaterialCustomDataIndex_AnimTimestampDuration         OFFSET(get<int32_t>, {0xC14, 4, 0, 0})
 	DMember(float)                                     MaterialCosineWavePeriod                                    OFFSET(get<float>, {0xC18, 4, 0, 0})
-	SMember(FVector2D)                                 OutletMaterialTransitionOffTimestampOffset                  OFFSET(get<T>, {0xC20, 16, 0, 0})
+	SMember(FVector2D)                                 OutletMaterialTransitionOffTimestampOffset                  OFFSET(getStruct<T>, {0xC20, 16, 0, 0})
 	DMember(int32_t)                                   LaserMaterialCustomDataIndex_PulseEnabled                   OFFSET(get<int32_t>, {0xC30, 4, 0, 0})
 	DMember(int32_t)                                   LaserMaterialCustomDataIndex_RandomFlickeringSpeed          OFFSET(get<int32_t>, {0xC34, 4, 0, 0})
 	DMember(int32_t)                                   LaserMaterialCustomDataIndex_AnimTimestamp                  OFFSET(get<int32_t>, {0xC38, 4, 0, 0})
 	DMember(int32_t)                                   LaserMaterialCustomDataIndex_PulseTimeOffset                OFFSET(get<int32_t>, {0xC3C, 4, 0, 0})
-	SMember(FVector2D)                                 LaserMaterialRandomFlickeringSpeed                          OFFSET(get<T>, {0xC40, 16, 0, 0})
-	SMember(FLaserGridOutletArray)                     LaserGridOutlets                                            OFFSET(get<T>, {0xC50, 288, 0, 0})
+	SMember(FVector2D)                                 LaserMaterialRandomFlickeringSpeed                          OFFSET(getStruct<T>, {0xC40, 16, 0, 0})
+	SMember(FLaserGridOutletArray)                     LaserGridOutlets                                            OFFSET(getStruct<T>, {0xC50, 288, 0, 0})
 	CMember(UHierarchicalInstancedStaticMeshComponent*) HISMComponentOutlet                                        OFFSET(get<T>, {0xD70, 8, 0, 0})
 	CMember(UHierarchicalInstancedStaticMeshComponent*) HISMComponentLaser                                         OFFSET(get<T>, {0xD78, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0xD80, 1, 0, 0})
 	DMember(int32_t)                                   LaserGridPatternIndex                                       OFFSET(get<int32_t>, {0xD84, 4, 0, 0})
-	SMember(FTimerHandle)                              LaserPatternTimerHandle                                     OFFSET(get<T>, {0xD88, 8, 0, 0})
+	SMember(FTimerHandle)                              LaserPatternTimerHandle                                     OFFSET(getStruct<T>, {0xD88, 8, 0, 0})
 
 
 	/// Functions
@@ -109,19 +109,21 @@ public:
 /// Size: 0x000C (0x00000C - 0x000018)
 class FLaserGridConnectionEntry : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FLaserOutletConnection)                    OutletConnection                                            OFFSET(get<T>, {0xC, 2, 0, 0})
+	SMember(FLaserOutletConnection)                    OutletConnection                                            OFFSET(getStruct<T>, {0xC, 2, 0, 0})
 	CMember(ELaserConnectionState)                     State                                                       OFFSET(get<T>, {0xE, 1, 0, 0})
 	CMember(ULaserCapsuleComponent*)                   LaserCapsuleComponent                                       OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/LaserGameplayRuntime.LaserOutletConnection
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FLaserOutletConnection : public MDKStruct
+class FLaserOutletConnection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -134,6 +136,7 @@ public:
 /// Size: 0x0010 (0x000108 - 0x000118)
 class FLaserGridConnectionArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
@@ -145,6 +148,7 @@ public:
 /// Size: 0x0004 (0x00000C - 0x000010)
 class FLaserGridOutletEntry : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -157,6 +161,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FLaserGridOutletArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -166,8 +171,9 @@ public:
 
 /// Struct /Script/LaserGameplayRuntime.LaserGridPattern
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLaserGridPattern : public MDKStruct
+class FLaserGridPattern : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

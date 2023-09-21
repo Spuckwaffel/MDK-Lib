@@ -21,11 +21,11 @@ public:
 	DMember(float)                                     BackgroundOpacityPercentage                                 OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(bool)                                      bOrderTopToBottom                                           OFFSET(get<bool>, {0x54, 1, 0, 0})
 	DMember(bool)                                      bDisplayHelpInAutoComplete                                  OFFSET(get<bool>, {0x55, 1, 0, 0})
-	SMember(FColor)                                    InputColor                                                  OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FColor)                                    HistoryColor                                                OFFSET(get<T>, {0x5C, 4, 0, 0})
-	SMember(FColor)                                    AutoCompleteCommandColor                                    OFFSET(get<T>, {0x60, 4, 0, 0})
-	SMember(FColor)                                    AutoCompleteCVarColor                                       OFFSET(get<T>, {0x64, 4, 0, 0})
-	SMember(FColor)                                    AutoCompleteFadedColor                                      OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FColor)                                    InputColor                                                  OFFSET(getStruct<T>, {0x58, 4, 0, 0})
+	SMember(FColor)                                    HistoryColor                                                OFFSET(getStruct<T>, {0x5C, 4, 0, 0})
+	SMember(FColor)                                    AutoCompleteCommandColor                                    OFFSET(getStruct<T>, {0x60, 4, 0, 0})
+	SMember(FColor)                                    AutoCompleteCVarColor                                       OFFSET(getStruct<T>, {0x64, 4, 0, 0})
+	SMember(FColor)                                    AutoCompleteFadedColor                                      OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 };
 
 /// Class /Script/EngineSettings.GameMapsSettings
@@ -36,18 +36,18 @@ class UGameMapsSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FString)                                   LocalMapOptions                                             OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FSoftObjectPath)                           TransitionMap                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FString)                                   LocalMapOptions                                             OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FSoftObjectPath)                           TransitionMap                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(bool)                                      bUseSplitscreen                                             OFFSET(get<bool>, {0x50, 1, 0, 0})
 	CMember(TEnumAsByte<ETwoPlayerSplitScreenType>)    TwoPlayerSplitscreenLayout                                  OFFSET(get<T>, {0x51, 1, 0, 0})
 	CMember(TEnumAsByte<EThreePlayerSplitScreenType>)  ThreePlayerSplitscreenLayout                                OFFSET(get<T>, {0x52, 1, 0, 0})
 	CMember(EFourPlayerSplitScreenType)                FourPlayerSplitscreenLayout                                 OFFSET(get<T>, {0x53, 1, 0, 0})
 	DMember(bool)                                      bOffsetPlayerGamepadIds                                     OFFSET(get<bool>, {0x54, 1, 0, 0})
-	SMember(FSoftClassPath)                            GameInstanceClass                                           OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FSoftObjectPath)                           GameDefaultMap                                              OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FSoftObjectPath)                           ServerDefaultMap                                            OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FSoftClassPath)                            GlobalDefaultGameMode                                       OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FSoftClassPath)                            GlobalDefaultServerGameMode                                 OFFSET(get<T>, {0xB8, 24, 0, 0})
+	SMember(FSoftClassPath)                            GameInstanceClass                                           OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FSoftObjectPath)                           GameDefaultMap                                              OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FSoftObjectPath)                           ServerDefaultMap                                            OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FSoftClassPath)                            GlobalDefaultGameMode                                       OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FSoftClassPath)                            GlobalDefaultServerGameMode                                 OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
 	CMember(TArray<FGameModeName>)                     GameModeMapPrefixes                                         OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TArray<FGameModeName>)                     GameModeClassAliases                                        OFFSET(get<T>, {0xE0, 16, 0, 0})
 
@@ -113,19 +113,19 @@ class UGeneralProjectSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FString)                                   CompanyName                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   CompanyDistinguishedName                                    OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   CopyrightNotice                                             OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FString)                                   Description                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FString)                                   Homepage                                                    OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FString)                                   LicensingTerms                                              OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FString)                                   PrivacyPolicy                                               OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FGuid)                                     ProjectID                                                   OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FString)                                   ProjectName                                                 OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   ProjectVersion                                              OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FString)                                   SupportContact                                              OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FText)                                     ProjectDisplayedTitle                                       OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FText)                                     ProjectDebugTitleInfo                                       OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FString)                                   CompanyName                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   CompanyDistinguishedName                                    OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   CopyrightNotice                                             OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   Description                                                 OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   Homepage                                                    OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   LicensingTerms                                              OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   PrivacyPolicy                                               OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FGuid)                                     ProjectID                                                   OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   ProjectName                                                 OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   ProjectVersion                                              OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FString)                                   SupportContact                                              OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FText)                                     ProjectDisplayedTitle                                       OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FText)                                     ProjectDebugTitleInfo                                       OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	DMember(bool)                                      bShouldWindowPreserveAspectRatio                            OFFSET(get<bool>, {0x108, 1, 0, 0})
 	DMember(bool)                                      bUseBorderlessWindow                                        OFFSET(get<bool>, {0x109, 1, 0, 0})
 	DMember(bool)                                      bStartInVR                                                  OFFSET(get<bool>, {0x10A, 1, 0, 0})
@@ -151,39 +151,42 @@ public:
 
 /// Struct /Script/EngineSettings.AutoCompleteCommand
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FAutoCompleteCommand : public MDKStruct
+class FAutoCompleteCommand : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Command                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Desc                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Command                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Desc                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/EngineSettings.GameModeName
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameModeName : public MDKStruct
+class FGameModeName : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FSoftClassPath)                            GameMode                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FSoftClassPath)                            GameMode                                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/EngineSettings.TemplateMapInfoOverride
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FTemplateMapInfoOverride : public MDKStruct
+class FTemplateMapInfoOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FSoftObjectPath)                           Thumbnail                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FSoftObjectPath)                           Map                                                         OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FSoftObjectPath)                           Thumbnail                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           Map                                                         OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Enum /Script/EngineSettings.ETwoPlayerSplitScreenType

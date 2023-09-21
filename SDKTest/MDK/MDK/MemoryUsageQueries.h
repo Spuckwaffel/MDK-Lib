@@ -21,13 +21,14 @@ public:
 
 /// Struct /Script/MemoryUsageQueries.CollectionInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCollectionInfo : public MDKStruct
+class FCollectionInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FString>)                           Includes                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
 	CMember(TArray<FString>)                           Excludes                                                    OFFSET(get<T>, {0x20, 16, 0, 0})
 	DMember(float)                                     BudgetMB                                                    OFFSET(get<float>, {0x30, 4, 0, 0})

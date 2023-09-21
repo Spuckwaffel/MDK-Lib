@@ -82,7 +82,7 @@ class UFortCookingScreen : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1080;
 
 public:
-	SMember(FDataTableRowHandle)                       CloseInputAction                                            OFFSET(get<T>, {0x3F0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CloseInputAction                                            OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_EjectAll                                             OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_Cancel                                               OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_RecipeName                                             OFFSET(get<T>, {0x418, 8, 0, 0})
@@ -129,7 +129,7 @@ class UFortCraftingItemInfoWidget : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1104;
 
 public:
-	SMember(FText)                                     RarityTextFormat                                            OFFSET(get<T>, {0x3F0, 24, 0, 0})
+	SMember(FText)                                     RarityTextFormat                                            OFFSET(getStruct<T>, {0x3F0, 24, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemName                                               OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemRarity                                             OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemCategory                                           OFFSET(get<T>, {0x418, 8, 0, 0})
@@ -170,9 +170,9 @@ class UFortCraftingTab : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1328;
 
 public:
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x3F0, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x400, 240, 0, 0})
-	SMember(FGameplayTagContainer)                     PrimaryIngredientTags                                       OFFSET(get<T>, {0x4F0, 32, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x3F0, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x400, 240, 0, 0})
+	SMember(FGameplayTagContainer)                     PrimaryIngredientTags                                       OFFSET(getStruct<T>, {0x4F0, 32, 0, 0})
 	CMember(UFortCraftingItemInfoWidget*)              CraftingItemInfo                                            OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UCommonListView*)                          ListView_Recipes                                            OFFSET(get<T>, {0x518, 8, 0, 0})
 	CMember(UAthenaQuickbarEditorBase*)                QuickbarEditor                                              OFFSET(get<T>, {0x520, 8, 0, 0})

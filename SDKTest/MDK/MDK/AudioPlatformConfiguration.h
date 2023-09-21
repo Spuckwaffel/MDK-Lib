@@ -8,8 +8,9 @@
 
 /// Struct /Script/AudioPlatformConfiguration.PlatformRuntimeAudioCompressionOverrides
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPlatformRuntimeAudioCompressionOverrides : public MDKStruct
+class FPlatformRuntimeAudioCompressionOverrides : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

@@ -21,7 +21,7 @@ class UFortMantisLayerAnimInstance : public UFortPlayerAnimInstanceProxy
 	static inline constexpr uint64_t __MDKClassSize = 5600;
 
 public:
-	SMember(FFortMantisReplicatedAnimInstanceInfo)     MantisAnimInstanceInfo                                      OFFSET(get<T>, {0x15C8, 16, 0, 0})
+	SMember(FFortMantisReplicatedAnimInstanceInfo)     MantisAnimInstanceInfo                                      OFFSET(getStruct<T>, {0x15C8, 16, 0, 0})
 
 
 	/// Functions
@@ -39,10 +39,10 @@ class UFortItemLayerAnimInstance_UncleBrolly : public UFortItemLayerAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 1888;
 
 public:
-	SMember(FCachedAnimStateArray)                     UmbrellaGliderOpenStateDataArray                            OFFSET(get<T>, {0x6C8, 24, 0, 0})
-	SMember(FVector)                                   WrapTranslation                                             OFFSET(get<T>, {0x6E0, 24, 0, 0})
-	SMember(FRotator)                                  WrapRotation                                                OFFSET(get<T>, {0x6F8, 24, 0, 0})
-	SMember(FRotator)                                  RootRotationOffset                                          OFFSET(get<T>, {0x710, 24, 0, 0})
+	SMember(FCachedAnimStateArray)                     UmbrellaGliderOpenStateDataArray                            OFFSET(getStruct<T>, {0x6C8, 24, 0, 0})
+	SMember(FVector)                                   WrapTranslation                                             OFFSET(getStruct<T>, {0x6E0, 24, 0, 0})
+	SMember(FRotator)                                  WrapRotation                                                OFFSET(getStruct<T>, {0x6F8, 24, 0, 0})
+	SMember(FRotator)                                  RootRotationOffset                                          OFFSET(getStruct<T>, {0x710, 24, 0, 0})
 	DMember(float)                                     LandingPredictedTimer                                       OFFSET(get<float>, {0x728, 4, 0, 0})
 	DMember(bool)                                      bShouldUpdateYawCorrection                                  OFFSET(get<bool>, {0x72C, 1, 0, 0})
 	DMember(bool)                                      bWasAcceleratingBeforeDodge                                 OFFSET(get<bool>, {0x72D, 1, 0, 0})
@@ -82,7 +82,7 @@ class UUncleBrollyWeaponAnimInstance : public UAnimInstance
 
 public:
 	CMember(UClass*)                                   UncleBrollyItemLayer                                        OFFSET(get<T>, {0x348, 8, 0, 0})
-	SMember(FRotator)                                  UmbrellaRotation                                            OFFSET(get<T>, {0x350, 24, 0, 0})
+	SMember(FRotator)                                  UmbrellaRotation                                            OFFSET(getStruct<T>, {0x350, 24, 0, 0})
 	DMember(float)                                     UmbrellaSpinSpeed                                           OFFSET(get<float>, {0x368, 4, 0, 0})
 	DMember(float)                                     BlockDeployEndPlayrate                                      OFFSET(get<float>, {0x36C, 4, 0, 0})
 	DMember(float)                                     BlockDeployEndStartPosition                                 OFFSET(get<float>, {0x370, 4, 0, 0})
@@ -111,10 +111,10 @@ class UFortAbilityTask_ApplyRootMotionMantisForce : public UAbilityTask_ApplyRoo
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xC8, 4, 0, 0})
 	CMember(UAnimMontage*)                             TechniqueMontage                                            OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
 };
 
 /// Class /Script/MantisRuntime.FortAnimNotify_Mantis
@@ -139,7 +139,7 @@ class UFortAnimNotifyState_Mantis : public UAnimNotifyState
 
 public:
 	CMember(EFortMantisNotifyWindow)                   MantisNotifyWindow                                          OFFSET(get<T>, {0x30, 1, 0, 0})
-	SMember(FGameplayTag)                              MantisNotifyTag                                             OFFSET(get<T>, {0x34, 4, 0, 0})
+	SMember(FGameplayTag)                              MantisNotifyTag                                             OFFSET(getStruct<T>, {0x34, 4, 0, 0})
 	CMember(EFortMantisNotifyRotationWarpRateRule)     RotationRateWarpRule                                        OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(bool)                                      bWarpRotation                                               OFFSET(get<bool>, {0x39, 1, 1, 0})
 	DMember(bool)                                      bWarpTranslation                                            OFFSET(get<bool>, {0x39, 1, 1, 1})
@@ -211,7 +211,7 @@ class UFortMantisPawnComponent : public UPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTechniqueMetadataReady                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTechniqueMetadataReady                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	CMember(TMap<UAnimMontage*, FFortMantisMontageData>) MontageDataMap                                            OFFSET(get<T>, {0x178, 80, 0, 0})
 	CMember(UFortMantisData*)                          MantisData                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(AFortWeapon*)                              Weapon                                                      OFFSET(get<T>, {0x1D0, 8, 0, 0})
@@ -260,8 +260,8 @@ public:
 	DMember(bool)                                      bAllowPrimaryFireInputsWhileHolstered                       OFFSET(get<bool>, {0xA8, 1, 0, 0})
 	DMember(bool)                                      bAllowSecondaryFireInputsWhileHolstered                     OFFSET(get<bool>, {0xA9, 1, 0, 0})
 	CMember(TWeakObjectPtr<UFortMantisPawnComponent*>) MantisPawnComponent                                         OFFSET(get<T>, {0xAC, 8, 0, 0})
-	SMember(FFortMantisReplicatedAnimInstanceInfo)     AnimInstanceInfo                                            OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FFortMantisReplicatedAnimInstanceInfo)     ReplayAnimInstanceInfo                                      OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FFortMantisReplicatedAnimInstanceInfo)     AnimInstanceInfo                                            OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FFortMantisReplicatedAnimInstanceInfo)     ReplayAnimInstanceInfo                                      OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 
 
 	/// Functions
@@ -287,8 +287,9 @@ public:
 
 /// Struct /Script/MantisRuntime.FortMantisTechniqueMetadata
 /// Size: 0x0140 (0x000000 - 0x000140)
-class FFortMantisTechniqueMetadata : public MDKStruct
+class FFortMantisTechniqueMetadata : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
@@ -303,26 +304,28 @@ public:
 /// Size: 0x0080 (0x0000E0 - 0x000160)
 class FFortRootMotionSource_Mantis : public FRootMotionSource
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
 	DMember(float)                                     CurrentTechniqueTime                                        OFFSET(get<float>, {0xD8, 4, 0, 0})
 	CMember(UAnimMontage*)                             TechniqueMontage                                            OFFSET(get<T>, {0xE0, 8, 0, 0})
-	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(get<T>, {0xE8, 40, 0, 0})
-	SMember(FVector)                                   LatestRepMovementLocation                                   OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FFortMantisRootMotionWarpInfo)             WarpInfo                                                    OFFSET(getStruct<T>, {0xE8, 40, 0, 0})
+	SMember(FVector)                                   LatestRepMovementLocation                                   OFFSET(getStruct<T>, {0x110, 24, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisRootMotionWarpInfo
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FFortMantisRootMotionWarpInfo : public MDKStruct
+class FFortMantisRootMotionWarpInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   WarpTarget                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector_NetQuantize)                       LastValidWarpTargetLocation                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector_NetQuantize)                       LastValidWarpTargetLocation                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(bool)                                      bAllowTranslationWarp                                       OFFSET(get<bool>, {0x20, 1, 1, 1})
 	DMember(bool)                                      bAllowRotationWarp                                          OFFSET(get<bool>, {0x20, 1, 1, 2})
 	DMember(bool)                                      bSnapshotTargetLocation                                     OFFSET(get<bool>, {0x20, 1, 1, 3})
@@ -332,21 +335,23 @@ public:
 /// Size: 0x0178 (0x000008 - 0x000180)
 class FFortMantisTargetData : public FGameplayAbilityTargetData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FFortMantisRootMotionWarpInfo)             TechniqueWarpInfo                                           OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FFortMantisRootMotionWarpInfo)             TechniqueWarpInfo                                           OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 	DMember(int32_t)                                   TechniqueDataIndex                                          OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(bool)                                      bIsLockedOn                                                 OFFSET(get<bool>, {0x34, 1, 0, 0})
-	SMember(FName)                                     DynamicMontageName                                          OFFSET(get<T>, {0x38, 4, 0, 0})
-	SMember(FFortMantisTechniqueMetadata)              TechniqueMetadata                                           OFFSET(get<T>, {0x40, 320, 0, 0})
+	SMember(FName)                                     DynamicMontageName                                          OFFSET(getStruct<T>, {0x38, 4, 0, 0})
+	SMember(FFortMantisTechniqueMetadata)              TechniqueMetadata                                           OFFSET(getStruct<T>, {0x40, 320, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisTechniqueCharacterSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortMantisTechniqueCharacterSettings : public MDKStruct
+class FFortMantisTechniqueCharacterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -361,51 +366,54 @@ public:
 
 /// Struct /Script/MantisRuntime.FortMantisTechniqueData
 /// Size: 0x0150 (0x000000 - 0x000150)
-class FFortMantisTechniqueData : public MDKStruct
+class FFortMantisTechniqueData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bStartsSequence                                             OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bEndsSequence                                               OFFSET(get<bool>, {0x5, 1, 0, 0})
 	DMember(int32_t)                                   MaxConsecutiveBranchesToSelf                                OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	CMember(EFortMantisTechniqueAnimationType)         AnimationType                                               OFFSET(get<T>, {0xC, 1, 0, 0})
 	CMember(UAnimMontage*)                             Montage                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
 	CMember(TMap<FName, UAnimMontage*>)                DynamicMontages                                             OFFSET(get<T>, {0x18, 80, 0, 0})
-	SMember(FName)                                     DefaultDynamicMontageName                                   OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FName)                                     DefaultDynamicMontageName                                   OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	CMember(EFortMantisTechniqueRootMotionType)        RootMotionType                                              OFFSET(get<T>, {0x6C, 1, 0, 0})
 	DMember(float)                                     InputWindowDelay                                            OFFSET(get<float>, {0x70, 4, 0, 0})
 	CMember(EFortMantisTechniqueActivationInputType)   ActivationInputType                                         OFFSET(get<T>, {0x74, 1, 0, 0})
 	CMember(EFortMantisTechniqueActivationTimingType)  ActivationTimingType                                        OFFSET(get<T>, {0x75, 1, 0, 0})
 	DMember(float)                                     MinInputHoldDuration                                        OFFSET(get<float>, {0x78, 4, 0, 0})
 	DMember(float)                                     MaxInputHoldDuration                                        OFFSET(get<float>, {0x7C, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     ActivationGameplayCues                                      OFFSET(get<T>, {0x80, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         ActivationTagQuery                                          OFFSET(get<T>, {0xA0, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         OngoingTagQuery                                             OFFSET(get<T>, {0xE8, 72, 0, 0})
-	SMember(FGameplayTag)                              ActivationApplicationTag                                    OFFSET(get<T>, {0x130, 4, 0, 0})
-	SMember(FGameplayTag)                              DamageApplicationTag                                        OFFSET(get<T>, {0x134, 4, 0, 0})
-	SMember(FFortMantisTechniqueCharacterSettings)     CharacterSettings                                           OFFSET(get<T>, {0x138, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     ActivationGameplayCues                                      OFFSET(getStruct<T>, {0x80, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         ActivationTagQuery                                          OFFSET(getStruct<T>, {0xA0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         OngoingTagQuery                                             OFFSET(getStruct<T>, {0xE8, 72, 0, 0})
+	SMember(FGameplayTag)                              ActivationApplicationTag                                    OFFSET(getStruct<T>, {0x130, 4, 0, 0})
+	SMember(FGameplayTag)                              DamageApplicationTag                                        OFFSET(getStruct<T>, {0x134, 4, 0, 0})
+	SMember(FFortMantisTechniqueCharacterSettings)     CharacterSettings                                           OFFSET(getStruct<T>, {0x138, 24, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisTechniqueBranch
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FFortMantisTechniqueBranch : public MDKStruct
+class FFortMantisTechniqueBranch : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     FromTechnique                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ToTechnique                                                 OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     FromTechnique                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ToTechnique                                                 OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(EFortMantisBranchPath)                     BranchPath                                                  OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/MantisRuntime.FortMantisMontageData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortMantisMontageData : public MDKStruct
+class FFortMantisMontageData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -415,14 +423,15 @@ public:
 
 /// Struct /Script/MantisRuntime.FortMantisReplicatedAnimInstanceInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortMantisReplicatedAnimInstanceInfo : public MDKStruct
+class FFortMantisReplicatedAnimInstanceInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	DMember(bool)                                      bIsTechniqueActive                                          OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     ActiveTechniqueName                                         OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ActiveTechniqueName                                         OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   ActiveTechniqueIndex                                        OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   ActiveTechniqueConsecutiveBranchesToSelf                    OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
@@ -431,6 +440,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FFortMantisRootMotionWarpInfoNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

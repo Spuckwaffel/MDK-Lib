@@ -19,9 +19,9 @@ class AMeshBeaconClient : public AOnlineBeaconClient
 
 public:
 	DMember(bool)                                      bConnectedToRoot                                            OFFSET(get<bool>, {0x360, 1, 0, 0})
-	SMember(FDateTime)                                 MeshPingTime                                                OFFSET(get<T>, {0x368, 8, 0, 0})
+	SMember(FDateTime)                                 MeshPingTime                                                OFFSET(getStruct<T>, {0x368, 8, 0, 0})
 	CMember(TArray<FString>)                           ParentIds                                                   OFFSET(get<T>, {0x370, 16, 0, 0})
-	SMember(FString)                                   ClientId                                                    OFFSET(get<T>, {0x380, 16, 0, 0})
+	SMember(FString)                                   ClientId                                                    OFFSET(getStruct<T>, {0x380, 16, 0, 0})
 
 
 	/// Functions
@@ -109,11 +109,11 @@ class UMeshNetworkSubsystem : public UGameInstanceSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMeshNodeTypeChanged                                       OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnConnectedToRootChanged                                    OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnGameServerNodeTypeChanged                                 OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMeshMetaDataUpdated                                       OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMeshPlayerRequested                                       OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshNodeTypeChanged                                       OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnConnectedToRootChanged                                    OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnGameServerNodeTypeChanged                                 OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshMetaDataUpdated                                       OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshPlayerRequested                                       OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	CMember(EMeshNetworkNodeType)                      NodeType                                                    OFFSET(get<T>, {0xB0, 1, 0, 0})
 	CMember(EMeshNetworkNodeType)                      GameServerNodeType                                          OFFSET(get<T>, {0xB1, 1, 0, 0})
 	DMember(bool)                                      bConnectedToRoot                                            OFFSET(get<bool>, {0xB2, 1, 0, 0})
@@ -163,8 +163,9 @@ public:
 
 /// Struct /Script/MeshNetwork.AggregatedFunction
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FAggregatedFunction : public MDKStruct
+class FAggregatedFunction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -174,8 +175,9 @@ public:
 
 /// Struct /Script/MeshNetwork.AggregatedFunctionConfig
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FAggregatedFunctionConfig : public MDKStruct
+class FAggregatedFunctionConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -187,8 +189,9 @@ public:
 
 /// Struct /Script/MeshNetwork.MeshMetaDataStruct
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMeshMetaDataStruct : public MDKStruct
+class FMeshMetaDataStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

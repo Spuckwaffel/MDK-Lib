@@ -19,8 +19,9 @@ public:
 
 /// Struct /Script/CosmeticsFrameworkFlowgraph.CosmeticFlowData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCosmeticFlowData : public MDKStruct
+class FCosmeticFlowData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -30,8 +31,9 @@ public:
 
 /// Struct /Script/CosmeticsFrameworkFlowgraph.OperationSequenceHandle
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FOperationSequenceHandle : public MDKStruct
+class FOperationSequenceHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

@@ -28,17 +28,17 @@ class UEmberRae_Axe_L_AnimBP_Post_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 4808;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x808, 32, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x830, 2384, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1180, 296, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x738, 176, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x7E8, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0x808, 32, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0x830, 2384, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x1180, 296, 0, 0})
 	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x12A8, 8, 0, 0})
-	SMember(FVector)                                   TranslateMSTR                                               OFFSET(get<T>, {0x12B0, 24, 0, 0})
+	SMember(FVector)                                   TranslateMSTR                                               OFFSET(getStruct<T>, {0x12B0, 24, 0, 0})
 
 
 	/// Functions
@@ -60,19 +60,19 @@ class UEmberRae_Axe_R_AnimBP_Post_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 5408;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x808, 32, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x830, 2384, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1180, 296, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(get<T>, {0x12A8, 296, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(get<T>, {0x13D0, 296, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x738, 176, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x7E8, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0x808, 32, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0x830, 2384, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x1180, 296, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(getStruct<T>, {0x12A8, 296, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(getStruct<T>, {0x13D0, 296, 0, 0})
 	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	SMember(FVector)                                   TranslateMSTR                                               OFFSET(get<T>, {0x1500, 24, 0, 0})
+	SMember(FVector)                                   TranslateMSTR                                               OFFSET(getStruct<T>, {0x1500, 24, 0, 0})
 	DMember(double)                                    StrapScaleAlpha                                             OFFSET(get<double>, {0x1518, 8, 0, 0})
 
 
@@ -115,7 +115,7 @@ class AB_Ranged_Generic_C : public AFortWeaponRanged
 	static inline constexpr uint64_t __MDKClassSize = 7325;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1920, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1920, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Muzzle_Empty_                                               OFFSET(get<T>, {0x1928, 8, 0, 0})
 	DMember(float)                                     AnimateScopePostProcess_DownSightPostProcessAmount_393D8BA5486879173797EF8C9B8D4642 OFFSET(get<float>, {0x1930, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           AnimateScopePostProcess__Direction_393D8BA5486879173797EF8C9B8D4642 OFFSET(get<T>, {0x1934, 1, 0, 0})
@@ -135,16 +135,16 @@ public:
 	CMember(UNiagaraSystem*)                           Reload_Niagara_Asset                                        OFFSET(get<T>, {0x1980, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           Reload_System                                               OFFSET(get<T>, {0x1988, 8, 0, 0})
 	CMember(UMaterialInterface*)                       Reload_Smoke_Material                                       OFFSET(get<T>, {0x1990, 8, 0, 0})
-	SMember(FName)                                     ReloadSocketName                                            OFFSET(get<T>, {0x1998, 4, 0, 0})
+	SMember(FName)                                     ReloadSocketName                                            OFFSET(getStruct<T>, {0x1998, 4, 0, 0})
 	CMember(TArray<AFortAIPawn*>)                      Array_Of_Active_Enemy_AI                                    OFFSET(get<T>, {0x19A0, 16, 0, 0})
 	DMember(bool)                                      Scope___Render_Enemies_To_Custom_Depth_Buffer               OFFSET(get<bool>, {0x19B0, 1, 0, 0})
-	SMember(FName)                                     Shells_Socket_Name                                          OFFSET(get<T>, {0x19B4, 4, 0, 0})
+	SMember(FName)                                     Shells_Socket_Name                                          OFFSET(getStruct<T>, {0x19B4, 4, 0, 0})
 	CMember(TEnumAsByte<En_ShellTypes_01>)             ShellTypeSelect                                             OFFSET(get<T>, {0x19B8, 1, 0, 0})
 	DMember(double)                                    Shells_Spawn_Rate_Scale                                     OFFSET(get<double>, {0x19C0, 8, 0, 0})
-	SMember(FVector)                                   ShellsRotationRate                                          OFFSET(get<T>, {0x19C8, 24, 0, 0})
-	SMember(FVector)                                   Shells_Velocity                                             OFFSET(get<T>, {0x19E0, 24, 0, 0})
-	SMember(FVector)                                   Shells_Gravity                                              OFFSET(get<T>, {0x19F8, 24, 0, 0})
-	SMember(FVector)                                   Shells_Size                                                 OFFSET(get<T>, {0x1A10, 24, 0, 0})
+	SMember(FVector)                                   ShellsRotationRate                                          OFFSET(getStruct<T>, {0x19C8, 24, 0, 0})
+	SMember(FVector)                                   Shells_Velocity                                             OFFSET(getStruct<T>, {0x19E0, 24, 0, 0})
+	SMember(FVector)                                   Shells_Gravity                                              OFFSET(getStruct<T>, {0x19F8, 24, 0, 0})
+	SMember(FVector)                                   Shells_Size                                                 OFFSET(getStruct<T>, {0x1A10, 24, 0, 0})
 	DMember(double)                                    Target_Scope_Vignette_Blur_Screen_Percentage                OFFSET(get<double>, {0x1A28, 8, 0, 0})
 	DMember(double)                                    ScopeCameraOffsetX                                          OFFSET(get<double>, {0x1A30, 8, 0, 0})
 	DMember(double)                                    ScopeCameraOffsetY                                          OFFSET(get<double>, {0x1A38, 8, 0, 0})
@@ -152,13 +152,13 @@ public:
 	DMember(double)                                    Inherit_Parent_Velocity                                     OFFSET(get<double>, {0x1A48, 8, 0, 0})
 	DMember(double)                                    Cylindrical_Radius                                          OFFSET(get<double>, {0x1A50, 8, 0, 0})
 	DMember(double)                                    Cylindrical_Height                                          OFFSET(get<double>, {0x1A58, 8, 0, 0})
-	SMember(FLinearColor)                              Shell_Color                                                 OFFSET(get<T>, {0x1A60, 16, 0, 0})
+	SMember(FLinearColor)                              Shell_Color                                                 OFFSET(getStruct<T>, {0x1A60, 16, 0, 0})
 	CMember(UNiagaraComponent*)                        Spawned_Shells                                              OFFSET(get<T>, {0x1A70, 8, 0, 0})
 	DMember(bool)                                      DebugShellsSocket_                                          OFFSET(get<bool>, {0x1A78, 1, 0, 0})
 	CMember(USoundBase*)                               Sound_ScopeZoomIn                                           OFFSET(get<T>, {0x1A80, 8, 0, 0})
 	CMember(USoundBase*)                               Sound_ScopeZoomOut                                          OFFSET(get<T>, {0x1A88, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        Alteration_Ambient_PS                                       OFFSET(get<T>, {0x1A90, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ReticleHUDElementTags                                       OFFSET(get<T>, {0x1A98, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ReticleHUDElementTags                                       OFFSET(getStruct<T>, {0x1A98, 32, 0, 0})
 	DMember(bool)                                      Is_Wind_Enabled                                             OFFSET(get<bool>, {0x1AB8, 1, 0, 0})
 	CMember(UParticleSystem*)                          MuzzleWindParticleSystem                                    OFFSET(get<T>, {0x1AC0, 8, 0, 0})
 	CMember(UParticleSystem*)                          MuzzleParticleSystem1P                                      OFFSET(get<T>, {0x1AC8, 8, 0, 0})
@@ -175,7 +175,7 @@ public:
 	DMember(double)                                    Beam_PS_Max_Draw_Distance                                   OFFSET(get<double>, {0x1B20, 8, 0, 0})
 	DMember(double)                                    Reload_PS_Max_Draw_Distance                                 OFFSET(get<double>, {0x1B28, 8, 0, 0})
 	DMember(double)                                    Shells_PS_Max_Draw_Distance                                 OFFSET(get<double>, {0x1B30, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  onAimDownSightsChanged                                      OFFSET(get<T>, {0x1B38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  onAimDownSightsChanged                                      OFFSET(getStruct<T>, {0x1B38, 16, 0, 0})
 	DMember(bool)                                      IsMuzzleNiagara                                             OFFSET(get<bool>, {0x1B48, 1, 0, 0})
 	CMember(UNiagaraSystem*)                           MuzzleNiagaraSystemInstance                                 OFFSET(get<T>, {0x1B50, 8, 0, 0})
 	CMember(TWeakObjectPtr<UNiagaraSystem*>)           MuzzleNiagaraSystemAsset                                    OFFSET(get<T>, {0x1B58, 32, 0, 0})
@@ -186,23 +186,23 @@ public:
 	DMember(double)                                    Muzzle_FlashLarge_MaxScale                                  OFFSET(get<double>, {0x1BA0, 8, 0, 0})
 	DMember(double)                                    Muzzle_FlashSmall_MinScale                                  OFFSET(get<double>, {0x1BA8, 8, 0, 0})
 	DMember(double)                                    Muzzle_FlashSmall_MaxScale                                  OFFSET(get<double>, {0x1BB0, 8, 0, 0})
-	SMember(FTimerHandle)                              ScopeEffectDelay1Handle                                     OFFSET(get<T>, {0x1BB8, 8, 0, 0})
-	SMember(FTimerHandle)                              ScopeEffectDelay2Handle                                     OFFSET(get<T>, {0x1BC0, 8, 0, 0})
-	SMember(FScalableFloat)                            UseNativeFX                                                 OFFSET(get<T>, {0x1BC8, 40, 0, 0})
-	SMember(FScalableFloat)                            UseUpdatedFeedback                                          OFFSET(get<T>, {0x1BF0, 40, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStartFiring                                               OFFSET(get<T>, {0x1C18, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPersistentFireStopped                                     OFFSET(get<T>, {0x1C28, 16, 0, 0})
+	SMember(FTimerHandle)                              ScopeEffectDelay1Handle                                     OFFSET(getStruct<T>, {0x1BB8, 8, 0, 0})
+	SMember(FTimerHandle)                              ScopeEffectDelay2Handle                                     OFFSET(getStruct<T>, {0x1BC0, 8, 0, 0})
+	SMember(FScalableFloat)                            UseNativeFX                                                 OFFSET(getStruct<T>, {0x1BC8, 40, 0, 0})
+	SMember(FScalableFloat)                            UseUpdatedFeedback                                          OFFSET(getStruct<T>, {0x1BF0, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartFiring                                               OFFSET(getStruct<T>, {0x1C18, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPersistentFireStopped                                     OFFSET(getStruct<T>, {0x1C28, 16, 0, 0})
 	CMember(UStaticMesh*)                              ScopeMesh                                                   OFFSET(get<T>, {0x1C38, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     ScopeMesh1P_Spawned                                         OFFSET(get<T>, {0x1C40, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               ScopeMaterialOverrides                                      OFFSET(get<T>, {0x1C48, 16, 0, 0})
 	DMember(float)                                     Niagara_Impact_Global_Scale                                 OFFSET(get<float>, {0x1C58, 4, 0, 0})
 	DMember(float)                                     Reload_Smoke_Lifetime                                       OFFSET(get<float>, {0x1C5C, 4, 0, 0})
 	DMember(float)                                     Reload_Smoke_Width_Scale                                    OFFSET(get<float>, {0x1C60, 4, 0, 0})
-	SMember(FLinearColor)                              BaseColorAlpha                                              OFFSET(get<T>, {0x1C64, 16, 0, 0})
+	SMember(FLinearColor)                              BaseColorAlpha                                              OFFSET(getStruct<T>, {0x1C64, 16, 0, 0})
 	DMember(bool)                                      Use_Emissive_in_Reload                                      OFFSET(get<bool>, {0x1C74, 1, 0, 0})
-	SMember(FLinearColor)                              Reload_Emissive_Color                                       OFFSET(get<T>, {0x1C78, 16, 0, 0})
+	SMember(FLinearColor)                              Reload_Emissive_Color                                       OFFSET(getStruct<T>, {0x1C78, 16, 0, 0})
 	DMember(bool)                                      Is_Rocket_Launcher                                          OFFSET(get<bool>, {0x1C88, 1, 0, 0})
-	SMember(FLinearColor)                              Rocket_Launcher_Spark_Color                                 OFFSET(get<T>, {0x1C8C, 16, 0, 0})
+	SMember(FLinearColor)                              Rocket_Launcher_Spark_Color                                 OFFSET(getStruct<T>, {0x1C8C, 16, 0, 0})
 	DMember(bool)                                      Reload_Ejects_Shells                                        OFFSET(get<bool>, {0x1C9C, 1, 0, 0})
 
 
@@ -381,16 +381,16 @@ class UBlueprint_Paper_VIM_C : public UFortAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 6640;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x540, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x548, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x550, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x558, 32, 0, 0})
-	SMember(FAnimNode_MeshSpaceRefPose)                AnimGraphNode_MeshRefPose                                   OFFSET(get<T>, {0x578, 16, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x588, 32, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics                                  OFFSET(get<T>, {0x5B0, 1296, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics1                                 OFFSET(get<T>, {0xAC0, 1296, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics2                                 OFFSET(get<T>, {0xFD0, 1296, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics3                                 OFFSET(get<T>, {0x14E0, 1296, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x540, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x548, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x550, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x558, 32, 0, 0})
+	SMember(FAnimNode_MeshSpaceRefPose)                AnimGraphNode_MeshRefPose                                   OFFSET(getStruct<T>, {0x578, 16, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x588, 32, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics                                  OFFSET(getStruct<T>, {0x5B0, 1296, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics1                                 OFFSET(getStruct<T>, {0xAC0, 1296, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics2                                 OFFSET(getStruct<T>, {0xFD0, 1296, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics3                                 OFFSET(getStruct<T>, {0x14E0, 1296, 0, 0})
 
 
 	/// Functions
@@ -436,21 +436,21 @@ class AB_Athena_Pickaxe_Generic_C : public AFortWeaponPickaxeAthena
 	static inline constexpr uint64_t __MDKClassSize = 5552;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1520, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1520, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 MeleeHeavy_PSC                                              OFFSET(get<T>, {0x1528, 8, 0, 0})
 	CMember(UParticleSystem*)                          MeleeHeavy_ParticleSystem                                   OFFSET(get<T>, {0x1530, 8, 0, 0})
 	CMember(UParticleSystem*)                          WeaponDurabilityDestroyEffect                               OFFSET(get<T>, {0x1538, 8, 0, 0})
 	CMember(UParticleSystem*)                          WeaponDurabilityDestroyEffectIcon                           OFFSET(get<T>, {0x1540, 8, 0, 0})
 	DMember(bool)                                      UseDestroyEffect                                            OFFSET(get<bool>, {0x1548, 1, 0, 0})
 	CMember(UNiagaraComponent*)                        Alteration_Ambient_PS                                       OFFSET(get<T>, {0x1550, 8, 0, 0})
-	SMember(FVector)                                   Effects_Color_Level                                         OFFSET(get<T>, {0x1558, 24, 0, 0})
+	SMember(FVector)                                   Effects_Color_Level                                         OFFSET(getStruct<T>, {0x1558, 24, 0, 0})
 	DMember(bool)                                      Equipped                                                    OFFSET(get<bool>, {0x1570, 1, 0, 0})
 	DMember(bool)                                      bEquipPendingInstigator                                     OFFSET(get<bool>, {0x1571, 1, 0, 0})
 	DMember(bool)                                      UseTimeofDayControl                                         OFFSET(get<bool>, {0x1572, 1, 0, 0})
 	DMember(bool)                                      Swing_Right_                                                OFFSET(get<bool>, {0x1573, 1, 0, 0})
 	CMember(UFXSystemComponent*)                       Impact_FX                                                   OFFSET(get<T>, {0x1578, 8, 0, 0})
-	SMember(FRotator)                                  Left_Swing_Rotation                                         OFFSET(get<T>, {0x1580, 24, 0, 0})
-	SMember(FRotator)                                  Right_Swing_Rotation                                        OFFSET(get<T>, {0x1598, 24, 0, 0})
+	SMember(FRotator)                                  Left_Swing_Rotation                                         OFFSET(getStruct<T>, {0x1580, 24, 0, 0})
+	SMember(FRotator)                                  Right_Swing_Rotation                                        OFFSET(getStruct<T>, {0x1598, 24, 0, 0})
 
 
 	/// Functions
@@ -584,7 +584,7 @@ class AB_Athena_Pickaxe_DualWield_Generic_C : public AFortWeaponPickaxeDualWield
 	static inline constexpr uint64_t __MDKClassSize = 6369;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1840, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1840, 8, 0, 0})
 	DMember(bool)                                      Equipped                                                    OFFSET(get<bool>, {0x1848, 1, 0, 0})
 	CMember(UNiagaraComponent*)                        Alteration_Ambient_PS                                       OFFSET(get<T>, {0x1850, 8, 0, 0})
 	CMember(UParticleSystem*)                          MeleeHeavy_ParticleSystem                                   OFFSET(get<T>, {0x1858, 8, 0, 0})
@@ -594,13 +594,13 @@ public:
 	CMember(UParticleSystem*)                          WeaponDurabilityDestroyEffectIcon                           OFFSET(get<T>, {0x1878, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        Offhand_Alteration_Ambient_PS                               OFFSET(get<T>, {0x1880, 8, 0, 0})
 	DMember(bool)                                      bEquipPendingInstigator                                     OFFSET(get<bool>, {0x1888, 1, 0, 0})
-	SMember(FName)                                     Offhand_Socket_Name                                         OFFSET(get<T>, {0x188C, 4, 0, 0})
+	SMember(FName)                                     Offhand_Socket_Name                                         OFFSET(getStruct<T>, {0x188C, 4, 0, 0})
 	CMember(UAnimMontage*)                             MontageReference                                            OFFSET(get<T>, {0x1890, 8, 0, 0})
 	DMember(bool)                                      UseTimeofDayControl                                         OFFSET(get<bool>, {0x1898, 1, 0, 0})
 	CMember(UFXSystemComponent*)                       Impact_FX                                                   OFFSET(get<T>, {0x18A0, 8, 0, 0})
 	DMember(bool)                                      Swing_Right_                                                OFFSET(get<bool>, {0x18A8, 1, 0, 0})
-	SMember(FRotator)                                  Left_Swing_Rotation                                         OFFSET(get<T>, {0x18B0, 24, 0, 0})
-	SMember(FRotator)                                  Right_Swing_Rotation                                        OFFSET(get<T>, {0x18C8, 24, 0, 0})
+	SMember(FRotator)                                  Left_Swing_Rotation                                         OFFSET(getStruct<T>, {0x18B0, 24, 0, 0})
+	SMember(FRotator)                                  Right_Swing_Rotation                                        OFFSET(getStruct<T>, {0x18C8, 24, 0, 0})
 	DMember(bool)                                      Swing_Right_1                                               OFFSET(get<bool>, {0x18E0, 1, 0, 0})
 
 
@@ -683,31 +683,31 @@ class UHighTower_Tapas_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance_Hi
 	static inline constexpr uint64_t __MDKClassSize = 6768;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(get<T>, {0x708, 2, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x718, 8, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x720, 32, 0, 0})
-	SMember(FAnimNode_CopyPoseFromMesh)                AnimGraphNode_CopyPoseFromMesh                              OFFSET(get<T>, {0x740, 336, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x890, 32, 0, 0})
-	SMember(FAnimNode_Trail)                           AnimGraphNode_Trail                                         OFFSET(get<T>, {0x8B0, 672, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0xB50, 296, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(get<T>, {0xC78, 72, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0xCC0, 2384, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x1610, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace1                        OFFSET(get<T>, {0x1630, 32, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0x1650, 120, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(get<T>, {0x16C8, 40, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace1                        OFFSET(get<T>, {0x16F0, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(get<T>, {0x1710, 40, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(get<T>, {0x1738, 40, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(get<T>, {0x1760, 296, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace2                        OFFSET(get<T>, {0x1888, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace2                        OFFSET(get<T>, {0x18A8, 32, 0, 0})
-	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(get<T>, {0x18C8, 72, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(get<T>, {0x1910, 120, 0, 0})
-	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(get<T>, {0x1988, 192, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(get<T>, {0x1A48, 40, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(getStruct<T>, {0x708, 2, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x718, 8, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0x720, 32, 0, 0})
+	SMember(FAnimNode_CopyPoseFromMesh)                AnimGraphNode_CopyPoseFromMesh                              OFFSET(getStruct<T>, {0x740, 336, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x890, 32, 0, 0})
+	SMember(FAnimNode_Trail)                           AnimGraphNode_Trail                                         OFFSET(getStruct<T>, {0x8B0, 672, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0xB50, 296, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(getStruct<T>, {0xC78, 72, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0xCC0, 2384, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x1610, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace1                        OFFSET(getStruct<T>, {0x1630, 32, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(getStruct<T>, {0x1650, 120, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(getStruct<T>, {0x16C8, 40, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace1                        OFFSET(getStruct<T>, {0x16F0, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(getStruct<T>, {0x1710, 40, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(getStruct<T>, {0x1738, 40, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(getStruct<T>, {0x1760, 296, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace2                        OFFSET(getStruct<T>, {0x1888, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace2                        OFFSET(getStruct<T>, {0x18A8, 32, 0, 0})
+	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(getStruct<T>, {0x18C8, 72, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(getStruct<T>, {0x1910, 120, 0, 0})
+	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(getStruct<T>, {0x1988, 192, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(getStruct<T>, {0x1A48, 40, 0, 0})
 
 
 	/// Functions
@@ -725,17 +725,17 @@ class UMechanical_Engineer_Female_AnimBP_C : public UCustomCharacterPartAnimInst
 	static inline constexpr uint64_t __MDKClassSize = 6104;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x718, 176, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x7C8, 32, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x808, 32, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics                                  OFFSET(get<T>, {0x830, 1296, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0xD40, 2384, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1690, 296, 0, 0})
-	SMember(FRotator)                                  gear_rot                                                    OFFSET(get<T>, {0x17B8, 24, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(getStruct<T>, {0x718, 176, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(getStruct<T>, {0x7C8, 32, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(getStruct<T>, {0x7E8, 32, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x808, 32, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics                                  OFFSET(getStruct<T>, {0x830, 1296, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(getStruct<T>, {0xD40, 2384, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(getStruct<T>, {0x1690, 296, 0, 0})
+	SMember(FRotator)                                  gear_rot                                                    OFFSET(getStruct<T>, {0x17B8, 24, 0, 0})
 	CMember(USkeletalMeshComponent*)                   skel_mesh                                                   OFFSET(get<T>, {0x17D0, 8, 0, 0})
 
 
@@ -758,13 +758,13 @@ class UM_MED_Patches_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 4024;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x718, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x7C8, 32, 0, 0})
-	SMember(FGravityOverrideParamsStruct)              Gravity_Override_Params                                     OFFSET(get<T>, {0x7E8, 1976, 0, 0})
-	SMember(FVector)                                   GravityOverride                                             OFFSET(get<T>, {0xFA0, 24, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x718, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x7C8, 32, 0, 0})
+	SMember(FGravityOverrideParamsStruct)              Gravity_Override_Params                                     OFFSET(getStruct<T>, {0x7E8, 1976, 0, 0})
+	SMember(FVector)                                   GravityOverride                                             OFFSET(getStruct<T>, {0xFA0, 24, 0, 0})
 
 
 	/// Functions
@@ -784,12 +784,12 @@ class UNitroFlow_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2096;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(get<T>, {0x7E8, 72, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x738, 176, 0, 0})
+	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(getStruct<T>, {0x7E8, 72, 0, 0})
 
 
 	/// Functions
@@ -807,11 +807,11 @@ class ULoudPhoenix_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2024;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x738, 176, 0, 0})
 
 
 	/// Functions
@@ -829,11 +829,11 @@ class UMetalScout_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2024;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x738, 176, 0, 0})
 
 
 	/// Functions
@@ -851,11 +851,11 @@ class UGoldenGuard_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2024;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(getStruct<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(getStruct<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(getStruct<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(getStruct<T>, {0x738, 176, 0, 0})
 
 
 	/// Functions

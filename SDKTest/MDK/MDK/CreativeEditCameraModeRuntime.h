@@ -17,7 +17,7 @@ class AFortCreativeEditCameraController : public AFortFirstPersonCameraControlle
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	SMember(FCreativeOptionVariableBase)               WantsToImmersiveEdit                                        OFFSET(get<T>, {0x368, 8, 0, 0})
+	SMember(FCreativeOptionVariableBase)               WantsToImmersiveEdit                                        OFFSET(getStruct<T>, {0x368, 8, 0, 0})
 
 
 	/// Functions

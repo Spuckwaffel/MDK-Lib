@@ -18,7 +18,7 @@ class UCreativeGameStreamDeviceComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastSparseDelegate)                  OnTriggered                                                 OFFSET(get<T>, {0xA0, 1, 0, 0})
+	SMember(FMulticastSparseDelegate)                  OnTriggered                                                 OFFSET(getStruct<T>, {0xA0, 1, 0, 0})
 	CMember(TWeakObjectPtr<UFortMinigameLogicComponent*>) MinigameLogicComponent                                   OFFSET(get<T>, {0xA4, 8, 0, 0})
 
 

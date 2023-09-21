@@ -21,7 +21,7 @@ public:
 	DMember(bool)                                      bImportLods                                                 OFFSET(get<bool>, {0xE9, 1, 0, 0})
 	DMember(bool)                                      bBakeMeshes                                                 OFFSET(get<bool>, {0xEA, 1, 0, 0})
 	CMember(EInterchangeVertexColorImportOption)       VertexColorImportOption                                     OFFSET(get<T>, {0xEB, 1, 0, 0})
-	SMember(FColor)                                    VertexOverrideColor                                         OFFSET(get<T>, {0xEC, 4, 0, 0})
+	SMember(FColor)                                    VertexOverrideColor                                         OFFSET(getStruct<T>, {0xEC, 4, 0, 0})
 	DMember(bool)                                      bRecomputeNormals                                           OFFSET(get<bool>, {0xF0, 1, 0, 0})
 	DMember(bool)                                      bRecomputeTangents                                          OFFSET(get<bool>, {0xF1, 1, 0, 0})
 	DMember(bool)                                      bUseMikkTSpace                                              OFFSET(get<bool>, {0xF2, 1, 0, 0})
@@ -103,7 +103,7 @@ public:
 	DMember(bool)                                      bImportAnimations                                           OFFSET(get<bool>, {0xF8, 1, 0, 0})
 	DMember(bool)                                      bImportBoneTracks                                           OFFSET(get<bool>, {0xF9, 1, 0, 0})
 	CMember(EInterchangeAnimationRange)                AnimationRange                                              OFFSET(get<T>, {0xFA, 1, 0, 0})
-	SMember(FInt32Interval)                            FrameImportRange                                            OFFSET(get<T>, {0xFC, 8, 0, 0})
+	SMember(FInt32Interval)                            FrameImportRange                                            OFFSET(getStruct<T>, {0xFC, 8, 0, 0})
 	DMember(bool)                                      bUse30HzToBakeBoneAnimation                                 OFFSET(get<bool>, {0x104, 1, 0, 0})
 	DMember(int32_t)                                   CustomBoneAnimationSampleRate                               OFFSET(get<int32_t>, {0x108, 4, 0, 0})
 	DMember(bool)                                      bSnapToClosestFrameBoundary                                 OFFSET(get<bool>, {0x10C, 1, 0, 0})
@@ -116,7 +116,7 @@ public:
 	DMember(bool)                                      bDeleteExistingNonCurveCustomAttributes                     OFFSET(get<bool>, {0x122, 1, 0, 0})
 	DMember(bool)                                      bDeleteExistingCustomAttributeCurves                        OFFSET(get<bool>, {0x123, 1, 0, 0})
 	DMember(bool)                                      bDeleteExistingMorphTargetCurves                            OFFSET(get<bool>, {0x124, 1, 0, 0})
-	SMember(FString)                                   SourceAnimationName                                         OFFSET(get<T>, {0x128, 16, 0, 0})
+	SMember(FString)                                   SourceAnimationName                                         OFFSET(getStruct<T>, {0x128, 16, 0, 0})
 	DMember(bool)                                      bSceneImport                                                OFFSET(get<bool>, {0x138, 1, 0, 0})
 };
 
@@ -130,9 +130,9 @@ class UInterchangeGenericAssetsPipeline : public UInterchangePipelineBase
 public:
 	CMember(EReimportStrategyFlags)                    ReimportStrategy                                            OFFSET(get<T>, {0xE8, 1, 0, 0})
 	DMember(bool)                                      bUseSourceNameForAsset                                      OFFSET(get<bool>, {0xE9, 1, 0, 0})
-	SMember(FString)                                   AssetName                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FVector)                                   ImportOffsetTranslation                                     OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FRotator)                                  ImportOffsetRotation                                        OFFSET(get<T>, {0x118, 24, 0, 0})
+	SMember(FString)                                   AssetName                                                   OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
+	SMember(FVector)                                   ImportOffsetTranslation                                     OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FRotator)                                  ImportOffsetRotation                                        OFFSET(getStruct<T>, {0x118, 24, 0, 0})
 	DMember(float)                                     ImportOffsetUniformScale                                    OFFSET(get<float>, {0x130, 4, 0, 0})
 	CMember(UInterchangeGenericCommonMeshesProperties*) CommonMeshesProperties                                     OFFSET(get<T>, {0x138, 8, 0, 0})
 	CMember(UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties*) CommonSkeletalMeshesAndAnimationsProperties OFFSET(get<T>, {0x140, 8, 0, 0})
@@ -150,9 +150,9 @@ class UInterchangeGenericMaterialPipeline : public UInterchangePipelineBase
 
 public:
 	DMember(bool)                                      bImportMaterials                                            OFFSET(get<bool>, {0xE8, 1, 0, 0})
-	SMember(FString)                                   AssetName                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FString)                                   AssetName                                                   OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
 	CMember(EInterchangeMaterialImportOption)          MaterialImport                                              OFFSET(get<T>, {0x100, 1, 0, 0})
-	SMember(FSoftObjectPath)                           ParentMaterial                                              OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FSoftObjectPath)                           ParentMaterial                                              OFFSET(getStruct<T>, {0x108, 24, 0, 0})
 	CMember(UInterchangeGenericTexturePipeline*)       TexturePipeline                                             OFFSET(get<T>, {0x120, 8, 0, 0})
 	CMember(UInterchangeBaseNodeContainer*)            BaseNodeContainer                                           OFFSET(get<T>, {0x128, 8, 0, 0})
 };
@@ -169,7 +169,7 @@ public:
 	CMember(TWeakObjectPtr<UInterchangeGenericCommonSkeletalMeshesAndAnimationsProperties*>) CommonSkeletalMeshesAndAnimationsProperties OFFSET(get<T>, {0xF0, 8, 0, 0})
 	DMember(bool)                                      bImportStaticMeshes                                         OFFSET(get<bool>, {0xF8, 1, 0, 0})
 	DMember(bool)                                      bCombineStaticMeshes                                        OFFSET(get<bool>, {0xF9, 1, 0, 0})
-	SMember(FName)                                     LODGroup                                                    OFFSET(get<T>, {0xFC, 4, 0, 0})
+	SMember(FName)                                     LODGroup                                                    OFFSET(getStruct<T>, {0xFC, 4, 0, 0})
 	DMember(bool)                                      bImportCollision                                            OFFSET(get<bool>, {0x100, 1, 0, 0})
 	DMember(bool)                                      bImportCollisionAccordingToMeshName                         OFFSET(get<bool>, {0x101, 1, 0, 0})
 	DMember(bool)                                      bOneConvexHullPerUCX                                        OFFSET(get<bool>, {0x102, 1, 0, 0})
@@ -181,7 +181,7 @@ public:
 	DMember(int32_t)                                   MinLightmapResolution                                       OFFSET(get<int32_t>, {0x108, 4, 0, 0})
 	DMember(int32_t)                                   SrcLightmapIndex                                            OFFSET(get<int32_t>, {0x10C, 4, 0, 0})
 	DMember(int32_t)                                   DstLightmapIndex                                            OFFSET(get<int32_t>, {0x110, 4, 0, 0})
-	SMember(FVector)                                   BuildScale3D                                                OFFSET(get<T>, {0x118, 24, 0, 0})
+	SMember(FVector)                                   BuildScale3D                                                OFFSET(getStruct<T>, {0x118, 24, 0, 0})
 	DMember(float)                                     DistanceFieldResolutionScale                                OFFSET(get<float>, {0x130, 4, 0, 0})
 	CMember(TWeakObjectPtr<UStaticMesh*>)              DistanceFieldReplacementMesh                                OFFSET(get<T>, {0x134, 8, 0, 0})
 	DMember(int32_t)                                   MaxLumenMeshCards                                           OFFSET(get<int32_t>, {0x13C, 4, 0, 0})
@@ -226,7 +226,7 @@ class UInterchangeGenericTexturePipeline : public UInterchangePipelineBase
 
 public:
 	DMember(bool)                                      bImportTextures                                             OFFSET(get<bool>, {0xE8, 1, 0, 0})
-	SMember(FString)                                   AssetName                                                   OFFSET(get<T>, {0xF0, 16, 0, 0})
+	SMember(FString)                                   AssetName                                                   OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
 	DMember(bool)                                      bAllowNonPowerOfTwo                                         OFFSET(get<bool>, {0x100, 1, 0, 0})
 	CMember(UInterchangeBaseNodeContainer*)            BaseNodeContainer                                           OFFSET(get<T>, {0x108, 8, 0, 0})
 };
@@ -243,8 +243,9 @@ public:
 
 /// Struct /Script/InterchangePipelines.InterchangeLodSceneNodeContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FInterchangeLodSceneNodeContainer : public MDKStruct
+class FInterchangeLodSceneNodeContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -254,13 +255,14 @@ public:
 
 /// Struct /Script/InterchangePipelines.InterchangeMeshInstance
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FInterchangeMeshInstance : public MDKStruct
+class FInterchangeMeshInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FString)                                   MeshInstanceUid                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   MeshInstanceUid                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(UInterchangeSceneNode*)                    LodGroupNode                                                OFFSET(get<T>, {0x10, 8, 0, 0})
 	DMember(bool)                                      bReferenceSkinnedMesh                                       OFFSET(get<bool>, {0x18, 1, 0, 0})
 	DMember(bool)                                      bReferenceMorphTarget                                       OFFSET(get<bool>, {0x19, 1, 0, 0})
@@ -271,13 +273,14 @@ public:
 
 /// Struct /Script/InterchangePipelines.InterchangeMeshGeometry
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FInterchangeMeshGeometry : public MDKStruct
+class FInterchangeMeshGeometry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   MeshUid                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   MeshUid                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(UInterchangeMeshNode*)                     MeshNode                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
 	CMember(TArray<FString>)                           ReferencingMeshInstanceUids                                 OFFSET(get<T>, {0x18, 16, 0, 0})
 	CMember(TArray<FString>)                           AttachedSocketUids                                          OFFSET(get<T>, {0x28, 16, 0, 0})
@@ -285,8 +288,9 @@ public:
 
 /// Struct /Script/InterchangePipelines.InterchangePipelineMeshesUtilitiesContext
 /// Size: 0x0005 (0x000000 - 0x000005)
-class FInterchangePipelineMeshesUtilitiesContext : public MDKStruct
+class FInterchangePipelineMeshesUtilitiesContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 5;
 

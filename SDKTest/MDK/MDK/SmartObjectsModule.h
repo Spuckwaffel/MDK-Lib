@@ -20,8 +20,8 @@ class UEnvQueryGenerator_SmartObjects : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   QueryOriginContext                                          OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FSmartObjectRequestFilter)                 SmartObjectRequestFilter                                    OFFSET(get<T>, {0x60, 240, 0, 0})
-	SMember(FVector)                                   QueryBoxExtent                                              OFFSET(get<T>, {0x150, 24, 0, 0})
+	SMember(FSmartObjectRequestFilter)                 SmartObjectRequestFilter                                    OFFSET(getStruct<T>, {0x60, 240, 0, 0})
+	SMember(FVector)                                   QueryBoxExtent                                              OFFSET(getStruct<T>, {0x150, 24, 0, 0})
 	DMember(bool)                                      bOnlyClaimable                                              OFFSET(get<bool>, {0x168, 1, 0, 0})
 };
 
@@ -56,7 +56,7 @@ class UBlackboardKeyType_SOClaimHandle : public UBlackboardKeyType
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSmartObjectClaimHandle)                   Handle                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FSmartObjectClaimHandle)                   Handle                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Class /Script/SmartObjectsModule.GenericSmartObject
@@ -88,7 +88,7 @@ class ASmartObjectCollection : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 832;
 
 public:
-	SMember(FBox)                                      Bounds                                                      OFFSET(get<T>, {0x290, 56, 0, 0})
+	SMember(FBox)                                      Bounds                                                      OFFSET(getStruct<T>, {0x290, 56, 0, 0})
 	CMember(TArray<FSmartObjectCollectionEntry>)       CollectionEntries                                           OFFSET(get<T>, {0x2C8, 16, 0, 0})
 	CMember(TMap<FSmartObjectHandle, FSoftObjectPath>) RegisteredIdToObjectMap                                     OFFSET(get<T>, {0x2D8, 80, 0, 0})
 	CMember(TArray<USmartObjectDefinition*>)           Definitions                                                 OFFSET(get<T>, {0x328, 16, 0, 0})
@@ -102,9 +102,9 @@ class USmartObjectComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSmartObjectEvent                                          OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSmartObjectEvent                                          OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
 	CMember(USmartObjectDefinition*)                   DefinitionAsset                                             OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FSmartObjectHandle)                        RegisteredHandle                                            OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FSmartObjectHandle)                        RegisteredHandle                                            OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	DMember(bool)                                      bCanBePartOfCollection                                      OFFSET(get<bool>, {0x2E8, 1, 0, 0})
 
 
@@ -153,9 +153,9 @@ class USmartObjectDefinition : public UDataAsset
 public:
 	CMember(TArray<FSmartObjectSlotDefinition>)        Slots                                                       OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TArray<USmartObjectBehaviorDefinition*>)   DefaultBehaviorDefinitions                                  OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         UserTagFilter                                               OFFSET(get<T>, {0x50, 72, 0, 0})
-	SMember(FWorldConditionQueryDefinition)            Preconditions                                               OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     ActivityTags                                                OFFSET(get<T>, {0xB0, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         UserTagFilter                                               OFFSET(getStruct<T>, {0x50, 72, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            Preconditions                                               OFFSET(getStruct<T>, {0x98, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     ActivityTags                                                OFFSET(getStruct<T>, {0xB0, 32, 0, 0})
 	CMember(UClass*)                                   WorldConditionSchemaClass                                   OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(ESmartObjectTagMergingPolicy)              ActivityTagsMergingPolicy                                   OFFSET(get<T>, {0xD8, 1, 0, 0})
 	CMember(ESmartObjectTagFilteringPolicy)            UserTagsFilteringPolicy                                     OFFSET(get<T>, {0xD9, 1, 0, 0})
@@ -199,7 +199,7 @@ class ASmartObjectPersistentCollection : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	SMember(FSmartObjectContainer)                     SmartObjectContainer                                        OFFSET(get<T>, {0x290, 176, 0, 0})
+	SMember(FSmartObjectContainer)                     SmartObjectContainer                                        OFFSET(getStruct<T>, {0x290, 176, 0, 0})
 };
 
 /// Class /Script/SmartObjectsModule.SmartObjectRenderingComponent
@@ -220,11 +220,11 @@ class USmartObjectSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 408;
 
 public:
-	SMember(FSoftClassPath)                            SpacePartitionClassName                                     OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FSoftClassPath)                            SpacePartitionClassName                                     OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(UClass*)                                   SpacePartitionClass                                         OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(USmartObjectSpacePartition*)               SpacePartition                                              OFFSET(get<T>, {0x50, 8, 0, 0})
 	CMember(ASmartObjectSubsystemRenderingActor*)      RenderingActor                                              OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FSmartObjectContainer)                     SmartObjectContainer                                        OFFSET(get<T>, {0x60, 176, 0, 0})
+	SMember(FSmartObjectContainer)                     SmartObjectContainer                                        OFFSET(getStruct<T>, {0x60, 176, 0, 0})
 	CMember(TMap<FSmartObjectHandle, FSmartObjectRuntime>) RuntimeSmartObjects                                     OFFSET(get<T>, {0x120, 80, 0, 0})
 	CMember(TArray<USmartObjectComponent*>)            RegisteredSOComponents                                      OFFSET(get<T>, {0x170, 16, 0, 0})
 	CMember(TArray<USmartObjectComponent*>)            PendingSmartObjectRegistration                              OFFSET(get<T>, {0x180, 16, 0, 0})
@@ -315,7 +315,7 @@ class USmartObjectSimpleQueryTest : public USmartObjectTest
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FSmartObjectRequest)                       Request                                                     OFFSET(get<T>, {0x30, 304, 0, 0})
+	SMember(FSmartObjectRequest)                       Request                                                     OFFSET(getStruct<T>, {0x30, 304, 0, 0})
 	CMember(TArray<FSmartObjectRequestResult>)         Results                                                     OFFSET(get<T>, {0x160, 16, 0, 0})
 };
 
@@ -358,9 +358,9 @@ class USmartObjectSlotValidationFilter : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FSmartObjectSlotValidationParams)          EntryParameters                                             OFFSET(get<T>, {0x28, 112, 0, 0})
+	SMember(FSmartObjectSlotValidationParams)          EntryParameters                                             OFFSET(getStruct<T>, {0x28, 112, 0, 0})
 	DMember(bool)                                      bUseEntryParametersForExit                                  OFFSET(get<bool>, {0x98, 1, 0, 0})
-	SMember(FSmartObjectSlotValidationParams)          ExitParameters                                              OFFSET(get<T>, {0xA0, 112, 0, 0})
+	SMember(FSmartObjectSlotValidationParams)          ExitParameters                                              OFFSET(getStruct<T>, {0xA0, 112, 0, 0})
 };
 
 /// Class /Script/SmartObjectsModule.SmartObjectUserComponent
@@ -386,22 +386,24 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectEventData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FSmartObjectEventData : public MDKStruct
+class FSmartObjectEventData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FSmartObjectHandle)                        SmartObjectHandle                                           OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FSmartObjectHandle)                        SmartObjectHandle                                           OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(ESmartObjectChangeReason)                  Reason                                                      OFFSET(get<T>, {0x18, 1, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotHandle
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSmartObjectSlotHandle : public MDKStruct
+class FSmartObjectSlotHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -410,8 +412,9 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectHandle
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSmartObjectHandle : public MDKStruct
+class FSmartObjectHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -421,8 +424,9 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotDefinitionData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSmartObjectSlotDefinitionData : public MDKStruct
+class FSmartObjectSlotDefinitionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -433,6 +437,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FSmartObjectSlotAnnotation : public FSmartObjectSlotDefinitionData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -443,6 +448,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FSmartObjectWorldConditionBase : public FWorldConditionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -453,18 +459,20 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FSmartObjectAnnotation_SlotUserCollision : public FSmartObjectSlotAnnotation
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(bool)                                      bUseUserCapsuleSize                                         OFFSET(get<bool>, {0x8, 1, 0, 0})
-	SMember(FSmartObjectUserCapsuleParams)             Capsule                                                     OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FSmartObjectUserCapsuleParams)             Capsule                                                     OFFSET(getStruct<T>, {0xC, 12, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectUserCapsuleParams
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSmartObjectUserCapsuleParams : public MDKStruct
+class FSmartObjectUserCapsuleParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -478,13 +486,14 @@ public:
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FSmartObjectSlotEntranceAnnotation : public FSmartObjectSlotAnnotation
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector3f)                                 Offset                                                      OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FRotator3f)                                Rotation                                                    OFFSET(get<T>, {0x14, 12, 0, 0})
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FVector3f)                                 Offset                                                      OFFSET(getStruct<T>, {0x8, 12, 0, 0})
+	SMember(FRotator3f)                                Rotation                                                    OFFSET(getStruct<T>, {0x14, 12, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 	DMember(bool)                                      bIsEntry                                                    OFFSET(get<bool>, {0x40, 1, 1, 0})
 	DMember(bool)                                      bIsExit                                                     OFFSET(get<bool>, {0x40, 1, 1, 1})
 	DMember(bool)                                      bTraceGroundLocation                                        OFFSET(get<bool>, {0x40, 1, 1, 2})
@@ -499,18 +508,20 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FSmartObjectSlotLinkAnnotation : public FSmartObjectSlotAnnotation
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FSmartObjectSlotReference)                 LinkedSlot                                                  OFFSET(get<T>, {0xC, 1, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FSmartObjectSlotReference)                 LinkedSlot                                                  OFFSET(getStruct<T>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotReference
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FSmartObjectSlotReference : public MDKStruct
+class FSmartObjectSlotReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -522,6 +533,7 @@ public:
 /// Size: 0x0008 (0x000068 - 0x000070)
 class FSmartObjectComponentInstanceData : public FActorComponentInstanceData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -531,41 +543,44 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotDefinition
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FSmartObjectSlotDefinition : public MDKStruct
+class FSmartObjectSlotDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     RuntimeTags                                                 OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         UserTagFilter                                               OFFSET(get<T>, {0x28, 72, 0, 0})
-	SMember(FGameplayTagContainer)                     ActivityTags                                                OFFSET(get<T>, {0x70, 32, 0, 0})
-	SMember(FWorldConditionQueryDefinition)            SelectionPreconditions                                      OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FVector3f)                                 Offset                                                      OFFSET(get<T>, {0xA8, 12, 0, 0})
-	SMember(FRotator3f)                                Rotation                                                    OFFSET(get<T>, {0xB4, 12, 0, 0})
+	SMember(FGameplayTagContainer)                     RuntimeTags                                                 OFFSET(getStruct<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         UserTagFilter                                               OFFSET(getStruct<T>, {0x28, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     ActivityTags                                                OFFSET(getStruct<T>, {0x70, 32, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            SelectionPreconditions                                      OFFSET(getStruct<T>, {0x90, 24, 0, 0})
+	SMember(FVector3f)                                 Offset                                                      OFFSET(getStruct<T>, {0xA8, 12, 0, 0})
+	SMember(FRotator3f)                                Rotation                                                    OFFSET(getStruct<T>, {0xB4, 12, 0, 0})
 	CMember(TArray<FInstancedStruct>)                  Data                                                        OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<USmartObjectBehaviorDefinition*>)   BehaviorDefinitions                                         OFFSET(get<T>, {0xD0, 16, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectDefinitionPreviewData
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FSmartObjectDefinitionPreviewData : public MDKStruct
+class FSmartObjectDefinitionPreviewData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   ObjectActorClass                                            OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FSoftObjectPath)                           ObjectMeshPath                                              OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FSoftObjectPath)                           ObjectMeshPath                                              OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   UserActorClass                                              OFFSET(get<T>, {0x38, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   UserValidationFilterClass                                   OFFSET(get<T>, {0x58, 32, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSpatialEntryData
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FSmartObjectSpatialEntryData : public MDKStruct
+class FSmartObjectSpatialEntryData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -576,6 +591,7 @@ public:
 /// Size: 0x000B (0x000001 - 0x00000C)
 class FSmartObjectHashGridEntryData : public FSmartObjectSpatialEntryData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -586,6 +602,7 @@ public:
 /// Size: 0x000F (0x000001 - 0x000010)
 class FSmartObjectOctreeEntryData : public FSmartObjectSpatialEntryData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -594,29 +611,31 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectCollectionEntry
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FSmartObjectCollectionEntry : public MDKStruct
+class FSmartObjectCollectionEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FSoftObjectPath)                           Path                                                        OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FBox)                                      Bounds                                                      OFFSET(get<T>, {0xA0, 56, 0, 0})
-	SMember(FSmartObjectHandle)                        Handle                                                      OFFSET(get<T>, {0xD8, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FSoftObjectPath)                           Path                                                        OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x40, 96, 0, 0})
+	SMember(FBox)                                      Bounds                                                      OFFSET(getStruct<T>, {0xA0, 56, 0, 0})
+	SMember(FSmartObjectHandle)                        Handle                                                      OFFSET(getStruct<T>, {0xD8, 8, 0, 0})
 	DMember(uint32_t)                                  DefinitionIdx                                               OFFSET(get<uint32_t>, {0xE0, 4, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectContainer
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FSmartObjectContainer : public MDKStruct
+class FSmartObjectContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FBox)                                      Bounds                                                      OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FBox)                                      Bounds                                                      OFFSET(getStruct<T>, {0x0, 56, 0, 0})
 	CMember(TArray<FSmartObjectCollectionEntry>)       CollectionEntries                                           OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TMap<FSmartObjectHandle, FSoftObjectPath>) RegisteredIdToObjectMap                                     OFFSET(get<T>, {0x48, 80, 0, 0})
 	CMember(TArray<USmartObjectDefinition*>)           Definitions                                                 OFFSET(get<T>, {0x98, 16, 0, 0})
@@ -625,21 +644,23 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectClaimHandle
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSmartObjectClaimHandle : public MDKStruct
+class FSmartObjectClaimHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FSmartObjectHandle)                        SmartObjectHandle                                           OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FSmartObjectUserHandle)                    UserHandle                                                  OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FSmartObjectHandle)                        SmartObjectHandle                                           OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FSmartObjectUserHandle)                    UserHandle                                                  OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectUserHandle
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FSmartObjectUserHandle : public MDKStruct
+class FSmartObjectUserHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -649,8 +670,9 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotStateData
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FSmartObjectSlotStateData : public MDKStruct
+class FSmartObjectSlotStateData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -661,43 +683,47 @@ public:
 /// Size: 0x005F (0x000001 - 0x000060)
 class FSmartObjectSlotTransform : public FSmartObjectSlotStateData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectRuntimeSlot
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FSmartObjectRuntimeSlot : public MDKStruct
+class FSmartObjectRuntimeSlot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FWorldConditionQueryState)                 PreconditionState                                           OFFSET(get<T>, {0x70, 48, 0, 0})
+	SMember(FWorldConditionQueryState)                 PreconditionState                                           OFFSET(getStruct<T>, {0x70, 48, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectRuntime
 /// Size: 0x0120 (0x000000 - 0x000120)
-class FSmartObjectRuntime : public MDKStruct
+class FSmartObjectRuntime : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FWorldConditionQueryState)                 PreconditionState                                           OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FWorldConditionQueryState)                 PreconditionState                                           OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	CMember(TArray<FSmartObjectRuntimeSlot>)           Slots                                                       OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(USmartObjectDefinition*)                   Definition                                                  OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(TWeakObjectPtr<USmartObjectComponent*>)    OwnerComponent                                              OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FInstancedStruct)                          SpatialEntryData                                            OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FInstancedStruct)                          SpatialEntryData                                            OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotView
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSmartObjectSlotView : public MDKStruct
+class FSmartObjectSlotView : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -706,15 +732,16 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectRequestFilter
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FSmartObjectRequestFilter : public MDKStruct
+class FSmartObjectRequestFilter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
 	CMember(AActor*)                                   UserActor                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     UserTags                                                    OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         ActivityRequirements                                        OFFSET(get<T>, {0x28, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     UserTags                                                    OFFSET(getStruct<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         ActivityRequirements                                        OFFSET(getStruct<T>, {0x28, 72, 0, 0})
 	CMember(UClass*)                                   BehaviorDefinitionClass                                     OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(TArray<UClass*>)                           BehaviorDefinitionClasses                                   OFFSET(get<T>, {0x78, 16, 0, 0})
 	DMember(bool)                                      bShouldEvaluateConditions                                   OFFSET(get<bool>, {0x88, 1, 0, 0})
@@ -722,43 +749,47 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectRequest
 /// Size: 0x0130 (0x000000 - 0x000130)
-class FSmartObjectRequest : public MDKStruct
+class FSmartObjectRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FBox)                                      QueryBox                                                    OFFSET(get<T>, {0x0, 56, 0, 0})
-	SMember(FSmartObjectRequestFilter)                 Filter                                                      OFFSET(get<T>, {0x40, 240, 0, 0})
+	SMember(FBox)                                      QueryBox                                                    OFFSET(getStruct<T>, {0x0, 56, 0, 0})
+	SMember(FSmartObjectRequestFilter)                 Filter                                                      OFFSET(getStruct<T>, {0x40, 240, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectRequestResult
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSmartObjectRequestResult : public MDKStruct
+class FSmartObjectRequestResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSmartObjectHandle)                        SmartObjectHandle                                           OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FSmartObjectHandle)                        SmartObjectHandle                                           OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotEntranceHandle
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSmartObjectSlotEntranceHandle : public MDKStruct
+class FSmartObjectSlotEntranceHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FSmartObjectSlotHandle)                    SlotHandle                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotEntranceLocationRequest
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FSmartObjectSlotEntranceLocationRequest : public MDKStruct
+class FSmartObjectSlotEntranceLocationRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -767,23 +798,25 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotEntranceLocationResult
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FSmartObjectSlotEntranceLocationResult : public MDKStruct
+class FSmartObjectSlotEntranceLocationResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x38, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FSmartObjectSlotEntranceHandle)            EntranceHandle                                              OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x38, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x40, 32, 0, 0})
+	SMember(FSmartObjectSlotEntranceHandle)            EntranceHandle                                              OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotIndex
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FSmartObjectSlotIndex : public MDKStruct
+class FSmartObjectSlotIndex : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -793,8 +826,9 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectTraceParams
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSmartObjectTraceParams : public MDKStruct
+class FSmartObjectTraceParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -802,30 +836,32 @@ public:
 	CMember(ESmartObjectTraceType)                     Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(TEnumAsByte<ETraceTypeQuery>)              TraceChannel                                                OFFSET(get<T>, {0x1, 1, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       ObjectTypes                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FCollisionProfileName)                     CollisionProfile                                            OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FCollisionProfileName)                     CollisionProfile                                            OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 	DMember(bool)                                      bTraceComplex                                               OFFSET(get<bool>, {0x1C, 1, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectSlotValidationParams
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FSmartObjectSlotValidationParams : public MDKStruct
+class FSmartObjectSlotValidationParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UClass*)                                   NavigationFilter                                            OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   SearchExtents                                               OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FSmartObjectTraceParams)                   GroundTraceParameters                                       OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FSmartObjectTraceParams)                   TransitionTraceParameters                                   OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FVector)                                   SearchExtents                                               OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FSmartObjectTraceParams)                   GroundTraceParameters                                       OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FSmartObjectTraceParams)                   TransitionTraceParameters                                   OFFSET(getStruct<T>, {0x40, 32, 0, 0})
 	DMember(bool)                                      bUseNavigationCapsuleSize                                   OFFSET(get<bool>, {0x60, 1, 0, 0})
-	SMember(FSmartObjectUserCapsuleParams)             UserCapsule                                                 OFFSET(get<T>, {0x64, 12, 0, 0})
+	SMember(FSmartObjectUserCapsuleParams)             UserCapsule                                                 OFFSET(getStruct<T>, {0x64, 12, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectActorUserData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSmartObjectActorUserData : public MDKStruct
+class FSmartObjectActorUserData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -835,8 +871,9 @@ public:
 
 /// Struct /Script/SmartObjectsModule.SmartObjectWorldConditionObjectTagQueryState
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSmartObjectWorldConditionObjectTagQueryState : public MDKStruct
+class FSmartObjectWorldConditionObjectTagQueryState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -847,17 +884,19 @@ public:
 /// Size: 0x0058 (0x000010 - 0x000068)
 class FSmartObjectWorldConditionObjectTagQuery : public FSmartObjectWorldConditionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x20, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0x20, 72, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.SmartObjectWorldConditionSlotTagQueryState
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSmartObjectWorldConditionSlotTagQueryState : public MDKStruct
+class FSmartObjectWorldConditionSlotTagQueryState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -868,17 +907,19 @@ public:
 /// Size: 0x0058 (0x000010 - 0x000068)
 class FSmartObjectWorldConditionSlotTagQuery : public FSmartObjectWorldConditionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x20, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0x20, 72, 0, 0})
 };
 
 /// Struct /Script/SmartObjectsModule.WorldCondition_SmartObjectActorTagQueryState
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FWorldCondition_SmartObjectActorTagQueryState : public MDKStruct
+class FWorldCondition_SmartObjectActorTagQueryState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -889,11 +930,12 @@ public:
 /// Size: 0x0050 (0x000010 - 0x000060)
 class FWorldCondition_SmartObjectActorTagQuery : public FSmartObjectWorldConditionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x18, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0x18, 72, 0, 0})
 };
 
 /// Enum /Script/SmartObjectsModule.ESmartObjectChangeReason

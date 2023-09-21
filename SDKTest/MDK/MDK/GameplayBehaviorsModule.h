@@ -17,8 +17,8 @@ class UBTDecorator_GameplayTagQuery : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FBlackboardKeySelector)                    ActorForGameplayTagQuery                                    OFFSET(get<T>, {0x68, 40, 0, 0})
-	SMember(FGameplayTagQuery)                         GameplayTagQuery                                            OFFSET(get<T>, {0x90, 72, 0, 0})
+	SMember(FBlackboardKeySelector)                    ActorForGameplayTagQuery                                    OFFSET(getStruct<T>, {0x68, 40, 0, 0})
+	SMember(FGameplayTagQuery)                         GameplayTagQuery                                            OFFSET(getStruct<T>, {0x90, 72, 0, 0})
 	CMember(TArray<FGameplayTag>)                      QueryTags                                                   OFFSET(get<T>, {0xD8, 16, 0, 0})
 };
 
@@ -64,7 +64,7 @@ class UGameplayBehavior : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayTag)                              ActionTag                                                   OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FGameplayTag)                              ActionTag                                                   OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
 	CMember(TArray<AActor*>)                           RelevantActors                                              OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(AActor*)                                   TransientSmartObjectOwner                                   OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(AActor*)                                   TransientAvatar                                             OFFSET(get<T>, {0x70, 8, 0, 0})
@@ -127,7 +127,7 @@ class UGameplayBehaviorConfig_Animation : public UGameplayBehaviorConfig
 public:
 	CMember(TWeakObjectPtr<UAnimMontage*>)             AnimMontage                                                 OFFSET(get<T>, {0x30, 32, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FName)                                     StartSectionName                                            OFFSET(get<T>, {0x54, 4, 0, 0})
+	SMember(FName)                                     StartSectionName                                            OFFSET(getStruct<T>, {0x54, 4, 0, 0})
 	DMember(bool)                                      bLoop                                                       OFFSET(get<bool>, {0x58, 1, 1, 0})
 };
 
@@ -170,8 +170,9 @@ public:
 
 /// Struct /Script/GameplayBehaviorsModule.AgentGameplayBehaviors
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FAgentGameplayBehaviors : public MDKStruct
+class FAgentGameplayBehaviors : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -181,8 +182,9 @@ public:
 
 /// Struct /Script/GameplayBehaviorsModule.MontagePlaybackData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMontagePlaybackData : public MDKStruct
+class FMontagePlaybackData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 

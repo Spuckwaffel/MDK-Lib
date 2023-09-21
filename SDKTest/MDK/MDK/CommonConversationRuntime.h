@@ -18,8 +18,8 @@ class UConversationNode : public UObject
 
 public:
 	CMember(UObject*)                                  EvalWorldContextObj                                         OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FString)                                   NodeName                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FGuid)                                     Compiled_NodeGUID                                           OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   NodeName                                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FGuid)                                     Compiled_NodeGUID                                           OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	CMember(UConversationNode*)                        ParentNode                                                  OFFSET(get<T>, {0x50, 8, 0, 0})
 
 
@@ -46,8 +46,8 @@ class UConversationChoiceNode : public UConversationSubNode
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FText)                                     DefaultChoiceDisplayText                                    OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     ChoiceTags                                                  OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FText)                                     DefaultChoiceDisplayText                                    OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     ChoiceTags                                                  OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 
 
 	/// Functions
@@ -76,7 +76,7 @@ public:
 	DMember(int32_t)                                   CompilerVersion                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	CMember(TMap<FGuid, UConversationNode*>)           ReachableNodeMap                                            OFFSET(get<T>, {0x38, 80, 0, 0})
 	CMember(TArray<FConversationEntryList>)            EntryTags                                                   OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     ExitTags                                                    OFFSET(get<T>, {0x98, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ExitTags                                                    OFFSET(getStruct<T>, {0x98, 32, 0, 0})
 	CMember(TArray<FGuid>)                             InternalNodeIds                                             OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(TArray<FGuid>)                             LinkedToNodeIds                                             OFFSET(get<T>, {0xC8, 16, 0, 0})
 	CMember(TArray<FCommonDialogueBankParticipant>)    Speakers                                                    OFFSET(get<T>, {0xD8, 16, 0, 0})
@@ -101,7 +101,7 @@ class UConversationEntryPointNode : public UConversationNodeWithLinks
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGameplayTag)                              EntryTag                                                    OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FGameplayTag)                              EntryTag                                                    OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 };
 
 /// Class /Script/CommonConversationRuntime.ConversationInstance
@@ -112,7 +112,7 @@ class UConversationInstance : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	SMember(FConversationParticipants)                 Participants                                                OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FConversationParticipants)                 Participants                                                OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/CommonConversationRuntime.ConversationLibrary
@@ -158,7 +158,7 @@ class UConversationLinkNode : public UConversationTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayTag)                              RemoteEntryTag                                              OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FGameplayTag)                              RemoteEntryTag                                              OFFSET(getStruct<T>, {0x80, 4, 0, 0})
 };
 
 /// Class /Script/CommonConversationRuntime.ConversationParticipantComponent
@@ -172,7 +172,7 @@ public:
 	DMember(int32_t)                                   ConversationsActive                                         OFFSET(get<int32_t>, {0x100, 4, 0, 0})
 	CMember(UConversationInstance*)                    Auth_CurrentConversation                                    OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(TArray<UConversationInstance*>)            Auth_Conversations                                          OFFSET(get<T>, {0x110, 16, 0, 0})
-	SMember(FClientConversationMessagePayload)         LastMessage                                                 OFFSET(get<T>, {0x120, 120, 0, 0})
+	SMember(FClientConversationMessagePayload)         LastMessage                                                 OFFSET(getStruct<T>, {0x120, 120, 0, 0})
 
 
 	/// Functions
@@ -212,7 +212,7 @@ class UConversationRegistry : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	SMember(FNetSerializeScriptStructCache_ConvVersion) ConversationChoiceDataStructCache                          OFFSET(get<T>, {0x38, 96, 0, 0})
+	SMember(FNetSerializeScriptStructCache_ConvVersion) ConversationChoiceDataStructCache                          OFFSET(getStruct<T>, {0x38, 96, 0, 0})
 };
 
 /// Class /Script/CommonConversationRuntime.ConversationRequirementNode
@@ -248,72 +248,78 @@ public:
 
 /// Struct /Script/CommonConversationRuntime.ClientConversationMessagePayload
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FClientConversationMessagePayload : public MDKStruct
+class FClientConversationMessagePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FClientConversationMessage)                Message                                                     OFFSET(get<T>, {0x0, 72, 0, 0})
-	SMember(FConversationParticipants)                 Participants                                                OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FConversationNodeHandle)                   CurrentNode                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FClientConversationMessage)                Message                                                     OFFSET(getStruct<T>, {0x0, 72, 0, 0})
+	SMember(FConversationParticipants)                 Participants                                                OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FConversationNodeHandle)                   CurrentNode                                                 OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	CMember(TArray<FClientConversationOptionEntry>)    Options                                                     OFFSET(get<T>, {0x68, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ClientConversationOptionEntry
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FClientConversationOptionEntry : public MDKStruct
+class FClientConversationOptionEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FText)                                     ChoiceText                                                  OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FGameplayTagContainer)                     ChoiceTags                                                  OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FText)                                     ChoiceText                                                  OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     ChoiceTags                                                  OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 	CMember(EConversationChoiceType)                   ChoiceType                                                  OFFSET(get<T>, {0x38, 1, 0, 0})
-	SMember(FConversationChoiceReference)              ChoiceReference                                             OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FConversationChoiceReference)              ChoiceReference                                             OFFSET(getStruct<T>, {0x40, 32, 0, 0})
 	CMember(TArray<FConversationNodeParameterPair>)    ExtraData                                                   OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ConversationNodeParameterPair
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FConversationNodeParameterPair : public MDKStruct
+class FConversationNodeParameterPair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ConversationChoiceReference
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FConversationChoiceReference : public MDKStruct
+class FConversationChoiceReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FConversationNodeHandle)                   NodeReference                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FConversationNodeHandle)                   NodeReference                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FConversationNodeParameterPair>)    NodeParameters                                              OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ConversationNodeHandle
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FConversationNodeHandle : public MDKStruct
+class FConversationNodeHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGuid)                                     NodeGUID                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     NodeGUID                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ConversationParticipants
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FConversationParticipants : public MDKStruct
+class FConversationParticipants : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -323,59 +329,64 @@ public:
 
 /// Struct /Script/CommonConversationRuntime.ConversationParticipantEntry
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FConversationParticipantEntry : public MDKStruct
+class FConversationParticipantEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ClientConversationMessage
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FClientConversationMessage : public MDKStruct
+class FClientConversationMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTag)                              SpeakerID                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FText)                                     ParticipantDisplayName                                      OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FGameplayTag)                              SpeakerID                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FText)                                     ParticipantDisplayName                                      OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(TArray<FConversationNodeParameterPair>)    MetadataParameters                                          OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ConversationTaskResult
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FConversationTaskResult : public MDKStruct
+class FConversationTaskResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(EConversationTaskResultType)               Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FAdvanceConversationRequest)               AdvanceToChoice                                             OFFSET(get<T>, {0x8, 48, 0, 0})
-	SMember(FClientConversationMessage)                Message                                                     OFFSET(get<T>, {0x38, 72, 0, 0})
+	SMember(FAdvanceConversationRequest)               AdvanceToChoice                                             OFFSET(getStruct<T>, {0x8, 48, 0, 0})
+	SMember(FClientConversationMessage)                Message                                                     OFFSET(getStruct<T>, {0x38, 72, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.AdvanceConversationRequest
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FAdvanceConversationRequest : public MDKStruct
+class FAdvanceConversationRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FConversationChoiceReference)              Choice                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FConversationChoiceReference)              Choice                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	CMember(TArray<FConversationNodeParameterPair>)    UserParameters                                              OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.ConversationContext
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FConversationContext : public MDKStruct
+class FConversationContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -391,33 +402,36 @@ public:
 
 /// Struct /Script/CommonConversationRuntime.ConversationEntryList
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FConversationEntryList : public MDKStruct
+class FConversationEntryList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              EntryTag                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              EntryTag                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FGuid>)                             DestinationList                                             OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.CommonDialogueBankParticipant
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FCommonDialogueBankParticipant : public MDKStruct
+class FCommonDialogueBankParticipant : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FText)                                     FallbackName                                                OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FGameplayTag)                              ParticipantName                                             OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FLinearColor)                              NodeTint                                                    OFFSET(get<T>, {0x1C, 16, 0, 0})
+	SMember(FText)                                     FallbackName                                                OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FGameplayTag)                              ParticipantName                                             OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FLinearColor)                              NodeTint                                                    OFFSET(getStruct<T>, {0x1C, 16, 0, 0})
 };
 
 /// Struct /Script/CommonConversationRuntime.NetSerializeScriptStructCache_ConvVersion
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FNetSerializeScriptStructCache_ConvVersion : public MDKStruct
+class FNetSerializeScriptStructCache_ConvVersion : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -428,8 +442,9 @@ public:
 
 /// Struct /Script/CommonConversationRuntime.ConversationChoiceData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FConversationChoiceData : public MDKStruct
+class FConversationChoiceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -438,8 +453,9 @@ public:
 
 /// Struct /Script/CommonConversationRuntime.ConversationChoiceDataHandle
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FConversationChoiceDataHandle : public MDKStruct
+class FConversationChoiceDataHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -448,14 +464,15 @@ public:
 
 /// Struct /Script/CommonConversationRuntime.ConversationBranchPoint
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FConversationBranchPoint : public MDKStruct
+class FConversationBranchPoint : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(TArray<FConversationNodeHandle>)           ReturnScopeStack                                            OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FClientConversationOptionEntry)            ClientChoice                                                OFFSET(get<T>, {0x10, 112, 0, 0})
+	SMember(FClientConversationOptionEntry)            ClientChoice                                                OFFSET(getStruct<T>, {0x10, 112, 0, 0})
 };
 
 /// Enum /Script/CommonConversationRuntime.EConversationTaskResultType

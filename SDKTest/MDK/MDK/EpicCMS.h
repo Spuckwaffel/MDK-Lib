@@ -8,21 +8,23 @@
 
 /// Struct /Script/EpicCMS.DownloadCacheEntry
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FDownloadCacheEntry : public MDKStruct
+class FDownloadCacheEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   SourceUrl                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FDateTime)                                 LastAccessTime                                              OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FString)                                   FilePath                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   SourceUrl                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FDateTime)                                 LastAccessTime                                              OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicCMS.DownloadCache
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FDownloadCache : public MDKStruct
+class FDownloadCache : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 

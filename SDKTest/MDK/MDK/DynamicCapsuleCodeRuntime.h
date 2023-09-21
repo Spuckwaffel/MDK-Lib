@@ -19,7 +19,7 @@ class UDynamicCapsuleComponent : public UFortPawnComponent
 
 public:
 	CMember(TArray<FDynamicCapsuleEntry>)              DynamicCapsuleEntryStack                                    OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FDynamicCapsuleState)                      ReplicatedCapsuleState                                      OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FDynamicCapsuleState)                      ReplicatedCapsuleState                                      OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 
 
 	/// Functions
@@ -51,7 +51,7 @@ public:
 	DMember(float)                                     TargetCapsuleHalfHeight                                     OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(bool)                                      bAdjustRelativeMeshHeight                                   OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(float)                                     TargetRelativeMeshHeight                                    OFFSET(get<float>, {0x3C, 4, 0, 0})
-	SMember(FGameplayTag)                              CapsuleSizeTag                                              OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FGameplayTag)                              CapsuleSizeTag                                              OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 };
 
 /// Class /Script/DynamicCapsuleCodeRuntime.JumpSlideComponent
@@ -66,8 +66,9 @@ public:
 
 /// Struct /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleState
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDynamicCapsuleState : public MDKStruct
+class FDynamicCapsuleState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -79,13 +80,14 @@ public:
 
 /// Struct /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FDynamicCapsuleEntry : public MDKStruct
+class FDynamicCapsuleEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FDynamicCapsuleState)                      State                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FDynamicCapsuleState)                      State                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 

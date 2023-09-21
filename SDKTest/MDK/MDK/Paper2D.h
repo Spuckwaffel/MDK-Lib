@@ -77,9 +77,9 @@ public:
 	DMember(bool)                                      bPlaying                                                    OFFSET(get<bool>, {0x5B4, 1, 1, 2})
 	DMember(float)                                     AccumulatedTime                                             OFFSET(get<float>, {0x5B8, 4, 0, 0})
 	DMember(int32_t)                                   CachedFrameIndex                                            OFFSET(get<int32_t>, {0x5BC, 4, 0, 0})
-	SMember(FLinearColor)                              SpriteColor                                                 OFFSET(get<T>, {0x5C0, 16, 0, 0})
+	SMember(FLinearColor)                              SpriteColor                                                 OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
 	CMember(UBodySetup*)                               CachedBodySetup                                             OFFSET(get<T>, {0x5D0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedPlaying                                           OFFSET(get<T>, {0x5D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedPlaying                                           OFFSET(getStruct<T>, {0x5D8, 16, 0, 0})
 
 
 	/// Functions
@@ -197,8 +197,8 @@ class UPaperSprite : public UObject
 
 public:
 	CMember(TArray<UTexture*>)                         AdditionalSourceTextures                                    OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FVector2D)                                 BakedSourceUV                                               OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FVector2D)                                 BakedSourceDimension                                        OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FVector2D)                                 BakedSourceUV                                               OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FVector2D)                                 BakedSourceDimension                                        OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	CMember(UTexture2D*)                               BakedSourceTexture                                          OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultMaterial                                             OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(UMaterialInterface*)                       AlternateMaterial                                           OFFSET(get<T>, {0x78, 8, 0, 0})
@@ -251,7 +251,7 @@ class UPaperSpriteComponent : public UMeshComponent
 public:
 	CMember(UPaperSprite*)                             SourceSprite                                                OFFSET(get<T>, {0x5A0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       MaterialOverride                                            OFFSET(get<T>, {0x5A8, 8, 0, 0})
-	SMember(FLinearColor)                              SpriteColor                                                 OFFSET(get<T>, {0x5B0, 16, 0, 0})
+	SMember(FLinearColor)                              SpriteColor                                                 OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
 
 
 	/// Functions
@@ -271,7 +271,7 @@ class UPaperTileLayer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FText)                                     LayerName                                                   OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FText)                                     LayerName                                                   OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(int32_t)                                   LayerWidth                                                  OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	DMember(int32_t)                                   LayerHeight                                                 OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 	DMember(bool)                                      bHiddenInGame                                               OFFSET(get<bool>, {0x48, 1, 1, 0})
@@ -280,7 +280,7 @@ public:
 	DMember(bool)                                      bOverrideCollisionOffset                                    OFFSET(get<bool>, {0x48, 1, 1, 3})
 	DMember(float)                                     CollisionThicknessOverride                                  OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     CollisionOffsetOverride                                     OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FLinearColor)                              LayerColor                                                  OFFSET(get<T>, {0x54, 16, 0, 0})
+	SMember(FLinearColor)                              LayerColor                                                  OFFSET(getStruct<T>, {0x54, 16, 0, 0})
 	DMember(int32_t)                                   AllocatedWidth                                              OFFSET(get<int32_t>, {0x64, 4, 0, 0})
 	DMember(int32_t)                                   AllocatedHeight                                             OFFSET(get<int32_t>, {0x68, 4, 0, 0})
 	CMember(TArray<FPaperTileInfo>)                    AllocatedCells                                              OFFSET(get<T>, {0x70, 16, 0, 0})
@@ -341,7 +341,7 @@ public:
 	CMember(UPaperTileSet*)                            DefaultLayerTileSet                                         OFFSET(get<T>, {0x5B0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x5B8, 8, 0, 0})
 	CMember(TArray<UPaperTileLayer*>)                  TileLayers                                                  OFFSET(get<T>, {0x5C0, 16, 0, 0})
-	SMember(FLinearColor)                              TileMapColor                                                OFFSET(get<T>, {0x5D0, 16, 0, 0})
+	SMember(FLinearColor)                              TileMapColor                                                OFFSET(getStruct<T>, {0x5D0, 16, 0, 0})
 	DMember(int32_t)                                   UseSingleLayerIndex                                         OFFSET(get<int32_t>, {0x5E0, 4, 0, 0})
 	DMember(bool)                                      bUseSingleLayer                                             OFFSET(get<bool>, {0x5E4, 1, 0, 0})
 	CMember(UPaperTileMap*)                            TileMap                                                     OFFSET(get<T>, {0x5E8, 8, 0, 0})
@@ -396,12 +396,12 @@ class UPaperTileSet : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FIntPoint)                                 TileSize                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FIntPoint)                                 TileSize                                                    OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 	CMember(UTexture2D*)                               TileSheet                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<UTexture*>)                         AdditionalSourceTextures                                    OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FIntMargin)                                BorderMargin                                                OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FIntPoint)                                 PerTileSpacing                                              OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FIntPoint)                                 DrawingOffset                                               OFFSET(get<T>, {0x60, 8, 0, 0})
+	SMember(FIntMargin)                                BorderMargin                                                OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FIntPoint)                                 PerTileSpacing                                              OFFSET(getStruct<T>, {0x58, 8, 0, 0})
+	SMember(FIntPoint)                                 DrawingOffset                                               OFFSET(getStruct<T>, {0x60, 8, 0, 0})
 	DMember(int32_t)                                   WidthInTiles                                                OFFSET(get<int32_t>, {0x68, 4, 0, 0})
 	DMember(int32_t)                                   HeightInTiles                                               OFFSET(get<int32_t>, {0x6C, 4, 0, 0})
 	DMember(int32_t)                                   AllocatedWidth                                              OFFSET(get<int32_t>, {0x70, 4, 0, 0})
@@ -424,7 +424,7 @@ class UMaterialExpressionSpriteTextureSampler : public UMaterialExpressionTextur
 public:
 	DMember(bool)                                      bSampleAdditionalTextures                                   OFFSET(get<bool>, {0x238, 1, 0, 0})
 	DMember(int32_t)                                   AdditionalSlotIndex                                         OFFSET(get<int32_t>, {0x23C, 4, 0, 0})
-	SMember(FText)                                     SlotDisplayName                                             OFFSET(get<T>, {0x240, 24, 0, 0})
+	SMember(FText)                                     SlotDisplayName                                             OFFSET(getStruct<T>, {0x240, 24, 0, 0})
 };
 
 /// Class /Script/Paper2D.PaperTerrainActor
@@ -454,7 +454,7 @@ public:
 	CMember(UPaperTerrainSplineComponent*)             AssociatedSpline                                            OFFSET(get<T>, {0x578, 8, 0, 0})
 	DMember(int32_t)                                   RandomSeed                                                  OFFSET(get<int32_t>, {0x580, 4, 0, 0})
 	DMember(float)                                     SegmentOverlapAmount                                        OFFSET(get<float>, {0x584, 4, 0, 0})
-	SMember(FLinearColor)                              TerrainColor                                                OFFSET(get<T>, {0x588, 16, 0, 0})
+	SMember(FLinearColor)                              TerrainColor                                                OFFSET(getStruct<T>, {0x588, 16, 0, 0})
 	DMember(int32_t)                                   ReparamStepsPerSegment                                      OFFSET(get<int32_t>, {0x598, 4, 0, 0})
 	CMember(TEnumAsByte<ESpriteCollisionMode>)         SpriteCollisionDomain                                       OFFSET(get<T>, {0x59C, 1, 0, 0})
 	DMember(float)                                     CollisionThickness                                          OFFSET(get<float>, {0x5A0, 4, 0, 0})
@@ -500,8 +500,9 @@ public:
 
 /// Struct /Script/Paper2D.IntMargin
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FIntMargin : public MDKStruct
+class FIntMargin : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -514,37 +515,40 @@ public:
 
 /// Struct /Script/Paper2D.SpriteDrawCallRecord
 /// Size: 0x0140 (0x000000 - 0x000140)
-class FSpriteDrawCallRecord : public MDKStruct
+class FSpriteDrawCallRecord : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FVector)                                   Destination                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Destination                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(UTexture*)                                 BaseTexture                                                 OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FColor)                                    Color                                                       OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FColor)                                    Color                                                       OFFSET(getStruct<T>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/Paper2D.SpriteGeometryShape
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSpriteGeometryShape : public MDKStruct
+class FSpriteGeometryShape : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(ESpriteShapeType)                          ShapeType                                                   OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(TArray<FVector2D>)                         Vertices                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 BoxSize                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FVector2D)                                 BoxPosition                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FVector2D)                                 BoxSize                                                     OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FVector2D)                                 BoxPosition                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(float)                                     Rotation                                                    OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(bool)                                      bNegativeWinding                                            OFFSET(get<bool>, {0x3C, 1, 0, 0})
 };
 
 /// Struct /Script/Paper2D.SpriteGeometryCollection
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FSpriteGeometryCollection : public MDKStruct
+class FSpriteGeometryCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -561,8 +565,9 @@ public:
 
 /// Struct /Script/Paper2D.SpriteAssetInitParameters
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSpriteAssetInitParameters : public MDKStruct
+class FSpriteAssetInitParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -571,8 +576,9 @@ public:
 
 /// Struct /Script/Paper2D.PaperFlipbookKeyFrame
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPaperFlipbookKeyFrame : public MDKStruct
+class FPaperFlipbookKeyFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -583,34 +589,37 @@ public:
 
 /// Struct /Script/Paper2D.SpriteInstanceData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FSpriteInstanceData : public MDKStruct
+class FSpriteInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMatrix)                                   Transform                                                   OFFSET(get<T>, {0x0, 128, 0, 0})
+	SMember(FMatrix)                                   Transform                                                   OFFSET(getStruct<T>, {0x0, 128, 0, 0})
 	CMember(UPaperSprite*)                             SourceSprite                                                OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FColor)                                    VertexColor                                                 OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FColor)                                    VertexColor                                                 OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 	DMember(int32_t)                                   MaterialIndex                                               OFFSET(get<int32_t>, {0x8C, 4, 0, 0})
 };
 
 /// Struct /Script/Paper2D.PaperSpriteSocket
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FPaperSpriteSocket : public MDKStruct
+class FPaperSpriteSocket : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x60, 4, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(getStruct<T>, {0x0, 96, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(getStruct<T>, {0x60, 4, 0, 0})
 };
 
 /// Struct /Script/Paper2D.PaperSpriteAtlasSlot
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FPaperSpriteAtlasSlot : public MDKStruct
+class FPaperSpriteAtlasSlot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -625,8 +634,9 @@ public:
 
 /// Struct /Script/Paper2D.PaperTileInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPaperTileInfo : public MDKStruct
+class FPaperTileInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -637,33 +647,36 @@ public:
 
 /// Struct /Script/Paper2D.PaperTileMetadata
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FPaperTileMetadata : public MDKStruct
+class FPaperTileMetadata : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FName)                                     UserDataName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FSpriteGeometryCollection)                 CollisionData                                               OFFSET(get<T>, {0x8, 48, 0, 0})
+	SMember(FName)                                     UserDataName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FSpriteGeometryCollection)                 CollisionData                                               OFFSET(getStruct<T>, {0x8, 48, 0, 0})
 	DMember(char)                                      TerrainMembership                                           OFFSET(get<char>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/Paper2D.PaperTileSetTerrain
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPaperTileSetTerrain : public MDKStruct
+class FPaperTileSetTerrain : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   TerrainName                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TerrainName                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   CenterTileIndex                                             OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Paper2D.PaperTerrainMaterialRule
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FPaperTerrainMaterialRule : public MDKStruct
+class FPaperTerrainMaterialRule : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 

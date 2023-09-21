@@ -18,10 +18,10 @@ class UStateTreeComponent : public UBrainComponent
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStateTreeRunStatusChanged                                 OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FStateTreeReference)                       StateTreeRef                                                OFFSET(get<T>, {0x110, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStateTreeRunStatusChanged                                 OFFSET(getStruct<T>, {0x100, 16, 0, 0})
+	SMember(FStateTreeReference)                       StateTreeRef                                                OFFSET(getStruct<T>, {0x110, 24, 0, 0})
 	DMember(bool)                                      bStartLogicAutomatically                                    OFFSET(get<bool>, {0x128, 1, 0, 0})
-	SMember(FStateTreeInstanceData)                    InstanceData                                                OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FStateTreeInstanceData)                    InstanceData                                                OFFSET(getStruct<T>, {0x130, 16, 0, 0})
 
 
 	/// Functions
@@ -42,6 +42,6 @@ class UStateTreeComponentSchema : public UStateTreeSchema
 
 public:
 	CMember(UClass*)                                   ContextActorClass                                           OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FStateTreeExternalDataDesc)                ContextActorDataDesc                                        OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FStateTreeExternalDataDesc)                ContextActorDataDesc                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 

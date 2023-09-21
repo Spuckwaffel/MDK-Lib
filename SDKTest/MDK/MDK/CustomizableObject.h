@@ -24,7 +24,7 @@ public:
 	CMember(TArray<UMaterialInterface*>)               ReferencedMaterials                                         OFFSET(get<T>, {0x190, 16, 0, 0})
 	CMember(TArray<UPhysicsAsset*>)                    ClothingPhysicsAssets                                       OFFSET(get<T>, {0x200, 16, 0, 0})
 	CMember(TArray<UClass*>)                           GatheredAnimBPs                                             OFFSET(get<T>, {0x210, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     AnimBPGameplayTags                                          OFFSET(get<T>, {0x220, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AnimBPGameplayTags                                          OFFSET(getStruct<T>, {0x220, 32, 0, 0})
 	CMember(TMap<UClass*, FAnimBpGeneratedPhysicsAssets>) AnimBpPhysicsAssets                                      OFFSET(get<T>, {0x240, 80, 0, 0})
 };
 
@@ -94,7 +94,7 @@ public:
 	CMember(TArray<FName>)                             ReferencedMaterialSlotNames                                 OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    ReferencedSkeletons                                         OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    ReferencedPassThroughTextures                               OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMutableLODSettings)                       LODSettings                                                 OFFSET(get<T>, {0x78, 128, 0, 0})
+	SMember(FMutableLODSettings)                       LODSettings                                                 OFFSET(getStruct<T>, {0x78, 128, 0, 0})
 	CMember(TArray<FMutableModelImageProperties>)      ImageProperties                                             OFFSET(get<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<FMorphTargetInfo>)                  ContributingMorphTargetsInfo                                OFFSET(get<T>, {0x108, 16, 0, 0})
 	CMember(TArray<FMorphTargetVertexData>)            MorphTargetReconstructionData                               OFFSET(get<T>, {0x118, 16, 0, 0})
@@ -120,7 +120,7 @@ public:
 	CMember(TMap<FString, FParameterTags>)             CustomizableObjectParametersTags                            OFFSET(get<T>, {0x400, 80, 0, 0})
 	CMember(TArray<FName>)                             BoneNames                                                   OFFSET(get<T>, {0x450, 16, 0, 0})
 	CMember(UMutableMaskOutCache*)                     MaskOutCache_HardRef                                        OFFSET(get<T>, {0x470, 8, 0, 0})
-	SMember(FGuid)                                     CompilationGuid                                             OFFSET(get<T>, {0x478, 16, 0, 0})
+	SMember(FGuid)                                     CompilationGuid                                             OFFSET(getStruct<T>, {0x478, 16, 0, 0})
 	CMember(UCustomizableObjectBulk*)                  BulkData                                                    OFFSET(get<T>, {0x488, 8, 0, 0})
 
 
@@ -203,12 +203,12 @@ class UCustomizableObjectInstance : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FMulticastInlineDelegate)                  BeginUpdateDelegate                                         OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  UpdatedDelegate                                             OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BeginDestroyDelegate                                        OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BeginUpdateDelegate                                         OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  UpdatedDelegate                                             OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BeginDestroyDelegate                                        OFFSET(getStruct<T>, {0x78, 16, 0, 0})
 	CMember(TArray<USkeletalMesh*>)                    SkeletalMeshes                                              OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FString)                                   SkeletalMeshStatus                                          OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FCustomizableObjectInstanceDescriptor)     Descriptor                                                  OFFSET(get<T>, {0x158, 296, 0, 0})
+	SMember(FString)                                   SkeletalMeshStatus                                          OFFSET(getStruct<T>, {0x100, 16, 0, 0})
+	SMember(FCustomizableObjectInstanceDescriptor)     Descriptor                                                  OFFSET(getStruct<T>, {0x158, 296, 0, 0})
 	CMember(UCustomizableInstancePrivateData*)         PrivateData                                                 OFFSET(get<T>, {0x280, 8, 0, 0})
 	CMember(UCustomizableObject*)                      CustomizableObject                                          OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(TArray<FCustomizableObjectBoolParameterValue>) BoolParameters                                          OFFSET(get<T>, {0x2D8, 16, 0, 0})
@@ -398,7 +398,7 @@ class UCustomizableObjectExtensionDataContainer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FCustomizableObjectExtensionData)          Data                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FCustomizableObjectExtensionData)          Data                                                        OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/CustomizableObject.CustomizableSystemImageProvider
@@ -492,8 +492,9 @@ public:
 
 /// Struct /Script/CustomizableObject.UpdateContext
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FUpdateContext : public MDKStruct
+class FUpdateContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -503,20 +504,22 @@ public:
 
 /// Struct /Script/CustomizableObject.GeneratedTexture
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGeneratedTexture : public MDKStruct
+class FGeneratedTexture : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(UTexture*)                                 Texture                                                     OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.GeneratedMaterial
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGeneratedMaterial : public MDKStruct
+class FGeneratedMaterial : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -526,8 +529,9 @@ public:
 
 /// Struct /Script/CustomizableObject.ReferencedPhysicsAssets
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FReferencedPhysicsAssets : public MDKStruct
+class FReferencedPhysicsAssets : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -538,8 +542,9 @@ public:
 
 /// Struct /Script/CustomizableObject.ReferencedSkeletons
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FReferencedSkeletons : public MDKStruct
+class FReferencedSkeletons : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -551,21 +556,23 @@ public:
 
 /// Struct /Script/CustomizableObject.CustomizableInstanceComponentData
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FCustomizableInstanceComponentData : public MDKStruct
+class FCustomizableInstanceComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
 	CMember(TMap<FName, TWeakObjectPtr>)               AnimSlotToBP                                                OFFSET(get<T>, {0x8, 80, 0, 0})
-	SMember(FReferencedSkeletons)                      Skeletons                                                   OFFSET(get<T>, {0x58, 40, 0, 0})
-	SMember(FReferencedPhysicsAssets)                  PhysicsAssets                                               OFFSET(get<T>, {0x80, 64, 0, 0})
+	SMember(FReferencedSkeletons)                      Skeletons                                                   OFFSET(getStruct<T>, {0x58, 40, 0, 0})
+	SMember(FReferencedPhysicsAssets)                  PhysicsAssets                                               OFFSET(getStruct<T>, {0x80, 64, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.AnimInstanceOverridePhysicsAsset
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FAnimInstanceOverridePhysicsAsset : public MDKStruct
+class FAnimInstanceOverridePhysicsAsset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -576,8 +583,9 @@ public:
 
 /// Struct /Script/CustomizableObject.AnimBpGeneratedPhysicsAssets
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FAnimBpGeneratedPhysicsAssets : public MDKStruct
+class FAnimBpGeneratedPhysicsAssets : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -587,21 +595,23 @@ public:
 
 /// Struct /Script/CustomizableObject.CustomizableObjectClothConfigData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FCustomizableObjectClothConfigData : public MDKStruct
+class FCustomizableObjectClothConfigData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   ClassPath                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     ConfigName                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   ClassPath                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     ConfigName                                                  OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	CMember(TArray<char>)                              ConfigBytes                                                 OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectClothingAssetData
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FCustomizableObjectClothingAssetData : public MDKStruct
+class FCustomizableObjectClothingAssetData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -612,130 +622,139 @@ public:
 	CMember(TArray<int32_t>)                           UsedBoneIndices                                             OFFSET(get<T>, {0x30, 16, 0, 0})
 	DMember(int32_t)                                   ReferenceBoneIndex                                          OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	CMember(TArray<FCustomizableObjectClothConfigData>) ConfigsData                                                OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FString)                                   PhysicsAssetPath                                            OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x68, 4, 0, 0})
-	SMember(FGuid)                                     OriginalAssetGuid                                           OFFSET(get<T>, {0x6C, 16, 0, 0})
+	SMember(FString)                                   PhysicsAssetPath                                            OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x68, 4, 0, 0})
+	SMember(FGuid)                                     OriginalAssetGuid                                           OFFSET(getStruct<T>, {0x6C, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectExtensionData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCustomizableObjectExtensionData : public MDKStruct
+class FCustomizableObjectExtensionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FInstancedStruct)                          Data                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedStruct)                          Data                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectBoolParameterValue
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FCustomizableObjectBoolParameterValue : public MDKStruct
+class FCustomizableObjectBoolParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      ParameterValue                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FString)                                   UID                                                         OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   UID                                                         OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectIntParameterValue
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCustomizableObjectIntParameterValue : public MDKStruct
+class FCustomizableObjectIntParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ParameterValueName                                          OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   UID                                                         OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParameterValueName                                          OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   UID                                                         OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FString>)                           ParameterRangeValueNames                                    OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectFloatParameterValue
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCustomizableObjectFloatParameterValue : public MDKStruct
+class FCustomizableObjectFloatParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(float)                                     ParameterValue                                              OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FString)                                   UID                                                         OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   UID                                                         OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(TArray<float>)                             ParameterRangeValues                                        OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectTextureParameterValue
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCustomizableObjectTextureParameterValue : public MDKStruct
+class FCustomizableObjectTextureParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     ParameterValue                                              OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FString)                                   UID                                                         OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FName)                                     ParameterValue                                              OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   UID                                                         OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(TArray<FName>)                             ParameterRangeValues                                        OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectVectorParameterValue
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FCustomizableObjectVectorParameterValue : public MDKStruct
+class FCustomizableObjectVectorParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FLinearColor)                              ParameterValue                                              OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   UID                                                         OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              ParameterValue                                              OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   UID                                                         OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectProjector
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FCustomizableObjectProjector : public MDKStruct
+class FCustomizableObjectProjector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector3f)                                 Position                                                    OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector3f)                                 Direction                                                   OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FVector3f)                                 Up                                                          OFFSET(get<T>, {0x18, 12, 0, 0})
-	SMember(FVector3f)                                 Scale                                                       OFFSET(get<T>, {0x24, 12, 0, 0})
+	SMember(FVector3f)                                 Position                                                    OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FVector3f)                                 Direction                                                   OFFSET(getStruct<T>, {0xC, 12, 0, 0})
+	SMember(FVector3f)                                 Up                                                          OFFSET(getStruct<T>, {0x18, 12, 0, 0})
+	SMember(FVector3f)                                 Scale                                                       OFFSET(getStruct<T>, {0x24, 12, 0, 0})
 	CMember(ECustomizableObjectProjectorType)          ProjectionType                                              OFFSET(get<T>, {0x30, 1, 0, 0})
 	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x34, 4, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectProjectorParameterValue
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FCustomizableObjectProjectorParameterValue : public MDKStruct
+class FCustomizableObjectProjectorParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FCustomizableObjectProjector)              Value                                                       OFFSET(get<T>, {0x10, 56, 0, 0})
-	SMember(FString)                                   UID                                                         OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FCustomizableObjectProjector)              Value                                                       OFFSET(getStruct<T>, {0x10, 56, 0, 0})
+	SMember(FString)                                   UID                                                         OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	CMember(TArray<FCustomizableObjectProjector>)      RangeValues                                                 OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.MutableParamUIMetadata
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FMutableParamUIMetadata : public MDKStruct
+class FMutableParamUIMetadata : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FString)                                   ObjectFriendlyName                                          OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   UISectionName                                               OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ObjectFriendlyName                                          OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   UISectionName                                               OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(int32_t)                                   UIOrder                                                     OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               UIThumbnail                                                 OFFSET(get<T>, {0x28, 32, 0, 0})
 	CMember(TMap<FString, FString>)                    ExtraInformation                                            OFFSET(get<T>, {0x48, 80, 0, 0})
@@ -746,26 +765,28 @@ public:
 
 /// Struct /Script/CustomizableObject.IntegerParameterUIData
 /// Size: 0x0100 (0x000000 - 0x000100)
-class FIntegerParameterUIData : public MDKStruct
+class FIntegerParameterUIData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMutableParamUIMetadata)                   ParamUIMetadata                                             OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FMutableParamUIMetadata)                   ParamUIMetadata                                             OFFSET(getStruct<T>, {0x10, 240, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.ParameterUIData
 /// Size: 0x0170 (0x000000 - 0x000170)
-class FParameterUIData : public MDKStruct
+class FParameterUIData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMutableParamUIMetadata)                   ParamUIMetadata                                             OFFSET(get<T>, {0x10, 240, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FMutableParamUIMetadata)                   ParamUIMetadata                                             OFFSET(getStruct<T>, {0x10, 240, 0, 0})
 	CMember(EMutableParameterType)                     Type                                                        OFFSET(get<T>, {0x100, 1, 0, 0})
 	CMember(TArray<FIntegerParameterUIData>)           ArrayIntegerParameterOption                                 OFFSET(get<T>, {0x108, 16, 0, 0})
 	CMember(ECustomizableObjectGroupType)              IntegerParameterGroupType                                   OFFSET(get<T>, {0x118, 1, 0, 0})
@@ -777,8 +798,9 @@ public:
 
 /// Struct /Script/CustomizableObject.FParameterOptionsTags
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFParameterOptionsTags : public MDKStruct
+class FFParameterOptionsTags : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -788,8 +810,9 @@ public:
 
 /// Struct /Script/CustomizableObject.ParameterTags
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FParameterTags : public MDKStruct
+class FParameterTags : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -800,13 +823,14 @@ public:
 
 /// Struct /Script/CustomizableObject.ProfileParameterDat
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FProfileParameterDat : public MDKStruct
+class FProfileParameterDat : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FString)                                   ProfileName                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ProfileName                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FCustomizableObjectBoolParameterValue>) BoolParameters                                          OFFSET(get<T>, {0x10, 16, 0, 0})
 	CMember(TArray<FCustomizableObjectIntParameterValue>) IntParameters                                            OFFSET(get<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FCustomizableObjectFloatParameterValue>) FloatParameters                                        OFFSET(get<T>, {0x30, 16, 0, 0})
@@ -817,8 +841,9 @@ public:
 
 /// Struct /Script/CustomizableObject.CompilationOptions
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FCompilationOptions : public MDKStruct
+class FCompilationOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -830,13 +855,14 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableModelImageProperties
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMutableModelImageProperties : public MDKStruct
+class FMutableModelImageProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   TextureParameterName                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TextureParameterName                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TEnumAsByte<TextureFilter>)                Filter                                                      OFFSET(get<T>, {0x10, 1, 0, 0})
 	DMember(bool)                                      SRGB                                                        OFFSET(get<bool>, {0x14, 1, 1, 0})
 	DMember(bool)                                      FlipGreenChannel                                            OFFSET(get<bool>, {0x14, 1, 1, 1})
@@ -848,20 +874,22 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableModelParameterValue
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMutableModelParameterValue : public MDKStruct
+class FMutableModelParameterValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   Value                                                       OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.MutableModelParameterProperties
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMutableModelParameterProperties : public MDKStruct
+class FMutableModelParameterProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -872,8 +900,9 @@ public:
 
 /// Struct /Script/CustomizableObject.MaskOutTexture
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMaskOutTexture : public MDKStruct
+class FMaskOutTexture : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -885,8 +914,9 @@ public:
 
 /// Struct /Script/CustomizableObject.AnimBpOverridePhysicsAssetsInfo
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FAnimBpOverridePhysicsAssetsInfo : public MDKStruct
+class FAnimBpOverridePhysicsAssetsInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -898,33 +928,36 @@ public:
 
 /// Struct /Script/CustomizableObject.MorphTargetInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMorphTargetInfo : public MDKStruct
+class FMorphTargetInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   LodNum                                                      OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.MorphTargetVertexData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMorphTargetVertexData : public MDKStruct
+class FMorphTargetVertexData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector3f)                                 PositionDelta                                               OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FVector3f)                                 TangentZDelta                                               OFFSET(get<T>, {0xC, 12, 0, 0})
+	SMember(FVector3f)                                 PositionDelta                                               OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FVector3f)                                 TangentZDelta                                               OFFSET(getStruct<T>, {0xC, 12, 0, 0})
 	DMember(int32_t)                                   MorphIndex                                                  OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectMeshToMeshVertData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCustomizableObjectMeshToMeshVertData : public MDKStruct
+class FCustomizableObjectMeshToMeshVertData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -940,21 +973,23 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableSkinWeightProfileInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMutableSkinWeightProfileInfo : public MDKStruct
+class FMutableSkinWeightProfileInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      DefaultProfile                                              OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(int8_t)                                    DefaultProfileFromLODIndex                                  OFFSET(get<int8_t>, {0x5, 1, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.MutableStreamableBlock
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMutableStreamableBlock : public MDKStruct
+class FMutableStreamableBlock : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -966,8 +1001,9 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableRefLODInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMutableRefLODInfo : public MDKStruct
+class FMutableRefLODInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -980,8 +1016,9 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableRefLODRenderData
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FMutableRefLODRenderData : public MDKStruct
+class FMutableRefLODRenderData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -992,37 +1029,40 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableRefLODData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMutableRefLODData : public MDKStruct
+class FMutableRefLODData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FMutableRefLODInfo)                        LODInfo                                                     OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FMutableRefLODRenderData)                  RenderData                                                  OFFSET(get<T>, {0xC, 2, 0, 0})
+	SMember(FMutableRefLODInfo)                        LODInfo                                                     OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FMutableRefLODRenderData)                  RenderData                                                  OFFSET(getStruct<T>, {0xC, 2, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.MutableRefSocket
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FMutableRefSocket : public MDKStruct
+class FMutableRefSocket : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FVector)                                   RelativeLocation                                            OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  RelativeRotation                                            OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   RelativeScale                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FVector)                                   RelativeLocation                                            OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  RelativeRotation                                            OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   RelativeScale                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(bool)                                      bForceAlwaysAnimated                                        OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0x54, 4, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.MutableRefSkeletalMeshSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMutableRefSkeletalMeshSettings : public MDKStruct
+class FMutableRefSkeletalMeshSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1033,8 +1073,9 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableRefAssetUserData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMutableRefAssetUserData : public MDKStruct
+class FMutableRefAssetUserData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1044,18 +1085,19 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableRefSkeletalMeshData
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FMutableRefSkeletalMeshData : public MDKStruct
+class FMutableRefSkeletalMeshData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	CMember(USkeletalMesh*)                            SkeletalMesh                                                OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSoftObjectPath)                           SkeletalMeshAssetPath                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FSoftObjectPath)                           SkeletalMeshAssetPath                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	CMember(TArray<FMutableRefLODData>)                LodData                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FMutableRefSocket>)                 Sockets                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FBoxSphereBounds)                          Bounds                                                      OFFSET(get<T>, {0x40, 56, 0, 0})
-	SMember(FMutableRefSkeletalMeshSettings)           Settings                                                    OFFSET(get<T>, {0x78, 8, 0, 0})
+	SMember(FBoxSphereBounds)                          Bounds                                                      OFFSET(getStruct<T>, {0x40, 56, 0, 0})
+	SMember(FMutableRefSkeletalMeshSettings)           Settings                                                    OFFSET(getStruct<T>, {0x78, 8, 0, 0})
 	CMember(TWeakObjectPtr<USkeleton*>)                Skeleton                                                    OFFSET(get<T>, {0x80, 32, 0, 0})
 	CMember(TWeakObjectPtr<UPhysicsAsset*>)            PhysicsAsset                                                OFFSET(get<T>, {0xA0, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   PostProcessAnimInst                                         OFFSET(get<T>, {0xC0, 32, 0, 0})
@@ -1065,14 +1107,15 @@ public:
 
 /// Struct /Script/CustomizableObject.MutableLODSettings
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FMutableLODSettings : public MDKStruct
+class FMutableLODSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FPerPlatformInt)                           MinLOD                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FPerQualityLevelInt)                       MinQualityLevelLOD                                          OFFSET(get<T>, {0x8, 104, 0, 0})
+	SMember(FPerPlatformInt)                           MinLOD                                                      OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FPerQualityLevelInt)                       MinQualityLevelLOD                                          OFFSET(getStruct<T>, {0x8, 104, 0, 0})
 	DMember(int32_t)                                   NumLODsInRoot                                               OFFSET(get<int32_t>, {0x70, 4, 0, 0})
 	DMember(int32_t)                                   FirstLODAvailable                                           OFFSET(get<int32_t>, {0x74, 4, 0, 0})
 	DMember(bool)                                      bLODStreamingEnabled                                        OFFSET(get<bool>, {0x78, 1, 0, 0})
@@ -1081,33 +1124,36 @@ public:
 
 /// Struct /Script/CustomizableObject.CustomizableObjectIdPair
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCustomizableObjectIdPair : public MDKStruct
+class FCustomizableObjectIdPair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   CustomizableObjectGroupName                                 OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   CustomizableObjectName                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   CustomizableObjectGroupName                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   CustomizableObjectName                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectIdentifier
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FCustomizableObjectIdentifier : public MDKStruct
+class FCustomizableObjectIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   CustomizableObjectGroupName                                 OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   CustomizableObjectName                                      OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Guid                                                        OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   CustomizableObjectGroupName                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   CustomizableObjectName                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Guid                                                        OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObject.CustomizableObjectInstanceDescriptor
 /// Size: 0x0128 (0x000000 - 0x000128)
-class FCustomizableObjectInstanceDescriptor : public MDKStruct
+class FCustomizableObjectInstanceDescriptor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
@@ -1124,13 +1170,14 @@ public:
 
 /// Struct /Script/CustomizableObject.MultilayerProjector
 /// Size: 0x00F8 (0x000000 - 0x0000F8)
-class FMultilayerProjector : public MDKStruct
+class FMultilayerProjector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FName)                                     ParamName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ParamName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TMap<FName, int32_t>)                      VirtualLayersMapping                                        OFFSET(get<T>, {0x8, 80, 0, 0})
 	CMember(TMap<FName, int32_t>)                      VirtualLayersOrder                                          OFFSET(get<T>, {0x58, 80, 0, 0})
 	CMember(TMap<FName, FMultilayerProjectorLayer>)    DisableVirtualLayers                                        OFFSET(get<T>, {0xA8, 80, 0, 0})
@@ -1138,8 +1185,9 @@ public:
 
 /// Struct /Script/CustomizableObject.MultilayerProjectorLayer
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FMultilayerProjectorLayer : public MDKStruct
+class FMultilayerProjectorLayer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -1148,8 +1196,9 @@ public:
 
 /// Struct /Script/CustomizableObject.CustomizableObjectStreamedExtensionData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FCustomizableObjectStreamedExtensionData : public MDKStruct
+class FCustomizableObjectStreamedExtensionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1160,8 +1209,9 @@ public:
 
 /// Struct /Script/CustomizableObject.PendingReleaseSkeletalMeshInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPendingReleaseSkeletalMeshInfo : public MDKStruct
+class FPendingReleaseSkeletalMeshInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1172,8 +1222,9 @@ public:
 
 /// Struct /Script/CustomizableObject.PendingReleaseMaterialsInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPendingReleaseMaterialsInfo : public MDKStruct
+class FPendingReleaseMaterialsInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1186,6 +1237,7 @@ public:
 /// Size: 0x0008 (0x000080 - 0x000088)
 class FMultilayerProjectorVirtualLayer : public FMultilayerProjectorLayer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 

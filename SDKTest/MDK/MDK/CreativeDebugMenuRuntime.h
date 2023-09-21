@@ -18,13 +18,13 @@ class UFortControllerComponent_CreativeDebugger : public UFortControllerComponen
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FScalableFloat)                            DebuggerEnabledByDataRegistry                               OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FScalableFloat)                            VerseDebugDrawEnabledByDataRegistry                         OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FScalableFloat)                            NavigationMeshEnabledByDataRegistry                         OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FScalableFloat)                            NavigationPathsEnabledByDataRegistry                        OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FScalableFloat)                            GhostModeEnabledByDataRegistry                              OFFSET(get<T>, {0x150, 40, 0, 0})
-	SMember(FScalableFloat)                            InvincibilityEnabledByDataRegistry                          OFFSET(get<T>, {0x178, 40, 0, 0})
-	SMember(FScalableFloat)                            FastIterationEnabledByDataRegistry                          OFFSET(get<T>, {0x1A0, 40, 0, 0})
+	SMember(FScalableFloat)                            DebuggerEnabledByDataRegistry                               OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
+	SMember(FScalableFloat)                            VerseDebugDrawEnabledByDataRegistry                         OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
+	SMember(FScalableFloat)                            NavigationMeshEnabledByDataRegistry                         OFFSET(getStruct<T>, {0x100, 40, 0, 0})
+	SMember(FScalableFloat)                            NavigationPathsEnabledByDataRegistry                        OFFSET(getStruct<T>, {0x128, 40, 0, 0})
+	SMember(FScalableFloat)                            GhostModeEnabledByDataRegistry                              OFFSET(getStruct<T>, {0x150, 40, 0, 0})
+	SMember(FScalableFloat)                            InvincibilityEnabledByDataRegistry                          OFFSET(getStruct<T>, {0x178, 40, 0, 0})
+	SMember(FScalableFloat)                            FastIterationEnabledByDataRegistry                          OFFSET(getStruct<T>, {0x1A0, 40, 0, 0})
 	CMember(UClass*)                                   AIDebuggerClass                                             OFFSET(get<T>, {0x1C8, 8, 0, 0})
 
 

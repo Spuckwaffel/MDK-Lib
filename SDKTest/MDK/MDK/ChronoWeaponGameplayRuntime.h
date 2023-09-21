@@ -19,6 +19,6 @@ public:
 	DMember(bool)                                      bIsFiring                                                   OFFSET(get<bool>, {0x348, 1, 0, 0})
 	DMember(bool)                                      bIsReloading                                                OFFSET(get<bool>, {0x349, 1, 0, 0})
 	DMember(float)                                     MagRotationValue                                            OFFSET(get<float>, {0x34C, 4, 0, 0})
-	SMember(FName)                                     ResetMagRotationCurveName                                   OFFSET(get<T>, {0x350, 4, 0, 0})
+	SMember(FName)                                     ResetMagRotationCurveName                                   OFFSET(getStruct<T>, {0x350, 4, 0, 0})
 };
 

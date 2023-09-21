@@ -29,16 +29,16 @@ class ALevelInstanceGameplayVolume : public AGameplayVolume
 	static inline constexpr uint64_t __MDKClassSize = 1208;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnLevelInstanceResolved                                     OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnDisabledStateChanged                                      OFFSET(get<T>, {0x378, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLevelInstanceGuidChanged                                  OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLevelInstanceNameChanged                                  OFFSET(get<T>, {0x398, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLevelInstanceSizeChanged                                  OFFSET(get<T>, {0x3A8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLevelInstanceContentCollectionChanged                     OFFSET(get<T>, {0x3B8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLevelInstanceResolved                                     OFFSET(getStruct<T>, {0x338, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDisabledStateChanged                                      OFFSET(getStruct<T>, {0x378, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLevelInstanceGuidChanged                                  OFFSET(getStruct<T>, {0x388, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLevelInstanceNameChanged                                  OFFSET(getStruct<T>, {0x398, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLevelInstanceSizeChanged                                  OFFSET(getStruct<T>, {0x3A8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLevelInstanceContentCollectionChanged                     OFFSET(getStruct<T>, {0x3B8, 16, 0, 0})
 	DMember(bool)                                      bEditMode                                                   OFFSET(get<bool>, {0x3C9, 1, 0, 0})
 	DMember(bool)                                      bDisabled                                                   OFFSET(get<bool>, {0x3CA, 1, 0, 0})
 	CMember(ESpatialLoadingState)                      LoadingState                                                OFFSET(get<T>, {0x3CB, 1, 0, 0})
-	SMember(FString)                                   LevelInstanceName                                           OFFSET(get<T>, {0x3D0, 16, 0, 0})
+	SMember(FString)                                   LevelInstanceName                                           OFFSET(getStruct<T>, {0x3D0, 16, 0, 0})
 	DMember(bool)                                      bInstanceLoaded                                             OFFSET(get<bool>, {0x3E0, 1, 0, 0})
 	DMember(bool)                                      bWantsLevelLoaded                                           OFFSET(get<bool>, {0x3E1, 1, 0, 0})
 	DMember(bool)                                      bConvertStructuresToProps                                   OFFSET(get<bool>, {0x3E3, 1, 0, 0})
@@ -46,7 +46,7 @@ public:
 	CMember(UFortMutatorListComponent*)                MutatorListComponent                                        OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	CMember(UFortClassTrackerComponent*)               ClassFilterComponent                                        OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(TArray<UClass*>)                           BlacklistedClasses                                          OFFSET(get<T>, {0x400, 16, 0, 0})
-	SMember(FGuid)                                     LevelInstanceSaveActorGuid                                  OFFSET(get<T>, {0x460, 16, 0, 0})
+	SMember(FGuid)                                     LevelInstanceSaveActorGuid                                  OFFSET(getStruct<T>, {0x460, 16, 0, 0})
 	CMember(AFortLevelInstanceSaveActor*)              LevelInstanceSaveActor                                      OFFSET(get<T>, {0x470, 8, 0, 0})
 
 

@@ -51,25 +51,27 @@ public:
 
 /// Struct /Script/SoundCueTemplates.SoundCueCrossfadeInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSoundCueCrossfadeInfo : public MDKStruct
+class FSoundCueCrossfadeInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDistanceDatum)                            DistanceInfo                                                OFFSET(get<T>, {0x0, 20, 0, 0})
+	SMember(FDistanceDatum)                            DistanceInfo                                                OFFSET(getStruct<T>, {0x0, 20, 0, 0})
 	CMember(USoundWave*)                               sound                                                       OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/SoundCueTemplates.SoundCueTemplateQualitySettings
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FSoundCueTemplateQualitySettings : public MDKStruct
+class FSoundCueTemplateQualitySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(int32_t)                                   MaxConcatenatedVariations                                   OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	DMember(int32_t)                                   MaxRandomizedVariations                                     OFFSET(get<int32_t>, {0x1C, 4, 0, 0})
 	DMember(int32_t)                                   MaxMixVariations                                            OFFSET(get<int32_t>, {0x20, 4, 0, 0})

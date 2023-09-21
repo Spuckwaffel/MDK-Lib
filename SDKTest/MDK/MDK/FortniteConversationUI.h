@@ -47,7 +47,7 @@ class UFortApplyAbilityBrief : public UFortItemTransactionBrief
 	static inline constexpr uint64_t __MDKClassSize = 776;
 
 public:
-	SMember(FText)                                     PurchaseServiceText                                         OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     PurchaseServiceText                                         OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Display                                                OFFSET(get<T>, {0x300, 8, 0, 0})
 
 
@@ -111,8 +111,8 @@ class UFortConversationMarker : public UFortActorIndicatorWidget
 	static inline constexpr uint64_t __MDKClassSize = 1168;
 
 public:
-	SMember(FVector)                                   InitialOffset                                               OFFSET(get<T>, {0x3F0, 24, 0, 0})
-	SMember(FVector)                                   ManualOffset                                                OFFSET(get<T>, {0x408, 24, 0, 0})
+	SMember(FVector)                                   InitialOffset                                               OFFSET(getStruct<T>, {0x3F0, 24, 0, 0})
+	SMember(FVector)                                   ManualOffset                                                OFFSET(getStruct<T>, {0x408, 24, 0, 0})
 	DMember(float)                                     MessageBubbleDuration                                       OFFSET(get<float>, {0x420, 4, 0, 0})
 	DMember(float)                                     LastTextBubbleDuration                                      OFFSET(get<float>, {0x424, 4, 0, 0})
 	DMember(bool)                                      bSetCustomInteractionWidgetOnlyWhenNeeded                   OFFSET(get<bool>, {0x428, 1, 0, 0})
@@ -211,19 +211,19 @@ public:
 	CMember(UInputComponent*)                          ConversationInputComp                                       OFFSET(get<T>, {0x440, 8, 0, 0})
 	DMember(int32_t)                                   CurrentlySelectedIndex                                      OFFSET(get<int32_t>, {0x448, 4, 0, 0})
 	DMember(bool)                                      bBlockOptionIntroAnimation                                  OFFSET(get<bool>, {0x44C, 1, 0, 0})
-	SMember(FName)                                     RadialSelectionMaterialParameterName                        OFFSET(get<T>, {0x450, 4, 0, 0})
+	SMember(FName)                                     RadialSelectionMaterialParameterName                        OFFSET(getStruct<T>, {0x450, 4, 0, 0})
 	CMember(TArray<FGameplayTag>)                      TagPriorities                                               OFFSET(get<T>, {0x458, 16, 0, 0})
-	SMember(FName)                                     InteractActionNameKBM                                       OFFSET(get<T>, {0x468, 4, 0, 0})
-	SMember(FName)                                     ADSInputAction                                              OFFSET(get<T>, {0x46C, 4, 0, 0})
-	SMember(FName)                                     InteractActionNameGamepad                                   OFFSET(get<T>, {0x470, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       ConfirmBinding                                              OFFSET(get<T>, {0x478, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       MakeSelectionBinding                                        OFFSET(get<T>, {0x488, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ADSMouseBinding                                             OFFSET(get<T>, {0x498, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       CancelActionBinding                                         OFFSET(get<T>, {0x4A8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       RightTriggerBinding                                         OFFSET(get<T>, {0x4B8, 16, 0, 0})
+	SMember(FName)                                     InteractActionNameKBM                                       OFFSET(getStruct<T>, {0x468, 4, 0, 0})
+	SMember(FName)                                     ADSInputAction                                              OFFSET(getStruct<T>, {0x46C, 4, 0, 0})
+	SMember(FName)                                     InteractActionNameGamepad                                   OFFSET(getStruct<T>, {0x470, 4, 0, 0})
+	SMember(FDataTableRowHandle)                       ConfirmBinding                                              OFFSET(getStruct<T>, {0x478, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       MakeSelectionBinding                                        OFFSET(getStruct<T>, {0x488, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ADSMouseBinding                                             OFFSET(getStruct<T>, {0x498, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CancelActionBinding                                         OFFSET(getStruct<T>, {0x4A8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RightTriggerBinding                                         OFFSET(getStruct<T>, {0x4B8, 16, 0, 0})
 	CMember(TMap<FString, TWeakObjectPtr>)             DetailsNodeTypeToBrief                                      OFFSET(get<T>, {0x4C8, 80, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   ChatBrief                                                   OFFSET(get<T>, {0x518, 32, 0, 0})
-	SMember(FString)                                   DataDrivenBriefPrefix                                       OFFSET(get<T>, {0x538, 16, 0, 0})
+	SMember(FString)                                   DataDrivenBriefPrefix                                       OFFSET(getStruct<T>, {0x538, 16, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   DataDrivenBrief                                             OFFSET(get<T>, {0x548, 32, 0, 0})
 	CMember(UFortSlottedRadialMenu*)                   RadialMenu_DialogOptions                                    OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UImage*)                                   Image_RadialHighlight                                       OFFSET(get<T>, {0x570, 8, 0, 0})
@@ -285,7 +285,7 @@ class UFortDuelBrief : public UFortItemTransactionBrief
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FText)                                     TextTemplate                                                OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     TextTemplate                                                OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Objective                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UCommonTileView*)                          TileView                                                    OFFSET(get<T>, {0x308, 8, 0, 0})
 
@@ -303,7 +303,7 @@ class UFortHireBrief : public UFortItemTransactionBrief
 	static inline constexpr uint64_t __MDKClassSize = 776;
 
 public:
-	SMember(FText)                                     TextTemplate                                                OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     TextTemplate                                                OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Objective                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 
 
@@ -320,7 +320,7 @@ class UFortIntelBrief : public UFortItemTransactionBrief
 	static inline constexpr uint64_t __MDKClassSize = 776;
 
 public:
-	SMember(FText)                                     TextTemplate                                                OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     TextTemplate                                                OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Objective                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 };
 
@@ -416,7 +416,7 @@ public:
 	CMember(TArray<UDynamicUIScene*>)                  SpectatorMobileConversationScenes                           OFFSET(get<T>, {0x118, 16, 0, 0})
 	CMember(UClass*)                                   DialogWidgetClass                                           OFFSET(get<T>, {0x128, 8, 0, 0})
 	CMember(UClass*)                                   DialogMarkerClass                                           OFFSET(get<T>, {0x130, 8, 0, 0})
-	SMember(FUserWidgetPool)                           DialogWidgetPool                                            OFFSET(get<T>, {0x138, 136, 0, 0})
+	SMember(FUserWidgetPool)                           DialogWidgetPool                                            OFFSET(getStruct<T>, {0x138, 136, 0, 0})
 
 
 	/// Functions
@@ -432,7 +432,7 @@ class UFortQuestBrief : public UFortConversationOptionBrief
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FText)                                     ThisMatchOnlyQuestText                                      OFFSET(get<T>, {0x2D8, 24, 0, 0})
+	SMember(FText)                                     ThisMatchOnlyQuestText                                      OFFSET(getStruct<T>, {0x2D8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Objective                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_MoneyReward                                            OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_XpReward                                               OFFSET(get<T>, {0x300, 8, 0, 0})
@@ -456,7 +456,7 @@ class UFortShowFutureStormCircleBrief : public UFortItemTransactionBrief
 	static inline constexpr uint64_t __MDKClassSize = 776;
 
 public:
-	SMember(FText)                                     PurchaseServiceText                                         OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     PurchaseServiceText                                         OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Display                                                OFFSET(get<T>, {0x300, 8, 0, 0})
 
 

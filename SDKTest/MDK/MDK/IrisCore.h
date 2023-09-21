@@ -221,8 +221,8 @@ public:
 	DMember(float)                                     CellSizeY                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     MaxCullDistance                                             OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     DefaultCullDistance                                         OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FVector)                                   MinPos                                                      OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   MaxPos                                                      OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   MinPos                                                      OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   MaxPos                                                      OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/IrisCore.NetObjectGridFilter
@@ -338,8 +338,8 @@ public:
 	CMember(TArray<FObjectReplicationBridgeFilterConfig>) FilterConfigs                                            OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FObjectReplicationBridgePrioritizerConfig>) PrioritizerConfigs                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<FObjectReplicationBridgeDeltaCompressionConfig>) DeltaCompressionConfigs                        OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FName)                                     DefaultSpatialFilterName                                    OFFSET(get<T>, {0x68, 4, 0, 0})
-	SMember(FName)                                     RequiredNetDriverChannelClassName                           OFFSET(get<T>, {0x6C, 4, 0, 0})
+	SMember(FName)                                     DefaultSpatialFilterName                                    OFFSET(getStruct<T>, {0x68, 4, 0, 0})
+	SMember(FName)                                     RequiredNetDriverChannelClassName                           OFFSET(getStruct<T>, {0x6C, 4, 0, 0})
 };
 
 /// Class /Script/IrisCore.SequentialPartialNetBlobHandlerConfig
@@ -465,14 +465,15 @@ public:
 
 /// Struct /Script/IrisCore.DataStreamDefinition
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FDataStreamDefinition : public MDKStruct
+class FDataStreamDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     DataStreamName                                              OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     DataStreamName                                              OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
 	CMember(EDataStreamSendStatus)                     DefaultSendStatus                                           OFFSET(get<T>, {0x10, 1, 0, 0})
 	DMember(bool)                                      bAutoCreate                                                 OFFSET(get<bool>, {0x11, 1, 0, 0})
@@ -480,8 +481,9 @@ public:
 
 /// Struct /Script/IrisCore.NetSerializerConfig
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNetSerializerConfig : public MDKStruct
+class FNetSerializerConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -492,6 +494,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FDateTimeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -502,6 +505,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEnumInt8NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -515,6 +519,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEnumInt16NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -528,6 +533,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FEnumInt32NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -541,6 +547,7 @@ public:
 /// Size: 0x0020 (0x000010 - 0x000030)
 class FEnumInt64NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -554,6 +561,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEnumUint8NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -567,6 +575,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FEnumUint16NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -580,6 +589,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FEnumUint32NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -593,6 +603,7 @@ public:
 /// Size: 0x0020 (0x000010 - 0x000030)
 class FEnumUint64NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -606,6 +617,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FFloatNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -616,6 +628,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FDoubleNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -626,6 +639,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FGuidNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -636,6 +650,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FBitfieldNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -647,6 +662,7 @@ public:
 /// Size: 0x0030 (0x000010 - 0x000040)
 class FArrayPropertyNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -659,6 +675,7 @@ public:
 /// Size: 0x0028 (0x000010 - 0x000038)
 class FLastResortPropertyNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -670,6 +687,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FNetRoleNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -687,6 +705,7 @@ public:
 /// Size: 0x0020 (0x000010 - 0x000030)
 class FFieldPathNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -695,8 +714,9 @@ public:
 
 /// Struct /Script/IrisCore.FieldPathNetSerializerSerializationHelper
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFieldPathNetSerializerSerializationHelper : public MDKStruct
+class FFieldPathNetSerializerSerializationHelper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -709,6 +729,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FIntNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -720,6 +741,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FInt8RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -733,6 +755,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FInt16RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -746,6 +769,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FInt32RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -759,6 +783,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FInt64RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -772,6 +797,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FIrisFastArraySerializer : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -781,40 +807,43 @@ public:
 
 /// Struct /Script/IrisCore.NetBlobHandlerDefinition
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNetBlobHandlerDefinition : public MDKStruct
+class FNetBlobHandlerDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetObjectFilterDefinition
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNetObjectFilterDefinition : public MDKStruct
+class FNetObjectFilterDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     FilterName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FName)                                     ConfigClassName                                             OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     FilterName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ConfigClassName                                             OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.NetObjectPrioritizerDefinition
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNetObjectPrioritizerDefinition : public MDKStruct
+class FNetObjectPrioritizerDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     PrioritizerName                                             OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     PrioritizerName                                             OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(UClass*)                                   Class                                                       OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     ConfigClassName                                             OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     ConfigClassName                                             OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	CMember(UClass*)                                   ConfigClass                                                 OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
@@ -822,6 +851,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FBoolNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -832,6 +862,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FStructNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -842,6 +873,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FNopNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -852,6 +884,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FObjectNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -862,6 +895,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FWeakObjectNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -872,6 +906,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FScriptInterfaceNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -881,51 +916,55 @@ public:
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgePollConfig
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FObjectReplicationBridgePollConfig : public MDKStruct
+class FObjectReplicationBridgePollConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     PollFrequency                                               OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bIncludeSubclasses                                          OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgeFilterConfig
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FObjectReplicationBridgeFilterConfig : public MDKStruct
+class FObjectReplicationBridgeFilterConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     DynamicFilterName                                           OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     DynamicFilterName                                           OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgePrioritizerConfig
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FObjectReplicationBridgePrioritizerConfig : public MDKStruct
+class FObjectReplicationBridgePrioritizerConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     PrioritizerName                                             OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PrioritizerName                                             OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bForceEnableOnAllInstances                                  OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/IrisCore.ObjectReplicationBridgeDeltaCompressionConfig
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FObjectReplicationBridgeDeltaCompressionConfig : public MDKStruct
+class FObjectReplicationBridgeDeltaCompressionConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     ClassName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ClassName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bEnableDeltaCompression                                     OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
@@ -933,6 +972,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FPackedInt64NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -943,6 +983,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FPackedUint64NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -953,6 +994,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FPackedInt32NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -963,6 +1005,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FPackedUint32NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -973,6 +1016,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVectorNetQuantizeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -983,6 +1027,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVectorNetQuantize10NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -993,6 +1038,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVectorNetQuantize100NetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1003,6 +1049,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVectorNetQuantizeNormalNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1013,6 +1060,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FPolymorphicStructNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1023,6 +1071,7 @@ public:
 /// Size: 0x0000 (0x000028 - 0x000028)
 class FPolymorphicArrayStructNetSerializerConfig : public FPolymorphicStructNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1033,6 +1082,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FUnitQuatNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1043,6 +1093,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FUnitQuat4fNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1053,6 +1104,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FUnitQuat4dNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1063,6 +1115,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRotatorNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1073,6 +1126,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRotatorAsByteNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1083,6 +1137,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FRotatorAsShortNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1093,6 +1148,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FSoftObjectNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1103,6 +1159,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FSoftObjectPathNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1113,6 +1170,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FSoftClassPathNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1123,6 +1181,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FNameNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1133,6 +1192,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FStringNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1143,6 +1203,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FUintNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1154,6 +1215,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FUint8RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1167,6 +1229,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FUint16RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1180,6 +1243,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FUint32RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1193,6 +1257,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FUint64RangeNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1206,6 +1271,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVectorNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1216,6 +1282,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVector3fNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1226,6 +1293,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FVector3dNetSerializerConfig : public FNetSerializerConfig
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1234,13 +1302,14 @@ public:
 
 /// Struct /Script/IrisCore.SupportsStructNetSerializerConfig
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSupportsStructNetSerializerConfig : public MDKStruct
+class FSupportsStructNetSerializerConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     StructName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     StructName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bCanUseStructNetSerializer                                  OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 

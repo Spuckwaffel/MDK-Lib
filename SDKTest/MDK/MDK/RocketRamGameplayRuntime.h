@@ -18,8 +18,8 @@ class UAbilityTask_ApplyRootMotion_RocketRam : public UAbilityTask_ApplyRootMoti
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FVector)                                   InitialDirection                                            OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FVector)                                   EndingDirection                                             OFFSET(get<T>, {0x118, 24, 0, 0})
+	SMember(FVector)                                   InitialDirection                                            OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   EndingDirection                                             OFFSET(getStruct<T>, {0x118, 24, 0, 0})
 	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0x130, 4, 0, 0})
 	DMember(float)                                     MaxSpeed                                                    OFFSET(get<float>, {0x134, 4, 0, 0})
 	CMember(UCurveFloat*)                              SpeedCurve                                                  OFFSET(get<T>, {0x138, 8, 0, 0})
@@ -36,17 +36,18 @@ public:
 /// Size: 0x0060 (0x0000E0 - 0x000140)
 class FRootMotionSource_RocketRam : public FRootMotionSource
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FVector)                                   InitialDirection                                            OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FVector)                                   EndingDirection                                             OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FVector)                                   InitialDirection                                            OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FVector)                                   EndingDirection                                             OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0x108, 4, 0, 0})
 	DMember(float)                                     MaxSpeed                                                    OFFSET(get<float>, {0x10C, 4, 0, 0})
 	CMember(UCurveFloat*)                              SpeedCurve                                                  OFFSET(get<T>, {0x110, 8, 0, 0})
 	DMember(float)                                     FloorTraceHeight                                            OFFSET(get<float>, {0x118, 4, 0, 0})
 	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FVector)                                   PreviousEndLocationWithoutOffset                            OFFSET(get<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   PreviousEndLocationWithoutOffset                            OFFSET(getStruct<T>, {0x128, 24, 0, 0})
 };
 

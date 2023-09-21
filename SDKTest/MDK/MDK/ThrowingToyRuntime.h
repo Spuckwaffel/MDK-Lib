@@ -17,7 +17,7 @@ class UThrowingToyTrackerComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FThrowingToyDataArray)                     ThrowingToysData                                            OFFSET(get<T>, {0xA0, 280, 0, 0})
+	SMember(FThrowingToyDataArray)                     ThrowingToysData                                            OFFSET(getStruct<T>, {0xA0, 280, 0, 0})
 
 
 	/// Functions
@@ -37,18 +37,20 @@ public:
 /// Size: 0x001C (0x00000C - 0x000028)
 class FThrowingToyData : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(AActor*)                                   ThrowingToy                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FGuid)                                     WorldItemGuid                                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FGuid)                                     WorldItemGuid                                               OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/ThrowingToyRuntime.ThrowingToyDataArray
 /// Size: 0x0010 (0x000108 - 0x000118)
 class FThrowingToyDataArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 

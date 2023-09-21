@@ -18,8 +18,8 @@ class UAIAsyncTaskBlueprintProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFail                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFail                                                      OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -55,7 +55,7 @@ class UAISenseConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FColor)                                    DebugColor                                                  OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FColor)                                    DebugColor                                                  OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(float)                                     MaxAge                                                      OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(bool)                                      bStartsEnabled                                              OFFSET(get<bool>, {0x30, 1, 1, 0})
 };
@@ -83,7 +83,7 @@ public:
 	DMember(float)                                     HearingRange                                                OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     LoSHearingRange                                             OFFSET(get<float>, {0x54, 4, 0, 0})
 	DMember(bool)                                      bUseLoSHearing                                              OFFSET(get<bool>, {0x58, 1, 1, 0})
-	SMember(FAISenseAffiliationFilter)                 DetectionByAffiliation                                      OFFSET(get<T>, {0x5C, 4, 0, 0})
+	SMember(FAISenseAffiliationFilter)                 DetectionByAffiliation                                      OFFSET(getStruct<T>, {0x5C, 4, 0, 0})
 };
 
 /// Class /Script/AIModule.AISenseConfig_Prediction
@@ -108,7 +108,7 @@ public:
 	DMember(float)                                     SightRadius                                                 OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     LoseSightRadius                                             OFFSET(get<float>, {0x54, 4, 0, 0})
 	DMember(float)                                     PeripheralVisionAngleDegrees                                OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FAISenseAffiliationFilter)                 DetectionByAffiliation                                      OFFSET(get<T>, {0x5C, 4, 0, 0})
+	SMember(FAISenseAffiliationFilter)                 DetectionByAffiliation                                      OFFSET(getStruct<T>, {0x5C, 4, 0, 0})
 	DMember(float)                                     AutoSuccessRangeFromLastSeenLocation                        OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(float)                                     PointOfViewBackwardOffset                                   OFFSET(get<float>, {0x64, 4, 0, 0})
 	DMember(float)                                     NearClippingRadius                                          OFFSET(get<float>, {0x68, 4, 0, 0})
@@ -152,7 +152,7 @@ class UAISenseEvent_Damage : public UAISenseEvent
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FAIDamageEvent)                            Event                                                       OFFSET(get<T>, {0x28, 80, 0, 0})
+	SMember(FAIDamageEvent)                            Event                                                       OFFSET(getStruct<T>, {0x28, 80, 0, 0})
 };
 
 /// Class /Script/AIModule.AISenseEvent_Hearing
@@ -163,7 +163,7 @@ class UAISenseEvent_Hearing : public UAISenseEvent
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FAINoiseEvent)                             Event                                                       OFFSET(get<T>, {0x28, 56, 0, 0})
+	SMember(FAINoiseEvent)                             Event                                                       OFFSET(getStruct<T>, {0x28, 56, 0, 0})
 };
 
 /// Class /Script/AIModule.CrowdAgentInterface
@@ -278,7 +278,7 @@ class UPawnAction_Move : public UPawnAction
 
 public:
 	CMember(AActor*)                                   GoalActor                                                   OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FVector)                                   GoalLocation                                                OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FVector)                                   GoalLocation                                                OFFSET(getStruct<T>, {0x98, 24, 0, 0})
 	DMember(float)                                     AcceptableRadius                                            OFFSET(get<float>, {0xB0, 4, 0, 0})
 	CMember(UClass*)                                   FilterClass                                                 OFFSET(get<T>, {0xB8, 8, 0, 0})
 	DMember(bool)                                      bAllowStrafe                                                OFFSET(get<bool>, {0xC0, 1, 1, 0})
@@ -349,7 +349,7 @@ public:
 	CMember(UBlackboardComponent*)                     Blackboard                                                  OFFSET(get<T>, {0x388, 8, 0, 0})
 	CMember(UGameplayTasksComponent*)                  CachedGameplayTasksComponent                                OFFSET(get<T>, {0x390, 8, 0, 0})
 	CMember(UClass*)                                   DefaultNavigationFilterClass                                OFFSET(get<T>, {0x398, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ReceiveMoveCompleted                                        OFFSET(get<T>, {0x3A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ReceiveMoveCompleted                                        OFFSET(getStruct<T>, {0x3A0, 16, 0, 0})
 
 
 	/// Functions
@@ -438,9 +438,9 @@ class UAISystem : public UAISystemBase
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	SMember(FSoftClassPath)                            PerceptionSystemClassName                                   OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FSoftClassPath)                            HotSpotManagerClassName                                     OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FSoftClassPath)                            EnvQueryManagerClassName                                    OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FSoftClassPath)                            PerceptionSystemClassName                                   OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FSoftClassPath)                            HotSpotManagerClassName                                     OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FSoftClassPath)                            EnvQueryManagerClassName                                    OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 	DMember(float)                                     AcceptanceRadius                                            OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(float)                                     PathfollowingRegularPathPointAcceptanceRadius               OFFSET(get<float>, {0xA4, 4, 0, 0})
 	DMember(float)                                     PathfollowingNavLinkAcceptanceRadius                        OFFSET(get<float>, {0xA8, 4, 0, 0})
@@ -681,7 +681,7 @@ class UBlackboardKeyType_Enum : public UBlackboardKeyType
 
 public:
 	CMember(UEnum*)                                    EnumType                                                    OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FString)                                   EnumName                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   EnumName                                                    OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(bool)                                      bIsEnumNameValid                                            OFFSET(get<bool>, {0x48, 1, 1, 0})
 };
 
@@ -723,7 +723,7 @@ class UBlackboardKeyType_NativeEnum : public UBlackboardKeyType
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   EnumName                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   EnumName                                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	CMember(UEnum*)                                    EnumType                                                    OFFSET(get<T>, {0x40, 8, 0, 0})
 };
 
@@ -756,7 +756,7 @@ class UBlackboardKeyType_String : public UBlackboardKeyType
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   StringValue                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   StringValue                                                 OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/AIModule.BlackboardKeyType_Vector
@@ -777,7 +777,7 @@ class UBTNode : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   NodeName                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   NodeName                                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	CMember(UBehaviorTree*)                            TreeAsset                                                   OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(UBTCompositeNode*)                         ParentNode                                                  OFFSET(get<T>, {0x48, 8, 0, 0})
 };
@@ -892,7 +892,7 @@ class UBTDecorator_BlackboardBase : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(get<T>, {0x68, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(getStruct<T>, {0x68, 40, 0, 0})
 };
 
 /// Class /Script/AIModule.BTDecorator_Blackboard
@@ -905,8 +905,8 @@ class UBTDecorator_Blackboard : public UBTDecorator_BlackboardBase
 public:
 	DMember(int32_t)                                   IntValue                                                    OFFSET(get<int32_t>, {0x90, 4, 0, 0})
 	DMember(float)                                     FloatValue                                                  OFFSET(get<float>, {0x94, 4, 0, 0})
-	SMember(FString)                                   StringValue                                                 OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FString)                                   CachedDescription                                           OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   StringValue                                                 OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   CachedDescription                                           OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 	DMember(char)                                      OperationType                                               OFFSET(get<char>, {0xB8, 1, 0, 0})
 	CMember(TEnumAsByte<EBTBlackboardRestart>)         NotifyObserver                                              OFFSET(get<T>, {0xB9, 1, 0, 0})
 };
@@ -965,10 +965,10 @@ class UBTDecorator_CheckGameplayTagsOnActor : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FBlackboardKeySelector)                    ActorToCheck                                                OFFSET(get<T>, {0x68, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    ActorToCheck                                                OFFSET(getStruct<T>, {0x68, 40, 0, 0})
 	CMember(EGameplayContainerMatchType)               TagsToMatch                                                 OFFSET(get<T>, {0x90, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(get<T>, {0x98, 32, 0, 0})
-	SMember(FString)                                   CachedDescription                                           OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x98, 32, 0, 0})
+	SMember(FString)                                   CachedDescription                                           OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 };
 
 /// Class /Script/AIModule.BTDecorator_CompareBBEntries
@@ -980,8 +980,8 @@ class UBTDecorator_CompareBBEntries : public UBTDecorator
 
 public:
 	CMember(TEnumAsByte<EBlackBoardEntryComparison>)   Operator                                                    OFFSET(get<T>, {0x68, 1, 0, 0})
-	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 };
 
 /// Class /Script/AIModule.BTDecorator_ConditionalLoop
@@ -1003,9 +1003,9 @@ class UBTDecorator_ConeCheck : public UBTDecorator
 
 public:
 	DMember(float)                                     ConeHalfAngle                                               OFFSET(get<float>, {0x68, 4, 0, 0})
-	SMember(FBlackboardKeySelector)                    ConeOrigin                                                  OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    ConeDirection                                               OFFSET(get<T>, {0x98, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    Observed                                                    OFFSET(get<T>, {0xC0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    ConeOrigin                                                  OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    ConeDirection                                               OFFSET(getStruct<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    Observed                                                    OFFSET(getStruct<T>, {0xC0, 40, 0, 0})
 };
 
 /// Class /Script/AIModule.BTDecorator_Cooldown
@@ -1027,8 +1027,8 @@ class UBTDecorator_DoesPathExist : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(get<T>, {0x68, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(get<T>, {0x90, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(getStruct<T>, {0x68, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(getStruct<T>, {0x90, 40, 0, 0})
 	DMember(bool)                                      bUseSelf                                                    OFFSET(get<bool>, {0xB8, 1, 1, 0})
 	CMember(TEnumAsByte<EPathExistanceQueryType>)      PathQueryType                                               OFFSET(get<T>, {0xBC, 1, 0, 0})
 	CMember(UClass*)                                   FilterClass                                                 OFFSET(get<T>, {0xC0, 8, 0, 0})
@@ -1053,8 +1053,8 @@ class UBTDecorator_IsAtLocation : public UBTDecorator_BlackboardBase
 
 public:
 	DMember(float)                                     AcceptableRadius                                            OFFSET(get<float>, {0x90, 4, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ParametrizedAcceptableRadius                                OFFSET(get<T>, {0x98, 56, 0, 0})
-	SMember(FAIDistanceType)                           GeometricDistanceType                                       OFFSET(get<T>, {0xD0, 1, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ParametrizedAcceptableRadius                                OFFSET(getStruct<T>, {0x98, 56, 0, 0})
+	SMember(FAIDistanceType)                           GeometricDistanceType                                       OFFSET(getStruct<T>, {0xD0, 1, 0, 0})
 	DMember(bool)                                      bUseParametrizedRadius                                      OFFSET(get<bool>, {0xD4, 1, 1, 0})
 	DMember(bool)                                      bUseNavAgentGoalLocation                                    OFFSET(get<bool>, {0xD4, 1, 1, 1})
 	DMember(bool)                                      bPathFindingBasedTest                                       OFFSET(get<bool>, {0xD4, 1, 1, 2})
@@ -1080,8 +1080,8 @@ class UBTDecorator_KeepInCone : public UBTDecorator
 
 public:
 	DMember(float)                                     ConeHalfAngle                                               OFFSET(get<float>, {0x68, 4, 0, 0})
-	SMember(FBlackboardKeySelector)                    ConeOrigin                                                  OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    Observed                                                    OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    ConeOrigin                                                  OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    Observed                                                    OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 	DMember(bool)                                      bUseSelfAsOrigin                                            OFFSET(get<bool>, {0xC0, 1, 1, 0})
 	DMember(bool)                                      bUseSelfAsObserved                                          OFFSET(get<bool>, {0xC0, 1, 1, 1})
 };
@@ -1117,7 +1117,7 @@ class UBTDecorator_SetTagCooldown : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FGameplayTag)                              CooldownTag                                                 OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FGameplayTag)                              CooldownTag                                                 OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	DMember(float)                                     CooldownDuration                                            OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(bool)                                      bAddToExistingDuration                                      OFFSET(get<bool>, {0x70, 1, 0, 0})
 };
@@ -1130,7 +1130,7 @@ class UBTDecorator_TagCooldown : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FGameplayTag)                              CooldownTag                                                 OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FGameplayTag)                              CooldownTag                                                 OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	DMember(float)                                     CooldownDuration                                            OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(bool)                                      bAddToExistingDuration                                      OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(bool)                                      bActivatesCooldown                                          OFFSET(get<bool>, {0x71, 1, 0, 0})
@@ -1155,7 +1155,7 @@ class UBTService_BlackboardBase : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(get<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(getStruct<T>, {0x70, 40, 0, 0})
 };
 
 /// Class /Script/AIModule.BTService_BlueprintBase
@@ -1212,7 +1212,7 @@ class UBTService_RunEQS : public UBTService_BlackboardBase
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(get<T>, {0x98, 72, 0, 0})
+	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(getStruct<T>, {0x98, 72, 0, 0})
 	DMember(bool)                                      bUpdateBBOnFail                                             OFFSET(get<bool>, {0xE0, 1, 0, 0})
 };
 
@@ -1224,7 +1224,7 @@ class UBTTask_BlackboardBase : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(get<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(getStruct<T>, {0x70, 40, 0, 0})
 };
 
 /// Class /Script/AIModule.BTTask_BlueprintBase
@@ -1237,7 +1237,7 @@ class UBTTask_BlueprintBase : public UBTTaskNode
 public:
 	CMember(AAIController*)                            AIOwner                                                     OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(AActor*)                                   ActorOwner                                                  OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FIntervalCountdown)                        TickInterval                                                OFFSET(get<T>, {0x80, 8, 0, 0})
+	SMember(FIntervalCountdown)                        TickInterval                                                OFFSET(getStruct<T>, {0x80, 8, 0, 0})
 	DMember(bool)                                      bShowPropertyDetails                                        OFFSET(get<bool>, {0xA0, 1, 1, 0})
 
 
@@ -1414,7 +1414,7 @@ class UBTTask_RunBehaviorDynamic : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	CMember(UBehaviorTree*)                            DefaultBehaviorAsset                                        OFFSET(get<T>, {0x78, 8, 0, 0})
 	CMember(UBehaviorTree*)                            BehaviorAsset                                               OFFSET(get<T>, {0x80, 8, 0, 0})
 };
@@ -1431,9 +1431,9 @@ public:
 	CMember(TArray<FEnvNamedValue>)                    QueryParams                                                 OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<FAIDynamicParam>)                   QueryConfig                                                 OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryRunMode>)             RunMode                                                     OFFSET(get<T>, {0xC0, 1, 0, 0})
-	SMember(FBlackboardKeySelector)                    EQSQueryBlackboardKey                                       OFFSET(get<T>, {0xC8, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    EQSQueryBlackboardKey                                       OFFSET(getStruct<T>, {0xC8, 40, 0, 0})
 	DMember(bool)                                      bUseBBKey                                                   OFFSET(get<bool>, {0xF0, 1, 0, 0})
-	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(get<T>, {0xF8, 72, 0, 0})
+	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(getStruct<T>, {0xF8, 72, 0, 0})
 	DMember(bool)                                      bUpdateBBOnFail                                             OFFSET(get<bool>, {0x140, 1, 0, 0})
 };
 
@@ -1445,7 +1445,7 @@ class UBTTask_SetTagCooldown : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FGameplayTag)                              CooldownTag                                                 OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FGameplayTag)                              CooldownTag                                                 OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	DMember(bool)                                      bAddToExistingDuration                                      OFFSET(get<bool>, {0x74, 1, 0, 0})
 	DMember(float)                                     CooldownDuration                                            OFFSET(get<float>, {0x78, 4, 0, 0})
 };
@@ -1470,7 +1470,7 @@ class UBTTask_WaitBlackboardTime : public UBTTask_Wait
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(get<T>, {0x78, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(getStruct<T>, {0x78, 40, 0, 0})
 };
 
 /// Class /Script/AIModule.AIBlueprintHelperLibrary
@@ -1501,7 +1501,7 @@ class UAIDataProvider_QueryParams : public UAIDataProvider
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     ParamName                                                   OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     ParamName                                                   OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(float)                                     FloatValue                                                  OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(int32_t)                                   IntValue                                                    OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(bool)                                      BoolValue                                                   OFFSET(get<bool>, {0x34, 1, 0, 0})
@@ -1578,7 +1578,7 @@ class UEnvQuery : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FName)                                     QueryName                                                   OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     QueryName                                                   OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	CMember(TArray<UEnvQueryOption*>)                  Options                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
@@ -1611,7 +1611,7 @@ class UEnvQueryGenerator : public UEnvQueryNode
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   OptionName                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   OptionName                                                  OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	CMember(UClass*)                                   ItemType                                                    OFFSET(get<T>, {0x40, 8, 0, 0})
 	DMember(bool)                                      bAutoSortTests                                              OFFSET(get<bool>, {0x48, 1, 1, 0})
 };
@@ -1627,7 +1627,7 @@ public:
 	DMember(int32_t)                                   QueryID                                                     OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	CMember(UClass*)                                   ItemType                                                    OFFSET(get<T>, {0x58, 8, 0, 0})
 	DMember(int32_t)                                   OptionIndex                                                 OFFSET(get<int32_t>, {0x60, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnQueryFinishedEvent                                        OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnQueryFinishedEvent                                        OFFSET(getStruct<T>, {0x68, 16, 0, 0})
 
 
 	/// Functions
@@ -1694,21 +1694,21 @@ class UEnvQueryTest : public UEnvQueryNode
 public:
 	DMember(int32_t)                                   TestOrder                                                   OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	CMember(TEnumAsByte<EEnvTestPurpose>)              TestPurpose                                                 OFFSET(get<T>, {0x34, 1, 0, 0})
-	SMember(FString)                                   TestComment                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   TestComment                                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EEnvTestFilterOperator>)       MultipleContextFilterOp                                     OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EEnvTestScoreOperator>)        MultipleContextScoreOp                                      OFFSET(get<T>, {0x49, 1, 0, 0})
 	CMember(TEnumAsByte<EEnvTestFilterType>)           FilterType                                                  OFFSET(get<T>, {0x4A, 1, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  BoolValue                                                   OFFSET(get<T>, {0x50, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 FloatValueMin                                               OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 FloatValueMax                                               OFFSET(get<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  BoolValue                                                   OFFSET(getStruct<T>, {0x50, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 FloatValueMin                                               OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 FloatValueMax                                               OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
 	CMember(TEnumAsByte<EEnvTestScoreEquation>)        ScoringEquation                                             OFFSET(get<T>, {0xF9, 1, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryTestClamping>)        ClampMinType                                                OFFSET(get<T>, {0xFA, 1, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryTestClamping>)        ClampMaxType                                                OFFSET(get<T>, {0xFB, 1, 0, 0})
 	CMember(EEQSNormalizationType)                     NormalizationType                                           OFFSET(get<T>, {0xFC, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreClampMin                                               OFFSET(get<T>, {0x100, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreClampMax                                               OFFSET(get<T>, {0x138, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoringFactor                                               OFFSET(get<T>, {0x170, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ReferenceValue                                              OFFSET(get<T>, {0x1A8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreClampMin                                               OFFSET(getStruct<T>, {0x100, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreClampMax                                               OFFSET(getStruct<T>, {0x138, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoringFactor                                               OFFSET(getStruct<T>, {0x170, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ReferenceValue                                              OFFSET(getStruct<T>, {0x1A8, 56, 0, 0})
 	DMember(bool)                                      bDefineReferenceValue                                       OFFSET(get<bool>, {0x1E0, 1, 0, 0})
 	DMember(bool)                                      bWorkOnFloatValues                                          OFFSET(get<bool>, {0x1F0, 1, 1, 0})
 };
@@ -1743,7 +1743,7 @@ public:
 	DMember(bool)                                      bShouldBeVisibleInGame                                      OFFSET(get<bool>, {0x69C, 1, 1, 3})
 	DMember(bool)                                      bTickDuringGame                                             OFFSET(get<bool>, {0x69C, 1, 1, 4})
 	CMember(TEnumAsByte<EEnvQueryRunMode>)             QueryingMode                                                OFFSET(get<T>, {0x6A0, 1, 0, 0})
-	SMember(FNavAgentProperties)                       NavAgentProperties                                          OFFSET(get<T>, {0x6A8, 48, 0, 0})
+	SMember(FNavAgentProperties)                       NavAgentProperties                                          OFFSET(getStruct<T>, {0x6A8, 48, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_ActorsOfClass
@@ -1755,8 +1755,8 @@ class UEnvQueryGenerator_ActorsOfClass : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   SearchedActorClass                                          OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  GenerateOnlyActorsInRadius                                  OFFSET(get<T>, {0x58, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(get<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  GenerateOnlyActorsInRadius                                  OFFSET(getStruct<T>, {0x58, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(getStruct<T>, {0x90, 56, 0, 0})
 	CMember(UClass*)                                   SearchCenter                                                OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
@@ -1768,7 +1768,7 @@ class UEnvQueryGenerator_BlueprintBase : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FText)                                     GeneratorsActionDescription                                 OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FText)                                     GeneratorsActionDescription                                 OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	CMember(UClass*)                                   Context                                                     OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UClass*)                                   GeneratedItemType                                           OFFSET(get<T>, {0x70, 8, 0, 0})
 
@@ -1808,7 +1808,7 @@ class UEnvQueryGenerator_ProjectedPoints : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FEnvTraceData)                             ProjectionData                                              OFFSET(get<T>, {0x50, 56, 0, 0})
+	SMember(FEnvTraceData)                             ProjectionData                                              OFFSET(getStruct<T>, {0x50, 56, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_Cone
@@ -1819,10 +1819,10 @@ class UEnvQueryGenerator_Cone : public UEnvQueryGenerator_ProjectedPoints
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 AlignedPointsDistance                                       OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ConeDegrees                                                 OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 AngleStep                                                   OFFSET(get<T>, {0xF8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 Range                                                       OFFSET(get<T>, {0x130, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 AlignedPointsDistance                                       OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ConeDegrees                                                 OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 AngleStep                                                   OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 Range                                                       OFFSET(getStruct<T>, {0x130, 56, 0, 0})
 	CMember(UClass*)                                   CenterActor                                                 OFFSET(get<T>, {0x168, 8, 0, 0})
 	DMember(bool)                                      bIncludeContextLocation                                     OFFSET(get<bool>, {0x170, 1, 1, 0})
 };
@@ -1846,12 +1846,12 @@ class UEnvQueryGenerator_Donut : public UEnvQueryGenerator_ProjectedPoints
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 InnerRadius                                                 OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 OuterRadius                                                 OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   NumberOfRings                                               OFFSET(get<T>, {0xF8, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   PointsPerRing                                               OFFSET(get<T>, {0x130, 56, 0, 0})
-	SMember(FEnvDirection)                             ArcDirection                                                OFFSET(get<T>, {0x168, 32, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ArcAngle                                                    OFFSET(get<T>, {0x188, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 InnerRadius                                                 OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 OuterRadius                                                 OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   NumberOfRings                                               OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   PointsPerRing                                               OFFSET(getStruct<T>, {0x130, 56, 0, 0})
+	SMember(FEnvDirection)                             ArcDirection                                                OFFSET(getStruct<T>, {0x168, 32, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ArcAngle                                                    OFFSET(getStruct<T>, {0x188, 56, 0, 0})
 	DMember(bool)                                      bUseSpiralPattern                                           OFFSET(get<bool>, {0x1C0, 1, 0, 0})
 	CMember(UClass*)                                   Center                                                      OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	DMember(bool)                                      bDefineArc                                                  OFFSET(get<bool>, {0x1D0, 1, 1, 0})
@@ -1865,17 +1865,17 @@ class UEnvQueryGenerator_OnCircle : public UEnvQueryGenerator_ProjectedPoints
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 CircleRadius                                                OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   NumberOfPoints                                              OFFSET(get<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 CircleRadius                                                OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   NumberOfPoints                                              OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
 	CMember(EPointOnCircleSpacingMethod)               PointOnCircleSpacingMethod                                  OFFSET(get<T>, {0x130, 1, 0, 0})
-	SMember(FEnvDirection)                             ArcDirection                                                OFFSET(get<T>, {0x138, 32, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ArcAngle                                                    OFFSET(get<T>, {0x158, 56, 0, 0})
+	SMember(FEnvDirection)                             ArcDirection                                                OFFSET(getStruct<T>, {0x138, 32, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ArcAngle                                                    OFFSET(getStruct<T>, {0x158, 56, 0, 0})
 	DMember(float)                                     AngleRadians                                                OFFSET(get<float>, {0x190, 4, 0, 0})
 	CMember(UClass*)                                   CircleCenter                                                OFFSET(get<T>, {0x198, 8, 0, 0})
 	DMember(bool)                                      bIgnoreAnyContextActorsWhenGeneratingCircle                 OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 CircleCenterZOffset                                         OFFSET(get<T>, {0x1A8, 56, 0, 0})
-	SMember(FEnvTraceData)                             TraceData                                                   OFFSET(get<T>, {0x1E0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 CircleCenterZOffset                                         OFFSET(getStruct<T>, {0x1A8, 56, 0, 0})
+	SMember(FEnvTraceData)                             TraceData                                                   OFFSET(getStruct<T>, {0x1E0, 56, 0, 0})
 	DMember(bool)                                      bDefineArc                                                  OFFSET(get<bool>, {0x218, 1, 1, 0})
 };
 
@@ -1887,8 +1887,8 @@ class UEnvQueryGenerator_SimpleGrid : public UEnvQueryGenerator_ProjectedPoints
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 GridSize                                                    OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(get<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 GridSize                                                    OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0xF8, 8, 0, 0})
 };
 
@@ -1900,9 +1900,9 @@ class UEnvQueryGenerator_PathingGrid : public UEnvQueryGenerator_SimpleGrid
 	static inline constexpr uint64_t __MDKClassSize = 376;
 
 public:
-	SMember(FAIDataProviderBoolValue)                  PathToItem                                                  OFFSET(get<T>, {0x100, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  PathToItem                                                  OFFSET(getStruct<T>, {0x100, 56, 0, 0})
 	CMember(UClass*)                                   NavigationFilter                                            OFFSET(get<T>, {0x138, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScanRangeMultiplier                                         OFFSET(get<T>, {0x140, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScanRangeMultiplier                                         OFFSET(getStruct<T>, {0x140, 56, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryGenerator_PerceivedActors
@@ -1914,7 +1914,7 @@ class UEnvQueryGenerator_PerceivedActors : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   AllowedActorClass                                           OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(get<T>, {0x58, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(getStruct<T>, {0x58, 56, 0, 0})
 	CMember(UClass*)                                   ListenerContext                                             OFFSET(get<T>, {0x90, 8, 0, 0})
 	CMember(UClass*)                                   SenseToUse                                                  OFFSET(get<T>, {0x98, 8, 0, 0})
 	DMember(bool)                                      bIncludeKnownActors                                         OFFSET(get<bool>, {0xA0, 1, 0, 0})
@@ -2000,8 +2000,8 @@ class UEnvQueryTest_Dot : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FEnvDirection)                             LineA                                                       OFFSET(get<T>, {0x1F8, 32, 0, 0})
-	SMember(FEnvDirection)                             LineB                                                       OFFSET(get<T>, {0x218, 32, 0, 0})
+	SMember(FEnvDirection)                             LineA                                                       OFFSET(getStruct<T>, {0x1F8, 32, 0, 0})
+	SMember(FEnvDirection)                             LineB                                                       OFFSET(getStruct<T>, {0x218, 32, 0, 0})
 	CMember(EEnvTestDot)                               TestMode                                                    OFFSET(get<T>, {0x238, 1, 0, 0})
 	DMember(bool)                                      bAbsoluteValue                                              OFFSET(get<bool>, {0x239, 1, 0, 0})
 };
@@ -2014,11 +2014,11 @@ class UEnvQueryTest_GameplayTags : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQueryToMatch                                             OFFSET(get<T>, {0x1F8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQueryToMatch                                             OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
 	DMember(bool)                                      bRejectIncompatibleItems                                    OFFSET(get<bool>, {0x240, 1, 0, 0})
 	DMember(bool)                                      bUpdatedToUseQuery                                          OFFSET(get<bool>, {0x241, 1, 0, 0})
 	CMember(EGameplayContainerMatchType)               TagsToMatch                                                 OFFSET(get<T>, {0x242, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(get<T>, {0x248, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x248, 32, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Overlap
@@ -2029,7 +2029,7 @@ class UEnvQueryTest_Overlap : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FEnvOverlapData)                           OverlapData                                                 OFFSET(get<T>, {0x1F8, 48, 0, 0})
+	SMember(FEnvOverlapData)                           OverlapData                                                 OFFSET(getStruct<T>, {0x1F8, 48, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Pathfinding
@@ -2042,8 +2042,8 @@ class UEnvQueryTest_Pathfinding : public UEnvQueryTest
 public:
 	CMember(TEnumAsByte<EEnvTestPathfinding>)          TestMode                                                    OFFSET(get<T>, {0x1F8, 1, 0, 0})
 	CMember(UClass*)                                   Context                                                     OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  PathFromContext                                             OFFSET(get<T>, {0x208, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  SkipUnreachable                                             OFFSET(get<T>, {0x240, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  PathFromContext                                             OFFSET(getStruct<T>, {0x208, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  SkipUnreachable                                             OFFSET(getStruct<T>, {0x240, 56, 0, 0})
 	CMember(UClass*)                                   FilterClass                                                 OFFSET(get<T>, {0x278, 8, 0, 0})
 };
 
@@ -2055,7 +2055,7 @@ class UEnvQueryTest_PathfindingBatch : public UEnvQueryTest_Pathfinding
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 ScanRangeMultiplier                                         OFFSET(get<T>, {0x280, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScanRangeMultiplier                                         OFFSET(getStruct<T>, {0x280, 56, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Project
@@ -2066,7 +2066,7 @@ class UEnvQueryTest_Project : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FEnvTraceData)                             ProjectionData                                              OFFSET(get<T>, {0x1F8, 56, 0, 0})
+	SMember(FEnvTraceData)                             ProjectionData                                              OFFSET(getStruct<T>, {0x1F8, 56, 0, 0})
 };
 
 /// Class /Script/AIModule.EnvQueryTest_Random
@@ -2087,10 +2087,10 @@ class UEnvQueryTest_Trace : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FEnvTraceData)                             TraceData                                                   OFFSET(get<T>, {0x1F8, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  TraceFromContext                                            OFFSET(get<T>, {0x230, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ItemHeightOffset                                            OFFSET(get<T>, {0x268, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ContextHeightOffset                                         OFFSET(get<T>, {0x2A0, 56, 0, 0})
+	SMember(FEnvTraceData)                             TraceData                                                   OFFSET(getStruct<T>, {0x1F8, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  TraceFromContext                                            OFFSET(getStruct<T>, {0x230, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ItemHeightOffset                                            OFFSET(getStruct<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ContextHeightOffset                                         OFFSET(getStruct<T>, {0x2A0, 56, 0, 0})
 	CMember(UClass*)                                   Context                                                     OFFSET(get<T>, {0x2D8, 8, 0, 0})
 };
 
@@ -2159,7 +2159,7 @@ class UCrowdFollowingComponent : public UPathFollowingComponent
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FVector)                                   CrowdAgentMoveDirection                                     OFFSET(get<T>, {0x2E0, 24, 0, 0})
+	SMember(FVector)                                   CrowdAgentMoveDirection                                     OFFSET(getStruct<T>, {0x2E0, 24, 0, 0})
 
 
 	/// Functions
@@ -2222,7 +2222,7 @@ public:
 	CMember(TArray<FNavigationSegmentLink>)            SegmentLinks                                                OFFSET(get<T>, {0x2B0, 16, 0, 0})
 	CMember(UNavLinkCustomComponent*)                  SmartLinkComp                                               OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	DMember(bool)                                      bSmartLinkIsRelevant                                        OFFSET(get<bool>, {0x2C8, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSmartLinkReached                                          OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSmartLinkReached                                          OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 
 
 	/// Functions
@@ -2269,10 +2269,10 @@ public:
 	CMember(TArray<UAISenseConfig*>)                   SensesConfig                                                OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(UClass*)                                   DominantSense                                               OFFSET(get<T>, {0xB0, 8, 0, 0})
 	CMember(AAIController*)                            AIOwner                                                     OFFSET(get<T>, {0xC0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPerceptionUpdated                                         OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionForgotten                                 OFFSET(get<T>, {0x158, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionUpdated                                   OFFSET(get<T>, {0x168, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionInfoUpdated                               OFFSET(get<T>, {0x178, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPerceptionUpdated                                         OFFSET(getStruct<T>, {0x148, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionForgotten                                 OFFSET(getStruct<T>, {0x158, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionUpdated                                   OFFSET(getStruct<T>, {0x168, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionInfoUpdated                               OFFSET(getStruct<T>, {0x178, 16, 0, 0})
 
 
 	/// Functions
@@ -2533,8 +2533,8 @@ public:
 	DMember(bool)                                      bOnlySensePlayers                                           OFFSET(get<bool>, {0xB4, 1, 1, 1})
 	DMember(bool)                                      bSeePawns                                                   OFFSET(get<bool>, {0xB4, 1, 1, 2})
 	DMember(bool)                                      bHearNoises                                                 OFFSET(get<bool>, {0xB4, 1, 1, 3})
-	SMember(FMulticastInlineDelegate)                  OnSeePawn                                                   OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHearNoise                                                 OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSeePawn                                                   OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHearNoise                                                 OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 	DMember(float)                                     PeripheralVisionAngle                                       OFFSET(get<float>, {0xE0, 4, 0, 0})
 	DMember(float)                                     PeripheralVisionCosine                                      OFFSET(get<float>, {0xE4, 4, 0, 0})
 
@@ -2585,9 +2585,9 @@ class UAITask_MoveTo : public UAITask
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRequestFailed                                             OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMoveFinished                                              OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FAIMoveRequest)                            MoveRequest                                                 OFFSET(get<T>, {0x88, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestFailed                                             OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMoveFinished                                              OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FAIMoveRequest)                            MoveRequest                                                 OFFSET(getStruct<T>, {0x88, 80, 0, 0})
 
 
 	/// Functions
@@ -2617,21 +2617,23 @@ public:
 
 /// Struct /Script/AIModule.ActorPerceptionUpdateInfo
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FActorPerceptionUpdateInfo : public MDKStruct
+class FActorPerceptionUpdateInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	DMember(int32_t)                                   TargetId                                                    OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   Target                                                      OFFSET(get<T>, {0x4, 8, 0, 0})
-	SMember(FAIStimulus)                               Stimulus                                                    OFFSET(get<T>, {0x10, 80, 0, 0})
+	SMember(FAIStimulus)                               Stimulus                                                    OFFSET(getStruct<T>, {0x10, 80, 0, 0})
 };
 
 /// Struct /Script/AIModule.AIStimulus
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FAIStimulus : public MDKStruct
+class FAIStimulus : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -2639,16 +2641,17 @@ public:
 	DMember(float)                                     Age                                                         OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     ExpirationAge                                               OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     Strength                                                    OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   StimulusLocation                                            OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   ReceiverLocation                                            OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x40, 4, 0, 0})
+	SMember(FVector)                                   StimulusLocation                                            OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   ReceiverLocation                                            OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(getStruct<T>, {0x40, 4, 0, 0})
 	DMember(bool)                                      bSuccessfullySensed                                         OFFSET(get<bool>, {0x4C, 1, 1, 1})
 };
 
 /// Struct /Script/AIModule.AIRequestID
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FAIRequestID : public MDKStruct
+class FAIRequestID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2658,41 +2661,44 @@ public:
 
 /// Struct /Script/AIModule.EnvNamedValue
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FEnvNamedValue : public MDKStruct
+class FEnvNamedValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     ParamName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ParamName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(EAIParamType)                              ParamType                                                   OFFSET(get<T>, {0x4, 1, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/AIModule.AIDynamicParam
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FAIDynamicParam : public MDKStruct
+class FAIDynamicParam : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FName)                                     ParamName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ParamName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(EAIParamType)                              ParamType                                                   OFFSET(get<T>, {0x4, 1, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FBlackboardKeySelector)                    BBKey                                                       OFFSET(get<T>, {0x10, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BBKey                                                       OFFSET(getStruct<T>, {0x10, 40, 0, 0})
 };
 
 /// Struct /Script/AIModule.BlackboardKeySelector
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FBlackboardKeySelector : public MDKStruct
+class FBlackboardKeySelector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TArray<UBlackboardKeyType*>)               AllowedTypes                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FName)                                     SelectedKeyName                                             OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     SelectedKeyName                                             OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	CMember(UClass*)                                   SelectedKeyType                                             OFFSET(get<T>, {0x18, 8, 0, 0})
 	DMember(int32_t)                                   SelectedKeyID                                               OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 	DMember(bool)                                      bNoneIsAllowedValue                                         OFFSET(get<bool>, {0x24, 1, 1, 0})
@@ -2700,8 +2706,9 @@ public:
 
 /// Struct /Script/AIModule.AIMoveRequest
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FAIMoveRequest : public MDKStruct
+class FAIMoveRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -2711,8 +2718,9 @@ public:
 
 /// Struct /Script/AIModule.IntervalCountdown
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FIntervalCountdown : public MDKStruct
+class FIntervalCountdown : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2722,8 +2730,9 @@ public:
 
 /// Struct /Script/AIModule.EnvDirection
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FEnvDirection : public MDKStruct
+class FEnvDirection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -2736,8 +2745,9 @@ public:
 
 /// Struct /Script/AIModule.EnvTraceData
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FEnvTraceData : public MDKStruct
+class FEnvTraceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -2752,7 +2762,7 @@ public:
 	DMember(float)                                     PostProjectionVerticalOffset                                OFFSET(get<float>, {0x24, 4, 0, 0})
 	CMember(TEnumAsByte<ETraceTypeQuery>)              TraceChannel                                                OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            SerializedChannel                                           OFFSET(get<T>, {0x29, 1, 0, 0})
-	SMember(FName)                                     TraceProfileName                                            OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     TraceProfileName                                            OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	CMember(TEnumAsByte<EEnvTraceShape>)               TraceShape                                                  OFFSET(get<T>, {0x30, 1, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryTrace>)               TraceMode                                                   OFFSET(get<T>, {0x31, 1, 0, 0})
 	DMember(bool)                                      bTraceComplex                                               OFFSET(get<bool>, {0x34, 1, 1, 0})
@@ -2765,8 +2775,9 @@ public:
 
 /// Struct /Script/AIModule.EnvOverlapData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FEnvOverlapData : public MDKStruct
+class FEnvOverlapData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -2774,7 +2785,7 @@ public:
 	DMember(float)                                     ExtentX                                                     OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     ExtentY                                                     OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     ExtentZ                                                     OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   ShapeOffset                                                 OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   ShapeOffset                                                 OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            OverlapChannel                                              OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(TEnumAsByte<EEnvOverlapShape>)             OverlapShape                                                OFFSET(get<T>, {0x29, 1, 0, 0})
 	DMember(bool)                                      bOnlyBlockingHits                                           OFFSET(get<bool>, {0x2C, 1, 1, 0})
@@ -2784,8 +2795,9 @@ public:
 
 /// Struct /Script/AIModule.EnvQueryResult
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FEnvQueryResult : public MDKStruct
+class FEnvQueryResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -2797,23 +2809,25 @@ public:
 
 /// Struct /Script/AIModule.EQSParametrizedQueryExecutionRequest
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FEQSParametrizedQueryExecutionRequest : public MDKStruct
+class FEQSParametrizedQueryExecutionRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(UEnvQuery*)                                QueryTemplate                                               OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(TArray<FAIDynamicParam>)                   QueryConfig                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FBlackboardKeySelector)                    EQSQueryBlackboardKey                                       OFFSET(get<T>, {0x18, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    EQSQueryBlackboardKey                                       OFFSET(getStruct<T>, {0x18, 40, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryRunMode>)             RunMode                                                     OFFSET(get<T>, {0x40, 1, 0, 0})
 	DMember(bool)                                      bUseBBKeyForQueryTemplate                                   OFFSET(get<bool>, {0x44, 1, 1, 0})
 };
 
 /// Struct /Script/AIModule.GenericTeamId
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGenericTeamId : public MDKStruct
+class FGenericTeamId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -2823,8 +2837,9 @@ public:
 
 /// Struct /Script/AIModule.SimpleIndexedHandleBase
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FSimpleIndexedHandleBase : public MDKStruct
+class FSimpleIndexedHandleBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2835,6 +2850,7 @@ public:
 /// Size: 0x0004 (0x000004 - 0x000008)
 class FIndexedHandleBase : public FSimpleIndexedHandleBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2843,8 +2859,9 @@ public:
 
 /// Struct /Script/AIModule.CompactIndexedHandleBase
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCompactIndexedHandleBase : public MDKStruct
+class FCompactIndexedHandleBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2853,8 +2870,9 @@ public:
 
 /// Struct /Script/AIModule.SequentialIDBase
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FSequentialIDBase : public MDKStruct
+class FSequentialIDBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2864,8 +2882,9 @@ public:
 
 /// Struct /Script/AIModule.PawnActionEvent
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPawnActionEvent : public MDKStruct
+class FPawnActionEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2875,8 +2894,9 @@ public:
 
 /// Struct /Script/AIModule.PawnActionStack
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FPawnActionStack : public MDKStruct
+class FPawnActionStack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2886,8 +2906,9 @@ public:
 
 /// Struct /Script/AIModule.BehaviorTreeTemplateInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FBehaviorTreeTemplateInfo : public MDKStruct
+class FBehaviorTreeTemplateInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2898,21 +2919,23 @@ public:
 
 /// Struct /Script/AIModule.BlackboardEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FBlackboardEntry : public MDKStruct
+class FBlackboardEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     EntryName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     EntryName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UBlackboardKeyType*)                       KeyType                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bInstanceSynced                                             OFFSET(get<bool>, {0x10, 1, 1, 0})
 };
 
 /// Struct /Script/AIModule.BTDecoratorLogic
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FBTDecoratorLogic : public MDKStruct
+class FBTDecoratorLogic : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2923,8 +2946,9 @@ public:
 
 /// Struct /Script/AIModule.BTCompositeChild
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FBTCompositeChild : public MDKStruct
+class FBTCompositeChild : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -2937,20 +2961,22 @@ public:
 
 /// Struct /Script/AIModule.AIDataProviderValue
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FAIDataProviderValue : public MDKStruct
+class FAIDataProviderValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UAIDataProvider*)                          DataBinding                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FName)                                     DataField                                                   OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     DataField                                                   OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/AIModule.AIDataProviderTypedValue
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FAIDataProviderTypedValue : public FAIDataProviderValue
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -2962,6 +2988,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FAIDataProviderStructValue : public FAIDataProviderValue
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -2972,6 +2999,7 @@ public:
 /// Size: 0x0008 (0x000030 - 0x000038)
 class FAIDataProviderIntValue : public FAIDataProviderTypedValue
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -2983,6 +3011,7 @@ public:
 /// Size: 0x0008 (0x000030 - 0x000038)
 class FAIDataProviderFloatValue : public FAIDataProviderTypedValue
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -2994,6 +3023,7 @@ public:
 /// Size: 0x0008 (0x000030 - 0x000038)
 class FAIDataProviderBoolValue : public FAIDataProviderTypedValue
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -3003,8 +3033,9 @@ public:
 
 /// Struct /Script/AIModule.EnvQueryManagerConfig
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FEnvQueryManagerConfig : public MDKStruct
+class FEnvQueryManagerConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -3020,8 +3051,9 @@ public:
 
 /// Struct /Script/AIModule.EnvQueryRequest
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FEnvQueryRequest : public MDKStruct
+class FEnvQueryRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -3033,8 +3065,9 @@ public:
 
 /// Struct /Script/AIModule.EnvQueryInstanceCache
 /// Size: 0x0180 (0x000000 - 0x000180)
-class FEnvQueryInstanceCache : public MDKStruct
+class FEnvQueryInstanceCache : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
@@ -3044,8 +3077,9 @@ public:
 
 /// Struct /Script/AIModule.CrowdAvoidanceConfig
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FCrowdAvoidanceConfig : public MDKStruct
+class FCrowdAvoidanceConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -3064,8 +3098,9 @@ public:
 
 /// Struct /Script/AIModule.CrowdAvoidanceSamplingPattern
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCrowdAvoidanceSamplingPattern : public MDKStruct
+class FCrowdAvoidanceSamplingPattern : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -3076,8 +3111,9 @@ public:
 
 /// Struct /Script/AIModule.RecastGraphWrapper
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FRecastGraphWrapper : public MDKStruct
+class FRecastGraphWrapper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
@@ -3087,8 +3123,9 @@ public:
 
 /// Struct /Script/AIModule.ActorPerceptionBlueprintInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FActorPerceptionBlueprintInfo : public MDKStruct
+class FActorPerceptionBlueprintInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -3100,8 +3137,9 @@ public:
 
 /// Struct /Script/AIModule.AISenseAffiliationFilter
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FAISenseAffiliationFilter : public MDKStruct
+class FAISenseAffiliationFilter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -3113,39 +3151,42 @@ public:
 
 /// Struct /Script/AIModule.AIDamageEvent
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FAIDamageEvent : public MDKStruct
+class FAIDamageEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	DMember(float)                                     Amount                                                      OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   HitLocation                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   HitLocation                                                 OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	CMember(AActor*)                                   DamagedActor                                                OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(AActor*)                                   Instigator                                                  OFFSET(get<T>, {0x40, 8, 0, 0})
-	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x48, 4, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(getStruct<T>, {0x48, 4, 0, 0})
 };
 
 /// Struct /Script/AIModule.AINoiseEvent
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FAINoiseEvent : public MDKStruct
+class FAINoiseEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   NoiseLocation                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   NoiseLocation                                               OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Loudness                                                    OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0x24, 4, 0, 0})
 	CMember(AActor*)                                   Instigator                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 };
 
 /// Struct /Script/AIModule.AIPredictionEvent
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FAIPredictionEvent : public MDKStruct
+class FAIPredictionEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3156,8 +3197,9 @@ public:
 
 /// Struct /Script/AIModule.AISightEvent
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FAISightEvent : public MDKStruct
+class FAISightEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -3168,8 +3210,9 @@ public:
 
 /// Struct /Script/AIModule.AITeamStimulusEvent
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FAITeamStimulusEvent : public MDKStruct
+class FAITeamStimulusEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -3180,8 +3223,9 @@ public:
 
 /// Struct /Script/AIModule.AITouchEvent
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FAITouchEvent : public MDKStruct
+class FAITouchEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 

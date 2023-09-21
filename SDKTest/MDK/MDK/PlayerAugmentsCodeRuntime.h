@@ -22,10 +22,10 @@ class UFortAthenaAIBotEvaluator_Augments : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	CMember(UBehaviorTree*)                            BehaviorAsset                                               OFFSET(get<T>, {0xB0, 8, 0, 0})
-	SMember(FName)                                     AugmentStatusKeyName                                        OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     AugmentItemKeyName                                          OFFSET(get<T>, {0xBC, 4, 0, 0})
+	SMember(FName)                                     AugmentStatusKeyName                                        OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     AugmentItemKeyName                                          OFFSET(getStruct<T>, {0xBC, 4, 0, 0})
 };
 
 /// Class /Script/PlayerAugmentsCodeRuntime.FortAthenaBTTask_Augments
@@ -38,8 +38,8 @@ class UFortAthenaBTTask_Augments : public UBTTaskNode
 public:
 	DMember(float)                                     MinSelectionTime                                            OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(float)                                     MaxSelectionTime                                            OFFSET(get<float>, {0x74, 4, 0, 0})
-	SMember(FName)                                     AugmentStatusKeyName                                        OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     AugmentItemKeyName                                          OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     AugmentStatusKeyName                                        OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     AugmentItemKeyName                                          OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
 };
 
 /// Class /Script/PlayerAugmentsCodeRuntime.FortAugmentSelectionToolAbility
@@ -51,10 +51,10 @@ class UFortAugmentSelectionToolAbility : public UFortGameplayAbility
 
 public:
 	CMember(UInputComponent*)                          SelectionInputComponent                                     OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FScalableFloat)                            InputPriority                                               OFFSET(get<T>, {0xB30, 40, 0, 0})
+	SMember(FScalableFloat)                            InputPriority                                               OFFSET(getStruct<T>, {0xB30, 40, 0, 0})
 	DMember(int32_t)                                   NumChoices                                                  OFFSET(get<int32_t>, {0xB58, 4, 0, 0})
 	DMember(int32_t)                                   HighlightedChoiceIndex                                      OFFSET(get<int32_t>, {0xB5C, 4, 0, 0})
-	SMember(FScalableFloat)                            RerollHoldInputSeconds                                      OFFSET(get<T>, {0xB70, 40, 0, 0})
+	SMember(FScalableFloat)                            RerollHoldInputSeconds                                      OFFSET(getStruct<T>, {0xB70, 40, 0, 0})
 
 
 	/// Functions
@@ -79,11 +79,11 @@ class UFortBattleRoyalePlayerAugmentSystem : public UFortControllerComponent
 
 public:
 	DMember(float)                                     ServerGrantingStartedTimestamp                              OFFSET(get<float>, {0xA8, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMatchAugmentsResetEvent                                   OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMatchAugmentsResetEvent                                   OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 	DMember(bool)                                      bEnableAugmentCollectionUnlocking                           OFFSET(get<bool>, {0xC0, 1, 0, 0})
-	SMember(FScalableFloat)                            NumRollsForUnlock                                           OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FScalableFloat)                            EnableUnlocking                                             OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FScalableFloat)                            EnableBRAugmentSystem                                       OFFSET(get<T>, {0x120, 40, 0, 0})
+	SMember(FScalableFloat)                            NumRollsForUnlock                                           OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            EnableUnlocking                                             OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
+	SMember(FScalableFloat)                            EnableBRAugmentSystem                                       OFFSET(getStruct<T>, {0x120, 40, 0, 0})
 
 
 	/// Functions
@@ -128,7 +128,7 @@ class UFortCollectionDataEntryPlayerAugment : public UFortCollectionDataEntry
 
 public:
 	CMember(UFortPlayerAugmentItemDefinition*)         PlayerAugmentItemDefinition                                 OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FText)                                     AdditionalDescription                                       OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FText)                                     AdditionalDescription                                       OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Class /Script/PlayerAugmentsCodeRuntime.FortCollectionDataPlayerAugment
@@ -159,16 +159,16 @@ class UFortControllerComponent_AugmentGrantingSystem : public UFortControllerCom
 	static inline constexpr uint64_t __MDKClassSize = 1480;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnCanSelectAugmentChanged                                   OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSelectedAugmentForGrant                                   OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAvailableAugmentsForGrantingUpdated                       OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAuthorityRequestAugmentChoices                            OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLocalReroll                                               OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnReplicateNumPendingAugmentsToGrant                        OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCanSelectAugmentChanged                                   OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectedAugmentForGrant                                   OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAvailableAugmentsForGrantingUpdated                       OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAuthorityRequestAugmentChoices                            OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLocalReroll                                               OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnReplicateNumPendingAugmentsToGrant                        OFFSET(getStruct<T>, {0x118, 16, 0, 0})
 	CMember(UFortWeaponItemDefinition*)                AugmentSelectionModeItem                                    OFFSET(get<T>, {0x128, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortItemDefinition*>)      CachedResourceCurrencyOverride                              OFFSET(get<T>, {0x130, 8, 0, 0})
 	CMember(UFortWorldItem*)                           SelectionModeWorldItem                                      OFFSET(get<T>, {0x138, 8, 0, 0})
-	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0x140, 40, 0, 0})
+	SMember(FScalableFloat)                            Enabled                                                     OFFSET(getStruct<T>, {0x140, 40, 0, 0})
 	DMember(int8_t)                                    ReplicatedNumPendingAugmentsToGrant                         OFFSET(get<int8_t>, {0x168, 1, 0, 0})
 	CMember(TArray<FPlayerAugmentChoiceDatum>)         ReplicatedAugmentChoices                                    OFFSET(get<T>, {0x170, 16, 0, 0})
 	DMember(int8_t)                                    NumFreeRerolls                                              OFFSET(get<int8_t>, {0x180, 1, 0, 0})
@@ -176,12 +176,12 @@ public:
 	CMember(UInputComponent*)                          PrimaryInputComponentWeaponMode                             OFFSET(get<T>, {0x188, 8, 0, 0})
 	CMember(UInputComponent*)                          PrimaryInputComponentBuildMode                              OFFSET(get<T>, {0x190, 8, 0, 0})
 	CMember(UInputComponent*)                          TemporaryInputComponent                                     OFFSET(get<T>, {0x198, 8, 0, 0})
-	SMember(FScalableFloat)                            AugmentSelectInputPriority                                  OFFSET(get<T>, {0x1A0, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     SelectionBlockedPlayerTags                                  OFFSET(get<T>, {0x1C8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     AugmentSelectInputDisablePlayerTags                         OFFSET(get<T>, {0x1E8, 32, 0, 0})
+	SMember(FScalableFloat)                            AugmentSelectInputPriority                                  OFFSET(getStruct<T>, {0x1A0, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     SelectionBlockedPlayerTags                                  OFFSET(getStruct<T>, {0x1C8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AugmentSelectInputDisablePlayerTags                         OFFSET(getStruct<T>, {0x1E8, 32, 0, 0})
 	CMember(TArray<FFortAugmentRerollCost>)            RerollCosts                                                 OFFSET(get<T>, {0x230, 16, 0, 0})
-	SMember(FFortItemEntry)                            SelectorItemEntry                                           OFFSET(get<T>, {0x240, 408, 0, 0})
-	SMember(FFortItemEntry)                            LocalCachedPreviousWeapon                                   OFFSET(get<T>, {0x3D8, 408, 0, 0})
+	SMember(FFortItemEntry)                            SelectorItemEntry                                           OFFSET(getStruct<T>, {0x240, 408, 0, 0})
+	SMember(FFortItemEntry)                            LocalCachedPreviousWeapon                                   OFFSET(getStruct<T>, {0x3D8, 408, 0, 0})
 
 
 	/// Functions
@@ -279,12 +279,12 @@ class UFortControllerComponent_AugmentUIEvents : public UFortControllerComponent
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnAugmentSelectorHighlightedChoice                          OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAugmentStartedSelectionOfChoice                           OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAugmentGrantingTimersFinishedForMatch                     OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAugmentGrantingTimersResetForMatch                        OFFSET(get<T>, {0xF8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  AugmentHoldInputRerollChanged                               OFFSET(get<T>, {0x108, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAugmentToolViewSwap                                       OFFSET(get<T>, {0x118, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAugmentSelectorHighlightedChoice                          OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAugmentStartedSelectionOfChoice                           OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAugmentGrantingTimersFinishedForMatch                     OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAugmentGrantingTimersResetForMatch                        OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  AugmentHoldInputRerollChanged                               OFFSET(getStruct<T>, {0x108, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAugmentToolViewSwap                                       OFFSET(getStruct<T>, {0x118, 16, 0, 0})
 	DMember(int32_t)                                   NumAugmentGrantRoundsForPlaylist                            OFFSET(get<int32_t>, {0x140, 4, 0, 0})
 
 
@@ -325,11 +325,11 @@ class UFortControllerComponent_PlayerAugmentPersistence : public UFortController
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0xA8, 40, 0, 0})
-	SMember(FScalableFloat)                            LockMissingCollectionAugmentsEnabled                        OFFSET(get<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            Enabled                                                     OFFSET(getStruct<T>, {0xA8, 40, 0, 0})
+	SMember(FScalableFloat)                            LockMissingCollectionAugmentsEnabled                        OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
 	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xF8, 8, 0, 0})
 	CMember(UFortCollectionDataPlayerAugment*)         CollectionData                                              OFFSET(get<T>, {0x100, 8, 0, 0})
-	SMember(FPlayerAugmentsPersistenceData)            LivePlayerAugmentsPersistenceData                           OFFSET(get<T>, {0x108, 24, 0, 0})
+	SMember(FPlayerAugmentsPersistenceData)            LivePlayerAugmentsPersistenceData                           OFFSET(getStruct<T>, {0x108, 24, 0, 0})
 	CMember(TSet<UFortPlayerAugmentItemDefinition*>)   AugmentsCollectedThisMatch                                  OFFSET(get<T>, {0x120, 80, 0, 0})
 	CMember(TArray<FReplicatedSharedPlayerAugment>)    ReplicatedSharedPlayerAugments                              OFFSET(get<T>, {0x170, 16, 0, 0})
 
@@ -407,8 +407,8 @@ class UFortPlayerStateComponent_PlayerAugmentSystem : public UFortPlayerStateCom
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnAugmentListUpdated                                        OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FScalableFloat)                            EnableAugmentsFeature                                       OFFSET(get<T>, {0xC8, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAugmentListUpdated                                        OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FScalableFloat)                            EnableAugmentsFeature                                       OFFSET(getStruct<T>, {0xC8, 40, 0, 0})
 	CMember(UClass*)                                   DynamicTagGEClass                                           OFFSET(get<T>, {0xF0, 8, 0, 0})
 	CMember(TMap<FPrimaryAssetId, FPlayerAugmentTrackedData>) AugmentToRuntimeDataMap                              OFFSET(get<T>, {0xF8, 80, 0, 0})
 	CMember(TArray<UFortPlayerAugmentItemDefinition*>) ActiveAugments                                              OFFSET(get<T>, {0x148, 16, 0, 0})
@@ -440,8 +440,9 @@ public:
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.FortAugmentPassiveUnlockResult
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAugmentPassiveUnlockResult : public MDKStruct
+class FFortAugmentPassiveUnlockResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -452,8 +453,9 @@ public:
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.PlayerAugmentLockStatus
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPlayerAugmentLockStatus : public MDKStruct
+class FPlayerAugmentLockStatus : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -466,32 +468,35 @@ public:
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.PlayerAugmentChoiceDatum
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FPlayerAugmentChoiceDatum : public MDKStruct
+class FPlayerAugmentChoiceDatum : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(UFortPlayerAugmentItemDefinition*)         ItemDef                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ChoiceMetaTags                                              OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ChoiceMetaTags                                              OFFSET(getStruct<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.FortAugmentRerollCost
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortAugmentRerollCost : public MDKStruct
+class FFortAugmentRerollCost : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(UFortItemDefinition*)                      ResourceCurrency                                            OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FScalableFloat)                            Amount                                                      OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FScalableFloat)                            Amount                                                      OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.PlayerAugmentTrackedData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FPlayerAugmentTrackedData : public MDKStruct
+class FPlayerAugmentTrackedData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -502,8 +507,9 @@ public:
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.PlayerAugmentGameplayEffectHandlesStackEntry
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPlayerAugmentGameplayEffectHandlesStackEntry : public MDKStruct
+class FPlayerAugmentGameplayEffectHandlesStackEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -513,20 +519,22 @@ public:
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.CarryOverPlayerAugment
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FCarryOverPlayerAugment : public MDKStruct
+class FCarryOverPlayerAugment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FPrimaryAssetId)                           AugmentAssetId                                              OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     SourcePlaylistName                                          OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FPrimaryAssetId)                           AugmentAssetId                                              OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FName)                                     SourcePlaylistName                                          OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.ReplicatedSharedPlayerAugment
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FReplicatedSharedPlayerAugment : public MDKStruct
+class FReplicatedSharedPlayerAugment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -539,6 +547,7 @@ public:
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FFortAugmentBaseWeightTableRow : public FFortDynamicRollBaseWeightTableRow
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -549,6 +558,7 @@ public:
 /// Size: 0x0000 (0x000018 - 0x000018)
 class FFortAugmentWeightModificationDataRow : public FFortDynamicRollWeightModifierTableRow
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -557,8 +567,9 @@ public:
 
 /// Struct /Script/PlayerAugmentsCodeRuntime.FortMcpCollectedPlayerAugmentProperties
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FFortMcpCollectedPlayerAugmentProperties : public MDKStruct
+class FFortMcpCollectedPlayerAugmentProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

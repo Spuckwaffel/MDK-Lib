@@ -18,34 +18,34 @@ class UFortMovementMode_ELTacSprint : public UFortMovementMode_BaseExtLogic
 	static inline constexpr uint64_t __MDKClassSize = 640;
 
 public:
-	SMember(FGameplayTag)                              GCEnergyDrain                                               OFFSET(get<T>, {0x50, 4, 0, 0})
-	SMember(FGameplayTag)                              GCSpeedLines                                                OFFSET(get<T>, {0x54, 4, 0, 0})
-	SMember(FGameplayTag)                              GCSprintEnd                                                 OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FScalableFloat)                            MaxSpeedMultiplier                                          OFFSET(get<T>, {0x60, 40, 0, 0})
-	SMember(FScalableFloat)                            JumpHeightMultiplier                                        OFFSET(get<T>, {0x88, 40, 0, 0})
-	SMember(FGameplayTag)                              TutorialGameplayTag                                         OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TutorialAdditionalSourceTag                                 OFFSET(get<T>, {0xB8, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TutorialTargetTag                                           OFFSET(get<T>, {0xD8, 32, 0, 0})
-	SMember(FGameplayTag)                              TagPreventWeaponHolster                                     OFFSET(get<T>, {0xF8, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     TacticalSprintFail                                          OFFSET(get<T>, {0x100, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TacticalSprintFailLowEnergy                                 OFFSET(get<T>, {0x120, 32, 0, 0})
+	SMember(FGameplayTag)                              GCEnergyDrain                                               OFFSET(getStruct<T>, {0x50, 4, 0, 0})
+	SMember(FGameplayTag)                              GCSpeedLines                                                OFFSET(getStruct<T>, {0x54, 4, 0, 0})
+	SMember(FGameplayTag)                              GCSprintEnd                                                 OFFSET(getStruct<T>, {0x58, 4, 0, 0})
+	SMember(FScalableFloat)                            MaxSpeedMultiplier                                          OFFSET(getStruct<T>, {0x60, 40, 0, 0})
+	SMember(FScalableFloat)                            JumpHeightMultiplier                                        OFFSET(getStruct<T>, {0x88, 40, 0, 0})
+	SMember(FGameplayTag)                              TutorialGameplayTag                                         OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TutorialAdditionalSourceTag                                 OFFSET(getStruct<T>, {0xB8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TutorialTargetTag                                           OFFSET(getStruct<T>, {0xD8, 32, 0, 0})
+	SMember(FGameplayTag)                              TagPreventWeaponHolster                                     OFFSET(getStruct<T>, {0xF8, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     TacticalSprintFail                                          OFFSET(getStruct<T>, {0x100, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TacticalSprintFailLowEnergy                                 OFFSET(getStruct<T>, {0x120, 32, 0, 0})
 	CMember(USoundBase*)                               OnEnergyFullyDrainedSound                                   OFFSET(get<T>, {0x140, 8, 0, 0})
 	DMember(float)                                     MinSpeedForHolster                                          OFFSET(get<float>, {0x148, 4, 0, 0})
 	DMember(float)                                     HolsterTimeAttemptDelay                                     OFFSET(get<float>, {0x14C, 4, 0, 0})
 	DMember(float)                                     MinEnergyToActivate                                         OFFSET(get<float>, {0x15C, 4, 0, 0})
-	SMember(FScalableFloat)                            MinEnergyToActivateRow                                      OFFSET(get<T>, {0x160, 40, 0, 0})
-	SMember(FScalableFloat)                            HF_EnergyCostOnSlide                                        OFFSET(get<T>, {0x188, 40, 0, 0})
-	SMember(FScalableFloat)                            HF_EnergyCostOnStart                                        OFFSET(get<T>, {0x1B0, 40, 0, 0})
-	SMember(FScalableFloat)                            HF_EnergyCostPerSecond                                      OFFSET(get<T>, {0x1D8, 40, 0, 0})
-	SMember(FScalableFloat)                            HF_EnergyCostOnJump                                         OFFSET(get<T>, {0x200, 40, 0, 0})
-	SMember(FGameplayTag)                              IgnoreJumpCostTag                                           OFFSET(get<T>, {0x228, 4, 0, 0})
-	SMember(FGameplayTag)                              TacticalSprintTag                                           OFFSET(get<T>, {0x22C, 4, 0, 0})
-	SMember(FGameplayTag)                              EnergyUseIdentifier                                         OFFSET(get<T>, {0x230, 4, 0, 0})
+	SMember(FScalableFloat)                            MinEnergyToActivateRow                                      OFFSET(getStruct<T>, {0x160, 40, 0, 0})
+	SMember(FScalableFloat)                            HF_EnergyCostOnSlide                                        OFFSET(getStruct<T>, {0x188, 40, 0, 0})
+	SMember(FScalableFloat)                            HF_EnergyCostOnStart                                        OFFSET(getStruct<T>, {0x1B0, 40, 0, 0})
+	SMember(FScalableFloat)                            HF_EnergyCostPerSecond                                      OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
+	SMember(FScalableFloat)                            HF_EnergyCostOnJump                                         OFFSET(getStruct<T>, {0x200, 40, 0, 0})
+	SMember(FGameplayTag)                              IgnoreJumpCostTag                                           OFFSET(getStruct<T>, {0x228, 4, 0, 0})
+	SMember(FGameplayTag)                              TacticalSprintTag                                           OFFSET(getStruct<T>, {0x22C, 4, 0, 0})
+	SMember(FGameplayTag)                              EnergyUseIdentifier                                         OFFSET(getStruct<T>, {0x230, 4, 0, 0})
 	CMember(USoundMix*)                                SprintStartedSoundMix                                       OFFSET(get<T>, {0x238, 8, 0, 0})
 	CMember(USoundBase*)                               SprintStartedSound2D                                        OFFSET(get<T>, {0x240, 8, 0, 0})
-	SMember(FScalableFloat)                            HF_TacSprintEnabled                                         OFFSET(get<T>, {0x248, 40, 0, 0})
+	SMember(FScalableFloat)                            HF_TacSprintEnabled                                         OFFSET(getStruct<T>, {0x248, 40, 0, 0})
 	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0x270, 8, 0, 0})
-	SMember(FGameplayTag)                              CameraModeTag                                               OFFSET(get<T>, {0x278, 4, 0, 0})
+	SMember(FGameplayTag)                              CameraModeTag                                               OFFSET(getStruct<T>, {0x278, 4, 0, 0})
 
 
 	/// Functions
@@ -74,7 +74,7 @@ class UFortPlayerControllerComponent_TacticalSprint : public UControllerComponen
 
 public:
 	CMember(UClass*)                                   MovementModeExtension                                       OFFSET(get<T>, {0xB8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailedToSprint                                            OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailedToSprint                                            OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(AFortPlayerPawn*)                          CurrentBoundPlayerPawn                                      OFFSET(get<T>, {0xD0, 8, 0, 0})
 	DMember(bool)                                      bTacticalSprintEnabled                                      OFFSET(get<bool>, {0xD8, 1, 1, 0})
 	DMember(bool)                                      bWantsToTacticalSprint                                      OFFSET(get<bool>, {0xD8, 1, 1, 1})
@@ -82,13 +82,13 @@ public:
 	DMember(bool)                                      bIsSprinting                                                OFFSET(get<bool>, {0xD8, 1, 1, 3})
 	DMember(bool)                                      bWasInBuildMode                                             OFFSET(get<bool>, {0xD8, 1, 1, 4})
 	DMember(bool)                                      bFireAnalyticsEventOnEndPlay                                OFFSET(get<bool>, {0xD8, 1, 1, 5})
-	SMember(FGameplayTag)                              TacticalSprintAbilityGameplayTag                            OFFSET(get<T>, {0xDC, 4, 0, 0})
-	SMember(FGameplayTag)                              DisableTacticalSprintAbilityGameplayTag                     OFFSET(get<T>, {0xE0, 4, 0, 0})
-	SMember(FScalableFloat)                            TacticalSprintEnabled                                       OFFSET(get<T>, {0xE8, 40, 0, 0})
-	SMember(FScalableFloat)                            TacticalSprintToggleGracePeriod                             OFFSET(get<T>, {0x110, 40, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTacticalSprintStarted                                     OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTacticalSprintEnded                                       OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FTimerHandle)                              StopWantingToSprintTimerReceipt                             OFFSET(get<T>, {0x158, 8, 0, 0})
+	SMember(FGameplayTag)                              TacticalSprintAbilityGameplayTag                            OFFSET(getStruct<T>, {0xDC, 4, 0, 0})
+	SMember(FGameplayTag)                              DisableTacticalSprintAbilityGameplayTag                     OFFSET(getStruct<T>, {0xE0, 4, 0, 0})
+	SMember(FScalableFloat)                            TacticalSprintEnabled                                       OFFSET(getStruct<T>, {0xE8, 40, 0, 0})
+	SMember(FScalableFloat)                            TacticalSprintToggleGracePeriod                             OFFSET(getStruct<T>, {0x110, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTacticalSprintStarted                                     OFFSET(getStruct<T>, {0x138, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTacticalSprintEnded                                       OFFSET(getStruct<T>, {0x148, 16, 0, 0})
+	SMember(FTimerHandle)                              StopWantingToSprintTimerReceipt                             OFFSET(getStruct<T>, {0x158, 8, 0, 0})
 	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0x1C8, 8, 0, 0})
 
 
@@ -117,6 +117,7 @@ public:
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FFortMovementMode_TacSprintRuntimeData : public FFortMovementMode_BaseExtRuntimeData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 

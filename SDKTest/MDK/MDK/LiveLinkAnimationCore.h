@@ -49,12 +49,13 @@ public:
 /// Size: 0x0038 (0x000010 - 0x000048)
 class FAnimNode_LiveLinkPose : public FAnimNode_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FPoseLink)                                 InputPose                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FLiveLinkSubjectName)                      LiveLinkSubjectName                                         OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FPoseLink)                                 InputPose                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FLiveLinkSubjectName)                      LiveLinkSubjectName                                         OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 	CMember(UClass*)                                   RetargetAsset                                               OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(ULiveLinkRetargetAsset*)                   CurrentRetargetAsset                                        OFFSET(get<T>, {0x30, 8, 0, 0})
 };
@@ -63,10 +64,11 @@ public:
 /// Size: 0x0040 (0x000700 - 0x000740)
 class FLiveLinkInstanceProxy : public FAnimInstanceProxy
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1856;
 
 public:
-	SMember(FAnimNode_LiveLinkPose)                    PoseNode                                                    OFFSET(get<T>, {0x6F8, 72, 0, 0})
+	SMember(FAnimNode_LiveLinkPose)                    PoseNode                                                    OFFSET(getStruct<T>, {0x6F8, 72, 0, 0})
 };
 

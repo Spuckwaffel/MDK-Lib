@@ -26,7 +26,7 @@ class UStatePerObjectConfig : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   PerObjectConfigSection                                      OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   PerObjectConfigSection                                      OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
@@ -43,8 +43,9 @@ public:
 
 /// Struct /Script/NetCore.FastArraySerializerItem
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FFastArraySerializerItem : public MDKStruct
+class FFastArraySerializerItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -56,8 +57,9 @@ public:
 
 /// Struct /Script/NetCore.FastArraySerializer
 /// Size: 0x0108 (0x000000 - 0x000108)
-class FFastArraySerializer : public MDKStruct
+class FFastArraySerializer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
@@ -68,31 +70,34 @@ public:
 
 /// Struct /Script/NetCore.NetAnalyticsDataConfig
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNetAnalyticsDataConfig : public MDKStruct
+class FNetAnalyticsDataConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     DataName                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     DataName                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x4, 1, 0, 0})
 };
 
 /// Struct /Script/NetCore.StateStruct
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FStateStruct : public MDKStruct
+class FStateStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   StateName                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   StateName                                                   OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/NetCore.EscalationState
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FEscalationState : public FStateStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -109,6 +114,7 @@ public:
 /// Size: 0x0010 (0x000030 - 0x000040)
 class FNetFaultState : public FEscalationState
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 

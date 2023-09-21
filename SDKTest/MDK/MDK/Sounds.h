@@ -101,10 +101,10 @@ class UBP_SurfaceTypeSoundComponent_C : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 281;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA0, 8, 0, 0})
 	CMember(TEnumAsByte<EPhysicalSurface>)             SurfaceType                                                 OFFSET(get<T>, {0xA8, 1, 0, 0})
 	CMember(TMap<TEnumAsByte, USoundBase*>)            SoundMap                                                    OFFSET(get<T>, {0xB0, 80, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x100, 24, 0, 0})
 	DMember(bool)                                      IsSurfaceTypeSet                                            OFFSET(get<bool>, {0x118, 1, 0, 0})
 
 
@@ -129,7 +129,7 @@ class AFort_Entry_Music_Controller_BP_C : public AFortEntryMusicController
 	static inline constexpr uint64_t __MDKClassSize = 706;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0x298, 8, 0, 0})
 	DMember(double)                                    FadeOutTime                                                 OFFSET(get<double>, {0x2A0, 8, 0, 0})
 	CMember(USoundBase*)                               CurrentMusic                                                OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -166,18 +166,18 @@ class UWB_AudioAnalysis_FloatGraph_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 808;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCanvasPanel*)                             CanvasPanel                                                 OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UTextBlock*)                               Label_                                                      OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UProgressBar*)                             ProgressBar                                                 OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UTextBlock*)                               Value                                                       OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FVector2D)                                 Position                                                    OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FVector2D)                                 Size                                                        OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FVector2D)                                 Position                                                    OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FVector2D)                                 Size                                                        OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	DMember(bool)                                      calculated                                                  OFFSET(get<bool>, {0x2F0, 1, 0, 0})
-	SMember(FName)                                     Parameter                                                   OFFSET(get<T>, {0x2F4, 4, 0, 0})
+	SMember(FName)                                     Parameter                                                   OFFSET(getStruct<T>, {0x2F4, 4, 0, 0})
 	CMember(TArray<FVector2D>)                         Points                                                      OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	DMember(int32_t)                                   NumPoints                                                   OFFSET(get<int32_t>, {0x308, 4, 0, 0})
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x30C, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x30C, 16, 0, 0})
 	DMember(int32_t)                                   VectorIndex                                                 OFFSET(get<int32_t>, {0x31C, 4, 0, 0})
 	CMember(UMaterialParameterCollection*)             Collection                                                  OFFSET(get<T>, {0x320, 8, 0, 0})
 
@@ -209,7 +209,7 @@ class UWB_AudioAnalysis_UI_C : public UFortAudioAnalysisDebugWidget
 	static inline constexpr uint64_t __MDKClassSize = 712;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UVerticalBox*)                             GraphBox                                                    OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(TArray<UWB_AudioAnalysis_FloatGraph_C*>)   Widgets                                                     OFFSET(get<T>, {0x2B8, 16, 0, 0})
 
@@ -233,10 +233,10 @@ class UB_MusicEventDebugWidget_C : public UMusicEventSubsystemDebugWidget
 	static inline constexpr uint64_t __MDKClassSize = 740;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UBackgroundBlur*)                          Background                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UCommonListView*)                          EventInstances                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FString)                                   AssetFilter                                                 OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	SMember(FString)                                   AssetFilter                                                 OFFSET(getStruct<T>, {0x2C0, 16, 0, 0})
 	CMember(TArray<UMusicEventInstance*>)              Instances                                                   OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	DMember(int32_t)                                   FontSize                                                    OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
 
@@ -264,7 +264,7 @@ class UB_MusicEventInstanceWidget_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UUEFN_TextBlock_C*)                        Text                                                        OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UMusicEventInstance*)                      EventInstance                                               OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(double)                                    Distance                                                    OFFSET(get<double>, {0x2C0, 8, 0, 0})
@@ -308,7 +308,7 @@ class UBP_AudioParameterComponent_Pawn_C : public UFortAudioParameterComponent_P
 	static inline constexpr uint64_t __MDKClassSize = 299;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xF0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xF0, 8, 0, 0})
 	CMember(AActor*)                                   LocalViewTarget                                             OFFSET(get<T>, {0xF8, 8, 0, 0})
 	CMember(TArray<FAudioParameterQueryData>)          QueryAudioParams                                            OFFSET(get<T>, {0x100, 16, 0, 0})
 	DMember(bool)                                      bDebugEnabled                                               OFFSET(get<bool>, {0x110, 1, 0, 0})
@@ -361,7 +361,7 @@ class UB_WeaponSoundLibraryComponent_C : public UFortWeaponSoundLibraryComponent
 	static inline constexpr uint64_t __MDKClassSize = 396;
 
 public:
-	SMember(FGameplayTag)                              FireEvent                                                   OFFSET(get<T>, {0x188, 4, 0, 0})
+	SMember(FGameplayTag)                              FireEvent                                                   OFFSET(getStruct<T>, {0x188, 4, 0, 0})
 
 
 	/// Functions
@@ -411,8 +411,8 @@ class UBP_SkydiveSoundLibraryComponent_C : public UFortSkydiveSoundLibraryCompon
 	static inline constexpr uint64_t __MDKClassSize = 440;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x198, 8, 0, 0})
-	SMember(FGameplayTag)                              SkydiveEventTag                                             OFFSET(get<T>, {0x1A0, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x198, 8, 0, 0})
+	SMember(FGameplayTag)                              SkydiveEventTag                                             OFFSET(getStruct<T>, {0x1A0, 4, 0, 0})
 	CMember(TArray<UAudioComponent*>)                  Components                                                  OFFSET(get<T>, {0x1A8, 16, 0, 0})
 
 
@@ -451,16 +451,17 @@ public:
 
 /// Struct /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/AudioParameterQueryData.AudioParameterQueryData
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FAudioParameterQueryData : public MDKStruct
+class FAudioParameterQueryData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery_12_74B441D54446A49EB7F00AAC728B68F0                OFFSET(get<T>, {0x0, 72, 0, 0})
-	SMember(FName)                                     ParameterName_2_0E82F2EF4DD09C9EB9E25D9AD7DB520D            OFFSET(get<T>, {0x48, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery_12_74B441D54446A49EB7F00AAC728B68F0                OFFSET(getStruct<T>, {0x0, 72, 0, 0})
+	SMember(FName)                                     ParameterName_2_0E82F2EF4DD09C9EB9E25D9AD7DB520D            OFFSET(getStruct<T>, {0x48, 4, 0, 0})
 	CMember(USoundControlBus*)                         ControlBus_5_0B33E9404596DE8D58698EA40F70C171               OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FVector2D)                                 ControlBusFadeTime_9_E9701E2E4995E4A3C8798FA35536B86E       OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FVector2D)                                 ControlBusFadeTime_9_E9701E2E4995E4A3C8798FA35536B86E       OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 };
 
 /// Enum /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/PlayerWaterDepthEnum.PlayerWaterDepthEnum

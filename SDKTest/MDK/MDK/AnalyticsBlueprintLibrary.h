@@ -20,13 +20,14 @@ public:
 
 /// Struct /Script/AnalyticsBlueprintLibrary.AnalyticsEventAttr
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FAnalyticsEventAttr : public MDKStruct
+class FAnalyticsEventAttr : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 

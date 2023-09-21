@@ -39,21 +39,21 @@ class UCreativeModalDialogViewmodel : public UMVVMViewModelBase
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x68, 24, 0, 0})
-	SMember(FText)                                     Body                                                        OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x68, 24, 0, 0})
+	SMember(FText)                                     Body                                                        OFFSET(getStruct<T>, {0x80, 24, 0, 0})
 	CMember(UDataTable*)                               TextStyleSet                                                OFFSET(get<T>, {0x98, 8, 0, 0})
-	SMember(FText)                                     Button01_MainText                                           OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FText)                                     Button02_MainText                                           OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FText)                                     Button03_MainText                                           OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FText)                                     Button04_MainText                                           OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FText)                                     Button05_MainText                                           OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FText)                                     Button06_MainText                                           OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FText)                                     Button01_SubText                                            OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FText)                                     Button02_SubText                                            OFFSET(get<T>, {0x148, 24, 0, 0})
-	SMember(FText)                                     Button03_SubText                                            OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FText)                                     Button04_SubText                                            OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FText)                                     Button05_SubText                                            OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FText)                                     Button06_SubText                                            OFFSET(get<T>, {0x1A8, 24, 0, 0})
+	SMember(FText)                                     Button01_MainText                                           OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FText)                                     Button02_MainText                                           OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FText)                                     Button03_MainText                                           OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FText)                                     Button04_MainText                                           OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FText)                                     Button05_MainText                                           OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FText)                                     Button06_MainText                                           OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FText)                                     Button01_SubText                                            OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FText)                                     Button02_SubText                                            OFFSET(getStruct<T>, {0x148, 24, 0, 0})
+	SMember(FText)                                     Button03_SubText                                            OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FText)                                     Button04_SubText                                            OFFSET(getStruct<T>, {0x178, 24, 0, 0})
+	SMember(FText)                                     Button05_SubText                                            OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	SMember(FText)                                     Button06_SubText                                            OFFSET(getStruct<T>, {0x1A8, 24, 0, 0})
 	CMember(UTexture2D*)                               Art01_Image                                                 OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(UTexture2D*)                               Art02_Image                                                 OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(ECreativeModalDialogAlignmentOption)       ContentAlignment                                            OFFSET(get<T>, {0x1D0, 1, 0, 0})
@@ -138,7 +138,7 @@ class UCreativeModalDialogWidget : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1016;
 
 public:
-	SMember(FDataTableRowHandle)                       MainMenuInputRowHandle                                      OFFSET(get<T>, {0x3E8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       MainMenuInputRowHandle                                      OFFSET(getStruct<T>, {0x3E8, 16, 0, 0})
 };
 
 /// Enum /Script/CRD_ModalDialogUI.ECreativeModalDialogViewmodelResponse

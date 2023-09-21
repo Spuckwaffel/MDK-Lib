@@ -50,7 +50,7 @@ class UResonanceAudioReverbPluginPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FResonanceAudioReverbPluginSettings)       Settings                                                    OFFSET(get<T>, {0x100, 112, 0, 0})
+	SMember(FResonanceAudioReverbPluginSettings)       Settings                                                    OFFSET(getStruct<T>, {0x100, 112, 0, 0})
 
 
 	/// Functions
@@ -82,10 +82,10 @@ class UResonanceAudioSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSoftObjectPath)                           OutputSubmix                                                OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FSoftObjectPath)                           OutputSubmix                                                OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	CMember(ERaQualityMode)                            QualityMode                                                 OFFSET(get<T>, {0x40, 1, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalReverbPreset                                          OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FSoftObjectPath)                           GlobalSourcePreset                                          OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalReverbPreset                                          OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FSoftObjectPath)                           GlobalSourcePreset                                          OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings
@@ -116,17 +116,18 @@ public:
 
 /// Struct /Script/ResonanceAudio.ResonanceAudioReverbPluginSettings
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FResonanceAudioReverbPluginSettings : public MDKStruct
+class FResonanceAudioReverbPluginSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	DMember(bool)                                      bEnableRoomEffects                                          OFFSET(get<bool>, {0x0, 1, 0, 0})
 	DMember(bool)                                      bGetTransformFromAudioVolume                                OFFSET(get<bool>, {0x1, 1, 0, 0})
-	SMember(FVector)                                   RoomPosition                                                OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FQuat)                                     RoomRotation                                                OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   RoomDimensions                                              OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   RoomPosition                                                OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FQuat)                                     RoomRotation                                                OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   RoomDimensions                                              OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	CMember(ERaMaterialName)                           LeftWallMaterial                                            OFFSET(get<T>, {0x58, 1, 0, 0})
 	CMember(ERaMaterialName)                           RightWallMaterial                                           OFFSET(get<T>, {0x59, 1, 0, 0})
 	CMember(ERaMaterialName)                           FloorMaterial                                               OFFSET(get<T>, {0x5A, 1, 0, 0})

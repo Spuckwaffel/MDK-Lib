@@ -62,10 +62,10 @@ class UPlayspaceControllerComponent_PlayerSpawning : public UControllerComponent
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPlayerQueuedToSpawn                                       OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayerQueuedToSpawn                                       OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	CMember(ACameraActor*)                             SpawnCameraActor                                            OFFSET(get<T>, {0xB0, 8, 0, 0})
 	DMember(bool)                                      bClientReadyForSpawning                                     OFFSET(get<bool>, {0xB8, 1, 0, 0})
-	SMember(FReplicatedSpawnInfo)                      ReplicatedSpawnInfo                                         OFFSET(get<T>, {0xC0, 88, 0, 0})
+	SMember(FReplicatedSpawnInfo)                      ReplicatedSpawnInfo                                         OFFSET(getStruct<T>, {0xC0, 88, 0, 0})
 
 
 	/// Functions
@@ -135,7 +135,7 @@ public:
 	CMember(UClass*)                                   PlayspaceClass                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      bDestroyPlayspaceOnEndPlay                                  OFFSET(get<bool>, {0x2C0, 1, 0, 0})
 	CMember(APlayspace*)                               Playspace                                                   OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     VolumeTags                                                  OFFSET(get<T>, {0x2D0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     VolumeTags                                                  OFFSET(getStruct<T>, {0x2D0, 32, 0, 0})
 	CMember(UOverlapComponent*)                        BoundsComponent                                             OFFSET(get<T>, {0x2F0, 8, 0, 0})
 
 
@@ -158,15 +158,15 @@ class APlayspace : public AInfo
 	static inline constexpr uint64_t __MDKClassSize = 1408;
 
 public:
-	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceUserAdded                                    OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceUserRemoved                                  OFFSET(get<T>, {0x2B8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceInitialized                                  OFFSET(get<T>, {0x2E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyStartMatch                                            OFFSET(get<T>, {0x320, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NotifyEndMatch                                              OFFSET(get<T>, {0x348, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(get<T>, {0x370, 32, 0, 0})
-	SMember(FGameplayTag)                              RequestedPlayspaceParentTag                                 OFFSET(get<T>, {0x390, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceUserAdded                                    OFFSET(getStruct<T>, {0x290, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceUserRemoved                                  OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyPlayspaceInitialized                                  OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyStartMatch                                            OFFSET(getStruct<T>, {0x320, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NotifyEndMatch                                              OFFSET(getStruct<T>, {0x348, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x370, 32, 0, 0})
+	SMember(FGameplayTag)                              RequestedPlayspaceParentTag                                 OFFSET(getStruct<T>, {0x390, 4, 0, 0})
 	CMember(TArray<UClass*>)                           ChildPlayspaceClasses                                       OFFSET(get<T>, {0x398, 16, 0, 0})
-	SMember(FPlayspaceUserList)                        PlayspaceUsers                                              OFFSET(get<T>, {0x3A8, 376, 0, 0})
+	SMember(FPlayspaceUserList)                        PlayspaceUsers                                              OFFSET(getStruct<T>, {0x3A8, 376, 0, 0})
 	CMember(TArray<APlayspace*>)                       ChildPlayspaces                                             OFFSET(get<T>, {0x520, 16, 0, 0})
 	CMember(TArray<FUniqueNetIdRepl>)                  PendingUsers                                                OFFSET(get<T>, {0x530, 16, 0, 0})
 	DMember(bool)                                      bAutoStartMatchOnServerStart                                OFFSET(get<bool>, {0x540, 1, 0, 0})
@@ -289,11 +289,12 @@ public:
 /// Size: 0x004C (0x00000C - 0x000058)
 class FPlayspaceUser : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FUniqueNetIdRepl)                          UserId                                                      OFFSET(get<T>, {0x10, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          UserId                                                      OFFSET(getStruct<T>, {0x10, 48, 0, 0})
 	CMember(APlayspace*)                               LeafPlayspace                                               OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(APlayerState*)                             PlayerStateCached                                           OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(AController*)                              ControllerCached                                            OFFSET(get<T>, {0x50, 8, 0, 0})
@@ -301,56 +302,60 @@ public:
 
 /// Struct /Script/PlayspaceSystem.ReplicatedSpawnInfo
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FReplicatedSpawnInfo : public MDKStruct
+class FReplicatedSpawnInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   SpawnLocation                                               OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FRotator)                                  SpawnRotation                                               OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   SpawnLocation                                               OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  SpawnRotation                                               OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	DMember(float)                                     ServerSpawnTime                                             OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FVector)                                   LastLocation                                                OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   LastLocation                                                OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(float)                                     MinTimeForCameraFadeTransition                              OFFSET(get<float>, {0x50, 4, 0, 0})
 };
 
 /// Struct /Script/PlayspaceSystem.PlayspaceSpawningInfo
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FPlayspaceSpawningInfo : public MDKStruct
+class FPlayspaceSpawningInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FUniqueNetIdRepl)                          UserId                                                      OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          UserId                                                      OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	CMember(TWeakObjectPtr<APlayspace*>)               RequestingPlayspace                                         OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(AActor*)                                   SpawnLocationActor                                          OFFSET(get<T>, {0x38, 8, 0, 0})
-	SMember(FVector)                                   SpawnLocation                                               OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FRotator)                                  SpawnRotation                                               OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FVector)                                   SpawnLocation                                               OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FRotator)                                  SpawnRotation                                               OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 	DMember(float)                                     SpawnTimeServer                                             OFFSET(get<float>, {0x70, 4, 0, 0})
-	SMember(FVector)                                   LastLocation                                                OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   LastLocation                                                OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	DMember(float)                                     MinTimeForCameraFadeTransition                              OFFSET(get<float>, {0x90, 4, 0, 0})
 	DMember(bool)                                      bIsRespawnFromDeath                                         OFFSET(get<bool>, {0x94, 1, 0, 0})
 };
 
 /// Struct /Script/PlayspaceSystem.PlayspaceComponentConfiguration
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FPlayspaceComponentConfiguration : public MDKStruct
+class FPlayspaceComponentConfiguration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   PlayspaceComponentClass                                     OFFSET(get<T>, {0x0, 32, 0, 0})
 	CMember(EPlayspaceComponentCreationType)           CreationType                                                OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x28, 72, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0x28, 72, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x70, 24, 0, 0})
 };
 
 /// Struct /Script/PlayspaceSystem.PlayspaceConfiguration
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FPlayspaceConfiguration : public MDKStruct
+class FPlayspaceConfiguration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -361,8 +366,9 @@ public:
 
 /// Struct /Script/PlayspaceSystem.Playspace_ComponentInfo_Base
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPlayspace_ComponentInfo_Base : public MDKStruct
+class FPlayspace_ComponentInfo_Base : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -375,6 +381,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FPlayspace_ControllerComponentInfo : public FPlayspace_ComponentInfo_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -386,6 +393,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FPlayspace_PlayerStateComponentInfo : public FPlayspace_ComponentInfo_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -397,6 +405,7 @@ public:
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FPlayspace_ActorComponentInfo : public FPlayspace_ComponentInfo_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -406,8 +415,9 @@ public:
 
 /// Struct /Script/PlayspaceSystem.ActorOverlapEvent
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FActorOverlapEvent : public MDKStruct
+class FActorOverlapEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -420,6 +430,7 @@ public:
 /// Size: 0x0070 (0x000108 - 0x000178)
 class FPlayspaceUserList : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 376;
 

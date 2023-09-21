@@ -32,8 +32,9 @@ public:
 
 /// Struct /Script/EpicGameplayStatsRuntime.TagTableManagerHelper
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FTagTableManagerHelper : public MDKStruct
+class FTagTableManagerHelper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -44,12 +45,13 @@ public:
 /// Size: 0x0048 (0x000008 - 0x000050)
 class FGameplayStatMetadataTableRow : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   BackendName                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FString)                                   BackendName                                                 OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	CMember(TArray<EEpicLeaderboardTimeWindow>)        Windows                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(EEpicLeaderboardUpdateFunction)            Metric                                                      OFFSET(get<T>, {0x40, 1, 0, 0})
 	CMember(EEpicLeaderboardDataType)                  DataType                                                    OFFSET(get<T>, {0x41, 1, 0, 0})
@@ -63,22 +65,24 @@ public:
 /// Size: 0x0004 (0x000004 - 0x000008)
 class FGameplayStatTag : public FGameplayTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/EpicGameplayStatsRuntime.ManagedGameplayTagDataTableItem
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FManagedGameplayTagDataTableItem : public MDKStruct
+class FManagedGameplayTagDataTableItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              RootTag                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              RootTag                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UDataTable*)                               DataTable                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 

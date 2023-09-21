@@ -17,7 +17,7 @@ class ABP_ProjectileTrajectory_C : public AFortProjectileTrajectory
 	static inline constexpr uint64_t __MDKClassSize = 777;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2B8, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     InvalidTarget                                               OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Target                                                      OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	DMember(int32_t)                                   MaxMeshCount                                                OFFSET(get<int32_t>, {0x2D0, 4, 0, 0})

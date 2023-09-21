@@ -10,13 +10,14 @@
 
 /// Struct /Script/PBIK.PBIKBoneSetting
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FPBIKBoneSetting : public MDKStruct
+class FPBIKBoneSetting : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     RotationStiffness                                           OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     PositionStiffness                                           OFFSET(get<float>, {0x8, 4, 0, 0})
 	CMember(EPBIKLimitType)                            X                                                           OFFSET(get<T>, {0xC, 1, 0, 0})
@@ -29,13 +30,14 @@ public:
 	DMember(float)                                     MinZ                                                        OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     MaxZ                                                        OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(bool)                                      bUsePreferredAngles                                         OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FVector)                                   PreferredAngles                                             OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   PreferredAngles                                             OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 };
 
 /// Struct /Script/PBIK.RootPrePullSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FRootPrePullSettings : public MDKStruct
+class FRootPrePullSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -52,8 +54,9 @@ public:
 
 /// Struct /Script/PBIK.PBIKSolverSettings
 /// Size: 0x003C (0x000000 - 0x00003C)
-class FPBIKSolverSettings : public MDKStruct
+class FPBIKSolverSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 60;
 
@@ -62,7 +65,7 @@ public:
 	DMember(float)                                     MassMultiplier                                              OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bAllowStretch                                               OFFSET(get<bool>, {0x8, 1, 0, 0})
 	CMember(EPBIKRootBehavior)                         RootBehavior                                                OFFSET(get<T>, {0x9, 1, 0, 0})
-	SMember(FRootPrePullSettings)                      PrePullRootSettings                                         OFFSET(get<T>, {0xC, 32, 0, 0})
+	SMember(FRootPrePullSettings)                      PrePullRootSettings                                         OFFSET(getStruct<T>, {0xC, 32, 0, 0})
 	DMember(float)                                     GlobalPullChainAlpha                                        OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(float)                                     MaxAngle                                                    OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     OverRelaxation                                              OFFSET(get<float>, {0x34, 4, 0, 0})
@@ -71,8 +74,9 @@ public:
 
 /// Struct /Script/PBIK.PBIKSolver
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FPBIKSolver : public MDKStruct
+class FPBIKSolver : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -81,8 +85,9 @@ public:
 
 /// Struct /Script/PBIK.PBIKDebug
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FPBIKDebug : public MDKStruct
+class FPBIKDebug : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -93,14 +98,15 @@ public:
 
 /// Struct /Script/PBIK.PBIKEffector
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FPBIKEffector : public MDKStruct
+class FPBIKEffector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     bone                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FName)                                     bone                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(float)                                     PositionAlpha                                               OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(float)                                     RotationAlpha                                               OFFSET(get<float>, {0x74, 4, 0, 0})
 	DMember(float)                                     StrengthAlpha                                               OFFSET(get<float>, {0x78, 4, 0, 0})
@@ -110,8 +116,9 @@ public:
 
 /// Struct /Script/PBIK.PBIKWorkData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FPBIKWorkData : public MDKStruct
+class FPBIKWorkData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -120,25 +127,26 @@ public:
 	DMember(uint32_t)                                  HashInitializedWith                                         OFFSET(get<uint32_t>, {0x4, 4, 0, 0})
 	CMember(TArray<int32_t>)                           BoneSettingToSolverBoneIndex                                OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<int32_t>)                           SolverBoneToElementIndex                                    OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FPBIKSolver)                               Solver                                                      OFFSET(get<T>, {0x28, 104, 0, 0})
+	SMember(FPBIKSolver)                               Solver                                                      OFFSET(getStruct<T>, {0x28, 104, 0, 0})
 };
 
 /// Struct /Script/PBIK.RigUnit_PBIK
 /// Size: 0x0120 (0x000160 - 0x000280)
 class FRigUnit_PBIK : public FRigUnit_HighlevelBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 640;
 
 public:
-	SMember(FName)                                     Root                                                        OFFSET(get<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     Root                                                        OFFSET(getStruct<T>, {0x160, 4, 0, 0})
 	CMember(TArray<FPBIKEffector>)                     Effectors                                                   OFFSET(get<T>, {0x168, 16, 0, 0})
 	CMember(TArray<int32_t>)                           EffectorSolverIndices                                       OFFSET(get<T>, {0x178, 16, 0, 0})
 	CMember(TArray<FPBIKBoneSetting>)                  BoneSettings                                                OFFSET(get<T>, {0x188, 16, 0, 0})
 	CMember(TArray<FName>)                             ExcludedBones                                               OFFSET(get<T>, {0x198, 16, 0, 0})
-	SMember(FPBIKSolverSettings)                       Settings                                                    OFFSET(get<T>, {0x1A8, 60, 0, 0})
-	SMember(FPBIKDebug)                                Debug                                                       OFFSET(get<T>, {0x1E4, 8, 0, 0})
-	SMember(FPBIKWorkData)                             WorkData                                                    OFFSET(get<T>, {0x1F0, 144, 0, 0})
+	SMember(FPBIKSolverSettings)                       Settings                                                    OFFSET(getStruct<T>, {0x1A8, 60, 0, 0})
+	SMember(FPBIKDebug)                                Debug                                                       OFFSET(getStruct<T>, {0x1E4, 8, 0, 0})
+	SMember(FPBIKWorkData)                             WorkData                                                    OFFSET(getStruct<T>, {0x1F0, 144, 0, 0})
 };
 
 /// Enum /Script/PBIK.EPBIKLimitType

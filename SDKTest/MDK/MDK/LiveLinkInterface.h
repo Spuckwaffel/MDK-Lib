@@ -56,8 +56,8 @@ class ULiveLinkSourceSettings : public UObject
 
 public:
 	CMember(ELiveLinkSourceMode)                       Mode                                                        OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FLiveLinkSourceBufferManagementSettings)   BufferSettings                                              OFFSET(get<T>, {0x30, 96, 0, 0})
-	SMember(FString)                                   ConnectionString                                            OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FLiveLinkSourceBufferManagementSettings)   BufferSettings                                              OFFSET(getStruct<T>, {0x30, 96, 0, 0})
+	SMember(FString)                                   ConnectionString                                            OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 	CMember(UClass*)                                   Factory                                                     OFFSET(get<T>, {0xA0, 8, 0, 0})
 };
 
@@ -69,7 +69,7 @@ class ULiveLinkCurveRemapSettings : public ULiveLinkSourceSettings
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FLiveLinkCurveConversionSettings)          CurveConversionSettings                                     OFFSET(get<T>, {0xA8, 80, 0, 0})
+	SMember(FLiveLinkCurveConversionSettings)          CurveConversionSettings                                     OFFSET(getStruct<T>, {0xA8, 80, 0, 0})
 };
 
 /// Class /Script/LiveLinkInterface.LiveLinkFrameTranslator
@@ -104,7 +104,7 @@ public:
 	CMember(ULiveLinkFrameInterpolationProcessor*)     InterpolationProcessor                                      OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<ULiveLinkFrameTranslator*>)         Translators                                                 OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(UClass*)                                   Role                                                        OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FFrameRate)                                FrameRate                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FFrameRate)                                FrameRate                                                   OFFSET(getStruct<T>, {0x58, 8, 0, 0})
 	DMember(bool)                                      bRebroadcastSubject                                         OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
@@ -174,8 +174,9 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSourceHandle
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLiveLinkSourceHandle : public MDKStruct
+class FLiveLinkSourceHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -184,8 +185,9 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkBaseStaticData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLiveLinkBaseStaticData : public MDKStruct
+class FLiveLinkBaseStaticData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -197,6 +199,7 @@ public:
 /// Size: 0x0020 (0x000010 - 0x000030)
 class FLiveLinkSkeletonStaticData : public FLiveLinkBaseStaticData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -207,33 +210,36 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkBaseFrameData
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FLiveLinkBaseFrameData : public MDKStruct
+class FLiveLinkBaseFrameData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FLiveLinkWorldTime)                        WorldTime                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FLiveLinkMetaData)                         MetaData                                                    OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FLiveLinkWorldTime)                        WorldTime                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FLiveLinkMetaData)                         MetaData                                                    OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	CMember(TArray<float>)                             PropertyValues                                              OFFSET(get<T>, {0x70, 16, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkMetaData
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FLiveLinkMetaData : public MDKStruct
+class FLiveLinkMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(TMap<FName, FString>)                      StringMetaData                                              OFFSET(get<T>, {0x0, 80, 0, 0})
-	SMember(FQualifiedFrameTime)                       SceneTime                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       SceneTime                                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkWorldTime
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLiveLinkWorldTime : public MDKStruct
+class FLiveLinkWorldTime : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -246,6 +252,7 @@ public:
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class FLiveLinkAnimationFrameData : public FLiveLinkBaseFrameData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -255,8 +262,9 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkBaseBlueprintData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FLiveLinkBaseBlueprintData : public MDKStruct
+class FLiveLinkBaseBlueprintData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -267,18 +275,20 @@ public:
 /// Size: 0x00B0 (0x000008 - 0x0000B8)
 class FLiveLinkBasicBlueprintData : public FLiveLinkBaseBlueprintData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FLiveLinkBaseStaticData)                   StaticData                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FLiveLinkBaseFrameData)                    FrameData                                                   OFFSET(get<T>, {0x18, 160, 0, 0})
+	SMember(FLiveLinkBaseStaticData)                   StaticData                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FLiveLinkBaseFrameData)                    FrameData                                                   OFFSET(getStruct<T>, {0x18, 160, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkTransformStaticData
 /// Size: 0x0008 (0x000010 - 0x000018)
 class FLiveLinkTransformStaticData : public FLiveLinkBaseStaticData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -292,6 +302,7 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FLiveLinkCameraStaticData : public FLiveLinkTransformStaticData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -311,17 +322,19 @@ public:
 /// Size: 0x0060 (0x0000A0 - 0x000100)
 class FLiveLinkTransformFrameData : public FLiveLinkBaseFrameData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0xA0, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0xA0, 96, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkCameraFrameData
 /// Size: 0x0020 (0x000100 - 0x000120)
 class FLiveLinkCameraFrameData : public FLiveLinkTransformFrameData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -338,18 +351,20 @@ public:
 /// Size: 0x0148 (0x000008 - 0x000150)
 class FLiveLinkCameraBlueprintData : public FLiveLinkBaseBlueprintData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FLiveLinkCameraStaticData)                 StaticData                                                  OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FLiveLinkCameraFrameData)                  FrameData                                                   OFFSET(get<T>, {0x30, 288, 0, 0})
+	SMember(FLiveLinkCameraStaticData)                 StaticData                                                  OFFSET(getStruct<T>, {0x8, 40, 0, 0})
+	SMember(FLiveLinkCameraFrameData)                  FrameData                                                   OFFSET(getStruct<T>, {0x30, 288, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkLightStaticData
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FLiveLinkLightStaticData : public FLiveLinkTransformStaticData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -369,13 +384,14 @@ public:
 /// Size: 0x0030 (0x000100 - 0x000130)
 class FLiveLinkLightFrameData : public FLiveLinkTransformFrameData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
 	DMember(float)                                     Temperature                                                 OFFSET(get<float>, {0x100, 4, 0, 0})
 	DMember(float)                                     Intensity                                                   OFFSET(get<float>, {0x104, 4, 0, 0})
-	SMember(FColor)                                    LightColor                                                  OFFSET(get<T>, {0x108, 4, 0, 0})
+	SMember(FColor)                                    LightColor                                                  OFFSET(getStruct<T>, {0x108, 4, 0, 0})
 	DMember(float)                                     InnerConeAngle                                              OFFSET(get<float>, {0x10C, 4, 0, 0})
 	DMember(float)                                     OuterConeAngle                                              OFFSET(get<float>, {0x110, 4, 0, 0})
 	DMember(float)                                     AttenuationRadius                                           OFFSET(get<float>, {0x114, 4, 0, 0})
@@ -388,36 +404,39 @@ public:
 /// Size: 0x0158 (0x000008 - 0x000160)
 class FLiveLinkLightBlueprintData : public FLiveLinkBaseBlueprintData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FLiveLinkLightStaticData)                  StaticData                                                  OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FLiveLinkLightFrameData)                   FrameData                                                   OFFSET(get<T>, {0x30, 304, 0, 0})
+	SMember(FLiveLinkLightStaticData)                  StaticData                                                  OFFSET(getStruct<T>, {0x8, 40, 0, 0})
+	SMember(FLiveLinkLightFrameData)                   FrameData                                                   OFFSET(getStruct<T>, {0x30, 304, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSourcePreset
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FLiveLinkSourcePreset : public MDKStruct
+class FLiveLinkSourcePreset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(ULiveLinkSourceSettings*)                  Settings                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FText)                                     SourceType                                                  OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     SourceType                                                  OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSubjectPreset
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FLiveLinkSubjectPreset : public MDKStruct
+class FLiveLinkSubjectPreset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLiveLinkSubjectKey)                       Key                                                         OFFSET(get<T>, {0x0, 20, 0, 0})
+	SMember(FLiveLinkSubjectKey)                       Key                                                         OFFSET(getStruct<T>, {0x0, 20, 0, 0})
 	CMember(UClass*)                                   Role                                                        OFFSET(get<T>, {0x18, 8, 0, 0})
 	CMember(ULiveLinkSubjectSettings*)                 Settings                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 	CMember(ULiveLinkVirtualSubject*)                  VirtualSubject                                              OFFSET(get<T>, {0x28, 8, 0, 0})
@@ -426,31 +445,34 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSubjectKey
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FLiveLinkSubjectKey : public MDKStruct
+class FLiveLinkSubjectKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FGuid)                                     Source                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FLiveLinkSubjectName)                      SubjectName                                                 OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FGuid)                                     Source                                                      OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FLiveLinkSubjectName)                      SubjectName                                                 OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSubjectName
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FLiveLinkSubjectName : public MDKStruct
+class FLiveLinkSubjectName : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkRefSkeleton
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FLiveLinkRefSkeleton : public MDKStruct
+class FLiveLinkRefSkeleton : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -461,13 +483,14 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSubjectRepresentation
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLiveLinkSubjectRepresentation : public MDKStruct
+class FLiveLinkSubjectRepresentation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FLiveLinkSubjectName)                      Subject                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FLiveLinkSubjectName)                      Subject                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UClass*)                                   Role                                                        OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
@@ -475,18 +498,20 @@ public:
 /// Size: 0x0118 (0x000008 - 0x000120)
 class FLiveLinkTransformBlueprintData : public FLiveLinkBaseBlueprintData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FLiveLinkTransformStaticData)              StaticData                                                  OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FLiveLinkTransformFrameData)               FrameData                                                   OFFSET(get<T>, {0x20, 256, 0, 0})
+	SMember(FLiveLinkTransformStaticData)              StaticData                                                  OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FLiveLinkTransformFrameData)               FrameData                                                   OFFSET(getStruct<T>, {0x20, 256, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkCurveConversionSettings
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FLiveLinkCurveConversionSettings : public MDKStruct
+class FLiveLinkCurveConversionSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -496,8 +521,9 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSourceBufferManagementSettings
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FLiveLinkSourceBufferManagementSettings : public MDKStruct
+class FLiveLinkSourceBufferManagementSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -508,9 +534,9 @@ public:
 	DMember(double)                                    EngineTimeClockOffset                                       OFFSET(get<double>, {0x10, 8, 0, 0})
 	DMember(double)                                    SmoothEngineTimeOffset                                      OFFSET(get<double>, {0x18, 8, 0, 0})
 	DMember(bool)                                      bGenerateSubFrame                                           OFFSET(get<bool>, {0x20, 1, 0, 0})
-	SMember(FFrameRate)                                DetectedFrameRate                                           OFFSET(get<T>, {0x24, 8, 0, 0})
+	SMember(FFrameRate)                                DetectedFrameRate                                           OFFSET(getStruct<T>, {0x24, 8, 0, 0})
 	DMember(bool)                                      bUseTimecodeSmoothLatest                                    OFFSET(get<bool>, {0x2C, 1, 0, 0})
-	SMember(FFrameRate)                                SourceTimecodeFrameRate                                     OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FFrameRate)                                SourceTimecodeFrameRate                                     OFFSET(getStruct<T>, {0x30, 8, 0, 0})
 	DMember(bool)                                      bValidTimecodeFrameEnabled                                  OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(int32_t)                                   ValidTimecodeFrame                                          OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(float)                                     TimecodeFrameOffset                                         OFFSET(get<float>, {0x40, 4, 0, 0})
@@ -522,33 +548,36 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkSourceDebugInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FLiveLinkSourceDebugInfo : public MDKStruct
+class FLiveLinkSourceDebugInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FLiveLinkSubjectName)                      SubjectName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FLiveLinkSubjectName)                      SubjectName                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   SnapshotIndex                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   NumberOfBufferAtSnapshot                                    OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkTimeSynchronizationSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FLiveLinkTimeSynchronizationSettings : public MDKStruct
+class FLiveLinkTimeSynchronizationSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FFrameRate)                                FrameRate                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FFrameNumber)                              FrameOffset                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FFrameRate)                                FrameRate                                                   OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FFrameNumber)                              FrameOffset                                                 OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkInterpolationSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FLiveLinkInterpolationSettings : public MDKStruct
+class FLiveLinkInterpolationSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -559,20 +588,22 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkTime
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLiveLinkTime : public MDKStruct
+class FLiveLinkTime : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(double)                                    WorldTime                                                   OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(FQualifiedFrameTime)                       SceneTime                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FQualifiedFrameTime)                       SceneTime                                                   OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkFrameRate
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FLiveLinkFrameRate : public FFrameRate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -581,21 +612,23 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkTimeCode_Base_DEPRECATED
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLiveLinkTimeCode_Base_DEPRECATED : public MDKStruct
+class FLiveLinkTimeCode_Base_DEPRECATED : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	DMember(int32_t)                                   Seconds                                                     OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   Frames                                                      OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FLiveLinkFrameRate)                        FrameRate                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FLiveLinkFrameRate)                        FrameRate                                                   OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkTimeCode
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FLiveLinkTimeCode : public FLiveLinkTimeCode_Base_DEPRECATED
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -604,47 +637,51 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkCurveElement
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FLiveLinkCurveElement : public MDKStruct
+class FLiveLinkCurveElement : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     CurveName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CurveName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     CurveValue                                                  OFFSET(get<float>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.LiveLinkFrameData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FLiveLinkFrameData : public MDKStruct
+class FLiveLinkFrameData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	CMember(TArray<FTransform>)                        Transforms                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FLiveLinkCurveElement>)             CurveElements                                               OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FLiveLinkWorldTime)                        WorldTime                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FLiveLinkMetaData)                         MetaData                                                    OFFSET(get<T>, {0x30, 96, 0, 0})
+	SMember(FLiveLinkWorldTime)                        WorldTime                                                   OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FLiveLinkMetaData)                         MetaData                                                    OFFSET(getStruct<T>, {0x30, 96, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.SubjectMetadata
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FSubjectMetadata : public MDKStruct
+class FSubjectMetadata : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(TMap<FName, FString>)                      StringMetaData                                              OFFSET(get<T>, {0x0, 80, 0, 0})
-	SMember(FTimecode)                                 SceneTimecode                                               OFFSET(get<T>, {0x50, 20, 0, 0})
-	SMember(FFrameRate)                                SceneFramerate                                              OFFSET(get<T>, {0x64, 8, 0, 0})
+	SMember(FTimecode)                                 SceneTimecode                                               OFFSET(getStruct<T>, {0x50, 20, 0, 0})
+	SMember(FFrameRate)                                SceneFramerate                                              OFFSET(getStruct<T>, {0x64, 8, 0, 0})
 };
 
 /// Struct /Script/LiveLinkInterface.CachedSubjectFrame
 /// Size: 0x0160 (0x000000 - 0x000160)
-class FCachedSubjectFrame : public MDKStruct
+class FCachedSubjectFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
@@ -653,8 +690,9 @@ public:
 
 /// Struct /Script/LiveLinkInterface.LiveLinkTransform
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FLiveLinkTransform : public MDKStruct
+class FLiveLinkTransform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -665,6 +703,7 @@ public:
 /// Size: 0x0010 (0x000008 - 0x000018)
 class FSubjectFrameHandle : public FLiveLinkBaseBlueprintData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

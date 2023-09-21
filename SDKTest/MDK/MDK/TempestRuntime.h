@@ -39,17 +39,17 @@ class UTempestMovementComponent : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FTempestReplicatedMovementData)            MovementData                                                OFFSET(get<T>, {0xA0, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTempestMovementStuck                                      OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTempestSafeZoneStateChanged                               OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FTempestReplicatedMovementData)            MovementData                                                OFFSET(getStruct<T>, {0xA0, 80, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTempestMovementStuck                                      OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTempestSafeZoneStateChanged                               OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 	CMember(ETempestMovementMode)                      MovementMode                                                OFFSET(get<T>, {0x110, 1, 0, 0})
 	CMember(UEnvQuery*)                                FindNextMovementLocationQuery                               OFFSET(get<T>, {0x118, 8, 0, 0})
 	CMember(AFortAthenaPatrolPath*)                    MovementPath                                                OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FScalableFloat)                            MovementSpeed                                               OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FScalableFloat)                            RotationSpeed                                               OFFSET(get<T>, {0x150, 40, 0, 0})
+	SMember(FScalableFloat)                            MovementSpeed                                               OFFSET(getStruct<T>, {0x128, 40, 0, 0})
+	SMember(FScalableFloat)                            RotationSpeed                                               OFFSET(getStruct<T>, {0x150, 40, 0, 0})
 	DMember(bool)                                      bShouldIgnoreZMovement                                      OFFSET(get<bool>, {0x178, 1, 1, 0})
 	DMember(bool)                                      bFloatOnWater                                               OFFSET(get<bool>, {0x178, 1, 1, 1})
-	SMember(FScalableFloat)                            WaterTraceZOffset                                           OFFSET(get<T>, {0x180, 40, 0, 0})
+	SMember(FScalableFloat)                            WaterTraceZOffset                                           OFFSET(getStruct<T>, {0x180, 40, 0, 0})
 
 
 	/// Functions
@@ -66,11 +66,11 @@ class UTempestStateMachineComponent : public UGameFrameworkComponent
 
 public:
 	DMember(bool)                                      bDestroyOnCompletion                                        OFFSET(get<bool>, {0xA0, 1, 0, 0})
-	SMember(FScalableFloat)                            FormationDuration                                           OFFSET(get<T>, {0xA8, 40, 0, 0})
-	SMember(FScalableFloat)                            ActiveDuration                                              OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FScalableFloat)                            DissipationDuration                                         OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FTempestStateInfo)                         CurrentStateInfo                                            OFFSET(get<T>, {0x120, 12, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTempestStateChangedDelegate                               OFFSET(get<T>, {0x148, 16, 0, 0})
+	SMember(FScalableFloat)                            FormationDuration                                           OFFSET(getStruct<T>, {0xA8, 40, 0, 0})
+	SMember(FScalableFloat)                            ActiveDuration                                              OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            DissipationDuration                                         OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
+	SMember(FTempestStateInfo)                         CurrentStateInfo                                            OFFSET(getStruct<T>, {0x120, 12, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTempestStateChangedDelegate                               OFFSET(getStruct<T>, {0x148, 16, 0, 0})
 
 
 	/// Functions
@@ -88,8 +88,9 @@ public:
 
 /// Struct /Script/TempestRuntime.TempestStateInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FTempestStateInfo : public MDKStruct
+class FTempestStateInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -101,21 +102,23 @@ public:
 
 /// Struct /Script/TempestRuntime.TempestReplicatedMovementData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FTempestReplicatedMovementData : public MDKStruct
+class FTempestReplicatedMovementData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   TargetServerLocation                                        OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LastServerLocation                                          OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FQuat)                                     LastServerRotation                                          OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVector)                                   TargetServerLocation                                        OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LastServerLocation                                          OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FQuat)                                     LastServerRotation                                          OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/TempestRuntime.TempestStateChangeTimerInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FTempestStateChangeTimerInfo : public MDKStruct
+class FTempestStateChangeTimerInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

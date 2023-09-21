@@ -130,7 +130,7 @@ class UEntityActorCollisionComponent : public UEntityEnableableComponent
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FName)                                     ShadowVar_CollisionProfileName                              OFFSET(get<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     ShadowVar_CollisionProfileName                              OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      PrimitiveComponentCache                                     OFFSET(get<T>, {0xC8, 32, 0, 0})
 	CMember(TEnumAsByte<ECollisionShapeMode>)          CollisionShapeMode                                          OFFSET(get<T>, {0xEA, 1, 0, 0})
 
@@ -158,7 +158,7 @@ class UEntityActorPlayerComponent : public UEntityDataBackedComponent
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FUniqueNetIdRepl)                          PlayerId                                                    OFFSET(get<T>, {0x60, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          PlayerId                                                    OFFSET(getStruct<T>, {0x60, 48, 0, 0})
 	CMember(TWeakObjectPtr<APlayerController*>)        PlayerControllerCache                                       OFFSET(get<T>, {0x90, 32, 0, 0})
 	CMember(TWeakObjectPtr<APlayerState*>)             PlayerStateCache                                            OFFSET(get<T>, {0xB0, 32, 0, 0})
 
@@ -211,9 +211,9 @@ class UEntityActorTextDisplayComponent : public UEntityActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FText)                                     DisplayText                                                 OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FText)                                     DisplayText                                                 OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 	DMember(float)                                     ShadowVar_WorldSize                                         OFFSET(get<float>, {0xA0, 4, 0, 0})
-	SMember(FColor)                                    ShadowVar_TextRenderColor                                   OFFSET(get<T>, {0xA4, 4, 0, 0})
+	SMember(FColor)                                    ShadowVar_TextRenderColor                                   OFFSET(getStruct<T>, {0xA4, 4, 0, 0})
 	DMember(bool)                                      bAddedTextRenderComponent                                   OFFSET(get<bool>, {0xA8, 1, 0, 0})
 
 
@@ -262,7 +262,7 @@ class UEntityActorPositionComponent : public UEntityPositionComponent
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   ShadowVar_Location                                          OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   ShadowVar_Location                                          OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 
 
 	/// Functions
@@ -278,7 +278,7 @@ class UEntityActorRotationComponent : public UEntityRotationComponent
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FRotator)                                  ShadowVar_Rotation                                          OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FRotator)                                  ShadowVar_Rotation                                          OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 
 
 	/// Functions
@@ -294,7 +294,7 @@ class UEntityActorScaleComponent : public UEntityScaleComponent
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   ShadowVar_Scale                                             OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   ShadowVar_Scale                                             OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 
 
 	/// Functions

@@ -23,11 +23,11 @@ class AFortAthenaLivingWorldPointProvidersEnabler : public AActor
 public:
 	CMember(TArray<TScriptInterface>)                  EnabledLinkedPointProviders                                 OFFSET(get<T>, {0x290, 16, 0, 0})
 	CMember(TArray<TScriptInterface>)                  AvailableLinkedPointProviders                               OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     EnablerTags                                                 OFFSET(get<T>, {0x2B0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     EnablerTags                                                 OFFSET(getStruct<T>, {0x2B0, 32, 0, 0})
 	CMember(TArray<TScriptInterface>)                  LinkedPointProviders                                        OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FScalableFloat)                            PointProvidersToEnable                                      OFFSET(get<T>, {0x2E0, 40, 0, 0})
-	SMember(FScalableFloat)                            EvaluateAutomatically                                       OFFSET(get<T>, {0x308, 40, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCompletedEvaluationDelegate                               OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FScalableFloat)                            PointProvidersToEnable                                      OFFSET(getStruct<T>, {0x2E0, 40, 0, 0})
+	SMember(FScalableFloat)                            EvaluateAutomatically                                       OFFSET(getStruct<T>, {0x308, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCompletedEvaluationDelegate                               OFFSET(getStruct<T>, {0x338, 16, 0, 0})
 
 
 	/// Functions
@@ -98,19 +98,19 @@ class UFortAthenaLivingWorldConfigData : public UDataAsset
 
 public:
 	CMember(TArray<FFortAthenaLivingWorldCategoryTableData>) CategoryTableDatas                                    OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FScalableFloat)                            MaxActorCount                                               OFFSET(get<T>, {0x40, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxEventSpawnPerTick                                        OFFSET(get<T>, {0x68, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxActorDespawnPerTick                                      OFFSET(get<T>, {0x90, 40, 0, 0})
-	SMember(FScalableFloat)                            MinimumEventGenerationInterval                              OFFSET(get<T>, {0xB8, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxActorDensity                                             OFFSET(get<T>, {0xE0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxActorUpdatesPerTick                                      OFFSET(get<T>, {0x108, 40, 0, 0})
-	SMember(FScalableFloat)                            ActorDensityGridCellSize                                    OFFSET(get<T>, {0x130, 40, 0, 0})
-	SMember(FScalableFloat)                            PointClusterSize                                            OFFSET(get<T>, {0x158, 40, 0, 0})
-	SMember(FScalableFloat)                            MinNumberOfPlayerForAggressiveSpawning                      OFFSET(get<T>, {0x180, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxActorCount                                               OFFSET(getStruct<T>, {0x40, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxEventSpawnPerTick                                        OFFSET(getStruct<T>, {0x68, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxActorDespawnPerTick                                      OFFSET(getStruct<T>, {0x90, 40, 0, 0})
+	SMember(FScalableFloat)                            MinimumEventGenerationInterval                              OFFSET(getStruct<T>, {0xB8, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxActorDensity                                             OFFSET(getStruct<T>, {0xE0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxActorUpdatesPerTick                                      OFFSET(getStruct<T>, {0x108, 40, 0, 0})
+	SMember(FScalableFloat)                            ActorDensityGridCellSize                                    OFFSET(getStruct<T>, {0x130, 40, 0, 0})
+	SMember(FScalableFloat)                            PointClusterSize                                            OFFSET(getStruct<T>, {0x158, 40, 0, 0})
+	SMember(FScalableFloat)                            MinNumberOfPlayerForAggressiveSpawning                      OFFSET(getStruct<T>, {0x180, 40, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldTagDensityGridData>) TagDensityGridData                                   OFFSET(get<T>, {0x1A8, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         SingleUseSpawnerDataQuery                                   OFFSET(get<T>, {0x1B8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         SingleUseSpawnerDataQuery                                   OFFSET(getStruct<T>, {0x1B8, 72, 0, 0})
 	CMember(UClass*)                                   EQSActorHelperClass                                         OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(FScalableFloat)                            DelayEventGeneration                                        OFFSET(get<T>, {0x208, 40, 0, 0})
+	SMember(FScalableFloat)                            DelayEventGeneration                                        OFFSET(getStruct<T>, {0x208, 40, 0, 0})
 };
 
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldDebugDensityMiniMapIndicator
@@ -123,11 +123,11 @@ class UFortAthenaLivingWorldDebugDensityMiniMapIndicator : public UFortMiniMapIn
 public:
 	CMember(TArray<FFortAthenaActorDensityDebugInfo>)  ActorDebugInfos                                             OFFSET(get<T>, {0x140, 16, 0, 0})
 	CMember(TArray<float>)                             DensityGridValues                                           OFFSET(get<T>, {0x150, 16, 0, 0})
-	SMember(FVector)                                   GridOrigin                                                  OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FIntVector)                                MaxGridSize                                                 OFFSET(get<T>, {0x178, 12, 0, 0})
+	SMember(FVector)                                   GridOrigin                                                  OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FIntVector)                                MaxGridSize                                                 OFFSET(getStruct<T>, {0x178, 12, 0, 0})
 	DMember(float)                                     CellSize                                                    OFFSET(get<float>, {0x184, 4, 0, 0})
 	DMember(float)                                     MaxDensity                                                  OFFSET(get<float>, {0x188, 4, 0, 0})
-	SMember(FString)                                   DisplayName                                                 OFFSET(get<T>, {0x190, 16, 0, 0})
+	SMember(FString)                                   DisplayName                                                 OFFSET(getStruct<T>, {0x190, 16, 0, 0})
 };
 
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldDespawnConditionSchema
@@ -148,7 +148,7 @@ class UFortAthenaLivingWorldEncounter : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FScalableFloat)                            IntervalBetweenEventGeneration                              OFFSET(get<T>, {0x30, 40, 0, 0})
+	SMember(FScalableFloat)                            IntervalBetweenEventGeneration                              OFFSET(getStruct<T>, {0x30, 40, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldEncounterStage>) Stages                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
@@ -160,12 +160,12 @@ class UFortAthenaLivingWorldEncounterInstance : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnActorSpawned                                              OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFirstActorSpawned                                         OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorDestroyed                                            OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnLastActorDestroyed                                        OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorDied                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FFortAthenaLivingWorldConditionContainer)  ConditionContainer                                          OFFSET(get<T>, {0xC8, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorSpawned                                              OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFirstActorSpawned                                         OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorDestroyed                                            OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnLastActorDestroyed                                        OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorDied                                                 OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FFortAthenaLivingWorldConditionContainer)  ConditionContainer                                          OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
 	CMember(TArray<TScriptInterface>)                  AllowedPointProviders                                       OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(TArray<TScriptInterface>)                  RegisteredPointProviders                                    OFFSET(get<T>, {0xF0, 16, 0, 0})
 	CMember(TArray<UFortAthenaLivingWorldEventData*>)  RuntimeCreatedEventDatas                                    OFFSET(get<T>, {0x100, 16, 0, 0})
@@ -222,14 +222,14 @@ public:
 	DMember(int32_t)                                   TimeOfDayFilters                                            OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(float)                                     WaterLevelIndexMin                                          OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     WaterLevelIndexMax                                          OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldDespawnCondition>) DespawnConditions                                      OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         ProviderFiltersTagQuery                                     OFFSET(get<T>, {0x68, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         ProviderFiltersTagQuery                                     OFFSET(getStruct<T>, {0x68, 72, 0, 0})
 	CMember(TArray<FPointProviderFilterEntry>)         ProviderFiltersEntries                                      OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FInstancedStruct)                          PointProviderSelector                                       OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FInstancedStruct)                          PointProviderSelector                                       OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldTaggedSpawnActionClass>) SpawnActions                                     OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FScalableFloat)                            MinActorCountToSpawn                                        OFFSET(get<T>, {0xE0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxActorCountToSpawn                                        OFFSET(get<T>, {0x108, 40, 0, 0})
+	SMember(FScalableFloat)                            MinActorCountToSpawn                                        OFFSET(getStruct<T>, {0xE0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxActorCountToSpawn                                        OFFSET(getStruct<T>, {0x108, 40, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldEventDataActorSpawnDescription>) ActorDescriptions                        OFFSET(get<T>, {0x130, 16, 0, 0})
 };
 
@@ -243,23 +243,23 @@ class UFortAthenaLivingWorldManager : public UGameStateComponent
 public:
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldConfigData*>) DefaultLagerConfig                                  OFFSET(get<T>, {0xA8, 32, 0, 0})
 	CMember(TArray<FFortLivingWorldConfigOverride>)    LagerConfigOverrides                                        OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FScalableFloat)                            LagerEnabled                                                OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FScalableFloat)                            LagerEnabled                                                OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
 	CMember(TMap<FGameplayTag, UClass*>)               TaggedSpawnActionClassMap                                   OFFSET(get<T>, {0x100, 80, 0, 0})
 	CMember(TArray<TScriptInterface>)                  PointProviders                                              OFFSET(get<T>, {0x150, 16, 0, 0})
-	SMember(FSlateBrush)                               SpecialActorMinimapIconBrush                                OFFSET(get<T>, {0x160, 192, 0, 0})
-	SMember(FVector2D)                                 SpecialActorMinimapIconScale                                OFFSET(get<T>, {0x220, 16, 0, 0})
-	SMember(FSlateBrush)                               SpecialActorCompassIconBrush                                OFFSET(get<T>, {0x230, 192, 0, 0})
-	SMember(FVector2D)                                 SpecialActorCompassIconScale                                OFFSET(get<T>, {0x2F0, 16, 0, 0})
+	SMember(FSlateBrush)                               SpecialActorMinimapIconBrush                                OFFSET(getStruct<T>, {0x160, 192, 0, 0})
+	SMember(FVector2D)                                 SpecialActorMinimapIconScale                                OFFSET(getStruct<T>, {0x220, 16, 0, 0})
+	SMember(FSlateBrush)                               SpecialActorCompassIconBrush                                OFFSET(getStruct<T>, {0x230, 192, 0, 0})
+	SMember(FVector2D)                                 SpecialActorCompassIconScale                                OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
 	CMember(TArray<UClass*>)                           SpawnedSingleUseSpawnerData                                 OFFSET(get<T>, {0x300, 16, 0, 0})
 	CMember(UWorld*)                                   CachedWorld                                                 OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UFortAthenaLivingWorldConfigData*)         CachedConfig                                                OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(TArray<UFortAthenaLivingWorldEncounterInstance*>) RunningEncounterInstances                            OFFSET(get<T>, {0x320, 16, 0, 0})
 	CMember(UFortSeasonalEventManager*)                CachedSeasonalEventManager                                  OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    ActorClassToPreloadOnClient                                 OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(FFortAthenaLivingWorldActorUpdateHandler)  ActorUpdateHandler                                          OFFSET(get<T>, {0x348, 176, 0, 0})
-	SMember(FFortAthenaLivingWorldPlayerTracker)       PlayerTracker                                               OFFSET(get<T>, {0x3F8, 176, 0, 0})
-	SMember(FFortAthenaLivingWorldPreloader)           Preloader                                                   OFFSET(get<T>, {0x4A8, 224, 0, 0})
-	SMember(FFortAthenaLivingWorldConditionContainer)  GlobalConditionContainer                                    OFFSET(get<T>, {0x588, 24, 0, 0})
+	SMember(FFortAthenaLivingWorldActorUpdateHandler)  ActorUpdateHandler                                          OFFSET(getStruct<T>, {0x348, 176, 0, 0})
+	SMember(FFortAthenaLivingWorldPlayerTracker)       PlayerTracker                                               OFFSET(getStruct<T>, {0x3F8, 176, 0, 0})
+	SMember(FFortAthenaLivingWorldPreloader)           Preloader                                                   OFFSET(getStruct<T>, {0x4A8, 224, 0, 0})
+	SMember(FFortAthenaLivingWorldConditionContainer)  GlobalConditionContainer                                    OFFSET(getStruct<T>, {0x588, 24, 0, 0})
 	CMember(TArray<AActor*>)                           RuntimePointProviderList                                    OFFSET(get<T>, {0x7F8, 16, 0, 0})
 	CMember(TSet<AActor*>)                             RuntimePointProviderOwners                                  OFFSET(get<T>, {0x808, 80, 0, 0})
 	CMember(TMap<UClass*, UFortAthenaLivingWorldSpawnAction*>) SpawnActionCache                                    OFFSET(get<T>, {0xA68, 80, 0, 0})
@@ -358,12 +358,12 @@ class UFortAthenaLivingWorldNavigationInvokerComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FScalableFloat)                            GenerationRadius                                            OFFSET(get<T>, {0xA0, 40, 0, 0})
-	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(get<T>, {0xC8, 4, 0, 0})
-	SMember(FScalableFloat)                            DistanceToPlayer                                            OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FScalableFloat)                            DistanceToPlayerHysteresis                                  OFFSET(get<T>, {0xF8, 40, 0, 0})
-	SMember(FScalableFloat)                            RegistrationDistanceToPlayer                                OFFSET(get<T>, {0x120, 40, 0, 0})
-	SMember(FScalableFloat)                            RegistrationDistanceToPlayerHysteresis                      OFFSET(get<T>, {0x148, 40, 0, 0})
+	SMember(FScalableFloat)                            GenerationRadius                                            OFFSET(getStruct<T>, {0xA0, 40, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
+	SMember(FScalableFloat)                            DistanceToPlayer                                            OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            DistanceToPlayerHysteresis                                  OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
+	SMember(FScalableFloat)                            RegistrationDistanceToPlayer                                OFFSET(getStruct<T>, {0x120, 40, 0, 0})
+	SMember(FScalableFloat)                            RegistrationDistanceToPlayerHysteresis                      OFFSET(getStruct<T>, {0x148, 40, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldManager*>) LivingWorldManager                                     OFFSET(get<T>, {0x170, 8, 0, 0})
 
 
@@ -401,20 +401,20 @@ class AFortAthenaLivingWorldPrefab : public AFortLevelInstancePrefab
 
 public:
 	CMember(TArray<FFortAthenaLivingWorldPrefabActorSpawnerData>) ActorSpawnerDatas                                OFFSET(get<T>, {0x7C8, 16, 0, 0})
-	SMember(FBox)                                      LocalLevelBounds                                            OFFSET(get<T>, {0x7D8, 56, 0, 0})
-	SMember(FBox)                                      LocalGrassRemovalBox                                        OFFSET(get<T>, {0x810, 56, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAllActorSpawnedDelegate                                   OFFSET(get<T>, {0x848, 16, 0, 0})
+	SMember(FBox)                                      LocalLevelBounds                                            OFFSET(getStruct<T>, {0x7D8, 56, 0, 0})
+	SMember(FBox)                                      LocalGrassRemovalBox                                        OFFSET(getStruct<T>, {0x810, 56, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAllActorSpawnedDelegate                                   OFFSET(getStruct<T>, {0x848, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    BuildingsToKill                                             OFFSET(get<T>, {0x870, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    SpawnedActors                                               OFFSET(get<T>, {0x880, 16, 0, 0})
-	SMember(FDelegateProperty)                         FinishedDestroyingBuildingCallback                          OFFSET(get<T>, {0x890, 12, 0, 0})
+	SMember(FDelegateProperty)                         FinishedDestroyingBuildingCallback                          OFFSET(getStruct<T>, {0x890, 12, 0, 0})
 	DMember(bool)                                      bHasFinishedSpawn                                           OFFSET(get<bool>, {0x89C, 1, 0, 0})
 	DMember(bool)                                      bHasRemovedFoliage                                          OFFSET(get<bool>, {0x89D, 1, 0, 0})
-	SMember(FScalableFloat)                            bIsEnabled                                                  OFFSET(get<T>, {0x8A0, 40, 0, 0})
-	SMember(FScalableFloat)                            Weight                                                      OFFSET(get<T>, {0x8C8, 40, 0, 0})
+	SMember(FScalableFloat)                            bIsEnabled                                                  OFFSET(getStruct<T>, {0x8A0, 40, 0, 0})
+	SMember(FScalableFloat)                            Weight                                                      OFFSET(getStruct<T>, {0x8C8, 40, 0, 0})
 	DMember(bool)                                      bShouldLevelBeVisible                                       OFFSET(get<bool>, {0x8F0, 1, 0, 0})
 	DMember(bool)                                      bShouldSpawnerBeAllowedToSpawn                              OFFSET(get<bool>, {0x8F1, 1, 0, 0})
 	DMember(bool)                                      bShouldAlwaysSnapAboveLandscape                             OFFSET(get<bool>, {0x8F2, 1, 0, 0})
-	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(get<T>, {0x8F8, 24, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(getStruct<T>, {0x8F8, 24, 0, 0})
 
 
 	/// Functions
@@ -450,10 +450,10 @@ class AFortAthenaLivingWorldPrefabActorSpawner : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FFortAthenaLivingWorldActorSpawnDescription) ActorDescription                                          OFFSET(get<T>, {0x290, 256, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorSpawnedDelegate                                      OFFSET(get<T>, {0x390, 16, 0, 0})
+	SMember(FFortAthenaLivingWorldActorSpawnDescription) ActorDescription                                          OFFSET(getStruct<T>, {0x290, 256, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorSpawnedDelegate                                      OFFSET(getStruct<T>, {0x390, 16, 0, 0})
 	CMember(AFortAthenaPatrolPath*)                    PatrolPath                                                  OFFSET(get<T>, {0x3A0, 8, 0, 0})
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x3A8, 16, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0x3A8, 16, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   SpawnedActor                                                OFFSET(get<T>, {0x3B8, 8, 0, 0})
 
 
@@ -498,13 +498,13 @@ class AFortAthenaLivingWorldStaticPointProvider : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 880;
 
 public:
-	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(get<T>, {0x298, 104, 0, 0})
-	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(get<T>, {0x300, 32, 0, 0})
+	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(getStruct<T>, {0x298, 104, 0, 0})
+	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(getStruct<T>, {0x300, 32, 0, 0})
 	CMember(TArray<FTransform>)                        SpawnPoints                                                 OFFSET(get<T>, {0x320, 16, 0, 0})
 	DMember(bool)                                      bStartEnabled                                               OFFSET(get<bool>, {0x330, 1, 0, 0})
 	DMember(bool)                                      bRandomizeStartPoint                                        OFFSET(get<bool>, {0x331, 1, 0, 0})
 	DMember(bool)                                      bRandomizePointRotation                                     OFFSET(get<bool>, {0x332, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorSpawned                                              OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorSpawned                                              OFFSET(getStruct<T>, {0x338, 16, 0, 0})
 	CMember(TArray<FPointProviderTagDebugColor>)       DebugColors                                                 OFFSET(get<T>, {0x348, 16, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UFortAthenaLivingWorldManager*)            CachedLivingWorldManager                                    OFFSET(get<T>, {0x360, 8, 0, 0})
@@ -529,8 +529,8 @@ class AFortAthenaLivingWorldVehiclePointProvider : public AFortAthenaLivingWorld
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FGameplayTagContainer)                     ForceMods                                                   OFFSET(get<T>, {0x370, 32, 0, 0})
-	SMember(FScalableFloat)                            ForceModsAllowed                                            OFFSET(get<T>, {0x390, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     ForceMods                                                   OFFSET(getStruct<T>, {0x370, 32, 0, 0})
+	SMember(FScalableFloat)                            ForceModsAllowed                                            OFFSET(getStruct<T>, {0x390, 40, 0, 0})
 	CMember(TEnumAsByte<EVehicleInitialOverlapBehavior>) InitialOverlapBehavior                                    OFFSET(get<T>, {0x3B8, 1, 0, 0})
 };
 
@@ -543,18 +543,18 @@ class AFortAthenaLivingWorldVolume : public AVolume
 
 public:
 	DMember(bool)                                      bStartEnabled                                               OFFSET(get<bool>, {0x2D0, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(get<T>, {0x2D8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(getStruct<T>, {0x2D8, 32, 0, 0})
 	CMember(UEnvQuery*)                                EnvironmentQuery                                            OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(TArray<FAIDynamicParam>)                   QueryConfig                                                 OFFSET(get<T>, {0x300, 16, 0, 0})
 	DMember(bool)                                      bRemoveUsedPoint                                            OFFSET(get<bool>, {0x310, 1, 0, 0})
 	DMember(bool)                                      bRemoveUsedPointPermenantly                                 OFFSET(get<bool>, {0x311, 1, 0, 0})
-	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(get<T>, {0x318, 104, 0, 0})
-	SMember(FScalableFloat)                            EQSRefreshInterval                                          OFFSET(get<T>, {0x380, 40, 0, 0})
-	SMember(FScalableFloat)                            WaterLevelIndexMin                                          OFFSET(get<T>, {0x3A8, 40, 0, 0})
-	SMember(FScalableFloat)                            WaterLevelIndexMax                                          OFFSET(get<T>, {0x3D0, 40, 0, 0})
+	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(getStruct<T>, {0x318, 104, 0, 0})
+	SMember(FScalableFloat)                            EQSRefreshInterval                                          OFFSET(getStruct<T>, {0x380, 40, 0, 0})
+	SMember(FScalableFloat)                            WaterLevelIndexMin                                          OFFSET(getStruct<T>, {0x3A8, 40, 0, 0})
+	SMember(FScalableFloat)                            WaterLevelIndexMax                                          OFFSET(getStruct<T>, {0x3D0, 40, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x3F8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(get<T>, {0x400, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPointProviderRegistered                                   OFFSET(get<T>, {0x410, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(getStruct<T>, {0x400, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPointProviderRegistered                                   OFFSET(getStruct<T>, {0x410, 16, 0, 0})
 	CMember(UFortAthenaLivingWorldManager*)            CachedLivingWorldManager                                    OFFSET(get<T>, {0x420, 8, 0, 0})
 
 
@@ -617,13 +617,13 @@ class AFortAthenaPatrolPathPointProvider : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(get<T>, {0x298, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(getStruct<T>, {0x298, 32, 0, 0})
 	CMember(AFortAthenaPatrolPath*)                    AssociatedPatrolPath                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      bStartEnabled                                               OFFSET(get<bool>, {0x2C0, 1, 1, 0})
 	DMember(bool)                                      bSpawnOnPatrolPath                                          OFFSET(get<bool>, {0x2C0, 1, 1, 1})
 	DMember(bool)                                      bAlignOrientationToPath                                     OFFSET(get<bool>, {0x2C0, 1, 1, 2})
-	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(get<T>, {0x2C8, 104, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(get<T>, {0x330, 16, 0, 0})
+	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(getStruct<T>, {0x2C8, 104, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(getStruct<T>, {0x330, 16, 0, 0})
 	CMember(TWeakObjectPtr<AFortAthenaPatrolPath*>)    RuntimePatrolPathWeakPtr                                    OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UFortAthenaLivingWorldManager*)            CachedLivingWorldManager                                    OFFSET(get<T>, {0x350, 8, 0, 0})
@@ -648,14 +648,14 @@ class AFortAthenaPointAroundPlayerProvider : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(get<T>, {0x298, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     FiltersTags                                                 OFFSET(getStruct<T>, {0x298, 32, 0, 0})
 	CMember(UEnvQuery*)                                QueryTemplate                                               OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryRunMode>)             RunMode                                                     OFFSET(get<T>, {0x2C0, 1, 0, 0})
 	DMember(bool)                                      bStartEnabled                                               OFFSET(get<bool>, {0x2C1, 1, 1, 0})
 	DMember(bool)                                      bGenerateAroundPlayerBots                                   OFFSET(get<bool>, {0x2C1, 1, 1, 1})
-	SMember(FGameplayTag)                              IgnorePlayerWithTag                                         OFFSET(get<T>, {0x2C4, 4, 0, 0})
-	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(get<T>, {0x2C8, 104, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(get<T>, {0x330, 16, 0, 0})
+	SMember(FGameplayTag)                              IgnorePlayerWithTag                                         OFFSET(getStruct<T>, {0x2C4, 4, 0, 0})
+	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(getStruct<T>, {0x2C8, 104, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(getStruct<T>, {0x330, 16, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x340, 8, 0, 0})
 
 
@@ -679,11 +679,11 @@ class UFortCheatManager_LivingWorldManager : public UChildCheatManager
 
 public:
 	DMember(int32_t)                                   CheatTeleportToCount                                        OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	SMember(FString)                                   CheatTeleportLastEventDataName                              OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   CheatTeleportLastEventDataName                              OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	DMember(int32_t)                                   CheatSpawnEventCount                                        OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-	SMember(FString)                                   CheatSpawnEventName                                         OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   CheatSpawnEventName                                         OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	DMember(int32_t)                                   CheatTriggerEventCount                                      OFFSET(get<int32_t>, {0x58, 4, 0, 0})
-	SMember(FString)                                   CheatTriggerEventName                                       OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FString)                                   CheatTriggerEventName                                       OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 
 
 	/// Functions
@@ -775,7 +775,7 @@ class AFortAthenaLivingWorldEQSHelper : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 768;
 
 public:
-	SMember(FNavAgentProperties)                       NavAgentProperties                                          OFFSET(get<T>, {0x2D0, 48, 0, 0})
+	SMember(FNavAgentProperties)                       NavAgentProperties                                          OFFSET(getStruct<T>, {0x2D0, 48, 0, 0})
 };
 
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldSpawnAction_AddAIToGroup
@@ -786,7 +786,7 @@ class UFortAthenaLivingWorldSpawnAction_AddAIToGroup : public UFortAthenaLivingW
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTagContainer)                     GroupTags                                                   OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GroupTags                                                   OFFSET(getStruct<T>, {0x28, 32, 0, 0})
 };
 
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldSpawnAction_SeatPawnInVehicle
@@ -802,29 +802,31 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldPrefabActorSpawnerData
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FFortAthenaLivingWorldPrefabActorSpawnerData : public MDKStruct
+class FFortAthenaLivingWorldPrefabActorSpawnerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FGuid)                                     ActorSpawnerGuid                                            OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FFortAthenaLivingWorldActorSpawnDescription) ActorDescription                                          OFFSET(get<T>, {0x10, 256, 0, 0})
+	SMember(FGuid)                                     ActorSpawnerGuid                                            OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FFortAthenaLivingWorldActorSpawnDescription) ActorDescription                                          OFFSET(getStruct<T>, {0x10, 256, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldActorSpawnDescription
 /// Size: 0x0100 (0x000000 - 0x000100)
-class FFortAthenaLivingWorldActorSpawnDescription : public MDKStruct
+class FFortAthenaLivingWorldActorSpawnDescription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   ActorClass                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   SpawnerData                                                 OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FGameplayTagQuery)                         SpawnerDataTagQuery                                         OFFSET(get<T>, {0x40, 72, 0, 0})
-	SMember(FScalableFloat)                            ActorDensityValue                                           OFFSET(get<T>, {0x88, 40, 0, 0})
-	SMember(FScalableFloat)                            DensityComputationRangeOverride                             OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FGameplayTagQuery)                         SpawnerDataTagQuery                                         OFFSET(getStruct<T>, {0x40, 72, 0, 0})
+	SMember(FScalableFloat)                            ActorDensityValue                                           OFFSET(getStruct<T>, {0x88, 40, 0, 0})
+	SMember(FScalableFloat)                            DensityComputationRangeOverride                             OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldEventTagDensityRegistration>) TagDensityRegistrations                     OFFSET(get<T>, {0xD8, 16, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldTagTimer>)    PostDestructionTagDensityPersistenceDuration                OFFSET(get<T>, {0xE8, 16, 0, 0})
 	DMember(bool)                                      bPreloadOnClient                                            OFFSET(get<bool>, {0xF8, 1, 0, 0})
@@ -832,58 +834,63 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldTagTimer
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortAthenaLivingWorldTagTimer : public MDKStruct
+class FFortAthenaLivingWorldTagTimer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FScalableFloat)                            Duration                                                    OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FScalableFloat)                            Duration                                                    OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEventTagDensityRegistration
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FFortAthenaLivingWorldEventTagDensityRegistration : public MDKStruct
+class FFortAthenaLivingWorldEventTagDensityRegistration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FScalableFloat)                            Range                                                       OFFSET(get<T>, {0x8, 40, 0, 0})
-	SMember(FScalableFloat)                            DensityValue                                                OFFSET(get<T>, {0x30, 40, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FScalableFloat)                            Range                                                       OFFSET(getStruct<T>, {0x8, 40, 0, 0})
+	SMember(FScalableFloat)                            DensityValue                                                OFFSET(getStruct<T>, {0x30, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.PointProviderTagDebugColor
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FPointProviderTagDebugColor : public MDKStruct
+class FPointProviderTagDebugColor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FColor)                                    Color                                                       OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FColor)                                    Color                                                       OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldPointProviderSpawnLimiter
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FFortAthenaLivingWorldPointProviderSpawnLimiter : public MDKStruct
+class FFortAthenaLivingWorldPointProviderSpawnLimiter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
 	CMember(ELivingWorldPointProviderSpawnLimiterBehavior) Behavior                                                OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FScalableFloat)                            MaxNumberOfSpawn                                            OFFSET(get<T>, {0x10, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxNumberOfEventInstance                                    OFFSET(get<T>, {0x38, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxNumberOfSpawn                                            OFFSET(getStruct<T>, {0x10, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxNumberOfEventInstance                                    OFFSET(getStruct<T>, {0x38, 40, 0, 0})
 	DMember(bool)                                      bResetLimitWhenEnabling                                     OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldConditionContainer
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortAthenaLivingWorldConditionContainer : public MDKStruct
+class FFortAthenaLivingWorldConditionContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -895,49 +902,53 @@ public:
 /// Size: 0x0058 (0x000010 - 0x000068)
 class FFortAthenaLivingWorldCondition_TrackedPlayerPresence : public FWorldConditionCommonActorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FWorldConditionContextDataRef)             ActorRef                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FScalableFloat)                            MinDistanceToPlayer                                         OFFSET(get<T>, {0x18, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxDistanceToPlayer                                         OFFSET(get<T>, {0x40, 40, 0, 0})
+	SMember(FWorldConditionContextDataRef)             ActorRef                                                    OFFSET(getStruct<T>, {0x10, 8, 0, 0})
+	SMember(FScalableFloat)                            MinDistanceToPlayer                                         OFFSET(getStruct<T>, {0x18, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxDistanceToPlayer                                         OFFSET(getStruct<T>, {0x40, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldDensityCondition
 /// Size: 0x0088 (0x000010 - 0x000098)
 class FFortAthenaLivingWorldDensityCondition : public FWorldConditionCommonActorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FWorldConditionContextDataRef)             ActorRef                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FScalableFloat)                            Distance                                                    OFFSET(get<T>, {0x20, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxDensity                                                  OFFSET(get<T>, {0x48, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDensity                                                  OFFSET(get<T>, {0x70, 40, 0, 0})
+	SMember(FWorldConditionContextDataRef)             ActorRef                                                    OFFSET(getStruct<T>, {0x10, 8, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FScalableFloat)                            Distance                                                    OFFSET(getStruct<T>, {0x20, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxDensity                                                  OFFSET(getStruct<T>, {0x48, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDensity                                                  OFFSET(getStruct<T>, {0x70, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldDespawnCondition
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FFortAthenaLivingWorldDespawnCondition : public MDKStruct
+class FFortAthenaLivingWorldDespawnCondition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FWorldConditionQueryDefinition)            DespawnWorldCondition                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            DespawnWorldCondition                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     TimeAsCandidateBeforeDespawn                                OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     TimeAsCandidateBeforeDespawnDeviation                       OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(bool)                                      bUseCustomDeathTag                                          OFFSET(get<bool>, {0x20, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     DeathTagContainer                                           OFFSET(get<T>, {0x28, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DeathTagContainer                                           OFFSET(getStruct<T>, {0x28, 32, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLinearEncounterPlayerParticipationData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FFortAthenaLinearEncounterPlayerParticipationData : public MDKStruct
+class FFortAthenaLinearEncounterPlayerParticipationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -946,8 +957,9 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldActorUpdateHandler
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FFortAthenaLivingWorldActorUpdateHandler : public MDKStruct
+class FFortAthenaLivingWorldActorUpdateHandler : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -957,20 +969,22 @@ public:
 
 /// Struct /Script/LagerRuntime.FortLivingWorldEventTableVariation
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FFortLivingWorldEventTableVariation : public MDKStruct
+class FFortLivingWorldEventTableVariation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TWeakObjectPtr<UDataTable*>)               EventTableVariation                                         OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FScalableFloat)                            VariationWeight                                             OFFSET(get<T>, {0x20, 40, 0, 0})
+	SMember(FScalableFloat)                            VariationWeight                                             OFFSET(getStruct<T>, {0x20, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldCategory
 /// Size: 0x00E0 (0x000008 - 0x0000E8)
 class FFortAthenaLivingWorldCategory : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
@@ -981,51 +995,54 @@ public:
 	DMember(int32_t)                                   MaxSpawnedCount                                             OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(int32_t)                                   EventInstanceMaxCount                                       OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	DMember(int32_t)                                   EventInstanceMaxSpawnedCount                                OFFSET(get<int32_t>, {0x44, 4, 0, 0})
-	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(float)                                     Priority                                                    OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(bool)                                      bExcludeFromGlobalAIBudget                                  OFFSET(get<bool>, {0x64, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         RequirePlaylistTagQuery                                     OFFSET(get<T>, {0x68, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         RequirePlaylistTagQuery                                     OFFSET(getStruct<T>, {0x68, 72, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    Encounters                                                  OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FScalableFloat)                            IsEnabled                                                   OFFSET(get<T>, {0xC0, 40, 0, 0})
+	SMember(FScalableFloat)                            IsEnabled                                                   OFFSET(getStruct<T>, {0xC0, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldTagDensityGridData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortAthenaLivingWorldTagDensityGridData : public MDKStruct
+class FFortAthenaLivingWorldTagDensityGridData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FScalableFloat)                            GridCellSize                                                OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FScalableFloat)                            GridCellSize                                                OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldCategoryTableData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FFortAthenaLivingWorldCategoryTableData : public MDKStruct
+class FFortAthenaLivingWorldCategoryTableData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UDataTable*>)               CategoryTable                                               OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FScalableFloat)                            IsEnabled                                                   OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            IsEnabled                                                   OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaActorDensityDebugInfo
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FFortAthenaActorDensityDebugInfo : public MDKStruct
+class FFortAthenaActorDensityDebugInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   ActorName                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector)                                   ActorPosition                                               OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FIntVector)                                MinCellIndex                                                OFFSET(get<T>, {0x28, 12, 0, 0})
-	SMember(FIntVector)                                MaxCellIndex                                                OFFSET(get<T>, {0x34, 12, 0, 0})
+	SMember(FString)                                   ActorName                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector)                                   ActorPosition                                               OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FIntVector)                                MinCellIndex                                                OFFSET(getStruct<T>, {0x28, 12, 0, 0})
+	SMember(FIntVector)                                MaxCellIndex                                                OFFSET(getStruct<T>, {0x34, 12, 0, 0})
 	DMember(float)                                     DensityValue                                                OFFSET(get<float>, {0x40, 4, 0, 0})
 };
 
@@ -1033,6 +1050,7 @@ public:
 /// Size: 0x0098 (0x0000C0 - 0x000158)
 class FFortAthenaLivingWorldDensityGrid : public FFortSpatialGrid
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
@@ -1041,21 +1059,23 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEncounterStage
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FFortAthenaLivingWorldEncounterStage : public MDKStruct
+class FFortAthenaLivingWorldEncounterStage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(TWeakObjectPtr<UDataTable*>)               EventTable                                                  OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FScalableFloat)                            MaximumConcurrentNumberOfAI                                 OFFSET(get<T>, {0x20, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxSpawnCountPerEventGeneration                             OFFSET(get<T>, {0x48, 40, 0, 0})
+	SMember(FScalableFloat)                            MaximumConcurrentNumberOfAI                                 OFFSET(getStruct<T>, {0x20, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxSpawnCountPerEventGeneration                             OFFSET(getStruct<T>, {0x48, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEventDespawnCondition
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortAthenaLivingWorldEventDespawnCondition : public MDKStruct
+class FFortAthenaLivingWorldEventDespawnCondition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1071,40 +1091,43 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEventTagDensityCondition
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FFortAthenaLivingWorldEventTagDensityCondition : public MDKStruct
+class FFortAthenaLivingWorldEventTagDensityCondition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FGameplayTag)                              tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              tag                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     MaxDensity                                                  OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEventDataEntry
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FFortAthenaLivingWorldEventDataEntry : public MDKStruct
+class FFortAthenaLivingWorldEventDataEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEventData*>) EventData                                            OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FScalableFloat)                            Weight                                                      OFFSET(get<T>, {0x20, 40, 0, 0})
+	SMember(FScalableFloat)                            Weight                                                      OFFSET(getStruct<T>, {0x20, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEvent
 /// Size: 0x01A0 (0x000008 - 0x0001A8)
 class FFortAthenaLivingWorldEvent : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldEventData*>) EventData                                            OFFSET(get<T>, {0x8, 32, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldEventDataEntry>) EventDatas                                               OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FScalableFloat)                            IsEnabled                                                   OFFSET(get<T>, {0x38, 40, 0, 0})
+	SMember(FScalableFloat)                            IsEnabled                                                   OFFSET(getStruct<T>, {0x38, 40, 0, 0})
 	CMember(TArray<float>)                             MaxCount                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<float>)                             MaxSpawnedCount                                             OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(TArray<float>)                             EventInstanceMaxCount                                       OFFSET(get<T>, {0x80, 16, 0, 0})
@@ -1117,7 +1140,7 @@ public:
 	DMember(bool)                                      bOnlyInSafeZone                                             OFFSET(get<bool>, {0xE8, 1, 0, 0})
 	DMember(bool)                                      bOnlyInNextSafeZone                                         OFFSET(get<bool>, {0xE9, 1, 0, 0})
 	DMember(bool)                                      bOnlyInNextSafeZoneIfStormShrinking                         OFFSET(get<bool>, {0xEA, 1, 0, 0})
-	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	CMember(EAthenaGamePhaseStep)                      ActivationGamePhaseStep                                     OFFSET(get<T>, {0x108, 1, 0, 0})
 	DMember(int32_t)                                   ActivationSafezoneIndex                                     OFFSET(get<int32_t>, {0x10C, 4, 0, 0})
 	DMember(float)                                     ActivationMinDelay                                          OFFSET(get<float>, {0x110, 4, 0, 0})
@@ -1131,16 +1154,17 @@ public:
 	DMember(float)                                     MaxDistanceToPlayer                                         OFFSET(get<float>, {0x13C, 4, 0, 0})
 	DMember(bool)                                      bCanSpawnWithoutMatchingPlayerDistance                      OFFSET(get<bool>, {0x140, 1, 0, 0})
 	DMember(float)                                     RandomActivationChance                                      OFFSET(get<float>, {0x144, 4, 0, 0})
-	SMember(FFortAthenaLivingWorldEventDespawnCondition) DespawnCondition                                          OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FFortAthenaLivingWorldEventDespawnCondition) DespawnCondition                                          OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 	CMember(TArray<FFortAthenaLivingWorldDespawnCondition>) DespawnConditions                                      OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     RequirePlaylistTags                                         OFFSET(get<T>, {0x170, 32, 0, 0})
-	SMember(FLivingWorldCalendarEventConditions)       CalendarEventConditions                                     OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FGameplayTagContainer)                     RequirePlaylistTags                                         OFFSET(getStruct<T>, {0x170, 32, 0, 0})
+	SMember(FLivingWorldCalendarEventConditions)       CalendarEventConditions                                     OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.LivingWorldCalendarEventConditions
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLivingWorldCalendarEventConditions : public MDKStruct
+class FLivingWorldCalendarEventConditions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1151,13 +1175,14 @@ public:
 
 /// Struct /Script/LagerRuntime.LivingWorldCalendarEventCondition
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FLivingWorldCalendarEventCondition : public MDKStruct
+class FLivingWorldCalendarEventCondition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     CalendarEventName                                           OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CalendarEventName                                           OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(ELivingWorldCalendarEventConditionBehavior) Behavior                                                   OFFSET(get<T>, {0x4, 1, 0, 0})
 	DMember(bool)                                      ShouldEventBeActive                                         OFFSET(get<bool>, {0x5, 1, 0, 0})
 	CMember(ELivingWorldCalendarEventConditionRatioBehavior) RatioBehavior                                         OFFSET(get<T>, {0x6, 1, 0, 0})
@@ -1167,21 +1192,23 @@ public:
 
 /// Struct /Script/LagerRuntime.PointProviderFilterEntry
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FPointProviderFilterEntry : public MDKStruct
+class FPointProviderFilterEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FGameplayTagQuery)                         ProviderFiltersTagQuery                                     OFFSET(get<T>, {0x0, 72, 0, 0})
-	SMember(FLivingWorldCalendarEventConditions)       CalendarEventConditions                                     OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FScalableFloat)                            Weight                                                      OFFSET(get<T>, {0x60, 40, 0, 0})
+	SMember(FGameplayTagQuery)                         ProviderFiltersTagQuery                                     OFFSET(getStruct<T>, {0x0, 72, 0, 0})
+	SMember(FLivingWorldCalendarEventConditions)       CalendarEventConditions                                     OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FScalableFloat)                            Weight                                                      OFFSET(getStruct<T>, {0x60, 40, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldEventDataActorSpawnDescription
 /// Size: 0x0030 (0x000100 - 0x000130)
 class FFortAthenaLivingWorldEventDataActorSpawnDescription : public FFortAthenaLivingWorldActorSpawnDescription
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
@@ -1191,28 +1218,30 @@ public:
 	DMember(bool)                                      bSharePreviousActorEQSResult                                OFFSET(get<bool>, {0x102, 1, 0, 0})
 	CMember(UEnvQuery*)                                SpawnAroundEnvironmentQuery                                 OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(TEnumAsByte<EEnvQueryRunMode>)             SpawnAroundEnvironmentQueryRunMode                          OFFSET(get<T>, {0x110, 1, 0, 0})
-	SMember(FSoftClassPath)                            SpawnAroundNavigationSourceOverride                         OFFSET(get<T>, {0x118, 24, 0, 0})
+	SMember(FSoftClassPath)                            SpawnAroundNavigationSourceOverride                         OFFSET(getStruct<T>, {0x118, 24, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortLivingWorldConfigOverride
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FFortLivingWorldConfigOverride : public MDKStruct
+class FFortLivingWorldConfigOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
 	CMember(TWeakObjectPtr<UWorld*>)                   SourceWorld                                                 OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     PlaylistTag                                                 OFFSET(get<T>, {0x20, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlaylistTag                                                 OFFSET(getStruct<T>, {0x20, 32, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldConfigData*>) LagerConfig                                         OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FFortReleaseVersion)                       StartVersion                                                OFFSET(get<T>, {0x60, 4, 0, 0})
-	SMember(FFortReleaseVersion)                       EndVersion                                                  OFFSET(get<T>, {0x64, 4, 0, 0})
+	SMember(FFortReleaseVersion)                       StartVersion                                                OFFSET(getStruct<T>, {0x60, 4, 0, 0})
+	SMember(FFortReleaseVersion)                       EndVersion                                                  OFFSET(getStruct<T>, {0x64, 4, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldPlayerTracker
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FFortAthenaLivingWorldPlayerTracker : public MDKStruct
+class FFortAthenaLivingWorldPlayerTracker : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -1224,8 +1253,9 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldPointProviderFilterRules
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FFortAthenaLivingWorldPointProviderFilterRules : public MDKStruct
+class FFortAthenaLivingWorldPointProviderFilterRules : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1234,8 +1264,9 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldPreloader
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FFortAthenaLivingWorldPreloader : public MDKStruct
+class FFortAthenaLivingWorldPreloader : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
@@ -1247,20 +1278,22 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldTaggedSpawnActionClass
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAthenaLivingWorldTaggedSpawnActionClass : public MDKStruct
+class FFortAthenaLivingWorldTaggedSpawnActionClass : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGameplayTag)                              SpawnActionTag                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              SpawnActionTag                                              OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UClass*)                                   SpawnActionClass                                            OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldCategoryTableDataList
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAthenaLivingWorldCategoryTableDataList : public MDKStruct
+class FFortAthenaLivingWorldCategoryTableDataList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1270,8 +1303,9 @@ public:
 
 /// Struct /Script/LagerRuntime.LivingWorldSpawnAroundPlayerConfiguration
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FLivingWorldSpawnAroundPlayerConfiguration : public MDKStruct
+class FLivingWorldSpawnAroundPlayerConfiguration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1283,8 +1317,9 @@ public:
 
 /// Struct /Script/LagerRuntime.LivingWorldSpawnAroundPlayerRuntimeData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLivingWorldSpawnAroundPlayerRuntimeData : public MDKStruct
+class FLivingWorldSpawnAroundPlayerRuntimeData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1295,8 +1330,9 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldPointProviderSelector
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortAthenaLivingWorldPointProviderSelector : public MDKStruct
+class FFortAthenaLivingWorldPointProviderSelector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1305,13 +1341,14 @@ public:
 
 /// Struct /Script/LagerRuntime.FortAthenaLivingWorldTagQueryToSeatMapping
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FFortAthenaLivingWorldTagQueryToSeatMapping : public MDKStruct
+class FFortAthenaLivingWorldTagQueryToSeatMapping : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0x0, 72, 0, 0})
 	DMember(int32_t)                                   SeatIndex                                                   OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 };
 

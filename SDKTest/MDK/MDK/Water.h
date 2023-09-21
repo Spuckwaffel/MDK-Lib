@@ -41,9 +41,9 @@ class UBuoyancyComponent : public UActorComponent
 
 public:
 	CMember(TArray<FSphericalPontoon>)                 Pontoons                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEnteredWaterDelegate                                      OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnExitedWaterDelegate                                       OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FBuoyancyData)                             BuoyancyData                                                OFFSET(get<T>, {0xD0, 144, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnteredWaterDelegate                                      OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnExitedWaterDelegate                                       OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FBuoyancyData)                             BuoyancyData                                                OFFSET(getStruct<T>, {0xD0, 144, 0, 0})
 	CMember(TArray<UWaterBodyComponent*>)              CurrentWaterBodyComponents                                  OFFSET(get<T>, {0x160, 16, 0, 0})
 	CMember(UPrimitiveComponent*)                      SimulatingComponent                                         OFFSET(get<T>, {0x170, 8, 0, 0})
 
@@ -190,7 +190,7 @@ class ULakeCollisionComponent : public UPrimitiveComponent
 
 public:
 	CMember(UBodySetup*)                               CachedBodySetup                                             OFFSET(get<T>, {0x568, 8, 0, 0})
-	SMember(FVector)                                   BoxExtent                                                   OFFSET(get<T>, {0x570, 24, 0, 0})
+	SMember(FVector)                                   BoxExtent                                                   OFFSET(getStruct<T>, {0x570, 24, 0, 0})
 };
 
 /// Class /Script/Water.NiagaraDataInterfaceWater
@@ -306,18 +306,18 @@ public:
 	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            OFFSET(get<T>, {0x568, 8, 0, 0})
 	DMember(float)                                     TargetWaveMaskDepth                                         OFFSET(get<float>, {0x570, 4, 0, 0})
 	DMember(float)                                     MaxWaveHeightOffset                                         OFFSET(get<float>, {0x574, 4, 0, 0})
-	SMember(FUnderwaterPostProcessSettings)            UnderwaterPostProcessSettings                               OFFSET(get<T>, {0x580, 1792, 0, 0})
-	SMember(FWaterCurveSettings)                       CurveSettings                                               OFFSET(get<T>, {0xC80, 32, 0, 0})
+	SMember(FUnderwaterPostProcessSettings)            UnderwaterPostProcessSettings                               OFFSET(getStruct<T>, {0x580, 1792, 0, 0})
+	SMember(FWaterCurveSettings)                       CurveSettings                                               OFFSET(getStruct<T>, {0xC80, 32, 0, 0})
 	CMember(UMaterialInterface*)                       WaterMaterial                                               OFFSET(get<T>, {0xCA0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       WaterHLODMaterial                                           OFFSET(get<T>, {0xCA8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       WaterStaticMeshMaterial                                     OFFSET(get<T>, {0xCB0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       UnderwaterPostProcessMaterial                               OFFSET(get<T>, {0xCB8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       WaterInfoMaterial                                           OFFSET(get<T>, {0xCC0, 8, 0, 0})
-	SMember(FWaterBodyHeightmapSettings)               WaterHeightmapSettings                                      OFFSET(get<T>, {0xCC8, 128, 0, 0})
+	SMember(FWaterBodyHeightmapSettings)               WaterHeightmapSettings                                      OFFSET(getStruct<T>, {0xCC8, 128, 0, 0})
 	DMember(float)                                     ShapeDilation                                               OFFSET(get<float>, {0xD48, 4, 0, 0})
 	DMember(float)                                     CollisionHeightOffset                                       OFFSET(get<float>, {0xD4C, 4, 0, 0})
 	DMember(bool)                                      bAffectsLandscape                                           OFFSET(get<bool>, {0xD50, 1, 0, 0})
-	SMember(FWaterBodyStaticMeshSettings)              StaticMeshSettings                                          OFFSET(get<T>, {0xD58, 16, 0, 0})
+	SMember(FWaterBodyStaticMeshSettings)              StaticMeshSettings                                          OFFSET(getStruct<T>, {0xD58, 16, 0, 0})
 	DMember(int32_t)                                   WaterBodyIndex                                              OFFSET(get<int32_t>, {0xD68, 4, 0, 0})
 	CMember(UStaticMesh*)                              WaterMeshOverride                                           OFFSET(get<T>, {0xD70, 8, 0, 0})
 	DMember(bool)                                      bAlwaysGenerateWaterMeshTiles                               OFFSET(get<bool>, {0xD78, 1, 0, 0})
@@ -332,7 +332,7 @@ public:
 	CMember(TWeakObjectPtr<ALandscapeProxy*>)          Landscape                                                   OFFSET(get<T>, {0xDC8, 8, 0, 0})
 	CMember(TWeakObjectPtr<AWaterZone*>)               OwningWaterZone                                             OFFSET(get<T>, {0xDD0, 32, 0, 0})
 	CMember(TWeakObjectPtr<AWaterZone*>)               WaterZoneOverride                                           OFFSET(get<T>, {0xDF0, 32, 0, 0})
-	SMember(FPostProcessSettings)                      CurrentPostProcessSettings                                  OFFSET(get<T>, {0xE10, 1760, 0, 0})
+	SMember(FPostProcessSettings)                      CurrentPostProcessSettings                                  OFFSET(getStruct<T>, {0xE10, 1760, 0, 0})
 	CMember(UClass*)                                   WaterNavAreaClass                                           OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	DMember(double)                                    FixedWaterDepth                                             OFFSET(get<double>, {0x14F8, 8, 0, 0})
 
@@ -529,9 +529,9 @@ class UWaterBodyOceanComponent : public UWaterBodyComponent
 public:
 	CMember(TArray<UOceanBoxCollisionComponent*>)      CollisionBoxes                                              OFFSET(get<T>, {0x1500, 16, 0, 0})
 	CMember(TArray<UOceanCollisionComponent*>)         CollisionHullSets                                           OFFSET(get<T>, {0x1510, 16, 0, 0})
-	SMember(FVector)                                   CollisionExtents                                            OFFSET(get<T>, {0x1520, 24, 0, 0})
-	SMember(FVector2D)                                 OceanExtents                                                OFFSET(get<T>, {0x1538, 16, 0, 0})
-	SMember(FVector2D)                                 SavedZoneLocation                                           OFFSET(get<T>, {0x1548, 16, 0, 0})
+	SMember(FVector)                                   CollisionExtents                                            OFFSET(getStruct<T>, {0x1520, 24, 0, 0})
+	SMember(FVector2D)                                 OceanExtents                                                OFFSET(getStruct<T>, {0x1538, 16, 0, 0})
+	SMember(FVector2D)                                 SavedZoneLocation                                           OFFSET(getStruct<T>, {0x1548, 16, 0, 0})
 	DMember(float)                                     HeightOffset                                                OFFSET(get<float>, {0x1558, 4, 0, 0})
 };
 
@@ -593,8 +593,8 @@ public:
 	CMember(UMaterialInterface*)                       FarDistanceMaterial                                         OFFSET(get<T>, {0x5A8, 8, 0, 0})
 	DMember(float)                                     FarDistanceMeshExtent                                       OFFSET(get<float>, {0x5B0, 4, 0, 0})
 	DMember(float)                                     TileSize                                                    OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	SMember(FIntPoint)                                 ExtentInTiles                                               OFFSET(get<T>, {0x5B8, 8, 0, 0})
-	SMember(FIntPoint)                                 LocalTessellationExtentInTiles                              OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	SMember(FIntPoint)                                 ExtentInTiles                                               OFFSET(getStruct<T>, {0x5B8, 8, 0, 0})
+	SMember(FIntPoint)                                 LocalTessellationExtentInTiles                              OFFSET(getStruct<T>, {0x5C0, 8, 0, 0})
 	CMember(TSet<UMaterialInterface*>)                 UsedMaterials                                               OFFSET(get<T>, {0x670, 80, 0, 0})
 	DMember(bool)                                      bUseFarMeshWithoutOcean                                     OFFSET(get<bool>, {0x6C0, 1, 0, 0})
 	DMember(int32_t)                                   TessellationFactor                                          OFFSET(get<int32_t>, {0x6D0, 4, 0, 0})
@@ -617,7 +617,7 @@ public:
 	CMember(TEnumAsByte<ECollisionChannel>)            CollisionChannelForWaterTraces                              OFFSET(get<T>, {0x30, 1, 0, 0})
 	CMember(TWeakObjectPtr<UMaterialParameterCollection*>) MaterialParameterCollection                             OFFSET(get<T>, {0x38, 32, 0, 0})
 	DMember(float)                                     WaterBodyIconWorldZOffset                                   OFFSET(get<float>, {0x58, 4, 0, 0})
-	SMember(FName)                                     DefaultWaterCollisionProfileName                            OFFSET(get<T>, {0x5C, 4, 0, 0})
+	SMember(FName)                                     DefaultWaterCollisionProfileName                            OFFSET(getStruct<T>, {0x5C, 4, 0, 0})
 	CMember(TWeakObjectPtr<UMaterialInterface*>)       DefaultWaterInfoMaterial                                    OFFSET(get<T>, {0x60, 32, 0, 0})
 	CMember(UClass*)                                   WaterBodyRiverComponentClass                                OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UClass*)                                   WaterBodyLakeComponentClass                                 OFFSET(get<T>, {0x88, 8, 0, 0})
@@ -634,8 +634,8 @@ class UWaterSplineComponent : public USplineComponent
 	static inline constexpr uint64_t __MDKClassSize = 1680;
 
 public:
-	SMember(FWaterSplineCurveDefaults)                 WaterSplineDefaults                                         OFFSET(get<T>, {0x668, 16, 0, 0})
-	SMember(FWaterSplineCurveDefaults)                 PreviousWaterSplineDefaults                                 OFFSET(get<T>, {0x678, 16, 0, 0})
+	SMember(FWaterSplineCurveDefaults)                 WaterSplineDefaults                                         OFFSET(getStruct<T>, {0x668, 16, 0, 0})
+	SMember(FWaterSplineCurveDefaults)                 PreviousWaterSplineDefaults                                 OFFSET(getStruct<T>, {0x678, 16, 0, 0})
 
 
 	/// Functions
@@ -651,11 +651,11 @@ class UWaterSplineMetadata : public USplineMetadata
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FInterpCurveFloat)                         Depth                                                       OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FInterpCurveFloat)                         WaterVelocityScalar                                         OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FInterpCurveFloat)                         RiverWidth                                                  OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FInterpCurveFloat)                         AudioIntensity                                              OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FInterpCurveVector)                        WaterVelocity                                               OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FInterpCurveFloat)                         Depth                                                       OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FInterpCurveFloat)                         WaterVelocityScalar                                         OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FInterpCurveFloat)                         RiverWidth                                                  OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FInterpCurveFloat)                         AudioIntensity                                              OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FInterpCurveVector)                        WaterVelocity                                               OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Class /Script/Water.WaterSubsystem
@@ -667,8 +667,8 @@ class UWaterSubsystem : public UTickableWorldSubsystem
 
 public:
 	CMember(ABuoyancyManager*)                         BuoyancyManager                                             OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCameraUnderwaterStateChanged                              OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnWaterScalabilityChanged                                   OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCameraUnderwaterStateChanged                              OFFSET(getStruct<T>, {0x80, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnWaterScalabilityChanged                                   OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 	CMember(UStaticMesh*)                              DefaultRiverMesh                                            OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(UStaticMesh*)                              DefaultLakeMesh                                             OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(UMaterialParameterCollection*)             MaterialParameterCollection                                 OFFSET(get<T>, {0xD8, 8, 0, 0})
@@ -737,40 +737,41 @@ class AWaterZone : public AActor
 public:
 	CMember(UTextureRenderTarget2D*)                   WaterInfoTexture                                            OFFSET(get<T>, {0x290, 8, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    OwnedWaterBodies                                            OFFSET(get<T>, {0x298, 16, 0, 0})
-	SMember(FIntPoint)                                 RenderTargetResolution                                      OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FIntPoint)                                 RenderTargetResolution                                      OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UWaterMeshComponent*)                      WaterMesh                                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FVector2D)                                 ZoneExtent                                                  OFFSET(get<T>, {0x2B8, 16, 0, 0})
+	SMember(FVector2D)                                 ZoneExtent                                                  OFFSET(getStruct<T>, {0x2B8, 16, 0, 0})
 	DMember(float)                                     CaptureZOffset                                              OFFSET(get<float>, {0x2C8, 4, 0, 0})
 	DMember(bool)                                      bHalfPrecisionTexture                                       OFFSET(get<bool>, {0x2CC, 1, 0, 0})
 	DMember(int32_t)                                   VelocityBlurRadius                                          OFFSET(get<int32_t>, {0x2D0, 4, 0, 0})
 	DMember(int32_t)                                   OverlapPriority                                             OFFSET(get<int32_t>, {0x2D4, 4, 0, 0})
 	DMember(bool)                                      bEnableLocalOnlyTessellation                                OFFSET(get<bool>, {0x2D8, 1, 0, 0})
-	SMember(FVector)                                   LocalTessellationExtent                                     OFFSET(get<T>, {0x2E0, 24, 0, 0})
+	SMember(FVector)                                   LocalTessellationExtent                                     OFFSET(getStruct<T>, {0x2E0, 24, 0, 0})
 };
 
 /// Struct /Script/Water.SphericalPontoon
 /// Size: 0x02D0 (0x000000 - 0x0002D0)
-class FSphericalPontoon : public MDKStruct
+class FSphericalPontoon : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FName)                                     CenterSocket                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   RelativeLocation                                            OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     CenterSocket                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FVector)                                   RelativeLocation                                            OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(bool)                                      bFXEnabled                                                  OFFSET(get<bool>, {0x24, 1, 0, 0})
-	SMember(FVector)                                   LocalForce                                                  OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FVector)                                   CenterLocation                                              OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FQuat)                                     SocketRotation                                              OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FVector)                                   Offset                                                      OFFSET(get<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   LocalForce                                                  OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   CenterLocation                                              OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FQuat)                                     SocketRotation                                              OFFSET(getStruct<T>, {0x60, 32, 0, 0})
+	SMember(FVector)                                   Offset                                                      OFFSET(getStruct<T>, {0x80, 24, 0, 0})
 	DMember(float)                                     WaterHeight                                                 OFFSET(get<float>, {0x9C, 4, 0, 0})
 	DMember(float)                                     WaterDepth                                                  OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(float)                                     ImmersionDepth                                              OFFSET(get<float>, {0xA4, 4, 0, 0})
-	SMember(FVector)                                   WaterPlaneLocation                                          OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FVector)                                   WaterPlaneNormal                                            OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FVector)                                   WaterSurfacePosition                                        OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FVector)                                   WaterVelocity                                               OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FVector)                                   WaterPlaneLocation                                          OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   WaterPlaneNormal                                            OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FVector)                                   WaterSurfacePosition                                        OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FVector)                                   WaterVelocity                                               OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	DMember(int32_t)                                   WaterBodyIndex                                              OFFSET(get<int32_t>, {0x108, 4, 0, 0})
 	DMember(bool)                                      bIsInWater                                                  OFFSET(get<bool>, {0x10C, 1, 0, 0})
 	CMember(UWaterBodyComponent*)                      CurrentWaterBodyComponent                                   OFFSET(get<T>, {0x2B8, 8, 0, 0})
@@ -778,8 +779,9 @@ public:
 
 /// Struct /Script/Water.BuoyancyData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FBuoyancyData : public MDKStruct
+class FBuoyancyData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -808,7 +810,7 @@ public:
 	DMember(bool)                                      bAlwaysAllowLateralPush                                     OFFSET(get<bool>, {0x60, 1, 0, 0})
 	DMember(bool)                                      bAllowCurrentWhenMovingFastUpstream                         OFFSET(get<bool>, {0x61, 1, 0, 0})
 	DMember(bool)                                      bApplyDownstreamAngularRotation                             OFFSET(get<bool>, {0x62, 1, 0, 0})
-	SMember(FVector)                                   DownstreamAxisOfRotation                                    OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FVector)                                   DownstreamAxisOfRotation                                    OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	DMember(float)                                     DownstreamRotationStrength                                  OFFSET(get<float>, {0x80, 4, 0, 0})
 	DMember(float)                                     DownstreamRotationStiffness                                 OFFSET(get<float>, {0x84, 4, 0, 0})
 	DMember(float)                                     DownstreamRotationAngularDamping                            OFFSET(get<float>, {0x88, 4, 0, 0})
@@ -817,8 +819,9 @@ public:
 
 /// Struct /Script/Water.WaterBodyStaticMeshSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FWaterBodyStaticMeshSettings : public MDKStruct
+class FWaterBodyStaticMeshSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -830,8 +833,9 @@ public:
 
 /// Struct /Script/Water.WaterBodyWeightmapSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FWaterBodyWeightmapSettings : public MDKStruct
+class FWaterBodyWeightmapSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -847,8 +851,9 @@ public:
 
 /// Struct /Script/Water.WaterCurveSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FWaterCurveSettings : public MDKStruct
+class FWaterCurveSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -862,8 +867,9 @@ public:
 
 /// Struct /Script/Water.GerstnerWave
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FGerstnerWave : public MDKStruct
+class FGerstnerWave : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -871,8 +877,8 @@ public:
 	DMember(float)                                     WaveLength                                                  OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     Amplitude                                                   OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     Steepness                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector2D)                                 WaveVector                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector2D)                                 WaveVector                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(float)                                     WaveSpeed                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     WKA                                                         OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Q                                                           OFFSET(get<float>, {0x40, 4, 0, 0})
@@ -881,8 +887,9 @@ public:
 
 /// Struct /Script/Water.GerstnerWaveOctave
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FGerstnerWaveOctave : public MDKStruct
+class FGerstnerWaveOctave : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -896,8 +903,9 @@ public:
 
 /// Struct /Script/Water.UnderwaterPostProcessSettings
 /// Size: 0x0700 (0x000000 - 0x000700)
-class FUnderwaterPostProcessSettings : public MDKStruct
+class FUnderwaterPostProcessSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1792;
 
@@ -906,44 +914,47 @@ public:
 	DMember(float)                                     Priority                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     BlendRadius                                                 OFFSET(get<float>, {0x8, 4, 0, 0})
 	DMember(float)                                     BlendWeight                                                 OFFSET(get<float>, {0xC, 4, 0, 0})
-	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(get<T>, {0x10, 1760, 0, 0})
+	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(getStruct<T>, {0x10, 1760, 0, 0})
 	CMember(UMaterialInterface*)                       UnderwaterPostProcessMaterial                               OFFSET(get<T>, {0x6F0, 8, 0, 0})
 };
 
 /// Struct /Script/Water.WaterBodyHeightmapSettings
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FWaterBodyHeightmapSettings : public MDKStruct
+class FWaterBodyHeightmapSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(EWaterBrushBlendType)                      BlendMode                                                   OFFSET(get<T>, {0x0, 1, 0, 0})
 	DMember(bool)                                      bInvertShape                                                OFFSET(get<bool>, {0x1, 1, 0, 0})
-	SMember(FWaterFalloffSettings)                     FalloffSettings                                             OFFSET(get<T>, {0x4, 20, 0, 0})
-	SMember(FWaterBrushEffects)                        Effects                                                     OFFSET(get<T>, {0x18, 96, 0, 0})
+	SMember(FWaterFalloffSettings)                     FalloffSettings                                             OFFSET(getStruct<T>, {0x4, 20, 0, 0})
+	SMember(FWaterBrushEffects)                        Effects                                                     OFFSET(getStruct<T>, {0x18, 96, 0, 0})
 	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0x78, 4, 0, 0})
 };
 
 /// Struct /Script/Water.WaterBrushEffects
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FWaterBrushEffects : public MDKStruct
+class FWaterBrushEffects : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FWaterBrushEffectBlurring)                 Blurring                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FWaterBrushEffectCurlNoise)                CurlNoise                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FWaterBrushEffectDisplacement)             displacement                                                OFFSET(get<T>, {0x18, 40, 0, 0})
-	SMember(FWaterBrushEffectSmoothBlending)           SmoothBlending                                              OFFSET(get<T>, {0x40, 8, 0, 0})
-	SMember(FWaterBrushEffectTerracing)                Terracing                                                   OFFSET(get<T>, {0x48, 20, 0, 0})
+	SMember(FWaterBrushEffectBlurring)                 Blurring                                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FWaterBrushEffectCurlNoise)                CurlNoise                                                   OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FWaterBrushEffectDisplacement)             displacement                                                OFFSET(getStruct<T>, {0x18, 40, 0, 0})
+	SMember(FWaterBrushEffectSmoothBlending)           SmoothBlending                                              OFFSET(getStruct<T>, {0x40, 8, 0, 0})
+	SMember(FWaterBrushEffectTerracing)                Terracing                                                   OFFSET(getStruct<T>, {0x48, 20, 0, 0})
 };
 
 /// Struct /Script/Water.WaterBrushEffectTerracing
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FWaterBrushEffectTerracing : public MDKStruct
+class FWaterBrushEffectTerracing : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -957,8 +968,9 @@ public:
 
 /// Struct /Script/Water.WaterBrushEffectSmoothBlending
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FWaterBrushEffectSmoothBlending : public MDKStruct
+class FWaterBrushEffectSmoothBlending : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -969,8 +981,9 @@ public:
 
 /// Struct /Script/Water.WaterBrushEffectDisplacement
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FWaterBrushEffectDisplacement : public MDKStruct
+class FWaterBrushEffectDisplacement : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -979,14 +992,15 @@ public:
 	DMember(float)                                     DisplacementTiling                                          OFFSET(get<float>, {0x4, 4, 0, 0})
 	CMember(UTexture2D*)                               Texture                                                     OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(float)                                     Midpoint                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FLinearColor)                              Channel                                                     OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FLinearColor)                              Channel                                                     OFFSET(getStruct<T>, {0x14, 16, 0, 0})
 	DMember(float)                                     WeightmapInfluence                                          OFFSET(get<float>, {0x24, 4, 0, 0})
 };
 
 /// Struct /Script/Water.WaterBrushEffectCurlNoise
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FWaterBrushEffectCurlNoise : public MDKStruct
+class FWaterBrushEffectCurlNoise : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -999,8 +1013,9 @@ public:
 
 /// Struct /Script/Water.WaterBrushEffectBlurring
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FWaterBrushEffectBlurring : public MDKStruct
+class FWaterBrushEffectBlurring : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1011,8 +1026,9 @@ public:
 
 /// Struct /Script/Water.WaterFalloffSettings
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FWaterFalloffSettings : public MDKStruct
+class FWaterFalloffSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -1026,8 +1042,9 @@ public:
 
 /// Struct /Script/Water.WaterBrushEffectCurves
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FWaterBrushEffectCurves : public MDKStruct
+class FWaterBrushEffectCurves : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1041,8 +1058,9 @@ public:
 
 /// Struct /Script/Water.WaterSplineCurveDefaults
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FWaterSplineCurveDefaults : public MDKStruct
+class FWaterSplineCurveDefaults : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

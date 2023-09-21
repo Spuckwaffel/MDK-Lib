@@ -127,7 +127,7 @@ class USpeechBubbleWidget_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BubbleText                                                  OFFSET(get<T>, {0x2D8, 8, 0, 0})
 
 
@@ -166,7 +166,7 @@ class UFriendNotification_C : public UFortUIFriendNotification
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x148, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x148, 8, 0, 0})
 
 
 	/// Functions
@@ -757,7 +757,7 @@ class Uwindowchromebuttons_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         FadeOut                                                     OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         FadeIn                                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UWindowTitleBarArea*)                      WindowTitleBarArea                                          OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -780,7 +780,7 @@ class USocialPanelTab_C : public UFortSocialTab
 	static inline constexpr uint64_t __MDKClassSize = 5448;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1520, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1520, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Unselected                                                  OFFSET(get<T>, {0x1528, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnFriendsOnlineUpdated                                      OFFSET(get<T>, {0x1530, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1538, 8, 0, 0})
@@ -880,7 +880,7 @@ class UOptionsMenuHeader_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 765;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBoxContainer                                            OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(USpacer*)                                  SpacerBottom                                                OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -986,7 +986,7 @@ class ULightbox_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 872;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         FadeOut                                                     OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         FadeIn                                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UBorder*)                                  Border_Darken                                               OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -997,11 +997,11 @@ public:
 	CMember(UCommonVisibilityWidgetLegacy*)            WindowButtons                                               OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UOverlay*)                                 WindowsOverlay                                              OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(Uwindowchromebuttons_C*)                   WindowTitleBar                                              OFFSET(get<T>, {0x320, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  IntroEnded                                                  OFFSET(get<T>, {0x328, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OutroEnded                                                  OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  IntroEnded                                                  OFFSET(getStruct<T>, {0x328, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OutroEnded                                                  OFFSET(getStruct<T>, {0x338, 16, 0, 0})
 	DMember(bool)                                      ShowWindowControlButtons                                    OFFSET(get<bool>, {0x348, 1, 0, 0})
 	DMember(double)                                    DimAmount                                                   OFFSET(get<double>, {0x350, 8, 0, 0})
-	SMember(FLinearColor)                              BackgroundColor                                             OFFSET(get<T>, {0x358, 16, 0, 0})
+	SMember(FLinearColor)                              BackgroundColor                                             OFFSET(getStruct<T>, {0x358, 16, 0, 0})
 
 
 	/// Functions
@@ -1059,15 +1059,15 @@ class UPlayerBanner_C : public UFortAccountWidgetBase
 	static inline constexpr uint64_t __MDKClassSize = 881;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x308, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x308, 8, 0, 0})
 	CMember(UImage*)                                   BannerImage                                                 OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UCommonLoadGuard*)                         LoadGuard                                                   OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UImage*)                                   SurroundImage                                               OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UCommonLoadGuard*)                         SurroundLoadGuard                                           OFFSET(get<T>, {0x328, 8, 0, 0})
 	DMember(bool)                                      bUseLargeTexture                                            OFFSET(get<bool>, {0x330, 1, 0, 0})
-	SMember(FUniqueNetIdRepl)                          OwnerNetId                                                  OFFSET(get<T>, {0x338, 48, 0, 0})
-	SMember(FName)                                     CurrentBannerColorId                                        OFFSET(get<T>, {0x368, 4, 0, 0})
-	SMember(FName)                                     CurrentBannerIconId                                         OFFSET(get<T>, {0x36C, 4, 0, 0})
+	SMember(FUniqueNetIdRepl)                          OwnerNetId                                                  OFFSET(getStruct<T>, {0x338, 48, 0, 0})
+	SMember(FName)                                     CurrentBannerColorId                                        OFFSET(getStruct<T>, {0x368, 4, 0, 0})
+	SMember(FName)                                     CurrentBannerIconId                                         OFFSET(getStruct<T>, {0x36C, 4, 0, 0})
 	DMember(bool)                                      SurroundEnabled                                             OFFSET(get<bool>, {0x370, 1, 0, 0})
 
 
@@ -1168,7 +1168,7 @@ class UNormalBangWrapper_C : public UFortBangWrapper_NUI
 	static inline constexpr uint64_t __MDKClassSize = 874;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2E8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         IntroSuperBang                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         TutorialGlow                                                OFFSET(get<T>, {0x300, 8, 0, 0})
@@ -1277,7 +1277,7 @@ class UProgressModalWidget_C : public UFortProgressModal
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x660, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x660, 8, 0, 0})
 	CMember(ULightbox_C*)                              Lightbox                                                    OFFSET(get<T>, {0x668, 8, 0, 0})
 
 
@@ -1338,7 +1338,7 @@ class UCloseButton_C : public UBacchusCloseButton
 	static inline constexpr uint64_t __MDKClassSize = 5449;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Unhover                                                     OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Pressed                                                     OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover                                                       OFFSET(get<T>, {0x14E8, 8, 0, 0})
@@ -1347,10 +1347,10 @@ public:
 	CMember(UImage*)                                   CloseIcon                                                   OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Control                                             OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ButtonAction                                           OFFSET(get<T>, {0x1510, 8, 0, 0})
-	SMember(FText)                                     Button_Description                                          OFFSET(get<T>, {0x1518, 24, 0, 0})
+	SMember(FText)                                     Button_Description                                          OFFSET(getStruct<T>, {0x1518, 24, 0, 0})
 	DMember(bool)                                      FontSizeOveride                                             OFFSET(get<bool>, {0x1530, 1, 0, 0})
 	DMember(int32_t)                                   FontSize                                                    OFFSET(get<int32_t>, {0x1534, 4, 0, 0})
-	SMember(FMargin)                                   Padding_Overide                                             OFFSET(get<T>, {0x1538, 16, 0, 0})
+	SMember(FMargin)                                   Padding_Overide                                             OFFSET(getStruct<T>, {0x1538, 16, 0, 0})
 	DMember(bool)                                      PaddingOveride                                              OFFSET(get<bool>, {0x1548, 1, 0, 0})
 
 
@@ -1387,17 +1387,17 @@ class USoloButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5418;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Pressed                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover                                                       OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UBorder*)                                  Border_Container                                            OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UImage*)                                   ButtonBacking                                               OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Control                                             OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ButtonAction                                           OFFSET(get<T>, {0x14F0, 8, 0, 0})
-	SMember(FText)                                     Button_Description                                          OFFSET(get<T>, {0x14F8, 24, 0, 0})
+	SMember(FText)                                     Button_Description                                          OFFSET(getStruct<T>, {0x14F8, 24, 0, 0})
 	DMember(bool)                                      FontSizeOveride                                             OFFSET(get<bool>, {0x1510, 1, 0, 0})
 	DMember(int32_t)                                   FontSize                                                    OFFSET(get<int32_t>, {0x1514, 4, 0, 0})
-	SMember(FMargin)                                   Padding_Overide                                             OFFSET(get<T>, {0x1518, 16, 0, 0})
+	SMember(FMargin)                                   Padding_Overide                                             OFFSET(getStruct<T>, {0x1518, 16, 0, 0})
 	DMember(bool)                                      PaddingOveride                                              OFFSET(get<bool>, {0x1528, 1, 0, 0})
 	DMember(bool)                                      IsDisabled                                                  OFFSET(get<bool>, {0x1529, 1, 0, 0})
 
@@ -1443,7 +1443,7 @@ class USocialPanelWeGameFriendButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5336;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_LinkPrompt                                             OFFSET(get<T>, {0x14D0, 8, 0, 0})
 
@@ -1515,7 +1515,7 @@ class UTooltip_Basic_S_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UImage*)                                   _hr_                                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UHorizontalBox*)                           Body_HBox                                                   OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           Header_HBox                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -1523,8 +1523,8 @@ public:
 	CMember(USpacer*)                                  Spacer_Icon                                                 OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_Body                                                   OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_Header                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
-	SMember(FText)                                     BodyText                                                    OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FText)                                     HeaderText                                                  OFFSET(get<T>, {0x328, 24, 0, 0})
+	SMember(FText)                                     BodyText                                                    OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(FText)                                     HeaderText                                                  OFFSET(getStruct<T>, {0x328, 24, 0, 0})
 	CMember(USlateBrushAsset*)                         Icon_Brush                                                  OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(UClass*)                                   Body_Style                                                  OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UClass*)                                   Header_Style                                                OFFSET(get<T>, {0x350, 8, 0, 0})
@@ -1561,7 +1561,7 @@ class UTooltip_Custom_S_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UImage*)                                   _hr_                                                        OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           Body_HBox                                                   OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UNamedSlot*)                               Content_Slot                                                OFFSET(get<T>, {0x2C0, 8, 0, 0})
@@ -1570,7 +1570,7 @@ public:
 	CMember(USpacer*)                                  Spacer_Header                                               OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(USpacer*)                                  Spacer_Icon                                                 OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UTextBlock*)                               Text_Header                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	SMember(FText)                                     HeaderText                                                  OFFSET(get<T>, {0x2F0, 24, 0, 0})
+	SMember(FText)                                     HeaderText                                                  OFFSET(getStruct<T>, {0x2F0, 24, 0, 0})
 	CMember(USlateBrushAsset*)                         Icon_Brush                                                  OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UUserWidget*)                              ContentWidget                                               OFFSET(get<T>, {0x310, 8, 0, 0})
 
@@ -1606,11 +1606,11 @@ public:
 	CMember(UImage*)                                   Image2                                                      OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UImage*)                                   Image3                                                      OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UImage*)                                   Image4                                                      OFFSET(get<T>, {0x318, 8, 0, 0})
-	SMember(FText)                                     HeaderText                                                  OFFSET(get<T>, {0x320, 24, 0, 0})
-	SMember(FText)                                     CommanderXPText                                             OFFSET(get<T>, {0x338, 24, 0, 0})
-	SMember(FText)                                     BoostXPText                                                 OFFSET(get<T>, {0x350, 24, 0, 0})
-	SMember(FText)                                     RestedXPText                                                OFFSET(get<T>, {0x368, 24, 0, 0})
-	SMember(FText)                                     BodyText                                                    OFFSET(get<T>, {0x380, 24, 0, 0})
+	SMember(FText)                                     HeaderText                                                  OFFSET(getStruct<T>, {0x320, 24, 0, 0})
+	SMember(FText)                                     CommanderXPText                                             OFFSET(getStruct<T>, {0x338, 24, 0, 0})
+	SMember(FText)                                     BoostXPText                                                 OFFSET(getStruct<T>, {0x350, 24, 0, 0})
+	SMember(FText)                                     RestedXPText                                                OFFSET(getStruct<T>, {0x368, 24, 0, 0})
+	SMember(FText)                                     BodyText                                                    OFFSET(getStruct<T>, {0x380, 24, 0, 0})
 
 
 	/// Functions
@@ -1654,7 +1654,7 @@ class UTextRotatorWhite_C : public UCommonRotator
 	static inline constexpr uint64_t __MDKClassSize = 5344;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UCommonBorder*)                            MainBorder                                                  OFFSET(get<T>, {0x14D8, 8, 0, 0})
 
 
@@ -1683,22 +1683,22 @@ class UIconTabButton_Legacy_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5680;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UNormalBangWrapper_C*)                     BangWrapper                                                 OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CenterButtonTextWidget                                      OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           ContentHB                                                   OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UImage*)                                   LeftSideImage                                               OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBoxShell                                                OFFSET(get<T>, {0x14E8, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x14F0, 24, 0, 0})
-	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(get<T>, {0x1510, 192, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(getStruct<T>, {0x14F0, 24, 0, 0})
+	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(getStruct<T>, {0x1510, 192, 0, 0})
 	DMember(bool)                                      UseText                                                     OFFSET(get<bool>, {0x15D0, 1, 0, 0})
-	SMember(FLinearColor)                              SelectedIconTint                                            OFFSET(get<T>, {0x15D4, 16, 0, 0})
-	SMember(FLinearColor)                              DeselectedIconTint                                          OFFSET(get<T>, {0x15E4, 16, 0, 0})
-	SMember(FLinearColor)                              HoveredIconTint                                             OFFSET(get<T>, {0x15F4, 16, 0, 0})
+	SMember(FLinearColor)                              SelectedIconTint                                            OFFSET(getStruct<T>, {0x15D4, 16, 0, 0})
+	SMember(FLinearColor)                              DeselectedIconTint                                          OFFSET(getStruct<T>, {0x15E4, 16, 0, 0})
+	SMember(FLinearColor)                              HoveredIconTint                                             OFFSET(getStruct<T>, {0x15F4, 16, 0, 0})
 	DMember(bool)                                      bBangEnabled                                                OFFSET(get<bool>, {0x1604, 1, 0, 0})
 	DMember(bool)                                      ChangeIconColorWhenSelected                                 OFFSET(get<bool>, {0x1605, 1, 0, 0})
-	SMember(FSlateColor)                               SelectedIconColor                                           OFFSET(get<T>, {0x1608, 20, 0, 0})
-	SMember(FSlateColor)                               UnSelectedIconColor                                         OFFSET(get<T>, {0x161C, 20, 0, 0})
+	SMember(FSlateColor)                               SelectedIconColor                                           OFFSET(getStruct<T>, {0x1608, 20, 0, 0})
+	SMember(FSlateColor)                               UnSelectedIconColor                                         OFFSET(getStruct<T>, {0x161C, 20, 0, 0})
 
 
 	/// Functions
@@ -1748,15 +1748,15 @@ class UPanelButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5392;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UNamedSlot*)                               ContentSlot                                                 OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UClass*)                                   ControllerInputStyle                                        OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UClass*)                                   MouseKeyboardStyle                                          OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         InputActionHorizontalAlignment                              OFFSET(get<T>, {0x14E0, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           InputActionVerticalAlignment                                OFFSET(get<T>, {0x14E1, 1, 0, 0})
-	SMember(FVector2D)                                 InputActionRenderTranslation                                OFFSET(get<T>, {0x14E8, 16, 0, 0})
+	SMember(FVector2D)                                 InputActionRenderTranslation                                OFFSET(getStruct<T>, {0x14E8, 16, 0, 0})
 	DMember(bool)                                      InputActionUseRimBrush                                      OFFSET(get<bool>, {0x14F8, 1, 0, 0})
-	SMember(FVector2D)                                 InputActionRimBrushSize                                     OFFSET(get<T>, {0x1500, 16, 0, 0})
+	SMember(FVector2D)                                 InputActionRimBrushSize                                     OFFSET(getStruct<T>, {0x1500, 16, 0, 0})
 
 
 	/// Functions
@@ -1796,7 +1796,7 @@ class UHorizontalTabList_Legacy_C : public UFortTabListWidgetBase_Legacy
 	static inline constexpr uint64_t __MDKClassSize = 1296;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x470, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x470, 8, 0, 0})
 	CMember(UImage*)                                   ImageGamepadKeyPrompt                                       OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UImage*)                                   ImageHorizRule                                              OFFSET(get<T>, {0x480, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      NextTabAction                                               OFFSET(get<T>, {0x488, 8, 0, 0})
@@ -1805,7 +1805,7 @@ public:
 	CMember(UCommonActionWidget*)                      PreviousTabAction                                           OFFSET(get<T>, {0x4A0, 8, 0, 0})
 	CMember(USizeBox*)                                 PreviousTabActionWrapper                                    OFFSET(get<T>, {0x4A8, 8, 0, 0})
 	CMember(UHorizontalBox*)                           TabButtonBox                                                OFFSET(get<T>, {0x4B0, 8, 0, 0})
-	SMember(FMargin)                                   TabButtonPadding                                            OFFSET(get<T>, {0x4B8, 16, 0, 0})
+	SMember(FMargin)                                   TabButtonPadding                                            OFFSET(getStruct<T>, {0x4B8, 16, 0, 0})
 	CMember(UClass*)                                   ButtonStyle                                                 OFFSET(get<T>, {0x4C8, 8, 0, 0})
 	DMember(bool)                                      UseButtonStyle                                              OFFSET(get<bool>, {0x4D0, 1, 0, 0})
 	DMember(bool)                                      ShowGamePadInputPrompt                                      OFFSET(get<bool>, {0x4D1, 1, 0, 0})
@@ -1813,7 +1813,7 @@ public:
 	DMember(int32_t)                                   MinTabWidth                                                 OFFSET(get<int32_t>, {0x4D4, 4, 0, 0})
 	DMember(bool)                                      ForceTabLabelsCollapsed                                     OFFSET(get<bool>, {0x4D8, 1, 0, 0})
 	DMember(bool)                                      ForceTabIconsCollapsed                                      OFFSET(get<bool>, {0x4D9, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  RefreshGamepad                                              OFFSET(get<T>, {0x4E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  RefreshGamepad                                              OFFSET(getStruct<T>, {0x4E0, 16, 0, 0})
 	CMember(UClass*)                                   DebugButtonTypeDisplay                                      OFFSET(get<T>, {0x4F0, 8, 0, 0})
 	DMember(int32_t)                                   DebugTabCount                                               OFFSET(get<int32_t>, {0x4F8, 4, 0, 0})
 	DMember(double)                                    PreviousTabActionPaddingRight                               OFFSET(get<double>, {0x500, 8, 0, 0})
@@ -1879,25 +1879,25 @@ class UIconTextButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5760;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CenterButtonTextWidget                                      OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UBorder*)                                  ContentBorder                                               OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           HorizontalBox_ButtonContent                                 OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UImage*)                                   LeftSideImage                                               OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UNamedSlot*)                               RightExtraContentSlot                                       OFFSET(get<T>, {0x14E8, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x14F0, 24, 0, 0})
-	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(get<T>, {0x1510, 192, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(getStruct<T>, {0x14F0, 24, 0, 0})
+	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(getStruct<T>, {0x1510, 192, 0, 0})
 	CMember(UClass*)                                   ControllerInputStyle                                        OFFSET(get<T>, {0x15D0, 8, 0, 0})
 	CMember(UClass*)                                   MouseKeyboardStyle                                          OFFSET(get<T>, {0x15D8, 8, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         ContentAlignment                                            OFFSET(get<T>, {0x15E0, 1, 0, 0})
 	DMember(bool)                                      bMouseKeyboardStyleSet                                      OFFSET(get<bool>, {0x15E1, 1, 0, 0})
-	SMember(FText)                                     OverrideButtonText                                          OFFSET(get<T>, {0x15E8, 24, 0, 0})
+	SMember(FText)                                     OverrideButtonText                                          OFFSET(getStruct<T>, {0x15E8, 24, 0, 0})
 	CMember(TEnumAsByte<ETextJustify>)                 ButtonTextJustification                                     OFFSET(get<T>, {0x1600, 1, 0, 0})
 	DMember(bool)                                      bDisplayAllCaps                                             OFFSET(get<bool>, {0x1601, 1, 0, 0})
 	DMember(double)                                    PressProgress                                               OFFSET(get<double>, {0x1608, 8, 0, 0})
 	DMember(bool)                                      bIgnoreInputActionWidgetText                                OFFSET(get<bool>, {0x1610, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  FocusChangedEvent                                           OFFSET(get<T>, {0x1618, 16, 0, 0})
-	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x1628, 88, 0, 0})
+	SMember(FMulticastInlineDelegate)                  FocusChangedEvent                                           OFFSET(getStruct<T>, {0x1618, 16, 0, 0})
+	SMember(FSlateFontInfo)                            Font                                                        OFFSET(getStruct<T>, {0x1628, 88, 0, 0})
 
 
 	/// Functions
@@ -1971,7 +1971,7 @@ class UMainMenuButton_C : public UFortMainMenuButton
 	static inline constexpr uint64_t __MDKClassSize = 5633;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x15F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15F0, 8, 0, 0})
 	CMember(UImage*)                                   Image_Icon_RightSide                                        OFFSET(get<T>, {0x15F8, 8, 0, 0})
 	DMember(bool)                                      ShowExternalLinkIcon                                        OFFSET(get<bool>, {0x1600, 1, 0, 0})
 
@@ -2001,12 +2001,12 @@ class UScrollingTextButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5586;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CenterButtonTextWidget                                      OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UBorder*)                                  ContentBorder                                               OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UImage*)                                   LeftSideImage                                               OFFSET(get<T>, {0x14D8, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x14E0, 24, 0, 0})
-	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(get<T>, {0x1500, 192, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(getStruct<T>, {0x14E0, 24, 0, 0})
+	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(getStruct<T>, {0x1500, 192, 0, 0})
 	CMember(UClass*)                                   ControllerInputStyle                                        OFFSET(get<T>, {0x15C0, 8, 0, 0})
 	CMember(UClass*)                                   MouseKeyboardStyle                                          OFFSET(get<T>, {0x15C8, 8, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         ContentAlignment                                            OFFSET(get<T>, {0x15D0, 1, 0, 0})
@@ -2066,7 +2066,7 @@ class UMultiActionConfirmationMenu_C : public UFortMultiFriendActionMenu
 	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x440, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x440, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UHorizontalBox*)                           ConfirmationButtons                                         OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_ActionText                                             OFFSET(get<T>, {0x458, 8, 0, 0})
@@ -2101,7 +2101,7 @@ class ULocalUserSettingButton_C : public UFortLocalUserSettingButton
 	static inline constexpr uint64_t __MDKClassSize = 5376;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14E0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	CMember(UImage*)                                   Image_AnimatedArrow                                         OFFSET(get<T>, {0x14F8, 8, 0, 0})
@@ -2124,7 +2124,7 @@ class ULocalUserSettingTitle_C : public UFortLocalUserSettingTitleButton
 	static inline constexpr uint64_t __MDKClassSize = 5368;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnExpansion                                                 OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UImage*)                                   ExpandDirectionTick                                         OFFSET(get<T>, {0x14E8, 8, 0, 0})
@@ -2172,7 +2172,7 @@ class UVoiceChannelHeaderButton_C : public UFortVoiceChannelHeaderButton
 	static inline constexpr uint64_t __MDKClassSize = 5576;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1520, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1520, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnExpansion                                                 OFFSET(get<T>, {0x1528, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         JoinSlideOut                                                OFFSET(get<T>, {0x1530, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ScaleUp                                                     OFFSET(get<T>, {0x1538, 8, 0, 0})
@@ -2189,8 +2189,8 @@ public:
 	CMember(UWidgetSwitcher*)                          SimultaneousChannelSwitcher                                 OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          Switch_Transmitting                                         OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UImage*)                                   Transmitting                                                OFFSET(get<T>, {0x15A0, 8, 0, 0})
-	SMember(FLinearColor)                              VoiceStatusActiveColor                                      OFFSET(get<T>, {0x15A8, 16, 0, 0})
-	SMember(FLinearColor)                              VoiceStatusWarningColor                                     OFFSET(get<T>, {0x15B8, 16, 0, 0})
+	SMember(FLinearColor)                              VoiceStatusActiveColor                                      OFFSET(getStruct<T>, {0x15A8, 16, 0, 0})
+	SMember(FLinearColor)                              VoiceStatusWarningColor                                     OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
 
 
 	/// Functions
@@ -2220,7 +2220,7 @@ class USocialBanModal_C : public UFortSocialBanModal
 	static inline constexpr uint64_t __MDKClassSize = 1464;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x530, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x530, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         disclaimer                                                  OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         disclaimer1                                                 OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         disclaimer2                                                 OFFSET(get<T>, {0x548, 8, 0, 0})
@@ -2235,7 +2235,7 @@ public:
 	CMember(UVerticalBox*)                             VBox_Banned                                                 OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(UVerticalBox*)                             VBox_Warned                                                 OFFSET(get<T>, {0x598, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          WidgetSwitcher_SeverityImage                                OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCloseSucceeded                                            OFFSET(get<T>, {0x5A8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCloseSucceeded                                            OFFSET(getStruct<T>, {0x5A8, 16, 0, 0})
 
 
 	/// Functions
@@ -2255,7 +2255,7 @@ class UMissedInvitesActionMenu_C : public UFortMissedInvitesActionMenu
 	static inline constexpr uint64_t __MDKClassSize = 1152;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x448, 8, 0, 0})
@@ -2284,7 +2284,7 @@ class UActivatableMovieWidget_C : public UFortActivatableVideoPanel
 	static inline constexpr uint64_t __MDKClassSize = 1616;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x638, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x638, 8, 0, 0})
 	CMember(USafeZone*)                                MainSafeZone                                                OFFSET(get<T>, {0x640, 8, 0, 0})
 	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x648, 8, 0, 0})
 
@@ -2304,7 +2304,7 @@ class UEditNicknameButton_C : public UFortEditNicknameButton
 	static inline constexpr uint64_t __MDKClassSize = 5400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1500, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1500, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(UBorder*)                                  ClickCapture                                                OFFSET(get<T>, {0x1510, 8, 0, 0})
 
@@ -2336,7 +2336,7 @@ class UUserListHeaderEntry_C : public USocialUserListHeaderEntry
 	static inline constexpr uint64_t __MDKClassSize = 5400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnExpansion                                                 OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UFortMobileImage*)                         ExpandDirectionTick                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
@@ -2366,14 +2366,14 @@ class USocialInteraction_C : public USocialInteractionButton
 	static inline constexpr uint64_t __MDKClassSize = 5576;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1570, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1570, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x1578, 8, 0, 0})
 	CMember(UImage*)                                   EncourageEpicFriend                                         OFFSET(get<T>, {0x1580, 8, 0, 0})
 	CMember(UImage*)                                   InteractionIcon                                             OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x1590, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x1598, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15A8, 16, 0, 0})
-	SMember(FLinearColor)                              AddFriendColor                                              OFFSET(get<T>, {0x15B8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x1598, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15A8, 16, 0, 0})
+	SMember(FLinearColor)                              AddFriendColor                                              OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
 
 
 	/// Functions
@@ -2397,7 +2397,7 @@ class UUserActionMenu_C : public UFortSocialInteractionMenu
 	static inline constexpr uint64_t __MDKClassSize = 1296;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4E0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x4E8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x4F0, 8, 0, 0})
 	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x4F8, 8, 0, 0})
@@ -2422,14 +2422,14 @@ class USocialConfirmationButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5392;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UImage*)                                   InteractionIcon                                             OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_InteractionName                                        OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	DMember(bool)                                      bIsAccept                                                   OFFSET(get<bool>, {0x14F0, 1, 0, 0})
-	SMember(FText)                                     DisplayText                                                 OFFSET(get<T>, {0x14F8, 24, 0, 0})
+	SMember(FText)                                     DisplayText                                                 OFFSET(getStruct<T>, {0x14F8, 24, 0, 0})
 
 
 	/// Functions
@@ -2451,7 +2451,7 @@ class USocialPanel_FriendLinkButton_C : public UFortSocialPanelView_FriendLinkBu
 	static inline constexpr uint64_t __MDKClassSize = 5400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnCopied                                                    OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x14E8, 8, 0, 0})
@@ -2485,14 +2485,14 @@ class UTeamMemberListEntry_C : public UFortTeamMemberListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5600;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1590, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1590, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15A0, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15B0, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15C0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15D0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
 
 
 	/// Functions
@@ -2514,15 +2514,15 @@ class UUserListEntry_XS_C : public UFortSocialUserListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5592;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1580, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15A0, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15B8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15C8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15C8, 16, 0, 0})
 
 
 	/// Functions
@@ -2546,7 +2546,7 @@ class UJoinRequestUserListEntry_C : public UFortSocialUserListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5600;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1580, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
@@ -2554,8 +2554,8 @@ public:
 	CMember(UCommonRichTextBlock*)                     JoinRequest                                                 OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15B0, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15C0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15D0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
 
 
 	/// Functions
@@ -2579,7 +2579,7 @@ class USuggestedFriendListEntry_C : public UFortConnectionsUserListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5568;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1560, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1568, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1570, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1578, 8, 0, 0})
@@ -2587,8 +2587,8 @@ public:
 	CMember(UBorder*)                                  Border_Highlight                                            OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x1598, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15A0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15B0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15A0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15B0, 16, 0, 0})
 
 
 	/// Functions
@@ -2610,7 +2610,7 @@ class UUserSearchResultListEntry_XS_C : public UFortUserSearchResultListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5616;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1590, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1590, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15A0, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15A8, 8, 0, 0})
@@ -2618,8 +2618,8 @@ public:
 	CMember(UImage*)                                   Image_Lock                                                  OFFSET(get<T>, {0x15B8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15C0, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15D0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15E0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15E0, 16, 0, 0})
 
 
 	/// Functions
@@ -2643,7 +2643,7 @@ class UJoinablePartyActionMenu_C : public UFortJoinablePartyActionMenu
 	static inline constexpr uint64_t __MDKClassSize = 1304;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x4F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x4F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x500, 8, 0, 0})
 	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x508, 8, 0, 0})
@@ -2667,7 +2667,7 @@ class ULeavePartyConfirmationMenu_C : public UFortLeavePartyMenu
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x438, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x438, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x440, 8, 0, 0})
 
 
@@ -2686,7 +2686,7 @@ class UJoinablePartyEntry_C : public UFortJoinablePartyListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5624;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1580, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1598, 8, 0, 0})
@@ -2696,8 +2696,8 @@ public:
 	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x15B8, 8, 0, 0})
 	CMember(USizeBox*)                                 Exclamation                                                 OFFSET(get<T>, {0x15C0, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15C8, 8, 0, 0})
-	SMember(FSlateColor)                               InviteFontColor                                             OFFSET(get<T>, {0x15D0, 20, 0, 0})
-	SMember(FSlateColor)                               DefaultFontColor                                            OFFSET(get<T>, {0x15E4, 20, 0, 0})
+	SMember(FSlateColor)                               InviteFontColor                                             OFFSET(getStruct<T>, {0x15D0, 20, 0, 0})
+	SMember(FSlateColor)                               DefaultFontColor                                            OFFSET(getStruct<T>, {0x15E4, 20, 0, 0})
 
 
 	/// Functions
@@ -2721,7 +2721,7 @@ class UMissedInvitesEntry_C : public UFortMissedInvitesListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5440;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
@@ -2752,7 +2752,7 @@ class UInviteListEntry_FriendInvite_XS_C : public UFortConnectionsUserListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5584;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1560, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1568, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1570, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1578, 8, 0, 0})
@@ -2760,9 +2760,9 @@ public:
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UBorder*)                                  EntryBorder                                                 OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_SentRequest                                            OFFSET(get<T>, {0x1598, 8, 0, 0})
-	SMember(FLinearColor)                              Online                                                      OFFSET(get<T>, {0x15A0, 16, 0, 0})
-	SMember(FLinearColor)                              Offline                                                     OFFSET(get<T>, {0x15B0, 16, 0, 0})
-	SMember(FLinearColor)                              Away                                                        OFFSET(get<T>, {0x15C0, 16, 0, 0})
+	SMember(FLinearColor)                              Online                                                      OFFSET(getStruct<T>, {0x15A0, 16, 0, 0})
+	SMember(FLinearColor)                              Offline                                                     OFFSET(getStruct<T>, {0x15B0, 16, 0, 0})
+	SMember(FLinearColor)                              Away                                                        OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
 
 
 	/// Functions
@@ -2786,7 +2786,7 @@ class ULeavePartyListEntry_C : public UFortLeavePartyListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5432;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
@@ -2816,13 +2816,13 @@ class UVoiceChatMemberListEntry_C : public UFortVoiceChatMemberListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5592;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1590, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1590, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15A0, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15B8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15C8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15C8, 16, 0, 0})
 
 
 	/// Functions
@@ -2844,7 +2844,7 @@ class UMultiFriendActionListEntry_C : public UFortMultiFriendActionListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5424;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x1508, 8, 0, 0})
@@ -2877,14 +2877,14 @@ class UPartyMemberListEntry_C : public UFortPartyMemberListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5600;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1590, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1590, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x15A0, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15B0, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B8, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15C0, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15D0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15C0, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15D0, 16, 0, 0})
 
 
 	/// Functions
@@ -2906,7 +2906,7 @@ class UPowerRatingWidget_C : public UFortPlayerPowerRating
 	static inline constexpr uint64_t __MDKClassSize = 900;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BaseRatingValue                                             OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BaseRatingValue_Large                                       OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UImage*)                                   BuffedRatingOuterGlow                                       OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -2957,7 +2957,7 @@ class UMoonbeam_PowerRatingWidget_C : public UFortPlayerPowerRating
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BaseRatingValue                                             OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BaseRatingValue_Large                                       OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UImage*)                                   BuffedRatingOuterGlow                                       OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -2980,8 +2980,8 @@ public:
 	DMember(double)                                    InterpDuration                                              OFFSET(get<double>, {0x378, 8, 0, 0})
 	CMember(USoundBase*)                               PowerIncreasedSound                                         OFFSET(get<T>, {0x380, 8, 0, 0})
 	DMember(int32_t)                                   Power_Rating_Num                                            OFFSET(get<int32_t>, {0x388, 4, 0, 0})
-	SMember(FLinearColor)                              PowerBackingColor                                           OFFSET(get<T>, {0x38C, 16, 0, 0})
-	SMember(FSlateColor)                               FontColor                                                   OFFSET(get<T>, {0x39C, 20, 0, 0})
+	SMember(FLinearColor)                              PowerBackingColor                                           OFFSET(getStruct<T>, {0x38C, 16, 0, 0})
+	SMember(FSlateColor)                               FontColor                                                   OFFSET(getStruct<T>, {0x39C, 20, 0, 0})
 
 
 	/// Functions
@@ -3043,7 +3043,7 @@ class UBP_BannerEditorTile_C : public UFortPlayerProfileBannerEditorTile
 	static inline constexpr uint64_t __MDKClassSize = 5408;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UImage*)                                   ColorImage                                                  OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              CommonWidgetSwitcher                                        OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UImage*)                                   IconImage                                                   OFFSET(get<T>, {0x14E8, 8, 0, 0})
@@ -3051,7 +3051,7 @@ public:
 	CMember(UImage*)                                   Image_BannerEditBorder                                      OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UNormalBangWrapper_C*)                     NormalBangWrapper                                           OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 ColorMID                                                    OFFSET(get<T>, {0x1508, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BannerTileBangUpdated                                       OFFSET(get<T>, {0x1510, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BannerTileBangUpdated                                       OFFSET(getStruct<T>, {0x1510, 16, 0, 0})
 
 
 	/// Functions
@@ -3083,7 +3083,7 @@ class UBP_LocalPlayerBannerEditor_C : public UFortPlayerProfileBannerEditor
 	static inline constexpr uint64_t __MDKClassSize = 1016;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x318, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x318, 8, 0, 0})
 	CMember(UWBP_UIKit_Button_Regular_C*)              ApplyButton                                                 OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UCloseButton_C*)                           Button_CloseTouch                                           OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        Button_LeftTab                                              OFFSET(get<T>, {0x330, 8, 0, 0})
@@ -3102,16 +3102,16 @@ public:
 	CMember(UIconTextButton_C*)                        RightArrowButton                                            OFFSET(get<T>, {0x398, 8, 0, 0})
 	CMember(UNormalBangWrapper_C*)                     RightCategoryBang                                           OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      RightTriggerAction                                          OFFSET(get<T>, {0x3A8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CloseBannerEditor                                           OFFSET(get<T>, {0x3B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CloseBannerEditor                                           OFFSET(getStruct<T>, {0x3B0, 16, 0, 0})
 	DMember(int32_t)                                   IconCategoryIndex                                           OFFSET(get<int32_t>, {0x3C0, 4, 0, 0})
 	DMember(int32_t)                                   ColorCategoryIndex                                          OFFSET(get<int32_t>, {0x3C4, 4, 0, 0})
-	SMember(FName)                                     CurrentCategory                                             OFFSET(get<T>, {0x3C8, 4, 0, 0})
+	SMember(FName)                                     CurrentCategory                                             OFFSET(getStruct<T>, {0x3C8, 4, 0, 0})
 	DMember(bool)                                      bViewingIcons                                               OFFSET(get<bool>, {0x3CC, 1, 0, 0})
 	DMember(bool)                                      bPickingTile                                                OFFSET(get<bool>, {0x3CD, 1, 0, 0})
-	SMember(FName)                                     TempChosenIcon                                              OFFSET(get<T>, {0x3D0, 4, 0, 0})
-	SMember(FName)                                     TempChosenColor                                             OFFSET(get<T>, {0x3D4, 4, 0, 0})
+	SMember(FName)                                     TempChosenIcon                                              OFFSET(getStruct<T>, {0x3D0, 4, 0, 0})
+	SMember(FName)                                     TempChosenColor                                             OFFSET(getStruct<T>, {0x3D4, 4, 0, 0})
 	CMember(UCommonButtonGroupLegacy*)                 ButtonGroup                                                 OFFSET(get<T>, {0x3D8, 8, 0, 0})
-	SMember(FTimerHandle)                              UpdateBangTimerHandle                                       OFFSET(get<T>, {0x3E0, 8, 0, 0})
+	SMember(FTimerHandle)                              UpdateBangTimerHandle                                       OFFSET(getStruct<T>, {0x3E0, 8, 0, 0})
 	DMember(bool)                                      bIsActiveWidget                                             OFFSET(get<bool>, {0x3E8, 1, 0, 0})
 	CMember(USoundBase*)                               AppearSoundCue                                              OFFSET(get<T>, {0x3F0, 8, 0, 0})
 
@@ -3245,7 +3245,7 @@ class UTeamMemberManage_C : public UFortTeamMemberManage
 	static inline constexpr uint64_t __MDKClassSize = 1544;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5D8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5D8, 8, 0, 0})
 	CMember(UBP_LocalPlayerBannerEditor_C*)            BP_LocalPlayerBannerEditor                                  OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(UWBP_UIKit_Button_Regular_C*)              CloseProfileButton                                          OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              ContentSwitcher                                             OFFSET(get<T>, {0x5F0, 8, 0, 0})
@@ -3280,7 +3280,7 @@ class UFortSocialEventRSVPWidget_C : public UFortSocialEventRSVPWidget
 	static inline constexpr uint64_t __MDKClassSize = 721;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_AdditionalEvents                                    OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_AdditionalEvents                                       OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_EventName                                              OFFSET(get<T>, {0x2C0, 8, 0, 0})
@@ -3305,7 +3305,7 @@ class UPrimarySkewButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5392;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Pressed                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover                                                       OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CenterButtonTextWidget                                      OFFSET(get<T>, {0x14D8, 8, 0, 0})
@@ -3313,7 +3313,7 @@ public:
 	CMember(UImage*)                                   Image_Shadow                                                OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	DMember(bool)                                      ToUpper                                                     OFFSET(get<bool>, {0x14F0, 1, 0, 0})
 	DMember(bool)                                      XL                                                          OFFSET(get<bool>, {0x14F1, 1, 0, 0})
-	SMember(FText)                                     ButtonNameText                                              OFFSET(get<T>, {0x14F8, 24, 0, 0})
+	SMember(FText)                                     ButtonNameText                                              OFFSET(getStruct<T>, {0x14F8, 24, 0, 0})
 
 
 	/// Functions
@@ -3362,15 +3362,15 @@ class UUserListEntry_C : public UFortSocialUserListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5592;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1580, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1580, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x1598, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        EmptyButtonToEatOneMouseUpEvent                             OFFSET(get<T>, {0x15A0, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_DisplayName                                            OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UUserActionMenuInputButton_C*)             UserActionMenuInputButton                                   OFFSET(get<T>, {0x15B0, 8, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(get<T>, {0x15B8, 16, 0, 0})
-	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(get<T>, {0x15C8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_IdleColor                               OFFSET(getStruct<T>, {0x15B8, 16, 0, 0})
+	SMember(FLinearColor)                              EncourageEpicFriend_HoveredColor                            OFFSET(getStruct<T>, {0x15C8, 16, 0, 0})
 
 
 	/// Functions
@@ -3394,16 +3394,16 @@ class ULocalUserEntry_C : public UFortSocialEventRSVPLocalUserEntry
 	static inline constexpr uint64_t __MDKClassSize = 5512;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1520, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1520, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1528, 8, 0, 0})
 	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x1530, 8, 0, 0})
 	CMember(UFortMobileImage*)                         FortMobileImage_enforzer                                    OFFSET(get<T>, {0x1538, 8, 0, 0})
 	CMember(UImage*)                                   Image_MicIcon                                               OFFSET(get<T>, {0x1540, 8, 0, 0})
 	CMember(UBorder*)                                  LocalUserEntryBorder                                        OFFSET(get<T>, {0x1548, 8, 0, 0})
 	CMember(UFortMobileImage*)                         SettingsIcon                                                OFFSET(get<T>, {0x1550, 8, 0, 0})
-	SMember(FLinearColor)                              Online                                                      OFFSET(get<T>, {0x1558, 16, 0, 0})
-	SMember(FLinearColor)                              Offline                                                     OFFSET(get<T>, {0x1568, 16, 0, 0})
-	SMember(FLinearColor)                              Away                                                        OFFSET(get<T>, {0x1578, 16, 0, 0})
+	SMember(FLinearColor)                              Online                                                      OFFSET(getStruct<T>, {0x1558, 16, 0, 0})
+	SMember(FLinearColor)                              Offline                                                     OFFSET(getStruct<T>, {0x1568, 16, 0, 0})
+	SMember(FLinearColor)                              Away                                                        OFFSET(getStruct<T>, {0x1578, 16, 0, 0})
 
 
 	/// Functions
@@ -3427,7 +3427,7 @@ class UKeybindWidget_C : public UFortKeybindWidget
 	static inline constexpr uint64_t __MDKClassSize = 2960;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB80, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xB80, 8, 0, 0})
 	CMember(UImage*)                                   Image_Preview                                               OFFSET(get<T>, {0xB88, 8, 0, 0})
 
 
@@ -3446,20 +3446,20 @@ class UGamepadKeyTextButton_C : public UFortGamepadCustomListItem
 	static inline constexpr uint64_t __MDKClassSize = 5512;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UKeybindWidget_C*)                         BoundKey                                                    OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UBorder*)                                  ContentBorder                                               OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UFortRichTextBlockLegacy*)                 FortRichTextBlock_Desc                                      OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	CMember(UFortRichTextBlockLegacy*)                 FortRichTextBlock_NoKey                                     OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Nokey                                               OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x1500, 24, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(getStruct<T>, {0x1500, 24, 0, 0})
 	CMember(UClass*)                                   ControllerInputStyle                                        OFFSET(get<T>, {0x1518, 8, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         ContentAlignment                                            OFFSET(get<T>, {0x1520, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ChangeTheBinding_Button                                     OFFSET(get<T>, {0x1528, 16, 0, 0})
-	SMember(FName)                                     ActionNameData                                              OFFSET(get<T>, {0x1538, 4, 0, 0})
-	SMember(FKey)                                      KeyData                                                     OFFSET(get<T>, {0x1540, 24, 0, 0})
-	SMember(FText)                                     TextData                                                    OFFSET(get<T>, {0x1558, 24, 0, 0})
-	SMember(FKey)                                      KeyNone                                                     OFFSET(get<T>, {0x1570, 24, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ChangeTheBinding_Button                                     OFFSET(getStruct<T>, {0x1528, 16, 0, 0})
+	SMember(FName)                                     ActionNameData                                              OFFSET(getStruct<T>, {0x1538, 4, 0, 0})
+	SMember(FKey)                                      KeyData                                                     OFFSET(getStruct<T>, {0x1540, 24, 0, 0})
+	SMember(FText)                                     TextData                                                    OFFSET(getStruct<T>, {0x1558, 24, 0, 0})
+	SMember(FKey)                                      KeyNone                                                     OFFSET(getStruct<T>, {0x1570, 24, 0, 0})
 
 
 	/// Functions
@@ -3495,7 +3495,7 @@ class UGamepadCustomActionSelectorPanel_v3_C : public UFortGamePadCustomActionSe
 	static inline constexpr uint64_t __MDKClassSize = 1552;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x558, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x558, 8, 0, 0})
 	CMember(UButton*)                                  Button_Clear                                                OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder_Clear                                          OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UCommonListView*)                          CommonListView_GamepadActions                               OFFSET(get<T>, {0x570, 8, 0, 0})
@@ -3503,13 +3503,13 @@ public:
 	CMember(UFortRichTextBlockLegacy*)                 FortRichTextBlock_Clear2                                    OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(UKeybindWidget_C*)                         KeybindWidget_Clear                                         OFFSET(get<T>, {0x588, 8, 0, 0})
 	CMember(UOptionsMenuHeader_C*)                     OptionsMenuHeader                                           OFFSET(get<T>, {0x590, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       Back                                                        OFFSET(get<T>, {0x598, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CustomActionSelected                                        OFFSET(get<T>, {0x5A8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       Back                                                        OFFSET(getStruct<T>, {0x598, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CustomActionSelected                                        OFFSET(getStruct<T>, {0x5A8, 16, 0, 0})
 	CMember(TArray<UFortOptionsMenuInputData*>)        CurrentInputData                                            OFFSET(get<T>, {0x5B8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CustomClosedUsingBack                                       OFFSET(get<T>, {0x5C8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CustomClearButton                                           OFFSET(get<T>, {0x5D8, 16, 0, 0})
-	SMember(FKey)                                      KeyNone                                                     OFFSET(get<T>, {0x5E8, 24, 0, 0})
-	SMember(FDataTableRowHandle)                       Clear                                                       OFFSET(get<T>, {0x600, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CustomClosedUsingBack                                       OFFSET(getStruct<T>, {0x5C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CustomClearButton                                           OFFSET(getStruct<T>, {0x5D8, 16, 0, 0})
+	SMember(FKey)                                      KeyNone                                                     OFFSET(getStruct<T>, {0x5E8, 24, 0, 0})
+	SMember(FDataTableRowHandle)                       Clear                                                       OFFSET(getStruct<T>, {0x600, 16, 0, 0})
 
 
 	/// Functions
@@ -3549,7 +3549,7 @@ class UOptionsMenuSetting_C : public UFortOptionsMenuSetting
 	static inline constexpr uint64_t __MDKClassSize = 976;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x350, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x350, 8, 0, 0})
 	CMember(UButton*)                                  Button                                                      OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        ButtonTouchTooltip                                          OFFSET(get<T>, {0x360, 8, 0, 0})
 	CMember(UHorizontalBox*)                           HorizontalBox_Right                                         OFFSET(get<T>, {0x368, 8, 0, 0})
@@ -3563,7 +3563,7 @@ public:
 	CMember(USpacer*)                                  SpacerBottom                                                OFFSET(get<T>, {0x3A8, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 Slider_Texture                                              OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(TEnumAsByte<ERoundingMode>)                RoundingMode                                                OFFSET(get<T>, {0x3B8, 1, 0, 0})
-	SMember(FVector2D)                                 ToolTipSizeMobile                                           OFFSET(get<T>, {0x3C0, 16, 0, 0})
+	SMember(FVector2D)                                 ToolTipSizeMobile                                           OFFSET(getStruct<T>, {0x3C0, 16, 0, 0})
 
 
 	/// Functions
@@ -3629,7 +3629,7 @@ class UDeadzoneAdjustment_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 721;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UImage*)                                   Deadzone_Adjustment                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UOptionsMenuSetting_C*)                    Deadzone_Adjustment_Slider                                  OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UImage*)                                   Deadzone_Max                                                OFFSET(get<T>, {0x2C0, 8, 0, 0})
@@ -3666,12 +3666,12 @@ class UFortRadioButtonGroup_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Buttons                                             OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_Buttons                                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(TArray<FFortRadioButtonItemStruct>)        Buttons                                                     OFFSET(get<T>, {0x2C0, 16, 0, 0})
 	CMember(TArray<UIconTextButton_C*>)                CreatedButtons                                              OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  RadioButtonClicked_Event                                    OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  RadioButtonClicked_Event                                    OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	DMember(double)                                    WidthOverride                                               OFFSET(get<double>, {0x2F0, 8, 0, 0})
 	CMember(UCommonButtonGroupLegacy*)                 CreatedButtonsGroup                                         OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UClass*)                                   CommonButtonGroup                                           OFFSET(get<T>, {0x300, 8, 0, 0})
@@ -3701,7 +3701,7 @@ class UGamepadInfoSelectorPanel_v3_C : public UFortGamePadInfoSelectorPanel
 	static inline constexpr uint64_t __MDKClassSize = 1568;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x558, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x558, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder_Reset                                          OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UFortRadioButtonGroup_C*)                  FortRadioButtonGroup_Configs                                OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UFortRadioButtonGroup_C*)                  FortRadioButtonGroup_Platforms                              OFFSET(get<T>, {0x570, 8, 0, 0})
@@ -3712,13 +3712,13 @@ public:
 	CMember(UOptionsMenuHeader_C*)                     OptionsMenuHeader_Platforms                                 OFFSET(get<T>, {0x598, 8, 0, 0})
 	CMember(UButton*)                                  ResetButton                                                 OFFSET(get<T>, {0x5A0, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_Platforms                                       OFFSET(get<T>, {0x5A8, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       Back                                                        OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorBack                                     OFFSET(get<T>, {0x5C0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       Apply                                                       OFFSET(get<T>, {0x5D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorApply                                    OFFSET(get<T>, {0x5E0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       Reset                                                       OFFSET(get<T>, {0x5F0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorReset                                    OFFSET(get<T>, {0x600, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorFocus                                    OFFSET(get<T>, {0x610, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       Back                                                        OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorBack                                     OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       Apply                                                       OFFSET(getStruct<T>, {0x5D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorApply                                    OFFSET(getStruct<T>, {0x5E0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       Reset                                                       OFFSET(getStruct<T>, {0x5F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorReset                                    OFFSET(getStruct<T>, {0x600, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  GamepadInfoSelectorFocus                                    OFFSET(getStruct<T>, {0x610, 16, 0, 0})
 
 
 	/// Functions
@@ -3758,7 +3758,7 @@ class UGamepadMappingInfo_v3_C : public UFortGamepadMappingInfo
 	static inline constexpr uint64_t __MDKClassSize = 1876;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder_LeftBumperSeparator                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder_RightBumperSeparator                           OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder_Legend                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -3877,18 +3877,18 @@ public:
 	CMember(TArray<FText>)                             ButtonTextLabels_STW_BuilderPro_Build                       OFFSET(get<T>, {0x6A8, 16, 0, 0})
 	CMember(UGamepadKeyTextButton_C*)                  LastClickedButton                                           OFFSET(get<T>, {0x6B8, 8, 0, 0})
 	CMember(EFortInputActionGroup)                     CurrentInputActionGroup                                     OFFSET(get<T>, {0x6C0, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CustomKeySelected                                           OFFSET(get<T>, {0x6C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CustomKeySelected                                           OFFSET(getStruct<T>, {0x6C8, 16, 0, 0})
 	CMember(TArray<UGamepadKeyTextButton_C*>)          CustomKeyButtons                                            OFFSET(get<T>, {0x6D8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  Image_LightboxClicked                                       OFFSET(get<T>, {0x6E8, 16, 0, 0})
-	SMember(FName)                                     CombatModeIdName                                            OFFSET(get<T>, {0x6F8, 4, 0, 0})
-	SMember(FName)                                     BuildModeIdName                                             OFFSET(get<T>, {0x6FC, 4, 0, 0})
-	SMember(FName)                                     EditModeIdName                                              OFFSET(get<T>, {0x700, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  CustomButtonNavLeft                                         OFFSET(get<T>, {0x708, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Image_LightboxClicked                                       OFFSET(getStruct<T>, {0x6E8, 16, 0, 0})
+	SMember(FName)                                     CombatModeIdName                                            OFFSET(getStruct<T>, {0x6F8, 4, 0, 0})
+	SMember(FName)                                     BuildModeIdName                                             OFFSET(getStruct<T>, {0x6FC, 4, 0, 0})
+	SMember(FName)                                     EditModeIdName                                              OFFSET(getStruct<T>, {0x700, 4, 0, 0})
+	SMember(FMulticastInlineDelegate)                  CustomButtonNavLeft                                         OFFSET(getStruct<T>, {0x708, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    Generic_Images                                              OFFSET(get<T>, {0x718, 16, 0, 0})
-	SMember(FName)                                     DeadZoneMoveIdName                                          OFFSET(get<T>, {0x728, 4, 0, 0})
+	SMember(FName)                                     DeadZoneMoveIdName                                          OFFSET(getStruct<T>, {0x728, 4, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    XSX_Images                                                  OFFSET(get<T>, {0x730, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    PS5_Images                                                  OFFSET(get<T>, {0x740, 16, 0, 0})
-	SMember(FName)                                     LTMAbilitiesModeIdName                                      OFFSET(get<T>, {0x750, 4, 0, 0})
+	SMember(FName)                                     LTMAbilitiesModeIdName                                      OFFSET(getStruct<T>, {0x750, 4, 0, 0})
 
 
 	/// Functions
@@ -3980,10 +3980,10 @@ class UTabGamePadConfig_v3_C : public UFortGamepadInputOptions
 	static inline constexpr uint64_t __MDKClassSize = 1392;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x468, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x468, 8, 0, 0})
 	CMember(UGamepadInfoSelectorPanel_v3_C*)           GamepadInfoSelectorPanel_v3                                 OFFSET(get<T>, {0x470, 8, 0, 0})
 	CMember(UGamepadMappingInfo_v3_C*)                 GamepadMappingInfo_v3                                       OFFSET(get<T>, {0x478, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  GamepadMappingInfoChanged                                   OFFSET(get<T>, {0x480, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  GamepadMappingInfoChanged                                   OFFSET(getStruct<T>, {0x480, 16, 0, 0})
 	CMember(TArray<FString>)                           InputPresets                                                OFFSET(get<T>, {0x490, 16, 0, 0})
 	CMember(TArray<FText>)                             InputPresetNames_NoCustom                                   OFFSET(get<T>, {0x4A0, 16, 0, 0})
 	DMember(int32_t)                                   PresetMappingIndex                                          OFFSET(get<int32_t>, {0x4B0, 4, 0, 0})
@@ -3992,18 +3992,18 @@ public:
 	CMember(UGamepadKeyTextButton_C*)                  DisplayObject                                               OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	CMember(EFortInputActionGroup)                     CurrentInputActionGroup                                     OFFSET(get<T>, {0x4C8, 1, 0, 0})
 	DMember(int32_t)                                   CustomResetToDefaultConfig                                  OFFSET(get<int32_t>, {0x4CC, 4, 0, 0})
-	SMember(FKey)                                      CustomKeySelection                                          OFFSET(get<T>, {0x4D0, 24, 0, 0})
-	SMember(FName)                                     CustomActionSelection                                       OFFSET(get<T>, {0x4E8, 4, 0, 0})
+	SMember(FKey)                                      CustomKeySelection                                          OFFSET(getStruct<T>, {0x4D0, 24, 0, 0})
+	SMember(FName)                                     CustomActionSelection                                       OFFSET(getStruct<T>, {0x4E8, 4, 0, 0})
 	DMember(int32_t)                                   CustomInputActionGroupSelectionIndex                        OFFSET(get<int32_t>, {0x4EC, 4, 0, 0})
 	DMember(int32_t)                                   CustomActionSelectionIndex                                  OFFSET(get<int32_t>, {0x4F0, 4, 0, 0})
-	SMember(FKey)                                      Key_None                                                    OFFSET(get<T>, {0x4F8, 24, 0, 0})
+	SMember(FKey)                                      Key_None                                                    OFFSET(getStruct<T>, {0x4F8, 24, 0, 0})
 	CMember(UClass*)                                   RadioButtonClass                                            OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UClass*)                                   RadioButtonStyle                                            OFFSET(get<T>, {0x518, 8, 0, 0})
 	CMember(TArray<UFortOptionsMenuInputData*>)        InputDataForActionsPanel                                    OFFSET(get<T>, {0x520, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  TabGamePadConfigBack                                        OFFSET(get<T>, {0x530, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  TabGamePadConfigApply                                       OFFSET(get<T>, {0x540, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  TabGamePadActionsThatNeedBinds                              OFFSET(get<T>, {0x550, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OverrideResetModal                                          OFFSET(get<T>, {0x560, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  TabGamePadConfigBack                                        OFFSET(getStruct<T>, {0x530, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  TabGamePadConfigApply                                       OFFSET(getStruct<T>, {0x540, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  TabGamePadActionsThatNeedBinds                              OFFSET(getStruct<T>, {0x550, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OverrideResetModal                                          OFFSET(getStruct<T>, {0x560, 16, 0, 0})
 
 
 	/// Functions
@@ -4115,7 +4115,7 @@ class UOptionsMenu_C : public UFortOptionsMenu
 	static inline constexpr uint64_t __MDKClassSize = 4232;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1060, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1060, 8, 0, 0})
 	CMember(UFortHUDElementWrapper_C*)                 FortHUDElementWrapper                                       OFFSET(get<T>, {0x1068, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_ContentLetoSplitscreen                              OFFSET(get<T>, {0x1070, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_HeadingLeto                                         OFFSET(get<T>, {0x1078, 8, 0, 0})
@@ -4171,7 +4171,7 @@ class USocialPanel_FriendSearchBar_C : public UFortFriendSearchButton
 	static inline constexpr uint64_t __MDKClassSize = 5541;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1560, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHovered                                                   OFFSET(get<T>, {0x1568, 8, 0, 0})
 	CMember(UImage*)                                   AddFriendBanIcon                                            OFFSET(get<T>, {0x1570, 8, 0, 0})
 	CMember(UBorder*)                                  ClickCapture                                                OFFSET(get<T>, {0x1578, 8, 0, 0})
@@ -4179,7 +4179,7 @@ public:
 	CMember(UCommonRichTextBlock*)                     RichText_SocialBan                                          OFFSET(get<T>, {0x1588, 8, 0, 0})
 	CMember(UFortMobileImage*)                         SharingIcon                                                 OFFSET(get<T>, {0x1590, 8, 0, 0})
 	CMember(UFortSimpleWidgetAnimationsPanel*)         SimpleWidgetAnimationsPanel                                 OFFSET(get<T>, {0x1598, 8, 0, 0})
-	SMember(FName)                                     ShakeAnimation                                              OFFSET(get<T>, {0x15A0, 4, 0, 0})
+	SMember(FName)                                     ShakeAnimation                                              OFFSET(getStruct<T>, {0x15A0, 4, 0, 0})
 	DMember(bool)                                      bShakeAnimationIsPlaying                                    OFFSET(get<bool>, {0x15A4, 1, 0, 0})
 
 
@@ -4204,7 +4204,7 @@ class UVoiceChannelSettings_C : public UFortVoiceSettingsDisplay
 	static inline constexpr uint64_t __MDKClassSize = 1048;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x390, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x390, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         GearHover                                                   OFFSET(get<T>, {0x398, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      ActionWidget_InputDisplay                                   OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(UImage*)                                   AlertIcon                                                   OFFSET(get<T>, {0x3A8, 8, 0, 0})
@@ -4258,7 +4258,7 @@ class UReferAFriendActionMenu_C : public UFortReferFriendActionMenu
 	static inline constexpr uint64_t __MDKClassSize = 1168;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ConfirmationOpened                                          OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Opened                                                      OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UBorder*)                                  Border_OnlineStatusIndicator                                OFFSET(get<T>, {0x448, 8, 0, 0})
@@ -4293,7 +4293,7 @@ class UReferAFriendEntry_C : public UFortReferFriendListEntry
 	static inline constexpr uint64_t __MDKClassSize = 5440;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected                                                    OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UBorder*)                                  AnimatedInputBorder                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
@@ -4324,7 +4324,7 @@ class USocialPanelView_UserLists_C : public UFortSocialPanelView_UserLists
 	static inline constexpr uint64_t __MDKClassSize = 1712;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         WeGameButtonHovered                                         OFFSET(get<T>, {0x5F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         SwitcherTransition                                          OFFSET(get<T>, {0x600, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         NoFriendsArrowBounce                                        OFFSET(get<T>, {0x608, 8, 0, 0})
@@ -4371,7 +4371,7 @@ class USocialPanel_C : public UFortSocialPanel
 	static inline constexpr uint64_t __MDKClassSize = 1448;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x578, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x578, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnOpened                                                    OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(UImage*)                                   Image_Back                                                  OFFSET(get<T>, {0x588, 8, 0, 0})
 	CMember(ULightbox_C*)                              Lightbox                                                    OFFSET(get<T>, {0x590, 8, 0, 0})
@@ -4412,7 +4412,7 @@ class USocialPanel_TopBarExtension_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5352;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hovered                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UImage*)                                   Image_PlatformIcon                                          OFFSET(get<T>, {0x14D8, 8, 0, 0})
@@ -4436,7 +4436,7 @@ class UMiniPartyBar_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        ButtonLocalPlayer                                           OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UImage*)                                   LineSeparator                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UTeamMemberBanner_C*)                      LocalPlayer                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
@@ -4467,7 +4467,7 @@ class UTeamMemberBanner_C : public UFortCampaignTeamMemberBanner
 	static inline constexpr uint64_t __MDKClassSize = 5440;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1500, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1500, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        ButtonPartyFinder                                           OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(UOverlay*)                                 Connected                                                   OFFSET(get<T>, {0x1510, 8, 0, 0})
 	CMember(USizeBox*)                                 Connecting                                                  OFFSET(get<T>, {0x1518, 8, 0, 0})
@@ -4522,7 +4522,7 @@ class UMicIndicator_C : public UFortMicIndicatorWidget
 	static inline constexpr uint64_t __MDKClassSize = 810;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x300, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x300, 8, 0, 0})
 	CMember(UOverlay*)                                 _01_NotSpeaking                                             OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UOverlay*)                                 _02_Speaking                                                OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UOverlay*)                                 _03_Muted                                                   OFFSET(get<T>, {0x318, 8, 0, 0})
@@ -4559,7 +4559,7 @@ class UBuildWatermark_C : public UFortBuildWatermark
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x328, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x328, 8, 0, 0})
 
 
 	/// Functions
@@ -4583,14 +4583,14 @@ class ULegacy_MovieWidget_C : public UFortMovieWidget
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F0, 8, 0, 0})
 	CMember(UImage*)                                   Video_Image                                                 OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UScaleBox*)                                Video_ScaleBox                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      shouldloop                                                  OFFSET(get<bool>, {0x308, 1, 0, 0})
 	DMember(bool)                                      AutoPlay                                                    OFFSET(get<bool>, {0x309, 1, 0, 0})
 	DMember(bool)                                      MaintainAspectRatio                                         OFFSET(get<bool>, {0x30A, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMediaReadyToPlay                                          OFFSET(get<T>, {0x310, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMediaFailedToOpen                                         OFFSET(get<T>, {0x320, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMediaReadyToPlay                                          OFFSET(getStruct<T>, {0x310, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMediaFailedToOpen                                         OFFSET(getStruct<T>, {0x320, 16, 0, 0})
 
 
 	/// Functions
@@ -4654,12 +4654,12 @@ class UCinematic_TeamMics_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 1360;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UMicIndicator_C*)                          MicIndicator                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              SwitcherConnectingStranger                                  OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TextBlock                                                   OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TextPlayerName                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	SMember(FFortTeamMemberInfo)                       MemberInfo                                                  OFFSET(get<T>, {0x300, 592, 0, 0})
+	SMember(FFortTeamMemberInfo)                       MemberInfo                                                  OFFSET(getStruct<T>, {0x300, 592, 0, 0})
 
 
 	/// Functions
@@ -4679,7 +4679,7 @@ class UTeamMicStack_C : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x310, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x310, 8, 0, 0})
 	CMember(UVerticalBox*)                             _Vertical_Box__Team_Members                                 OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UCommonBorder*)                            BorderFrame                                                 OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(TArray<UCinematic-TeamMics_C*>)            TeamMembers                                                 OFFSET(get<T>, {0x328, 16, 0, 0})
@@ -4710,7 +4710,7 @@ class UCinematic_C : public UFortUIStateWidget_NUI
 	static inline constexpr uint64_t __MDKClassSize = 1537;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5A8, 8, 0, 0})
 	CMember(UNamedSlot*)                               LocalizedAudioOnlyMovieSlot                                 OFFSET(get<T>, {0x5B0, 8, 0, 0})
 	CMember(UCommonWidgetStackLegacy*)                 MainContentStack                                            OFFSET(get<T>, {0x5B8, 8, 0, 0})
 	CMember(UNamedSlot*)                               MovieSlot                                                   OFFSET(get<T>, {0x5C0, 8, 0, 0})
@@ -4823,14 +4823,14 @@ class UPlayerSurveyResponseChoice_C : public UFortPlayerSurveyResponseChoiceBase
 	static inline constexpr uint64_t __MDKClassSize = 6049;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1480, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1480, 8, 0, 0})
 	CMember(UBorder*)                                  Border_InputActionCircle                                    OFFSET(get<T>, {0x1488, 8, 0, 0})
 	CMember(UImage*)                                   Image_Checkbox                                              OFFSET(get<T>, {0x1490, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget_Select                                    OFFSET(get<T>, {0x1498, 8, 0, 0})
-	SMember(FSlateBrush)                               Brush_RadioUnchecked                                        OFFSET(get<T>, {0x14A0, 192, 0, 0})
-	SMember(FSlateBrush)                               Brush_RadioChecked                                          OFFSET(get<T>, {0x1560, 192, 0, 0})
-	SMember(FSlateBrush)                               Brush_CheckboxUnchecked                                     OFFSET(get<T>, {0x1620, 192, 0, 0})
-	SMember(FSlateBrush)                               Brush_CheckboxChecked                                       OFFSET(get<T>, {0x16E0, 192, 0, 0})
+	SMember(FSlateBrush)                               Brush_RadioUnchecked                                        OFFSET(getStruct<T>, {0x14A0, 192, 0, 0})
+	SMember(FSlateBrush)                               Brush_RadioChecked                                          OFFSET(getStruct<T>, {0x1560, 192, 0, 0})
+	SMember(FSlateBrush)                               Brush_CheckboxUnchecked                                     OFFSET(getStruct<T>, {0x1620, 192, 0, 0})
+	SMember(FSlateBrush)                               Brush_CheckboxChecked                                       OFFSET(getStruct<T>, {0x16E0, 192, 0, 0})
 	CMember(TEnumAsByte<EFortPlayerSurveyResponseChoiceType>) ChoiceType                                           OFFSET(get<T>, {0x17A0, 1, 0, 0})
 
 
@@ -4873,7 +4873,7 @@ class UPlayerSurveyVerticalIndicator_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget_Move                                      OFFSET(get<T>, {0x2B0, 8, 0, 0})
 
 
@@ -4894,7 +4894,7 @@ class UPlayerSurveyOrthogonalIndicator_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget_Move                                      OFFSET(get<T>, {0x2B0, 8, 0, 0})
 
 
@@ -4925,7 +4925,7 @@ class UPlayerSurveyMultipleChoiceResponse_C : public UFortPlayerSurveyMultipleCh
 	static inline constexpr uint64_t __MDKClassSize = 1144;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x438, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x438, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_OrthogonalIndicator                                 OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_VerticalIndicator                                   OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UPlayerSurveyOrthogonalIndicator_C*)       PlayerSurveyOrthogonalIndicator                             OFFSET(get<T>, {0x450, 8, 0, 0})
@@ -5002,7 +5002,7 @@ class UPlayerSurveySingleChoiceResponse_C : public UFortPlayerSurveySingleChoice
 	static inline constexpr uint64_t __MDKClassSize = 1144;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x438, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x438, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_OrthogonalIndicator                                 OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_VerticalIndicator                                   OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UPlayerSurveyOrthogonalIndicator_C*)       PlayerSurveyOrthogonalIndicator                             OFFSET(get<T>, {0x450, 8, 0, 0})
@@ -5029,7 +5029,7 @@ class UPlayerSurveyHorizontalIndicator_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget_Move                                      OFFSET(get<T>, {0x2B0, 8, 0, 0})
 
 
@@ -5080,7 +5080,7 @@ class UPlayerSurveyRatingChoice_C : public UFortPlayerSurveyRatingChoiceBase
 	static inline constexpr uint64_t __MDKClassSize = 5264;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1480, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1480, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget_Select                                    OFFSET(get<T>, {0x1488, 8, 0, 0})
 
 
@@ -5115,7 +5115,7 @@ class UPlayerSurveyRatingResponse_C : public UFortPlayerSurveyRatingResponseBase
 	static inline constexpr uint64_t __MDKClassSize = 1088;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 	CMember(UPlayerSurveyHorizontalIndicator_C*)       PlayerSurveyHorizontalIndicator                             OFFSET(get<T>, {0x438, 8, 0, 0})
 
 
@@ -5146,7 +5146,7 @@ class ATVPostProcessBP_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 681;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UBillboardComponent*)                      Billboard                                                   OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	DMember(bool)                                      DisableOnStartup                                            OFFSET(get<bool>, {0x2A8, 1, 0, 0})
@@ -5175,7 +5175,7 @@ class ATVPostProcessBPAthena_C : public ATVPostProcessBP_C
 	static inline constexpr uint64_t __MDKClassSize = 728;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2B0, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    FullScreenTVPP_OnlyMaterialModified                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(float)                                     FrontEndCameraSwitchFadeAthena_SwipeLines_Animation_8828A7EA43DFA9153F986F805918F9F7 OFFSET(get<float>, {0x2C0, 4, 0, 0})
 	DMember(float)                                     FrontEndCameraSwitchFadeAthena_PostProcessVisibility_8828A7EA43DFA9153F986F805918F9F7 OFFSET(get<float>, {0x2C4, 4, 0, 0})
@@ -5206,7 +5206,7 @@ class AFrontendCamera_Manage_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2576;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
 
 
@@ -5227,7 +5227,7 @@ class ULoginScreen_C : public UFortUIStateWidget_Login
 	static inline constexpr uint64_t __MDKClassSize = 1368;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x508, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x508, 8, 0, 0})
 	CMember(UConsoleProfileWidget_C*)                  ConsoleProfileWidget                                        OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UImage*)                                   DarkBacking                                                 OFFSET(get<T>, {0x518, 8, 0, 0})
 	CMember(UOverlay*)                                 KeyArt_Group                                                OFFSET(get<T>, {0x520, 8, 0, 0})
@@ -5282,7 +5282,7 @@ class UCorrectiveActionDateOfBirthScreen_C : public UFortCorrectiveActionDateOfB
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x438, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x438, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_AgeEntryChallengeError                                 OFFSET(get<T>, {0x440, 8, 0, 0})
 
 
@@ -5303,7 +5303,7 @@ class UCorrectiveActionGuardianEmailScreen_C : public UFortCorrectiveActionGuard
 	static inline constexpr uint64_t __MDKClassSize = 1064;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x418, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x418, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_EmailEntryChallengeError                               OFFSET(get<T>, {0x420, 8, 0, 0})
 
 
@@ -5324,7 +5324,7 @@ class UCorrectiveActionDisplayNameScreen_C : public UFortCorrectiveActionDisplay
 	static inline constexpr uint64_t __MDKClassSize = 1072;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x418, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x418, 8, 0, 0})
 	CMember(UImage*)                                   Image_DisplayNameEntrySpinner                               OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_DisplayNameEntryError                                  OFFSET(get<T>, {0x428, 8, 0, 0})
 
@@ -5348,12 +5348,12 @@ class USplashScreenWidget_C : public UFortSplashScreenWidget
 	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x530, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x530, 8, 0, 0})
 	CMember(UWBP_UIKit_Button_Loud_C*)                 Button_PressToStart                                         OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         I_Fortnite                                                  OFFSET(get<T>, {0x540, 8, 0, 0})
-	SMember(FText)                                     GamepadText                                                 OFFSET(get<T>, {0x548, 24, 0, 0})
-	SMember(FText)                                     MouseText                                                   OFFSET(get<T>, {0x560, 24, 0, 0})
-	SMember(FText)                                     MobileText                                                  OFFSET(get<T>, {0x578, 24, 0, 0})
+	SMember(FText)                                     GamepadText                                                 OFFSET(getStruct<T>, {0x548, 24, 0, 0})
+	SMember(FText)                                     MouseText                                                   OFFSET(getStruct<T>, {0x560, 24, 0, 0})
+	SMember(FText)                                     MobileText                                                  OFFSET(getStruct<T>, {0x578, 24, 0, 0})
 
 
 	/// Functions
@@ -5383,7 +5383,7 @@ class USubgameSelectScreen_C : public UFortSubgameSelectScreen
 	static inline constexpr uint64_t __MDKClassSize = 1188;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x470, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x470, 8, 0, 0})
 	CMember(UOverlay*)                                 ModeSelect                                                  OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UProgressModalWidget_C*)                   LeavingMatchmakingDialog                                    OFFSET(get<T>, {0x480, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 MID_Keyart                                                  OFFSET(get<T>, {0x488, 8, 0, 0})
@@ -5420,10 +5420,10 @@ class UCampaignPurchaseScreen_C : public UFortCampaignPurchaseScreen
 	static inline constexpr uint64_t __MDKClassSize = 1204;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x480, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x480, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         SwitchTextures                                              OFFSET(get<T>, {0x488, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 MID_Keyart                                                  OFFSET(get<T>, {0x490, 8, 0, 0})
-	SMember(FTimerHandle)                              CycleTimer                                                  OFFSET(get<T>, {0x498, 8, 0, 0})
+	SMember(FTimerHandle)                              CycleTimer                                                  OFFSET(getStruct<T>, {0x498, 8, 0, 0})
 	CMember(TArray<UTexture*>)                         TextureCycle                                                OFFSET(get<T>, {0x4A0, 16, 0, 0})
 	DMember(int32_t)                                   TextureCycleIndex                                           OFFSET(get<int32_t>, {0x4B0, 4, 0, 0})
 
@@ -5465,7 +5465,7 @@ class UStoreMain_Root_Legacy_C : public UFortMtxStoreRootBase_Legacy
 	static inline constexpr uint64_t __MDKClassSize = 1697;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5E0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder                                                OFFSET(get<T>, {0x5F0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock                                             OFFSET(get<T>, {0x5F8, 8, 0, 0})
@@ -5555,7 +5555,7 @@ class UStoreMain_MTXOffer_C : public UFortRealMoneyOffer
 	static inline constexpr uint64_t __MDKClassSize = 5704;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1500, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1500, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover_Linear                                                OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         UnhoverNew                                                  OFFSET(get<T>, {0x1510, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         HoverNew                                                    OFFSET(get<T>, {0x1518, 8, 0, 0})
@@ -5589,10 +5589,10 @@ public:
 	CMember(UCommonTextBlock*)                         TextOriginalPrice                                           OFFSET(get<T>, {0x15F8, 8, 0, 0})
 	CMember(USizeBox*)                                 TileSize                                                    OFFSET(get<T>, {0x1600, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         VBucksText                                                  OFFSET(get<T>, {0x1608, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  AboutToShowDetails                                          OFFSET(get<T>, {0x1610, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  AboutToShowDetails                                          OFFSET(getStruct<T>, {0x1610, 16, 0, 0})
 	DMember(bool)                                      bCanSetPrice                                                OFFSET(get<bool>, {0x1620, 1, 0, 0})
 	CMember(UCatalogMessaging*)                        CatalogMessaging                                            OFFSET(get<T>, {0x1628, 8, 0, 0})
-	SMember(FText)                                     OverrideBannerText                                          OFFSET(get<T>, {0x1630, 24, 0, 0})
+	SMember(FText)                                     OverrideBannerText                                          OFFSET(getStruct<T>, {0x1630, 24, 0, 0})
 
 
 	/// Functions
@@ -5642,7 +5642,7 @@ class UStoreMain_OfferDetails_C : public UFortRealMoneyOfferDetails
 	static inline constexpr uint64_t __MDKClassSize = 2536;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x8B0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x8B0, 8, 0, 0})
 	CMember(UImage*)                                   BaseColor                                                   OFFSET(get<T>, {0x8B8, 8, 0, 0})
 	CMember(UImage*)                                   BaseColorDetails                                            OFFSET(get<T>, {0x8C0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           BonusMTXArea                                                OFFSET(get<T>, {0x8C8, 8, 0, 0})
@@ -5733,12 +5733,12 @@ class UWBP_ContentPurchaseBlocker_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Mobile                                              OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_Description                                            OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_Title                                                  OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UWBP_UIKit_Button_Loud_C*)                 WBP_UIKit_Button_Loud                                       OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FText)                                     Text_Details                                                OFFSET(get<T>, {0x2D0, 24, 0, 0})
+	SMember(FText)                                     Text_Details                                                OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
 	DMember(int32_t)                                   Max_Width                                                   OFFSET(get<int32_t>, {0x2E8, 4, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   ParentalControlsScreenClass                                 OFFSET(get<T>, {0x2F0, 32, 0, 0})
 
@@ -5772,7 +5772,7 @@ class AFrontendCamera_Inspect_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2576;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
 
 
@@ -5793,7 +5793,7 @@ class ULoginCredentialSelect_C : public UFortLoginCredentialSelect
 	static inline constexpr uint64_t __MDKClassSize = 1192;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x440, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x440, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              CommonWidgetSwitcher                                        OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Erebus_Title                                                OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         ErebusType                                                  OFFSET(get<T>, {0x458, 8, 0, 0})
@@ -5823,7 +5823,7 @@ class UPlayedBeforeSelect_C : public UFortPlayedBeforeSelect
 	static inline constexpr uint64_t __MDKClassSize = 1120;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x418, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x418, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock                                             OFFSET(get<T>, {0x428, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock1                                            OFFSET(get<T>, {0x430, 8, 0, 0})
@@ -5849,7 +5849,7 @@ class USkewButton_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5411;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Released                                                    OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Pressed                                                     OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover                                                       OFFSET(get<T>, {0x14D8, 8, 0, 0})
@@ -5857,8 +5857,8 @@ public:
 	CMember(UImage*)                                   ImageShadow                                                 OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	CMember(UNamedSlot*)                               NamedSlot_ButtonContent                                     OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_SkewBrushes                                         OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	SMember(FLinearColor)                              ButtonColor                                                 OFFSET(get<T>, {0x1500, 16, 0, 0})
-	SMember(FLinearColor)                              HoverColor                                                  OFFSET(get<T>, {0x1510, 16, 0, 0})
+	SMember(FLinearColor)                              ButtonColor                                                 OFFSET(getStruct<T>, {0x1500, 16, 0, 0})
+	SMember(FLinearColor)                              HoverColor                                                  OFFSET(getStruct<T>, {0x1510, 16, 0, 0})
 	DMember(bool)                                      Chip                                                        OFFSET(get<bool>, {0x1520, 1, 0, 0})
 	DMember(bool)                                      Skew                                                        OFFSET(get<bool>, {0x1521, 1, 0, 0})
 	DMember(bool)                                      NoHoverColor                                                OFFSET(get<bool>, {0x1522, 1, 0, 0})
@@ -5899,7 +5899,7 @@ class UQualityLevelSelectScreen_C : public UFortQualityLevelSelectScreen
 	static inline constexpr uint64_t __MDKClassSize = 1544;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x5C8, 8, 0, 0})
 	CMember(UQualityModeSelectTile_C*)                 Button_SelectHighQuality                                    OFFSET(get<T>, {0x5D0, 8, 0, 0})
 	CMember(USafeZone*)                                Footersafezone                                              OFFSET(get<T>, {0x5D8, 8, 0, 0})
@@ -5925,7 +5925,7 @@ class UQualityModeSelectTile_C : public UFortQualityModeTile
 	static inline constexpr uint64_t __MDKClassSize = 5489;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14E0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         InAnOutro                                                   OFFSET(get<T>, {0x14E8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ConfirmSeleccion                                            OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         GameModeSelection                                           OFFSET(get<T>, {0x14F8, 8, 0, 0})
@@ -5969,7 +5969,7 @@ class AFrontendCamera_Main_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2576;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
 
 
@@ -5988,7 +5988,7 @@ class UWBP_ComboBox_C : public UFortComboBox
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OpenAnim                                                    OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         HoverAnim                                                   OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x2F0, 8, 0, 0})
@@ -5997,15 +5997,15 @@ public:
 	CMember(UCommonTextBlock*)                         LabelText                                                   OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UImage*)                                   Outline                                                     OFFSET(get<T>, {0x310, 8, 0, 0})
 	DMember(bool)                                      AlignContentCenter                                          OFFSET(get<bool>, {0x318, 1, 0, 0})
-	SMember(FLinearColor)                              OutlineEndColor                                             OFFSET(get<T>, {0x31C, 16, 0, 0})
+	SMember(FLinearColor)                              OutlineEndColor                                             OFFSET(getStruct<T>, {0x31C, 16, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 OutlineMaterial                                             OFFSET(get<T>, {0x330, 8, 0, 0})
-	SMember(FName)                                     OutlineColorParam                                           OFFSET(get<T>, {0x338, 4, 0, 0})
+	SMember(FName)                                     OutlineColorParam                                           OFFSET(getStruct<T>, {0x338, 4, 0, 0})
 	CMember(TEnumAsByte<E_UI_InputField_ContentSize>)  ContentSize                                                 OFFSET(get<T>, {0x33C, 1, 0, 0})
 	DMember(bool)                                      p_IsFocused                                                 OFFSET(get<bool>, {0x33D, 1, 0, 0})
 	DMember(bool)                                      p_IsListOpened                                              OFFSET(get<bool>, {0x33E, 1, 0, 0})
 	DMember(bool)                                      p_IsHover                                                   OFFSET(get<bool>, {0x33F, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 ArrowMaterial                                               OFFSET(get<T>, {0x340, 8, 0, 0})
-	SMember(FName)                                     ArrowColorParam                                             OFFSET(get<T>, {0x348, 4, 0, 0})
+	SMember(FName)                                     ArrowColorParam                                             OFFSET(getStruct<T>, {0x348, 4, 0, 0})
 	DMember(bool)                                      p_FocusAnimPlayed                                           OFFSET(get<bool>, {0x34C, 1, 0, 0})
 	CMember(USoundBase*)                               HoverSound                                                  OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(USoundBase*)                               ClickSound                                                  OFFSET(get<T>, {0x358, 8, 0, 0})
@@ -6060,7 +6060,7 @@ class UWBP_InputField_C : public UFortInputField
 	static inline constexpr uint64_t __MDKClassSize = 969;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ErrorAnim                                                   OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         HoverAnim                                                   OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      CommonActionWidget                                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
@@ -6075,14 +6075,14 @@ public:
 	CMember(TEnumAsByte<E_UI_InputField_State>)        DebugInputFieldState                                        OFFSET(get<T>, {0x338, 1, 0, 0})
 	DMember(bool)                                      ShowLabel                                                   OFFSET(get<bool>, {0x339, 1, 0, 0})
 	DMember(bool)                                      AlignContentCenter                                          OFFSET(get<bool>, {0x33A, 1, 0, 0})
-	SMember(FText)                                     DefaultLabelValue                                           OFFSET(get<T>, {0x340, 24, 0, 0})
-	SMember(FText)                                     ErrorValue                                                  OFFSET(get<T>, {0x358, 24, 0, 0})
-	SMember(FText)                                     DefaultHintTextValue                                        OFFSET(get<T>, {0x370, 24, 0, 0})
-	SMember(FLinearColor)                              IdleEndColor                                                OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FLinearColor)                              ErrorEndColor                                               OFFSET(get<T>, {0x398, 16, 0, 0})
-	SMember(FLinearColor)                              OutlineEndColor                                             OFFSET(get<T>, {0x3A8, 16, 0, 0})
+	SMember(FText)                                     DefaultLabelValue                                           OFFSET(getStruct<T>, {0x340, 24, 0, 0})
+	SMember(FText)                                     ErrorValue                                                  OFFSET(getStruct<T>, {0x358, 24, 0, 0})
+	SMember(FText)                                     DefaultHintTextValue                                        OFFSET(getStruct<T>, {0x370, 24, 0, 0})
+	SMember(FLinearColor)                              IdleEndColor                                                OFFSET(getStruct<T>, {0x388, 16, 0, 0})
+	SMember(FLinearColor)                              ErrorEndColor                                               OFFSET(getStruct<T>, {0x398, 16, 0, 0})
+	SMember(FLinearColor)                              OutlineEndColor                                             OFFSET(getStruct<T>, {0x3A8, 16, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 OutlineMaterial                                             OFFSET(get<T>, {0x3B8, 8, 0, 0})
-	SMember(FName)                                     OutlineColorParam                                           OFFSET(get<T>, {0x3C0, 4, 0, 0})
+	SMember(FName)                                     OutlineColorParam                                           OFFSET(getStruct<T>, {0x3C0, 4, 0, 0})
 	CMember(TEnumAsByte<E_UI_InputField_ContentSize>)  ContentSize                                                 OFFSET(get<T>, {0x3C4, 1, 0, 0})
 	DMember(bool)                                      p_IsFocused                                                 OFFSET(get<bool>, {0x3C5, 1, 0, 0})
 	DMember(bool)                                      p_IsMouseHovered                                            OFFSET(get<bool>, {0x3C6, 1, 0, 0})
@@ -6155,7 +6155,7 @@ class UJoinServer_C : public UFortUIStateWidget_JoinServer
 	static inline constexpr uint64_t __MDKClassSize = 1504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5D0, 8, 0, 0})
 	CMember(UBuildWatermark_C*)                        BuildWatermark                                              OFFSET(get<T>, {0x5D8, 8, 0, 0})
 
 
@@ -6179,8 +6179,8 @@ public:
 	CMember(UCommonTextBlock*)                         AutorejoinText                                              OFFSET(get<T>, {0x598, 8, 0, 0})
 	CMember(UHorizontalBox*)                           ButtonBox                                                   OFFSET(get<T>, {0x5A0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Title                                                       OFFSET(get<T>, {0x5A8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRequestAbandon                                            OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRequestRejoinRetry                                        OFFSET(get<T>, {0x5C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestAbandon                                            OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRequestRejoinRetry                                        OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
 
 
 	/// Functions
@@ -6298,7 +6298,7 @@ class UStoreSelectionPopup_C : public UFortMtxStoreSelectionPopup
 	static inline constexpr uint64_t __MDKClassSize = 1408;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x558, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x558, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UImage*)                                   SpeedLines                                                  OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         StorePrompt_Header                                          OFFSET(get<T>, {0x570, 8, 0, 0})
@@ -6340,7 +6340,7 @@ class URedeemFriendCodeWindow_C : public UFortRedeemCodeBase
 	static inline constexpr uint64_t __MDKClassSize = 1480;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x560, 8, 0, 0})
 	CMember(UCloseButton_C*)                           Button_Cancel                                               OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        CancelButton                                                OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          EntryProgressSwitcher                                       OFFSET(get<T>, {0x578, 8, 0, 0})
@@ -6384,15 +6384,15 @@ class UInfoFlag_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UImage*)                                   BG_Gradient                                                 OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     CommonRichTextBlock                                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox                                                     OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UImage*)                                   Trim                                                        OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FLinearColor)                              TrimColor                                                   OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FLinearColor)                              GradientColor                                               OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FLinearColor)                              TrimColor                                                   OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FLinearColor)                              GradientColor                                               OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	DMember(double)                                    TrimWidth                                                   OFFSET(get<double>, {0x2F0, 8, 0, 0})
-	SMember(FText)                                     InfoText                                                    OFFSET(get<T>, {0x2F8, 24, 0, 0})
+	SMember(FText)                                     InfoText                                                    OFFSET(getStruct<T>, {0x2F8, 24, 0, 0})
 	DMember(double)                                    GradientDistance                                            OFFSET(get<double>, {0x310, 8, 0, 0})
 	DMember(double)                                    MaxWidth                                                    OFFSET(get<double>, {0x318, 8, 0, 0})
 
@@ -6420,7 +6420,7 @@ class UMTXButton_C : public UFortMTXButton
 	static inline constexpr uint64_t __MDKClassSize = 5400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover_Mobile                                                OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover_Grow                                                  OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Hover_Bounce                                                OFFSET(get<T>, {0x14E8, 8, 0, 0})
@@ -6503,12 +6503,12 @@ class UStoreMain_OfferDetailsAttribute_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Name                                                        OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Value                                                       OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	SMember(FText)                                     AttributeDescription                                        OFFSET(get<T>, {0x2F0, 24, 0, 0})
-	SMember(FText)                                     AttributeValue                                              OFFSET(get<T>, {0x308, 24, 0, 0})
+	SMember(FText)                                     AttributeDescription                                        OFFSET(getStruct<T>, {0x2F0, 24, 0, 0})
+	SMember(FText)                                     AttributeValue                                              OFFSET(getStruct<T>, {0x308, 24, 0, 0})
 
 
 	/// Functions
@@ -6526,7 +6526,7 @@ class UMTXOffer_SpecialBanner_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonBorder*)                            Border_SaleInfo                                             OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           HB_BattlePassStarsSupplemental                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UImage*)                                   Image_BattleStarSupplemental                                OFFSET(get<T>, {0x2C0, 8, 0, 0})
@@ -6535,7 +6535,7 @@ public:
 	CMember(UWidgetSwitcher*)                          WidgetSwitcher_Main                                         OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	DMember(bool)                                      bShowBanner                                                 OFFSET(get<bool>, {0x2E0, 1, 0, 0})
 	DMember(bool)                                      bHasBattlePassStars                                         OFFSET(get<bool>, {0x2E1, 1, 0, 0})
-	SMember(FText)                                     SalesInfoText                                               OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     SalesInfoText                                               OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	DMember(int32_t)                                   NumOfBattlePassStars                                        OFFSET(get<int32_t>, {0x300, 4, 0, 0})
 	CMember(UCatalogMessaging*)                        CatalogMessaging                                            OFFSET(get<T>, {0x308, 8, 0, 0})
 
@@ -6555,7 +6555,7 @@ class UPurchaseUnavailable_C : public UFortPurchaseUnavailableModal
 	static inline constexpr uint64_t __MDKClassSize = 1416;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x568, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x568, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     RichText_Details                                            OFFSET(get<T>, {0x578, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     RichText_HeaderText                                         OFFSET(get<T>, {0x580, 8, 0, 0})
@@ -6586,7 +6586,7 @@ class ULoadingSubGameContentModal_C : public UFortLoadingOnDemandContentModal
 	static inline constexpr uint64_t __MDKClassSize = 1145;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x430, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro                                                       OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock_Title                                       OFFSET(get<T>, {0x448, 8, 0, 0})
@@ -6621,7 +6621,7 @@ class USimpleMTXDisplay_C : public UFortSimpleMTXDisplay
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     AvailableAmountText                                         OFFSET(get<T>, {0x2D8, 8, 0, 0})
 
 
@@ -6640,7 +6640,7 @@ class USubgameTile_C : public UFortSubgameTile
 	static inline constexpr uint64_t __MDKClassSize = 5672;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x15F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x15F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         RevealCMSKeyArt                                             OFFSET(get<T>, {0x15F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         UnFocused                                                   OFFSET(get<T>, {0x1600, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         FocusedSecondary                                            OFFSET(get<T>, {0x1608, 8, 0, 0})
@@ -6756,7 +6756,7 @@ class UAthenaBottomBarWidget_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 745;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UAthenaBoundActionBar*)                    AthenaBoundActionBar                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UFortHUDElementWrapper_C*)                 FortHUDElementWrapper                                       OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	DMember(bool)                                      Display_Owner_Actions_Only                                  OFFSET(get<bool>, {0x2E8, 1, 0, 0})
@@ -6839,7 +6839,7 @@ class UEulaWidget_C : public UFortEulaWidget
 	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEulaResponse                                              OFFSET(get<T>, {0x580, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEulaResponse                                              OFFSET(getStruct<T>, {0x580, 16, 0, 0})
 
 
 	/// Functions
@@ -6905,7 +6905,7 @@ class UAccountPinLinkingWindow_C : public UFortAccountPinLinkingWindow
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x658, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x658, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x660, 8, 0, 0})
 	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x668, 8, 0, 0})
 
@@ -7069,7 +7069,7 @@ class UQualityLevelSelectTimer_C : public UFortHUDQualityLevelSelectTimer
 	static inline constexpr uint64_t __MDKClassSize = 808;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x310, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x310, 8, 0, 0})
 	DMember(double)                                    TextScaleUnderOneSecond                                     OFFSET(get<double>, {0x318, 8, 0, 0})
 	DMember(double)                                    TextScaleOverOneSecond                                      OFFSET(get<double>, {0x320, 8, 0, 0})
 
@@ -7107,7 +7107,7 @@ class UStatusWidget_C : public UFortLoginStatus
 	static inline constexpr uint64_t __MDKClassSize = 1480;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5C0, 8, 0, 0})
 
 
 	/// Functions
@@ -7187,12 +7187,12 @@ class UHealthWarningScreen_C : public UHealthWarningScreen
 	static inline constexpr uint64_t __MDKClassSize = 1432;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x558, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x558, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         FinishingAnim                                               OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x568, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HealthWarningCompleted                                      OFFSET(get<T>, {0x570, 16, 0, 0})
-	SMember(FTimerHandle)                              ShowTimer                                                   OFFSET(get<T>, {0x580, 8, 0, 0})
-	SMember(FMargin)                                   IconPadding                                                 OFFSET(get<T>, {0x588, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HealthWarningCompleted                                      OFFSET(getStruct<T>, {0x570, 16, 0, 0})
+	SMember(FTimerHandle)                              ShowTimer                                                   OFFSET(getStruct<T>, {0x580, 8, 0, 0})
+	SMember(FMargin)                                   IconPadding                                                 OFFSET(getStruct<T>, {0x588, 16, 0, 0})
 
 
 	/// Functions
@@ -7242,7 +7242,7 @@ class UWebLogin_C : public UFortWebLoginWidget
 	static inline constexpr uint64_t __MDKClassSize = 1344;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x528, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x528, 8, 0, 0})
 	CMember(UCircularThrobber*)                        Throbber                                                    OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(UBorder*)                                  WebContent                                                  OFFSET(get<T>, {0x538, 8, 0, 0})
 
@@ -7305,7 +7305,7 @@ class AFrontendCamera_VaultRotator_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2584;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
 	CMember(AVaultRotator_C*)                          ActiveVaultRotator                                          OFFSET(get<T>, {0xA10, 8, 0, 0})
 
@@ -7329,7 +7329,7 @@ class AMPItemShop_VaultWorld_C : public AVaultWorld_C
 	static inline constexpr uint64_t __MDKClassSize = 921;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x348, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x348, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     floor                                                       OFFSET(get<T>, {0x350, 8, 0, 0})
 	DMember(float)                                     FloorVisibility_FloorMask_33DB417F4F318DD14C0CDB92ED647F56  OFFSET(get<float>, {0x358, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           FloorVisibility__Direction_33DB417F4F318DD14C0CDB92ED647F56 OFFSET(get<T>, {0x35C, 1, 0, 0})
@@ -7427,9 +7427,9 @@ class UItemReceivedHeaderSubWidgetBase_C : public UItemReceivedHeaderBase
 	static inline constexpr uint64_t __MDKClassSize = 753;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2C0, 8, 0, 0})
 	CMember(UFortGiftBoxItem*)                         GiftBoxItem_BP                                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FString)                                   FromUserName_BP                                             OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FString)                                   FromUserName_BP                                             OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 	CMember(TArray<FFortReceivedItemLootInfo>)         ItemDefs                                                    OFFSET(get<T>, {0x2E0, 16, 0, 0})
 	DMember(bool)                                      bSelfGift                                                   OFFSET(get<bool>, {0x2F0, 1, 0, 0})
 
@@ -7451,7 +7451,7 @@ class UCurrencyListObject_C : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FCurrencyData)                             Data                                                        OFFSET(get<T>, {0x28, 80, 0, 0})
+	SMember(FCurrencyData)                             Data                                                        OFFSET(getStruct<T>, {0x28, 80, 0, 0})
 };
 
 /// Class /Game/UI/ItemReceived/ItemReceivedHeaders/CurrencyListViewItem.CurrencyListViewItem_C
@@ -7462,9 +7462,9 @@ class UCurrencyListViewItem_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     CurrencyMessage                                             OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FText)                                     DisplayMessage                                              OFFSET(get<T>, {0x2B8, 24, 0, 0})
+	SMember(FText)                                     DisplayMessage                                              OFFSET(getStruct<T>, {0x2B8, 24, 0, 0})
 
 
 	/// Functions
@@ -7490,7 +7490,7 @@ class UItemReceivedAccountWidget_C : public UFortAccountWidgetBase
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x308, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x308, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock_UserMessage                                 OFFSET(get<T>, {0x310, 8, 0, 0})
 
 
@@ -7509,7 +7509,7 @@ class UCurrencyListView_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonListView*)                          DataListView                                                OFFSET(get<T>, {0x2B0, 8, 0, 0})
 
 
@@ -7530,7 +7530,7 @@ class UItemReceivedCurrencyHeader_C : public UItemReceivedHeaderSubWidgetBase_C
 	static inline constexpr uint64_t __MDKClassSize = 849;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BattlepassTier                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         BattlepassUpgraded                                          OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              CommonWidgetSwitcher_Icon                                   OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -7539,7 +7539,7 @@ public:
 	CMember(UImage*)                                   ImageBattlePassIconGold                                     OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UImage*)                                   ImageBattlePassIconSilver                                   OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UItemReceivedAccountWidget_C*)             ItemReceivedAccountWidget                                   OFFSET(get<T>, {0x338, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ActivateWidgetFromPresentationScreen                        OFFSET(get<T>, {0x340, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ActivateWidgetFromPresentationScreen                        OFFSET(getStruct<T>, {0x340, 16, 0, 0})
 	DMember(bool)                                      AlreadyActivated                                            OFFSET(get<bool>, {0x350, 1, 0, 0})
 
 
@@ -7580,7 +7580,7 @@ class UPinDot_C : public UFortPinCharacter
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x2B0, 8, 0, 0})
 
 
@@ -7619,11 +7619,11 @@ class UErrorLlama_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 MID_Llama                                                   OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      bFlippedTexture                                             OFFSET(get<bool>, {0x2C0, 1, 0, 0})
-	SMember(FVector2D)                                 CurLookAt2D                                                 OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	SMember(FVector2D)                                 CurLookAt2D                                                 OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
 	CMember(ECommonInputType)                          CurInputType                                                OFFSET(get<T>, {0x2D8, 1, 0, 0})
 	DMember(double)                                    EyeInterpSpeed                                              OFFSET(get<double>, {0x2E0, 8, 0, 0})
 	DMember(double)                                    MaterialInputScale                                          OFFSET(get<double>, {0x2E8, 8, 0, 0})
@@ -7672,7 +7672,7 @@ class ULetoBorder_C : public UFortLetoLayoutBorder
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D8, 8, 0, 0})
 	CMember(UBorder*)                                  BorderBottom                                                OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UBorder*)                                  BorderLeft                                                  OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UBorder*)                                  BorderNameplate                                             OFFSET(get<T>, {0x2F0, 8, 0, 0})
@@ -7779,7 +7779,7 @@ class UPowerToastWidget_C : public UFortPlayerPowerRatingToast
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x328, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x328, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         LookAtMe                                                    OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro                                                       OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x340, 8, 0, 0})
@@ -7789,7 +7789,7 @@ public:
 	CMember(UImage*)                                   Moonbeam_Power_Back                                         OFFSET(get<T>, {0x360, 8, 0, 0})
 	CMember(UImage*)                                   Moonbeam_Power_Back_Difference                              OFFSET(get<T>, {0x368, 8, 0, 0})
 	CMember(UImage*)                                   PowerIconGlow                                               OFFSET(get<T>, {0x370, 8, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x378, 8, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x378, 8, 0, 0})
 
 
 	/// Functions
@@ -7861,7 +7861,7 @@ class UPinCodeButton_C : public UFortPinButton
 	static inline constexpr uint64_t __MDKClassSize = 5344;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         PasscodeText                                                OFFSET(get<T>, {0x14D8, 8, 0, 0})
 
 
@@ -7934,7 +7934,7 @@ class UWebPurchase_C : public UFortWebPurchaseScreen
 	static inline constexpr uint64_t __MDKClassSize = 1376;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	CMember(UWBP_UIKit_Button_Quiet_C*)                Button_Back                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
 	CMember(UCircularThrobber*)                        Throbber                                                    OFFSET(get<T>, {0x558, 8, 0, 0})
 
@@ -7954,7 +7954,7 @@ class UVoiceChannelChangePopup_C : public UFortVoiceChannelChangePopup
 	static inline constexpr uint64_t __MDKClassSize = 1117;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3F0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         AmbientIconPulse                                            OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UHorizontalBox*)                           GamepadKeybindWrapper                                       OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UImage*)                                   Image_Mic                                                   OFFSET(get<T>, {0x408, 8, 0, 0})
@@ -7962,11 +7962,11 @@ public:
 	CMember(UImage*)                                   MicPulse                                                    OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_KeybindWidgets                                     OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Hold                                                   OFFSET(get<T>, {0x428, 8, 0, 0})
-	SMember(FName)                                     M_Param_ColorA                                              OFFSET(get<T>, {0x430, 4, 0, 0})
-	SMember(FName)                                     M_Param_ColorB                                              OFFSET(get<T>, {0x434, 4, 0, 0})
-	SMember(FName)                                     M_Param_Progress                                            OFFSET(get<T>, {0x438, 4, 0, 0})
-	SMember(FLinearColor)                              ColorB                                                      OFFSET(get<T>, {0x43C, 16, 0, 0})
-	SMember(FLinearColor)                              ColorA                                                      OFFSET(get<T>, {0x44C, 16, 0, 0})
+	SMember(FName)                                     M_Param_ColorA                                              OFFSET(getStruct<T>, {0x430, 4, 0, 0})
+	SMember(FName)                                     M_Param_ColorB                                              OFFSET(getStruct<T>, {0x434, 4, 0, 0})
+	SMember(FName)                                     M_Param_Progress                                            OFFSET(getStruct<T>, {0x438, 4, 0, 0})
+	SMember(FLinearColor)                              ColorB                                                      OFFSET(getStruct<T>, {0x43C, 16, 0, 0})
+	SMember(FLinearColor)                              ColorA                                                      OFFSET(getStruct<T>, {0x44C, 16, 0, 0})
 	DMember(bool)                                      CollapseOnAnimationFinish                                   OFFSET(get<bool>, {0x45C, 1, 0, 0})
 
 
@@ -7995,27 +7995,27 @@ class UIconTextButtonHold_C : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5712;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14C0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CenterButtonTextWidget                                      OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UBorder*)                                  ContentBorder                                               OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UHorizontalBox*)                           HorizontalBox_ButtonContent                                 OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UImage*)                                   LeftSideImage                                               OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UNamedSlot*)                               RightExtraContentSlot                                       OFFSET(get<T>, {0x14E8, 8, 0, 0})
-	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x14F0, 24, 0, 0})
-	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(get<T>, {0x1510, 192, 0, 0})
+	SMember(FText)                                     ButtonText                                                  OFFSET(getStruct<T>, {0x14F0, 24, 0, 0})
+	SMember(FSlateBrush)                               IconBrush                                                   OFFSET(getStruct<T>, {0x1510, 192, 0, 0})
 	CMember(UClass*)                                   ControllerInputStyle                                        OFFSET(get<T>, {0x15D0, 8, 0, 0})
 	CMember(UClass*)                                   MouseKeyboardStyle                                          OFFSET(get<T>, {0x15D8, 8, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         ContentAlignment                                            OFFSET(get<T>, {0x15E0, 1, 0, 0})
 	DMember(bool)                                      bMouseKeyboardStyleSet                                      OFFSET(get<bool>, {0x15E1, 1, 0, 0})
-	SMember(FText)                                     OverrideButtonText                                          OFFSET(get<T>, {0x15E8, 24, 0, 0})
+	SMember(FText)                                     OverrideButtonText                                          OFFSET(getStruct<T>, {0x15E8, 24, 0, 0})
 	CMember(TEnumAsByte<ETextJustify>)                 ButtonTextJustification                                     OFFSET(get<T>, {0x1600, 1, 0, 0})
 	DMember(bool)                                      bDisplayAllCaps                                             OFFSET(get<bool>, {0x1601, 1, 0, 0})
 	DMember(double)                                    PressProgress                                               OFFSET(get<double>, {0x1608, 8, 0, 0})
 	DMember(bool)                                      bIgnoreInputActionWidgetText                                OFFSET(get<bool>, {0x1610, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HoldActionStarted                                           OFFSET(get<T>, {0x1618, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HoldActionStarted                                           OFFSET(getStruct<T>, {0x1618, 16, 0, 0})
 	DMember(bool)                                      bHolding                                                    OFFSET(get<bool>, {0x1628, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HoldActionEnded                                             OFFSET(get<T>, {0x1630, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  HoldActionCompleted                                         OFFSET(get<T>, {0x1640, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HoldActionEnded                                             OFFSET(getStruct<T>, {0x1630, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  HoldActionCompleted                                         OFFSET(getStruct<T>, {0x1640, 16, 0, 0})
 
 
 	/// Functions
@@ -8095,7 +8095,7 @@ class UAthena_ProgressModal_C : public UAthenaProgressModal
 	static inline constexpr uint64_t __MDKClassSize = 1072;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UImage*)                                   Image_Separator_Down                                        OFFSET(get<T>, {0x410, 8, 0, 0})
@@ -8119,7 +8119,7 @@ class UAthena_ControllerDisconnectedModal_C : public UAthenaControllerDisconnect
 	static inline constexpr uint64_t __MDKClassSize = 1088;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x400, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x400, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      CommonActionWidget                                          OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x418, 8, 0, 0})
@@ -8184,7 +8184,7 @@ class URestartClient_C : public UFortRestartClientModal
 	static inline constexpr uint64_t __MDKClassSize = 1400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x560, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        Button_Confirm                                              OFFSET(get<T>, {0x570, 8, 0, 0})
 
@@ -8218,7 +8218,7 @@ class UToastWidget_MinorError_C : public UFortToastWidget
 	static inline constexpr uint64_t __MDKClassSize = 905;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro_New                                                   OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro1                                                      OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -8233,8 +8233,8 @@ public:
 	CMember(UIconTextButton_C*)                        OpenButton                                                  OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         ProgrammerNote                                              OFFSET(get<T>, {0x360, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Title                                                       OFFSET(get<T>, {0x368, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(get<T>, {0x370, 16, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x380, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(getStruct<T>, {0x370, 16, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x380, 8, 0, 0})
 	DMember(bool)                                      bActionTaken                                                OFFSET(get<bool>, {0x388, 1, 0, 0})
 
 
@@ -8295,7 +8295,7 @@ class UBP_SidebarCollectionScreenContainerTabButtonEditTags_C : public UFortSide
 	static inline constexpr uint64_t __MDKClassSize = 5593;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1530, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x1530, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Selected_Touch                                              OFFSET(get<T>, {0x1538, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Unselected_Touch                                            OFFSET(get<T>, {0x1540, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Tag_DisabledUnhover                                         OFFSET(get<T>, {0x1548, 8, 0, 0})
@@ -8352,11 +8352,11 @@ class UConfirmationWindow_C : public UFortConfirmationWindow
 	static inline constexpr uint64_t __MDKClassSize = 1936;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x750, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x750, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x758, 8, 0, 0})
 	CMember(USizeBox*)                                 SizeBox                                                     OFFSET(get<T>, {0x760, 8, 0, 0})
 	CMember(UCommonBorder*)                            TapToCloseZone                                              OFFSET(get<T>, {0x768, 8, 0, 0})
-	SMember(FLinearColor)                              ButtonIconColor                                             OFFSET(get<T>, {0x770, 16, 0, 0})
+	SMember(FLinearColor)                              ButtonIconColor                                             OFFSET(getStruct<T>, {0x770, 16, 0, 0})
 	CMember(USoundBase*)                               ConfirmationAppearSound                                     OFFSET(get<T>, {0x780, 8, 0, 0})
 	CMember(USoundBase*)                               ConfirmationDisappearSound                                  OFFSET(get<T>, {0x788, 8, 0, 0})
 
@@ -8398,7 +8398,7 @@ class UParentalControlsCabinEmailManagementWidget_C : public UFortCabinEmailMana
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x340, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x340, 8, 0, 0})
 	CMember(UOverlay*)                                 CabinEmailManagement                                        OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UImage*)                                   Image_DisplayNameEntrySpinner                               OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UImage*)                                   Image_DisplayNameEntrySpinner1                              OFFSET(get<T>, {0x358, 8, 0, 0})
@@ -8428,7 +8428,7 @@ class UPinModal_C : public UFortPinModal
 	static inline constexpr uint64_t __MDKClassSize = 1800;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x600, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x600, 8, 0, 0})
 	CMember(UImage*)                                   Bad                                                         OFFSET(get<T>, {0x608, 8, 0, 0})
 	CMember(UImage*)                                   BG_INPUTBOX                                                 OFFSET(get<T>, {0x610, 8, 0, 0})
 	CMember(UImage*)                                   BG_WIREFRAME2                                               OFFSET(get<T>, {0x618, 8, 0, 0})
@@ -8490,24 +8490,24 @@ class UWBP_PlayerAvatar_C : public UFortPlayerAvatar
 	static inline constexpr uint64_t __MDKClassSize = 897;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UFortOnlineStatusViewModel*)               FortOnlineStatusViewModel                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UFortPlayerAvatarViewModel*)               FortPlayerAvatarViewModel                                   OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Hover                                                  OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UImage*)                                   AvatarImage                                                 OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(USpacer*)                                  Spacer_Size                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 AvatarMaterial                                              OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(FVector2D)                                 AvatarSize                                                  OFFSET(get<T>, {0x2E0, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceSelect_Online                                       OFFSET(get<T>, {0x2F0, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceSelect_Away                                         OFFSET(get<T>, {0x300, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceSelect_Offline                                      OFFSET(get<T>, {0x310, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceSelect_Blocked                                      OFFSET(get<T>, {0x320, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceColor_Online                                        OFFSET(get<T>, {0x330, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceColor_Away                                          OFFSET(get<T>, {0x340, 16, 0, 0})
-	SMember(FLinearColor)                              PresenceColor_Offline                                       OFFSET(get<T>, {0x350, 16, 0, 0})
+	SMember(FVector2D)                                 AvatarSize                                                  OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceSelect_Online                                       OFFSET(getStruct<T>, {0x2F0, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceSelect_Away                                         OFFSET(getStruct<T>, {0x300, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceSelect_Offline                                      OFFSET(getStruct<T>, {0x310, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceSelect_Blocked                                      OFFSET(getStruct<T>, {0x320, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceColor_Online                                        OFFSET(getStruct<T>, {0x330, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceColor_Away                                          OFFSET(getStruct<T>, {0x340, 16, 0, 0})
+	SMember(FLinearColor)                              PresenceColor_Offline                                       OFFSET(getStruct<T>, {0x350, 16, 0, 0})
 	DMember(bool)                                      ShowOnlinePresence                                          OFFSET(get<bool>, {0x360, 1, 0, 0})
 	DMember(double)                                    PresenceIconScale                                           OFFSET(get<double>, {0x368, 8, 0, 0})
-	SMember(FVector2D)                                 PresenceIconOffset                                          OFFSET(get<T>, {0x370, 16, 0, 0})
+	SMember(FVector2D)                                 PresenceIconOffset                                          OFFSET(getStruct<T>, {0x370, 16, 0, 0})
 	DMember(bool)                                      ShowPresenceBg                                              OFFSET(get<bool>, {0x380, 1, 0, 0})
 
 
@@ -8546,7 +8546,7 @@ class UToastWidgetDonut_C : public UFortToastWidget
 	static inline constexpr uint64_t __MDKClassSize = 849;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro_New                                                   OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UCommonBorder*)                            CommonBorder_MainWidget                                     OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -8554,8 +8554,8 @@ public:
 	CMember(UImage*)                                   Image                                                       OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UTextBlock*)                               TextBlock                                                   OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Title                                                       OFFSET(get<T>, {0x330, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(get<T>, {0x338, 16, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x348, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(getStruct<T>, {0x338, 16, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x348, 8, 0, 0})
 	DMember(bool)                                      bActionTaken                                                OFFSET(get<bool>, {0x350, 1, 0, 0})
 
 
@@ -8602,7 +8602,7 @@ class UErrorWindow_C : public UFortErrorWindow
 	static inline constexpr uint64_t __MDKClassSize = 1664;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x600, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x600, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Llama                                                       OFFSET(get<T>, {0x608, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Llama1                                                      OFFSET(get<T>, {0x610, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x618, 8, 0, 0})
@@ -8615,8 +8615,8 @@ public:
 	CMember(ULightbox_C*)                              Lightbox                                                    OFFSET(get<T>, {0x650, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         CurLlamaAnim                                                OFFSET(get<T>, {0x658, 8, 0, 0})
 	CMember(TArray<UErrorLlama_C*>)                    LlamaArray                                                  OFFSET(get<T>, {0x660, 16, 0, 0})
-	SMember(FTimerHandle)                              LlamaReverseTimer                                           OFFSET(get<T>, {0x670, 8, 0, 0})
-	SMember(FTimerHandle)                              AmbientLlamaPlayTimer                                       OFFSET(get<T>, {0x678, 8, 0, 0})
+	SMember(FTimerHandle)                              LlamaReverseTimer                                           OFFSET(getStruct<T>, {0x670, 8, 0, 0})
+	SMember(FTimerHandle)                              AmbientLlamaPlayTimer                                       OFFSET(getStruct<T>, {0x678, 8, 0, 0})
 
 
 	/// Functions
@@ -8660,15 +8660,15 @@ class USidebarSocialAddingTagWidget_C : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         AddingTag                                                   OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UBorder*)                                  Border_AddingTagBorder                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UImage*)                                   Image_AddingTagArrow                                        OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_AddingTag                                           OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_AddingTagName                                          OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	SMember(FString)                                   TagCategory_AddTag                                          OFFSET(get<T>, {0x300, 16, 0, 0})
-	SMember(FName)                                     Name_InnerColor                                             OFFSET(get<T>, {0x310, 4, 0, 0})
-	SMember(FName)                                     OuterColor                                                  OFFSET(get<T>, {0x314, 4, 0, 0})
+	SMember(FString)                                   TagCategory_AddTag                                          OFFSET(getStruct<T>, {0x300, 16, 0, 0})
+	SMember(FName)                                     Name_InnerColor                                             OFFSET(getStruct<T>, {0x310, 4, 0, 0})
+	SMember(FName)                                     OuterColor                                                  OFFSET(getStruct<T>, {0x314, 4, 0, 0})
 
 
 	/// Functions
@@ -8688,7 +8688,7 @@ class USidebarSocialTagWidget_C : public USocialTagWidget
 	static inline constexpr uint64_t __MDKClassSize = 5924;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         BorderUnhover                                               OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         BorderHover                                                 OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         StateChange                                                 OFFSET(get<T>, {0x14E8, 8, 0, 0})
@@ -8700,35 +8700,35 @@ public:
 	CMember(USpacer*)                                  Spacer_TagCategoryIcon                                      OFFSET(get<T>, {0x1518, 8, 0, 0})
 	CMember(UCommonVisibilitySwitcher*)                Switcher_SelectedState                                      OFFSET(get<T>, {0x1520, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_TagName                                                OFFSET(get<T>, {0x1528, 8, 0, 0})
-	SMember(FName)                                     Name_InnerColor                                             OFFSET(get<T>, {0x1530, 4, 0, 0})
-	SMember(FName)                                     Name_OuterColor                                             OFFSET(get<T>, {0x1534, 4, 0, 0})
-	SMember(FName)                                     Name_TagOpacity                                             OFFSET(get<T>, {0x1538, 4, 0, 0})
-	SMember(FString)                                   TagCategory_Disabled                                        OFFSET(get<T>, {0x1540, 16, 0, 0})
-	SMember(FTimerHandle)                              StateChangeLerpTimerHandle                                  OFFSET(get<T>, {0x1550, 8, 0, 0})
+	SMember(FName)                                     Name_InnerColor                                             OFFSET(getStruct<T>, {0x1530, 4, 0, 0})
+	SMember(FName)                                     Name_OuterColor                                             OFFSET(getStruct<T>, {0x1534, 4, 0, 0})
+	SMember(FName)                                     Name_TagOpacity                                             OFFSET(getStruct<T>, {0x1538, 4, 0, 0})
+	SMember(FString)                                   TagCategory_Disabled                                        OFFSET(getStruct<T>, {0x1540, 16, 0, 0})
+	SMember(FTimerHandle)                              StateChangeLerpTimerHandle                                  OFFSET(getStruct<T>, {0x1550, 8, 0, 0})
 	DMember(double)                                    StateChangeLerpAlpha                                        OFFSET(get<double>, {0x1558, 8, 0, 0})
-	SMember(FSidebarSocialTagCategoryStructure)        TagCategoryStructureReference                               OFFSET(get<T>, {0x1560, 112, 0, 0})
-	SMember(FSidebarSocialTagCategoryStructure)        DisabledTagCategoryStructureReference                       OFFSET(get<T>, {0x15D0, 112, 0, 0})
+	SMember(FSidebarSocialTagCategoryStructure)        TagCategoryStructureReference                               OFFSET(getStruct<T>, {0x1560, 112, 0, 0})
+	SMember(FSidebarSocialTagCategoryStructure)        DisabledTagCategoryStructureReference                       OFFSET(getStruct<T>, {0x15D0, 112, 0, 0})
 	DMember(double)                                    StateChangeLerpTimeStep                                     OFFSET(get<double>, {0x1640, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 TagBorderMaterialReference                                  OFFSET(get<T>, {0x1648, 8, 0, 0})
-	SMember(FLinearColor)                              CurrentInnerColorReference                                  OFFSET(get<T>, {0x1650, 16, 0, 0})
-	SMember(FLinearColor)                              CurrentOuterColorReference                                  OFFSET(get<T>, {0x1660, 16, 0, 0})
-	SMember(FLinearColor)                              TargetInnerColorReference                                   OFFSET(get<T>, {0x1670, 16, 0, 0})
-	SMember(FLinearColor)                              TargetOuterColorReference                                   OFFSET(get<T>, {0x1680, 16, 0, 0})
-	SMember(FLinearColor)                              TagContentColorWhite                                        OFFSET(get<T>, {0x1690, 16, 0, 0})
-	SMember(FLinearColor)                              TagContentColorWhiteDisabled                                OFFSET(get<T>, {0x16A0, 16, 0, 0})
-	SMember(FLinearColor)                              TagContentColorBlack                                        OFFSET(get<T>, {0x16B0, 16, 0, 0})
-	SMember(FLinearColor)                              CurrentTagContentColorReference                             OFFSET(get<T>, {0x16C0, 16, 0, 0})
-	SMember(FLinearColor)                              TargetTagContentColorReference                              OFFSET(get<T>, {0x16D0, 16, 0, 0})
-	SMember(FLinearColor)                              TagContentColorBlackDisabled                                OFFSET(get<T>, {0x16E0, 16, 0, 0})
+	SMember(FLinearColor)                              CurrentInnerColorReference                                  OFFSET(getStruct<T>, {0x1650, 16, 0, 0})
+	SMember(FLinearColor)                              CurrentOuterColorReference                                  OFFSET(getStruct<T>, {0x1660, 16, 0, 0})
+	SMember(FLinearColor)                              TargetInnerColorReference                                   OFFSET(getStruct<T>, {0x1670, 16, 0, 0})
+	SMember(FLinearColor)                              TargetOuterColorReference                                   OFFSET(getStruct<T>, {0x1680, 16, 0, 0})
+	SMember(FLinearColor)                              TagContentColorWhite                                        OFFSET(getStruct<T>, {0x1690, 16, 0, 0})
+	SMember(FLinearColor)                              TagContentColorWhiteDisabled                                OFFSET(getStruct<T>, {0x16A0, 16, 0, 0})
+	SMember(FLinearColor)                              TagContentColorBlack                                        OFFSET(getStruct<T>, {0x16B0, 16, 0, 0})
+	SMember(FLinearColor)                              CurrentTagContentColorReference                             OFFSET(getStruct<T>, {0x16C0, 16, 0, 0})
+	SMember(FLinearColor)                              TargetTagContentColorReference                              OFFSET(getStruct<T>, {0x16D0, 16, 0, 0})
+	SMember(FLinearColor)                              TagContentColorBlackDisabled                                OFFSET(getStruct<T>, {0x16E0, 16, 0, 0})
 	DMember(double)                                    EnabledTagOpacity                                           OFFSET(get<double>, {0x16F0, 8, 0, 0})
 	DMember(double)                                    DisabledTagOpacity                                          OFFSET(get<double>, {0x16F8, 8, 0, 0})
 	DMember(bool)                                      Highlighted                                                 OFFSET(get<bool>, {0x1700, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 TagCategoryIconMaterialReference                            OFFSET(get<T>, {0x1708, 8, 0, 0})
-	SMember(FName)                                     Name_GradientStartColor                                     OFFSET(get<T>, {0x1710, 4, 0, 0})
-	SMember(FName)                                     Name_GradientEndColor                                       OFFSET(get<T>, {0x1714, 4, 0, 0})
-	SMember(FName)                                     Name_IconColor                                              OFFSET(get<T>, {0x1718, 4, 0, 0})
-	SMember(FName)                                     Name_EndingInnerColor                                       OFFSET(get<T>, {0x171C, 4, 0, 0})
-	SMember(FName)                                     Name_EndingOuterColor                                       OFFSET(get<T>, {0x1720, 4, 0, 0})
+	SMember(FName)                                     Name_GradientStartColor                                     OFFSET(getStruct<T>, {0x1710, 4, 0, 0})
+	SMember(FName)                                     Name_GradientEndColor                                       OFFSET(getStruct<T>, {0x1714, 4, 0, 0})
+	SMember(FName)                                     Name_IconColor                                              OFFSET(getStruct<T>, {0x1718, 4, 0, 0})
+	SMember(FName)                                     Name_EndingInnerColor                                       OFFSET(getStruct<T>, {0x171C, 4, 0, 0})
+	SMember(FName)                                     Name_EndingOuterColor                                       OFFSET(getStruct<T>, {0x1720, 4, 0, 0})
 
 
 	/// Functions
@@ -8796,7 +8796,7 @@ class UToastSocialWidget_Base_C : public UFortSocialNotificationWidget
 	static inline constexpr uint64_t __MDKClassSize = 1161;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x330, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x330, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         TapAccept                                                   OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         ClickAccept                                                 OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro_NeutralInfo_Simple                                    OFFSET(get<T>, {0x348, 8, 0, 0})
@@ -8831,8 +8831,8 @@ public:
 	CMember(UVerticalBox*)                             VerticalBox_HoldAction                                      OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_Info                                            OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UWBP_RebootRallyIcon_C*)                   WBP_RebootRallyIcon                                         OFFSET(get<T>, {0x440, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(get<T>, {0x448, 16, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x458, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(getStruct<T>, {0x448, 16, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x458, 8, 0, 0})
 	DMember(bool)                                      bActionTaken                                                OFFSET(get<bool>, {0x460, 1, 0, 0})
 	DMember(bool)                                      UseComplexAnims                                             OFFSET(get<bool>, {0x461, 1, 0, 0})
 	DMember(bool)                                      NewVar                                                      OFFSET(get<bool>, {0x462, 1, 0, 0})
@@ -8953,7 +8953,7 @@ class UToastWidget_New_C : public UFortToastWidget
 	static inline constexpr uint64_t __MDKClassSize = 865;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro_New                                                   OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UCommonBorder*)                            B_NotificationImage                                         OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -8963,8 +8963,8 @@ public:
 	CMember(UFortLazyImage*)                           NotificationImage                                           OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UIconTextButton_C*)                        OpenButton                                                  OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     TitleRichText                                               OFFSET(get<T>, {0x340, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(get<T>, {0x348, 16, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x358, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(getStruct<T>, {0x348, 16, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x358, 8, 0, 0})
 	DMember(bool)                                      bActionTaken                                                OFFSET(get<bool>, {0x360, 1, 0, 0})
 
 
@@ -9017,7 +9017,7 @@ class UToastSocialWidget_C : public UFortSocialNotificationWidget
 	static inline constexpr uint64_t __MDKClassSize = 921;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x330, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x330, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro_New                                                   OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(UCommonBorder*)                            B_NotificationImage                                         OFFSET(get<T>, {0x348, 8, 0, 0})
@@ -9029,7 +9029,7 @@ public:
 	CMember(UFortLazyImage*)                           NotificationImage                                           OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(UCommonWidgetSwitcherLegacy*)              Switcher_InputButtons                                       OFFSET(get<T>, {0x380, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     TitleRichText                                               OFFSET(get<T>, {0x388, 8, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x390, 8, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x390, 8, 0, 0})
 	DMember(bool)                                      bActionTaken                                                OFFSET(get<bool>, {0x398, 1, 0, 0})
 
 
@@ -9104,7 +9104,7 @@ class UBattlePassPageUnlockedToast_C : public UFortToastWidget
 	static inline constexpr uint64_t __MDKClassSize = 857;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2F8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Outro_New                                                   OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UCommonBorder*)                            B_NotificationImage                                         OFFSET(get<T>, {0x310, 8, 0, 0})
@@ -9113,8 +9113,8 @@ public:
 	CMember(UCommonTextBlock*)                         Description                                                 OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UFortLazyImage*)                           NotificationImage                                           OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Title                                                       OFFSET(get<T>, {0x338, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(get<T>, {0x340, 16, 0, 0})
-	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(get<T>, {0x350, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinishedToast                                             OFFSET(getStruct<T>, {0x340, 16, 0, 0})
+	SMember(FTimerHandle)                              AnimationDelayTimer                                         OFFSET(getStruct<T>, {0x350, 8, 0, 0})
 	DMember(bool)                                      bActionTaken                                                OFFSET(get<bool>, {0x358, 1, 0, 0})
 
 
@@ -9165,7 +9165,7 @@ class UToastDisplayArea_C : public UFortToastDisplayArea
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x328, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x328, 8, 0, 0})
 	CMember(USafeZone*)                                SafeZone                                                    OFFSET(get<T>, {0x330, 8, 0, 0})
 
 
@@ -9184,14 +9184,14 @@ class URootLayout_Athena_C : public UFortRootViewportLayout_Athena
 	static inline constexpr uint64_t __MDKClassSize = 1160;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x428, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x428, 8, 0, 0})
 	CMember(UNamedSlot*)                               BottomCenterNotificationNamedSlot                           OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UNamedSlot*)                               IndicatorNamedSlot                                          OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UConfirmationWindow_C*)                    ConfirmationWindow                                          OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UProgressModalWidget_C*)                   ControllerDisconnectedModal                                 OFFSET(get<T>, {0x448, 8, 0, 0})
 	DMember(bool)                                      bClosingErrorDialog                                         OFFSET(get<bool>, {0x450, 1, 0, 0})
-	SMember(FText)                                     QuitTitle                                                   OFFSET(get<T>, {0x458, 24, 0, 0})
-	SMember(FText)                                     QuitMessage                                                 OFFSET(get<T>, {0x470, 24, 0, 0})
+	SMember(FText)                                     QuitTitle                                                   OFFSET(getStruct<T>, {0x458, 24, 0, 0})
+	SMember(FText)                                     QuitMessage                                                 OFFSET(getStruct<T>, {0x470, 24, 0, 0})
 
 
 	/// Functions
@@ -9307,8 +9307,8 @@ class UVictoryCrownsKillFeedExtension_C : public UFortGameStateComponent_KillFee
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FString)                                   OverrideVictimStyle                                         OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FString)                                   OverrideKillerStyle                                         OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FString)                                   OverrideVictimStyle                                         OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FString)                                   OverrideKillerStyle                                         OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 
 
 	/// Functions
@@ -9326,7 +9326,7 @@ class UWBP_Augment_SelectionTimer_C : public UFortPlayerAugmentHUDSelectionTimer
 	static inline constexpr uint64_t __MDKClassSize = 1272;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x368, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x368, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_AugmentReady_IncreaseCount                             OFFSET(get<T>, {0x370, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_AugmentReady_Reminder                                  OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_AugmentReady                                           OFFSET(get<T>, {0x380, 8, 0, 0})
@@ -9363,10 +9363,10 @@ public:
 	CMember(UFortControllerComponent_SpyTechPerkSystem*) OwningPerkComponent                                       OFFSET(get<T>, {0x478, 8, 0, 0})
 	DMember(int32_t)                                   Num_Pending_Augments_to_Grant                               OFFSET(get<int32_t>, {0x480, 4, 0, 0})
 	DMember(bool)                                      Can_Select_Augment                                          OFFSET(get<bool>, {0x484, 1, 0, 0})
-	SMember(FText)                                     TextAugmentReady                                            OFFSET(get<T>, {0x488, 24, 0, 0})
-	SMember(FText)                                     TextAugmentCount                                            OFFSET(get<T>, {0x4A0, 24, 0, 0})
+	SMember(FText)                                     TextAugmentReady                                            OFFSET(getStruct<T>, {0x488, 24, 0, 0})
+	SMember(FText)                                     TextAugmentCount                                            OFFSET(getStruct<T>, {0x4A0, 24, 0, 0})
 	DMember(double)                                    ReminderFrequencyInSeconds                                  OFFSET(get<double>, {0x4B8, 8, 0, 0})
-	SMember(FTimerHandle)                              AugmentReadyReminderTimer                                   OFFSET(get<T>, {0x4C0, 8, 0, 0})
+	SMember(FTimerHandle)                              AugmentReadyReminderTimer                                   OFFSET(getStruct<T>, {0x4C0, 8, 0, 0})
 	CMember(USoundBase*)                               MultiplierSound                                             OFFSET(get<T>, {0x4C8, 8, 0, 0})
 	DMember(bool)                                      Player_Able_to_Open_Selector                                OFFSET(get<bool>, {0x4D0, 1, 0, 0})
 	CMember(TWeakObjectPtr<UPaperSprite*>)             MobileBackgroundSprite                                      OFFSET(get<T>, {0x4D8, 32, 0, 0})
@@ -9427,7 +9427,7 @@ class UWBP_Augments_InteractionIndicatorInfo_C : public UFortPlayerAugmentInfoEn
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x338, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x338, 8, 0, 0})
 	CMember(UImage*)                                   Image_AugmentIcon                                           OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(UFortPlayerAugmentItemDefinition*)         Augment_Item_Definition                                     OFFSET(get<T>, {0x348, 8, 0, 0})
 
@@ -9451,7 +9451,7 @@ class UWBP_Augments_InteractionIndicator_C : public UFortInteractContextInfoWidg
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         AnimIntro                                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UImage*)                                   Icon_BackingPanel_UnlockedFX                                OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UImage*)                                   Icon_Border_Unlocked                                        OFFSET(get<T>, {0x2C0, 8, 0, 0})
@@ -9462,7 +9462,7 @@ public:
 	CMember(UCommonTextBlock*)                         Text_AugmentName                                            OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UWBP_Augments_InteractionIndicatorInfo_C*) WBP_Augments_InteractionIndicatorInfo                       OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(USpacer*)                                  WidthConrol                                                 OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	SMember(FText)                                     InteractText                                                OFFSET(get<T>, {0x300, 24, 0, 0})
+	SMember(FText)                                     InteractText                                                OFFSET(getStruct<T>, {0x300, 24, 0, 0})
 
 
 	/// Functions
@@ -9492,21 +9492,23 @@ public:
 
 /// Struct /Game/UI/RadioButtonGroup/FortRadioButtonItemStruct.FortRadioButtonItemStruct
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FFortRadioButtonItemStruct : public MDKStruct
+class FFortRadioButtonItemStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(UClass*)                                   ButtonClass_16_96A6B156493ECD26328DB3A2AD2A49F3             OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UClass*)                                   ButtonStyle_12_1900F8284D83F2AFA8F7549B26E57AFD             OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FText)                                     ButtonText_8_3ECB1D484A34D2AA393E81AEEDD4CC0E               OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FText)                                     ButtonText_8_3ECB1D484A34D2AA393E81AEEDD4CC0E               OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Game/UI/Foundation/StateLayouts/CinematicLanuageToTrackStruct.CinematicLanuageToTrackStruct
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCinematicLanuageToTrackStruct : public MDKStruct
+class FCinematicLanuageToTrackStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -9516,19 +9518,20 @@ public:
 
 /// Struct /Game/UI/Sidebar/Tags/SidebarSocialTagCategoryStructure.SidebarSocialTagCategoryStructure
 /// Size: 0x006C (0x000000 - 0x00006C)
-class FSidebarSocialTagCategoryStructure : public MDKStruct
+class FSidebarSocialTagCategoryStructure : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 108;
 
 public:
-	SMember(FLinearColor)                              TagSkewBoxInnerColor_48_C74E0AB74864DE4E29C3AEBA2ECC7DA4    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FLinearColor)                              TagSkewBoxInnerColorHovered_42_7C212CFC4A6078EEE7C986B14E3FEB49 OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FLinearColor)                              TagSkewBoxInnerColorSelected_45_E34FF8A8455FE97079F6B0A6A31A05AB OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FLinearColor)                              TagSkewBoxOuterColor_41_98DDEF0940105128E6C274B11D3A3D5D    OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FLinearColor)                              TagSkewBoxOuterColorSelected_47_9B952DE4402DE9AFF112F2A20DC4F48C OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FLinearColor)                              TagSkewBoxInnerColor_48_C74E0AB74864DE4E29C3AEBA2ECC7DA4    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              TagSkewBoxInnerColorHovered_42_7C212CFC4A6078EEE7C986B14E3FEB49 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FLinearColor)                              TagSkewBoxInnerColorSelected_45_E34FF8A8455FE97079F6B0A6A31A05AB OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FLinearColor)                              TagSkewBoxOuterColor_41_98DDEF0940105128E6C274B11D3A3D5D    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FLinearColor)                              TagSkewBoxOuterColorSelected_47_9B952DE4402DE9AFF112F2A20DC4F48C OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	CMember(UMaterialInstance*)                        TagCategoryIconMaterial_7_8991D63341121885D70AE09CB10AE389  OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FSlateColor)                               TagCategoryBaseColor_19_47DC015C4160F77A7C6E66AEEA302F6A    OFFSET(get<T>, {0x58, 20, 0, 0})
+	SMember(FSlateColor)                               TagCategoryBaseColor_19_47DC015C4160F77A7C6E66AEEA302F6A    OFFSET(getStruct<T>, {0x58, 20, 0, 0})
 };
 
 /// Enum /Game/UI/ContentControls/E_UI_InputField_State.E_UI_InputField_State

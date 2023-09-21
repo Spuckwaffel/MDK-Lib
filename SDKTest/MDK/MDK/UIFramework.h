@@ -32,8 +32,8 @@ class UUIFrameworkPlayerComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 1240;
 
 public:
-	SMember(FUIFrameworkGameLayerSlotList)             RootList                                                    OFFSET(get<T>, {0xA8, 288, 0, 0})
-	SMember(FUIFrameworkWidgetTree)                    WidgetTree                                                  OFFSET(get<T>, {0x1C8, 504, 0, 0})
+	SMember(FUIFrameworkGameLayerSlotList)             RootList                                                    OFFSET(getStruct<T>, {0xA8, 288, 0, 0})
+	SMember(FUIFrameworkWidgetTree)                    WidgetTree                                                  OFFSET(getStruct<T>, {0x1C8, 504, 0, 0})
 	CMember(UUIFrameworkPresenter*)                    Presenter                                                   OFFSET(get<T>, {0x3C0, 8, 0, 0})
 	CMember(TSet<int32_t>)                             NetReplicationPending                                       OFFSET(get<T>, {0x3C8, 80, 0, 0})
 	CMember(TSet<int32_t>)                             AddPending                                                  OFFSET(get<T>, {0x418, 80, 0, 0})
@@ -89,9 +89,9 @@ public:
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x68, 1, 0, 0})
 	CMember(ESlateVisibility)                          Visibility                                                  OFFSET(get<T>, {0x69, 1, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   WidgetClass                                                 OFFSET(get<T>, {0x70, 32, 0, 0})
-	SMember(FUIFrameworkWidgetId)                      ID                                                          OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FUIFrameworkWidgetId)                      ID                                                          OFFSET(getStruct<T>, {0x90, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   Wrapper                                                     OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FUIFrameworkParentWidget)                  AuthorityParent                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FUIFrameworkParentWidget)                  AuthorityParent                                             OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 	CMember(UWidget*)                                  LocalUMGWidget                                              OFFSET(get<T>, {0xC0, 8, 0, 0})
 
 
@@ -110,7 +110,7 @@ class UUIFrameworkButton : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FUIFrameworkSimpleSlot)                    Slot                                                        OFFSET(get<T>, {0xE0, 64, 0, 0})
+	SMember(FUIFrameworkSimpleSlot)                    Slot                                                        OFFSET(getStruct<T>, {0xE0, 64, 0, 0})
 
 
 	/// Functions
@@ -144,7 +144,7 @@ class UUIFrameworkCanvasBox : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FUIFrameworkCanvasBoxSlotList)             ReplicatedSlotList                                          OFFSET(get<T>, {0xC8, 288, 0, 0})
+	SMember(FUIFrameworkCanvasBoxSlotList)             ReplicatedSlotList                                          OFFSET(getStruct<T>, {0xC8, 288, 0, 0})
 
 
 	/// Functions
@@ -162,8 +162,8 @@ class UUIFrameworkColorBlock : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FVector2f)                                 DesiredSize                                                 OFFSET(get<T>, {0xD8, 8, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FVector2f)                                 DesiredSize                                                 OFFSET(getStruct<T>, {0xD8, 8, 0, 0})
 
 
 	/// Functions
@@ -189,7 +189,7 @@ class UUIFrameworkImageBlock : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FUIFrameworkImageBlockData)                Data                                                        OFFSET(get<T>, {0xC8, 64, 0, 0})
+	SMember(FUIFrameworkImageBlockData)                Data                                                        OFFSET(getStruct<T>, {0xC8, 64, 0, 0})
 	DMember(bool)                                      bWaitForResourceToBeLoaded                                  OFFSET(get<bool>, {0x108, 1, 0, 0})
 
 
@@ -224,7 +224,7 @@ class UUIFrameworkOverlay : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FUIFrameworkOverlaySlotList)               ReplicatedSlotList                                          OFFSET(get<T>, {0xC8, 288, 0, 0})
+	SMember(FUIFrameworkOverlaySlotList)               ReplicatedSlotList                                          OFFSET(getStruct<T>, {0xC8, 288, 0, 0})
 
 
 	/// Functions
@@ -242,9 +242,9 @@ class UUIFrameworkSimpleButton : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0xC8, 24, 0, 0})
-	SMember(FLocalizableMessage)                       Message                                                     OFFSET(get<T>, {0xE0, 48, 0, 0})
-	SMember(FUIFrameworkClickEventArgument)            ClickEvent                                                  OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
+	SMember(FLocalizableMessage)                       Message                                                     OFFSET(getStruct<T>, {0xE0, 48, 0, 0})
+	SMember(FUIFrameworkClickEventArgument)            ClickEvent                                                  OFFSET(getStruct<T>, {0x110, 16, 0, 0})
 
 
 	/// Functions
@@ -265,7 +265,7 @@ class UUIFrameworkStackBox : public UUIFrameworkWidget
 
 public:
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0xC8, 1, 0, 0})
-	SMember(FUIFrameworkStackBoxSlotList)              ReplicatedSlotList                                          OFFSET(get<T>, {0xD0, 288, 0, 0})
+	SMember(FUIFrameworkStackBoxSlotList)              ReplicatedSlotList                                          OFFSET(getStruct<T>, {0xD0, 288, 0, 0})
 
 
 	/// Functions
@@ -285,9 +285,9 @@ class UUIFrameworkTextBase : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0xC8, 24, 0, 0})
-	SMember(FLocalizableMessage)                       Message                                                     OFFSET(get<T>, {0xE0, 48, 0, 0})
-	SMember(FLinearColor)                              TextColor                                                   OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
+	SMember(FLocalizableMessage)                       Message                                                     OFFSET(getStruct<T>, {0xE0, 48, 0, 0})
+	SMember(FLinearColor)                              TextColor                                                   OFFSET(getStruct<T>, {0x110, 16, 0, 0})
 	CMember(TEnumAsByte<ETextJustify>)                 Justification                                               OFFSET(get<T>, {0x120, 1, 0, 0})
 	CMember(ETextOverflowPolicy)                       OverflowPolicy                                              OFFSET(get<T>, {0x121, 1, 0, 0})
 
@@ -325,8 +325,8 @@ class UUIFrameworkTextBlock : public UUIFrameworkTextBase
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FVector2f)                                 ShadowOffset                                                OFFSET(get<T>, {0x128, 8, 0, 0})
-	SMember(FLinearColor)                              ShadowColor                                                 OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FVector2f)                                 ShadowOffset                                                OFFSET(getStruct<T>, {0x128, 8, 0, 0})
+	SMember(FLinearColor)                              ShadowColor                                                 OFFSET(getStruct<T>, {0x130, 16, 0, 0})
 
 
 	/// Functions
@@ -352,7 +352,7 @@ class UUIFrameworkUserWidget : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FUIFrameworkUserWidgetSlotList)            ReplicatedSlotList                                          OFFSET(get<T>, {0xC8, 288, 0, 0})
+	SMember(FUIFrameworkUserWidgetSlotList)            ReplicatedSlotList                                          OFFSET(getStruct<T>, {0xC8, 288, 0, 0})
 
 
 	/// Functions
@@ -364,8 +364,9 @@ public:
 
 /// Struct /Script/UIFramework.UIFrameworkSimpleEventArgument
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FUIFrameworkSimpleEventArgument : public MDKStruct
+class FUIFrameworkSimpleEventArgument : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -378,6 +379,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FUIFrameworkClickEventArgument : public FUIFrameworkSimpleEventArgument
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -386,8 +388,9 @@ public:
 
 /// Struct /Script/UIFramework.UIFrameworkWidgetOwner
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FUIFrameworkWidgetOwner : public MDKStruct
+class FUIFrameworkWidgetOwner : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -399,8 +402,9 @@ public:
 
 /// Struct /Script/UIFramework.UIFrameworkParentWidget
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FUIFrameworkParentWidget : public MDKStruct
+class FUIFrameworkParentWidget : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -412,19 +416,21 @@ public:
 /// Size: 0x001C (0x00000C - 0x000028)
 class FUIFrameworkSlotBase : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(UUIFrameworkWidget*)                       Widget                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FUIFrameworkWidgetId)                      WidgetId                                                    OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FUIFrameworkWidgetId)                      LocalPreviousWidgetId                                       OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FUIFrameworkWidgetId)                      WidgetId                                                    OFFSET(getStruct<T>, {0x18, 8, 0, 0})
+	SMember(FUIFrameworkWidgetId)                      LocalPreviousWidgetId                                       OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/UIFramework.UIFrameworkWidgetId
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FUIFrameworkWidgetId : public MDKStruct
+class FUIFrameworkWidgetId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -436,11 +442,12 @@ public:
 /// Size: 0x0018 (0x000028 - 0x000040)
 class FUIFrameworkSimpleSlot : public FUIFrameworkSlotBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x38, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x39, 1, 0, 0})
 };
@@ -449,20 +456,22 @@ public:
 /// Size: 0x0024 (0x00000C - 0x000030)
 class FUIFrameworkWidgetTreeEntry : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(UUIFrameworkWidget*)                       Parent                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
 	CMember(UUIFrameworkWidget*)                       Child                                                       OFFSET(get<T>, {0x18, 8, 0, 0})
-	SMember(FUIFrameworkWidgetId)                      ParentID                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FUIFrameworkWidgetId)                      ChildId                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FUIFrameworkWidgetId)                      ParentID                                                    OFFSET(getStruct<T>, {0x20, 8, 0, 0})
+	SMember(FUIFrameworkWidgetId)                      ChildId                                                     OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/UIFramework.UIFrameworkWidgetTree
 /// Size: 0x00F0 (0x000108 - 0x0001F8)
 class FUIFrameworkWidgetTree : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
@@ -475,6 +484,7 @@ public:
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FUIFrameworkGameLayerSlot : public FUIFrameworkSlotBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -488,6 +498,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FUIFrameworkGameLayerSlotList : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -500,13 +511,14 @@ public:
 /// Size: 0x0048 (0x000028 - 0x000070)
 class FUIFrameworkCanvasBoxSlot : public FUIFrameworkSlotBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FAnchors)                                  Anchors                                                     OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FMargin)                                   Offsets                                                     OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FVector2D)                                 Alignment                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FAnchors)                                  Anchors                                                     OFFSET(getStruct<T>, {0x28, 32, 0, 0})
+	SMember(FMargin)                                   Offsets                                                     OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FVector2D)                                 Alignment                                                   OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	DMember(int32_t)                                   ZOrder                                                      OFFSET(get<int32_t>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bSizeToContent                                              OFFSET(get<bool>, {0x6C, 1, 0, 0})
 };
@@ -515,6 +527,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FUIFrameworkCanvasBoxSlotList : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -525,15 +538,16 @@ public:
 
 /// Struct /Script/UIFramework.UIFrameworkImageBlockData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FUIFrameworkImageBlockData : public MDKStruct
+class FUIFrameworkImageBlockData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FLinearColor)                              Tint                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              Tint                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  ResourceObject                                              OFFSET(get<T>, {0x10, 32, 0, 0})
-	SMember(FVector2f)                                 DesiredSize                                                 OFFSET(get<T>, {0x30, 8, 0, 0})
+	SMember(FVector2f)                                 DesiredSize                                                 OFFSET(getStruct<T>, {0x30, 8, 0, 0})
 	CMember(TEnumAsByte<ESlateBrushTileType>)          Tiling                                                      OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(bool)                                      bUseTextureSize                                             OFFSET(get<bool>, {0x39, 1, 0, 0})
 };
@@ -542,11 +556,12 @@ public:
 /// Size: 0x0018 (0x000028 - 0x000040)
 class FUIFrameworkOverlaySlot : public FUIFrameworkSlotBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x38, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x39, 1, 0, 0})
 	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
@@ -556,6 +571,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FUIFrameworkOverlaySlotList : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -568,14 +584,15 @@ public:
 /// Size: 0x0020 (0x000028 - 0x000048)
 class FUIFrameworkStackBoxSlot : public FUIFrameworkSlotBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x29, 1, 0, 0})
-	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x2C, 16, 0, 0})
-	SMember(FSlateChildSize)                           Size                                                        OFFSET(get<T>, {0x3C, 8, 0, 0})
+	SMember(FMargin)                                   Padding                                                     OFFSET(getStruct<T>, {0x2C, 16, 0, 0})
+	SMember(FSlateChildSize)                           Size                                                        OFFSET(getStruct<T>, {0x3C, 8, 0, 0})
 	DMember(int32_t)                                   Index                                                       OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 };
 
@@ -583,6 +600,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FUIFrameworkStackBoxSlotList : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -595,17 +613,19 @@ public:
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FUIFrameworkUserWidgetSlot : public FUIFrameworkSlotBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     SlotName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     SlotName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 };
 
 /// Struct /Script/UIFramework.UIFrameworkUserWidgetSlotList
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FUIFrameworkUserWidgetSlotList : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 

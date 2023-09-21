@@ -73,7 +73,7 @@ class UMVVMViewModelCollectionObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FMVVMViewModelCollection)                  ViewModelCollection                                         OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FMVVMViewModelCollection)                  ViewModelCollection                                         OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 
 
 	/// Functions
@@ -157,20 +157,21 @@ class UMVVMViewClass : public UWidgetBlueprintGeneratedClassExtension
 public:
 	CMember(TArray<FMVVMViewClass_SourceCreator>)      SourceCreators                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FMVVMViewClass_CompiledBinding>)    CompiledBindings                                            OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMVVMCompiledBindingLibrary)               BindingLibrary                                              OFFSET(get<T>, {0x48, 96, 0, 0})
+	SMember(FMVVMCompiledBindingLibrary)               BindingLibrary                                              OFFSET(getStruct<T>, {0x48, 96, 0, 0})
 	DMember(bool)                                      bInitializeSourcesOnConstruct                               OFFSET(get<bool>, {0xAC, 1, 0, 0})
 	DMember(bool)                                      bInitializeBindingsOnConstruct                              OFFSET(get<bool>, {0xAD, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMAvailableBinding
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMVVMAvailableBinding : public MDKStruct
+class FMVVMAvailableBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FMVVMBindingName)                          BindingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMVVMBindingName)                          BindingName                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bIsReadable                                                 OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bIsWritable                                                 OFFSET(get<bool>, {0x5, 1, 0, 0})
 	DMember(bool)                                      bHasNotify                                                  OFFSET(get<bool>, {0x6, 1, 0, 0})
@@ -178,19 +179,21 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMBindingName
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMVVMBindingName : public MDKStruct
+class FMVVMBindingName : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     BindingName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     BindingName                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMEventField
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMVVMEventField : public MDKStruct
+class FMVVMEventField : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -199,32 +202,35 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMViewModelContextInstance
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMVVMViewModelContextInstance : public MDKStruct
+class FMVVMViewModelContextInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FMVVMViewModelContext)                     Context                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FMVVMViewModelContext)                     Context                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(UMVVMViewModelBase*)                       Instance                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewModelContext
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMVVMViewModelContext : public MDKStruct
+class FMVVMViewModelContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	CMember(UClass*)                                   ContextClass                                                OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     ContextName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     ContextName                                                 OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledFields
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMVVMVCompiledFields : public MDKStruct
+class FMVVMVCompiledFields : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -238,8 +244,9 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledFieldPath
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMVVMVCompiledFieldPath : public MDKStruct
+class FMVVMVCompiledFieldPath : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -250,8 +257,9 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledFieldId
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FMVVMVCompiledFieldId : public MDKStruct
+class FMVVMVCompiledFieldId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -261,8 +269,9 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMCompiledLoadedPropertyOrFunctionIndex
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMVVMCompiledLoadedPropertyOrFunctionIndex : public MDKStruct
+class FMVVMCompiledLoadedPropertyOrFunctionIndex : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -275,22 +284,24 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMVCompiledBinding
 /// Size: 0x000E (0x000000 - 0x00000E)
-class FMVVMVCompiledBinding : public MDKStruct
+class FMVVMVCompiledBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 14;
 
 public:
-	SMember(FMVVMVCompiledFieldPath)                   SourceFieldPath                                             OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMVVMVCompiledFieldPath)                   DestinationFieldPath                                        OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FMVVMVCompiledFieldPath)                   ConversionFunctionFieldPath                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   SourceFieldPath                                             OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   DestinationFieldPath                                        OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   ConversionFunctionFieldPath                                 OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMCompiledBindingLibrary
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FMVVMCompiledBindingLibrary : public MDKStruct
+class FMVVMCompiledBindingLibrary : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -303,8 +314,9 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMViewModelCollection
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMVVMViewModelCollection : public MDKStruct
+class FMVVMViewModelCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -314,14 +326,15 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMViewSource
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMVVMViewSource : public MDKStruct
+class FMVVMViewSource : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UObject*)                                  Source                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     SourceName                                                  OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     SourceName                                                  OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   RegisteredCount                                             OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(bool)                                      bCreatedSource                                              OFFSET(get<bool>, {0x10, 1, 0, 0})
 	DMember(bool)                                      bSetManually                                                OFFSET(get<bool>, {0x11, 1, 0, 0})
@@ -330,32 +343,34 @@ public:
 
 /// Struct /Script/ModelViewViewModel.MVVMViewClass_SourceCreator
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMVVMViewClass_SourceCreator : public MDKStruct
+class FMVVMViewClass_SourceCreator : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(UClass*)                                   ExpectedSourceType                                          OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UMVVMViewModelContextResolver*)            Resolver                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FMVVMViewModelContext)                     GlobalViewModelInstance                                     OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FMVVMVCompiledFieldPath)                   FieldPath                                                   OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x24, 4, 0, 0})
-	SMember(FName)                                     ParentSourceName                                            OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FMVVMViewModelContext)                     GlobalViewModelInstance                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FMVVMVCompiledFieldPath)                   FieldPath                                                   OFFSET(getStruct<T>, {0x20, 4, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(getStruct<T>, {0x24, 4, 0, 0})
+	SMember(FName)                                     ParentSourceName                                            OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0x2C, 1, 0, 0})
 };
 
 /// Struct /Script/ModelViewViewModel.MVVMViewClass_CompiledBinding
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FMVVMViewClass_CompiledBinding : public MDKStruct
+class FMVVMViewClass_CompiledBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FMVVMVCompiledFieldId)                     FieldId                                                     OFFSET(get<T>, {0x0, 2, 0, 0})
-	SMember(FName)                                     SourcePropertyName                                          OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FMVVMVCompiledBinding)                     Binding                                                     OFFSET(get<T>, {0x8, 14, 0, 0})
+	SMember(FMVVMVCompiledFieldId)                     FieldId                                                     OFFSET(getStruct<T>, {0x0, 2, 0, 0})
+	SMember(FName)                                     SourcePropertyName                                          OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FMVVMVCompiledBinding)                     Binding                                                     OFFSET(getStruct<T>, {0x8, 14, 0, 0})
 	CMember(EMVVMExecutionMode)                        ExecutionMode                                               OFFSET(get<T>, {0x16, 1, 0, 0})
 	DMember(int8_t)                                    EvaluateSourceCreatorIndex                                  OFFSET(get<int8_t>, {0x17, 1, 0, 0})
 	DMember(char)                                      Flags                                                       OFFSET(get<char>, {0x18, 1, 0, 0})

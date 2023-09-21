@@ -16,11 +16,11 @@ class UNetworkPredictionComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      OFFSET(get<T>, {0xA0, 176, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_ServerRPC                                  OFFSET(get<T>, {0x150, 80, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_Autonomous                                 OFFSET(get<T>, {0x1A0, 80, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_Simulated                                  OFFSET(get<T>, {0x1F0, 80, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy_Replay                                     OFFSET(get<T>, {0x240, 80, 0, 0})
+	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      OFFSET(getStruct<T>, {0xA0, 176, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_ServerRPC                                  OFFSET(getStruct<T>, {0x150, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_Autonomous                                 OFFSET(getStruct<T>, {0x1A0, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_Simulated                                  OFFSET(getStruct<T>, {0x1F0, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy_Replay                                     OFFSET(getStruct<T>, {0x240, 80, 0, 0})
 
 
 	/// Functions
@@ -36,9 +36,9 @@ class UNetworkPredictionPhysicsComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      OFFSET(get<T>, {0xA0, 176, 0, 0})
+	SMember(FNetworkPredictionProxy)                   NetworkPredictionProxy                                      OFFSET(getStruct<T>, {0xA0, 176, 0, 0})
 	CMember(UPrimitiveComponent*)                      UpdatedPrimitive                                            OFFSET(get<T>, {0x150, 8, 0, 0})
-	SMember(FReplicationProxy)                         ReplicationProxy                                            OFFSET(get<T>, {0x160, 80, 0, 0})
+	SMember(FReplicationProxy)                         ReplicationProxy                                            OFFSET(getStruct<T>, {0x160, 80, 0, 0})
 };
 
 /// Class /Script/NetworkPrediction.NetworkPredictionReplicatedManager
@@ -49,7 +49,7 @@ class ANetworkPredictionReplicatedManager : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FSharedPackageMap)                         SharedPackageMap                                            OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FSharedPackageMap)                         SharedPackageMap                                            OFFSET(getStruct<T>, {0x290, 16, 0, 0})
 };
 
 /// Class /Script/NetworkPrediction.NetworkPredictionSettingsObject
@@ -60,7 +60,7 @@ class UNetworkPredictionSettingsObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FNetworkPredictionSettings)                Settings                                                    OFFSET(get<T>, {0x28, 48, 0, 0})
+	SMember(FNetworkPredictionSettings)                Settings                                                    OFFSET(getStruct<T>, {0x28, 48, 0, 0})
 	CMember(TArray<FNetworkPredictionDevHUD>)          DevHUDs                                                     OFFSET(get<T>, {0x58, 16, 0, 0})
 };
 
@@ -77,8 +77,9 @@ public:
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionProxy
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FNetworkPredictionProxy : public MDKStruct
+class FNetworkPredictionProxy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -88,8 +89,9 @@ public:
 
 /// Struct /Script/NetworkPrediction.SharedPackageMapItem
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSharedPackageMapItem : public MDKStruct
+class FSharedPackageMapItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -99,8 +101,9 @@ public:
 
 /// Struct /Script/NetworkPrediction.SharedPackageMap
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSharedPackageMap : public MDKStruct
+class FSharedPackageMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -110,8 +113,9 @@ public:
 
 /// Struct /Script/NetworkPrediction.ReplicationProxy
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FReplicationProxy : public MDKStruct
+class FReplicationProxy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -120,8 +124,9 @@ public:
 
 /// Struct /Script/NetworkPrediction.ServerReplicationRPCParameter
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FServerReplicationRPCParameter : public MDKStruct
+class FServerReplicationRPCParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -130,8 +135,9 @@ public:
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionSettings
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNetworkPredictionSettings : public MDKStruct
+class FNetworkPredictionSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -151,14 +157,15 @@ public:
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionDevHUDItem
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNetworkPredictionDevHUDItem : public MDKStruct
+class FNetworkPredictionDevHUDItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   DisplayName                                                 OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ExecCommand                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   DisplayName                                                 OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ExecCommand                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(bool)                                      bAutoBack                                                   OFFSET(get<bool>, {0x20, 1, 0, 0})
 	DMember(bool)                                      bRequirePIE                                                 OFFSET(get<bool>, {0x21, 1, 0, 0})
 	DMember(bool)                                      bRequireNotPIE                                              OFFSET(get<bool>, {0x22, 1, 0, 0})
@@ -166,13 +173,14 @@ public:
 
 /// Struct /Script/NetworkPrediction.NetworkPredictionDevHUD
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FNetworkPredictionDevHUD : public MDKStruct
+class FNetworkPredictionDevHUD : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   HUDName                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   HUDName                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FNetworkPredictionDevHUDItem>)      Items                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
 	DMember(bool)                                      bRequirePIE                                                 OFFSET(get<bool>, {0x20, 1, 0, 0})
 	DMember(bool)                                      bRequireNotPIE                                              OFFSET(get<bool>, {0x21, 1, 0, 0})

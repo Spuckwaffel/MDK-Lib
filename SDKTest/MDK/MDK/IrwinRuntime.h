@@ -21,7 +21,7 @@ public:
 	DMember(float)                                     AverageSpeedTimeFrame                                       OFFSET(get<float>, {0x57C, 4, 0, 0})
 	DMember(bool)                                      bHasValidAimTarget                                          OFFSET(get<bool>, {0x580, 1, 0, 0})
 	DMember(float)                                     AimTime                                                     OFFSET(get<float>, {0x584, 4, 0, 0})
-	SMember(FVector)                                   AimTargetLocation                                           OFFSET(get<T>, {0x588, 24, 0, 0})
+	SMember(FVector)                                   AimTargetLocation                                           OFFSET(getStruct<T>, {0x588, 24, 0, 0})
 	DMember(bool)                                      bIsSurfaceSwimming                                          OFFSET(get<bool>, {0x5A0, 1, 0, 0})
 	DMember(bool)                                      bIsMovingOnGround                                           OFFSET(get<bool>, {0x5A1, 1, 0, 0})
 	DMember(bool)                                      bIsInTornado                                                OFFSET(get<bool>, {0x5A2, 1, 0, 0})
@@ -29,8 +29,8 @@ public:
 	DMember(float)                                     MaxDistanceToPlayerForLookAt                                OFFSET(get<float>, {0x5A8, 4, 0, 0})
 	DMember(float)                                     LookAtTooFarFromPlayerTimeOut                               OFFSET(get<float>, {0x5AC, 4, 0, 0})
 	DMember(bool)                                      bDisableLookAtDuringMontage                                 OFFSET(get<bool>, {0x5B0, 1, 0, 0})
-	SMember(FName)                                     DisableHeadTrackingCurveName                                OFFSET(get<T>, {0x5B4, 4, 0, 0})
-	SMember(FRidingAnimationData)                      RidingAnimationData                                         OFFSET(get<T>, {0x5B8, 20, 0, 0})
+	SMember(FName)                                     DisableHeadTrackingCurveName                                OFFSET(getStruct<T>, {0x5B4, 4, 0, 0})
+	SMember(FRidingAnimationData)                      RidingAnimationData                                         OFFSET(getStruct<T>, {0x5B8, 20, 0, 0})
 	DMember(bool)                                      bIsSlopeSliding                                             OFFSET(get<bool>, {0x5CC, 1, 0, 0})
 	DMember(float)                                     SlopeSlidingPitch                                           OFFSET(get<float>, {0x5D0, 4, 0, 0})
 	DMember(float)                                     SlopeSlidingRoll                                            OFFSET(get<float>, {0x5D4, 4, 0, 0})
@@ -60,14 +60,14 @@ public:
 	DMember(bool)                                      bIsFootPhase_RightBackFeetForward                           OFFSET(get<bool>, {0x616, 1, 0, 0})
 	DMember(bool)                                      bIsFootPhase_LeftPlantedRightPass                           OFFSET(get<bool>, {0x617, 1, 0, 0})
 	DMember(bool)                                      bIsFootPhase_RightPlantedLeftPass                           OFFSET(get<bool>, {0x618, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     SlipstreamTags                                              OFFSET(get<T>, {0x620, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SlipstreamTags                                              OFFSET(getStruct<T>, {0x620, 32, 0, 0})
 	DMember(bool)                                      bIsInSlipstream                                             OFFSET(get<bool>, {0x640, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     SkydivingTags                                               OFFSET(get<T>, {0x648, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SkydivingTags                                               OFFSET(getStruct<T>, {0x648, 32, 0, 0})
 	DMember(bool)                                      bMovementMode_Skydiving                                     OFFSET(get<bool>, {0x668, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     SkytubingTags                                               OFFSET(get<T>, {0x670, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SkytubingTags                                               OFFSET(getStruct<T>, {0x670, 32, 0, 0})
 	DMember(bool)                                      bGameplay_Status_Skytubing                                  OFFSET(get<bool>, {0x690, 1, 0, 0})
 	DMember(bool)                                      bIsAbducted                                                 OFFSET(get<bool>, {0x691, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     TractorBeamTags                                             OFFSET(get<T>, {0x698, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TractorBeamTags                                             OFFSET(getStruct<T>, {0x698, 32, 0, 0})
 	DMember(bool)                                      bIsInTractorBeam                                            OFFSET(get<bool>, {0x6B8, 1, 0, 0})
 	DMember(bool)                                      bIsFloating                                                 OFFSET(get<bool>, {0x6B9, 1, 0, 0})
 	DMember(float)                                     JustGotPlayerInitialDelaySec                                OFFSET(get<float>, {0x6BC, 4, 0, 0})
@@ -110,8 +110,8 @@ public:
 	DMember(float)                                     LocomotionPoseAdditiveAlpha                                 OFFSET(get<float>, {0x6DC, 4, 0, 0})
 	DMember(bool)                                      bEnableHeadTiltUpAdditive                                   OFFSET(get<bool>, {0x6E0, 1, 0, 0})
 	DMember(bool)                                      bTurnAngleIsNegative                                        OFFSET(get<bool>, {0x6E1, 1, 0, 0})
-	SMember(FName)                                     DisableLocomotionAdditiveCurveName                          OFFSET(get<T>, {0x6E4, 4, 0, 0})
-	SMember(FName)                                     InterruptibleCurveName                                      OFFSET(get<T>, {0x6E8, 4, 0, 0})
+	SMember(FName)                                     DisableLocomotionAdditiveCurveName                          OFFSET(getStruct<T>, {0x6E4, 4, 0, 0})
+	SMember(FName)                                     InterruptibleCurveName                                      OFFSET(getStruct<T>, {0x6E8, 4, 0, 0})
 	DMember(bool)                                      bIsIdleShuffleTurn                                          OFFSET(get<bool>, {0x6EC, 1, 0, 0})
 	DMember(float)                                     IdleShuffleBodyBend                                         OFFSET(get<float>, {0x6F0, 4, 0, 0})
 	DMember(float)                                     IdleShufflePlayRate                                         OFFSET(get<float>, {0x6F4, 4, 0, 0})
@@ -156,7 +156,7 @@ public:
 	DMember(float)                                     IdleShufflePlayRateOutRangeB                                OFFSET(get<float>, {0x760, 4, 0, 0})
 	DMember(float)                                     MinSpeedSlowRidingMovePlayRate                              OFFSET(get<float>, {0x764, 4, 0, 0})
 	DMember(float)                                     SpeedSlowDivisorRidingMovePlayRate                          OFFSET(get<float>, {0x768, 4, 0, 0})
-	SMember(FMapRangeClamped_Ranges)                   RidingMovePlayRate_Ranges                                   OFFSET(get<T>, {0x76C, 16, 0, 0})
+	SMember(FMapRangeClamped_Ranges)                   RidingMovePlayRate_Ranges                                   OFFSET(getStruct<T>, {0x76C, 16, 0, 0})
 };
 
 /// Class /Script/IrwinRuntime.FortAIFaunaAnimInstance_Burt_Hitchhiker
@@ -226,8 +226,8 @@ public:
 	DMember(int32_t)                                   SniffAdditiveFrequenceySeconds                              OFFSET(get<int32_t>, {0x718, 4, 0, 0})
 	DMember(int32_t)                                   AlertAdditiveFrequenceySeconds                              OFFSET(get<int32_t>, {0x71C, 4, 0, 0})
 	DMember(int32_t)                                   PawnIDScale                                                 OFFSET(get<int32_t>, {0x720, 4, 0, 0})
-	SMember(FName)                                     ShouldPlayFullBodyInPlaceCurveName                          OFFSET(get<T>, {0x724, 4, 0, 0})
-	SMember(FName)                                     BlinkAlphaCurveName                                         OFFSET(get<T>, {0x728, 4, 0, 0})
+	SMember(FName)                                     ShouldPlayFullBodyInPlaceCurveName                          OFFSET(getStruct<T>, {0x724, 4, 0, 0})
+	SMember(FName)                                     BlinkAlphaCurveName                                         OFFSET(getStruct<T>, {0x728, 4, 0, 0})
 	DMember(float)                                     IdleStartTurnInterruptibleThreshold                         OFFSET(get<float>, {0x72C, 4, 0, 0})
 	DMember(float)                                     IdleShuffleBodyBendMultiplier                               OFFSET(get<float>, {0x730, 4, 0, 0})
 	DMember(float)                                     IdleShuffleTurnThreshold                                    OFFSET(get<float>, {0x734, 4, 0, 0})
@@ -332,7 +332,7 @@ public:
 	DMember(bool)                                      bShouldLean                                                 OFFSET(get<bool>, {0x6E8, 1, 0, 0})
 	DMember(float)                                     LeanDirection                                               OFFSET(get<float>, {0x6EC, 4, 0, 0})
 	DMember(bool)                                      bTurnAngleIsNegative                                        OFFSET(get<bool>, {0x6F0, 1, 0, 0})
-	SMember(FName)                                     InterruptibleCurveName                                      OFFSET(get<T>, {0x6F4, 4, 0, 0})
+	SMember(FName)                                     InterruptibleCurveName                                      OFFSET(getStruct<T>, {0x6F4, 4, 0, 0})
 	DMember(bool)                                      bIsIdleShuffleTurn                                          OFFSET(get<bool>, {0x6F8, 1, 0, 0})
 	DMember(float)                                     IdleShuffleBodyBend                                         OFFSET(get<float>, {0x6FC, 4, 0, 0})
 	DMember(float)                                     IdleShufflePlayRate                                         OFFSET(get<float>, {0x700, 4, 0, 0})
@@ -591,8 +591,9 @@ public:
 
 /// Struct /Script/IrwinRuntime.RidingAnimationData
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FRidingAnimationData : public MDKStruct
+class FRidingAnimationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 

@@ -15,9 +15,9 @@ class UOnlineHotfixManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FString)                                   OSSName                                                     OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(FString)                                   HotfixManagerClassName                                      OFFSET(get<T>, {0x238, 16, 0, 0})
-	SMember(FString)                                   DebugPrefix                                                 OFFSET(get<T>, {0x248, 16, 0, 0})
+	SMember(FString)                                   OSSName                                                     OFFSET(getStruct<T>, {0x228, 16, 0, 0})
+	SMember(FString)                                   HotfixManagerClassName                                      OFFSET(getStruct<T>, {0x238, 16, 0, 0})
+	SMember(FString)                                   DebugPrefix                                                 OFFSET(getStruct<T>, {0x248, 16, 0, 0})
 	CMember(TArray<UObject*>)                          AssetsHotfixedFromIniFiles                                  OFFSET(get<T>, {0x258, 16, 0, 0})
 
 
@@ -47,23 +47,24 @@ public:
 	CMember(EUpdateState)                              CurrentUpdateState                                          OFFSET(get<T>, {0xB3, 1, 0, 0})
 	DMember(int32_t)                                   WorstNumFilesPendingLoadViewed                              OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
 	CMember(EHotfixResult)                             LastHotfixResult                                            OFFSET(get<T>, {0xBC, 1, 0, 0})
-	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FDateTime)                                 LastUpdateCheck                                             OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
 	CMember(EUpdateCompletionStatus)                   LastCompletionResult                                        OFFSET(get<T>, {0xF0, 2, 0, 0})
 	CMember(UEnum*)                                    UpdateStateEnum                                             OFFSET(get<T>, {0x118, 8, 0, 0})
 	CMember(UEnum*)                                    UpdateCompletionEnum                                        OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FUpdateContextDefinition)                  UpdateContextDefinitionUnknown                              OFFSET(get<T>, {0x128, 104, 0, 0})
+	SMember(FUpdateContextDefinition)                  UpdateContextDefinitionUnknown                              OFFSET(getStruct<T>, {0x128, 104, 0, 0})
 	CMember(TArray<FUpdateContextDefinition>)          UpdateContextDefinitions                                    OFFSET(get<T>, {0x190, 16, 0, 0})
 };
 
 /// Struct /Script/Hotfix.UpdateContextDefinition
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FUpdateContextDefinition : public MDKStruct
+class FUpdateContextDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
 	DMember(bool)                                      bCheckAvailabilityOnly                                      OFFSET(get<bool>, {0x11, 1, 0, 0})
 	DMember(bool)                                      bPatchCheckEnabled                                          OFFSET(get<bool>, {0x12, 1, 0, 0})

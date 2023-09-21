@@ -8,8 +8,9 @@
 
 /// Struct /Script/InterchangeCommonParser.InterchangeCurveKey
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FInterchangeCurveKey : public MDKStruct
+class FInterchangeCurveKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -27,8 +28,9 @@ public:
 
 /// Struct /Script/InterchangeCommonParser.InterchangeCurve
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FInterchangeCurve : public MDKStruct
+class FInterchangeCurve : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -38,8 +40,9 @@ public:
 
 /// Struct /Script/InterchangeCommonParser.InterchangeStepCurve
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FInterchangeStepCurve : public MDKStruct
+class FInterchangeStepCurve : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 

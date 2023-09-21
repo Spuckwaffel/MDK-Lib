@@ -37,7 +37,7 @@ class ALevelVariantSetsActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	SMember(FSoftObjectPath)                           LevelVariantSets                                            OFFSET(get<T>, {0x290, 24, 0, 0})
+	SMember(FSoftObjectPath)                           LevelVariantSets                                            OFFSET(getStruct<T>, {0x290, 24, 0, 0})
 	CMember(TMap<UBlueprintGeneratedClass*, ULevelVariantSetsFunctionDirector*>) DirectorInstances                 OFFSET(get<T>, {0x2A8, 80, 0, 0})
 
 
@@ -73,8 +73,8 @@ public:
 	CMember(TArray<Properties>)                        Properties                                                  OFFSET(get<T>, {0x88, 16, 0, 0})
 	CMember(TArray<int32_t>)                           PropertyIndices                                             OFFSET(get<T>, {0x98, 16, 0, 0})
 	CMember(TArray<FCapturedPropSegment>)              CapturedPropSegments                                        OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   FullDisplayString                                           OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FName)                                     PropertySetterName                                          OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FString)                                   FullDisplayString                                           OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FName)                                     PropertySetterName                                          OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 	CMember(TMap<FString, FString>)                    PropertySetterParameterDefaults                             OFFSET(get<T>, {0xD0, 80, 0, 0})
 	DMember(bool)                                      bHasRecordedData                                            OFFSET(get<bool>, {0x120, 1, 0, 0})
 	CMember(UClass*)                                   LeafPropertyClass                                           OFFSET(get<T>, {0x128, 8, 0, 0})
@@ -181,7 +181,7 @@ class UVariant : public UObject
 
 public:
 	CMember(TArray<FVariantDependency>)                Dependencies                                                OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FText)                                     DisplayText                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FText)                                     DisplayText                                                 OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	CMember(TArray<UVariantObjectBinding*>)            ObjectBindings                                              OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(UTexture2D*)                               Thumbnail                                                   OFFSET(get<T>, {0x78, 8, 0, 0})
 
@@ -233,8 +233,8 @@ class UVariantObjectBinding : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FString)                                   CachedActorLabel                                            OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FSoftObjectPath)                           ObjectPtr                                                   OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FString)                                   CachedActorLabel                                            OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FSoftObjectPath)                           ObjectPtr                                                   OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	CMember(TLazyObjectPtr<UObject*>)                  LazyObjectPtr                                               OFFSET(get<T>, {0x50, 24, 0, 0})
 	CMember(TArray<UPropertyValue*>)                   CapturedProperties                                          OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(TArray<FFunctionCaller>)                   FunctionCallers                                             OFFSET(get<T>, {0x78, 16, 0, 0})
@@ -248,7 +248,7 @@ class UVariantSet : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     DisplayText                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FText)                                     DisplayText                                                 OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(bool)                                      bExpanded                                                   OFFSET(get<bool>, {0x58, 1, 0, 0})
 	CMember(TArray<UVariant*>)                         Variants                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(UTexture2D*)                               Thumbnail                                                   OFFSET(get<T>, {0x70, 8, 0, 0})
@@ -281,32 +281,35 @@ public:
 
 /// Struct /Script/VariantManagerContent.FunctionCaller
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FFunctionCaller : public MDKStruct
+class FFunctionCaller : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     FunctionName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     FunctionName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/VariantManagerContent.CapturedPropSegment
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FCapturedPropSegment : public MDKStruct
+class FCapturedPropSegment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   PropertyName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   PropertyName                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   PropertyIndex                                               OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FString)                                   ComponentName                                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ComponentName                                               OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/VariantManagerContent.VariantDependency
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FVariantDependency : public MDKStruct
+class FVariantDependency : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 

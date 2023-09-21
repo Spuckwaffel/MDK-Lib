@@ -29,20 +29,22 @@ public:
 
 /// Struct /Script/NiagaraCore.NiagaraVariableCommonReference
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraVariableCommonReference : public MDKStruct
+class FNiagaraVariableCommonReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UObject*)                                  UnderlyingType                                              OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/NiagaraCore.NiagaraCompileHash
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNiagaraCompileHash : public MDKStruct
+class FNiagaraCompileHash : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

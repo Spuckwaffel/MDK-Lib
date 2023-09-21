@@ -50,8 +50,9 @@ public:
 
 /// Struct /Script/VerseNative.VerseIntRange
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVerseIntRange : public MDKStruct
+class FVerseIntRange : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -62,8 +63,9 @@ public:
 
 /// Struct /Script/VerseNative.VerseRational
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVerseRational : public MDKStruct
+class FVerseRational : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -74,8 +76,9 @@ public:
 
 /// Struct /Script/VerseNative.akeType
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FakeType : public MDKStruct
+class FakeType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

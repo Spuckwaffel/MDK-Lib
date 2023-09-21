@@ -18,9 +18,9 @@ class UFortMotorSimComponent_PatternPlayer : public UAudioMotorSimComponent
 
 public:
 	DMember(float)                                     PatternResetCooldown                                        OFFSET(get<float>, {0xA8, 4, 0, 0})
-	SMember(FFortMotorSimPatternState)                 DriftState                                                  OFFSET(get<T>, {0xB0, 48, 0, 0})
-	SMember(FFortMotorSimPatternState)                 AirState                                                    OFFSET(get<T>, {0xE0, 48, 0, 0})
-	SMember(FFortMotorSimPatternState)                 StartlineState                                              OFFSET(get<T>, {0x110, 48, 0, 0})
+	SMember(FFortMotorSimPatternState)                 DriftState                                                  OFFSET(getStruct<T>, {0xB0, 48, 0, 0})
+	SMember(FFortMotorSimPatternState)                 AirState                                                    OFFSET(getStruct<T>, {0xE0, 48, 0, 0})
+	SMember(FFortMotorSimPatternState)                 StartlineState                                              OFFSET(getStruct<T>, {0x110, 48, 0, 0})
 	CMember(UCurveVector*)                             CurrentCurve                                                OFFSET(get<T>, {0x160, 8, 0, 0})
 };
 
@@ -33,7 +33,7 @@ class UFortMotorSimComponent_SurfaceModifier : public UAudioMotorSimComponent
 
 public:
 	CMember(TMap<FName, UCurveFloat*>)                 Surfaces                                                    OFFSET(get<T>, {0xA8, 80, 0, 0})
-	SMember(FVector2f)                                 ThrottleRange                                               OFFSET(get<T>, {0xF8, 8, 0, 0})
+	SMember(FVector2f)                                 ThrottleRange                                               OFFSET(getStruct<T>, {0xF8, 8, 0, 0})
 	DMember(float)                                     OnsetInterpTime                                             OFFSET(get<float>, {0x100, 4, 0, 0})
 	CMember(UCurveFloat*)                              CurrentCurve                                                OFFSET(get<T>, {0x108, 8, 0, 0})
 
@@ -161,7 +161,7 @@ class UFortVehicleSoundComponent_Speed : public UFortVehicleSoundComponent
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FFortAudioFloatParameter)                  Speed                                                       OFFSET(get<T>, {0xB0, 56, 0, 0})
+	SMember(FFortAudioFloatParameter)                  Speed                                                       OFFSET(getStruct<T>, {0xB0, 56, 0, 0})
 
 
 	/// Functions
@@ -177,7 +177,7 @@ class UFortVehicleSoundComponent_Surface : public UFortVehicleSoundComponent
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FFortVehicleSoundComponent_SurfaceContext) Context                                                     OFFSET(get<T>, {0xB0, 168, 0, 0})
+	SMember(FFortVehicleSoundComponent_SurfaceContext) Context                                                     OFFSET(getStruct<T>, {0xB0, 168, 0, 0})
 
 
 	/// Functions
@@ -206,14 +206,15 @@ public:
 	DMember(float)                                     ThrottleMultiplier                                          OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     SurfaceFrictionModifier                                     OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     MotorFrictionModifier                                       OFFSET(get<float>, {0x54, 4, 0, 0})
-	SMember(FVector2D)                                 FrictionJitter                                              OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FVector2D)                                 FrictionJitter                                              OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	DMember(bool)                                      bCanShiftOverride                                           OFFSET(get<bool>, {0x68, 1, 0, 0})
 };
 
 /// Struct /Script/VehicleAudioRuntime.FortMotorSimPatternState
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortMotorSimPatternState : public MDKStruct
+class FFortMotorSimPatternState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -231,21 +232,23 @@ public:
 
 /// Struct /Script/VehicleAudioRuntime.FortVehicleSoundSurfaceParam
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FFortVehicleSoundSurfaceParam : public MDKStruct
+class FFortVehicleSoundSurfaceParam : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 	CMember(TEnumAsByte<EPhysicalSurface>)             Surface                                                     OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/VehicleAudioRuntime.FortVehicleSoundComponent_SurfaceContext
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FFortVehicleSoundComponent_SurfaceContext : public MDKStruct
+class FFortVehicleSoundComponent_SurfaceContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
@@ -254,14 +257,14 @@ public:
 	DMember(float)                                     BrakingSoftStopThreshold                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     SurfaceParamInterpSpeed                                     OFFSET(get<float>, {0x8, 4, 0, 0})
 	CMember(TMap<TEnumAsByte, TEnumAsByte>)            SurfaceMap                                                  OFFSET(get<T>, {0x10, 80, 0, 0})
-	SMember(FName)                                     WaterParamName                                              OFFSET(get<T>, {0x60, 4, 0, 0})
+	SMember(FName)                                     WaterParamName                                              OFFSET(getStruct<T>, {0x60, 4, 0, 0})
 	DMember(float)                                     WaterParamInterpSpeed                                       OFFSET(get<float>, {0x64, 4, 0, 0})
-	SMember(FName)                                     AirParamName                                                OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FName)                                     AirParamName                                                OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	DMember(float)                                     AirParamAttackInterpSpeed                                   OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(float)                                     AirParamReleaseInterpSpeed                                  OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(float)                                     MinSpeedForSkidFX                                           OFFSET(get<float>, {0x74, 4, 0, 0})
 	DMember(float)                                     MaxSpeedForSkidFX                                           OFFSET(get<float>, {0x78, 4, 0, 0})
-	SMember(FName)                                     SkiddingParamName                                           OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     SkiddingParamName                                           OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
 	DMember(float)                                     SkiddingParamInterpSpeed                                    OFFSET(get<float>, {0x80, 4, 0, 0})
 	CMember(TEnumAsByte<EPhysicalSurface>)             CurrentSurface                                              OFFSET(get<T>, {0x84, 1, 0, 0})
 	CMember(TArray<FFortVehicleSoundSurfaceParam>)     SurfaceParams                                               OFFSET(get<T>, {0x88, 16, 0, 0})

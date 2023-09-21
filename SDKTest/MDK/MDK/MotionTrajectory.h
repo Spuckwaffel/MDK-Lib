@@ -16,7 +16,7 @@ class UCharacterTrajectoryComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FPoseSearchQueryTrajectory)                Trajectory                                                  OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FPoseSearchQueryTrajectory)                Trajectory                                                  OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	DMember(float)                                     HistoryLengthSeconds                                        OFFSET(get<float>, {0xB0, 4, 0, 0})
 	DMember(int32_t)                                   HistorySamplesPerSecond                                     OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
 	DMember(float)                                     PredictionLengthSeconds                                     OFFSET(get<float>, {0xB8, 4, 0, 0})
@@ -49,8 +49,9 @@ public:
 
 /// Struct /Script/MotionTrajectory.MotionTrajectorySettings
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMotionTrajectorySettings : public MDKStruct
+class FMotionTrajectorySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 

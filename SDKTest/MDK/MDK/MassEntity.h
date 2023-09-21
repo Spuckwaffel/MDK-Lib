@@ -27,8 +27,8 @@ class UMassEntitySettings : public UMassModuleSettings
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FString)                                   DumpDependencyGraphFileName                                 OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMassProcessingPhaseConfig)                ProcessingPhasesConfig                                      OFFSET(get<T>, {0x38, 192, 0, 0})
+	SMember(FString)                                   DumpDependencyGraphFileName                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMassProcessingPhaseConfig)                ProcessingPhasesConfig                                      OFFSET(getStruct<T>, {0x38, 192, 0, 0})
 	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               OFFSET(get<T>, {0xF8, 16, 0, 0})
 };
 
@@ -52,7 +52,7 @@ class UMassProcessor : public UObject
 public:
 	DMember(int32_t)                                   ExecutionFlags                                              OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 	CMember(EMassProcessingPhase)                      ProcessingPhase                                             OFFSET(get<T>, {0x2C, 1, 0, 0})
-	SMember(FMassProcessorExecutionOrder)              ExecutionOrder                                              OFFSET(get<T>, {0x30, 40, 0, 0})
+	SMember(FMassProcessorExecutionOrder)              ExecutionOrder                                              OFFSET(getStruct<T>, {0x30, 40, 0, 0})
 	DMember(bool)                                      bAutoRegisterWithProcessingPhases                           OFFSET(get<bool>, {0x58, 1, 0, 0})
 	DMember(bool)                                      bRequiresGameThreadExecution                                OFFSET(get<bool>, {0x5B, 1, 0, 0})
 };
@@ -77,8 +77,8 @@ class UMassObserverRegistry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FMassEntityObserverClassesMap)             FragmentObservers                                           OFFSET(get<T>, {0x28, 160, 0, 0})
-	SMember(FMassEntityObserverClassesMap)             TagObservers                                                OFFSET(get<T>, {0xC8, 160, 0, 0})
+	SMember(FMassEntityObserverClassesMap)             FragmentObservers                                           OFFSET(getStruct<T>, {0x28, 160, 0, 0})
+	SMember(FMassEntityObserverClassesMap)             TagObservers                                                OFFSET(getStruct<T>, {0xC8, 160, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassCompositeProcessor
@@ -89,8 +89,8 @@ class UMassCompositeProcessor : public UMassProcessor
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMassRuntimePipeline)                      ChildPipeline                                               OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FMassRuntimePipeline)                      ChildPipeline                                               OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 };
 
 /// Class /Script/MassEntity.MassSettings
@@ -106,8 +106,9 @@ public:
 
 /// Struct /Script/MassEntity.MassFragmentRequirements
 /// Size: 0x01E8 (0x000000 - 0x0001E8)
-class FMassFragmentRequirements : public MDKStruct
+class FMassFragmentRequirements : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
@@ -118,6 +119,7 @@ public:
 /// Size: 0x00B8 (0x0001E8 - 0x0002A0)
 class FMassEntityQuery : public FMassFragmentRequirements
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
@@ -126,8 +128,9 @@ public:
 
 /// Struct /Script/MassEntity.MassFragment
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMassFragment : public MDKStruct
+class FMassFragment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -136,8 +139,9 @@ public:
 
 /// Struct /Script/MassEntity.MassTag
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMassTag : public MDKStruct
+class FMassTag : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -146,8 +150,9 @@ public:
 
 /// Struct /Script/MassEntity.MassChunkFragment
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMassChunkFragment : public MDKStruct
+class FMassChunkFragment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -156,8 +161,9 @@ public:
 
 /// Struct /Script/MassEntity.MassSharedFragment
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMassSharedFragment : public MDKStruct
+class FMassSharedFragment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -166,8 +172,9 @@ public:
 
 /// Struct /Script/MassEntity.MassEntityHandle
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMassEntityHandle : public MDKStruct
+class FMassEntityHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -178,8 +185,9 @@ public:
 
 /// Struct /Script/MassEntity.MassEntityView
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMassEntityView : public MDKStruct
+class FMassEntityView : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -188,8 +196,9 @@ public:
 
 /// Struct /Script/MassEntity.MassObserversMap
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FMassObserversMap : public MDKStruct
+class FMassObserversMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -199,8 +208,9 @@ public:
 
 /// Struct /Script/MassEntity.MassRuntimePipeline
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMassRuntimePipeline : public MDKStruct
+class FMassRuntimePipeline : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -210,20 +220,22 @@ public:
 
 /// Struct /Script/MassEntity.MassObserverManager
 /// Size: 0x01C8 (0x000000 - 0x0001C8)
-class FMassObserverManager : public MDKStruct
+class FMassObserverManager : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
 public:
-	SMember(FMassObserversMap)                         FragmentObservers                                           OFFSET(get<T>, {0x80, 160, 0, 0})
-	SMember(FMassObserversMap)                         TagObservers                                                OFFSET(get<T>, {0x120, 160, 0, 0})
+	SMember(FMassObserversMap)                         FragmentObservers                                           OFFSET(getStruct<T>, {0x80, 160, 0, 0})
+	SMember(FMassObserversMap)                         TagObservers                                                OFFSET(getStruct<T>, {0x120, 160, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassProcessorClassCollection
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMassProcessorClassCollection : public MDKStruct
+class FMassProcessorClassCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -233,8 +245,9 @@ public:
 
 /// Struct /Script/MassEntity.MassEntityObserverClassesMap
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FMassEntityObserverClassesMap : public MDKStruct
+class FMassEntityObserverClassesMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -244,21 +257,23 @@ public:
 
 /// Struct /Script/MassEntity.MassProcessingPhaseConfig
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMassProcessingPhaseConfig : public MDKStruct
+class FMassProcessingPhaseConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     PhaseName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PhaseName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UClass*)                                   PhaseGroupClass                                             OFFSET(get<T>, {0x8, 8, 0, 0})
 	CMember(TArray<UMassProcessor*>)                   ProcessorCDOs                                               OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/MassEntity.ProcessorAuxDataBase
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FProcessorAuxDataBase : public MDKStruct
+class FProcessorAuxDataBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -267,34 +282,37 @@ public:
 
 /// Struct /Script/MassEntity.MassProcessingContext
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMassProcessingContext : public MDKStruct
+class FMassProcessingContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	DMember(float)                                     DeltaSeconds                                                OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FInstancedStruct)                          AuxData                                                     OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FInstancedStruct)                          AuxData                                                     OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      bFlushCommandBuffer                                         OFFSET(get<bool>, {0x28, 1, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassProcessorExecutionOrder
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMassProcessorExecutionOrder : public MDKStruct
+class FMassProcessorExecutionOrder : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FName)                                     ExecuteInGroup                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ExecuteInGroup                                              OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FName>)                             ExecuteBefore                                               OFFSET(get<T>, {0x8, 16, 0, 0})
 	CMember(TArray<FName>)                             ExecuteAfter                                                OFFSET(get<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MassEntity.MassSubsystemRequirements
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FMassSubsystemRequirements : public MDKStruct
+class FMassSubsystemRequirements : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 

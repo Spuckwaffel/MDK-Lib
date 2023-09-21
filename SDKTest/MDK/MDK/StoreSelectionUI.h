@@ -22,8 +22,8 @@ class UFortStoreSelectionData : public UFortGameFeatureData
 
 public:
 	CMember(TWeakObjectPtr<UClass*>)                   StoreSelectionScreenClass                                   OFFSET(get<T>, {0x498, 32, 0, 0})
-	SMember(FText)                                     RegularStoreSelectedText                                    OFFSET(get<T>, {0x4B8, 24, 0, 0})
-	SMember(FText)                                     NonRegularStoreSelectedText                                 OFFSET(get<T>, {0x4D0, 24, 0, 0})
+	SMember(FText)                                     RegularStoreSelectedText                                    OFFSET(getStruct<T>, {0x4B8, 24, 0, 0})
+	SMember(FText)                                     NonRegularStoreSelectedText                                 OFFSET(getStruct<T>, {0x4D0, 24, 0, 0})
 };
 
 /// Class /Script/StoreSelectionUI.FortStoreSelectionOptionEntry
@@ -59,20 +59,21 @@ public:
 	CMember(TScriptInterface<Class>)                   PurchaseChoiceOwner                                         OFFSET(get<T>, {0x568, 16, 0, 0})
 	CMember(TArray<FItemData>)                         StoreOptions                                                OFFSET(get<T>, {0x578, 16, 0, 0})
 	CMember(TWeakObjectPtr<UFortMtxOfferData*>)        SoftDisplayAsset                                            OFFSET(get<T>, {0x588, 32, 0, 0})
-	SMember(FItemData)                                 ItemData                                                    OFFSET(get<T>, {0x5A8, 768, 0, 0})
-	SMember(FText)                                     OptionalLabels                                              OFFSET(get<T>, {0x8A8, 48, 0, 0})
+	SMember(FItemData)                                 ItemData                                                    OFFSET(getStruct<T>, {0x5A8, 768, 0, 0})
+	SMember(FText)                                     OptionalLabels                                              OFFSET(getStruct<T>, {0x8A8, 48, 0, 0})
 };
 
 /// Struct /Script/StoreSelectionUI.ItemData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FItemData : public MDKStruct
+class FItemData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(TWeakObjectPtr<UTexture2D*>)               Icon                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FText)                                     Name                                                        OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FText)                                     Name                                                        OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Enum /Script/StoreSelectionUI.EOptionalLabel

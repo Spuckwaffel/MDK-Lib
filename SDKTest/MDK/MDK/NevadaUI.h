@@ -21,7 +21,7 @@ public:
 	CMember(UClass*)                                   NevadaTargetIndicatorClass                                  OFFSET(get<T>, {0x480, 8, 0, 0})
 	CMember(UNevadaTargetIndicator*)                   TargetIndicator                                             OFFSET(get<T>, {0x488, 8, 0, 0})
 	CMember(AFortNevadaVehicle*)                       OwningNevadaVehicle                                         OFFSET(get<T>, {0x490, 8, 0, 0})
-	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(get<T>, {0x4A0, 136, 0, 0})
+	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(getStruct<T>, {0x4A0, 136, 0, 0})
 
 
 	/// Functions

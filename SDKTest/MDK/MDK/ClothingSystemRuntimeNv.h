@@ -18,26 +18,26 @@ class UClothConfigNv : public UClothConfigCommon
 
 public:
 	CMember(EClothingWindMethodNv)                     ClothingWindMethod                                          OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FClothConstraintSetupNv)                   VerticalConstraint                                          OFFSET(get<T>, {0x2C, 16, 0, 0})
-	SMember(FClothConstraintSetupNv)                   HorizontalConstraint                                        OFFSET(get<T>, {0x3C, 16, 0, 0})
-	SMember(FClothConstraintSetupNv)                   BendConstraint                                              OFFSET(get<T>, {0x4C, 16, 0, 0})
-	SMember(FClothConstraintSetupNv)                   ShearConstraint                                             OFFSET(get<T>, {0x5C, 16, 0, 0})
+	SMember(FClothConstraintSetupNv)                   VerticalConstraint                                          OFFSET(getStruct<T>, {0x2C, 16, 0, 0})
+	SMember(FClothConstraintSetupNv)                   HorizontalConstraint                                        OFFSET(getStruct<T>, {0x3C, 16, 0, 0})
+	SMember(FClothConstraintSetupNv)                   BendConstraint                                              OFFSET(getStruct<T>, {0x4C, 16, 0, 0})
+	SMember(FClothConstraintSetupNv)                   ShearConstraint                                             OFFSET(getStruct<T>, {0x5C, 16, 0, 0})
 	DMember(float)                                     SelfCollisionRadius                                         OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(float)                                     SelfCollisionStiffness                                      OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(float)                                     SelfCollisionCullScale                                      OFFSET(get<float>, {0x74, 4, 0, 0})
-	SMember(FVector)                                   Damping                                                     OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   Damping                                                     OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	DMember(float)                                     Friction                                                    OFFSET(get<float>, {0x90, 4, 0, 0})
 	DMember(float)                                     WindDragCoefficient                                         OFFSET(get<float>, {0x94, 4, 0, 0})
 	DMember(float)                                     WindLiftCoefficient                                         OFFSET(get<float>, {0x98, 4, 0, 0})
-	SMember(FVector)                                   LinearDrag                                                  OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FVector)                                   AngularDrag                                                 OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FVector)                                   LinearInertiaScale                                          OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FVector)                                   AngularInertiaScale                                         OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FVector)                                   CentrifugalInertiaScale                                     OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   LinearDrag                                                  OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FVector)                                   AngularDrag                                                 OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FVector)                                   LinearInertiaScale                                          OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FVector)                                   AngularInertiaScale                                         OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FVector)                                   CentrifugalInertiaScale                                     OFFSET(getStruct<T>, {0x100, 24, 0, 0})
 	DMember(float)                                     SolverFrequency                                             OFFSET(get<float>, {0x118, 4, 0, 0})
 	DMember(float)                                     StiffnessFrequency                                          OFFSET(get<float>, {0x11C, 4, 0, 0})
 	DMember(float)                                     GravityScale                                                OFFSET(get<float>, {0x120, 4, 0, 0})
-	SMember(FVector)                                   GravityOverride                                             OFFSET(get<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   GravityOverride                                             OFFSET(getStruct<T>, {0x128, 24, 0, 0})
 	DMember(bool)                                      bUseGravityOverride                                         OFFSET(get<bool>, {0x140, 1, 0, 0})
 	DMember(float)                                     TetherStiffness                                             OFFSET(get<float>, {0x144, 4, 0, 0})
 	DMember(float)                                     TetherLimit                                                 OFFSET(get<float>, {0x148, 4, 0, 0})
@@ -45,10 +45,10 @@ public:
 	DMember(float)                                     AnimDriveSpringStiffness                                    OFFSET(get<float>, {0x150, 4, 0, 0})
 	DMember(float)                                     AnimDriveDamperStiffness                                    OFFSET(get<float>, {0x154, 4, 0, 0})
 	CMember(EClothingWindMethod_Legacy)                WindMethod                                                  OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              VerticalConstraintConfig                                    OFFSET(get<T>, {0x15C, 16, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              HorizontalConstraintConfig                                  OFFSET(get<T>, {0x16C, 16, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              BendConstraintConfig                                        OFFSET(get<T>, {0x17C, 16, 0, 0})
-	SMember(FClothConstraintSetup_Legacy)              ShearConstraintConfig                                       OFFSET(get<T>, {0x18C, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              VerticalConstraintConfig                                    OFFSET(getStruct<T>, {0x15C, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              HorizontalConstraintConfig                                  OFFSET(getStruct<T>, {0x16C, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              BendConstraintConfig                                        OFFSET(getStruct<T>, {0x17C, 16, 0, 0})
+	SMember(FClothConstraintSetup_Legacy)              ShearConstraintConfig                                       OFFSET(getStruct<T>, {0x18C, 16, 0, 0})
 };
 
 /// Class /Script/ClothingSystemRuntimeNv.ClothingSimulationFactoryNv
@@ -87,8 +87,9 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeNv.ClothConstraintSetupNv
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FClothConstraintSetupNv : public MDKStruct
+class FClothConstraintSetupNv : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

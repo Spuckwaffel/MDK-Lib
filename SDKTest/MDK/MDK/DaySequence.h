@@ -19,7 +19,7 @@ class UDaySequenceModifierComponent : public UBoxComponent
 
 public:
 	CMember(ADaySequenceActor*)                        TargetActor                                                 OFFSET(get<T>, {0x5B0, 8, 0, 0})
-	SMember(FComponentReference)                       VolumeShapeComponent                                        OFFSET(get<T>, {0x5B8, 40, 0, 0})
+	SMember(FComponentReference)                       VolumeShapeComponent                                        OFFSET(getStruct<T>, {0x5B8, 40, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   ExternalVolumeBlendTarget                                   OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(UDaySequence*)                             UserDaySequence                                             OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(UDaySequence*)                             ProceduralDaySequence                                       OFFSET(get<T>, {0x5F0, 8, 0, 0})
@@ -30,8 +30,8 @@ public:
 	DMember(float)                                     CustomVolumeBlendWeight                                     OFFSET(get<float>, {0x660, 4, 0, 0})
 	CMember(EDayNightCycleMode)                        DayNightCycle                                               OFFSET(get<T>, {0x664, 1, 0, 0})
 	CMember(EDaySequenceModifierBlendMode)             BlendMode                                                   OFFSET(get<T>, {0x665, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostReinitializeSubSequences                              OFFSET(get<T>, {0x668, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostEnableModifier                                        OFFSET(get<T>, {0x678, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostReinitializeSubSequences                              OFFSET(getStruct<T>, {0x668, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostEnableModifier                                        OFFSET(getStruct<T>, {0x678, 16, 0, 0})
 	DMember(bool)                                      bIgnoreBias                                                 OFFSET(get<bool>, {0x688, 1, 1, 0})
 	DMember(bool)                                      bUseVolume                                                  OFFSET(get<bool>, {0x688, 1, 1, 1})
 	DMember(bool)                                      bIsComponentEnabled                                         OFFSET(get<bool>, {0x688, 1, 1, 2})
@@ -97,7 +97,7 @@ class UDaySequence : public UMovieSceneSequence
 
 public:
 	CMember(UMovieScene*)                              MovieScene                                                  OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FDaySequenceBindingReferences)             BindingReferences                                           OFFSET(get<T>, {0x78, 160, 0, 0})
+	SMember(FDaySequenceBindingReferences)             BindingReferences                                           OFFSET(getStruct<T>, {0x78, 160, 0, 0})
 	CMember(UClass*)                                   DirectorClass                                               OFFSET(get<T>, {0x118, 8, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x120, 16, 0, 0})
 };
@@ -118,9 +118,9 @@ public:
 	CMember(UDaySequence*)                             RootSequence                                                OFFSET(get<T>, {0x310, 8, 0, 0})
 	DMember(bool)                                      bRunDayCycle                                                OFFSET(get<bool>, {0x318, 1, 0, 0})
 	DMember(bool)                                      bUseInterpCurve                                             OFFSET(get<bool>, {0x319, 1, 0, 0})
-	SMember(FTimecode)                                 DayLength                                                   OFFSET(get<T>, {0x31C, 20, 0, 0})
-	SMember(FTimecode)                                 TimePerCycle                                                OFFSET(get<T>, {0x330, 20, 0, 0})
-	SMember(FTimecode)                                 InitialTimeOfDay                                            OFFSET(get<T>, {0x344, 20, 0, 0})
+	SMember(FTimecode)                                 DayLength                                                   OFFSET(getStruct<T>, {0x31C, 20, 0, 0})
+	SMember(FTimecode)                                 TimePerCycle                                                OFFSET(getStruct<T>, {0x330, 20, 0, 0})
+	SMember(FTimecode)                                 InitialTimeOfDay                                            OFFSET(getStruct<T>, {0x344, 20, 0, 0})
 
 
 	/// Functions
@@ -227,8 +227,8 @@ class UDaySequenceProjectSettings : public UDeveloperSettings
 
 public:
 	DMember(bool)                                      bDefaultLockEngineToDisplayRate                             OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FString)                                   DefaultDisplayRate                                          OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   DefaultTickResolution                                       OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   DefaultDisplayRate                                          OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   DefaultTickResolution                                       OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	CMember(EUpdateClockSource)                        DefaultClockSource                                          OFFSET(get<T>, {0x58, 1, 0, 0})
 };
 
@@ -281,8 +281,9 @@ public:
 
 /// Struct /Script/DaySequence.DaySequenceModifierNamedSequence
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDaySequenceModifierNamedSequence : public MDKStruct
+class FDaySequenceModifierNamedSequence : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -293,8 +294,9 @@ public:
 
 /// Struct /Script/DaySequence.DaySequenceAssetData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDaySequenceAssetData : public MDKStruct
+class FDaySequenceAssetData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -306,20 +308,22 @@ public:
 
 /// Struct /Script/DaySequence.DaySequenceBindingReference
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FDaySequenceBindingReference : public MDKStruct
+class FDaySequenceBindingReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(TWeakObjectPtr<UObject*>)                  ExternalObjectPath                                          OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FString)                                   ObjectPath                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ObjectPath                                                  OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/DaySequence.DaySequenceBindingReferenceArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDaySequenceBindingReferenceArray : public MDKStruct
+class FDaySequenceBindingReferenceArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -329,8 +333,9 @@ public:
 
 /// Struct /Script/DaySequence.DaySequenceBindingReferences
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FDaySequenceBindingReferences : public MDKStruct
+class FDaySequenceBindingReferences : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 

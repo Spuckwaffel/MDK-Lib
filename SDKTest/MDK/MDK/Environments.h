@@ -19,17 +19,17 @@ class ACameraAnimationTransition_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
 	DMember(float)                                     Timeline_0_NewTrack_0_2750533A46B9AEF2BE294F8153FE4FD4      OFFSET(get<float>, {0x2A0, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_2750533A46B9AEF2BE294F8153FE4FD4      OFFSET(get<T>, {0x2A4, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraBR                                                    OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FTransform)                                CameraLocationBR                                            OFFSET(get<T>, {0x2C0, 96, 0, 0})
+	SMember(FTransform)                                CameraLocationBR                                            OFFSET(getStruct<T>, {0x2C0, 96, 0, 0})
 	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraBR16Player                                            OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraCreative                                              OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraCreative16Player                                      OFFSET(get<T>, {0x330, 8, 0, 0})
-	SMember(FTransform)                                CameraLocationCreative                                      OFFSET(get<T>, {0x340, 96, 0, 0})
+	SMember(FTransform)                                CameraLocationCreative                                      OFFSET(getStruct<T>, {0x340, 96, 0, 0})
 	DMember(double)                                    FOVPostion1                                                 OFFSET(get<double>, {0x3A0, 8, 0, 0})
 	DMember(double)                                    FOVPostion2                                                 OFFSET(get<double>, {0x3A8, 8, 0, 0})
 
@@ -57,7 +57,7 @@ class ABP_FortniteLobbyLightSwitcher_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 796;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(ADirectionalLight*)                        DirectionLight                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(ASkyLight*)                                SkyLight                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -71,8 +71,8 @@ public:
 	CMember(AExponentialHeightFog*)                    ExponentialHeightfog_LowDetailMode                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	DMember(bool)                                      LOW_FX_Setting_Use_MobileLighting                           OFFSET(get<bool>, {0x2F8, 1, 0, 0})
 	DMember(bool)                                      IsLightalreadyActive                                        OFFSET(get<bool>, {0x2F9, 1, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(get<T>, {0x2FC, 16, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(get<T>, {0x30C, 16, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(getStruct<T>, {0x2FC, 16, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(getStruct<T>, {0x30C, 16, 0, 0})
 
 
 	/// Functions
@@ -102,9 +102,9 @@ class AFortnitePartyBackdrop_Camera_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2673;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0xA08, 8, 0, 0})
-	SMember(FTransform)                                SavedTransform                                              OFFSET(get<T>, {0xA10, 96, 0, 0})
+	SMember(FTransform)                                SavedTransform                                              OFFSET(getStruct<T>, {0xA10, 96, 0, 0})
 	DMember(bool)                                      Active                                                      OFFSET(get<bool>, {0xA70, 1, 0, 0})
 
 
@@ -129,7 +129,7 @@ class ABP_DetailLevelMesh_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 682;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StaticMesh                                                  OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	DMember(bool)                                      AlwaysVisible                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
@@ -149,7 +149,7 @@ class APartyDisplayManagerBP_C : public APartyDisplayManager
 	static inline constexpr uint64_t __MDKClassSize = 2084;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x648, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x648, 8, 0, 0})
 	CMember(UChildActorComponent*)                     PrefabActorComp                                             OFFSET(get<T>, {0x650, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x658, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StaticMesh                                                  OFFSET(get<T>, {0x660, 8, 0, 0})
@@ -166,14 +166,14 @@ public:
 	DMember(float)                                     ScaleAnimLevel_Scaling_CC68128E49202D0C982B7A945E41AF43     OFFSET(get<float>, {0x6A8, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           ScaleAnimLevel__Direction_CC68128E49202D0C982B7A945E41AF43  OFFSET(get<T>, {0x6AC, 1, 0, 0})
 	CMember(UTimelineComponent*)                       ScaleAnimLevel                                              OFFSET(get<T>, {0x6B0, 8, 0, 0})
-	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(get<T>, {0x6B8, 8, 0, 0})
+	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(getStruct<T>, {0x6B8, 8, 0, 0})
 	DMember(double)                                    Rotation                                                    OFFSET(get<double>, {0x6C0, 8, 0, 0})
 	CMember(UFortItem*)                                ItemToRepresent                                             OFFSET(get<T>, {0x6C8, 8, 0, 0})
 	DMember(bool)                                      PreviewRotation                                             OFFSET(get<bool>, {0x6D0, 1, 0, 0})
 	CMember(UCurveFloat*)                              RotationAnimation                                           OFFSET(get<T>, {0x6D8, 8, 0, 0})
 	CMember(UParticleSystem*)                          LevelUpFX                                                   OFFSET(get<T>, {0x6E0, 8, 0, 0})
 	CMember(UParticleSystem*)                          EvolveUpFX                                                  OFFSET(get<T>, {0x6E8, 8, 0, 0})
-	SMember(FVector)                                   FXTargetLocation                                            OFFSET(get<T>, {0x6F0, 24, 0, 0})
+	SMember(FVector)                                   FXTargetLocation                                            OFFSET(getStruct<T>, {0x6F0, 24, 0, 0})
 	DMember(bool)                                      IsCharacter                                                 OFFSET(get<bool>, {0x708, 1, 0, 0})
 	DMember(bool)                                      IsEvolve                                                    OFFSET(get<bool>, {0x709, 1, 0, 0})
 	CMember(UParticleSystem*)                          CharLevelUpFX                                               OFFSET(get<T>, {0x710, 8, 0, 0})
@@ -187,27 +187,27 @@ public:
 	CMember(AFortPlayerPawn*)                          HeroPawn                                                    OFFSET(get<T>, {0x750, 8, 0, 0})
 	DMember(bool)                                      SanityChecker                                               OFFSET(get<bool>, {0x758, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 MID_HoloMaterial                                            OFFSET(get<T>, {0x760, 8, 0, 0})
-	SMember(FName)                                     HideElement                                                 OFFSET(get<T>, {0x768, 4, 0, 0})
-	SMember(FName)                                     VertexRange                                                 OFFSET(get<T>, {0x76C, 4, 0, 0})
-	SMember(FName)                                     HideElement1                                                OFFSET(get<T>, {0x770, 4, 0, 0})
-	SMember(FName)                                     HideElement2                                                OFFSET(get<T>, {0x774, 4, 0, 0})
-	SMember(FName)                                     HideElement3                                                OFFSET(get<T>, {0x778, 4, 0, 0})
-	SMember(FName)                                     HideElement4                                                OFFSET(get<T>, {0x77C, 4, 0, 0})
-	SMember(FName)                                     HideElement5                                                OFFSET(get<T>, {0x780, 4, 0, 0})
-	SMember(FName)                                     HideElement6                                                OFFSET(get<T>, {0x784, 4, 0, 0})
-	SMember(FName)                                     HideElement7                                                OFFSET(get<T>, {0x788, 4, 0, 0})
-	SMember(FName)                                     HideElement8                                                OFFSET(get<T>, {0x78C, 4, 0, 0})
-	SMember(FName)                                     HideElement9                                                OFFSET(get<T>, {0x790, 4, 0, 0})
-	SMember(FVector)                                   ScalePivotPreScaleLocation                                  OFFSET(get<T>, {0x798, 24, 0, 0})
-	SMember(FVector)                                   StaticMeshPreScaleLocation                                  OFFSET(get<T>, {0x7B0, 24, 0, 0})
-	SMember(FVector)                                   SkelMeshPreScaleLocation                                    OFFSET(get<T>, {0x7C8, 24, 0, 0})
-	SMember(FVector)                                   PrefabPreScaleLocation                                      OFFSET(get<T>, {0x7E0, 24, 0, 0})
+	SMember(FName)                                     HideElement                                                 OFFSET(getStruct<T>, {0x768, 4, 0, 0})
+	SMember(FName)                                     VertexRange                                                 OFFSET(getStruct<T>, {0x76C, 4, 0, 0})
+	SMember(FName)                                     HideElement1                                                OFFSET(getStruct<T>, {0x770, 4, 0, 0})
+	SMember(FName)                                     HideElement2                                                OFFSET(getStruct<T>, {0x774, 4, 0, 0})
+	SMember(FName)                                     HideElement3                                                OFFSET(getStruct<T>, {0x778, 4, 0, 0})
+	SMember(FName)                                     HideElement4                                                OFFSET(getStruct<T>, {0x77C, 4, 0, 0})
+	SMember(FName)                                     HideElement5                                                OFFSET(getStruct<T>, {0x780, 4, 0, 0})
+	SMember(FName)                                     HideElement6                                                OFFSET(getStruct<T>, {0x784, 4, 0, 0})
+	SMember(FName)                                     HideElement7                                                OFFSET(getStruct<T>, {0x788, 4, 0, 0})
+	SMember(FName)                                     HideElement8                                                OFFSET(getStruct<T>, {0x78C, 4, 0, 0})
+	SMember(FName)                                     HideElement9                                                OFFSET(getStruct<T>, {0x790, 4, 0, 0})
+	SMember(FVector)                                   ScalePivotPreScaleLocation                                  OFFSET(getStruct<T>, {0x798, 24, 0, 0})
+	SMember(FVector)                                   StaticMeshPreScaleLocation                                  OFFSET(getStruct<T>, {0x7B0, 24, 0, 0})
+	SMember(FVector)                                   SkelMeshPreScaleLocation                                    OFFSET(getStruct<T>, {0x7C8, 24, 0, 0})
+	SMember(FVector)                                   PrefabPreScaleLocation                                      OFFSET(getStruct<T>, {0x7E0, 24, 0, 0})
 	CMember(UParticleSystemComponent*)                 GhostPistolVFX                                              OFFSET(get<T>, {0x7F8, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Ghost_Sword_VFX                                             OFFSET(get<T>, {0x800, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Ghost_Sword_Mesh                                            OFFSET(get<T>, {0x808, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 TransitionFXComponent                                       OFFSET(get<T>, {0x810, 8, 0, 0})
 	CMember(UParticleSystem*)                          CharSwapTransitionFXLoop                                    OFFSET(get<T>, {0x818, 8, 0, 0})
-	SMember(FName)                                     HideElementsOnlyConsidersRedChannel                         OFFSET(get<T>, {0x820, 4, 0, 0})
+	SMember(FName)                                     HideElementsOnlyConsidersRedChannel                         OFFSET(getStruct<T>, {0x820, 4, 0, 0})
 
 
 	/// Functions
@@ -299,7 +299,7 @@ class AItemOnPawnPreview_C : public AFortItemPreviewOnPawnActor
 	static inline constexpr uint64_t __MDKClassSize = 1952;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6B0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x6B0, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x6B8, 8, 0, 0})
 	CMember(UDirectionalLightComponent*)               Directional_Light_For_Atmosphere_PC                         OFFSET(get<T>, {0x6C0, 8, 0, 0})
 	CMember(USkyLightComponent*)                       SkyLightPC                                                  OFFSET(get<T>, {0x6C8, 8, 0, 0})
@@ -324,9 +324,9 @@ public:
 	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x759, 1, 0, 0})
 	DMember(bool)                                      debugConstructionLighting                                   OFFSET(get<bool>, {0x75A, 1, 0, 0})
 	CMember(UParticleSystemComponent*)                 ObscuringLoopEmitter                                        OFFSET(get<T>, {0x760, 8, 0, 0})
-	SMember(FRotator)                                  ToonLightRotatio                                            OFFSET(get<T>, {0x768, 24, 0, 0})
+	SMember(FRotator)                                  ToonLightRotatio                                            OFFSET(getStruct<T>, {0x768, 24, 0, 0})
 	DMember(bool)                                      bIsBattlePassReward                                         OFFSET(get<bool>, {0x780, 1, 0, 0})
-	SMember(FTimerHandle)                              LOD_StreamingSafetyTimer                                    OFFSET(get<T>, {0x788, 8, 0, 0})
+	SMember(FTimerHandle)                              LOD_StreamingSafetyTimer                                    OFFSET(getStruct<T>, {0x788, 8, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultFloorMaterial                                        OFFSET(get<T>, {0x790, 8, 0, 0})
 	CMember(UMaterialInterface*)                       CustomFloorMaterial                                         OFFSET(get<T>, {0x798, 8, 0, 0})
 
@@ -374,7 +374,7 @@ class AVaultWeaponPlacementHelper_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 736;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     CUBE                                                        OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Sparkle                                         OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Swirl02                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -382,7 +382,7 @@ public:
 	CMember(UStaticMeshComponent*)                     CharacterPlacement                                          OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
 
 
 	/// Functions
@@ -412,15 +412,15 @@ class AVaultCharacterPlacementHelper_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     floor                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     CharacterPlacement                                          OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FTransform)                                OriginalTransform                                           OFFSET(get<T>, {0x2B0, 96, 0, 0})
-	SMember(FVector)                                   OffsetTranslate                                             OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FRotator)                                  OffsetRotate                                                OFFSET(get<T>, {0x328, 24, 0, 0})
+	SMember(FTransform)                                OriginalTransform                                           OFFSET(getStruct<T>, {0x2B0, 96, 0, 0})
+	SMember(FVector)                                   OffsetTranslate                                             OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(FRotator)                                  OffsetRotate                                                OFFSET(getStruct<T>, {0x328, 24, 0, 0})
 	DMember(bool)                                      Athena                                                      OFFSET(get<bool>, {0x340, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnZoomLevelUpdated                                          OFFSET(get<T>, {0x348, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnZoomLevelUpdated                                          OFFSET(getStruct<T>, {0x348, 16, 0, 0})
 
 
 	/// Functions
@@ -448,9 +448,9 @@ class UUI_Background_Strings_C : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     CustomString                                                OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FText)                                     CustomText                                                  OFFSET(get<T>, {0x2B8, 24, 0, 0})
+	SMember(FText)                                     CustomText                                                  OFFSET(getStruct<T>, {0x2B8, 24, 0, 0})
 
 
 	/// Functions
@@ -477,7 +477,7 @@ public:
 	DMember(double)                                    Brightness                                                  OFFSET(get<double>, {0x2A8, 8, 0, 0})
 	CMember(UTexture*)                                 _2dTexture                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UTexture*)                                 Cubemap                                                     OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FLinearColor)                              FadeColor                                                   OFFSET(get<T>, {0x2C0, 16, 0, 0})
+	SMember(FLinearColor)                              FadeColor                                                   OFFSET(getStruct<T>, {0x2C0, 16, 0, 0})
 
 
 	/// Functions
@@ -504,7 +504,7 @@ class ABP_CharacterRimlightDisabler_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
 
 
@@ -525,7 +525,7 @@ class AFortnitePartyHeroSelect_Camera_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2592;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UCameraComponent*)                         CameraActor                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
 	DMember(bool)                                      MouseDown                                                   OFFSET(get<bool>, {0xA10, 1, 0, 0})
 	CMember(AFortPlayerPawn*)                          CachedPawn                                                  OFFSET(get<T>, {0xA18, 8, 0, 0})
@@ -562,7 +562,7 @@ class AVaultCharacterLightingBP_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(USpotLightComponent*)                      KeyLight4                                                   OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(USpotLightComponent*)                      KeyLight3                                                   OFFSET(get<T>, {0x2A8, 8, 0, 0})
@@ -588,8 +588,8 @@ public:
 	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x33A, 1, 0, 0})
 	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x33B, 1, 0, 0})
 	DMember(bool)                                      DebugLighting_LOWDetailPC                                   OFFSET(get<bool>, {0x33C, 1, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(get<T>, {0x340, 16, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(get<T>, {0x350, 16, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(getStruct<T>, {0x340, 16, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(getStruct<T>, {0x350, 16, 0, 0})
 
 
 	/// Functions
@@ -623,7 +623,7 @@ class AVaultWorld_C : public AFortItemPreviewWorld
 	static inline constexpr uint64_t __MDKClassSize = 833;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x338, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x338, 8, 0, 0})
 	DMember(bool)                                      bIsPrimaryBackgroundActive                                  OFFSET(get<bool>, {0x340, 1, 0, 0})
 
 
@@ -644,7 +644,7 @@ class ASpecialEventVaultWorld_C : public AVaultWorld_C
 	static inline constexpr uint64_t __MDKClassSize = 968;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x348, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x348, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     floor                                                       OFFSET(get<T>, {0x350, 8, 0, 0})
 	DMember(float)                                     ItemDetails_X_Offset_1EDCEF5F41216A9DADD25897C8B68493       OFFSET(get<float>, {0x358, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           ItemDetails__Direction_1EDCEF5F41216A9DADD25897C8B68493     OFFSET(get<T>, {0x35C, 1, 0, 0})
@@ -724,7 +724,7 @@ class AItemPreviewSideSwap_C : public AItemPreviewSwapper
 	static inline constexpr uint64_t __MDKClassSize = 1360;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3D0, 8, 0, 0})
 	CMember(UPostProcessComponent*)                    PostProcess_Mobile                                          OFFSET(get<T>, {0x3D8, 8, 0, 0})
 	CMember(USkyLightComponent*)                       SkyLightLowMobile                                           OFFSET(get<T>, {0x3E0, 8, 0, 0})
 	CMember(USkyLightComponent*)                       SkyLight                                                    OFFSET(get<T>, {0x3E8, 8, 0, 0})
@@ -741,16 +741,16 @@ public:
 	DMember(float)                                     Timeline_0_ZoomLevel_F92CF88A423F8300F5A67CB744A0DA45       OFFSET(get<float>, {0x438, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_F92CF88A423F8300F5A67CB744A0DA45      OFFSET(get<T>, {0x43C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline1                                                   OFFSET(get<T>, {0x440, 8, 0, 0})
-	SMember(FVector)                                   MoveOutRight_Location_89D9209D4024EFFF08326CBAE53949F1      OFFSET(get<T>, {0x448, 24, 0, 0})
+	SMember(FVector)                                   MoveOutRight_Location_89D9209D4024EFFF08326CBAE53949F1      OFFSET(getStruct<T>, {0x448, 24, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           MoveOutRight__Direction_89D9209D4024EFFF08326CBAE53949F1    OFFSET(get<T>, {0x460, 1, 0, 0})
 	CMember(UTimelineComponent*)                       MoveOutRight                                                OFFSET(get<T>, {0x468, 8, 0, 0})
-	SMember(FVector)                                   MoveInRight_Location_3FE1D8EB4B6BCBA0C3D120B521728FCE       OFFSET(get<T>, {0x470, 24, 0, 0})
+	SMember(FVector)                                   MoveInRight_Location_3FE1D8EB4B6BCBA0C3D120B521728FCE       OFFSET(getStruct<T>, {0x470, 24, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           MoveInRight__Direction_3FE1D8EB4B6BCBA0C3D120B521728FCE     OFFSET(get<T>, {0x488, 1, 0, 0})
 	CMember(UTimelineComponent*)                       MoveInRight                                                 OFFSET(get<T>, {0x490, 8, 0, 0})
-	SMember(FVector)                                   MoveInLeft_Location_B344DA1A46B3CB2F19E2E0A1F7E36A47        OFFSET(get<T>, {0x498, 24, 0, 0})
+	SMember(FVector)                                   MoveInLeft_Location_B344DA1A46B3CB2F19E2E0A1F7E36A47        OFFSET(getStruct<T>, {0x498, 24, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           MoveInLeft__Direction_B344DA1A46B3CB2F19E2E0A1F7E36A47      OFFSET(get<T>, {0x4B0, 1, 0, 0})
 	CMember(UTimelineComponent*)                       MoveInLeft                                                  OFFSET(get<T>, {0x4B8, 8, 0, 0})
-	SMember(FVector)                                   MoveOutLeft_Location_6890893D4037128B5CB3B2AE9A4AE0A1       OFFSET(get<T>, {0x4C0, 24, 0, 0})
+	SMember(FVector)                                   MoveOutLeft_Location_6890893D4037128B5CB3B2AE9A4AE0A1       OFFSET(getStruct<T>, {0x4C0, 24, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           MoveOutLeft__Direction_6890893D4037128B5CB3B2AE9A4AE0A1     OFFSET(get<T>, {0x4D8, 1, 0, 0})
 	CMember(UTimelineComponent*)                       MoveOutLeft                                                 OFFSET(get<T>, {0x4E0, 8, 0, 0})
 	DMember(bool)                                      DebugMobile_Lighting                                        OFFSET(get<bool>, {0x4E8, 1, 0, 0})
@@ -758,11 +758,11 @@ public:
 	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x4EA, 1, 0, 0})
 	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x4EB, 1, 0, 0})
 	DMember(bool)                                      DebugLighting_LOWDetailPC                                   OFFSET(get<bool>, {0x4EC, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  On_New_Item_Spawned                                         OFFSET(get<T>, {0x4F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  On_New_Item_Spawned                                         OFFSET(getStruct<T>, {0x4F0, 16, 0, 0})
 	DMember(double)                                    CurrentZoomLevel                                            OFFSET(get<double>, {0x500, 8, 0, 0})
 	DMember(double)                                    TargetZoomLevel                                             OFFSET(get<double>, {0x508, 8, 0, 0})
-	SMember(FRotator)                                  TargetRotationOffset                                        OFFSET(get<T>, {0x510, 24, 0, 0})
-	SMember(FRotator)                                  OrigRotationOffset                                          OFFSET(get<T>, {0x528, 24, 0, 0})
+	SMember(FRotator)                                  TargetRotationOffset                                        OFFSET(getStruct<T>, {0x510, 24, 0, 0})
+	SMember(FRotator)                                  OrigRotationOffset                                          OFFSET(getStruct<T>, {0x528, 24, 0, 0})
 	CMember(UFortAccountItemDefinition*)               Primary_Requested_Item                                      OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortAccountItemDefinition*)               Previous_Requested_Item                                     OFFSET(get<T>, {0x548, 8, 0, 0})
 
@@ -826,7 +826,7 @@ class ABattlePassVaultWorld_C : public AVaultWorld_C
 	static inline constexpr uint64_t __MDKClassSize = 1064;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x348, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x348, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     floor                                                       OFFSET(get<T>, {0x350, 8, 0, 0})
 	DMember(float)                                     TransitionForward_FX_Transition_Fade_46DACBD74D0A8B2278950785C007984A OFFSET(get<float>, {0x358, 4, 0, 0})
 	DMember(float)                                     TransitionForward_Fade_46DACBD74D0A8B2278950785C007984A     OFFSET(get<float>, {0x35C, 4, 0, 0})
@@ -942,7 +942,7 @@ class AVaultRotator_C : public AItemPreviewRotator
 	static inline constexpr uint64_t __MDKClassSize = 1408;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3C8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3C8, 8, 0, 0})
 	CMember(UDirectionalLightComponent*)               DirectionalLightMobile                                      OFFSET(get<T>, {0x3D0, 8, 0, 0})
 	CMember(UDirectionalLightComponent*)               DirectionalLight_LOWPC                                      OFFSET(get<T>, {0x3D8, 8, 0, 0})
 	CMember(USceneComponent*)                          DirectionalLights                                           OFFSET(get<T>, {0x3E0, 8, 0, 0})
@@ -959,19 +959,19 @@ public:
 	DMember(float)                                     Timeline_Zoom_ZoomLevel_6FFD6729471BD965D850258DA1C0AF39    OFFSET(get<float>, {0x430, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_Zoom__Direction_6FFD6729471BD965D850258DA1C0AF39   OFFSET(get<T>, {0x434, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline_Zoom                                               OFFSET(get<T>, {0x438, 8, 0, 0})
-	SMember(FVector)                                   CameraTurn_180_to_360_CameraRotationOffset_DF51680448A0BDB5D459C9BB5786D714 OFFSET(get<T>, {0x440, 24, 0, 0})
-	SMember(FVector)                                   CameraTurn_180_to_360_CameraPositionOffset_DF51680448A0BDB5D459C9BB5786D714 OFFSET(get<T>, {0x458, 24, 0, 0})
+	SMember(FVector)                                   CameraTurn_180_to_360_CameraRotationOffset_DF51680448A0BDB5D459C9BB5786D714 OFFSET(getStruct<T>, {0x440, 24, 0, 0})
+	SMember(FVector)                                   CameraTurn_180_to_360_CameraPositionOffset_DF51680448A0BDB5D459C9BB5786D714 OFFSET(getStruct<T>, {0x458, 24, 0, 0})
 	DMember(float)                                     CameraTurn_180_to_360_DirectionRotation_DF51680448A0BDB5D459C9BB5786D714 OFFSET(get<float>, {0x470, 4, 0, 0})
 	DMember(float)                                     CameraTurn_180_to_360_FoV_DF51680448A0BDB5D459C9BB5786D714  OFFSET(get<float>, {0x474, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           CameraTurn_180_to_360__Direction_DF51680448A0BDB5D459C9BB5786D714 OFFSET(get<T>, {0x478, 1, 0, 0})
 	CMember(UTimelineComponent*)                       CameraTurn_180_to                                           OFFSET(get<T>, {0x480, 8, 0, 0})
-	SMember(FVector)                                   CameraTurn_0_to_180_CameraRotationOffset_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0 OFFSET(get<T>, {0x488, 24, 0, 0})
-	SMember(FVector)                                   CameraTurn_0_to_180_CameraPositionOffset_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0 OFFSET(get<T>, {0x4A0, 24, 0, 0})
+	SMember(FVector)                                   CameraTurn_0_to_180_CameraRotationOffset_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0 OFFSET(getStruct<T>, {0x488, 24, 0, 0})
+	SMember(FVector)                                   CameraTurn_0_to_180_CameraPositionOffset_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0 OFFSET(getStruct<T>, {0x4A0, 24, 0, 0})
 	DMember(float)                                     CameraTurn_0_to_180_DirectionalRotation_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0 OFFSET(get<float>, {0x4B8, 4, 0, 0})
 	DMember(float)                                     CameraTurn_0_to_180_FoV_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0    OFFSET(get<float>, {0x4BC, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           CameraTurn_0_to_180__Direction_EEFFCB9D4EE2DC181BC00CBD7C0E7EF0 OFFSET(get<T>, {0x4C0, 1, 0, 0})
 	CMember(UTimelineComponent*)                       CameraTurn_0_to                                             OFFSET(get<T>, {0x4C8, 8, 0, 0})
-	SMember(FTransform)                                InitialCameraTransform                                      OFFSET(get<T>, {0x4D0, 96, 0, 0})
+	SMember(FTransform)                                InitialCameraTransform                                      OFFSET(getStruct<T>, {0x4D0, 96, 0, 0})
 	CMember(USoundBase*)                               ClockwiseSound                                              OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(USoundBase*)                               CounterClockwiseSound                                       OFFSET(get<T>, {0x538, 8, 0, 0})
 	DMember(bool)                                      DebugMobile_Lighting                                        OFFSET(get<bool>, {0x540, 1, 0, 0})
@@ -980,8 +980,8 @@ public:
 	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x543, 1, 0, 0})
 	DMember(bool)                                      DebugLighting_LOWDetailPC                                   OFFSET(get<bool>, {0x544, 1, 0, 0})
 	DMember(double)                                    TargetZoomLevel                                             OFFSET(get<double>, {0x548, 8, 0, 0})
-	SMember(FRotator)                                  StartingRotationOffset                                      OFFSET(get<T>, {0x550, 24, 0, 0})
-	SMember(FRotator)                                  TargetRotationOffset                                        OFFSET(get<T>, {0x568, 24, 0, 0})
+	SMember(FRotator)                                  StartingRotationOffset                                      OFFSET(getStruct<T>, {0x550, 24, 0, 0})
+	SMember(FRotator)                                  TargetRotationOffset                                        OFFSET(getStruct<T>, {0x568, 24, 0, 0})
 
 
 	/// Functions
@@ -1057,7 +1057,7 @@ class AItemPreviewPedestal_C : public AFortCameraTargetPedestal
 	static inline constexpr uint64_t __MDKClassSize = 1521;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5E8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x5E8, 8, 0, 0})
 	DMember(bool)                                      Floor_Enabled                                               OFFSET(get<bool>, {0x5F0, 1, 0, 0})
 
 
@@ -1078,7 +1078,7 @@ class AWrapPreview_C : public AAthenaWrapPreviewActor
 	static inline constexpr uint64_t __MDKClassSize = 1556;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x560, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x560, 8, 0, 0})
 	CMember(USkyLightComponent*)                       SkyLightPC                                                  OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   AssaultRiflePreview                                         OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   MechPreview                                                 OFFSET(get<T>, {0x578, 8, 0, 0})

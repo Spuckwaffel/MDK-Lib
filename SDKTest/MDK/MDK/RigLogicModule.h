@@ -28,7 +28,7 @@ class UDNAAsset : public UAssetUserData
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FString)                                   DnaFileName                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   DnaFileName                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/RigLogicModule.SkelMeshDNAUtils
@@ -43,8 +43,9 @@ public:
 
 /// Struct /Script/RigLogicModule.CoordinateSystem
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FCoordinateSystem : public MDKStruct
+class FCoordinateSystem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
@@ -56,8 +57,9 @@ public:
 
 /// Struct /Script/RigLogicModule.MeshBlendShapeChannelMapping
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMeshBlendShapeChannelMapping : public MDKStruct
+class FMeshBlendShapeChannelMapping : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -68,8 +70,9 @@ public:
 
 /// Struct /Script/RigLogicModule.TextureCoordinate
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FTextureCoordinate : public MDKStruct
+class FTextureCoordinate : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -80,8 +83,9 @@ public:
 
 /// Struct /Script/RigLogicModule.VertexLayout
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FVertexLayout : public MDKStruct
+class FVertexLayout : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -95,18 +99,20 @@ public:
 /// Size: 0x0050 (0x000010 - 0x000060)
 class FAnimNode_RigLogic : public FAnimNode_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FPoseLink)                                 AnimSequence                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 AnimSequence                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(int32_t)                                   LODThreshold                                                OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/RigLogicModule.RigUnit_RigLogic_IntArray
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRigUnit_RigLogic_IntArray : public MDKStruct
+class FRigUnit_RigLogic_IntArray : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -116,8 +122,9 @@ public:
 
 /// Struct /Script/RigLogicModule.RigUnit_RigLogic_Data
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FRigUnit_RigLogic_Data : public MDKStruct
+class FRigUnit_RigLogic_Data : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
@@ -137,11 +144,12 @@ public:
 /// Size: 0x00A0 (0x000160 - 0x000200)
 class FRigUnit_RigLogic : public FRigUnitMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FRigUnit_RigLogic_Data)                    Data                                                        OFFSET(get<T>, {0x160, 152, 0, 0})
+	SMember(FRigUnit_RigLogic_Data)                    Data                                                        OFFSET(getStruct<T>, {0x160, 152, 0, 0})
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x1F8, 1, 0, 0})
 };
 

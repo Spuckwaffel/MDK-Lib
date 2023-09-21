@@ -146,7 +146,7 @@ class UMovieSceneSignedObject : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FGuid)                                     Signature                                                   OFFSET(get<T>, {0x2C, 16, 0, 0})
+	SMember(FGuid)                                     Signature                                                   OFFSET(getStruct<T>, {0x2C, 16, 0, 0})
 };
 
 /// Class /Script/MovieScene.MovieSceneChannelOverrideContainer
@@ -188,15 +188,15 @@ class UMovieSceneCompiledData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 1016;
 
 public:
-	SMember(FMovieSceneEvaluationTemplate)             EvaluationTemplate                                          OFFSET(get<T>, {0x28, 352, 0, 0})
-	SMember(FMovieSceneSequenceHierarchy)              Hierarchy                                                   OFFSET(get<T>, {0x188, 280, 0, 0})
-	SMember(FMovieSceneEntityComponentField)           EntityComponentField                                        OFFSET(get<T>, {0x2A0, 240, 0, 0})
-	SMember(FMovieSceneEvaluationField)                TrackTemplateField                                          OFFSET(get<T>, {0x390, 48, 0, 0})
+	SMember(FMovieSceneEvaluationTemplate)             EvaluationTemplate                                          OFFSET(getStruct<T>, {0x28, 352, 0, 0})
+	SMember(FMovieSceneSequenceHierarchy)              Hierarchy                                                   OFFSET(getStruct<T>, {0x188, 280, 0, 0})
+	SMember(FMovieSceneEntityComponentField)           EntityComponentField                                        OFFSET(getStruct<T>, {0x2A0, 240, 0, 0})
+	SMember(FMovieSceneEvaluationField)                TrackTemplateField                                          OFFSET(getStruct<T>, {0x390, 48, 0, 0})
 	CMember(TArray<FFrameTime>)                        DeterminismFences                                           OFFSET(get<T>, {0x3C0, 16, 0, 0})
-	SMember(FGuid)                                     CompiledSignature                                           OFFSET(get<T>, {0x3D0, 16, 0, 0})
-	SMember(FGuid)                                     CompilerVersion                                             OFFSET(get<T>, {0x3E0, 16, 0, 0})
-	SMember(FMovieSceneSequenceCompilerMaskStruct)     AccumulatedMask                                             OFFSET(get<T>, {0x3F0, 1, 0, 0})
-	SMember(FMovieSceneSequenceCompilerMaskStruct)     AllocatedMask                                               OFFSET(get<T>, {0x3F1, 1, 0, 0})
+	SMember(FGuid)                                     CompiledSignature                                           OFFSET(getStruct<T>, {0x3D0, 16, 0, 0})
+	SMember(FGuid)                                     CompilerVersion                                             OFFSET(getStruct<T>, {0x3E0, 16, 0, 0})
+	SMember(FMovieSceneSequenceCompilerMaskStruct)     AccumulatedMask                                             OFFSET(getStruct<T>, {0x3F0, 1, 0, 0})
+	SMember(FMovieSceneSequenceCompilerMaskStruct)     AllocatedMask                                               OFFSET(getStruct<T>, {0x3F1, 1, 0, 0})
 	CMember(EMovieSceneSequenceFlags)                  AccumulatedFlags                                            OFFSET(get<T>, {0x3F2, 1, 0, 0})
 };
 
@@ -293,7 +293,7 @@ class UMovieSceneEntitySystemLinker : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 1848;
 
 public:
-	SMember(FMovieSceneEntitySystemGraph)              SystemGraph                                                 OFFSET(get<T>, {0x2A0, 400, 0, 0})
+	SMember(FMovieSceneEntitySystemGraph)              SystemGraph                                                 OFFSET(getStruct<T>, {0x2A0, 400, 0, 0})
 };
 
 /// Class /Script/MovieScene.MovieSceneEvalTimeSystem
@@ -478,13 +478,13 @@ public:
 	CMember(TMap<FName, FMovieSceneObjectBindingIDs>)  BindingGroups                                               OFFSET(get<T>, {0x90, 80, 0, 0})
 	CMember(TArray<UMovieSceneTrack*>)                 Tracks                                                      OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(UMovieSceneTrack*)                         CameraCutTrack                                              OFFSET(get<T>, {0xF0, 8, 0, 0})
-	SMember(FMovieSceneFrameRange)                     SelectionRange                                              OFFSET(get<T>, {0xF8, 16, 0, 0})
-	SMember(FMovieSceneFrameRange)                     PlaybackRange                                               OFFSET(get<T>, {0x108, 16, 0, 0})
-	SMember(FFrameRate)                                TickResolution                                              OFFSET(get<T>, {0x118, 8, 0, 0})
-	SMember(FFrameRate)                                DisplayRate                                                 OFFSET(get<T>, {0x120, 8, 0, 0})
+	SMember(FMovieSceneFrameRange)                     SelectionRange                                              OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
+	SMember(FMovieSceneFrameRange)                     PlaybackRange                                               OFFSET(getStruct<T>, {0x108, 16, 0, 0})
+	SMember(FFrameRate)                                TickResolution                                              OFFSET(getStruct<T>, {0x118, 8, 0, 0})
+	SMember(FFrameRate)                                DisplayRate                                                 OFFSET(getStruct<T>, {0x120, 8, 0, 0})
 	CMember(EMovieSceneEvaluationType)                 EvaluationType                                              OFFSET(get<T>, {0x128, 1, 0, 0})
 	CMember(EUpdateClockSource)                        ClockSource                                                 OFFSET(get<T>, {0x129, 1, 0, 0})
-	SMember(FSoftObjectPath)                           CustomClockSourcePath                                       OFFSET(get<T>, {0x130, 24, 0, 0})
+	SMember(FSoftObjectPath)                           CustomClockSourcePath                                       OFFSET(getStruct<T>, {0x130, 24, 0, 0})
 	CMember(TArray<FMovieSceneMarkedFrame>)            MarkedFrames                                                OFFSET(get<T>, {0x148, 16, 0, 0})
 };
 
@@ -517,7 +517,7 @@ class UMovieSceneFolder : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FName)                                     FolderName                                                  OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     FolderName                                                  OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	CMember(TArray<UMovieSceneFolder*>)                ChildFolders                                                OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TArray<UMovieSceneTrack*>)                 ChildTracks                                                 OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<FString>)                           ChildObjectBindingStrings                                   OFFSET(get<T>, {0x50, 16, 0, 0})
@@ -531,9 +531,9 @@ class UMovieSceneMetaData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   Author                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x40, 8, 0, 0})
-	SMember(FString)                                   Notes                                                       OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   Author                                                      OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FDateTime)                                 Created                                                     OFFSET(getStruct<T>, {0x40, 8, 0, 0})
+	SMember(FString)                                   Notes                                                       OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 
 
 	/// Functions
@@ -559,11 +559,11 @@ class UMovieSceneTrack : public UMovieSceneSignedObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMovieSceneTrackEvalOptions)               EvalOptions                                                 OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FMovieSceneTrackEvalOptions)               EvalOptions                                                 OFFSET(getStruct<T>, {0x58, 4, 0, 0})
 	DMember(bool)                                      bIsEvalDisabled                                             OFFSET(get<bool>, {0x5D, 1, 0, 0})
 	CMember(TArray<int32_t>)                           RowsDisabled                                                OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FGuid)                                     EvaluationFieldGuid                                         OFFSET(get<T>, {0x74, 16, 0, 0})
-	SMember(FMovieSceneTrackEvaluationField)           EvaluationField                                             OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FGuid)                                     EvaluationFieldGuid                                         OFFSET(getStruct<T>, {0x74, 16, 0, 0})
+	SMember(FMovieSceneTrackEvaluationField)           EvaluationField                                             OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 };
 
 /// Class /Script/MovieScene.MovieSceneNameableTrack
@@ -584,11 +584,11 @@ class UMovieSceneSection : public UMovieSceneSignedObject
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMovieSceneSectionEvalOptions)             EvalOptions                                                 OFFSET(get<T>, {0x58, 2, 0, 0})
-	SMember(FMovieSceneEasingSettings)                 Easing                                                      OFFSET(get<T>, {0x60, 56, 0, 0})
-	SMember(FMovieSceneFrameRange)                     SectionRange                                                OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FFrameNumber)                              PreRollFrames                                               OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FFrameNumber)                              PostRollFrames                                              OFFSET(get<T>, {0xAC, 4, 0, 0})
+	SMember(FMovieSceneSectionEvalOptions)             EvalOptions                                                 OFFSET(getStruct<T>, {0x58, 2, 0, 0})
+	SMember(FMovieSceneEasingSettings)                 Easing                                                      OFFSET(getStruct<T>, {0x60, 56, 0, 0})
+	SMember(FMovieSceneFrameRange)                     SectionRange                                                OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FFrameNumber)                              PreRollFrames                                               OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FFrameNumber)                              PostRollFrames                                              OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
 	DMember(int32_t)                                   RowIndex                                                    OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
 	DMember(int32_t)                                   OverlapPriority                                             OFFSET(get<int32_t>, {0xB4, 4, 0, 0})
 	DMember(bool)                                      bIsActive                                                   OFFSET(get<bool>, {0xB8, 1, 1, 0})
@@ -599,7 +599,7 @@ public:
 	DMember(float)                                     PostrollTime                                                OFFSET(get<float>, {0xC8, 4, 0, 0})
 	DMember(bool)                                      bIsInfinite                                                 OFFSET(get<bool>, {0xCC, 1, 1, 0})
 	DMember(bool)                                      bSupportsInfiniteRange                                      OFFSET(get<bool>, {0xD0, 1, 0, 0})
-	SMember(FOptionalMovieSceneBlendType)              BlendType                                                   OFFSET(get<T>, {0xD1, 2, 0, 0})
+	SMember(FOptionalMovieSceneBlendType)              BlendType                                                   OFFSET(getStruct<T>, {0xD1, 2, 0, 0})
 
 
 	/// Functions
@@ -674,22 +674,22 @@ class UMovieSceneSequencePlayer : public UObject
 
 public:
 	CMember(TScriptInterface<Class>)                   Observer                                                    OFFSET(get<T>, {0x228, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlay                                                      OFFSET(get<T>, {0x238, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlayReverse                                               OFFSET(get<T>, {0x248, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStop                                                      OFFSET(get<T>, {0x258, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPause                                                     OFFSET(get<T>, {0x268, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(get<T>, {0x278, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlay                                                      OFFSET(getStruct<T>, {0x238, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayReverse                                               OFFSET(getStruct<T>, {0x248, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStop                                                      OFFSET(getStruct<T>, {0x258, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPause                                                     OFFSET(getStruct<T>, {0x268, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(getStruct<T>, {0x278, 16, 0, 0})
 	CMember(TEnumAsByte<EMovieScenePlayerStatus>)      Status                                                      OFFSET(get<T>, {0x288, 1, 0, 0})
 	DMember(bool)                                      bReversePlayback                                            OFFSET(get<bool>, {0x28C, 1, 1, 0})
 	CMember(UMovieSceneSequence*)                      Sequence                                                    OFFSET(get<T>, {0x290, 8, 0, 0})
-	SMember(FFrameNumber)                              StartTime                                                   OFFSET(get<T>, {0x298, 4, 0, 0})
+	SMember(FFrameNumber)                              StartTime                                                   OFFSET(getStruct<T>, {0x298, 4, 0, 0})
 	DMember(int32_t)                                   DurationFrames                                              OFFSET(get<int32_t>, {0x29C, 4, 0, 0})
 	DMember(float)                                     DurationSubFrames                                           OFFSET(get<float>, {0x2A0, 4, 0, 0})
 	DMember(int32_t)                                   CurrentNumLoops                                             OFFSET(get<int32_t>, {0x2A4, 4, 0, 0})
 	DMember(int32_t)                                   SerialNumber                                                OFFSET(get<int32_t>, {0x2A8, 4, 0, 0})
-	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(get<T>, {0x2AC, 32, 0, 0})
-	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(get<T>, {0x2D0, 136, 0, 0})
-	SMember(FMovieSceneSequenceReplProperties)         NetSyncProps                                                OFFSET(get<T>, {0x3E8, 20, 0, 0})
+	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x2AC, 32, 0, 0})
+	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(getStruct<T>, {0x2D0, 136, 0, 0})
+	SMember(FMovieSceneSequenceReplProperties)         NetSyncProps                                                OFFSET(getStruct<T>, {0x3E8, 20, 0, 0})
 	CMember(TScriptInterface<Class>)                   PlaybackClient                                              OFFSET(get<T>, {0x400, 16, 0, 0})
 	CMember(UMovieSceneSequenceTickManager*)           TickManager                                                 OFFSET(get<T>, {0x410, 8, 0, 0})
 
@@ -790,7 +790,7 @@ class UMovieSceneBoolSection : public UMovieSceneSection
 
 public:
 	DMember(bool)                                      DefaultValue                                                OFFSET(get<bool>, {0xF0, 1, 0, 0})
-	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(get<T>, {0xF8, 256, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(getStruct<T>, {0xF8, 256, 0, 0})
 };
 
 /// Class /Script/MovieScene.MovieSceneHookSection
@@ -823,7 +823,7 @@ class UMovieSceneSubSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FMovieSceneSectionParameters)              Parameters                                                  OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FMovieSceneSectionParameters)              Parameters                                                  OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
 	DMember(float)                                     StartOffset                                                 OFFSET(get<float>, {0x120, 4, 0, 0})
 	DMember(float)                                     TimeScale                                                   OFFSET(get<float>, {0x124, 4, 0, 0})
 	DMember(float)                                     PrerollTime                                                 OFFSET(get<float>, {0x128, 4, 0, 0})
@@ -933,26 +933,28 @@ class UMovieSceneSpawnTrack : public UMovieSceneTrack
 
 public:
 	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FGuid)                                     ObjectGuid                                                  OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FGuid)                                     ObjectGuid                                                  OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.ActorForWorldTransforms
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FActorForWorldTransforms : public MDKStruct
+class FActorForWorldTransforms : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(TWeakObjectPtr<USceneComponent*>)          Component                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneDeterminismData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneDeterminismData : public MDKStruct
+class FMovieSceneDeterminismData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -964,8 +966,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEmptyStruct
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMovieSceneEmptyStruct : public MDKStruct
+class FMovieSceneEmptyStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -974,8 +977,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvalTemplateBase
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneEvalTemplateBase : public MDKStruct
+class FMovieSceneEvalTemplateBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -984,21 +988,23 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationKey
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMovieSceneEvaluationKey : public MDKStruct
+class FMovieSceneEvaluationKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FMovieSceneSequenceID)                     SequenceID                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneTrackIdentifier)                TrackIdentifier                                             OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FMovieSceneSequenceID)                     SequenceID                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneTrackIdentifier)                TrackIdentifier                                             OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(uint32_t)                                  SectionIndex                                                OFFSET(get<uint32_t>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneTrackIdentifier
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneTrackIdentifier : public MDKStruct
+class FMovieSceneTrackIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1008,8 +1014,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequenceID
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneSequenceID : public MDKStruct
+class FMovieSceneSequenceID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1019,20 +1026,22 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationOperand
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FMovieSceneEvaluationOperand : public MDKStruct
+class FMovieSceneEvaluationOperand : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMovieSceneSequenceID)                     SequenceID                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FMovieSceneSequenceID)                     SequenceID                                                  OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneKeyStruct
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneKeyStruct : public MDKStruct
+class FMovieSceneKeyStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1041,8 +1050,9 @@ public:
 
 /// Struct /Script/MovieScene.GeneratedMovieSceneKeyStruct
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FGeneratedMovieSceneKeyStruct : public MDKStruct
+class FGeneratedMovieSceneKeyStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -1053,38 +1063,41 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FMovieSceneKeyTimeStruct : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieScenePropertyBinding
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMovieScenePropertyBinding : public MDKStruct
+class FMovieScenePropertyBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     PropertyPath                                                OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     PropertyPath                                                OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bCanUseClassLookup                                          OFFSET(get<bool>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSectionParameters
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneSectionParameters : public MDKStruct
+class FMovieSceneSectionParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bCanLoop                                                    OFFSET(get<bool>, {0x4, 1, 0, 0})
-	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 	DMember(float)                                     TimeScale                                                   OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(int32_t)                                   HierarchicalBias                                            OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 	CMember(EMovieSceneSubSectionFlags)                Flags                                                       OFFSET(get<T>, {0x18, 4, 0, 0})
@@ -1095,8 +1108,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSegmentIdentifier
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneSegmentIdentifier : public MDKStruct
+class FMovieSceneSegmentIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1106,21 +1120,23 @@ public:
 
 /// Struct /Script/MovieScene.SectionEvaluationData
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSectionEvaluationData : public MDKStruct
+class FSectionEvaluationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 	DMember(int32_t)                                   ImplIndex                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 	CMember(ESectionEvaluationFlags)                   Flags                                                       OFFSET(get<T>, {0x8, 1, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSegment
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FMovieSceneSegment : public MDKStruct
+class FMovieSceneSegment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -1129,8 +1145,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequenceLoopCount
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneSequenceLoopCount : public MDKStruct
+class FMovieSceneSequenceLoopCount : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1140,15 +1157,16 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequencePlaybackSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneSequencePlaybackSettings : public MDKStruct
+class FMovieSceneSequencePlaybackSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(bool)                                      bAutoPlay                                                   OFFSET(get<bool>, {0x0, 1, 1, 0})
-	SMember(FMovieSceneSequenceLoopCount)              LoopCount                                                   OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FMovieSceneSequenceTickInterval)           TickInterval                                                OFFSET(get<T>, {0x8, 12, 0, 0})
+	SMember(FMovieSceneSequenceLoopCount)              LoopCount                                                   OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FMovieSceneSequenceTickInterval)           TickInterval                                                OFFSET(getStruct<T>, {0x8, 12, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(float)                                     StartTime                                                   OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(bool)                                      bRandomStartTime                                            OFFSET(get<bool>, {0x1C, 1, 1, 0})
@@ -1165,8 +1183,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequenceTickInterval
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMovieSceneSequenceTickInterval : public MDKStruct
+class FMovieSceneSequenceTickInterval : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1179,20 +1198,22 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTimeTransform
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMovieSceneTimeTransform : public MDKStruct
+class FMovieSceneTimeTransform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 	DMember(float)                                     TimeScale                                                   OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FFrameTime)                                Offset                                                      OFFSET(get<T>, {0x4, 8, 0, 0})
+	SMember(FFrameTime)                                Offset                                                      OFFSET(getStruct<T>, {0x4, 8, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneChannel
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FMovieSceneChannel : public MDKStruct
+class FMovieSceneChannel : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -1203,19 +1224,21 @@ public:
 /// Size: 0x00A8 (0x000050 - 0x0000F8)
 class FMovieSceneAudioTriggerChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
 	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
 	CMember(TArray<bool>)                              Values                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x70, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x70, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneKeyHandleMap
 /// Size: 0x0000 (0x000088 - 0x000088)
 class FMovieSceneKeyHandleMap : public FKeyHandleLookupTable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -1226,6 +1249,7 @@ public:
 /// Size: 0x00B0 (0x000050 - 0x000100)
 class FMovieSceneBoolChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -1234,13 +1258,14 @@ public:
 	DMember(bool)                                      DefaultValue                                                OFFSET(get<bool>, {0x60, 1, 0, 0})
 	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x61, 1, 0, 0})
 	CMember(TArray<bool>)                              Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x78, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x78, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneByteChannel
 /// Size: 0x00B8 (0x000050 - 0x000108)
 class FMovieSceneByteChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
@@ -1250,13 +1275,14 @@ public:
 	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x61, 1, 0, 0})
 	CMember(TArray<char>)                              Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(UEnum*)                                    Enum                                                        OFFSET(get<T>, {0x78, 8, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x80, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x80, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneTangentData
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FMovieSceneTangentData : public MDKStruct
+class FMovieSceneTangentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -1270,14 +1296,15 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneDoubleValue
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneDoubleValue : public MDKStruct
+class FMovieSceneDoubleValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(double)                                    Value                                                       OFFSET(get<double>, {0x0, 8, 0, 0})
-	SMember(FMovieSceneTangentData)                    Tangent                                                     OFFSET(get<T>, {0x8, 20, 0, 0})
+	SMember(FMovieSceneTangentData)                    Tangent                                                     OFFSET(getStruct<T>, {0x8, 20, 0, 0})
 	CMember(TEnumAsByte<ERichCurveInterpMode>)         InterpMode                                                  OFFSET(get<T>, {0x1C, 1, 0, 0})
 	CMember(TEnumAsByte<ERichCurveTangentMode>)        TangentMode                                                 OFFSET(get<T>, {0x1D, 1, 0, 0})
 	DMember(char)                                      PaddingByte                                                 OFFSET(get<char>, {0x1E, 1, 0, 0})
@@ -1287,6 +1314,7 @@ public:
 /// Size: 0x00C8 (0x000050 - 0x000118)
 class FMovieSceneDoubleChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
@@ -1297,20 +1325,21 @@ public:
 	CMember(TArray<FMovieSceneDoubleValue>)            Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
 	DMember(double)                                    DefaultValue                                                OFFSET(get<double>, {0x78, 8, 0, 0})
 	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x80, 1, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x88, 136, 0, 0})
-	SMember(FFrameRate)                                TickResolution                                              OFFSET(get<T>, {0x110, 8, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x88, 136, 0, 0})
+	SMember(FFrameRate)                                TickResolution                                              OFFSET(getStruct<T>, {0x110, 8, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneFloatValue
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FMovieSceneFloatValue : public MDKStruct
+class FMovieSceneFloatValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneTangentData)                    Tangent                                                     OFFSET(get<T>, {0x4, 20, 0, 0})
+	SMember(FMovieSceneTangentData)                    Tangent                                                     OFFSET(getStruct<T>, {0x4, 20, 0, 0})
 	CMember(TEnumAsByte<ERichCurveInterpMode>)         InterpMode                                                  OFFSET(get<T>, {0x18, 1, 0, 0})
 	CMember(TEnumAsByte<ERichCurveTangentMode>)        TangentMode                                                 OFFSET(get<T>, {0x19, 1, 0, 0})
 	DMember(char)                                      PaddingByte                                                 OFFSET(get<char>, {0x1A, 1, 0, 0})
@@ -1320,6 +1349,7 @@ public:
 /// Size: 0x00C0 (0x000050 - 0x000110)
 class FMovieSceneFloatChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
@@ -1330,14 +1360,15 @@ public:
 	CMember(TArray<FMovieSceneFloatValue>)             Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
 	DMember(float)                                     DefaultValue                                                OFFSET(get<float>, {0x78, 4, 0, 0})
 	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x7C, 1, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x80, 136, 0, 0})
-	SMember(FFrameRate)                                TickResolution                                              OFFSET(get<T>, {0x108, 8, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x80, 136, 0, 0})
+	SMember(FFrameRate)                                TickResolution                                              OFFSET(getStruct<T>, {0x108, 8, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneIntegerChannel
 /// Size: 0x00B0 (0x000050 - 0x000100)
 class FMovieSceneIntegerChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -1346,13 +1377,14 @@ public:
 	DMember(int32_t)                                   DefaultValue                                                OFFSET(get<int32_t>, {0x60, 4, 0, 0})
 	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x64, 1, 0, 0})
 	CMember(TArray<int32_t>)                           Values                                                      OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x78, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x78, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneObjectPathChannelKeyValue
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneObjectPathChannelKeyValue : public MDKStruct
+class FMovieSceneObjectPathChannelKeyValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1365,6 +1397,7 @@ public:
 /// Size: 0x00D8 (0x000050 - 0x000128)
 class FMovieSceneObjectPathChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
@@ -1372,14 +1405,15 @@ public:
 	CMember(UClass*)                                   PropertyClass                                               OFFSET(get<T>, {0x50, 8, 0, 0})
 	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TArray<FMovieSceneObjectPathChannelKeyValue>) Values                                                   OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMovieSceneObjectPathChannelKeyValue)      DefaultValue                                                OFFSET(get<T>, {0x78, 40, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0xA0, 136, 0, 0})
+	SMember(FMovieSceneObjectPathChannelKeyValue)      DefaultValue                                                OFFSET(getStruct<T>, {0x78, 40, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0xA0, 136, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSequenceCompilerMaskStruct
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMovieSceneSequenceCompilerMaskStruct : public MDKStruct
+class FMovieSceneSequenceCompilerMaskStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -1392,8 +1426,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneCompiledSequenceFlagStruct
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMovieSceneCompiledSequenceFlagStruct : public MDKStruct
+class FMovieSceneCompiledSequenceFlagStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -1404,8 +1439,9 @@ public:
 
 /// Struct /Script/MovieScene.EasingComponentData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FEasingComponentData : public MDKStruct
+class FEasingComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1415,8 +1451,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTrackInstanceComponent
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneTrackInstanceComponent : public MDKStruct
+class FMovieSceneTrackInstanceComponent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1427,8 +1464,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationHookComponent
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneEvaluationHookComponent : public MDKStruct
+class FMovieSceneEvaluationHookComponent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1438,8 +1476,9 @@ public:
 
 /// Struct /Script/MovieScene.TrackInstanceInputComponent
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FTrackInstanceInputComponent : public MDKStruct
+class FTrackInstanceInputComponent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1450,8 +1489,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEntitySystemGraphNode
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneEntitySystemGraphNode : public MDKStruct
+class FMovieSceneEntitySystemGraphNode : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1461,8 +1501,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEntitySystemGraphNodes
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FMovieSceneEntitySystemGraphNodes : public MDKStruct
+class FMovieSceneEntitySystemGraphNodes : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1471,30 +1512,33 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEntitySystemGraph
 /// Size: 0x0190 (0x000000 - 0x000190)
-class FMovieSceneEntitySystemGraph : public MDKStruct
+class FMovieSceneEntitySystemGraph : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FMovieSceneEntitySystemGraphNodes)         Nodes                                                       OFFSET(get<T>, {0xB8, 56, 0, 0})
+	SMember(FMovieSceneEntitySystemGraphNodes)         Nodes                                                       OFFSET(getStruct<T>, {0xB8, 56, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationHookEvent
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FMovieSceneEvaluationHookEvent : public MDKStruct
+class FMovieSceneEvaluationHookEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FMovieSceneEvaluationHookComponent)        Hook                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FMovieSceneEvaluationHookComponent)        Hook                                                        OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationHookEventContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneEvaluationHookEventContainer : public MDKStruct
+class FMovieSceneEvaluationHookEventContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1504,8 +1548,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationInstanceKey
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneEvaluationInstanceKey : public MDKStruct
+class FMovieSceneEvaluationInstanceKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1514,8 +1559,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTrackInstanceInput
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneTrackInstanceInput : public MDKStruct
+class FMovieSceneTrackInstanceInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1525,8 +1571,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTrackInstanceEntry
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneTrackInstanceEntry : public MDKStruct
+class FMovieSceneTrackInstanceEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1537,8 +1584,9 @@ public:
 
 /// Struct /Script/MovieScene.OptionalMovieSceneBlendType
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FOptionalMovieSceneBlendType : public MDKStruct
+class FOptionalMovieSceneBlendType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -1551,6 +1599,7 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FMovieSceneEvalTemplate : public FMovieSceneEvalTemplateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1561,8 +1610,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvalTemplatePtr
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FMovieSceneEvalTemplatePtr : public MDKStruct
+class FMovieSceneEvalTemplatePtr : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -1571,8 +1621,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldEntityKey
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMovieSceneEvaluationFieldEntityKey : public MDKStruct
+class FMovieSceneEvaluationFieldEntityKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1583,37 +1634,40 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldEntity
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneEvaluationFieldEntity : public MDKStruct
+class FMovieSceneEvaluationFieldEntity : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FMovieSceneEvaluationFieldEntityKey)       Key                                                         OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FMovieSceneEvaluationFieldEntityKey)       Key                                                         OFFSET(getStruct<T>, {0x0, 12, 0, 0})
 	DMember(int32_t)                                   SharedMetaDataIndex                                         OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldSharedEntityMetaData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneEvaluationFieldSharedEntityMetaData : public MDKStruct
+class FMovieSceneEvaluationFieldSharedEntityMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldEntityMetaData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneEvaluationFieldEntityMetaData : public MDKStruct
+class FMovieSceneEvaluationFieldEntityMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   OverrideBoundPropertyPath                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   OverrideBoundPropertyPath                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	CMember(ESectionEvaluationFlags)                   Flags                                                       OFFSET(get<T>, {0x14, 1, 0, 0})
 	DMember(bool)                                      bEvaluateInSequencePreRoll                                  OFFSET(get<bool>, {0x15, 1, 1, 0})
 	DMember(bool)                                      bEvaluateInSequencePostRoll                                 OFFSET(get<bool>, {0x15, 1, 1, 1})
@@ -1621,8 +1675,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldEntityTree
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FMovieSceneEvaluationFieldEntityTree : public MDKStruct
+class FMovieSceneEvaluationFieldEntityTree : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -1631,14 +1686,15 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEntityComponentField
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FMovieSceneEntityComponentField : public MDKStruct
+class FMovieSceneEntityComponentField : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FMovieSceneEvaluationFieldEntityTree)      PersistentEntityTree                                        OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FMovieSceneEvaluationFieldEntityTree)      OneShotEntityTree                                           OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FMovieSceneEvaluationFieldEntityTree)      PersistentEntityTree                                        OFFSET(getStruct<T>, {0x0, 96, 0, 0})
+	SMember(FMovieSceneEvaluationFieldEntityTree)      OneShotEntityTree                                           OFFSET(getStruct<T>, {0x60, 96, 0, 0})
 	CMember(TArray<FMovieSceneEvaluationFieldEntity>)  Entities                                                    OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<FMovieSceneEvaluationFieldEntityMetaData>) EntityMetaData                                       OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TArray<FMovieSceneEvaluationFieldSharedEntityMetaData>) SharedMetaData                                 OFFSET(get<T>, {0xE0, 16, 0, 0})
@@ -1646,56 +1702,61 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldTrackPtr
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneEvaluationFieldTrackPtr : public MDKStruct
+class FMovieSceneEvaluationFieldTrackPtr : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FMovieSceneSequenceID)                     SequenceID                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneTrackIdentifier)                TrackIdentifier                                             OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FMovieSceneSequenceID)                     SequenceID                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneTrackIdentifier)                TrackIdentifier                                             OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationFieldSegmentPtr
 /// Size: 0x0004 (0x000008 - 0x00000C)
 class FMovieSceneEvaluationFieldSegmentPtr : public FMovieSceneEvaluationFieldTrackPtr
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FMovieSceneSegmentIdentifier)              SegmentID                                                   OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FMovieSceneSegmentIdentifier)              SegmentID                                                   OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneFieldEntry_EvaluationTrack
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FMovieSceneFieldEntry_EvaluationTrack : public MDKStruct
+class FMovieSceneFieldEntry_EvaluationTrack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
-	SMember(FMovieSceneEvaluationFieldTrackPtr)        TrackPtr                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FMovieSceneEvaluationFieldTrackPtr)        TrackPtr                                                    OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	DMember(uint16_t)                                  NumChildren                                                 OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneFieldEntry_ChildTemplate
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneFieldEntry_ChildTemplate : public MDKStruct
+class FMovieSceneFieldEntry_ChildTemplate : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
 	DMember(uint16_t)                                  ChildIndex                                                  OFFSET(get<uint16_t>, {0x0, 2, 0, 0})
 	CMember(ESectionEvaluationFlags)                   Flags                                                       OFFSET(get<T>, {0x2, 1, 0, 0})
-	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationGroupLUTIndex
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneEvaluationGroupLUTIndex : public MDKStruct
+class FMovieSceneEvaluationGroupLUTIndex : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1706,8 +1767,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationGroup
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMovieSceneEvaluationGroup : public MDKStruct
+class FMovieSceneEvaluationGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1719,21 +1781,23 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneOrderedEvaluationKey
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneOrderedEvaluationKey : public MDKStruct
+class FMovieSceneOrderedEvaluationKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FMovieSceneEvaluationKey)                  Key                                                         OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FMovieSceneEvaluationKey)                  Key                                                         OFFSET(getStruct<T>, {0x0, 12, 0, 0})
 	DMember(uint16_t)                                  SetupIndex                                                  OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
 	DMember(uint16_t)                                  TearDownIndex                                               OFFSET(get<uint16_t>, {0xE, 2, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationMetaData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneEvaluationMetaData : public MDKStruct
+class FMovieSceneEvaluationMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1744,8 +1808,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationField
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMovieSceneEvaluationField : public MDKStruct
+class FMovieSceneEvaluationField : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1757,8 +1822,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneFrameRange
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneFrameRange : public MDKStruct
+class FMovieSceneFrameRange : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1767,34 +1833,37 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTemplateGenerationLedger
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FMovieSceneTemplateGenerationLedger : public MDKStruct
+class FMovieSceneTemplateGenerationLedger : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMovieSceneTrackIdentifier)                LastTrackIdentifier                                         OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneTrackIdentifier)                LastTrackIdentifier                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TMap<FGuid, FMovieSceneTrackIdentifier>)   TrackSignatureToTrackIdentifier                             OFFSET(get<T>, {0x8, 80, 0, 0})
 	CMember(TMap<FGuid, FMovieSceneFrameRange>)        SubSectionRanges                                            OFFSET(get<T>, {0x58, 80, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSubSectionData
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FMovieSceneSubSectionData : public MDKStruct
+class FMovieSceneSubSectionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
 	CMember(TWeakObjectPtr<UMovieSceneSubSection*>)    Section                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(ESectionEvaluationFlags)                   Flags                                                       OFFSET(get<T>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationTemplateSerialNumber
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneEvaluationTemplateSerialNumber : public MDKStruct
+class FMovieSceneEvaluationTemplateSerialNumber : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1804,33 +1873,35 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationTemplate
 /// Size: 0x0160 (0x000000 - 0x000160)
-class FMovieSceneEvaluationTemplate : public MDKStruct
+class FMovieSceneEvaluationTemplate : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
 	CMember(TMap<FMovieSceneTrackIdentifier, FMovieSceneEvaluationTrack>) Tracks                                   OFFSET(get<T>, {0x0, 80, 0, 0})
-	SMember(FGuid)                                     SequenceSignature                                           OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMovieSceneEvaluationTemplateSerialNumber) TemplateSerialNumber                                        OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FMovieSceneTemplateGenerationLedger)       TemplateLedger                                              OFFSET(get<T>, {0xB8, 168, 0, 0})
+	SMember(FGuid)                                     SequenceSignature                                           OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMovieSceneEvaluationTemplateSerialNumber) TemplateSerialNumber                                        OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FMovieSceneTemplateGenerationLedger)       TemplateLedger                                              OFFSET(getStruct<T>, {0xB8, 168, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneEvaluationTrack
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FMovieSceneEvaluationTrack : public MDKStruct
+class FMovieSceneEvaluationTrack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(uint16_t)                                  EvaluationPriority                                          OFFSET(get<uint16_t>, {0x10, 2, 0, 0})
 	CMember(EEvaluationMethod)                         EvaluationMethod                                            OFFSET(get<T>, {0x12, 1, 0, 0})
 	CMember(TWeakObjectPtr<UMovieSceneTrack*>)         SourceTrack                                                 OFFSET(get<T>, {0x14, 8, 0, 0})
 	CMember(TArray<FMovieSceneEvalTemplatePtr>)        ChildTemplates                                              OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FMovieSceneTrackImplementationPtr)         TrackTemplate                                               OFFSET(get<T>, {0x30, 56, 0, 0})
-	SMember(FName)                                     EvaluationGroup                                             OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FMovieSceneTrackImplementationPtr)         TrackTemplate                                               OFFSET(getStruct<T>, {0x30, 56, 0, 0})
+	SMember(FName)                                     EvaluationGroup                                             OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bEvaluateInPreroll                                          OFFSET(get<bool>, {0x6C, 1, 1, 0})
 	DMember(bool)                                      bEvaluateInPostroll                                         OFFSET(get<bool>, {0x6C, 1, 1, 1})
 	DMember(bool)                                      bTearDownPriority                                           OFFSET(get<bool>, {0x6C, 1, 1, 2})
@@ -1838,8 +1909,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTrackImplementationPtr
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FMovieSceneTrackImplementationPtr : public MDKStruct
+class FMovieSceneTrackImplementationPtr : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1848,8 +1920,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneRootEvaluationTemplateInstance
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FMovieSceneRootEvaluationTemplateInstance : public MDKStruct
+class FMovieSceneRootEvaluationTemplateInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
@@ -1862,60 +1935,64 @@ public:
 
 /// Struct /Script/MovieScene.MovieScenePropertySectionData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieScenePropertySectionData : public MDKStruct
+class FMovieScenePropertySectionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     PropertyName                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   PropertyPath                                                OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     PropertyName                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   PropertyPath                                                OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieScenePropertySectionTemplate
 /// Size: 0x0018 (0x000020 - 0x000038)
 class FMovieScenePropertySectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FMovieScenePropertySectionData)            PropertyData                                                OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FMovieScenePropertySectionData)            PropertyData                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSubSequenceData
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FMovieSceneSubSequenceData : public MDKStruct
+class FMovieSceneSubSequenceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FSoftObjectPath)                           Sequence                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FMovieSceneSequenceTransform)              OuterToInnerTransform                                       OFFSET(get<T>, {0x18, 32, 0, 0})
-	SMember(FMovieSceneSequenceTransform)              RootToSequenceTransform                                     OFFSET(get<T>, {0x38, 32, 0, 0})
-	SMember(FFrameRate)                                TickResolution                                              OFFSET(get<T>, {0x58, 8, 0, 0})
-	SMember(FMovieSceneSequenceID)                     DeterministicSequenceID                                     OFFSET(get<T>, {0x60, 4, 0, 0})
-	SMember(FMovieSceneFrameRange)                     ParentPlayRange                                             OFFSET(get<T>, {0x64, 16, 0, 0})
-	SMember(FFrameNumber)                              ParentStartFrameOffset                                      OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FFrameNumber)                              ParentEndFrameOffset                                        OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FFrameNumber)                              ParentFirstLoopStartFrameOffset                             OFFSET(get<T>, {0x7C, 4, 0, 0})
+	SMember(FSoftObjectPath)                           Sequence                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FMovieSceneSequenceTransform)              OuterToInnerTransform                                       OFFSET(getStruct<T>, {0x18, 32, 0, 0})
+	SMember(FMovieSceneSequenceTransform)              RootToSequenceTransform                                     OFFSET(getStruct<T>, {0x38, 32, 0, 0})
+	SMember(FFrameRate)                                TickResolution                                              OFFSET(getStruct<T>, {0x58, 8, 0, 0})
+	SMember(FMovieSceneSequenceID)                     DeterministicSequenceID                                     OFFSET(getStruct<T>, {0x60, 4, 0, 0})
+	SMember(FMovieSceneFrameRange)                     ParentPlayRange                                             OFFSET(getStruct<T>, {0x64, 16, 0, 0})
+	SMember(FFrameNumber)                              ParentStartFrameOffset                                      OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FFrameNumber)                              ParentEndFrameOffset                                        OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FFrameNumber)                              ParentFirstLoopStartFrameOffset                             OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
 	DMember(bool)                                      bCanLoop                                                    OFFSET(get<bool>, {0x80, 1, 0, 0})
-	SMember(FMovieSceneFrameRange)                     PlayRange                                                   OFFSET(get<T>, {0x84, 16, 0, 0})
-	SMember(FMovieSceneFrameRange)                     FullPlayRange                                               OFFSET(get<T>, {0x94, 16, 0, 0})
-	SMember(FMovieSceneFrameRange)                     UnwarpedPlayRange                                           OFFSET(get<T>, {0xA4, 16, 0, 0})
-	SMember(FMovieSceneFrameRange)                     PreRollRange                                                OFFSET(get<T>, {0xB4, 16, 0, 0})
-	SMember(FMovieSceneFrameRange)                     PostRollRange                                               OFFSET(get<T>, {0xC4, 16, 0, 0})
+	SMember(FMovieSceneFrameRange)                     PlayRange                                                   OFFSET(getStruct<T>, {0x84, 16, 0, 0})
+	SMember(FMovieSceneFrameRange)                     FullPlayRange                                               OFFSET(getStruct<T>, {0x94, 16, 0, 0})
+	SMember(FMovieSceneFrameRange)                     UnwarpedPlayRange                                           OFFSET(getStruct<T>, {0xA4, 16, 0, 0})
+	SMember(FMovieSceneFrameRange)                     PreRollRange                                                OFFSET(getStruct<T>, {0xB4, 16, 0, 0})
+	SMember(FMovieSceneFrameRange)                     PostRollRange                                               OFFSET(getStruct<T>, {0xC4, 16, 0, 0})
 	DMember(int16_t)                                   HierarchicalBias                                            OFFSET(get<int16_t>, {0xD4, 2, 0, 0})
 	CMember(EMovieSceneSubSectionFlags)                AccumulatedFlags                                            OFFSET(get<T>, {0xD8, 4, 0, 0})
-	SMember(FMovieSceneSequenceInstanceDataPtr)        InstanceData                                                OFFSET(get<T>, {0xE0, 24, 0, 0})
-	SMember(FGuid)                                     SubSectionSignature                                         OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FMovieSceneSequenceInstanceDataPtr)        InstanceData                                                OFFSET(getStruct<T>, {0xE0, 24, 0, 0})
+	SMember(FGuid)                                     SubSectionSignature                                         OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSequenceInstanceDataPtr
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneSequenceInstanceDataPtr : public MDKStruct
+class FMovieSceneSequenceInstanceDataPtr : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1924,56 +2001,61 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequenceTransform
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneSequenceTransform : public MDKStruct
+class FMovieSceneSequenceTransform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FMovieSceneTimeTransform)                  LinearTransform                                             OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FMovieSceneTimeTransform)                  LinearTransform                                             OFFSET(getStruct<T>, {0x0, 12, 0, 0})
 	CMember(TArray<FMovieSceneNestedSequenceTransform>) NestedTransforms                                           OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneNestedSequenceTransform
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FMovieSceneNestedSequenceTransform : public MDKStruct
+class FMovieSceneNestedSequenceTransform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FMovieSceneTimeTransform)                  LinearTransform                                             OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FMovieSceneTimeWarping)                    Warping                                                     OFFSET(get<T>, {0xC, 8, 0, 0})
+	SMember(FMovieSceneTimeTransform)                  LinearTransform                                             OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FMovieSceneTimeWarping)                    Warping                                                     OFFSET(getStruct<T>, {0xC, 8, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneTimeWarping
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneTimeWarping : public MDKStruct
+class FMovieSceneTimeWarping : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FFrameNumber)                              Start                                                       OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FFrameNumber)                              End                                                         OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FFrameNumber)                              Start                                                       OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FFrameNumber)                              End                                                         OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSequenceHierarchyNode
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneSequenceHierarchyNode : public MDKStruct
+class FMovieSceneSequenceHierarchyNode : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FMovieSceneSequenceID)                     ParentID                                                    OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneSequenceID)                     ParentID                                                    OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FMovieSceneSequenceID>)             Children                                                    OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSubSequenceTreeEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneSubSequenceTreeEntry : public MDKStruct
+class FMovieSceneSubSequenceTreeEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1982,8 +2064,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSubSequenceTree
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FMovieSceneSubSequenceTree : public MDKStruct
+class FMovieSceneSubSequenceTree : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -1992,22 +2075,24 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequenceHierarchy
 /// Size: 0x0118 (0x000000 - 0x000118)
-class FMovieSceneSequenceHierarchy : public MDKStruct
+class FMovieSceneSequenceHierarchy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FMovieSceneSequenceHierarchyNode)          RootNode                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FMovieSceneSubSequenceTree)                Tree                                                        OFFSET(get<T>, {0x18, 96, 0, 0})
+	SMember(FMovieSceneSequenceHierarchyNode)          RootNode                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FMovieSceneSubSequenceTree)                Tree                                                        OFFSET(getStruct<T>, {0x18, 96, 0, 0})
 	CMember(TMap<FMovieSceneSequenceID, FMovieSceneSubSequenceData>) SubSequences                                  OFFSET(get<T>, {0x78, 80, 0, 0})
 	CMember(TMap<FMovieSceneSequenceID, FMovieSceneSequenceHierarchyNode>) Hierarchy                               OFFSET(get<T>, {0xC8, 80, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneWarpCounter
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneWarpCounter : public MDKStruct
+class FMovieSceneWarpCounter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2019,6 +2104,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FMovieSceneTrackImplementation : public FMovieSceneEvalTemplateBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2027,8 +2113,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneExpansionState
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMovieSceneExpansionState : public MDKStruct
+class FMovieSceneExpansionState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -2038,8 +2125,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEditorData
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FMovieSceneEditorData : public MDKStruct
+class FMovieSceneEditorData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
@@ -2051,14 +2139,15 @@ public:
 	DMember(double)                                    WorkStart                                                   OFFSET(get<double>, {0x70, 8, 0, 0})
 	DMember(double)                                    WorkEnd                                                     OFFSET(get<double>, {0x78, 8, 0, 0})
 	CMember(TSet<FFrameNumber>)                        MarkedFrames                                                OFFSET(get<T>, {0x80, 80, 0, 0})
-	SMember(FFloatRange)                               WorkingRange                                                OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FFloatRange)                               ViewRange                                                   OFFSET(get<T>, {0xE0, 16, 0, 0})
+	SMember(FFloatRange)                               WorkingRange                                                OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
+	SMember(FFloatRange)                               ViewRange                                                   OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneTrackLabels
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneTrackLabels : public MDKStruct
+class FMovieSceneTrackLabels : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2068,8 +2157,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneObjectBindingIDs
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneObjectBindingIDs : public MDKStruct
+class FMovieSceneObjectBindingIDs : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2079,21 +2169,23 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneObjectBindingID
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneObjectBindingID : public MDKStruct
+class FMovieSceneObjectBindingID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   SequenceID                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 	DMember(int32_t)                                   ResolveParentIndex                                          OFFSET(get<int32_t>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSectionGroup
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneSectionGroup : public MDKStruct
+class FMovieSceneSectionGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2103,70 +2195,76 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneMarkedFrame
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneMarkedFrame : public MDKStruct
+class FMovieSceneMarkedFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FFrameNumber)                              FrameNumber                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Label                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FFrameNumber)                              FrameNumber                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Label                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(bool)                                      bIsDeterminismFence                                         OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneBinding
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMovieSceneBinding : public MDKStruct
+class FMovieSceneBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGuid)                                     ObjectGuid                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   BindingName                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FGuid)                                     ObjectGuid                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   BindingName                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(TArray<UMovieSceneTrack*>)                 Tracks                                                      OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneBindingOverrideData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMovieSceneBindingOverrideData : public MDKStruct
+class FMovieSceneBindingOverrideData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FMovieSceneObjectBindingID)                ObjectBindingID                                             OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                ObjectBindingID                                             OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      OFFSET(get<T>, {0x18, 32, 0, 0})
 	DMember(bool)                                      bOverridesDefault                                           OFFSET(get<bool>, {0x38, 1, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneBindingProxy
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneBindingProxy : public MDKStruct
+class FMovieSceneBindingProxy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGuid)                                     BindingID                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     BindingID                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(UMovieSceneSequence*)                      Sequence                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBindingPayloadVariable
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneDynamicBindingPayloadVariable : public MDKStruct
+class FMovieSceneDynamicBindingPayloadVariable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBinding
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneDynamicBinding : public MDKStruct
+class FMovieSceneDynamicBinding : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2176,21 +2274,23 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBindingResolveParams
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneDynamicBindingResolveParams : public MDKStruct
+class FMovieSceneDynamicBindingResolveParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UMovieSceneSequence*)                      Sequence                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(UMovieSceneSequence*)                      RootSequence                                                OFFSET(get<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBindingResolveResult
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneDynamicBindingResolveResult : public MDKStruct
+class FMovieSceneDynamicBindingResolveResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2201,35 +2301,38 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneDynamicBindingContainer
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneDynamicBindingContainer : public MDKStruct
+class FMovieSceneDynamicBindingContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FMovieSceneDynamicBinding)                 DynamicBinding                                              OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FMovieSceneDynamicBinding)                 DynamicBinding                                              OFFSET(getStruct<T>, {0x0, 40, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieScenePossessable
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FMovieScenePossessable : public MDKStruct
+class FMovieScenePossessable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
 	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMovieSceneDynamicBinding)                 DynamicBinding                                              OFFSET(get<T>, {0x10, 40, 0, 0})
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FGuid)                                     ParentGuid                                                  OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FMovieSceneObjectBindingID)                SpawnableObjectBindingID                                    OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FMovieSceneDynamicBinding)                 DynamicBinding                                              OFFSET(getStruct<T>, {0x10, 40, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FGuid)                                     ParentGuid                                                  OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                SpawnableObjectBindingID                                    OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSectionEvalOptions
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FMovieSceneSectionEvalOptions : public MDKStruct
+class FMovieSceneSectionEvalOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -2240,8 +2343,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneEasingSettings
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FMovieSceneEasingSettings : public MDKStruct
+class FMovieSceneEasingSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -2258,19 +2362,21 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTimecodeSource
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FMovieSceneTimecodeSource : public MDKStruct
+class FMovieSceneTimecodeSource : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FTimecode)                                 Timecode                                                    OFFSET(get<T>, {0x0, 20, 0, 0})
+	SMember(FTimecode)                                 Timecode                                                    OFFSET(getStruct<T>, {0x0, 20, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneSequenceInstanceData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneSequenceInstanceData : public MDKStruct
+class FMovieSceneSequenceInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2279,13 +2385,14 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequenceReplProperties
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FMovieSceneSequenceReplProperties : public MDKStruct
+class FMovieSceneSequenceReplProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FFrameTime)                                LastKnownPosition                                           OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FFrameTime)                                LastKnownPosition                                           OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	CMember(TEnumAsByte<EMovieScenePlayerStatus>)      LastKnownStatus                                             OFFSET(get<T>, {0x8, 1, 0, 0})
 	DMember(int32_t)                                   LastKnownNumLoops                                           OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(int32_t)                                   LastKnownSerialNumber                                       OFFSET(get<int32_t>, {0x10, 4, 0, 0})
@@ -2293,15 +2400,16 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequencePlaybackParams
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneSequencePlaybackParams : public MDKStruct
+class FMovieSceneSequencePlaybackParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FFrameTime)                                Frame                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FFrameTime)                                Frame                                                       OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	DMember(float)                                     Time                                                        OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FString)                                   MarkedFrame                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   MarkedFrame                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(EMovieScenePositionType)                   PositionType                                                OFFSET(get<T>, {0x20, 1, 0, 0})
 	CMember(EUpdatePositionMethod)                     UpdateMethod                                                OFFSET(get<T>, {0x21, 1, 0, 0})
 	DMember(bool)                                      bHasJumped                                                  OFFSET(get<bool>, {0x22, 1, 0, 0})
@@ -2309,8 +2417,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSequencePlayToParams
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMovieSceneSequencePlayToParams : public MDKStruct
+class FMovieSceneSequencePlayToParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -2320,29 +2429,31 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneSpawnable
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
-class FMovieSceneSpawnable : public MDKStruct
+class FMovieSceneSpawnable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FTransform)                                SpawnTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                SpawnTransform                                              OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 	CMember(TArray<FName>)                             Tags                                                        OFFSET(get<T>, {0x60, 16, 0, 0})
 	DMember(bool)                                      bContinuouslyRespawn                                        OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(bool)                                      bNetAddressableName                                         OFFSET(get<bool>, {0x71, 1, 0, 0})
-	SMember(FMovieSceneDynamicBinding)                 DynamicBinding                                              OFFSET(get<T>, {0x78, 40, 0, 0})
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMovieSceneDynamicBinding)                 DynamicBinding                                              OFFSET(getStruct<T>, {0x78, 40, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 	CMember(UObject*)                                  ObjectTemplate                                              OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(TArray<FGuid>)                             ChildPossessables                                           OFFSET(get<T>, {0xC8, 16, 0, 0})
 	CMember(ESpawnOwnership)                           Ownership                                                   OFFSET(get<T>, {0xD8, 1, 0, 0})
-	SMember(FName)                                     LevelName                                                   OFFSET(get<T>, {0xDC, 4, 0, 0})
+	SMember(FName)                                     LevelName                                                   OFFSET(getStruct<T>, {0xDC, 4, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneTrackEvalOptions
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneTrackEvalOptions : public MDKStruct
+class FMovieSceneTrackEvalOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2356,8 +2467,9 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTrackDisplayOptions
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneTrackDisplayOptions : public MDKStruct
+class FMovieSceneTrackDisplayOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2367,23 +2479,25 @@ public:
 
 /// Struct /Script/MovieScene.MovieSceneTrackEvaluationFieldEntry
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneTrackEvaluationFieldEntry : public MDKStruct
+class FMovieSceneTrackEvaluationFieldEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UMovieSceneSection*)                       Section                                                     OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FFrameNumberRange)                         Range                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FFrameNumberRange)                         Range                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FFrameNumber)                              ForcedTime                                                  OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 	CMember(ESectionEvaluationFlags)                   Flags                                                       OFFSET(get<T>, {0x1C, 1, 0, 0})
 	DMember(int16_t)                                   LegacySortOrder                                             OFFSET(get<int16_t>, {0x1E, 2, 0, 0})
 };
 
 /// Struct /Script/MovieScene.MovieSceneTrackEvaluationField
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneTrackEvaluationField : public MDKStruct
+class FMovieSceneTrackEvaluationField : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -2395,6 +2509,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FTestMovieSceneEvalTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

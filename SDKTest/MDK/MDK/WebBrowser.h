@@ -8,8 +8,9 @@
 
 /// Struct /Script/WebBrowser.WebJSCallbackBase
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FWebJSCallbackBase : public MDKStruct
+class FWebJSCallbackBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -20,6 +21,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FWebJSFunction : public FWebJSCallbackBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -30,6 +32,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FWebJSResponse : public FWebJSCallbackBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

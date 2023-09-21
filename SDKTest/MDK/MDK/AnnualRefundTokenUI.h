@@ -114,7 +114,7 @@ class UFortPurchaseHistoryScreen : public UFortActivatablePanel
 	static inline constexpr uint64_t __MDKClassSize = 1624;
 
 public:
-	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(get<T>, {0x558, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(getStruct<T>, {0x558, 16, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   RefundConfirmationClass                                     OFFSET(get<T>, {0x580, 32, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   DirectPurchaseInfoModalClass                                OFFSET(get<T>, {0x5A0, 32, 0, 0})
 	CMember(UCommonAnimatedSwitcher*)                  Switcher_MainContent                                        OFFSET(get<T>, {0x5C0, 8, 0, 0})
@@ -179,13 +179,14 @@ public:
 
 /// Struct /Script/AnnualRefundTokenUI.PurchaseHistoryBundleEntry
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FPurchaseHistoryBundleEntry : public MDKStruct
+class FPurchaseHistoryBundleEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Enum /Script/AnnualRefundTokenUI.EFortPurchaseHistoryRefundType

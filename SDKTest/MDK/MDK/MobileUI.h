@@ -19,7 +19,7 @@ class UWBP_Mobile_Augment_Selection_Proxy_C : public UFortMobileHUDElementProxy
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3B8, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x3B8, 8, 0, 0})
 
 
 	/// Functions
@@ -105,7 +105,7 @@ class UWBP_Mobile_Augment_SelectionTimer_C : public UFortMobilePlayerAugmentTime
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x348, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x348, 8, 0, 0})
 	CMember(UWBP_Augment_SelectionTimer_C*)            WBP_Augment_SelectionTimer                                  OFFSET(get<T>, {0x350, 8, 0, 0})
 
 

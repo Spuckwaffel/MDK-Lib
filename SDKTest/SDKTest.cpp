@@ -1,6 +1,3 @@
-// SDKTest.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <cstdint>
 #include <Windows.h>
@@ -53,48 +50,36 @@ int main()
             TArray<ULocalPlayer*> localPlayer = gameInstance.LocalPlayers<TArray<ULocalPlayer*>>();
             printf("Localplayer count: %d\n", localPlayer.Count);
             printf("Data: %p\n", localPlayer.Data);
+
+            // example of writing
+            /*
+            auto pool = world.PSCPool<FWorldPSCPool>();
+            auto member = pool.WorldParticleSystemPools<int>();
+            // you call this function, in the template you define the Class, specify the datatype
+            // as param you specify your object where the write should be, the member (dont forget the &)
+            // and then the value
+            
+            MDKHandler::write<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
+
+            //or
+
+            //use writesilent so it will just write in the cache to queue many small writes
+            //this is effective when writing an entire vector and not wasting 3 reads
+            
+            MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 4555);
+            MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 283);
+            MDKHandler::writeSilent<FWorldPSCPool, int>(pool, &FWorldPSCPool::WorldParticleSystemPools<int>, 444);
+
+        	// and then write the entire bulk
+            MDKHandler::writeBulk(pool);
+
+            //dont do this with too large structs, it could corrupt other possible data in race conditions!
+            //and dont do it with classes
+            */
         }
 
         getchar();
     }
-    
-    
-
-    
-    
-    
-    //UWorld world = MDKHandler::get<UWorld>(&d);
-    //
-    //
-    //
-    //MDKHandler::write<UWorld, bool>(world, &UWorld::bAreConstraintsDirty, true);
-    //MDKHandler::write<UWorld, int>(world, &UWorld::StreamingLevelsToConsider, 333);
-    //
-    //printf("%d\n", world.StreamingLevelsToConsider<int>());
-    //printf("%d\n", world.bAreConstraintsDirty());
-    //
-    //MDKHandler::newFrame();
-    //
-    //world = MDKHandler::get<UWorld>(&d);
-    //printf("%d\n", world.StreamingLevelsToConsider<int>());
-    //printf("%d\n", world.bAreConstraintsDirty());
-    //MDKHandler::write<int>(UWorld::StreamingLevelsToConsider<int>, 4555);
-    
-    //UWorld* _persistentlevel = world.persistentLevel<UWorld*>();
-    //World3 struc = world.st<World3>();
-    //World3* river = world.river<World3*>();
-    //printf("%d\n", struc.x<int>());
-    //printf("%d\n", struc.y<int>());
-    //printf("%d\n", struc.z<int>());
-    //printf("%p\n", struc.world<UWorld*>());
-
-    //const UWorld worldagain = MDKHandler::get<UWorld>(&d);
-    //water = world.water<UWorld*>();
-    //printf("%p\n", water);
-
-    //UWorld persistentlevel= MDKHandler::get<UWorld>(_persistentlevel);
-
-    //UShieldBarrierInterface bar;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

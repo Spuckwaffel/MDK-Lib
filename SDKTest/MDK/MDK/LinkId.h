@@ -8,13 +8,14 @@
 
 /// Struct /Script/LinkId.OnlineLinkId
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOnlineLinkId : public MDKStruct
+class FOnlineLinkId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Mnemonic                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Mnemonic                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 

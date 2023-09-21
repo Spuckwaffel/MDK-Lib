@@ -8,8 +8,9 @@
 
 /// Struct /Script/Chaos.ClosestPhysicsObjectResult
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FClosestPhysicsObjectResult : public MDKStruct
+class FClosestPhysicsObjectResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -18,8 +19,9 @@ public:
 
 /// Struct /Script/Chaos.ChaosSolverConfiguration
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FChaosSolverConfiguration : public MDKStruct
+class FChaosSolverConfiguration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -34,11 +36,11 @@ public:
 	DMember(float)                                     ClusterConnectionFactor                                     OFFSET(get<float>, {0x1C, 4, 0, 0})
 	CMember(EClusterUnionMethod)                       ClusterUnionConnectionType                                  OFFSET(get<T>, {0x20, 1, 0, 0})
 	DMember(bool)                                      bGenerateCollisionData                                      OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(get<T>, {0x24, 16, 0, 0})
+	SMember(FSolverCollisionFilterSettings)            CollisionFilterSettings                                     OFFSET(getStruct<T>, {0x24, 16, 0, 0})
 	DMember(bool)                                      bGenerateBreakData                                          OFFSET(get<bool>, {0x34, 1, 0, 0})
-	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FSolverBreakingFilterSettings)             BreakingFilterSettings                                      OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(bool)                                      bGenerateTrailingData                                       OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(get<T>, {0x4C, 16, 0, 0})
+	SMember(FSolverTrailingFilterSettings)             TrailingFilterSettings                                      OFFSET(getStruct<T>, {0x4C, 16, 0, 0})
 	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
 	DMember(int32_t)                                   PushOutIterations                                           OFFSET(get<int32_t>, {0x60, 4, 0, 0})
 	DMember(bool)                                      bGenerateContactGraph                                       OFFSET(get<bool>, {0x64, 1, 0, 0})
@@ -46,8 +48,9 @@ public:
 
 /// Struct /Script/Chaos.SolverTrailingFilterSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSolverTrailingFilterSettings : public MDKStruct
+class FSolverTrailingFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -60,8 +63,9 @@ public:
 
 /// Struct /Script/Chaos.SolverBreakingFilterSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSolverBreakingFilterSettings : public MDKStruct
+class FSolverBreakingFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -74,8 +78,9 @@ public:
 
 /// Struct /Script/Chaos.SolverCollisionFilterSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSolverCollisionFilterSettings : public MDKStruct
+class FSolverCollisionFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -88,8 +93,9 @@ public:
 
 /// Struct /Script/Chaos.ManagedArrayCollection
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FManagedArrayCollection : public MDKStruct
+class FManagedArrayCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -98,19 +104,20 @@ public:
 
 /// Struct /Script/Chaos.SolverCollisionData
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FSolverCollisionData : public MDKStruct
+class FSolverCollisionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Velocity1                                                   OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   Velocity2                                                   OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity1                                            OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity2                                            OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   AccumulatedImpulse                                          OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Velocity1                                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Velocity2                                                   OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity1                                            OFFSET(getStruct<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity2                                            OFFSET(getStruct<T>, {0x90, 24, 0, 0})
 	DMember(float)                                     Mass1                                                       OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     Mass2                                                       OFFSET(get<float>, {0xAC, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
@@ -121,15 +128,16 @@ public:
 
 /// Struct /Script/Chaos.SolverBreakingData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FSolverBreakingData : public MDKStruct
+class FSolverBreakingData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndexMesh                                           OFFSET(get<int32_t>, {0x50, 4, 0, 0})
@@ -137,15 +145,16 @@ public:
 
 /// Struct /Script/Chaos.SolverTrailingData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FSolverTrailingData : public MDKStruct
+class FSolverTrailingData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   AngularVelocity                                             OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   AngularVelocity                                             OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndex                                               OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 	DMember(int32_t)                                   ParticleIndexMesh                                           OFFSET(get<int32_t>, {0x50, 4, 0, 0})
@@ -153,8 +162,9 @@ public:
 
 /// Struct /Script/Chaos.RecordedFrame
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FRecordedFrame : public MDKStruct
+class FRecordedFrame : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
@@ -171,8 +181,9 @@ public:
 
 /// Struct /Script/Chaos.RecordedTransformTrack
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FRecordedTransformTrack : public MDKStruct
+class FRecordedTransformTrack : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -182,8 +193,9 @@ public:
 
 /// Struct /Script/Chaos.SolverRemovalFilterSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSolverRemovalFilterSettings : public MDKStruct
+class FSolverRemovalFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

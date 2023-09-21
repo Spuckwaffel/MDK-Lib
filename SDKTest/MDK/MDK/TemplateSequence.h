@@ -43,11 +43,11 @@ public:
 	DMember(float)                                     FieldOfView                                                 OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(bool)                                      bConstrainAspectRatio                                       OFFSET(get<bool>, {0x2C, 1, 1, 0})
 	DMember(float)                                     AspectRatio                                                 OFFSET(get<float>, {0x30, 4, 0, 0})
-	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(get<T>, {0x40, 1760, 0, 0})
+	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(getStruct<T>, {0x40, 1760, 0, 0})
 	DMember(float)                                     PostProcessBlendWeight                                      OFFSET(get<float>, {0x720, 4, 0, 0})
-	SMember(FCameraFilmbackSettings)                   Filmback                                                    OFFSET(get<T>, {0x724, 12, 0, 0})
-	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(get<T>, {0x730, 28, 0, 0})
-	SMember(FCameraFocusSettings)                      FocusSettings                                               OFFSET(get<T>, {0x750, 88, 0, 0})
+	SMember(FCameraFilmbackSettings)                   Filmback                                                    OFFSET(getStruct<T>, {0x724, 12, 0, 0})
+	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(getStruct<T>, {0x730, 28, 0, 0})
+	SMember(FCameraFocusSettings)                      FocusSettings                                               OFFSET(getStruct<T>, {0x750, 88, 0, 0})
 	DMember(float)                                     CurrentFocalLength                                          OFFSET(get<float>, {0x7A8, 4, 0, 0})
 	DMember(float)                                     CurrentAperture                                             OFFSET(get<float>, {0x7AC, 4, 0, 0})
 	DMember(float)                                     CurrentFocusDistance                                        OFFSET(get<float>, {0x7B0, 4, 0, 0})
@@ -63,7 +63,7 @@ class UCameraAnimationSequencePlayer : public UObject
 public:
 	CMember(UObject*)                                  BoundObjectOverride                                         OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UMovieSceneSequence*)                      Sequence                                                    OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(get<T>, {0x2A8, 136, 0, 0})
+	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(getStruct<T>, {0x2A8, 136, 0, 0})
 };
 
 /// Class /Script/TemplateSequence.CameraAnimationSpawnableSystem
@@ -175,10 +175,10 @@ class ATemplateSequenceActor : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(get<T>, {0x298, 32, 0, 0})
+	SMember(FMovieSceneSequencePlaybackSettings)       PlaybackSettings                                            OFFSET(getStruct<T>, {0x298, 32, 0, 0})
 	CMember(UTemplateSequencePlayer*)                  SequencePlayer                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FSoftObjectPath)                           TemplateSequence                                            OFFSET(get<T>, {0x2C0, 24, 0, 0})
-	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             OFFSET(get<T>, {0x2D8, 12, 0, 0})
+	SMember(FSoftObjectPath)                           TemplateSequence                                            OFFSET(getStruct<T>, {0x2C0, 24, 0, 0})
+	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             OFFSET(getStruct<T>, {0x2D8, 12, 0, 0})
 
 
 	/// Functions
@@ -226,22 +226,24 @@ public:
 
 /// Struct /Script/TemplateSequence.TemplateSectionPropertyScale
 /// Size: 0x0130 (0x000000 - 0x000130)
-class FTemplateSectionPropertyScale : public MDKStruct
+class FTemplateSectionPropertyScale : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FGuid)                                     ObjectBinding                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FMovieScenePropertyBinding)                PropertyBinding                                             OFFSET(get<T>, {0x10, 12, 0, 0})
+	SMember(FGuid)                                     ObjectBinding                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FMovieScenePropertyBinding)                PropertyBinding                                             OFFSET(getStruct<T>, {0x10, 12, 0, 0})
 	CMember(ETemplateSectionPropertyScaleType)         PropertyScaleType                                           OFFSET(get<T>, {0x1C, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   FloatChannel                                                OFFSET(get<T>, {0x20, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatChannel                                                OFFSET(getStruct<T>, {0x20, 272, 0, 0})
 };
 
 /// Struct /Script/TemplateSequence.TemplateSequenceBindingOverrideData
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FTemplateSequenceBindingOverrideData : public MDKStruct
+class FTemplateSequenceBindingOverrideData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

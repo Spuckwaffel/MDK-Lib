@@ -26,7 +26,7 @@ class UGizmoBaseComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1440;
 
 public:
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x568, 16, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x568, 16, 0, 0})
 	DMember(float)                                     HoverSizeMultiplier                                         OFFSET(get<float>, {0x578, 4, 0, 0})
 	DMember(float)                                     PixelHitDistanceThreshold                                   OFFSET(get<float>, {0x57C, 4, 0, 0})
 	CMember(UGizmoViewContext*)                        GizmoViewContext                                            OFFSET(get<T>, {0x588, 8, 0, 0})
@@ -198,8 +198,8 @@ class UGizmoLocalVec2ParameterSource : public UGizmoBaseVec2ParameterSource
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector2D)                                 Value                                                       OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(get<T>, {0x58, 32, 0, 0})
+	SMember(FVector2D)                                 Value                                                       OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(getStruct<T>, {0x58, 32, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoBaseFloatParameterSource
@@ -223,10 +223,10 @@ public:
 	CMember(TScriptInterface<Class>)                   AxisSource                                                  OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TScriptInterface<Class>)                   TransformSource                                             OFFSET(get<T>, {0xE0, 16, 0, 0})
 	DMember(float)                                     Parameter                                                   OFFSET(get<float>, {0xF0, 4, 0, 0})
-	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(get<T>, {0xF4, 8, 0, 0})
-	SMember(FVector)                                   CurTranslationAxis                                          OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FVector)                                   CurTranslationOrigin                                        OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x130, 96, 0, 0})
+	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(getStruct<T>, {0xF4, 8, 0, 0})
+	SMember(FVector)                                   CurTranslationAxis                                          OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   CurTranslationOrigin                                        OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0x130, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoPlaneTranslationParameterSource
@@ -239,13 +239,13 @@ class UGizmoPlaneTranslationParameterSource : public UGizmoBaseVec2ParameterSour
 public:
 	CMember(TScriptInterface<Class>)                   AxisSource                                                  OFFSET(get<T>, {0x110, 16, 0, 0})
 	CMember(TScriptInterface<Class>)                   TransformSource                                             OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FVector2D)                                 Parameter                                                   OFFSET(get<T>, {0x130, 16, 0, 0})
-	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(get<T>, {0x140, 32, 0, 0})
-	SMember(FVector)                                   CurTranslationOrigin                                        OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   CurTranslationNormal                                        OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FVector)                                   CurTranslationAxisX                                         OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FVector)                                   CurTranslationAxisY                                         OFFSET(get<T>, {0x1A8, 24, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x1C0, 96, 0, 0})
+	SMember(FVector2D)                                 Parameter                                                   OFFSET(getStruct<T>, {0x130, 16, 0, 0})
+	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(getStruct<T>, {0x140, 32, 0, 0})
+	SMember(FVector)                                   CurTranslationOrigin                                        OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   CurTranslationNormal                                        OFFSET(getStruct<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   CurTranslationAxisX                                         OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	SMember(FVector)                                   CurTranslationAxisY                                         OFFSET(getStruct<T>, {0x1A8, 24, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0x1C0, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoAxisRotationParameterSource
@@ -259,10 +259,10 @@ public:
 	CMember(TScriptInterface<Class>)                   AxisSource                                                  OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TScriptInterface<Class>)                   TransformSource                                             OFFSET(get<T>, {0xE0, 16, 0, 0})
 	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0xF0, 4, 0, 0})
-	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(get<T>, {0xF4, 8, 0, 0})
-	SMember(FVector)                                   CurRotationAxis                                             OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FVector)                                   CurRotationOrigin                                           OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x130, 96, 0, 0})
+	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(getStruct<T>, {0xF4, 8, 0, 0})
+	SMember(FVector)                                   CurRotationAxis                                             OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   CurRotationOrigin                                           OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0x130, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoUniformScaleParameterSource
@@ -276,13 +276,13 @@ public:
 	CMember(TScriptInterface<Class>)                   AxisSource                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TScriptInterface<Class>)                   TransformSource                                             OFFSET(get<T>, {0x58, 16, 0, 0})
 	DMember(float)                                     ScaleMultiplier                                             OFFSET(get<float>, {0x68, 4, 0, 0})
-	SMember(FVector2D)                                 Parameter                                                   OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(get<T>, {0x80, 32, 0, 0})
-	SMember(FVector)                                   CurScaleOrigin                                              OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FVector)                                   CurScaleNormal                                              OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FVector)                                   CurScaleAxisX                                               OFFSET(get<T>, {0xD0, 24, 0, 0})
-	SMember(FVector)                                   CurScaleAxisY                                               OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x100, 96, 0, 0})
+	SMember(FVector2D)                                 Parameter                                                   OFFSET(getStruct<T>, {0x70, 16, 0, 0})
+	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(getStruct<T>, {0x80, 32, 0, 0})
+	SMember(FVector)                                   CurScaleOrigin                                              OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FVector)                                   CurScaleNormal                                              OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FVector)                                   CurScaleAxisX                                               OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
+	SMember(FVector)                                   CurScaleAxisY                                               OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0x100, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoAxisScaleParameterSource
@@ -298,10 +298,10 @@ public:
 	DMember(float)                                     ScaleMultiplier                                             OFFSET(get<float>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bClampToZero                                                OFFSET(get<bool>, {0x6C, 1, 0, 0})
 	DMember(float)                                     Parameter                                                   OFFSET(get<float>, {0x70, 4, 0, 0})
-	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(get<T>, {0x74, 8, 0, 0})
-	SMember(FVector)                                   CurScaleAxis                                                OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FVector)                                   CurScaleOrigin                                              OFFSET(get<T>, {0x98, 24, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0xB0, 96, 0, 0})
+	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(getStruct<T>, {0x74, 8, 0, 0})
+	SMember(FVector)                                   CurScaleAxis                                                OFFSET(getStruct<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   CurScaleOrigin                                              OFFSET(getStruct<T>, {0x98, 24, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0xB0, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoPlaneScaleParameterSource
@@ -317,13 +317,13 @@ public:
 	DMember(float)                                     ScaleMultiplier                                             OFFSET(get<float>, {0xB0, 4, 0, 0})
 	DMember(bool)                                      bUseEqualScaling                                            OFFSET(get<bool>, {0xB4, 1, 0, 0})
 	DMember(bool)                                      bClampToZero                                                OFFSET(get<bool>, {0xB5, 1, 0, 0})
-	SMember(FVector2D)                                 Parameter                                                   OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(get<T>, {0xC8, 32, 0, 0})
-	SMember(FVector)                                   CurScaleOrigin                                              OFFSET(get<T>, {0xE8, 24, 0, 0})
-	SMember(FVector)                                   CurScaleNormal                                              OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FVector)                                   CurScaleAxisX                                               OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FVector)                                   CurScaleAxisY                                               OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FTransform)                                InitialTransform                                            OFFSET(get<T>, {0x150, 96, 0, 0})
+	SMember(FVector2D)                                 Parameter                                                   OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FGizmoVec2ParameterChange)                 LastChange                                                  OFFSET(getStruct<T>, {0xC8, 32, 0, 0})
+	SMember(FVector)                                   CurScaleOrigin                                              OFFSET(getStruct<T>, {0xE8, 24, 0, 0})
+	SMember(FVector)                                   CurScaleNormal                                              OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FVector)                                   CurScaleAxisX                                               OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FVector)                                   CurScaleAxisY                                               OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FTransform)                                InitialTransform                                            OFFSET(getStruct<T>, {0x150, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.PhysicsDataSource
@@ -545,12 +545,12 @@ public:
 	CMember(TScriptInterface<Class>)                   StateTarget                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UClickDragInputBehavior*)                  MouseBehavior                                               OFFSET(get<T>, {0x88, 8, 0, 0})
 	DMember(bool)                                      bInInteraction                                              OFFSET(get<bool>, {0x110, 1, 0, 0})
-	SMember(FVector)                                   RotationOrigin                                              OFFSET(get<T>, {0x118, 24, 0, 0})
-	SMember(FVector)                                   RotationAxis                                                OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FVector)                                   RotationPlaneX                                              OFFSET(get<T>, {0x148, 24, 0, 0})
-	SMember(FVector)                                   RotationPlaneY                                              OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   InteractionStartPoint                                       OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FVector)                                   InteractionCurPoint                                         OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FVector)                                   RotationOrigin                                              OFFSET(getStruct<T>, {0x118, 24, 0, 0})
+	SMember(FVector)                                   RotationAxis                                                OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FVector)                                   RotationPlaneX                                              OFFSET(getStruct<T>, {0x148, 24, 0, 0})
+	SMember(FVector)                                   RotationPlaneY                                              OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   InteractionStartPoint                                       OFFSET(getStruct<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   InteractionCurPoint                                         OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 	DMember(float)                                     InteractionStartAngle                                       OFFSET(get<float>, {0x1A8, 4, 0, 0})
 	DMember(float)                                     InteractionCurAngle                                         OFFSET(get<float>, {0x1AC, 4, 0, 0})
 };
@@ -581,10 +581,10 @@ public:
 	CMember(UClickDragInputBehavior*)                  MouseBehavior                                               OFFSET(get<T>, {0x90, 8, 0, 0})
 	DMember(bool)                                      bEnableSignedAxis                                           OFFSET(get<bool>, {0x98, 1, 0, 0})
 	DMember(bool)                                      bInInteraction                                              OFFSET(get<bool>, {0x121, 1, 0, 0})
-	SMember(FVector)                                   InteractionOrigin                                           OFFSET(get<T>, {0x128, 24, 0, 0})
-	SMember(FVector)                                   InteractionAxis                                             OFFSET(get<T>, {0x140, 24, 0, 0})
-	SMember(FVector)                                   InteractionStartPoint                                       OFFSET(get<T>, {0x158, 24, 0, 0})
-	SMember(FVector)                                   InteractionCurPoint                                         OFFSET(get<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   InteractionOrigin                                           OFFSET(getStruct<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   InteractionAxis                                             OFFSET(getStruct<T>, {0x140, 24, 0, 0})
+	SMember(FVector)                                   InteractionStartPoint                                       OFFSET(getStruct<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   InteractionCurPoint                                         OFFSET(getStruct<T>, {0x170, 24, 0, 0})
 	DMember(float)                                     InteractionStartParameter                                   OFFSET(get<float>, {0x188, 4, 0, 0})
 	DMember(float)                                     InteractionCurParameter                                     OFFSET(get<float>, {0x18C, 4, 0, 0})
 	DMember(float)                                     ParameterSign                                               OFFSET(get<float>, {0x190, 4, 0, 0})
@@ -598,8 +598,8 @@ class UGizmoConstantAxisSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoConstantFrameAxisSource
@@ -610,10 +610,10 @@ class UGizmoConstantFrameAxisSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   TangentX                                                    OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FVector)                                   TangentY                                                    OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   TangentX                                                    OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   TangentY                                                    OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoWorldAxisSource
@@ -624,7 +624,7 @@ class UGizmoWorldAxisSource : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	DMember(int32_t)                                   AxisIndex                                                   OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 };
 
@@ -662,17 +662,17 @@ public:
 	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x38, 1, 0, 0})
 	DMember(float)                                     BrushRadius                                                 OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     BrushFalloff                                                OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FVector)                                   BrushPosition                                               OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   BrushNormal                                                 OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   BrushPosition                                               OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   BrushNormal                                                 OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 	DMember(bool)                                      bDrawIndicatorLines                                         OFFSET(get<bool>, {0x78, 1, 0, 0})
 	DMember(bool)                                      bDrawRadiusCircle                                           OFFSET(get<bool>, {0x79, 1, 0, 0})
 	DMember(int32_t)                                   SampleStepCount                                             OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
-	SMember(FLinearColor)                              LineColor                                                   OFFSET(get<T>, {0x80, 16, 0, 0})
+	SMember(FLinearColor)                              LineColor                                                   OFFSET(getStruct<T>, {0x80, 16, 0, 0})
 	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0x90, 4, 0, 0})
 	DMember(bool)                                      bDepthTested                                                OFFSET(get<bool>, {0x94, 1, 0, 0})
 	DMember(bool)                                      bDrawSecondaryLines                                         OFFSET(get<bool>, {0x95, 1, 0, 0})
 	DMember(float)                                     SecondaryLineThickness                                      OFFSET(get<float>, {0x98, 4, 0, 0})
-	SMember(FLinearColor)                              SecondaryLineColor                                          OFFSET(get<T>, {0x9C, 16, 0, 0})
+	SMember(FLinearColor)                              SecondaryLineColor                                          OFFSET(getStruct<T>, {0x9C, 16, 0, 0})
 	CMember(UPrimitiveComponent*)                      AttachedComponent                                           OFFSET(get<T>, {0xB0, 8, 0, 0})
 };
 
@@ -734,9 +734,9 @@ public:
 	CMember(UTransformProxy*)                          ActiveTarget                                                OFFSET(get<T>, {0x38, 8, 0, 0})
 	DMember(bool)                                      bSnapToWorldGrid                                            OFFSET(get<bool>, {0x40, 1, 0, 0})
 	DMember(bool)                                      bGridSizeIsExplicit                                         OFFSET(get<bool>, {0x44, 1, 0, 0})
-	SMember(FVector)                                   ExplicitGridSize                                            OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   ExplicitGridSize                                            OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(bool)                                      bRotationGridSizeIsExplicit                                 OFFSET(get<bool>, {0x60, 1, 0, 0})
-	SMember(FRotator)                                  ExplicitRotationGridSize                                    OFFSET(get<T>, {0x68, 24, 0, 0})
+	SMember(FRotator)                                  ExplicitRotationGridSize                                    OFFSET(getStruct<T>, {0x68, 24, 0, 0})
 	DMember(bool)                                      bSnapToWorldRotGrid                                         OFFSET(get<bool>, {0x80, 1, 0, 0})
 	DMember(bool)                                      bUseContextCoordinateSystem                                 OFFSET(get<bool>, {0x81, 1, 0, 0})
 	CMember(EToolContextCoordinateSystem)              CurrentCoordinateSystem                                     OFFSET(get<T>, {0x84, 4, 0, 0})
@@ -762,7 +762,7 @@ class UGizmoArrowComponent : public UGizmoBaseComponent
 	static inline constexpr uint64_t __MDKClassSize = 1472;
 
 public:
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x598, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x598, 24, 0, 0})
 	DMember(float)                                     Gap                                                         OFFSET(get<float>, {0x5B0, 4, 0, 0})
 	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x5B4, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5B8, 4, 0, 0})
@@ -776,9 +776,9 @@ class UGizmoBoxComponent : public UGizmoBaseComponent
 	static inline constexpr uint64_t __MDKClassSize = 1520;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x598, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x5B0, 32, 0, 0})
-	SMember(FVector)                                   Dimensions                                                  OFFSET(get<T>, {0x5D0, 24, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x598, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x5B0, 32, 0, 0})
+	SMember(FVector)                                   Dimensions                                                  OFFSET(getStruct<T>, {0x5D0, 24, 0, 0})
 	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0x5E8, 4, 0, 0})
 	DMember(bool)                                      bRemoveHiddenLines                                          OFFSET(get<bool>, {0x5EC, 1, 0, 0})
 	DMember(bool)                                      bEnableAxisFlip                                             OFFSET(get<bool>, {0x5ED, 1, 0, 0})
@@ -792,7 +792,7 @@ class UGizmoCircleComponent : public UGizmoBaseComponent
 	static inline constexpr uint64_t __MDKClassSize = 1472;
 
 public:
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x598, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x598, 24, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x5B0, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5B4, 4, 0, 0})
 	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x5B8, 4, 0, 0})
@@ -816,17 +816,17 @@ public:
 	DMember(bool)                                      bEnabledForHoveringState                                    OFFSET(get<bool>, {0x2C, 1, 0, 0})
 	DMember(bool)                                      bEnabledForInteractingState                                 OFFSET(get<bool>, {0x2D, 1, 0, 0})
 	DMember(uint32_t)                                  PartIdentifier                                              OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
-	SMember(FGizmoElementMeshRenderStateAttributes)    MeshRenderAttributes                                        OFFSET(get<T>, {0x34, 96, 0, 0})
+	SMember(FGizmoElementMeshRenderStateAttributes)    MeshRenderAttributes                                        OFFSET(getStruct<T>, {0x34, 96, 0, 0})
 	CMember(EGizmoElementState)                        ElementState                                                OFFSET(get<T>, {0x94, 1, 0, 0})
 	CMember(EGizmoElementInteractionState)             ElementInteractionState                                     OFFSET(get<T>, {0x98, 4, 0, 0})
 	CMember(EGizmoElementViewDependentType)            ViewDependentType                                           OFFSET(get<T>, {0x9C, 4, 0, 0})
-	SMember(FVector)                                   ViewDependentAxis                                           OFFSET(get<T>, {0xA0, 24, 0, 0})
+	SMember(FVector)                                   ViewDependentAxis                                           OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
 	DMember(float)                                     ViewDependentAngleTol                                       OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     ViewDependentAxialMaxCosAngleTol                            OFFSET(get<float>, {0xBC, 4, 0, 0})
 	DMember(float)                                     ViewDependentPlanarMinCosAngleTol                           OFFSET(get<float>, {0xC0, 4, 0, 0})
 	CMember(EGizmoElementViewAlignType)                ViewAlignType                                               OFFSET(get<T>, {0xC4, 4, 0, 0})
-	SMember(FVector)                                   ViewAlignAxis                                               OFFSET(get<T>, {0xC8, 24, 0, 0})
-	SMember(FVector)                                   ViewAlignNormal                                             OFFSET(get<T>, {0xE0, 24, 0, 0})
+	SMember(FVector)                                   ViewAlignAxis                                               OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
+	SMember(FVector)                                   ViewAlignNormal                                             OFFSET(getStruct<T>, {0xE0, 24, 0, 0})
 	DMember(float)                                     ViewAlignAxialAngleTol                                      OFFSET(get<float>, {0xF8, 4, 0, 0})
 	DMember(float)                                     ViewAlignAxialMaxCosAngleTol                                OFFSET(get<float>, {0xFC, 4, 0, 0})
 	DMember(float)                                     PixelHitDistanceThreshold                                   OFFSET(get<float>, {0x100, 4, 0, 0})
@@ -840,7 +840,7 @@ class UGizmoElementLineBase : public UGizmoElementBase
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-	SMember(FGizmoElementLineRenderStateAttributes)    LineRenderAttributes                                        OFFSET(get<T>, {0x108, 60, 0, 0})
+	SMember(FGizmoElementLineRenderStateAttributes)    LineRenderAttributes                                        OFFSET(getStruct<T>, {0x108, 60, 0, 0})
 	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0x144, 4, 0, 0})
 	DMember(bool)                                      bScreenSpaceLine                                            OFFSET(get<bool>, {0x148, 1, 0, 0})
 	DMember(float)                                     HoverLineThicknessMultiplier                                OFFSET(get<float>, {0x14C, 4, 0, 0})
@@ -855,9 +855,9 @@ class UGizmoElementCircleBase : public UGizmoElementLineBase
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
 public:
-	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x158, 24, 0, 0})
-	SMember(FVector)                                   Axis0                                                       OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   Axis1                                                       OFFSET(get<T>, {0x188, 24, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(getStruct<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   Axis0                                                       OFFSET(getStruct<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   Axis1                                                       OFFSET(getStruct<T>, {0x188, 24, 0, 0})
 	DMember(double)                                    Radius                                                      OFFSET(get<double>, {0x1A0, 8, 0, 0})
 	DMember(int32_t)                                   NumSegments                                                 OFFSET(get<int32_t>, {0x1A8, 4, 0, 0})
 	CMember(EGizmoElementPartialType)                  PartialType                                                 OFFSET(get<T>, {0x1AC, 4, 0, 0})
@@ -888,9 +888,9 @@ public:
 	CMember(UGizmoElementCylinder*)                    CylinderElement                                             OFFSET(get<T>, {0x110, 8, 0, 0})
 	CMember(UGizmoElementCone*)                        ConeElement                                                 OFFSET(get<T>, {0x118, 8, 0, 0})
 	CMember(UGizmoElementBox*)                         BoxElement                                                  OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FVector)                                   base                                                        OFFSET(get<T>, {0x128, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x140, 24, 0, 0})
-	SMember(FVector)                                   SideDirection                                               OFFSET(get<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   base                                                        OFFSET(getStruct<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x140, 24, 0, 0})
+	SMember(FVector)                                   SideDirection                                               OFFSET(getStruct<T>, {0x158, 24, 0, 0})
 	DMember(float)                                     BodyLength                                                  OFFSET(get<float>, {0x170, 4, 0, 0})
 	DMember(float)                                     BodyRadius                                                  OFFSET(get<float>, {0x174, 4, 0, 0})
 	DMember(float)                                     HeadLength                                                  OFFSET(get<float>, {0x178, 4, 0, 0})
@@ -907,10 +907,10 @@ class UGizmoElementBox : public UGizmoElementBase
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FVector)                                   Dimensions                                                  OFFSET(get<T>, {0x120, 24, 0, 0})
-	SMember(FVector)                                   UpDirection                                                 OFFSET(get<T>, {0x138, 24, 0, 0})
-	SMember(FVector)                                   SideDirection                                               OFFSET(get<T>, {0x150, 24, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FVector)                                   Dimensions                                                  OFFSET(getStruct<T>, {0x120, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x138, 24, 0, 0})
+	SMember(FVector)                                   SideDirection                                               OFFSET(getStruct<T>, {0x150, 24, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoElementCircle
@@ -935,8 +935,8 @@ class UGizmoElementCone : public UGizmoElementBase
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FVector)                                   Origin                                                      OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x120, 24, 0, 0})
+	SMember(FVector)                                   Origin                                                      OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x120, 24, 0, 0})
 	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x138, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x13C, 4, 0, 0})
 	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x140, 4, 0, 0})
@@ -950,8 +950,8 @@ class UGizmoElementCylinder : public UGizmoElementBase
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FVector)                                   base                                                        OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x120, 24, 0, 0})
+	SMember(FVector)                                   base                                                        OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x120, 24, 0, 0})
 	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x138, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x13C, 4, 0, 0})
 	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x140, 4, 0, 0})
@@ -1004,11 +1004,11 @@ class UGizmoElementRectangle : public UGizmoElementLineBase
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(getStruct<T>, {0x158, 24, 0, 0})
 	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x170, 4, 0, 0})
 	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x174, 4, 0, 0})
-	SMember(FVector)                                   UpDirection                                                 OFFSET(get<T>, {0x178, 24, 0, 0})
-	SMember(FVector)                                   SideDirection                                               OFFSET(get<T>, {0x190, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   SideDirection                                               OFFSET(getStruct<T>, {0x190, 24, 0, 0})
 	DMember(bool)                                      bDrawMesh                                                   OFFSET(get<bool>, {0x1A8, 1, 0, 0})
 	DMember(bool)                                      bDrawLine                                                   OFFSET(get<bool>, {0x1A9, 1, 0, 0})
 	DMember(bool)                                      bHitMesh                                                    OFFSET(get<bool>, {0x1AA, 1, 0, 0})
@@ -1126,10 +1126,10 @@ class UGizmoLineHandleComponent : public UGizmoBaseComponent
 	static inline constexpr uint64_t __MDKClassSize = 1504;
 
 public:
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0x598, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0x598, 24, 0, 0})
 	DMember(float)                                     HandleSize                                                  OFFSET(get<float>, {0x5B0, 4, 0, 0})
 	DMember(float)                                     Thickness                                                   OFFSET(get<float>, {0x5B4, 4, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x5B8, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x5B8, 24, 0, 0})
 	DMember(float)                                     Length                                                      OFFSET(get<float>, {0x5D0, 4, 0, 0})
 	DMember(bool)                                      bImageScale                                                 OFFSET(get<bool>, {0x5D4, 1, 0, 0})
 };
@@ -1142,8 +1142,8 @@ class UGizmoRectangleComponent : public UGizmoBaseComponent
 	static inline constexpr uint64_t __MDKClassSize = 1520;
 
 public:
-	SMember(FVector)                                   DirectionX                                                  OFFSET(get<T>, {0x598, 24, 0, 0})
-	SMember(FVector)                                   DirectionY                                                  OFFSET(get<T>, {0x5B0, 24, 0, 0})
+	SMember(FVector)                                   DirectionX                                                  OFFSET(getStruct<T>, {0x598, 24, 0, 0})
+	SMember(FVector)                                   DirectionY                                                  OFFSET(getStruct<T>, {0x5B0, 24, 0, 0})
 	DMember(bool)                                      bOrientYAccordingToCamera                                   OFFSET(get<bool>, {0x5C8, 1, 0, 0})
 	DMember(float)                                     OffsetX                                                     OFFSET(get<float>, {0x5CC, 4, 0, 0})
 	DMember(float)                                     OffsetY                                                     OFFSET(get<float>, {0x5D0, 4, 0, 0})
@@ -1245,7 +1245,7 @@ class UGizmoLocalFloatParameterSource : public UGizmoBaseFloatParameterSource
 
 public:
 	DMember(float)                                     Value                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
-	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(get<T>, {0x4C, 8, 0, 0})
+	SMember(FGizmoFloatParameterChange)                LastChange                                                  OFFSET(getStruct<T>, {0x4C, 8, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.PlanePositionGizmoBuilder
@@ -1275,15 +1275,15 @@ public:
 	DMember(bool)                                      bFlipX                                                      OFFSET(get<bool>, {0x91, 1, 0, 0})
 	DMember(bool)                                      bFlipY                                                      OFFSET(get<bool>, {0x92, 1, 0, 0})
 	DMember(bool)                                      bInInteraction                                              OFFSET(get<bool>, {0x120, 1, 0, 0})
-	SMember(FVector)                                   InteractionOrigin                                           OFFSET(get<T>, {0x128, 24, 0, 0})
-	SMember(FVector)                                   InteractionNormal                                           OFFSET(get<T>, {0x140, 24, 0, 0})
-	SMember(FVector)                                   InteractionAxisX                                            OFFSET(get<T>, {0x158, 24, 0, 0})
-	SMember(FVector)                                   InteractionAxisY                                            OFFSET(get<T>, {0x170, 24, 0, 0})
-	SMember(FVector)                                   InteractionStartPoint                                       OFFSET(get<T>, {0x188, 24, 0, 0})
-	SMember(FVector)                                   InteractionCurPoint                                         OFFSET(get<T>, {0x1A0, 24, 0, 0})
-	SMember(FVector2D)                                 InteractionStartParameter                                   OFFSET(get<T>, {0x1B8, 16, 0, 0})
-	SMember(FVector2D)                                 InteractionCurParameter                                     OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	SMember(FVector2D)                                 ParameterSigns                                              OFFSET(get<T>, {0x1D8, 16, 0, 0})
+	SMember(FVector)                                   InteractionOrigin                                           OFFSET(getStruct<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   InteractionNormal                                           OFFSET(getStruct<T>, {0x140, 24, 0, 0})
+	SMember(FVector)                                   InteractionAxisX                                            OFFSET(getStruct<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   InteractionAxisY                                            OFFSET(getStruct<T>, {0x170, 24, 0, 0})
+	SMember(FVector)                                   InteractionStartPoint                                       OFFSET(getStruct<T>, {0x188, 24, 0, 0})
+	SMember(FVector)                                   InteractionCurPoint                                         OFFSET(getStruct<T>, {0x1A0, 24, 0, 0})
+	SMember(FVector2D)                                 InteractionStartParameter                                   OFFSET(getStruct<T>, {0x1B8, 16, 0, 0})
+	SMember(FVector2D)                                 InteractionCurParameter                                     OFFSET(getStruct<T>, {0x1C8, 16, 0, 0})
+	SMember(FVector2D)                                 ParameterSigns                                              OFFSET(getStruct<T>, {0x1D8, 16, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.RepositionableTransformGizmoBuilder
@@ -1326,14 +1326,14 @@ class UScalableSphereGizmo : public UInteractiveGizmo
 
 public:
 	DMember(float)                                     HitErrorThreshold                                           OFFSET(get<float>, {0x80, 4, 0, 0})
-	SMember(FText)                                     TransactionDescription                                      OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FText)                                     TransactionDescription                                      OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(bool)                                      bIsHovering                                                 OFFSET(get<bool>, {0xA4, 1, 0, 0})
 	DMember(bool)                                      bIsDragging                                                 OFFSET(get<bool>, {0xA5, 1, 0, 0})
 	CMember(UTransformProxy*)                          ActiveTarget                                                OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FVector)                                   ActiveAxis                                                  OFFSET(get<T>, {0xB0, 24, 0, 0})
-	SMember(FVector)                                   DragStartWorldPosition                                      OFFSET(get<T>, {0xC8, 24, 0, 0})
-	SMember(FVector)                                   DragCurrentPositionProjected                                OFFSET(get<T>, {0xE0, 24, 0, 0})
+	SMember(FVector)                                   ActiveAxis                                                  OFFSET(getStruct<T>, {0xB0, 24, 0, 0})
+	SMember(FVector)                                   DragStartWorldPosition                                      OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
+	SMember(FVector)                                   DragCurrentPositionProjected                                OFFSET(getStruct<T>, {0xE0, 24, 0, 0})
 	DMember(float)                                     InteractionStartParameter                                   OFFSET(get<float>, {0xF8, 4, 0, 0})
 };
 
@@ -1409,8 +1409,8 @@ class UTransformProxy : public UObject
 public:
 	DMember(bool)                                      bRotatePerObject                                            OFFSET(get<bool>, {0xD0, 1, 0, 0})
 	DMember(bool)                                      bSetPivotMode                                               OFFSET(get<bool>, {0xD1, 1, 0, 0})
-	SMember(FTransform)                                SharedTransform                                             OFFSET(get<T>, {0xF0, 96, 0, 0})
-	SMember(FTransform)                                InitialSharedTransform                                      OFFSET(get<T>, {0x150, 96, 0, 0})
+	SMember(FTransform)                                SharedTransform                                             OFFSET(getStruct<T>, {0xF0, 96, 0, 0})
+	SMember(FTransform)                                InitialSharedTransform                                      OFFSET(getStruct<T>, {0x150, 96, 0, 0})
 };
 
 /// Class /Script/InteractiveToolsFramework.GizmoBaseTransformSource
@@ -1553,7 +1553,7 @@ public:
 	CMember(UBrushBaseProperties*)                     BrushProperties                                             OFFSET(get<T>, {0x108, 8, 0, 0})
 	DMember(bool)                                      bInBrushStroke                                              OFFSET(get<bool>, {0x110, 1, 0, 0})
 	DMember(float)                                     WorldToLocalScale                                           OFFSET(get<float>, {0x114, 4, 0, 0})
-	SMember(FBrushStampData)                           LastBrushStamp                                              OFFSET(get<T>, {0x118, 288, 0, 0})
+	SMember(FBrushStampData)                           LastBrushStamp                                              OFFSET(getStruct<T>, {0x118, 288, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   PropertyClass                                               OFFSET(get<T>, {0x248, 32, 0, 0})
 	CMember(UBrushStampIndicator*)                     BrushStampIndicator                                         OFFSET(get<T>, {0x268, 8, 0, 0})
 };
@@ -1832,33 +1832,36 @@ public:
 
 /// Struct /Script/InteractiveToolsFramework.GizmoVec2ParameterChange
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FGizmoVec2ParameterChange : public MDKStruct
+class FGizmoVec2ParameterChange : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector2D)                                 InitialValue                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 CurrentValue                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 InitialValue                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 CurrentValue                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/InteractiveToolsFramework.GizmoElementColorAttribute
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FGizmoElementColorAttribute : public MDKStruct
+class FGizmoElementColorAttribute : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bHasValue                                                   OFFSET(get<bool>, {0x10, 1, 0, 0})
 	DMember(bool)                                      bOverridesChildState                                        OFFSET(get<bool>, {0x11, 1, 0, 0})
 };
 
 /// Struct /Script/InteractiveToolsFramework.GizmoElementMaterialAttribute
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FGizmoElementMaterialAttribute : public MDKStruct
+class FGizmoElementMaterialAttribute : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1869,37 +1872,40 @@ public:
 
 /// Struct /Script/InteractiveToolsFramework.GizmoElementMeshRenderStateAttributes
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FGizmoElementMeshRenderStateAttributes : public MDKStruct
+class FGizmoElementMeshRenderStateAttributes : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGizmoElementMaterialAttribute)            Material                                                    OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FGizmoElementMaterialAttribute)            HoverMaterial                                               OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FGizmoElementMaterialAttribute)            InteractMaterial                                            OFFSET(get<T>, {0x18, 12, 0, 0})
-	SMember(FGizmoElementColorAttribute)               VertexColor                                                 OFFSET(get<T>, {0x24, 20, 0, 0})
-	SMember(FGizmoElementColorAttribute)               HoverVertexColor                                            OFFSET(get<T>, {0x38, 20, 0, 0})
-	SMember(FGizmoElementColorAttribute)               InteractVertexColor                                         OFFSET(get<T>, {0x4C, 20, 0, 0})
+	SMember(FGizmoElementMaterialAttribute)            Material                                                    OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FGizmoElementMaterialAttribute)            HoverMaterial                                               OFFSET(getStruct<T>, {0xC, 12, 0, 0})
+	SMember(FGizmoElementMaterialAttribute)            InteractMaterial                                            OFFSET(getStruct<T>, {0x18, 12, 0, 0})
+	SMember(FGizmoElementColorAttribute)               VertexColor                                                 OFFSET(getStruct<T>, {0x24, 20, 0, 0})
+	SMember(FGizmoElementColorAttribute)               HoverVertexColor                                            OFFSET(getStruct<T>, {0x38, 20, 0, 0})
+	SMember(FGizmoElementColorAttribute)               InteractVertexColor                                         OFFSET(getStruct<T>, {0x4C, 20, 0, 0})
 };
 
 /// Struct /Script/InteractiveToolsFramework.GizmoElementLineRenderStateAttributes
 /// Size: 0x003C (0x000000 - 0x00003C)
-class FGizmoElementLineRenderStateAttributes : public MDKStruct
+class FGizmoElementLineRenderStateAttributes : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 60;
 
 public:
-	SMember(FGizmoElementColorAttribute)               LineColor                                                   OFFSET(get<T>, {0x0, 20, 0, 0})
-	SMember(FGizmoElementColorAttribute)               HoverLineColor                                              OFFSET(get<T>, {0x14, 20, 0, 0})
-	SMember(FGizmoElementColorAttribute)               InteractLineColor                                           OFFSET(get<T>, {0x28, 20, 0, 0})
+	SMember(FGizmoElementColorAttribute)               LineColor                                                   OFFSET(getStruct<T>, {0x0, 20, 0, 0})
+	SMember(FGizmoElementColorAttribute)               HoverLineColor                                              OFFSET(getStruct<T>, {0x14, 20, 0, 0})
+	SMember(FGizmoElementColorAttribute)               InteractLineColor                                           OFFSET(getStruct<T>, {0x28, 20, 0, 0})
 };
 
 /// Struct /Script/InteractiveToolsFramework.GizmoFloatParameterChange
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FGizmoFloatParameterChange : public MDKStruct
+class FGizmoFloatParameterChange : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1910,8 +1916,9 @@ public:
 
 /// Struct /Script/InteractiveToolsFramework.BrushStampData
 /// Size: 0x0120 (0x000000 - 0x000120)
-class FBrushStampData : public MDKStruct
+class FBrushStampData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -1920,8 +1927,9 @@ public:
 
 /// Struct /Script/InteractiveToolsFramework.BehaviorInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FBehaviorInfo : public MDKStruct
+class FBehaviorInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1931,15 +1939,16 @@ public:
 
 /// Struct /Script/InteractiveToolsFramework.InputRayHit
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FInputRayHit : public MDKStruct
+class FInputRayHit : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	DMember(bool)                                      bHit                                                        OFFSET(get<bool>, {0x0, 1, 0, 0})
 	DMember(double)                                    HitDepth                                                    OFFSET(get<double>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   HitNormal                                                   OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   HitNormal                                                   OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	DMember(bool)                                      bHasHitNormal                                               OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(int32_t)                                   HitIdentifier                                               OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  HitObject                                                   OFFSET(get<T>, {0x38, 8, 0, 0})
@@ -1947,21 +1956,23 @@ public:
 
 /// Struct /Script/InteractiveToolsFramework.InputDeviceRay
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FInputDeviceRay : public MDKStruct
+class FInputDeviceRay : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FRay)                                      WorldRay                                                    OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FRay)                                      WorldRay                                                    OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	DMember(bool)                                      bHas2D                                                      OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FVector2D)                                 ScreenPosition                                              OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FVector2D)                                 ScreenPosition                                              OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/InteractiveToolsFramework.ActiveGizmo
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FActiveGizmo : public MDKStruct
+class FActiveGizmo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 

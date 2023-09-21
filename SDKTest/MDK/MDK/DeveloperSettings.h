@@ -50,8 +50,9 @@ public:
 
 /// Struct /Script/DeveloperSettings.PerPlatformSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPerPlatformSettings : public MDKStruct
+class FPerPlatformSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -61,8 +62,9 @@ public:
 
 /// Struct /Script/DeveloperSettings.PlatformSettingsInstances
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FPlatformSettingsInstances : public MDKStruct
+class FPlatformSettingsInstances : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 

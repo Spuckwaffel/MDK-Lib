@@ -28,7 +28,7 @@ class AGCNL_EdgeOfStorm_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2473;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          Audio                                                       OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          StormPawn                                                   OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	DMember(bool)                                      bBoundAudioPercent                                          OFFSET(get<bool>, {0x9A8, 1, 0, 0})
@@ -67,7 +67,7 @@ class AGCN_RezIn_C : public AFortGameplayCueNotify_BurstLatent
 	static inline constexpr uint64_t __MDKClassSize = 1808;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	DMember(float)                                     TFX_ResOutCharacterMesh_LightIntensity_81C5527F43A6972D94623590BA582E8C OFFSET(get<float>, {0x550, 4, 0, 0})
 	DMember(float)                                     TFX_ResOutCharacterMesh_ZHeightParam_81C5527F43A6972D94623590BA582E8C OFFSET(get<float>, {0x554, 4, 0, 0})
 	DMember(float)                                     TFX_ResOutCharacterMesh_TransitionParam_81C5527F43A6972D94623590BA582E8C OFFSET(get<float>, {0x558, 4, 0, 0})
@@ -82,22 +82,22 @@ public:
 	DMember(double)                                    Teleport_Bot_AnimPlayRate                                   OFFSET(get<double>, {0x588, 8, 0, 0})
 	DMember(double)                                    Teleport_Bot_Lifespan                                       OFFSET(get<double>, {0x590, 8, 0, 0})
 	CMember(UPointLightComponent*)                     Teleportation_Point_Light                                   OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(FVector)                                   Teleportation_Light_Offset                                  OFFSET(get<T>, {0x5A0, 24, 0, 0})
-	SMember(FLinearColor)                              Teleportation_Light_Color                                   OFFSET(get<T>, {0x5B8, 16, 0, 0})
+	SMember(FVector)                                   Teleportation_Light_Offset                                  OFFSET(getStruct<T>, {0x5A0, 24, 0, 0})
+	SMember(FLinearColor)                              Teleportation_Light_Color                                   OFFSET(getStruct<T>, {0x5B8, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         DissolveMIDs                                                OFFSET(get<T>, {0x5C8, 16, 0, 0})
 	CMember(UMaterialInterface*)                       Mat_Chracter_Dissolve                                       OFFSET(get<T>, {0x5D8, 8, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     Pawn                                                        OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(TSet<USkeletalMeshComponent*>)             Dissolve                                                    OFFSET(get<T>, {0x5E8, 80, 0, 0})
-	SMember(FName)                                     Socket_Mesh_Top                                             OFFSET(get<T>, {0x638, 4, 0, 0})
+	SMember(FName)                                     Socket_Mesh_Top                                             OFFSET(getStruct<T>, {0x638, 4, 0, 0})
 	DMember(double)                                    Max_Light_Intensity                                         OFFSET(get<double>, {0x640, 8, 0, 0})
-	SMember(FName)                                     Socket_Mesh_Bottom                                          OFFSET(get<T>, {0x648, 4, 0, 0})
+	SMember(FName)                                     Socket_Mesh_Bottom                                          OFFSET(getStruct<T>, {0x648, 4, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           Meshes_to_Dissolve                                          OFFSET(get<T>, {0x650, 16, 0, 0})
 	CMember(ABP_TeleportationDrone_C*)                 Drone                                                       OFFSET(get<T>, {0x660, 8, 0, 0})
 	DMember(bool)                                      DEBUG_CHILDCOMPONENTS                                       OFFSET(get<bool>, {0x668, 1, 0, 0})
 	CMember(TArray<UFXSystemComponent*>)               Particle_Components                                         OFFSET(get<T>, {0x670, 16, 0, 0})
 	CMember(UNiagaraComponent*)                        Spawned_Teleport_VFX                                        OFFSET(get<T>, {0x680, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           Teleport_In_Visual_Effect                                   OFFSET(get<T>, {0x688, 8, 0, 0})
-	SMember(FName)                                     Teleport_In_VFX_Attach_Point_Name                           OFFSET(get<T>, {0x690, 4, 0, 0})
+	SMember(FName)                                     Teleport_In_VFX_Attach_Point_Name                           OFFSET(getStruct<T>, {0x690, 4, 0, 0})
 	DMember(int32_t)                                   Cur_Dissolve_Setup_Attempt                                  OFFSET(get<int32_t>, {0x694, 4, 0, 0})
 	DMember(int32_t)                                   AmountOfTimesToAttemptRestoreMats                           OFFSET(get<int32_t>, {0x698, 4, 0, 0})
 	DMember(bool)                                      Spawn_VFX_Attached                                          OFFSET(get<bool>, {0x69C, 1, 0, 0})
@@ -105,10 +105,10 @@ public:
 	DMember(double)                                    Glow_Timeline_Playrate                                      OFFSET(get<double>, {0x6A8, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           Drone_Visual_Effect                                         OFFSET(get<T>, {0x6B0, 8, 0, 0})
 	DMember(bool)                                      DEBUG_TESTJANUSFX                                           OFFSET(get<bool>, {0x6B8, 1, 0, 0})
-	SMember(FName)                                     Drone_VFX_Attach_Point                                      OFFSET(get<T>, {0x6BC, 4, 0, 0})
-	SMember(FGuid)                                     Material_Override_ID                                        OFFSET(get<T>, {0x6C0, 16, 0, 0})
-	SMember(FFortPawnMaterialOverrideCopiedParameters) Copied_Parameters                                           OFFSET(get<T>, {0x6D0, 48, 0, 0})
-	SMember(FDelegateHandleController)                 Delegate_Handle_Controller                                  OFFSET(get<T>, {0x700, 16, 0, 0})
+	SMember(FName)                                     Drone_VFX_Attach_Point                                      OFFSET(getStruct<T>, {0x6BC, 4, 0, 0})
+	SMember(FGuid)                                     Material_Override_ID                                        OFFSET(getStruct<T>, {0x6C0, 16, 0, 0})
+	SMember(FFortPawnMaterialOverrideCopiedParameters) Copied_Parameters                                           OFFSET(getStruct<T>, {0x6D0, 48, 0, 0})
+	SMember(FDelegateHandleController)                 Delegate_Handle_Controller                                  OFFSET(getStruct<T>, {0x700, 16, 0, 0})
 
 
 	/// Functions
@@ -162,7 +162,7 @@ class AGCN_RezOut_C : public AFortGameplayCueNotify_BurstLatent
 	static inline constexpr uint64_t __MDKClassSize = 1848;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	DMember(float)                                     TFX_ResOutCharacterMesh_LightIntensity_E9C2D3554642468472CCCFA609A39FBC OFFSET(get<float>, {0x550, 4, 0, 0})
 	DMember(float)                                     TFX_ResOutCharacterMesh_ZHeightParam_E9C2D3554642468472CCCFA609A39FBC OFFSET(get<float>, {0x554, 4, 0, 0})
 	DMember(float)                                     TFX_ResOutCharacterMesh_TransitionParam_E9C2D3554642468472CCCFA609A39FBC OFFSET(get<float>, {0x558, 4, 0, 0})
@@ -177,22 +177,22 @@ public:
 	DMember(double)                                    Teleport_Bot_AnimPlayRate                                   OFFSET(get<double>, {0x588, 8, 0, 0})
 	DMember(double)                                    Teleport_Bot_Lifespan                                       OFFSET(get<double>, {0x590, 8, 0, 0})
 	CMember(UPointLightComponent*)                     Teleportation_Point_Light                                   OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(FVector)                                   Teleportation_Light_Offset                                  OFFSET(get<T>, {0x5A0, 24, 0, 0})
-	SMember(FLinearColor)                              Teleportation_Light_Color                                   OFFSET(get<T>, {0x5B8, 16, 0, 0})
+	SMember(FVector)                                   Teleportation_Light_Offset                                  OFFSET(getStruct<T>, {0x5A0, 24, 0, 0})
+	SMember(FLinearColor)                              Teleportation_Light_Color                                   OFFSET(getStruct<T>, {0x5B8, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         DissolveMIDs                                                OFFSET(get<T>, {0x5C8, 16, 0, 0})
 	CMember(UMaterialInterface*)                       Mat_Chracter_Dissolve                                       OFFSET(get<T>, {0x5D8, 8, 0, 0})
 	CMember(APlayerPawn_Athena_C*)                     Pawn                                                        OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(TSet<USkeletalMeshComponent*>)             Dissolve                                                    OFFSET(get<T>, {0x5E8, 80, 0, 0})
-	SMember(FName)                                     Socket_Mesh_Top                                             OFFSET(get<T>, {0x638, 4, 0, 0})
+	SMember(FName)                                     Socket_Mesh_Top                                             OFFSET(getStruct<T>, {0x638, 4, 0, 0})
 	DMember(double)                                    Max_Light_Intensity                                         OFFSET(get<double>, {0x640, 8, 0, 0})
-	SMember(FName)                                     Socket_Mesh_Bottom                                          OFFSET(get<T>, {0x648, 4, 0, 0})
+	SMember(FName)                                     Socket_Mesh_Bottom                                          OFFSET(getStruct<T>, {0x648, 4, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           Meshes_to_Dissolve                                          OFFSET(get<T>, {0x650, 16, 0, 0})
 	CMember(ABP_TeleportationDrone_C*)                 Drone                                                       OFFSET(get<T>, {0x660, 8, 0, 0})
 	DMember(bool)                                      DEBUG_CHILDCOMPONENTS                                       OFFSET(get<bool>, {0x668, 1, 0, 0})
 	CMember(TArray<UFXSystemComponent*>)               Particle_Components                                         OFFSET(get<T>, {0x670, 16, 0, 0})
 	CMember(UNiagaraComponent*)                        Spawned_Death_VFX                                           OFFSET(get<T>, {0x680, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           Dissolve_Visual_Effect                                      OFFSET(get<T>, {0x688, 8, 0, 0})
-	SMember(FName)                                     Dissolve_VFX_Spawn_Point_Name                               OFFSET(get<T>, {0x690, 4, 0, 0})
+	SMember(FName)                                     Dissolve_VFX_Spawn_Point_Name                               OFFSET(getStruct<T>, {0x690, 4, 0, 0})
 	CMember(UAnimMontage*)                             Base_Elimination_Montage                                    OFFSET(get<T>, {0x698, 8, 0, 0})
 	CMember(UAnimMontage*)                             DBNO_Elimination_Montage                                    OFFSET(get<T>, {0x6A0, 8, 0, 0})
 	CMember(UAnimMontage*)                             Skydiving_Elimination_Montage                               OFFSET(get<T>, {0x6A8, 8, 0, 0})
@@ -204,12 +204,12 @@ public:
 	DMember(bool)                                      DEBUG_REMOVESPAWNVFX                                        OFFSET(get<bool>, {0x6D8, 1, 0, 0})
 	DMember(bool)                                      DEBUG_REMOVESPAWNEDPOINTLIGHT                               OFFSET(get<bool>, {0x6D9, 1, 0, 0})
 	CMember(UNiagaraSystem*)                           Drone_Visual_Effect                                         OFFSET(get<T>, {0x6E0, 8, 0, 0})
-	SMember(FName)                                     Drone_VFX_Attach_Point                                      OFFSET(get<T>, {0x6E8, 4, 0, 0})
+	SMember(FName)                                     Drone_VFX_Attach_Point                                      OFFSET(getStruct<T>, {0x6E8, 4, 0, 0})
 	DMember(bool)                                      DEBUG_FXSYSTEMCOMPONENTS                                    OFFSET(get<bool>, {0x6EC, 1, 0, 0})
 	DMember(bool)                                      ShouldDelayBetweenAnimAndVFX                                OFFSET(get<bool>, {0x6ED, 1, 0, 0})
 	DMember(double)                                    DelayBetweenAnimAndVFX                                      OFFSET(get<double>, {0x6F0, 8, 0, 0})
-	SMember(FGuid)                                     Material_Override_ID                                        OFFSET(get<T>, {0x6F8, 16, 0, 0})
-	SMember(FFortPawnMaterialOverrideCopiedParameters) Copied_Parameters                                           OFFSET(get<T>, {0x708, 48, 0, 0})
+	SMember(FGuid)                                     Material_Override_ID                                        OFFSET(getStruct<T>, {0x6F8, 16, 0, 0})
+	SMember(FFortPawnMaterialOverrideCopiedParameters) Copied_Parameters                                           OFFSET(getStruct<T>, {0x708, 48, 0, 0})
 
 
 	/// Functions
@@ -273,7 +273,7 @@ class AGC_Abilities_Death_FadeCapsule_Athena_C : public AFortGameplayCueNotify_B
 	static inline constexpr uint64_t __MDKClassSize = 1400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	DMember(float)                                     CapsuleFadeTL_RemoveShadow_B48F4431426ECD264BA37C992B6887C3 OFFSET(get<float>, {0x550, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           CapsuleFadeTL__Direction_B48F4431426ECD264BA37C992B6887C3   OFFSET(get<T>, {0x554, 1, 0, 0})
 	CMember(UTimelineComponent*)                       CapsuleFadeTL                                               OFFSET(get<T>, {0x558, 8, 0, 0})
@@ -302,7 +302,7 @@ class AGC_Abilities_Death_FadeCapsule_StW_C : public AFortGameplayCueNotify_Burs
 	static inline constexpr uint64_t __MDKClassSize = 1400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x548, 8, 0, 0})
 	DMember(float)                                     CapsuleFadeTL_RemoveShadow_D18D776D462C2233B7D3E1B7577403C1 OFFSET(get<float>, {0x550, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           CapsuleFadeTL__Direction_D18D776D462C2233B7D3E1B7577403C1   OFFSET(get<T>, {0x554, 1, 0, 0})
 	CMember(UTimelineComponent*)                       CapsuleFadeTL                                               OFFSET(get<T>, {0x558, 8, 0, 0})
@@ -331,7 +331,7 @@ class AGCN_RezOut_NPC_C : public AGCN_RezOut_C
 	static inline constexpr uint64_t __MDKClassSize = 1864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x738, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x738, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnNPCDeath                                             OFFSET(get<T>, {0x740, 8, 0, 0})
 
 
@@ -350,7 +350,7 @@ class AGCN_NPC_Interaction_RezOut_Glitch_C : public AGCN_RezOut_C
 	static inline constexpr uint64_t __MDKClassSize = 1864;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x738, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x738, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnNPCDeath                                             OFFSET(get<T>, {0x740, 8, 0, 0})
 
 
@@ -369,7 +369,7 @@ class AGCNL_Athena_Player_TacticalSprint_EnergyDrain_C : public AFortGameplayCue
 	static inline constexpr uint64_t __MDKClassSize = 2504;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(double)                                    FrequencyToCheckEnergy                                      OFFSET(get<double>, {0x998, 8, 0, 0})
 	CMember(TArray<UAudioComponent*>)                  Audio_Components                                            OFFSET(get<T>, {0x9A0, 16, 0, 0})
 	CMember(UTacticalSprintEnergyComponent_C*)         TacSprintComp                                               OFFSET(get<T>, {0x9B0, 8, 0, 0})
@@ -396,14 +396,14 @@ class AGCNL_Athena_Player_TacticalSprint_Speedlines_C : public AFortGameplayCueN
 	static inline constexpr uint64_t __MDKClassSize = 2520;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x990, 8, 0, 0})
 	DMember(double)                                    TimeBetweenLoopUpdates                                      OFFSET(get<double>, {0x998, 8, 0, 0})
 	CMember(TArray<UNiagaraComponent*>)                Particle_Components                                         OFFSET(get<T>, {0x9A0, 16, 0, 0})
 	CMember(ACharacter*)                               TargetCharacter                                             OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(bool)                                      IsLocallyViewed                                             OFFSET(get<bool>, {0x9B8, 1, 0, 0})
 	CMember(AFortPlayerPawn*)                          As_Fort_Player_Pawn                                         OFFSET(get<T>, {0x9C0, 8, 0, 0})
 	DMember(int32_t)                                   SurfaceTypeInt                                              OFFSET(get<int32_t>, {0x9C8, 4, 0, 0})
-	SMember(FTimerHandle)                              LoopUpdateTimer                                             OFFSET(get<T>, {0x9D0, 8, 0, 0})
+	SMember(FTimerHandle)                              LoopUpdateTimer                                             OFFSET(getStruct<T>, {0x9D0, 8, 0, 0})
 
 
 	/// Functions

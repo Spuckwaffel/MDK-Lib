@@ -19,7 +19,7 @@ public:
 	DMember(uint32_t)                                  VerseClassFlags                                             OFFSET(get<uint32_t>, {0xC0, 4, 0, 0})
 	CMember(UFunction*)                                InitFunction                                                OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(UVerseClass*)                              ModuleClass                                                 OFFSET(get<T>, {0xD0, 8, 0, 0})
-	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0xD8, 16, 0, 0})
+	SMember(FGuid)                                     Guid                                                        OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
 	CMember(UFunction*)                                FactoryFunction                                             OFFSET(get<T>, {0xE8, 8, 0, 0})
 	CMember(UFunction*)                                OverrideFactoryFunction                                     OFFSET(get<T>, {0xF0, 8, 0, 0})
 };
@@ -43,7 +43,7 @@ class UVerseDigest : public UObject
 
 public:
 	CMember(TArray<char>)                              DigestCode                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   ProjectName                                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ProjectName                                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(EVerseDigestVariant)                       Variant                                                     OFFSET(get<T>, {0x48, 1, 0, 0})
 	DMember(bool)                                      bCookAllVerseInternalDigests                                OFFSET(get<bool>, {0x49, 1, 0, 0})
 };
@@ -220,8 +220,9 @@ public:
 
 /// Struct /Script/Solaris.GenericKeyType
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGenericKeyType : public MDKStruct
+class FGenericKeyType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -230,8 +231,9 @@ public:
 
 /// Struct /Script/Solaris.GenericValueType
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGenericValueType : public MDKStruct
+class FGenericValueType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -240,22 +242,24 @@ public:
 
 /// Struct /Script/Solaris.VersePackageContainerSettings
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FVersePackageContainerSettings : public MDKStruct
+class FVersePackageContainerSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   VersePath                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   VersePath                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EVersePackageScope)                        VerseScope                                                  OFFSET(get<T>, {0x10, 1, 0, 0})
 	CMember(TArray<FString>)                           DependencyPackages                                          OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   VniDestDir                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   VniDestDir                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VerseSourceCode
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVerseSourceCode : public MDKStruct
+class FVerseSourceCode : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -265,29 +269,31 @@ public:
 
 /// Struct /Script/Solaris.VerseSourceFile
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FVerseSourceFile : public MDKStruct
+class FVerseSourceFile : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Filename                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FVerseSourceCode>)                  CodeChunks                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VersePackageContainer
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FVersePackageContainer : public MDKStruct
+class FVersePackageContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DirPath                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DirPath                                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(EVersePackageType)                         PackageType                                                 OFFSET(get<T>, {0x20, 1, 0, 0})
 	DMember(bool)                                      bEnableVerseAssetReflection                                 OFFSET(get<bool>, {0x21, 1, 0, 0})
-	SMember(FVersePackageContainerSettings)            Settings                                                    OFFSET(get<T>, {0x28, 56, 0, 0})
+	SMember(FVersePackageContainerSettings)            Settings                                                    OFFSET(getStruct<T>, {0x28, 56, 0, 0})
 	CMember(TArray<FVerseSourceFile>)                  SourceFiles                                                 OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<char>)                              AssetDigest                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(TArray<FString>)                           AssetDependencies                                           OFFSET(get<T>, {0x80, 16, 0, 0})
@@ -295,8 +301,9 @@ public:
 
 /// Struct /Script/Solaris.VerseProjectContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FVerseProjectContainer : public MDKStruct
+class FVerseProjectContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -306,8 +313,9 @@ public:
 
 /// Struct /Script/Solaris.GenericElementType
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FGenericElementType : public MDKStruct
+class FGenericElementType : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -316,19 +324,21 @@ public:
 
 /// Struct /Script/Solaris.VersePersistentVar
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FVersePersistentVar : public MDKStruct
+class FVersePersistentVar : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Path                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Path                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/Solaris.VerseSessionVar
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FVerseSessionVar : public MDKStruct
+class FVerseSessionVar : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

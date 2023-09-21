@@ -21,7 +21,7 @@ class UAudioComponentBase : public UEntityActorComponent
 
 public:
 	CMember(UVerseAssetPtr*)                           SoundAsset                                                  OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FActiveSoundInfo)                          ActiveSoundInfo                                             OFFSET(get<T>, {0x90, 8, 0, 0})
+	SMember(FActiveSoundInfo)                          ActiveSoundInfo                                             OFFSET(getStruct<T>, {0x90, 8, 0, 0})
 
 
 	/// Functions
@@ -55,7 +55,7 @@ class UDatastoreComponentBase : public UEntityActorPlayerComponent
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FDatastoreState)                           ReplicatedDatastoreState                                    OFFSET(get<T>, {0xD0, 296, 0, 0})
+	SMember(FDatastoreState)                           ReplicatedDatastoreState                                    OFFSET(getStruct<T>, {0xD0, 296, 0, 0})
 };
 
 /// Class /Script/VGameplayRst.VerseLevelStreamingPlayerControllerRpcComponent
@@ -76,8 +76,8 @@ class UVerseLevelStreamingComponentBase : public UEntityActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FVerseLevelStreamingLevelIdentifier)       NewLevel                                                    OFFSET(get<T>, {0x88, 40, 0, 0})
-	SMember(FVerseLevelStreamingLevelStatus)           LevelStatus                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FVerseLevelStreamingLevelIdentifier)       NewLevel                                                    OFFSET(getStruct<T>, {0x88, 40, 0, 0})
+	SMember(FVerseLevelStreamingLevelStatus)           LevelStatus                                                 OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 
 
 	/// Functions
@@ -124,7 +124,7 @@ class UVerseLightPropertiesBase : public UObject
 
 public:
 	DMember(float)                                     Intensity                                                   OFFSET(get<float>, {0x28, 4, 0, 0})
-	SMember(FLinearColor)                              LightColor                                                  OFFSET(get<T>, {0x2C, 16, 0, 0})
+	SMember(FLinearColor)                              LightColor                                                  OFFSET(getStruct<T>, {0x2C, 16, 0, 0})
 	CMember(ULightComponentBase*)                      LightComponent                                              OFFSET(get<T>, {0x40, 8, 0, 0})
 
 
@@ -212,8 +212,9 @@ public:
 
 /// Struct /Script/VGameplayRst.ActiveSoundInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FActiveSoundInfo : public MDKStruct
+class FActiveSoundInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -226,18 +227,20 @@ public:
 /// Size: 0x0014 (0x00000C - 0x000020)
 class FDatastoreEntry : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     KeyName                                                     OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FString)                                   ValueData                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FName)                                     KeyName                                                     OFFSET(getStruct<T>, {0xC, 4, 0, 0})
+	SMember(FString)                                   ValueData                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/VGameplayRst.DatastoreState
 /// Size: 0x0020 (0x000108 - 0x000128)
 class FDatastoreState : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
@@ -248,8 +251,9 @@ public:
 
 /// Struct /Script/VGameplayRst.VerseLevelStreamingLevelStatus
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FVerseLevelStreamingLevelStatus : public MDKStruct
+class FVerseLevelStreamingLevelStatus : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -260,13 +264,14 @@ public:
 
 /// Struct /Script/VGameplayRst.VerseLevelStreamingLevelIdentifier
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FVerseLevelStreamingLevelIdentifier : public MDKStruct
+class FVerseLevelStreamingLevelIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FSoftObjectPath)                           LevelPath                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   LevelNameOverride                                           OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FSoftObjectPath)                           LevelPath                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   LevelNameOverride                                           OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 

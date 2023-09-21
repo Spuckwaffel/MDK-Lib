@@ -45,19 +45,19 @@ class UBattlePassLandingPageButton : public UCommonButtonBase
 public:
 	CMember(EBattlePassView)                           SubPageType                                                 OFFSET(get<T>, {0x1470, 1, 0, 0})
 	CMember(EBattlePassFeatures)                       FeatureType                                                 OFFSET(get<T>, {0x1471, 1, 0, 0})
-	SMember(FBattlePassLandingPageEntryPreviewInfo)    PreviewInfo                                                 OFFSET(get<T>, {0x1478, 144, 0, 0})
+	SMember(FBattlePassLandingPageEntryPreviewInfo)    PreviewInfo                                                 OFFSET(getStruct<T>, {0x1478, 144, 0, 0})
 	DMember(bool)                                      bNeedsBattlePass                                            OFFSET(get<bool>, {0x1508, 1, 0, 0})
 	CMember(UFortChallengeBundleScheduleDefinition*)   DelayQuestSchedule                                          OFFSET(get<T>, {0x1510, 8, 0, 0})
 	DMember(int32_t)                                   DelayDaysSinceSeasonStart                                   OFFSET(get<int32_t>, {0x1518, 4, 0, 0})
 	CMember(UFortItemDefinition*)                      RequiredItem                                                OFFSET(get<T>, {0x1520, 8, 0, 0})
 	CMember(UFortBangWrapper_NUI*)                     BangWrapper                                                 OFFSET(get<T>, {0x1528, 8, 0, 0})
 	DMember(bool)                                      bUsesTelemetry                                              OFFSET(get<bool>, {0x1530, 1, 0, 0})
-	SMember(FIntPoint)                                 Telemetry_Size                                              OFFSET(get<T>, {0x1534, 8, 0, 0})
-	SMember(FIntPoint)                                 Telemetry_Position                                          OFFSET(get<T>, {0x153C, 8, 0, 0})
-	SMember(FBattlePassLandingPageButtonTexts)         DefaultTexts                                                OFFSET(get<T>, {0x1548, 72, 0, 0})
-	SMember(FBattlePassLandingPageButtonTexts)         DelayedTexts                                                OFFSET(get<T>, {0x1590, 72, 0, 0})
-	SMember(FBattlePassLandingPageButtonTexts)         SubscribedTexts                                             OFFSET(get<T>, {0x15D8, 72, 0, 0})
-	SMember(FBattlePassLandingPageButtonDisplayBehaviorData) DisplayBehaviorData                                   OFFSET(get<T>, {0x1620, 24, 0, 0})
+	SMember(FIntPoint)                                 Telemetry_Size                                              OFFSET(getStruct<T>, {0x1534, 8, 0, 0})
+	SMember(FIntPoint)                                 Telemetry_Position                                          OFFSET(getStruct<T>, {0x153C, 8, 0, 0})
+	SMember(FBattlePassLandingPageButtonTexts)         DefaultTexts                                                OFFSET(getStruct<T>, {0x1548, 72, 0, 0})
+	SMember(FBattlePassLandingPageButtonTexts)         DelayedTexts                                                OFFSET(getStruct<T>, {0x1590, 72, 0, 0})
+	SMember(FBattlePassLandingPageButtonTexts)         SubscribedTexts                                             OFFSET(getStruct<T>, {0x15D8, 72, 0, 0})
+	SMember(FBattlePassLandingPageButtonDisplayBehaviorData) DisplayBehaviorData                                   OFFSET(getStruct<T>, {0x1620, 24, 0, 0})
 
 
 	/// Functions
@@ -358,7 +358,7 @@ class UFortBattlePassRewardGrid : public UCommonActivatableWidget
 public:
 	CMember(UClass*)                                   GridTileClass                                               OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UClass*)                                   GridEmptyTileClass                                          OFFSET(get<T>, {0x458, 8, 0, 0})
-	SMember(FVector2D)                                 GridCellPadding                                             OFFSET(get<T>, {0x460, 16, 0, 0})
+	SMember(FVector2D)                                 GridCellPadding                                             OFFSET(getStruct<T>, {0x460, 16, 0, 0})
 	CMember(UFortBattlePassRewardGridHeader*)          PageHeader                                                  OFFSET(get<T>, {0x470, 8, 0, 0})
 	CMember(UGridPanel*)                               GridPanel_Rewards                                           OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UFortBattlePassTileBase*)                  DefaultFocusTile                                            OFFSET(get<T>, {0x480, 8, 0, 0})
@@ -393,7 +393,7 @@ public:
 	CMember(UClass*)                                   RewardTileClass                                             OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UClass*)                                   RewardEmptyTileClass                                        OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UClass*)                                   PrerequisiteHeaderClass                                     OFFSET(get<T>, {0x448, 8, 0, 0})
-	SMember(FVector2D)                                 GridCellPadding                                             OFFSET(get<T>, {0x450, 16, 0, 0})
+	SMember(FVector2D)                                 GridCellPadding                                             OFFSET(getStruct<T>, {0x450, 16, 0, 0})
 	CMember(UGridPanel*)                               GridPanel_Rewards                                           OFFSET(get<T>, {0x460, 8, 0, 0})
 	CMember(UFortBattlePassTileBase*)                  DefaultFocusTile                                            OFFSET(get<T>, {0x468, 8, 0, 0})
 	CMember(TWeakObjectPtr<UCommonButtonBase*>)        LastFocusedTile                                             OFFSET(get<T>, {0x470, 8, 0, 0})
@@ -417,8 +417,8 @@ public:
 	CMember(ERewardPageType)                           RewardPageType                                              OFFSET(get<T>, {0x1510, 1, 0, 0})
 	CMember(USizeBox*)                                 SizeBox_Content                                             OFFSET(get<T>, {0x1518, 8, 0, 0})
 	CMember(TMap<FName, FLinearColor>)                 TileColors                                                  OFFSET(get<T>, {0x1520, 80, 0, 0})
-	SMember(FLinearColor)                              OverlayDimColor                                             OFFSET(get<T>, {0x1570, 16, 0, 0})
-	SMember(FVector2D)                                 TileDesiredCellSpan                                         OFFSET(get<T>, {0x1580, 16, 0, 0})
+	SMember(FLinearColor)                              OverlayDimColor                                             OFFSET(getStruct<T>, {0x1570, 16, 0, 0})
+	SMember(FVector2D)                                 TileDesiredCellSpan                                         OFFSET(getStruct<T>, {0x1580, 16, 0, 0})
 	DMember(float)                                     UnitHeight                                                  OFFSET(get<float>, {0x1590, 4, 0, 0})
 	DMember(float)                                     UnitWidth                                                   OFFSET(get<float>, {0x1594, 4, 0, 0})
 
@@ -526,8 +526,9 @@ public:
 
 /// Struct /Script/BattlePassBase.BattlePassEntrySelectedParams
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FBattlePassEntrySelectedParams : public MDKStruct
+class FBattlePassEntrySelectedParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -536,8 +537,9 @@ public:
 
 /// Struct /Script/BattlePassBase.BattlePassCoverPageParams
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FBattlePassCoverPageParams : public MDKStruct
+class FBattlePassCoverPageParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -546,56 +548,60 @@ public:
 
 /// Struct /Script/BattlePassBase.BattlePassLandingPageButtonTexts
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FBattlePassLandingPageButtonTexts : public MDKStruct
+class FBattlePassLandingPageButtonTexts : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FText)                                     TileText                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     LandingPageTitleText                                        OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FText)                                     LandingPageDescriptionText                                  OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FText)                                     TileText                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     LandingPageTitleText                                        OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     LandingPageDescriptionText                                  OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/BattlePassBase.BattlePassLandingPageButtonDisplayBehaviorData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FBattlePassLandingPageButtonDisplayBehaviorData : public MDKStruct
+class FBattlePassLandingPageButtonDisplayBehaviorData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FBattlePassLandingPageButtonDisplayBehavior) DisplayBehavior                                           OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FTimespan)                                 BehaviorTimespan                                            OFFSET(get<T>, {0x8, 8, 0, 0})
+	SMember(FBattlePassLandingPageButtonDisplayBehavior) DisplayBehavior                                           OFFSET(getStruct<T>, {0x0, 1, 0, 0})
+	SMember(FTimespan)                                 BehaviorTimespan                                            OFFSET(getStruct<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bIsDisplayActive                                            OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/BattlePassBase.BattlePassLandingPageButtonDisplayDetails
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FBattlePassLandingPageButtonDisplayDetails : public MDKStruct
+class FBattlePassLandingPageButtonDisplayDetails : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FBattlePassLandingPageButtonTexts)         ButtonTexts                                                 OFFSET(get<T>, {0x0, 72, 0, 0})
+	SMember(FBattlePassLandingPageButtonTexts)         ButtonTexts                                                 OFFSET(getStruct<T>, {0x0, 72, 0, 0})
 	DMember(bool)                                      bIsBPLocked                                                 OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FText)                                     MissingCosmeticNameText                                     OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FTimespan)                                 DelayTimespan                                               OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FText)                                     MissingCosmeticNameText                                     OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FTimespan)                                 DelayTimespan                                               OFFSET(getStruct<T>, {0x68, 8, 0, 0})
 };
 
 /// Struct /Script/BattlePassBase.BattlePassLandingPageEntryPreviewInfo
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FBattlePassLandingPageEntryPreviewInfo : public MDKStruct
+class FBattlePassLandingPageEntryPreviewInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	CMember(EBattlePassLandingPageSpecialEntryType)    SpecialEntryType                                            OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(TArray<EFortItemType>)                     SubscriptionItemTypesToDisplay                              OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FGameplayTag)                              SpecialCharacterVariantChannelToModify                      OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FGameplayTag)                              SpecialCharacterActiveVariantTag                            OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FGameplayTag)                              SpecialCharacterVariantChannelToModify                      OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FGameplayTag)                              SpecialCharacterActiveVariantTag                            OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 	CMember(TMap<FString, TWeakObjectPtr>)             TemplateIdTileRenderMap                                     OFFSET(get<T>, {0x20, 80, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    PreviewItems                                                OFFSET(get<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bEnableDynamicWeeklyPreview                                 OFFSET(get<bool>, {0x80, 1, 0, 0})
@@ -604,8 +610,9 @@ public:
 
 /// Struct /Script/BattlePassBase.SeasonalResourceList
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSeasonalResourceList : public MDKStruct
+class FSeasonalResourceList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

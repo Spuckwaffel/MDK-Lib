@@ -39,20 +39,22 @@ public:
 
 /// Struct /Script/AssetRegistry.TagAndValue
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTagAndValue : public MDKStruct
+class FTagAndValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     tag                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     tag                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/AssetRegistry.AssetRegistryDependencyOptions
 /// Size: 0x0005 (0x000000 - 0x000005)
-class FAssetRegistryDependencyOptions : public MDKStruct
+class FAssetRegistryDependencyOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 5;
 

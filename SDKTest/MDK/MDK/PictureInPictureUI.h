@@ -52,17 +52,17 @@ class UPictureInPicturePanelWidget : public UCommonActivatableWidget
 
 public:
 	CMember(USizeBox*)                                 Video_Size_Box                                              OFFSET(get<T>, {0x3F0, 8, 0, 0})
-	SMember(FVector2D)                                 StandardVideoSize                                           OFFSET(get<T>, {0x3F8, 16, 0, 0})
-	SMember(FVector2D)                                 StandardVideoTranslation                                    OFFSET(get<T>, {0x408, 16, 0, 0})
-	SMember(FMargin)                                   FrontEndSubtitleMargin                                      OFFSET(get<T>, {0x418, 16, 0, 0})
-	SMember(FMargin)                                   GameSubtitleMargin                                          OFFSET(get<T>, {0x428, 16, 0, 0})
+	SMember(FVector2D)                                 StandardVideoSize                                           OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
+	SMember(FVector2D)                                 StandardVideoTranslation                                    OFFSET(getStruct<T>, {0x408, 16, 0, 0})
+	SMember(FMargin)                                   FrontEndSubtitleMargin                                      OFFSET(getStruct<T>, {0x418, 16, 0, 0})
+	SMember(FMargin)                                   GameSubtitleMargin                                          OFFSET(getStruct<T>, {0x428, 16, 0, 0})
 	CMember(UImage*)                                   Image_Movie                                                 OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         Image_Thumbnail_Prev                                        OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         Image_Thumbnail_Next                                        OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UNamedSlot*)                               MetadataOverlaySlot                                         OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_Main                                                OFFSET(get<T>, {0x458, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_Keybind                                             OFFSET(get<T>, {0x460, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       PressedObjectInputAction                                    OFFSET(get<T>, {0x468, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PressedObjectInputAction                                    OFFSET(getStruct<T>, {0x468, 16, 0, 0})
 	CMember(UPictureInPicturePartnerControls*)         CurrentPartner                                              OFFSET(get<T>, {0x480, 8, 0, 0})
 	DMember(bool)                                      bEnableUCPCheck                                             OFFSET(get<bool>, {0x488, 1, 0, 0})
 	CMember(UClass*)                                   SourcePickerClass                                           OFFSET(get<T>, {0x490, 8, 0, 0})
@@ -71,7 +71,7 @@ public:
 	CMember(UCommonActivatableWidget*)                 SourcePickerWidget                                          OFFSET(get<T>, {0x4A8, 8, 0, 0})
 	CMember(UPictureInPicturePlayer*)                  VideoWidget                                                 OFFSET(get<T>, {0x4B0, 8, 0, 0})
 	CMember(UAudioComponent*)                          PIPSoundComponent                                           OFFSET(get<T>, {0x4D8, 8, 0, 0})
-	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(get<T>, {0x4E0, 488, 0, 0})
+	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(getStruct<T>, {0x4E0, 488, 0, 0})
 	CMember(USubtitleDisplay*)                         Subtitles                                                   OFFSET(get<T>, {0x6D0, 8, 0, 0})
 
 
@@ -110,12 +110,12 @@ class UPictureInPictureSourcePicker : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1504;
 
 public:
-	SMember(FVector2D)                                 FullScreenTranslation                                       OFFSET(get<T>, {0x3F0, 16, 0, 0})
-	SMember(FVector2D)                                 StandardTranslation                                         OFFSET(get<T>, {0x400, 16, 0, 0})
+	SMember(FVector2D)                                 FullScreenTranslation                                       OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
+	SMember(FVector2D)                                 StandardTranslation                                         OFFSET(getStruct<T>, {0x400, 16, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_Main                                            OFFSET(get<T>, {0x410, 8, 0, 0})
-	SMember(FSlateBrush)                               FullScreenActionBrush                                       OFFSET(get<T>, {0x420, 192, 0, 0})
-	SMember(FSlateBrush)                               StandardScreenActionBrush                                   OFFSET(get<T>, {0x4E0, 192, 0, 0})
-	SMember(FPrimaryContentSetup)                      PrimaryContentSetup                                         OFFSET(get<T>, {0x5A1, 3, 0, 0})
+	SMember(FSlateBrush)                               FullScreenActionBrush                                       OFFSET(getStruct<T>, {0x420, 192, 0, 0})
+	SMember(FSlateBrush)                               StandardScreenActionBrush                                   OFFSET(getStruct<T>, {0x4E0, 192, 0, 0})
+	SMember(FPrimaryContentSetup)                      PrimaryContentSetup                                         OFFSET(getStruct<T>, {0x5A1, 3, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemName                                               OFFSET(get<T>, {0x5A8, 8, 0, 0})
 	CMember(UFortPickerOverlay*)                       PickerOverlay_MediaSource                                   OFFSET(get<T>, {0x5B0, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_Main                                                OFFSET(get<T>, {0x5B8, 8, 0, 0})

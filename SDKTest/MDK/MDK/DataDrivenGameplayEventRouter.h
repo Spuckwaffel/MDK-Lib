@@ -30,8 +30,9 @@ public:
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventDefinition
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGameplayEventDefinition : public MDKStruct
+class FGameplayEventDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -43,8 +44,9 @@ public:
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventDescriptor
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FGameplayEventDescriptor : public MDKStruct
+class FGameplayEventDescriptor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -53,46 +55,50 @@ public:
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventSubscription
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FGameplayEventSubscription : public MDKStruct
+class FGameplayEventSubscription : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(TWeakObjectPtr<UObject*>)                  Object                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FMemberReference)                          EventDescriptor                                             OFFSET(get<T>, {0x20, 48, 0, 0})
-	SMember(FGameplayEventListenerHandle)              EventHandle                                                 OFFSET(get<T>, {0x50, 28, 0, 0})
+	SMember(FMemberReference)                          EventDescriptor                                             OFFSET(getStruct<T>, {0x20, 48, 0, 0})
+	SMember(FGameplayEventListenerHandle)              EventHandle                                                 OFFSET(getStruct<T>, {0x50, 28, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventHandlerFunction
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FGameplayEventHandlerFunction : public MDKStruct
+class FGameplayEventHandlerFunction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMemberReference)                          EventHandlerFunction                                        OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FMemberReference)                          EventHandlerFunction                                        OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 	CMember(TMap<FName, FString>)                      EventHandlerFunctionDefaultValues                           OFFSET(get<T>, {0x30, 80, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventHandlerFunctions
 /// Size: 0x0180 (0x000000 - 0x000180)
-class FGameplayEventHandlerFunctions : public MDKStruct
+class FGameplayEventHandlerFunctions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FGameplayEventHandlerFunction)             OnEventReceived                                             OFFSET(get<T>, {0x0, 128, 0, 0})
-	SMember(FGameplayEventHandlerFunction)             OnStatefulEventApplied                                      OFFSET(get<T>, {0x80, 128, 0, 0})
-	SMember(FGameplayEventHandlerFunction)             OnStatefulEventCleared                                      OFFSET(get<T>, {0x100, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnEventReceived                                             OFFSET(getStruct<T>, {0x0, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnStatefulEventApplied                                      OFFSET(getStruct<T>, {0x80, 128, 0, 0})
+	SMember(FGameplayEventHandlerFunction)             OnStatefulEventCleared                                      OFFSET(getStruct<T>, {0x100, 128, 0, 0})
 };
 
 /// Struct /Script/DataDrivenGameplayEventRouter.GameplayEventFunction
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGameplayEventFunction : public MDKStruct
+class FGameplayEventFunction : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

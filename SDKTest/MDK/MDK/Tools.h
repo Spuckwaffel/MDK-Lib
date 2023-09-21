@@ -16,10 +16,10 @@ class ASunDirectionandColorSet_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FLinearColor)                              SunLightColor                                               OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	SMember(FLinearColor)                              SunLightColor                                               OFFSET(getStruct<T>, {0x2A8, 16, 0, 0})
 
 
 	/// Functions

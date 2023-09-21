@@ -159,14 +159,15 @@ class UGLTFMaterialExportOptions : public UAssetUserData
 
 public:
 	CMember(UMaterialInterface*)                       Proxy                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
-	SMember(FGLTFOverrideMaterialBakeSettings)         Default                                                     OFFSET(get<T>, {0x30, 6, 0, 0})
+	SMember(FGLTFOverrideMaterialBakeSettings)         Default                                                     OFFSET(getStruct<T>, {0x30, 6, 0, 0})
 	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) Inputs                            OFFSET(get<T>, {0x38, 80, 0, 0})
 };
 
 /// Struct /Script/GLTFExporter.GLTFExportMessages
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FGLTFExportMessages : public MDKStruct
+class FGLTFExportMessages : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -178,8 +179,9 @@ public:
 
 /// Struct /Script/GLTFExporter.GLTFOverrideMaterialBakeSettings
 /// Size: 0x0006 (0x000000 - 0x000006)
-class FGLTFOverrideMaterialBakeSettings : public MDKStruct
+class FGLTFOverrideMaterialBakeSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 6;
 

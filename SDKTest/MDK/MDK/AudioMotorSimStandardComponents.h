@@ -23,7 +23,7 @@ public:
 	DMember(bool)                                      ScaleThrottleWithBoostStrength                              OFFSET(get<bool>, {0xB4, 1, 0, 0})
 	DMember(bool)                                      bModifyPitch                                                OFFSET(get<bool>, {0xB5, 1, 0, 0})
 	DMember(float)                                     PitchModifierInterpSpeed                                    OFFSET(get<float>, {0xB8, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        BoostToPitchCurve                                           OFFSET(get<T>, {0xC0, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        BoostToPitchCurve                                           OFFSET(getStruct<T>, {0xC0, 136, 0, 0})
 };
 
 /// Class /Script/AudioMotorSimStandardComponents.MotorPhysicsSimComponent
@@ -51,7 +51,7 @@ public:
 	DMember(float)                                     WindResistancePerVelocity                                   OFFSET(get<float>, {0xEC, 4, 0, 0})
 	DMember(float)                                     ThrottleInterpolationTime                                   OFFSET(get<float>, {0xF0, 4, 0, 0})
 	DMember(float)                                     RpmInterpSpeed                                              OFFSET(get<float>, {0xF4, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnGearChangedEvent                                          OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnGearChangedEvent                                          OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
 };
 
 /// Class /Script/AudioMotorSimStandardComponents.ResistanceMotorSimComponent
@@ -64,7 +64,7 @@ class UResistanceMotorSimComponent : public UAudioMotorSimComponent
 public:
 	DMember(float)                                     UpSpeedMaxFriction                                          OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     MinSpeed                                                    OFFSET(get<float>, {0xAC, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        SideSpeedFrictionCurve                                      OFFSET(get<T>, {0xB0, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        SideSpeedFrictionCurve                                      OFFSET(getStruct<T>, {0xB0, 136, 0, 0})
 };
 
 /// Class /Script/AudioMotorSimStandardComponents.ReverseMotorSimComponent
@@ -91,8 +91,8 @@ public:
 	DMember(float)                                     AirMaxThrottleTime                                          OFFSET(get<float>, {0xB0, 4, 0, 0})
 	DMember(float)                                     SideSpeedThreshold                                          OFFSET(get<float>, {0xB4, 4, 0, 0})
 	DMember(float)                                     LimiterMaxRpm                                               OFFSET(get<float>, {0xB8, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRevLimiterHit                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRevLimiterStateChanged                                    OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRevLimiterHit                                             OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRevLimiterStateChanged                                    OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 };
 
 /// Class /Script/AudioMotorSimStandardComponents.RpmCurveMotorSimComponent
@@ -105,8 +105,8 @@ class URpmCurveMotorSimComponent : public UAudioMotorSimComponent
 public:
 	CMember(TArray<FMotorSimGearCurve>)                Gears                                                       OFFSET(get<T>, {0xA8, 16, 0, 0})
 	DMember(float)                                     InterpSpeed                                                 OFFSET(get<float>, {0xB8, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpShift                                                   OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnDownShift                                                 OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpShift                                                   OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDownShift                                                 OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 };
 
 /// Class /Script/AudioMotorSimStandardComponents.ThrottleStateMotorSimComponent
@@ -117,9 +117,9 @@ class UThrottleStateMotorSimComponent : public UAudioMotorSimComponent
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnThrottleEngaged                                           OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnThrottleReleased                                          OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEngineBlowoff                                             OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnThrottleEngaged                                           OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnThrottleReleased                                          OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEngineBlowoff                                             OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 	DMember(float)                                     BlowoffMinThrottleTime                                      OFFSET(get<float>, {0xD8, 4, 0, 0})
 };
 
@@ -133,7 +133,7 @@ class UVelocitySyncMotorSimComponent : public UAudioMotorSimComponent
 public:
 	DMember(float)                                     NoThrottleTime                                              OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     SpeedThreshold                                              OFFSET(get<float>, {0xAC, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        SpeedToRpmCurve                                             OFFSET(get<T>, {0xB0, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        SpeedToRpmCurve                                             OFFSET(getStruct<T>, {0xB0, 136, 0, 0})
 	DMember(float)                                     InterpSpeed                                                 OFFSET(get<float>, {0x138, 4, 0, 0})
 	DMember(float)                                     InterpTime                                                  OFFSET(get<float>, {0x13C, 4, 0, 0})
 	DMember(float)                                     FirstGearThrottleThreshold                                  OFFSET(get<float>, {0x140, 4, 0, 0})
@@ -141,13 +141,14 @@ public:
 
 /// Struct /Script/AudioMotorSimStandardComponents.MotorSimGearCurve
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FMotorSimGearCurve : public MDKStruct
+class FMotorSimGearCurve : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FRuntimeFloatCurve)                        RpmCurve                                                    OFFSET(get<T>, {0x0, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        RpmCurve                                                    OFFSET(getStruct<T>, {0x0, 136, 0, 0})
 	DMember(float)                                     SpeedTopThreshold                                           OFFSET(get<float>, {0x88, 4, 0, 0})
 };
 

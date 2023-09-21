@@ -30,8 +30,9 @@ public:
 
 /// Struct /Script/StructUtils.InstancedStruct
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FInstancedStruct : public MDKStruct
+class FInstancedStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -40,8 +41,9 @@ public:
 
 /// Struct /Script/StructUtils.InstancedStructContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FInstancedStructContainer : public MDKStruct
+class FInstancedStructContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -50,8 +52,9 @@ public:
 
 /// Struct /Script/StructUtils.PropertyBagContainerTypes
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FPropertyBagContainerTypes : public MDKStruct
+class FPropertyBagContainerTypes : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
@@ -60,46 +63,50 @@ public:
 
 /// Struct /Script/StructUtils.PropertyBagPropertyDescMetaData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPropertyBagPropertyDescMetaData : public MDKStruct
+class FPropertyBagPropertyDescMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Key                                                         OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Key                                                         OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StructUtils.PropertyBagPropertyDesc
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FPropertyBagPropertyDesc : public MDKStruct
+class FPropertyBagPropertyDesc : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(UObject*)                                  ValueTypeObject                                             OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGuid)                                     ID                                                          OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FGuid)                                     ID                                                          OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 	CMember(EPropertyBagPropertyType)                  ValueType                                                   OFFSET(get<T>, {0x1C, 1, 0, 0})
-	SMember(FPropertyBagContainerTypes)                ContainerTypes                                              OFFSET(get<T>, {0x1D, 3, 0, 0})
+	SMember(FPropertyBagContainerTypes)                ContainerTypes                                              OFFSET(getStruct<T>, {0x1D, 3, 0, 0})
 };
 
 /// Struct /Script/StructUtils.InstancedPropertyBag
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FInstancedPropertyBag : public MDKStruct
+class FInstancedPropertyBag : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FInstancedStruct)                          Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedStruct)                          Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/StructUtils.PropertyBagMissingStruct
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FPropertyBagMissingStruct : public MDKStruct
+class FPropertyBagMissingStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -108,8 +115,9 @@ public:
 
 /// Struct /Script/StructUtils.SharedStruct
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSharedStruct : public MDKStruct
+class FSharedStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -118,8 +126,9 @@ public:
 
 /// Struct /Script/StructUtils.ConstSharedStruct
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FConstSharedStruct : public MDKStruct
+class FConstSharedStruct : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

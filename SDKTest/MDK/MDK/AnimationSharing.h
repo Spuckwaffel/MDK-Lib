@@ -121,27 +121,29 @@ class UAnimationSharingSetup : public UObject
 
 public:
 	CMember(TArray<FPerSkeletonAnimationSharingSetup>) SkeletonSetups                                              OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FAnimationSharingScalability)              ScalabilitySettings                                         OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FAnimationSharingScalability)              ScalabilitySettings                                         OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/AnimationSharing.AnimationSetup
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FAnimationSetup : public MDKStruct
+class FAnimationSetup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UAnimSequence*)                            AnimSequence                                                OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UClass*)                                   AnimBlueprint                                               OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FPerPlatformInt)                           NumRandomizedInstances                                      OFFSET(get<T>, {0x10, 4, 0, 0})
-	SMember(FPerPlatformBool)                          Enabled                                                     OFFSET(get<T>, {0x14, 1, 0, 0})
+	SMember(FPerPlatformInt)                           NumRandomizedInstances                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
+	SMember(FPerPlatformBool)                          Enabled                                                     OFFSET(getStruct<T>, {0x14, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationSharing.AnimationStateEntry
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FAnimationStateEntry : public MDKStruct
+class FAnimationStateEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -154,15 +156,16 @@ public:
 	DMember(bool)                                      bReturnToPreviousState                                      OFFSET(get<bool>, {0x20, 1, 0, 0})
 	DMember(bool)                                      bSetNextState                                               OFFSET(get<bool>, {0x21, 1, 0, 0})
 	DMember(char)                                      NextState                                                   OFFSET(get<char>, {0x22, 1, 0, 0})
-	SMember(FPerPlatformInt)                           MaximumNumberOfConcurrentInstances                          OFFSET(get<T>, {0x24, 4, 0, 0})
+	SMember(FPerPlatformInt)                           MaximumNumberOfConcurrentInstances                          OFFSET(getStruct<T>, {0x24, 4, 0, 0})
 	DMember(float)                                     WiggleTimePercentage                                        OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(bool)                                      bRequiresCurves                                             OFFSET(get<bool>, {0x2C, 1, 0, 0})
 };
 
 /// Struct /Script/AnimationSharing.PerSkeletonAnimationSharingSetup
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FPerSkeletonAnimationSharingSetup : public MDKStruct
+class FPerSkeletonAnimationSharingSetup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -177,22 +180,24 @@ public:
 
 /// Struct /Script/AnimationSharing.AnimationSharingScalability
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FAnimationSharingScalability : public MDKStruct
+class FAnimationSharingScalability : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FPerPlatformBool)                          UseBlendTransitions                                         OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FPerPlatformFloat)                         BlendSignificanceValue                                      OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FPerPlatformInt)                           MaximumNumberConcurrentBlends                               OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FPerPlatformFloat)                         TickSignificanceValue                                       OFFSET(get<T>, {0xC, 4, 0, 0})
+	SMember(FPerPlatformBool)                          UseBlendTransitions                                         OFFSET(getStruct<T>, {0x0, 1, 0, 0})
+	SMember(FPerPlatformFloat)                         BlendSignificanceValue                                      OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FPerPlatformInt)                           MaximumNumberConcurrentBlends                               OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FPerPlatformFloat)                         TickSignificanceValue                                       OFFSET(getStruct<T>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/AnimationSharing.TickAnimationSharingFunction
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FTickAnimationSharingFunction : public FTickFunction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 

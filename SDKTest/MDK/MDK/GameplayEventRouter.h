@@ -16,7 +16,7 @@ class UAsyncAction_StartListeningToEvent : public UBlueprintAsyncActionBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 
 
 	/// Functions
@@ -36,9 +36,9 @@ class UAsyncAction_StartListeningToStatefulEvent : public UBlueprintAsyncActionB
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSavedEventStateExists                                     OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnEventStateCleared                                         OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSavedEventStateExists                                     OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEventStateCleared                                         OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 
 
 	/// Functions
@@ -82,8 +82,9 @@ public:
 
 /// Struct /Script/GameplayEventRouter.GameplayEventId
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGameplayEventId : public MDKStruct
+class FGameplayEventId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -92,8 +93,9 @@ public:
 
 /// Struct /Script/GameplayEventRouter.GameplayEventListenerHandle
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FGameplayEventListenerHandle : public MDKStruct
+class FGameplayEventListenerHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -103,8 +105,9 @@ public:
 
 /// Struct /Script/GameplayEventRouter.GameplayEventListenerData
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FGameplayEventListenerData : public MDKStruct
+class FGameplayEventListenerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
@@ -115,8 +118,9 @@ public:
 
 /// Struct /Script/GameplayEventRouter.GameplayEventListenerList
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FGameplayEventListenerList : public MDKStruct
+class FGameplayEventListenerList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 

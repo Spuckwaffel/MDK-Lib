@@ -199,8 +199,9 @@ public:
 
 /// Struct /Script/NearestNeighborModel.NearestNeighborNetworkParameter
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNearestNeighborNetworkParameter : public MDKStruct
+class FNearestNeighborNetworkParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -211,8 +212,9 @@ public:
 
 /// Struct /Script/NearestNeighborModel.SkeletonCachePair
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSkeletonCachePair : public MDKStruct
+class FSkeletonCachePair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -223,21 +225,23 @@ public:
 
 /// Struct /Script/NearestNeighborModel.ClothPartEditorData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FClothPartEditorData : public MDKStruct
+class FClothPartEditorData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   PCACoeffNum                                                 OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   VertexMapPath                                               OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   VertexMapPath                                               OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   MeshIndex                                                   OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/NearestNeighborModel.ClothPartData
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FClothPartData : public MDKStruct
+class FClothPartData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 

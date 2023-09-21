@@ -20,8 +20,9 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionQueryDefinition
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FWorldConditionQueryDefinition : public MDKStruct
+class FWorldConditionQueryDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -31,8 +32,9 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionBase
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FWorldConditionBase : public MDKStruct
+class FWorldConditionBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -46,6 +48,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FWorldConditionCommonBase : public FWorldConditionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -56,6 +59,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FWorldConditionCommonActorBase : public FWorldConditionBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -64,8 +68,9 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionEditable
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FWorldConditionEditable : public MDKStruct
+class FWorldConditionEditable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -74,20 +79,22 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionQuerySharedDefinition
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FWorldConditionQuerySharedDefinition : public MDKStruct
+class FWorldConditionQuerySharedDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FInstancedStructContainer)                 Conditions                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedStructContainer)                 Conditions                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(UClass*)                                   SchemaClass                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionItem
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FWorldConditionItem : public MDKStruct
+class FWorldConditionItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
@@ -96,8 +103,9 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionStateObject
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FWorldConditionStateObject : public MDKStruct
+class FWorldConditionStateObject : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -107,8 +115,9 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionQueryState
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FWorldConditionQueryState : public MDKStruct
+class FWorldConditionQueryState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -118,20 +127,22 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionQuery
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FWorldConditionQuery : public MDKStruct
+class FWorldConditionQuery : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FWorldConditionQueryDefinition)            QueryDefinition                                             OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(get<T>, {0x18, 48, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            QueryDefinition                                             OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(getStruct<T>, {0x18, 48, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionResult
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FWorldConditionResult : public MDKStruct
+class FWorldConditionResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -142,26 +153,28 @@ public:
 
 /// Struct /Script/WorldConditions.WorldConditionContextDataDesc
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FWorldConditionContextDataDesc : public MDKStruct
+class FWorldConditionContextDataDesc : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	CMember(UStruct*)                                  Struct                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	CMember(EWorldConditionContextDataType)            Type                                                        OFFSET(get<T>, {0xC, 1, 0, 0})
 };
 
 /// Struct /Script/WorldConditions.WorldConditionContextDataRef
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FWorldConditionContextDataRef : public MDKStruct
+class FWorldConditionContextDataRef : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(char)                                      Index                                                       OFFSET(get<char>, {0x4, 1, 0, 0})
 };
 

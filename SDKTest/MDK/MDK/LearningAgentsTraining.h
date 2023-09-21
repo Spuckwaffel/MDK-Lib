@@ -281,8 +281,9 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsImitationTrainerSettings
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FLearningAgentsImitationTrainerSettings : public MDKStruct
+class FLearningAgentsImitationTrainerSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -292,8 +293,9 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsImitationTrainerTrainingSettings
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FLearningAgentsImitationTrainerTrainingSettings : public MDKStruct
+class FLearningAgentsImitationTrainerTrainingSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -310,20 +312,22 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsRecorderPathSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FLearningAgentsRecorderPathSettings : public MDKStruct
+class FLearningAgentsRecorderPathSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FDirectoryPath)                            IntermediateRelativePath                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   RecordingsSubdirectory                                      OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDirectoryPath)                            IntermediateRelativePath                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   RecordingsSubdirectory                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsRecord
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FLearningAgentsRecord : public MDKStruct
+class FLearningAgentsRecord : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -335,8 +339,9 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsTrainerSettings
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FLearningAgentsTrainerSettings : public MDKStruct
+class FLearningAgentsTrainerSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -350,8 +355,9 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsTrainerGameSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FLearningAgentsTrainerGameSettings : public MDKStruct
+class FLearningAgentsTrainerGameSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -365,8 +371,9 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsTrainerTrainingSettings
 /// Size: 0x0044 (0x000000 - 0x000044)
-class FLearningAgentsTrainerTrainingSettings : public MDKStruct
+class FLearningAgentsTrainerTrainingSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 68;
 
@@ -394,15 +401,16 @@ public:
 
 /// Struct /Script/LearningAgentsTraining.LearningAgentsTrainerPathSettings
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FLearningAgentsTrainerPathSettings : public MDKStruct
+class FLearningAgentsTrainerPathSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FDirectoryPath)                            EditorEngineRelativePath                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   NonEditorEngineRelativePath                                 OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FDirectoryPath)                            IntermediateRelativePath                                    OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FDirectoryPath)                            EditorEngineRelativePath                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   NonEditorEngineRelativePath                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FDirectoryPath)                            IntermediateRelativePath                                    OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Enum /Script/LearningAgentsTraining.ELearningAgentsCompletion

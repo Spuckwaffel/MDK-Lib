@@ -18,8 +18,8 @@ class UB_GasPump_Valet_Component_C : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA0, 8, 0, 0})
-	SMember(FName)                                     Gas_Pump_Icon_Enabled                                       OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA0, 8, 0, 0})
+	SMember(FName)                                     Gas_Pump_Icon_Enabled                                       OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	CMember(UClass*)                                   Gas_Pump_IndicatorManager_Class                             OFFSET(get<T>, {0xB0, 8, 0, 0})
 	CMember(UValet_GasPumpIndicatorManagerV2_C*)       Gas_Pump_IndicatorManager                                   OFFSET(get<T>, {0xB8, 8, 0, 0})
 

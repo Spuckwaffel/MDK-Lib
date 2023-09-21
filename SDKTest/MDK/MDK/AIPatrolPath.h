@@ -30,17 +30,17 @@ public:
 	CMember(TWeakObjectPtr<UClass*>)                   DefaultAIPawn                                               OFFSET(get<T>, {0xD8, 32, 0, 0})
 	CMember(UClass*)                                   PathRendererClass                                           OFFSET(get<T>, {0xF8, 8, 0, 0})
 	DMember(bool)                                      bAllowPartialPaths                                          OFFSET(get<bool>, {0x100, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     UnableToPlaceNewDeviceTags                                  OFFSET(get<T>, {0x108, 32, 0, 0})
-	SMember(FNavAgentProperties)                       CachedAIAgentProperties                                     OFFSET(get<T>, {0x128, 48, 0, 0})
+	SMember(FGameplayTagContainer)                     UnableToPlaceNewDeviceTags                                  OFFSET(getStruct<T>, {0x108, 32, 0, 0})
+	SMember(FNavAgentProperties)                       CachedAIAgentProperties                                     OFFSET(getStruct<T>, {0x128, 48, 0, 0})
 	CMember(UNavigationSystemV1*)                      CachedNavSystem                                             OFFSET(get<T>, {0x158, 8, 0, 0})
 	CMember(ANavigationData*)                          CachedNavData                                               OFFSET(get<T>, {0x160, 8, 0, 0})
 	CMember(UClass*)                                   CachedFilterClass                                           OFFSET(get<T>, {0x168, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPatrolPointFailedToReach                                  OFFSET(get<T>, {0x180, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPatrolPointReached                                        OFFSET(get<T>, {0x190, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPatrolPathStarted                                         OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPatrolPathStopped                                         OFFSET(get<T>, {0x1B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPatrolPointFailedToReach                                  OFFSET(getStruct<T>, {0x180, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPatrolPointReached                                        OFFSET(getStruct<T>, {0x190, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPatrolPathStarted                                         OFFSET(getStruct<T>, {0x1A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPatrolPathStopped                                         OFFSET(getStruct<T>, {0x1B0, 16, 0, 0})
 	CMember(TArray<AActor*>)                           PatrolPath                                                  OFFSET(get<T>, {0x1C8, 16, 0, 0})
-	SMember(FPatrolPathSegmentDetails)                 PathSegmentDetails                                          OFFSET(get<T>, {0x1D8, 264, 0, 0})
+	SMember(FPatrolPathSegmentDetails)                 PathSegmentDetails                                          OFFSET(getStruct<T>, {0x1D8, 264, 0, 0})
 	CMember(UAIPatrolPathComponent*)                   CopiedFrom                                                  OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(AActor*)                                   CurrentCloningNode                                          OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UAIPatrolPathComponent*)                   CopiedFromCut                                               OFFSET(get<T>, {0x308, 8, 0, 0})
@@ -123,8 +123,9 @@ public:
 
 /// Struct /Script/AIPatrolPath.PatrolPathSegmentDetails
 /// Size: 0x0108 (0x000000 - 0x000108)
-class FPatrolPathSegmentDetails : public MDKStruct
+class FPatrolPathSegmentDetails : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 

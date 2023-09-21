@@ -154,7 +154,7 @@ class UMLDeformerInputInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FSoftObjectPath)                           SkeletalMesh                                                OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FSoftObjectPath)                           SkeletalMesh                                                OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	CMember(TArray<FName>)                             BoneNames                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<FName>)                             CurveNames                                                  OFFSET(get<T>, {0x50, 16, 0, 0})
 	DMember(int32_t)                                   NumBaseMeshVertices                                         OFFSET(get<int32_t>, {0x60, 4, 0, 0})
@@ -228,19 +228,21 @@ public:
 
 /// Struct /Script/MLDeformerFramework.MLDeformerCurveReference
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMLDeformerCurveReference : public MDKStruct
+class FMLDeformerCurveReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FName)                                     CurveName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     CurveName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/MLDeformerFramework.MLDeformerMorphModelQualityLevel
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMLDeformerMorphModelQualityLevel : public MDKStruct
+class FMLDeformerMorphModelQualityLevel : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 

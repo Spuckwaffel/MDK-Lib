@@ -17,12 +17,12 @@ class AFortNevadaVehicle : public AFortAthenaSKVehicle
 	static inline constexpr uint64_t __MDKClassSize = 8576;
 
 public:
-	SMember(FNevadaState)                              ServerReplicatedState                                       OFFSET(get<T>, {0x1B78, 20, 0, 0})
+	SMember(FNevadaState)                              ServerReplicatedState                                       OFFSET(getStruct<T>, {0x1B78, 20, 0, 0})
 	CMember(UFortNevadaVehicleConfigs*)                FortNevadaVehicleConfigs                                    OFFSET(get<T>, {0x1B90, 8, 0, 0})
 	CMember(UClass*)                                   FortNevadaAudioControllerClass                              OFFSET(get<T>, {0x1B98, 8, 0, 0})
 	CMember(UChildActorComponent*)                     AudioControllerActor                                        OFFSET(get<T>, {0x1BA0, 8, 0, 0})
 	CMember(AFortNevadaAudioController*)               FortNevadaAudioController                                   OFFSET(get<T>, {0x1BA8, 8, 0, 0})
-	SMember(FVehicleGamepadLiftInputs)                 LiftInputs                                                  OFFSET(get<T>, {0x1BB0, 8, 0, 0})
+	SMember(FVehicleGamepadLiftInputs)                 LiftInputs                                                  OFFSET(getStruct<T>, {0x1BB0, 8, 0, 0})
 	DMember(float)                                     LastBatteryRegenTickTime                                    OFFSET(get<float>, {0x1BB8, 4, 0, 0})
 	DMember(bool)                                      bBoostThrust                                                OFFSET(get<bool>, {0x1BBC, 1, 0, 0})
 	DMember(bool)                                      bBoostDrag                                                  OFFSET(get<bool>, {0x1BBD, 1, 0, 0})
@@ -30,12 +30,12 @@ public:
 	DMember(bool)                                      bUseTractorBeamUprightForce                                 OFFSET(get<bool>, {0x1BBF, 1, 0, 0})
 	DMember(bool)                                      bDeadBattery                                                OFFSET(get<bool>, {0x1BC0, 1, 0, 0})
 	DMember(float)                                     TractorBeamExtraLengthForExtents                            OFFSET(get<float>, {0x1BC4, 4, 0, 0})
-	SMember(FVector)                                   CrashingDesiredUp                                           OFFSET(get<T>, {0x1BC8, 24, 0, 0})
+	SMember(FVector)                                   CrashingDesiredUp                                           OFFSET(getStruct<T>, {0x1BC8, 24, 0, 0})
 	DMember(float)                                     BoostStartTime                                              OFFSET(get<float>, {0x1BE0, 4, 0, 0})
 	DMember(float)                                     BoostPitchAlpha                                             OFFSET(get<float>, {0x1BE4, 4, 0, 0})
 	DMember(float)                                     BoostChargeProgress                                         OFFSET(get<float>, {0x1BE8, 4, 0, 0})
 	DMember(int32_t)                                   BoostChargesAvailable                                       OFFSET(get<int32_t>, {0x1BEC, 4, 0, 0})
-	SMember(FVector)                                   CachedBoostMoveDir                                          OFFSET(get<T>, {0x1BF0, 24, 0, 0})
+	SMember(FVector)                                   CachedBoostMoveDir                                          OFFSET(getStruct<T>, {0x1BF0, 24, 0, 0})
 	DMember(float)                                     CurrentStateStartTime                                       OFFSET(get<float>, {0x1C08, 4, 0, 0})
 	DMember(float)                                     HeightAtLandingTime                                         OFFSET(get<float>, {0x1C0C, 4, 0, 0})
 	DMember(float)                                     CrashingScrapingTime                                        OFFSET(get<float>, {0x1C10, 4, 0, 0})
@@ -51,7 +51,7 @@ public:
 	CMember(TWeakObjectPtr<ALandscapeProxy*>)          CachedLandscapeProxy                                        OFFSET(get<T>, {0x1C78, 8, 0, 0})
 	CMember(UClass*)                                   PassengerCameraModeClass                                    OFFSET(get<T>, {0x1C80, 8, 0, 0})
 	DMember(bool)                                      bTractorBeamChargeStarted                                   OFFSET(get<bool>, {0x1C88, 1, 0, 0})
-	SMember(FTowhookParams)                            TowhookParams                                               OFFSET(get<T>, {0x1C90, 208, 0, 0})
+	SMember(FTowhookParams)                            TowhookParams                                               OFFSET(getStruct<T>, {0x1C90, 208, 0, 0})
 	CMember(UClass*)                                   AttachedPawnHiddenVehicle                                   OFFSET(get<T>, {0x1D60, 8, 0, 0})
 	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      TractorBeamAttachedPrimitive                                OFFSET(get<T>, {0x1D68, 8, 0, 0})
 	CMember(AFortAthenaVehicle*)                       SpawnedTractorBeamVictimVehicle                             OFFSET(get<T>, {0x1D70, 8, 0, 0})
@@ -60,11 +60,11 @@ public:
 	CMember(TArray<AActor*>)                           PreviouslyTargetedActors                                    OFFSET(get<T>, {0x1D90, 16, 0, 0})
 	CMember(AActor*)                                   TractorBeamAttachedActor                                    OFFSET(get<T>, {0x1DA0, 8, 0, 0})
 	CMember(AActor*)                                   TractorBeamTargetedActor                                    OFFSET(get<T>, {0x1DA8, 8, 0, 0})
-	SMember(FVector)                                   TractorBeamTargetPosition                                   OFFSET(get<T>, {0x1DB0, 24, 0, 0})
+	SMember(FVector)                                   TractorBeamTargetPosition                                   OFFSET(getStruct<T>, {0x1DB0, 24, 0, 0})
 	DMember(bool)                                      bBeamButtonReleased                                         OFFSET(get<bool>, {0x1DC9, 1, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       TractorBeamObjectsTypes                                     OFFSET(get<T>, {0x1DD0, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     DisallowedBeamTags                                          OFFSET(get<T>, {0x1DE0, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     AlwaysAllowedBeamTags                                       OFFSET(get<T>, {0x1E00, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DisallowedBeamTags                                          OFFSET(getStruct<T>, {0x1DE0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AlwaysAllowedBeamTags                                       OFFSET(getStruct<T>, {0x1E00, 32, 0, 0})
 	CMember(UNiagaraSystem*)                           TractorBeamFX_Unattached                                    OFFSET(get<T>, {0x1EB8, 8, 0, 0})
 	CMember(UNiagaraSystem*)                           TractorBeamFX_Attached                                      OFFSET(get<T>, {0x1EC0, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        BeamPSC                                                     OFFSET(get<T>, {0x1EC8, 8, 0, 0})
@@ -76,10 +76,10 @@ public:
 	DMember(float)                                     LastCockpitHealthTickTime                                   OFFSET(get<float>, {0x1FD8, 4, 0, 0})
 	DMember(float)                                     LastCockpitDamageTime                                       OFFSET(get<float>, {0x1FDC, 4, 0, 0})
 	DMember(float)                                     CockpitDissolveStartTime                                    OFFSET(get<float>, {0x1FE0, 4, 0, 0})
-	SMember(FScalableFloat)                            CockpitMaxHealth                                            OFFSET(get<T>, {0x1FE8, 40, 0, 0})
-	SMember(FScalableFloat)                            CockpitHealthTickRate                                       OFFSET(get<T>, {0x2010, 40, 0, 0})
-	SMember(FScalableFloat)                            CockpitHealthPerTick                                        OFFSET(get<T>, {0x2038, 40, 0, 0})
-	SMember(FScalableFloat)                            CockpitRegenDelay                                           OFFSET(get<T>, {0x2060, 40, 0, 0})
+	SMember(FScalableFloat)                            CockpitMaxHealth                                            OFFSET(getStruct<T>, {0x1FE8, 40, 0, 0})
+	SMember(FScalableFloat)                            CockpitHealthTickRate                                       OFFSET(getStruct<T>, {0x2010, 40, 0, 0})
+	SMember(FScalableFloat)                            CockpitHealthPerTick                                        OFFSET(getStruct<T>, {0x2038, 40, 0, 0})
+	SMember(FScalableFloat)                            CockpitRegenDelay                                           OFFSET(getStruct<T>, {0x2060, 40, 0, 0})
 	CMember(UCurveFloat*)                              CockpitHitMaterialWobble                                    OFFSET(get<T>, {0x2088, 8, 0, 0})
 	DMember(float)                                     LastDamageAlpha                                             OFFSET(get<float>, {0x2090, 4, 0, 0})
 	DMember(bool)                                      bDissolvingCockpit                                          OFFSET(get<bool>, {0x2094, 1, 0, 0})
@@ -91,8 +91,8 @@ public:
 	CMember(UMaterialInstanceDynamic*)                 Native_EnergyFieldMatInstance                               OFFSET(get<T>, {0x20B0, 8, 0, 0})
 	CMember(UAudioComponent*)                          NativeComp_DamageStateLastLife                              OFFSET(get<T>, {0x20B8, 8, 0, 0})
 	CMember(UAudioComponent*)                          NativeComp_DamageState                                      OFFSET(get<T>, {0x20C0, 8, 0, 0})
-	SMember(FVector)                                   Native_LastHitLocation                                      OFFSET(get<T>, {0x20C8, 24, 0, 0})
-	SMember(FVector)                                   Native_LastHitNormal                                        OFFSET(get<T>, {0x20E0, 24, 0, 0})
+	SMember(FVector)                                   Native_LastHitLocation                                      OFFSET(getStruct<T>, {0x20C8, 24, 0, 0})
+	SMember(FVector)                                   Native_LastHitNormal                                        OFFSET(getStruct<T>, {0x20E0, 24, 0, 0})
 	CMember(UNiagaraComponent*)                        NativeComp_DamageStateFX                                    OFFSET(get<T>, {0x20F8, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NativeComp_HologramScreen                                   OFFSET(get<T>, {0x2100, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        NativeComp_SpeedLines                                       OFFSET(get<T>, {0x2108, 8, 0, 0})
@@ -257,11 +257,11 @@ public:
 	DMember(bool)                                      bLaunchToDepart                                             OFFSET(get<bool>, {0x660, 1, 0, 0})
 	DMember(bool)                                      bLaunchToIdle                                               OFFSET(get<bool>, {0x661, 1, 0, 0})
 	DMember(bool)                                      bIsPartsLanding                                             OFFSET(get<bool>, {0x662, 1, 0, 0})
-	SMember(FName)                                     TractorBeamSocketName                                       OFFSET(get<T>, {0x664, 4, 0, 0})
-	SMember(FName)                                     TractorBeamAimCurveName                                     OFFSET(get<T>, {0x668, 4, 0, 0})
-	SMember(FName)                                     NevadaVehicleInterruptName                                  OFFSET(get<T>, {0x66C, 4, 0, 0})
-	SMember(FName)                                     LandingTraceRightName                                       OFFSET(get<T>, {0x670, 4, 0, 0})
-	SMember(FName)                                     LandingTraceLeftName                                        OFFSET(get<T>, {0x674, 4, 0, 0})
+	SMember(FName)                                     TractorBeamSocketName                                       OFFSET(getStruct<T>, {0x664, 4, 0, 0})
+	SMember(FName)                                     TractorBeamAimCurveName                                     OFFSET(getStruct<T>, {0x668, 4, 0, 0})
+	SMember(FName)                                     NevadaVehicleInterruptName                                  OFFSET(getStruct<T>, {0x66C, 4, 0, 0})
+	SMember(FName)                                     LandingTraceRightName                                       OFFSET(getStruct<T>, {0x670, 4, 0, 0})
+	SMember(FName)                                     LandingTraceLeftName                                        OFFSET(getStruct<T>, {0x674, 4, 0, 0})
 	DMember(float)                                     MaxLeanDeltaInterruptMagnitude                              OFFSET(get<float>, {0x678, 4, 0, 0})
 	DMember(float)                                     MinForwardSpeedToBeMoving                                   OFFSET(get<float>, {0x67C, 4, 0, 0})
 	DMember(float)                                     MinForwardSpeedToPlayWings                                  OFFSET(get<float>, {0x680, 4, 0, 0})
@@ -283,23 +283,23 @@ public:
 	CMember(AFortNevadaVehicle*)                       NevadaVehicle                                               OFFSET(get<T>, {0x1800, 8, 0, 0})
 	DMember(float)                                     AnimLeftRight                                               OFFSET(get<float>, {0x1808, 4, 0, 0})
 	DMember(float)                                     AnimForwardBackward                                         OFFSET(get<float>, {0x180C, 4, 0, 0})
-	SMember(FVector)                                   RootAttachmentLoc                                           OFFSET(get<T>, {0x1810, 24, 0, 0})
-	SMember(FRotator)                                  RootAttachmentRot                                           OFFSET(get<T>, {0x1828, 24, 0, 0})
+	SMember(FVector)                                   RootAttachmentLoc                                           OFFSET(getStruct<T>, {0x1810, 24, 0, 0})
+	SMember(FRotator)                                  RootAttachmentRot                                           OFFSET(getStruct<T>, {0x1828, 24, 0, 0})
 	DMember(int32_t)                                   BoostCount                                                  OFFSET(get<int32_t>, {0x1840, 4, 0, 0})
 	DMember(int32_t)                                   PreviousBoostCount                                          OFFSET(get<int32_t>, {0x1844, 4, 0, 0})
 	DMember(bool)                                      bIsBoostingAgain                                            OFFSET(get<bool>, {0x1848, 1, 0, 0})
 	DMember(bool)                                      bIsMoving                                                   OFFSET(get<bool>, {0x1849, 1, 0, 0})
 	DMember(float)                                     MinVehicleVelocityToBeMoving                                OFFSET(get<float>, {0x184C, 4, 0, 0})
-	SMember(FName)                                     DriverSocketName                                            OFFSET(get<T>, {0x1850, 4, 0, 0})
-	SMember(FName)                                     RightHandAttachmentSocketName                               OFFSET(get<T>, {0x1854, 4, 0, 0})
-	SMember(FName)                                     LeftHandAttachmentSocketName                                OFFSET(get<T>, {0x1858, 4, 0, 0})
-	SMember(FName)                                     RightFootAttachmentSocketName                               OFFSET(get<T>, {0x185C, 4, 0, 0})
-	SMember(FName)                                     LeftFootAttachementSocketName                               OFFSET(get<T>, {0x1860, 4, 0, 0})
-	SMember(FRotator)                                  RightHandRotationOffset                                     OFFSET(get<T>, {0x1868, 24, 0, 0})
-	SMember(FRotator)                                  LeftHandRotationOffset                                      OFFSET(get<T>, {0x1880, 24, 0, 0})
-	SMember(FRotator)                                  RightFootRotationOffset                                     OFFSET(get<T>, {0x1898, 24, 0, 0})
-	SMember(FRotator)                                  LeftFootRotationOffset                                      OFFSET(get<T>, {0x18B0, 24, 0, 0})
-	SMember(FVector)                                   RootAttachmentOffset                                        OFFSET(get<T>, {0x18C8, 24, 0, 0})
+	SMember(FName)                                     DriverSocketName                                            OFFSET(getStruct<T>, {0x1850, 4, 0, 0})
+	SMember(FName)                                     RightHandAttachmentSocketName                               OFFSET(getStruct<T>, {0x1854, 4, 0, 0})
+	SMember(FName)                                     LeftHandAttachmentSocketName                                OFFSET(getStruct<T>, {0x1858, 4, 0, 0})
+	SMember(FName)                                     RightFootAttachmentSocketName                               OFFSET(getStruct<T>, {0x185C, 4, 0, 0})
+	SMember(FName)                                     LeftFootAttachementSocketName                               OFFSET(getStruct<T>, {0x1860, 4, 0, 0})
+	SMember(FRotator)                                  RightHandRotationOffset                                     OFFSET(getStruct<T>, {0x1868, 24, 0, 0})
+	SMember(FRotator)                                  LeftHandRotationOffset                                      OFFSET(getStruct<T>, {0x1880, 24, 0, 0})
+	SMember(FRotator)                                  RightFootRotationOffset                                     OFFSET(getStruct<T>, {0x1898, 24, 0, 0})
+	SMember(FRotator)                                  LeftFootRotationOffset                                      OFFSET(getStruct<T>, {0x18B0, 24, 0, 0})
+	SMember(FVector)                                   RootAttachmentOffset                                        OFFSET(getStruct<T>, {0x18C8, 24, 0, 0})
 };
 
 /// Class /Script/NevadaRuntime.FortCameraMode_Nevada
@@ -310,14 +310,14 @@ class UFortCameraMode_Nevada : public UFortCameraMode_AthenaVehicle
 	static inline constexpr uint64_t __MDKClassSize = 7136;
 
 public:
-	SMember(FVector)                                   TractorBeamCameraOffset                                     OFFSET(get<T>, {0x1B90, 24, 0, 0})
+	SMember(FVector)                                   TractorBeamCameraOffset                                     OFFSET(getStruct<T>, {0x1B90, 24, 0, 0})
 	DMember(float)                                     TractorBeamCameraLerpTime                                   OFFSET(get<float>, {0x1BA8, 4, 0, 0})
 	DMember(float)                                     TractorBeamCameraExtraPitch                                 OFFSET(get<float>, {0x1BAC, 4, 0, 0})
 	DMember(float)                                     TractorBeamInactiveCameraExtraPitch                         OFFSET(get<float>, {0x1BB0, 4, 0, 0})
 	DMember(float)                                     TractorBeamCameraPositionResetDelay                         OFFSET(get<float>, {0x1BB4, 4, 0, 0})
 	DMember(float)                                     MinPitchForOffset                                           OFFSET(get<float>, {0x1BB8, 4, 0, 0})
 	DMember(float)                                     MaxPitchForOffset                                           OFFSET(get<float>, {0x1BBC, 4, 0, 0})
-	SMember(FVector)                                   ExtraOffset                                                 OFFSET(get<T>, {0x1BC0, 24, 0, 0})
+	SMember(FVector)                                   ExtraOffset                                                 OFFSET(getStruct<T>, {0x1BC0, 24, 0, 0})
 };
 
 /// Class /Script/NevadaRuntime.FortNevadaAudioController
@@ -328,20 +328,20 @@ class AFortNevadaAudioController : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FVector2D)                                 SpeedRangeMap                                               OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FVector2D)                                 TurningRangeMap                                             OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	SMember(FVector2D)                                 AcceleratingRangeMap                                        OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	SMember(FVector2D)                                 BrakingRangeMap                                             OFFSET(get<T>, {0x2C0, 16, 0, 0})
-	SMember(FVector2D)                                 PassByRangeMap                                              OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	SMember(FVector2D)                                 LFORangeMap                                                 OFFSET(get<T>, {0x2E0, 16, 0, 0})
+	SMember(FVector2D)                                 SpeedRangeMap                                               OFFSET(getStruct<T>, {0x290, 16, 0, 0})
+	SMember(FVector2D)                                 TurningRangeMap                                             OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
+	SMember(FVector2D)                                 AcceleratingRangeMap                                        OFFSET(getStruct<T>, {0x2B0, 16, 0, 0})
+	SMember(FVector2D)                                 BrakingRangeMap                                             OFFSET(getStruct<T>, {0x2C0, 16, 0, 0})
+	SMember(FVector2D)                                 PassByRangeMap                                              OFFSET(getStruct<T>, {0x2D0, 16, 0, 0})
+	SMember(FVector2D)                                 LFORangeMap                                                 OFFSET(getStruct<T>, {0x2E0, 16, 0, 0})
 	CMember(AFortNevadaVehicle*)                       Vehicle                                                     OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UFortLayeredAudioComponent*)               LayeredAudioComponent                                       OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	DMember(float)                                     SpeedParamValue                                             OFFSET(get<float>, {0x300, 4, 0, 0})
 	DMember(float)                                     SpeedParamValuePrev                                         OFFSET(get<float>, {0x304, 4, 0, 0})
 	DMember(float)                                     AcceleratingParamValue                                      OFFSET(get<float>, {0x308, 4, 0, 0})
 	DMember(float)                                     BrakingParamValue                                           OFFSET(get<float>, {0x30C, 4, 0, 0})
-	SMember(FVector)                                   ForwardVector                                               OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FVector)                                   ForwardVectorPrev                                           OFFSET(get<T>, {0x328, 24, 0, 0})
+	SMember(FVector)                                   ForwardVector                                               OFFSET(getStruct<T>, {0x310, 24, 0, 0})
+	SMember(FVector)                                   ForwardVectorPrev                                           OFFSET(getStruct<T>, {0x328, 24, 0, 0})
 	DMember(float)                                     TurningParamValue                                           OFFSET(get<float>, {0x340, 4, 0, 0})
 	DMember(float)                                     PassByParamValue                                            OFFSET(get<float>, {0x344, 4, 0, 0})
 	DMember(float)                                     LocallyControlledParamValue                                 OFFSET(get<float>, {0x348, 4, 0, 0})
@@ -371,10 +371,10 @@ class UFortNevadaVehicleConfigs : public UFortPhysicsVehicleConfigs
 	static inline constexpr uint64_t __MDKClassSize = 3416;
 
 public:
-	SMember(FNevadaMoveModeConfig)                     BaseMovement                                                OFFSET(get<T>, {0x8B0, 20, 0, 0})
-	SMember(FNevadaMoveModeConfig)                     BoostMovement                                               OFFSET(get<T>, {0x8C4, 20, 0, 0})
-	SMember(FNevadaMoveModeConfig)                     ChargingMovement                                            OFFSET(get<T>, {0x8D8, 20, 0, 0})
-	SMember(FDampedSpringConfig)                       UprightSpringForce                                          OFFSET(get<T>, {0x8EC, 12, 0, 0})
+	SMember(FNevadaMoveModeConfig)                     BaseMovement                                                OFFSET(getStruct<T>, {0x8B0, 20, 0, 0})
+	SMember(FNevadaMoveModeConfig)                     BoostMovement                                               OFFSET(getStruct<T>, {0x8C4, 20, 0, 0})
+	SMember(FNevadaMoveModeConfig)                     ChargingMovement                                            OFFSET(getStruct<T>, {0x8D8, 20, 0, 0})
+	SMember(FDampedSpringConfig)                       UprightSpringForce                                          OFFSET(getStruct<T>, {0x8EC, 12, 0, 0})
 	DMember(float)                                     DebaseLaunchspeed                                           OFFSET(get<float>, {0x8F8, 4, 0, 0})
 	DMember(float)                                     MaxHeight                                                   OFFSET(get<float>, {0x8FC, 4, 0, 0})
 	DMember(float)                                     MinHeight                                                   OFFSET(get<float>, {0x900, 4, 0, 0})
@@ -393,33 +393,33 @@ public:
 	DMember(float)                                     BoostDragFinishSpeed                                        OFFSET(get<float>, {0x934, 4, 0, 0})
 	DMember(float)                                     TractorBeamRadius                                           OFFSET(get<float>, {0x938, 4, 0, 0})
 	DMember(float)                                     TractorBeamWithTargetRadius                                 OFFSET(get<float>, {0x93C, 4, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamSweepLength                                      OFFSET(get<T>, {0x940, 40, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamChargeTime                                       OFFSET(get<T>, {0x968, 40, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamDurationTime                                     OFFSET(get<T>, {0x990, 40, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamTossImpulseStrengthForward                       OFFSET(get<T>, {0x9B8, 40, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamTossImpulseStrengthUpward                        OFFSET(get<T>, {0x9E0, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamSweepLength                                      OFFSET(getStruct<T>, {0x940, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamChargeTime                                       OFFSET(getStruct<T>, {0x968, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamDurationTime                                     OFFSET(getStruct<T>, {0x990, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamTossImpulseStrengthForward                       OFFSET(getStruct<T>, {0x9B8, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamTossImpulseStrengthUpward                        OFFSET(getStruct<T>, {0x9E0, 40, 0, 0})
 	DMember(float)                                     TractorBeamShutdownTime                                     OFFSET(get<float>, {0xA08, 4, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamTurnOffDamage                                    OFFSET(get<T>, {0xA10, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowTractorBeamAIPawns                                     OFFSET(get<T>, {0xA38, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamTurnOffDamage                                    OFFSET(getStruct<T>, {0xA10, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowTractorBeamAIPawns                                     OFFSET(getStruct<T>, {0xA38, 40, 0, 0})
 	DMember(float)                                     TractorBeamBreakForceMagnitude                              OFFSET(get<float>, {0xA60, 4, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamActive                                           OFFSET(get<T>, {0xA68, 40, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamCooldown                                         OFFSET(get<T>, {0xA90, 40, 0, 0})
-	SMember(FScalableFloat)                            TractorBeamDisruptionCooldown                               OFFSET(get<T>, {0xAB8, 40, 0, 0})
-	SMember(FName)                                     TractorBeamSocket                                           OFFSET(get<T>, {0xAE0, 4, 0, 0})
-	SMember(FVector)                                   TractorBeamAttachPositionOffset                             OFFSET(get<T>, {0xAE8, 24, 0, 0})
-	SMember(FRigidBodyErrorCorrection)                 TractorBeamTargetOverridenErrorCorrection                   OFFSET(get<T>, {0xB00, 52, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamActive                                           OFFSET(getStruct<T>, {0xA68, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamCooldown                                         OFFSET(getStruct<T>, {0xA90, 40, 0, 0})
+	SMember(FScalableFloat)                            TractorBeamDisruptionCooldown                               OFFSET(getStruct<T>, {0xAB8, 40, 0, 0})
+	SMember(FName)                                     TractorBeamSocket                                           OFFSET(getStruct<T>, {0xAE0, 4, 0, 0})
+	SMember(FVector)                                   TractorBeamAttachPositionOffset                             OFFSET(getStruct<T>, {0xAE8, 24, 0, 0})
+	SMember(FRigidBodyErrorCorrection)                 TractorBeamTargetOverridenErrorCorrection                   OFFSET(getStruct<T>, {0xB00, 52, 0, 0})
 	DMember(float)                                     VictimPitchDrag                                             OFFSET(get<float>, {0xB34, 4, 0, 0})
 	DMember(float)                                     VictimYawDrag                                               OFFSET(get<float>, {0xB38, 4, 0, 0})
 	DMember(float)                                     VictimRollDrag                                              OFFSET(get<float>, {0xB3C, 4, 0, 0})
-	SMember(FDampedSpringConfig)                       TractorBeamVictimUprightForce                               OFFSET(get<T>, {0xB40, 12, 0, 0})
+	SMember(FDampedSpringConfig)                       TractorBeamVictimUprightForce                               OFFSET(getStruct<T>, {0xB40, 12, 0, 0})
 	DMember(int32_t)                                   NumReboots                                                  OFFSET(get<int32_t>, {0xB4C, 4, 0, 0})
 	DMember(int32_t)                                   NumRebootsDefault                                           OFFSET(get<int32_t>, {0xB50, 4, 0, 0})
 	DMember(float)                                     MaxCrashingTime                                             OFFSET(get<float>, {0xB54, 4, 0, 0})
 	DMember(float)                                     MaxCrashingScrapingTime                                     OFFSET(get<float>, {0xB58, 4, 0, 0})
 	DMember(float)                                     MaxCrashingTimeSpentNotMoving                               OFFSET(get<float>, {0xB5C, 4, 0, 0})
 	DMember(float)                                     SpeedThresholdForCrashed                                    OFFSET(get<float>, {0xB60, 4, 0, 0})
-	SMember(FScalableFloat)                            RebootDuration                                              OFFSET(get<T>, {0xB68, 40, 0, 0})
-	SMember(FScalableFloat)                            RebootDelay                                                 OFFSET(get<T>, {0xB90, 40, 0, 0})
+	SMember(FScalableFloat)                            RebootDuration                                              OFFSET(getStruct<T>, {0xB68, 40, 0, 0})
+	SMember(FScalableFloat)                            RebootDelay                                                 OFFSET(getStruct<T>, {0xB90, 40, 0, 0})
 	DMember(float)                                     LandingTraceRange                                           OFFSET(get<float>, {0xBB8, 4, 0, 0})
 	DMember(float)                                     DesiredLandingDistance                                      OFFSET(get<float>, {0xBBC, 4, 0, 0})
 	DMember(float)                                     LandingDelay_Max                                            OFFSET(get<float>, {0xBC0, 4, 0, 0})
@@ -439,21 +439,22 @@ public:
 	DMember(float)                                     ExtraTraceInteractRange                                     OFFSET(get<float>, {0xBF8, 4, 0, 0})
 	DMember(float)                                     AntiGravityMult                                             OFFSET(get<float>, {0xBFC, 4, 0, 0})
 	DMember(float)                                     InitialLiftDuration                                         OFFSET(get<float>, {0xC00, 4, 0, 0})
-	SMember(FScalableFloat)                            BatteryCostDuringFlight                                     OFFSET(get<T>, {0xC08, 40, 0, 0})
-	SMember(FScalableFloat)                            BatteryRegenDelay                                           OFFSET(get<T>, {0xC30, 40, 0, 0})
-	SMember(FScalableFloat)                            BatteryRegenTickRate                                        OFFSET(get<T>, {0xC58, 40, 0, 0})
-	SMember(FScalableFloat)                            BatteryRegenAmount                                          OFFSET(get<T>, {0xC80, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxBattery                                                  OFFSET(get<T>, {0xCA8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinBatteryForFlight                                         OFFSET(get<T>, {0xCD0, 40, 0, 0})
+	SMember(FScalableFloat)                            BatteryCostDuringFlight                                     OFFSET(getStruct<T>, {0xC08, 40, 0, 0})
+	SMember(FScalableFloat)                            BatteryRegenDelay                                           OFFSET(getStruct<T>, {0xC30, 40, 0, 0})
+	SMember(FScalableFloat)                            BatteryRegenTickRate                                        OFFSET(getStruct<T>, {0xC58, 40, 0, 0})
+	SMember(FScalableFloat)                            BatteryRegenAmount                                          OFFSET(getStruct<T>, {0xC80, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxBattery                                                  OFFSET(getStruct<T>, {0xCA8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinBatteryForFlight                                         OFFSET(getStruct<T>, {0xCD0, 40, 0, 0})
 	CMember(TArray<FName>)                             CockpitShapeNames                                           OFFSET(get<T>, {0xCF8, 16, 0, 0})
-	SMember(FScalableFloat)                            CockpitDamageMult                                           OFFSET(get<T>, {0xD08, 40, 0, 0})
-	SMember(FScalableFloat)                            CockpitHealth                                               OFFSET(get<T>, {0xD30, 40, 0, 0})
+	SMember(FScalableFloat)                            CockpitDamageMult                                           OFFSET(getStruct<T>, {0xD08, 40, 0, 0})
+	SMember(FScalableFloat)                            CockpitHealth                                               OFFSET(getStruct<T>, {0xD30, 40, 0, 0})
 };
 
 /// Struct /Script/NevadaRuntime.NevadaAudioUpdateContext
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNevadaAudioUpdateContext : public MDKStruct
+class FNevadaAudioUpdateContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -464,6 +465,7 @@ public:
 /// Size: 0x0008 (0x000038 - 0x000040)
 class FNevadaOutContinuous : public FFortVehicleOutContinuous
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -476,6 +478,7 @@ public:
 /// Size: 0x0428 (0x000028 - 0x000450)
 class FNevadaOutPersistent : public FFortVehicleOutPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1104;
 
@@ -484,8 +487,9 @@ public:
 
 /// Struct /Script/NevadaRuntime.NevadaState
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNevadaState : public MDKStruct
+class FNevadaState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -501,8 +505,9 @@ public:
 
 /// Struct /Script/NevadaRuntime.NevadaMoveModeConfig
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FNevadaMoveModeConfig : public MDKStruct
+class FNevadaMoveModeConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -516,8 +521,9 @@ public:
 
 /// Struct /Script/NevadaRuntime.DampedSpringConfig
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FDampedSpringConfig : public MDKStruct
+class FDampedSpringConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -531,6 +537,7 @@ public:
 /// Size: 0x0110 (0x000188 - 0x000298)
 class FNevadaInPersistent : public FFortVehicleInPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
@@ -540,7 +547,7 @@ public:
 	DMember(bool)                                      bBoostDrag                                                  OFFSET(get<bool>, {0x191, 1, 0, 0})
 	DMember(float)                                     TractorBeamExtraLengthForExtents                            OFFSET(get<float>, {0x194, 4, 0, 0})
 	DMember(bool)                                      bUseTractorBeamUprightForce                                 OFFSET(get<bool>, {0x198, 1, 0, 0})
-	SMember(FVector)                                   CrashingDesiredUp                                           OFFSET(get<T>, {0x1A0, 24, 0, 0})
+	SMember(FVector)                                   CrashingDesiredUp                                           OFFSET(getStruct<T>, {0x1A0, 24, 0, 0})
 	CMember(ENevadaFlightStates)                       CurrentVehicleState                                         OFFSET(get<T>, {0x1B8, 1, 0, 0})
 };
 

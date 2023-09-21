@@ -19,10 +19,10 @@ class UFortGameplayAbility_AppleSunSmall_Passive : public UFortGameplayAbility
 public:
 	CMember(TWeakObjectPtr<AFortPlayerPawn*>)          PlayerPawn                                                  OFFSET(get<T>, {0xB28, 8, 0, 0})
 	CMember(TWeakObjectPtr<UCharacterMovementComponent*>) CharacterMovementComponent                               OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FScalableFloat)                            UpdateIntervalRow                                           OFFSET(get<T>, {0xB38, 40, 0, 0})
+	SMember(FScalableFloat)                            UpdateIntervalRow                                           OFFSET(getStruct<T>, {0xB38, 40, 0, 0})
 	CMember(UClass*)                                   CanCrashpadGameplayEffectClass                              OFFSET(get<T>, {0xB60, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     CanCrashpadGameplayTags                                     OFFSET(get<T>, {0xB68, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GliderRedeployTags                                          OFFSET(get<T>, {0xB88, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     CanCrashpadGameplayTags                                     OFFSET(getStruct<T>, {0xB68, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GliderRedeployTags                                          OFFSET(getStruct<T>, {0xB88, 32, 0, 0})
 	DMember(float)                                     UpdateInterval                                              OFFSET(get<float>, {0xBA8, 4, 0, 0})
 	DMember(float)                                     MaxFallVelocity                                             OFFSET(get<float>, {0xBAC, 4, 0, 0})
 	DMember(float)                                     CloseToGroundThreshold                                      OFFSET(get<float>, {0xBB0, 4, 0, 0})

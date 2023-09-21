@@ -15,6 +15,6 @@ class USignificanceManager : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FSoftClassPath)                            SignificanceManagerClassName                                OFFSET(get<T>, {0x120, 24, 0, 0})
+	SMember(FSoftClassPath)                            SignificanceManagerClassName                                OFFSET(getStruct<T>, {0x120, 24, 0, 0})
 };
 

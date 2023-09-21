@@ -21,8 +21,8 @@ public:
 	CMember(TMap<FString, UMediaPlayer*>)              MediaPlayerMap                                              OFFSET(get<T>, {0x290, 80, 0, 0})
 	CMember(UPapayaTimedEventsResponderComponent*)     MeshEventResponder                                          OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(TArray<AActor*>)                           TimedEventActorTargets                                      OFFSET(get<T>, {0x2E8, 16, 0, 0})
-	SMember(FMediaTimeEventArray)                      TimedEventsArray                                            OFFSET(get<T>, {0x300, 280, 0, 0})
-	SMember(FString)                                   ScreenName                                                  OFFSET(get<T>, {0x430, 16, 0, 0})
+	SMember(FMediaTimeEventArray)                      TimedEventsArray                                            OFFSET(getStruct<T>, {0x300, 280, 0, 0})
+	SMember(FString)                                   ScreenName                                                  OFFSET(getStruct<T>, {0x430, 16, 0, 0})
 
 
 	/// Functions
@@ -54,19 +54,21 @@ public:
 /// Size: 0x002C (0x00000C - 0x000038)
 class FMediaTimeEventItem : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   EventName                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   EventName                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(int64_t)                                   Time                                                        OFFSET(get<int64_t>, {0x20, 8, 0, 0})
-	SMember(FString)                                   Parameter                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Parameter                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/PapayaTimedEvents.MediaTimeEventArray
 /// Size: 0x0010 (0x000108 - 0x000118)
 class FMediaTimeEventArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 

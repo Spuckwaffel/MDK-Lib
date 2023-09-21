@@ -17,27 +17,6 @@ struct MemberInfo
 	int bitField = 0;
 };
 
-class MDKStruct
-{
-	friend MDKHandler;
-	friend MDKBase;
-
-	uint64_t baseClass = 0;
-	int offset = 0;
-	size_t maxSize = 0;
-
-public:
-	template<typename T>
-	T get(MemberInfo b) const
-	{
-		T res;
-		memset(&res, 0, sizeof(T));
-		if (sizeof(T) > b.size || maxSize < b.offset + b.size)
-			return res;
-		memcpy(&res, reinterpret_cast<void*>(baseClass + offset + b.offset), b.size);
-		return res;
-	}
-};
 
 class MDKBase
 {
@@ -53,6 +32,9 @@ class MDKBase
 
 	MemoryBlock block{};
 
+	//this is always 0 if its not a struct were currently working on
+	uint64_t baseOffset = 0;
+
 	uint64_t lastCacheTS = -1;
 
 	bool valid = false;
@@ -61,16 +43,17 @@ class MDKBase
 public:
 	MDKBase();
 
+	//only gets called by pointers or default types that are not structs
 	template<typename T>
 	T get(MemberInfo b) const
 	{
 		T res;
 		memset(&res, 0, sizeof(T));
 
-		if (!valid /*|| sizeof(T) != b.size*/ || block.blockSize < b.offset + b.size)
+		if (!valid /*|| sizeof(T) != b.size*/ || block.blockSize - baseOffset < b.offset + b.size)
 			return res;
 
-		memcpy(&res, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(block.blockPointer) + b.offset), sizeof(T));
+		memcpy(&res, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(block.blockPointer) + baseOffset + b.offset), sizeof(T));
 
 		if(b.isBit)
 		{
@@ -94,20 +77,19 @@ public:
 	T getStruct(MemberInfo b) const
 	{
 		T res;
-		memset(&res, 0, sizeof(T));
+		memset(&res, 0, sizeof(T::__MDKClassSize));
 		if (!valid || T::__MDKClassSize != b.size || block.blockSize < b.offset + b.size)
 			return res;
 
-		res.baseClass = reinterpret_cast<uint64_t>(block.blockPointer);
-		res.offset = b.offset;
-		//no, only the struct size is allowed
-		res.maxSize = b.size;
+		//keep a baseOffset but rest still same logic
+		res.baseOffset = b.offset;
 		return res;
 	}
 
 
 	operator bool() const { return block.blockPointer != nullptr; }
 };
+
 
 #define Member(x,...)  template<typename T>\
 	T
@@ -129,27 +111,37 @@ public:
 
 #define DMember(x,...)  x
 
-#define ___ 
 
 
 
 //handler for all the classes
 class MDKHandler
 {
-
+	//the cache gets for the given game pointer the MDKBase
 	static inline std::unordered_map<uint64_t, MDKBase> MDKCache{};
 
+	//the timestamp in nanoseconds when the cache last changed
 	static inline uint64_t currentFrameTS = 0;
 
+	//blocks must have at least this timestamp or larger or they get flushed
+	static inline uint64_t frameTSFlushThreshold = 0;
+
+	//the maximum amount of frames blocks can skip until they get flushed
+	static inline int maxFrameSkipsTilFlush = 5;
+	//current counter of the frame. -1 = init
+	static inline int frameSkipCounter = -1;
+
 	template<typename T>
-	static void checkSizeandTS(MDKBase& base)
+	static bool checkSizeandTS(MDKBase& base)
 	{
 		//wont really happen unless we read a invalid ptr
-		if (!base.valid)
-			return;
+		if (!base.valid || !base.block.blockPointer)
+			return false;
 		if (base.block.blockSize < T::__MDKClassSize)
 		{
 			base.block.blockPointer = realloc(base.block.blockPointer, T::__MDKClassSize);
+			if (!base.block.blockPointer)
+				return false;
 			//we in the same frame or more?
 			if(base.lastCacheTS > currentFrameTS)
 			{
@@ -157,7 +149,7 @@ class MDKHandler
 				Memory::read(base.basePointer + base.block.blockSize, reinterpret_cast<uint64_t>(base.block.blockPointer) + base.block.blockSize, T::__MDKClassSize - base.block.blockSize);
 				base.block.blockSize = T::__MDKClassSize;
 				base.lastCacheTS = currentFrameTS;
-				return;
+				return true;
 			}
 		}
 		if(base.lastCacheTS < currentFrameTS)
@@ -165,6 +157,7 @@ class MDKHandler
 			Memory::read(base.basePointer, reinterpret_cast<uint64_t>(base.block.blockPointer), T::__MDKClassSize);
 			base.lastCacheTS = currentFrameTS;
 		}
+		return true;
 		//we cant really do any memory checks, sure we could make for uworld classes some valid vtable bytes but for other stuff that isnt inherited not really
 	}
 
@@ -195,7 +188,8 @@ public:
 			return T();
 		if (MDKCache.contains(up))
 		{
-			checkSizeandTS<T>(MDKCache[up]);
+			if(!checkSizeandTS<T>(MDKCache[up]))
+				return T();
 			//freely case, bytes are fine
 			return castTo<T>(MDKCache[up]);
 		}
@@ -208,7 +202,8 @@ public:
 		if (!b.block.blockPointer)
 			return T();
 		b.valid = true;
-		checkSizeandTS<T>(b);
+		if(!checkSizeandTS<T>(b))
+			return T();
 		MDKCache.insert(std::pair(up, b));
 		return castTo<T>(b);
 	}
@@ -222,12 +217,15 @@ public:
 	{
 		return get<T>((void*)gamePointer);
 	}
-	template <typename classInstance, typename x>
+	template <typename classInstance = MDKBase, typename x>
 	static void write(const classInstance& instance, x (classInstance::* memberFunction)(MemberInfo*) const, x value)
 	{
+		if (!instance.basePointer)
+			return;
 		MemberInfo b{};
 		(instance.*memberFunction)(&b);
 
+		
 		uint64_t addr = (uint64_t)&value;
 		char c;
 		if(b.isBit)
@@ -235,7 +233,7 @@ public:
 			const bool bval = (bool)value;
 			
 			//for a single bit we need the entire bits first so get them out of the cache
-			memcpy(&c, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + b.offset), 1);
+			memcpy(&c, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), 1);
 			if (bval)
 				c |= (1 << b.bitField);  // Set nth bit to 1
 			else
@@ -244,9 +242,47 @@ public:
 			//change to our cooked bitfield
 			addr = reinterpret_cast<uint64_t>(&c);
 		}
-		Memory::write(addr, instance.basePointer + b.offset, sizeof(x));
+		Memory::write(addr, reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset, sizeof(x));
 		//make a shadow copy so the current frame sees the change too
-		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
+		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
 	}
 
+	template <typename classInstance = MDKBase, typename x>
+	static void writeSilent(const classInstance& instance, x(classInstance::* memberFunction)(MemberInfo*) const, x value)
+	{
+		if (!instance.basePointer || !instance.block.blockPointer)
+			return;
+		MemberInfo b{};
+		(instance.*memberFunction)(&b);
+
+
+		uint64_t addr = (uint64_t)&value;
+		char c;
+		if (b.isBit)
+		{
+			const bool bval = (bool)value;
+
+			//for a single bit we need the entire bits first so get them out of the cache
+			memcpy(&c, reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), 1);
+			if (bval)
+				c |= (1 << b.bitField);  // Set nth bit to 1
+			else
+				c &= ~(1 << b.bitField);  // Set nth bit to 0
+
+			//change to our cooked bitfield
+			addr = reinterpret_cast<uint64_t>(&c);
+		}
+		//silent write
+		memcpy(reinterpret_cast<void*>(reinterpret_cast<uint64_t>(instance.block.blockPointer) + instance.baseOffset + b.offset), reinterpret_cast<void*>(addr), sizeof(x));
+	}
+
+	template <typename classInstance = MDKBase>
+	static void writeBulk(const classInstance& base)
+	{
+		if (!base.basePointer)
+			return;
+
+		//write the entire class
+		Memory::write(base.basePointer + base.baseOffset, (uint64_t)base.block.blockPointer + base.baseOffset, classInstance::__MDKClassSize);
+	}
 };

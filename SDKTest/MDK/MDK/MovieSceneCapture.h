@@ -53,7 +53,7 @@ class UMasterAudioSubmixCaptureProtocol : public UMovieSceneAudioCaptureProtocol
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   Filename                                                    OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneImageCaptureProtocolBase
@@ -74,11 +74,11 @@ class UCompositionGraphCaptureProtocol : public UMovieSceneImageCaptureProtocolB
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FCompositionGraphCapturePasses)            IncludeRenderPasses                                         OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FCompositionGraphCapturePasses)            IncludeRenderPasses                                         OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	DMember(bool)                                      bCaptureFramesInHDR                                         OFFSET(get<bool>, {0x68, 1, 0, 0})
 	DMember(int32_t)                                   HDRCompressionQuality                                       OFFSET(get<int32_t>, {0x6C, 4, 0, 0})
 	CMember(TEnumAsByte<EHDRCaptureGamut>)             CaptureGamut                                                OFFSET(get<T>, {0x70, 1, 0, 0})
-	SMember(FSoftObjectPath)                           PostProcessingMaterial                                      OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FSoftObjectPath)                           PostProcessingMaterial                                      OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	DMember(bool)                                      bDisableScreenPercentage                                    OFFSET(get<bool>, {0x90, 1, 0, 0})
 	CMember(UMaterialInterface*)                       PostProcessingMaterialPtr                                   OFFSET(get<T>, {0x98, 8, 0, 0})
 };
@@ -174,15 +174,15 @@ class UMovieSceneCapture : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FSoftClassPath)                            ImageCaptureProtocolType                                    OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FSoftClassPath)                            AudioCaptureProtocolType                                    OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FSoftClassPath)                            ImageCaptureProtocolType                                    OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FSoftClassPath)                            AudioCaptureProtocolType                                    OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	CMember(UMovieSceneImageCaptureProtocolBase*)      ImageCaptureProtocol                                        OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UMovieSceneAudioCaptureProtocolBase*)      AudioCaptureProtocol                                        OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FMovieSceneCaptureSettings)                Settings                                                    OFFSET(get<T>, {0x78, 112, 0, 0})
+	SMember(FMovieSceneCaptureSettings)                Settings                                                    OFFSET(getStruct<T>, {0x78, 112, 0, 0})
 	DMember(bool)                                      bUseSeparateProcess                                         OFFSET(get<bool>, {0xE8, 1, 0, 0})
 	DMember(bool)                                      bCloseEditorWhenCaptureStarts                               OFFSET(get<bool>, {0xE9, 1, 0, 0})
-	SMember(FString)                                   AdditionalCommandLineArguments                              OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FString)                                   InheritedCommandLineArguments                               OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FString)                                   AdditionalCommandLineArguments                              OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
+	SMember(FString)                                   InheritedCommandLineArguments                               OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 
 
 	/// Functions
@@ -205,7 +205,7 @@ class ULevelCapture : public UMovieSceneCapture
 
 public:
 	DMember(bool)                                      bAutoStartCapture                                           OFFSET(get<bool>, {0x228, 1, 0, 0})
-	SMember(FGuid)                                     PrerequisiteActorId                                         OFFSET(get<T>, {0x234, 16, 0, 0})
+	SMember(FGuid)                                     PrerequisiteActorId                                         OFFSET(getStruct<T>, {0x234, 16, 0, 0})
 };
 
 /// Class /Script/MovieSceneCapture.MovieSceneCaptureEnvironment
@@ -300,8 +300,9 @@ public:
 
 /// Struct /Script/MovieSceneCapture.CompositionGraphCapturePasses
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCompositionGraphCapturePasses : public MDKStruct
+class FCompositionGraphCapturePasses : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -311,8 +312,9 @@ public:
 
 /// Struct /Script/MovieSceneCapture.CaptureResolution
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FCaptureResolution : public MDKStruct
+class FCaptureResolution : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -323,24 +325,25 @@ public:
 
 /// Struct /Script/MovieSceneCapture.MovieSceneCaptureSettings
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FMovieSceneCaptureSettings : public MDKStruct
+class FMovieSceneCaptureSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FDirectoryPath)                            OutputDirectory                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDirectoryPath)                            OutputDirectory                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(UClass*)                                   GameModeOverride                                            OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FString)                                   OutputFormat                                                OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   OutputFormat                                                OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      bOverwriteExisting                                          OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(bool)                                      bUseRelativeFrameNumbers                                    OFFSET(get<bool>, {0x29, 1, 0, 0})
 	DMember(int32_t)                                   HandleFrames                                                OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
-	SMember(FString)                                   MovieExtension                                              OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   MovieExtension                                              OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	DMember(char)                                      ZeroPadFrameNumbers                                         OFFSET(get<char>, {0x40, 1, 0, 0})
-	SMember(FFrameRate)                                FrameRate                                                   OFFSET(get<T>, {0x44, 8, 0, 0})
+	SMember(FFrameRate)                                FrameRate                                                   OFFSET(getStruct<T>, {0x44, 8, 0, 0})
 	DMember(bool)                                      bUseCustomFrameRate                                         OFFSET(get<bool>, {0x4C, 1, 0, 0})
-	SMember(FFrameRate)                                CustomFrameRate                                             OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FCaptureResolution)                        Resolution                                                  OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FFrameRate)                                CustomFrameRate                                             OFFSET(getStruct<T>, {0x50, 8, 0, 0})
+	SMember(FCaptureResolution)                        Resolution                                                  OFFSET(getStruct<T>, {0x58, 8, 0, 0})
 	DMember(bool)                                      bEnableTextureStreaming                                     OFFSET(get<bool>, {0x60, 1, 0, 0})
 	DMember(bool)                                      bCinematicEngineScalability                                 OFFSET(get<bool>, {0x61, 1, 0, 0})
 	DMember(bool)                                      bCinematicMode                                              OFFSET(get<bool>, {0x62, 1, 0, 0})
@@ -354,8 +357,9 @@ public:
 
 /// Struct /Script/MovieSceneCapture.FrameMetrics
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFrameMetrics : public MDKStruct
+class FFrameMetrics : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -368,8 +372,9 @@ public:
 
 /// Struct /Script/MovieSceneCapture.CapturedPixelsID
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCapturedPixelsID : public MDKStruct
+class FCapturedPixelsID : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -379,8 +384,9 @@ public:
 
 /// Struct /Script/MovieSceneCapture.CapturedPixels
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCapturedPixels : public MDKStruct
+class FCapturedPixels : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

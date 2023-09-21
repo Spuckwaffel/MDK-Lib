@@ -36,7 +36,7 @@ class URadioPlayerWidgetBase : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 864;
 
 public:
-	SMember(FFortPrioritizedWidgetData)                PriorityData                                                OFFSET(get<T>, {0x350, 2, 0, 0})
+	SMember(FFortPrioritizedWidgetData)                PriorityData                                                OFFSET(getStruct<T>, {0x350, 2, 0, 0})
 	CMember(UStreamingRadioPlayerComponent*)           LastValidComp                                               OFFSET(get<T>, {0x358, 8, 0, 0})
 
 

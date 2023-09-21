@@ -41,7 +41,7 @@ class UGameFeatureAction_AddAudioCluster : public UGameFeatureAction
 public:
 	CMember(TArray<FGameFeatureAudioClusterEntry>)     Clusters                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TMap<FName, FGameplayTag>)                 OverrideTable                                               OFFSET(get<T>, {0x38, 80, 0, 0})
-	SMember(FName)                                     DisabledActorTag                                            OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     DisabledActorTag                                            OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 
 
 	/// Functions
@@ -62,13 +62,14 @@ public:
 
 /// Struct /Script/FortAudioClustersRuntime.GameFeatureAudioClusterEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FGameFeatureAudioClusterEntry : public MDKStruct
+class FGameFeatureAudioClusterEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              ClusterTag                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              ClusterTag                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    ActorClasses                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 

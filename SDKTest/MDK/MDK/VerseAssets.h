@@ -17,7 +17,7 @@ class UVerseAssetPtr : public UVerseAsset
 
 public:
 	CMember(TWeakObjectPtr<UObject*>)                  AssetForEditor                                              OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FName)                                     AssetPathName                                               OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FName)                                     AssetPathName                                               OFFSET(getStruct<T>, {0x50, 4, 0, 0})
 	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x58, 8, 0, 0})
 
 

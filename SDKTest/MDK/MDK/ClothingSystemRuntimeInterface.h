@@ -15,8 +15,8 @@ class UClothingAssetBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   ImportedFilePath                                            OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FGuid)                                     AssetGuid                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   ImportedFilePath                                            OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FGuid)                                     AssetGuid                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 };
 
 /// Class /Script/ClothingSystemRuntimeInterface.ClothConfigBase
@@ -123,21 +123,23 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_Sphere
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FClothCollisionPrim_Sphere : public MDKStruct
+class FClothCollisionPrim_Sphere : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   BoneIndex                                                   OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FVector)                                   LocalPosition                                               OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   LocalPosition                                               OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_SphereConnection
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FClothCollisionPrim_SphereConnection : public MDKStruct
+class FClothCollisionPrim_SphereConnection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -147,20 +149,22 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_ConvexFace
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FClothCollisionPrim_ConvexFace : public MDKStruct
+class FClothCollisionPrim_ConvexFace : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FPlane)                                    Plane                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FPlane)                                    Plane                                                       OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	CMember(TArray<int32_t>)                           Indices                                                     OFFSET(get<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_Convex
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FClothCollisionPrim_Convex : public MDKStruct
+class FClothCollisionPrim_Convex : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -172,22 +176,24 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionPrim_Box
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FClothCollisionPrim_Box : public MDKStruct
+class FClothCollisionPrim_Box : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   LocalPosition                                               OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FQuat)                                     LocalRotation                                               OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   HalfExtents                                                 OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   LocalPosition                                               OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FQuat)                                     LocalRotation                                               OFFSET(getStruct<T>, {0x20, 32, 0, 0})
+	SMember(FVector)                                   HalfExtents                                                 OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(int32_t)                                   BoneIndex                                                   OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 };
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothVertBoneData
 /// Size: 0x004C (0x000000 - 0x00004C)
-class FClothVertBoneData : public MDKStruct
+class FClothVertBoneData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 76;
 
@@ -199,8 +205,9 @@ public:
 
 /// Struct /Script/ClothingSystemRuntimeInterface.ClothCollisionData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FClothCollisionData : public MDKStruct
+class FClothCollisionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 

@@ -16,12 +16,12 @@ class USidecarDss : public UObject
 
 public:
 	CMember(TMap<FString, FSidecarFileInfo>)           FileInfoMap                                                 OFFSET(get<T>, {0x28, 80, 0, 0})
-	SMember(FString)                                   DssDownloadUrl                                              OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FString)                                   DssCheckoutUrl                                              OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FString)                                   DssUploadUrl                                                OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FString)                                   DssRestoreUrl                                               OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   DssCheckinUrl                                               OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FString)                                   DssListFilesUrl                                             OFFSET(get<T>, {0xC8, 16, 0, 0})
+	SMember(FString)                                   DssDownloadUrl                                              OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   DssCheckoutUrl                                              OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   DssUploadUrl                                                OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   DssRestoreUrl                                               OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   DssCheckinUrl                                               OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FString)                                   DssListFilesUrl                                             OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
 };
 
 /// Class /Script/SidecarSys.SidecarInventorySys
@@ -32,9 +32,9 @@ class USidecarInventorySys : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FString)                                   InventoryDownloadUrl                                        OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   InventoryLockUrl                                            OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FString)                                   ItemUpdateUrl                                               OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   InventoryDownloadUrl                                        OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   InventoryLockUrl                                            OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   ItemUpdateUrl                                               OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/SidecarSys.SidecarSys
@@ -51,8 +51,9 @@ public:
 
 /// Struct /Script/SidecarSys.SidecarFileInfo
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FSidecarFileInfo : public MDKStruct
+class FSidecarFileInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -60,6 +61,6 @@ public:
 	CMember(TMap<FString, FString>)                    meta                                                        OFFSET(get<T>, {0x0, 80, 0, 0})
 	DMember(bool)                                      bIsCheckedOut                                               OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(bool)                                      bOperationPending                                           OFFSET(get<bool>, {0x51, 1, 0, 0})
-	SMember(FString)                                   CheckoutGuid                                                OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   CheckoutGuid                                                OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 };
 

@@ -80,7 +80,7 @@ class UStateTreeManagerComponent : public UActorComponent
 public:
 	CMember(TArray<FStateTreeRuntimeData>)             StateTreeRuntimeDataList                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<FStateTreeClientSimulationData>)    SimulatedDataList                                           OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FStateChangeDataArray)                     ReplicatedStateChanges                                      OFFSET(get<T>, {0xC0, 288, 0, 0})
+	SMember(FStateChangeDataArray)                     ReplicatedStateChanges                                      OFFSET(getStruct<T>, {0xC0, 288, 0, 0})
 };
 
 /// Class /Script/FortniteGameFramework.StateTreeTaskObject
@@ -96,8 +96,9 @@ public:
 
 /// Struct /Script/FortniteGameFramework.ComponentCacheHelper
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FComponentCacheHelper : public MDKStruct
+class FComponentCacheHelper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -106,8 +107,9 @@ public:
 
 /// Struct /Script/FortniteGameFramework.ActorOwnedStateTreeConfig
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FActorOwnedStateTreeConfig : public MDKStruct
+class FActorOwnedStateTreeConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -118,21 +120,23 @@ public:
 
 /// Struct /Script/FortniteGameFramework.StateTreeRuntimeData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FStateTreeRuntimeData : public MDKStruct
+class FStateTreeRuntimeData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(UObject*)                                  Owner                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UStateTree*)                               StateTree                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FStateTreeInstanceData)                    StateTreeInstanceData                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FStateTreeInstanceData)                    StateTreeInstanceData                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/FortniteGameFramework.StateChangeData
 /// Size: 0x001C (0x00000C - 0x000028)
 class FStateChangeData : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -148,6 +152,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FStateChangeDataArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -158,8 +163,9 @@ public:
 
 /// Struct /Script/FortniteGameFramework.StateTreeClientSimulationData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FStateTreeClientSimulationData : public MDKStruct
+class FStateTreeClientSimulationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 

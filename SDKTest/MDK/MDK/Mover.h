@@ -106,13 +106,13 @@ class UKinematicMoverComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 632;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnPreSimulationTick                                         OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostSimulationTick                                        OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPostSimulationRollback                                    OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPreSimulationTick                                         OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostSimulationTick                                        OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPostSimulationRollback                                    OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 	CMember(UClass*)                                   BackendClass                                                OFFSET(get<T>, {0xE0, 8, 0, 0})
-	SMember(FKinematicMoverAuxStateContext)            InitialAuxState                                             OFFSET(get<T>, {0xE8, 64, 0, 0})
+	SMember(FKinematicMoverAuxStateContext)            InitialAuxState                                             OFFSET(getStruct<T>, {0xE8, 64, 0, 0})
 	CMember(TMap<FName, UBaseMovementMode*>)           MovementModes                                               OFFSET(get<T>, {0x128, 80, 0, 0})
-	SMember(FName)                                     StartingMovementMode                                        OFFSET(get<T>, {0x178, 4, 0, 0})
+	SMember(FName)                                     StartingMovementMode                                        OFFSET(getStruct<T>, {0x178, 4, 0, 0})
 	DMember(float)                                     HistoryTrackingSeconds                                      OFFSET(get<float>, {0x17C, 4, 0, 0})
 	DMember(int32_t)                                   HistorySamplesPerSecond                                     OFFSET(get<int32_t>, {0x180, 4, 0, 0})
 	CMember(USceneComponent*)                          UpdatedComponent                                            OFFSET(get<T>, {0x1A0, 8, 0, 0})
@@ -188,7 +188,7 @@ public:
 	DMember(float)                                     TerminalMovementPlaneSpeed                                  OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     VerticalFallingDeceleration                                 OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(float)                                     TerminalVerticalSpeed                                       OFFSET(get<float>, {0x44, 4, 0, 0})
-	SMember(FVector)                                   GravityAcceleration                                         OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   GravityAcceleration                                         OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 
 
 	/// Functions
@@ -316,8 +316,9 @@ public:
 
 /// Struct /Script/Mover.MoverTimeStep
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMoverTimeStep : public MDKStruct
+class FMoverTimeStep : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -326,19 +327,21 @@ public:
 
 /// Struct /Script/Mover.KinematicMoverInputCmdContext
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FKinematicMoverInputCmdContext : public MDKStruct
+class FKinematicMoverInputCmdContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FMoverDataCollection)                      InputCollection                                             OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FMoverDataCollection)                      InputCollection                                             OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/Mover.MoverDataCollection
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMoverDataCollection : public MDKStruct
+class FMoverDataCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -347,8 +350,9 @@ public:
 
 /// Struct /Script/Mover.LayeredMoveBase
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FLayeredMoveBase : public MDKStruct
+class FLayeredMoveBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -362,6 +366,7 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FLayeredMove_AnimRootMotion : public FLayeredMoveBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -375,11 +380,12 @@ public:
 /// Size: 0x0020 (0x000018 - 0x000038)
 class FLayeredMove_LinearVelocity : public FLayeredMoveBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 	DMember(char)                                      SettingsFlags                                               OFFSET(get<char>, {0x30, 1, 0, 0})
 };
 
@@ -387,6 +393,7 @@ public:
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FLayeredMove_JumpImpulse : public FLayeredMoveBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -398,45 +405,49 @@ public:
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FLayeredMove_Teleport : public FLayeredMoveBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   TargetLocation                                              OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   TargetLocation                                              OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Mover.MovementModeTickEndState
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovementModeTickEndState : public MDKStruct
+class FMovementModeTickEndState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
 	DMember(float)                                     RemainingMs                                                 OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FName)                                     NextModeName                                                OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     NextModeName                                                OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Mover.KinematicMoverSyncState
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FKinematicMoverSyncState : public MDKStruct
+class FKinematicMoverSyncState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FMoverDataCollection)                      SyncStateCollection                                         OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FMoverDataCollection)                      SyncStateCollection                                         OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/Mover.KinematicMoverAuxStateContext
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FKinematicMoverAuxStateContext : public MDKStruct
+class FKinematicMoverAuxStateContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   UpDir                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   UpDir                                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     GravityScale                                                OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     MaxSpeed                                                    OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(float)                                     TurningBoost                                                OFFSET(get<float>, {0x20, 4, 0, 0})
@@ -451,34 +462,37 @@ public:
 
 /// Struct /Script/Mover.KinematicMoverTickStartData
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FKinematicMoverTickStartData : public MDKStruct
+class FKinematicMoverTickStartData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FKinematicMoverInputCmdContext)            InputCmd                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FKinematicMoverSyncState)                  SyncState                                                   OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(get<T>, {0x30, 64, 0, 0})
+	SMember(FKinematicMoverInputCmdContext)            InputCmd                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FKinematicMoverSyncState)                  SyncState                                                   OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(getStruct<T>, {0x30, 64, 0, 0})
 };
 
 /// Struct /Script/Mover.KinematicMoverTickEndData
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FKinematicMoverTickEndData : public MDKStruct
+class FKinematicMoverTickEndData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FKinematicMoverSyncState)                  SyncState                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(get<T>, {0x18, 64, 0, 0})
-	SMember(FMovementModeTickEndState)                 MovementEndState                                            OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FKinematicMoverSyncState)                  SyncState                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(getStruct<T>, {0x18, 64, 0, 0})
+	SMember(FMovementModeTickEndState)                 MovementEndState                                            OFFSET(getStruct<T>, {0x58, 8, 0, 0})
 };
 
 /// Struct /Script/Mover.LayeredMoveGroup
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FLayeredMoveGroup : public MDKStruct
+class FLayeredMoveGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -487,8 +501,9 @@ public:
 
 /// Struct /Script/Mover.MovementSubstep
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovementSubstep : public MDKStruct
+class FMovementSubstep : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -497,8 +512,9 @@ public:
 
 /// Struct /Script/Mover.MovementRecord
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FMovementRecord : public MDKStruct
+class FMovementRecord : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -507,8 +523,9 @@ public:
 
 /// Struct /Script/Mover.ProposedMove
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FProposedMove : public MDKStruct
+class FProposedMove : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -517,8 +534,9 @@ public:
 
 /// Struct /Script/Mover.MoverDataStructBase
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMoverDataStructBase : public MDKStruct
+class FMoverDataStructBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -529,18 +547,19 @@ public:
 /// Size: 0x0068 (0x000008 - 0x000070)
 class FKinematicDefaultInputs : public FMoverDataStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(EMoveInputType)                            MoveInputType                                               OFFSET(get<T>, {0x8, 1, 0, 0})
-	SMember(FVector)                                   MoveInput                                                   OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   OrientationIntent                                           OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FRotator)                                  ControlRotation                                             OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FName)                                     SuggestedMovementMode                                       OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FVector)                                   MoveInput                                                   OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   OrientationIntent                                           OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FRotator)                                  ControlRotation                                             OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FName)                                     SuggestedMovementMode                                       OFFSET(getStruct<T>, {0x58, 4, 0, 0})
 	DMember(bool)                                      bUsingMovementBase                                          OFFSET(get<bool>, {0x5C, 1, 0, 0})
 	CMember(UPrimitiveComponent*)                      MovementBase                                                OFFSET(get<T>, {0x60, 8, 0, 0})
-	SMember(FName)                                     MovementBaseBoneName                                        OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FName)                                     MovementBaseBoneName                                        OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bIsJumpJustPressed                                          OFFSET(get<bool>, {0x6C, 1, 0, 0})
 	DMember(bool)                                      bIsJumpPressed                                              OFFSET(get<bool>, {0x6D, 1, 0, 0})
 };
@@ -549,64 +568,69 @@ public:
 /// Size: 0x00E8 (0x000008 - 0x0000F0)
 class FMoverDefaultSyncState : public FMoverDataStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  Orientation                                                 OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   MoveDirectionIntent                                         OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FName)                                     MovementMode                                                OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  Orientation                                                 OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Velocity                                                    OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   MoveDirectionIntent                                         OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FName)                                     MovementMode                                                OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 	CMember(UPrimitiveComponent*)                      MovementBase                                                OFFSET(get<T>, {0x70, 8, 0, 0})
-	SMember(FName)                                     MovementBaseBoneName                                        OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FVector)                                   MovementBasePos                                             OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FQuat)                                     MovementBaseQuat                                            OFFSET(get<T>, {0xA0, 32, 0, 0})
-	SMember(FLayeredMoveGroup)                         LayeredMoves                                                OFFSET(get<T>, {0xC0, 40, 0, 0})
+	SMember(FName)                                     MovementBaseBoneName                                        OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FVector)                                   MovementBasePos                                             OFFSET(getStruct<T>, {0x80, 24, 0, 0})
+	SMember(FQuat)                                     MovementBaseQuat                                            OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
+	SMember(FLayeredMoveGroup)                         LayeredMoves                                                OFFSET(getStruct<T>, {0xC0, 40, 0, 0})
 };
 
 /// Struct /Script/Mover.NetworkPhysicsMoverInputs
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FNetworkPhysicsMoverInputs : public FNetworkPhysicsDatas
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FKinematicMoverInputCmdContext)            InputCmdContext                                             OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FKinematicMoverInputCmdContext)            InputCmdContext                                             OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/Mover.NetworkPhysicsMoverState
 /// Size: 0x0058 (0x000018 - 0x000070)
 class FNetworkPhysicsMoverState : public FNetworkPhysicsDatas
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FKinematicMoverSyncState)                  SyncStateContext                                            OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FKinematicMoverAuxStateContext)            AuxStateContext                                             OFFSET(get<T>, {0x30, 64, 0, 0})
+	SMember(FKinematicMoverSyncState)                  SyncStateContext                                            OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FKinematicMoverAuxStateContext)            AuxStateContext                                             OFFSET(getStruct<T>, {0x30, 64, 0, 0})
 };
 
 /// Struct /Script/Mover.RelativeBaseInfo
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FRelativeBaseInfo : public MDKStruct
+class FRelativeBaseInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 	CMember(UPrimitiveComponent*)                      MovementBase                                                OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FVector)                                   ContactLocalPosition                                        OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x30, 32, 0, 0})
+	SMember(FVector)                                   ContactLocalPosition                                        OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 };
 
 /// Struct /Script/Mover.FloorCheckResult
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FFloorCheckResult : public MDKStruct
+class FFloorCheckResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
@@ -616,13 +640,14 @@ public:
 	DMember(bool)                                      bLineTrace                                                  OFFSET(get<bool>, {0x0, 1, 1, 2})
 	DMember(float)                                     LineDist                                                    OFFSET(get<float>, {0x4, 4, 0, 0})
 	DMember(float)                                     FloorDist                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FHitResult)                                HitResult                                                   OFFSET(get<T>, {0x10, 224, 0, 0})
+	SMember(FHitResult)                                HitResult                                                   OFFSET(getStruct<T>, {0x10, 224, 0, 0})
 };
 
 /// Struct /Script/Mover.TrajectorySampleInfo
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FTrajectorySampleInfo : public MDKStruct
+class FTrajectorySampleInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -631,50 +656,53 @@ public:
 
 /// Struct /Script/Mover.GroundMoveParams
 /// Size: 0x00C8 (0x000000 - 0x0000C8)
-class FGroundMoveParams : public MDKStruct
+class FGroundMoveParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
 	CMember(EMoveInputType)                            MoveInputType                                               OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   MoveInput                                                   OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  OrientationIntent                                           OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PriorVelocity                                               OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FRotator)                                  PriorOrientation                                            OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(get<T>, {0x68, 64, 0, 0})
-	SMember(FVector)                                   GroundNormal                                                OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   MoveInput                                                   OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  OrientationIntent                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PriorVelocity                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FRotator)                                  PriorOrientation                                            OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(getStruct<T>, {0x68, 64, 0, 0})
+	SMember(FVector)                                   GroundNormal                                                OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 	DMember(float)                                     DeltaSeconds                                                OFFSET(get<float>, {0xC0, 4, 0, 0})
 };
 
 /// Struct /Script/Mover.FreeMoveParams
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FFreeMoveParams : public MDKStruct
+class FFreeMoveParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
 	CMember(EMoveInputType)                            MoveInputType                                               OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   MoveInput                                                   OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  OrientationIntent                                           OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   PriorVelocity                                               OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FRotator)                                  PriorOrientation                                            OFFSET(get<T>, {0x50, 24, 0, 0})
-	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(get<T>, {0x68, 64, 0, 0})
+	SMember(FVector)                                   MoveInput                                                   OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  OrientationIntent                                           OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   PriorVelocity                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FRotator)                                  PriorOrientation                                            OFFSET(getStruct<T>, {0x50, 24, 0, 0})
+	SMember(FKinematicMoverAuxStateContext)            AuxState                                                    OFFSET(getStruct<T>, {0x68, 64, 0, 0})
 	DMember(float)                                     DeltaSeconds                                                OFFSET(get<float>, {0xA8, 4, 0, 0})
 };
 
 /// Struct /Script/Mover.ComputeVelocityParams
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FComputeVelocityParams : public MDKStruct
+class FComputeVelocityParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	DMember(float)                                     DeltaSeconds                                                OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FVector)                                   InitialVelocity                                             OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   MoveDirectionIntent                                         OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   InitialVelocity                                             OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   MoveDirectionIntent                                         OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     MaxSpeed                                                    OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     TurningBoost                                                OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Deceleration                                                OFFSET(get<float>, {0x40, 4, 0, 0})
@@ -683,17 +711,18 @@ public:
 
 /// Struct /Script/Mover.SimulationTickParams
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FSimulationTickParams : public MDKStruct
+class FSimulationTickParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	CMember(USceneComponent*)                          UpdatedComponent                                            OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(UPrimitiveComponent*)                      UpdatedPrimitive                                            OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FKinematicMoverTickStartData)              StartState                                                  OFFSET(get<T>, {0x10, 112, 0, 0})
-	SMember(FMoverTimeStep)                            TimeStep                                                    OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FProposedMove)                             ProposedMove                                                OFFSET(get<T>, {0x90, 128, 0, 0})
+	SMember(FKinematicMoverTickStartData)              StartState                                                  OFFSET(getStruct<T>, {0x10, 112, 0, 0})
+	SMember(FMoverTimeStep)                            TimeStep                                                    OFFSET(getStruct<T>, {0x80, 16, 0, 0})
+	SMember(FProposedMove)                             ProposedMove                                                OFFSET(getStruct<T>, {0x90, 128, 0, 0})
 };
 
 /// Enum /Script/Mover.ELayeredMove_ConstantVelocitySettingsFlags

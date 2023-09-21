@@ -21,70 +21,76 @@ public:
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineDiscoveryModeSetDef
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FOnlineDiscoveryModeSetDef : public MDKStruct
+class FOnlineDiscoveryModeSetDef : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FOnlineLinkId)                             ModeSetId                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   SubModeLinkType                                             OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FOnlineLinkId)                             ModeSetId                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   SubModeLinkType                                             OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	CMember(TArray<FOnlineLinkId>)                     SubModeLinkIds                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineDiscoverySurfaceDevelopmentLinkCodes
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOnlineDiscoverySurfaceDevelopmentLinkCodes : public MDKStruct
+class FOnlineDiscoverySurfaceDevelopmentLinkCodes : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     SurfaceName                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     SurfaceName                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FString>)                           DevelopmentLinkCodes                                        OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineISOLanguageInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FOnlineISOLanguageInfo : public MDKStruct
+class FOnlineISOLanguageInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   LanguageId                                                  OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   BackendId                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   LanguageId                                                  OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   BackendId                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.OnlineISORegionInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FOnlineISORegionInfo : public MDKStruct
+class FOnlineISORegionInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   RegionId                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   BackendId                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   RegionId                                                    OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   BackendId                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityEvaluationRequestLegacy
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FJsonToxicityEvaluationRequestLegacy : public MDKStruct
+class FJsonToxicityEvaluationRequestLegacy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Text                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Text                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityBulkEvaluationRequestLegacy
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FJsonToxicityBulkEvaluationRequestLegacy : public MDKStruct
+class FJsonToxicityBulkEvaluationRequestLegacy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -94,19 +100,21 @@ public:
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityEvaluationRequest
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FJsonToxicityEvaluationRequest : public MDKStruct
+class FJsonToxicityEvaluationRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityBulkEvaluationRequest
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FJsonToxicityBulkEvaluationRequest : public MDKStruct
+class FJsonToxicityBulkEvaluationRequest : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -116,8 +124,9 @@ public:
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityEvaluationResponse
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FJsonToxicityEvaluationResponse : public MDKStruct
+class FJsonToxicityEvaluationResponse : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -127,8 +136,9 @@ public:
 
 /// Struct /Script/OnlineSubsystemMcp.JsonToxicityBulkEvaluationResponse
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FJsonToxicityBulkEvaluationResponse : public MDKStruct
+class FJsonToxicityBulkEvaluationResponse : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

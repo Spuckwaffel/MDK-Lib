@@ -17,10 +17,10 @@ class UFortHoagieDriverAnimInstance : public UFortVehicleOccupantAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2192;
 
 public:
-	SMember(FVector)                                   LeftHandIKPositionOffset                                    OFFSET(get<T>, {0x810, 24, 0, 0})
-	SMember(FVector)                                   RightHandIKPositionOffset                                   OFFSET(get<T>, {0x828, 24, 0, 0})
-	SMember(FRotator)                                  LeftHandIKRotationOffset                                    OFFSET(get<T>, {0x840, 24, 0, 0})
-	SMember(FRotator)                                  RightHandIKRotationOffset                                   OFFSET(get<T>, {0x858, 24, 0, 0})
+	SMember(FVector)                                   LeftHandIKPositionOffset                                    OFFSET(getStruct<T>, {0x810, 24, 0, 0})
+	SMember(FVector)                                   RightHandIKPositionOffset                                   OFFSET(getStruct<T>, {0x828, 24, 0, 0})
+	SMember(FRotator)                                  LeftHandIKRotationOffset                                    OFFSET(getStruct<T>, {0x840, 24, 0, 0})
+	SMember(FRotator)                                  RightHandIKRotationOffset                                   OFFSET(getStruct<T>, {0x858, 24, 0, 0})
 	CMember(EFortCardinalDirection)                    BoostCardinalDirection                                      OFFSET(get<T>, {0x870, 1, 0, 0})
 	DMember(float)                                     NormalizedAcceleration                                      OFFSET(get<float>, {0x874, 4, 0, 0})
 	DMember(float)                                     VehicleRoll                                                 OFFSET(get<float>, {0x878, 4, 0, 0})
@@ -42,10 +42,10 @@ class UFortHoagieVehicleAnimInstance : public UFortVehicleAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 2032;
 
 public:
-	SMember(FRotator)                                  EngineRotation                                              OFFSET(get<T>, {0x728, 24, 0, 0})
-	SMember(FRotator)                                  MainRotorRotation                                           OFFSET(get<T>, {0x740, 24, 0, 0})
-	SMember(FRotator)                                  TailRotorRotaton                                            OFFSET(get<T>, {0x758, 24, 0, 0})
-	SMember(FRotator)                                  BoosterFanRotation                                          OFFSET(get<T>, {0x770, 24, 0, 0})
+	SMember(FRotator)                                  EngineRotation                                              OFFSET(getStruct<T>, {0x728, 24, 0, 0})
+	SMember(FRotator)                                  MainRotorRotation                                           OFFSET(getStruct<T>, {0x740, 24, 0, 0})
+	SMember(FRotator)                                  TailRotorRotaton                                            OFFSET(getStruct<T>, {0x758, 24, 0, 0})
+	SMember(FRotator)                                  BoosterFanRotation                                          OFFSET(getStruct<T>, {0x770, 24, 0, 0})
 	CMember(EFortCardinalDirection)                    BoostCardinalDirection                                      OFFSET(get<T>, {0x788, 1, 0, 0})
 	DMember(float)                                     EngineRotationInterpSpeed                                   OFFSET(get<float>, {0x7A4, 4, 0, 0})
 	DMember(float)                                     EngineRotationDuringBoostInterpSpeed                        OFFSET(get<float>, {0x7A8, 4, 0, 0})
@@ -84,9 +84,9 @@ class UFortCameraMode_Hoagie : public UFortCameraMode_AthenaVehicle
 public:
 	DMember(float)                                     CurrentRollMultiplier                                       OFFSET(get<float>, {0x1B68, 4, 0, 0})
 	DMember(float)                                     CurrentPitchMultiplier                                      OFFSET(get<float>, {0x1B6C, 4, 0, 0})
-	SMember(FVector)                                   LastOrigin                                                  OFFSET(get<T>, {0x1B70, 24, 0, 0})
-	SMember(FVector)                                   CurrentInterpSpeed                                          OFFSET(get<T>, {0x1B88, 24, 0, 0})
-	SMember(FVector)                                   BoostInterpSpeed                                            OFFSET(get<T>, {0x1BA0, 24, 0, 0})
+	SMember(FVector)                                   LastOrigin                                                  OFFSET(getStruct<T>, {0x1B70, 24, 0, 0})
+	SMember(FVector)                                   CurrentInterpSpeed                                          OFFSET(getStruct<T>, {0x1B88, 24, 0, 0})
+	SMember(FVector)                                   BoostInterpSpeed                                            OFFSET(getStruct<T>, {0x1BA0, 24, 0, 0})
 	DMember(float)                                     BaseRollMultiplier                                          OFFSET(get<float>, {0x1BB8, 4, 0, 0})
 	DMember(float)                                     BasePitchMultiplier                                         OFFSET(get<float>, {0x1BBC, 4, 0, 0})
 	DMember(float)                                     BoostRollMultiplier                                         OFFSET(get<float>, {0x1BC0, 4, 0, 0})
@@ -132,12 +132,12 @@ class AFortHoagieVehicle : public AFortAthenaSKVehicle
 	static inline constexpr uint64_t __MDKClassSize = 8608;
 
 public:
-	SMember(FName)                                     PassengerCollision                                          OFFSET(get<T>, {0x1B78, 4, 0, 0})
+	SMember(FName)                                     PassengerCollision                                          OFFSET(getStruct<T>, {0x1B78, 4, 0, 0})
 	DMember(float)                                     CameraBoomDistance                                          OFFSET(get<float>, {0x1B7C, 4, 0, 0})
 	DMember(float)                                     CameraBoomHeight                                            OFFSET(get<float>, {0x1B80, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnBoostStateChanged                                         OFFSET(get<T>, {0x1B88, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAltimeterTraceUpdated                                     OFFSET(get<T>, {0x1B98, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnCrashingStateEntered                                      OFFSET(get<T>, {0x1BA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnBoostStateChanged                                         OFFSET(getStruct<T>, {0x1B88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAltimeterTraceUpdated                                     OFFSET(getStruct<T>, {0x1B98, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnCrashingStateEntered                                      OFFSET(getStruct<T>, {0x1BA8, 16, 0, 0})
 	DMember(bool)                                      bEngineAudioDisabled                                        OFFSET(get<bool>, {0x1BB8, 1, 0, 0})
 	DMember(float)                                     LiftRumbleTimer                                             OFFSET(get<float>, {0x1BBC, 4, 0, 0})
 	DMember(bool)                                      bLiftUp                                                     OFFSET(get<bool>, {0x1BC0, 1, 0, 0})
@@ -150,7 +150,7 @@ public:
 	CMember(TArray<TEnumAsByte>)                       RotorWashObjectsTypes                                       OFFSET(get<T>, {0x1BF8, 16, 0, 0})
 	CMember(UFortHoagieVehicleConfigs*)                FortHoagieVehicleConfigs                                    OFFSET(get<T>, {0x1C08, 8, 0, 0})
 	CMember(UCurveFloat*)                              RumbleIntensity                                             OFFSET(get<T>, {0x1C10, 8, 0, 0})
-	SMember(FFortHeliFlightModel)                      FlightModel                                                 OFFSET(get<T>, {0x1C18, 488, 0, 0})
+	SMember(FFortHeliFlightModel)                      FlightModel                                                 OFFSET(getStruct<T>, {0x1C18, 488, 0, 0})
 	DMember(bool)                                      bClearPitchInput                                            OFFSET(get<bool>, {0x1E00, 1, 0, 0})
 	DMember(float)                                     BoostTimeLeft                                               OFFSET(get<float>, {0x1E04, 4, 0, 0})
 	DMember(float)                                     BoostBrakingTimeLeft                                        OFFSET(get<float>, {0x1E08, 4, 0, 0})
@@ -170,36 +170,36 @@ public:
 	DMember(float)                                     TimeWhileCritical                                           OFFSET(get<float>, {0x1E34, 4, 0, 0})
 	DMember(float)                                     TimeWhileLanding                                            OFFSET(get<float>, {0x1E38, 4, 0, 0})
 	DMember(float)                                     LiftFromOverrideButton                                      OFFSET(get<float>, {0x1E3C, 4, 0, 0})
-	SMember(FVector)                                   BoostDirection                                              OFFSET(get<T>, {0x1E40, 24, 0, 0})
-	SMember(FVector)                                   LastRotorSweepDirection                                     OFFSET(get<T>, {0x1E58, 24, 0, 0})
-	SMember(FHitResult)                                AltimeterTraceResult                                        OFFSET(get<T>, {0x1E70, 224, 0, 0})
+	SMember(FVector)                                   BoostDirection                                              OFFSET(getStruct<T>, {0x1E40, 24, 0, 0})
+	SMember(FVector)                                   LastRotorSweepDirection                                     OFFSET(getStruct<T>, {0x1E58, 24, 0, 0})
+	SMember(FHitResult)                                AltimeterTraceResult                                        OFFSET(getStruct<T>, {0x1E70, 224, 0, 0})
 	DMember(int32_t)                                   HoagieStateRep                                              OFFSET(get<int32_t>, {0x1F50, 4, 0, 0})
 	CMember(EHoagieState)                              CurrentHoagieState                                          OFFSET(get<T>, {0x1F54, 4, 0, 0})
 	DMember(float)                                     CurrentRotorSpeed                                           OFFSET(get<float>, {0x1F58, 4, 0, 0})
 	DMember(float)                                     CurrentRotorAngle                                           OFFSET(get<float>, {0x1F5C, 4, 0, 0})
 	DMember(float)                                     RotorImpactTraceAngle                                       OFFSET(get<float>, {0x1F60, 4, 0, 0})
-	SMember(FVehicleGamepadLiftInputs)                 LiftInputs                                                  OFFSET(get<T>, {0x1F64, 8, 0, 0})
+	SMember(FVehicleGamepadLiftInputs)                 LiftInputs                                                  OFFSET(getStruct<T>, {0x1F64, 8, 0, 0})
 	CMember(TArray<FRotorHit>)                         RotorHits                                                   OFFSET(get<T>, {0x1F70, 16, 0, 0})
 	CMember(TArray<FCachedSeatCollision>)              CachedSeatCollision                                         OFFSET(get<T>, {0x1F80, 16, 0, 0})
-	SMember(FVector)                                   RotorHitLinearImpulse                                       OFFSET(get<T>, {0x1F90, 24, 0, 0})
-	SMember(FVector)                                   RotorHitAngularImpulse                                      OFFSET(get<T>, {0x1FA8, 24, 0, 0})
+	SMember(FVector)                                   RotorHitLinearImpulse                                       OFFSET(getStruct<T>, {0x1F90, 24, 0, 0})
+	SMember(FVector)                                   RotorHitAngularImpulse                                      OFFSET(getStruct<T>, {0x1FA8, 24, 0, 0})
 	CMember(UNiagaraComponent*)                        HoagieIdleFX_Native                                         OFFSET(get<T>, {0x1FC0, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        DamageFX_Native                                             OFFSET(get<T>, {0x1FC8, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        RotorWashFX_Native                                          OFFSET(get<T>, {0x1FD0, 8, 0, 0})
 	CMember(UFortHoagieVehicleAnimInstance*)           HoagieAnimBP_Native                                         OFFSET(get<T>, {0x1FD8, 8, 0, 0})
-	SMember(FName)                                     AltimeterTraceSocketName                                    OFFSET(get<T>, {0x1FE0, 4, 0, 0})
-	SMember(FName)                                     RotorDamageTraceSocketName                                  OFFSET(get<T>, {0x1FE4, 4, 0, 0})
-	SMember(FName)                                     MainRotorCritSocketName                                     OFFSET(get<T>, {0x1FE8, 4, 0, 0})
-	SMember(FName)                                     TailRotorCritSocketName                                     OFFSET(get<T>, {0x1FEC, 4, 0, 0})
+	SMember(FName)                                     AltimeterTraceSocketName                                    OFFSET(getStruct<T>, {0x1FE0, 4, 0, 0})
+	SMember(FName)                                     RotorDamageTraceSocketName                                  OFFSET(getStruct<T>, {0x1FE4, 4, 0, 0})
+	SMember(FName)                                     MainRotorCritSocketName                                     OFFSET(getStruct<T>, {0x1FE8, 4, 0, 0})
+	SMember(FName)                                     TailRotorCritSocketName                                     OFFSET(getStruct<T>, {0x1FEC, 4, 0, 0})
 	CMember(UAnimMontage*)                             SeatTransition_ToDriver                                     OFFSET(get<T>, {0x1FF0, 8, 0, 0})
 	CMember(UAnimMontage*)                             SeatTransition_ToPassenger                                  OFFSET(get<T>, {0x1FF8, 8, 0, 0})
-	SMember(FName)                                     RotorTraceProfile                                           OFFSET(get<T>, {0x2000, 4, 0, 0})
-	SMember(FName)                                     FoliageOverlapsBoxTag                                       OFFSET(get<T>, {0x2004, 4, 0, 0})
-	SMember(FReplicatedHeliControlState)               ControlState                                                OFFSET(get<T>, {0x2008, 48, 0, 0})
+	SMember(FName)                                     RotorTraceProfile                                           OFFSET(getStruct<T>, {0x2000, 4, 0, 0})
+	SMember(FName)                                     FoliageOverlapsBoxTag                                       OFFSET(getStruct<T>, {0x2004, 4, 0, 0})
+	SMember(FReplicatedHeliControlState)               ControlState                                                OFFSET(getStruct<T>, {0x2008, 48, 0, 0})
 	DMember(float)                                     CurrentViewDistanceScale                                    OFFSET(get<float>, {0x2038, 4, 0, 0})
 	DMember(float)                                     CurrentHLODDistanceOverrideScale                            OFFSET(get<float>, {0x203C, 4, 0, 0})
 	DMember(float)                                     CurrentHLODMaxDrawDistanceScale                             OFFSET(get<float>, {0x2040, 4, 0, 0})
-	SMember(FHoagieDeathEffectInfo)                    CachedDeathEffectInfo                                       OFFSET(get<T>, {0x2050, 328, 0, 0})
+	SMember(FHoagieDeathEffectInfo)                    CachedDeathEffectInfo                                       OFFSET(getStruct<T>, {0x2050, 328, 0, 0})
 
 
 	/// Functions
@@ -421,18 +421,19 @@ public:
 	DMember(bool)                                      bSkipRotorImpulses                                          OFFSET(get<bool>, {0xA51, 1, 0, 0})
 	DMember(bool)                                      bEnableCVarScaling                                          OFFSET(get<bool>, {0xA52, 1, 0, 0})
 	DMember(float)                                     CVarScalingInterp                                           OFFSET(get<float>, {0xA54, 4, 0, 0})
-	SMember(FVector)                                   FoliageTraceBoxSize                                         OFFSET(get<T>, {0xA58, 24, 0, 0})
-	SMember(FVector)                                   WaterBoxSize                                                OFFSET(get<T>, {0xA70, 24, 0, 0})
-	SMember(FVector)                                   WaterBoxOffset                                              OFFSET(get<T>, {0xA88, 24, 0, 0})
-	SMember(FVector)                                   RotorOffsetFromActorLocationOnServer                        OFFSET(get<T>, {0xAA0, 24, 0, 0})
+	SMember(FVector)                                   FoliageTraceBoxSize                                         OFFSET(getStruct<T>, {0xA58, 24, 0, 0})
+	SMember(FVector)                                   WaterBoxSize                                                OFFSET(getStruct<T>, {0xA70, 24, 0, 0})
+	SMember(FVector)                                   WaterBoxOffset                                              OFFSET(getStruct<T>, {0xA88, 24, 0, 0})
+	SMember(FVector)                                   RotorOffsetFromActorLocationOnServer                        OFFSET(getStruct<T>, {0xAA0, 24, 0, 0})
 	DMember(bool)                                      bSkipContactRotations                                       OFFSET(get<bool>, {0xAB8, 1, 0, 0})
-	SMember(FScalableFloat)                            MaxAutoLandHeightWhenOutOfFuel                              OFFSET(get<T>, {0xAC0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAutoLandHeightWhenOutOfFuel                              OFFSET(getStruct<T>, {0xAC0, 40, 0, 0})
 };
 
 /// Struct /Script/HoagieRuntime.FortHeliFlightModel
 /// Size: 0x01E8 (0x000000 - 0x0001E8)
-class FFortHeliFlightModel : public MDKStruct
+class FFortHeliFlightModel : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
@@ -442,20 +443,22 @@ public:
 
 /// Struct /Script/HoagieRuntime.RotorHit
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FRotorHit : public MDKStruct
+class FRotorHit : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
-	SMember(FActorInstanceHandle)                      HitObjectHandle                                             OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FActorInstanceHandle)                      HitObjectHandle                                             OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     LastHitTimer                                                OFFSET(get<float>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/HoagieRuntime.CachedSeatCollision
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FCachedSeatCollision : public MDKStruct
+class FCachedSeatCollision : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -466,20 +469,22 @@ public:
 
 /// Struct /Script/HoagieRuntime.ReplicatedHeliControlState
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FReplicatedHeliControlState : public MDKStruct
+class FReplicatedHeliControlState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector_NetQuantizeNormal)                 Up                                                          OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector_NetQuantizeNormal)                 Forward                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector_NetQuantizeNormal)                 Up                                                          OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector_NetQuantizeNormal)                 Forward                                                     OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/HoagieRuntime.HoagieCmd
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FHoagieCmd : public MDKStruct
+class FHoagieCmd : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
@@ -490,6 +495,7 @@ public:
 /// Size: 0x0040 (0x000188 - 0x0001C8)
 class FHoagieInPersistent : public FFortVehicleInPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
@@ -497,25 +503,27 @@ public:
 	CMember(UFortHoagieVehicleConfigs*)                FortHoagieVehicleConfigs                                    OFFSET(get<T>, {0x188, 8, 0, 0})
 	CMember(EHoagieState)                              CurrentHoagieState                                          OFFSET(get<T>, {0x190, 4, 0, 0})
 	DMember(float)                                     LastRotorImpulseTime                                        OFFSET(get<float>, {0x194, 4, 0, 0})
-	SMember(FVector)                                   RotorHitLinearImpulse                                       OFFSET(get<T>, {0x198, 24, 0, 0})
-	SMember(FVector)                                   RotorHitAngularImpulse                                      OFFSET(get<T>, {0x1B0, 24, 0, 0})
+	SMember(FVector)                                   RotorHitLinearImpulse                                       OFFSET(getStruct<T>, {0x198, 24, 0, 0})
+	SMember(FVector)                                   RotorHitAngularImpulse                                      OFFSET(getStruct<T>, {0x1B0, 24, 0, 0})
 };
 
 /// Struct /Script/HoagieRuntime.HoagieInternal
 /// Size: 0x01F0 (0x000080 - 0x000270)
 class FHoagieInternal : public FFortVehicleInternalPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FFortHeliFlightModel)                      FlightModel                                                 OFFSET(get<T>, {0x80, 488, 0, 0})
+	SMember(FFortHeliFlightModel)                      FlightModel                                                 OFFSET(getStruct<T>, {0x80, 488, 0, 0})
 };
 
 /// Struct /Script/HoagieRuntime.HoagieOutContinuous
 /// Size: 0x0000 (0x000038 - 0x000038)
 class FHoagieOutContinuous : public FFortVehicleOutContinuous
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -526,6 +534,7 @@ public:
 /// Size: 0x0000 (0x000028 - 0x000028)
 class FHoagieOutPersistent : public FFortVehicleOutPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -534,19 +543,20 @@ public:
 
 /// Struct /Script/HoagieRuntime.HoagieDeathEffectInfo
 /// Size: 0x0148 (0x000000 - 0x000148)
-class FHoagieDeathEffectInfo : public MDKStruct
+class FHoagieDeathEffectInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
 	DMember(float)                                     Damage                                                      OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FVector)                                   Momentum                                                    OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FHitResult)                                HitInfo                                                     OFFSET(get<T>, {0x40, 224, 0, 0})
+	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(getStruct<T>, {0x8, 32, 0, 0})
+	SMember(FVector)                                   Momentum                                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FHitResult)                                HitInfo                                                     OFFSET(getStruct<T>, {0x40, 224, 0, 0})
 	CMember(AFortPawn*)                                InstigatedBy                                                OFFSET(get<T>, {0x120, 8, 0, 0})
 	CMember(AActor*)                                   DamageCauser                                                OFFSET(get<T>, {0x128, 8, 0, 0})
-	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(get<T>, {0x130, 24, 0, 0})
+	SMember(FGameplayEffectContextHandle)              EffectContext                                               OFFSET(getStruct<T>, {0x130, 24, 0, 0})
 };
 
 /// Enum /Script/HoagieRuntime.EHoagieBoostState

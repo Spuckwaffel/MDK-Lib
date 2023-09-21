@@ -18,11 +18,11 @@ class UFortPawnComponent_Mud : public UFortPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FGameplayTag)                              CurieFireTag                                                OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FGameplayTag)                              SlidingTag                                                  OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FGameplayTag)                              SprintingTag                                                OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FGameplayTag)                              AttachParentCoveredEventTag                                 OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FGameplayTag)                              CreatureSprintingTag                                        OFFSET(get<T>, {0xB8, 4, 0, 0})
+	SMember(FGameplayTag)                              CurieFireTag                                                OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FGameplayTag)                              SlidingTag                                                  OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FGameplayTag)                              SprintingTag                                                OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FGameplayTag)                              AttachParentCoveredEventTag                                 OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FGameplayTag)                              CreatureSprintingTag                                        OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
 
 
 	/// Functions

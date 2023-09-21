@@ -141,8 +141,8 @@ public:
 	CMember(UCommonButtonBase*)                        Button_TouchClose                                           OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(TArray<FText>)                             BulletPoints                                                OFFSET(get<T>, {0x420, 16, 0, 0})
 	CMember(TMap<EAppStore, FText>)                    AppStorePlatformMapping                                     OFFSET(get<T>, {0x430, 80, 0, 0})
-	SMember(FString)                                   HowToCancelURL                                              OFFSET(get<T>, {0x480, 16, 0, 0})
-	SMember(FText)                                     PlatformTextStyle                                           OFFSET(get<T>, {0x4B0, 24, 0, 0})
+	SMember(FString)                                   HowToCancelURL                                              OFFSET(getStruct<T>, {0x480, 16, 0, 0})
+	SMember(FText)                                     PlatformTextStyle                                           OFFSET(getStruct<T>, {0x4B0, 24, 0, 0})
 
 
 	/// Functions
@@ -304,14 +304,14 @@ class UCrewSubscriptionContentContainer : public UCommonActivatableWidget
 
 public:
 	CMember(TArray<FCrewSubscriptionContentTabData>)   TabsData                                                    OFFSET(get<T>, {0x418, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       NextTabInputAction                                          OFFSET(get<T>, {0x428, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       PreviousTabInputAction                                      OFFSET(get<T>, {0x438, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       NextTabInputAction                                          OFFSET(getStruct<T>, {0x428, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PreviousTabInputAction                                      OFFSET(getStruct<T>, {0x438, 16, 0, 0})
 	CMember(UDynamicEntryBox*)                         EntryBox_Tabs                                               OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup_Tabs                                            OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UCommonActivatableWidgetSwitcher*)         Switcher_Tabs                                               OFFSET(get<T>, {0x458, 8, 0, 0})
 	CMember(UWidget*)                                  Widget_TabsContainer                                        OFFSET(get<T>, {0x460, 8, 0, 0})
 	DMember(float)                                     SpacingAdjustmentForTabs                                    OFFSET(get<float>, {0x468, 4, 0, 0})
-	SMember(FPrimaryContentSetup)                      ContentSetup                                                OFFSET(get<T>, {0x46C, 3, 0, 0})
+	SMember(FPrimaryContentSetup)                      ContentSetup                                                OFFSET(getStruct<T>, {0x46C, 3, 0, 0})
 
 
 	/// Functions
@@ -445,7 +445,7 @@ public:
 	CMember(UFortProgressiveStageList*)                Widget_ProgressiveStageList                                 OFFSET(get<T>, {0x7C8, 8, 0, 0})
 	CMember(UFortProgressiveItemStateTitleWidget*)     ProgressiveItemStateTitle                                   OFFSET(get<T>, {0x7D0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   MoreInfoModalClass                                          OFFSET(get<T>, {0x7D8, 32, 0, 0})
-	SMember(FName)                                     SubscribedMaterialParameterName                             OFFSET(get<T>, {0x7F8, 4, 0, 0})
+	SMember(FName)                                     SubscribedMaterialParameterName                             OFFSET(getStruct<T>, {0x7F8, 4, 0, 0})
 
 
 	/// Functions
@@ -480,7 +480,7 @@ class UFortProgressiveItemWidget : public UCommonButtonBase
 
 public:
 	CMember(UAthenaItemShopReactiveTileText*)          TileText_ItemName                                           OFFSET(get<T>, {0x1470, 8, 0, 0})
-	SMember(FProgressiveStageItemInfo)                 StageItemInfo                                               OFFSET(get<T>, {0x1478, 104, 0, 0})
+	SMember(FProgressiveStageItemInfo)                 StageItemInfo                                               OFFSET(getStruct<T>, {0x1478, 104, 0, 0})
 
 
 	/// Functions
@@ -610,7 +610,7 @@ public:
 	CMember(UDynamicEntryBox*)                         EntryBox_SetPagesPips                                       OFFSET(get<T>, {0x7B0, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup_SetPagesPips                                    OFFSET(get<T>, {0x7B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   MoreInfoModalClass                                          OFFSET(get<T>, {0x7C0, 32, 0, 0})
-	SMember(FName)                                     SubscribedMaterialParameterName                             OFFSET(get<T>, {0x7E0, 4, 0, 0})
+	SMember(FName)                                     SubscribedMaterialParameterName                             OFFSET(getStruct<T>, {0x7E0, 4, 0, 0})
 
 
 	/// Functions
@@ -630,20 +630,22 @@ public:
 
 /// Struct /Script/CrewUI.CrewSubscriptionContentTabData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCrewSubscriptionContentTabData : public MDKStruct
+class FCrewSubscriptionContentTabData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FText)                                     TabName                                                     OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     TabName                                                     OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	CMember(ESubscriptionContentTab)                   TabType                                                     OFFSET(get<T>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/CrewUI.FortProgressiveReward
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FFortProgressiveReward : public MDKStruct
+class FFortProgressiveReward : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -657,49 +659,53 @@ public:
 
 /// Struct /Script/CrewUI.FortProgressiveStageOverrideDisplayData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FFortProgressiveStageOverrideDisplayData : public MDKStruct
+class FFortProgressiveStageOverrideDisplayData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(TArray<FCosmeticVariantInfo>)              DefaultVariantPreviewOverrides                              OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	CMember(TWeakObjectPtr<UMaterialInterface*>)       TileMaterial                                                OFFSET(get<T>, {0x28, 32, 0, 0})
 	DMember(bool)                                      bAllowPreviewStyles                                         OFFSET(get<bool>, {0x48, 1, 0, 0})
 };
 
 /// Struct /Script/CrewUI.FortProgressiveUIStage
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FFortProgressiveUIStage : public MDKStruct
+class FFortProgressiveUIStage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
 	CMember(TArray<FFortProgressiveReward>)            Rewards                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bUseOverrideDisplayData                                     OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FFortProgressiveStageOverrideDisplayData)  OverrideDisplayData                                         OFFSET(get<T>, {0x18, 80, 0, 0})
+	SMember(FFortProgressiveStageOverrideDisplayData)  OverrideDisplayData                                         OFFSET(getStruct<T>, {0x18, 80, 0, 0})
 };
 
 /// Struct /Script/CrewUI.FortProgressiveSet
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FFortProgressiveSet : public MDKStruct
+class FFortProgressiveSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FString)                                   FulfillmentId                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FText)                                     SetName                                                     OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FString)                                   FulfillmentId                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FText)                                     SetName                                                     OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 	CMember(TWeakObjectPtr<UMaterialInterface*>)       TileMaterial                                                OFFSET(get<T>, {0x28, 32, 0, 0})
 	CMember(TArray<FFortProgressiveUIStage>)           Stages                                                      OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Struct /Script/CrewUI.FortProgressiveSetRewardData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortProgressiveSetRewardData : public MDKStruct
+class FFortProgressiveSetRewardData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

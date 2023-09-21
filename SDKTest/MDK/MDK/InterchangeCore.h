@@ -31,7 +31,7 @@ class UInterchangeSourceData : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Filename                                                    OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 
 
 	/// Functions
@@ -92,10 +92,10 @@ class UInterchangeResult : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FString)                                   SourceAssetName                                             OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   DestinationAssetName                                        OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   SourceAssetName                                             OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   DestinationAssetName                                        OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(UClass*)                                   AssetType                                                   OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FString)                                   InterchangeKey                                              OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   InterchangeKey                                              OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultSuccess
@@ -136,7 +136,7 @@ class UInterchangeResultWarning_Generic : public UInterchangeResultWarning
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultError_Generic
@@ -147,7 +147,7 @@ class UInterchangeResultError_Generic : public UInterchangeResultError
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultError_ReimportFail
@@ -168,7 +168,7 @@ class UInterchangeResultDisplay_Generic : public UInterchangeResultSuccess
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 };
 
 /// Class /Script/InterchangeCore.InterchangeResultsContainer
@@ -280,8 +280,9 @@ public:
 
 /// Struct /Script/InterchangeCore.InterchangePipelinePropertyStatePerContext
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FInterchangePipelinePropertyStatePerContext : public MDKStruct
+class FInterchangePipelinePropertyStatePerContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -291,26 +292,28 @@ public:
 
 /// Struct /Script/InterchangeCore.InterchangePipelinePropertyStates
 /// Size: 0x0003 (0x000000 - 0x000003)
-class FInterchangePipelinePropertyStates : public MDKStruct
+class FInterchangePipelinePropertyStates : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 3;
 
 public:
 	DMember(bool)                                      bLocked                                                     OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FInterchangePipelinePropertyStatePerContext) ImportStates                                              OFFSET(get<T>, {0x1, 1, 0, 0})
-	SMember(FInterchangePipelinePropertyStatePerContext) ReimportStates                                            OFFSET(get<T>, {0x2, 1, 0, 0})
+	SMember(FInterchangePipelinePropertyStatePerContext) ImportStates                                              OFFSET(getStruct<T>, {0x1, 1, 0, 0})
+	SMember(FInterchangePipelinePropertyStatePerContext) ReimportStates                                            OFFSET(getStruct<T>, {0x2, 1, 0, 0})
 };
 
 /// Struct /Script/InterchangeCore.InterchangeUserDefinedAttributeInfo
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FInterchangeUserDefinedAttributeInfo : public MDKStruct
+class FInterchangeUserDefinedAttributeInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Enum /Script/InterchangeCore.EInterchangeFactoryAssetType

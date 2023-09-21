@@ -20,58 +20,62 @@ public:
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleEntryHourly
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FEpicMediaScheduleScheduleEntryHourly : public MDKStruct
+class FEpicMediaScheduleScheduleEntryHourly : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(int32_t)                                   Minutes                                                     OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   DurationSeconds                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleEntryDaily
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FEpicMediaScheduleScheduleEntryDaily : public MDKStruct
+class FEpicMediaScheduleScheduleEntryDaily : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	DMember(int32_t)                                   Hours                                                       OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   Minutes                                                     OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(int32_t)                                   DurationSeconds                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleEntryAbsolute
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FEpicMediaScheduleScheduleEntryAbsolute : public MDKStruct
+class FEpicMediaScheduleScheduleEntryAbsolute : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   IsoStartTime                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   IsoStartTime                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(int32_t)                                   DurationSeconds                                             OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/EpicMediaSchedule.EpicMediaScheduleScheduleInfo
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FEpicMediaScheduleScheduleInfo : public MDKStruct
+class FEpicMediaScheduleScheduleInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FDateTime)                                 StartTime                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTimespan)                                 RelativeStartTime                                           OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FString)                                   VUID                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FDateTime)                                 StartTime                                                   OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FTimespan)                                 RelativeStartTime                                           OFFSET(getStruct<T>, {0x8, 8, 0, 0})
+	SMember(FString)                                   VUID                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(ULevelSequence*)                           Sequence                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 

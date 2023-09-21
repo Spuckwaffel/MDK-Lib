@@ -54,22 +54,24 @@ public:
 
 /// Struct /Script/EventModeRuntime.EventModeFocusActor
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FEventModeFocusActor : public MDKStruct
+class FEventModeFocusActor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   Target                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
 	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   Offset                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   Offset                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(float)                                     FOV                                                         OFFSET(get<float>, {0x40, 4, 0, 0})
 };
 
 /// Struct /Script/EventModeRuntime.EventModeWidgetCachedData
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FEventModeWidgetCachedData : public MDKStruct
+class FEventModeWidgetCachedData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

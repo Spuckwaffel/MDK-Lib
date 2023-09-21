@@ -18,7 +18,7 @@ class UFortGameStateComponent_HeistDisplayCaseItemManager : public UFortGameStat
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnDisplayCaseItemManagerReady                               OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnDisplayCaseItemManagerReady                               OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<UFortWorldItemDefinition*>)         AllDisplayCaseItems                                         OFFSET(get<T>, {0xB0, 16, 0, 0})
 
 
@@ -42,8 +42,8 @@ public:
 	DMember(bool)                                      bReplicateLongInteractionDetails                            OFFSET(get<bool>, {0xB88, 1, 0, 0})
 	DMember(bool)                                      bCanBeMarked                                                OFFSET(get<bool>, {0xB89, 1, 1, 0})
 	DMember(bool)                                      bBlockMarking                                               OFFSET(get<bool>, {0xB89, 1, 1, 1})
-	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(get<T>, {0xB90, 168, 0, 0})
-	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(get<T>, {0xC38, 24, 0, 0})
+	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(getStruct<T>, {0xB90, 168, 0, 0})
+	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(getStruct<T>, {0xC38, 24, 0, 0})
 
 
 	/// Functions
@@ -57,6 +57,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FFortHeistDisplayCaseItemDataTableRow : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

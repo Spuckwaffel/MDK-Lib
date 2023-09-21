@@ -22,15 +22,15 @@ public:
 	DMember(float)                                     TotalMass                                                   OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     Density                                                     OFFSET(get<float>, {0x34, 4, 0, 0})
 	DMember(float)                                     MinPerParticleMass                                          OFFSET(get<float>, {0x38, 4, 0, 0})
-	SMember(FChaosClothWeightedValue)                  EdgeStiffnessWeighted                                       OFFSET(get<T>, {0x3C, 8, 0, 0})
-	SMember(FChaosClothWeightedValue)                  BendingStiffnessWeighted                                    OFFSET(get<T>, {0x44, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  EdgeStiffnessWeighted                                       OFFSET(getStruct<T>, {0x3C, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  BendingStiffnessWeighted                                    OFFSET(getStruct<T>, {0x44, 8, 0, 0})
 	DMember(bool)                                      bUseBendingElements                                         OFFSET(get<bool>, {0x4C, 1, 0, 0})
 	DMember(float)                                     BucklingRatio                                               OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FChaosClothWeightedValue)                  BucklingStiffnessWeighted                                   OFFSET(get<T>, {0x54, 8, 0, 0})
-	SMember(FChaosClothWeightedValue)                  AreaStiffnessWeighted                                       OFFSET(get<T>, {0x5C, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  BucklingStiffnessWeighted                                   OFFSET(getStruct<T>, {0x54, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  AreaStiffnessWeighted                                       OFFSET(getStruct<T>, {0x5C, 8, 0, 0})
 	DMember(float)                                     VolumeStiffness                                             OFFSET(get<float>, {0x64, 4, 0, 0})
-	SMember(FChaosClothWeightedValue)                  TetherStiffness                                             OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FChaosClothWeightedValue)                  TetherScale                                                 OFFSET(get<T>, {0x70, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  TetherStiffness                                             OFFSET(getStruct<T>, {0x68, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  TetherScale                                                 OFFSET(getStruct<T>, {0x70, 8, 0, 0})
 	DMember(bool)                                      bUseGeodesicDistance                                        OFFSET(get<bool>, {0x78, 1, 0, 0})
 	DMember(float)                                     ShapeTargetStiffness                                        OFFSET(get<float>, {0x7C, 4, 0, 0})
 	DMember(float)                                     CollisionThickness                                          OFFSET(get<float>, {0x80, 4, 0, 0})
@@ -44,15 +44,15 @@ public:
 	DMember(float)                                     DampingCoefficient                                          OFFSET(get<float>, {0x98, 4, 0, 0})
 	DMember(float)                                     LocalDampingCoefficient                                     OFFSET(get<float>, {0x9C, 4, 0, 0})
 	DMember(bool)                                      bUsePointBasedWindModel                                     OFFSET(get<bool>, {0xA0, 1, 0, 0})
-	SMember(FChaosClothWeightedValue)                  Drag                                                        OFFSET(get<T>, {0xA4, 8, 0, 0})
-	SMember(FChaosClothWeightedValue)                  Lift                                                        OFFSET(get<T>, {0xAC, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  Drag                                                        OFFSET(getStruct<T>, {0xA4, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  Lift                                                        OFFSET(getStruct<T>, {0xAC, 8, 0, 0})
 	DMember(bool)                                      bUseGravityOverride                                         OFFSET(get<bool>, {0xB4, 1, 0, 0})
 	DMember(float)                                     GravityScale                                                OFFSET(get<float>, {0xB8, 4, 0, 0})
-	SMember(FVector)                                   Gravity                                                     OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FChaosClothWeightedValue)                  Pressure                                                    OFFSET(get<T>, {0xD8, 8, 0, 0})
-	SMember(FChaosClothWeightedValue)                  AnimDriveStiffness                                          OFFSET(get<T>, {0xE0, 8, 0, 0})
-	SMember(FChaosClothWeightedValue)                  AnimDriveDamping                                            OFFSET(get<T>, {0xE8, 8, 0, 0})
-	SMember(FVector)                                   LinearVelocityScale                                         OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FVector)                                   Gravity                                                     OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FChaosClothWeightedValue)                  Pressure                                                    OFFSET(getStruct<T>, {0xD8, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  AnimDriveStiffness                                          OFFSET(getStruct<T>, {0xE0, 8, 0, 0})
+	SMember(FChaosClothWeightedValue)                  AnimDriveDamping                                            OFFSET(getStruct<T>, {0xE8, 8, 0, 0})
+	SMember(FVector)                                   LinearVelocityScale                                         OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	DMember(float)                                     AngularVelocityScale                                        OFFSET(get<float>, {0x108, 4, 0, 0})
 	DMember(float)                                     FictitiousAngularScale                                      OFFSET(get<float>, {0x10C, 4, 0, 0})
 	DMember(bool)                                      bUseTetrahedralConstraints                                  OFFSET(get<bool>, {0x110, 1, 0, 0})
@@ -107,8 +107,9 @@ public:
 
 /// Struct /Script/ChaosCloth.ChaosClothWeightedValue
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FChaosClothWeightedValue : public MDKStruct
+class FChaosClothWeightedValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

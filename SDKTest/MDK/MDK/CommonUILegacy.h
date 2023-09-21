@@ -18,8 +18,8 @@ class UCommonActivatablePanelLegacy : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1312;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnWidgetActivated                                           OFFSET(get<T>, {0x3F0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnWidgetDeactivated                                         OFFSET(get<T>, {0x400, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnWidgetActivated                                           OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnWidgetDeactivated                                         OFFSET(getStruct<T>, {0x400, 16, 0, 0})
 	DMember(bool)                                      bConsumeAllActions                                          OFFSET(get<bool>, {0x410, 1, 0, 0})
 	DMember(bool)                                      bExposeActionsExternally                                    OFFSET(get<bool>, {0x411, 1, 0, 0})
 	DMember(bool)                                      bShouldBypassStack                                          OFFSET(get<bool>, {0x412, 1, 0, 0})
@@ -106,11 +106,11 @@ class UCommonButtonLegacy : public UCommonButtonBase
 	static inline constexpr uint64_t __MDKClassSize = 5312;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSelectedChanged                                           OFFSET(get<T>, {0x1470, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonClicked                                             OFFSET(get<T>, {0x1480, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonDoubleClicked                                       OFFSET(get<T>, {0x1490, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonHovered                                             OFFSET(get<T>, {0x14A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonUnhovered                                           OFFSET(get<T>, {0x14B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectedChanged                                           OFFSET(getStruct<T>, {0x1470, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonClicked                                             OFFSET(getStruct<T>, {0x1480, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonDoubleClicked                                       OFFSET(getStruct<T>, {0x1490, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonHovered                                             OFFSET(getStruct<T>, {0x14A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonUnhovered                                           OFFSET(getStruct<T>, {0x14B0, 16, 0, 0})
 
 
 	/// Functions
@@ -250,8 +250,8 @@ class UCommonTabListWidgetLegacy : public UCommonTabListWidgetBase
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTabButtonCreated                                          OFFSET(get<T>, {0x3C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTabButtonRemoved                                          OFFSET(get<T>, {0x3D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTabButtonCreated                                          OFFSET(getStruct<T>, {0x3C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTabButtonRemoved                                          OFFSET(getStruct<T>, {0x3D0, 16, 0, 0})
 
 
 	/// Functions
@@ -279,7 +279,7 @@ class UCommonUISubsystemLegacy : public UCommonUISubsystemBase
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnInputSuspensionChanged                                    OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInputSuspensionChanged                                    OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	CMember(UCommonInputManagerLegacy*)                CommonInputManager                                          OFFSET(get<T>, {0x50, 8, 0, 0})
 
 
@@ -322,7 +322,7 @@ class UCommonWidgetStackLegacy : public UCommonVisibilitySwitcher
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnActiveWidgetChangedLegacyEvent                            OFFSET(get<T>, {0x1C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActiveWidgetChangedLegacyEvent                            OFFSET(getStruct<T>, {0x1C8, 16, 0, 0})
 
 
 	/// Functions
@@ -346,8 +346,8 @@ class UCommonWidgetSwitcherLegacy : public UCommonAnimatedSwitcher
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnActiveWidgetDeactivated                                   OFFSET(get<T>, {0x218, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnActiveWidgetChanged                                       OFFSET(get<T>, {0x228, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActiveWidgetDeactivated                                   OFFSET(getStruct<T>, {0x218, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnActiveWidgetChanged                                       OFFSET(getStruct<T>, {0x228, 16, 0, 0})
 	DMember(bool)                                      bWidgetActivationEnabled                                    OFFSET(get<bool>, {0x238, 1, 0, 0})
 	DMember(bool)                                      bOutroPanelBelow                                            OFFSET(get<bool>, {0x239, 1, 0, 0})
 
@@ -373,10 +373,10 @@ class UCommonButtonGroupLegacy : public UCommonButtonGroupBase
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSelectedButtonChanged                                     OFFSET(get<T>, {0x110, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnHoveredButtonChanged                                      OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonClicked                                             OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnButtonDoubleClicked                                       OFFSET(get<T>, {0x188, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSelectedButtonChanged                                     OFFSET(getStruct<T>, {0x110, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnHoveredButtonChanged                                      OFFSET(getStruct<T>, {0x138, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonClicked                                             OFFSET(getStruct<T>, {0x160, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnButtonDoubleClicked                                       OFFSET(getStruct<T>, {0x188, 16, 0, 0})
 
 
 	/// Functions
@@ -426,8 +426,9 @@ public:
 
 /// Struct /Script/CommonUILegacy.Operation
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FOperation : public MDKStruct
+class FOperation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -443,12 +444,13 @@ public:
 /// Size: 0x05F0 (0x000360 - 0x000950)
 class FCommonInputActionData : public FCommonInputActionDataBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2384;
 
 public:
 	CMember(TMap<ECommonGamepadType, FCommonInputTypeInfo>) GamepadInputTypeInfoOverrides                          OFFSET(get<T>, {0x360, 80, 0, 0})
-	SMember(FCommonInputTypeInfo)                      GamepadInputTypeInfos                                       OFFSET(get<T>, {0x3B0, 1440, 0, 0})
+	SMember(FCommonInputTypeInfo)                      GamepadInputTypeInfos                                       OFFSET(getStruct<T>, {0x3B0, 1440, 0, 0})
 };
 
 /// Enum /Script/CommonUILegacy.EOperation

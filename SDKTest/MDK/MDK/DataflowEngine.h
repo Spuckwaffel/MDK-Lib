@@ -44,13 +44,14 @@ public:
 
 /// Struct /Script/DataflowEngine.StringValuePair
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FStringValuePair : public MDKStruct
+class FStringValuePair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Key                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Key                                                         OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 

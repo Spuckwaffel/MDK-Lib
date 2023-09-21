@@ -15,7 +15,7 @@ class UCustomizableObjectPopulation : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FClassWeightPair>)                  ClassWeights                                                OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(UCustomizableObjectPopulationGenerator*)   Generator                                                   OFFSET(get<T>, {0x48, 8, 0, 0})
 
@@ -35,7 +35,7 @@ class UCustomizableObjectPopulationClass : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(UCustomizableObject*)                      CustomizableObject                                          OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<FString>)                           AllowList                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<FString>)                           Blocklist                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
@@ -56,8 +56,9 @@ public:
 
 /// Struct /Script/CustomizableObjectPopulation.ClassWeightPair
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FClassWeightPair : public MDKStruct
+class FClassWeightPair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -68,20 +69,22 @@ public:
 
 /// Struct /Script/CustomizableObjectPopulation.CustomizableObjectPopulationCharacteristic
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCustomizableObjectPopulationCharacteristic : public MDKStruct
+class FCustomizableObjectPopulationCharacteristic : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<FCustomizableObjectPopulationConstraint>) Constraints                                           OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/CustomizableObjectPopulation.CustomizableObjectPopulationConstraint
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FCustomizableObjectPopulationConstraint : public MDKStruct
+class FCustomizableObjectPopulationConstraint : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -90,8 +93,8 @@ public:
 	DMember(int32_t)                                   ConstraintWeight                                            OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(int32_t)                                   TrueWeight                                                  OFFSET(get<int32_t>, {0x8, 4, 0, 0})
 	DMember(int32_t)                                   FalseWeight                                                 OFFSET(get<int32_t>, {0xC, 4, 0, 0})
-	SMember(FString)                                   DiscreteValue                                               OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FLinearColor)                              DiscreteColor                                               OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   DiscreteValue                                               OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FLinearColor)                              DiscreteColor                                               OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(TArray<FString>)                           AllowList                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TArray<FString>)                           Blocklist                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<FConstraintRanges>)                 Ranges                                                      OFFSET(get<T>, {0x50, 16, 0, 0})
@@ -101,8 +104,9 @@ public:
 
 /// Struct /Script/CustomizableObjectPopulation.ConstraintRanges
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FConstraintRanges : public MDKStruct
+class FConstraintRanges : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -114,8 +118,9 @@ public:
 
 /// Struct /Script/CustomizableObjectPopulation.PopulationClassParameterOptions
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPopulationClassParameterOptions : public MDKStruct
+class FPopulationClassParameterOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -125,8 +130,9 @@ public:
 
 /// Struct /Script/CustomizableObjectPopulation.PopulationClassParameter
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FPopulationClassParameter : public MDKStruct
+class FPopulationClassParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 

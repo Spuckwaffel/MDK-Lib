@@ -53,22 +53,23 @@ public:
 	DMember(int32_t)                                   NumTestsPerRegion                                           OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 	DMember(float)                                     PingTimeout                                                 OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(bool)                                      bEnableSubspaceBiasOrder                                    OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FString)                                   SubspaceDelimiter                                           OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   SubspaceDelimiter                                           OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FQosRegionInfo>)                    RegionDefinitions                                           OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<FQosDatacenterInfo>)                DatacenterDefinitions                                       OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FDateTime)                                 LastCheckTimestamp                                          OFFSET(get<T>, {0x68, 8, 0, 0})
+	SMember(FDateTime)                                 LastCheckTimestamp                                          OFFSET(getStruct<T>, {0x68, 8, 0, 0})
 	CMember(UQosEvaluator*)                            Evaluator                                                   OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(EQosCompletionResult)                      QosEvalResult                                               OFFSET(get<T>, {0x78, 1, 0, 0})
 	CMember(TArray<FRegionQosInstance>)                RegionOptions                                               OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FString)                                   ForceRegionId                                               OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FString)                                   ForceRegionId                                               OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 	DMember(bool)                                      bRegionForcedViaCommandline                                 OFFSET(get<bool>, {0xA0, 1, 0, 0})
-	SMember(FString)                                   SelectedRegionId                                            OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   SelectedRegionId                                            OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 };
 
 /// Struct /Script/Qos.QosSubspaceComparisonParams
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FQosSubspaceComparisonParams : public MDKStruct
+class FQosSubspaceComparisonParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -81,72 +82,77 @@ public:
 
 /// Struct /Script/Qos.QosPingServerInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FQosPingServerInfo : public MDKStruct
+class FQosPingServerInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Address                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Address                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   Port                                                        OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/Qos.QosDatacenterInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FQosDatacenterInfo : public MDKStruct
+class FQosDatacenterInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   RegionId                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   RegionId                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x20, 1, 0, 0})
 	CMember(TArray<FQosPingServerInfo>)                Servers                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/Qos.QosRegionInfo
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FQosRegionInfo : public MDKStruct
+class FQosRegionInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   RegionId                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   RegionId                                                    OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(bool)                                      bVisible                                                    OFFSET(get<bool>, {0x29, 1, 0, 0})
 	DMember(bool)                                      bAutoAssignable                                             OFFSET(get<bool>, {0x2A, 1, 0, 0})
 	DMember(bool)                                      bAllowSubspaceBias                                          OFFSET(get<bool>, {0x2B, 1, 0, 0})
-	SMember(FQosSubspaceComparisonParams)              SubspaceBiasParams                                          OFFSET(get<T>, {0x2C, 16, 0, 0})
+	SMember(FQosSubspaceComparisonParams)              SubspaceBiasParams                                          OFFSET(getStruct<T>, {0x2C, 16, 0, 0})
 };
 
 /// Struct /Script/Qos.DatacenterQosInstance
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FDatacenterQosInstance : public MDKStruct
+class FDatacenterQosInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FQosDatacenterInfo)                        Definition                                                  OFFSET(get<T>, {0x0, 56, 0, 0})
+	SMember(FQosDatacenterInfo)                        Definition                                                  OFFSET(getStruct<T>, {0x0, 56, 0, 0})
 	CMember(EQosDatacenterResult)                      Result                                                      OFFSET(get<T>, {0x38, 1, 0, 0})
 	DMember(int32_t)                                   AvgPingMs                                                   OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	CMember(TArray<int32_t>)                           PingResults                                                 OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FDateTime)                                 LastCheckTimestamp                                          OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FDateTime)                                 LastCheckTimestamp                                          OFFSET(getStruct<T>, {0x58, 8, 0, 0})
 	DMember(bool)                                      bUsable                                                     OFFSET(get<bool>, {0x60, 1, 0, 0})
 };
 
 /// Struct /Script/Qos.RegionQosInstance
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FRegionQosInstance : public MDKStruct
+class FRegionQosInstance : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FQosRegionInfo)                            Definition                                                  OFFSET(get<T>, {0x0, 64, 0, 0})
+	SMember(FQosRegionInfo)                            Definition                                                  OFFSET(getStruct<T>, {0x0, 64, 0, 0})
 	CMember(TArray<FDatacenterQosInstance>)            DatacenterOptions                                           OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 

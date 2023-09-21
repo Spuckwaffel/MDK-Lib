@@ -17,7 +17,7 @@ class UBP_ControllerRequirement_CheckLivingWorldManagerBudget_C : public UFortCo
 
 public:
 	DMember(int32_t)                                   RequiredBudget                                              OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       EventRowHandle                                              OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       EventRowHandle                                              OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions

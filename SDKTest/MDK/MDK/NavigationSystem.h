@@ -36,7 +36,7 @@ class UNavigationGraphNodeComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FNavGraphNode)                             Node                                                        OFFSET(get<T>, {0x2A0, 24, 0, 0})
+	SMember(FNavGraphNode)                             Node                                                        OFFSET(getStruct<T>, {0x2A0, 24, 0, 0})
 	CMember(UNavigationGraphNodeComponent*)            NextNodeComponent                                           OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UNavigationGraphNodeComponent*)            PrevNodeComponent                                           OFFSET(get<T>, {0x2C0, 8, 0, 0})
 };
@@ -100,7 +100,7 @@ class ANavigationData : public AActor
 
 public:
 	CMember(UPrimitiveComponent*)                      RenderingComp                                               OFFSET(get<T>, {0x298, 8, 0, 0})
-	SMember(FNavDataConfig)                            NavDataConfig                                               OFFSET(get<T>, {0x2A0, 112, 0, 0})
+	SMember(FNavDataConfig)                            NavDataConfig                                               OFFSET(getStruct<T>, {0x2A0, 112, 0, 0})
 	DMember(bool)                                      bEnableDrawing                                              OFFSET(get<bool>, {0x310, 1, 1, 0})
 	DMember(bool)                                      bForceRebuildOnLoad                                         OFFSET(get<bool>, {0x310, 1, 1, 1})
 	DMember(bool)                                      bAutoDestroyWhenNoNavigation                                OFFSET(get<bool>, {0x310, 1, 1, 2})
@@ -133,8 +133,8 @@ class UNavArea : public UNavAreaBase
 public:
 	DMember(float)                                     DefaultCost                                                 OFFSET(get<float>, {0x30, 4, 0, 0})
 	DMember(float)                                     FixedAreaEnteringCost                                       OFFSET(get<float>, {0x34, 4, 0, 0})
-	SMember(FColor)                                    DrawColor                                                   OFFSET(get<T>, {0x38, 4, 0, 0})
-	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FColor)                                    DrawColor                                                   OFFSET(getStruct<T>, {0x38, 4, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
 	DMember(bool)                                      bSupportsAgent0                                             OFFSET(get<bool>, {0x40, 1, 1, 0})
 	DMember(bool)                                      bSupportsAgent1                                             OFFSET(get<bool>, {0x40, 1, 1, 1})
 	DMember(bool)                                      bSupportsAgent2                                             OFFSET(get<bool>, {0x40, 1, 1, 2})
@@ -253,8 +253,8 @@ class UNavigationQueryFilter : public UObject
 
 public:
 	CMember(TArray<FNavigationFilterArea>)             Areas                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FNavigationFilterFlags)                    IncludeFlags                                                OFFSET(get<T>, {0x38, 4, 0, 0})
-	SMember(FNavigationFilterFlags)                    ExcludeFlags                                                OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FNavigationFilterFlags)                    IncludeFlags                                                OFFSET(getStruct<T>, {0x38, 4, 0, 0})
+	SMember(FNavigationFilterFlags)                    ExcludeFlags                                                OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
 };
 
 /// Class /Script/NavigationSystem.RecastFilter_UseDefaultArea
@@ -287,7 +287,7 @@ class UNavigationInvokerComponent : public UActorComponent
 public:
 	DMember(float)                                     TileGenerationRadius                                        OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(float)                                     TileRemovalRadius                                           OFFSET(get<float>, {0xA4, 4, 0, 0})
-	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	CMember(ENavigationInvokerPriority)                Priority                                                    OFFSET(get<T>, {0xAC, 1, 0, 0})
 };
 
@@ -299,7 +299,7 @@ class UNavigationPath : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FMulticastInlineDelegate)                  PathUpdatedNotifier                                         OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  PathUpdatedNotifier                                         OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FVector>)                           PathPoints                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<ENavigationOptionFlag>)        RecalculateOnInvalidation                                   OFFSET(get<T>, {0x48, 1, 0, 0})
 
@@ -333,7 +333,7 @@ class UNavigationSystemV1 : public UNavigationSystemBase
 public:
 	CMember(ANavigationData*)                          MainNavData                                                 OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(ANavigationData*)                          AbstractNavData                                             OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FName)                                     DefaultAgentName                                            OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FName)                                     DefaultAgentName                                            OFFSET(getStruct<T>, {0x38, 4, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   CrowdManagerClass                                           OFFSET(get<T>, {0x40, 32, 0, 0})
 	DMember(bool)                                      bAutoCreateNavigationData                                   OFFSET(get<bool>, {0x60, 1, 1, 0})
 	DMember(bool)                                      bSpawnNavDataInNavBoundsLevel                               OFFSET(get<bool>, {0x60, 1, 1, 1})
@@ -350,13 +350,13 @@ public:
 	DMember(float)                                     DirtyAreaWarningSizeThreshold                               OFFSET(get<float>, {0x74, 4, 0, 0})
 	DMember(float)                                     GatheringNavModifiersWarningLimitTime                       OFFSET(get<float>, {0x78, 4, 0, 0})
 	CMember(TArray<FNavDataConfig>)                    SupportedAgents                                             OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FNavAgentSelector)                         SupportedAgentsMask                                         OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FBox)                                      BuildBounds                                                 OFFSET(get<T>, {0x98, 56, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgentsMask                                         OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+	SMember(FBox)                                      BuildBounds                                                 OFFSET(getStruct<T>, {0x98, 56, 0, 0})
 	CMember(TArray<ANavigationData*>)                  NavDataSet                                                  OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TArray<ANavigationData*>)                  NavDataRegistrationQueue                                    OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNavDataRegisteredEvent                                    OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNavigationGenerationFinishedDelegate                      OFFSET(get<T>, {0x110, 16, 0, 0})
-	SMember(FNavigationSystemRunMode)                  OperationMode                                               OFFSET(get<T>, {0x200, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNavDataRegisteredEvent                                    OFFSET(getStruct<T>, {0x100, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNavigationGenerationFinishedDelegate                      OFFSET(getStruct<T>, {0x110, 16, 0, 0})
+	SMember(FNavigationSystemRunMode)                  OperationMode                                               OFFSET(getStruct<T>, {0x200, 1, 0, 0})
 
 
 	/// Functions
@@ -425,10 +425,10 @@ public:
 	CMember(UCapsuleComponent*)                        CapsuleComponent                                            OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(UNavigationInvokerComponent*)              InvokerComponent                                            OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	DMember(bool)                                      bActAsNavigationInvoker                                     OFFSET(get<bool>, {0x2B0, 1, 1, 0})
-	SMember(FNavAgentProperties)                       NavAgentProps                                               OFFSET(get<T>, {0x2B8, 48, 0, 0})
-	SMember(FVector)                                   QueryingExtent                                              OFFSET(get<T>, {0x2E8, 24, 0, 0})
+	SMember(FNavAgentProperties)                       NavAgentProps                                               OFFSET(getStruct<T>, {0x2B8, 48, 0, 0})
+	SMember(FVector)                                   QueryingExtent                                              OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
 	CMember(ANavigationData*)                          MyNavData                                                   OFFSET(get<T>, {0x300, 8, 0, 0})
-	SMember(FVector)                                   ProjectedLocation                                           OFFSET(get<T>, {0x308, 24, 0, 0})
+	SMember(FVector)                                   ProjectedLocation                                           OFFSET(getStruct<T>, {0x308, 24, 0, 0})
 	DMember(bool)                                      bProjectedLocationValid                                     OFFSET(get<bool>, {0x320, 1, 1, 0})
 	DMember(bool)                                      bSearchStart                                                OFFSET(get<bool>, {0x320, 1, 1, 1})
 	DMember(float)                                     CostLimitFactor                                             OFFSET(get<float>, {0x324, 4, 0, 0})
@@ -443,7 +443,7 @@ public:
 	DMember(bool)                                      bShowDiffWithPreviousStep                                   OFFSET(get<bool>, {0x32C, 1, 1, 7})
 	DMember(bool)                                      bShouldBeVisibleInGame                                      OFFSET(get<bool>, {0x32D, 1, 1, 0})
 	CMember(TEnumAsByte<ENavCostDisplay>)              CostDisplayMode                                             OFFSET(get<T>, {0x330, 1, 0, 0})
-	SMember(FVector2D)                                 TextCanvasOffset                                            OFFSET(get<T>, {0x338, 16, 0, 0})
+	SMember(FVector2D)                                 TextCanvasOffset                                            OFFSET(getStruct<T>, {0x338, 16, 0, 0})
 	DMember(bool)                                      bPathExist                                                  OFFSET(get<bool>, {0x348, 1, 1, 0})
 	DMember(bool)                                      bPathIsPartial                                              OFFSET(get<bool>, {0x348, 1, 1, 1})
 	DMember(bool)                                      bPathSearchOutOfNodes                                       OFFSET(get<bool>, {0x348, 1, 1, 2})
@@ -493,20 +493,20 @@ class UNavLinkCustomComponent : public UNavRelevantComponent
 
 public:
 	DMember(uint32_t)                                  NavLinkUserId                                               OFFSET(get<uint32_t>, {0xF8, 4, 0, 0})
-	SMember(FNavLinkId)                                CustomLinkId                                                OFFSET(get<T>, {0x100, 8, 0, 0})
-	SMember(FNavLinkAuxiliaryId)                       AuxiliaryCustomLinkId                                       OFFSET(get<T>, {0x108, 8, 0, 0})
+	SMember(FNavLinkId)                                CustomLinkId                                                OFFSET(getStruct<T>, {0x100, 8, 0, 0})
+	SMember(FNavLinkAuxiliaryId)                       AuxiliaryCustomLinkId                                       OFFSET(getStruct<T>, {0x108, 8, 0, 0})
 	CMember(UClass*)                                   EnabledAreaClass                                            OFFSET(get<T>, {0x110, 8, 0, 0})
 	CMember(UClass*)                                   DisabledAreaClass                                           OFFSET(get<T>, {0x118, 8, 0, 0})
-	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(get<T>, {0x120, 4, 0, 0})
-	SMember(FVector)                                   LinkRelativeStart                                           OFFSET(get<T>, {0x128, 24, 0, 0})
-	SMember(FVector)                                   LinkRelativeEnd                                             OFFSET(get<T>, {0x140, 24, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(getStruct<T>, {0x120, 4, 0, 0})
+	SMember(FVector)                                   LinkRelativeStart                                           OFFSET(getStruct<T>, {0x128, 24, 0, 0})
+	SMember(FVector)                                   LinkRelativeEnd                                             OFFSET(getStruct<T>, {0x140, 24, 0, 0})
 	CMember(TEnumAsByte<ENavLinkDirection>)            LinkDirection                                               OFFSET(get<T>, {0x158, 1, 0, 0})
 	DMember(bool)                                      bLinkEnabled                                                OFFSET(get<bool>, {0x15C, 1, 1, 0})
 	DMember(bool)                                      bNotifyWhenEnabled                                          OFFSET(get<bool>, {0x15C, 1, 1, 1})
 	DMember(bool)                                      bNotifyWhenDisabled                                         OFFSET(get<bool>, {0x15C, 1, 1, 2})
 	DMember(bool)                                      bCreateBoxObstacle                                          OFFSET(get<bool>, {0x15C, 1, 1, 3})
-	SMember(FVector)                                   ObstacleOffset                                              OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   ObstacleExtent                                              OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   ObstacleOffset                                              OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   ObstacleExtent                                              OFFSET(getStruct<T>, {0x178, 24, 0, 0})
 	CMember(UClass*)                                   ObstacleAreaClass                                           OFFSET(get<T>, {0x190, 8, 0, 0})
 	DMember(float)                                     BroadcastRadius                                             OFFSET(get<float>, {0x198, 4, 0, 0})
 	DMember(float)                                     BroadcastInterval                                           OFFSET(get<float>, {0x19C, 4, 0, 0})
@@ -531,7 +531,7 @@ class ANavMeshBoundsVolume : public AVolume
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(get<T>, {0x2C8, 4, 0, 0})
+	SMember(FNavAgentSelector)                         SupportedAgents                                             OFFSET(getStruct<T>, {0x2C8, 4, 0, 0})
 };
 
 /// Class /Script/NavigationSystem.NavMeshRenderingComponent
@@ -584,13 +584,13 @@ public:
 	DMember(bool)                                      bDrawMarkedForbiddenPolys                                   OFFSET(get<bool>, {0x492, 1, 1, 3})
 	DMember(bool)                                      bDistinctlyDrawTilesBeingBuilt                              OFFSET(get<bool>, {0x492, 1, 1, 4})
 	DMember(float)                                     DrawOffset                                                  OFFSET(get<float>, {0x494, 4, 0, 0})
-	SMember(FRecastNavMeshTileGenerationDebug)         TileGenerationDebug                                         OFFSET(get<T>, {0x498, 28, 0, 0})
+	SMember(FRecastNavMeshTileGenerationDebug)         TileGenerationDebug                                         OFFSET(getStruct<T>, {0x498, 28, 0, 0})
 	DMember(bool)                                      bFixedTilePoolSize                                          OFFSET(get<bool>, {0x4B4, 1, 1, 0})
 	DMember(int32_t)                                   TilePoolSize                                                OFFSET(get<int32_t>, {0x4B8, 4, 0, 0})
 	DMember(float)                                     TileSizeUU                                                  OFFSET(get<float>, {0x4BC, 4, 0, 0})
 	DMember(float)                                     CellSize                                                    OFFSET(get<float>, {0x4C0, 4, 0, 0})
 	DMember(float)                                     CellHeight                                                  OFFSET(get<float>, {0x4C4, 4, 0, 0})
-	SMember(FNavMeshResolutionParam)                   NavMeshResolutionParams                                     OFFSET(get<T>, {0x4C8, 36, 0, 0})
+	SMember(FNavMeshResolutionParam)                   NavMeshResolutionParams                                     OFFSET(getStruct<T>, {0x4C8, 36, 0, 0})
 	DMember(float)                                     AgentRadius                                                 OFFSET(get<float>, {0x4EC, 4, 0, 0})
 	DMember(float)                                     AgentHeight                                                 OFFSET(get<float>, {0x4F0, 4, 0, 0})
 	DMember(float)                                     AgentMaxSlope                                               OFFSET(get<float>, {0x4F4, 4, 0, 0})
@@ -603,7 +603,7 @@ public:
 	DMember(int32_t)                                   PolyRefTileBits                                             OFFSET(get<int32_t>, {0x510, 4, 0, 0})
 	DMember(int32_t)                                   PolyRefNavPolyBits                                          OFFSET(get<int32_t>, {0x514, 4, 0, 0})
 	DMember(int32_t)                                   PolyRefSaltBits                                             OFFSET(get<int32_t>, {0x518, 4, 0, 0})
-	SMember(FVector)                                   NavMeshOriginOffset                                         OFFSET(get<T>, {0x520, 24, 0, 0})
+	SMember(FVector)                                   NavMeshOriginOffset                                         OFFSET(getStruct<T>, {0x520, 24, 0, 0})
 	DMember(float)                                     DefaultDrawDistance                                         OFFSET(get<float>, {0x538, 4, 0, 0})
 	DMember(float)                                     DefaultMaxSearchNodes                                       OFFSET(get<float>, {0x53C, 4, 0, 0})
 	DMember(float)                                     DefaultMaxHierarchicalSearchNodes                           OFFSET(get<float>, {0x540, 4, 0, 0})
@@ -658,7 +658,7 @@ class UNavModifierComponent : public UNavRelevantComponent
 
 public:
 	CMember(UClass*)                                   AreaClass                                                   OFFSET(get<T>, {0xF0, 8, 0, 0})
-	SMember(FVector)                                   FailsafeExtent                                              OFFSET(get<T>, {0xF8, 24, 0, 0})
+	SMember(FVector)                                   FailsafeExtent                                              OFFSET(getStruct<T>, {0xF8, 24, 0, 0})
 	CMember(ENavigationDataResolution)                 NavMeshResolution                                           OFFSET(get<T>, {0x110, 1, 0, 0})
 	DMember(bool)                                      bIncludeAgentHeight                                         OFFSET(get<bool>, {0x111, 1, 1, 0})
 
@@ -701,33 +701,36 @@ public:
 
 /// Struct /Script/NavigationSystem.NavCollisionCylinder
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNavCollisionCylinder : public MDKStruct
+class FNavCollisionCylinder : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Offset                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Offset                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/NavigationSystem.NavCollisionBox
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNavCollisionBox : public MDKStruct
+class FNavCollisionBox : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector)                                   Offset                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Offset                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Extent                                                      OFFSET(getStruct<T>, {0x18, 24, 0, 0})
 };
 
 /// Struct /Script/NavigationSystem.NavigationFilterArea
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNavigationFilterArea : public MDKStruct
+class FNavigationFilterArea : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -742,8 +745,9 @@ public:
 
 /// Struct /Script/NavigationSystem.NavigationFilterFlags
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FNavigationFilterFlags : public MDKStruct
+class FNavigationFilterFlags : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -768,8 +772,9 @@ public:
 
 /// Struct /Script/NavigationSystem.NavGraphEdge
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNavGraphEdge : public MDKStruct
+class FNavGraphEdge : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -778,8 +783,9 @@ public:
 
 /// Struct /Script/NavigationSystem.NavGraphNode
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNavGraphNode : public MDKStruct
+class FNavGraphNode : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -789,13 +795,14 @@ public:
 
 /// Struct /Script/NavigationSystem.SupportedAreaData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSupportedAreaData : public MDKStruct
+class FSupportedAreaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   AreaClassName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   AreaClassName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   AreaID                                                      OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 	CMember(UClass*)                                   AreaClass                                                   OFFSET(get<T>, {0x18, 8, 0, 0})
 };
@@ -804,18 +811,20 @@ public:
 /// Size: 0x0010 (0x000068 - 0x000078)
 class FNavLinkCustomInstanceData : public FActorComponentInstanceData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FNavLinkId)                                CustomLinkId                                                OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FNavLinkAuxiliaryId)                       AuxiliaryCustomLinkId                                       OFFSET(get<T>, {0x70, 8, 0, 0})
+	SMember(FNavLinkId)                                CustomLinkId                                                OFFSET(getStruct<T>, {0x68, 8, 0, 0})
+	SMember(FNavLinkAuxiliaryId)                       AuxiliaryCustomLinkId                                       OFFSET(getStruct<T>, {0x70, 8, 0, 0})
 };
 
 /// Struct /Script/NavigationSystem.RecastNavMeshGenerationProperties
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FRecastNavMeshGenerationProperties : public MDKStruct
+class FRecastNavMeshGenerationProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -848,14 +857,15 @@ public:
 
 /// Struct /Script/NavigationSystem.RecastNavMeshTileGenerationDebug
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FRecastNavMeshTileGenerationDebug : public MDKStruct
+class FRecastNavMeshTileGenerationDebug : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
 public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x0, 1, 1, 0})
-	SMember(FIntVector)                                TileCoordinate                                              OFFSET(get<T>, {0x4, 12, 0, 0})
+	SMember(FIntVector)                                TileCoordinate                                              OFFSET(getStruct<T>, {0x4, 12, 0, 0})
 	DMember(bool)                                      bGenerateDebugTileOnly                                      OFFSET(get<bool>, {0x10, 1, 1, 0})
 	DMember(bool)                                      bCollisionGeometry                                          OFFSET(get<bool>, {0x10, 1, 1, 1})
 	CMember(EHeightFieldRenderMode)                    HeightFieldRenderMode                                       OFFSET(get<T>, {0x14, 1, 0, 0})
@@ -876,8 +886,9 @@ public:
 
 /// Struct /Script/NavigationSystem.NavMeshResolutionParam
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FNavMeshResolutionParam : public MDKStruct
+class FNavMeshResolutionParam : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

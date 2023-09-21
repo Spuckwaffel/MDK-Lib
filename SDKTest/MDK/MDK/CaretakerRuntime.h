@@ -31,7 +31,7 @@ class UFortBTTask_CaretakerMoveTo : public UBTTask_MoveTo
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FBlackboardKeySelector)                    FocalPointWhileMoving                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    FocalPointWhileMoving                                       OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 	CMember(TEnumAsByte<EPathObstacleAction>)          PathObstacleAction                                          OFFSET(get<T>, {0xD8, 1, 0, 0})
 	DMember(bool)                                      bEnableSlowdownAtGoal                                       OFFSET(get<bool>, {0xDC, 1, 1, 0})
 	DMember(bool)                                      bMoveDirectlyTowards                                        OFFSET(get<bool>, {0xDC, 1, 1, 1})
@@ -80,12 +80,12 @@ public:
 	DMember(bool)                                      bFootPhase_StopRightPass                                    OFFSET(get<bool>, {0x587, 1, 0, 0})
 	DMember(float)                                     BreathingCurve                                              OFFSET(get<float>, {0x588, 4, 0, 0})
 	DMember(float)                                     MovingTreshold                                              OFFSET(get<float>, {0x58C, 4, 0, 0})
-	SMember(FName)                                     CurveName_AimOffsetCurve                                    OFFSET(get<T>, {0x590, 4, 0, 0})
-	SMember(FName)                                     CurveName_FootPhase                                         OFFSET(get<T>, {0x594, 4, 0, 0})
-	SMember(FName)                                     CurveName_BreathingCurve                                    OFFSET(get<T>, {0x598, 4, 0, 0})
-	SMember(FName)                                     SocketName_FX_Chest                                         OFFSET(get<T>, {0x59C, 4, 0, 0})
-	SMember(FName)                                     ParamName_ChestSocketLocation                               OFFSET(get<T>, {0x5A0, 4, 0, 0})
-	SMember(FName)                                     ParamName_ChestSocketVector                                 OFFSET(get<T>, {0x5A4, 4, 0, 0})
+	SMember(FName)                                     CurveName_AimOffsetCurve                                    OFFSET(getStruct<T>, {0x590, 4, 0, 0})
+	SMember(FName)                                     CurveName_FootPhase                                         OFFSET(getStruct<T>, {0x594, 4, 0, 0})
+	SMember(FName)                                     CurveName_BreathingCurve                                    OFFSET(getStruct<T>, {0x598, 4, 0, 0})
+	SMember(FName)                                     SocketName_FX_Chest                                         OFFSET(getStruct<T>, {0x59C, 4, 0, 0})
+	SMember(FName)                                     ParamName_ChestSocketLocation                               OFFSET(getStruct<T>, {0x5A0, 4, 0, 0})
+	SMember(FName)                                     ParamName_ChestSocketVector                                 OFFSET(getStruct<T>, {0x5A4, 4, 0, 0})
 	DMember(float)                                     FirstFootPhaseMin                                           OFFSET(get<float>, {0x5A8, 4, 0, 0})
 	DMember(float)                                     SecondFootPhaseMin                                          OFFSET(get<float>, {0x5AC, 4, 0, 0})
 	DMember(float)                                     ThirdFootPhaseMin                                           OFFSET(get<float>, {0x5B0, 4, 0, 0})

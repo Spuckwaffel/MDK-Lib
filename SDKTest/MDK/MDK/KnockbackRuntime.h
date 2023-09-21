@@ -21,12 +21,12 @@ class AFortAthenaMutator_Knockback : public AFortAthenaMutator
 public:
 	DMember(bool)                                      bStorePlayerKnockbackData                                   OFFSET(get<bool>, {0x338, 1, 0, 0})
 	DMember(bool)                                      bReplicatePlayerKnockbackData                               OFFSET(get<bool>, {0x339, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlayerKnockbackDataChanged                                OFFSET(get<T>, {0x340, 16, 0, 0})
-	SMember(FKnockbackMutatorDataArray)                AllPlayersKnockbackData                                     OFFSET(get<T>, {0x350, 288, 0, 0})
-	SMember(FScalableFloat)                            bDisplayKnockbackDamageNumbersAsPercentage                  OFFSET(get<T>, {0x470, 40, 0, 0})
-	SMember(FScalableFloat)                            ConvertToKnockbackDamageMultiplier                          OFFSET(get<T>, {0x498, 40, 0, 0})
-	SMember(FScalableFloat)                            PercentDamageLowMaxThreshold                                OFFSET(get<T>, {0x4C0, 40, 0, 0})
-	SMember(FScalableFloat)                            PercentDamageMediumMaxThreshold                             OFFSET(get<T>, {0x4E8, 40, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlayerKnockbackDataChanged                                OFFSET(getStruct<T>, {0x340, 16, 0, 0})
+	SMember(FKnockbackMutatorDataArray)                AllPlayersKnockbackData                                     OFFSET(getStruct<T>, {0x350, 288, 0, 0})
+	SMember(FScalableFloat)                            bDisplayKnockbackDamageNumbersAsPercentage                  OFFSET(getStruct<T>, {0x470, 40, 0, 0})
+	SMember(FScalableFloat)                            ConvertToKnockbackDamageMultiplier                          OFFSET(getStruct<T>, {0x498, 40, 0, 0})
+	SMember(FScalableFloat)                            PercentDamageLowMaxThreshold                                OFFSET(getStruct<T>, {0x4C0, 40, 0, 0})
+	SMember(FScalableFloat)                            PercentDamageMediumMaxThreshold                             OFFSET(getStruct<T>, {0x4E8, 40, 0, 0})
 	DMember(float)                                     KnockbackMultiplierInitialValue                             OFFSET(get<float>, {0x510, 4, 0, 0})
 
 
@@ -68,6 +68,7 @@ public:
 /// Size: 0x0014 (0x00000C - 0x000020)
 class FKnockbackMutatorData : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -80,6 +81,7 @@ public:
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FKnockbackMutatorDataArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 

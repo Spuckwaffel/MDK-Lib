@@ -28,8 +28,8 @@ class UAchievementQueryCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -47,8 +47,8 @@ class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -64,8 +64,8 @@ class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -81,8 +81,8 @@ class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -98,8 +98,8 @@ class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -115,8 +115,8 @@ class UEndMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -132,8 +132,8 @@ class UEndTurnCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -149,8 +149,8 @@ class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -174,8 +174,8 @@ class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -191,8 +191,8 @@ class UInAppPurchaseCallbackProxy2 : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -212,8 +212,8 @@ class UInAppPurchaseCheckoutCallbackProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -239,8 +239,8 @@ class UInAppPurchaseQueryCallbackProxy2 : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -256,8 +256,8 @@ class UInAppPurchaseReceiptsCallbackProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -277,8 +277,8 @@ class UInAppPurchaseRestoreCallbackProxy2 : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -326,8 +326,8 @@ class UJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 408;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -353,8 +353,8 @@ class ULeaderboardFlushCallbackProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -370,8 +370,8 @@ class ULeaderboardQueryCallbackProxy : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 
 
 	/// Functions
@@ -387,8 +387,8 @@ class ULogoutCallbackProxy : public UBlueprintAsyncActionBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -450,7 +450,7 @@ class AOnlineBeaconHostObject : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-	SMember(FString)                                   BeaconTypeName                                              OFFSET(get<T>, {0x290, 16, 0, 0})
+	SMember(FString)                                   BeaconTypeName                                              OFFSET(getStruct<T>, {0x290, 16, 0, 0})
 	CMember(UClass*)                                   ClientBeaconActorClass                                      OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(TArray<AOnlineBeaconClient*>)              ClientActors                                                OFFSET(get<T>, {0x2A8, 16, 0, 0})
 };
@@ -465,7 +465,7 @@ class UOnlineEngineInterfaceImpl : public UOnlineEngineInterface
 public:
 	CMember(TMap<FName, FName>)                        MappedUniqueNetIdTypes                                      OFFSET(get<T>, {0x28, 80, 0, 0})
 	CMember(TArray<FName>)                             CompatibleUniqueNetIdTypes                                  OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FName)                                     VoiceSubsystemNameOverride                                  OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     VoiceSubsystemNameOverride                                  OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 };
 
 /// Class /Script/OnlineSubsystemUtils.OnlinePIESettings
@@ -510,8 +510,8 @@ class APartyBeaconClient : public AOnlineBeaconClient
 	static inline constexpr uint64_t __MDKClassSize = 1000;
 
 public:
-	SMember(FString)                                   DestSessionId                                               OFFSET(get<T>, {0x350, 16, 0, 0})
-	SMember(FPartyReservation)                         PendingReservation                                          OFFSET(get<T>, {0x360, 88, 0, 0})
+	SMember(FString)                                   DestSessionId                                               OFFSET(getStruct<T>, {0x350, 16, 0, 0})
+	SMember(FPartyReservation)                         PendingReservation                                          OFFSET(getStruct<T>, {0x360, 88, 0, 0})
 	CMember(EClientRequestType)                        RequestType                                                 OFFSET(get<T>, {0x3B8, 1, 0, 0})
 	DMember(bool)                                      bPendingReservationSent                                     OFFSET(get<bool>, {0x3B9, 1, 0, 0})
 	DMember(bool)                                      bCancelReservation                                          OFFSET(get<bool>, {0x3BA, 1, 0, 0})
@@ -561,12 +561,12 @@ class UPartyBeaconState : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FName)                                     SessionName                                                 OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     SessionName                                                 OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(int32_t)                                   NumConsumedReservations                                     OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 	DMember(int32_t)                                   MaxReservations                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(int32_t)                                   NumTeams                                                    OFFSET(get<int32_t>, {0x34, 4, 0, 0})
 	DMember(int32_t)                                   NumPlayersPerTeam                                           OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	SMember(FName)                                     TeamAssignmentMethod                                        OFFSET(get<T>, {0x3C, 4, 0, 0})
+	SMember(FName)                                     TeamAssignmentMethod                                        OFFSET(getStruct<T>, {0x3C, 4, 0, 0})
 	DMember(int32_t)                                   ReservedHostTeamNum                                         OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 	DMember(int32_t)                                   ForceTeamNum                                                OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 	DMember(bool)                                      bRestrictCrossConsole                                       OFFSET(get<bool>, {0x48, 1, 0, 0})
@@ -585,8 +585,8 @@ class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -602,8 +602,8 @@ class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 
 
 	/// Functions
@@ -619,8 +619,8 @@ class ASpectatorBeaconClient : public AOnlineBeaconClient
 	static inline constexpr uint64_t __MDKClassSize = 1048;
 
 public:
-	SMember(FString)                                   DestSessionId                                               OFFSET(get<T>, {0x350, 16, 0, 0})
-	SMember(FSpectatorReservation)                     PendingReservation                                          OFFSET(get<T>, {0x360, 136, 0, 0})
+	SMember(FString)                                   DestSessionId                                               OFFSET(getStruct<T>, {0x350, 16, 0, 0})
+	SMember(FSpectatorReservation)                     PendingReservation                                          OFFSET(getStruct<T>, {0x360, 136, 0, 0})
 	CMember(ESpectatorClientRequestType)               RequestType                                                 OFFSET(get<T>, {0x3E8, 1, 0, 0})
 	DMember(bool)                                      bPendingReservationSent                                     OFFSET(get<bool>, {0x3E9, 1, 0, 0})
 	DMember(bool)                                      bCancelReservation                                          OFFSET(get<bool>, {0x3EA, 1, 0, 0})
@@ -664,7 +664,7 @@ class USpectatorBeaconState : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FName)                                     SessionName                                                 OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     SessionName                                                 OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	DMember(int32_t)                                   NumConsumedReservations                                     OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 	DMember(int32_t)                                   MaxReservations                                             OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(bool)                                      bRestrictCrossConsole                                       OFFSET(get<bool>, {0x34, 1, 0, 0})
@@ -713,8 +713,9 @@ public:
 
 /// Struct /Script/OnlineSubsystemUtils.BlueprintSessionResult
 /// Size: 0x0120 (0x000000 - 0x000120)
-class FBlueprintSessionResult : public MDKStruct
+class FBlueprintSessionResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
@@ -723,153 +724,163 @@ public:
 
 /// Struct /Script/OnlineSubsystemUtils.OnlineProxyStoreOffer
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FOnlineProxyStoreOffer : public MDKStruct
+class FOnlineProxyStoreOffer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FString)                                   OfferId                                                     OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FText)                                     Description                                                 OFFSET(get<T>, {0x28, 24, 0, 0})
-	SMember(FText)                                     LongDescription                                             OFFSET(get<T>, {0x40, 24, 0, 0})
-	SMember(FText)                                     RegularPriceText                                            OFFSET(get<T>, {0x58, 24, 0, 0})
+	SMember(FString)                                   OfferId                                                     OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FText)                                     Description                                                 OFFSET(getStruct<T>, {0x28, 24, 0, 0})
+	SMember(FText)                                     LongDescription                                             OFFSET(getStruct<T>, {0x40, 24, 0, 0})
+	SMember(FText)                                     RegularPriceText                                            OFFSET(getStruct<T>, {0x58, 24, 0, 0})
 	DMember(int32_t)                                   RegularPrice                                                OFFSET(get<int32_t>, {0x70, 4, 0, 0})
-	SMember(FText)                                     PriceText                                                   OFFSET(get<T>, {0x78, 24, 0, 0})
+	SMember(FText)                                     PriceText                                                   OFFSET(getStruct<T>, {0x78, 24, 0, 0})
 	DMember(int32_t)                                   NumericPrice                                                OFFSET(get<int32_t>, {0x90, 4, 0, 0})
-	SMember(FString)                                   CurrencyCode                                                OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FDateTime)                                 ReleaseDate                                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FDateTime)                                 ExpirationDate                                              OFFSET(get<T>, {0xB0, 8, 0, 0})
+	SMember(FString)                                   CurrencyCode                                                OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FDateTime)                                 ReleaseDate                                                 OFFSET(getStruct<T>, {0xA8, 8, 0, 0})
+	SMember(FDateTime)                                 ExpirationDate                                              OFFSET(getStruct<T>, {0xB0, 8, 0, 0})
 	CMember(EOnlineProxyStoreOfferDiscountType)        DiscountType                                                OFFSET(get<T>, {0xB8, 1, 0, 0})
 	CMember(TMap<FString, FString>)                    DynamicFields                                               OFFSET(get<T>, {0xC0, 80, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FInAppPurchaseRestoreInfo2 : public MDKStruct
+class FInAppPurchaseRestoreInfo2 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   ItemName                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ItemId                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   ValidationInfo                                              OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ItemName                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ItemId                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ValidationInfo                                              OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseReceiptInfo2
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FInAppPurchaseReceiptInfo2 : public MDKStruct
+class FInAppPurchaseReceiptInfo2 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   ItemName                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ItemId                                                      OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   ValidationInfo                                              OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   TransactionIdentifier                                       OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   ItemName                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ItemId                                                      OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   ValidationInfo                                              OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   TransactionIdentifier                                       OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseProductRequest2
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FInAppPurchaseProductRequest2 : public MDKStruct
+class FInAppPurchaseProductRequest2 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   ProductIdentifier                                           OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ProductIdentifier                                           OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bIsConsumable                                               OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PlayerReservation
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FPlayerReservation : public MDKStruct
+class FPlayerReservation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(get<T>, {0x0, 48, 0, 0})
-	SMember(FString)                                   ValidationStr                                               OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   Platform                                                    OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FUniqueNetIdRepl)                          UniqueID                                                    OFFSET(getStruct<T>, {0x0, 48, 0, 0})
+	SMember(FString)                                   ValidationStr                                               OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   Platform                                                    OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	DMember(bool)                                      bAllowCrossplay                                             OFFSET(get<bool>, {0x50, 1, 0, 0})
 	DMember(float)                                     ElapsedTime                                                 OFFSET(get<float>, {0x54, 4, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.InAppPurchaseProductInfo2
 /// Size: 0x00F8 (0x000000 - 0x0000F8)
-class FInAppPurchaseProductInfo2 : public MDKStruct
+class FInAppPurchaseProductInfo2 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FString)                                   Identifier                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   TransactionIdentifier                                       OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   DisplayName                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   DisplayDescription                                          OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   DisplayPrice                                                OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   Identifier                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   TransactionIdentifier                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   DisplayName                                                 OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   DisplayDescription                                          OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   DisplayPrice                                                OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	DMember(float)                                     RawPrice                                                    OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FString)                                   CurrencyCode                                                OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FString)                                   CurrencySymbol                                              OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FString)                                   DecimalSeparator                                            OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FString)                                   GroupingSeparator                                           OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FString)                                   ReceiptData                                                 OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   CurrencyCode                                                OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   CurrencySymbol                                              OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   DecimalSeparator                                            OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   GroupingSeparator                                           OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   ReceiptData                                                 OFFSET(getStruct<T>, {0x98, 16, 0, 0})
 	CMember(TMap<FString, FString>)                    DynamicFields                                               OFFSET(get<T>, {0xA8, 80, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PIELoginSettingsInternal
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FPIELoginSettingsInternal : public MDKStruct
+class FPIELoginSettingsInternal : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   ID                                                          OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   Token                                                       OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Type                                                        OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   ID                                                          OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Token                                                       OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Type                                                        OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(TArray<char>)                              TokenBytes                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PartyReservation
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FPartyReservation : public MDKStruct
+class FPartyReservation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	DMember(int32_t)                                   TeamNum                                                     OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FUniqueNetIdRepl)                          PartyLeader                                                 OFFSET(get<T>, {0x8, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          PartyLeader                                                 OFFSET(getStruct<T>, {0x8, 48, 0, 0})
 	CMember(TArray<FPlayerReservation>)                PartyMembers                                                OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FPlayerReservation>)                RemovedPartyMembers                                         OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.PartyBeaconCrossplayPlatformMapping
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FPartyBeaconCrossplayPlatformMapping : public MDKStruct
+class FPartyBeaconCrossplayPlatformMapping : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   PlatformName                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   PlatformType                                                OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   PlatformName                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   PlatformType                                                OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystemUtils.SpectatorReservation
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FSpectatorReservation : public MDKStruct
+class FSpectatorReservation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FUniqueNetIdRepl)                          SpectatorId                                                 OFFSET(get<T>, {0x0, 48, 0, 0})
-	SMember(FPlayerReservation)                        Spectator                                                   OFFSET(get<T>, {0x30, 88, 0, 0})
+	SMember(FUniqueNetIdRepl)                          SpectatorId                                                 OFFSET(getStruct<T>, {0x0, 48, 0, 0})
+	SMember(FPlayerReservation)                        Spectator                                                   OFFSET(getStruct<T>, {0x30, 88, 0, 0})
 };
 
 /// Enum /Script/OnlineSubsystemUtils.EOnlineProxyStoreOfferDiscountType

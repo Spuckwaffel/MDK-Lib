@@ -31,8 +31,9 @@ public:
 
 /// Struct /Script/NaniteDisplacedMesh.NaniteDisplacedMeshDisplacementMap
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNaniteDisplacedMeshDisplacementMap : public MDKStruct
+class FNaniteDisplacedMeshDisplacementMap : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -44,8 +45,9 @@ public:
 
 /// Struct /Script/NaniteDisplacedMesh.NaniteDisplacedMeshParams
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FNaniteDisplacedMeshParams : public MDKStruct
+class FNaniteDisplacedMeshParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

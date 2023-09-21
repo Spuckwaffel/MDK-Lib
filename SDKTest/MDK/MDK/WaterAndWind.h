@@ -20,8 +20,9 @@ public:
 
 /// Struct /Game/WaterAndWind/Blueprint/ArrayOfWaterMeshWaterBlueprintPairs.ArrayOfWaterMeshWaterBlueprintPairs
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FArrayOfWaterMeshWaterBlueprintPairs : public MDKStruct
+class FArrayOfWaterMeshWaterBlueprintPairs : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

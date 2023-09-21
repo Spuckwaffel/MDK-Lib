@@ -24,8 +24,9 @@ public:
 
 /// Struct /Script/WaveTable.WaveTableData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FWaveTableData : public MDKStruct
+class FWaveTableData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -37,42 +38,45 @@ public:
 
 /// Struct /Script/WaveTable.WaveTableBankEntry
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FWaveTableBankEntry : public MDKStruct
+class FWaveTableBankEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FWaveTableTransform)                       Transform                                                   OFFSET(get<T>, {0x0, 184, 0, 0})
+	SMember(FWaveTableTransform)                       Transform                                                   OFFSET(getStruct<T>, {0x0, 184, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableTransform
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FWaveTableTransform : public MDKStruct
+class FWaveTableTransform : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
 	CMember(EWaveTableCurve)                           Curve                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
 	DMember(float)                                     Scalar                                                      OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FRichCurve)                                CurveCustom                                                 OFFSET(get<T>, {0x8, 128, 0, 0})
+	SMember(FRichCurve)                                CurveCustom                                                 OFFSET(getStruct<T>, {0x8, 128, 0, 0})
 	CMember(UCurveFloat*)                              CurveShared                                                 OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FWaveTableData)                            TableData                                                   OFFSET(get<T>, {0x90, 32, 0, 0})
+	SMember(FWaveTableData)                            TableData                                                   OFFSET(getStruct<T>, {0x90, 32, 0, 0})
 	DMember(float)                                     Duration                                                    OFFSET(get<float>, {0xB0, 4, 0, 0})
 };
 
 /// Struct /Script/WaveTable.WaveTableSettings
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FWaveTableSettings : public MDKStruct
+class FWaveTableSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FFilePath)                                 FilePath                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FFilePath)                                 FilePath                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   ChannelIndex                                                OFFSET(get<int32_t>, {0x10, 4, 0, 0})
-	SMember(FWaveTableData)                            SourceData                                                  OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FWaveTableData)                            SourceData                                                  OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 	DMember(int32_t)                                   SourceSampleRate                                            OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 	DMember(float)                                     Phase                                                       OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Top                                                         OFFSET(get<float>, {0x40, 4, 0, 0})

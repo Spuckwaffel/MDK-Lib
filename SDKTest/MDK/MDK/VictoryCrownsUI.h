@@ -22,7 +22,7 @@ class UFortUIManagerComponent_VictoryCrowns : public UFortControllerComponent
 
 public:
 	CMember(UClass*)                                   VictoryCrownsIndicatorClass                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(get<T>, {0xB0, 136, 0, 0})
+	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(getStruct<T>, {0xB0, 136, 0, 0})
 
 
 	/// Functions
@@ -89,7 +89,7 @@ class UVictoryCrownsPreGameWidget : public UCommonActivatableWidget
 public:
 	CMember(UDynamicEntryBox*)                         EntryBox_BearerList                                         OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      TipActionWidget                                             OFFSET(get<T>, {0x3F0, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       CloseObjectInputAction                                      OFFSET(get<T>, {0x3F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       CloseObjectInputAction                                      OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
 
 
 	/// Functions

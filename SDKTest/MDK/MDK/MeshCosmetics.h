@@ -61,8 +61,8 @@ class UMeshCosmeticsApparelItemDefinition : public UFortApparelItemDefinition
 	static inline constexpr uint64_t __MDKClassSize = 1944;
 
 public:
-	SMember(FCosmeticSlotSelector)                     SlotValidWithin                                             OFFSET(get<T>, {0x770, 2, 0, 0})
-	SMember(FApparelCustomizableItemReference)         Parameter                                                   OFFSET(get<T>, {0x778, 32, 0, 0})
+	SMember(FCosmeticSlotSelector)                     SlotValidWithin                                             OFFSET(getStruct<T>, {0x770, 2, 0, 0})
+	SMember(FApparelCustomizableItemReference)         Parameter                                                   OFFSET(getStruct<T>, {0x778, 32, 0, 0})
 };
 
 /// Class /Script/MeshCosmetics.FortCustomizableObjectParameterVariant
@@ -89,19 +89,19 @@ class UFortCustomizableObjectSprayVariant : public UFortCosmeticVariant
 	static inline constexpr uint64_t __MDKClassSize = 680;
 
 public:
-	SMember(FGameplayTag)                              ActiveSelectionTag                                          OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FString)                                   EnabledParamName                                            OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FString)                                   ProjectorParamName                                          OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FString)                                   TextureParamName                                            OFFSET(get<T>, {0x98, 16, 0, 0})
-	SMember(FString)                                   SaturationParamName                                         OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FString)                                   WearParamName                                               OFFSET(get<T>, {0xB8, 16, 0, 0})
-	SMember(FString)                                   ScaleParamName                                              OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQueryForShouldOverrideCODefaultsWithFixedLocationParameters OFFSET(get<T>, {0xD8, 72, 0, 0})
-	SMember(FCustomizableObjectSprayVariantFixedProperties) FixedSprayLocation                                     OFFSET(get<T>, {0x120, 104, 0, 0})
-	SMember(FCustomizableObjectSprayVariantSelectablePayload) DefaultSprayCustomization                            OFFSET(get<T>, {0x188, 152, 0, 0})
-	SMember(FCustomizableObjectSprayVariantPayloadClamps) SprayNumericConstraints                                  OFFSET(get<T>, {0x220, 48, 0, 0})
+	SMember(FGameplayTag)                              ActiveSelectionTag                                          OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FString)                                   EnabledParamName                                            OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   ProjectorParamName                                          OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   TextureParamName                                            OFFSET(getStruct<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   SaturationParamName                                         OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FString)                                   WearParamName                                               OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
+	SMember(FString)                                   ScaleParamName                                              OFFSET(getStruct<T>, {0xC8, 16, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQueryForShouldOverrideCODefaultsWithFixedLocationParameters OFFSET(getStruct<T>, {0xD8, 72, 0, 0})
+	SMember(FCustomizableObjectSprayVariantFixedProperties) FixedSprayLocation                                     OFFSET(getStruct<T>, {0x120, 104, 0, 0})
+	SMember(FCustomizableObjectSprayVariantSelectablePayload) DefaultSprayCustomization                            OFFSET(getStruct<T>, {0x188, 152, 0, 0})
+	SMember(FCustomizableObjectSprayVariantPayloadClamps) SprayNumericConstraints                                  OFFSET(getStruct<T>, {0x220, 48, 0, 0})
 	DMember(float)                                     TextureBaseScale                                            OFFSET(get<float>, {0x250, 4, 0, 0})
-	SMember(FCustomizableObjectSprayVariantSlotImageProperties) SpraySlotImageProperties                           OFFSET(get<T>, {0x258, 64, 0, 0})
+	SMember(FCustomizableObjectSprayVariantSlotImageProperties) SpraySlotImageProperties                           OFFSET(getStruct<T>, {0x258, 64, 0, 0})
 };
 
 /// Class /Script/MeshCosmetics.MeshCosmeticsStep_ComponentRemoval
@@ -270,8 +270,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.PartHandleControllers
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FPartHandleControllers : public MDKStruct
+class FPartHandleControllers : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -280,28 +281,30 @@ public:
 
 /// Struct /Script/MeshCosmetics.ApparelCustomizableItemReference
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FApparelCustomizableItemReference : public MDKStruct
+class FApparelCustomizableItemReference : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   GroupName                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ValueName                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   GroupName                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ValueName                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectSprayVariantFixedProperties
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FCustomizableObjectSprayVariantFixedProperties : public MDKStruct
+class FCustomizableObjectSprayVariantFixedProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   UpDirection                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   BaseScale                                                   OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   BaseScale                                                   OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(float)                                     BaseRotation                                                OFFSET(get<float>, {0x60, 4, 0, 0})
 };
 
@@ -309,11 +312,12 @@ public:
 /// Size: 0x0018 (0x000080 - 0x000098)
 class FCustomizableObjectSprayVariantSelectablePayload : public FBaseVariantDef
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FPrimaryAssetId)                           TextureSource                                               OFFSET(get<T>, {0x80, 8, 0, 0})
+	SMember(FPrimaryAssetId)                           TextureSource                                               OFFSET(getStruct<T>, {0x80, 8, 0, 0})
 	DMember(float)                                     Saturation                                                  OFFSET(get<float>, {0x88, 4, 0, 0})
 	DMember(float)                                     Wear                                                        OFFSET(get<float>, {0x8C, 4, 0, 0})
 	DMember(float)                                     Scale                                                       OFFSET(get<float>, {0x90, 4, 0, 0})
@@ -321,13 +325,14 @@ public:
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectSprayVariantMCPPayload
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCustomizableObjectSprayVariantMCPPayload : public MDKStruct
+class FCustomizableObjectSprayVariantMCPPayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FPrimaryAssetId)                           TextureAssetID                                              OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FPrimaryAssetId)                           TextureAssetID                                              OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	DMember(uint16_t)                                  CompactSaturation                                           OFFSET(get<uint16_t>, {0x8, 2, 0, 0})
 	DMember(uint16_t)                                  CompactWear                                                 OFFSET(get<uint16_t>, {0xA, 2, 0, 0})
 	DMember(uint16_t)                                  CompactScale                                                OFFSET(get<uint16_t>, {0xC, 2, 0, 0})
@@ -335,21 +340,23 @@ public:
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectSprayVariantPayloadClamps
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FCustomizableObjectSprayVariantPayloadClamps : public MDKStruct
+class FCustomizableObjectSprayVariantPayloadClamps : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FFloatRange)                               Saturation                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FFloatRange)                               Wear                                                        OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FFloatRange)                               Scale                                                       OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FFloatRange)                               Saturation                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FFloatRange)                               Wear                                                        OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FFloatRange)                               Scale                                                       OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectSprayVariantSlotImageProperties
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCustomizableObjectSprayVariantSlotImageProperties : public MDKStruct
+class FCustomizableObjectSprayVariantSlotImageProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -360,8 +367,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectParamVariantBase
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FCustomizableObjectParamVariantBase : public MDKStruct
+class FCustomizableObjectParamVariantBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -371,13 +379,14 @@ public:
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectValueBase
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FCustomizableObjectValueBase : public MDKStruct
+class FCustomizableObjectValueBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   ParameterName                                               OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ParameterName                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(int32_t)                                   RangeIndex                                                  OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 };
 
@@ -385,18 +394,20 @@ public:
 /// Size: 0x0018 (0x000018 - 0x000030)
 class FCustomizableObjectIntValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	DMember(int32_t)                                   NumericValue                                                OFFSET(get<int32_t>, {0x18, 4, 0, 0})
-	SMember(FString)                                   NamedValue                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   NamedValue                                                  OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectFloatValue
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FCustomizableObjectFloatValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -408,6 +419,7 @@ public:
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FCustomizableObjectBoolValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -419,17 +431,19 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FCustomizableObjectVectorValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectTextureValue
 /// Size: 0x0008 (0x000018 - 0x000020)
 class FCustomizableObjectTextureValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -441,14 +455,15 @@ public:
 /// Size: 0x0068 (0x000018 - 0x000080)
 class FCustomizableObjectProjectorValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   UpDirection                                                 OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x60, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x60, 24, 0, 0})
 	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x78, 4, 0, 0})
 };
 
@@ -456,17 +471,19 @@ public:
 /// Size: 0x0010 (0x000018 - 0x000028)
 class FCustomizableObjectStateValue : public FCustomizableObjectValueBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   NewState                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   NewState                                                    OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectIntParamVariant
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectIntParamVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -478,6 +495,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectFloatParamVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -489,6 +507,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectBoolParamVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -500,6 +519,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectVectorParamVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -511,6 +531,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectTextureParamVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -522,6 +543,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectProjectorVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -531,8 +553,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectMultilayerProjectsVirtualLayer
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FCustomizableObjectMultilayerProjectsVirtualLayer : public MDKStruct
+class FCustomizableObjectMultilayerProjectsVirtualLayer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
@@ -540,13 +563,13 @@ public:
 	DMember(bool)                                      bModifyEnabled                                              OFFSET(get<bool>, {0x0, 1, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x1, 1, 0, 0})
 	DMember(bool)                                      bModifyProjection                                           OFFSET(get<bool>, {0x2, 1, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   UpDirection                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   UpDirection                                                 OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FVector)                                   Scale                                                       OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 	DMember(float)                                     Angle                                                       OFFSET(get<float>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bModifyImage                                                OFFSET(get<bool>, {0x6C, 1, 0, 0})
-	SMember(FString)                                   Image                                                       OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   Image                                                       OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bModifyOpacity                                              OFFSET(get<bool>, {0x80, 1, 0, 0})
 	DMember(float)                                     Opacity                                                     OFFSET(get<float>, {0x84, 4, 0, 0})
 	DMember(bool)                                      bModifyOrder                                                OFFSET(get<bool>, {0x88, 1, 0, 0})
@@ -555,8 +578,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.CustomizableObjectMultilayerProjectors
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FCustomizableObjectMultilayerProjectors : public MDKStruct
+class FCustomizableObjectMultilayerProjectors : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -568,6 +592,7 @@ public:
 /// Size: 0x0050 (0x000020 - 0x000070)
 class FCustomizableObjectMultilayerProjectorVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
@@ -579,6 +604,7 @@ public:
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FCustomizableObjectStateVariant : public FCustomizableObjectParamVariantBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -590,6 +616,7 @@ public:
 /// Size: 0x0080 (0x000080 - 0x000100)
 class FCustomizableObjectParamsVariantDef : public FBaseVariantDef
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -606,8 +633,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.MeshCosmeticsCustomizationPerSlotData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMeshCosmeticsCustomizationPerSlotData : public MDKStruct
+class FMeshCosmeticsCustomizationPerSlotData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -616,8 +644,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.MeshCosmeticsCustomizableObjectEntry
 /// Size: 0x02A0 (0x000000 - 0x0002A0)
-class FMeshCosmeticsCustomizableObjectEntry : public MDKStruct
+class FMeshCosmeticsCustomizableObjectEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
@@ -626,8 +655,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.MeshCosmeticsCustomizationCCV2Data
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMeshCosmeticsCustomizationCCV2Data : public MDKStruct
+class FMeshCosmeticsCustomizationCCV2Data : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -636,8 +666,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.MeshCosmeticsImageProviderWrapper
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMeshCosmeticsImageProviderWrapper : public MDKStruct
+class FMeshCosmeticsImageProviderWrapper : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -647,8 +678,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.PendingCustomizationComponentsList
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FPendingCustomizationComponentsList : public MDKStruct
+class FPendingCustomizationComponentsList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -657,8 +689,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.LoadedAthenaCosmeticAssets
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FLoadedAthenaCosmeticAssets : public MDKStruct
+class FLoadedAthenaCosmeticAssets : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -667,8 +700,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.PendingVariantAssetsToLoad
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FPendingVariantAssetsToLoad : public MDKStruct
+class FPendingVariantAssetsToLoad : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -677,21 +711,23 @@ public:
 
 /// Struct /Script/MeshCosmetics.SkeletalComponentData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSkeletalComponentData : public MDKStruct
+class FSkeletalComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UMeshCosmeticsLayoutSchema*)               LayoutSchema                                                OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FCosmeticSlotSelector)                     Slot                                                        OFFSET(get<T>, {0x8, 2, 0, 0})
+	SMember(FCosmeticSlotSelector)                     Slot                                                        OFFSET(getStruct<T>, {0x8, 2, 0, 0})
 	CMember(UCustomizableObject*)                      CustomizableObject                                          OFFSET(get<T>, {0x10, 8, 0, 0})
 };
 
 /// Struct /Script/MeshCosmetics.CosmeticSlotSelector
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FCosmeticSlotSelector : public MDKStruct
+class FCosmeticSlotSelector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -702,8 +738,9 @@ public:
 
 /// Struct /Script/MeshCosmetics.MeshCosmeticsPassDataCommon
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FMeshCosmeticsPassDataCommon : public MDKStruct
+class FMeshCosmeticsPassDataCommon : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
@@ -717,15 +754,16 @@ public:
 
 /// Struct /Script/MeshCosmetics.CosmeticsLayoutSlot
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FCosmeticsLayoutSlot : public MDKStruct
+class FCosmeticsLayoutSlot : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
 	CMember(TWeakObjectPtr<UCustomizableObject*>)      SlottedObject                                               OFFSET(get<T>, {0x0, 32, 0, 0})
 	DMember(int32_t)                                   ComponentIndex                                              OFFSET(get<int32_t>, {0x20, 4, 0, 0})
-	SMember(FCosmeticSlotSelector)                     RequiredCosmeticPart                                        OFFSET(get<T>, {0x24, 2, 0, 0})
+	SMember(FCosmeticSlotSelector)                     RequiredCosmeticPart                                        OFFSET(getStruct<T>, {0x24, 2, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   ProportionalLayerAnimBP                                     OFFSET(get<T>, {0x28, 32, 0, 0})
 	CMember(TMap<int32_t, FName>)                      LinkedAnimGraphTag                                          OFFSET(get<T>, {0x48, 80, 0, 0})
 };

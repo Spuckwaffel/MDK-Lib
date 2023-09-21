@@ -66,8 +66,9 @@ public:
 
 /// Struct /Script/EntityFortnite.EntityFortniteStormPhase
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FEntityFortniteStormPhase : public MDKStruct
+class FEntityFortniteStormPhase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -82,6 +83,6 @@ public:
 	DMember(float)                                     MaxMovementDistance                                         OFFSET(get<float>, {0x1C, 4, 0, 0})
 	DMember(float)                                     MinMovementDistancePercentage                               OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(float)                                     MaxMovementDistancePercentage                               OFFSET(get<float>, {0x24, 4, 0, 0})
-	SMember(FVector4)                                  EndLocation                                                 OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVector4)                                  EndLocation                                                 OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 

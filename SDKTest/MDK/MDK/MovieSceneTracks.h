@@ -61,7 +61,7 @@ class UMovieSceneDoublePerlinNoiseChannelContainer : public UMovieSceneChannelOv
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FMovieSceneDoublePerlinNoiseChannel)       PerlinNoiseChannel                                          OFFSET(get<T>, {0x58, 104, 0, 0})
+	SMember(FMovieSceneDoublePerlinNoiseChannel)       PerlinNoiseChannel                                          OFFSET(getStruct<T>, {0x58, 104, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneFloatPerlinNoiseChannelContainer
@@ -72,7 +72,7 @@ class UMovieSceneFloatPerlinNoiseChannelContainer : public UMovieSceneChannelOve
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FMovieSceneFloatPerlinNoiseChannel)        PerlinNoiseChannel                                          OFFSET(get<T>, {0x58, 104, 0, 0})
+	SMember(FMovieSceneFloatPerlinNoiseChannel)        PerlinNoiseChannel                                          OFFSET(getStruct<T>, {0x58, 104, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneInterrogatedPropertyInstantiatorSystem
@@ -103,8 +103,8 @@ class UMovieScene3DConstraintSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FGuid)                                     ConstraintId                                                OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FMovieSceneObjectBindingID)                ConstraintBindingID                                         OFFSET(get<T>, {0x100, 24, 0, 0})
+	SMember(FGuid)                                     ConstraintId                                                OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                ConstraintBindingID                                         OFFSET(getStruct<T>, {0x100, 24, 0, 0})
 
 
 	/// Functions
@@ -122,8 +122,8 @@ class UMovieScene3DAttachSection : public UMovieScene3DConstraintSection
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0x120, 4, 0, 0})
-	SMember(FName)                                     AttachComponentName                                         OFFSET(get<T>, {0x124, 4, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(getStruct<T>, {0x120, 4, 0, 0})
+	SMember(FName)                                     AttachComponentName                                         OFFSET(getStruct<T>, {0x124, 4, 0, 0})
 	CMember(EAttachmentRule)                           AttachmentLocationRule                                      OFFSET(get<T>, {0x128, 1, 0, 0})
 	CMember(EAttachmentRule)                           AttachmentRotationRule                                      OFFSET(get<T>, {0x129, 1, 0, 0})
 	CMember(EAttachmentRule)                           AttachmentScaleRule                                         OFFSET(get<T>, {0x12A, 1, 0, 0})
@@ -140,7 +140,7 @@ class UMovieScene3DPathSection : public UMovieScene3DConstraintSection
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   TimingCurve                                                 OFFSET(get<T>, {0x118, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   TimingCurve                                                 OFFSET(getStruct<T>, {0x118, 272, 0, 0})
 	CMember(MovieScene3DPathSection_Axis)              FrontAxisEnum                                               OFFSET(get<T>, {0x228, 1, 0, 0})
 	CMember(MovieScene3DPathSection_Axis)              UpAxisEnum                                                  OFFSET(get<T>, {0x229, 1, 0, 0})
 	DMember(bool)                                      bFollow                                                     OFFSET(get<bool>, {0x22C, 1, 1, 0})
@@ -167,11 +167,11 @@ class UMovieScene3DTransformSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 3128;
 
 public:
-	SMember(FMovieSceneTransformMask)                  TransformMask                                               OFFSET(get<T>, {0x130, 4, 0, 0})
-	SMember(FMovieSceneDoubleChannel)                  Translation                                                 OFFSET(get<T>, {0x138, 840, 0, 0})
-	SMember(FMovieSceneDoubleChannel)                  Rotation                                                    OFFSET(get<T>, {0x480, 840, 0, 0})
-	SMember(FMovieSceneDoubleChannel)                  Scale                                                       OFFSET(get<T>, {0x7C8, 840, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   ManualWeight                                                OFFSET(get<T>, {0xB10, 272, 0, 0})
+	SMember(FMovieSceneTransformMask)                  TransformMask                                               OFFSET(getStruct<T>, {0x130, 4, 0, 0})
+	SMember(FMovieSceneDoubleChannel)                  Translation                                                 OFFSET(getStruct<T>, {0x138, 840, 0, 0})
+	SMember(FMovieSceneDoubleChannel)                  Rotation                                                    OFFSET(getStruct<T>, {0x480, 840, 0, 0})
+	SMember(FMovieSceneDoubleChannel)                  Scale                                                       OFFSET(getStruct<T>, {0x7C8, 840, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   ManualWeight                                                OFFSET(getStruct<T>, {0xB10, 272, 0, 0})
 	CMember(UMovieSceneSectionChannelOverrideRegistry*) OverrideRegistry                                           OFFSET(get<T>, {0xC20, 8, 0, 0})
 	CMember(UMovieScene3DTransformSectionConstraints*) Constraints                                                 OFFSET(get<T>, {0xC28, 8, 0, 0})
 	DMember(bool)                                      bUseQuaternionInterpolation                                 OFFSET(get<bool>, {0xC30, 1, 0, 0})
@@ -185,8 +185,8 @@ class UMovieSceneActorReferenceSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 664;
 
 public:
-	SMember(FMovieSceneActorReferenceData)             ActorReferenceData                                          OFFSET(get<T>, {0xF0, 280, 0, 0})
-	SMember(FIntegralCurve)                            ActorGuidIndexCurve                                         OFFSET(get<T>, {0x208, 128, 0, 0})
+	SMember(FMovieSceneActorReferenceData)             ActorReferenceData                                          OFFSET(getStruct<T>, {0xF0, 280, 0, 0})
+	SMember(FIntegralCurve)                            ActorGuidIndexCurve                                         OFFSET(getStruct<T>, {0x208, 128, 0, 0})
 	CMember(TArray<FString>)                           ActorGuidStrings                                            OFFSET(get<T>, {0x288, 16, 0, 0})
 };
 
@@ -199,26 +199,26 @@ class UMovieSceneAudioSection : public UMovieSceneSection
 
 public:
 	CMember(USoundBase*)                               sound                                                       OFFSET(get<T>, {0xF8, 8, 0, 0})
-	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(get<T>, {0x100, 4, 0, 0})
+	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(getStruct<T>, {0x100, 4, 0, 0})
 	DMember(float)                                     StartOffset                                                 OFFSET(get<float>, {0x104, 4, 0, 0})
 	DMember(float)                                     AudioStartTime                                              OFFSET(get<float>, {0x108, 4, 0, 0})
 	DMember(float)                                     AudioDilationFactor                                         OFFSET(get<float>, {0x10C, 4, 0, 0})
 	DMember(float)                                     AudioVolume                                                 OFFSET(get<float>, {0x110, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   SoundVolume                                                 OFFSET(get<T>, {0x118, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   PitchMultiplier                                             OFFSET(get<T>, {0x228, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   SoundVolume                                                 OFFSET(getStruct<T>, {0x118, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   PitchMultiplier                                             OFFSET(getStruct<T>, {0x228, 272, 0, 0})
 	CMember(TMap<FName, FMovieSceneFloatChannel>)      Inputs_Float                                                OFFSET(get<T>, {0x338, 80, 0, 0})
 	CMember(TMap<FName, FMovieSceneStringChannel>)     Inputs_String                                               OFFSET(get<T>, {0x388, 80, 0, 0})
 	CMember(TMap<FName, FMovieSceneBoolChannel>)       Inputs_Bool                                                 OFFSET(get<T>, {0x3D8, 80, 0, 0})
 	CMember(TMap<FName, FMovieSceneIntegerChannel>)    Inputs_Int                                                  OFFSET(get<T>, {0x428, 80, 0, 0})
 	CMember(TMap<FName, FMovieSceneAudioTriggerChannel>) Inputs_Trigger                                            OFFSET(get<T>, {0x478, 80, 0, 0})
-	SMember(FMovieSceneActorReferenceData)             AttachActorData                                             OFFSET(get<T>, {0x4C8, 280, 0, 0})
+	SMember(FMovieSceneActorReferenceData)             AttachActorData                                             OFFSET(getStruct<T>, {0x4C8, 280, 0, 0})
 	DMember(bool)                                      bLooping                                                    OFFSET(get<bool>, {0x5E0, 1, 0, 0})
 	DMember(bool)                                      bSuppressSubtitles                                          OFFSET(get<bool>, {0x5E1, 1, 0, 0})
 	DMember(bool)                                      bOverrideAttenuation                                        OFFSET(get<bool>, {0x5E2, 1, 0, 0})
 	CMember(USoundAttenuation*)                        AttenuationSettings                                         OFFSET(get<T>, {0x5E8, 8, 0, 0})
-	SMember(FDelegateProperty)                         OnQueueSubtitles                                            OFFSET(get<T>, {0x5F0, 12, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAudioFinished                                             OFFSET(get<T>, {0x600, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAudioPlaybackPercent                                      OFFSET(get<T>, {0x610, 16, 0, 0})
+	SMember(FDelegateProperty)                         OnQueueSubtitles                                            OFFSET(getStruct<T>, {0x5F0, 12, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAudioFinished                                             OFFSET(getStruct<T>, {0x600, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAudioPlaybackPercent                                      OFFSET(getStruct<T>, {0x610, 16, 0, 0})
 
 
 	/// Functions
@@ -266,7 +266,7 @@ class UMovieSceneByteSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FMovieSceneByteChannel)                    ByteCurve                                                   OFFSET(get<T>, {0xF8, 264, 0, 0})
+	SMember(FMovieSceneByteChannel)                    ByteCurve                                                   OFFSET(getStruct<T>, {0xF8, 264, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraCutSection
@@ -278,9 +278,9 @@ class UMovieSceneCameraCutSection : public UMovieSceneSection
 
 public:
 	DMember(bool)                                      bLockPreviousCamera                                         OFFSET(get<bool>, {0xF8, 1, 0, 0})
-	SMember(FGuid)                                     CameraGuid                                                  OFFSET(get<T>, {0xFC, 16, 0, 0})
-	SMember(FMovieSceneObjectBindingID)                CameraBindingID                                             OFFSET(get<T>, {0x10C, 24, 0, 0})
-	SMember(FTransform)                                InitialCameraCutTransform                                   OFFSET(get<T>, {0x130, 96, 0, 0})
+	SMember(FGuid)                                     CameraGuid                                                  OFFSET(getStruct<T>, {0xFC, 16, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                CameraBindingID                                             OFFSET(getStruct<T>, {0x10C, 24, 0, 0})
+	SMember(FTransform)                                InitialCameraCutTransform                                   OFFSET(getStruct<T>, {0x130, 96, 0, 0})
 	DMember(bool)                                      bHasInitialCameraCutTransform                               OFFSET(get<bool>, {0x190, 1, 0, 0})
 
 
@@ -299,11 +299,11 @@ class UMovieSceneCameraShakeSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
 	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x118, 8, 0, 0})
 	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x120, 4, 0, 0})
 	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0x124, 1, 0, 0})
-	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(get<T>, {0x128, 24, 0, 0})
+	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x128, 24, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSourceShakeSection
@@ -314,7 +314,7 @@ class UMovieSceneCameraShakeSourceShakeSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FMovieSceneCameraShakeSectionData)         ShakeData                                                   OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTriggerSection
@@ -325,7 +325,7 @@ class UMovieSceneCameraShakeSourceTriggerSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FMovieSceneCameraShakeSourceTriggerChannel) Channel                                                    OFFSET(get<T>, {0xF0, 248, 0, 0})
+	SMember(FMovieSceneCameraShakeSourceTriggerChannel) Channel                                                    OFFSET(getStruct<T>, {0xF0, 248, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneCinematicShotSection
@@ -336,8 +336,8 @@ class UMovieSceneCinematicShotSection : public UMovieSceneSubSection
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FString)                                   ShotDisplayName                                             OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FString)                                   ShotDisplayName                                             OFFSET(getStruct<T>, {0x138, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 
 
 	/// Functions
@@ -355,10 +355,10 @@ class UMovieSceneColorSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 1336;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   RedCurve                                                    OFFSET(get<T>, {0xF8, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   GreenCurve                                                  OFFSET(get<T>, {0x208, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   BlueCurve                                                   OFFSET(get<T>, {0x318, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   AlphaCurve                                                  OFFSET(get<T>, {0x428, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   RedCurve                                                    OFFSET(getStruct<T>, {0xF8, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   GreenCurve                                                  OFFSET(getStruct<T>, {0x208, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   BlueCurve                                                   OFFSET(getStruct<T>, {0x318, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   AlphaCurve                                                  OFFSET(getStruct<T>, {0x428, 272, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneConstrainedSection
@@ -380,7 +380,7 @@ class UMovieSceneCVarSection : public UMovieSceneSection
 
 public:
 	CMember(TArray<FMovieSceneConsoleVariableCollection>) ConsoleVariableCollections                               OFFSET(get<T>, {0xF8, 16, 0, 0})
-	SMember(FMovieSceneCVarOverrides)                  ConsoleVariables                                            OFFSET(get<T>, {0x108, 80, 0, 0})
+	SMember(FMovieSceneCVarOverrides)                  ConsoleVariables                                            OFFSET(getStruct<T>, {0x108, 80, 0, 0})
 
 
 	/// Functions
@@ -436,7 +436,7 @@ class UMovieSceneDoubleSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FMovieSceneDoubleChannel)                  DoubleCurve                                                 OFFSET(get<T>, {0xF8, 280, 0, 0})
+	SMember(FMovieSceneDoubleChannel)                  DoubleCurve                                                 OFFSET(getStruct<T>, {0xF8, 280, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneEnumSection
@@ -447,7 +447,7 @@ class UMovieSceneEnumSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FMovieSceneByteChannel)                    EnumCurve                                                   OFFSET(get<T>, {0xF8, 264, 0, 0})
+	SMember(FMovieSceneByteChannel)                    EnumCurve                                                   OFFSET(getStruct<T>, {0xF8, 264, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneEventSectionBase
@@ -468,7 +468,7 @@ class UMovieSceneEventRepeaterSection : public UMovieSceneEventSectionBase
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMovieSceneEvent)                          Event                                                       OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FMovieSceneEvent)                          Event                                                       OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneEventSection
@@ -479,8 +479,8 @@ class UMovieSceneEventSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FNameCurve)                                Events                                                      OFFSET(get<T>, {0xF0, 120, 0, 0})
-	SMember(FMovieSceneEventSectionData)               EventData                                                   OFFSET(get<T>, {0x168, 248, 0, 0})
+	SMember(FNameCurve)                                Events                                                      OFFSET(getStruct<T>, {0xF0, 120, 0, 0})
+	SMember(FMovieSceneEventSectionData)               EventData                                                   OFFSET(getStruct<T>, {0x168, 248, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneEventTriggerSection
@@ -491,7 +491,7 @@ class UMovieSceneEventTriggerSection : public UMovieSceneEventSectionBase
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FMovieSceneEventChannel)                   EventChannel                                                OFFSET(get<T>, {0xF8, 248, 0, 0})
+	SMember(FMovieSceneEventChannel)                   EventChannel                                                OFFSET(getStruct<T>, {0xF8, 248, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneFadeSection
@@ -502,8 +502,8 @@ class UMovieSceneFadeSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(get<T>, {0xF8, 272, 0, 0})
-	SMember(FLinearColor)                              FadeColor                                                   OFFSET(get<T>, {0x208, 16, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(getStruct<T>, {0xF8, 272, 0, 0})
+	SMember(FLinearColor)                              FadeColor                                                   OFFSET(getStruct<T>, {0x208, 16, 0, 0})
 	DMember(bool)                                      bFadeAudio                                                  OFFSET(get<bool>, {0x218, 1, 1, 0})
 };
 
@@ -515,7 +515,7 @@ class UMovieSceneFloatSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(get<T>, {0x100, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(getStruct<T>, {0x100, 272, 0, 0})
 	CMember(UMovieSceneSectionChannelOverrideRegistry*) OverrideRegistry                                           OFFSET(get<T>, {0x210, 8, 0, 0})
 };
 
@@ -527,7 +527,7 @@ class UMovieSceneIntegerSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	SMember(FMovieSceneIntegerChannel)                 IntegerCurve                                                OFFSET(get<T>, {0xF8, 256, 0, 0})
+	SMember(FMovieSceneIntegerChannel)                 IntegerCurve                                                OFFSET(getStruct<T>, {0xF8, 256, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneLevelVisibilitySection
@@ -561,7 +561,7 @@ class UMovieSceneObjectPropertySection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	SMember(FMovieSceneObjectPathChannel)              ObjectChannel                                               OFFSET(get<T>, {0xF0, 296, 0, 0})
+	SMember(FMovieSceneObjectPathChannel)              ObjectChannel                                               OFFSET(getStruct<T>, {0xF0, 296, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneParameterSectionExtender
@@ -627,7 +627,7 @@ class UMovieSceneParticleSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	SMember(FMovieSceneParticleChannel)                ParticleKeys                                                OFFSET(get<T>, {0xF0, 264, 0, 0})
+	SMember(FMovieSceneParticleChannel)                ParticleKeys                                                OFFSET(getStruct<T>, {0xF0, 264, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieScenePrimitiveMaterialSection
@@ -638,7 +638,7 @@ class UMovieScenePrimitiveMaterialSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FMovieSceneObjectPathChannel)              MaterialChannel                                             OFFSET(get<T>, {0xF8, 296, 0, 0})
+	SMember(FMovieSceneObjectPathChannel)              MaterialChannel                                             OFFSET(getStruct<T>, {0xF8, 296, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneSkeletalAnimationSection
@@ -649,20 +649,20 @@ class UMovieSceneSkeletalAnimationSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-	SMember(FMovieSceneSkeletalAnimationParams)        Params                                                      OFFSET(get<T>, {0xF8, 328, 0, 0})
+	SMember(FMovieSceneSkeletalAnimationParams)        Params                                                      OFFSET(getStruct<T>, {0xF8, 328, 0, 0})
 	CMember(UAnimSequence*)                            AnimSequence                                                OFFSET(get<T>, {0x240, 8, 0, 0})
 	CMember(UAnimSequenceBase*)                        Animation                                                   OFFSET(get<T>, {0x248, 8, 0, 0})
 	DMember(float)                                     StartOffset                                                 OFFSET(get<float>, {0x250, 4, 0, 0})
 	DMember(float)                                     EndOffset                                                   OFFSET(get<float>, {0x254, 4, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x258, 4, 0, 0})
 	DMember(bool)                                      bReverse                                                    OFFSET(get<bool>, {0x25C, 1, 1, 0})
-	SMember(FName)                                     SlotName                                                    OFFSET(get<T>, {0x260, 4, 0, 0})
-	SMember(FVector)                                   StartLocationOffset                                         OFFSET(get<T>, {0x268, 24, 0, 0})
-	SMember(FRotator)                                  StartRotationOffset                                         OFFSET(get<T>, {0x280, 24, 0, 0})
+	SMember(FName)                                     SlotName                                                    OFFSET(getStruct<T>, {0x260, 4, 0, 0})
+	SMember(FVector)                                   StartLocationOffset                                         OFFSET(getStruct<T>, {0x268, 24, 0, 0})
+	SMember(FRotator)                                  StartRotationOffset                                         OFFSET(getStruct<T>, {0x280, 24, 0, 0})
 	DMember(bool)                                      bMatchWithPrevious                                          OFFSET(get<bool>, {0x298, 1, 0, 0})
-	SMember(FName)                                     MatchedBoneName                                             OFFSET(get<T>, {0x29C, 4, 0, 0})
-	SMember(FVector)                                   MatchedLocationOffset                                       OFFSET(get<T>, {0x2A0, 24, 0, 0})
-	SMember(FRotator)                                  MatchedRotationOffset                                       OFFSET(get<T>, {0x2B8, 24, 0, 0})
+	SMember(FName)                                     MatchedBoneName                                             OFFSET(getStruct<T>, {0x29C, 4, 0, 0})
+	SMember(FVector)                                   MatchedLocationOffset                                       OFFSET(getStruct<T>, {0x2A0, 24, 0, 0})
+	SMember(FRotator)                                  MatchedRotationOffset                                       OFFSET(getStruct<T>, {0x2B8, 24, 0, 0})
 	DMember(bool)                                      bMatchTranslation                                           OFFSET(get<bool>, {0x2D0, 1, 0, 0})
 	DMember(bool)                                      bMatchIncludeZHeight                                        OFFSET(get<bool>, {0x2D1, 1, 0, 0})
 	DMember(bool)                                      bMatchRotationYaw                                           OFFSET(get<bool>, {0x2D2, 1, 0, 0})
@@ -678,7 +678,7 @@ class UMovieSceneSlomoSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(get<T>, {0xF0, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   FloatCurve                                                  OFFSET(getStruct<T>, {0xF0, 272, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneStringSection
@@ -689,7 +689,7 @@ class UMovieSceneStringSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
-	SMember(FMovieSceneStringChannel)                  StringCurve                                                 OFFSET(get<T>, {0xF8, 272, 0, 0})
+	SMember(FMovieSceneStringChannel)                  StringCurve                                                 OFFSET(getStruct<T>, {0xF8, 272, 0, 0})
 };
 
 /// Class /Script/MovieSceneTracks.MovieSceneFloatVectorSection
@@ -700,7 +700,7 @@ class UMovieSceneFloatVectorSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 1344;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   Curves                                                      OFFSET(get<T>, {0xF8, 1088, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Curves                                                      OFFSET(getStruct<T>, {0xF8, 1088, 0, 0})
 	DMember(int32_t)                                   ChannelsUsed                                                OFFSET(get<int32_t>, {0x538, 4, 0, 0})
 };
 
@@ -712,7 +712,7 @@ class UMovieSceneDoubleVectorSection : public UMovieSceneSection
 	static inline constexpr uint64_t __MDKClassSize = 1376;
 
 public:
-	SMember(FMovieSceneDoubleChannel)                  Curves                                                      OFFSET(get<T>, {0xF8, 1120, 0, 0})
+	SMember(FMovieSceneDoubleChannel)                  Curves                                                      OFFSET(getStruct<T>, {0xF8, 1120, 0, 0})
 	DMember(int32_t)                                   ChannelsUsed                                                OFFSET(get<int32_t>, {0x558, 4, 0, 0})
 };
 
@@ -1156,8 +1156,8 @@ class UMovieSceneAsyncAction_SequencePrediction : public UBlueprintAsyncActionBa
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Result                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  Failure                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Result                                                      OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Failure                                                     OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 	CMember(UMovieSceneSequencePlayer*)                SequencePlayer                                              OFFSET(get<T>, {0x60, 8, 0, 0})
 	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0x68, 8, 0, 0})
 
@@ -1387,7 +1387,7 @@ class UMovieScenePropertyTrack : public UMovieSceneNameableTrack
 
 public:
 	CMember(UMovieSceneSection*)                       SectionToKey                                                OFFSET(get<T>, {0x98, 8, 0, 0})
-	SMember(FMovieScenePropertyBinding)                PropertyBinding                                             OFFSET(get<T>, {0xA0, 12, 0, 0})
+	SMember(FMovieScenePropertyBinding)                PropertyBinding                                             OFFSET(getStruct<T>, {0xA0, 12, 0, 0})
 	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0xB0, 16, 0, 0})
 };
 
@@ -1706,7 +1706,7 @@ class UMovieSceneSkeletalAnimationTrack : public UMovieSceneNameableTrack
 public:
 	CMember(TArray<UMovieSceneSection*>)               AnimationSections                                           OFFSET(get<T>, {0x98, 16, 0, 0})
 	DMember(bool)                                      bUseLegacySectionIndexBlend                                 OFFSET(get<bool>, {0xA8, 1, 0, 0})
-	SMember(FMovieSceneSkeletalAnimRootMotionTrackParams) RootMotionParams                                         OFFSET(get<T>, {0xB0, 128, 0, 0})
+	SMember(FMovieSceneSkeletalAnimRootMotionTrackParams) RootMotionParams                                         OFFSET(getStruct<T>, {0xB0, 128, 0, 0})
 	DMember(bool)                                      bBlendFirstChildOfRoot                                      OFFSET(get<bool>, {0x130, 1, 0, 0})
 	CMember(ESwapRootBone)                             SwapRootBone                                                OFFSET(get<T>, {0x131, 1, 0, 0})
 
@@ -1782,8 +1782,9 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieScenePreAnimatedMaterialParameters
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieScenePreAnimatedMaterialParameters : public MDKStruct
+class FMovieScenePreAnimatedMaterialParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1794,8 +1795,9 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTrigger
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneCameraShakeSourceTrigger : public MDKStruct
+class FMovieSceneCameraShakeSourceTrigger : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1803,37 +1805,40 @@ public:
 	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
 	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
 	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTriggerChannel
 /// Size: 0x00A8 (0x000050 - 0x0000F8)
 class FMovieSceneCameraShakeSourceTriggerChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
 	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
 	CMember(TArray<FMovieSceneCameraShakeSourceTrigger>) KeyValues                                                 OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x70, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x70, 136, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneDoublePerlinNoiseChannel
 /// Size: 0x0018 (0x000050 - 0x000068)
 class FMovieSceneDoublePerlinNoiseChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FPerlinNoiseParams)                        PerlinNoiseParams                                           OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FPerlinNoiseParams)                        PerlinNoiseParams                                           OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.PerlinNoiseParams
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FPerlinNoiseParams : public MDKStruct
+class FPerlinNoiseParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1845,19 +1850,21 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventPayloadVariable
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMovieSceneEventPayloadVariable : public MDKStruct
+class FMovieSceneEventPayloadVariable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventPtrs
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneEventPtrs : public MDKStruct
+class FMovieSceneEventPtrs : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1867,64 +1874,69 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEvent
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneEvent : public MDKStruct
+class FMovieSceneEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FMovieSceneEventPtrs)                      Ptrs                                                        OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FMovieSceneEventPtrs)                      Ptrs                                                        OFFSET(getStruct<T>, {0x0, 40, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventChannel
 /// Size: 0x00A8 (0x000050 - 0x0000F8)
 class FMovieSceneEventChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
 	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
 	CMember(TArray<FMovieSceneEvent>)                  KeyValues                                                   OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x70, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x70, 136, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneFloatPerlinNoiseChannel
 /// Size: 0x0018 (0x000050 - 0x000068)
 class FMovieSceneFloatPerlinNoiseChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FPerlinNoiseParams)                        PerlinNoiseParams                                           OFFSET(get<T>, {0x50, 24, 0, 0})
+	SMember(FPerlinNoiseParams)                        PerlinNoiseParams                                           OFFSET(getStruct<T>, {0x50, 24, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneStringChannel
 /// Size: 0x00C0 (0x000050 - 0x000110)
 class FMovieSceneStringChannel : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
 	CMember(TArray<FString>)                           Values                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FString)                                   DefaultValue                                                OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FString)                                   DefaultValue                                                OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bHasDefaultValue                                            OFFSET(get<bool>, {0x80, 1, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x88, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x88, 136, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieScene3DPathSectionTemplate
 /// Size: 0x0130 (0x000020 - 0x000150)
 class FMovieScene3DPathSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FMovieSceneObjectBindingID)                PathBindingID                                               OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   TimingCurve                                                 OFFSET(get<T>, {0x38, 272, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                PathBindingID                                               OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   TimingCurve                                                 OFFSET(getStruct<T>, {0x38, 272, 0, 0})
 	CMember(MovieScene3DPathSection_Axis)              FrontAxisEnum                                               OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(MovieScene3DPathSection_Axis)              UpAxisEnum                                                  OFFSET(get<T>, {0x149, 1, 0, 0})
 	DMember(bool)                                      bFollow                                                     OFFSET(get<bool>, {0x14C, 1, 1, 0})
@@ -1936,70 +1948,76 @@ public:
 /// Size: 0x0130 (0x000020 - 0x000150)
 class FMovieSceneActorReferenceSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FMovieScenePropertySectionData)            PropertyData                                                OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FMovieSceneActorReferenceData)             ActorReferenceData                                          OFFSET(get<T>, {0x38, 280, 0, 0})
+	SMember(FMovieScenePropertySectionData)            PropertyData                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FMovieSceneActorReferenceData)             ActorReferenceData                                          OFFSET(getStruct<T>, {0x38, 280, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneActorReferenceData
 /// Size: 0x00C8 (0x000050 - 0x000118)
 class FMovieSceneActorReferenceData : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
 	CMember(TArray<FFrameNumber>)                      KeyTimes                                                    OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMovieSceneActorReferenceKey)              DefaultValue                                                OFFSET(get<T>, {0x60, 32, 0, 0})
+	SMember(FMovieSceneActorReferenceKey)              DefaultValue                                                OFFSET(getStruct<T>, {0x60, 32, 0, 0})
 	CMember(TArray<FMovieSceneActorReferenceKey>)      KeyValues                                                   OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x90, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x90, 136, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneActorReferenceKey
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneActorReferenceKey : public MDKStruct
+class FMovieSceneActorReferenceKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FMovieSceneObjectBindingID)                Object                                                      OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FName)                                     ComponentName                                               OFFSET(get<T>, {0x18, 4, 0, 0})
-	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FMovieSceneObjectBindingID)                Object                                                      OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FName)                                     ComponentName                                               OFFSET(getStruct<T>, {0x18, 4, 0, 0})
+	SMember(FName)                                     SocketName                                                  OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneBaseCacheSectionTemplateParameters
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneBaseCacheSectionTemplateParameters : public MDKStruct
+class FMovieSceneBaseCacheSectionTemplateParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSourceShakeSectionTemplate
 /// Size: 0x0030 (0x000020 - 0x000050)
 class FMovieSceneCameraShakeSourceShakeSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FMovieSceneCameraShakeSectionData)         SourceData                                                  OFFSET(get<T>, {0x20, 40, 0, 0})
-	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(get<T>, {0x48, 4, 0, 0})
-	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(get<T>, {0x4C, 4, 0, 0})
+	SMember(FMovieSceneCameraShakeSectionData)         SourceData                                                  OFFSET(getStruct<T>, {0x20, 40, 0, 0})
+	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x48, 4, 0, 0})
+	SMember(FFrameNumber)                              SectionEndTime                                              OFFSET(getStruct<T>, {0x4C, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSectionData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneCameraShakeSectionData : public MDKStruct
+class FMovieSceneCameraShakeSectionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2007,13 +2025,14 @@ public:
 	CMember(UClass*)                                   ShakeClass                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
 	DMember(float)                                     PlayScale                                                   OFFSET(get<float>, {0x8, 4, 0, 0})
 	CMember(ECameraShakePlaySpace)                     Playspace                                                   OFFSET(get<T>, {0xC, 1, 0, 0})
-	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(get<T>, {0x10, 24, 0, 0})
+	SMember(FRotator)                                  UserDefinedPlaySpace                                        OFFSET(getStruct<T>, {0x10, 24, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneCameraShakeSourceTriggerSectionTemplate
 /// Size: 0x0020 (0x000020 - 0x000040)
 class FMovieSceneCameraShakeSourceTriggerSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
@@ -2026,23 +2045,25 @@ public:
 /// Size: 0x0030 (0x000020 - 0x000050)
 class FMovieSceneCameraShakeSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FMovieSceneCameraShakeSectionData)         SourceData                                                  OFFSET(get<T>, {0x20, 40, 0, 0})
-	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(get<T>, {0x48, 4, 0, 0})
+	SMember(FMovieSceneCameraShakeSectionData)         SourceData                                                  OFFSET(getStruct<T>, {0x20, 40, 0, 0})
+	SMember(FFrameNumber)                              SectionStartTime                                            OFFSET(getStruct<T>, {0x48, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventSectionTemplate
 /// Size: 0x0100 (0x000020 - 0x000120)
 class FMovieSceneEventSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FMovieSceneEventSectionData)               EventData                                                   OFFSET(get<T>, {0x20, 248, 0, 0})
+	SMember(FMovieSceneEventSectionData)               EventData                                                   OFFSET(getStruct<T>, {0x20, 248, 0, 0})
 	DMember(bool)                                      bFireEventsWhenForwards                                     OFFSET(get<bool>, {0x118, 1, 1, 0})
 	DMember(bool)                                      bFireEventsWhenBackwards                                    OFFSET(get<bool>, {0x118, 1, 1, 1})
 };
@@ -2051,31 +2072,34 @@ public:
 /// Size: 0x00A8 (0x000050 - 0x0000F8)
 class FMovieSceneEventSectionData : public FMovieSceneChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
 	CMember(TArray<FFrameNumber>)                      Times                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
 	CMember(TArray<FEventPayload>)                     KeyValues                                                   OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(get<T>, {0x70, 136, 0, 0})
+	SMember(FMovieSceneKeyHandleMap)                   KeyHandles                                                  OFFSET(getStruct<T>, {0x70, 136, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.EventPayload
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FEventPayload : public MDKStruct
+class FEventPayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     EventName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneEventParameters)                Parameters                                                  OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FName)                                     EventName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneEventParameters)                Parameters                                                  OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventParameters
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMovieSceneEventParameters : public MDKStruct
+class FMovieSceneEventParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -2086,17 +2110,19 @@ public:
 /// Size: 0x0128 (0x000038 - 0x000160)
 class FMovieSceneObjectPropertyTemplate : public FMovieScenePropertySectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FMovieSceneObjectPathChannel)              ObjectChannel                                               OFFSET(get<T>, {0x38, 296, 0, 0})
+	SMember(FMovieSceneObjectPathChannel)              ObjectChannel                                               OFFSET(getStruct<T>, {0x38, 296, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneParameterSectionTemplate
 /// Size: 0x0060 (0x000020 - 0x000080)
 class FMovieSceneParameterSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -2111,88 +2137,95 @@ public:
 
 /// Struct /Script/MovieSceneTracks.TransformParameterNameAndCurves
 /// Size: 0x0998 (0x000000 - 0x000998)
-class FTransformParameterNameAndCurves : public MDKStruct
+class FTransformParameterNameAndCurves : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2456;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   Translation                                                 OFFSET(get<T>, {0x8, 816, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   Rotation                                                    OFFSET(get<T>, {0x338, 816, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   Scale                                                       OFFSET(get<T>, {0x668, 816, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Translation                                                 OFFSET(getStruct<T>, {0x8, 816, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Rotation                                                    OFFSET(getStruct<T>, {0x338, 816, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Scale                                                       OFFSET(getStruct<T>, {0x668, 816, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.ColorParameterNameAndCurves
 /// Size: 0x0448 (0x000000 - 0x000448)
-class FColorParameterNameAndCurves : public MDKStruct
+class FColorParameterNameAndCurves : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   RedCurve                                                    OFFSET(get<T>, {0x8, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   GreenCurve                                                  OFFSET(get<T>, {0x118, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   BlueCurve                                                   OFFSET(get<T>, {0x228, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   AlphaCurve                                                  OFFSET(get<T>, {0x338, 272, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   RedCurve                                                    OFFSET(getStruct<T>, {0x8, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   GreenCurve                                                  OFFSET(getStruct<T>, {0x118, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   BlueCurve                                                   OFFSET(getStruct<T>, {0x228, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   AlphaCurve                                                  OFFSET(getStruct<T>, {0x338, 272, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.VectorParameterNameAndCurves
 /// Size: 0x0338 (0x000000 - 0x000338)
-class FVectorParameterNameAndCurves : public MDKStruct
+class FVectorParameterNameAndCurves : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   XCurve                                                      OFFSET(get<T>, {0x8, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   YCurve                                                      OFFSET(get<T>, {0x118, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   ZCurve                                                      OFFSET(get<T>, {0x228, 272, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   XCurve                                                      OFFSET(getStruct<T>, {0x8, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   YCurve                                                      OFFSET(getStruct<T>, {0x118, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   ZCurve                                                      OFFSET(getStruct<T>, {0x228, 272, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.Vector2DParameterNameAndCurves
 /// Size: 0x0228 (0x000000 - 0x000228)
-class FVector2DParameterNameAndCurves : public MDKStruct
+class FVector2DParameterNameAndCurves : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   XCurve                                                      OFFSET(get<T>, {0x8, 272, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   YCurve                                                      OFFSET(get<T>, {0x118, 272, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   XCurve                                                      OFFSET(getStruct<T>, {0x8, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   YCurve                                                      OFFSET(getStruct<T>, {0x118, 272, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.BoolParameterNameAndCurve
 /// Size: 0x0108 (0x000000 - 0x000108)
-class FBoolParameterNameAndCurve : public MDKStruct
+class FBoolParameterNameAndCurve : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneBoolChannel)                    ParameterCurve                                              OFFSET(get<T>, {0x8, 256, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    ParameterCurve                                              OFFSET(getStruct<T>, {0x8, 256, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.ScalarParameterNameAndCurve
 /// Size: 0x0118 (0x000000 - 0x000118)
-class FScalarParameterNameAndCurve : public MDKStruct
+class FScalarParameterNameAndCurve : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   ParameterCurve                                              OFFSET(get<T>, {0x8, 272, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   ParameterCurve                                              OFFSET(getStruct<T>, {0x8, 272, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneParticleParameterSectionTemplate
 /// Size: 0x0000 (0x000080 - 0x000080)
 class FMovieSceneParticleParameterSectionTemplate : public FMovieSceneParameterSectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -2203,17 +2236,19 @@ public:
 /// Size: 0x0108 (0x000020 - 0x000128)
 class FMovieSceneParticleSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FMovieSceneParticleChannel)                ParticleKeys                                                OFFSET(get<T>, {0x20, 264, 0, 0})
+	SMember(FMovieSceneParticleChannel)                ParticleKeys                                                OFFSET(getStruct<T>, {0x20, 264, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneParticleChannel
 /// Size: 0x0000 (0x000108 - 0x000108)
 class FMovieSceneParticleChannel : public FMovieSceneByteChannel
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
@@ -2224,28 +2259,31 @@ public:
 /// Size: 0x0100 (0x000038 - 0x000138)
 class FMovieSceneBoolPropertySectionTemplate : public FMovieScenePropertySectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(get<T>, {0x38, 256, 0, 0})
+	SMember(FMovieSceneBoolChannel)                    BoolCurve                                                   OFFSET(getStruct<T>, {0x38, 256, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneSlomoSectionTemplate
 /// Size: 0x0110 (0x000020 - 0x000130)
 class FMovieSceneSlomoSectionTemplate : public FMovieSceneEvalTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FMovieSceneFloatChannel)                   SlomoCurve                                                  OFFSET(get<T>, {0x20, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   SlomoCurve                                                  OFFSET(getStruct<T>, {0x20, 272, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVisibilitySectionTemplate
 /// Size: 0x0000 (0x000138 - 0x000138)
 class FMovieSceneVisibilitySectionTemplate : public FMovieSceneBoolPropertySectionTemplate
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
@@ -2254,8 +2292,9 @@ public:
 
 /// Struct /Script/MovieSceneTracks.LevelVisibilityComponentData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FLevelVisibilityComponentData : public MDKStruct
+class FLevelVisibilityComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2265,8 +2304,9 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneDataLayerComponentData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneDataLayerComponentData : public MDKStruct
+class FMovieSceneDataLayerComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2276,19 +2316,21 @@ public:
 
 /// Struct /Script/MovieSceneTracks.ConstraintComponentData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FConstraintComponentData : public MDKStruct
+class FConstraintComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     ConstraintName                                              OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ConstraintName                                              OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneSkeletalAnimationComponentData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneSkeletalAnimationComponentData : public MDKStruct
+class FMovieSceneSkeletalAnimationComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2298,8 +2340,9 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneAudioComponentData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMovieSceneAudioComponentData : public MDKStruct
+class FMovieSceneAudioComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -2309,72 +2352,78 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneAudioInputData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMovieSceneAudioInputData : public MDKStruct
+class FMovieSceneAudioInputData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     FloatInputs                                                 OFFSET(get<T>, {0x0, 36, 0, 0})
-	SMember(FName)                                     StringInput                                                 OFFSET(get<T>, {0x24, 4, 0, 0})
-	SMember(FName)                                     BoolInput                                                   OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FName)                                     IntInput                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FName)                                     FloatInputs                                                 OFFSET(getStruct<T>, {0x0, 36, 0, 0})
+	SMember(FName)                                     StringInput                                                 OFFSET(getStruct<T>, {0x24, 4, 0, 0})
+	SMember(FName)                                     BoolInput                                                   OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     IntInput                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieScene3DLocationKeyStruct
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FMovieScene3DLocationKeyStruct : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieScene3DRotationKeyStruct
 /// Size: 0x0038 (0x000008 - 0x000040)
 class FMovieScene3DRotationKeyStruct : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieScene3DScaleKeyStruct
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FMovieScene3DScaleKeyStruct : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector3f)                                 Scale                                                       OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x14, 4, 0, 0})
+	SMember(FVector3f)                                 Scale                                                       OFFSET(getStruct<T>, {0x8, 12, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x14, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieScene3DTransformKeyStruct
 /// Size: 0x0058 (0x000008 - 0x000060)
 class FMovieScene3DTransformKeyStruct : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FRotator)                                  Rotation                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector3f)                                 Scale                                                       OFFSET(get<T>, {0x38, 12, 0, 0})
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x44, 4, 0, 0})
+	SMember(FVector)                                   Location                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FRotator)                                  Rotation                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector3f)                                 Scale                                                       OFFSET(getStruct<T>, {0x38, 12, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x44, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneTransformMask
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FMovieSceneTransformMask : public MDKStruct
+class FMovieSceneTransformMask : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -2384,15 +2433,16 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneBaseCacheParams
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMovieSceneBaseCacheParams : public MDKStruct
+class FMovieSceneBaseCacheParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(getStruct<T>, {0xC, 4, 0, 0})
+	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(bool)                                      bReverse                                                    OFFSET(get<bool>, {0x18, 1, 1, 0})
 };
@@ -2401,18 +2451,20 @@ public:
 /// Size: 0x0030 (0x000008 - 0x000038)
 class FMovieSceneColorKeyStruct : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FLinearColor)                              Color                                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneConsoleVariableCollection
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMovieSceneConsoleVariableCollection : public MDKStruct
+class FMovieSceneConsoleVariableCollection : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -2423,8 +2475,9 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneCVarOverrides
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FMovieSceneCVarOverrides : public MDKStruct
+class FMovieSceneCVarOverrides : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -2434,21 +2487,22 @@ public:
 
 /// Struct /Script/MovieSceneTracks.MovieSceneSkeletalAnimationParams
 /// Size: 0x0148 (0x000000 - 0x000148)
-class FMovieSceneSkeletalAnimationParams : public MDKStruct
+class FMovieSceneSkeletalAnimationParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
 	CMember(UAnimSequenceBase*)                        Animation                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(get<T>, {0x8, 4, 0, 0})
-	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(get<T>, {0xC, 4, 0, 0})
-	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FFrameNumber)                              FirstLoopStartFrameOffset                                   OFFSET(getStruct<T>, {0x8, 4, 0, 0})
+	SMember(FFrameNumber)                              StartFrameOffset                                            OFFSET(getStruct<T>, {0xC, 4, 0, 0})
+	SMember(FFrameNumber)                              EndFrameOffset                                              OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x14, 4, 0, 0})
 	DMember(bool)                                      bReverse                                                    OFFSET(get<bool>, {0x18, 1, 1, 0})
-	SMember(FName)                                     SlotName                                                    OFFSET(get<T>, {0x1C, 4, 0, 0})
+	SMember(FName)                                     SlotName                                                    OFFSET(getStruct<T>, {0x1C, 4, 0, 0})
 	CMember(UMirrorDataTable*)                         MirrorDataTable                                             OFFSET(get<T>, {0x20, 8, 0, 0})
-	SMember(FMovieSceneFloatChannel)                   Weight                                                      OFFSET(get<T>, {0x28, 272, 0, 0})
+	SMember(FMovieSceneFloatChannel)                   Weight                                                      OFFSET(getStruct<T>, {0x28, 272, 0, 0})
 	DMember(bool)                                      bSkipAnimNotifiers                                          OFFSET(get<bool>, {0x138, 1, 0, 0})
 	DMember(bool)                                      bForceCustomMode                                            OFFSET(get<bool>, {0x139, 1, 0, 0})
 	CMember(ESwapRootBone)                             SwapRootBone                                                OFFSET(get<T>, {0x13A, 1, 0, 0})
@@ -2460,106 +2514,116 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FMovieSceneFloatVectorKeyStructBase : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVector2fKeyStruct
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FMovieSceneVector2fKeyStruct : public FMovieSceneFloatVectorKeyStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector2f)                                 Vector                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FVector2f)                                 Vector                                                      OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVector3fKeyStruct
 /// Size: 0x0010 (0x000028 - 0x000038)
 class FMovieSceneVector3fKeyStruct : public FMovieSceneFloatVectorKeyStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector3f)                                 Vector                                                      OFFSET(get<T>, {0x28, 12, 0, 0})
+	SMember(FVector3f)                                 Vector                                                      OFFSET(getStruct<T>, {0x28, 12, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVector4fKeyStruct
 /// Size: 0x0018 (0x000028 - 0x000040)
 class FMovieSceneVector4fKeyStruct : public FMovieSceneFloatVectorKeyStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector4f)                                 Vector                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FVector4f)                                 Vector                                                      OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneDoubleVectorKeyStructBase
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FMovieSceneDoubleVectorKeyStructBase : public FMovieSceneKeyStruct
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FFrameNumber)                              Time                                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FFrameNumber)                              Time                                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVector2DKeyStruct
 /// Size: 0x0010 (0x000028 - 0x000038)
 class FMovieSceneVector2DKeyStruct : public FMovieSceneDoubleVectorKeyStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FVector2D)                                 Vector                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FVector2D)                                 Vector                                                      OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVector3dKeyStruct
 /// Size: 0x0018 (0x000028 - 0x000040)
 class FMovieSceneVector3dKeyStruct : public FMovieSceneDoubleVectorKeyStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FVector3d)                                 Vector                                                      OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector3d)                                 Vector                                                      OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneVector4dKeyStruct
 /// Size: 0x0028 (0x000028 - 0x000050)
 class FMovieSceneVector4dKeyStruct : public FMovieSceneDoubleVectorKeyStructBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FVector4d)                                 Vector                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FVector4d)                                 Vector                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneEventTriggerData
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FMovieSceneEventTriggerData : public MDKStruct
+class FMovieSceneEventTriggerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FMovieSceneEventPtrs)                      Ptrs                                                        OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMovieSceneEventPtrs)                      Ptrs                                                        OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FGuid)                                     ObjectBindingID                                             OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Struct /Script/MovieSceneTracks.MovieSceneSkeletalAnimRootMotionTrackParams
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FMovieSceneSkeletalAnimRootMotionTrackParams : public MDKStruct
+class FMovieSceneSkeletalAnimRootMotionTrackParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 

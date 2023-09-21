@@ -19,15 +19,15 @@ class UFortGameplayAbility_ScoutDrone_Dive : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 3272;
 
 public:
-	SMember(FFortScoutDroneDiveTransitionData)         EaseInData                                                  OFFSET(get<T>, {0xB38, 48, 0, 0})
-	SMember(FFortScoutDroneDiveTransitionData)         EaseOutData                                                 OFFSET(get<T>, {0xB68, 48, 0, 0})
-	SMember(FScalableFloat)                            DiveUpdateInterval                                          OFFSET(get<T>, {0xBA0, 40, 0, 0})
-	SMember(FScalableFloat)                            DiveSpeedIncrease                                           OFFSET(get<T>, {0xBC8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinSpeedToDive                                              OFFSET(get<T>, {0xBF0, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDistToGround                                             OFFSET(get<T>, {0xC18, 40, 0, 0})
-	SMember(FScalableFloat)                            TargetPitchToDive                                           OFFSET(get<T>, {0xC40, 40, 0, 0})
-	SMember(FScalableFloat)                            DivingGravityScale                                          OFFSET(get<T>, {0xC68, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxSpeedDivingGravityScale                                  OFFSET(get<T>, {0xC90, 40, 0, 0})
+	SMember(FFortScoutDroneDiveTransitionData)         EaseInData                                                  OFFSET(getStruct<T>, {0xB38, 48, 0, 0})
+	SMember(FFortScoutDroneDiveTransitionData)         EaseOutData                                                 OFFSET(getStruct<T>, {0xB68, 48, 0, 0})
+	SMember(FScalableFloat)                            DiveUpdateInterval                                          OFFSET(getStruct<T>, {0xBA0, 40, 0, 0})
+	SMember(FScalableFloat)                            DiveSpeedIncrease                                           OFFSET(getStruct<T>, {0xBC8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinSpeedToDive                                              OFFSET(getStruct<T>, {0xBF0, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDistToGround                                             OFFSET(getStruct<T>, {0xC18, 40, 0, 0})
+	SMember(FScalableFloat)                            TargetPitchToDive                                           OFFSET(getStruct<T>, {0xC40, 40, 0, 0})
+	SMember(FScalableFloat)                            DivingGravityScale                                          OFFSET(getStruct<T>, {0xC68, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxSpeedDivingGravityScale                                  OFFSET(getStruct<T>, {0xC90, 40, 0, 0})
 
 
 	/// Functions
@@ -46,9 +46,9 @@ class UFortGameplayAbility_ScoutDrone_TargetingBase : public UFortGameplayAbilit
 
 public:
 	CMember(UTargetingPreset*)                         TargetingPreset                                             OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FTargetingRequestHandle)                   AsyncTargetingHandle                                        OFFSET(get<T>, {0xB30, 4, 0, 0})
-	SMember(FTimerHandle)                              TargetingTimerHandle                                        OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FScalableFloat)                            TargetingInterval                                           OFFSET(get<T>, {0xB40, 40, 0, 0})
+	SMember(FTargetingRequestHandle)                   AsyncTargetingHandle                                        OFFSET(getStruct<T>, {0xB30, 4, 0, 0})
+	SMember(FTimerHandle)                              TargetingTimerHandle                                        OFFSET(getStruct<T>, {0xB38, 8, 0, 0})
+	SMember(FScalableFloat)                            TargetingInterval                                           OFFSET(getStruct<T>, {0xB40, 40, 0, 0})
 	DMember(bool)                                      bUseControllerAsInstigator                                  OFFSET(get<bool>, {0xB68, 1, 0, 0})
 
 
@@ -69,15 +69,15 @@ class UFortGameplayAbility_ScoutDrone_SpeedBoost : public UFortGameplayAbility_S
 	static inline constexpr uint64_t __MDKClassSize = 3168;
 
 public:
-	SMember(FGameplayTag)                              DoorBashCueTag                                              OFFSET(get<T>, {0xB70, 4, 0, 0})
+	SMember(FGameplayTag)                              DoorBashCueTag                                              OFFSET(getStruct<T>, {0xB70, 4, 0, 0})
 	CMember(UClass*)                                   DamageGameplayEffectClass                                   OFFSET(get<T>, {0xB78, 8, 0, 0})
-	SMember(FGameplayTag)                              DoorBashPawnLaunchGameplayCueTag                            OFFSET(get<T>, {0xB80, 4, 0, 0})
-	SMember(FScalableFloat)                            DoorBashEnabledHotfix                                       OFFSET(get<T>, {0xB88, 40, 0, 0})
-	SMember(FScalableFloat)                            DoorBashSphereRadiusForPawnLaunch                           OFFSET(get<T>, {0xBB0, 40, 0, 0})
-	SMember(FScalableFloat)                            DoorBashScalarForPawnLaunch                                 OFFSET(get<T>, {0xBD8, 40, 0, 0})
+	SMember(FGameplayTag)                              DoorBashPawnLaunchGameplayCueTag                            OFFSET(getStruct<T>, {0xB80, 4, 0, 0})
+	SMember(FScalableFloat)                            DoorBashEnabledHotfix                                       OFFSET(getStruct<T>, {0xB88, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashSphereRadiusForPawnLaunch                           OFFSET(getStruct<T>, {0xBB0, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashScalarForPawnLaunch                                 OFFSET(getStruct<T>, {0xBD8, 40, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       DoorBashCollisionTypesForPawn                               OFFSET(get<T>, {0xC00, 16, 0, 0})
-	SMember(FScalableFloat)                            DoorBashEnabled                                             OFFSET(get<T>, {0xC10, 40, 0, 0})
-	SMember(FScalableFloat)                            DamageOnBoostEnabled                                        OFFSET(get<T>, {0xC38, 40, 0, 0})
+	SMember(FScalableFloat)                            DoorBashEnabled                                             OFFSET(getStruct<T>, {0xC10, 40, 0, 0})
+	SMember(FScalableFloat)                            DamageOnBoostEnabled                                        OFFSET(getStruct<T>, {0xC38, 40, 0, 0})
 
 
 	/// Functions
@@ -97,18 +97,18 @@ class UFortScoutDroneAnalyticsComponent : public UFortControllerComponent
 public:
 	DMember(float)                                     SessionStartTime                                            OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     SessionLength                                               OFFSET(get<float>, {0xAC, 4, 0, 0})
-	SMember(FScalableFloat)                            MinSessionLength                                            OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FScalableFloat)                            MinSessionLength                                            OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 	DMember(float)                                     DistanceTraveled                                            OFFSET(get<float>, {0xD8, 4, 0, 0})
 	DMember(int32_t)                                   NumberOfContainersInteractedWith                            OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
-	SMember(FGameplayTag)                              DismissalReason                                             OFFSET(get<T>, {0xE0, 4, 0, 0})
+	SMember(FGameplayTag)                              DismissalReason                                             OFFSET(getStruct<T>, {0xE0, 4, 0, 0})
 	DMember(int32_t)                                   NumberOfItemsPickedUp                                       OFFSET(get<int32_t>, {0xE4, 4, 0, 0})
 	CMember(TArray<FString>)                           DBNOCarriedPlayers                                          OFFSET(get<T>, {0xE8, 16, 0, 0})
 	DMember(int32_t)                                   NumberOfEnemiesPassivelyMarked                              OFFSET(get<int32_t>, {0xF8, 4, 0, 0})
 	DMember(int32_t)                                   NumberOfEnemiesMarkedOnCaw                                  OFFSET(get<int32_t>, {0xFC, 4, 0, 0})
 	DMember(int32_t)                                   NumberOfCaws                                                OFFSET(get<int32_t>, {0x100, 4, 0, 0})
-	SMember(FScalableFloat)                            DistanceTraveledUpdateInterval                              OFFSET(get<T>, {0x110, 40, 0, 0})
-	SMember(FTimerHandle)                              DistanceTraveledUpdateTimerHandle                           OFFSET(get<T>, {0x138, 8, 0, 0})
-	SMember(FVector)                                   LastRecorderDroneLocation                                   OFFSET(get<T>, {0x140, 24, 0, 0})
+	SMember(FScalableFloat)                            DistanceTraveledUpdateInterval                              OFFSET(getStruct<T>, {0x110, 40, 0, 0})
+	SMember(FTimerHandle)                              DistanceTraveledUpdateTimerHandle                           OFFSET(getStruct<T>, {0x138, 8, 0, 0})
+	SMember(FVector)                                   LastRecorderDroneLocation                                   OFFSET(getStruct<T>, {0x140, 24, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortScoutDroneAnimInstance
@@ -121,24 +121,24 @@ class UFortScoutDroneAnimInstance : public UFortBaseAnimInstance
 public:
 	CMember(UFortScoutDroneMovementComponent*)         FortScoutDroneMovementComponent                             OFFSET(get<T>, {0x438, 8, 0, 0})
 	DMember(double)                                    YawDeltaLastTick                                            OFFSET(get<double>, {0x440, 8, 0, 0})
-	SMember(FRotator)                                  ActorCurrentRotationTick                                    OFFSET(get<T>, {0x448, 24, 0, 0})
+	SMember(FRotator)                                  ActorCurrentRotationTick                                    OFFSET(getStruct<T>, {0x448, 24, 0, 0})
 	DMember(double)                                    YawDeltaCurrentTick                                         OFFSET(get<double>, {0x460, 8, 0, 0})
-	SMember(FRotator)                                  ActorRotationLastTick                                       OFFSET(get<T>, {0x468, 24, 0, 0})
+	SMember(FRotator)                                  ActorRotationLastTick                                       OFFSET(getStruct<T>, {0x468, 24, 0, 0})
 	DMember(bool)                                      IsFlying                                                    OFFSET(get<bool>, {0x480, 1, 0, 0})
 	DMember(double)                                    CurrentVelocity                                             OFFSET(get<double>, {0x488, 8, 0, 0})
 	DMember(double)                                    LastVelocity                                                OFFSET(get<double>, {0x490, 8, 0, 0})
 	DMember(double)                                    Velocity                                                    OFFSET(get<double>, {0x498, 8, 0, 0})
 	DMember(double)                                    ForwardInputAlpha                                           OFFSET(get<double>, {0x4A0, 8, 0, 0})
 	DMember(double)                                    StrafeInputAlpha                                            OFFSET(get<double>, {0x4A8, 8, 0, 0})
-	SMember(FRotator)                                  DroneRotation                                               OFFSET(get<T>, {0x4B0, 24, 0, 0})
+	SMember(FRotator)                                  DroneRotation                                               OFFSET(getStruct<T>, {0x4B0, 24, 0, 0})
 	DMember(double)                                    Acceleration                                                OFFSET(get<double>, {0x4C8, 8, 0, 0})
 	CMember(AFortScoutDrone*)                          ScoutDrone                                                  OFFSET(get<T>, {0x4D0, 8, 0, 0})
 	DMember(bool)                                      IsBoosting                                                  OFFSET(get<bool>, {0x4D8, 1, 0, 0})
 	DMember(bool)                                      IsDiving                                                    OFFSET(get<bool>, {0x4D9, 1, 0, 0})
 	DMember(double)                                    AimPitch                                                    OFFSET(get<double>, {0x4E0, 8, 0, 0})
 	DMember(double)                                    NegativeAimPitch                                            OFFSET(get<double>, {0x4E8, 8, 0, 0})
-	SMember(FRotator)                                  FinalFanRotationL                                           OFFSET(get<T>, {0x4F0, 24, 0, 0})
-	SMember(FRotator)                                  FinalFanRotationR                                           OFFSET(get<T>, {0x508, 24, 0, 0})
+	SMember(FRotator)                                  FinalFanRotationL                                           OFFSET(getStruct<T>, {0x4F0, 24, 0, 0})
+	SMember(FRotator)                                  FinalFanRotationR                                           OFFSET(getStruct<T>, {0x508, 24, 0, 0})
 	DMember(double)                                    FanIdleSpeed                                                OFFSET(get<double>, {0x520, 8, 0, 0})
 	DMember(double)                                    FanAuthoredSpeed                                            OFFSET(get<double>, {0x528, 8, 0, 0})
 	DMember(double)                                    FanIdleAuthoredSpeed                                        OFFSET(get<double>, {0x530, 8, 0, 0})
@@ -177,8 +177,8 @@ public:
 	DMember(bool)                                      ShouldAllowTransition                                       OFFSET(get<bool>, {0x5D5, 1, 0, 0})
 	DMember(bool)                                      StateRuleFromBoostOutroToFlying                             OFFSET(get<bool>, {0x5D6, 1, 0, 0})
 	DMember(bool)                                      WasBoosting                                                 OFFSET(get<bool>, {0x5D7, 1, 0, 0})
-	SMember(FScalableFloat)                            SpeedBoostForceBoostVelocity                                OFFSET(get<T>, {0x5D8, 40, 0, 0})
-	SMember(FScalableFloat)                            SpeedBoostMaxSpeedIncrease                                  OFFSET(get<T>, {0x600, 40, 0, 0})
+	SMember(FScalableFloat)                            SpeedBoostForceBoostVelocity                                OFFSET(getStruct<T>, {0x5D8, 40, 0, 0})
+	SMember(FScalableFloat)                            SpeedBoostMaxSpeedIncrease                                  OFFSET(getStruct<T>, {0x600, 40, 0, 0})
 	DMember(bool)                                      IsFlappingTime                                              OFFSET(get<bool>, {0x628, 1, 0, 0})
 };
 
@@ -190,7 +190,7 @@ class AFortScoutDroneGlove : public AFortWeapon
 	static inline constexpr uint64_t __MDKClassSize = 4664;
 
 public:
-	SMember(FScalableFloat)                            HoldToDeployTime                                            OFFSET(get<T>, {0x11F8, 40, 0, 0})
+	SMember(FScalableFloat)                            HoldToDeployTime                                            OFFSET(getStruct<T>, {0x11F8, 40, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_Activate
@@ -202,7 +202,7 @@ class UFortGameplayAbility_ScoutDrone_Activate : public UFortGameplayAbility
 
 public:
 	CMember(UClass*)                                   RCActorClass                                                OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FVector)                                   SpawnOffset                                                 OFFSET(get<T>, {0xB30, 24, 0, 0})
+	SMember(FVector)                                   SpawnOffset                                                 OFFSET(getStruct<T>, {0xB30, 24, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_Dismiss
@@ -213,7 +213,7 @@ class UFortGameplayAbility_ScoutDrone_Dismiss : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2872;
 
 public:
-	SMember(FScoutDroneDeferredDestructionData)        DismissDelayData                                            OFFSET(get<T>, {0xB28, 16, 0, 0})
+	SMember(FScoutDroneDeferredDestructionData)        DismissDelayData                                            OFFSET(getStruct<T>, {0xB28, 16, 0, 0})
 
 
 	/// Functions
@@ -229,8 +229,8 @@ class UFortGameplayAbility_ScoutDrone_MarkPotentialTargets : public UFortGamepla
 	static inline constexpr uint64_t __MDKClassSize = 3232;
 
 public:
-	SMember(FIndicatedActorData)                       IndicatedActorData                                          OFFSET(get<T>, {0xB70, 248, 0, 0})
-	SMember(FScalableFloat)                            MaxNumberOfPotentialTargets                                 OFFSET(get<T>, {0xC78, 40, 0, 0})
+	SMember(FIndicatedActorData)                       IndicatedActorData                                          OFFSET(getStruct<T>, {0xB70, 248, 0, 0})
+	SMember(FScalableFloat)                            MaxNumberOfPotentialTargets                                 OFFSET(getStruct<T>, {0xC78, 40, 0, 0})
 
 
 	/// Functions
@@ -248,7 +248,7 @@ class UScoutDronePassiveMarkPayload : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FScoutDroneStatusData)                     TargetStatus                                                OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FScoutDroneStatusData)                     TargetStatus                                                OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_PassiveMark
@@ -259,13 +259,13 @@ class UFortGameplayAbility_ScoutDrone_PassiveMark : public UFortGameplayAbility_
 	static inline constexpr uint64_t __MDKClassSize = 3432;
 
 public:
-	SMember(FScoutDroneStatusData)                     CurrentTargetStatus                                         OFFSET(get<T>, {0xB70, 8, 0, 0})
-	SMember(FStenciledActorData)                       StenciledActorData                                          OFFSET(get<T>, {0xB78, 128, 0, 0})
-	SMember(FIndicatedActorData)                       IndicatedActorData                                          OFFSET(get<T>, {0xBF8, 248, 0, 0})
-	SMember(FScalableFloat)                            ActorTargetingRange                                         OFFSET(get<T>, {0xCF0, 40, 0, 0})
-	SMember(FScalableFloat)                            TimeToConfirmTarget                                         OFFSET(get<T>, {0xD18, 40, 0, 0})
+	SMember(FScoutDroneStatusData)                     CurrentTargetStatus                                         OFFSET(getStruct<T>, {0xB70, 8, 0, 0})
+	SMember(FStenciledActorData)                       StenciledActorData                                          OFFSET(getStruct<T>, {0xB78, 128, 0, 0})
+	SMember(FIndicatedActorData)                       IndicatedActorData                                          OFFSET(getStruct<T>, {0xBF8, 248, 0, 0})
+	SMember(FScalableFloat)                            ActorTargetingRange                                         OFFSET(getStruct<T>, {0xCF0, 40, 0, 0})
+	SMember(FScalableFloat)                            TimeToConfirmTarget                                         OFFSET(getStruct<T>, {0xD18, 40, 0, 0})
 	CMember(AActor*)                                   CurrentTarget                                               OFFSET(get<T>, {0xD40, 8, 0, 0})
-	SMember(FTimerHandle)                              TargetConfirmationTimerHandle                               OFFSET(get<T>, {0xD48, 8, 0, 0})
+	SMember(FTimerHandle)                              TargetConfirmationTimerHandle                               OFFSET(getStruct<T>, {0xD48, 8, 0, 0})
 	CMember(UScoutDronePassiveMarkPayload*)            PayloadCache                                                OFFSET(get<T>, {0xD50, 8, 0, 0})
 
 
@@ -286,7 +286,7 @@ class UScoutDronePickUpTargetsPayload : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FScoutDronePickupTargets)                  PickUpTargets                                               OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FScoutDronePickupTargets)                  PickUpTargets                                               OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_PickUp
@@ -297,9 +297,9 @@ class UFortGameplayAbility_ScoutDrone_PickUp : public UFortGameplayAbility_Scout
 	static inline constexpr uint64_t __MDKClassSize = 3048;
 
 public:
-	SMember(FScalableFloat)                            MaxNumberOfItemsToGrab                                      OFFSET(get<T>, {0xB78, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxNumberOfItemsToGrab                                      OFFSET(getStruct<T>, {0xB78, 40, 0, 0})
 	CMember(UScoutDronePickUpTargetsPayload*)          PayloadCache                                                OFFSET(get<T>, {0xBA0, 8, 0, 0})
-	SMember(FScalableFloat)                            PickupToggleCooldownDuration                                OFFSET(get<T>, {0xBA8, 40, 0, 0})
+	SMember(FScalableFloat)                            PickupToggleCooldownDuration                                OFFSET(getStruct<T>, {0xBA8, 40, 0, 0})
 	CMember(UClass*)                                   AttachedPawnGEClass                                         OFFSET(get<T>, {0xBE0, 8, 0, 0})
 
 
@@ -316,13 +316,13 @@ class UFortGameplayAbility_ScoutDrone_Tether : public UFortGameplayAbility
 	static inline constexpr uint64_t __MDKClassSize = 2976;
 
 public:
-	SMember(FScalableFloat)                            WarningRange                                                OFFSET(get<T>, {0xB28, 40, 0, 0})
-	SMember(FScalableFloat)                            SignalLossRange                                             OFFSET(get<T>, {0xB50, 40, 0, 0})
+	SMember(FScalableFloat)                            WarningRange                                                OFFSET(getStruct<T>, {0xB28, 40, 0, 0})
+	SMember(FScalableFloat)                            SignalLossRange                                             OFFSET(getStruct<T>, {0xB50, 40, 0, 0})
 	DMember(bool)                                      bIsInWarningRange                                           OFFSET(get<bool>, {0xB78, 1, 0, 0})
 	DMember(bool)                                      bIsInSignalLossRange                                        OFFSET(get<bool>, {0xB79, 1, 0, 0})
-	SMember(FTimerHandle)                              TetheringTimerHandle                                        OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FTimerHandle)                              TetheringReportTimerHandle                                  OFFSET(get<T>, {0xB88, 8, 0, 0})
-	SMember(FScoutDroneDeferredDestructionData)        DismissDelayData                                            OFFSET(get<T>, {0xB90, 16, 0, 0})
+	SMember(FTimerHandle)                              TetheringTimerHandle                                        OFFSET(getStruct<T>, {0xB80, 8, 0, 0})
+	SMember(FTimerHandle)                              TetheringReportTimerHandle                                  OFFSET(getStruct<T>, {0xB88, 8, 0, 0})
+	SMember(FScoutDroneDeferredDestructionData)        DismissDelayData                                            OFFSET(getStruct<T>, {0xB90, 16, 0, 0})
 
 
 	/// Functions
@@ -344,8 +344,8 @@ class AFortAthenaMutator_ScoutDrone : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FGameplayTagContainer)                     DroneAllowedInteractionTags                                 OFFSET(get<T>, {0x338, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     DroneBlockedInteractionTags                                 OFFSET(get<T>, {0x358, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DroneAllowedInteractionTags                                 OFFSET(getStruct<T>, {0x338, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DroneBlockedInteractionTags                                 OFFSET(getStruct<T>, {0x358, 32, 0, 0})
 	DMember(bool)                                      bIsControllingDrone                                         OFFSET(get<bool>, {0x378, 1, 0, 0})
 
 
@@ -362,10 +362,10 @@ class UFortChargingSet_ScoutDroneEnergy : public UFortChargingSet_Base
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FFortGameplayAttributeData)                Energy                                                      OFFSET(get<T>, {0x48, 40, 0, 0})
-	SMember(FFortGameplayAttributeData)                MaxEnergy                                                   OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FFortGameplayAttributeData)                EnergyChargeRate                                            OFFSET(get<T>, {0x98, 40, 0, 0})
-	SMember(FFortGameplayAttributeData)                ServerTimeEnergyIncrements                                  OFFSET(get<T>, {0xC0, 40, 0, 0})
+	SMember(FFortGameplayAttributeData)                Energy                                                      OFFSET(getStruct<T>, {0x48, 40, 0, 0})
+	SMember(FFortGameplayAttributeData)                MaxEnergy                                                   OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FFortGameplayAttributeData)                EnergyChargeRate                                            OFFSET(getStruct<T>, {0x98, 40, 0, 0})
+	SMember(FFortGameplayAttributeData)                ServerTimeEnergyIncrements                                  OFFSET(getStruct<T>, {0xC0, 40, 0, 0})
 
 
 	/// Functions
@@ -382,14 +382,14 @@ class AFortScoutDrone : public ACharacter
 
 public:
 	DMember(bool)                                      bIsDiving                                                   OFFSET(get<bool>, {0x6B0, 1, 0, 0})
-	SMember(FScalableFloat)                            DivingEnabled                                               OFFSET(get<T>, {0x6B8, 40, 0, 0})
+	SMember(FScalableFloat)                            DivingEnabled                                               OFFSET(getStruct<T>, {0x6B8, 40, 0, 0})
 	DMember(bool)                                      bIsSpeedBoosting                                            OFFSET(get<bool>, {0x6E0, 1, 0, 0})
 	CMember(UNiagaraComponent*)                        NSScoutDroneIdle_Native                                     OFFSET(get<T>, {0x6E8, 8, 0, 0})
 	CMember(UFortScoutDronePickupManager*)             PickupManagerComponent_Native                               OFFSET(get<T>, {0x6F0, 8, 0, 0})
 	CMember(UClass*)                                   TeamMateIndicatorMarkerWidgetClass                          OFFSET(get<T>, {0x6F8, 8, 0, 0})
 	CMember(UAudioComponent*)                          DroneMotorLoopComponent                                     OFFSET(get<T>, {0x700, 8, 0, 0})
 	CMember(UAudioComponent*)                          DroneThrustSoundComponent                                   OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FScalableFloat)                            BaseMaxFlySpeed                                             OFFSET(get<T>, {0x710, 40, 0, 0})
+	SMember(FScalableFloat)                            BaseMaxFlySpeed                                             OFFSET(getStruct<T>, {0x710, 40, 0, 0})
 	CMember(UFortAbilitySystemComponent*)              AbilitySystemComponent                                      OFFSET(get<T>, {0x740, 8, 0, 0})
 	CMember(UFortActorComponent_Affiliation*)          AffiliationComponent                                        OFFSET(get<T>, {0x748, 8, 0, 0})
 	CMember(UFortAbilitySet*)                          StartupAbilitySet                                           OFFSET(get<T>, {0x750, 8, 0, 0})
@@ -397,20 +397,20 @@ public:
 	CMember(UFortHealthSet*)                           HealthSet                                                   OFFSET(get<T>, {0x760, 8, 0, 0})
 	CMember(UFortChargingSet_ScoutDroneEnergy*)        EnergySet                                                   OFFSET(get<T>, {0x768, 8, 0, 0})
 	DMember(float)                                     LifespanAfterDeath                                          OFFSET(get<float>, {0x770, 4, 0, 0})
-	SMember(FFortAttributeInitializationKey)           AttributeInitKey                                            OFFSET(get<T>, {0x774, 8, 0, 0})
+	SMember(FFortAttributeInitializationKey)           AttributeInitKey                                            OFFSET(getStruct<T>, {0x774, 8, 0, 0})
 	CMember(TEnumAsByte<EPhysicalSurface>)             PrimarySurfaceType                                          OFFSET(get<T>, {0x77C, 1, 0, 0})
 	CMember(TEnumAsByte<EFortBaseWeaponDamage>)        WeaponResponseType                                          OFFSET(get<T>, {0x77D, 1, 0, 0})
 	DMember(bool)                                      bPlayedDeath                                                OFFSET(get<bool>, {0x77E, 1, 0, 0})
-	SMember(FScoutDroneDeferredDestructionData)        OutOfHealthDismissDelayData                                 OFFSET(get<T>, {0x780, 16, 0, 0})
-	SMember(FScoutDroneDeferredDestructionData)        OutOfEnergyDismissDelayData                                 OFFSET(get<T>, {0x790, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTeamIndexChanged                                          OFFSET(get<T>, {0x7A0, 16, 0, 0})
+	SMember(FScoutDroneDeferredDestructionData)        OutOfHealthDismissDelayData                                 OFFSET(getStruct<T>, {0x780, 16, 0, 0})
+	SMember(FScoutDroneDeferredDestructionData)        OutOfEnergyDismissDelayData                                 OFFSET(getStruct<T>, {0x790, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTeamIndexChanged                                          OFFSET(getStruct<T>, {0x7A0, 16, 0, 0})
 	CMember(UClass*)                                   PawnOverrideComponentClass                                  OFFSET(get<T>, {0x7B0, 8, 0, 0})
 	CMember(USoundBase*)                               DroneMotorLoopSound                                         OFFSET(get<T>, {0x7B8, 8, 0, 0})
 	CMember(USoundBase*)                               DroneThrusterSound                                          OFFSET(get<T>, {0x7C0, 8, 0, 0})
 	CMember(UAudioParameterComponent*)                 AudioParameter                                              OFFSET(get<T>, {0x7C8, 8, 0, 0})
-	SMember(FName)                                     LocallyViewedPawnAudioParamName                             OFFSET(get<T>, {0x7D0, 4, 0, 0})
-	SMember(FName)                                     IsEnemyAudioParamName                                       OFFSET(get<T>, {0x7D4, 4, 0, 0})
-	SMember(FName)                                     ThrustAmountAudioParamName                                  OFFSET(get<T>, {0x7D8, 4, 0, 0})
+	SMember(FName)                                     LocallyViewedPawnAudioParamName                             OFFSET(getStruct<T>, {0x7D0, 4, 0, 0})
+	SMember(FName)                                     IsEnemyAudioParamName                                       OFFSET(getStruct<T>, {0x7D4, 4, 0, 0})
+	SMember(FName)                                     ThrustAmountAudioParamName                                  OFFSET(getStruct<T>, {0x7D8, 4, 0, 0})
 	DMember(float)                                     ThrustSoundThreshold                                        OFFSET(get<float>, {0x7DC, 4, 0, 0})
 
 
@@ -459,7 +459,7 @@ class UScoutDroneDeferredDestructionPayload : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FScoutDroneDeferredDestructionData)        DeferredDestructionData                                     OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FScoutDroneDeferredDestructionData)        DeferredDestructionData                                     OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortScoutDroneControllingComponent
@@ -479,16 +479,16 @@ public:
 	CMember(UInputAction*)                             MoveAction                                                  OFFSET(get<T>, {0x110, 8, 0, 0})
 	CMember(UInputAction*)                             DismissAction                                               OFFSET(get<T>, {0x118, 8, 0, 0})
 	CMember(UClass*)                                   DroneCooldownEffectClass                                    OFFSET(get<T>, {0x120, 8, 0, 0})
-	SMember(FStenciledActorData)                       OwningActorStencilData                                      OFFSET(get<T>, {0x140, 128, 0, 0})
-	SMember(FScoutDroneDeferredDestructionData)        CurrentDestructionData                                      OFFSET(get<T>, {0x1C0, 16, 0, 0})
+	SMember(FStenciledActorData)                       OwningActorStencilData                                      OFFSET(getStruct<T>, {0x140, 128, 0, 0})
+	SMember(FScoutDroneDeferredDestructionData)        CurrentDestructionData                                      OFFSET(getStruct<T>, {0x1C0, 16, 0, 0})
 	CMember(UClass*)                                   FirstPersonCameraModeOverride                               OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(UClass*)                                   ThirdPersonCameraModeOverride                               OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(FGameplayAbilitySpec)                      FakeCameraAbilitySpec                                       OFFSET(get<T>, {0x1E0, 248, 0, 0})
+	SMember(FGameplayAbilitySpec)                      FakeCameraAbilitySpec                                       OFFSET(getStruct<T>, {0x1E0, 248, 0, 0})
 	CMember(TArray<FName>)                             LegacyInputActionsToBlock                                   OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	CMember(UScoutDroneDeferredDestructionPayload*)    DismissPayloadCache                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	SMember(FScalableFloat)                            DismissButtonPressCooldown                                  OFFSET(get<T>, {0x2F0, 40, 0, 0})
-	SMember(FViewTargetTransitionParams)               PlayerToDroneTransitionParams                               OFFSET(get<T>, {0x320, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     InterruptingPlayerTags                                      OFFSET(get<T>, {0x338, 32, 0, 0})
+	SMember(FScalableFloat)                            DismissButtonPressCooldown                                  OFFSET(getStruct<T>, {0x2F0, 40, 0, 0})
+	SMember(FViewTargetTransitionParams)               PlayerToDroneTransitionParams                               OFFSET(getStruct<T>, {0x320, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     InterruptingPlayerTags                                      OFFSET(getStruct<T>, {0x338, 32, 0, 0})
 
 
 	/// Functions
@@ -528,7 +528,7 @@ class UFortScoutDroneCooldownMagnitudeCalculation : public UFortGameplayModMagni
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FScalableFloat)                            MinDroneCooldown                                            OFFSET(get<T>, {0x40, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDroneCooldown                                            OFFSET(getStruct<T>, {0x40, 40, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortScoutDroneMovementComponent
@@ -539,12 +539,12 @@ class UFortScoutDroneMovementComponent : public UCharacterMovementComponent
 	static inline constexpr uint64_t __MDKClassSize = 4080;
 
 public:
-	SMember(FVector)                                   LocalInputState                                             OFFSET(get<T>, {0xF28, 24, 0, 0})
-	SMember(FVector)                                   LastInputState                                              OFFSET(get<T>, {0xF40, 24, 0, 0})
-	SMember(FVector)                                   ReplicatedAcceleration                                      OFFSET(get<T>, {0xF58, 24, 0, 0})
-	SMember(FScalableFloat)                            StrafeInputMultiplier                                       OFFSET(get<T>, {0xF70, 40, 0, 0})
-	SMember(FScalableFloat)                            BacktrackingInputMultiplier                                 OFFSET(get<T>, {0xF98, 40, 0, 0})
-	SMember(FScalableFloat)                            VerticalMovementInputMultiplier                             OFFSET(get<T>, {0xFC0, 40, 0, 0})
+	SMember(FVector)                                   LocalInputState                                             OFFSET(getStruct<T>, {0xF28, 24, 0, 0})
+	SMember(FVector)                                   LastInputState                                              OFFSET(getStruct<T>, {0xF40, 24, 0, 0})
+	SMember(FVector)                                   ReplicatedAcceleration                                      OFFSET(getStruct<T>, {0xF58, 24, 0, 0})
+	SMember(FScalableFloat)                            StrafeInputMultiplier                                       OFFSET(getStruct<T>, {0xF70, 40, 0, 0})
+	SMember(FScalableFloat)                            BacktrackingInputMultiplier                                 OFFSET(getStruct<T>, {0xF98, 40, 0, 0})
+	SMember(FScalableFloat)                            VerticalMovementInputMultiplier                             OFFSET(getStruct<T>, {0xFC0, 40, 0, 0})
 };
 
 /// Class /Script/ScoutDroneRuntime.FortScoutDronePawnOverrideComponent
@@ -577,16 +577,16 @@ class UFortScoutDronePickupManager : public UPawnComponent
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	SMember(FScoutDronePickupTargets)                  AttachedTargets                                             OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FName)                                     AttachPointSocketName                                       OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FScoutDronePickupTargets)                  PreviouslyAttachedTargets                                   OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FVector)                                   ItemOffset                                                  OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FVector)                                   DBNOPawnOffset                                              OFFSET(get<T>, {0xF0, 24, 0, 0})
+	SMember(FScoutDronePickupTargets)                  AttachedTargets                                             OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FName)                                     AttachPointSocketName                                       OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FScoutDronePickupTargets)                  PreviouslyAttachedTargets                                   OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FVector)                                   ItemOffset                                                  OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FVector)                                   DBNOPawnOffset                                              OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
 	DMember(float)                                     CurrentlyAppliedCameraOffset                                OFFSET(get<float>, {0x108, 4, 0, 0})
-	SMember(FScoutDroneCapsuleSizeData)                MaxExtraCapsuleDimensions                                   OFFSET(get<T>, {0x110, 80, 0, 0})
-	SMember(FScalableFloat)                            MaxPickupSpread                                             OFFSET(get<T>, {0x160, 40, 0, 0})
-	SMember(FScalableFloat)                            PickupTossSpeed                                             OFFSET(get<T>, {0x188, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     ItemsPickupTags                                             OFFSET(get<T>, {0x1B0, 32, 0, 0})
+	SMember(FScoutDroneCapsuleSizeData)                MaxExtraCapsuleDimensions                                   OFFSET(getStruct<T>, {0x110, 80, 0, 0})
+	SMember(FScalableFloat)                            MaxPickupSpread                                             OFFSET(getStruct<T>, {0x160, 40, 0, 0})
+	SMember(FScalableFloat)                            PickupTossSpeed                                             OFFSET(getStruct<T>, {0x188, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     ItemsPickupTags                                             OFFSET(getStruct<T>, {0x1B0, 32, 0, 0})
 
 
 	/// Functions
@@ -612,20 +612,22 @@ public:
 
 /// Struct /Script/ScoutDroneRuntime.FortScoutDroneDiveTransitionData
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortScoutDroneDiveTransitionData : public MDKStruct
+class FFortScoutDroneDiveTransitionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(UCurveFloat*)                              Curve                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FScalableFloat)                            TransitionDuration                                          OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FScalableFloat)                            TransitionDuration                                          OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 
 /// Struct /Script/ScoutDroneRuntime.OnFortScoutDroneDeployed
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FOnFortScoutDroneDeployed : public MDKStruct
+class FOnFortScoutDroneDeployed : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -635,31 +637,34 @@ public:
 
 /// Struct /Script/ScoutDroneRuntime.OnFortScoutDroneDismissed
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FOnFortScoutDroneDismissed : public MDKStruct
+class FOnFortScoutDroneDismissed : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
 public:
-	SMember(FGameplayTag)                              DismissalReason                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              DismissalReason                                             OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Struct /Script/ScoutDroneRuntime.OnFortScoutDroneMarkedEnemies
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FOnFortScoutDroneMarkedEnemies : public MDKStruct
+class FOnFortScoutDroneMarkedEnemies : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              Source                                                      OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              Source                                                      OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<AActor*>)                           MarkedActors                                                OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/ScoutDroneRuntime.OnFortScoutDroneFinishedLongInteract
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FOnFortScoutDroneFinishedLongInteract : public MDKStruct
+class FOnFortScoutDroneFinishedLongInteract : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -668,22 +673,24 @@ public:
 
 /// Struct /Script/ScoutDroneRuntime.ScoutDroneDeferredDestructionData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FScoutDroneDeferredDestructionData : public MDKStruct
+class FScoutDroneDeferredDestructionData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	DMember(float)                                     DeposessDelay                                               OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(float)                                     DestroyDelay                                                OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FGameplayTag)                              DismissalReason                                             OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              DismissalReason                                             OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(float)                                     ServerDismissStartTime                                      OFFSET(get<float>, {0xC, 4, 0, 0})
 };
 
 /// Struct /Script/ScoutDroneRuntime.ScoutDronePickupTargets
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FScoutDronePickupTargets : public MDKStruct
+class FScoutDronePickupTargets : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -694,8 +701,9 @@ public:
 
 /// Struct /Script/ScoutDroneRuntime.ScoutDroneStatusData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FScoutDroneStatusData : public MDKStruct
+class FScoutDroneStatusData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -706,27 +714,29 @@ public:
 
 /// Struct /Script/ScoutDroneRuntime.ScoutDroneInputTriggerableEvent
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FScoutDroneInputTriggerableEvent : public MDKStruct
+class FScoutDroneInputTriggerableEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     InputActionName                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     InputActionName                                             OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UInputAction*)                             InputAction                                                 OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FGameplayTag)                              GameplayEventToTrigger                                      OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayEventToTrigger                                      OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Struct /Script/ScoutDroneRuntime.ScoutDroneCapsuleSizeData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FScoutDroneCapsuleSizeData : public MDKStruct
+class FScoutDroneCapsuleSizeData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FScalableFloat)                            CapsuleHalfHeight                                           OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            CapsuleRadius                                               OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            CapsuleHalfHeight                                           OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            CapsuleRadius                                               OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 };
 
 /// Enum /Script/ScoutDroneRuntime.EFortScoutDroneTargetStatus

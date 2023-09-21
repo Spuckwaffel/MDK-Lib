@@ -18,7 +18,7 @@ class ASpecialEventsCamera_Blueprint_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2568;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 
 
 	/// Functions
@@ -59,12 +59,12 @@ class AHBOnboardingFlow_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 712;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UFortQuestItemDefinition_Campaign*)        PlayPeriodicEventMovieQuest                                 OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	DMember(bool)                                      bPlayedPeriodicEventMovie                                   OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 	DMember(bool)                                      bHasRecheckedNeedToPlayPeriodicEventMovie                   OFFSET(get<bool>, {0x2A9, 1, 0, 0})
-	SMember(FDataTableRowHandle)                       PlayPeriodicEventCineObjective                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       PlayPeriodicEventCineObjective                              OFFSET(getStruct<T>, {0x2B0, 16, 0, 0})
 	CMember(UClass*)                                   PeriodicEventMovieAnnouncementClass                         OFFSET(get<T>, {0x2C0, 8, 0, 0})
 
 
@@ -103,7 +103,7 @@ class AAnnounce_EventCine_C : public AFortClientAnnouncement_Cinematic
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x310, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x310, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UMediaSource*)                             EventMediaSource                                            OFFSET(get<T>, {0x320, 8, 0, 0})
 	DMember(bool)                                      AllowSkipping                                               OFFSET(get<bool>, {0x328, 1, 0, 0})
@@ -143,7 +143,7 @@ class AStoreCamera_Blueprint_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2736;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     Mesh_DarkenBG                                               OFFSET(get<T>, {0xA08, 8, 0, 0})
 	CMember(UCameraComponent*)                         CameraPlaceholderGround                                     OFFSET(get<T>, {0xA10, 8, 0, 0})
 	DMember(float)                                     ChoicePack_NewTrack_0_ACA3841D4D5084BE3482FA8EBB7CE9C0      OFFSET(get<float>, {0xA18, 4, 0, 0})
@@ -152,10 +152,10 @@ public:
 	DMember(float)                                     Timeline_0_NewTrack_0_6555812E4B246E6144D3C99FC49F7FE9      OFFSET(get<float>, {0xA28, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_6555812E4B246E6144D3C99FC49F7FE9      OFFSET(get<T>, {0xA2C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0xA30, 8, 0, 0})
-	SMember(FVector)                                   CameraGroundLoc                                             OFFSET(get<T>, {0xA38, 24, 0, 0})
-	SMember(FRotator)                                  CameraGroundRot                                             OFFSET(get<T>, {0xA50, 24, 0, 0})
-	SMember(FVector)                                   CameraOriginalLoc                                           OFFSET(get<T>, {0xA68, 24, 0, 0})
-	SMember(FRotator)                                  CameraOriginalRot                                           OFFSET(get<T>, {0xA80, 24, 0, 0})
+	SMember(FVector)                                   CameraGroundLoc                                             OFFSET(getStruct<T>, {0xA38, 24, 0, 0})
+	SMember(FRotator)                                  CameraGroundRot                                             OFFSET(getStruct<T>, {0xA50, 24, 0, 0})
+	SMember(FVector)                                   CameraOriginalLoc                                           OFFSET(getStruct<T>, {0xA68, 24, 0, 0})
+	SMember(FRotator)                                  CameraOriginalRot                                           OFFSET(getStruct<T>, {0xA80, 24, 0, 0})
 	DMember(bool)                                      CameraInStartPos                                            OFFSET(get<bool>, {0xA98, 1, 0, 0})
 	CMember(AStorePinataMaster_Parent_C*)              PinataInLevel                                               OFFSET(get<T>, {0xAA0, 8, 0, 0})
 	CMember(AStoreCardReveal_Parent_C*)                CardRevealInLevel                                           OFFSET(get<T>, {0xAA8, 8, 0, 0})
@@ -198,7 +198,7 @@ class AStoreCardReveal_Parent_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          PinataSceneRoot                                             OFFSET(get<T>, {0x298, 8, 0, 0})
 
 
@@ -228,7 +228,7 @@ class AHeroesCamera_Blueprint_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2584;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	DMember(bool)                                      MouseDown                                                   OFFSET(get<bool>, {0xA08, 1, 0, 0})
 	CMember(AFortPlayerPawn*)                          Cached_Pawn                                                 OFFSET(get<T>, {0xA10, 8, 0, 0})
 
@@ -264,7 +264,7 @@ class ALoginCamera_Blueprint_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2584;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     StaticMesh                                                  OFFSET(get<T>, {0xA08, 8, 0, 0})
 	CMember(UCameraComponent*)                         LoginCamera                                                 OFFSET(get<T>, {0xA10, 8, 0, 0})
 
@@ -284,7 +284,7 @@ class AStorePinataMaster_Parent_C : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x290, 8, 0, 0})
 	CMember(USceneComponent*)                          PinataSceneRoot                                             OFFSET(get<T>, {0x298, 8, 0, 0})
 
 
@@ -307,7 +307,7 @@ class AVaultCamera_Blueprint_C : public AFortCameraBase
 	static inline constexpr uint64_t __MDKClassSize = 2568;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xA00, 8, 0, 0})
 
 
 	/// Functions

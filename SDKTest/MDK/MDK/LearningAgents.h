@@ -701,8 +701,9 @@ public:
 
 /// Struct /Script/LearningAgents.LearningAgentsCriticSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FLearningAgentsCriticSettings : public MDKStruct
+class FLearningAgentsCriticSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -714,8 +715,9 @@ public:
 
 /// Struct /Script/LearningAgents.LearningAgentsPolicySettings
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FLearningAgentsPolicySettings : public MDKStruct
+class FLearningAgentsPolicySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 

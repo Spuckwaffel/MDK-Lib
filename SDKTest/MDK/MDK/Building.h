@@ -539,7 +539,7 @@ class APBWA_S1_Solid_C : public ABuildingWall
 	static inline constexpr uint64_t __MDKClassSize = 3416;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xD30, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xD30, 8, 0, 0})
 	DMember(int32_t)                                   GnomeWallChance                                             OFFSET(get<int32_t>, {0xD38, 4, 0, 0})
 	DMember(int32_t)                                   GnomeWallMax                                                OFFSET(get<int32_t>, {0xD3C, 4, 0, 0})
 	DMember(bool)                                      Gnomed                                                      OFFSET(get<bool>, {0xD40, 1, 0, 0})
@@ -1354,7 +1354,7 @@ class APBW_BP_Parent_C : public ABuildingWall
 	static inline constexpr uint64_t __MDKClassSize = 3400;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xD30, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0xD30, 8, 0, 0})
 	CMember(TArray<UStaticMesh*>)                      StaticMeshAlternateArray                                    OFFSET(get<T>, {0xD38, 16, 0, 0})
 
 
@@ -1519,8 +1519,9 @@ public:
 
 /// Struct /Game/Building/K2_FX_Macros/DayPhaseFloats.DayPhaseFloats
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDayPhaseFloats : public MDKStruct
+class FDayPhaseFloats : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

@@ -45,12 +45,12 @@ class UStreamingRadioPlayerComponent : public UFortPawnComponent
 
 public:
 	CMember(TMap<FName, FSrirachaInputMappingData>)    InputMappingData                                            OFFSET(get<T>, {0xB8, 80, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSourceLoading                                             OFFSET(get<T>, {0x108, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSourcePlayed                                              OFFSET(get<T>, {0x118, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSourceStopped                                             OFFSET(get<T>, {0x128, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSourceFailed                                              OFFSET(get<T>, {0x138, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMetadataChanged                                           OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRadioExplicitStop                                         OFFSET(get<T>, {0x158, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSourceLoading                                             OFFSET(getStruct<T>, {0x108, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSourcePlayed                                              OFFSET(getStruct<T>, {0x118, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSourceStopped                                             OFFSET(getStruct<T>, {0x128, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSourceFailed                                              OFFSET(getStruct<T>, {0x138, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMetadataChanged                                           OFFSET(getStruct<T>, {0x148, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRadioExplicitStop                                         OFFSET(getStruct<T>, {0x158, 16, 0, 0})
 	DMember(float)                                     PercentAutostartRadio                                       OFFSET(get<float>, {0x168, 4, 0, 0})
 	CMember(TArray<FName>)                             DisabledVehicleList                                         OFFSET(get<T>, {0x170, 16, 0, 0})
 	CMember(TMap<FName, float>)                        ExteriorVolumeMultiplierMap                                 OFFSET(get<T>, {0x180, 80, 0, 0})
@@ -59,14 +59,14 @@ public:
 	CMember(TArray<FString>)                           DisabledStationList                                         OFFSET(get<T>, {0x228, 16, 0, 0})
 	DMember(bool)                                      bAutostartOnEntry                                           OFFSET(get<bool>, {0x238, 1, 0, 0})
 	DMember(bool)                                      bDisabledForCurrentPlayerState                              OFFSET(get<bool>, {0x239, 1, 0, 0})
-	SMember(FStreamingRadioSourceData)                 ReplicatedRadioSourceData                                   OFFSET(get<T>, {0x240, 104, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnReplicatedStateChangedDelegate                            OFFSET(get<T>, {0x2A8, 16, 0, 0})
+	SMember(FStreamingRadioSourceData)                 ReplicatedRadioSourceData                                   OFFSET(getStruct<T>, {0x240, 104, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnReplicatedStateChangedDelegate                            OFFSET(getStruct<T>, {0x2A8, 16, 0, 0})
 	CMember(UMediaSoundComponent*)                     SoundComponent                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UStreamingRadioAudioShapeComponent*)       AudioShape                                                  OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(USrirachaRanchComponentTemplateWrapper*)   SoundCompTemplateSource                                     OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FAthenaRadioStation)                       LastSource                                                  OFFSET(get<T>, {0x2D0, 88, 0, 0})
+	SMember(FAthenaRadioStation)                       LastSource                                                  OFFSET(getStruct<T>, {0x2D0, 88, 0, 0})
 	CMember(TArray<URadioContentSourceItemDefinition*>) Sources                                                    OFFSET(get<T>, {0x328, 16, 0, 0})
-	SMember(FAthenaRadioStation)                       FallbackSource                                              OFFSET(get<T>, {0x338, 88, 0, 0})
+	SMember(FAthenaRadioStation)                       FallbackSource                                              OFFSET(getStruct<T>, {0x338, 88, 0, 0})
 	CMember(TMap<FGameplayTag, FSrirachaPerClassSpecialSeats>) SpecialSeatList                                     OFFSET(get<T>, {0x390, 80, 0, 0})
 	CMember(UFortBaseStreamingVideo*)                  BasePlayerInstance                                          OFFSET(get<T>, {0x3E0, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         DefaultSoundSubmix                                          OFFSET(get<T>, {0x3E8, 8, 0, 0})
@@ -80,8 +80,8 @@ public:
 	CMember(USoundMix*)                                SoundMixInside                                              OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(USoundMix*)                                SoundMixOutside                                             OFFSET(get<T>, {0x418, 8, 0, 0})
 	DMember(float)                                     ActivationRadius                                            OFFSET(get<float>, {0x424, 4, 0, 0})
-	SMember(FName)                                     ComponentToAttachTo                                         OFFSET(get<T>, {0x428, 4, 0, 0})
-	SMember(FName)                                     ComponentSocketAttachTo                                     OFFSET(get<T>, {0x42C, 4, 0, 0})
+	SMember(FName)                                     ComponentToAttachTo                                         OFFSET(getStruct<T>, {0x428, 4, 0, 0})
+	SMember(FName)                                     ComponentSocketAttachTo                                     OFFSET(getStruct<T>, {0x42C, 4, 0, 0})
 	CMember(UFortStreamMediaSource*)                   MediaSource                                                 OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(TArray<FAthenaRadioStation>)               RadioStationList                                            OFFSET(get<T>, {0x438, 16, 0, 0})
 	CMember(UObject*)                                  DelegateContextObject                                       OFFSET(get<T>, {0x448, 8, 0, 0})
@@ -199,29 +199,31 @@ class URadioContentSourceItemDefinition : public UFortAccountItemDefinition
 	static inline constexpr uint64_t __MDKClassSize = 1032;
 
 public:
-	SMember(FString)                                   ResourceID                                                  OFFSET(get<T>, {0x3F0, 16, 0, 0})
+	SMember(FString)                                   ResourceID                                                  OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
 	CMember(UFortStreamMediaSource*)                   MediaSource                                                 OFFSET(get<T>, {0x400, 8, 0, 0})
 };
 
 /// Struct /Script/SrirachaRanch.AthenaRadioStation
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FAthenaRadioStation : public MDKStruct
+class FAthenaRadioStation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-	SMember(FText)                                     Title                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   StationImage                                                OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FString)                                   ResourceID                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FText)                                     Title                                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   StationImage                                                OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FString)                                   ResourceID                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FString>)                           GameplayTagDenylist                                         OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FString>)                           GameplayTagAllowlist                                        OFFSET(get<T>, {0x48, 16, 0, 0})
 };
 
 /// Struct /Script/SrirachaRanch.SrirachaPerClassSpecialSeats
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSrirachaPerClassSpecialSeats : public MDKStruct
+class FSrirachaPerClassSpecialSeats : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -231,8 +233,9 @@ public:
 
 /// Struct /Script/SrirachaRanch.StreamingRadioSourceData
 /// Size: 0x0068 (0x000000 - 0x000068)
-class FStreamingRadioSourceData : public MDKStruct
+class FStreamingRadioSourceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
@@ -240,20 +243,21 @@ public:
 	CMember(EStreamingRadioSourceState)                State                                                       OFFSET(get<T>, {0x0, 1, 0, 0})
 	DMember(int32_t)                                   PlayingIndex                                                OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(float)                                     FadeoutSeconds                                              OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FAthenaRadioStation)                       SourceOverride                                              OFFSET(get<T>, {0x10, 88, 0, 0})
+	SMember(FAthenaRadioStation)                       SourceOverride                                              OFFSET(getStruct<T>, {0x10, 88, 0, 0})
 };
 
 /// Struct /Script/SrirachaRanch.SrirachaInputMappingData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSrirachaInputMappingData : public MDKStruct
+class FSrirachaInputMappingData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FName)                                     MainActionName                                              OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     GamepadActionName                                           OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FName)                                     MainActionName                                              OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     GamepadActionName                                           OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Enum /Script/SrirachaRanch.EStreamingRadioSourceState

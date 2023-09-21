@@ -27,7 +27,7 @@ class UImagePlateComponent : public UPrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 1728;
 
 public:
-	SMember(FImagePlateParameters)                     Plate                                                       OFFSET(get<T>, {0x568, 64, 0, 0})
+	SMember(FImagePlateParameters)                     Plate                                                       OFFSET(getStruct<T>, {0x568, 64, 0, 0})
 
 
 	/// Functions
@@ -47,7 +47,7 @@ class UImagePlateSettings : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   ProxyName                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   ProxyName                                                   OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/ImagePlate.ImagePlateFileSequence
@@ -58,8 +58,8 @@ class UImagePlateFileSequence : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FDirectoryPath)                            SequencePath                                                OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FString)                                   FileWildcard                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FDirectoryPath)                            SequencePath                                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   FileWildcard                                                OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x48, 4, 0, 0})
 };
 
@@ -75,17 +75,18 @@ public:
 
 /// Struct /Script/ImagePlate.ImagePlateParameters
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FImagePlateParameters : public MDKStruct
+class FImagePlateParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(UMaterialInterface*)                       Material                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     TextureParameterName                                        OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     TextureParameterName                                        OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	DMember(bool)                                      bFillScreen                                                 OFFSET(get<bool>, {0xC, 1, 0, 0})
-	SMember(FVector2D)                                 FillScreenAmount                                            OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector2D)                                 FixedSize                                                   OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVector2D)                                 FillScreenAmount                                            OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 FixedSize                                                   OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(UTexture*)                                 RenderTexture                                               OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 DynamicMaterial                                             OFFSET(get<T>, {0x38, 8, 0, 0})
 };

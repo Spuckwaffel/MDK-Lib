@@ -20,14 +20,15 @@ public:
 
 /// Struct /Script/ImageWriteQueue.ImageWriteOptions
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FImageWriteOptions : public MDKStruct
+class FImageWriteOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(EDesiredImageFormat)                       Format                                                      OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FDelegateProperty)                         OnComplete                                                  OFFSET(get<T>, {0x4, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnComplete                                                  OFFSET(getStruct<T>, {0x4, 12, 0, 0})
 	DMember(int32_t)                                   CompressionQuality                                          OFFSET(get<int32_t>, {0x10, 4, 0, 0})
 	DMember(bool)                                      bOverwriteFile                                              OFFSET(get<bool>, {0x14, 1, 0, 0})
 	DMember(bool)                                      bAsync                                                      OFFSET(get<bool>, {0x15, 1, 0, 0})

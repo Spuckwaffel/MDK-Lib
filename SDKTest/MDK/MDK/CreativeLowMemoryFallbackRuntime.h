@@ -18,7 +18,7 @@ class UCreativeLowMemoryFallbackSettings : public UDeveloperSettings
 
 public:
 	CMember(TWeakObjectPtr<UObject*>)                  WarningToastIcon                                            OFFSET(get<T>, {0x30, 32, 0, 0})
-	SMember(FCreativeLowMemoryFallbackUserFacingText)  DefaultText                                                 OFFSET(get<T>, {0x50, 72, 0, 0})
+	SMember(FCreativeLowMemoryFallbackUserFacingText)  DefaultText                                                 OFFSET(getStruct<T>, {0x50, 72, 0, 0})
 	CMember(TMap<TWeakObjectPtr, FCreativeLowMemoryFallbackFreeMemoryThresholds>) PlaylistOverrideThresholds       OFFSET(get<T>, {0x98, 80, 0, 0})
 	CMember(TMap<TWeakObjectPtr, FCreativeLowMemoryFallbackUserFacingText>) PlaylistOverrideText                   OFFSET(get<T>, {0xE8, 80, 0, 0})
 };
@@ -31,7 +31,7 @@ class UCreativeLowMemoryFallbackWorldSubsystem : public UWorldSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FCreativeLowMemoryFallbackFreeMemoryThresholds) CurrentThresholds                                      OFFSET(get<T>, {0x30, 12, 0, 0})
+	SMember(FCreativeLowMemoryFallbackFreeMemoryThresholds) CurrentThresholds                                      OFFSET(getStruct<T>, {0x30, 12, 0, 0})
 
 
 	/// Functions
@@ -41,21 +41,23 @@ public:
 
 /// Struct /Script/CreativeLowMemoryFallbackRuntime.CreativeLowMemoryFallbackUserFacingText
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FCreativeLowMemoryFallbackUserFacingText : public MDKStruct
+class FCreativeLowMemoryFallbackUserFacingText : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FText)                                     ExitToMainMenuReasonText                                    OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     WarningToastTitle                                           OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FText)                                     WarningToastDescription                                     OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FText)                                     ExitToMainMenuReasonText                                    OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     WarningToastTitle                                           OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     WarningToastDescription                                     OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/CreativeLowMemoryFallbackRuntime.CreativeLowMemoryFallbackFreeMemoryThresholds
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FCreativeLowMemoryFallbackFreeMemoryThresholds : public MDKStruct
+class FCreativeLowMemoryFallbackFreeMemoryThresholds : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

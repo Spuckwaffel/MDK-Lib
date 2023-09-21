@@ -43,12 +43,13 @@ public:
 
 /// Struct /Script/VerseSimulation.LocalizableMessageParameterAgent
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FLocalizableMessageParameterAgent : public MDKStruct
+class FLocalizableMessageParameterAgent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FUniqueNetIdRepl)                          Value                                                       OFFSET(get<T>, {0x0, 48, 0, 0})
+	SMember(FUniqueNetIdRepl)                          Value                                                       OFFSET(getStruct<T>, {0x0, 48, 0, 0})
 };
 

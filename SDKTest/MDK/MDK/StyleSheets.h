@@ -18,7 +18,7 @@ class UGameFeatureAction_ActivateStyleTheme : public UGameFeatureAction
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     ThemeName                                                   OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     ThemeName                                                   OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/StyleSheets.GameFeatureAction_RegisterStyleThemes
@@ -40,7 +40,7 @@ class UPropertyTweenContext : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     PropertyPath                                                OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     PropertyPath                                                OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/StyleSheets.StyleAnimationProvider
@@ -74,9 +74,9 @@ class UStyleRule : public UObject
 
 public:
 	CMember(TArray<UStyleRule*>)                       Children                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FStyleSelectorItem)                        StyleSelectorItem                                           OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FStyleSelectorItem)                        StyleSelectorItem                                           OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TWeakObjectPtr<UStyleRule*>)               Parent                                                      OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FStyleClass)                               style                                                       OFFSET(get<T>, {0x50, 264, 0, 0})
+	SMember(FStyleClass)                               style                                                       OFFSET(getStruct<T>, {0x50, 264, 0, 0})
 };
 
 /// Class /Script/StyleSheets.StyleRuleTree
@@ -188,20 +188,22 @@ public:
 
 /// Struct /Script/StyleSheets.WidgetProperty
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FWidgetProperty : public MDKStruct
+class FWidgetProperty : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
 public:
 	CMember(TWeakObjectPtr<UWidget*>)                  Widget                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     PropertyPath                                                OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     PropertyPath                                                OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/StyleSheets.StyleAnimationData
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FStyleAnimationData : public MDKStruct
+class FStyleAnimationData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -213,21 +215,23 @@ public:
 
 /// Struct /Script/StyleSheets.StyleClass
 /// Size: 0x0108 (0x000000 - 0x000108)
-class FStyleClass : public MDKStruct
+class FStyleClass : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FInstancedPropertyBag)                     StylePropertyBag                                            OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FInstancedPropertyBag)                     StylePropertyBag                                            OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TMap<FName, FStyleAnimationData>)          PropertyAnimations                                          OFFSET(get<T>, {0x10, 80, 0, 0})
 	CMember(TMap<FName, FInstancedPropertyBag>)        MaterialParameters                                          OFFSET(get<T>, {0x60, 80, 0, 0})
 };
 
 /// Struct /Script/StyleSheets.StylePropertyStore
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FStylePropertyStore : public MDKStruct
+class FStylePropertyStore : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -237,20 +241,22 @@ public:
 
 /// Struct /Script/StyleSheets.StyleRulePreviewInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FStyleRulePreviewInfo : public MDKStruct
+class FStyleRulePreviewInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	CMember(UClass*)                                   PreviewWidgetClass                                          OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FInstancedPropertyBag)                     PreviewPropertyBag                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FInstancedPropertyBag)                     PreviewPropertyBag                                          OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/StyleSheets.StyleSelectorItem
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FStyleSelectorItem : public MDKStruct
+class FStyleSelectorItem : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -262,6 +268,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FStyleTag : public FStyleSelectorItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -270,26 +277,28 @@ public:
 
 /// Struct /Script/StyleSheets.StyleThemeConfigEntry
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FStyleThemeConfigEntry : public MDKStruct
+class FStyleThemeConfigEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     ThemeName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     ThemeName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UStyleSheetCollection*>)    Theme                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
 	CMember(UStyleSheetCollection*)                    ThemeInstance                                               OFFSET(get<T>, {0x28, 8, 0, 0})
 };
 
 /// Struct /Script/StyleSheets.WidgetTypeEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FWidgetTypeEntry : public MDKStruct
+class FWidgetTypeEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              WidgetType                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              WidgetType                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<UClass*>)                           WidgetClasses                                               OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 

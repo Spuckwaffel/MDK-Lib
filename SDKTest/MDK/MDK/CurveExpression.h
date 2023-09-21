@@ -23,13 +23,14 @@ public:
 /// Size: 0x00F0 (0x000010 - 0x000100)
 class FAnimNode_RemapCurvesBase : public FAnimNode_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FPoseLink)                                 SourcePose                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(ERemapCurvesExpressionSource)              ExpressionSource                                            OFFSET(get<T>, {0x20, 1, 0, 0})
-	SMember(FCurveExpressionList)                      ExpressionList                                              OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FCurveExpressionList)                      ExpressionList                                              OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(UCurveExpressionsDataAsset*)               CurveExpressionsDataAsset                                   OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TMap<FName, FString>)                      CurveExpressions                                            OFFSET(get<T>, {0x40, 80, 0, 0})
 	DMember(bool)                                      bExpressionsImmutable                                       OFFSET(get<bool>, {0x90, 1, 0, 0})
@@ -38,19 +39,21 @@ public:
 
 /// Struct /Script/CurveExpression.CurveExpressionList
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCurveExpressionList : public MDKStruct
+class FCurveExpressionList : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   AssignmentExpressions                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   AssignmentExpressions                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/CurveExpression.AnimNode_RemapCurves
 /// Size: 0x0000 (0x000100 - 0x000100)
 class FAnimNode_RemapCurves : public FAnimNode_RemapCurvesBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
@@ -61,6 +64,7 @@ public:
 /// Size: 0x0078 (0x000100 - 0x000178)
 class FAnimNode_RemapCurvesFromMesh : public FAnimNode_RemapCurvesBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 376;
 

@@ -20,7 +20,7 @@ class UVerseFortnitePlayspaceHUDController : public UVerseFortnitePlayspaceExten
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FHUDElementVisibilityRepData)              VisibilityData                                              OFFSET(get<T>, {0x38, 120, 0, 0})
+	SMember(FHUDElementVisibilityRepData)              VisibilityData                                              OFFSET(getStruct<T>, {0x38, 120, 0, 0})
 };
 
 /// Class /Script/VerseFortniteUI.VerseFortniteUIOverlaySlot
@@ -62,7 +62,7 @@ class UVerseFortniteUIActivableWidgetBase : public UCommonActivatableWidget
 
 public:
 	CMember(UVerseFortniteUINamedSlot*)                MainSlot                                                    OFFSET(get<T>, {0x3E8, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       MainMenuInputRowHandle                                      OFFSET(get<T>, {0x3F8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       MainMenuInputRowHandle                                      OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
 	CMember(TArray<FGameplayTagContainer>)             HudToDeactivateOnInitialization                             OFFSET(get<T>, {0x408, 16, 0, 0})
 };
 
@@ -91,8 +91,8 @@ class UVerseFortniteUIFrameworkButton_Base : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0xC8, 24, 0, 0})
-	SMember(FLocalizableMessage)                       Message                                                     OFFSET(get<T>, {0xE0, 48, 0, 0})
+	SMember(FText)                                     Text                                                        OFFSET(getStruct<T>, {0xC8, 24, 0, 0})
+	SMember(FLocalizableMessage)                       Message                                                     OFFSET(getStruct<T>, {0xE0, 48, 0, 0})
 
 
 	/// Functions
@@ -182,7 +182,7 @@ class UVerseFortniteUIFrameworkSlider : public UUIFrameworkWidget
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FVerseFortniteUIFrameworkSliderValue)      Value                                                       OFFSET(get<T>, {0xC8, 12, 0, 0})
+	SMember(FVerseFortniteUIFrameworkSliderValue)      Value                                                       OFFSET(getStruct<T>, {0xC8, 12, 0, 0})
 	DMember(float)                                     MinValue                                                    OFFSET(get<float>, {0xD4, 4, 0, 0})
 	DMember(float)                                     MaxValue                                                    OFFSET(get<float>, {0xD8, 4, 0, 0})
 	DMember(float)                                     StepSize                                                    OFFSET(get<float>, {0xDC, 4, 0, 0})
@@ -223,8 +223,9 @@ public:
 
 /// Struct /Script/VerseFortniteUI.VerseFortniteUIPresenterElement
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FVerseFortniteUIPresenterElement : public MDKStruct
+class FVerseFortniteUIPresenterElement : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -235,8 +236,9 @@ public:
 
 /// Struct /Script/VerseFortniteUI.VerseFortniteUIFrameworkSliderValue
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FVerseFortniteUIFrameworkSliderValue : public MDKStruct
+class FVerseFortniteUIFrameworkSliderValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

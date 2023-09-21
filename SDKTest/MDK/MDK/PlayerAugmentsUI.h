@@ -72,9 +72,9 @@ public:
 	DMember(bool)                                      bIsAugmentReadyVisible                                      OFFSET(get<bool>, {0x310, 1, 0, 0})
 	DMember(bool)                                      bIsCountdownActive                                          OFFSET(get<bool>, {0x311, 1, 0, 0})
 	DMember(bool)                                      bIsOffline                                                  OFFSET(get<bool>, {0x312, 1, 0, 0})
-	SMember(FTimerHandle)                              HideTimerHandle                                             OFFSET(get<T>, {0x318, 8, 0, 0})
+	SMember(FTimerHandle)                              HideTimerHandle                                             OFFSET(getStruct<T>, {0x318, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 TimerProgressDMI                                            OFFSET(get<T>, {0x320, 8, 0, 0})
-	SMember(FScalableFloat)                            CountdownStartTimeHF                                        OFFSET(get<T>, {0x328, 40, 0, 0})
+	SMember(FScalableFloat)                            CountdownStartTimeHF                                        OFFSET(getStruct<T>, {0x328, 40, 0, 0})
 	CMember(UCommonTextBlock*)                         NativeAugmentTimerText                                      OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         NativeAnimTimerTextCountdownUpdated                         OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         NativeAnimProgressBarCountdownUpdated                       OFFSET(get<T>, {0x360, 8, 0, 0})
@@ -100,7 +100,7 @@ class UFortMobileActionBBE_AugmentShoot : public UFortMobileActionButtonBehavior
 
 public:
 	CMember(UPaperSprite*)                             IconOverrideSprite                                          OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FGameplayTag)                              IconOverrideTag                                             OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FGameplayTag)                              IconOverrideTag                                             OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 };
 
 /// Class /Script/PlayerAugmentsUI.FortMobileActionButtonBehavior_RerollAugments
@@ -152,8 +152,8 @@ class UFortPlayerAugmentCollectionListEntry : public UAthenaCollectionListEntry
 
 public:
 	CMember(UImage*)                                   Image_Background                                            OFFSET(get<T>, {0x1550, 8, 0, 0})
-	SMember(FName)                                     ParamName_ItemIcon                                          OFFSET(get<T>, {0x1558, 4, 0, 0})
-	SMember(FName)                                     ParamName_IsDiscovered                                      OFFSET(get<T>, {0x155C, 4, 0, 0})
+	SMember(FName)                                     ParamName_ItemIcon                                          OFFSET(getStruct<T>, {0x1558, 4, 0, 0})
+	SMember(FName)                                     ParamName_IsDiscovered                                      OFFSET(getStruct<T>, {0x155C, 4, 0, 0})
 };
 
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentCollectionScreen
@@ -164,7 +164,7 @@ class UFortPlayerAugmentCollectionScreen : public UAthenaCollectionScreenBase
 	static inline constexpr uint64_t __MDKClassSize = 1712;
 
 public:
-	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(get<T>, {0x630, 40, 0, 0})
+	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(getStruct<T>, {0x630, 40, 0, 0})
 	CMember(TMap<FGameplayTag, TWeakObjectPtr>)        TagToImageMap                                               OFFSET(get<T>, {0x658, 80, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_CategoryTitle                                          OFFSET(get<T>, {0x6A8, 8, 0, 0})
 };
@@ -187,7 +187,7 @@ class UFortPlayerAugmentCollectionScreenInfoOverlay : public UAthenaCollectionSc
 	static inline constexpr uint64_t __MDKClassSize = 1232;
 
 public:
-	SMember(FName)                                     ParamName_Progress                                          OFFSET(get<T>, {0x4B0, 4, 0, 0})
+	SMember(FName)                                     ParamName_Progress                                          OFFSET(getStruct<T>, {0x4B0, 4, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemCategory                                           OFFSET(get<T>, {0x4B8, 8, 0, 0})
 	CMember(UFortItemCategoryIndicator*)               ItemCategoryIndicator                                       OFFSET(get<T>, {0x4C0, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_UndiscoveredText                                    OFFSET(get<T>, {0x4C8, 8, 0, 0})
@@ -264,8 +264,8 @@ class UFortPlayerAugmentHUDQuickbarWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FGameplayTagContainer)                     HiddenAugmentGameplayTags                                   OFFSET(get<T>, {0x2D0, 32, 0, 0})
-	SMember(FScalableFloat)                            NumAugmentGrantRoundsForPlaylist                            OFFSET(get<T>, {0x2F0, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     HiddenAugmentGameplayTags                                   OFFSET(getStruct<T>, {0x2D0, 32, 0, 0})
+	SMember(FScalableFloat)                            NumAugmentGrantRoundsForPlaylist                            OFFSET(getStruct<T>, {0x2F0, 40, 0, 0})
 
 
 	/// Functions
@@ -284,7 +284,7 @@ public:
 	CMember(UCommonLazyImage*)                         Image_CurrencyIcon                                          OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UFortWorldItemDefinition*)                 RerollCurrency                                              OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	DMember(int32_t)                                   CachedNumFreeRerolls                                        OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
-	SMember(FName)                                     RerollHoldMaterialParamName                                 OFFSET(get<T>, {0x2E4, 4, 0, 0})
+	SMember(FName)                                     RerollHoldMaterialParamName                                 OFFSET(getStruct<T>, {0x2E4, 4, 0, 0})
 	CMember(UImage*)                                   Image_ProgressBar                                           OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_OwnedCurrency                                          OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_RerollCost                                             OFFSET(get<T>, {0x300, 8, 0, 0})
@@ -317,7 +317,7 @@ class UFortPlayerAugmentInfoEntryWidget : public UCommonUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FText)                                     RarityTextFormat                                            OFFSET(get<T>, {0x2D0, 24, 0, 0})
+	SMember(FText)                                     RarityTextFormat                                            OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_AugmentName                                            OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_AugmentRarity                                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_AugmentCategory                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
@@ -369,7 +369,7 @@ class UFortPlayerAugmentInventoryInfoWidget : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1096;
 
 public:
-	SMember(FText)                                     RarityTextFormat                                            OFFSET(get<T>, {0x3F0, 24, 0, 0})
+	SMember(FText)                                     RarityTextFormat                                            OFFSET(getStruct<T>, {0x3F0, 24, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemName                                               OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemRarity                                             OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_ItemCategory                                           OFFSET(get<T>, {0x418, 8, 0, 0})
@@ -405,10 +405,10 @@ class UFortPlayerAugmentInventoryTab : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1344;
 
 public:
-	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(get<T>, {0x3F0, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     HiddenAugmentGameplayTags                                   OFFSET(get<T>, {0x418, 32, 0, 0})
-	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x438, 4, 0, 0})
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x440, 240, 0, 0})
+	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(getStruct<T>, {0x3F0, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     HiddenAugmentGameplayTags                                   OFFSET(getStruct<T>, {0x418, 32, 0, 0})
+	SMember(FName)                                     TabNameID                                                   OFFSET(getStruct<T>, {0x438, 4, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x440, 240, 0, 0})
 	CMember(UFortPlayerAugmentInventoryInfoWidget*)    AugmentInfo                                                 OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(UCommonListView*)                          ListView_Augments                                           OFFSET(get<T>, {0x538, 8, 0, 0})
 
@@ -456,7 +456,7 @@ class UFortPlayerAugmentPostMatchUnlocksWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 824;
 
 public:
-	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(get<T>, {0x310, 40, 0, 0})
+	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(getStruct<T>, {0x310, 40, 0, 0})
 
 
 	/// Functions
@@ -472,8 +472,8 @@ class UFortPlayerAugmentSpecialAcquiredNotificationWidget : public UFortHUDEleme
 	static inline constexpr uint64_t __MDKClassSize = 928;
 
 public:
-	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x370, 2, 0, 0})
-	SMember(FGameplayTagContainer)                     TargetGameplayTags                                          OFFSET(get<T>, {0x378, 32, 0, 0})
+	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(getStruct<T>, {0x370, 2, 0, 0})
+	SMember(FGameplayTagContainer)                     TargetGameplayTags                                          OFFSET(getStruct<T>, {0x378, 32, 0, 0})
 
 
 	/// Functions

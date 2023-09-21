@@ -5,21 +5,36 @@
 *                                                       *
 ********************************************************/
 
+/// This file contains all definitions of structs that werent defined automatically.
 
-/// Struct /Custom/FName
-/// Size: 0x0008 (0x000000 - 0x000008)
-class FName : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 8;
 
-public:
-	DMember(int)                                       ComparisonIndex                                             OFFSET(get<int>, {0x0, 4, 0, 0})
-	DMember(int)                                       Number                                                      OFFSET(get<int>, {0x4, 4, 0, 0})
-};
 
-/// Struct /Custom/TArray
-/// Size: 0x0010 (0x000000 - 0x000010)
+//TODO: Define FMulticastInlineDelegate!
+
+
+//TODO: Define TWeakObjectPtr!
+
+
+//TODO: Define FString!
+
+
+//TODO: Define FDelegateProperty!
+
+
+//TODO: Define TSet!
+
+
+//TODO: Define FMulticastSparseDelegate!
+
+
+//TODO: Define EObjectFlags!
+
+
+//TODO: Define TLazyObjectPtr!
+
+
+/// Definition for TArray
+
 template <class T>
 struct TArray
 {
@@ -86,3 +101,231 @@ public:
     int32_t Count;
     int32_t Max;
 };
+
+
+/// Definition for FName
+
+typedef uint32_t FNameEntryId;
+
+struct FName
+{
+    /** Index into the Names array (used to find String portion of the string/number pair used for comparison) */
+    FNameEntryId ComparisonIndex = 0;
+
+	/** Number portion of the string/number pair (stored internally as 1 more than actual, so zero'd memory will be the default, no-instance case) */
+    FNameEntryId Number = 0;
+
+};
+
+
+/// Definition for TMap
+
+template<typename Key, typename Value>
+class TMap
+{
+public:
+    char UnknownData[0x50];
+};
+
+
+/// Definition for FScriptInterface
+
+class FScriptInterface
+{
+private:
+    uint64_t* ObjectPointer;
+    void* InterfacePointer;
+
+public:
+    inline uint64_t* GetObject() const
+    {
+        return ObjectPointer;
+    }
+
+    inline uint64_t*& GetObjectRef()
+    {
+        return ObjectPointer;
+    }
+
+    inline void* GetInterface() const
+    {
+        return ObjectPointer != nullptr ? InterfacePointer : nullptr;
+    }
+};
+
+
+/// Definition for TScriptInterface
+
+template<class InterfaceType>
+class TScriptInterface : public FScriptInterface
+{
+public:
+    inline InterfaceType* operator->() const
+    {
+        return (InterfaceType*)GetInterface();
+    }
+
+    inline InterfaceType& operator*() const
+    {
+        return *((InterfaceType*)GetInterface());
+    }
+
+    inline operator bool() const
+    {
+        return GetInterface() != nullptr;
+    }
+};
+
+
+/// Definition for TEnumAsByte
+
+template<class TEnum>
+class TEnumAsByte
+{
+public:
+    inline TEnumAsByte()
+    {
+    }
+
+    inline TEnumAsByte(TEnum _value)
+        : value(static_cast<uint8_t>(_value))
+    {
+    }
+
+    explicit inline TEnumAsByte(int32_t _value)
+        : value(static_cast<uint8_t>(_value))
+    {
+    }
+
+    explicit inline TEnumAsByte(uint8_t _value)
+        : value(_value)
+    {
+    }
+
+    inline operator TEnum() const
+    {
+        return (TEnum)value;
+    }
+
+    inline TEnum GetValue() const
+    {
+        return (TEnum)value;
+    }
+
+private:
+    uint8_t value;
+};
+
+
+/// Definition for TPair
+
+template <typename KeyType, typename ValueType>
+class TPair
+{
+private:
+    KeyType First;
+    ValueType Second;
+
+public:
+    TPair(KeyType Key, ValueType Value)
+        : First(Key)
+        , Second(Value)
+    {
+    }
+    TPair(){};
+
+public:
+    FORCEINLINE KeyType& Key()
+    {
+        return First;
+    }
+    FORCEINLINE const KeyType& Key() const
+    {
+        return First;
+    }
+    FORCEINLINE ValueType& Value()
+    {
+        return Second;
+    }
+    FORCEINLINE const ValueType& Value() const
+    {
+        return Second;
+    }
+};
+
+
+/// Definition for TUniquePtr
+
+template <typename PtrType>
+class TUniquePtr
+{
+private:
+    PtrType* Ptr = nullptr;
+
+public:
+    bool IsValid() const
+    {
+        return Ptr != nullptr;
+    }
+
+    FORCEINLINE explicit operator bool() const
+    {
+        return IsValid();
+    }
+
+    FORCEINLINE bool operator!() const
+    {
+        return !IsValid();
+    }
+
+    FORCEINLINE PtrType* operator->() const
+    {
+        return Ptr;
+    }
+
+    FORCEINLINE PtrType& operator*() const
+    {
+        return *Ptr;
+    }
+
+    FORCEINLINE const PtrType*& Get() const
+    {
+        return Ptr;
+    }
+
+    FORCEINLINE PtrType*& Get()
+    {
+        return Ptr;
+    }
+};
+
+
+/// Definition for FScriptMulticastDelegate
+
+struct FScriptMulticastDelegate
+{
+    char UnknownData[16];
+    char b : 1;
+};
+
+
+/// Definition for FTextData
+
+class FTextData {
+public:
+    char pad_0x0000[0x28];  //0x0000
+    wchar_t* Name;          //0x0028 
+    __int32 Length;         //0x0030 
+
+};
+
+
+/// Definition for FText
+
+struct FText
+{
+    FTextData* Data;
+    char UnknownData[0x10];
+};
+
+

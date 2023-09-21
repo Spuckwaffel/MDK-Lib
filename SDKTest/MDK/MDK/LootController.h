@@ -17,7 +17,7 @@ class AFortAthenaMutator_CR_CreativeAllowLootItem : public AFortAthenaMutator
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FGameplayTagContainer)                     ItemGameplayTagsNotAllowed                                  OFFSET(get<T>, {0x338, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ItemGameplayTagsNotAllowed                                  OFFSET(getStruct<T>, {0x338, 32, 0, 0})
 
 
 	/// Functions
@@ -44,7 +44,7 @@ class ULootControllerNativeComponent : public UActorComponent
 
 public:
 	CMember(TArray<AActor*>)                           OutActors                                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAsyncGetActorsOfClassCompleted                            OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAsyncGetActorsOfClassCompleted                            OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 
 
 	/// Functions
@@ -62,27 +62,29 @@ public:
 
 /// Struct /Script/LootController.BuildingContainersArrayEntry
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FBuildingContainersArrayEntry : public MDKStruct
+class FBuildingContainersArrayEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
 	CMember(ABuildingContainer*)                       BuildingContainer                                           OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x10, 96, 0, 0})
-	SMember(FName)                                     SearchLootTierGroup                                         OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(get<T>, {0x78, 32, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x10, 96, 0, 0})
+	SMember(FName)                                     SearchLootTierGroup                                         OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x78, 32, 0, 0})
 };
 
 /// Struct /Script/LootController.BuildingContainersFoundEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FBuildingContainersFoundEntry : public MDKStruct
+class FBuildingContainersFoundEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FBuildingContainersArrayEntry>)     BuildingContainers                                          OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 

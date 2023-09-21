@@ -10,8 +10,9 @@
 
 /// Struct /Script/FullBodyIK.FBIKBoneLimit
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFBIKBoneLimit : public MDKStruct
+class FFBIKBoneLimit : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -19,34 +20,36 @@ public:
 	CMember(EFBIKBoneLimitType)                        LimitType_X                                                 OFFSET(get<T>, {0x0, 1, 0, 0})
 	CMember(EFBIKBoneLimitType)                        LimitType_Y                                                 OFFSET(get<T>, {0x1, 1, 0, 0})
 	CMember(EFBIKBoneLimitType)                        LimitType_Z                                                 OFFSET(get<T>, {0x2, 1, 0, 0})
-	SMember(FVector)                                   Limit                                                       OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Limit                                                       OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/FullBodyIK.FBIKConstraintOption
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FFBIKConstraintOption : public MDKStruct
+class FFBIKConstraintOption : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x8, 1, 0, 0})
 	DMember(bool)                                      bUseStiffness                                               OFFSET(get<bool>, {0x9, 1, 0, 0})
-	SMember(FVector)                                   LinearStiffness                                             OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   AngularStiffness                                            OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   LinearStiffness                                             OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   AngularStiffness                                            OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(bool)                                      bUseAngularLimit                                            OFFSET(get<bool>, {0x40, 1, 0, 0})
-	SMember(FFBIKBoneLimit)                            AngularLimit                                                OFFSET(get<T>, {0x48, 32, 0, 0})
+	SMember(FFBIKBoneLimit)                            AngularLimit                                                OFFSET(getStruct<T>, {0x48, 32, 0, 0})
 	DMember(bool)                                      bUsePoleVector                                              OFFSET(get<bool>, {0x68, 1, 0, 0})
 	CMember(EPoleVectorOption)                         PoleVectorOption                                            OFFSET(get<T>, {0x69, 1, 0, 0})
-	SMember(FVector)                                   PoleVector                                                  OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FRotator)                                  OffsetRotation                                              OFFSET(get<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   PoleVector                                                  OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FRotator)                                  OffsetRotation                                              OFFSET(getStruct<T>, {0x88, 24, 0, 0})
 };
 
 /// Struct /Script/FullBodyIK.MotionProcessInput
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FMotionProcessInput : public MDKStruct
+class FMotionProcessInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -57,8 +60,9 @@ public:
 
 /// Struct /Script/FullBodyIK.FBIKDebugOption
 /// Size: 0x0080 (0x000000 - 0x000080)
-class FFBIKDebugOption : public MDKStruct
+class FFBIKDebugOption : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
@@ -69,14 +73,15 @@ public:
 	DMember(bool)                                      bDrawDebugAxes                                              OFFSET(get<bool>, {0x3, 1, 0, 0})
 	DMember(bool)                                      bDrawDebugEffector                                          OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bDrawDebugConstraints                                       OFFSET(get<bool>, {0x5, 1, 0, 0})
-	SMember(FTransform)                                DrawWorldOffset                                             OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                DrawWorldOffset                                             OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	DMember(float)                                     DrawSize                                                    OFFSET(get<float>, {0x70, 4, 0, 0})
 };
 
 /// Struct /Script/FullBodyIK.SolverInput
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FSolverInput : public MDKStruct
+class FSolverInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
@@ -94,17 +99,18 @@ public:
 
 /// Struct /Script/FullBodyIK.FBIKEndEffector
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FFBIKEndEffector : public MDKStruct
+class FFBIKEndEffector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FRigElementKey)                            Item                                                        OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FRigElementKey)                            Item                                                        OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 	DMember(float)                                     PositionAlpha                                               OFFSET(get<float>, {0x20, 4, 0, 0})
 	DMember(int32_t)                                   PositionDepth                                               OFFSET(get<int32_t>, {0x24, 4, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 	DMember(float)                                     RotationAlpha                                               OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(int32_t)                                   RotationDepth                                               OFFSET(get<int32_t>, {0x54, 4, 0, 0})
 	DMember(float)                                     Pull                                                        OFFSET(get<float>, {0x58, 4, 0, 0})
@@ -112,8 +118,9 @@ public:
 
 /// Struct /Script/FullBodyIK.RigUnit_FullbodyIK_WorkData
 /// Size: 0x0198 (0x000000 - 0x000198)
-class FRigUnit_FullbodyIK_WorkData : public MDKStruct
+class FRigUnit_FullbodyIK_WorkData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 408;
 
@@ -124,18 +131,19 @@ public:
 /// Size: 0x0270 (0x000160 - 0x0003D0)
 class FRigUnit_FullbodyIK : public FRigUnit_HighlevelBaseMutable
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 976;
 
 public:
-	SMember(FRigElementKey)                            Root                                                        OFFSET(get<T>, {0x160, 8, 0, 0})
+	SMember(FRigElementKey)                            Root                                                        OFFSET(getStruct<T>, {0x160, 8, 0, 0})
 	CMember(TArray<FFBIKEndEffector>)                  Effectors                                                   OFFSET(get<T>, {0x168, 16, 0, 0})
 	CMember(TArray<FFBIKConstraintOption>)             Constraints                                                 OFFSET(get<T>, {0x178, 16, 0, 0})
-	SMember(FSolverInput)                              SolverProperty                                              OFFSET(get<T>, {0x188, 36, 0, 0})
-	SMember(FMotionProcessInput)                       MotionProperty                                              OFFSET(get<T>, {0x1AC, 2, 0, 0})
+	SMember(FSolverInput)                              SolverProperty                                              OFFSET(getStruct<T>, {0x188, 36, 0, 0})
+	SMember(FMotionProcessInput)                       MotionProperty                                              OFFSET(getStruct<T>, {0x1AC, 2, 0, 0})
 	DMember(bool)                                      bPropagateToChildren                                        OFFSET(get<bool>, {0x1AE, 1, 0, 0})
-	SMember(FFBIKDebugOption)                          DebugOption                                                 OFFSET(get<T>, {0x1B0, 128, 0, 0})
-	SMember(FRigUnit_FullbodyIK_WorkData)              WorkData                                                    OFFSET(get<T>, {0x230, 408, 0, 0})
+	SMember(FFBIKDebugOption)                          DebugOption                                                 OFFSET(getStruct<T>, {0x1B0, 128, 0, 0})
+	SMember(FRigUnit_FullbodyIK_WorkData)              WorkData                                                    OFFSET(getStruct<T>, {0x230, 408, 0, 0})
 };
 
 /// Enum /Script/FullBodyIK.EFBIKBoneLimitType

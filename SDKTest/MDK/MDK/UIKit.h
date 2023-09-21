@@ -30,13 +30,13 @@ class UWBP_UIKit_ButtonText_CTA_C : public UWBP_UIKit_Block_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x300, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x300, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Bounce                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Disabled_Transition                                    OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Pressed_Transition                                     OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Focused_Transition                                     OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TextBlock                                                   OFFSET(get<T>, {0x328, 8, 0, 0})
-	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x330, 88, 0, 0})
+	SMember(FSlateFontInfo)                            Font                                                        OFFSET(getStruct<T>, {0x330, 88, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 FontDynamicMaterial                                         OFFSET(get<T>, {0x388, 8, 0, 0})
 
 
@@ -77,7 +77,7 @@ class UWBP_UIKit_ButtonBackground_CTA_C : public UWBP_UIKit_Block_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 888;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x300, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x300, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Outline_Glow                                           OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Outline                                                OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         Anim_Disabled_Transition                                    OFFSET(get<T>, {0x318, 8, 0, 0})
@@ -133,7 +133,7 @@ class UWBP_UIKit_Button_Quiet_C : public UWBP_UIKit_ButtonCTA_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 6649;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x19F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x19F0, 8, 0, 0})
 	DMember(bool)                                      isDarkBackground                                            OFFSET(get<bool>, {0x19F8, 1, 0, 0})
 
 
@@ -160,7 +160,7 @@ class UWBP_UIKit_Button_Regular_C : public UWBP_UIKit_ButtonCTA_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 6649;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x19F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x19F0, 8, 0, 0})
 	CMember(TEnumAsByte<E_UI_CTAButtonType>)           ButtonType                                                  OFFSET(get<T>, {0x19F8, 1, 0, 0})
 
 
@@ -181,7 +181,7 @@ class UWBP_UIKit_Button_Loud_C : public UWBP_UIKit_ButtonCTA_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 6648;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x19F0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x19F0, 8, 0, 0})
 
 
 	/// Functions
@@ -209,7 +209,7 @@ class UWBP_UIKit_Dialog_C : public UWBP_UIKit_Dialog_Base_C
 	static inline constexpr uint64_t __MDKClassSize = 2352;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x920, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x920, 8, 0, 0})
 	CMember(UUIKitDialogViewModel*)                    UIKitDialogViewModel                                        OFFSET(get<T>, {0x928, 8, 0, 0})
 
 

@@ -49,8 +49,9 @@ public:
 
 /// Struct /Script/UnrealEngineExperimental.PersistentLineBatcher
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPersistentLineBatcher : public MDKStruct
+class FPersistentLineBatcher : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -60,41 +61,44 @@ public:
 
 /// Struct /Script/UnrealEngineExperimental.ScriptDiagnosticSourceLocation
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FScriptDiagnosticSourceLocation : public MDKStruct
+class FScriptDiagnosticSourceLocation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FIntPoint)                                 RowSpan                                                     OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FIntPoint)                                 ColSpan                                                     OFFSET(get<T>, {0x18, 8, 0, 0})
+	SMember(FString)                                   FilePath                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FIntPoint)                                 RowSpan                                                     OFFSET(getStruct<T>, {0x10, 8, 0, 0})
+	SMember(FIntPoint)                                 ColSpan                                                     OFFSET(getStruct<T>, {0x18, 8, 0, 0})
 };
 
 /// Struct /Script/UnrealEngineExperimental.ScriptDiagnosticMessage
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FScriptDiagnosticMessage : public MDKStruct
+class FScriptDiagnosticMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	CMember(TEnumAsByte<EScriptDiagnosticMessageType>) MessageType                                                 OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FDateTime)                                 Timestamp                                                   OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FString)                                   Channel                                                     OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FText)                                     MessageStr                                                  OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FScriptDiagnosticSourceLocation)           SourceLocation                                              OFFSET(get<T>, {0x38, 32, 0, 0})
+	SMember(FDateTime)                                 Timestamp                                                   OFFSET(getStruct<T>, {0x8, 8, 0, 0})
+	SMember(FString)                                   Channel                                                     OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FText)                                     MessageStr                                                  OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FScriptDiagnosticSourceLocation)           SourceLocation                                              OFFSET(getStruct<T>, {0x38, 32, 0, 0})
 };
 
 /// Struct /Script/UnrealEngineExperimental.ScriptScreenLogMessage
 /// Size: 0x0008 (0x000058 - 0x000060)
 class FScriptScreenLogMessage : public FScriptDiagnosticMessage
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FColor)                                    ScreenColor                                                 OFFSET(get<T>, {0x58, 4, 0, 0})
+	SMember(FColor)                                    ScreenColor                                                 OFFSET(getStruct<T>, {0x58, 4, 0, 0})
 	DMember(float)                                     DisplayDuration                                             OFFSET(get<float>, {0x5C, 4, 0, 0})
 };
 

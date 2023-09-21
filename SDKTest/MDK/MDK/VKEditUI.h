@@ -20,8 +20,8 @@ class UVKConnectionIndicator : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1496;
 
 public:
-	SMember(FText)                                     EditStatusLocalizedText                                     OFFSET(get<T>, {0x3E8, 240, 0, 0})
-	SMember(FDataTableRowHandle)                       OpenLogInputAction                                          OFFSET(get<T>, {0x4D8, 16, 0, 0})
+	SMember(FText)                                     EditStatusLocalizedText                                     OFFSET(getStruct<T>, {0x3E8, 240, 0, 0})
+	SMember(FDataTableRowHandle)                       OpenLogInputAction                                          OFFSET(getStruct<T>, {0x4D8, 16, 0, 0})
 	CMember(UObject*)                                  StatusIcon_NotConnected                                     OFFSET(get<T>, {0x4E8, 8, 0, 0})
 	CMember(UObject*)                                  StatusIcon_Connected                                        OFFSET(get<T>, {0x4F0, 8, 0, 0})
 	CMember(UObject*)                                  StatusIcon_RefreshRequired                                  OFFSET(get<T>, {0x4F8, 8, 0, 0})
@@ -82,6 +82,6 @@ class UVkEditLogTab : public UCommonActivatableWidget
 	static inline constexpr uint64_t __MDKClassSize = 1248;
 
 public:
-	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x3F0, 240, 0, 0})
+	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(getStruct<T>, {0x3F0, 240, 0, 0})
 };
 

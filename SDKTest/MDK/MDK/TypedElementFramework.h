@@ -149,8 +149,9 @@ public:
 
 /// Struct /Script/TypedElementFramework.ScriptTypedElementHandle
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FScriptTypedElementHandle : public MDKStruct
+class FScriptTypedElementHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -159,8 +160,9 @@ public:
 
 /// Struct /Script/TypedElementFramework.TypedElementDataStorageColumn
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FTypedElementDataStorageColumn : public MDKStruct
+class FTypedElementDataStorageColumn : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -171,6 +173,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementUObjectColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -181,6 +184,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementExternalObjectColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -189,8 +193,9 @@ public:
 
 /// Struct /Script/TypedElementFramework.TypedElementDataStorageTag
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FTypedElementDataStorageTag : public MDKStruct
+class FTypedElementDataStorageTag : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -199,8 +204,9 @@ public:
 
 /// Struct /Script/TypedElementFramework.TypedElementWidgetConstructor
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FTypedElementWidgetConstructor : public MDKStruct
+class FTypedElementWidgetConstructor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -211,17 +217,19 @@ public:
 /// Size: 0x000F (0x000001 - 0x000010)
 class FTypedElementLabelColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Label                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Label                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/TypedElementFramework.TypedElementLabelHashColumn
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementLabelHashColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -231,8 +239,9 @@ public:
 
 /// Struct /Script/TypedElementFramework.ScriptTypedElementListProxy
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FScriptTypedElementListProxy : public MDKStruct
+class FScriptTypedElementListProxy : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -243,6 +252,7 @@ public:
 /// Size: 0x0000 (0x000001 - 0x000001)
 class FTypedElementSyncBackToWorldTag : public FTypedElementDataStorageTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -253,6 +263,7 @@ public:
 /// Size: 0x0000 (0x000001 - 0x000001)
 class FTypedElementSyncFromWorldTag : public FTypedElementDataStorageTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -263,6 +274,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementRowReferenceColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -273,17 +285,19 @@ public:
 /// Size: 0x000F (0x000001 - 0x000010)
 class FTypedElementPackagePathColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FString)                                   Path                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   Path                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/TypedElementFramework.TypedElementPackageLoadedPathColumn
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementPackageLoadedPathColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -294,6 +308,7 @@ public:
 /// Size: 0x0000 (0x000001 - 0x000001)
 class FTypedElementSelectionColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -304,6 +319,7 @@ public:
 /// Size: 0x000F (0x000001 - 0x000010)
 class FTypedElementSlateWidgetReferenceColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -314,6 +330,7 @@ public:
 /// Size: 0x0000 (0x000001 - 0x000001)
 class FTypedElementSlateWidgetReferenceDeletesRowTag : public FTypedElementDataStorageTag
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -324,17 +341,19 @@ public:
 /// Size: 0x005F (0x000001 - 0x000060)
 class FTypedElementLocalTransformColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/TypedElementFramework.TypedElementClassTypeInfoColumn
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementClassTypeInfoColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -345,6 +364,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementScriptStructTypeInfoColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -355,6 +375,7 @@ public:
 /// Size: 0x0003 (0x000001 - 0x000004)
 class FTypedElementU32IntValueCacheColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -366,6 +387,7 @@ public:
 /// Size: 0x0003 (0x000001 - 0x000004)
 class FTypedElementI32IntValueCacheColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -377,6 +399,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementU64IntValueCacheColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -388,6 +411,7 @@ public:
 /// Size: 0x0007 (0x000001 - 0x000008)
 class FTypedElementI64IntValueCacheColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -399,6 +423,7 @@ public:
 /// Size: 0x0003 (0x000001 - 0x000004)
 class FTypedElementFloatValueCacheColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -410,6 +435,7 @@ public:
 /// Size: 0x0000 (0x000001 - 0x000001)
 class FTypedElementViewportColorColumn : public FTypedElementDataStorageColumn
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

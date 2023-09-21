@@ -19,12 +19,12 @@ class UFortVehicleLayerAnimInstance_Riding : public UFortVehicleOccupantAnimInst
 	static inline constexpr uint64_t __MDKClassSize = 2768;
 
 public:
-	SMember(FCachedAnimRelevancyData)                  IntoVehicleCachedData                                       OFFSET(get<T>, {0x810, 20, 0, 0})
-	SMember(FCachedAnimRelevancyData)                  OutOfVehicleCachedData                                      OFFSET(get<T>, {0x824, 20, 0, 0})
+	SMember(FCachedAnimRelevancyData)                  IntoVehicleCachedData                                       OFFSET(getStruct<T>, {0x810, 20, 0, 0})
+	SMember(FCachedAnimRelevancyData)                  OutOfVehicleCachedData                                      OFFSET(getStruct<T>, {0x824, 20, 0, 0})
 	DMember(float)                                     InTime                                                      OFFSET(get<float>, {0x838, 4, 0, 0})
 	DMember(float)                                     OutTime                                                     OFFSET(get<float>, {0x83C, 4, 0, 0})
 	DMember(float)                                     BodyYawOffset                                               OFFSET(get<float>, {0x840, 4, 0, 0})
-	SMember(FRotator)                                  BodyCounterRotation                                         OFFSET(get<T>, {0x848, 24, 0, 0})
+	SMember(FRotator)                                  BodyCounterRotation                                         OFFSET(getStruct<T>, {0x848, 24, 0, 0})
 	DMember(float)                                     BodyCounterRotationAlpha                                    OFFSET(get<float>, {0x860, 4, 0, 0})
 	DMember(bool)                                      bIsReloading                                                OFFSET(get<bool>, {0x864, 1, 0, 0})
 	DMember(bool)                                      bIsTargeting                                                OFFSET(get<bool>, {0x865, 1, 0, 0})
@@ -56,12 +56,12 @@ public:
 	DMember(float)                                     CombatToRideYaw                                             OFFSET(get<float>, {0x8A8, 4, 0, 0})
 	DMember(float)                                     InPlaceYaw                                                  OFFSET(get<float>, {0x8AC, 4, 0, 0})
 	DMember(float)                                     HeadAOAlpha                                                 OFFSET(get<float>, {0x8B0, 4, 0, 0})
-	SMember(FRotator)                                  MeleeTwistRot                                               OFFSET(get<T>, {0x8B8, 24, 0, 0})
+	SMember(FRotator)                                  MeleeTwistRot                                               OFFSET(getStruct<T>, {0x8B8, 24, 0, 0})
 	DMember(bool)                                      bIsDualWield                                                OFFSET(get<bool>, {0x8D0, 1, 0, 0})
 	DMember(bool)                                      bIsOneHandedDualWield                                       OFFSET(get<bool>, {0x8D1, 1, 0, 0})
 	DMember(bool)                                      bIsTwoHandedSword                                           OFFSET(get<bool>, {0x8D2, 1, 0, 0})
 	DMember(bool)                                      bShouldAdjustBodyTwistForMelee                              OFFSET(get<bool>, {0x8D3, 1, 0, 0})
-	SMember(FVector)                                   PlayerOffset                                                OFFSET(get<T>, {0x8D8, 24, 0, 0})
+	SMember(FVector)                                   PlayerOffset                                                OFFSET(getStruct<T>, {0x8D8, 24, 0, 0})
 	DMember(float)                                     NoiseAlpha                                                  OFFSET(get<float>, {0x8F0, 4, 0, 0})
 	DMember(bool)                                      bIsLobsterBlockActive                                       OFFSET(get<bool>, {0x8F4, 1, 0, 0})
 	DMember(float)                                     SlopePitch                                                  OFFSET(get<float>, {0x8F8, 4, 0, 0})
@@ -71,11 +71,11 @@ public:
 	DMember(float)                                     RiderHeightAdjustmentForMinSlopePitch                       OFFSET(get<float>, {0x908, 4, 0, 0})
 	DMember(float)                                     RiderHeightAdjustmentForMaxSlopePitch                       OFFSET(get<float>, {0x90C, 4, 0, 0})
 	DMember(float)                                     PettingRotAlpha                                             OFFSET(get<float>, {0x910, 4, 0, 0})
-	SMember(FRotator)                                  PettingRot                                                  OFFSET(get<T>, {0x918, 24, 0, 0})
+	SMember(FRotator)                                  PettingRot                                                  OFFSET(getStruct<T>, {0x918, 24, 0, 0})
 	DMember(float)                                     PettingPitchFactor                                          OFFSET(get<float>, {0x930, 4, 0, 0})
 	DMember(float)                                     PettingRollFactor                                           OFFSET(get<float>, {0x934, 4, 0, 0})
-	SMember(FVector)                                   HandAttachLeft                                              OFFSET(get<T>, {0x938, 24, 0, 0})
-	SMember(FVector)                                   HandAttachRight                                             OFFSET(get<T>, {0x950, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLeft                                              OFFSET(getStruct<T>, {0x938, 24, 0, 0})
+	SMember(FVector)                                   HandAttachRight                                             OFFSET(getStruct<T>, {0x950, 24, 0, 0})
 	DMember(float)                                     HandAttachAlpha                                             OFFSET(get<float>, {0x968, 4, 0, 0})
 	CMember(ERidingFootPhase)                          FootPhase                                                   OFFSET(get<T>, {0x96C, 1, 0, 0})
 	DMember(bool)                                      bIsFootPhase_FeetInAir                                      OFFSET(get<bool>, {0x96D, 1, 0, 0})
@@ -92,21 +92,21 @@ public:
 	DMember(float)                                     JustEnteredDelayTimeSec                                     OFFSET(get<float>, {0x984, 4, 0, 0})
 	DMember(float)                                     FalseBlendTime_Moving                                       OFFSET(get<float>, {0x988, 4, 0, 0})
 	DMember(float)                                     FalseBlendTime_NotMoving                                    OFFSET(get<float>, {0x98C, 4, 0, 0})
-	SMember(FVector)                                   PlayerOffsetMale                                            OFFSET(get<T>, {0x990, 24, 0, 0})
-	SMember(FVector)                                   PlayerOffsetFemale                                          OFFSET(get<T>, {0x9A8, 24, 0, 0})
-	SMember(FSoftObjectPath)                           ScytheMontage                                               OFFSET(get<T>, {0x9C0, 24, 0, 0})
-	SMember(FSoftObjectPath)                           BRSwordMontage                                              OFFSET(get<T>, {0x9D8, 24, 0, 0})
+	SMember(FVector)                                   PlayerOffsetMale                                            OFFSET(getStruct<T>, {0x990, 24, 0, 0})
+	SMember(FVector)                                   PlayerOffsetFemale                                          OFFSET(getStruct<T>, {0x9A8, 24, 0, 0})
+	SMember(FSoftObjectPath)                           ScytheMontage                                               OFFSET(getStruct<T>, {0x9C0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           BRSwordMontage                                              OFFSET(getStruct<T>, {0x9D8, 24, 0, 0})
 	CMember(TEnumAsByte<EFortWeaponCoreAnimation>)     MeleeDualWieldCoreAnimation                                 OFFSET(get<T>, {0x9F0, 1, 0, 0})
-	SMember(FVector)                                   SlopePitchTraceStart                                        OFFSET(get<T>, {0x9F8, 24, 0, 0})
-	SMember(FVector)                                   SlopePitchTraceEnd                                          OFFSET(get<T>, {0xA10, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationLeftMale                                  OFFSET(get<T>, {0xA28, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationRightMale                                 OFFSET(get<T>, {0xA40, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationLeftFemale                                OFFSET(get<T>, {0xA58, 24, 0, 0})
-	SMember(FVector)                                   HandAttachLocationRightFemale                               OFFSET(get<T>, {0xA70, 24, 0, 0})
-	SMember(FName)                                     PlayerHandAttachLeft                                        OFFSET(get<T>, {0xA88, 4, 0, 0})
-	SMember(FName)                                     PlayerHandAttachRight                                       OFFSET(get<T>, {0xA8C, 4, 0, 0})
-	SMember(FName)                                     DisableHandAttachCurveName                                  OFFSET(get<T>, {0xA90, 4, 0, 0})
-	SMember(FName)                                     AllowRidingNoiseAdditiveCurveName                           OFFSET(get<T>, {0xA94, 4, 0, 0})
+	SMember(FVector)                                   SlopePitchTraceStart                                        OFFSET(getStruct<T>, {0x9F8, 24, 0, 0})
+	SMember(FVector)                                   SlopePitchTraceEnd                                          OFFSET(getStruct<T>, {0xA10, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationLeftMale                                  OFFSET(getStruct<T>, {0xA28, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationRightMale                                 OFFSET(getStruct<T>, {0xA40, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationLeftFemale                                OFFSET(getStruct<T>, {0xA58, 24, 0, 0})
+	SMember(FVector)                                   HandAttachLocationRightFemale                               OFFSET(getStruct<T>, {0xA70, 24, 0, 0})
+	SMember(FName)                                     PlayerHandAttachLeft                                        OFFSET(getStruct<T>, {0xA88, 4, 0, 0})
+	SMember(FName)                                     PlayerHandAttachRight                                       OFFSET(getStruct<T>, {0xA8C, 4, 0, 0})
+	SMember(FName)                                     DisableHandAttachCurveName                                  OFFSET(getStruct<T>, {0xA90, 4, 0, 0})
+	SMember(FName)                                     AllowRidingNoiseAdditiveCurveName                           OFFSET(getStruct<T>, {0xA94, 4, 0, 0})
 
 
 	/// Functions
@@ -140,30 +140,30 @@ class URidableComponent : public UGameFrameworkComponent
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRiderStartedRiding                                        OFFSET(get<T>, {0xA8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRiderStoppedRiding                                        OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRiderStartedRiding                                        OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRiderStoppedRiding                                        OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 	CMember(UClass*)                                   RiderAnimLayerOverlayClass                                  OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FName)                                     AttachSocket                                                OFFSET(get<T>, {0xD0, 4, 0, 0})
-	SMember(FVector)                                   AttachLocationOffset                                        OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FRotator)                                  AttachRotationOffset                                        OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FName)                                     ClientAttachGuideSocket                                     OFFSET(get<T>, {0x108, 4, 0, 0})
-	SMember(FVector)                                   ClientAttachGuideLocationOffset                             OFFSET(get<T>, {0x110, 24, 0, 0})
-	SMember(FName)                                     RidablePropAttachSocket                                     OFFSET(get<T>, {0x128, 4, 0, 0})
-	SMember(FVector)                                   RidablePropAttachLocationOffset                             OFFSET(get<T>, {0x130, 24, 0, 0})
-	SMember(FRotator)                                  RidablePropAttachRotationOffset                             OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FName)                                     AttachSocket                                                OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
+	SMember(FVector)                                   AttachLocationOffset                                        OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FRotator)                                  AttachRotationOffset                                        OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
+	SMember(FName)                                     ClientAttachGuideSocket                                     OFFSET(getStruct<T>, {0x108, 4, 0, 0})
+	SMember(FVector)                                   ClientAttachGuideLocationOffset                             OFFSET(getStruct<T>, {0x110, 24, 0, 0})
+	SMember(FName)                                     RidablePropAttachSocket                                     OFFSET(getStruct<T>, {0x128, 4, 0, 0})
+	SMember(FVector)                                   RidablePropAttachLocationOffset                             OFFSET(getStruct<T>, {0x130, 24, 0, 0})
+	SMember(FRotator)                                  RidablePropAttachRotationOffset                             OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 	DMember(float)                                     RidablePropAttachScale                                      OFFSET(get<float>, {0x160, 4, 0, 0})
 	DMember(float)                                     RidablePropAttachRiderVerticalBuffer                        OFFSET(get<float>, {0x164, 4, 0, 0})
-	SMember(FRidingAttachmentBoundsOverride)           RiderPropAttachBoundsOverride                               OFFSET(get<T>, {0x168, 56, 0, 0})
+	SMember(FRidingAttachmentBoundsOverride)           RiderPropAttachBoundsOverride                               OFFSET(getStruct<T>, {0x168, 56, 0, 0})
 	DMember(bool)                                      bOverrideNoiseGeneration                                    OFFSET(get<bool>, {0x1A0, 1, 0, 0})
-	SMember(FFortPlayerPawnAthenaMovementNoiseOverride) RiderMovementNoiseOverride                                 OFFSET(get<T>, {0x1A4, 12, 0, 0})
+	SMember(FFortPlayerPawnAthenaMovementNoiseOverride) RiderMovementNoiseOverride                                 OFFSET(getStruct<T>, {0x1A4, 12, 0, 0})
 	CMember(UClass*)                                   CameraModeClassOverride                                     OFFSET(get<T>, {0x1B0, 8, 0, 0})
 	CMember(UClass*)                                   SprintCameraModeClassOverride                               OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(FScalableFloat)                            UseTargetingAdditionalViewTargetSpaceViewOffsetOverride     OFFSET(get<T>, {0x1C0, 40, 0, 0})
-	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffsetOverride        OFFSET(get<T>, {0x1E8, 16, 0, 0})
-	SMember(FVector)                                   WeaponTargetingSourceOffsetModifier                         OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FGameplayTag)                              RidableTag                                                  OFFSET(get<T>, {0x210, 4, 0, 0})
-	SMember(FGameplayTag)                              EnergyDepletedTag                                           OFFSET(get<T>, {0x214, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       PlaylistTagBlacklistRowHandle                               OFFSET(get<T>, {0x218, 16, 0, 0})
+	SMember(FScalableFloat)                            UseTargetingAdditionalViewTargetSpaceViewOffsetOverride     OFFSET(getStruct<T>, {0x1C0, 40, 0, 0})
+	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffsetOverride        OFFSET(getStruct<T>, {0x1E8, 16, 0, 0})
+	SMember(FVector)                                   WeaponTargetingSourceOffsetModifier                         OFFSET(getStruct<T>, {0x1F8, 24, 0, 0})
+	SMember(FGameplayTag)                              RidableTag                                                  OFFSET(getStruct<T>, {0x210, 4, 0, 0})
+	SMember(FGameplayTag)                              EnergyDepletedTag                                           OFFSET(getStruct<T>, {0x214, 4, 0, 0})
+	SMember(FDataTableRowHandle)                       PlaylistTagBlacklistRowHandle                               OFFSET(getStruct<T>, {0x218, 16, 0, 0})
 	CMember(URiderComponent*)                          ActiveRider                                                 OFFSET(get<T>, {0x228, 8, 0, 0})
 	CMember(URiderComponent*)                          LastRider                                                   OFFSET(get<T>, {0x230, 8, 0, 0})
 	CMember(USceneComponent*)                          RidableProp                                                 OFFSET(get<T>, {0x238, 8, 0, 0})
@@ -172,11 +172,11 @@ public:
 	DMember(float)                                     RidingCapsuleRadius                                         OFFSET(get<float>, {0x248, 4, 0, 0})
 	DMember(float)                                     RidingCapsuleHalfHeight                                     OFFSET(get<float>, {0x24C, 4, 0, 0})
 	DMember(bool)                                      bOriginalClientPositionSmoothingThrottlingSetting           OFFSET(get<bool>, {0x250, 1, 0, 0})
-	SMember(FScalableFloat)                            MaxHalfAimingAngle                                          OFFSET(get<T>, {0x258, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxHalfAimingAngle                                          OFFSET(getStruct<T>, {0x258, 40, 0, 0})
 	CMember(TArray<FPrimaryFireAnimMontageAnimCoreTypeOverride>) PrimaryFireMontageAnimCoreTypeOverrides           OFFSET(get<T>, {0x280, 16, 0, 0})
 	CMember(TArray<FPrimaryFireAnimMontageTagOverride>) PrimaryFireMontageTagOverrides                             OFFSET(get<T>, {0x290, 16, 0, 0})
-	SMember(FRidingPettingData)                        PettingData                                                 OFFSET(get<T>, {0x2A0, 272, 0, 0})
-	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(get<T>, {0x3B0, 8, 0, 0})
+	SMember(FRidingPettingData)                        PettingData                                                 OFFSET(getStruct<T>, {0x2A0, 272, 0, 0})
+	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(getStruct<T>, {0x3B0, 8, 0, 0})
 	DMember(bool)                                      bIsSprinting                                                OFFSET(get<bool>, {0x3C8, 1, 0, 0})
 
 
@@ -226,7 +226,7 @@ public:
 	DMember(bool)                                      bUseGravityJump                                             OFFSET(get<bool>, {0x3E0, 1, 0, 0})
 	DMember(bool)                                      bIsControllable                                             OFFSET(get<bool>, {0x3E1, 1, 0, 0})
 	DMember(bool)                                      bHasAbility                                                 OFFSET(get<bool>, {0x3E2, 1, 0, 0})
-	SMember(FText)                                     AbilityDisplayText                                          OFFSET(get<T>, {0x3E8, 24, 0, 0})
+	SMember(FText)                                     AbilityDisplayText                                          OFFSET(getStruct<T>, {0x3E8, 24, 0, 0})
 	DMember(bool)                                      bCanJump                                                    OFFSET(get<bool>, {0x400, 1, 0, 0})
 	DMember(bool)                                      bAlwaysMoveForward                                          OFFSET(get<bool>, {0x401, 1, 0, 0})
 	DMember(float)                                     ForwardMoveSpeedMultiplier                                  OFFSET(get<float>, {0x404, 4, 0, 0})
@@ -234,9 +234,9 @@ public:
 	DMember(float)                                     SidewaysMoveRotationOffset                                  OFFSET(get<float>, {0x40C, 4, 0, 0})
 	CMember(TEnumAsByte<EFortMovementUrgency>)         MovementUrgency                                             OFFSET(get<T>, {0x410, 1, 0, 0})
 	DMember(bool)                                      bIsBeingControlled                                          OFFSET(get<bool>, {0x411, 1, 0, 0})
-	SMember(FRidableControlParams)                     RidableControlParams                                        OFFSET(get<T>, {0x430, 520, 0, 0})
-	SMember(FScalableFloat)                            JumpUpwardGravityScale                                      OFFSET(get<T>, {0x660, 40, 0, 0})
-	SMember(FScalableFloat)                            JumpDownwardGravityScale                                    OFFSET(get<T>, {0x688, 40, 0, 0})
+	SMember(FRidableControlParams)                     RidableControlParams                                        OFFSET(getStruct<T>, {0x430, 520, 0, 0})
+	SMember(FScalableFloat)                            JumpUpwardGravityScale                                      OFFSET(getStruct<T>, {0x660, 40, 0, 0})
+	SMember(FScalableFloat)                            JumpDownwardGravityScale                                    OFFSET(getStruct<T>, {0x688, 40, 0, 0})
 
 
 	/// Functions
@@ -280,62 +280,62 @@ class URiderComponent : public UFortPawnOverrideComponent
 	static inline constexpr uint64_t __MDKClassSize = 1648;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnStartedRiding                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnStoppedRiding                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStartedRiding                                             OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnStoppedRiding                                             OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(UClass*)                                   RidingCameraModeClass                                       OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(UClass*)                                   RidingSprintCameraModeClass                                 OFFSET(get<T>, {0xD8, 8, 0, 0})
 	DMember(float)                                     RidingCameraModeBlendTime                                   OFFSET(get<float>, {0xE0, 4, 0, 0})
-	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffset                OFFSET(get<T>, {0xE8, 16, 0, 0})
+	SMember(FInterpOffset)                             TargetingAdditionalViewTargetSpaceViewOffset                OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
 	CMember(UClass*)                                   RiderPropClass                                              OFFSET(get<T>, {0xF8, 8, 0, 0})
 	CMember(UClass*)                                   RidablePropClass                                            OFFSET(get<T>, {0x100, 8, 0, 0})
-	SMember(FVector)                                   RiderPropAttachLocationOffset                               OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FRotator)                                  RiderPropAttachRotationOffset                               OFFSET(get<T>, {0x120, 24, 0, 0})
+	SMember(FVector)                                   RiderPropAttachLocationOffset                               OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FRotator)                                  RiderPropAttachRotationOffset                               OFFSET(getStruct<T>, {0x120, 24, 0, 0})
 	DMember(float)                                     RiderPropAttachScale                                        OFFSET(get<float>, {0x138, 4, 0, 0})
-	SMember(FName)                                     RiderPropAttachSocket                                       OFFSET(get<T>, {0x13C, 4, 0, 0})
+	SMember(FName)                                     RiderPropAttachSocket                                       OFFSET(getStruct<T>, {0x13C, 4, 0, 0})
 	DMember(bool)                                      bUseClientAttachGuideSocket                                 OFFSET(get<bool>, {0x140, 1, 0, 0})
-	SMember(FVector)                                   RiderPropAttachSoftBounds                                   OFFSET(get<T>, {0x148, 24, 0, 0})
+	SMember(FVector)                                   RiderPropAttachSoftBounds                                   OFFSET(getStruct<T>, {0x148, 24, 0, 0})
 	DMember(float)                                     RiderPropAttachSoftBoundsScalar                             OFFSET(get<float>, {0x160, 4, 0, 0})
-	SMember(FVector)                                   RiderPropAttachHardBounds                                   OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FVector)                                   RiderPropAttachHardBounds                                   OFFSET(getStruct<T>, {0x168, 24, 0, 0})
 	DMember(float)                                     RiderPropAttachSoftBoundsTargetingScalar                    OFFSET(get<float>, {0x180, 4, 0, 0})
 	DMember(float)                                     RiderPropAttachHardBoundsTargetingScalar                    OFFSET(get<float>, {0x184, 4, 0, 0})
 	DMember(float)                                     RiderPropAttachVerticalBufferTargetingScalar                OFFSET(get<float>, {0x188, 4, 0, 0})
 	DMember(float)                                     RidingExitHoldTime                                          OFFSET(get<float>, {0x18C, 4, 0, 0})
-	SMember(FScalableFloat)                            TimeBeforeReenteringRiding                                  OFFSET(get<T>, {0x190, 40, 0, 0})
-	SMember(FGameplayTag)                              RidingExitStartedEventTag                                   OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FGameplayTag)                              RidingExitStoppedEventTag                                   OFFSET(get<T>, {0x1BC, 4, 0, 0})
+	SMember(FScalableFloat)                            TimeBeforeReenteringRiding                                  OFFSET(getStruct<T>, {0x190, 40, 0, 0})
+	SMember(FGameplayTag)                              RidingExitStartedEventTag                                   OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FGameplayTag)                              RidingExitStoppedEventTag                                   OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
 	CMember(UFortInputMappingContext*)                 RidingInputContext                                          OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(UInputAction*)                             RidingExit                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(UInputAction*)                             GamepadRidingExit                                           OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(UFXSystemAsset*)                           ConnectorFXAsset                                            OFFSET(get<T>, {0x1D8, 8, 0, 0})
-	SMember(FName)                                     ConnectorPropSourceMeshParameterName                        OFFSET(get<T>, {0x1E0, 4, 0, 0})
-	SMember(FName)                                     ConnectorPropTargetMeshParameterName                        OFFSET(get<T>, {0x1E4, 4, 0, 0})
+	SMember(FName)                                     ConnectorPropSourceMeshParameterName                        OFFSET(getStruct<T>, {0x1E0, 4, 0, 0})
+	SMember(FName)                                     ConnectorPropTargetMeshParameterName                        OFFSET(getStruct<T>, {0x1E4, 4, 0, 0})
 	DMember(float)                                     SimulatedSmoothedRotationSpeed                              OFFSET(get<float>, {0x1E8, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     ExcludedEmoteTags                                           OFFSET(get<T>, {0x1F0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ExcludedEmoteTags                                           OFFSET(getStruct<T>, {0x1F0, 32, 0, 0})
 	CMember(URidableComponent*)                        ActiveRidable                                               OFFSET(get<T>, {0x218, 8, 0, 0})
 	CMember(URidableComponent*)                        LastRidable                                                 OFFSET(get<T>, {0x220, 8, 0, 0})
 	CMember(USceneComponent*)                          RiderProp                                                   OFFSET(get<T>, {0x228, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       ConnectorProp                                               OFFSET(get<T>, {0x230, 8, 0, 0})
-	SMember(FVector)                                   PropAttachSeparation                                        OFFSET(get<T>, {0x238, 24, 0, 0})
-	SMember(FVector)                                   AdditionalAttachOffset                                      OFFSET(get<T>, {0x250, 24, 0, 0})
-	SMember(FVector)                                   SoftBoundsAttachmentOffset                                  OFFSET(get<T>, {0x268, 24, 0, 0})
-	SMember(FVector)                                   HardBoundsAttachmentOffset                                  OFFSET(get<T>, {0x280, 24, 0, 0})
-	SMember(FDataTableRowHandle)                       PlaylistTagDenylistRowHandle                                OFFSET(get<T>, {0x298, 16, 0, 0})
+	SMember(FVector)                                   PropAttachSeparation                                        OFFSET(getStruct<T>, {0x238, 24, 0, 0})
+	SMember(FVector)                                   AdditionalAttachOffset                                      OFFSET(getStruct<T>, {0x250, 24, 0, 0})
+	SMember(FVector)                                   SoftBoundsAttachmentOffset                                  OFFSET(getStruct<T>, {0x268, 24, 0, 0})
+	SMember(FVector)                                   HardBoundsAttachmentOffset                                  OFFSET(getStruct<T>, {0x280, 24, 0, 0})
+	SMember(FDataTableRowHandle)                       PlaylistTagDenylistRowHandle                                OFFSET(getStruct<T>, {0x298, 16, 0, 0})
 	CMember(UFortInputComponent*)                      RiderInputComponent                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     PendingFailedEmoteErrorTags                                 OFFSET(get<T>, {0x2B0, 32, 0, 0})
-	SMember(FRiderDismountLaunchVelocity)              ExitLaunchVelocity                                          OFFSET(get<T>, {0x2D0, 168, 0, 0})
-	SMember(FRiderDismountLaunchVelocity)              JumpExitLaunchVelocity                                      OFFSET(get<T>, {0x378, 168, 0, 0})
-	SMember(FRidingAnalyticsData_Stopped)              ActiveAnaltyicsData                                         OFFSET(get<T>, {0x428, 128, 0, 0})
-	SMember(FVector)                                   RidableLocationLastFrame                                    OFFSET(get<T>, {0x4A8, 24, 0, 0})
-	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(get<T>, {0x4C8, 8, 0, 0})
-	SMember(FRidableControlRuntimeData)                RidableControlRuntimeData                                   OFFSET(get<T>, {0x4D0, 64, 0, 0})
+	SMember(FGameplayTagContainer)                     PendingFailedEmoteErrorTags                                 OFFSET(getStruct<T>, {0x2B0, 32, 0, 0})
+	SMember(FRiderDismountLaunchVelocity)              ExitLaunchVelocity                                          OFFSET(getStruct<T>, {0x2D0, 168, 0, 0})
+	SMember(FRiderDismountLaunchVelocity)              JumpExitLaunchVelocity                                      OFFSET(getStruct<T>, {0x378, 168, 0, 0})
+	SMember(FRidingAnalyticsData_Stopped)              ActiveAnaltyicsData                                         OFFSET(getStruct<T>, {0x428, 128, 0, 0})
+	SMember(FVector)                                   RidableLocationLastFrame                                    OFFSET(getStruct<T>, {0x4A8, 24, 0, 0})
+	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(getStruct<T>, {0x4C8, 8, 0, 0})
+	SMember(FRidableControlRuntimeData)                RidableControlRuntimeData                                   OFFSET(getStruct<T>, {0x4D0, 64, 0, 0})
 	DMember(bool)                                      bIsSprintingReplay                                          OFFSET(get<bool>, {0x510, 1, 1, 0})
 	CMember(TWeakObjectPtr<AFortPlayerController*>)    ClampedController                                           OFFSET(get<T>, {0x514, 8, 0, 0})
 	DMember(bool)                                      bIsPetting                                                  OFFSET(get<bool>, {0x51C, 1, 0, 0})
-	SMember(FScalableFloat)                            RidingCapsuleHalfHeight                                     OFFSET(get<T>, {0x520, 40, 0, 0})
-	SMember(FScalableFloat)                            RidingCapsuleRadius                                         OFFSET(get<T>, {0x548, 40, 0, 0})
-	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(get<T>, {0x580, 4, 0, 0})
-	SMember(FScalableFloat)                            TraceRadius                                                 OFFSET(get<T>, {0x588, 40, 0, 0})
-	SMember(FScalableFloat)                            TraceLength                                                 OFFSET(get<T>, {0x5B0, 40, 0, 0})
+	SMember(FScalableFloat)                            RidingCapsuleHalfHeight                                     OFFSET(getStruct<T>, {0x520, 40, 0, 0})
+	SMember(FScalableFloat)                            RidingCapsuleRadius                                         OFFSET(getStruct<T>, {0x548, 40, 0, 0})
+	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(getStruct<T>, {0x580, 4, 0, 0})
+	SMember(FScalableFloat)                            TraceRadius                                                 OFFSET(getStruct<T>, {0x588, 40, 0, 0})
+	SMember(FScalableFloat)                            TraceLength                                                 OFFSET(getStruct<T>, {0x5B0, 40, 0, 0})
 	DMember(bool)                                      bPreventExitRidingFromInput                                 OFFSET(get<bool>, {0x5D8, 1, 0, 0})
 
 
@@ -406,9 +406,9 @@ public:
 	DMember(bool)                                      bCanControlRidable                                          OFFSET(get<bool>, {0x688, 1, 0, 0})
 	DMember(bool)                                      bIsControllingRidable                                       OFFSET(get<bool>, {0x689, 1, 0, 0})
 	CMember(ERidingControlInputStyle)                  ControlInputStyle                                           OFFSET(get<T>, {0x68A, 1, 0, 0})
-	SMember(FRidingControlInputState)                  ReplicatedControlInputState                                 OFFSET(get<T>, {0x698, 12, 0, 0})
-	SMember(FRidingControlInputStateReliable)          ReplicatedControlInputStateReliable                         OFFSET(get<T>, {0x6A4, 1, 0, 0})
-	SMember(FRidingControlInputStateUnreliable)        ReplicatedControlInputStateUnreliable                       OFFSET(get<T>, {0x6A5, 2, 0, 0})
+	SMember(FRidingControlInputState)                  ReplicatedControlInputState                                 OFFSET(getStruct<T>, {0x698, 12, 0, 0})
+	SMember(FRidingControlInputStateReliable)          ReplicatedControlInputStateReliable                         OFFSET(getStruct<T>, {0x6A4, 1, 0, 0})
+	SMember(FRidingControlInputStateUnreliable)        ReplicatedControlInputStateUnreliable                       OFFSET(getStruct<T>, {0x6A5, 2, 0, 0})
 	CMember(UFortInputComponent*)                      ControllingRiderInputComponent                              OFFSET(get<T>, {0x6A8, 8, 0, 0})
 	DMember(float)                                     AutoRunDoubleTapTimestamp                                   OFFSET(get<float>, {0x6C0, 4, 0, 0})
 	DMember(bool)                                      bCanBePet                                                   OFFSET(get<bool>, {0x6C4, 1, 0, 0})
@@ -469,7 +469,7 @@ class UFortCameraMode_Riding : public UFortCameraMode_ThirdPerson
 	static inline constexpr uint64_t __MDKClassSize = 7024;
 
 public:
-	SMember(FVector)                                   OriginOffset                                                OFFSET(get<T>, {0x1B50, 24, 0, 0})
+	SMember(FVector)                                   OriginOffset                                                OFFSET(getStruct<T>, {0x1B50, 24, 0, 0})
 };
 
 /// Class /Script/RidingCodeRuntime.RidingGameStateMutator
@@ -510,8 +510,9 @@ public:
 
 /// Struct /Script/RidingCodeRuntime.RidingControlInputStateReliable
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FRidingControlInputStateReliable : public MDKStruct
+class FRidingControlInputStateReliable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -523,8 +524,9 @@ public:
 
 /// Struct /Script/RidingCodeRuntime.RidingControlInputStateUnreliable
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FRidingControlInputStateUnreliable : public MDKStruct
+class FRidingControlInputStateUnreliable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 
@@ -535,8 +537,9 @@ public:
 
 /// Struct /Script/RidingCodeRuntime.RidingControlInputState
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FRidingControlInputState : public MDKStruct
+class FRidingControlInputState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -552,83 +555,90 @@ public:
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FRidingPlaylistBlacklistTableRow : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     PlaylistTags                                                OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     PlaylistTags                                                OFFSET(getStruct<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.PrimaryFireAnimMontageAnimCoreTypeOverride
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FPrimaryFireAnimMontageAnimCoreTypeOverride : public MDKStruct
+class FPrimaryFireAnimMontageAnimCoreTypeOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	CMember(TEnumAsByte<EFortWeaponCoreAnimation>)     CoreTypeToOverride                                          OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       OFFSET(get<T>, {0x8, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       OFFSET(getStruct<T>, {0x8, 88, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.PrimaryFireAnimMontageTagOverride
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FPrimaryFireAnimMontageTagOverride : public MDKStruct
+class FPrimaryFireAnimMontageTagOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FGameplayTag)                              TagOverride                                                 OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       OFFSET(get<T>, {0x8, 88, 0, 0})
+	SMember(FGameplayTag)                              TagOverride                                                 OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverridingMontageInfo                                       OFFSET(getStruct<T>, {0x8, 88, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingAttachmentBoundsOverride
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FRidingAttachmentBoundsOverride : public MDKStruct
+class FRidingAttachmentBoundsOverride : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	DMember(bool)                                      bUseOverride                                                OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector)                                   AttachSoftBounds                                            OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   AttachHardBounds                                            OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   AttachSoftBounds                                            OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   AttachHardBounds                                            OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingPettingData
 /// Size: 0x0110 (0x000000 - 0x000110)
-class FRidingPettingData : public MDKStruct
+class FRidingPettingData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 	DMember(bool)                                      bIsPettableCreature                                         OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RiderMalePettingMontageInfo                                 OFFSET(get<T>, {0x8, 88, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RiderFemalePettingMontageInfo                               OFFSET(get<T>, {0x60, 88, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RidablePettingMontageInfo                                   OFFSET(get<T>, {0xB8, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RiderMalePettingMontageInfo                                 OFFSET(getStruct<T>, {0x8, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RiderFemalePettingMontageInfo                               OFFSET(getStruct<T>, {0x60, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RidablePettingMontageInfo                                   OFFSET(getStruct<T>, {0xB8, 88, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RiderDismountLaunchVelocity
 /// Size: 0x00A8 (0x000000 - 0x0000A8)
-class FRiderDismountLaunchVelocity : public MDKStruct
+class FRiderDismountLaunchVelocity : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FScalableFloat)                            DismountVelocityMultiplier                                  OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            DismountVelocityBaseForwardVelocity                         OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FScalableFloat)                            DismountVelocityBaseRightVelocity                           OFFSET(get<T>, {0x50, 40, 0, 0})
-	SMember(FScalableFloat)                            DismountVelocityBaseUpVelocity                              OFFSET(get<T>, {0x78, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityMultiplier                                  OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityBaseForwardVelocity                         OFFSET(getStruct<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityBaseRightVelocity                           OFFSET(getStruct<T>, {0x50, 40, 0, 0})
+	SMember(FScalableFloat)                            DismountVelocityBaseUpVelocity                              OFFSET(getStruct<T>, {0x78, 40, 0, 0})
 	DMember(bool)                                      bApplyDismountVelocityMultiplierToZVelocity                 OFFSET(get<bool>, {0xA0, 1, 0, 0})
 };
 
 /// Struct /Script/RidingCodeRuntime.RidingAnalyticsData_Base
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FRidingAnalyticsData_Base : public MDKStruct
+class FRidingAnalyticsData_Base : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -641,6 +651,7 @@ public:
 /// Size: 0x0000 (0x000048 - 0x000048)
 class FRidingAnalyticsData_Started : public FRidingAnalyticsData_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -651,6 +662,7 @@ public:
 /// Size: 0x0038 (0x000048 - 0x000080)
 class FRidingAnalyticsData_Stopped : public FRidingAnalyticsData_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 128;
 

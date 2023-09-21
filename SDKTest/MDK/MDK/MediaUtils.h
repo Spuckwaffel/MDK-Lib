@@ -8,8 +8,9 @@
 
 /// Struct /Script/MediaUtils.MediaPlayerTrackOptions
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FMediaPlayerTrackOptions : public MDKStruct
+class FMediaPlayerTrackOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -25,14 +26,15 @@ public:
 
 /// Struct /Script/MediaUtils.MediaPlayerOptions
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMediaPlayerOptions : public MDKStruct
+class FMediaPlayerOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FMediaPlayerTrackOptions)                  Tracks                                                      OFFSET(get<T>, {0x0, 28, 0, 0})
-	SMember(FTimespan)                                 SeekTime                                                    OFFSET(get<T>, {0x20, 8, 0, 0})
+	SMember(FMediaPlayerTrackOptions)                  Tracks                                                      OFFSET(getStruct<T>, {0x0, 28, 0, 0})
+	SMember(FTimespan)                                 SeekTime                                                    OFFSET(getStruct<T>, {0x20, 8, 0, 0})
 	CMember(EMediaPlayerOptionBooleanOverride)         PlayOnOpen                                                  OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(EMediaPlayerOptionBooleanOverride)         Loop                                                        OFFSET(get<T>, {0x29, 1, 0, 0})
 };

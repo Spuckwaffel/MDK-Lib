@@ -17,29 +17,29 @@ class AWindManager_C : public AFortWindManager
 	static inline constexpr uint64_t __MDKClassSize = 1604;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x518, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x518, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     EmptyStaticMesh                                             OFFSET(get<T>, {0x520, 8, 0, 0})
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x528, 8, 0, 0})
 	DMember(double)                                    SmallerRenderTargetOrthoWidth                               OFFSET(get<double>, {0x530, 8, 0, 0})
 	CMember(TArray<AActor*>)                           External_Test_Actor                                         OFFSET(get<T>, {0x538, 16, 0, 0})
 	CMember(TArray<AFortStaticMeshActor*>)             World_Terrain_Meshes                                        OFFSET(get<T>, {0x548, 16, 0, 0})
-	SMember(FVector)                                   Camera_Height_Offset                                        OFFSET(get<T>, {0x558, 24, 0, 0})
+	SMember(FVector)                                   Camera_Height_Offset                                        OFFSET(getStruct<T>, {0x558, 24, 0, 0})
 	DMember(double)                                    Particle_Z_Offset                                           OFFSET(get<double>, {0x570, 8, 0, 0})
 	DMember(bool)                                      Is_Water_Interaction_Enabled                                OFFSET(get<bool>, {0x578, 1, 0, 0})
 	CMember(TArray<FStaticMeshMaterialArrayCombo>)     WorldStaticMeshArray                                        OFFSET(get<T>, {0x580, 16, 0, 0})
-	SMember(FArrayOfWaterMeshWaterBlueprintPairs)      Array_Of_Water_Assets                                       OFFSET(get<T>, {0x590, 16, 0, 0})
+	SMember(FArrayOfWaterMeshWaterBlueprintPairs)      Array_Of_Water_Assets                                       OFFSET(getStruct<T>, {0x590, 16, 0, 0})
 	CMember(TArray<UStaticMesh*>)                      PrototypicalStaticMeshes                                    OFFSET(get<T>, {0x5A0, 16, 0, 0})
 	DMember(int32_t)                                   Current_Water_Mesh_Index                                    OFFSET(get<int32_t>, {0x5B0, 4, 0, 0})
 	CMember(TArray<FFlowMapMaterials>)                 WaterVectorMatToDefaultMaterialPairing                      OFFSET(get<T>, {0x5B8, 16, 0, 0})
 	DMember(bool)                                      MaterialPairingFound                                        OFFSET(get<bool>, {0x5C8, 1, 0, 0})
-	SMember(FLinearColor)                              WorldBoundsMinMax                                           OFFSET(get<T>, {0x5CC, 16, 0, 0})
+	SMember(FLinearColor)                              WorldBoundsMinMax                                           OFFSET(getStruct<T>, {0x5CC, 16, 0, 0})
 	CMember(UMaterialInterface*)                       Black_Scene_Capture_Material                                OFFSET(get<T>, {0x5E0, 8, 0, 0})
-	SMember(FBox)                                      Max_level_bounds___used_to_isolate_the_level_from_the_vista OFFSET(get<T>, {0x5E8, 56, 0, 0})
+	SMember(FBox)                                      Max_level_bounds___used_to_isolate_the_level_from_the_vista OFFSET(getStruct<T>, {0x5E8, 56, 0, 0})
 	CMember(TArray<UStaticMeshComponent*>)             StormCylinderMeshes                                         OFFSET(get<T>, {0x620, 16, 0, 0})
 	DMember(bool)                                      Storm_Cyl_Mesh_Match                                        OFFSET(get<bool>, {0x630, 1, 0, 0})
 	DMember(int32_t)                                   Wind_Cyl_Mesh_Array_Match_Index                             OFFSET(get<int32_t>, {0x634, 4, 0, 0})
 	DMember(double)                                    Delta_Wind_Falloff_in_World_Units                           OFFSET(get<double>, {0x638, 8, 0, 0})
-	SMember(FFortWindImpulseHandle)                    NewVar                                                      OFFSET(get<T>, {0x640, 4, 0, 0})
+	SMember(FFortWindImpulseHandle)                    NewVar                                                      OFFSET(getStruct<T>, {0x640, 4, 0, 0})
 
 
 	/// Functions
@@ -91,14 +91,14 @@ class AThreatPostProcessManagerAndParticleBlueprint_C : public AFortThreatPartic
 	static inline constexpr uint64_t __MDKClassSize = 1040;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x2A0, 8, 0, 0})
 	CMember(UAudioComponent*)                          EnterTheStormSound                                          OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UBillboardComponent*)                      Sprite1                                                     OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	DMember(float)                                     Ramp_Up_down_values_on_death_NewTrack_0_1CA080D642E9F1C3CB297DBE1BD2C9A4 OFFSET(get<float>, {0x2B8, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Ramp_Up_down_values_on_death__Direction_1CA080D642E9F1C3CB297DBE1BD2C9A4 OFFSET(get<T>, {0x2BC, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Ramp_Up_down_values_on_death                                OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NewEventDispatcher0                                         OFFSET(get<T>, {0x2D8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NewEventDispatcher0                                         OFFSET(getStruct<T>, {0x2D8, 16, 0, 0})
 	CMember(TArray<FVector>)                           Array_of_Cloud_Positions                                    OFFSET(get<T>, {0x2E8, 16, 0, 0})
 	DMember(int32_t)                                   RecalculateTimer                                            OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
 	DMember(bool)                                      Is_Alive                                                    OFFSET(get<bool>, {0x2FC, 1, 0, 0})
@@ -116,10 +116,10 @@ public:
 	DMember(bool)                                      SoundIsActive                                               OFFSET(get<bool>, {0x340, 1, 0, 0})
 	DMember(bool)                                      SoundWasPreviouslyActive                                    OFFSET(get<bool>, {0x341, 1, 0, 0})
 	DMember(bool)                                      is_On                                                       OFFSET(get<bool>, {0x342, 1, 0, 0})
-	SMember(FLinearColor)                              ThreatFogPostProcessColor_Morning                           OFFSET(get<T>, {0x344, 16, 0, 0})
-	SMember(FLinearColor)                              ThreatFogPostProcessColor_Day                               OFFSET(get<T>, {0x354, 16, 0, 0})
-	SMember(FLinearColor)                              ThreatFogPostProcessColor_Evening                           OFFSET(get<T>, {0x364, 16, 0, 0})
-	SMember(FLinearColor)                              ThreatFogPostProcessColor_Night                             OFFSET(get<T>, {0x374, 16, 0, 0})
+	SMember(FLinearColor)                              ThreatFogPostProcessColor_Morning                           OFFSET(getStruct<T>, {0x344, 16, 0, 0})
+	SMember(FLinearColor)                              ThreatFogPostProcessColor_Day                               OFFSET(getStruct<T>, {0x354, 16, 0, 0})
+	SMember(FLinearColor)                              ThreatFogPostProcessColor_Evening                           OFFSET(getStruct<T>, {0x364, 16, 0, 0})
+	SMember(FLinearColor)                              ThreatFogPostProcessColor_Night                             OFFSET(getStruct<T>, {0x374, 16, 0, 0})
 	CMember(TArray<FBox>)                              Array_of_Cloud_Volumes                                      OFFSET(get<T>, {0x388, 16, 0, 0})
 	DMember(double)                                    PostProcessWeightModulation                                 OFFSET(get<double>, {0x398, 8, 0, 0})
 	DMember(double)                                    Ramp_Up_And_Down_Anim_Values                                OFFSET(get<double>, {0x3A0, 8, 0, 0})
@@ -128,7 +128,7 @@ public:
 	CMember(UParticleSystemComponent*)                 LocalizedParticleSystem                                     OFFSET(get<T>, {0x3B8, 8, 0, 0})
 	DMember(bool)                                      IsWorldReady                                                OFFSET(get<bool>, {0x3C0, 1, 0, 0})
 	DMember(double)                                    Rain_Trace_Timer                                            OFFSET(get<double>, {0x3C8, 8, 0, 0})
-	SMember(FVector)                                   RainTraceOffset                                             OFFSET(get<T>, {0x3D0, 24, 0, 0})
+	SMember(FVector)                                   RainTraceOffset                                             OFFSET(getStruct<T>, {0x3D0, 24, 0, 0})
 	DMember(double)                                    RainMultiplierCurrent                                       OFFSET(get<double>, {0x3E8, 8, 0, 0})
 	DMember(double)                                    Rain_Spawn_Rate_Exponent                                    OFFSET(get<double>, {0x3F0, 8, 0, 0})
 	DMember(bool)                                      TracePrevious                                               OFFSET(get<bool>, {0x3F8, 1, 0, 0})
@@ -189,7 +189,7 @@ class AB_CameraRainDrops_01_C : public AEmitterCameraLensEffectBase
 	static inline constexpr uint64_t __MDKClassSize = 920;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(getStruct<T>, {0x380, 8, 0, 0})
 	DMember(float)                                     Alpha_Alpha_06897833405CC2B231B02C93C4E725A3                OFFSET(get<float>, {0x388, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Alpha__Direction_06897833405CC2B231B02C93C4E725A3           OFFSET(get<T>, {0x38C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Alpha                                                       OFFSET(get<T>, {0x390, 8, 0, 0})
@@ -218,8 +218,9 @@ public:
 
 /// Struct /Game/VisualThreatManager/StormVisuals/Blueprints/StaticMeshMaterialArrayCombo.StaticMeshMaterialArrayCombo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FStaticMeshMaterialArrayCombo : public MDKStruct
+class FStaticMeshMaterialArrayCombo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -230,8 +231,9 @@ public:
 
 /// Struct /Game/VisualThreatManager/StormVisuals/Blueprints/FlowMapMaterials.FlowMapMaterials
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFlowMapMaterials : public MDKStruct
+class FFlowMapMaterials : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

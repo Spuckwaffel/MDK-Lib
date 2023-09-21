@@ -41,7 +41,7 @@ class UTweenMaterialParameterInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     ParameterName                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     ParameterName                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 };
 
 /// Class /Script/Tweening.MaterialTweening
@@ -130,8 +130,9 @@ public:
 
 /// Struct /Script/Tweening.TweenOptionalFloat
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FTweenOptionalFloat : public MDKStruct
+class FTweenOptionalFloat : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -142,68 +143,74 @@ public:
 
 /// Struct /Script/Tweening.TweenOptionalVector2D
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTweenOptionalVector2D : public MDKStruct
+class FTweenOptionalVector2D : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector2D)                                 Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalVector
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FTweenOptionalVector : public MDKStruct
+class FTweenOptionalVector : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FVector)                                   Value                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   Value                                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalVector4
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FTweenOptionalVector4 : public MDKStruct
+class FTweenOptionalVector4 : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FVector4)                                  Value                                                       OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FVector4)                                  Value                                                       OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalLinearColor
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FTweenOptionalLinearColor : public MDKStruct
+class FTweenOptionalLinearColor : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
 public:
-	SMember(FLinearColor)                              Value                                                       OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FLinearColor)                              Value                                                       OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenOptionalRotator
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FTweenOptionalRotator : public MDKStruct
+class FTweenOptionalRotator : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FRotator)                                  Value                                                       OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  Value                                                       OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(bool)                                      bUseSpecificValue                                           OFFSET(get<bool>, {0x18, 1, 0, 0})
 };
 
 /// Struct /Script/Tweening.TweenDelayOptions
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FTweenDelayOptions : public MDKStruct
+class FTweenDelayOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -215,8 +222,9 @@ public:
 
 /// Struct /Script/Tweening.TweenLoopOptions
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FTweenLoopOptions : public MDKStruct
+class FTweenLoopOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -227,8 +235,9 @@ public:
 
 /// Struct /Script/Tweening.TweenSequenceEntry
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FTweenSequenceEntry : public MDKStruct
+class FTweenSequenceEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

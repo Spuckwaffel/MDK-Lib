@@ -31,26 +31,28 @@ public:
 
 /// Struct /Script/OnlineSubsystem.NamedInterface
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNamedInterface : public MDKStruct
+class FNamedInterface : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     InterfaceName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     InterfaceName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UObject*)                                  InterfaceObject                                             OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
 /// Struct /Script/OnlineSubsystem.NamedInterfaceDef
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNamedInterfaceDef : public MDKStruct
+class FNamedInterfaceDef : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     InterfaceName                                               OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FString)                                   InterfaceClassName                                          OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     InterfaceName                                               OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FString)                                   InterfaceClassName                                          OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Enum /Script/OnlineSubsystem.EInAppPurchaseState

@@ -17,10 +17,10 @@ class AAttachableWheel : public AActor
 
 public:
 	CMember(UStaticMeshComponent*)                     WheelMeshComponent                                          OFFSET(get<T>, {0x290, 8, 0, 0})
-	SMember(FRotator)                                  WheelOrientation                                            OFFSET(get<T>, {0x298, 24, 0, 0})
+	SMember(FRotator)                                  WheelOrientation                                            OFFSET(getStruct<T>, {0x298, 24, 0, 0})
 	DMember(float)                                     WheelDistance                                               OFFSET(get<float>, {0x2B0, 4, 0, 0})
 	CMember(UPhysicsConstraintComponent*)              AxleConstraint                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FAttachableWheelAttachData)                AttachData                                                  OFFSET(get<T>, {0x2C0, 88, 0, 0})
+	SMember(FAttachableWheelAttachData)                AttachData                                                  OFFSET(getStruct<T>, {0x2C0, 88, 0, 0})
 
 
 	/// Functions
@@ -80,16 +80,17 @@ public:
 
 /// Struct /Script/AttachableWheelsRuntime.AttachableWheelAttachData
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FAttachableWheelAttachData : public MDKStruct
+class FAttachableWheelAttachData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	CMember(TWeakObjectPtr<UPrimitiveComponent*>)      PrimitiveComponent                                          OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   Pos                                                         OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   Axis1                                                       OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector)                                   Axis2                                                       OFFSET(get<T>, {0x38, 24, 0, 0})
-	SMember(FName)                                     AttachmentName                                              OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FVector)                                   Pos                                                         OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   Axis1                                                       OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   Axis2                                                       OFFSET(getStruct<T>, {0x38, 24, 0, 0})
+	SMember(FName)                                     AttachmentName                                              OFFSET(getStruct<T>, {0x50, 4, 0, 0})
 };
 

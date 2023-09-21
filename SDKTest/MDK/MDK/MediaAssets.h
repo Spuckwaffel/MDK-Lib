@@ -30,7 +30,7 @@ public:
 	CMember(TEnumAsByte<TextureAddress>)               AddressX                                                    OFFSET(get<T>, {0x138, 1, 0, 0})
 	CMember(TEnumAsByte<TextureAddress>)               AddressY                                                    OFFSET(get<T>, {0x139, 1, 0, 0})
 	DMember(bool)                                      AutoClear                                                   OFFSET(get<bool>, {0x13A, 1, 0, 0})
-	SMember(FLinearColor)                              ClearColor                                                  OFFSET(get<T>, {0x13C, 16, 0, 0})
+	SMember(FLinearColor)                              ClearColor                                                  OFFSET(getStruct<T>, {0x13C, 16, 0, 0})
 	DMember(bool)                                      EnableGenMips                                               OFFSET(get<bool>, {0x14C, 1, 0, 0})
 	DMember(char)                                      NumMips                                                     OFFSET(get<char>, {0x14D, 1, 0, 0})
 	DMember(bool)                                      NewStyleOutput                                              OFFSET(get<bool>, {0x14E, 1, 0, 0})
@@ -75,7 +75,7 @@ class UBaseMediaSource : public UMediaSource
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     PlayerName                                                  OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     PlayerName                                                  OFFSET(getStruct<T>, {0x80, 4, 0, 0})
 };
 
 /// Class /Script/MediaAssets.FileMediaSource
@@ -86,7 +86,7 @@ class UFileMediaSource : public UBaseMediaSource
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   FilePath                                                    OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 	DMember(bool)                                      PrecacheFile                                                OFFSET(get<bool>, {0x98, 1, 0, 0})
 
 
@@ -122,7 +122,7 @@ class UMediaTimeStampInfo : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FTimespan)                                 Time                                                        OFFSET(get<T>, {0x28, 8, 0, 0})
+	SMember(FTimespan)                                 Time                                                        OFFSET(getStruct<T>, {0x28, 8, 0, 0})
 	DMember(int64_t)                                   SequenceIndex                                               OFFSET(get<int64_t>, {0x30, 8, 0, 0})
 };
 
@@ -134,29 +134,29 @@ class UMediaPlayer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEndReached                                                OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMediaClosed                                               OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMediaOpened                                               OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMediaOpenFailed                                           OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlaybackResumed                                           OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPlaybackSuspended                                         OFFSET(get<T>, {0x80, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSeekCompleted                                             OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTracksChanged                                             OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMetadataChanged                                           OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FTimespan)                                 CacheAhead                                                  OFFSET(get<T>, {0xC0, 8, 0, 0})
-	SMember(FTimespan)                                 CacheBehind                                                 OFFSET(get<T>, {0xC8, 8, 0, 0})
-	SMember(FTimespan)                                 CacheBehindGame                                             OFFSET(get<T>, {0xD0, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEndReached                                                OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMediaClosed                                               OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMediaOpened                                               OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMediaOpenFailed                                           OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlaybackResumed                                           OFFSET(getStruct<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPlaybackSuspended                                         OFFSET(getStruct<T>, {0x80, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSeekCompleted                                             OFFSET(getStruct<T>, {0x90, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTracksChanged                                             OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMetadataChanged                                           OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FTimespan)                                 CacheAhead                                                  OFFSET(getStruct<T>, {0xC0, 8, 0, 0})
+	SMember(FTimespan)                                 CacheBehind                                                 OFFSET(getStruct<T>, {0xC8, 8, 0, 0})
+	SMember(FTimespan)                                 CacheBehindGame                                             OFFSET(getStruct<T>, {0xD0, 8, 0, 0})
 	DMember(bool)                                      NativeAudioOut                                              OFFSET(get<bool>, {0xD8, 1, 0, 0})
 	DMember(bool)                                      PlayOnOpen                                                  OFFSET(get<bool>, {0xD9, 1, 0, 0})
 	DMember(bool)                                      Shuffle                                                     OFFSET(get<bool>, {0xDC, 1, 1, 0})
 	DMember(bool)                                      Loop                                                        OFFSET(get<bool>, {0xDC, 1, 1, 1})
 	CMember(UMediaPlaylist*)                           Playlist                                                    OFFSET(get<T>, {0xE0, 8, 0, 0})
 	DMember(int32_t)                                   PlaylistIndex                                               OFFSET(get<int32_t>, {0xE8, 4, 0, 0})
-	SMember(FTimespan)                                 TimeDelay                                                   OFFSET(get<T>, {0xF0, 8, 0, 0})
+	SMember(FTimespan)                                 TimeDelay                                                   OFFSET(getStruct<T>, {0xF0, 8, 0, 0})
 	DMember(float)                                     HorizontalFieldOfView                                       OFFSET(get<float>, {0xF8, 4, 0, 0})
 	DMember(float)                                     VerticalFieldOfView                                         OFFSET(get<float>, {0xFC, 4, 0, 0})
-	SMember(FRotator)                                  ViewRotation                                                OFFSET(get<T>, {0x100, 24, 0, 0})
-	SMember(FGuid)                                     PlayerGuid                                                  OFFSET(get<T>, {0x140, 16, 0, 0})
+	SMember(FRotator)                                  ViewRotation                                                OFFSET(getStruct<T>, {0x100, 24, 0, 0})
+	SMember(FGuid)                                     PlayerGuid                                                  OFFSET(getStruct<T>, {0x140, 16, 0, 0})
 
 
 	/// Functions
@@ -371,7 +371,7 @@ public:
 	CMember(EMediaSoundChannels)                       Channels                                                    OFFSET(get<T>, {0x900, 4, 0, 0})
 	DMember(bool)                                      DynamicRateAdjustment                                       OFFSET(get<bool>, {0x904, 1, 0, 0})
 	DMember(float)                                     RateAdjustmentFactor                                        OFFSET(get<float>, {0x908, 4, 0, 0})
-	SMember(FFloatRange)                               RateAdjustmentRange                                         OFFSET(get<T>, {0x90C, 16, 0, 0})
+	SMember(FFloatRange)                               RateAdjustmentRange                                         OFFSET(getStruct<T>, {0x90C, 16, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x920, 8, 0, 0})
 
 
@@ -417,7 +417,7 @@ class UStreamMediaSource : public UBaseMediaSource
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FString)                                   StreamUrl                                                   OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   StreamUrl                                                   OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 };
 
 /// Class /Script/MediaAssets.TimeSynchronizableMediaSource
@@ -446,22 +446,24 @@ public:
 
 /// Struct /Script/MediaAssets.MediaMetadataItemBPT
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FMediaMetadataItemBPT : public MDKStruct
+class FMediaMetadataItemBPT : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   LanguageCode                                                OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   MimeType                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   StringData                                                  OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   LanguageCode                                                OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   MimeType                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   StringData                                                  OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 	CMember(TArray<char>)                              BinaryData                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/MediaAssets.MediaMetadataItemsBPT
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMediaMetadataItemsBPT : public MDKStruct
+class FMediaMetadataItemsBPT : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -471,8 +473,9 @@ public:
 
 /// Struct /Script/MediaAssets.MediaSoundComponentSpectralData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMediaSoundComponentSpectralData : public MDKStruct
+class FMediaSoundComponentSpectralData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -483,8 +486,9 @@ public:
 
 /// Struct /Script/MediaAssets.MediaSourceCacheSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMediaSourceCacheSettings : public MDKStruct
+class FMediaSourceCacheSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -495,14 +499,15 @@ public:
 
 /// Struct /Script/MediaAssets.MediaCaptureDevice
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FMediaCaptureDevice : public MDKStruct
+class FMediaCaptureDevice : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FString)                                   URL                                                         OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FText)                                     DisplayName                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FString)                                   URL                                                         OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Enum /Script/MediaAssets.MediaTextureOutputFormat

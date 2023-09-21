@@ -204,8 +204,9 @@ public:
 
 /// Struct /Script/ReplicationGraph.ConnectionAlwaysRelevantNodePair
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FConnectionAlwaysRelevantNodePair : public MDKStruct
+class FConnectionAlwaysRelevantNodePair : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -216,8 +217,9 @@ public:
 
 /// Struct /Script/ReplicationGraph.AlwaysRelevantActorInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FAlwaysRelevantActorInfo : public MDKStruct
+class FAlwaysRelevantActorInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -229,8 +231,9 @@ public:
 
 /// Struct /Script/ReplicationGraph.TearOffActorInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTearOffActorInfo : public MDKStruct
+class FTearOffActorInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -240,21 +243,23 @@ public:
 
 /// Struct /Script/ReplicationGraph.LastLocationGatherInfo
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FLastLocationGatherInfo : public MDKStruct
+class FLastLocationGatherInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(UNetConnection*)                           Connection                                                  OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector)                                   LastLocation                                                OFFSET(get<T>, {0x8, 24, 0, 0})
-	SMember(FVector)                                   LastOutOfRangeLocationCheck                                 OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   LastLocation                                                OFFSET(getStruct<T>, {0x8, 24, 0, 0})
+	SMember(FVector)                                   LastOutOfRangeLocationCheck                                 OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 };
 
 /// Struct /Script/ReplicationGraph.ClassReplicationInfo
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FClassReplicationInfo : public MDKStruct
+class FClassReplicationInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 

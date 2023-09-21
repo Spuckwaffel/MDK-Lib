@@ -26,9 +26,9 @@ class UOnlineAccountCommon : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 2176;
 
 public:
-	SMember(FString)                                   AvailabilityServiceGameName                                 OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   AvailabilityServiceGameName                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(bool)                                      bRequireLightswitchAtStartup                                OFFSET(get<bool>, {0x48, 1, 0, 0})
-	SMember(FString)                                   EulaKey                                                     OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FString)                                   EulaKey                                                     OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 	CMember(TArray<FString>)                           EulaKeys                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TMap<FString, FString>)                    EulaKeyMapping                                              OFFSET(get<T>, {0x70, 80, 0, 0})
 	DMember(bool)                                      bEnableWaitingRoom                                          OFFSET(get<bool>, {0xC0, 1, 0, 0})
@@ -37,9 +37,9 @@ public:
 	DMember(float)                                     DefaultLoginStepTimeout                                     OFFSET(get<float>, {0x110, 4, 0, 0})
 	CMember(TMap<FName, float>)                        CustomLoginStepTimeouts                                     OFFSET(get<T>, {0x118, 80, 0, 0})
 	DMember(bool)                                      bEnableDevLoginStepTimeouts                                 OFFSET(get<bool>, {0x168, 1, 0, 0})
-	SMember(FString)                                   RedeemAccessUrl                                             OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	SMember(FString)                                   RequestFreeAccessUrl                                        OFFSET(get<T>, {0x1E0, 16, 0, 0})
-	SMember(FString)                                   RealGameAccessUrl                                           OFFSET(get<T>, {0x1F0, 16, 0, 0})
+	SMember(FString)                                   RedeemAccessUrl                                             OFFSET(getStruct<T>, {0x1D0, 16, 0, 0})
+	SMember(FString)                                   RequestFreeAccessUrl                                        OFFSET(getStruct<T>, {0x1E0, 16, 0, 0})
+	SMember(FString)                                   RealGameAccessUrl                                           OFFSET(getStruct<T>, {0x1F0, 16, 0, 0})
 	DMember(float)                                     SkipRedeemOfflinePurchasesChance                            OFFSET(get<float>, {0x200, 4, 0, 0})
 	DMember(bool)                                      bUseFreeAccessInsteadOfGameAccess                           OFFSET(get<bool>, {0x204, 1, 0, 0})
 	DMember(bool)                                      bShouldGrantFreeAccess                                      OFFSET(get<bool>, {0x205, 1, 0, 0})
@@ -63,181 +63,187 @@ public:
 
 /// Struct /Script/Account.WebEnvUrl
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FWebEnvUrl : public MDKStruct
+class FWebEnvUrl : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   URL                                                         OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   RedirectUrl                                                 OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   Environment                                                 OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   URL                                                         OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   RedirectUrl                                                 OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Environment                                                 OFFSET(getStruct<T>, {0x20, 16, 0, 0})
 };
 
 /// Struct /Script/Account.ExternalAccountServiceConfig
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FExternalAccountServiceConfig : public MDKStruct
+class FExternalAccountServiceConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
 	CMember(EExternalAccountType)                      Type                                                        OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FName)                                     ExternalServiceName                                         OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FName)                                     ExternalServiceName                                         OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/Account.ExchangeAccessParams
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FExchangeAccessParams : public MDKStruct
+class FExchangeAccessParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FString)                                   EntitlementId                                               OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   ReceiptId                                                   OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FString)                                   VendorReceipt                                               OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FString)                                   AppStore                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   EntitlementId                                               OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   ReceiptId                                                   OFFSET(getStruct<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   VendorReceipt                                               OFFSET(getStruct<T>, {0x20, 16, 0, 0})
+	SMember(FString)                                   AppStore                                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Struct /Script/Account.GiftMessage
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FGiftMessage : public MDKStruct
+class FGiftMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   GiftCode                                                    OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   SenderName                                                  OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   GiftCode                                                    OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   SenderName                                                  OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 };
 
 /// Struct /Script/Account.OnlineAccountTexts_FailedLoginConsole
 /// Size: 0x0168 (0x000000 - 0x000168)
-class FOnlineAccountTexts_FailedLoginConsole : public MDKStruct
+class FOnlineAccountTexts_FailedLoginConsole : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FText)                                     AgeRestriction                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     Generic                                                     OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FText)                                     MissingAuthAssociation                                      OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FText)                                     NeedPremiumAccount                                          OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FText)                                     OnlinePlayRestriction                                       OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FText)                                     PatchAvailable                                              OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FText)                                     PatchAvailableInstruction_Default                           OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FText)                                     PatchAvailableInstruction_Xbox                              OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FText)                                     PleaseSignIn                                                OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FText)                                     SystemUpdateAvailable                                       OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FText)                                     UI                                                          OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FText)                                     UnableToComplete                                            OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FText)                                     UnableToSignIn                                              OFFSET(get<T>, {0x120, 24, 0, 0})
-	SMember(FText)                                     UnableToStartPrivCheck                                      OFFSET(get<T>, {0x138, 24, 0, 0})
-	SMember(FText)                                     UnexpectedError                                             OFFSET(get<T>, {0x150, 24, 0, 0})
+	SMember(FText)                                     AgeRestriction                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     Generic                                                     OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     MissingAuthAssociation                                      OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FText)                                     NeedPremiumAccount                                          OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FText)                                     OnlinePlayRestriction                                       OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     PatchAvailable                                              OFFSET(getStruct<T>, {0x78, 24, 0, 0})
+	SMember(FText)                                     PatchAvailableInstruction_Default                           OFFSET(getStruct<T>, {0x90, 24, 0, 0})
+	SMember(FText)                                     PatchAvailableInstruction_Xbox                              OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
+	SMember(FText)                                     PleaseSignIn                                                OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FText)                                     SystemUpdateAvailable                                       OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FText)                                     UI                                                          OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
+	SMember(FText)                                     UnableToComplete                                            OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FText)                                     UnableToSignIn                                              OFFSET(getStruct<T>, {0x120, 24, 0, 0})
+	SMember(FText)                                     UnableToStartPrivCheck                                      OFFSET(getStruct<T>, {0x138, 24, 0, 0})
+	SMember(FText)                                     UnexpectedError                                             OFFSET(getStruct<T>, {0x150, 24, 0, 0})
 };
 
 /// Struct /Script/Account.OnlineAccountTexts
 /// Size: 0x0A08 (0x000000 - 0x000A08)
-class FOnlineAccountTexts : public MDKStruct
+class FOnlineAccountTexts : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2568;
 
 public:
-	SMember(FText)                                     AllGiftCodesUsed                                            OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FText)                                     AssociateConsoleAuth                                        OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FText)                                     AutoLoginFailed                                             OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FText)                                     AutoLoginFailedMobile                                       OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FText)                                     BannedFromGame                                              OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FText)                                     CheckEntitledToPlay                                         OFFSET(get<T>, {0x78, 24, 0, 0})
-	SMember(FText)                                     CheckingRejoin                                              OFFSET(get<T>, {0x90, 24, 0, 0})
-	SMember(FText)                                     CheckServiceAvailability                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
-	SMember(FText)                                     ConsolePrivileges                                           OFFSET(get<T>, {0xC0, 24, 0, 0})
-	SMember(FText)                                     CreateAccountCompleted                                      OFFSET(get<T>, {0xD8, 24, 0, 0})
-	SMember(FText)                                     CreateAccountFailure                                        OFFSET(get<T>, {0xF0, 24, 0, 0})
-	SMember(FText)                                     CreateHeadless                                              OFFSET(get<T>, {0x108, 24, 0, 0})
-	SMember(FText)                                     DoQosPingTests                                              OFFSET(get<T>, {0x120, 24, 0, 0})
-	SMember(FText)                                     DowntimeMinutesWarningText                                  OFFSET(get<T>, {0x138, 24, 0, 0})
-	SMember(FText)                                     DowntimeSecondsWarningText                                  OFFSET(get<T>, {0x150, 24, 0, 0})
-	SMember(FText)                                     DuplicateAuthAssociaton                                     OFFSET(get<T>, {0x168, 24, 0, 0})
-	SMember(FText)                                     EulaCheck                                                   OFFSET(get<T>, {0x180, 24, 0, 0})
-	SMember(FText)                                     ExchangeConsoleGiftsForAccess                               OFFSET(get<T>, {0x198, 24, 0, 0})
-	SMember(FText)                                     FailedAccountCreate                                         OFFSET(get<T>, {0x1B0, 24, 0, 0})
-	SMember(FText)                                     FailedEulaCheck_EulaAcceptanceFailed                        OFFSET(get<T>, {0x1C8, 24, 0, 0})
-	SMember(FText)                                     FailedEulaCheck_MustAcceptEula                              OFFSET(get<T>, {0x1E0, 24, 0, 0})
-	SMember(FText)                                     FailedLoginCredentialsMsg                                   OFFSET(get<T>, {0x1F8, 24, 0, 0})
-	SMember(FText)                                     FailedLoginAgeVerificationIncomplete                        OFFSET(get<T>, {0x210, 24, 0, 0})
-	SMember(FText)                                     FailedLoginParentalLock                                     OFFSET(get<T>, {0x228, 24, 0, 0})
-	SMember(FText)                                     FailedLoginNoRealId                                         OFFSET(get<T>, {0x240, 24, 0, 0})
-	SMember(FText)                                     FailedLoginLockoutMsg                                       OFFSET(get<T>, {0x258, 24, 0, 0})
-	SMember(FText)                                     FailedLoginRequiresMFA                                      OFFSET(get<T>, {0x270, 24, 0, 0})
-	SMember(FText)                                     FailedLoginRequiresAuthAppMFA                               OFFSET(get<T>, {0x288, 24, 0, 0})
-	SMember(FText)                                     FailedInvalidMFA                                            OFFSET(get<T>, {0x2A0, 24, 0, 0})
-	SMember(FText)                                     FailedLoginRequiresCorrectiveAction                         OFFSET(get<T>, {0x2B8, 24, 0, 0})
-	SMember(FText)                                     FailedLoginMsg                                              OFFSET(get<T>, {0x2D0, 24, 0, 0})
-	SMember(FText)                                     FailedLoginMsg_InvalidRefreshToken                          OFFSET(get<T>, {0x2E8, 24, 0, 0})
-	SMember(FText)                                     FailedLoginTencent_UnableToSignIn                           OFFSET(get<T>, {0x300, 24, 0, 0})
-	SMember(FText)                                     FailedLoginTencent_NotSignedInToWeGame                      OFFSET(get<T>, {0x318, 24, 0, 0})
-	SMember(FText)                                     FailedLoginTencent_FailedToInitializeWeGame                 OFFSET(get<T>, {0x330, 24, 0, 0})
-	SMember(FText)                                     FailedLoginTencent_WeGameSystemOffline                      OFFSET(get<T>, {0x348, 24, 0, 0})
-	SMember(FText)                                     Tencent_ExitByAntiAddiction                                 OFFSET(get<T>, {0x360, 24, 0, 0})
-	SMember(FText)                                     FailedStartLogin                                            OFFSET(get<T>, {0x378, 24, 0, 0})
-	SMember(FText)                                     FounderChatExitedText                                       OFFSET(get<T>, {0x390, 24, 0, 0})
-	SMember(FText)                                     FounderChatJoinedText                                       OFFSET(get<T>, {0x3A8, 24, 0, 0})
-	SMember(FText)                                     GameDisplayName                                             OFFSET(get<T>, {0x3C0, 24, 0, 0})
-	SMember(FText)                                     GeneralLoginFailure                                         OFFSET(get<T>, {0x3D8, 24, 0, 0})
-	SMember(FText)                                     GlobalChatExitedText                                        OFFSET(get<T>, {0x3F0, 24, 0, 0})
-	SMember(FText)                                     GlobalChatJoinedText                                        OFFSET(get<T>, {0x408, 24, 0, 0})
-	SMember(FText)                                     HeadlessAccountFailed                                       OFFSET(get<T>, {0x420, 24, 0, 0})
-	SMember(FText)                                     InMatchShutdownTimeWarningText                              OFFSET(get<T>, {0x438, 24, 0, 0})
-	SMember(FText)                                     InvalidUser                                                 OFFSET(get<T>, {0x450, 24, 0, 0})
-	SMember(FText)                                     LoggedOutofMCP                                              OFFSET(get<T>, {0x468, 24, 0, 0})
-	SMember(FText)                                     DisconnectedFromMCP                                         OFFSET(get<T>, {0x480, 24, 0, 0})
-	SMember(FText)                                     LoggedOutReturnedToTitle                                    OFFSET(get<T>, {0x498, 24, 0, 0})
-	SMember(FText)                                     LoggedOutSwitchedProfile                                    OFFSET(get<T>, {0x4B0, 24, 0, 0})
-	SMember(FText)                                     LoggingIn                                                   OFFSET(get<T>, {0x4C8, 24, 0, 0})
-	SMember(FText)                                     LoggingInConsoleAuth                                        OFFSET(get<T>, {0x4E0, 24, 0, 0})
-	SMember(FText)                                     LoggingOut                                                  OFFSET(get<T>, {0x4F8, 24, 0, 0})
-	SMember(FText)                                     LoginConsole                                                OFFSET(get<T>, {0x510, 24, 0, 0})
-	SMember(FText)                                     LoginFailure                                                OFFSET(get<T>, {0x528, 24, 0, 0})
-	SMember(FText)                                     Logout_Unlink                                               OFFSET(get<T>, {0x540, 24, 0, 0})
-	SMember(FText)                                     LogoutCompleted                                             OFFSET(get<T>, {0x558, 24, 0, 0})
-	SMember(FText)                                     LostConnection                                              OFFSET(get<T>, {0x570, 24, 0, 0})
-	SMember(FText)                                     LoginStepTimeout                                            OFFSET(get<T>, {0x588, 24, 0, 0})
-	SMember(FText)                                     MCPTimeout                                                  OFFSET(get<T>, {0x5A0, 24, 0, 0})
-	SMember(FText)                                     LightswitchCheckNetworkFailureMsg                           OFFSET(get<T>, {0x5B8, 24, 0, 0})
-	SMember(FText)                                     NetworkConnectionUnavailable                                OFFSET(get<T>, {0x5D0, 24, 0, 0})
-	SMember(FText)                                     NoPlayEntitlement                                           OFFSET(get<T>, {0x5E8, 24, 0, 0})
-	SMember(FText)                                     NoServerAccess                                              OFFSET(get<T>, {0x600, 24, 0, 0})
-	SMember(FText)                                     PlayAccessRevoked                                           OFFSET(get<T>, {0x618, 24, 0, 0})
-	SMember(FText)                                     PremiumAccountName_Default                                  OFFSET(get<T>, {0x630, 24, 0, 0})
-	SMember(FText)                                     PremiumAccountName_Sony                                     OFFSET(get<T>, {0x648, 24, 0, 0})
-	SMember(FText)                                     PremiumAccountName_Switch                                   OFFSET(get<T>, {0x660, 24, 0, 0})
-	SMember(FText)                                     PremiumAccountName_XboxOne                                  OFFSET(get<T>, {0x678, 24, 0, 0})
-	SMember(FText)                                     RedeemOfflinePurchases                                      OFFSET(get<T>, {0x690, 24, 0, 0})
-	SMember(FText)                                     ServiceDowntime                                             OFFSET(get<T>, {0x6A8, 24, 0, 0})
-	SMember(FText)                                     SignInCompleting                                            OFFSET(get<T>, {0x6C0, 24, 0, 0})
-	SMember(FText)                                     SignIntoConsoleServices                                     OFFSET(get<T>, {0x6D8, 24, 0, 0})
-	SMember(FText)                                     TokenExpired                                                OFFSET(get<T>, {0x6F0, 24, 0, 0})
-	SMember(FText)                                     UnableToConnect                                             OFFSET(get<T>, {0x708, 24, 0, 0})
-	SMember(FText)                                     UnableToJoinWaitingRoomLoginQueue                           OFFSET(get<T>, {0x720, 24, 0, 0})
-	SMember(FText)                                     UnexpectedConsoleAuthFailure                                OFFSET(get<T>, {0x738, 24, 0, 0})
-	SMember(FText)                                     UnlinkConsoleFailed                                         OFFSET(get<T>, {0x750, 24, 0, 0})
-	SMember(FText)                                     UserLoginFailed                                             OFFSET(get<T>, {0x768, 24, 0, 0})
-	SMember(FText)                                     WaitingRoom                                                 OFFSET(get<T>, {0x780, 24, 0, 0})
-	SMember(FText)                                     WaitingRoomError                                            OFFSET(get<T>, {0x798, 24, 0, 0})
-	SMember(FText)                                     WaitingRoomFailure                                          OFFSET(get<T>, {0x7B0, 24, 0, 0})
-	SMember(FText)                                     WaitingRoomWaiting                                          OFFSET(get<T>, {0x7C8, 24, 0, 0})
-	SMember(FOnlineAccountTexts_FailedLoginConsole)    FailedLoginConsole                                          OFFSET(get<T>, {0x7E0, 360, 0, 0})
-	SMember(FText)                                     LoggingInExternalAuth                                       OFFSET(get<T>, {0x948, 24, 0, 0})
-	SMember(FText)                                     CreateDeviceAuth                                            OFFSET(get<T>, {0x960, 24, 0, 0})
-	SMember(FText)                                     ExtAuthCanceled                                             OFFSET(get<T>, {0x978, 24, 0, 0})
-	SMember(FText)                                     ExtAuthFailure                                              OFFSET(get<T>, {0x990, 24, 0, 0})
-	SMember(FText)                                     ExtAuthAssociationFailure                                   OFFSET(get<T>, {0x9A8, 24, 0, 0})
-	SMember(FText)                                     ExtAuthTimeout                                              OFFSET(get<T>, {0x9C0, 24, 0, 0})
-	SMember(FText)                                     ExtAuthMissingAuthAssociation                               OFFSET(get<T>, {0x9D8, 24, 0, 0})
-	SMember(FText)                                     UnableToQueryReceipts                                       OFFSET(get<T>, {0x9F0, 24, 0, 0})
+	SMember(FText)                                     AllGiftCodesUsed                                            OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FText)                                     AssociateConsoleAuth                                        OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FText)                                     AutoLoginFailed                                             OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FText)                                     AutoLoginFailedMobile                                       OFFSET(getStruct<T>, {0x48, 24, 0, 0})
+	SMember(FText)                                     BannedFromGame                                              OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FText)                                     CheckEntitledToPlay                                         OFFSET(getStruct<T>, {0x78, 24, 0, 0})
+	SMember(FText)                                     CheckingRejoin                                              OFFSET(getStruct<T>, {0x90, 24, 0, 0})
+	SMember(FText)                                     CheckServiceAvailability                                    OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
+	SMember(FText)                                     ConsolePrivileges                                           OFFSET(getStruct<T>, {0xC0, 24, 0, 0})
+	SMember(FText)                                     CreateAccountCompleted                                      OFFSET(getStruct<T>, {0xD8, 24, 0, 0})
+	SMember(FText)                                     CreateAccountFailure                                        OFFSET(getStruct<T>, {0xF0, 24, 0, 0})
+	SMember(FText)                                     CreateHeadless                                              OFFSET(getStruct<T>, {0x108, 24, 0, 0})
+	SMember(FText)                                     DoQosPingTests                                              OFFSET(getStruct<T>, {0x120, 24, 0, 0})
+	SMember(FText)                                     DowntimeMinutesWarningText                                  OFFSET(getStruct<T>, {0x138, 24, 0, 0})
+	SMember(FText)                                     DowntimeSecondsWarningText                                  OFFSET(getStruct<T>, {0x150, 24, 0, 0})
+	SMember(FText)                                     DuplicateAuthAssociaton                                     OFFSET(getStruct<T>, {0x168, 24, 0, 0})
+	SMember(FText)                                     EulaCheck                                                   OFFSET(getStruct<T>, {0x180, 24, 0, 0})
+	SMember(FText)                                     ExchangeConsoleGiftsForAccess                               OFFSET(getStruct<T>, {0x198, 24, 0, 0})
+	SMember(FText)                                     FailedAccountCreate                                         OFFSET(getStruct<T>, {0x1B0, 24, 0, 0})
+	SMember(FText)                                     FailedEulaCheck_EulaAcceptanceFailed                        OFFSET(getStruct<T>, {0x1C8, 24, 0, 0})
+	SMember(FText)                                     FailedEulaCheck_MustAcceptEula                              OFFSET(getStruct<T>, {0x1E0, 24, 0, 0})
+	SMember(FText)                                     FailedLoginCredentialsMsg                                   OFFSET(getStruct<T>, {0x1F8, 24, 0, 0})
+	SMember(FText)                                     FailedLoginAgeVerificationIncomplete                        OFFSET(getStruct<T>, {0x210, 24, 0, 0})
+	SMember(FText)                                     FailedLoginParentalLock                                     OFFSET(getStruct<T>, {0x228, 24, 0, 0})
+	SMember(FText)                                     FailedLoginNoRealId                                         OFFSET(getStruct<T>, {0x240, 24, 0, 0})
+	SMember(FText)                                     FailedLoginLockoutMsg                                       OFFSET(getStruct<T>, {0x258, 24, 0, 0})
+	SMember(FText)                                     FailedLoginRequiresMFA                                      OFFSET(getStruct<T>, {0x270, 24, 0, 0})
+	SMember(FText)                                     FailedLoginRequiresAuthAppMFA                               OFFSET(getStruct<T>, {0x288, 24, 0, 0})
+	SMember(FText)                                     FailedInvalidMFA                                            OFFSET(getStruct<T>, {0x2A0, 24, 0, 0})
+	SMember(FText)                                     FailedLoginRequiresCorrectiveAction                         OFFSET(getStruct<T>, {0x2B8, 24, 0, 0})
+	SMember(FText)                                     FailedLoginMsg                                              OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
+	SMember(FText)                                     FailedLoginMsg_InvalidRefreshToken                          OFFSET(getStruct<T>, {0x2E8, 24, 0, 0})
+	SMember(FText)                                     FailedLoginTencent_UnableToSignIn                           OFFSET(getStruct<T>, {0x300, 24, 0, 0})
+	SMember(FText)                                     FailedLoginTencent_NotSignedInToWeGame                      OFFSET(getStruct<T>, {0x318, 24, 0, 0})
+	SMember(FText)                                     FailedLoginTencent_FailedToInitializeWeGame                 OFFSET(getStruct<T>, {0x330, 24, 0, 0})
+	SMember(FText)                                     FailedLoginTencent_WeGameSystemOffline                      OFFSET(getStruct<T>, {0x348, 24, 0, 0})
+	SMember(FText)                                     Tencent_ExitByAntiAddiction                                 OFFSET(getStruct<T>, {0x360, 24, 0, 0})
+	SMember(FText)                                     FailedStartLogin                                            OFFSET(getStruct<T>, {0x378, 24, 0, 0})
+	SMember(FText)                                     FounderChatExitedText                                       OFFSET(getStruct<T>, {0x390, 24, 0, 0})
+	SMember(FText)                                     FounderChatJoinedText                                       OFFSET(getStruct<T>, {0x3A8, 24, 0, 0})
+	SMember(FText)                                     GameDisplayName                                             OFFSET(getStruct<T>, {0x3C0, 24, 0, 0})
+	SMember(FText)                                     GeneralLoginFailure                                         OFFSET(getStruct<T>, {0x3D8, 24, 0, 0})
+	SMember(FText)                                     GlobalChatExitedText                                        OFFSET(getStruct<T>, {0x3F0, 24, 0, 0})
+	SMember(FText)                                     GlobalChatJoinedText                                        OFFSET(getStruct<T>, {0x408, 24, 0, 0})
+	SMember(FText)                                     HeadlessAccountFailed                                       OFFSET(getStruct<T>, {0x420, 24, 0, 0})
+	SMember(FText)                                     InMatchShutdownTimeWarningText                              OFFSET(getStruct<T>, {0x438, 24, 0, 0})
+	SMember(FText)                                     InvalidUser                                                 OFFSET(getStruct<T>, {0x450, 24, 0, 0})
+	SMember(FText)                                     LoggedOutofMCP                                              OFFSET(getStruct<T>, {0x468, 24, 0, 0})
+	SMember(FText)                                     DisconnectedFromMCP                                         OFFSET(getStruct<T>, {0x480, 24, 0, 0})
+	SMember(FText)                                     LoggedOutReturnedToTitle                                    OFFSET(getStruct<T>, {0x498, 24, 0, 0})
+	SMember(FText)                                     LoggedOutSwitchedProfile                                    OFFSET(getStruct<T>, {0x4B0, 24, 0, 0})
+	SMember(FText)                                     LoggingIn                                                   OFFSET(getStruct<T>, {0x4C8, 24, 0, 0})
+	SMember(FText)                                     LoggingInConsoleAuth                                        OFFSET(getStruct<T>, {0x4E0, 24, 0, 0})
+	SMember(FText)                                     LoggingOut                                                  OFFSET(getStruct<T>, {0x4F8, 24, 0, 0})
+	SMember(FText)                                     LoginConsole                                                OFFSET(getStruct<T>, {0x510, 24, 0, 0})
+	SMember(FText)                                     LoginFailure                                                OFFSET(getStruct<T>, {0x528, 24, 0, 0})
+	SMember(FText)                                     Logout_Unlink                                               OFFSET(getStruct<T>, {0x540, 24, 0, 0})
+	SMember(FText)                                     LogoutCompleted                                             OFFSET(getStruct<T>, {0x558, 24, 0, 0})
+	SMember(FText)                                     LostConnection                                              OFFSET(getStruct<T>, {0x570, 24, 0, 0})
+	SMember(FText)                                     LoginStepTimeout                                            OFFSET(getStruct<T>, {0x588, 24, 0, 0})
+	SMember(FText)                                     MCPTimeout                                                  OFFSET(getStruct<T>, {0x5A0, 24, 0, 0})
+	SMember(FText)                                     LightswitchCheckNetworkFailureMsg                           OFFSET(getStruct<T>, {0x5B8, 24, 0, 0})
+	SMember(FText)                                     NetworkConnectionUnavailable                                OFFSET(getStruct<T>, {0x5D0, 24, 0, 0})
+	SMember(FText)                                     NoPlayEntitlement                                           OFFSET(getStruct<T>, {0x5E8, 24, 0, 0})
+	SMember(FText)                                     NoServerAccess                                              OFFSET(getStruct<T>, {0x600, 24, 0, 0})
+	SMember(FText)                                     PlayAccessRevoked                                           OFFSET(getStruct<T>, {0x618, 24, 0, 0})
+	SMember(FText)                                     PremiumAccountName_Default                                  OFFSET(getStruct<T>, {0x630, 24, 0, 0})
+	SMember(FText)                                     PremiumAccountName_Sony                                     OFFSET(getStruct<T>, {0x648, 24, 0, 0})
+	SMember(FText)                                     PremiumAccountName_Switch                                   OFFSET(getStruct<T>, {0x660, 24, 0, 0})
+	SMember(FText)                                     PremiumAccountName_XboxOne                                  OFFSET(getStruct<T>, {0x678, 24, 0, 0})
+	SMember(FText)                                     RedeemOfflinePurchases                                      OFFSET(getStruct<T>, {0x690, 24, 0, 0})
+	SMember(FText)                                     ServiceDowntime                                             OFFSET(getStruct<T>, {0x6A8, 24, 0, 0})
+	SMember(FText)                                     SignInCompleting                                            OFFSET(getStruct<T>, {0x6C0, 24, 0, 0})
+	SMember(FText)                                     SignIntoConsoleServices                                     OFFSET(getStruct<T>, {0x6D8, 24, 0, 0})
+	SMember(FText)                                     TokenExpired                                                OFFSET(getStruct<T>, {0x6F0, 24, 0, 0})
+	SMember(FText)                                     UnableToConnect                                             OFFSET(getStruct<T>, {0x708, 24, 0, 0})
+	SMember(FText)                                     UnableToJoinWaitingRoomLoginQueue                           OFFSET(getStruct<T>, {0x720, 24, 0, 0})
+	SMember(FText)                                     UnexpectedConsoleAuthFailure                                OFFSET(getStruct<T>, {0x738, 24, 0, 0})
+	SMember(FText)                                     UnlinkConsoleFailed                                         OFFSET(getStruct<T>, {0x750, 24, 0, 0})
+	SMember(FText)                                     UserLoginFailed                                             OFFSET(getStruct<T>, {0x768, 24, 0, 0})
+	SMember(FText)                                     WaitingRoom                                                 OFFSET(getStruct<T>, {0x780, 24, 0, 0})
+	SMember(FText)                                     WaitingRoomError                                            OFFSET(getStruct<T>, {0x798, 24, 0, 0})
+	SMember(FText)                                     WaitingRoomFailure                                          OFFSET(getStruct<T>, {0x7B0, 24, 0, 0})
+	SMember(FText)                                     WaitingRoomWaiting                                          OFFSET(getStruct<T>, {0x7C8, 24, 0, 0})
+	SMember(FOnlineAccountTexts_FailedLoginConsole)    FailedLoginConsole                                          OFFSET(getStruct<T>, {0x7E0, 360, 0, 0})
+	SMember(FText)                                     LoggingInExternalAuth                                       OFFSET(getStruct<T>, {0x948, 24, 0, 0})
+	SMember(FText)                                     CreateDeviceAuth                                            OFFSET(getStruct<T>, {0x960, 24, 0, 0})
+	SMember(FText)                                     ExtAuthCanceled                                             OFFSET(getStruct<T>, {0x978, 24, 0, 0})
+	SMember(FText)                                     ExtAuthFailure                                              OFFSET(getStruct<T>, {0x990, 24, 0, 0})
+	SMember(FText)                                     ExtAuthAssociationFailure                                   OFFSET(getStruct<T>, {0x9A8, 24, 0, 0})
+	SMember(FText)                                     ExtAuthTimeout                                              OFFSET(getStruct<T>, {0x9C0, 24, 0, 0})
+	SMember(FText)                                     ExtAuthMissingAuthAssociation                               OFFSET(getStruct<T>, {0x9D8, 24, 0, 0})
+	SMember(FText)                                     UnableToQueryReceipts                                       OFFSET(getStruct<T>, {0x9F0, 24, 0, 0})
 };
 
 /// Enum /Script/Account.EExternalAccountType

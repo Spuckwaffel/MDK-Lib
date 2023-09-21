@@ -19,13 +19,14 @@ public:
 
 /// Struct /Script/InputCore.Key
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FKey : public MDKStruct
+class FKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     KeyName                                                     OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     KeyName                                                     OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 };
 
 /// Enum /Script/InputCore.ETouchIndex

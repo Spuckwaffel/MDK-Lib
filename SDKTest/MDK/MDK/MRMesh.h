@@ -16,14 +16,14 @@ class UMockDataMeshTrackerComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMeshTrackerUpdated                                        OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMeshTrackerUpdated                                        OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
 	DMember(bool)                                      ScanWorld                                                   OFFSET(get<bool>, {0x2B0, 1, 0, 0})
 	DMember(bool)                                      RequestNormals                                              OFFSET(get<bool>, {0x2B1, 1, 0, 0})
 	DMember(bool)                                      RequestVertexConfidence                                     OFFSET(get<bool>, {0x2B2, 1, 0, 0})
 	CMember(EMeshTrackerVertexColorMode)               VertexColorMode                                             OFFSET(get<T>, {0x2B3, 1, 0, 0})
 	CMember(TArray<FColor>)                            BlockVertexColors                                           OFFSET(get<T>, {0x2B8, 16, 0, 0})
-	SMember(FLinearColor)                              VertexColorFromConfidenceZero                               OFFSET(get<T>, {0x2C8, 16, 0, 0})
-	SMember(FLinearColor)                              VertexColorFromConfidenceOne                                OFFSET(get<T>, {0x2D8, 16, 0, 0})
+	SMember(FLinearColor)                              VertexColorFromConfidenceZero                               OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
+	SMember(FLinearColor)                              VertexColorFromConfidenceOne                                OFFSET(getStruct<T>, {0x2D8, 16, 0, 0})
 	DMember(float)                                     UpdateInterval                                              OFFSET(get<float>, {0x2E8, 4, 0, 0})
 	CMember(UMRMeshComponent*)                         MRMesh                                                      OFFSET(get<T>, {0x2F0, 8, 0, 0})
 
@@ -46,7 +46,7 @@ class UMRMeshBodyHolder : public UObject
 
 public:
 	CMember(UBodySetup*)                               BodySetup                                                   OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FBodyInstance)                             BodyInstance                                                OFFSET(get<T>, {0x38, 392, 0, 0})
+	SMember(FBodyInstance)                             BodyInstance                                                OFFSET(getStruct<T>, {0x38, 392, 0, 0})
 };
 
 /// Class /Script/MRMesh.MRMeshComponent
@@ -102,8 +102,9 @@ public:
 
 /// Struct /Script/MRMesh.MRMeshConfiguration
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FMRMeshConfiguration : public MDKStruct
+class FMRMeshConfiguration : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

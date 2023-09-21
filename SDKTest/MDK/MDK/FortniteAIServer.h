@@ -27,10 +27,10 @@ class UFortAthenaAIBotEvaluator_Harvest : public UFortAthenaAIBotEvaluator_Movem
 public:
 	CMember(UClass*)                                   ProjectionNavigationQueryFilterClass                        OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(UClass*)                                   ValidNavigationQueryFilterClassOverride                     OFFSET(get<T>, {0x1D0, 8, 0, 0})
-	SMember(FScalableFloat)                            MaximumTimeToHelpFromLastPlayerDamage                       OFFSET(get<T>, {0x1D8, 40, 0, 0})
-	SMember(FName)                                     HarvestTargetKeyName                                        OFFSET(get<T>, {0x200, 4, 0, 0})
-	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(get<T>, {0x208, 4, 0, 0})
-	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(get<T>, {0x210, 4, 0, 0})
+	SMember(FScalableFloat)                            MaximumTimeToHelpFromLastPlayerDamage                       OFFSET(getStruct<T>, {0x1D8, 40, 0, 0})
+	SMember(FName)                                     HarvestTargetKeyName                                        OFFSET(getStruct<T>, {0x200, 4, 0, 0})
+	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(getStruct<T>, {0x208, 4, 0, 0})
+	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(getStruct<T>, {0x210, 4, 0, 0})
 
 
 	/// Functions
@@ -48,11 +48,11 @@ class UFortAthenaAIBotEvaluator_ImitatePlayerEmote : public UFortAthenaAIBotEval
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FScalableFloat)                            MinDistanceFromPlayerToPlayEmote                            OFFSET(get<T>, {0x1E0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxImitationDuration                                        OFFSET(get<T>, {0x208, 40, 0, 0})
-	SMember(FFortNearbyActorsPerceptionConfiguration)  PerceptionConfiguration                                     OFFSET(get<T>, {0x230, 208, 0, 0})
-	SMember(FName)                                     ImitatePlayerEmoteTargetActorKeyName                        OFFSET(get<T>, {0x300, 4, 0, 0})
-	SMember(FName)                                     ImitatePlayerEmoteShouldMoveKeyName                         OFFSET(get<T>, {0x308, 4, 0, 0})
+	SMember(FScalableFloat)                            MinDistanceFromPlayerToPlayEmote                            OFFSET(getStruct<T>, {0x1E0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxImitationDuration                                        OFFSET(getStruct<T>, {0x208, 40, 0, 0})
+	SMember(FFortNearbyActorsPerceptionConfiguration)  PerceptionConfiguration                                     OFFSET(getStruct<T>, {0x230, 208, 0, 0})
+	SMember(FName)                                     ImitatePlayerEmoteTargetActorKeyName                        OFFSET(getStruct<T>, {0x300, 4, 0, 0})
+	SMember(FName)                                     ImitatePlayerEmoteShouldMoveKeyName                         OFFSET(getStruct<T>, {0x308, 4, 0, 0})
 
 
 	/// Functions
@@ -101,9 +101,9 @@ class UFortAthenaBTService_WorldCondition : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FWorldConditionQueryDefinition)            Conditions                                                  OFFSET(get<T>, {0x70, 24, 0, 0})
-	SMember(FName)                                     ConditionsResultName                                        OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(get<T>, {0x90, 48, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            Conditions                                                  OFFSET(getStruct<T>, {0x70, 24, 0, 0})
+	SMember(FName)                                     ConditionsResultName                                        OFFSET(getStruct<T>, {0x88, 4, 0, 0})
+	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(getStruct<T>, {0x90, 48, 0, 0})
 	CMember(AAIController*)                            CachedOwnerController                                       OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(AActor*)                                   CachedOwnerPawn                                             OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
@@ -116,11 +116,11 @@ class UFortAthenaBTTask_Harvest : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FName)                                     HarvestExecutionStatusKeyName                               OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     HarvestTargetKeyName                                        OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerMeleeKeyName                                   OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FName)                                     HarvestExecutionStatusKeyName                               OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     HarvestTargetKeyName                                        OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     HarvestTargetHitPointKeyName                                OFFSET(getStruct<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     HarvestDestinationKeyName                                   OFFSET(getStruct<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeKeyName                                   OFFSET(getStruct<T>, {0x90, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_VehicleSwitchSeat
@@ -216,9 +216,9 @@ class UFortQueryGenerator_GridInBox : public UEnvQueryGenerator_ProjectedPoints
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 BoxWidth                                                    OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 BoxLength                                                   OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(get<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 BoxWidth                                                    OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 BoxLength                                                   OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x130, 8, 0, 0})
 };
 
@@ -230,7 +230,7 @@ class UFortQueryGenerator_GridInVolume : public UEnvQueryGenerator_ProjectedPoin
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(get<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0x88, 56, 0, 0})
 	CMember(UClass*)                                   GenerateInVolume                                            OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
@@ -263,7 +263,7 @@ class UFortEnvQueryGenerator_ProjectedPoints : public UEnvQueryGenerator_Project
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     OverridenAgentNameForNavmesh                                OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     OverridenAgentNameForNavmesh                                OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortEnvQueryGenerator_SimpleGrid
@@ -274,8 +274,8 @@ class UFortEnvQueryGenerator_SimpleGrid : public UFortEnvQueryGenerator_Projecte
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 GridSize                                                    OFFSET(get<T>, {0x90, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(get<T>, {0xC8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 GridSize                                                    OFFSET(getStruct<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SpaceBetween                                                OFFSET(getStruct<T>, {0xC8, 56, 0, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x100, 8, 0, 0})
 };
 
@@ -340,8 +340,8 @@ class UFortBTDecorator_DistanceBetween : public UBTDecorator
 
 public:
 	CMember(TEnumAsByte<EArithmeticKeyOperation>)      Operator                                                    OFFSET(get<T>, {0x68, 1, 0, 0})
-	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 	DMember(float)                                     SpecifiedDistance                                           OFFSET(get<float>, {0xC0, 4, 0, 0})
 	DMember(bool)                                      bUseSelf                                                    OFFSET(get<bool>, {0xC4, 1, 1, 0})
 	DMember(bool)                                      bCalculateAs2D                                              OFFSET(get<bool>, {0xC4, 1, 1, 1})
@@ -398,9 +398,9 @@ class UFortBTDecorator_GameplayAbility_HasGameplayAbility : public UBTDecorator
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FBlackboardKeySelector)                    AbilityOwningActorKey                                       OFFSET(get<T>, {0x68, 40, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(get<T>, {0x90, 32, 0, 0})
-	SMember(FBlackboardKeySelector)                    GameplayAbilityTagBlackboardKey                             OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    AbilityOwningActorKey                                       OFFSET(getStruct<T>, {0x68, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(getStruct<T>, {0x90, 32, 0, 0})
+	SMember(FBlackboardKeySelector)                    GameplayAbilityTagBlackboardKey                             OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 	DMember(bool)                                      bOnlyTestActiveAbility                                      OFFSET(get<bool>, {0xD8, 1, 0, 0})
 };
 
@@ -492,7 +492,7 @@ public:
 	DMember(float)                                     MinTime                                                     OFFSET(get<float>, {0x104, 4, 0, 0})
 	DMember(bool)                                      bUseMinDist                                                 OFFSET(get<bool>, {0x108, 1, 0, 0})
 	DMember(float)                                     MinDistMinTime                                              OFFSET(get<float>, {0x10C, 4, 0, 0})
-	SMember(FDistanceToTargetComparison)               MinDistanceComparison                                       OFFSET(get<T>, {0x110, 56, 0, 0})
+	SMember(FDistanceToTargetComparison)               MinDistanceComparison                                       OFFSET(getStruct<T>, {0x110, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortBTDecorator_IsTakerAirborne
@@ -517,7 +517,7 @@ public:
 	DMember(bool)                                      bTestIfCurrentWeaponIsValid                                 OFFSET(get<bool>, {0x6C, 1, 1, 0})
 	DMember(bool)                                      bCurrentWeaponShouldBeValid                                 OFFSET(get<bool>, {0x6C, 1, 1, 1})
 	DMember(bool)                                      bTestAllowedCurrentWeaponTags                               OFFSET(get<bool>, {0x6C, 1, 1, 2})
-	SMember(FGameplayTagContainer)                     AllowedCurrentWeaponTags                                    OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AllowedCurrentWeaponTags                                    OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 	DMember(bool)                                      bTestIfCurrentWeaponIsReloading                             OFFSET(get<bool>, {0x90, 1, 1, 0})
 	DMember(bool)                                      bCurrentWeaponShouldBeReloading                             OFFSET(get<bool>, {0x90, 1, 1, 1})
 	DMember(bool)                                      bTestIfCurrentWeaponHasAmmoInMagazine                       OFFSET(get<bool>, {0x90, 1, 1, 2})
@@ -535,10 +535,10 @@ class UFortBTService_ActivateAbility : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FGameplayTagContainer)                     AbilityTags                                                 OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     AbilityTags                                                 OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 	DMember(bool)                                      bRequireCanHitTargetWithAbility                             OFFSET(get<bool>, {0x90, 1, 0, 0})
 	DMember(bool)                                      bPawnTargetsOnly                                            OFFSET(get<bool>, {0x91, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     ProhibitedTargetTags                                        OFFSET(get<T>, {0x98, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ProhibitedTargetTags                                        OFFSET(getStruct<T>, {0x98, 32, 0, 0})
 	DMember(bool)                                      bCanActivateWhenMoving                                      OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	CMember(TArray<FDistanceToTargetComparison>)       DistanceChecks                                              OFFSET(get<T>, {0xC0, 16, 0, 0})
 };
@@ -551,8 +551,8 @@ class UFortBTService_UpdateBotMissionBuilding : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FBlackboardKeySelector)                    InterestLocationKey                                         OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    BuildOrderKey                                               OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    InterestLocationKey                                         OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BuildOrderKey                                               OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortBTService_UpdateBotMissionGoal
@@ -597,8 +597,8 @@ class UFortBTTask_ExecuteGameplayAbility : public UBTTask_GameplayTaskBase
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(get<T>, {0x78, 32, 0, 0})
-	SMember(FBlackboardKeySelector)                    GameplayAbilityTagBlackboardKey                             OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(getStruct<T>, {0x78, 32, 0, 0})
+	SMember(FBlackboardKeySelector)                    GameplayAbilityTagBlackboardKey                             OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 	DMember(bool)                                      bUseBlackboardTag                                           OFFSET(get<bool>, {0xC0, 1, 0, 0})
 };
 
@@ -610,15 +610,15 @@ class UFortBTTask_GameMoveTo : public UBTTask_MoveTo
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-	SMember(FBlackboardKeySelector)                    FocalPointWhileMoving                                       OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    FocalPointWhileMoving                                       OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 	CMember(TEnumAsByte<EPathObstacleAction>)          PathObstacleAction                                          OFFSET(get<T>, {0xD8, 1, 0, 0})
 	CMember(UClass*)                                   PushBumpedPawnClass                                         OFFSET(get<T>, {0xE0, 8, 0, 0})
-	SMember(FGameplayTag)                              NavFilterTag                                                OFFSET(get<T>, {0xE8, 4, 0, 0})
+	SMember(FGameplayTag)                              NavFilterTag                                                OFFSET(getStruct<T>, {0xE8, 4, 0, 0})
 	DMember(bool)                                      bDetectUnexpectedPathBlockingObstacles                      OFFSET(get<bool>, {0xEC, 1, 1, 0})
 	DMember(bool)                                      bEnableSlowdownAtGoal                                       OFFSET(get<bool>, {0xEC, 1, 1, 1})
 	DMember(bool)                                      bStopAtGoal                                                 OFFSET(get<bool>, {0xEC, 1, 1, 2})
 	DMember(bool)                                      bFinishMoveOnOverlap                                        OFFSET(get<bool>, {0xEC, 1, 1, 3})
-	SMember(FBlackboardKeySelector)                    AcceptableRadiusKey                                         OFFSET(get<T>, {0xF0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    AcceptableRadiusKey                                         OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
 	DMember(bool)                                      bDeimosFlavor                                               OFFSET(get<bool>, {0x118, 1, 1, 0})
 };
 
@@ -650,7 +650,7 @@ class UFortBTTask_RotateToFaceBBEntryWithTags : public UBTTask_RotateToFaceBBEnt
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FGameplayTagContainer)                     TagsToApply                                                 OFFSET(get<T>, {0xA0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagsToApply                                                 OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortBTTask_SetFrustrationDiscouragement
@@ -693,7 +693,7 @@ class AFortEQSPrevisActor : public AActor
 
 public:
 	CMember(USceneComponent*)                          SceneRoot                                                   OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(get<T>, {0x2A8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTags                                                OFFSET(getStruct<T>, {0x2A8, 32, 0, 0})
 
 
 	/// Functions
@@ -722,7 +722,7 @@ class UFortQueryContext_AllBots : public UEnvQueryContext
 
 public:
 	DMember(bool)                                      bIncludeOnlyAthenaGameParticipantBots                       OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         BotTagQuery                                                 OFFSET(get<T>, {0x30, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         BotTagQuery                                                 OFFSET(getStruct<T>, {0x30, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryContext_AllEnemies
@@ -763,7 +763,7 @@ class UFortQueryContext_AllPOIVolumes : public UEnvQueryContext
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGameplayTagQuery)                         VolumeLocationTagQuery                                      OFFSET(get<T>, {0x28, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         VolumeLocationTagQuery                                      OFFSET(getStruct<T>, {0x28, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryContext_AthenaCurrentSafeZoneCenter
@@ -1034,8 +1034,8 @@ class UFortQueryData_CurvesAroundLine : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FFortPointsOnCurve)                        PointsOnSideA                                               OFFSET(get<T>, {0x30, 48, 0, 0})
-	SMember(FFortPointsOnCurve)                        PointsOnSideB                                               OFFSET(get<T>, {0x60, 48, 0, 0})
+	SMember(FFortPointsOnCurve)                        PointsOnSideA                                               OFFSET(getStruct<T>, {0x30, 48, 0, 0})
+	SMember(FFortPointsOnCurve)                        PointsOnSideB                                               OFFSET(getStruct<T>, {0x60, 48, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_ActorsAround
@@ -1086,17 +1086,17 @@ class UFortQueryGenerator_Buildings : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
 public:
-	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(get<T>, {0x50, 48, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(getStruct<T>, {0x50, 48, 0, 0})
 	CMember(UFortAIAssignmentSettings*)                AssignmentSettings                                          OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UClass*)                                   BuildingGridVolumeCenter                                    OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FAIDataProviderIntValue)                   HorizontalBuildingCellRadius                                OFFSET(get<T>, {0x90, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   BuildingCellsAbove                                          OFFSET(get<T>, {0xC8, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   BuildingCellsBelow                                          OFFSET(get<T>, {0x100, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bIncludeWalls                                               OFFSET(get<T>, {0x138, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bIncludeFloors                                              OFFSET(get<T>, {0x170, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   HorizontalBuildingCellRadius                                OFFSET(getStruct<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   BuildingCellsAbove                                          OFFSET(getStruct<T>, {0xC8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   BuildingCellsBelow                                          OFFSET(getStruct<T>, {0x100, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bIncludeWalls                                               OFFSET(getStruct<T>, {0x138, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bIncludeFloors                                              OFFSET(getStruct<T>, {0x170, 56, 0, 0})
 	CMember(TArray<EFloorPatternType>)                 FloorPatternsToIgnore                                       OFFSET(get<T>, {0x1A8, 16, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bIncludeCenterCell                                          OFFSET(get<T>, {0x1B8, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   MaxBuildingActorsPerVolumeCenterToCollect                   OFFSET(get<T>, {0x1F0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bIncludeCenterCell                                          OFFSET(getStruct<T>, {0x1B8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   MaxBuildingActorsPerVolumeCenterToCollect                   OFFSET(getStruct<T>, {0x1F0, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_BuildingsOnCachedPath
@@ -1108,9 +1108,9 @@ class UFortQueryGenerator_BuildingsOnCachedPath : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   CachedPathSource                                            OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bIncludeWalls                                               OFFSET(get<T>, {0x58, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bIncludeFloors                                              OFFSET(get<T>, {0x90, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bIncludeCenterCell                                          OFFSET(get<T>, {0xC8, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bIncludeWalls                                               OFFSET(getStruct<T>, {0x58, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bIncludeFloors                                              OFFSET(getStruct<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bIncludeCenterCell                                          OFFSET(getStruct<T>, {0xC8, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_EncounterTargets
@@ -1136,9 +1136,9 @@ public:
 	DMember(bool)                                      bIgnoreDBNOPawns                                            OFFSET(get<bool>, {0x52, 1, 0, 0})
 	DMember(bool)                                      bIgnoreSleepingAIs                                          OFFSET(get<bool>, {0x53, 1, 0, 0})
 	DMember(bool)                                      bAddEnemiesFromAbilityRange                                 OFFSET(get<bool>, {0x54, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     AbilityTags                                                 OFFSET(get<T>, {0x58, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     DistanceTags                                                OFFSET(get<T>, {0x78, 32, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxTimeSincePerceived                                       OFFSET(get<T>, {0x98, 56, 0, 0})
+	SMember(FGameplayTagContainer)                     AbilityTags                                                 OFFSET(getStruct<T>, {0x58, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     DistanceTags                                                OFFSET(getStruct<T>, {0x78, 32, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxTimeSincePerceived                                       OFFSET(getStruct<T>, {0x98, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_GoalActorsOfClass
@@ -1150,7 +1150,7 @@ class UFortQueryGenerator_GoalActorsOfClass : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   SearchedActorClass                                          OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(get<T>, {0x58, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(getStruct<T>, {0x58, 56, 0, 0})
 	CMember(UClass*)                                   SearchCenter                                                OFFSET(get<T>, {0x90, 8, 0, 0})
 };
 
@@ -1164,7 +1164,7 @@ class UFortQueryGenerator_GoalOnCircle : public UEnvQueryGenerator_OnCircle
 public:
 	DMember(bool)                                      bIncludeCenterActorInGeneratedGoals                         OFFSET(get<bool>, {0x220, 1, 0, 0})
 	CMember(UFortAIAssignmentSettings*)                OptionalAssignmentSettings                                  OFFSET(get<T>, {0x228, 8, 0, 0})
-	SMember(FFortAIAssignmentIdentifier)               OptionalAssignmentIdentifier                                OFFSET(get<T>, {0x230, 48, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               OptionalAssignmentIdentifier                                OFFSET(getStruct<T>, {0x230, 48, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_GoalPlayerPawns
@@ -1186,10 +1186,10 @@ class UFortQueryGenerator_GoalTrackableAIObjects : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(get<T>, {0x50, 48, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(getStruct<T>, {0x50, 48, 0, 0})
 	CMember(UClass*)                                   SearchedActorClass                                          OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FGameplayTag)                              RequiredTag                                                 OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(get<T>, {0x90, 56, 0, 0})
+	SMember(FGameplayTag)                              RequiredTag                                                 OFFSET(getStruct<T>, {0x88, 4, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SearchRadius                                                OFFSET(getStruct<T>, {0x90, 56, 0, 0})
 	CMember(UClass*)                                   SearchCenter                                                OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
@@ -1202,7 +1202,7 @@ class UFortQueryGenerator_HotspotSlots : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(get<T>, {0x58, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(getStruct<T>, {0x58, 56, 0, 0})
 	DMember(bool)                                      bUseTetherZone                                              OFFSET(get<bool>, {0x90, 1, 1, 0})
 	CMember(UClass*)                                   HotspotClass                                                OFFSET(get<T>, {0x98, 8, 0, 0})
 };
@@ -1215,7 +1215,7 @@ class UFortQueryGenerator_InfluenceMapPoints : public UEnvQueryGenerator_Project
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FAIDataProviderIntValue)                   Density                                                     OFFSET(get<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   Density                                                     OFFSET(getStruct<T>, {0x88, 56, 0, 0})
 	DMember(bool)                                      bOnlyFlatSurface                                            OFFSET(get<bool>, {0xC0, 1, 1, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
@@ -1228,13 +1228,13 @@ class UFortQueryGenerator_LootGoalsAthena : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(get<T>, {0x50, 48, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(getStruct<T>, {0x50, 48, 0, 0})
 	CMember(UFortAIAssignmentSettings*)                AssignmentSettings                                          OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 HorizontalHalfExtents                                       OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 VerticalHalfExtents                                         OFFSET(get<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 HorizontalHalfExtents                                       OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 VerticalHalfExtents                                         OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
 	CMember(UClass*)                                   SearchCenter                                                OFFSET(get<T>, {0xF8, 8, 0, 0})
 	DMember(bool)                                      bAvailableLootOnly                                          OFFSET(get<bool>, {0x100, 1, 1, 0})
-	SMember(FGameplayTagContainer)                     ExcludedAILootGameplayTags                                  OFFSET(get<T>, {0x108, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ExcludedAILootGameplayTags                                  OFFSET(getStruct<T>, {0x108, 32, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_MissionPlacementActors
@@ -1245,7 +1245,7 @@ class UFortQueryGenerator_MissionPlacementActors : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FGameplayTagQuery)                         MissionPlacementActorTagQuery                               OFFSET(get<T>, {0x50, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         MissionPlacementActorTagQuery                               OFFSET(getStruct<T>, {0x50, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_MutatorActorQueryResults
@@ -1277,11 +1277,11 @@ class UFortQueryGenerator_PerceivedActors : public UEnvQueryGenerator
 
 public:
 	DMember(bool)                                      bGenerateHostileActorGoal                                   OFFSET(get<bool>, {0x50, 1, 0, 0})
-	SMember(FFortQueryGenerator_PerceivedActors_Settings) HostileActorSettings                                     OFFSET(get<T>, {0x58, 64, 0, 0})
+	SMember(FFortQueryGenerator_PerceivedActors_Settings) HostileActorSettings                                     OFFSET(getStruct<T>, {0x58, 64, 0, 0})
 	DMember(bool)                                      bGenerateNeutralActorGoal                                   OFFSET(get<bool>, {0x98, 1, 0, 0})
-	SMember(FFortQueryGenerator_PerceivedActors_Settings) NeutralActorSettings                                     OFFSET(get<T>, {0xA0, 64, 0, 0})
+	SMember(FFortQueryGenerator_PerceivedActors_Settings) NeutralActorSettings                                     OFFSET(getStruct<T>, {0xA0, 64, 0, 0})
 	DMember(bool)                                      bGenerateFriendlyActorGoal                                  OFFSET(get<bool>, {0xE0, 1, 0, 0})
-	SMember(FFortQueryGenerator_PerceivedActors_Settings) FriendlyActorSettings                                    OFFSET(get<T>, {0xE8, 64, 0, 0})
+	SMember(FFortQueryGenerator_PerceivedActors_Settings) FriendlyActorSettings                                    OFFSET(getStruct<T>, {0xE8, 64, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_PointsAroundLine
@@ -1293,8 +1293,8 @@ class UFortQueryGenerator_PointsAroundLine : public UEnvQueryGenerator_Projected
 
 public:
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FAIDataProviderIntValue)                   MaxPointsPerClusterLocation                                 OFFSET(get<T>, {0x90, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ClusterRadius                                               OFFSET(get<T>, {0xC8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   MaxPointsPerClusterLocation                                 OFFSET(getStruct<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ClusterRadius                                               OFFSET(getStruct<T>, {0xC8, 56, 0, 0})
 	CMember(TWeakObjectPtr<UFortQueryData_CurvesAroundLine*>) CurvesAroundLineAsset                                OFFSET(get<T>, {0x100, 32, 0, 0})
 };
 
@@ -1306,13 +1306,13 @@ class UFortQueryGenerator_PointsFromNavGraph : public UEnvQueryGenerator_Project
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 MinPathDistance                                             OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxPathDistance                                             OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   Density                                                     OFFSET(get<T>, {0xF8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ExploreDirectionYaw                                         OFFSET(get<T>, {0x130, 56, 0, 0})
-	SMember(FEnvDirection)                             ExploreDirection                                            OFFSET(get<T>, {0x168, 32, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MinPathDistance                                             OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxPathDistance                                             OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   Density                                                     OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ExploreDirectionYaw                                         OFFSET(getStruct<T>, {0x130, 56, 0, 0})
+	SMember(FEnvDirection)                             ExploreDirection                                            OFFSET(getStruct<T>, {0x168, 32, 0, 0})
 	DMember(float)                                     ExploreAngleDot                                             OFFSET(get<float>, {0x188, 4, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ExploreInnerRadius                                          OFFSET(get<T>, {0x190, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ExploreInnerRadius                                          OFFSET(getStruct<T>, {0x190, 56, 0, 0})
 	DMember(bool)                                      bLimitExplorationDirection                                  OFFSET(get<bool>, {0x1C8, 1, 1, 0})
 	DMember(bool)                                      bOnlyFlatSurface                                            OFFSET(get<bool>, {0x1C8, 1, 1, 1})
 	DMember(bool)                                      bUseParameterizedDirection                                  OFFSET(get<bool>, {0x1C8, 1, 1, 2})
@@ -1334,7 +1334,7 @@ class UFortQueryGenerator_PointsInVolume : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FAIDataProviderIntValue)                   NumberOfPoints                                              OFFSET(get<T>, {0x50, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   NumberOfPoints                                              OFFSET(getStruct<T>, {0x50, 56, 0, 0})
 	CMember(TEnumAsByte<EFortNamedNavmesh>)            NavMeshToUse                                                OFFSET(get<T>, {0x88, 1, 0, 0})
 	CMember(UClass*)                                   GenerateIn                                                  OFFSET(get<T>, {0x90, 8, 0, 0})
 };
@@ -1347,12 +1347,12 @@ class UFortQueryGenerator_PointsOnBuildingActors : public UEnvQueryGenerator_Pro
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 BoundingBoxExtentXY                                         OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 BoundingBoxExtentZ                                          OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 PointDensity                                                OFFSET(get<T>, {0xF8, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   MaxGeneratedPoints                                          OFFSET(get<T>, {0x130, 56, 0, 0})
-	SMember(FFortTaggedActorOctreeFilter)              ActorLookupFilter                                           OFFSET(get<T>, {0x168, 168, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 RandomChanceToSkip                                          OFFSET(get<T>, {0x210, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 BoundingBoxExtentXY                                         OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 BoundingBoxExtentZ                                          OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 PointDensity                                                OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   MaxGeneratedPoints                                          OFFSET(getStruct<T>, {0x130, 56, 0, 0})
+	SMember(FFortTaggedActorOctreeFilter)              ActorLookupFilter                                           OFFSET(getStruct<T>, {0x168, 168, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 RandomChanceToSkip                                          OFFSET(getStruct<T>, {0x210, 56, 0, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x248, 8, 0, 0})
 };
 
@@ -1364,8 +1364,8 @@ class UFortQueryGenerator_PointsOnBuildingGrid : public UEnvQueryGenerator_Proje
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-	SMember(FAIDataProviderIntValue)                   HorizontalGridSize                                          OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   VerticalGridSize                                            OFFSET(get<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   HorizontalGridSize                                          OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   VerticalGridSize                                            OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
 	DMember(bool)                                      bStartGridFromBottom                                        OFFSET(get<bool>, {0xF8, 1, 0, 0})
 	DMember(bool)                                      bUsePointInVerticalCenterOfCell                             OFFSET(get<bool>, {0xF9, 1, 0, 0})
 	CMember(UClass*)                                   GenerateAround                                              OFFSET(get<T>, {0x100, 8, 0, 0})
@@ -1392,7 +1392,7 @@ class UFortQueryGenerator_RandomPointsInBoundingVolume : public UEnvQueryGenerat
 
 public:
 	CMember(UClass*)                                   GenerateIn                                                  OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 RandomPointsCount                                           OFFSET(get<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 RandomPointsCount                                           OFFSET(getStruct<T>, {0x90, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_SpecificAssignmentGoals
@@ -1403,7 +1403,7 @@ class UFortQueryGenerator_SpecificAssignmentGoals : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(get<T>, {0x50, 48, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               AssignmentIdentifier                                        OFFSET(getStruct<T>, {0x50, 48, 0, 0})
 	CMember(UFortAIAssignmentSettings*)                AssignmentSettings                                          OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UClass*)                                   GoalProvider                                                OFFSET(get<T>, {0x88, 8, 0, 0})
 };
@@ -1416,11 +1416,11 @@ class UFortQueryGenerator_SquadMembers : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 360;
 
 public:
-	SMember(FAIDataProviderBoolValue)                  LookingForHumanPlayers                                      OFFSET(get<T>, {0x50, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  LookingForPlayerBots                                        OFFSET(get<T>, {0x88, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  LookingForNpcs                                              OFFSET(get<T>, {0xC0, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  LookingForAiPawns                                           OFFSET(get<T>, {0xF8, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  IncludeSelf                                                 OFFSET(get<T>, {0x130, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  LookingForHumanPlayers                                      OFFSET(getStruct<T>, {0x50, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  LookingForPlayerBots                                        OFFSET(getStruct<T>, {0x88, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  LookingForNpcs                                              OFFSET(getStruct<T>, {0xC0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  LookingForAiPawns                                           OFFSET(getStruct<T>, {0xF8, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  IncludeSelf                                                 OFFSET(getStruct<T>, {0x130, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryGenerator_TerrainDonut
@@ -1432,10 +1432,10 @@ class UFortQueryGenerator_TerrainDonut : public UEnvQueryGenerator
 
 public:
 	CMember(UClass*)                                   Center                                                      OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(get<T>, {0x58, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 RadiusWidth                                                 OFFSET(get<T>, {0x90, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 SpacingArc                                                  OFFSET(get<T>, {0xC8, 56, 0, 0})
-	SMember(FAIDataProviderIntValue)                   NumRings                                                    OFFSET(get<T>, {0x100, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(getStruct<T>, {0x58, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 RadiusWidth                                                 OFFSET(getStruct<T>, {0x90, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SpacingArc                                                  OFFSET(getStruct<T>, {0xC8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   NumRings                                                    OFFSET(getStruct<T>, {0x100, 56, 0, 0})
 	DMember(bool)                                      bFilterAllowTerrain                                         OFFSET(get<bool>, {0x138, 1, 1, 0})
 	DMember(bool)                                      bFilterAllowBuildings                                       OFFSET(get<bool>, {0x138, 1, 1, 1})
 };
@@ -1448,7 +1448,7 @@ class UFortQueryGenerator_ValidSpawnRiftActors : public UEnvQueryGenerator
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FAIDataProviderIntValue)                   NumAIForGroup                                               OFFSET(get<T>, {0x50, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   NumAIForGroup                                               OFFSET(getStruct<T>, {0x50, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryItemType_PointOrSlot
@@ -1475,7 +1475,7 @@ public:
 	DMember(bool)                                      bScoreSpecificAssignments                                   OFFSET(get<bool>, {0x1F8, 1, 1, 3})
 	CMember(TArray<FFortAIAssignmentIdentifier>)       AssignmentIDs                                               OFFSET(get<T>, {0x200, 16, 0, 0})
 	CMember(TArray<FFortAIAssignmentIdentifier>)       ProhibitedAssignmentIDs                                     OFFSET(get<T>, {0x210, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         GoalActorTagQuery                                           OFFSET(get<T>, {0x220, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         GoalActorTagQuery                                           OFFSET(getStruct<T>, {0x220, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_AssignmentTypeInterest
@@ -1486,14 +1486,14 @@ class UFortQueryTest_AssignmentTypeInterest : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 1064;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 InvalidTypeStartInterest                                    OFFSET(get<T>, {0x268, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 InvalidTypeEndInterest                                      OFFSET(get<T>, {0x2A0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 InvalidTypeTimeBeforeLerp                                   OFFSET(get<T>, {0x2D8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 InvalidTypeLerpDuration                                     OFFSET(get<T>, {0x310, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValidTypeStartInterest                                      OFFSET(get<T>, {0x348, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValidTypeEndInterest                                        OFFSET(get<T>, {0x380, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValidTypeTimeBeforeLerp                                     OFFSET(get<T>, {0x3B8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValidTypeLerpDuration                                       OFFSET(get<T>, {0x3F0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 InvalidTypeStartInterest                                    OFFSET(getStruct<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 InvalidTypeEndInterest                                      OFFSET(getStruct<T>, {0x2A0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 InvalidTypeTimeBeforeLerp                                   OFFSET(getStruct<T>, {0x2D8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 InvalidTypeLerpDuration                                     OFFSET(getStruct<T>, {0x310, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValidTypeStartInterest                                      OFFSET(getStruct<T>, {0x348, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValidTypeEndInterest                                        OFFSET(getStruct<T>, {0x380, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValidTypeTimeBeforeLerp                                     OFFSET(getStruct<T>, {0x3B8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValidTypeLerpDuration                                       OFFSET(getStruct<T>, {0x3F0, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_BuildingCriteria
@@ -1504,35 +1504,35 @@ class UFortQueryTest_BuildingCriteria : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 2232;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 ScoreForGroundSupportedFloor                                OFFSET(get<T>, {0x268, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreForBeingGroundSupported                                OFFSET(get<T>, {0x2A0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreForTraps                                               OFFSET(get<T>, {0x2D8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreForWalls                                               OFFSET(get<T>, {0x310, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreForNavigableOpening                                    OFFSET(get<T>, {0x348, 56, 0, 0})
-	SMember(FFortAIAssignmentIdentifier)               RootAssignmentID                                            OFFSET(get<T>, {0x380, 48, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bPreferCloserToRootAssignment                               OFFSET(get<T>, {0x3B0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScoreForDistanceFromClosestRootAssignmentGoal               OFFSET(get<T>, {0x3E8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MinDistanceForDistanceScoring                               OFFSET(get<T>, {0x420, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxDistanceForDistanceScoring                               OFFSET(get<T>, {0x458, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxHealthScore                                              OFFSET(get<T>, {0x490, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bPreferHigherHealth                                         OFFSET(get<T>, {0x4C8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ClampMaxHealthValue                                         OFFSET(get<T>, {0x500, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ClampMinHealthValue                                         OFFSET(get<T>, {0x538, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bPreferHigherHealthPercentage                               OFFSET(get<T>, {0x570, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxHealthPercentageScore                                    OFFSET(get<T>, {0x5A8, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bWantsBuildingRepairableByOwner                             OFFSET(get<T>, {0x5E0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 RepairableBuildingScore                                     OFFSET(get<T>, {0x618, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 NotRepairableBuildingScore                                  OFFSET(get<T>, {0x650, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 NeedsRepairBuildingScore                                    OFFSET(get<T>, {0x688, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DoesntNeedsRepairBuildingScore                              OFFSET(get<T>, {0x6C0, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bWantsDamagedByFriendly                                     OFFSET(get<T>, {0x6F8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DamagedByFriendlyMaxLifespan                                OFFSET(get<T>, {0x730, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DamagedByFriendlyMinDamage                                  OFFSET(get<T>, {0x768, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DamagedByFriendlyScore                                      OFFSET(get<T>, {0x7A0, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  bWantsDamagedByEnemy                                        OFFSET(get<T>, {0x7D8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DamagedByEnemyMaxLifespan                                   OFFSET(get<T>, {0x810, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DamagedByEnemyMinDamage                                     OFFSET(get<T>, {0x848, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DamagedByEnemyScore                                         OFFSET(get<T>, {0x880, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreForGroundSupportedFloor                                OFFSET(getStruct<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreForBeingGroundSupported                                OFFSET(getStruct<T>, {0x2A0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreForTraps                                               OFFSET(getStruct<T>, {0x2D8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreForWalls                                               OFFSET(getStruct<T>, {0x310, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreForNavigableOpening                                    OFFSET(getStruct<T>, {0x348, 56, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               RootAssignmentID                                            OFFSET(getStruct<T>, {0x380, 48, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bPreferCloserToRootAssignment                               OFFSET(getStruct<T>, {0x3B0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScoreForDistanceFromClosestRootAssignmentGoal               OFFSET(getStruct<T>, {0x3E8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MinDistanceForDistanceScoring                               OFFSET(getStruct<T>, {0x420, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxDistanceForDistanceScoring                               OFFSET(getStruct<T>, {0x458, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxHealthScore                                              OFFSET(getStruct<T>, {0x490, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bPreferHigherHealth                                         OFFSET(getStruct<T>, {0x4C8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ClampMaxHealthValue                                         OFFSET(getStruct<T>, {0x500, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ClampMinHealthValue                                         OFFSET(getStruct<T>, {0x538, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bPreferHigherHealthPercentage                               OFFSET(getStruct<T>, {0x570, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxHealthPercentageScore                                    OFFSET(getStruct<T>, {0x5A8, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bWantsBuildingRepairableByOwner                             OFFSET(getStruct<T>, {0x5E0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 RepairableBuildingScore                                     OFFSET(getStruct<T>, {0x618, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 NotRepairableBuildingScore                                  OFFSET(getStruct<T>, {0x650, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 NeedsRepairBuildingScore                                    OFFSET(getStruct<T>, {0x688, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DoesntNeedsRepairBuildingScore                              OFFSET(getStruct<T>, {0x6C0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bWantsDamagedByFriendly                                     OFFSET(getStruct<T>, {0x6F8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DamagedByFriendlyMaxLifespan                                OFFSET(getStruct<T>, {0x730, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DamagedByFriendlyMinDamage                                  OFFSET(getStruct<T>, {0x768, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DamagedByFriendlyScore                                      OFFSET(getStruct<T>, {0x7A0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  bWantsDamagedByEnemy                                        OFFSET(getStruct<T>, {0x7D8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DamagedByEnemyMaxLifespan                                   OFFSET(getStruct<T>, {0x810, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DamagedByEnemyMinDamage                                     OFFSET(getStruct<T>, {0x848, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DamagedByEnemyScore                                         OFFSET(getStruct<T>, {0x880, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_CanAttackTarget
@@ -1565,7 +1565,7 @@ class UFortQueryTest_CanHitWithGameplayAbility : public UEnvQueryTest
 public:
 	CMember(UClass*)                                   AIsUsingAbility                                             OFFSET(get<T>, {0x1F8, 8, 0, 0})
 	CMember(UClass*)                                   AbilityTargets                                              OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(get<T>, {0x208, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(getStruct<T>, {0x208, 32, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_CurieState
@@ -1576,7 +1576,7 @@ class UFortQueryTest_CurieState : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FGameplayTagQuery)                         CurieStateQuery                                             OFFSET(get<T>, {0x1F8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         CurieStateQuery                                             OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_DecoyDistance
@@ -1632,7 +1632,7 @@ class UFortQueryTest_EnvironmentalDanger : public UEnvQueryTest
 
 public:
 	DMember(bool)                                      bUse3DBoundsCheck                                           OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FGameplayTag)                              DangerSourceActorRegistryTag                                OFFSET(get<T>, {0x1FC, 4, 0, 0})
+	SMember(FGameplayTag)                              DangerSourceActorRegistryTag                                OFFSET(getStruct<T>, {0x1FC, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_GameplayTagsPerDifficulty
@@ -1678,7 +1678,7 @@ class UFortQueryTest_GoalDiscouragement : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FAIDataProviderBoolValue)                  DisableDiscouragementWhenUndermining                        OFFSET(get<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  DisableDiscouragementWhenUndermining                        OFFSET(getStruct<T>, {0x268, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_GoalDistance
@@ -1728,8 +1728,8 @@ class UFortQueryTest_GoalGameplayTags : public UFortQueryTest_GoalBase
 
 public:
 	DMember(bool)                                      bShouldLookupQueryByTag                                     OFFSET(get<bool>, {0x268, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQueryToMatch                                             OFFSET(get<T>, {0x270, 72, 0, 0})
-	SMember(FGameplayTag)                              QueryLookupTag                                              OFFSET(get<T>, {0x2B8, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQueryToMatch                                             OFFSET(getStruct<T>, {0x270, 72, 0, 0})
+	SMember(FGameplayTag)                              QueryLookupTag                                              OFFSET(getStruct<T>, {0x2B8, 4, 0, 0})
 	DMember(bool)                                      bShouldPassWhenQueryNotFound                                OFFSET(get<bool>, {0x2BC, 1, 0, 0})
 	DMember(bool)                                      bRequireAllProvidedTagQueriesPass                           OFFSET(get<bool>, {0x2BD, 1, 0, 0})
 };
@@ -1742,8 +1742,8 @@ class UFortQueryTest_GoalMarkedByPlayer : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 744;
 
 public:
-	SMember(FGameplayTagQuery)                         OwnerTagQuery                                               OFFSET(get<T>, {0x268, 72, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  OnlyConverterMarkedTargets                                  OFFSET(get<T>, {0x2B0, 56, 0, 0})
+	SMember(FGameplayTagQuery)                         OwnerTagQuery                                               OFFSET(getStruct<T>, {0x268, 72, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OnlyConverterMarkedTargets                                  OFFSET(getStruct<T>, {0x2B0, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_GoalNumberOfAIAssigned
@@ -1787,7 +1787,7 @@ class UFortQueryTest_GoalProject : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FEnvTraceData)                             ProjectionData                                              OFFSET(get<T>, {0x268, 56, 0, 0})
+	SMember(FEnvTraceData)                             ProjectionData                                              OFFSET(getStruct<T>, {0x268, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_GoalStickiness
@@ -1798,11 +1798,11 @@ class UFortQueryTest_GoalStickiness : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 StartValueForGoal                                           OFFSET(get<T>, {0x268, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 EndValueForGoal                                             OFFSET(get<T>, {0x2A0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 TimeBeforeValueLerp                                         OFFSET(get<T>, {0x2D8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValueLerpDuration                                           OFFSET(get<T>, {0x310, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  ApplyStickinessToAllGoalsWithSameActor                      OFFSET(get<T>, {0x348, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 StartValueForGoal                                           OFFSET(getStruct<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 EndValueForGoal                                             OFFSET(getStruct<T>, {0x2A0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 TimeBeforeValueLerp                                         OFFSET(getStruct<T>, {0x2D8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValueLerpDuration                                           OFFSET(getStruct<T>, {0x310, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  ApplyStickinessToAllGoalsWithSameActor                      OFFSET(getStruct<T>, {0x348, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_GoalType
@@ -1850,7 +1850,7 @@ class UFortQueryTest_HasNearbyEncounterGoals : public UEnvQueryTest
 
 public:
 	DMember(bool)                                      bOnlyActiveEncounters                                       OFFSET(get<bool>, {0x1F8, 1, 1, 0})
-	SMember(FAIDataProviderFloatValue)                 TestDistance                                                OFFSET(get<T>, {0x200, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 TestDistance                                                OFFSET(getStruct<T>, {0x200, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_Health
@@ -1873,12 +1873,12 @@ class UFortQueryTest_HealthAndShield : public UEnvQueryTest
 
 public:
 	DMember(bool)                                      bConsiderHealth                                             OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 HealthMin                                                   OFFSET(get<T>, {0x200, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 HealthMax                                                   OFFSET(get<T>, {0x238, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 HealthMin                                                   OFFSET(getStruct<T>, {0x200, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 HealthMax                                                   OFFSET(getStruct<T>, {0x238, 56, 0, 0})
 	DMember(bool)                                      bHealthAsPercent                                            OFFSET(get<bool>, {0x270, 1, 0, 0})
 	DMember(bool)                                      bConsiderShield                                             OFFSET(get<bool>, {0x271, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ShieldMin                                                   OFFSET(get<T>, {0x278, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ShieldMax                                                   OFFSET(get<T>, {0x2B0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ShieldMin                                                   OFFSET(getStruct<T>, {0x278, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ShieldMax                                                   OFFSET(getStruct<T>, {0x2B0, 56, 0, 0})
 	DMember(bool)                                      bShieldAsPercent                                            OFFSET(get<bool>, {0x2E8, 1, 0, 0})
 };
 
@@ -1891,7 +1891,7 @@ class UFortQueryTest_HotspotSlotOrientation : public UEnvQueryTest
 
 public:
 	CMember(UClass*)                                   FaceToward                                                  OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DotThreshold                                                OFFSET(get<T>, {0x200, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DotThreshold                                                OFFSET(getStruct<T>, {0x200, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_HotspotSlotState
@@ -1944,7 +1944,7 @@ class UFortQueryTest_InsideAthenaSafeZone : public UEnvQueryTest
 
 public:
 	DMember(bool)                                      bUseCurrentSafeZoneIndicatorRadius                          OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FAIDataProviderIntValue)                   SafeZoneIndex                                               OFFSET(get<T>, {0x200, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   SafeZoneIndex                                               OFFSET(getStruct<T>, {0x200, 56, 0, 0})
 	DMember(bool)                                      bNextSafeZone                                               OFFSET(get<bool>, {0x238, 1, 0, 0})
 };
 
@@ -1978,7 +1978,7 @@ class UFortQueryTest_IsCloseToHotspotSlot : public UEnvQueryTest
 
 public:
 	CMember(UClass*)                                   HotspotClass                                                OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(get<T>, {0x200, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(getStruct<T>, {0x200, 56, 0, 0})
 	DMember(bool)                                      bIgnoreItemsWithSlotData                                    OFFSET(get<bool>, {0x238, 1, 0, 0})
 };
 
@@ -2002,7 +2002,7 @@ class UFortQueryTest_IsGoalForAssignment : public UEnvQueryTest
 
 public:
 	DMember(bool)                                      bRetrieveRootAssignmentFromOwner                            OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FFortAIAssignmentIdentifier)               RootAssignmentID                                            OFFSET(get<T>, {0x200, 48, 0, 0})
+	SMember(FFortAIAssignmentIdentifier)               RootAssignmentID                                            OFFSET(getStruct<T>, {0x200, 48, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_IsGoalHostile
@@ -2013,9 +2013,9 @@ class UFortQueryTest_IsGoalHostile : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FGameplayTagQuery)                         OwnerTagQuery                                               OFFSET(get<T>, {0x268, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         EnemyPawnTagsToConsider                                     OFFSET(get<T>, {0x2B0, 72, 0, 0})
-	SMember(FGameplayTagContainer)                     BuildingTagsToConsider                                      OFFSET(get<T>, {0x2F8, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         OwnerTagQuery                                               OFFSET(getStruct<T>, {0x268, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         EnemyPawnTagsToConsider                                     OFFSET(getStruct<T>, {0x2B0, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     BuildingTagsToConsider                                      OFFSET(getStruct<T>, {0x2F8, 32, 0, 0})
 	DMember(bool)                                      bConsiderDefenders                                          OFFSET(get<bool>, {0x318, 1, 0, 0})
 };
 
@@ -2027,7 +2027,7 @@ class UFortQueryTest_IsInLeaderLOS : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FGameplayTagQuery)                         OwnerTagQuery                                               OFFSET(get<T>, {0x1F8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         OwnerTagQuery                                               OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
 	DMember(bool)                                      bRequireLOSRayCast                                          OFFSET(get<bool>, {0x240, 1, 0, 0})
 	DMember(float)                                     RayCastLeaderVerticalOffset                                 OFFSET(get<float>, {0x244, 4, 0, 0})
 	DMember(float)                                     RayCastItemVerticalOffset                                   OFFSET(get<float>, {0x248, 4, 0, 0})
@@ -2042,9 +2042,9 @@ class UFortQueryTest_IsObstructed : public UEnvQueryTest_Trace
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationXWithItemLocationX                   OFFSET(get<T>, {0x2E0, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationYWithItemLocationY                   OFFSET(get<T>, {0x318, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationZWithItemLocationZ                   OFFSET(get<T>, {0x350, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationXWithItemLocationX                   OFFSET(getStruct<T>, {0x2E0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationYWithItemLocationY                   OFFSET(getStruct<T>, {0x318, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationZWithItemLocationZ                   OFFSET(getStruct<T>, {0x350, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_IsObstructedOverlap
@@ -2055,9 +2055,9 @@ class UFortQueryTest_IsObstructedOverlap : public UEnvQueryTest_Trace
 	static inline constexpr uint64_t __MDKClassSize = 904;
 
 public:
-	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationXWithItemLocationX                   OFFSET(get<T>, {0x2E0, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationYWithItemLocationY                   OFFSET(get<T>, {0x318, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationZWithItemLocationZ                   OFFSET(get<T>, {0x350, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationXWithItemLocationX                   OFFSET(getStruct<T>, {0x2E0, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationYWithItemLocationY                   OFFSET(getStruct<T>, {0x318, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  OverrideContextLocationZWithItemLocationZ                   OFFSET(getStruct<T>, {0x350, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_MissionGameplayTagMatch
@@ -2068,8 +2068,8 @@ class UFortQueryTest_MissionGameplayTagMatch : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FGameplayTagQuery)                         MissionPlacementActorTagQuery                               OFFSET(get<T>, {0x1F8, 72, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayTagsToMatch                                         OFFSET(get<T>, {0x240, 32, 0, 0})
+	SMember(FGameplayTagQuery)                         MissionPlacementActorTagQuery                               OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTagsToMatch                                         OFFSET(getStruct<T>, {0x240, 32, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_MissionSameMap
@@ -2080,7 +2080,7 @@ class UFortQueryTest_MissionSameMap : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FGameplayTagQuery)                         MissionPlacementActorTagQuery                               OFFSET(get<T>, {0x1F8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         MissionPlacementActorTagQuery                               OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_NavGraphDistance
@@ -2131,7 +2131,7 @@ class UFortQueryTest_PathfindingBatch : public UEnvQueryTest_PathfindingBatch
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FGameplayTag)                              NavFilterTag                                                OFFSET(get<T>, {0x2B8, 4, 0, 0})
+	SMember(FGameplayTag)                              NavFilterTag                                                OFFSET(getStruct<T>, {0x2B8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_PawnHealth
@@ -2175,10 +2175,10 @@ class UFortQueryTest_PerceptionAll : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 1144;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 SenseScores                                                 OFFSET(get<T>, {0x268, 336, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 SenseScores                                                 OFFSET(getStruct<T>, {0x268, 336, 0, 0})
 	CMember(TMap<UClass*, FAIDataProviderFloatValue>)  AdditionalSenseScores                                       OFFSET(get<T>, {0x3B8, 80, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MinSenseAge                                                 OFFSET(get<T>, {0x408, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxSenseAge                                                 OFFSET(get<T>, {0x440, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MinSenseAge                                                 OFFSET(getStruct<T>, {0x408, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxSenseAge                                                 OFFSET(getStruct<T>, {0x440, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_PerceptionExists
@@ -2201,11 +2201,11 @@ class UFortQueryTest_PickupDropper : public UFortQueryTest_GoalBase
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 ValueConverterDroppedPickup                                 OFFSET(get<T>, {0x268, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValueOtherDroppedPickupInitial                              OFFSET(get<T>, {0x2A0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ValueOtherDroppedPickupFinal                                OFFSET(get<T>, {0x2D8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 TimeOtherDroppedPickupFinal                                 OFFSET(get<T>, {0x310, 56, 0, 0})
-	SMember(FAIDataProviderBoolValue)                  LerpFromInitialToFinal                                      OFFSET(get<T>, {0x348, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValueConverterDroppedPickup                                 OFFSET(getStruct<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValueOtherDroppedPickupInitial                              OFFSET(getStruct<T>, {0x2A0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ValueOtherDroppedPickupFinal                                OFFSET(getStruct<T>, {0x2D8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 TimeOtherDroppedPickupFinal                                 OFFSET(getStruct<T>, {0x310, 56, 0, 0})
+	SMember(FAIDataProviderBoolValue)                  LerpFromInitialToFinal                                      OFFSET(getStruct<T>, {0x348, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_PointInBuildingFoundation
@@ -2218,7 +2218,7 @@ class UFortQueryTest_PointInBuildingFoundation : public UEnvQueryTest
 public:
 	CMember(UClass*)                                   BuildingFoundationContext                                   OFFSET(get<T>, {0x1F8, 8, 0, 0})
 	CMember(UClass*)                                   BuildingFoundationClass                                     OFFSET(get<T>, {0x200, 8, 0, 0})
-	SMember(FVector)                                   BoundingBoxScale                                            OFFSET(get<T>, {0x208, 24, 0, 0})
+	SMember(FVector)                                   BoundingBoxScale                                            OFFSET(getStruct<T>, {0x208, 24, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_PrimaryAssignment
@@ -2230,11 +2230,11 @@ class UFortQueryTest_PrimaryAssignment : public UFortQueryTest_GoalBase
 
 public:
 	DMember(bool)                                      bUseItemActorLocation                                       OFFSET(get<bool>, {0x268, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DistanceClose                                               OFFSET(get<T>, {0x270, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 DistanceFar                                                 OFFSET(get<T>, {0x2A8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 PercentValueClose                                           OFFSET(get<T>, {0x2E0, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 PercentValueRegular                                         OFFSET(get<T>, {0x318, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 PercentValueFar                                             OFFSET(get<T>, {0x350, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DistanceClose                                               OFFSET(getStruct<T>, {0x270, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 DistanceFar                                                 OFFSET(getStruct<T>, {0x2A8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 PercentValueClose                                           OFFSET(getStruct<T>, {0x2E0, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 PercentValueRegular                                         OFFSET(getStruct<T>, {0x318, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 PercentValueFar                                             OFFSET(getStruct<T>, {0x350, 56, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortQueryTest_ProjectOnNavMesh
@@ -2267,7 +2267,7 @@ class UFortQueryTest_TowardNextAthenaSafeZone : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FAIDataProviderIntValue)                   SafeZoneIndex                                               OFFSET(get<T>, {0x1F8, 56, 0, 0})
+	SMember(FAIDataProviderIntValue)                   SafeZoneIndex                                               OFFSET(getStruct<T>, {0x1F8, 56, 0, 0})
 	DMember(bool)                                      bCheckAcceptanceAngleTowardNextCenter                       OFFSET(get<bool>, {0x230, 1, 0, 0})
 	DMember(float)                                     AcceptanceAngleTowardNextCenter                             OFFSET(get<float>, {0x234, 4, 0, 0})
 	CMember(TArray<int32_t>)                           ExclusionSafeZoneIndex                                      OFFSET(get<T>, {0x238, 16, 0, 0})
@@ -2281,11 +2281,11 @@ class UFortQueryTest_ValidSurface : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 792;
 
 public:
-	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(get<T>, {0x1F8, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 TraceOffsetUp                                               OFFSET(get<T>, {0x230, 56, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 TraceOffsetDown                                             OFFSET(get<T>, {0x268, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 Radius                                                      OFFSET(getStruct<T>, {0x1F8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 TraceOffsetUp                                               OFFSET(getStruct<T>, {0x230, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 TraceOffsetDown                                             OFFSET(getStruct<T>, {0x268, 56, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            TraceCollisionChannel                                       OFFSET(get<T>, {0x2A0, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 FlatSurfaceToleranceZ                                       OFFSET(get<T>, {0x2A8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 FlatSurfaceToleranceZ                                       OFFSET(getStruct<T>, {0x2A8, 56, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    SurfaceMaterials                                            OFFSET(get<T>, {0x2E0, 16, 0, 0})
 	DMember(bool)                                      bAreSurfaceMaterialsValid                                   OFFSET(get<bool>, {0x2F0, 1, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    ValidHitActorClasses                                        OFFSET(get<T>, {0x2F8, 16, 0, 0})
@@ -2301,7 +2301,7 @@ class UFortQueryTest_WithinHotfixVolumeBounds : public UEnvQueryTest
 
 public:
 	CMember(UDataTable*)                               BoundsTable                                                 OFFSET(get<T>, {0x1F8, 8, 0, 0})
-	SMember(FVector)                                   BoundsExtentBuffer                                          OFFSET(get<T>, {0x200, 24, 0, 0})
+	SMember(FVector)                                   BoundsExtentBuffer                                          OFFSET(getStruct<T>, {0x200, 24, 0, 0})
 	DMember(bool)                                      bXYOnly                                                     OFFSET(get<bool>, {0x218, 1, 0, 0})
 };
 
@@ -2313,8 +2313,8 @@ class UFortQueryTest_WithinTaggedArea : public UEnvQueryTest
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0x1F8, 72, 0, 0})
-	SMember(FVector)                                   AreaExtentBuffer                                            OFFSET(get<T>, {0x240, 24, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
+	SMember(FVector)                                   AreaExtentBuffer                                            OFFSET(getStruct<T>, {0x240, 24, 0, 0})
 	DMember(bool)                                      bAssumeInfiniteHeightForArea                                OFFSET(get<bool>, {0x258, 1, 0, 0})
 };
 
@@ -2339,9 +2339,9 @@ public:
 	DMember(float)                                     FacingPrecision                                             OFFSET(get<float>, {0x78, 4, 0, 0})
 	DMember(float)                                     WeaponCooldown                                              OFFSET(get<float>, {0x7C, 4, 0, 0})
 	DMember(bool)                                      bClearBlackboardOnFinished                                  OFFSET(get<bool>, {0x80, 1, 0, 0})
-	SMember(FBlackboardKeySelector)                    TargetedPlayerKeySelector                                   OFFSET(get<T>, {0x88, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    MaxLocationErrorKeySelector                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    MinLocationErrorKeySelector                                 OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    TargetedPlayerKeySelector                                   OFFSET(getStruct<T>, {0x88, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    MaxLocationErrorKeySelector                                 OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    MinLocationErrorKeySelector                                 OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTDecorator_BehaviorControls
@@ -2363,10 +2363,10 @@ class UFortAthenaAIBotEvaluator_AimDownSight : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FName)                                     WeaponKeyName                                               OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     ThrowableAttacksName                                        OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     UrgentMovementName                                          OFFSET(get<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     ThrowableAttacksName                                        OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     UrgentMovementName                                          OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
 	DMember(bool)                                      bSkipTargetChecks                                           OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   CacheAimingDigestedSkillSet                                 OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
@@ -2379,10 +2379,10 @@ class UFortAthenaAIBotEvaluator_Ambush : public UFortAthenaAIBotEvaluator_Moveme
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FName)                                     LastKnownPositionName                                       OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     DestinationKeyName                                          OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     AggressivenessName                                          OFFSET(get<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     LastKnownPositionName                                       OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     DestinationKeyName                                          OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     AggressivenessName                                          OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Attack
@@ -2393,9 +2393,9 @@ class UFortAthenaAIBotEvaluator_Attack : public UFortAthenaAIBotEvaluator_Moveme
 	static inline constexpr uint64_t __MDKClassSize = 448;
 
 public:
-	SMember(FName)                                     WeaponKeyName                                               OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_AvoidThreat
@@ -2406,9 +2406,9 @@ class UFortAthenaAIBotEvaluator_AvoidThreat : public UFortAthenaAIBotEvaluator_M
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FName)                                     AvoidThreatKeyName                                          OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     AvoidThreatMovementStateKeyName                             OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     AvoidThreatDestinationKeyName                               OFFSET(get<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     AvoidThreatKeyName                                          OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     AvoidThreatMovementStateKeyName                             OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     AvoidThreatDestinationKeyName                               OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
 	CMember(AActor*)                                   CurrentThreatActorAvoiding                                  OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(UFortAthenaAIBotEvasiveManeuversDigestedSkillSet*) CacheEMDigestedSkillSet                             OFFSET(get<T>, {0x1C8, 8, 0, 0})
 };
@@ -2421,9 +2421,9 @@ class UFortAthenaAIBotEvaluator_Bunker : public UFortAthenaAIBotEvaluator_Moveme
 	static inline constexpr uint64_t __MDKClassSize = 608;
 
 public:
-	SMember(FName)                                     BuildExecutionStatusKeyName                                 OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     HealingStatusKeyName                                        OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     DangerTags                                                  OFFSET(get<T>, {0x1B0, 32, 0, 0})
+	SMember(FName)                                     BuildExecutionStatusKeyName                                 OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     HealingStatusKeyName                                        OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     DangerTags                                                  OFFSET(getStruct<T>, {0x1B0, 32, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_CanMove
@@ -2434,7 +2434,7 @@ class UFortAthenaAIBotEvaluator_CanMove : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     CanMoveKeyName                                              OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     CanMoveKeyName                                              OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_CharacterLaunched
@@ -2446,9 +2446,9 @@ class UFortAthenaAIBotEvaluator_CharacterLaunched : public UFortAthenaAIBotEvalu
 
 public:
 	DMember(bool)                                      bSteerInSameDirectionAsLaunchVelocity                       OFFSET(get<bool>, {0xA8, 1, 0, 0})
-	SMember(FName)                                     CharacterLaunchedExecutionStatusKeyName                     OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     SteerDirectionKeyName                                       OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FVector)                                   LastLaunchVelocity                                          OFFSET(get<T>, {0xB8, 24, 0, 0})
+	SMember(FName)                                     CharacterLaunchedExecutionStatusKeyName                     OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     SteerDirectionKeyName                                       OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FVector)                                   LastLaunchVelocity                                          OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
 	CMember(UFortAthenaAIBotMovementDigestedSkillSet*) CachedMovementSkillSet                                      OFFSET(get<T>, {0xD0, 8, 0, 0})
 
 
@@ -2465,7 +2465,7 @@ class UFortAthenaAIBotEvaluator_Conversation : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FName)                                     IsInConversationStateName                                   OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     IsInConversationStateName                                   OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	CMember(TArray<FName>)                             ExecutionStatusesToCheckedToAvoidStoppingWhenNearActorNames OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FName>)                             ExecutionStatusesToCheckForAllowToAvoidStoppingWhenNearActorNames OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TArray<FName>)                             MovementStatusesToCheckedToAvoidStoppingWhenNearActorNames  OFFSET(get<T>, {0xF0, 16, 0, 0})
@@ -2487,14 +2487,14 @@ class UFortAthenaAIBotEvaluator_Converted : public UFortAthenaAIBotEvaluator_Mov
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	SMember(FName)                                     ShouldMoveTowardsConverterName                              OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     ShouldTeleportTowardsConverterName                          OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     ConvertedAllowPatrolAroundName                              OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     ConvertedAllowScanAroundWhenWaitingName                     OFFSET(get<T>, {0x1B4, 4, 0, 0})
-	SMember(FName)                                     ConvertedDestinationName                                    OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(get<T>, {0x1BC, 4, 0, 0})
-	SMember(FVector)                                   TeleportLocationProjectionExtent                            OFFSET(get<T>, {0x1C0, 24, 0, 0})
-	SMember(FVector)                                   MovingFromLosLocationProjectionExtent                       OFFSET(get<T>, {0x1D8, 24, 0, 0})
+	SMember(FName)                                     ShouldMoveTowardsConverterName                              OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     ShouldTeleportTowardsConverterName                          OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     ConvertedAllowPatrolAroundName                              OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     ConvertedAllowScanAroundWhenWaitingName                     OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     ConvertedDestinationName                                    OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
+	SMember(FVector)                                   TeleportLocationProjectionExtent                            OFFSET(getStruct<T>, {0x1C0, 24, 0, 0})
+	SMember(FVector)                                   MovingFromLosLocationProjectionExtent                       OFFSET(getStruct<T>, {0x1D8, 24, 0, 0})
 	CMember(AFortPawn*)                                ConverterPawn                                               OFFSET(get<T>, {0x1F8, 8, 0, 0})
 	CMember(UFortAthenaAIRuntimeParameters_AIBotConvert*) CachedAIBotConvertParameters                             OFFSET(get<T>, {0x200, 8, 0, 0})
 
@@ -2514,10 +2514,10 @@ class UFortAthenaAIBotEvaluator_DanceOnKill : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FName)                                     LastKillPositionKeyName                                     OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     LastKillTimeKeyName                                         OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     LastKillWasABotKeyName                                      OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     PlayEmoteExecutionStatusKeyName                             OFFSET(get<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     LastKillPositionKeyName                                     OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     LastKillTimeKeyName                                         OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     LastKillWasABotKeyName                                      OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     PlayEmoteExecutionStatusKeyName                             OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
 	CMember(UFortAthenaAIBotEmoteDigestedSkillSet*)    CacheEmoteDigestedSkillSet                                  OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
 
@@ -2529,7 +2529,7 @@ class UFortAthenaAIBotEvaluator_TagQuery : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(get<T>, {0xA8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQuery                                                    OFFSET(getStruct<T>, {0xA8, 72, 0, 0})
 	CMember(UAbilitySystemComponent*)                  CachedAbilitySystemComponent                                OFFSET(get<T>, {0xF0, 8, 0, 0})
 };
 
@@ -2544,8 +2544,8 @@ public:
 	CMember(UClass*)                                   DangerNavAreaClass                                          OFFSET(get<T>, {0x108, 8, 0, 0})
 	DMember(float)                                     TimeToCheckForDangerAfterValidQuery                         OFFSET(get<float>, {0x110, 4, 0, 0})
 	DMember(float)                                     MaxRadiusToSearchForSafePlace                               OFFSET(get<float>, {0x114, 4, 0, 0})
-	SMember(FName)                                     DangerZoneDetectedExecutionStatusName                       OFFSET(get<T>, {0x118, 4, 0, 0})
-	SMember(FName)                                     DangerZoneDetectedSafeLocationKeyName                       OFFSET(get<T>, {0x11C, 4, 0, 0})
+	SMember(FName)                                     DangerZoneDetectedExecutionStatusName                       OFFSET(getStruct<T>, {0x118, 4, 0, 0})
+	SMember(FName)                                     DangerZoneDetectedSafeLocationKeyName                       OFFSET(getStruct<T>, {0x11C, 4, 0, 0})
 	CMember(UFortAthenaAIBotMovementDigestedSkillSet*) CachedMovementSkillSet                                      OFFSET(get<T>, {0x128, 8, 0, 0})
 	CMember(UAthenaAIServiceZoneManager*)              CacheZoneManager                                            OFFSET(get<T>, {0x130, 8, 0, 0})
 };
@@ -2558,11 +2558,11 @@ class UFortAthenaAIBotEvaluator_DBNO : public UFortAthenaAIBotEvaluator_Movement
 	static inline constexpr uint64_t __MDKClassSize = 512;
 
 public:
-	SMember(FName)                                     DBNODestinationKeyName                                      OFFSET(get<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     DBNODestinationKeyName                                      OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
 	DMember(bool)                                      bAllowReachSquadmates                                       OFFSET(get<bool>, {0x1AE, 1, 1, 0})
 	DMember(bool)                                      bAllowReachSameFactionNPCs                                  OFFSET(get<bool>, {0x1AE, 1, 1, 1})
 	CMember(TArray<AFortPlayerPawnAthena*>)            AllyPawns                                                   OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FVector)                                   CachedCurrentDestination                                    OFFSET(get<T>, {0x1C0, 24, 0, 0})
+	SMember(FVector)                                   CachedCurrentDestination                                    OFFSET(getStruct<T>, {0x1C0, 24, 0, 0})
 	CMember(UFortAthenaAIBotDBNODigestedSkillSet*)     DBNOSkillSet                                                OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	CMember(UFortAthenaAICoverComponent*)              CachedCoverComponent                                        OFFSET(get<T>, {0x1E0, 8, 0, 0})
 	CMember(UFortAthenaAIRuntimeParameters_DBNOBehavior*) DBNOBehaviorRuntimeParameters                            OFFSET(get<T>, {0x1E8, 8, 0, 0})
@@ -2593,9 +2593,9 @@ class UFortAthenaAIBotEvaluator_Escape : public UFortAthenaAIBotEvaluator_Moveme
 	static inline constexpr uint64_t __MDKClassSize = 472;
 
 public:
-	SMember(FGameplayTagContainer)                     EscapeTags                                                  OFFSET(get<T>, {0x1A8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     EscapeTags                                                  OFFSET(getStruct<T>, {0x1A8, 32, 0, 0})
 	DMember(float)                                     CooldownBetweenAggressivenessChanges                        OFFSET(get<float>, {0x1C8, 4, 0, 0})
-	SMember(FName)                                     AggressivenessName                                          OFFSET(get<T>, {0x1CC, 4, 0, 0})
+	SMember(FName)                                     AggressivenessName                                          OFFSET(getStruct<T>, {0x1CC, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_EvasiveManeuvers
@@ -2606,12 +2606,12 @@ class UFortAthenaAIBotEvaluator_EvasiveManeuvers : public UFortAthenaAIBotEvalua
 	static inline constexpr uint64_t __MDKClassSize = 656;
 
 public:
-	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(get<T>, {0x150, 4, 0, 0})
-	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(get<T>, {0x154, 4, 0, 0})
-	SMember(FName)                                     JetpackStrafeExecutionStatusName                            OFFSET(get<T>, {0x158, 4, 0, 0})
-	SMember(FName)                                     DodgeName                                                   OFFSET(get<T>, {0x15C, 4, 0, 0})
-	SMember(FName)                                     DestinationKeyName                                          OFFSET(get<T>, {0x160, 4, 0, 0})
-	SMember(FName)                                     UrgentMoveKeyName                                           OFFSET(get<T>, {0x164, 4, 0, 0})
+	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(getStruct<T>, {0x150, 4, 0, 0})
+	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(getStruct<T>, {0x154, 4, 0, 0})
+	SMember(FName)                                     JetpackStrafeExecutionStatusName                            OFFSET(getStruct<T>, {0x158, 4, 0, 0})
+	SMember(FName)                                     DodgeName                                                   OFFSET(getStruct<T>, {0x15C, 4, 0, 0})
+	SMember(FName)                                     DestinationKeyName                                          OFFSET(getStruct<T>, {0x160, 4, 0, 0})
+	SMember(FName)                                     UrgentMoveKeyName                                           OFFSET(getStruct<T>, {0x164, 4, 0, 0})
 	DMember(bool)                                      bDoCrouching                                                OFFSET(get<bool>, {0x174, 1, 0, 0})
 	DMember(bool)                                      bDoDodging                                                  OFFSET(get<bool>, {0x175, 1, 0, 0})
 	DMember(bool)                                      bDoJumping                                                  OFFSET(get<bool>, {0x176, 1, 0, 0})
@@ -2620,9 +2620,9 @@ public:
 	DMember(bool)                                      bDoJetpackStrafingDistanceCheck                             OFFSET(get<bool>, {0x179, 1, 0, 0})
 	DMember(float)                                     JetpackStrafingRequiredFuelPercent                          OFFSET(get<float>, {0x17C, 4, 0, 0})
 	DMember(float)                                     JetpackStrafeNavPadding                                     OFFSET(get<float>, {0x180, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         RequiredTagQuery                                            OFFSET(get<T>, {0x188, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         JetpackRequiredTagQuery                                     OFFSET(get<T>, {0x1D0, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         JumpRequiredTagQuery                                        OFFSET(get<T>, {0x218, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         RequiredTagQuery                                            OFFSET(getStruct<T>, {0x188, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         JetpackRequiredTagQuery                                     OFFSET(getStruct<T>, {0x1D0, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         JumpRequiredTagQuery                                        OFFSET(getStruct<T>, {0x218, 72, 0, 0})
 	CMember(UClass*)                                   ForcedPerkClass                                             OFFSET(get<T>, {0x260, 8, 0, 0})
 	CMember(UFortAthenaAIBotEvasiveManeuversDigestedSkillSet*) CacheEMDigestedSkillSet                             OFFSET(get<T>, {0x268, 8, 0, 0})
 
@@ -2642,9 +2642,9 @@ class UFortAthenaAIBotEvaluator_Flanking : public UFortAthenaAIBotEvaluator_Move
 public:
 	CMember(AFortAIDirector*)                          CachedAIDirector                                            OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UFortAthenaAIBotRangeAttackDigestedSkillSet*) CachedRangeAttackDigestedSkillSet                        OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	SMember(FName)                                     FlankingExecutionStatusKeyName                              OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     FlankingMovementStateKeyName                                OFFSET(get<T>, {0x1BC, 4, 0, 0})
-	SMember(FName)                                     FlankingDestinationKeyName                                  OFFSET(get<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     FlankingExecutionStatusKeyName                              OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FName)                                     FlankingMovementStateKeyName                                OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
+	SMember(FName)                                     FlankingDestinationKeyName                                  OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
 	CMember(TArray<FFlankingLocationInfo>)             LocationsToEvaluate                                         OFFSET(get<T>, {0x1D0, 16, 0, 0})
 	CMember(TArray<FFlankingLocationInfo>)             BestLocations                                               OFFSET(get<T>, {0x1E0, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    ActorsInArea                                                OFFSET(get<T>, {0x1F0, 16, 0, 0})
@@ -2663,10 +2663,10 @@ public:
 	DMember(float)                                     FleeDistance                                                OFFSET(get<float>, {0x1B0, 4, 0, 0})
 	DMember(float)                                     MaxDistanceFromTargetWhenFleeing                            OFFSET(get<float>, {0x1B4, 4, 0, 0})
 	DMember(float)                                     MinDistanceHysteresisWhenChangingTarget                     OFFSET(get<float>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     FleeKeyName                                                 OFFSET(get<T>, {0x1BC, 4, 0, 0})
-	SMember(FName)                                     FleeMovementStateKeyName                                    OFFSET(get<T>, {0x1C0, 4, 0, 0})
-	SMember(FName)                                     FleeDestinationKeyName                                      OFFSET(get<T>, {0x1C4, 4, 0, 0})
-	SMember(FName)                                     FleeActorKeyName                                            OFFSET(get<T>, {0x1C8, 4, 0, 0})
+	SMember(FName)                                     FleeKeyName                                                 OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
+	SMember(FName)                                     FleeMovementStateKeyName                                    OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     FleeDestinationKeyName                                      OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
+	SMember(FName)                                     FleeActorKeyName                                            OFFSET(getStruct<T>, {0x1C8, 4, 0, 0})
 	CMember(AActor*)                                   CurrentActorFleeingFrom                                     OFFSET(get<T>, {0x1D8, 8, 0, 0})
 };
 
@@ -2678,15 +2678,15 @@ class UFortAthenaAIBotEvaluator_FreeFalling : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FName)                                     DiveExecutionStatusKeyName                                  OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     DiveDestinationKeyName                                      OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     GlideExecutionStatusKeyName                                 OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     GlideDestinationKeyName                                     OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FName)                                     JumpOffBusDestinationName                                   OFFSET(get<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     DiveExecutionStatusKeyName                                  OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     DiveDestinationKeyName                                      OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     GlideExecutionStatusKeyName                                 OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     GlideDestinationKeyName                                     OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     JumpOffBusDestinationName                                   OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
 	DMember(bool)                                      bRandomlySelectFreeFallingMode                              OFFSET(get<bool>, {0xC6, 1, 0, 0})
-	SMember(FScalableFloat)                            IdleWeight                                                  OFFSET(get<T>, {0xC8, 40, 0, 0})
-	SMember(FScalableFloat)                            RandomWeight                                                OFFSET(get<T>, {0xF0, 40, 0, 0})
-	SMember(FScalableFloat)                            TowardNearestAllyWeight                                     OFFSET(get<T>, {0x118, 40, 0, 0})
+	SMember(FScalableFloat)                            IdleWeight                                                  OFFSET(getStruct<T>, {0xC8, 40, 0, 0})
+	SMember(FScalableFloat)                            RandomWeight                                                OFFSET(getStruct<T>, {0xF0, 40, 0, 0})
+	SMember(FScalableFloat)                            TowardNearestAllyWeight                                     OFFSET(getStruct<T>, {0x118, 40, 0, 0})
 	CMember(EFreeFallingMode)                          FreeFallingMode                                             OFFSET(get<T>, {0x140, 1, 0, 0})
 	DMember(float)                                     MaxOffsetRangeFromNearestAlly                               OFFSET(get<float>, {0x144, 4, 0, 0})
 	DMember(bool)                                      bShouldRecomputeDestinationWhenTowardNearestAlly            OFFSET(get<bool>, {0x148, 1, 1, 0})
@@ -2695,7 +2695,7 @@ public:
 	DMember(bool)                                      bGlideAllowed                                               OFFSET(get<bool>, {0x148, 1, 1, 3})
 	DMember(float)                                     SkyTubeDivingStuckTimeThreshold                             OFFSET(get<float>, {0x14C, 4, 0, 0})
 	CMember(AFortPlayerStateAthena*)                   NearestAlly                                                 OFFSET(get<T>, {0x170, 8, 0, 0})
-	SMember(FVector)                                   CachedLatestDestination                                     OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   CachedLatestDestination                                     OFFSET(getStruct<T>, {0x178, 24, 0, 0})
 	CMember(UFortAthenaAIBotMovementDigestedSkillSet*) CacheMovementDigestedSkillSet                               OFFSET(get<T>, {0x190, 8, 0, 0})
 	CMember(AFortSkyTube*)                             CachedSkyTube                                               OFFSET(get<T>, {0x1A0, 8, 0, 0})
 };
@@ -2708,7 +2708,7 @@ class UFortAthenaAIBotEvaluator_Ground : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FVector)                                   SurfaceTypeRaycastDir                                       OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   SurfaceTypeRaycastDir                                       OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 	CMember(UFortAthenaAIRuntimeParameters_Behavior*)  CachedBehaviorRuntimeParameters                             OFFSET(get<T>, {0x128, 8, 0, 0})
 };
 
@@ -2720,16 +2720,16 @@ class UFortAthenaAIBotEvaluator_HandleFocusing : public UFortAthenaAIBotEvaluato
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     InteractActorName                                           OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     TargetLocationName                                          OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     FocusActorName                                              OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FName)                                     FocalPointName                                              OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     WeaponFireName                                              OFFSET(get<T>, {0xBC, 4, 0, 0})
-	SMember(FName)                                     RangeAttackIsReadyToFireName                                OFFSET(get<T>, {0xC0, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(get<T>, {0xC4, 4, 0, 0})
-	SMember(FName)                                     LastKnownPositionName                                       OFFSET(get<T>, {0xC8, 4, 0, 0})
-	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(get<T>, {0xCC, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     InteractActorName                                           OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     TargetLocationName                                          OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     FocusActorName                                              OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     FocalPointName                                              OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     WeaponFireName                                              OFFSET(getStruct<T>, {0xBC, 4, 0, 0})
+	SMember(FName)                                     RangeAttackIsReadyToFireName                                OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0xC4, 4, 0, 0})
+	SMember(FName)                                     LastKnownPositionName                                       OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
+	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(getStruct<T>, {0xCC, 4, 0, 0})
 	CMember(EFocusingBehavior)                         FocusingBehavior                                            OFFSET(get<T>, {0xE4, 1, 0, 0})
 	CMember(EFocusingBehavior)                         NoRangedWeaponFocusBehavior                                 OFFSET(get<T>, {0xE5, 1, 0, 0})
 	DMember(bool)                                      bPrioritizeThreatOverCurrentTarget                          OFFSET(get<bool>, {0xE6, 1, 0, 0})
@@ -2754,8 +2754,8 @@ class UFortAthenaAIBotEvaluator_Heal : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 280;
 
 public:
-	SMember(FName)                                     HealingObjectKeyName                                        OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         RequiredTagQuery                                            OFFSET(get<T>, {0xB8, 72, 0, 0})
+	SMember(FName)                                     HealingObjectKeyName                                        OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         RequiredTagQuery                                            OFFSET(getStruct<T>, {0xB8, 72, 0, 0})
 	DMember(bool)                                      bAllowEvaluationRetry                                       OFFSET(get<bool>, {0x100, 1, 0, 0})
 	CMember(UFortAthenaAIBotHealingDigestedSkillSet*)  HealingSkillSet                                             OFFSET(get<T>, {0x108, 8, 0, 0})
 
@@ -2773,15 +2773,15 @@ class UFortAthenaAIBotEvaluator_HitAndRun : public UFortAthenaAIBotEvaluator_Mov
 	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
-	SMember(FScalableFloat)                            AttackDurationBeforeEvade                                   OFFSET(get<T>, {0x1A8, 40, 0, 0})
-	SMember(FScalableFloat)                            MeleeAttackMaxDistToEvade                                   OFFSET(get<T>, {0x1D0, 40, 0, 0})
-	SMember(FScalableFloat)                            ClampEvadeDistanceEnable                                    OFFSET(get<T>, {0x1F8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDistanceToEvade                                          OFFSET(get<T>, {0x220, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxDistanceToEvade                                          OFFSET(get<T>, {0x248, 40, 0, 0})
-	SMember(FName)                                     EvadeKeyName                                                OFFSET(get<T>, {0x270, 4, 0, 0})
-	SMember(FName)                                     EvadeMovementStateKeyName                                   OFFSET(get<T>, {0x274, 4, 0, 0})
-	SMember(FName)                                     EvadeDestinationKeyName                                     OFFSET(get<T>, {0x278, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(get<T>, {0x27C, 4, 0, 0})
+	SMember(FScalableFloat)                            AttackDurationBeforeEvade                                   OFFSET(getStruct<T>, {0x1A8, 40, 0, 0})
+	SMember(FScalableFloat)                            MeleeAttackMaxDistToEvade                                   OFFSET(getStruct<T>, {0x1D0, 40, 0, 0})
+	SMember(FScalableFloat)                            ClampEvadeDistanceEnable                                    OFFSET(getStruct<T>, {0x1F8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDistanceToEvade                                          OFFSET(getStruct<T>, {0x220, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxDistanceToEvade                                          OFFSET(getStruct<T>, {0x248, 40, 0, 0})
+	SMember(FName)                                     EvadeKeyName                                                OFFSET(getStruct<T>, {0x270, 4, 0, 0})
+	SMember(FName)                                     EvadeMovementStateKeyName                                   OFFSET(getStruct<T>, {0x274, 4, 0, 0})
+	SMember(FName)                                     EvadeDestinationKeyName                                     OFFSET(getStruct<T>, {0x278, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0x27C, 4, 0, 0})
 	DMember(float)                                     MeleeAttackMaxDistToEvadeSqr                                OFFSET(get<float>, {0x290, 4, 0, 0})
 	DMember(float)                                     MaxDistanceToEvadeSqr                                       OFFSET(get<float>, {0x294, 4, 0, 0})
 };
@@ -2805,12 +2805,12 @@ class UFortAthenaAIBotEvaluator_Investigate : public UFortAthenaAIBotEvaluator_M
 	static inline constexpr uint64_t __MDKClassSize = 616;
 
 public:
-	SMember(FName)                                     LastKnownPositionName                                       OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     DestinationKeyName                                          OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     AggressivenessName                                          OFFSET(get<T>, {0x1B4, 4, 0, 0})
-	SMember(FName)                                     CautiousKeyName                                             OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     AlertLevelName                                              OFFSET(get<T>, {0x1BC, 4, 0, 0})
+	SMember(FName)                                     LastKnownPositionName                                       OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     DestinationKeyName                                          OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     AggressivenessName                                          OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     CautiousKeyName                                             OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FName)                                     AlertLevelName                                              OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
 	CMember(UClass*)                                   SearchQueryFilterClass                                      OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   CacheAimingDigestedSkillSet                                 OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) CacheAttackingDigestedSkillSet                             OFFSET(get<T>, {0x1E0, 8, 0, 0})
@@ -2828,8 +2828,8 @@ class UFortAthenaAIBotEvaluator_JumpOffBus : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FName)                                     JumpOffBusDestinationName                                   OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     JumpOffBusDestinationVolumeKeyName                          OFFSET(get<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     JumpOffBusDestinationName                                   OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     JumpOffBusDestinationVolumeKeyName                          OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
 	CMember(AFortPoiVolume*)                           BusDroppingVolume                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedAthenaGameState                                       OFFSET(get<T>, {0xD8, 8, 0, 0})
 	CMember(UFortAthenaAIBotMovementDigestedSkillSet*) CacheMovementDigestedSkillSet                               OFFSET(get<T>, {0xE0, 8, 0, 0})
@@ -2843,9 +2843,9 @@ class UFortAthenaAIBotEvaluator_MeleeAttack : public UFortAthenaAIBotEvaluator_A
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(get<T>, {0x1C4, 4, 0, 0})
-	SMember(FName)                                     ThrowableAttacksAllowedName                                 OFFSET(get<T>, {0x1C8, 4, 0, 0})
-	SMember(FName)                                     TraversalBlockMeleeAttackName                               OFFSET(get<T>, {0x1CC, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
+	SMember(FName)                                     ThrowableAttacksAllowedName                                 OFFSET(getStruct<T>, {0x1C8, 4, 0, 0})
+	SMember(FName)                                     TraversalBlockMeleeAttackName                               OFFSET(getStruct<T>, {0x1CC, 4, 0, 0})
 	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) AttackingSkillSet                                          OFFSET(get<T>, {0x1D8, 8, 0, 0})
 };
 
@@ -2857,8 +2857,8 @@ class UFortAthenaAIBotEvaluator_Observe : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FName)                                     AggressivenessName                                          OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     ObserveDestinationKeyName                                   OFFSET(get<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     AggressivenessName                                          OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     ObserveDestinationKeyName                                   OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
 	DMember(bool)                                      bContinueMovementOnStart                                    OFFSET(get<bool>, {0xB4, 1, 0, 0})
 	DMember(float)                                     MaxMovementDuration                                         OFFSET(get<float>, {0xB8, 4, 0, 0})
 };
@@ -2871,8 +2871,8 @@ class UFortAthenaAIBotEvaluator_PathExists : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FName)                                     PathExistsKeyName                                           OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     GoalKeyName                                                 OFFSET(get<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     PathExistsKeyName                                           OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     GoalKeyName                                                 OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
 	DMember(float)                                     AcceptableRadius                                            OFFSET(get<float>, {0xB4, 4, 0, 0})
 	CMember(UClass*)                                   FilterClass                                                 OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(TEnumAsByte<EPathTestQueryType>)           PathQueryType                                               OFFSET(get<T>, {0xC0, 1, 0, 0})
@@ -2889,13 +2889,13 @@ class UFortAthenaAIBotEvaluator_PatrolAround : public UFortAthenaAIBotEvaluator_
 	static inline constexpr uint64_t __MDKClassSize = 568;
 
 public:
-	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(get<T>, {0x1A8, 72, 0, 0})
+	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(getStruct<T>, {0x1A8, 72, 0, 0})
 	CMember(UClass*)                                   NavigationQueryFilterClass                                  OFFSET(get<T>, {0x1F0, 8, 0, 0})
 	DMember(bool)                                      bFallbackToPointWithNoCustomNavigationQueryFilter           OFFSET(get<bool>, {0x1F8, 1, 0, 0})
-	SMember(FName)                                     PatrolDestinationName                                       OFFSET(get<T>, {0x1FC, 4, 0, 0})
-	SMember(FName)                                     PatrolExecutionStatusName                                   OFFSET(get<T>, {0x200, 4, 0, 0})
-	SMember(FName)                                     PatrolMovementStateName                                     OFFSET(get<T>, {0x204, 4, 0, 0})
-	SMember(FName)                                     BestTargetActorName                                         OFFSET(get<T>, {0x208, 4, 0, 0})
+	SMember(FName)                                     PatrolDestinationName                                       OFFSET(getStruct<T>, {0x1FC, 4, 0, 0})
+	SMember(FName)                                     PatrolExecutionStatusName                                   OFFSET(getStruct<T>, {0x200, 4, 0, 0})
+	SMember(FName)                                     PatrolMovementStateName                                     OFFSET(getStruct<T>, {0x204, 4, 0, 0})
+	SMember(FName)                                     BestTargetActorName                                         OFFSET(getStruct<T>, {0x208, 4, 0, 0})
 	CMember(AFortGameModeAthena*)                      CacheAthenaGameMode                                         OFFSET(get<T>, {0x210, 8, 0, 0})
 };
 
@@ -2907,8 +2907,8 @@ class UFortAthenaAIBotEvaluator_PlayEmote : public UFortAthenaAIBotEvaluator_Mov
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
 public:
-	SMember(FName)                                     PlayEmoteExecutionStatusKeyName                             OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     PlayEmoteDestinationKeyName                                 OFFSET(get<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     PlayEmoteExecutionStatusKeyName                             OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     PlayEmoteDestinationKeyName                                 OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
 	CMember(AActor*)                                   ExcludeReachingTarget                                       OFFSET(get<T>, {0x1B8, 8, 0, 0})
 };
 
@@ -2920,7 +2920,7 @@ class UFortAthenaAIBotEvaluator_PropagateAwareness : public UFortAthenaAIBotEval
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-	SMember(FGameplayTagQuery)                         AwarenessTagQuery                                           OFFSET(get<T>, {0xA8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         AwarenessTagQuery                                           OFFSET(getStruct<T>, {0xA8, 72, 0, 0})
 	CMember(UClass*)                                   AwarenessGameplayEffectClass                                OFFSET(get<T>, {0xF0, 8, 0, 0})
 	CMember(TArray<AFortPlayerPawnAthena*>)            AwareAllyPawns                                              OFFSET(get<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<AFortPlayerPawnAthena*>)            AlreadyTestedPawns                                          OFFSET(get<T>, {0x108, 16, 0, 0})
@@ -2937,13 +2937,13 @@ class UFortAthenaAIBotEvaluator_RangeAttack : public UFortAthenaAIBotEvaluator_A
 	static inline constexpr uint64_t __MDKClassSize = 784;
 
 public:
-	SMember(FName)                                     WeaponReloadName                                            OFFSET(get<T>, {0x1D8, 4, 0, 0})
-	SMember(FName)                                     WeaponFireName                                              OFFSET(get<T>, {0x1DC, 4, 0, 0})
-	SMember(FName)                                     RangeAttackIsReadyToFireName                                OFFSET(get<T>, {0x1E0, 4, 0, 0})
-	SMember(FName)                                     WeaponTargetingName                                         OFFSET(get<T>, {0x1E4, 4, 0, 0})
-	SMember(FName)                                     AggressivenessName                                          OFFSET(get<T>, {0x1E8, 4, 0, 0})
-	SMember(FName)                                     HasLoSOnThreatName                                          OFFSET(get<T>, {0x1EC, 4, 0, 0})
-	SMember(FName)                                     UrgentMovementKeyName                                       OFFSET(get<T>, {0x1F0, 4, 0, 0})
+	SMember(FName)                                     WeaponReloadName                                            OFFSET(getStruct<T>, {0x1D8, 4, 0, 0})
+	SMember(FName)                                     WeaponFireName                                              OFFSET(getStruct<T>, {0x1DC, 4, 0, 0})
+	SMember(FName)                                     RangeAttackIsReadyToFireName                                OFFSET(getStruct<T>, {0x1E0, 4, 0, 0})
+	SMember(FName)                                     WeaponTargetingName                                         OFFSET(getStruct<T>, {0x1E4, 4, 0, 0})
+	SMember(FName)                                     AggressivenessName                                          OFFSET(getStruct<T>, {0x1E8, 4, 0, 0})
+	SMember(FName)                                     HasLoSOnThreatName                                          OFFSET(getStruct<T>, {0x1EC, 4, 0, 0})
+	SMember(FName)                                     UrgentMovementKeyName                                       OFFSET(getStruct<T>, {0x1F0, 4, 0, 0})
 	DMember(bool)                                      bAlwaysAllowTargetingEvaluation                             OFFSET(get<bool>, {0x202, 1, 0, 0})
 	DMember(bool)                                      bSkipADSEvaluation                                          OFFSET(get<bool>, {0x203, 1, 0, 0})
 	DMember(bool)                                      bConsiderLoF                                                OFFSET(get<bool>, {0x204, 1, 0, 0})
@@ -2970,9 +2970,9 @@ class UFortAthenaAIBotEvaluator_ReachBeacon : public UFortAthenaAIBotEvaluator_M
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
 public:
-	SMember(FName)                                     ReachBeaconStatusKeyName                                    OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     ReachBeaconMovementStateKeyName                             OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     ReachBeaconTargetKeyName                                    OFFSET(get<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     ReachBeaconStatusKeyName                                    OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     ReachBeaconMovementStateKeyName                             OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     ReachBeaconTargetKeyName                                    OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaBeaconComponent*>) CurrentBeacon                                             OFFSET(get<T>, {0x1BC, 8, 0, 0})
 };
 
@@ -2984,11 +2984,11 @@ class UFortAthenaAIBotEvaluator_RecoverLineOfSight : public UFortAthenaAIBotEval
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FScalableFloat)                            RecoveringLineOfSightMaxDuration                            OFFSET(get<T>, {0x1A8, 40, 0, 0})
+	SMember(FScalableFloat)                            RecoveringLineOfSightMaxDuration                            OFFSET(getStruct<T>, {0x1A8, 40, 0, 0})
 	CMember(TArray<FName>)                             ExecutionStatusToListenKeyNames                             OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	SMember(FName)                                     RecoverLineOfSightExecutionStatusKeyName                    OFFSET(get<T>, {0x1E0, 4, 0, 0})
-	SMember(FName)                                     RecoverLineOfSightMovementStateKeyName                      OFFSET(get<T>, {0x1E4, 4, 0, 0})
-	SMember(FName)                                     RecoverLineOfSightDestinationKeyName                        OFFSET(get<T>, {0x1E8, 4, 0, 0})
+	SMember(FName)                                     RecoverLineOfSightExecutionStatusKeyName                    OFFSET(getStruct<T>, {0x1E0, 4, 0, 0})
+	SMember(FName)                                     RecoverLineOfSightMovementStateKeyName                      OFFSET(getStruct<T>, {0x1E4, 4, 0, 0})
+	SMember(FName)                                     RecoverLineOfSightDestinationKeyName                        OFFSET(getStruct<T>, {0x1E8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_ReloadWeapon
@@ -2999,7 +2999,7 @@ class UFortAthenaAIBotEvaluator_ReloadWeapon : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     WeaponKeyName                                               OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	DMember(bool)                                      bCanReloadWeaponsInInventory                                OFFSET(get<bool>, {0xAE, 1, 0, 0})
 };
 
@@ -3011,7 +3011,7 @@ class UFortAthenaAIBotEvaluator_Retreat : public UFortAthenaAIBotEvaluator_Movem
 	static inline constexpr uint64_t __MDKClassSize = 464;
 
 public:
-	SMember(FName)                                     RetreatDestinationName                                      OFFSET(get<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     RetreatDestinationName                                      OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
 	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) CacheAttackingDigestedSkillSet                             OFFSET(get<T>, {0x1B0, 8, 0, 0})
 	CMember(UFortAthenaAICoverComponent*)              CachedCoverComponent                                        OFFSET(get<T>, {0x1B8, 8, 0, 0})
 
@@ -3029,9 +3029,9 @@ class UFortAthenaAIBotEvaluator_Revive : public UFortAthenaAIBotEvaluator_Moveme
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FScalableFloat)                            LastReviveTargetExpiration                                  OFFSET(get<T>, {0x1A8, 40, 0, 0})
-	SMember(FName)                                     ReviveTargetKeyName                                         OFFSET(get<T>, {0x1D0, 4, 0, 0})
-	SMember(FName)                                     ReviveLastTargetKeyName                                     OFFSET(get<T>, {0x1D4, 4, 0, 0})
+	SMember(FScalableFloat)                            LastReviveTargetExpiration                                  OFFSET(getStruct<T>, {0x1A8, 40, 0, 0})
+	SMember(FName)                                     ReviveTargetKeyName                                         OFFSET(getStruct<T>, {0x1D0, 4, 0, 0})
+	SMember(FName)                                     ReviveLastTargetKeyName                                     OFFSET(getStruct<T>, {0x1D4, 4, 0, 0})
 	CMember(UFortAthenaAIRuntimeParameters_ReviveBehavior*) ReviveBehaviorRuntimeParameters                        OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    CurrentReviveTarget                                         OFFSET(get<T>, {0x1E0, 8, 0, 0})
 	CMember(TArray<AFortPlayerPawnAthena*>)            DBNOAllyPawns                                               OFFSET(get<T>, {0x1E8, 16, 0, 0})
@@ -3051,11 +3051,11 @@ class UFortAthenaAIBotEvaluator_SandTunnel : public UFortAthenaAIBotEvaluator_Ta
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(get<T>, {0xF8, 4, 0, 0})
-	SMember(FName)                                     LootInteractionExecutionStatusName                          OFFSET(get<T>, {0xFC, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(get<T>, {0x100, 4, 0, 0})
-	SMember(FName)                                     WeaponFireName                                              OFFSET(get<T>, {0x104, 4, 0, 0})
-	SMember(FGameplayTagQuery)                         BuriedTagQuery                                              OFFSET(get<T>, {0x110, 72, 0, 0})
+	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(getStruct<T>, {0xF8, 4, 0, 0})
+	SMember(FName)                                     LootInteractionExecutionStatusName                          OFFSET(getStruct<T>, {0xFC, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0x100, 4, 0, 0})
+	SMember(FName)                                     WeaponFireName                                              OFFSET(getStruct<T>, {0x104, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         BuriedTagQuery                                              OFFSET(getStruct<T>, {0x110, 72, 0, 0})
 	CMember(UFortAthenaAIBotMovementDigestedSkillSet*) CacheMovementDigestedSkillSet                               OFFSET(get<T>, {0x158, 8, 0, 0})
 
 
@@ -3074,11 +3074,11 @@ class UFortAthenaAIBotEvaluator_SelectNextDynamicPOI : public UFortAthenaAIBotEv
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	SMember(FName)                                     DynamicPOIExecutionStatusKeyName                            OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     DynamicPOILocationKeyName                                   OFFSET(get<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     DynamicPOIExecutionStatusKeyName                            OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     DynamicPOILocationKeyName                                   OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
 	CMember(AFortTeamInfoAthena*)                      CachedTeamInfo                                              OFFSET(get<T>, {0x1B8, 8, 0, 0})
 	CMember(UFortGameStateComponent_BattleRoyaleGamePhaseLogic*) CachedGamePhaseLogic                              OFFSET(get<T>, {0x1C0, 8, 0, 0})
-	SMember(FTimerHandle)                              NextSearchTimerHandle                                       OFFSET(get<T>, {0x200, 8, 0, 0})
+	SMember(FTimerHandle)                              NextSearchTimerHandle                                       OFFSET(getStruct<T>, {0x200, 8, 0, 0})
 	CMember(TArray<FFailedToReachPOI>)                 FailedBotPOIList                                            OFFSET(get<T>, {0x208, 16, 0, 0})
 	DMember(int32_t)                                   CachedSelectedBotPOIID                                      OFFSET(get<int32_t>, {0x218, 4, 0, 0})
 
@@ -3098,8 +3098,8 @@ class UFortAthenaAIBotEvaluator_SelectNextPOI : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FName)                                     NextPOIKeyName                                              OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     MarkerLocationKeyName                                       OFFSET(get<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     NextPOIKeyName                                              OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     MarkerLocationKeyName                                       OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
 	CMember(AFortPoiVolume*)                           StartingGroundPOI                                           OFFSET(get<T>, {0x1B8, 8, 0, 0})
 	DMember(bool)                                      bCheckForStartingGroundPOI                                  OFFSET(get<bool>, {0x1C0, 1, 0, 0})
 	DMember(float)                                     CurrentPOICompletionTime                                    OFFSET(get<float>, {0x1C4, 4, 0, 0})
@@ -3116,11 +3116,11 @@ class UFortAthenaAIBotEvaluator_SelectVehicle : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 648;
 
 public:
-	SMember(FName)                                     VehicleDestinationKeyName                                   OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     SelectVehicleMovementStateKeyName                           OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     SelectVehicleStatusKeyName                                  OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     SelectedVehicleKeyName                                      OFFSET(get<T>, {0x1B4, 4, 0, 0})
-	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0x1C0, 40, 0, 0})
+	SMember(FName)                                     VehicleDestinationKeyName                                   OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     SelectVehicleMovementStateKeyName                           OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     SelectVehicleStatusKeyName                                  OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     SelectedVehicleKeyName                                      OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+	SMember(FScalableFloat)                            Enabled                                                     OFFSET(getStruct<T>, {0x1C0, 40, 0, 0})
 	DMember(float)                                     VehicleSearchRadius                                         OFFSET(get<float>, {0x1E8, 4, 0, 0})
 	DMember(bool)                                      bCanEnterOnlyWithHisConverter                               OFFSET(get<bool>, {0x1EC, 1, 0, 0})
 	DMember(bool)                                      bCanEnterAsDriver                                           OFFSET(get<bool>, {0x1ED, 1, 0, 0})
@@ -3128,8 +3128,8 @@ public:
 	DMember(bool)                                      bCanEnterOutOfFuelVehicles                                  OFFSET(get<bool>, {0x1EF, 1, 0, 0})
 	DMember(bool)                                      bCanEnterWithPlayerDriver                                   OFFSET(get<bool>, {0x1F0, 1, 0, 0})
 	DMember(bool)                                      bCanEnterOnlyMatchingPatrols                                OFFSET(get<bool>, {0x1F1, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         VehiclesFilterTagQuery                                      OFFSET(get<T>, {0x1F8, 72, 0, 0})
-	SMember(FGameplayTagQuery)                         SeatsFilterTagQuery                                         OFFSET(get<T>, {0x240, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         VehiclesFilterTagQuery                                      OFFSET(getStruct<T>, {0x1F8, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         SeatsFilterTagQuery                                         OFFSET(getStruct<T>, {0x240, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_SmartObjects
@@ -3147,12 +3147,12 @@ public:
 	CMember(UCurveFloat*)                              DistanceToWeightCurveForSlotPicking                         OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(UClass*)                                   OverridenFilterClassForEntryPoints                          OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(TArray<FName>)                             ExecutionStatusesToCheckForAllowToAvoidGoingToSOKeyNames    OFFSET(get<T>, {0x1D8, 16, 0, 0})
-	SMember(FName)                                     SmartObjectExecutionStatusKeyName                           OFFSET(get<T>, {0x1F8, 4, 0, 0})
-	SMember(FName)                                     SmartObjectMovementStateKeyName                             OFFSET(get<T>, {0x1FC, 4, 0, 0})
-	SMember(FName)                                     SmartObjectDestinationKeyName                               OFFSET(get<T>, {0x200, 4, 0, 0})
-	SMember(FName)                                     SmartObjectDestinationRotationKeyName                       OFFSET(get<T>, {0x204, 4, 0, 0})
-	SMember(FName)                                     SmartObjectShouldMoveKeyName                                OFFSET(get<T>, {0x208, 4, 0, 0})
-	SMember(FName)                                     SmartObjectUrgencyKeyName                                   OFFSET(get<T>, {0x20C, 4, 0, 0})
+	SMember(FName)                                     SmartObjectExecutionStatusKeyName                           OFFSET(getStruct<T>, {0x1F8, 4, 0, 0})
+	SMember(FName)                                     SmartObjectMovementStateKeyName                             OFFSET(getStruct<T>, {0x1FC, 4, 0, 0})
+	SMember(FName)                                     SmartObjectDestinationKeyName                               OFFSET(getStruct<T>, {0x200, 4, 0, 0})
+	SMember(FName)                                     SmartObjectDestinationRotationKeyName                       OFFSET(getStruct<T>, {0x204, 4, 0, 0})
+	SMember(FName)                                     SmartObjectShouldMoveKeyName                                OFFSET(getStruct<T>, {0x208, 4, 0, 0})
+	SMember(FName)                                     SmartObjectUrgencyKeyName                                   OFFSET(getStruct<T>, {0x20C, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Sprinting
@@ -3163,15 +3163,15 @@ class UFortAthenaAIBotEvaluator_Sprinting : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FName)                                     AllowSprintKeyName                                          OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     AllowSlideKeyName                                           OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FName)                                     SlideExecutionStatusName                                    OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     UrgentMovementKeyName                                       OFFSET(get<T>, {0xBC, 4, 0, 0})
-	SMember(FName)                                     RangeAttackExecutionStatusName                              OFFSET(get<T>, {0xC0, 4, 0, 0})
-	SMember(FName)                                     MeleeAttackExecutionStatusName                              OFFSET(get<T>, {0xC4, 4, 0, 0})
-	SMember(FName)                                     ThrowableAttackExecutionStatusName                          OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FName)                                     AllowSprintKeyName                                          OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     AllowSlideKeyName                                           OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     SlideExecutionStatusName                                    OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     UrgentMovementKeyName                                       OFFSET(getStruct<T>, {0xBC, 4, 0, 0})
+	SMember(FName)                                     RangeAttackExecutionStatusName                              OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     MeleeAttackExecutionStatusName                              OFFSET(getStruct<T>, {0xC4, 4, 0, 0})
+	SMember(FName)                                     ThrowableAttackExecutionStatusName                          OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 	DMember(bool)                                      bSprintOnlyInWater                                          OFFSET(get<bool>, {0xDE, 1, 0, 0})
 	DMember(bool)                                      bSprintOnlyInUrgentMode                                     OFFSET(get<bool>, {0xDF, 1, 0, 0})
 	CMember(UFortAthenaAIBotMovementDigestedSkillSet*) MovementSkillSet                                            OFFSET(get<T>, {0xE0, 8, 0, 0})
@@ -3189,9 +3189,9 @@ class UFortAthenaAIBotEvaluator_StealWall : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FName)                                     StealWallBuildTypeName                                      OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     StealWallBuildGridCoordName                                 OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     StealWallBuildTypeName                                      OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     StealWallBuildGridCoordName                                 OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
 	CMember(UFortAthenaAIBotBuildingDigestedSkillSet*) CacheBuildingDigestedSkillSet                               OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(ABuildingActor*)                           CurrentBuildingTarget                                       OFFSET(get<T>, {0xC8, 8, 0, 0})
 };
@@ -3206,9 +3206,9 @@ class UFortAthenaAIBotEvaluator_StepBack : public UFortAthenaAIBotEvaluator_Move
 public:
 	CMember(UFortAthenaAIBotRangeAttackDigestedSkillSet*) CachedRangeAttackDigestedSkillSet                        OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UAthenaAIServiceCover*)                    CachedAIServiceCover                                        OFFSET(get<T>, {0x1B0, 8, 0, 0})
-	SMember(FName)                                     StepBackExecutionStatusKeyName                              OFFSET(get<T>, {0x1C0, 4, 0, 0})
-	SMember(FName)                                     StepBackMovementStateKeyName                                OFFSET(get<T>, {0x1C4, 4, 0, 0})
-	SMember(FName)                                     StepBackDestinationKeyName                                  OFFSET(get<T>, {0x1C8, 4, 0, 0})
+	SMember(FName)                                     StepBackExecutionStatusKeyName                              OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     StepBackMovementStateKeyName                                OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
+	SMember(FName)                                     StepBackDestinationKeyName                                  OFFSET(getStruct<T>, {0x1C8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Storm
@@ -3219,7 +3219,7 @@ class UFortAthenaAIBotEvaluator_Storm : public UFortAthenaAIBotEvaluator_Movemen
 	static inline constexpr uint64_t __MDKClassSize = 520;
 
 public:
-	SMember(FName)                                     StormDestinationName                                        OFFSET(get<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     StormDestinationName                                        OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
 	CMember(AFortGameModeAthena*)                      CacheAthenaGameMode                                         OFFSET(get<T>, {0x1B8, 8, 0, 0})
 	CMember(UBehaviorTreeComponent*)                   CachedBTComp                                                OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(UFortGameStateComponent_BattleRoyaleGamePhaseLogic*) CachedGamePhaseLogic                              OFFSET(get<T>, {0x1C8, 8, 0, 0})
@@ -3238,7 +3238,7 @@ class UFortAthenaAIBotEvaluator_TagQueryToBBKey : public UFortAthenaAIBotEvaluat
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FName)                                     LinkedBBKeyName                                             OFFSET(get<T>, {0xF8, 4, 0, 0})
+	SMember(FName)                                     LinkedBBKeyName                                             OFFSET(getStruct<T>, {0xF8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_TakeCover
@@ -3252,12 +3252,12 @@ public:
 	CMember(UFortAthenaAIBotRangeAttackDigestedSkillSet*) CacheRangeAttackDigestedSkillSet                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   CacheAimingDigestedSkillSet                                 OFFSET(get<T>, {0x1B0, 8, 0, 0})
 	CMember(UAthenaAIServiceCover*)                    CachedAIServiceCover                                        OFFSET(get<T>, {0x1B8, 8, 0, 0})
-	SMember(FName)                                     DestinationKeyName                                          OFFSET(get<T>, {0x1C0, 4, 0, 0})
-	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(get<T>, {0x1C4, 4, 0, 0})
-	SMember(FName)                                     HealingStatusKeyName                                        OFFSET(get<T>, {0x1C8, 4, 0, 0})
-	SMember(FName)                                     WeaponFireName                                              OFFSET(get<T>, {0x1CC, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0x1D0, 4, 0, 0})
-	SMember(FName)                                     BunkerStatusKeyName                                         OFFSET(get<T>, {0x1D4, 4, 0, 0})
+	SMember(FName)                                     DestinationKeyName                                          OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     MoveToDestinationKeyName                                    OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
+	SMember(FName)                                     HealingStatusKeyName                                        OFFSET(getStruct<T>, {0x1C8, 4, 0, 0})
+	SMember(FName)                                     WeaponFireName                                              OFFSET(getStruct<T>, {0x1CC, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0x1D0, 4, 0, 0})
+	SMember(FName)                                     BunkerStatusKeyName                                         OFFSET(getStruct<T>, {0x1D4, 4, 0, 0})
 	CMember(ABuildingActor*)                           CachedCoverBuildingActor                                    OFFSET(get<T>, {0x1E8, 8, 0, 0})
 	CMember(TArray<ABuildingActor*>)                   ExcludedBuildingActors                                      OFFSET(get<T>, {0x1F0, 16, 0, 0})
 };
@@ -3270,8 +3270,8 @@ class UFortAthenaAIBotEvaluator_ThrowableAttack : public UFortAthenaAIBotEvaluat
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FName)                                     WeaponTriggerThrowableName                                  OFFSET(get<T>, {0x1C0, 4, 0, 0})
-	SMember(FName)                                     ThrowableAttackIsReadyToThrowName                           OFFSET(get<T>, {0x1C4, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerThrowableName                                  OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     ThrowableAttackIsReadyToThrowName                           OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
 	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) AttackingSkillSet                                          OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(UFortAthenaAIBotRangeAttackDigestedSkillSet*) RangeAttackSkillSet                                      OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   AimingSkillSet                                              OFFSET(get<T>, {0x1E0, 8, 0, 0})
@@ -3288,11 +3288,11 @@ class UFortAthenaAIBotEvaluator_TrapOnPathDetected : public UFortAthenaAIBotEval
 
 public:
 	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   CacheAimingDigestedSkillSet                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FName)                                     TrapOnPathKeyName                                           OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     TrapActorOnPathKeyName                                      OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     AlertLevelName                                              OFFSET(get<T>, {0xBC, 4, 0, 0})
-	SMember(FName)                                     RangeAttackExecutionStatusName                              OFFSET(get<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     TrapOnPathKeyName                                           OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     TrapActorOnPathKeyName                                      OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     AlertLevelName                                              OFFSET(getStruct<T>, {0xBC, 4, 0, 0})
+	SMember(FName)                                     RangeAttackExecutionStatusName                              OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
 	CMember(ABuildingTrap*)                            CurrentTrapTarget                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
 };
 
@@ -3304,7 +3304,7 @@ class UFortAthenaAIBotEvaluator_VehicleLeaveSeat : public UFortAthenaAIBotEvalua
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     LeaveSeatStatusKeyName                                      OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     LeaveSeatStatusKeyName                                      OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	DMember(bool)                                      bLeaveSeatWhenPlayerInVehicle                               OFFSET(get<bool>, {0xAE, 1, 0, 0})
 	DMember(bool)                                      bLeaveSeatWhenConverterLeave                                OFFSET(get<bool>, {0xAF, 1, 0, 0})
 };
@@ -3317,7 +3317,7 @@ class UFortAthenaAIBotEvaluator_VehicleSwitchSeat : public UFortAthenaAIBotEvalu
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     SwitchSeatStatusKeyName                                     OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     SwitchSeatStatusKeyName                                     OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 	DMember(bool)                                      bSwitchToEmptyDriverSeat                                    OFFSET(get<bool>, {0xAE, 1, 0, 0})
 };
 
@@ -3329,7 +3329,7 @@ class UFortAthenaAIBotEvaluator_WaitForPassengers : public UFortAthenaAIBotEvalu
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     WaitForPassengersStatusKeyName                              OFFSET(get<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     WaitForPassengersStatusKeyName                              OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIBotEvaluator_Warmup
@@ -3340,9 +3340,9 @@ class UFortAthenaAIBotEvaluator_Warmup : public UFortAthenaAIBotEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FName)                                     WarmupPlayEmoteExecutionStatusKeyName                       OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     WarmupLootAndShootExecutionStatusKeyName                    OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     WarmupIdleExecutionStatusKeyName                            OFFSET(get<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     WarmupPlayEmoteExecutionStatusKeyName                       OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     WarmupLootAndShootExecutionStatusKeyName                    OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     WarmupIdleExecutionStatusKeyName                            OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
 	CMember(UFortAthenaAIBotWarmupDigestedSkillSet*)   CacheWarmupDigestedSkillSet                                 OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
@@ -3354,9 +3354,9 @@ class UFortAthenaAIBotEvaluator_WeaponSelection : public UFortAthenaAIBotEvaluat
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FName)                                     ThrowableAttackIsReadyToThrowName                           OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     WeaponKeyName                                               OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     TargetActorName                                             OFFSET(get<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     ThrowableAttackIsReadyToThrowName                           OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     WeaponKeyName                                               OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     TargetActorName                                             OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
 	CMember(UFortAthenaAIBotRangeAttackDigestedSkillSet*) CacheRangeAttackDigestedSkillSet                         OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(UFortAthenaAIBotAttackingDigestedSkillSet*) CacheAttackingDigestedSkillSet                             OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(UFortAthenaAIBotAimingDigestedSkillSet*)   CacheAimingDigestedSkillSet                                 OFFSET(get<T>, {0xD8, 8, 0, 0})
@@ -3370,16 +3370,16 @@ class UFortAthenaAIBotEvaluator_Zipline : public UFortAthenaAIBotEvaluator_Movem
 	static inline constexpr uint64_t __MDKClassSize = 584;
 
 public:
-	SMember(FName)                                     CurrentDestinationKeyName                                   OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     ZiplineTargetKeyName                                        OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     LastZiplineUsedName                                         OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     ZiplineMoveExecutionStatusKeyName                           OFFSET(get<T>, {0x1B4, 4, 0, 0})
-	SMember(FName)                                     ZiplineEntryLocationKeyName                                 OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     ZiplineExitLocationKeyName                                  OFFSET(get<T>, {0x1BC, 4, 0, 0})
-	SMember(FName)                                     ZiplineLastUsageTimeName                                    OFFSET(get<T>, {0x1C0, 4, 0, 0})
-	SMember(FName)                                     ZiplineUsageExecutionStatusName                             OFFSET(get<T>, {0x1C4, 4, 0, 0})
-	SMember(FScalableFloat)                            WaitTimeBetweenZiplineRandomChoices                         OFFSET(get<T>, {0x1C8, 40, 0, 0})
-	SMember(FScalableFloat)                            ProbabilityToUseZipline                                     OFFSET(get<T>, {0x1F0, 40, 0, 0})
+	SMember(FName)                                     CurrentDestinationKeyName                                   OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     ZiplineTargetKeyName                                        OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     LastZiplineUsedName                                         OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     ZiplineMoveExecutionStatusKeyName                           OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     ZiplineEntryLocationKeyName                                 OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FName)                                     ZiplineExitLocationKeyName                                  OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
+	SMember(FName)                                     ZiplineLastUsageTimeName                                    OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     ZiplineUsageExecutionStatusName                             OFFSET(getStruct<T>, {0x1C4, 4, 0, 0})
+	SMember(FScalableFloat)                            WaitTimeBetweenZiplineRandomChoices                         OFFSET(getStruct<T>, {0x1C8, 40, 0, 0})
+	SMember(FScalableFloat)                            ProbabilityToUseZipline                                     OFFSET(getStruct<T>, {0x1F0, 40, 0, 0})
 
 
 	/// Functions
@@ -3397,7 +3397,7 @@ class UFortAthenaAIEvaluator_BlueprintBase : public UFortAthenaAIBotEvaluator
 public:
 	DMember(bool)                                      bBlockWeaponActions                                         OFFSET(get<bool>, {0xA8, 1, 0, 0})
 	DMember(bool)                                      bGameplayAbilityEvaluator                                   OFFSET(get<bool>, {0xA9, 1, 0, 0})
-	SMember(FGameplayAbilityEvaluatorModule)           GameplayAbilityEvaluatorModule                              OFFSET(get<T>, {0xB0, 40, 0, 0})
+	SMember(FGameplayAbilityEvaluatorModule)           GameplayAbilityEvaluatorModule                              OFFSET(getStruct<T>, {0xB0, 40, 0, 0})
 
 
 	/// Functions
@@ -3419,11 +3419,11 @@ class UFortAthenaAIEvaluator_DormantUntilPhase : public UFortAthenaAIEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-	SMember(FScalableFloat)                            bIsEnabled                                                  OFFSET(get<T>, {0xA0, 40, 0, 0})
+	SMember(FScalableFloat)                            bIsEnabled                                                  OFFSET(getStruct<T>, {0xA0, 40, 0, 0})
 	DMember(bool)                                      bDisabledInCreative                                         OFFSET(get<bool>, {0xC8, 1, 0, 0})
 	CMember(EAthenaGamePhaseStep)                      RequiredGamePhaseStep                                       OFFSET(get<T>, {0xC9, 1, 0, 0})
-	SMember(FScalableFloat)                            DelayAfterPhase                                             OFFSET(get<T>, {0xD0, 40, 0, 0})
-	SMember(FScalableFloat)                            RandomDeviationAfterPhase                                   OFFSET(get<T>, {0xF8, 40, 0, 0})
+	SMember(FScalableFloat)                            DelayAfterPhase                                             OFFSET(getStruct<T>, {0xD0, 40, 0, 0})
+	SMember(FScalableFloat)                            RandomDeviationAfterPhase                                   OFFSET(getStruct<T>, {0xF8, 40, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIEvaluator_FleeEnvDanger
@@ -3436,10 +3436,10 @@ class UFortAthenaAIEvaluator_FleeEnvDanger : public UFortAthenaAIEvaluator
 public:
 	DMember(float)                                     MaximumCheckDistance                                        OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(float)                                     AdditionalFleeDistance                                      OFFSET(get<float>, {0xA4, 4, 0, 0})
-	SMember(FName)                                     EnvironmentalDangerExecutionStatusName                      OFFSET(get<T>, {0xA8, 4, 0, 0})
-	SMember(FName)                                     EnvironmentalDangerFleeDirectionFromKeyName                 OFFSET(get<T>, {0xAC, 4, 0, 0})
-	SMember(FName)                                     EnvironmentalDangerFleeDirectionToKeyName                   OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     EnvironmentalDangerFleeDistanceKeyName                      OFFSET(get<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     EnvironmentalDangerExecutionStatusName                      OFFSET(getStruct<T>, {0xA8, 4, 0, 0})
+	SMember(FName)                                     EnvironmentalDangerFleeDirectionFromKeyName                 OFFSET(getStruct<T>, {0xAC, 4, 0, 0})
+	SMember(FName)                                     EnvironmentalDangerFleeDirectionToKeyName                   OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     EnvironmentalDangerFleeDistanceKeyName                      OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
 	CMember(AAIController*)                            CachedController                                            OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
@@ -3451,10 +3451,10 @@ class UFortAthenaAIEvaluator_FollowGroupLeader : public UFortAthenaAIBotEvaluato
 	static inline constexpr uint64_t __MDKClassSize = 456;
 
 public:
-	SMember(FName)                                     FollowGroupLeaderStatusKeyName                              OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     FollowGroupLeaderMovementStateKeyName                       OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     FollowGroupLeaderDestinationKeyName                         OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     TooFarFromLeaderKeyName                                     OFFSET(get<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     FollowGroupLeaderStatusKeyName                              OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     FollowGroupLeaderMovementStateKeyName                       OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     FollowGroupLeaderDestinationKeyName                         OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     TooFarFromLeaderKeyName                                     OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
 	CMember(UFortPawnComponent_AIGroup*)               CachedAIGroupComponent                                      OFFSET(get<T>, {0x1C0, 8, 0, 0})
 };
 
@@ -3466,8 +3466,8 @@ class UFortAthenaAIEvaluator_Leash : public UFortAthenaAIEvaluator
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FName)                                     GoalIsInsideLeashKeyName                                    OFFSET(get<T>, {0xA0, 4, 0, 0})
-	SMember(FName)                                     AIIsInsideLeashKeyName                                      OFFSET(get<T>, {0xA4, 4, 0, 0})
+	SMember(FName)                                     GoalIsInsideLeashKeyName                                    OFFSET(getStruct<T>, {0xA0, 4, 0, 0})
+	SMember(FName)                                     AIIsInsideLeashKeyName                                      OFFSET(getStruct<T>, {0xA4, 4, 0, 0})
 	CMember(UFortAthenaLeashComponent*)                CachedLeashComponent                                        OFFSET(get<T>, {0xB0, 8, 0, 0})
 	CMember(UFortAIGoalComponent*)                     CachedAIGoalComponent                                       OFFSET(get<T>, {0xB8, 8, 0, 0})
 };
@@ -3480,13 +3480,13 @@ class UFortAthenaAIEvaluator_NearbyActorsPerception : public UFortAthenaAIEvalua
 	static inline constexpr uint64_t __MDKClassSize = 592;
 
 public:
-	SMember(FName)                                     FoundNearbyActorKeyName                                     OFFSET(get<T>, {0xA0, 4, 0, 0})
-	SMember(FScalableFloat)                            MinimumUpdateInterval                                       OFFSET(get<T>, {0xA8, 40, 0, 0})
+	SMember(FName)                                     FoundNearbyActorKeyName                                     OFFSET(getStruct<T>, {0xA0, 4, 0, 0})
+	SMember(FScalableFloat)                            MinimumUpdateInterval                                       OFFSET(getStruct<T>, {0xA8, 40, 0, 0})
 	DMember(int32_t)                                   RequiredTypes                                               OFFSET(get<int32_t>, {0xD0, 4, 0, 0})
-	SMember(FScalableFloat)                            MinimumDistanceToActors                                     OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinimumDistanceToActors                                     OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       RequiredAttitudes                                           OFFSET(get<T>, {0x100, 16, 0, 0})
 	DMember(bool)                                      bRequireLoS                                                 OFFSET(get<bool>, {0x110, 1, 0, 0})
-	SMember(FGameplayTagQuery)                         RequiredTagsQuery                                           OFFSET(get<T>, {0x118, 72, 0, 0})
+	SMember(FGameplayTagQuery)                         RequiredTagsQuery                                           OFFSET(getStruct<T>, {0x118, 72, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAIEvaluator_SpeechBubble
@@ -3517,7 +3517,7 @@ class UFortAthenaBTService_AIEvaluator : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	CMember(UClass*)                                   AIEvaluatorClass                                            OFFSET(get<T>, {0x78, 8, 0, 0})
 };
 
@@ -3529,7 +3529,7 @@ class UFortAthenaBTService_ApplyGameplayTags : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FGameplayTagContainer)                     GameplayTagsToApply                                         OFFSET(get<T>, {0x70, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayTagsToApply                                         OFFSET(getStruct<T>, {0x70, 32, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_BuildConstruction
@@ -3540,9 +3540,9 @@ class UFortAthenaBTService_BuildConstruction : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     StealWallBuildName                                          OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     StealWallBuildTypeName                                      OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     StealWallBuildGridCoordName                                 OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     StealWallBuildName                                          OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     StealWallBuildTypeName                                      OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     StealWallBuildGridCoordName                                 OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_Clamber
@@ -3553,12 +3553,12 @@ class UFortAthenaBTService_Clamber : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FName)                                     ClamberExecutionStatusName                                  OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     ClamberOriginLocationName                                   OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     ClamberDestinationLocationName                              OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     ClamberAbilityStatusName                                    OFFSET(get<T>, {0x7C, 4, 0, 0})
-	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(get<T>, {0x84, 4, 0, 0})
+	SMember(FName)                                     ClamberExecutionStatusName                                  OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     ClamberOriginLocationName                                   OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     ClamberDestinationLocationName                              OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     ClamberAbilityStatusName                                    OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(getStruct<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(getStruct<T>, {0x84, 4, 0, 0})
 	DMember(uint32_t)                                  FirstJumpRetryMaxCount                                      OFFSET(get<uint32_t>, {0x94, 4, 0, 0})
 	DMember(float)                                     FirstJumpRetryDelay                                         OFFSET(get<float>, {0x98, 4, 0, 0})
 	DMember(float)                                     FirstJumpClamberMaxStartDelay                               OFFSET(get<float>, {0x9C, 4, 0, 0})
@@ -3572,8 +3572,8 @@ class UFortAthenaBTService_CopyBlackboardVariable : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FBlackboardKeySelector)                    SourceBlackboardKey                                         OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    DestinationBlackboardKey                                    OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    SourceBlackboardKey                                         OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    DestinationBlackboardKey                                    OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 	DMember(bool)                                      bCopyOnBecomeRelevant                                       OFFSET(get<bool>, {0xC0, 1, 1, 0})
 	DMember(bool)                                      bCopyOnCeaseRelevant                                        OFFSET(get<bool>, {0xC0, 1, 1, 1})
 	DMember(bool)                                      bCopyWhenSourceValueChange                                  OFFSET(get<bool>, {0xC0, 1, 1, 2})
@@ -3587,7 +3587,7 @@ class UFortAthenaBTService_Crouch : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_DontForgetCurrentThreat
@@ -3608,8 +3608,8 @@ class UFortAthenaBTService_Escape : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     EscapeKeyName                                               OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     EscapeFromStormKeyName                                      OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     EscapeKeyName                                               OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     EscapeFromStormKeyName                                      OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_Interact
@@ -3620,11 +3620,11 @@ class UFortAthenaBTService_Interact : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-	SMember(FBlackboardKeySelector)                    InteractExecutionStatusKeySelector                          OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    InteractContextInfoKeySelector                              OFFSET(get<T>, {0x98, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    InteractObjectKeySelector                                   OFFSET(get<T>, {0xC0, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    ExecutionStatusKeySelector                                  OFFSET(get<T>, {0xE8, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    MovementStateKeySelector                                    OFFSET(get<T>, {0x110, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    InteractExecutionStatusKeySelector                          OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    InteractContextInfoKeySelector                              OFFSET(getStruct<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    InteractObjectKeySelector                                   OFFSET(getStruct<T>, {0xC0, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    ExecutionStatusKeySelector                                  OFFSET(getStruct<T>, {0xE8, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    MovementStateKeySelector                                    OFFSET(getStruct<T>, {0x110, 40, 0, 0})
 	CMember(TEnumAsByte<EInteractionBeingAttempted>)   InteractionBeingAttempted                                   OFFSET(get<T>, {0x138, 1, 0, 0})
 	DMember(bool)                                      bRequireDistanceCheck                                       OFFSET(get<bool>, {0x139, 1, 0, 0})
 	DMember(bool)                                      bRequireBlockedCheck                                        OFFSET(get<bool>, {0x13A, 1, 0, 0})
@@ -3638,8 +3638,8 @@ class UFortAthenaBTService_Jump : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     CrouchExecutionStatusName                                   OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 	DMember(float)                                     JumpInputReleaseDelay                                       OFFSET(get<float>, {0x80, 4, 0, 0})
 };
 
@@ -3651,7 +3651,7 @@ class UFortAthenaBTService_JetpackStrafe : public UFortAthenaBTService_Jump
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FName)                                     JetpackStrafeExecutionStatusName                            OFFSET(get<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     JetpackStrafeExecutionStatusName                            OFFSET(getStruct<T>, {0x88, 4, 0, 0})
 	CMember(UFortAthenaAIBotEvasiveManeuversDigestedSkillSet*) CacheEMDigestedSkillSet                             OFFSET(get<T>, {0x90, 8, 0, 0})
 };
 
@@ -3663,7 +3663,7 @@ class UFortAthenaBTService_JumpOffBus : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     JumpOffBusExecutionStatusName                               OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     JumpOffBusExecutionStatusName                               OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_ManageWeapon
@@ -3674,16 +3674,16 @@ class UFortAthenaBTService_ManageWeapon : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FName)                                     WeaponFireName                                              OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerThrowableName                                  OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     WeaponReloadName                                            OFFSET(get<T>, {0x7C, 4, 0, 0})
-	SMember(FName)                                     WeaponName                                                  OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FName)                                     WeaponTargetingName                                         OFFSET(get<T>, {0x84, 4, 0, 0})
-	SMember(FName)                                     SprintExecutionStatusName                                   OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(get<T>, {0x8C, 4, 0, 0})
-	SMember(FName)                                     HealingStatusKeyName                                        OFFSET(get<T>, {0x90, 4, 0, 0})
-	SMember(FName)                                     BlockWeaponActionsKeyName                                   OFFSET(get<T>, {0x94, 4, 0, 0})
+	SMember(FName)                                     WeaponFireName                                              OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerThrowableName                                  OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     WeaponReloadName                                            OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     WeaponName                                                  OFFSET(getStruct<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     WeaponTargetingName                                         OFFSET(getStruct<T>, {0x84, 4, 0, 0})
+	SMember(FName)                                     SprintExecutionStatusName                                   OFFSET(getStruct<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(getStruct<T>, {0x8C, 4, 0, 0})
+	SMember(FName)                                     HealingStatusKeyName                                        OFFSET(getStruct<T>, {0x90, 4, 0, 0})
+	SMember(FName)                                     BlockWeaponActionsKeyName                                   OFFSET(getStruct<T>, {0x94, 4, 0, 0})
 	DMember(bool)                                      bEndChargeOnFireStop                                        OFFSET(get<bool>, {0xAC, 1, 0, 0})
 
 
@@ -3710,8 +3710,8 @@ class UFortAthenaBTService_ModulateVehicleSpeedUsingDistBetween : public UBTServ
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(get<T>, {0x70, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(get<T>, {0x98, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyA                                              OFFSET(getStruct<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKeyB                                              OFFSET(getStruct<T>, {0x98, 40, 0, 0})
 	DMember(float)                                     MinDistance                                                 OFFSET(get<float>, {0xC0, 4, 0, 0})
 	DMember(float)                                     MaxDistance                                                 OFFSET(get<float>, {0xC4, 4, 0, 0})
 	DMember(float)                                     MinDistanceSpeed                                            OFFSET(get<float>, {0xC8, 4, 0, 0})
@@ -3727,7 +3727,7 @@ class UFortAthenaBTService_Patrolling : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     PatrollingAppendDestinationKeyName                          OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     PatrollingAppendDestinationKeyName                          OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	DMember(float)                                     AcceptableRadius                                            OFFSET(get<float>, {0x78, 4, 0, 0})
 	CMember(UClass*)                                   FilterClass                                                 OFFSET(get<T>, {0x80, 8, 0, 0})
 	DMember(bool)                                      bAllowPartialPath                                           OFFSET(get<bool>, {0x88, 1, 1, 0})
@@ -3752,11 +3752,11 @@ class UFortAthenaBTService_PickUpLoot : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     LootObjectKeyName                                           OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     ExecutionStatusName                                         OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     InteractionExecutionStatusName                              OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     InteractionContextInfoName                                  OFFSET(get<T>, {0x7C, 4, 0, 0})
-	SMember(FName)                                     MovementStateKeyName                                        OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     LootObjectKeyName                                           OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusName                                         OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     InteractionExecutionStatusName                              OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     InteractionContextInfoName                                  OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     MovementStateKeyName                                        OFFSET(getStruct<T>, {0x80, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_PropagatePatrolProgressToPassengers
@@ -3767,7 +3767,7 @@ class UFortAthenaBTService_PropagatePatrolProgressToPassengers : public UBTServi
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     PatrollingAppendDestinationKeyName                          OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     PatrollingAppendDestinationKeyName                          OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_Revive
@@ -3778,11 +3778,11 @@ class UFortAthenaBTService_Revive : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FName)                                     ReviveTargetKeyName                                         OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     ExecutionStatusName                                         OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     MoveToPathMovementStateName                                 OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     InteractionExecutionStatusName                              OFFSET(get<T>, {0x7C, 4, 0, 0})
-	SMember(FName)                                     InteractionContextInfoName                                  OFFSET(get<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     ReviveTargetKeyName                                         OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusName                                         OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     MoveToPathMovementStateName                                 OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     InteractionExecutionStatusName                              OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     InteractionContextInfoName                                  OFFSET(getStruct<T>, {0x80, 4, 0, 0})
 	DMember(bool)                                      bDisableLeash                                               OFFSET(get<bool>, {0x84, 1, 0, 0})
 };
 
@@ -3794,7 +3794,7 @@ class UFortAthenaBTService_SetBlackboardBool : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(get<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    BlackboardKey                                               OFFSET(getStruct<T>, {0x70, 40, 0, 0})
 	DMember(bool)                                      bBlackboardValue                                            OFFSET(get<bool>, {0x98, 1, 0, 0})
 	CMember(EBTSetBlackboardBoolExitActions)           ExitAction                                                  OFFSET(get<T>, {0x99, 1, 0, 0})
 };
@@ -3818,7 +3818,7 @@ class UFortAthenaBTService_Slide : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     SlideExecutionStatusName                                    OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     SlideExecutionStatusName                                    OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 
 
 	/// Functions
@@ -3834,8 +3834,8 @@ class UFortAthenaBTService_SmartObject : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     SmartObjectStatusKeyName                                    OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     SmartObjectDestinationKeyName                               OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     SmartObjectStatusKeyName                                    OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     SmartObjectDestinationKeyName                               OFFSET(getStruct<T>, {0x74, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_Sprinting
@@ -3846,9 +3846,9 @@ class UFortAthenaBTService_Sprinting : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FName)                                     SprintExecutionStatusName                                   OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(get<T>, {0xB4, 4, 0, 0})
-	SMember(FName)                                     TacticalSprintOverridenName                                 OFFSET(get<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     SprintExecutionStatusName                                   OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     TacticalSprintExecutionStatusName                           OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     TacticalSprintOverridenName                                 OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_UpdateTarget
@@ -3869,7 +3869,7 @@ class UFortAthenaBTService_WaitForPassengers : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     WaitForPassengersStatusKeyName                              OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     WaitForPassengersStatusKeyName                              OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTService_Zipline
@@ -3880,15 +3880,15 @@ class UFortAthenaBTService_Zipline : public UBTService
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FName)                                     ZiplineTargetName                                           OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     InteractionExecutionStatusName                              OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     InteractionContextInfoName                                  OFFSET(get<T>, {0x78, 4, 0, 0})
-	SMember(FName)                                     UsageExecutionStatusName                                    OFFSET(get<T>, {0x7C, 4, 0, 0})
-	SMember(FName)                                     ZiplineEntryLocationName                                    OFFSET(get<T>, {0x80, 4, 0, 0})
-	SMember(FName)                                     ZiplineExitLocationKeyName                                  OFFSET(get<T>, {0x84, 4, 0, 0})
-	SMember(FName)                                     MoveToPathMovementStateName                                 OFFSET(get<T>, {0x88, 4, 0, 0})
-	SMember(FName)                                     MoveExecutionStatusName                                     OFFSET(get<T>, {0x8C, 4, 0, 0})
-	SMember(FName)                                     FocalPointName                                              OFFSET(get<T>, {0x90, 4, 0, 0})
+	SMember(FName)                                     ZiplineTargetName                                           OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     InteractionExecutionStatusName                              OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     InteractionContextInfoName                                  OFFSET(getStruct<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     UsageExecutionStatusName                                    OFFSET(getStruct<T>, {0x7C, 4, 0, 0})
+	SMember(FName)                                     ZiplineEntryLocationName                                    OFFSET(getStruct<T>, {0x80, 4, 0, 0})
+	SMember(FName)                                     ZiplineExitLocationKeyName                                  OFFSET(getStruct<T>, {0x84, 4, 0, 0})
+	SMember(FName)                                     MoveToPathMovementStateName                                 OFFSET(getStruct<T>, {0x88, 4, 0, 0})
+	SMember(FName)                                     MoveExecutionStatusName                                     OFFSET(getStruct<T>, {0x8C, 4, 0, 0})
+	SMember(FName)                                     FocalPointName                                              OFFSET(getStruct<T>, {0x90, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_ActivateVehicleBoost
@@ -3912,8 +3912,8 @@ class UFortAthenaBTTask_MoveTo : public UBTTask_MoveTo
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FName)                                     MovementResultKeyName                                       OFFSET(get<T>, {0xB0, 4, 0, 0})
-	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(get<T>, {0xB4, 4, 0, 0})
+	SMember(FName)                                     MovementResultKeyName                                       OFFSET(getStruct<T>, {0xB0, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(getStruct<T>, {0xB4, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_BotMoveTo
@@ -3924,7 +3924,7 @@ class UFortAthenaBTTask_BotMoveTo : public UFortAthenaBTTask_MoveTo
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-	SMember(FName)                                     NoSmashMoveGoalActorKeyName                                 OFFSET(get<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     NoSmashMoveGoalActorKeyName                                 OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
 	DMember(bool)                                      bAllowRandomWobble                                          OFFSET(get<bool>, {0xC6, 1, 1, 0})
 	DMember(bool)                                      bIsUrgentMovement                                           OFFSET(get<bool>, {0xC6, 1, 1, 1})
 };
@@ -3937,11 +3937,11 @@ class UFortAthenaBTTask_BotUnstuckTeleport : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(get<T>, {0x70, 72, 0, 0})
-	SMember(FName)                                     CanReachDestinationKeyName                                  OFFSET(get<T>, {0xB8, 4, 0, 0})
-	SMember(FName)                                     TeleportExecutionStatusKeyName                              OFFSET(get<T>, {0xBC, 4, 0, 0})
-	SMember(FName)                                     LastPartialPathTimeKeyName                                  OFFSET(get<T>, {0xC0, 4, 0, 0})
-	SMember(FName)                                     LastPartialPathCountKeyName                                 OFFSET(get<T>, {0xC4, 4, 0, 0})
+	SMember(FEQSParametrizedQueryExecutionRequest)     EQSRequest                                                  OFFSET(getStruct<T>, {0x70, 72, 0, 0})
+	SMember(FName)                                     CanReachDestinationKeyName                                  OFFSET(getStruct<T>, {0xB8, 4, 0, 0})
+	SMember(FName)                                     TeleportExecutionStatusKeyName                              OFFSET(getStruct<T>, {0xBC, 4, 0, 0})
+	SMember(FName)                                     LastPartialPathTimeKeyName                                  OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     LastPartialPathCountKeyName                                 OFFSET(getStruct<T>, {0xC4, 4, 0, 0})
 	CMember(UFortAthenaAIBotUnstuckDigestedSkillSet*)  UnstuckSkillSet                                             OFFSET(get<T>, {0xE8, 8, 0, 0})
 };
 
@@ -3953,7 +3953,7 @@ class UFortAthenaBTTask_BotWait : public UBTTask_Wait
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FBlackboardKeySelector)                    WaitCompleteKeySelector                                     OFFSET(get<T>, {0x78, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    WaitCompleteKeySelector                                     OFFSET(getStruct<T>, {0x78, 40, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_Build
@@ -3964,8 +3964,8 @@ class UFortAthenaBTTask_Build : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     FocalPointName                                              OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     FocalPointName                                              OFFSET(getStruct<T>, {0x74, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_Conversation
@@ -3976,7 +3976,7 @@ class UFortAthenaBTTask_Conversation : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     ConversationStatusKeyName                                   OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     ConversationStatusKeyName                                   OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	DMember(bool)                                      bResetEvaluatorStatusKeyOnFinish                            OFFSET(get<bool>, {0x76, 1, 0, 0})
 };
 
@@ -3988,8 +3988,8 @@ class UFortAthenaBTTask_Dive : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     DiveDestinationKeyName                                      OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     DiveDestinationKeyName                                      OFFSET(getStruct<T>, {0x74, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_EnterVehicle
@@ -4000,7 +4000,7 @@ class UFortAthenaBTTask_EnterVehicle : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FName)                                     SelectedVehicleKeyName                                      OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     SelectedVehicleKeyName                                      OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_Glide
@@ -4011,8 +4011,8 @@ class UFortAthenaBTTask_Glide : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     GlideDestinationKeyName                                     OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     GlideDestinationKeyName                                     OFFSET(getStruct<T>, {0x74, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_Interact
@@ -4026,12 +4026,12 @@ public:
 	DMember(float)                                     AttemptInterval                                             OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(int32_t)                                   MaxInteractAttempts                                         OFFSET(get<int32_t>, {0x74, 4, 0, 0})
 	DMember(bool)                                      bShouldFocusOnInteraction                                   OFFSET(get<bool>, {0x78, 1, 0, 0})
-	SMember(FBlackboardKeySelector)                    InteractExecutionStatusKeySelector                          OFFSET(get<T>, {0x80, 40, 0, 0})
-	SMember(FBlackboardKeySelector)                    InteractContextInfoKeySelector                              OFFSET(get<T>, {0xA8, 40, 0, 0})
-	SMember(FName)                                     FocalPointName                                              OFFSET(get<T>, {0xD0, 4, 0, 0})
-	SMember(FName)                                     InteractActorName                                           OFFSET(get<T>, {0xD4, 4, 0, 0})
-	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(get<T>, {0xD8, 4, 0, 0})
-	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(get<T>, {0xDC, 4, 0, 0})
+	SMember(FBlackboardKeySelector)                    InteractExecutionStatusKeySelector                          OFFSET(getStruct<T>, {0x80, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    InteractContextInfoKeySelector                              OFFSET(getStruct<T>, {0xA8, 40, 0, 0})
+	SMember(FName)                                     FocalPointName                                              OFFSET(getStruct<T>, {0xD0, 4, 0, 0})
+	SMember(FName)                                     InteractActorName                                           OFFSET(getStruct<T>, {0xD4, 4, 0, 0})
+	SMember(FName)                                     JumpExecutionStatusName                                     OFFSET(getStruct<T>, {0xD8, 4, 0, 0})
+	SMember(FName)                                     WeaponTriggerMeleeName                                      OFFSET(getStruct<T>, {0xDC, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_LeaveVehicle
@@ -4075,7 +4075,7 @@ class UFortAthenaBTTask_PlayEmote : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     PlayEmoteExecutionStatusKeyName                             OFFSET(get<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     PlayEmoteExecutionStatusKeyName                             OFFSET(getStruct<T>, {0x70, 4, 0, 0})
 	CMember(TArray<UAthenaDanceItemDefinition*>)       BespokeEmotes                                               OFFSET(get<T>, {0x78, 16, 0, 0})
 };
 
@@ -4121,8 +4121,8 @@ class UFortAthenaBTTask_ShootTrap : public UBTTask_Wait
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FBlackboardKeySelector)                    TargetActorKey                                              OFFSET(get<T>, {0x78, 40, 0, 0})
-	SMember(FName)                                     TrapOnPathKeyName                                           OFFSET(get<T>, {0xA0, 4, 0, 0})
+	SMember(FBlackboardKeySelector)                    TargetActorKey                                              OFFSET(getStruct<T>, {0x78, 40, 0, 0})
+	SMember(FName)                                     TrapOnPathKeyName                                           OFFSET(getStruct<T>, {0xA0, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_SteerMovement
@@ -4133,7 +4133,7 @@ class UFortAthenaBTTask_SteerMovement : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FBlackboardKeySelector)                    SteerDirectionKeySelector                                   OFFSET(get<T>, {0x70, 40, 0, 0})
+	SMember(FBlackboardKeySelector)                    SteerDirectionKeySelector                                   OFFSET(getStruct<T>, {0x70, 40, 0, 0})
 	DMember(bool)                                      bSetControlRotation                                         OFFSET(get<bool>, {0x98, 1, 1, 0})
 };
 
@@ -4145,9 +4145,9 @@ class UFortAthenaBTTask_Undermine : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     UndermineTargetKeyName                                      OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     UndermineLocationImpactName                                 OFFSET(get<T>, {0x74, 4, 0, 0})
-	SMember(FName)                                     UndermineExecutionStatusKeyName                             OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     UndermineTargetKeyName                                      OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     UndermineLocationImpactName                                 OFFSET(getStruct<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     UndermineExecutionStatusKeyName                             OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_UseItem
@@ -4158,8 +4158,8 @@ class UFortAthenaBTTask_UseItem : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FName)                                     ActionObjectKeyName                                         OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(get<T>, {0x74, 4, 0, 0})
+	SMember(FName)                                     ActionObjectKeyName                                         OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     ExecutionStatusKeyName                                      OFFSET(getStruct<T>, {0x74, 4, 0, 0})
 	DMember(float)                                     MinWaitTimeBetweenUses                                      OFFSET(get<float>, {0x78, 4, 0, 0})
 	DMember(float)                                     MaxWaitTimeBetweenUses                                      OFFSET(get<float>, {0x7C, 4, 0, 0})
 	DMember(bool)                                      bValidateAbility                                            OFFSET(get<bool>, {0x80, 1, 0, 0})
@@ -4175,10 +4175,10 @@ class UFortAthenaBTTask_UseSmartObject : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FName)                                     SmartObjectsStatusKeyName                                   OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     SmartObjectDestinationRotationKeyName                       OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     SmartObjectsStatusKeyName                                   OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     SmartObjectDestinationRotationKeyName                       OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 	DMember(bool)                                      bHandleAbortWithSoftDisable                                 OFFSET(get<bool>, {0x7E, 1, 0, 0})
-	SMember(FGameplayInteractionContext)               GameplayInteractionContext                                  OFFSET(get<T>, {0xA8, 104, 0, 0})
+	SMember(FGameplayInteractionContext)               GameplayInteractionContext                                  OFFSET(getStruct<T>, {0xA8, 104, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_VehicleHonk
@@ -4214,9 +4214,9 @@ class UFortAthenaBTTask_VerseNPCMoveTo : public UFortAthenaBTTask_MoveTo
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FName)                                     AcceptableRadiusKeyName                                     OFFSET(get<T>, {0xC0, 4, 0, 0})
-	SMember(FName)                                     AllowStrafeKeyName                                          OFFSET(get<T>, {0xC4, 4, 0, 0})
-	SMember(FName)                                     AllowPartialPathName                                        OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FName)                                     AcceptableRadiusKeyName                                     OFFSET(getStruct<T>, {0xC0, 4, 0, 0})
+	SMember(FName)                                     AllowStrafeKeyName                                          OFFSET(getStruct<T>, {0xC4, 4, 0, 0})
+	SMember(FName)                                     AllowPartialPathName                                        OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaBTTask_Zipline
@@ -4227,8 +4227,8 @@ class UFortAthenaBTTask_Zipline : public UBTTaskNode
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FName)                                     UsageExecutionStatusName                                    OFFSET(get<T>, {0x70, 4, 0, 0})
-	SMember(FName)                                     ZiplineTargetName                                           OFFSET(get<T>, {0x78, 4, 0, 0})
+	SMember(FName)                                     UsageExecutionStatusName                                    OFFSET(getStruct<T>, {0x70, 4, 0, 0})
+	SMember(FName)                                     ZiplineTargetName                                           OFFSET(getStruct<T>, {0x78, 4, 0, 0})
 
 
 	/// Functions
@@ -4244,26 +4244,26 @@ class UFortAthenaNpcEvaluator_Encampment : public UFortAthenaAIBotEvaluator_Move
 	static inline constexpr uint64_t __MDKClassSize = 1104;
 
 public:
-	SMember(FScalableFloat)                            EncampmentEnable                                            OFFSET(get<T>, {0x1A8, 40, 0, 0})
-	SMember(FScalableFloat)                            EncampmentTentativeDelayMin                                 OFFSET(get<T>, {0x1D0, 40, 0, 0})
-	SMember(FScalableFloat)                            EncampmentTentativeDelayMax                                 OFFSET(get<T>, {0x1F8, 40, 0, 0})
-	SMember(FScalableFloat)                            EncampmentDurationMin                                       OFFSET(get<T>, {0x220, 40, 0, 0})
-	SMember(FScalableFloat)                            EncampmentDurationMax                                       OFFSET(get<T>, {0x248, 40, 0, 0})
-	SMember(FScalableFloat)                            BuilderPercentage                                           OFFSET(get<T>, {0x270, 40, 0, 0})
-	SMember(FScalableFloat)                            BuilderMinDistance                                          OFFSET(get<T>, {0x298, 40, 0, 0})
-	SMember(FScalableFloat)                            BuilderMaxDistance                                          OFFSET(get<T>, {0x2C0, 40, 0, 0})
-	SMember(FScalableFloat)                            GuardMinDistance                                            OFFSET(get<T>, {0x2E8, 40, 0, 0})
-	SMember(FScalableFloat)                            GuardMaxDistance                                            OFFSET(get<T>, {0x310, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowInSwimming                                             OFFSET(get<T>, {0x338, 40, 0, 0})
-	SMember(FScalableFloat)                            AllowInFalling                                              OFFSET(get<T>, {0x360, 40, 0, 0})
-	SMember(FScalableFloat)                            MinSquadMembersCountToBuild                                 OFFSET(get<T>, {0x388, 40, 0, 0})
-	SMember(FName)                                     EncampmentStatusKeyName                                     OFFSET(get<T>, {0x3B0, 4, 0, 0})
-	SMember(FName)                                     EncampmentMovementStateKeyName                              OFFSET(get<T>, {0x3B8, 4, 0, 0})
-	SMember(FName)                                     EncampmentCenterLocationKeyName                             OFFSET(get<T>, {0x3C0, 4, 0, 0})
-	SMember(FName)                                     EncampmentDestinationKeyName                                OFFSET(get<T>, {0x3C8, 4, 0, 0})
-	SMember(FName)                                     EncampmentAroundCampFireLocationKeyName                     OFFSET(get<T>, {0x3D0, 4, 0, 0})
-	SMember(FName)                                     EncampmentRoleKeyName                                       OFFSET(get<T>, {0x3D8, 4, 0, 0})
-	SMember(FName)                                     DefensiveBuildName                                          OFFSET(get<T>, {0x3E0, 4, 0, 0})
+	SMember(FScalableFloat)                            EncampmentEnable                                            OFFSET(getStruct<T>, {0x1A8, 40, 0, 0})
+	SMember(FScalableFloat)                            EncampmentTentativeDelayMin                                 OFFSET(getStruct<T>, {0x1D0, 40, 0, 0})
+	SMember(FScalableFloat)                            EncampmentTentativeDelayMax                                 OFFSET(getStruct<T>, {0x1F8, 40, 0, 0})
+	SMember(FScalableFloat)                            EncampmentDurationMin                                       OFFSET(getStruct<T>, {0x220, 40, 0, 0})
+	SMember(FScalableFloat)                            EncampmentDurationMax                                       OFFSET(getStruct<T>, {0x248, 40, 0, 0})
+	SMember(FScalableFloat)                            BuilderPercentage                                           OFFSET(getStruct<T>, {0x270, 40, 0, 0})
+	SMember(FScalableFloat)                            BuilderMinDistance                                          OFFSET(getStruct<T>, {0x298, 40, 0, 0})
+	SMember(FScalableFloat)                            BuilderMaxDistance                                          OFFSET(getStruct<T>, {0x2C0, 40, 0, 0})
+	SMember(FScalableFloat)                            GuardMinDistance                                            OFFSET(getStruct<T>, {0x2E8, 40, 0, 0})
+	SMember(FScalableFloat)                            GuardMaxDistance                                            OFFSET(getStruct<T>, {0x310, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowInSwimming                                             OFFSET(getStruct<T>, {0x338, 40, 0, 0})
+	SMember(FScalableFloat)                            AllowInFalling                                              OFFSET(getStruct<T>, {0x360, 40, 0, 0})
+	SMember(FScalableFloat)                            MinSquadMembersCountToBuild                                 OFFSET(getStruct<T>, {0x388, 40, 0, 0})
+	SMember(FName)                                     EncampmentStatusKeyName                                     OFFSET(getStruct<T>, {0x3B0, 4, 0, 0})
+	SMember(FName)                                     EncampmentMovementStateKeyName                              OFFSET(getStruct<T>, {0x3B8, 4, 0, 0})
+	SMember(FName)                                     EncampmentCenterLocationKeyName                             OFFSET(getStruct<T>, {0x3C0, 4, 0, 0})
+	SMember(FName)                                     EncampmentDestinationKeyName                                OFFSET(getStruct<T>, {0x3C8, 4, 0, 0})
+	SMember(FName)                                     EncampmentAroundCampFireLocationKeyName                     OFFSET(getStruct<T>, {0x3D0, 4, 0, 0})
+	SMember(FName)                                     EncampmentRoleKeyName                                       OFFSET(getStruct<T>, {0x3D8, 4, 0, 0})
+	SMember(FName)                                     DefensiveBuildName                                          OFFSET(getStruct<T>, {0x3E0, 4, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaNpcEvaluator_FollowPatrolPath
@@ -4274,9 +4274,9 @@ class UFortAthenaNpcEvaluator_FollowPatrolPath : public UFortAthenaAIBotEvaluato
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FName)                                     FollowPatrolPathKeyName                                     OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     FollowPatrolPathMovementStateKeyName                        OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     FollowPatrolPathDestinationKeyName                          OFFSET(get<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     FollowPatrolPathKeyName                                     OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     FollowPatrolPathMovementStateKeyName                        OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     FollowPatrolPathDestinationKeyName                          OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
 	DMember(float)                                     ChanceToTakeABreak                                          OFFSET(get<float>, {0x1BC, 4, 0, 0})
 	DMember(float)                                     BreakDurationMin                                            OFFSET(get<float>, {0x1C0, 4, 0, 0})
 	DMember(float)                                     BreakDurationMax                                            OFFSET(get<float>, {0x1C4, 4, 0, 0})
@@ -4290,18 +4290,18 @@ class UFortAthenaNpcEvaluator_FollowSquadLeader : public UFortAthenaAIBotEvaluat
 	static inline constexpr uint64_t __MDKClassSize = 760;
 
 public:
-	SMember(FScalableFloat)                            FormationOffsetRadiusMin                                    OFFSET(get<T>, {0x1A8, 40, 0, 0})
-	SMember(FScalableFloat)                            FormationOffsetRadiusMax                                    OFFSET(get<T>, {0x1D0, 40, 0, 0})
-	SMember(FScalableFloat)                            TooFarFromSquadLeaderDistance                               OFFSET(get<T>, {0x1F8, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxNoiseRadius                                              OFFSET(get<T>, {0x220, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDurationNoiseEvaluate                                    OFFSET(get<T>, {0x248, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxDurationNoiseEvaluate                                    OFFSET(get<T>, {0x270, 40, 0, 0})
-	SMember(FName)                                     FollowSquadLeaderStatusKeyName                              OFFSET(get<T>, {0x298, 4, 0, 0})
-	SMember(FName)                                     FollowSquadLeaderMovementStateKeyName                       OFFSET(get<T>, {0x2A0, 4, 0, 0})
-	SMember(FName)                                     FollowSquadLeaderDestinationKeyName                         OFFSET(get<T>, {0x2A8, 4, 0, 0})
-	SMember(FName)                                     TooFarFromLeaderKeyName                                     OFFSET(get<T>, {0x2B0, 4, 0, 0})
-	SMember(FVector)                                   CachedSquadFormationOffset                                  OFFSET(get<T>, {0x2B8, 24, 0, 0})
-	SMember(FVector)                                   CachedNoiseOffset                                           OFFSET(get<T>, {0x2D0, 24, 0, 0})
+	SMember(FScalableFloat)                            FormationOffsetRadiusMin                                    OFFSET(getStruct<T>, {0x1A8, 40, 0, 0})
+	SMember(FScalableFloat)                            FormationOffsetRadiusMax                                    OFFSET(getStruct<T>, {0x1D0, 40, 0, 0})
+	SMember(FScalableFloat)                            TooFarFromSquadLeaderDistance                               OFFSET(getStruct<T>, {0x1F8, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxNoiseRadius                                              OFFSET(getStruct<T>, {0x220, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDurationNoiseEvaluate                                    OFFSET(getStruct<T>, {0x248, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxDurationNoiseEvaluate                                    OFFSET(getStruct<T>, {0x270, 40, 0, 0})
+	SMember(FName)                                     FollowSquadLeaderStatusKeyName                              OFFSET(getStruct<T>, {0x298, 4, 0, 0})
+	SMember(FName)                                     FollowSquadLeaderMovementStateKeyName                       OFFSET(getStruct<T>, {0x2A0, 4, 0, 0})
+	SMember(FName)                                     FollowSquadLeaderDestinationKeyName                         OFFSET(getStruct<T>, {0x2A8, 4, 0, 0})
+	SMember(FName)                                     TooFarFromLeaderKeyName                                     OFFSET(getStruct<T>, {0x2B0, 4, 0, 0})
+	SMember(FVector)                                   CachedSquadFormationOffset                                  OFFSET(getStruct<T>, {0x2B8, 24, 0, 0})
+	SMember(FVector)                                   CachedNoiseOffset                                           OFFSET(getStruct<T>, {0x2D0, 24, 0, 0})
 	DMember(float)                                     CachedTooFarFromSquadLeaderDistanceSqr                      OFFSET(get<float>, {0x2E8, 4, 0, 0})
 	DMember(float)                                     LastNoiseOffsetUpdateTime                                   OFFSET(get<float>, {0x2EC, 4, 0, 0})
 	DMember(float)                                     DurationNoiseEvaluate                                       OFFSET(get<float>, {0x2F0, 4, 0, 0})
@@ -4315,12 +4315,12 @@ class UFortAthenaNpcEvaluator_Leash : public UFortAthenaAIBotEvaluator_Movement
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FName)                                     LeashKeyName                                                OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     LeashMovementStateKeyName                                   OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     LeashDestinationKeyName                                     OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     LeashLocationKeyName                                        OFFSET(get<T>, {0x1B4, 4, 0, 0})
-	SMember(FName)                                     LeashOuterRadiusKeyName                                     OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     ShouldTeleportInLeashKeyName                                OFFSET(get<T>, {0x1BC, 4, 0, 0})
+	SMember(FName)                                     LeashKeyName                                                OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     LeashMovementStateKeyName                                   OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     LeashDestinationKeyName                                     OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     LeashLocationKeyName                                        OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     LeashOuterRadiusKeyName                                     OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FName)                                     ShouldTeleportInLeashKeyName                                OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
 	DMember(bool)                                      bAlwaysForceMoveToLeashCenter                               OFFSET(get<bool>, {0x1C0, 1, 0, 0})
 	CMember(UClass*)                                   AvoidObstaclesFilterClass                                   OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(UFortAthenaAIRuntimeParameters_Leash*)     LeashRuntimeParameters                                      OFFSET(get<T>, {0x1E0, 8, 0, 0})
@@ -4334,13 +4334,13 @@ class UFortAthenaNpcEvaluator_Patrolling : public UFortAthenaAIBotEvaluator_Move
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	SMember(FName)                                     PatrollingKeyName                                           OFFSET(get<T>, {0x1A8, 4, 0, 0})
-	SMember(FName)                                     PatrollingMovementStateKeyName                              OFFSET(get<T>, {0x1AC, 4, 0, 0})
-	SMember(FName)                                     PatrollingDestinationKeyName                                OFFSET(get<T>, {0x1B0, 4, 0, 0})
-	SMember(FName)                                     DynamicBlueprintStatusKeyName                               OFFSET(get<T>, {0x1B4, 4, 0, 0})
-	SMember(FName)                                     DynamicBlueprintActorKeyName                                OFFSET(get<T>, {0x1B8, 4, 0, 0})
-	SMember(FName)                                     PatrollingShouldMoveKeyName                                 OFFSET(get<T>, {0x1BC, 4, 0, 0})
-	SMember(FName)                                     PatrollingAppendDestinationKeyName                          OFFSET(get<T>, {0x1C0, 4, 0, 0})
+	SMember(FName)                                     PatrollingKeyName                                           OFFSET(getStruct<T>, {0x1A8, 4, 0, 0})
+	SMember(FName)                                     PatrollingMovementStateKeyName                              OFFSET(getStruct<T>, {0x1AC, 4, 0, 0})
+	SMember(FName)                                     PatrollingDestinationKeyName                                OFFSET(getStruct<T>, {0x1B0, 4, 0, 0})
+	SMember(FName)                                     DynamicBlueprintStatusKeyName                               OFFSET(getStruct<T>, {0x1B4, 4, 0, 0})
+	SMember(FName)                                     DynamicBlueprintActorKeyName                                OFFSET(getStruct<T>, {0x1B8, 4, 0, 0})
+	SMember(FName)                                     PatrollingShouldMoveKeyName                                 OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
+	SMember(FName)                                     PatrollingAppendDestinationKeyName                          OFFSET(getStruct<T>, {0x1C0, 4, 0, 0})
 	DMember(float)                                     DistanceToTestPoint                                         OFFSET(get<float>, {0x1D4, 4, 0, 0})
 	DMember(bool)                                      bCanDisablePatrolling                                       OFFSET(get<bool>, {0x1D8, 1, 0, 0})
 	DMember(bool)                                      bCanReenablePatrolling                                      OFFSET(get<bool>, {0x1D9, 1, 0, 0})
@@ -4358,7 +4358,7 @@ class UFortQueryContext_BotPOIVolume : public UEnvQueryContext
 
 public:
 	DMember(bool)                                      bSetProjectedToNavmeshLocationAsContext                     OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FVector)                                   ProjectionExtent                                            OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   ProjectionExtent                                            OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Class /Script/FortniteAIServer.FortAthenaAttachToActorStateTreeTask
@@ -4380,7 +4380,7 @@ public:
 	CMember(EAttachmentRule)                           AttachmentRotationRule                                      OFFSET(get<T>, {0x61, 1, 0, 0})
 	CMember(EAttachmentRule)                           AttachmentScaleRule                                         OFFSET(get<T>, {0x62, 1, 0, 0})
 	DMember(bool)                                      bWeldSimulatedBodiesOnAttach                                OFFSET(get<bool>, {0x63, 1, 0, 0})
-	SMember(FName)                                     AttachmentSocketName                                        OFFSET(get<T>, {0x64, 4, 0, 0})
+	SMember(FName)                                     AttachmentSocketName                                        OFFSET(getStruct<T>, {0x64, 4, 0, 0})
 	CMember(EFortAthenaStateTreeTaskFeatureExecutionMode) DetachExecutionMode                                      OFFSET(get<T>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bForceChangeBaseOnDetach                                    OFFSET(get<bool>, {0x6C, 1, 0, 0})
 	CMember(EDetachmentRule)                           DetachmentLocationRule                                      OFFSET(get<T>, {0x6D, 1, 0, 0})
@@ -4402,17 +4402,17 @@ class UFortAthenaPlayContextualAnimTaskInstanceData : public UObject
 public:
 	CMember(AActor*)                                   PrimaryActor                                                OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(AActor*)                                   SecondaryActor                                              OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FName)                                     SecondaryRole                                               OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FName)                                     SecondaryRole                                               OFFSET(getStruct<T>, {0x38, 4, 0, 0})
 	CMember(AActor*)                                   TertiaryActor                                               OFFSET(get<T>, {0x40, 8, 0, 0})
-	SMember(FName)                                     TertiaryRole                                                OFFSET(get<T>, {0x48, 4, 0, 0})
+	SMember(FName)                                     TertiaryRole                                                OFFSET(getStruct<T>, {0x48, 4, 0, 0})
 	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x50, 8, 0, 0})
-	SMember(FName)                                     SectionName                                                 OFFSET(get<T>, {0x58, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     PrimaryActorExternalTags                                    OFFSET(get<T>, {0x60, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SecondaryActorExternalTags                                  OFFSET(get<T>, {0x80, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     TertiaryActorExternalTags                                   OFFSET(get<T>, {0xA0, 32, 0, 0})
+	SMember(FName)                                     SectionName                                                 OFFSET(getStruct<T>, {0x58, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     PrimaryActorExternalTags                                    OFFSET(getStruct<T>, {0x60, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SecondaryActorExternalTags                                  OFFSET(getStruct<T>, {0x80, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TertiaryActorExternalTags                                   OFFSET(getStruct<T>, {0xA0, 32, 0, 0})
 	CMember(EFortAthenaPlayContextualAnimExecutionMethod) ExecutionMethod                                          OFFSET(get<T>, {0xC0, 1, 0, 0})
 	DMember(bool)                                      bWaitForNotifyEventToEnd                                    OFFSET(get<bool>, {0xC1, 1, 0, 0})
-	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(get<T>, {0xC4, 4, 0, 0})
+	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(getStruct<T>, {0xC4, 4, 0, 0})
 	DMember(int32_t)                                   LoopsToRun                                                  OFFSET(get<int32_t>, {0xC8, 4, 0, 0})
 	DMember(bool)                                      bLoopForever                                                OFFSET(get<bool>, {0xCC, 1, 0, 0})
 	DMember(float)                                     DelayBetweenLoops                                           OFFSET(get<float>, {0xD0, 4, 0, 0})
@@ -4440,7 +4440,7 @@ public:
 	CMember(UAnimMontage*)                             InteractorMontage                                           OFFSET(get<T>, {0x58, 8, 0, 0})
 	CMember(UAnimMontage*)                             InteractableMontage                                         OFFSET(get<T>, {0x60, 8, 0, 0})
 	DMember(bool)                                      bWaitForNotifyEventToEnd                                    OFFSET(get<bool>, {0x68, 1, 0, 0})
-	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(get<T>, {0x6C, 4, 0, 0})
+	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(getStruct<T>, {0x6C, 4, 0, 0})
 	DMember(bool)                                      bAddMotionWarpingTargets                                    OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(bool)                                      bDisableCollisionBetweenActors                              OFFSET(get<bool>, {0x71, 1, 0, 0})
 	DMember(bool)                                      bSetMovementModeToFlying                                    OFFSET(get<bool>, {0x72, 1, 0, 0})
@@ -4470,7 +4470,7 @@ public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(UAnimMontage*)                             Montage                                                     OFFSET(get<T>, {0x50, 8, 0, 0})
 	DMember(bool)                                      bWaitForNotifyEventToEnd                                    OFFSET(get<bool>, {0x58, 1, 0, 0})
-	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(get<T>, {0x5C, 4, 0, 0})
+	SMember(FName)                                     NotifyEventNameToEnd                                        OFFSET(getStruct<T>, {0x5C, 4, 0, 0})
 	DMember(bool)                                      bSetMovementModeToFlying                                    OFFSET(get<bool>, {0x60, 1, 0, 0})
 	DMember(int32_t)                                   LoopsToRun                                                  OFFSET(get<int32_t>, {0x64, 4, 0, 0})
 	DMember(bool)                                      bLoopForever                                                OFFSET(get<bool>, {0x68, 1, 0, 0})
@@ -4488,13 +4488,14 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaHandleSoftDisableGuardStateTreeTaskInstanceData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFortAthenaHandleSoftDisableGuardStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaHandleSoftDisableGuardStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FStateTreeStructRef)                       SoftDisableStateReference                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreeStructRef)                       SoftDisableStateReference                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(TArray<AActor*>)                           ActorsToTeleportOnFailure                                   OFFSET(get<T>, {0x10, 16, 0, 0})
 };
 
@@ -4502,6 +4503,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaHandleSoftDisableGuardStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -4510,8 +4512,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaSoftDisableStateTreeParameter
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAthenaSoftDisableStateTreeParameter : public MDKStruct
+class FFortAthenaSoftDisableStateTreeParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4521,35 +4524,38 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaHandleSoftDisableStateTreeTaskInstanceData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FFortAthenaHandleSoftDisableStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaHandleSoftDisableStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(TArray<AActor*>)                           ActorsToCleanup                                             OFFSET(get<T>, {0x0, 16, 0, 0})
 	DMember(bool)                                      bHasReceivedSoftDisableEvent                                OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FGameplayTag)                              ReceivedSoftDisableEvent                                    OFFSET(get<T>, {0x14, 4, 0, 0})
-	SMember(FFortAthenaSoftDisableStateTreeParameter)  OutState                                                    OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FGameplayTag)                              ReceivedSoftDisableEvent                                    OFFSET(getStruct<T>, {0x14, 4, 0, 0})
+	SMember(FFortAthenaSoftDisableStateTreeParameter)  OutState                                                    OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaHandleSoftDisableStateTreeTask
 /// Size: 0x0028 (0x000020 - 0x000048)
 class FFortAthenaHandleSoftDisableStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FGameplayTag)                              StateTreeEventTag                                           OFFSET(get<T>, {0x20, 4, 0, 0})
-	SMember(FVector)                                   TeleportOnNavmeshQueryBoxExtents                            OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FGameplayTag)                              StateTreeEventTag                                           OFFSET(getStruct<T>, {0x20, 4, 0, 0})
+	SMember(FVector)                                   TeleportOnNavmeshQueryBoxExtents                            OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(int32_t)                                   MaxTeleportToTryPerActor                                    OFFSET(get<int32_t>, {0x40, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaPickRandomMontageConfig
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAthenaPickRandomMontageConfig : public MDKStruct
+class FFortAthenaPickRandomMontageConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4560,8 +4566,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaPickRandomMontageStateTreeTaskInstanceData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortAthenaPickRandomMontageStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaPickRandomMontageStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -4574,6 +4581,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaPickRandomMontageStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -4582,8 +4590,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaToggleAllowInteractStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAthenaToggleAllowInteractStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaToggleAllowInteractStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4596,6 +4605,7 @@ public:
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FFortAthenaToggleAllowInteractStateTreeTaskTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4606,19 +4616,21 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaTrackEventConsumeStateTreeTaskInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortAthenaTrackEventConsumeStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaTrackEventConsumeStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FStateTreeStructRef)                       ReferencedEvent                                             OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FStateTreeStructRef)                       ReferencedEvent                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaTrackEventConsumeStateTreeTask
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaTrackEventConsumeStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -4627,43 +4639,47 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaTrackEventStateTreeTaskStateTreeParameter
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortAthenaTrackEventStateTreeTaskStateTreeParameter : public MDKStruct
+class FFortAthenaTrackEventStateTreeTaskStateTreeParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
 	DMember(bool)                                      bHasReceivedTrackedEvent                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FGameplayTag)                              ReceivedEventTag                                            OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              ReceivedEventTag                                            OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaTrackEventStateTreeTaskInstanceData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortAthenaTrackEventStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaTrackEventStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FFortAthenaTrackEventStateTreeTaskStateTreeParameter) OutParameter                                     OFFSET(get<T>, {0x0, 8, 0, 0})
+	SMember(FFortAthenaTrackEventStateTreeTaskStateTreeParameter) OutParameter                                     OFFSET(getStruct<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaTrackEventStateTreeTask
 /// Size: 0x0050 (0x000020 - 0x000070)
 class FFortAthenaTrackEventStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FGameplayTagQuery)                         EventTagQuery                                               OFFSET(get<T>, {0x20, 72, 0, 0})
-	SMember(FGameplayTag)                              StateTreeEventTag                                           OFFSET(get<T>, {0x68, 4, 0, 0})
+	SMember(FGameplayTagQuery)                         EventTagQuery                                               OFFSET(getStruct<T>, {0x20, 72, 0, 0})
+	SMember(FGameplayTag)                              StateTreeEventTag                                           OFFSET(getStruct<T>, {0x68, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaWorldConditionInstanceData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FFortAthenaWorldConditionInstanceData : public MDKStruct
+class FFortAthenaWorldConditionInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
@@ -4672,37 +4688,40 @@ public:
 	CMember(AActor*)                                   ActorB                                                      OFFSET(get<T>, {0x8, 8, 0, 0})
 	CMember(AActor*)                                   ActorC                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
 	DMember(bool)                                      bOutResult                                                  OFFSET(get<bool>, {0x18, 1, 0, 0})
-	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(get<T>, {0x20, 48, 0, 0})
+	SMember(FWorldConditionQueryState)                 QueryState                                                  OFFSET(getStruct<T>, {0x20, 48, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaWorldConditionInstanceDataStateTreeTask
 /// Size: 0x0020 (0x000020 - 0x000040)
 class FFortAthenaWorldConditionInstanceDataStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FWorldConditionQueryDefinition)            Conditions                                                  OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FGameplayTag)                              StateTreeEventTag                                           OFFSET(get<T>, {0x38, 4, 0, 0})
+	SMember(FWorldConditionQueryDefinition)            Conditions                                                  OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FGameplayTag)                              StateTreeEventTag                                           OFFSET(getStruct<T>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortBTService_InjectionTagKey
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortBTService_InjectionTagKey : public MDKStruct
+class FFortBTService_InjectionTagKey : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(get<T>, {0x0, 4, 0, 0})
-	SMember(FName)                                     InjectionKeyName                                            OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(getStruct<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     InjectionKeyName                                            OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortWorldConditionGameplayTagActorQueryState
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortWorldConditionGameplayTagActorQueryState : public MDKStruct
+class FFortWorldConditionGameplayTagActorQueryState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -4713,12 +4732,13 @@ public:
 /// Size: 0x0030 (0x000010 - 0x000040)
 class FFortWorldConditionGameplayTagActor : public FWorldConditionCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FWorldConditionContextDataRef)             ActorContextRef                                             OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TagContainerToCheck                                         OFFSET(get<T>, {0x18, 32, 0, 0})
+	SMember(FWorldConditionContextDataRef)             ActorContextRef                                             OFFSET(getStruct<T>, {0x10, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     TagContainerToCheck                                         OFFSET(getStruct<T>, {0x18, 32, 0, 0})
 	CMember(EHasMatchingGameplayTagContainerTestType)  TestType                                                    OFFSET(get<T>, {0x38, 1, 0, 0})
 };
 
@@ -4726,11 +4746,12 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FFortWorldConditionPlayerHasConvertedNPC : public FWorldConditionCommonActorBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FWorldConditionContextDataRef)             ActorRef                                                    OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FWorldConditionContextDataRef)             ActorRef                                                    OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 	CMember(EFortWorldConditionPlayerHasConvertedNPCCondition) ConditionToCheck                                    OFFSET(get<T>, {0x18, 1, 0, 0})
 };
 
@@ -4738,31 +4759,34 @@ public:
 /// Size: 0x0010 (0x000010 - 0x000020)
 class FFortWorldConditionTimeOfDay : public FWorldConditionCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FWorldConditionContextDataRef)             ActorContextRef                                             OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FWorldConditionContextDataRef)             ActorContextRef                                             OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 	DMember(int32_t)                                   ValidTimesOfDay                                             OFFSET(get<int32_t>, {0x18, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.GameFeatureFortAIEvaluatorEntry
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FGameFeatureFortAIEvaluatorEntry : public MDKStruct
+class FGameFeatureFortAIEvaluatorEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
 	CMember(TWeakObjectPtr<UBehaviorTree*>)            TreeAsset                                                   OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(get<T>, {0x20, 4, 0, 0})
+	SMember(FGameplayTag)                              InjectionTag                                                OFFSET(getStruct<T>, {0x20, 4, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   AIEvaluatorClass                                            OFFSET(get<T>, {0x28, 32, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortPointOnCurveRange
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortPointOnCurveRange : public MDKStruct
+class FFortPointOnCurveRange : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -4773,8 +4797,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortPointsOnCurve
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFortPointsOnCurve : public MDKStruct
+class FFortPointsOnCurve : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -4785,48 +4810,52 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortQueryGenerator_PerceivedActors_Settings
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FFortQueryGenerator_PerceivedActors_Settings : public MDKStruct
+class FFortQueryGenerator_PerceivedActors_Settings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	DMember(bool)                                      bIgnoreDBNOPawns                                            OFFSET(get<bool>, {0x0, 1, 0, 0})
 	DMember(bool)                                      bIgnoreSleepingAIs                                          OFFSET(get<bool>, {0x1, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 MaxTimeSincePerceived                                       OFFSET(get<T>, {0x8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 MaxTimeSincePerceived                                       OFFSET(getStruct<T>, {0x8, 56, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortGameplayTagQueryPerDifficulty
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FFortGameplayTagQueryPerDifficulty : public MDKStruct
+class FFortGameplayTagQueryPerDifficulty : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FDataTableRowHandle)                       DifficultyInfo                                              OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FGameplayTagQuery)                         TagQueryToMatch                                             OFFSET(get<T>, {0x10, 72, 0, 0})
+	SMember(FDataTableRowHandle)                       DifficultyInfo                                              OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FGameplayTagQuery)                         TagQueryToMatch                                             OFFSET(getStruct<T>, {0x10, 72, 0, 0})
 	DMember(float)                                     Difficulty                                                  OFFSET(get<float>, {0x58, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.GoalDistanceData
 /// Size: 0x0098 (0x000000 - 0x000098)
-class FGoalDistanceData : public MDKStruct
+class FGoalDistanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
 	DMember(bool)                                      bIgnoreScreeningDistance                                    OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 ScreeningTestMaxDistance                                    OFFSET(get<T>, {0x8, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 ScreeningTestMaxDistance                                    OFFSET(getStruct<T>, {0x8, 56, 0, 0})
 	CMember(TWeakObjectPtr<UCurveFloat*>)              TestScoreCurve                                              OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FAIDataProviderFloatValue)                 CurveDistanceScale                                          OFFSET(get<T>, {0x60, 56, 0, 0})
+	SMember(FAIDataProviderFloatValue)                 CurveDistanceScale                                          OFFSET(getStruct<T>, {0x60, 56, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FlankingLocationInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFlankingLocationInfo : public MDKStruct
+class FFlankingLocationInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -4835,8 +4864,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FailedToReachPOI
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFailedToReachPOI : public MDKStruct
+class FFailedToReachPOI : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -4847,8 +4877,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.SmartObjectActivityResult
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSmartObjectActivityResult : public MDKStruct
+class FSmartObjectActivityResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -4857,32 +4888,35 @@ public:
 
 /// Struct /Script/FortniteAIServer.GameplayAbilityEvaluatorModule
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameplayAbilityEvaluatorModule : public MDKStruct
+class FGameplayAbilityEvaluatorModule : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayAbilityTag                                          OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	CMember(UAbilitySystemComponent*)                  CachedAbilitySystemComponent                                OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.GameplayTagActorHasMatchingGameplayTagInstanceData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FGameplayTagActorHasMatchingGameplayTagInstanceData : public MDKStruct
+class FGameplayTagActorHasMatchingGameplayTagInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTag)                              TagToCheck                                                  OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FGameplayTag)                              TagToCheck                                                  OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.GameplayTagActorHasMatchingGameplayTagCondition
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FGameplayTagActorHasMatchingGameplayTagCondition : public FStateTreeConditionCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4892,20 +4926,22 @@ public:
 
 /// Struct /Script/FortniteAIServer.GameplayTagActorHasMatchingGameplayTagContainerInstanceData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameplayTagActorHasMatchingGameplayTagContainerInstanceData : public MDKStruct
+class FGameplayTagActorHasMatchingGameplayTagContainerInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     TagContainerToCheck                                         OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     TagContainerToCheck                                         OFFSET(getStruct<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.GameplayTagActorHasMatchingGameplayContainerTagCondition
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FGameplayTagActorHasMatchingGameplayContainerTagCondition : public FStateTreeConditionCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4916,20 +4952,22 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaAddGameplayTagsStateTreeTaskInstanceData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FFortAthenaAddGameplayTagsStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaAddGameplayTagsStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaAddGameplayTagsStateTreeTask
 /// Size: 0x0010 (0x000020 - 0x000030)
 class FFortAthenaAddGameplayTagsStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -4943,6 +4981,7 @@ public:
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FFortAthenaArithmeticStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4953,21 +4992,23 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaIntArithmeticStateTreeTaskInstanceData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortAthenaIntArithmeticStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaIntArithmeticStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
 	DMember(int32_t)                                   FirstOperand                                                OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   SecondOperand                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
-	SMember(FStateTreeStructRef)                       ReferencedResult                                            OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FStateTreeStructRef)                       ReferencedResult                                            OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaIntArithmeticStateTreeTask
 /// Size: 0x0000 (0x000028 - 0x000028)
 class FFortAthenaIntArithmeticStateTreeTask : public FFortAthenaArithmeticStateTreeTask
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -4976,16 +5017,17 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaFocusAtStateTreeTaskInstanceData
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FFortAthenaFocusAtStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaFocusAtStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(AActor*)                                   FocusActor                                                  OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   FocusActorOffset                                            OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FVector)                                   FocusWorldPoint                                             OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   FocusActorOffset                                            OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FVector)                                   FocusWorldPoint                                             OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 	DMember(bool)                                      bSetBackOnExit                                              OFFSET(get<bool>, {0x40, 1, 0, 0})
 };
 
@@ -4993,6 +5035,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaFocusAtStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5001,8 +5044,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaIntStateTreeParameter
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FFortAthenaIntStateTreeParameter : public MDKStruct
+class FFortAthenaIntStateTreeParameter : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -5012,20 +5056,22 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaMakeIntVariableStateTreeTaskInstanceData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortAthenaMakeIntVariableStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaMakeIntVariableStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
 	DMember(int32_t)                                   DefaultIntValue                                             OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FFortAthenaIntStateTreeParameter)          OutInt                                                      OFFSET(get<T>, {0x4, 4, 0, 0})
+	SMember(FFortAthenaIntStateTreeParameter)          OutInt                                                      OFFSET(getStruct<T>, {0x4, 4, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaMakeIntVariableStateTreeTask
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FFortAthenaMakeIntVariableStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -5037,6 +5083,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaPlayContextualAnimStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5045,8 +5092,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaPlayInteractionStateTreeTaskActorInfo
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FFortAthenaPlayInteractionStateTreeTaskActorInfo : public MDKStruct
+class FFortAthenaPlayInteractionStateTreeTaskActorInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
@@ -5055,8 +5103,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaStateTreeCrouchTaskInstanceData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortAthenaStateTreeCrouchTaskInstanceData : public MDKStruct
+class FFortAthenaStateTreeCrouchTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -5068,6 +5117,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaStateTreeCrouchTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5076,8 +5126,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaStateTreeInteractTaskInstanceData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFortAthenaStateTreeInteractTaskInstanceData : public MDKStruct
+class FFortAthenaStateTreeInteractTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5093,6 +5144,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaStateTreeInteractTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5101,8 +5153,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaStateTreeLookAroundTaskInstanceData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortAthenaStateTreeLookAroundTaskInstanceData : public MDKStruct
+class FFortAthenaStateTreeLookAroundTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -5118,6 +5171,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaStateTreeLookAroundTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5126,22 +5180,24 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaTeleportToActorStateTreeTaskInstanceData
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FFortAthenaTeleportToActorStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaTeleportToActorStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(AActor*)                                   Actor                                                       OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   TeleportRelativeLocation                                    OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FRotator)                                  TeleportRelativeRotation                                    OFFSET(get<T>, {0x28, 24, 0, 0})
+	SMember(FVector)                                   TeleportRelativeLocation                                    OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FRotator)                                  TeleportRelativeRotation                                    OFFSET(getStruct<T>, {0x28, 24, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaTeleportToActorStateTreeTask
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FFortAthenaTeleportToActorStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -5150,8 +5206,9 @@ public:
 
 /// Struct /Script/FortniteAIServer.FortAthenaToggleGameplayEffectStateTreeTaskInstanceData
 /// Size: 0x00C8 (0x000000 - 0x0000C8)
-class FFortAthenaToggleGameplayEffectStateTreeTaskInstanceData : public MDKStruct
+class FFortAthenaToggleGameplayEffectStateTreeTaskInstanceData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
@@ -5161,16 +5218,17 @@ public:
 	CMember(TArray<UClass*>)                           GameplayEffectClassesToAdd                                  OFFSET(get<T>, {0x10, 16, 0, 0})
 	DMember(bool)                                      bAutomaticallyRemoveAddedEffectsOnExit                      OFFSET(get<bool>, {0x20, 1, 0, 0})
 	CMember(TArray<UClass*>)                           GameplayEffectClassesToRemove                               OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayEffectsByTagsToRemove                               OFFSET(get<T>, {0x38, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayEffectsBySourceTagsToRemove                         OFFSET(get<T>, {0x58, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayEffectsByAppliedTagsToRemove                        OFFSET(get<T>, {0x78, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayEffectsByGrantedTagsToRemove                        OFFSET(get<T>, {0x98, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayEffectsByTagsToRemove                               OFFSET(getStruct<T>, {0x38, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayEffectsBySourceTagsToRemove                         OFFSET(getStruct<T>, {0x58, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayEffectsByAppliedTagsToRemove                        OFFSET(getStruct<T>, {0x78, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayEffectsByGrantedTagsToRemove                        OFFSET(getStruct<T>, {0x98, 32, 0, 0})
 };
 
 /// Struct /Script/FortniteAIServer.FortAthenaToggleGameplayEffectStateTreeTask
 /// Size: 0x0008 (0x000020 - 0x000028)
 class FFortAthenaToggleGameplayEffectStateTreeTask : public FStateTreeTaskCommonBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 

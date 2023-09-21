@@ -47,7 +47,7 @@ class UFortConversationContextCondition_ParticipantHasCID : public UFortConversa
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(TArray<FSoftObjectPath>)                   AllowedCIDs                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
 };
 
@@ -59,8 +59,8 @@ class UFortConversationContextCondition_ParticipantHasMetaTag : public UFortConv
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FGameplayTag)                              MetaTag                                                     OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              MetaTag                                                     OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 };
 
 /// Class /Script/FortniteConversationRuntime.FortConversationContextCondition_ParticipantHasOwnedTag
@@ -71,8 +71,8 @@ class UFortConversationContextCondition_ParticipantHasOwnedTag : public UFortCon
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(get<T>, {0x28, 4, 0, 0})
-	SMember(FGameplayTag)                              OwnedTag                                                    OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              OwnedTag                                                    OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 };
 
 /// Class /Script/FortniteConversationRuntime.FortConversationContextCondition_ParticipantControllerMeetsRequirement
@@ -83,7 +83,7 @@ class UFortConversationContextCondition_ParticipantControllerMeetsRequirement : 
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FGameplayTag)                              ParticipantID                                               OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(UFortControllerRequirement*)               Requirement                                                 OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
@@ -129,7 +129,7 @@ public:
 	DMember(float)                                     GreetSphereRadius                                           OFFSET(get<float>, {0x1B0, 4, 0, 0})
 	DMember(float)                                     IconVisibilityRadius                                        OFFSET(get<float>, {0x1B4, 4, 0, 0})
 	DMember(float)                                     AbortConversationRange                                      OFFSET(get<float>, {0x1B8, 4, 0, 0})
-	SMember(FGameplayTag)                              RidingOnActorTag                                            OFFSET(get<T>, {0x1BC, 4, 0, 0})
+	SMember(FGameplayTag)                              RidingOnActorTag                                            OFFSET(getStruct<T>, {0x1BC, 4, 0, 0})
 	DMember(float)                                     RidingOnActorRangeMultiplierSquared                         OFFSET(get<float>, {0x1C0, 4, 0, 0})
 	CMember(TSet<UFortNonPlayerConversationParticipantComponent*>) IndicatedNPCConversationComponents              OFFSET(get<T>, {0x200, 80, 0, 0})
 	DMember(bool)                                      bMoveShouldAbortConversation                                OFFSET(get<bool>, {0x258, 1, 0, 0})
@@ -158,8 +158,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.FortConversationEnterEvent
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortConversationEnterEvent : public MDKStruct
+class FFortConversationEnterEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -169,8 +170,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.FortConversationLeaveEvent
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FFortConversationLeaveEvent : public MDKStruct
+class FFortConversationLeaveEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -180,8 +182,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.FortConversation_Spectator_EnterConversation
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FFortConversation_Spectator_EnterConversation : public MDKStruct
+class FFortConversation_Spectator_EnterConversation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -190,8 +193,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.FortConversation_Spectator_LeaveConversation
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FFortConversation_Spectator_LeaveConversation : public MDKStruct
+class FFortConversation_Spectator_LeaveConversation : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -200,8 +204,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.FortConversation_SetDialogMarkerClassEvent
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FFortConversation_SetDialogMarkerClassEvent : public MDKStruct
+class FFortConversation_SetDialogMarkerClassEvent : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -210,8 +215,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.NPCConversationIndicatorMessage
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FNPCConversationIndicatorMessage : public MDKStruct
+class FNPCConversationIndicatorMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -223,6 +229,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FFortConversation_NPC_AddIndicator : public FNPCConversationIndicatorMessage
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -233,6 +240,7 @@ public:
 /// Size: 0x0000 (0x000008 - 0x000008)
 class FFortConversation_NPC_RemoveIndicator : public FNPCConversationIndicatorMessage
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -241,8 +249,9 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.ConversationSettingDialogMarkerData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FConversationSettingDialogMarkerData : public MDKStruct
+class FConversationSettingDialogMarkerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -252,20 +261,22 @@ public:
 
 /// Struct /Script/FortniteConversationRuntime.FortConversationConditionalMessage
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFortConversationConditionalMessage : public MDKStruct
+class FFortConversationConditionalMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UFortConversationContextCondition*)        Condition                                                   OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FText)                                     Message                                                     OFFSET(get<T>, {0x8, 24, 0, 0})
+	SMember(FText)                                     Message                                                     OFFSET(getStruct<T>, {0x8, 24, 0, 0})
 };
 
 /// Struct /Script/FortniteConversationRuntime.FortConversationNodeConditionalMessages
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortConversationNodeConditionalMessages : public MDKStruct
+class FFortConversationNodeConditionalMessages : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

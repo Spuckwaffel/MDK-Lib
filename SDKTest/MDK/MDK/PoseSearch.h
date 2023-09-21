@@ -27,7 +27,7 @@ class UPoseSearchDatabase : public UDataAsset
 
 public:
 	CMember(UPoseSearchSchema*)                        Schema                                                      OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FPoseSearchExcludeFromDatabaseParameters)  ExcludeFromDatabaseParameters                               OFFSET(get<T>, {0x38, 8, 0, 0})
+	SMember(FPoseSearchExcludeFromDatabaseParameters)  ExcludeFromDatabaseParameters                               OFFSET(getStruct<T>, {0x38, 8, 0, 0})
 	CMember(TArray<FInstancedStruct>)                  AnimationAssets                                             OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(EPoseSearchMode)                           PoseSearchMode                                              OFFSET(get<T>, {0x50, 4, 0, 0})
 	DMember(int32_t)                                   NumberOfPrincipalComponents                                 OFFSET(get<int32_t>, {0x54, 4, 0, 0})
@@ -56,10 +56,10 @@ class UPoseSearchFeatureChannel_FilterCrashingLegs : public UPoseSearchFeatureCh
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FBoneReference)                            LeftThigh                                                   OFFSET(get<T>, {0x40, 12, 0, 0})
-	SMember(FBoneReference)                            RightThigh                                                  OFFSET(get<T>, {0x4C, 12, 0, 0})
-	SMember(FBoneReference)                            LeftFoot                                                    OFFSET(get<T>, {0x58, 12, 0, 0})
-	SMember(FBoneReference)                            RightFoot                                                   OFFSET(get<T>, {0x64, 12, 0, 0})
+	SMember(FBoneReference)                            LeftThigh                                                   OFFSET(getStruct<T>, {0x40, 12, 0, 0})
+	SMember(FBoneReference)                            RightThigh                                                  OFFSET(getStruct<T>, {0x4C, 12, 0, 0})
+	SMember(FBoneReference)                            LeftFoot                                                    OFFSET(getStruct<T>, {0x58, 12, 0, 0})
+	SMember(FBoneReference)                            RightFoot                                                   OFFSET(getStruct<T>, {0x64, 12, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x70, 4, 0, 0})
 	DMember(int8_t)                                    LeftThighIdx                                                OFFSET(get<int8_t>, {0x74, 1, 0, 0})
 	DMember(int8_t)                                    RightThighIdx                                               OFFSET(get<int8_t>, {0x75, 1, 0, 0})
@@ -98,12 +98,12 @@ class UPoseSearchFeatureChannel_Heading : public UPoseSearchFeatureChannel
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x40, 12, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(getStruct<T>, {0x40, 12, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     SampleTimeOffset                                            OFFSET(get<float>, {0x50, 4, 0, 0})
 	CMember(EHeadingAxis)                              HeadingAxis                                                 OFFSET(get<T>, {0x54, 1, 0, 0})
 	DMember(int8_t)                                    SchemaBoneIdx                                               OFFSET(get<int8_t>, {0x55, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	CMember(EInputQueryPose)                           InputQueryPose                                              OFFSET(get<T>, {0x68, 1, 0, 0})
 	CMember(EComponentStrippingVector)                 ComponentStripping                                          OFFSET(get<T>, {0x69, 1, 0, 0})
 };
@@ -138,10 +138,10 @@ class UPoseSearchFeatureChannel_Phase : public UPoseSearchFeatureChannel
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x40, 12, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(getStruct<T>, {0x40, 12, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(int8_t)                                    SchemaBoneIdx                                               OFFSET(get<int8_t>, {0x50, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x54, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0x54, 16, 0, 0})
 	CMember(EInputQueryPose)                           InputQueryPose                                              OFFSET(get<T>, {0x64, 1, 0, 0})
 };
 
@@ -169,13 +169,13 @@ class UPoseSearchFeatureChannel_Position : public UPoseSearchFeatureChannel
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x40, 12, 0, 0})
-	SMember(FBoneReference)                            OriginBone                                                  OFFSET(get<T>, {0x4C, 12, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(getStruct<T>, {0x40, 12, 0, 0})
+	SMember(FBoneReference)                            OriginBone                                                  OFFSET(getStruct<T>, {0x4C, 12, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x58, 4, 0, 0})
 	DMember(float)                                     SampleTimeOffset                                            OFFSET(get<float>, {0x5C, 4, 0, 0})
 	DMember(int8_t)                                    SchemaBoneIdx                                               OFFSET(get<int8_t>, {0x60, 1, 0, 0})
 	DMember(int8_t)                                    SchemaOriginBoneIdx                                         OFFSET(get<int8_t>, {0x61, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x64, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0x64, 16, 0, 0})
 	CMember(EInputQueryPose)                           InputQueryPose                                              OFFSET(get<T>, {0x74, 1, 0, 0})
 	CMember(EComponentStrippingVector)                 ComponentStripping                                          OFFSET(get<T>, {0x75, 1, 0, 0})
 	CMember(EPermutationTimeType)                      PermutationTimeType                                         OFFSET(get<T>, {0x76, 1, 0, 0})
@@ -214,11 +214,11 @@ class UPoseSearchFeatureChannel_Velocity : public UPoseSearchFeatureChannel
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FBoneReference)                            bone                                                        OFFSET(get<T>, {0x40, 12, 0, 0})
+	SMember(FBoneReference)                            bone                                                        OFFSET(getStruct<T>, {0x40, 12, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     SampleTimeOffset                                            OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(int8_t)                                    SchemaBoneIdx                                               OFFSET(get<int8_t>, {0x54, 1, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	CMember(EInputQueryPose)                           InputQueryPose                                              OFFSET(get<T>, {0x68, 1, 0, 0})
 	DMember(bool)                                      bUseCharacterSpaceVelocities                                OFFSET(get<bool>, {0x69, 1, 0, 0})
 	DMember(bool)                                      bNormalize                                                  OFFSET(get<bool>, {0x6A, 1, 0, 0})
@@ -329,6 +329,7 @@ public:
 /// Size: 0x0000 (0x000010 - 0x000010)
 class FMotionMatchingAnimNodeReference : public FAnimNodeReference
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -337,8 +338,9 @@ public:
 
 /// Struct /Script/PoseSearch.PoseSearchCost
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FPoseSearchCost : public MDKStruct
+class FPoseSearchCost : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -348,8 +350,9 @@ public:
 
 /// Struct /Script/PoseSearch.PoseSearchExcludeFromDatabaseParameters
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FPoseSearchExcludeFromDatabaseParameters : public MDKStruct
+class FPoseSearchExcludeFromDatabaseParameters : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -360,8 +363,9 @@ public:
 
 /// Struct /Script/PoseSearch.PoseSearchDatabaseAnimationAssetBase
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FPoseSearchDatabaseAnimationAssetBase : public MDKStruct
+class FPoseSearchDatabaseAnimationAssetBase : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -372,13 +376,14 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FPoseSearchDatabaseSequence : public FPoseSearchDatabaseAnimationAssetBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UAnimSequence*)                            Sequence                                                    OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FFloatInterval)                            SamplingRange                                               OFFSET(get<T>, {0x14, 8, 0, 0})
+	SMember(FFloatInterval)                            SamplingRange                                               OFFSET(getStruct<T>, {0x14, 8, 0, 0})
 	CMember(EPoseSearchMirrorOption)                   MirrorOption                                                OFFSET(get<T>, {0x1C, 4, 0, 0})
 };
 
@@ -386,6 +391,7 @@ public:
 /// Size: 0x0028 (0x000008 - 0x000030)
 class FPoseSearchDatabaseBlendSpace : public FPoseSearchDatabaseAnimationAssetBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -405,13 +411,14 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FPoseSearchDatabaseAnimComposite : public FPoseSearchDatabaseAnimationAssetBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UAnimComposite*)                           AnimComposite                                               OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FFloatInterval)                            SamplingRange                                               OFFSET(get<T>, {0x14, 8, 0, 0})
+	SMember(FFloatInterval)                            SamplingRange                                               OFFSET(getStruct<T>, {0x14, 8, 0, 0})
 	CMember(EPoseSearchMirrorOption)                   MirrorOption                                                OFFSET(get<T>, {0x1C, 4, 0, 0})
 };
 
@@ -419,34 +426,37 @@ public:
 /// Size: 0x0018 (0x000008 - 0x000020)
 class FPoseSearchDatabaseAnimMontage : public FPoseSearchDatabaseAnimationAssetBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(UAnimMontage*)                             AnimMontage                                                 OFFSET(get<T>, {0x8, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x10, 1, 0, 0})
-	SMember(FFloatInterval)                            SamplingRange                                               OFFSET(get<T>, {0x14, 8, 0, 0})
+	SMember(FFloatInterval)                            SamplingRange                                               OFFSET(getStruct<T>, {0x14, 8, 0, 0})
 	CMember(EPoseSearchMirrorOption)                   MirrorOption                                                OFFSET(get<T>, {0x1C, 4, 0, 0})
 };
 
 /// Struct /Script/PoseSearch.PoseSearchBone
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FPoseSearchBone : public MDKStruct
+class FPoseSearchBone : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
 public:
-	SMember(FBoneReference)                            Reference                                                   OFFSET(get<T>, {0x0, 12, 0, 0})
+	SMember(FBoneReference)                            Reference                                                   OFFSET(getStruct<T>, {0x0, 12, 0, 0})
 	DMember(int32_t)                                   Flags                                                       OFFSET(get<int32_t>, {0xC, 4, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x10, 4, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0x14, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0x14, 16, 0, 0})
 };
 
 /// Struct /Script/PoseSearch.PoseSearchTrajectorySample
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FPoseSearchTrajectorySample : public MDKStruct
+class FPoseSearchTrajectorySample : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -454,26 +464,28 @@ public:
 	DMember(float)                                     Offset                                                      OFFSET(get<float>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   Flags                                                       OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FLinearColor)                              DebugColor                                                  OFFSET(get<T>, {0xC, 16, 0, 0})
+	SMember(FLinearColor)                              DebugColor                                                  OFFSET(getStruct<T>, {0xC, 16, 0, 0})
 };
 
 /// Struct /Script/PoseSearch.PoseSearchQueryTrajectorySample
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FPoseSearchQueryTrajectorySample : public MDKStruct
+class FPoseSearchQueryTrajectorySample : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FQuat)                                     Facing                                                      OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Facing                                                      OFFSET(getStruct<T>, {0x0, 32, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(float)                                     AccumulatedSeconds                                          OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/PoseSearch.PoseSearchQueryTrajectory
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FPoseSearchQueryTrajectory : public MDKStruct
+class FPoseSearchQueryTrajectory : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -483,8 +495,9 @@ public:
 
 /// Struct /Script/PoseSearch.PoseSearchAnimPlayer
 /// Size: 0x0218 (0x000000 - 0x000218)
-class FPoseSearchAnimPlayer : public MDKStruct
+class FPoseSearchAnimPlayer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
@@ -495,6 +508,7 @@ public:
 /// Size: 0x0020 (0x000038 - 0x000058)
 class FAnimNode_BlendStack_Standalone : public FAnimNode_AssetPlayerBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
@@ -505,6 +519,7 @@ public:
 /// Size: 0x0058 (0x000058 - 0x0000B0)
 class FAnimNode_BlendStack : public FAnimNode_BlendStack_Standalone
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
@@ -520,7 +535,7 @@ public:
 	DMember(int32_t)                                   MaxActiveBlends                                             OFFSET(get<int32_t>, {0x78, 4, 0, 0})
 	CMember(UBlendProfile*)                            BlendProfile                                                OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(EAlphaBlendOption)                         BlendOption                                                 OFFSET(get<T>, {0x88, 1, 0, 0})
-	SMember(FVector)                                   BlendParameters                                             OFFSET(get<T>, {0x90, 24, 0, 0})
+	SMember(FVector)                                   BlendParameters                                             OFFSET(getStruct<T>, {0x90, 24, 0, 0})
 	CMember(UMirrorDataTable*)                         MirrorDataTable                                             OFFSET(get<T>, {0xA8, 8, 0, 0})
 };
 
@@ -528,13 +543,14 @@ public:
 /// Size: 0x0170 (0x000038 - 0x0001A8)
 class FAnimNode_MotionMatching : public FAnimNode_AssetPlayerBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 424;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(UPoseSearchDatabase*)                      Database                                                    OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FPoseSearchQueryTrajectory)                Trajectory                                                  OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FPoseSearchQueryTrajectory)                Trajectory                                                  OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 	DMember(float)                                     TrajectorySpeedMultiplier                                   OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(float)                                     BlendTime                                                   OFFSET(get<float>, {0x64, 4, 0, 0})
 	DMember(int32_t)                                   MaxActiveBlends                                             OFFSET(get<int32_t>, {0x68, 4, 0, 0})
@@ -543,7 +559,7 @@ public:
 	DMember(float)                                     PoseJumpThresholdTime                                       OFFSET(get<float>, {0x7C, 4, 0, 0})
 	DMember(float)                                     PoseReselectHistory                                         OFFSET(get<float>, {0x80, 4, 0, 0})
 	DMember(float)                                     SearchThrottleTime                                          OFFSET(get<float>, {0x84, 4, 0, 0})
-	SMember(FFloatInterval)                            PlayRate                                                    OFFSET(get<T>, {0x88, 8, 0, 0})
+	SMember(FFloatInterval)                            PlayRate                                                    OFFSET(getStruct<T>, {0x88, 8, 0, 0})
 	DMember(bool)                                      bResetOnBecomingRelevant                                    OFFSET(get<bool>, {0x90, 1, 0, 0})
 	DMember(bool)                                      bShouldSearch                                               OFFSET(get<bool>, {0x91, 1, 0, 0})
 	DMember(float)                                     YawFromAnimationTrajectoryBlendTime                         OFFSET(get<float>, {0x94, 4, 0, 0})
@@ -555,6 +571,7 @@ public:
 /// Size: 0x0098 (0x000010 - 0x0000A8)
 class FAnimNode_PoseSearchHistoryCollector_Base : public FAnimNode_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
@@ -568,28 +585,31 @@ public:
 /// Size: 0x0010 (0x0000A8 - 0x0000B8)
 class FAnimNode_PoseSearchHistoryCollector : public FAnimNode_PoseSearchHistoryCollector_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FPoseLink)                                 Source                                                      OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FPoseLink)                                 Source                                                      OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 };
 
 /// Struct /Script/PoseSearch.AnimNode_PoseSearchComponentSpaceHistoryCollector
 /// Size: 0x0010 (0x0000A8 - 0x0000B8)
 class FAnimNode_PoseSearchComponentSpaceHistoryCollector : public FAnimNode_PoseSearchHistoryCollector_Base
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FComponentSpacePoseLink)                   Source                                                      OFFSET(get<T>, {0xA8, 16, 0, 0})
+	SMember(FComponentSpacePoseLink)                   Source                                                      OFFSET(getStruct<T>, {0xA8, 16, 0, 0})
 };
 
 /// Struct /Script/PoseSearch.MotionMatchingState
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FMotionMatchingState : public MDKStruct
+class FMotionMatchingState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 

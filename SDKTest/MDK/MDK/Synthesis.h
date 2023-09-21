@@ -188,7 +188,7 @@ class USourceEffectBitCrusherPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
-	SMember(FSourceEffectBitCrusherSettings)           Settings                                                    OFFSET(get<T>, {0x150, 192, 0, 0})
+	SMember(FSourceEffectBitCrusherSettings)           Settings                                                    OFFSET(getStruct<T>, {0x150, 192, 0, 0})
 
 
 	/// Functions
@@ -218,7 +218,7 @@ class USourceEffectChorusPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 1248;
 
 public:
-	SMember(FSourceEffectChorusSettings)               Settings                                                    OFFSET(get<T>, {0x2B8, 552, 0, 0})
+	SMember(FSourceEffectChorusSettings)               Settings                                                    OFFSET(getStruct<T>, {0x2B8, 552, 0, 0})
 
 
 	/// Functions
@@ -273,7 +273,7 @@ class USourceEffectConvolutionReverbPreset : public USoundEffectSourcePreset
 
 public:
 	CMember(UAudioImpulseResponse*)                    ImpulseResponse                                             OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FSourceEffectConvolutionReverbSettings)    Settings                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FSourceEffectConvolutionReverbSettings)    Settings                                                    OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	CMember(ESubmixEffectConvolutionReverbBlockSize)   BlockSize                                                   OFFSET(get<T>, {0x80, 1, 0, 0})
 	DMember(bool)                                      bEnableHardwareAcceleration                                 OFFSET(get<bool>, {0x81, 1, 0, 0})
 
@@ -293,7 +293,7 @@ class USourceEffectDynamicsProcessorPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-	SMember(FSourceEffectDynamicsProcessorSettings)    Settings                                                    OFFSET(get<T>, {0xB8, 40, 0, 0})
+	SMember(FSourceEffectDynamicsProcessorSettings)    Settings                                                    OFFSET(getStruct<T>, {0xB8, 40, 0, 0})
 
 
 	/// Functions
@@ -309,7 +309,7 @@ class UEnvelopeFollowerListener : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnEnvelopeFollowerUpdate                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnEnvelopeFollowerUpdate                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 };
 
 /// Class /Script/Synthesis.SourceEffectEnvelopeFollowerPreset
@@ -320,7 +320,7 @@ class USourceEffectEnvelopeFollowerPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FSourceEffectEnvelopeFollowerSettings)     Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
+	SMember(FSourceEffectEnvelopeFollowerSettings)     Settings                                                    OFFSET(getStruct<T>, {0x9C, 12, 0, 0})
 
 
 	/// Functions
@@ -340,7 +340,7 @@ class USourceEffectEQPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FSourceEffectEQSettings)                   Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FSourceEffectEQSettings)                   Settings                                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 
 
 	/// Functions
@@ -356,7 +356,7 @@ class USourceEffectFilterPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FSourceEffectFilterSettings)               Settings                                                    OFFSET(get<T>, {0xB0, 32, 0, 0})
+	SMember(FSourceEffectFilterSettings)               Settings                                                    OFFSET(getStruct<T>, {0xB0, 32, 0, 0})
 
 
 	/// Functions
@@ -372,7 +372,7 @@ class USourceEffectFoldbackDistortionPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FSourceEffectFoldbackDistortionSettings)   Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
+	SMember(FSourceEffectFoldbackDistortionSettings)   Settings                                                    OFFSET(getStruct<T>, {0x9C, 12, 0, 0})
 
 
 	/// Functions
@@ -388,7 +388,7 @@ class USourceEffectMidSideSpreaderPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FSourceEffectMidSideSpreaderSettings)      Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
+	SMember(FSourceEffectMidSideSpreaderSettings)      Settings                                                    OFFSET(getStruct<T>, {0x98, 8, 0, 0})
 
 
 	/// Functions
@@ -404,7 +404,7 @@ class USourceEffectMotionFilterPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FSourceEffectMotionFilterSettings)         Settings                                                    OFFSET(get<T>, {0x108, 120, 0, 0})
+	SMember(FSourceEffectMotionFilterSettings)         Settings                                                    OFFSET(getStruct<T>, {0x108, 120, 0, 0})
 
 
 	/// Functions
@@ -420,7 +420,7 @@ class USourceEffectPannerPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FSourceEffectPannerSettings)               Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
+	SMember(FSourceEffectPannerSettings)               Settings                                                    OFFSET(getStruct<T>, {0x98, 8, 0, 0})
 
 
 	/// Functions
@@ -436,7 +436,7 @@ class USourceEffectPhaserPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FSourceEffectPhaserSettings)               Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FSourceEffectPhaserSettings)               Settings                                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 
 
 	/// Functions
@@ -452,7 +452,7 @@ class USourceEffectRingModulationPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FSourceEffectRingModulationSettings)       Settings                                                    OFFSET(get<T>, {0xB0, 32, 0, 0})
+	SMember(FSourceEffectRingModulationSettings)       Settings                                                    OFFSET(getStruct<T>, {0xB0, 32, 0, 0})
 
 
 	/// Functions
@@ -468,7 +468,7 @@ class USourceEffectSimpleDelayPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-	SMember(FSourceEffectSimpleDelaySettings)          Settings                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FSourceEffectSimpleDelaySettings)          Settings                                                    OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 
 
 	/// Functions
@@ -484,7 +484,7 @@ class USourceEffectStereoDelayPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FSourceEffectStereoDelaySettings)          Settings                                                    OFFSET(get<T>, {0xB4, 36, 0, 0})
+	SMember(FSourceEffectStereoDelaySettings)          Settings                                                    OFFSET(getStruct<T>, {0xB4, 36, 0, 0})
 
 
 	/// Functions
@@ -500,7 +500,7 @@ class USourceEffectWaveShaperPreset : public USoundEffectSourcePreset
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FSourceEffectWaveShaperSettings)           Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
+	SMember(FSourceEffectWaveShaperSettings)           Settings                                                    OFFSET(getStruct<T>, {0x98, 8, 0, 0})
 
 
 	/// Functions
@@ -517,7 +517,7 @@ class USubmixEffectConvolutionReverbPreset : public USoundEffectSubmixPreset
 
 public:
 	CMember(UAudioImpulseResponse*)                    ImpulseResponse                                             OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FSubmixEffectConvolutionReverbSettings)    Settings                                                    OFFSET(get<T>, {0x70, 48, 0, 0})
+	SMember(FSubmixEffectConvolutionReverbSettings)    Settings                                                    OFFSET(getStruct<T>, {0x70, 48, 0, 0})
 	CMember(ESubmixEffectConvolutionReverbBlockSize)   BlockSize                                                   OFFSET(get<T>, {0xA0, 1, 0, 0})
 	DMember(bool)                                      bEnableHardwareAcceleration                                 OFFSET(get<bool>, {0xA1, 1, 0, 0})
 
@@ -547,8 +547,8 @@ class USubmixEffectDelayPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FSubmixEffectDelaySettings)                Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
-	SMember(FSubmixEffectDelaySettings)                DynamicSettings                                             OFFSET(get<T>, {0xA8, 12, 0, 0})
+	SMember(FSubmixEffectDelaySettings)                Settings                                                    OFFSET(getStruct<T>, {0x9C, 12, 0, 0})
+	SMember(FSubmixEffectDelaySettings)                DynamicSettings                                             OFFSET(getStruct<T>, {0xA8, 12, 0, 0})
 
 
 	/// Functions
@@ -572,7 +572,7 @@ class USubmixEffectFilterPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FSubmixEffectFilterSettings)               Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
+	SMember(FSubmixEffectFilterSettings)               Settings                                                    OFFSET(getStruct<T>, {0x9C, 12, 0, 0})
 
 
 	/// Functions
@@ -600,7 +600,7 @@ class USubmixEffectFlexiverbPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FSubmixEffectFlexiverbSettings)            Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FSubmixEffectFlexiverbSettings)            Settings                                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 
 
 	/// Functions
@@ -616,7 +616,7 @@ class USubmixEffectMultibandCompressorPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-	SMember(FSubmixEffectMultibandCompressorSettings)  Settings                                                    OFFSET(get<T>, {0xC8, 56, 0, 0})
+	SMember(FSubmixEffectMultibandCompressorSettings)  Settings                                                    OFFSET(getStruct<T>, {0xC8, 56, 0, 0})
 
 
 	/// Functions
@@ -638,7 +638,7 @@ class USubmixEffectStereoDelayPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FSubmixEffectStereoDelaySettings)          Settings                                                    OFFSET(get<T>, {0xB4, 36, 0, 0})
+	SMember(FSubmixEffectStereoDelaySettings)          Settings                                                    OFFSET(getStruct<T>, {0xB4, 36, 0, 0})
 
 
 	/// Functions
@@ -654,7 +654,7 @@ class USubmixEffectStereoToQuadPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FSubmixEffectStereoToQuadSettings)         Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
+	SMember(FSubmixEffectStereoToQuadSettings)         Settings                                                    OFFSET(getStruct<T>, {0x98, 8, 0, 0})
 
 
 	/// Functions
@@ -670,7 +670,7 @@ class USubmixEffectTapDelayPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FSubmixEffectTapDelaySettings)             Settings                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FSubmixEffectTapDelaySettings)             Settings                                                    OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 
 
 	/// Functions
@@ -754,7 +754,7 @@ class UMonoWaveTableSynthPreset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-	SMember(FString)                                   PresetName                                                  OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   PresetName                                                  OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(bool)                                      bLockKeyframesToGridBool                                    OFFSET(get<bool>, {0x38, 1, 1, 0})
 	DMember(int32_t)                                   LockKeyframesToGrid                                         OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(int32_t)                                   WaveTableResolution                                         OFFSET(get<int32_t>, {0x40, 4, 0, 0})
@@ -770,8 +770,8 @@ class USynthComponentMonoWaveTable : public USynthComponent
 	static inline constexpr uint64_t __MDKClassSize = 4176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTableAltered                                              OFFSET(get<T>, {0x900, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnNumTablesChanged                                          OFFSET(get<T>, {0x910, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTableAltered                                              OFFSET(getStruct<T>, {0x900, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnNumTablesChanged                                          OFFSET(getStruct<T>, {0x910, 16, 0, 0})
 	CMember(UMonoWaveTableSynthPreset*)                CurrentPreset                                               OFFSET(get<T>, {0x920, 8, 0, 0})
 
 
@@ -876,8 +876,8 @@ class USynthComponentToneGenerator : public USynthComponent
 public:
 	DMember(float)                                     Frequency                                                   OFFSET(get<float>, {0x900, 4, 0, 0})
 	DMember(float)                                     Volume                                                      OFFSET(get<float>, {0x904, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        DistanceAttenuationCurve                                    OFFSET(get<T>, {0x908, 136, 0, 0})
-	SMember(FVector2D)                                 DistanceRange                                               OFFSET(get<T>, {0x990, 16, 0, 0})
+	SMember(FRuntimeFloatCurve)                        DistanceAttenuationCurve                                    OFFSET(getStruct<T>, {0x908, 136, 0, 0})
+	SMember(FVector2D)                                 DistanceRange                                               OFFSET(getStruct<T>, {0x990, 16, 0, 0})
 	DMember(float)                                     AttenuationDbAtMaxRange                                     OFFSET(get<float>, {0x9A0, 4, 0, 0})
 
 
@@ -897,8 +897,8 @@ class USynthSamplePlayer : public USynthComponent
 
 public:
 	CMember(USoundWave*)                               SoundWave                                                   OFFSET(get<T>, {0x900, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSampleLoaded                                              OFFSET(get<T>, {0x908, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSamplePlaybackProgress                                    OFFSET(get<T>, {0x918, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSampleLoaded                                              OFFSET(getStruct<T>, {0x908, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSamplePlaybackProgress                                    OFFSET(getStruct<T>, {0x918, 16, 0, 0})
 
 
 	/// Functions
@@ -942,20 +942,20 @@ class USynth2DSlider : public UWidget
 public:
 	DMember(float)                                     ValueX                                                      OFFSET(get<float>, {0x178, 4, 0, 0})
 	DMember(float)                                     ValueY                                                      OFFSET(get<float>, {0x17C, 4, 0, 0})
-	SMember(FDelegateProperty)                         ValueXDelegate                                              OFFSET(get<T>, {0x180, 12, 0, 0})
-	SMember(FDelegateProperty)                         ValueYDelegate                                              OFFSET(get<T>, {0x18C, 12, 0, 0})
-	SMember(FSynth2DSliderStyle)                       WidgetStyle                                                 OFFSET(get<T>, {0x1A0, 992, 0, 0})
-	SMember(FLinearColor)                              SliderHandleColor                                           OFFSET(get<T>, {0x580, 16, 0, 0})
+	SMember(FDelegateProperty)                         ValueXDelegate                                              OFFSET(getStruct<T>, {0x180, 12, 0, 0})
+	SMember(FDelegateProperty)                         ValueYDelegate                                              OFFSET(getStruct<T>, {0x18C, 12, 0, 0})
+	SMember(FSynth2DSliderStyle)                       WidgetStyle                                                 OFFSET(getStruct<T>, {0x1A0, 992, 0, 0})
+	SMember(FLinearColor)                              SliderHandleColor                                           OFFSET(getStruct<T>, {0x580, 16, 0, 0})
 	DMember(bool)                                      IndentHandle                                                OFFSET(get<bool>, {0x590, 1, 0, 0})
 	DMember(bool)                                      Locked                                                      OFFSET(get<bool>, {0x591, 1, 0, 0})
 	DMember(float)                                     StepSize                                                    OFFSET(get<float>, {0x594, 4, 0, 0})
 	DMember(bool)                                      IsFocusable                                                 OFFSET(get<bool>, {0x598, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMouseCaptureBegin                                         OFFSET(get<T>, {0x5A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMouseCaptureEnd                                           OFFSET(get<T>, {0x5B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(get<T>, {0x5C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(get<T>, {0x5D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnValueChangedX                                             OFFSET(get<T>, {0x5E0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnValueChangedY                                             OFFSET(get<T>, {0x5F0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMouseCaptureBegin                                         OFFSET(getStruct<T>, {0x5A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMouseCaptureEnd                                           OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(getStruct<T>, {0x5C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(getStruct<T>, {0x5D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnValueChangedX                                             OFFSET(getStruct<T>, {0x5E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnValueChangedY                                             OFFSET(getStruct<T>, {0x5F0, 16, 0, 0})
 
 
 	/// Functions
@@ -986,17 +986,17 @@ public:
 	DMember(float)                                     MouseSpeed                                                  OFFSET(get<float>, {0x180, 4, 0, 0})
 	DMember(float)                                     MouseFineTuneSpeed                                          OFFSET(get<float>, {0x184, 4, 0, 0})
 	DMember(bool)                                      ShowTooltipInfo                                             OFFSET(get<bool>, {0x188, 1, 1, 0})
-	SMember(FText)                                     ParameterName                                               OFFSET(get<T>, {0x190, 24, 0, 0})
-	SMember(FText)                                     ParameterUnits                                              OFFSET(get<T>, {0x1A8, 24, 0, 0})
-	SMember(FDelegateProperty)                         ValueDelegate                                               OFFSET(get<T>, {0x1C0, 12, 0, 0})
-	SMember(FSynthKnobStyle)                           WidgetStyle                                                 OFFSET(get<T>, {0x1D0, 800, 0, 0})
+	SMember(FText)                                     ParameterName                                               OFFSET(getStruct<T>, {0x190, 24, 0, 0})
+	SMember(FText)                                     ParameterUnits                                              OFFSET(getStruct<T>, {0x1A8, 24, 0, 0})
+	SMember(FDelegateProperty)                         ValueDelegate                                               OFFSET(getStruct<T>, {0x1C0, 12, 0, 0})
+	SMember(FSynthKnobStyle)                           WidgetStyle                                                 OFFSET(getStruct<T>, {0x1D0, 800, 0, 0})
 	DMember(bool)                                      Locked                                                      OFFSET(get<bool>, {0x4F0, 1, 0, 0})
 	DMember(bool)                                      IsFocusable                                                 OFFSET(get<bool>, {0x4F1, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMouseCaptureBegin                                         OFFSET(get<T>, {0x4F8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMouseCaptureEnd                                           OFFSET(get<T>, {0x508, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(get<T>, {0x518, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(get<T>, {0x528, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(get<T>, {0x538, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMouseCaptureBegin                                         OFFSET(getStruct<T>, {0x4F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMouseCaptureEnd                                           OFFSET(getStruct<T>, {0x508, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(getStruct<T>, {0x518, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(getStruct<T>, {0x528, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(getStruct<T>, {0x538, 16, 0, 0})
 
 
 	/// Functions
@@ -1012,8 +1012,9 @@ public:
 
 /// Struct /Script/Synthesis.Synth1PatchCable
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSynth1PatchCable : public MDKStruct
+class FSynth1PatchCable : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1024,8 +1025,9 @@ public:
 
 /// Struct /Script/Synthesis.PatchId
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FPatchId : public MDKStruct
+class FPatchId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -1035,8 +1037,9 @@ public:
 
 /// Struct /Script/Synthesis.EpicSynth1Patch
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FEpicSynth1Patch : public MDKStruct
+class FEpicSynth1Patch : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1049,6 +1052,7 @@ public:
 /// Size: 0x00D8 (0x000008 - 0x0000E0)
 class FModularSynthPreset : public FTableRowBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
@@ -1116,20 +1120,22 @@ public:
 
 /// Struct /Script/Synthesis.ModularSynthPresetBankEntry
 /// Size: 0x00F0 (0x000000 - 0x0000F0)
-class FModularSynthPresetBankEntry : public MDKStruct
+class FModularSynthPresetBankEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-	SMember(FString)                                   PresetName                                                  OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FModularSynthPreset)                       Preset                                                      OFFSET(get<T>, {0x10, 224, 0, 0})
+	SMember(FString)                                   PresetName                                                  OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FModularSynthPreset)                       Preset                                                      OFFSET(getStruct<T>, {0x10, 224, 0, 0})
 };
 
 /// Struct /Script/Synthesis.SourceEffectBitCrusherBaseSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSourceEffectBitCrusherBaseSettings : public MDKStruct
+class FSourceEffectBitCrusherBaseSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1140,22 +1146,24 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectBitCrusherSettings
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
-class FSourceEffectBitCrusherSettings : public MDKStruct
+class FSourceEffectBitCrusherSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 	DMember(float)                                     CrushedSampleRate                                           OFFSET(get<float>, {0x0, 4, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       SampleRateModulation                                        OFFSET(get<T>, {0x8, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       SampleRateModulation                                        OFFSET(getStruct<T>, {0x8, 88, 0, 0})
 	DMember(float)                                     CrushedBits                                                 OFFSET(get<float>, {0x60, 4, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       BitModulation                                               OFFSET(get<T>, {0x68, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       BitModulation                                               OFFSET(getStruct<T>, {0x68, 88, 0, 0})
 };
 
 /// Struct /Script/Synthesis.SourceEffectChorusBaseSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSourceEffectChorusBaseSettings : public MDKStruct
+class FSourceEffectChorusBaseSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1170,8 +1178,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectChorusSettings
 /// Size: 0x0228 (0x000000 - 0x000228)
-class FSourceEffectChorusSettings : public MDKStruct
+class FSourceEffectChorusSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 552;
 
@@ -1182,18 +1191,19 @@ public:
 	DMember(float)                                     WetLevel                                                    OFFSET(get<float>, {0xC, 4, 0, 0})
 	DMember(float)                                     DryLevel                                                    OFFSET(get<float>, {0x10, 4, 0, 0})
 	DMember(float)                                     Spread                                                      OFFSET(get<float>, {0x14, 4, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       DepthModulation                                             OFFSET(get<T>, {0x18, 88, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       FrequencyModulation                                         OFFSET(get<T>, {0x70, 88, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       FeedbackModulation                                          OFFSET(get<T>, {0xC8, 88, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       WetModulation                                               OFFSET(get<T>, {0x120, 88, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       DryModulation                                               OFFSET(get<T>, {0x178, 88, 0, 0})
-	SMember(FSoundModulationDestinationSettings)       SpreadModulation                                            OFFSET(get<T>, {0x1D0, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       DepthModulation                                             OFFSET(getStruct<T>, {0x18, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       FrequencyModulation                                         OFFSET(getStruct<T>, {0x70, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       FeedbackModulation                                          OFFSET(getStruct<T>, {0xC8, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       WetModulation                                               OFFSET(getStruct<T>, {0x120, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       DryModulation                                               OFFSET(getStruct<T>, {0x178, 88, 0, 0})
+	SMember(FSoundModulationDestinationSettings)       SpreadModulation                                            OFFSET(getStruct<T>, {0x1D0, 88, 0, 0})
 };
 
 /// Struct /Script/Synthesis.SourceEffectConvolutionReverbSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSourceEffectConvolutionReverbSettings : public MDKStruct
+class FSourceEffectConvolutionReverbSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1206,8 +1216,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectDynamicsProcessorSettings
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FSourceEffectDynamicsProcessorSettings : public MDKStruct
+class FSourceEffectDynamicsProcessorSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1228,8 +1239,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectEnvelopeFollowerSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSourceEffectEnvelopeFollowerSettings : public MDKStruct
+class FSourceEffectEnvelopeFollowerSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1242,8 +1254,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectEQBand
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSourceEffectEQBand : public MDKStruct
+class FSourceEffectEQBand : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1256,8 +1269,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectEQSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSourceEffectEQSettings : public MDKStruct
+class FSourceEffectEQSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1267,8 +1281,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectFilterAudioBusModulationSettings
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FSourceEffectFilterAudioBusModulationSettings : public MDKStruct
+class FSourceEffectFilterAudioBusModulationSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1286,8 +1301,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectFilterSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSourceEffectFilterSettings : public MDKStruct
+class FSourceEffectFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1301,8 +1317,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectFoldbackDistortionSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSourceEffectFoldbackDistortionSettings : public MDKStruct
+class FSourceEffectFoldbackDistortionSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1314,8 +1331,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectMidSideSpreaderSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSourceEffectMidSideSpreaderSettings : public MDKStruct
+class FSourceEffectMidSideSpreaderSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1328,8 +1346,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectIndividualFilterSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSourceEffectIndividualFilterSettings : public MDKStruct
+class FSourceEffectIndividualFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1342,39 +1361,42 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectMotionFilterModulationSettings
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSourceEffectMotionFilterModulationSettings : public MDKStruct
+class FSourceEffectMotionFilterModulationSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(ESourceEffectMotionFilterModSource)        ModulationSource                                            OFFSET(get<T>, {0x0, 1, 0, 0})
-	SMember(FVector2D)                                 ModulationInputRange                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 ModulationOutputMinimumRange                                OFFSET(get<T>, {0x18, 16, 0, 0})
-	SMember(FVector2D)                                 ModulationOutputMaximumRange                                OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FVector2D)                                 ModulationInputRange                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 ModulationOutputMinimumRange                                OFFSET(getStruct<T>, {0x18, 16, 0, 0})
+	SMember(FVector2D)                                 ModulationOutputMaximumRange                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(float)                                     UpdateEaseMS                                                OFFSET(get<float>, {0x38, 4, 0, 0})
 };
 
 /// Struct /Script/Synthesis.SourceEffectMotionFilterSettings
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FSourceEffectMotionFilterSettings : public MDKStruct
+class FSourceEffectMotionFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	CMember(ESourceEffectMotionFilterTopology)         MotionFilterTopology                                        OFFSET(get<T>, {0x0, 1, 0, 0})
 	DMember(float)                                     MotionFilterMix                                             OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FSourceEffectIndividualFilterSettings)     FilterASettings                                             OFFSET(get<T>, {0x8, 12, 0, 0})
-	SMember(FSourceEffectIndividualFilterSettings)     FilterBSettings                                             OFFSET(get<T>, {0x14, 12, 0, 0})
+	SMember(FSourceEffectIndividualFilterSettings)     FilterASettings                                             OFFSET(getStruct<T>, {0x8, 12, 0, 0})
+	SMember(FSourceEffectIndividualFilterSettings)     FilterBSettings                                             OFFSET(getStruct<T>, {0x14, 12, 0, 0})
 	CMember(TMap<ESourceEffectMotionFilterModDestination, FSourceEffectMotionFilterModulationSettings>) ModulationMappings OFFSET(get<T>, {0x20, 80, 0, 0})
 	DMember(float)                                     DryVolumeDb                                                 OFFSET(get<float>, {0x70, 4, 0, 0})
 };
 
 /// Struct /Script/Synthesis.SourceEffectPannerSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSourceEffectPannerSettings : public MDKStruct
+class FSourceEffectPannerSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1385,8 +1407,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectPhaserSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSourceEffectPhaserSettings : public MDKStruct
+class FSourceEffectPhaserSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1400,8 +1423,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectRingModulationSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSourceEffectRingModulationSettings : public MDKStruct
+class FSourceEffectRingModulationSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1416,8 +1440,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectSimpleDelaySettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSourceEffectSimpleDelaySettings : public MDKStruct
+class FSourceEffectSimpleDelaySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1433,8 +1458,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectStereoDelaySettings
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FSourceEffectStereoDelaySettings : public MDKStruct
+class FSourceEffectStereoDelaySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
@@ -1453,8 +1479,9 @@ public:
 
 /// Struct /Script/Synthesis.SourceEffectWaveShaperSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSourceEffectWaveShaperSettings : public MDKStruct
+class FSourceEffectWaveShaperSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1465,8 +1492,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectConvolutionReverbSettings
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FSubmixEffectConvolutionReverbSettings : public MDKStruct
+class FSubmixEffectConvolutionReverbSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -1487,8 +1515,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectDelaySettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSubmixEffectDelaySettings : public MDKStruct
+class FSubmixEffectDelaySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1500,8 +1529,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectFilterSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSubmixEffectFilterSettings : public MDKStruct
+class FSubmixEffectFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1514,8 +1544,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectFlexiverbSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSubmixEffectFlexiverbSettings : public MDKStruct
+class FSubmixEffectFlexiverbSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -1528,8 +1559,9 @@ public:
 
 /// Struct /Script/Synthesis.DynamicsBandSettings
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FDynamicsBandSettings : public MDKStruct
+class FDynamicsBandSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -1546,8 +1578,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectMultibandCompressorSettings
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FSubmixEffectMultibandCompressorSettings : public MDKStruct
+class FSubmixEffectMultibandCompressorSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
@@ -1569,8 +1602,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectStereoDelaySettings
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FSubmixEffectStereoDelaySettings : public MDKStruct
+class FSubmixEffectStereoDelaySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
@@ -1589,8 +1623,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectStereoToQuadSettings
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FSubmixEffectStereoToQuadSettings : public MDKStruct
+class FSubmixEffectStereoToQuadSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1601,8 +1636,9 @@ public:
 
 /// Struct /Script/Synthesis.TapDelayInfo
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTapDelayInfo : public MDKStruct
+class FTapDelayInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1617,8 +1653,9 @@ public:
 
 /// Struct /Script/Synthesis.SubmixEffectTapDelaySettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FSubmixEffectTapDelaySettings : public MDKStruct
+class FSubmixEffectTapDelaySettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1632,15 +1669,16 @@ public:
 /// Size: 0x03D8 (0x000008 - 0x0003E0)
 class FSynth2DSliderStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FSlateBrush)                               NormalThumbImage                                            OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               DisabledThumbImage                                          OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               NormalBarImage                                              OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               DisabledBarImage                                            OFFSET(get<T>, {0x250, 192, 0, 0})
-	SMember(FSlateBrush)                               BackgroundImage                                             OFFSET(get<T>, {0x310, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalThumbImage                                            OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               DisabledThumbImage                                          OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               NormalBarImage                                              OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               DisabledBarImage                                            OFFSET(getStruct<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               BackgroundImage                                             OFFSET(getStruct<T>, {0x310, 192, 0, 0})
 	DMember(float)                                     BarThickness                                                OFFSET(get<float>, {0x3D0, 4, 0, 0})
 };
 
@@ -1648,14 +1686,15 @@ public:
 /// Size: 0x0318 (0x000008 - 0x000320)
 class FSynthKnobStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FSlateBrush)                               LargeKnob                                                   OFFSET(get<T>, {0x10, 192, 0, 0})
-	SMember(FSlateBrush)                               LargeKnobOverlay                                            OFFSET(get<T>, {0xD0, 192, 0, 0})
-	SMember(FSlateBrush)                               MediumKnob                                                  OFFSET(get<T>, {0x190, 192, 0, 0})
-	SMember(FSlateBrush)                               MediumKnobOverlay                                           OFFSET(get<T>, {0x250, 192, 0, 0})
+	SMember(FSlateBrush)                               LargeKnob                                                   OFFSET(getStruct<T>, {0x10, 192, 0, 0})
+	SMember(FSlateBrush)                               LargeKnobOverlay                                            OFFSET(getStruct<T>, {0xD0, 192, 0, 0})
+	SMember(FSlateBrush)                               MediumKnob                                                  OFFSET(getStruct<T>, {0x190, 192, 0, 0})
+	SMember(FSlateBrush)                               MediumKnobOverlay                                           OFFSET(getStruct<T>, {0x250, 192, 0, 0})
 	DMember(float)                                     MinValueAngle                                               OFFSET(get<float>, {0x310, 4, 0, 0})
 	DMember(float)                                     MaxValueAngle                                               OFFSET(get<float>, {0x314, 4, 0, 0})
 	CMember(ESynthKnobSize)                            KnobSize                                                    OFFSET(get<T>, {0x318, 1, 0, 0})
@@ -1665,6 +1704,7 @@ public:
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FSynthSlateStyle : public FSlateWidgetStyle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

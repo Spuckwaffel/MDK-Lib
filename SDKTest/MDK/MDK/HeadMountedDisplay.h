@@ -27,11 +27,11 @@ class UMotionControllerComponent : public UPrimitiveComponent
 
 public:
 	DMember(int32_t)                                   PlayerIndex                                                 OFFSET(get<int32_t>, {0x568, 4, 0, 0})
-	SMember(FName)                                     MotionSource                                                OFFSET(get<T>, {0x56C, 4, 0, 0})
+	SMember(FName)                                     MotionSource                                                OFFSET(getStruct<T>, {0x56C, 4, 0, 0})
 	DMember(bool)                                      bDisableLowLatencyUpdate                                    OFFSET(get<bool>, {0x570, 1, 1, 0})
 	CMember(ETrackingStatus)                           CurrentTrackingStatus                                       OFFSET(get<T>, {0x574, 1, 0, 0})
 	DMember(bool)                                      bDisplayDeviceModel                                         OFFSET(get<bool>, {0x575, 1, 0, 0})
-	SMember(FName)                                     DisplayModelSource                                          OFFSET(get<T>, {0x578, 4, 0, 0})
+	SMember(FName)                                     DisplayModelSource                                          OFFSET(getStruct<T>, {0x578, 4, 0, 0})
 	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x588, 16, 0, 0})
 	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x598, 8, 0, 0})
@@ -70,40 +70,42 @@ public:
 
 /// Struct /Script/HeadMountedDisplay.XRHMDData
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FXRHMDData : public MDKStruct
+class FXRHMDData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
 	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     DeviceName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     DeviceName                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(ETrackingStatus)                           TrackingStatus                                              OFFSET(get<T>, {0x18, 1, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     Rotation                                                    OFFSET(get<T>, {0x40, 32, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     Rotation                                                    OFFSET(getStruct<T>, {0x40, 32, 0, 0})
 };
 
 /// Struct /Script/HeadMountedDisplay.XRMotionControllerData
 /// Size: 0x0120 (0x000000 - 0x000120)
-class FXRMotionControllerData : public MDKStruct
+class FXRMotionControllerData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
 	DMember(bool)                                      bValid                                                      OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FName)                                     DeviceName                                                  OFFSET(get<T>, {0x4, 4, 0, 0})
-	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FName)                                     DeviceName                                                  OFFSET(getStruct<T>, {0x4, 4, 0, 0})
+	SMember(FGuid)                                     ApplicationInstanceID                                       OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	CMember(EXRVisualType)                             DeviceVisualType                                            OFFSET(get<T>, {0x18, 1, 0, 0})
 	CMember(EControllerHand)                           HandIndex                                                   OFFSET(get<T>, {0x19, 1, 0, 0})
 	CMember(ETrackingStatus)                           TrackingStatus                                              OFFSET(get<T>, {0x1A, 1, 0, 0})
-	SMember(FVector)                                   GripPosition                                                OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FQuat)                                     GripRotation                                                OFFSET(get<T>, {0x40, 32, 0, 0})
-	SMember(FVector)                                   AimPosition                                                 OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FQuat)                                     AimRotation                                                 OFFSET(get<T>, {0x80, 32, 0, 0})
-	SMember(FVector)                                   PalmPosition                                                OFFSET(get<T>, {0xA0, 24, 0, 0})
-	SMember(FQuat)                                     PalmRotation                                                OFFSET(get<T>, {0xC0, 32, 0, 0})
+	SMember(FVector)                                   GripPosition                                                OFFSET(getStruct<T>, {0x20, 24, 0, 0})
+	SMember(FQuat)                                     GripRotation                                                OFFSET(getStruct<T>, {0x40, 32, 0, 0})
+	SMember(FVector)                                   AimPosition                                                 OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FQuat)                                     AimRotation                                                 OFFSET(getStruct<T>, {0x80, 32, 0, 0})
+	SMember(FVector)                                   PalmPosition                                                OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
+	SMember(FQuat)                                     PalmRotation                                                OFFSET(getStruct<T>, {0xC0, 32, 0, 0})
 	CMember(TArray<FVector>)                           HandKeyPositions                                            OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(TArray<FQuat>)                             HandKeyRotations                                            OFFSET(get<T>, {0xF0, 16, 0, 0})
 	CMember(TArray<float>)                             HandKeyRadii                                                OFFSET(get<T>, {0x100, 16, 0, 0})
@@ -112,8 +114,9 @@ public:
 
 /// Struct /Script/HeadMountedDisplay.XRGestureConfig
 /// Size: 0x0006 (0x000000 - 0x000006)
-class FXRGestureConfig : public MDKStruct
+class FXRGestureConfig : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 6;
 
@@ -128,13 +131,14 @@ public:
 
 /// Struct /Script/HeadMountedDisplay.XRDeviceId
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FXRDeviceId : public MDKStruct
+class FXRDeviceId : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
 public:
-	SMember(FName)                                     SystemName                                                  OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     SystemName                                                  OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 };
 

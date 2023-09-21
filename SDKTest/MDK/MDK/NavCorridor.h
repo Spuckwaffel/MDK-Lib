@@ -16,14 +16,14 @@ class UNavCorridorTestingComponent : public UDebugDrawComponent
 	static inline constexpr uint64_t __MDKClassSize = 1744;
 
 public:
-	SMember(FNavAgentProperties)                       NavAgentProps                                               OFFSET(get<T>, {0x5B8, 48, 0, 0})
+	SMember(FNavAgentProperties)                       NavAgentProps                                               OFFSET(getStruct<T>, {0x5B8, 48, 0, 0})
 	CMember(UClass*)                                   FilterClass                                                 OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	DMember(bool)                                      bFindCorridorToGoal                                         OFFSET(get<bool>, {0x5F0, 1, 0, 0})
 	DMember(bool)                                      bFollowPathOnGoalCorridor                                   OFFSET(get<bool>, {0x5F1, 1, 0, 0})
 	DMember(float)                                     FollowLookAheadDistance                                     OFFSET(get<float>, {0x5F4, 4, 0, 0})
 	CMember(AActor*)                                   GoalActor                                                   OFFSET(get<T>, {0x5F8, 8, 0, 0})
 	CMember(ANavigationData*)                          NavData                                                     OFFSET(get<T>, {0x600, 8, 0, 0})
-	SMember(FNavCorridorParams)                        CorridorParams                                              OFFSET(get<T>, {0x608, 24, 0, 0})
+	SMember(FNavCorridorParams)                        CorridorParams                                              OFFSET(getStruct<T>, {0x608, 24, 0, 0})
 	DMember(bool)                                      bUpdateParametersFromWidth                                  OFFSET(get<bool>, {0x620, 1, 0, 0})
 	DMember(float)                                     PathOffset                                                  OFFSET(get<float>, {0x624, 4, 0, 0})
 	DMember(float)                                     PathfindingTimeUs                                           OFFSET(get<float>, {0x628, 4, 0, 0})
@@ -43,8 +43,9 @@ public:
 
 /// Struct /Script/NavCorridor.NavCorridorParams
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNavCorridorParams : public MDKStruct
+class FNavCorridorParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

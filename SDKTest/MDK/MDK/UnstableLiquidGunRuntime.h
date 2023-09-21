@@ -18,18 +18,18 @@ class AFortLiquidGunProjectile : public AFortProjectileBase
 
 public:
 	CMember(USceneComponent*)                          AttachComponent                                             OFFSET(get<T>, {0xA88, 8, 0, 0})
-	SMember(FVector)                                   AttachOffset                                                OFFSET(get<T>, {0xA90, 24, 0, 0})
+	SMember(FVector)                                   AttachOffset                                                OFFSET(getStruct<T>, {0xA90, 24, 0, 0})
 	DMember(int32_t)                                   ProjectileIndex                                             OFFSET(get<int32_t>, {0xAA8, 4, 0, 0})
-	SMember(FVector)                                   StopNormal                                                  OFFSET(get<T>, {0xAB0, 24, 0, 0})
+	SMember(FVector)                                   StopNormal                                                  OFFSET(getStruct<T>, {0xAB0, 24, 0, 0})
 	CMember(ALiquidRibbonManager*)                     RibbonManager                                               OFFSET(get<T>, {0xAC8, 8, 0, 0})
-	SMember(FScalableFloat)                            MinDistBetweenProjectilesForSplineCollisionTest             OFFSET(get<T>, {0xAD0, 40, 0, 0})
-	SMember(FScalableFloat)                            MinDistBetweenInLineProjectilesForSplineCollisionTest       OFFSET(get<T>, {0xAF8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinProjectileVelocityAngleToBeInLine                        OFFSET(get<T>, {0xB20, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDistBetweenProjectilesForSplineCollisionTest             OFFSET(getStruct<T>, {0xAD0, 40, 0, 0})
+	SMember(FScalableFloat)                            MinDistBetweenInLineProjectilesForSplineCollisionTest       OFFSET(getStruct<T>, {0xAF8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinProjectileVelocityAngleToBeInLine                        OFFSET(getStruct<T>, {0xB20, 40, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            BroadSphereOverlapTraceChannel                              OFFSET(get<T>, {0xB48, 1, 0, 0})
-	SMember(FName)                                     CapsuleTraceProfileName                                     OFFSET(get<T>, {0xB4C, 4, 0, 0})
+	SMember(FName)                                     CapsuleTraceProfileName                                     OFFSET(getStruct<T>, {0xB4C, 4, 0, 0})
 	DMember(bool)                                      bCapsuleTraceComplex                                        OFFSET(get<bool>, {0xB50, 1, 0, 0})
-	SMember(FVector_NetQuantize)                       RandomDetachmentAngleFirstHalf                              OFFSET(get<T>, {0xB58, 24, 0, 0})
-	SMember(FVector_NetQuantize)                       RandomDetachmentAngleSecondHalf                             OFFSET(get<T>, {0xB70, 24, 0, 0})
+	SMember(FVector_NetQuantize)                       RandomDetachmentAngleFirstHalf                              OFFSET(getStruct<T>, {0xB58, 24, 0, 0})
+	SMember(FVector_NetQuantize)                       RandomDetachmentAngleSecondHalf                             OFFSET(getStruct<T>, {0xB70, 24, 0, 0})
 	DMember(bool)                                      bDrawDebugCollision                                         OFFSET(get<bool>, {0xB88, 1, 0, 0})
 	DMember(bool)                                      bDrawDebugCollisionOnlyCapsuleTraceHits                     OFFSET(get<bool>, {0xB89, 1, 0, 0})
 	CMember(ELiquidRibbonDetachmentReason)             DetachmentReason                                            OFFSET(get<T>, {0xB8A, 1, 0, 0})
@@ -53,7 +53,7 @@ class ALiquidRibbonManager : public AActor
 
 public:
 	DMember(int32_t)                                   PointsPerSegment                                            OFFSET(get<int32_t>, {0x290, 4, 0, 0})
-	SMember(FScalableFloat)                            MaxSegmentLengthBeforeBreak                                 OFFSET(get<T>, {0x298, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxSegmentLengthBeforeBreak                                 OFFSET(getStruct<T>, {0x298, 40, 0, 0})
 	DMember(float)                                     SplineCurveTension                                          OFFSET(get<float>, {0x2C0, 4, 0, 0})
 	DMember(float)                                     MinPointSize                                                OFFSET(get<float>, {0x2C4, 4, 0, 0})
 	DMember(float)                                     MaxPointSize                                                OFFSET(get<float>, {0x2C8, 4, 0, 0})
@@ -66,18 +66,18 @@ public:
 	DMember(float)                                     TaperSizeAtDetachment_RemapClosenessToBreakageOldMax        OFFSET(get<float>, {0x2E4, 4, 0, 0})
 	DMember(float)                                     MinPointSizePercentForFlashIntensity                        OFFSET(get<float>, {0x2E8, 4, 0, 0})
 	DMember(float)                                     MaxPointSizePercentForFlashIntensity                        OFFSET(get<float>, {0x2EC, 4, 0, 0})
-	SMember(FName)                                     PositionsNiagaraParamName                                   OFFSET(get<T>, {0x2F0, 4, 0, 0})
-	SMember(FName)                                     RibbonIDsNiagaraParamName                                   OFFSET(get<T>, {0x2F4, 4, 0, 0})
-	SMember(FName)                                     RibbonVisibilitiesNiagaraParamName                          OFFSET(get<T>, {0x2F8, 4, 0, 0})
-	SMember(FName)                                     FlashIntensitiesNiagaraParamName                            OFFSET(get<T>, {0x2FC, 4, 0, 0})
-	SMember(FName)                                     RibbonSizesNiagaraParamName                                 OFFSET(get<T>, {0x300, 4, 0, 0})
-	SMember(FScalableFloat)                            CalculateBaseCurlOffset_MaxSegmentLength                    OFFSET(get<T>, {0x308, 40, 0, 0})
-	SMember(FScalableFloat)                            CalculateBaseCurlOffset_MaxTimeSinceDetachment              OFFSET(get<T>, {0x330, 40, 0, 0})
-	SMember(FScalableFloat)                            CalculateBaseCurlOffset_TowardPerpendicularMult             OFFSET(get<T>, {0x358, 40, 0, 0})
-	SMember(FScalableFloat)                            CalculateBaseCurlOffset_TowardEndMult                       OFFSET(get<T>, {0x380, 40, 0, 0})
-	SMember(FScalableFloat)                            CalculateBaseCurlOffset_TowardRandomMult                    OFFSET(get<T>, {0x3A8, 40, 0, 0})
+	SMember(FName)                                     PositionsNiagaraParamName                                   OFFSET(getStruct<T>, {0x2F0, 4, 0, 0})
+	SMember(FName)                                     RibbonIDsNiagaraParamName                                   OFFSET(getStruct<T>, {0x2F4, 4, 0, 0})
+	SMember(FName)                                     RibbonVisibilitiesNiagaraParamName                          OFFSET(getStruct<T>, {0x2F8, 4, 0, 0})
+	SMember(FName)                                     FlashIntensitiesNiagaraParamName                            OFFSET(getStruct<T>, {0x2FC, 4, 0, 0})
+	SMember(FName)                                     RibbonSizesNiagaraParamName                                 OFFSET(getStruct<T>, {0x300, 4, 0, 0})
+	SMember(FScalableFloat)                            CalculateBaseCurlOffset_MaxSegmentLength                    OFFSET(getStruct<T>, {0x308, 40, 0, 0})
+	SMember(FScalableFloat)                            CalculateBaseCurlOffset_MaxTimeSinceDetachment              OFFSET(getStruct<T>, {0x330, 40, 0, 0})
+	SMember(FScalableFloat)                            CalculateBaseCurlOffset_TowardPerpendicularMult             OFFSET(getStruct<T>, {0x358, 40, 0, 0})
+	SMember(FScalableFloat)                            CalculateBaseCurlOffset_TowardEndMult                       OFFSET(getStruct<T>, {0x380, 40, 0, 0})
+	SMember(FScalableFloat)                            CalculateBaseCurlOffset_TowardRandomMult                    OFFSET(getStruct<T>, {0x3A8, 40, 0, 0})
 	CMember(UCurveFloat*)                              TimeSinceDetachmentCurlCurve                                OFFSET(get<T>, {0x3D0, 8, 0, 0})
-	SMember(FScalableFloat)                            TimeSinceDetachmentCurlCurve_MaxTime                        OFFSET(get<T>, {0x3D8, 40, 0, 0})
+	SMember(FScalableFloat)                            TimeSinceDetachmentCurlCurve_MaxTime                        OFFSET(getStruct<T>, {0x3D8, 40, 0, 0})
 	DMember(float)                                     CurlingMaxClosenessToBreakage                               OFFSET(get<float>, {0x400, 4, 0, 0})
 	CMember(TArray<float>)                             SegmentLengths                                              OFFSET(get<T>, {0x408, 16, 0, 0})
 	CMember(TArray<FLiquidRibbonSplineDetachment>)     Detachments                                                 OFFSET(get<T>, {0x418, 16, 0, 0})
@@ -108,16 +108,17 @@ public:
 
 /// Struct /Script/UnstableLiquidGunRuntime.LiquidRibbonSplineSegment
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FLiquidRibbonSplineSegment : public MDKStruct
+class FLiquidRibbonSplineSegment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FVector)                                   A                                                           OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   B                                                           OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   C                                                           OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   D                                                           OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   A                                                           OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   B                                                           OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   C                                                           OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   D                                                           OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 	DMember(float)                                     DirectLength                                                OFFSET(get<float>, {0x60, 4, 0, 0})
 	DMember(bool)                                      bHasDetachment                                              OFFSET(get<bool>, {0x64, 1, 0, 0})
 	CMember(TArray<FVector>)                           PointPositions                                              OFFSET(get<T>, {0x68, 16, 0, 0})
@@ -125,8 +126,9 @@ public:
 
 /// Struct /Script/UnstableLiquidGunRuntime.LiquidRibbonSplineDetachment
 /// Size: 0x00B8 (0x000000 - 0x0000B8)
-class FLiquidRibbonSplineDetachment : public MDKStruct
+class FLiquidRibbonSplineDetachment : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
@@ -134,9 +136,9 @@ public:
 	DMember(int32_t)                                   FirstRibbonID                                               OFFSET(get<int32_t>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   SecondRibbonID                                              OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(float)                                     TimeDetached                                                OFFSET(get<float>, {0x8, 4, 0, 0})
-	SMember(FLiquidRibbonSplineSegment)                Segment                                                     OFFSET(get<T>, {0x10, 120, 0, 0})
-	SMember(FVector)                                   SegmentStartPoint                                           OFFSET(get<T>, {0x88, 24, 0, 0})
-	SMember(FVector)                                   SegmentEndPoint                                             OFFSET(get<T>, {0xA0, 24, 0, 0})
+	SMember(FLiquidRibbonSplineSegment)                Segment                                                     OFFSET(getStruct<T>, {0x10, 120, 0, 0})
+	SMember(FVector)                                   SegmentStartPoint                                           OFFSET(getStruct<T>, {0x88, 24, 0, 0})
+	SMember(FVector)                                   SegmentEndPoint                                             OFFSET(getStruct<T>, {0xA0, 24, 0, 0})
 };
 
 /// Enum /Script/UnstableLiquidGunRuntime.ELiquidRibbonDetachmentReason

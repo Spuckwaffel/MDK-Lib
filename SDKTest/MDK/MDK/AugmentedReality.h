@@ -56,8 +56,8 @@ class UARSaveWorldAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProx
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 
 
 	/// Functions
@@ -73,8 +73,8 @@ class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlue
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 
 
 	/// Functions
@@ -90,7 +90,7 @@ class UARComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 800;
 
 public:
-	SMember(FGuid)                                     NativeID                                                    OFFSET(get<T>, {0x2A0, 16, 0, 0})
+	SMember(FGuid)                                     NativeID                                                    OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
 	DMember(bool)                                      bUseDefaultReplication                                      OFFSET(get<bool>, {0x2E0, 1, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
@@ -119,7 +119,7 @@ class UARPlaneComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 1008;
 
 public:
-	SMember(FARPlaneUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 208, 0, 0})
+	SMember(FARPlaneUpdatePayload)                     ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 208, 0, 0})
 
 
 	/// Functions
@@ -145,7 +145,7 @@ class UARPointComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FARPointUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 1, 0, 0})
+	SMember(FARPointUpdatePayload)                     ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 1, 0, 0})
 
 
 	/// Functions
@@ -168,7 +168,7 @@ public:
 	CMember(EARFaceTransformMixing)                    TransformSetting                                            OFFSET(get<T>, {0x320, 1, 0, 0})
 	DMember(bool)                                      bUpdateVertexNormal                                         OFFSET(get<bool>, {0x321, 1, 0, 0})
 	DMember(bool)                                      bFaceOutOfScreen                                            OFFSET(get<bool>, {0x322, 1, 0, 0})
-	SMember(FARFaceUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x328, 96, 0, 0})
+	SMember(FARFaceUpdatePayload)                      ReplicatedPayload                                           OFFSET(getStruct<T>, {0x328, 96, 0, 0})
 
 
 	/// Functions
@@ -190,7 +190,7 @@ class UARImageComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FARImageUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 160, 0, 0})
+	SMember(FARImageUpdatePayload)                     ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 160, 0, 0})
 
 
 	/// Functions
@@ -212,7 +212,7 @@ class UARQRCodeComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 976;
 
 public:
-	SMember(FARQRCodeUpdatePayload)                    ReplicatedPayload                                           OFFSET(get<T>, {0x320, 176, 0, 0})
+	SMember(FARQRCodeUpdatePayload)                    ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 176, 0, 0})
 
 
 	/// Functions
@@ -234,7 +234,7 @@ class UARPoseComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 912;
 
 public:
-	SMember(FARPoseUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x320, 112, 0, 0})
+	SMember(FARPoseUpdatePayload)                      ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 112, 0, 0})
 
 
 	/// Functions
@@ -256,7 +256,7 @@ class UAREnvironmentProbeComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FAREnvironmentProbeUpdatePayload)          ReplicatedPayload                                           OFFSET(get<T>, {0x320, 96, 0, 0})
+	SMember(FAREnvironmentProbeUpdatePayload)          ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 96, 0, 0})
 
 
 	/// Functions
@@ -276,7 +276,7 @@ class UARObjectComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FARObjectUpdatePayload)                    ReplicatedPayload                                           OFFSET(get<T>, {0x320, 96, 0, 0})
+	SMember(FARObjectUpdatePayload)                    ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 96, 0, 0})
 
 
 	/// Functions
@@ -296,7 +296,7 @@ class UARMeshComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 944;
 
 public:
-	SMember(FARMeshUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x320, 144, 0, 0})
+	SMember(FARMeshUpdatePayload)                      ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 144, 0, 0})
 
 
 	/// Functions
@@ -316,7 +316,7 @@ class UARGeoAnchorComponent : public UARComponent
 	static inline constexpr uint64_t __MDKClassSize = 960;
 
 public:
-	SMember(FARGeoAnchorUpdatePayload)                 ReplicatedPayload                                           OFFSET(get<T>, {0x320, 160, 0, 0})
+	SMember(FARGeoAnchorUpdatePayload)                 ReplicatedPayload                                           OFFSET(getStruct<T>, {0x320, 160, 0, 0})
 
 
 	/// Functions
@@ -358,8 +358,8 @@ class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy : public UARBaseAsync
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 
 
 	/// Functions
@@ -379,8 +379,8 @@ class UGetGeoLocationAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintP
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 
 
 	/// Functions
@@ -398,8 +398,8 @@ class UARLifeCycleComponent : public USceneComponent
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnARActorSpawnedDelegate                                    OFFSET(get<T>, {0x2A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnARActorToBeDestroyedDelegate                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARActorSpawnedDelegate                                    OFFSET(getStruct<T>, {0x2A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARActorToBeDestroyedDelegate                              OFFSET(getStruct<T>, {0x2B0, 16, 0, 0})
 
 
 	/// Functions
@@ -433,7 +433,7 @@ class UARBasicLightEstimate : public UARLightEstimate
 public:
 	DMember(float)                                     AmbientIntensityLumens                                      OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     AmbientColorTemperatureKelvin                               OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FLinearColor)                              AmbientColor                                                OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FLinearColor)                              AmbientColor                                                OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 
 
 	/// Functions
@@ -465,11 +465,11 @@ class UARPin : public UObject
 public:
 	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(USceneComponent*)                          PinnedComponent                                             OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FTransform)                                LocalToTrackingTransform                                    OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FTransform)                                LocalToAlignedTrackingTransform                             OFFSET(get<T>, {0xA0, 96, 0, 0})
+	SMember(FTransform)                                LocalToTrackingTransform                                    OFFSET(getStruct<T>, {0x40, 96, 0, 0})
+	SMember(FTransform)                                LocalToAlignedTrackingTransform                             OFFSET(getStruct<T>, {0xA0, 96, 0, 0})
 	CMember(EARTrackingState)                          TrackingState                                               OFFSET(get<T>, {0x100, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnARTrackingStateChanged                                    OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnARTransformUpdated                                        OFFSET(get<T>, {0x130, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARTrackingStateChanged                                    OFFSET(getStruct<T>, {0x120, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnARTransformUpdated                                        OFFSET(getStruct<T>, {0x130, 16, 0, 0})
 
 
 	/// Functions
@@ -524,7 +524,7 @@ public:
 	CMember(EAREnvironmentCaptureProbeType)            EnvironmentCaptureProbeType                                 OFFSET(get<T>, {0x5C, 1, 0, 0})
 	CMember(TArray<char>)                              WorldMapData                                                OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<UARCandidateObject*>)               CandidateObjects                                            OFFSET(get<T>, {0x70, 16, 0, 0})
-	SMember(FARVideoFormat)                            DesiredVideoFormat                                          OFFSET(get<T>, {0x80, 12, 0, 0})
+	SMember(FARVideoFormat)                            DesiredVideoFormat                                          OFFSET(getStruct<T>, {0x80, 12, 0, 0})
 	DMember(bool)                                      bUseOptimalVideoFormat                                      OFFSET(get<bool>, {0x8C, 1, 0, 0})
 	CMember(EARFaceTrackingDirection)                  FaceTrackingDirection                                       OFFSET(get<T>, {0x8D, 1, 0, 0})
 	CMember(EARFaceTrackingUpdate)                     FaceTrackingUpdate                                          OFFSET(get<T>, {0x8E, 1, 0, 0})
@@ -698,8 +698,8 @@ class UARTexture : public UTexture
 public:
 	CMember(EARTextureType)                            TextureType                                                 OFFSET(get<T>, {0x138, 1, 0, 0})
 	DMember(float)                                     Timestamp                                                   OFFSET(get<float>, {0x13C, 4, 0, 0})
-	SMember(FGuid)                                     ExternalTextureGuid                                         OFFSET(get<T>, {0x140, 16, 0, 0})
-	SMember(FVector2f)                                 Size                                                        OFFSET(get<T>, {0x150, 8, 0, 0})
+	SMember(FGuid)                                     ExternalTextureGuid                                         OFFSET(getStruct<T>, {0x140, 16, 0, 0})
+	SMember(FVector2f)                                 Size                                                        OFFSET(getStruct<T>, {0x150, 8, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARTextureCameraImage
@@ -735,8 +735,8 @@ class UAREnvironmentCaptureProbeTexture : public UTextureCube
 public:
 	CMember(EARTextureType)                            TextureType                                                 OFFSET(get<T>, {0x140, 1, 0, 0})
 	DMember(float)                                     Timestamp                                                   OFFSET(get<float>, {0x144, 4, 0, 0})
-	SMember(FGuid)                                     ExternalTextureGuid                                         OFFSET(get<T>, {0x148, 16, 0, 0})
-	SMember(FVector2f)                                 Size                                                        OFFSET(get<T>, {0x158, 8, 0, 0})
+	SMember(FGuid)                                     ExternalTextureGuid                                         OFFSET(getStruct<T>, {0x148, 16, 0, 0})
+	SMember(FVector2f)                                 Size                                                        OFFSET(getStruct<T>, {0x158, 8, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARTraceResultDummy
@@ -757,15 +757,15 @@ class UARTrackedGeometry : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FGuid)                                     UniqueID                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FTransform)                                LocalToTrackingTransform                                    OFFSET(get<T>, {0x40, 96, 0, 0})
-	SMember(FTransform)                                LocalToAlignedTrackingTransform                             OFFSET(get<T>, {0xA0, 96, 0, 0})
+	SMember(FGuid)                                     UniqueID                                                    OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FTransform)                                LocalToTrackingTransform                                    OFFSET(getStruct<T>, {0x40, 96, 0, 0})
+	SMember(FTransform)                                LocalToAlignedTrackingTransform                             OFFSET(getStruct<T>, {0xA0, 96, 0, 0})
 	CMember(EARTrackingState)                          TrackingState                                               OFFSET(get<T>, {0x100, 1, 0, 0})
 	CMember(UMRMeshComponent*)                         UnderlyingMesh                                              OFFSET(get<T>, {0x110, 8, 0, 0})
 	CMember(EARObjectClassification)                   ObjectClassification                                        OFFSET(get<T>, {0x118, 1, 0, 0})
 	CMember(EARSpatialMeshUsageFlags)                  SpatialMeshUsageFlags                                       OFFSET(get<T>, {0x119, 1, 0, 0})
 	DMember(int32_t)                                   LastUpdateFrameNumber                                       OFFSET(get<int32_t>, {0x130, 4, 0, 0})
-	SMember(FName)                                     DebugName                                                   OFFSET(get<T>, {0x140, 4, 0, 0})
+	SMember(FName)                                     DebugName                                                   OFFSET(getStruct<T>, {0x140, 4, 0, 0})
 
 
 	/// Functions
@@ -802,8 +802,8 @@ class UARPlaneGeometry : public UARTrackedGeometry
 
 public:
 	CMember(EARPlaneOrientation)                       Orientation                                                 OFFSET(get<T>, {0x158, 1, 0, 0})
-	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x160, 24, 0, 0})
-	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x178, 24, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(getStruct<T>, {0x160, 24, 0, 0})
+	SMember(FVector)                                   Extent                                                      OFFSET(getStruct<T>, {0x178, 24, 0, 0})
 	CMember(TArray<FVector>)                           BoundaryPolygon                                             OFFSET(get<T>, {0x190, 16, 0, 0})
 	CMember(UARPlaneGeometry*)                         SubsumedBy                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
 
@@ -840,7 +840,7 @@ class UARTrackedImage : public UARTrackedGeometry
 
 public:
 	CMember(UARCandidateImage*)                        DetectedImage                                               OFFSET(get<T>, {0x158, 8, 0, 0})
-	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(get<T>, {0x160, 16, 0, 0})
+	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(getStruct<T>, {0x160, 16, 0, 0})
 
 
 	/// Functions
@@ -858,7 +858,7 @@ class UARTrackedQRCode : public UARTrackedImage
 	static inline constexpr uint64_t __MDKClassSize = 400;
 
 public:
-	SMember(FString)                                   QRCode                                                      OFFSET(get<T>, {0x170, 16, 0, 0})
+	SMember(FString)                                   QRCode                                                      OFFSET(getStruct<T>, {0x170, 16, 0, 0})
 	DMember(int32_t)                                   Version                                                     OFFSET(get<int32_t>, {0x180, 4, 0, 0})
 };
 
@@ -870,11 +870,11 @@ class UARFaceGeometry : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FVector)                                   LookAtTarget                                                OFFSET(get<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   LookAtTarget                                                OFFSET(getStruct<T>, {0x158, 24, 0, 0})
 	DMember(bool)                                      bIsTracked                                                  OFFSET(get<bool>, {0x170, 1, 0, 0})
 	CMember(TMap<EARFaceBlendShape, float>)            BlendShapes                                                 OFFSET(get<T>, {0x178, 80, 0, 0})
-	SMember(FTransform)                                LeftEyeTransform                                            OFFSET(get<T>, {0x200, 96, 0, 0})
-	SMember(FTransform)                                RightEyeTransform                                           OFFSET(get<T>, {0x260, 96, 0, 0})
+	SMember(FTransform)                                LeftEyeTransform                                            OFFSET(getStruct<T>, {0x200, 96, 0, 0})
+	SMember(FTransform)                                RightEyeTransform                                           OFFSET(getStruct<T>, {0x260, 96, 0, 0})
 
 
 	/// Functions
@@ -896,7 +896,7 @@ class UAREnvironmentCaptureProbe : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x158, 24, 0, 0})
+	SMember(FVector)                                   Extent                                                      OFFSET(getStruct<T>, {0x158, 24, 0, 0})
 	CMember(UAREnvironmentCaptureProbeTexture*)        EnvironmentCaptureTexture                                   OFFSET(get<T>, {0x170, 8, 0, 0})
 
 
@@ -930,7 +930,7 @@ class UARTrackedPose : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 432;
 
 public:
-	SMember(FARPose3D)                                 TrackedPose                                                 OFFSET(get<T>, {0x158, 80, 0, 0})
+	SMember(FARPose3D)                                 TrackedPose                                                 OFFSET(getStruct<T>, {0x158, 80, 0, 0})
 
 
 	/// Functions
@@ -966,27 +966,27 @@ class UARTrackableNotifyComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedGeometry                                        OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedGeometry                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedGeometry                                     OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedPlane                                           OFFSET(get<T>, {0xD0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPlane                                        OFFSET(get<T>, {0xE0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPlane                                        OFFSET(get<T>, {0xF0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedPoint                                           OFFSET(get<T>, {0x100, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPoint                                        OFFSET(get<T>, {0x110, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPoint                                        OFFSET(get<T>, {0x120, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedImage                                           OFFSET(get<T>, {0x130, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedImage                                        OFFSET(get<T>, {0x140, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedImage                                        OFFSET(get<T>, {0x150, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedFace                                            OFFSET(get<T>, {0x160, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedFace                                         OFFSET(get<T>, {0x170, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedFace                                         OFFSET(get<T>, {0x180, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedEnvProbe                                        OFFSET(get<T>, {0x190, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedEnvProbe                                     OFFSET(get<T>, {0x1A0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedEnvProbe                                     OFFSET(get<T>, {0x1B0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAddTrackedObject                                          OFFSET(get<T>, {0x1C0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedObject                                       OFFSET(get<T>, {0x1D0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedObject                                       OFFSET(get<T>, {0x1E0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedGeometry                                        OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedGeometry                                     OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedGeometry                                     OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedPlane                                           OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPlane                                        OFFSET(getStruct<T>, {0xE0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPlane                                        OFFSET(getStruct<T>, {0xF0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedPoint                                           OFFSET(getStruct<T>, {0x100, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedPoint                                        OFFSET(getStruct<T>, {0x110, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedPoint                                        OFFSET(getStruct<T>, {0x120, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedImage                                           OFFSET(getStruct<T>, {0x130, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedImage                                        OFFSET(getStruct<T>, {0x140, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedImage                                        OFFSET(getStruct<T>, {0x150, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedFace                                            OFFSET(getStruct<T>, {0x160, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedFace                                         OFFSET(getStruct<T>, {0x170, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedFace                                         OFFSET(getStruct<T>, {0x180, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedEnvProbe                                        OFFSET(getStruct<T>, {0x190, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedEnvProbe                                     OFFSET(getStruct<T>, {0x1A0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedEnvProbe                                     OFFSET(getStruct<T>, {0x1B0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAddTrackedObject                                          OFFSET(getStruct<T>, {0x1C0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnUpdateTrackedObject                                       OFFSET(getStruct<T>, {0x1D0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRemoveTrackedObject                                       OFFSET(getStruct<T>, {0x1E0, 16, 0, 0})
 };
 
 /// Class /Script/AugmentedReality.ARTypesDummyClass
@@ -1008,7 +1008,7 @@ class UARCandidateImage : public UDataAsset
 
 public:
 	CMember(UTexture2D*)                               CandidateTexture                                            OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FString)                                   FriendlyName                                                OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   FriendlyName                                                OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
 	CMember(EARCandidateImageOrientation)              Orientation                                                 OFFSET(get<T>, {0x50, 1, 0, 0})
@@ -1036,8 +1036,8 @@ class UARCandidateObject : public UDataAsset
 
 public:
 	CMember(TArray<char>)                              CandidateObjectData                                         OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FString)                                   FriendlyName                                                OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FBox)                                      BoundingBox                                                 OFFSET(get<T>, {0x50, 56, 0, 0})
+	SMember(FString)                                   FriendlyName                                                OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FBox)                                      BoundingBox                                                 OFFSET(getStruct<T>, {0x50, 56, 0, 0})
 
 
 	/// Functions
@@ -1057,8 +1057,9 @@ public:
 
 /// Struct /Script/AugmentedReality.TrackedGeometryGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FTrackedGeometryGroup : public MDKStruct
+class FTrackedGeometryGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1070,8 +1071,9 @@ public:
 
 /// Struct /Script/AugmentedReality.ARSessionPayload
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FARSessionPayload : public MDKStruct
+class FARSessionPayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -1083,24 +1085,26 @@ public:
 
 /// Struct /Script/AugmentedReality.ARPlaneUpdatePayload
 /// Size: 0x00D0 (0x000000 - 0x0000D0)
-class FARPlaneUpdatePayload : public MDKStruct
+class FARPlaneUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FVector)                                   Center                                                      OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FVector)                                   Extents                                                     OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x20, 96, 0, 0})
+	SMember(FVector)                                   Center                                                      OFFSET(getStruct<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   Extents                                                     OFFSET(getStruct<T>, {0x98, 24, 0, 0})
 	CMember(TArray<FVector>)                           BoundaryVertices                                            OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(EARObjectClassification)                   ObjectClassification                                        OFFSET(get<T>, {0xC0, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPointUpdatePayload
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FARPointUpdatePayload : public MDKStruct
+class FARPointUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -1109,114 +1113,123 @@ public:
 
 /// Struct /Script/AugmentedReality.ARFaceUpdatePayload
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FARFaceUpdatePayload : public MDKStruct
+class FARFaceUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   LeftEyePosition                                             OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FVector)                                   RightEyePosition                                            OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   LookAtTarget                                                OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   LeftEyePosition                                             OFFSET(getStruct<T>, {0x18, 24, 0, 0})
+	SMember(FVector)                                   RightEyePosition                                            OFFSET(getStruct<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   LookAtTarget                                                OFFSET(getStruct<T>, {0x48, 24, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARImageUpdatePayload
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FARImageUpdatePayload : public MDKStruct
+class FARImageUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x20, 96, 0, 0})
 	CMember(UARCandidateImage*)                        DetectedImage                                               OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARQRCodeUpdatePayload
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
-class FARQRCodeUpdatePayload : public MDKStruct
+class FARQRCodeUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
-	SMember(FVector)                                   Extents                                                     OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FString)                                   QRCode                                                      OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x20, 96, 0, 0})
+	SMember(FVector)                                   Extents                                                     OFFSET(getStruct<T>, {0x80, 24, 0, 0})
+	SMember(FString)                                   QRCode                                                      OFFSET(getStruct<T>, {0x98, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPoseUpdatePayload
 /// Size: 0x0070 (0x000000 - 0x000070)
-class FARPoseUpdatePayload : public MDKStruct
+class FARPoseUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 	CMember(TArray<FTransform>)                        JointTransforms                                             OFFSET(get<T>, {0x60, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.AREnvironmentProbeUpdatePayload
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FAREnvironmentProbeUpdatePayload : public MDKStruct
+class FAREnvironmentProbeUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARObjectUpdatePayload
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FARObjectUpdatePayload : public MDKStruct
+class FARObjectUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x0, 96, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARMeshUpdatePayload
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FARMeshUpdatePayload : public MDKStruct
+class FARMeshUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x20, 96, 0, 0})
 	CMember(EARObjectClassification)                   ObjectClassification                                        OFFSET(get<T>, {0x80, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARGeoAnchorUpdatePayload
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
-class FARGeoAnchorUpdatePayload : public MDKStruct
+class FARGeoAnchorUpdatePayload : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FTransform)                                WorldTransform                                              OFFSET(get<T>, {0x20, 96, 0, 0})
+	SMember(FARSessionPayload)                         SessionPayload                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
+	SMember(FTransform)                                WorldTransform                                              OFFSET(getStruct<T>, {0x20, 96, 0, 0})
 	DMember(float)                                     Longitude                                                   OFFSET(get<float>, {0x80, 4, 0, 0})
 	DMember(float)                                     Latitude                                                    OFFSET(get<float>, {0x84, 4, 0, 0})
 	DMember(float)                                     AltitudeMeters                                              OFFSET(get<float>, {0x88, 4, 0, 0})
 	CMember(EARAltitudeSource)                         AltitudeSource                                              OFFSET(get<T>, {0x8C, 1, 0, 0})
-	SMember(FString)                                   AnchorName                                                  OFFSET(get<T>, {0x90, 16, 0, 0})
+	SMember(FString)                                   AnchorName                                                  OFFSET(getStruct<T>, {0x90, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARSharedWorldReplicationState
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FARSharedWorldReplicationState : public MDKStruct
+class FARSharedWorldReplicationState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -1227,34 +1240,37 @@ public:
 
 /// Struct /Script/AugmentedReality.ARTraceResult
 /// Size: 0x0090 (0x000000 - 0x000090)
-class FARTraceResult : public MDKStruct
+class FARTraceResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 144;
 
 public:
 	DMember(float)                                     DistanceFromCamera                                          OFFSET(get<float>, {0x0, 4, 0, 0})
 	CMember(EARLineTraceChannels)                      TraceChannel                                                OFFSET(get<T>, {0x4, 1, 0, 0})
-	SMember(FTransform)                                LocalTransform                                              OFFSET(get<T>, {0x10, 96, 0, 0})
+	SMember(FTransform)                                LocalTransform                                              OFFSET(getStruct<T>, {0x10, 96, 0, 0})
 	CMember(UARTrackedGeometry*)                       TrackedGeometry                                             OFFSET(get<T>, {0x70, 8, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARSessionStatus
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FARSessionStatus : public MDKStruct
+class FARSessionStatus : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   AdditionalInfo                                              OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   AdditionalInfo                                              OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 	CMember(EARSessionStatus)                          Status                                                      OFFSET(get<T>, {0x10, 1, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARVideoFormat
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FARVideoFormat : public MDKStruct
+class FARVideoFormat : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -1266,8 +1282,9 @@ public:
 
 /// Struct /Script/AugmentedReality.ARSkeletonDefinition
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FARSkeletonDefinition : public MDKStruct
+class FARSkeletonDefinition : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -1279,26 +1296,28 @@ public:
 
 /// Struct /Script/AugmentedReality.ARPose2D
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FARPose2D : public MDKStruct
+class FARPose2D : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          OFFSET(getStruct<T>, {0x0, 40, 0, 0})
 	CMember(TArray<FVector2D>)                         JointLocations                                              OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<bool>)                              IsJointTracked                                              OFFSET(get<T>, {0x38, 16, 0, 0})
 };
 
 /// Struct /Script/AugmentedReality.ARPose3D
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FARPose3D : public MDKStruct
+class FARPose3D : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          OFFSET(get<T>, {0x0, 40, 0, 0})
+	SMember(FARSkeletonDefinition)                     SkeletonDefinition                                          OFFSET(getStruct<T>, {0x0, 40, 0, 0})
 	CMember(TArray<FTransform>)                        JointTransforms                                             OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<bool>)                              IsJointTracked                                              OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(EARJointTransformSpace)                    JointTransformSpace                                         OFFSET(get<T>, {0x48, 1, 0, 0})
@@ -1306,15 +1325,16 @@ public:
 
 /// Struct /Script/AugmentedReality.ARCameraIntrinsics
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FARCameraIntrinsics : public MDKStruct
+class FARCameraIntrinsics : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FIntPoint)                                 ImageResolution                                             OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FVector2D)                                 FocalLength                                                 OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 PrincipalPoint                                              OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FIntPoint)                                 ImageResolution                                             OFFSET(getStruct<T>, {0x0, 8, 0, 0})
+	SMember(FVector2D)                                 FocalLength                                                 OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 PrincipalPoint                                              OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 };
 
 /// Enum /Script/AugmentedReality.EARTrackingState

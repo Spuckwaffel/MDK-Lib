@@ -42,17 +42,18 @@ public:
 
 /// Struct /Script/CloakGameplay.FortGameCueCloakModifier
 /// Size: 0x00D0 (0x000000 - 0x0000D0)
-class FFortGameCueCloakModifier : public MDKStruct
+class FFortGameCueCloakModifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-	SMember(FScalableFloat)                            bCanBeEnabled                                               OFFSET(get<T>, {0x0, 40, 0, 0})
-	SMember(FScalableFloat)                            VisibilityModifierMultiplicative                            OFFSET(get<T>, {0x28, 40, 0, 0})
-	SMember(FScalableFloat)                            VisibilityModifierAdditive                                  OFFSET(get<T>, {0x50, 40, 0, 0})
-	SMember(FScalableFloat)                            AlphaTimeToEnabled                                          OFFSET(get<T>, {0x78, 40, 0, 0})
-	SMember(FScalableFloat)                            AlphaTimeToDisabled                                         OFFSET(get<T>, {0xA0, 40, 0, 0})
+	SMember(FScalableFloat)                            bCanBeEnabled                                               OFFSET(getStruct<T>, {0x0, 40, 0, 0})
+	SMember(FScalableFloat)                            VisibilityModifierMultiplicative                            OFFSET(getStruct<T>, {0x28, 40, 0, 0})
+	SMember(FScalableFloat)                            VisibilityModifierAdditive                                  OFFSET(getStruct<T>, {0x50, 40, 0, 0})
+	SMember(FScalableFloat)                            AlphaTimeToEnabled                                          OFFSET(getStruct<T>, {0x78, 40, 0, 0})
+	SMember(FScalableFloat)                            AlphaTimeToDisabled                                         OFFSET(getStruct<T>, {0xA0, 40, 0, 0})
 	DMember(bool)                                      bCurrentlyEnabled                                           OFFSET(get<bool>, {0xC8, 1, 1, 0})
 	DMember(float)                                     CurrentAlpha                                                OFFSET(get<float>, {0xCC, 4, 0, 0})
 };

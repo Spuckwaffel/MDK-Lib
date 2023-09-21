@@ -19,7 +19,7 @@ class UCreativeVideoPlayerFullScreenWidget : public UCommonActivatableWidget
 public:
 	CMember(USoundSourceBus*)                          SourceBus                                                   OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(USoundClass*)                              SoundClass                                                  OFFSET(get<T>, {0x408, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       HoldToSkipAction                                            OFFSET(get<T>, {0x410, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       HoldToSkipAction                                            OFFSET(getStruct<T>, {0x410, 16, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_Skip                                                 OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UImage*)                                   Image_VideoTexture                                          OFFSET(get<T>, {0x428, 8, 0, 0})
 	DMember(float)                                     SkipButtonTimeout                                           OFFSET(get<float>, {0x430, 4, 0, 0})

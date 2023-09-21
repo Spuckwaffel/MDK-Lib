@@ -29,8 +29,8 @@ class AMidMatchRiftPoiManagerActor : public AActor
 public:
 	DMember(bool)                                      bCanBeMarked                                                OFFSET(get<bool>, {0x298, 1, 1, 0})
 	DMember(bool)                                      bBlockMarking                                               OFFSET(get<bool>, {0x298, 1, 1, 1})
-	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(get<T>, {0x2A0, 168, 0, 0})
-	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(get<T>, {0x348, 24, 0, 0})
+	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(getStruct<T>, {0x2A0, 168, 0, 0})
+	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(getStruct<T>, {0x348, 24, 0, 0})
 	DMember(bool)                                      bDynamicLandBrushApplied                                    OFFSET(get<bool>, {0x360, 1, 0, 0})
 
 
@@ -49,8 +49,8 @@ class AMidmatchRiftPoiSpawnIndicator : public AActor
 public:
 	DMember(bool)                                      bCanBeMarked                                                OFFSET(get<bool>, {0x2A0, 1, 1, 0})
 	DMember(bool)                                      bBlockMarking                                               OFFSET(get<bool>, {0x2A0, 1, 1, 1})
-	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(get<T>, {0x2A8, 168, 0, 0})
-	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(get<T>, {0x350, 24, 0, 0})
+	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(getStruct<T>, {0x2A8, 168, 0, 0})
+	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(getStruct<T>, {0x350, 24, 0, 0})
 
 
 	/// Functions

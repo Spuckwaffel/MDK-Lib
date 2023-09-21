@@ -11,10 +11,11 @@
 /// Size: 0x0010 (0x000068 - 0x000078)
 class FVkContentPackageRequest : public FVkResolvedContent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FString)                                   ProjectID                                                   OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   ProjectID                                                   OFFSET(getStruct<T>, {0x68, 16, 0, 0})
 };
 

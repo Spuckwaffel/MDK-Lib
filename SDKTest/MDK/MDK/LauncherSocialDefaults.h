@@ -16,7 +16,7 @@ class UChatColorSchemeDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FChatColorScheme)                          ChatColorData                                               OFFSET(get<T>, {0x30, 288, 0, 0})
+	SMember(FChatColorScheme)                          ChatColorData                                               OFFSET(getStruct<T>, {0x30, 288, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialActionButtonStyleDataAsset
@@ -27,7 +27,7 @@ class USocialActionButtonStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 992;
 
 public:
-	SMember(FButtonStyle)                              style                                                       OFFSET(get<T>, {0x30, 944, 0, 0})
+	SMember(FButtonStyle)                              style                                                       OFFSET(getStruct<T>, {0x30, 944, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialChatChromeColorSchemeDataAsset
@@ -38,7 +38,7 @@ class USocialChatChromeColorSchemeDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FChatChromeColorScheme)                    style                                                       OFFSET(get<T>, {0x30, 80, 0, 0})
+	SMember(FChatChromeColorScheme)                    style                                                       OFFSET(getStruct<T>, {0x30, 80, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialChatChromeMarginsDataAsset
@@ -49,7 +49,7 @@ class USocialChatChromeMarginsDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FChatChromeMargins)                        style                                                       OFFSET(get<T>, {0x30, 100, 0, 0})
+	SMember(FChatChromeMargins)                        style                                                       OFFSET(getStruct<T>, {0x30, 100, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialChatChromeStyleDataAsset
@@ -60,7 +60,7 @@ class USocialChatChromeStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 2944;
 
 public:
-	SMember(FChatChromeStyle)                          style                                                       OFFSET(get<T>, {0x30, 2896, 0, 0})
+	SMember(FChatChromeStyle)                          style                                                       OFFSET(getStruct<T>, {0x30, 2896, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialChatMarkupStyleDataAsset
@@ -71,7 +71,7 @@ class USocialChatMarkupStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 2272;
 
 public:
-	SMember(FChatMarkupStyle)                          style                                                       OFFSET(get<T>, {0x30, 2224, 0, 0})
+	SMember(FChatMarkupStyle)                          style                                                       OFFSET(getStruct<T>, {0x30, 2224, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialChatStyleDataAsset
@@ -82,7 +82,7 @@ class USocialChatStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 8240;
 
 public:
-	SMember(FChatStyle)                                style                                                       OFFSET(get<T>, {0x30, 8192, 0, 0})
+	SMember(FChatStyle)                                style                                                       OFFSET(getStruct<T>, {0x30, 8192, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialCheckBoxStyleDataAsset
@@ -93,7 +93,7 @@ class USocialCheckBoxStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 2624;
 
 public:
-	SMember(FCheckBoxStyle)                            style                                                       OFFSET(get<T>, {0x30, 2576, 0, 0})
+	SMember(FCheckBoxStyle)                            style                                                       OFFSET(getStruct<T>, {0x30, 2576, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialFontStyleDataAsset
@@ -104,7 +104,7 @@ class USocialFontStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 624;
 
 public:
-	SMember(FSocialFontStyle)                          style                                                       OFFSET(get<T>, {0x30, 576, 0, 0})
+	SMember(FSocialFontStyle)                          style                                                       OFFSET(getStruct<T>, {0x30, 576, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialListMarginsDataAsset
@@ -115,7 +115,7 @@ class USocialListMarginsDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-	SMember(FSocialListMargins)                        style                                                       OFFSET(get<T>, {0x30, 528, 0, 0})
+	SMember(FSocialListMargins)                        style                                                       OFFSET(getStruct<T>, {0x30, 528, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialListStyleDataAsset
@@ -126,7 +126,7 @@ class USocialListStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 14992;
 
 public:
-	SMember(FSocialListStyle)                          style                                                       OFFSET(get<T>, {0x30, 14944, 0, 0})
+	SMember(FSocialListStyle)                          style                                                       OFFSET(getStruct<T>, {0x30, 14944, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialProfanityDataAsset
@@ -148,7 +148,7 @@ class USocialRadioBoxStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 2624;
 
 public:
-	SMember(FCheckBoxStyle)                            style                                                       OFFSET(get<T>, {0x30, 2576, 0, 0})
+	SMember(FCheckBoxStyle)                            style                                                       OFFSET(getStruct<T>, {0x30, 2576, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialScrollBarStyleDataAsset
@@ -159,7 +159,7 @@ class USocialScrollBarStyleDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 1808;
 
 public:
-	SMember(FScrollBarStyle)                           style                                                       OFFSET(get<T>, {0x30, 1760, 0, 0})
+	SMember(FScrollBarStyle)                           style                                                       OFFSET(getStruct<T>, {0x30, 1760, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialSoundSchemaDataAsset
@@ -170,7 +170,7 @@ class USocialSoundSchemaDataAsset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FSocialSoundSchema)                        SoundSchema                                                 OFFSET(get<T>, {0x30, 72, 0, 0})
+	SMember(FSocialSoundSchema)                        SoundSchema                                                 OFFSET(getStruct<T>, {0x30, 72, 0, 0})
 };
 
 /// Class /Script/LauncherSocialDefaults.SocialStyleDataAsset

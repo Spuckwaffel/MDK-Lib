@@ -41,8 +41,8 @@ public:
 	DMember(bool)                                      bIsWorldField                                               OFFSET(get<bool>, {0x570, 1, 0, 0})
 	DMember(bool)                                      bIsChaosField                                               OFFSET(get<bool>, {0x571, 1, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    SupportedSolvers                                            OFFSET(get<T>, {0x578, 16, 0, 0})
-	SMember(FFieldObjectCommands)                      ConstructionCommands                                        OFFSET(get<T>, {0x588, 48, 0, 0})
-	SMember(FFieldObjectCommands)                      BufferCommands                                              OFFSET(get<T>, {0x5B8, 48, 0, 0})
+	SMember(FFieldObjectCommands)                      ConstructionCommands                                        OFFSET(getStruct<T>, {0x588, 48, 0, 0})
+	SMember(FFieldObjectCommands)                      BufferCommands                                              OFFSET(getStruct<T>, {0x5B8, 48, 0, 0})
 
 
 	/// Functions
@@ -195,7 +195,7 @@ class URadialIntMask : public UFieldNodeInt
 
 public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0xA0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 	DMember(int32_t)                                   InteriorValue                                               OFFSET(get<int32_t>, {0xC0, 4, 0, 0})
 	DMember(int32_t)                                   ExteriorValue                                               OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
 	CMember(TEnumAsByte<ESetMaskConditionType>)        SetMaskCondition                                            OFFSET(get<T>, {0xC8, 1, 0, 0})
@@ -231,7 +231,7 @@ class UWaveScalar : public UFieldNodeFloat
 
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 	DMember(float)                                     WaveLength                                                  OFFSET(get<float>, {0xC0, 4, 0, 0})
 	DMember(float)                                     Period                                                      OFFSET(get<float>, {0xC4, 4, 0, 0})
 	CMember(TEnumAsByte<EWaveFunctionType>)            Function                                                    OFFSET(get<T>, {0xC8, 1, 0, 0})
@@ -256,7 +256,7 @@ public:
 	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     Default                                                     OFFSET(get<float>, {0xAC, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0xB0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xB8, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0xD0, 1, 0, 0})
 
 
@@ -278,8 +278,8 @@ public:
 	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     Default                                                     OFFSET(get<float>, {0xAC, 4, 0, 0})
 	DMember(float)                                     Distance                                                    OFFSET(get<float>, {0xB0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xB8, 24, 0, 0})
-	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0xD0, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0xB8, 24, 0, 0})
+	SMember(FVector)                                   Normal                                                      OFFSET(getStruct<T>, {0xD0, 24, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0xE8, 1, 0, 0})
 
 
@@ -300,7 +300,7 @@ public:
 	DMember(float)                                     MinRange                                                    OFFSET(get<float>, {0xA4, 4, 0, 0})
 	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     Default                                                     OFFSET(get<float>, {0xAC, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0xB0, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0xB0, 96, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0x110, 1, 0, 0})
 
 
@@ -319,7 +319,7 @@ class UNoiseField : public UFieldNodeFloat
 public:
 	DMember(float)                                     MinRange                                                    OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0xA4, 4, 0, 0})
-	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0xB0, 96, 0, 0})
+	SMember(FTransform)                                Transform                                                   OFFSET(getStruct<T>, {0xB0, 96, 0, 0})
 
 
 	/// Functions
@@ -336,7 +336,7 @@ class UUniformVector : public UFieldNodeVector
 
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
-	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Direction                                                   OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 
 
 	/// Functions
@@ -353,7 +353,7 @@ class URadialVector : public UFieldNodeVector
 
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
-	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
+	SMember(FVector)                                   Position                                                    OFFSET(getStruct<T>, {0xA8, 24, 0, 0})
 
 
 	/// Functions
@@ -458,8 +458,9 @@ public:
 
 /// Struct /Script/FieldSystemEngine.FieldObjectCommands
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FFieldObjectCommands : public MDKStruct
+class FFieldObjectCommands : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 

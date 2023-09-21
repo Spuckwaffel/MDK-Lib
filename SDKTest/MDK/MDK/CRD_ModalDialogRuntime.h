@@ -19,7 +19,7 @@ class UModalDialogVariant : public UCommonActivatableWidget
 public:
 	CMember(UWidgetAnimation*)                         BoundAnim_Open                                              OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         BoundAnim_Response                                          OFFSET(get<T>, {0x3F0, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnResponseAnimationFinished                                 OFFSET(get<T>, {0x3F8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnResponseAnimationFinished                                 OFFSET(getStruct<T>, {0x3F8, 16, 0, 0})
 
 
 	/// Functions

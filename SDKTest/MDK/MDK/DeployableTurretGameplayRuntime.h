@@ -28,12 +28,12 @@ public:
 	DMember(bool)                                      bAggroToFire                                                OFFSET(get<bool>, {0x349, 1, 1, 1})
 	DMember(bool)                                      bInterruptibleCurveOverThreshold                            OFFSET(get<bool>, {0x349, 1, 1, 2})
 	DMember(bool)                                      bTurnEndCurveOverThreshold                                  OFFSET(get<bool>, {0x349, 1, 1, 3})
-	SMember(FName)                                     InterruptibleCurveName                                      OFFSET(get<T>, {0x34C, 4, 0, 0})
+	SMember(FName)                                     InterruptibleCurveName                                      OFFSET(getStruct<T>, {0x34C, 4, 0, 0})
 	DMember(float)                                     InterruptibleCurveThreshold                                 OFFSET(get<float>, {0x350, 4, 0, 0})
-	SMember(FName)                                     TurnEndCurveName                                            OFFSET(get<T>, {0x354, 4, 0, 0})
+	SMember(FName)                                     TurnEndCurveName                                            OFFSET(getStruct<T>, {0x354, 4, 0, 0})
 	DMember(float)                                     TurnEndCurveThreshold                                       OFFSET(get<float>, {0x358, 4, 0, 0})
-	SMember(FRotator)                                  AimRotationInComponentSpace                                 OFFSET(get<T>, {0x360, 24, 0, 0})
-	SMember(FRotator)                                  SurfaceRotation                                             OFFSET(get<T>, {0x378, 24, 0, 0})
+	SMember(FRotator)                                  AimRotationInComponentSpace                                 OFFSET(getStruct<T>, {0x360, 24, 0, 0})
+	SMember(FRotator)                                  SurfaceRotation                                             OFFSET(getStruct<T>, {0x378, 24, 0, 0})
 
 
 	/// Functions
@@ -53,13 +53,14 @@ public:
 
 /// Struct /Script/DeployableTurretGameplayRuntime.DeployableTurretBPAnimData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FDeployableTurretBPAnimData : public MDKStruct
+class FDeployableTurretBPAnimData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FRotator)                                  AimRotation                                                 OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  AimRotation                                                 OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 	DMember(float)                                     SurfaceRollDegrees                                          OFFSET(get<float>, {0x18, 4, 0, 0})
 	DMember(float)                                     SurfacePitchDegrees                                         OFFSET(get<float>, {0x1C, 4, 0, 0})
 	CMember(EDeployableTurretState)                    State                                                       OFFSET(get<T>, {0x20, 1, 0, 0})

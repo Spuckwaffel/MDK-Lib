@@ -21,7 +21,7 @@ public:
 	DMember(float)                                     SmoothingDistance                                           OFFSET(get<float>, {0xB4, 4, 0, 0})
 	DMember(float)                                     FadeInTime                                                  OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     FadeOutTime                                                 OFFSET(get<float>, {0xBC, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAudibleStateChanged                                       OFFSET(get<T>, {0xC0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAudibleStateChanged                                       OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
 	CMember(TMap<FName, UAudioComponent*>)             AudioComponents                                             OFFSET(get<T>, {0xD0, 80, 0, 0})
 	CMember(TArray<APlayerController*>)                LocalControllers                                            OFFSET(get<T>, {0x120, 16, 0, 0})
 
@@ -45,10 +45,10 @@ class UAudioShapePrimitiveComponent : public UAudioShapeComponent
 public:
 	CMember(USoundBase*)                               SoundOnEdge                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnInside                                               OFFSET(get<T>, {0x148, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnInsideStateChanged                                        OFFSET(get<T>, {0x150, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnInsideStateChanged                                        OFFSET(getStruct<T>, {0x150, 16, 0, 0})
 	DMember(bool)                                      bUseOwningActorTransform                                    OFFSET(get<bool>, {0x160, 1, 0, 0})
 	DMember(bool)                                      bAutoRefreshShape                                           OFFSET(get<bool>, {0x161, 1, 0, 0})
-	SMember(FVector)                                   ActorTransformScale                                         OFFSET(get<T>, {0x168, 24, 0, 0})
+	SMember(FVector)                                   ActorTransformScale                                         OFFSET(getStruct<T>, {0x168, 24, 0, 0})
 
 
 	/// Functions
@@ -68,7 +68,7 @@ class UAudioShapeBoxComponent : public UAudioShapePrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FTransform)                                BoxTransform                                                OFFSET(get<T>, {0x1D0, 96, 0, 0})
+	SMember(FTransform)                                BoxTransform                                                OFFSET(getStruct<T>, {0x1D0, 96, 0, 0})
 
 
 	/// Functions
@@ -103,8 +103,8 @@ class UAudioShapeLineComponent : public UAudioShapePrimitiveComponent
 	static inline constexpr uint64_t __MDKClassSize = 504;
 
 public:
-	SMember(FVector)                                   StartPoint                                                  OFFSET(get<T>, {0x1C8, 24, 0, 0})
-	SMember(FVector)                                   EndPoint                                                    OFFSET(get<T>, {0x1E0, 24, 0, 0})
+	SMember(FVector)                                   StartPoint                                                  OFFSET(getStruct<T>, {0x1C8, 24, 0, 0})
+	SMember(FVector)                                   EndPoint                                                    OFFSET(getStruct<T>, {0x1E0, 24, 0, 0})
 
 
 	/// Functions

@@ -131,8 +131,9 @@ public:
 
 /// Struct /Script/EntityCore.ComponentData
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FComponentData : public MDKStruct
+class FComponentData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -143,39 +144,43 @@ public:
 /// Size: 0x0017 (0x000001 - 0x000018)
 class FEntityPositionComponentData : public FComponentData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector)                                   WorldPosition                                               OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   WorldPosition                                               OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityRotationComponentData
 /// Size: 0x0017 (0x000001 - 0x000018)
 class FEntityRotationComponentData : public FComponentData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FRotator)                                  WorldRotation                                               OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  WorldRotation                                               OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityScaleComponentData
 /// Size: 0x0017 (0x000001 - 0x000018)
 class FEntityScaleComponentData : public FComponentData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FVector)                                   WorldScale3D                                                OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   WorldScale3D                                                OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/EntityCore.EntityCoreSystemRelativePositionComponentData
 /// Size: 0x001F (0x000001 - 0x000020)
 class FEntityCoreSystemRelativePositionComponentData : public FComponentData
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -184,8 +189,9 @@ public:
 
 /// Struct /Script/EntityCore.EntityComponentContainer
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FEntityComponentContainer : public MDKStruct
+class FEntityComponentContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -197,6 +203,7 @@ public:
 /// Size: 0x0008 (0x000028 - 0x000030)
 class FEntityTickFunction : public FTickFunction
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 

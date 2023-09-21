@@ -18,7 +18,7 @@ class UAbilityTask_PerformTargeting : public UAbilityTask
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnTargetReady                                               OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTargetReady                                               OFFSET(getStruct<T>, {0x78, 16, 0, 0})
 
 
 	/// Functions
@@ -36,11 +36,11 @@ class UAsyncAction_PerformTargeting : public UBlueprintAsyncActionBase
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Targeted                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Targeted                                                    OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	CMember(UTargetingPreset*)                         TargetingPreset                                             OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   WeakSourceActor                                             OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(TArray<AActor*>)                           InitialTargets                                              OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FTargetingRequestHandle)                   TargetingHandle                                             OFFSET(get<T>, {0x60, 4, 0, 0})
+	SMember(FTargetingRequestHandle)                   TargetingHandle                                             OFFSET(getStruct<T>, {0x60, 4, 0, 0})
 	DMember(bool)                                      bUseAsyncTargeting                                          OFFSET(get<bool>, {0x64, 1, 1, 0})
 
 
@@ -93,7 +93,7 @@ class UTargetingPreset : public UDataAsset
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
-	SMember(FTargetingTaskSet)                         TargetingTaskSet                                            OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FTargetingTaskSet)                         TargetingTaskSet                                            OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 };
 
 /// Class /Script/TargetingSystem.TargetingSelectionTask_AOE
@@ -106,16 +106,16 @@ class UTargetingSelectionTask_AOE : public UTargetingTask
 public:
 	CMember(ETargetingAOEShape)                        ShapeType                                                   OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            CollisionChannel                                            OFFSET(get<T>, {0x29, 1, 0, 0})
-	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(get<T>, {0x2C, 4, 0, 0})
+	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       CollisionObjectTypes                                        OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FVector)                                   DefaultSourceOffset                                         OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   DefaultSourceOffset                                         OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(bool)                                      bUseRelativeOffset                                          OFFSET(get<bool>, {0x58, 1, 1, 0})
 	DMember(bool)                                      bIgnoreSourceActor                                          OFFSET(get<bool>, {0x58, 1, 1, 1})
 	DMember(bool)                                      bIgnoreInstigatorActor                                      OFFSET(get<bool>, {0x58, 1, 1, 2})
-	SMember(FVector)                                   HalfExtent                                                  OFFSET(get<T>, {0x60, 24, 0, 0})
-	SMember(FScalableFloat)                            Radius                                                      OFFSET(get<T>, {0x78, 40, 0, 0})
-	SMember(FScalableFloat)                            HalfHeight                                                  OFFSET(get<T>, {0xA0, 40, 0, 0})
-	SMember(FName)                                     ComponentTag                                                OFFSET(get<T>, {0xC8, 4, 0, 0})
+	SMember(FVector)                                   HalfExtent                                                  OFFSET(getStruct<T>, {0x60, 24, 0, 0})
+	SMember(FScalableFloat)                            Radius                                                      OFFSET(getStruct<T>, {0x78, 40, 0, 0})
+	SMember(FScalableFloat)                            HalfHeight                                                  OFFSET(getStruct<T>, {0xA0, 40, 0, 0})
+	SMember(FName)                                     ComponentTag                                                OFFSET(getStruct<T>, {0xC8, 4, 0, 0})
 
 
 	/// Functions
@@ -147,11 +147,11 @@ class UTargetingSelectionTask_Trace : public UTargetingTask
 public:
 	CMember(ETargetingTraceType)                       TraceType                                                   OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(TEnumAsByte<ETraceTypeQuery>)              TraceChannel                                                OFFSET(get<T>, {0x29, 1, 0, 0})
-	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(get<T>, {0x2C, 4, 0, 0})
-	SMember(FScalableFloat)                            DefaultSweptTraceRadius                                     OFFSET(get<T>, {0x30, 40, 0, 0})
-	SMember(FScalableFloat)                            DefaultTraceLength                                          OFFSET(get<T>, {0x58, 40, 0, 0})
-	SMember(FVector)                                   DefaultSourceOffset                                         OFFSET(get<T>, {0x80, 24, 0, 0})
-	SMember(FVector)                                   ExplicitTraceDirection                                      OFFSET(get<T>, {0x98, 24, 0, 0})
+	SMember(FCollisionProfileName)                     CollisionProfileName                                        OFFSET(getStruct<T>, {0x2C, 4, 0, 0})
+	SMember(FScalableFloat)                            DefaultSweptTraceRadius                                     OFFSET(getStruct<T>, {0x30, 40, 0, 0})
+	SMember(FScalableFloat)                            DefaultTraceLength                                          OFFSET(getStruct<T>, {0x58, 40, 0, 0})
+	SMember(FVector)                                   DefaultSourceOffset                                         OFFSET(getStruct<T>, {0x80, 24, 0, 0})
+	SMember(FVector)                                   ExplicitTraceDirection                                      OFFSET(getStruct<T>, {0x98, 24, 0, 0})
 	DMember(bool)                                      bComplexTrace                                               OFFSET(get<bool>, {0xB0, 1, 1, 0})
 	DMember(bool)                                      bIgnoreSourceActor                                          OFFSET(get<bool>, {0xB0, 1, 1, 1})
 	DMember(bool)                                      bIgnoreInstigatorActor                                      OFFSET(get<bool>, {0xB0, 1, 1, 2})
@@ -223,8 +223,9 @@ public:
 
 /// Struct /Script/TargetingSystem.TargetingRequestHandle
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FTargetingRequestHandle : public MDKStruct
+class FTargetingRequestHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -233,8 +234,9 @@ public:
 
 /// Struct /Script/TargetingSystem.CollisionQueryTaskData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCollisionQueryTaskData : public MDKStruct
+class FCollisionQueryTaskData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -244,8 +246,9 @@ public:
 
 /// Struct /Script/TargetingSystem.TargetingTaskSet
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FTargetingTaskSet : public MDKStruct
+class FTargetingTaskSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -255,19 +258,21 @@ public:
 
 /// Struct /Script/TargetingSystem.TargetingDefaultResultData
 /// Size: 0x00E8 (0x000000 - 0x0000E8)
-class FTargetingDefaultResultData : public MDKStruct
+class FTargetingDefaultResultData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-	SMember(FHitResult)                                HitResult                                                   OFFSET(get<T>, {0x0, 224, 0, 0})
+	SMember(FHitResult)                                HitResult                                                   OFFSET(getStruct<T>, {0x0, 224, 0, 0})
 };
 
 /// Struct /Script/TargetingSystem.TargetingDefaultResultsSet
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FTargetingDefaultResultsSet : public MDKStruct
+class FTargetingDefaultResultsSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -277,34 +282,37 @@ public:
 
 /// Struct /Script/TargetingSystem.TargetingSourceContext
 /// Size: 0x0038 (0x000000 - 0x000038)
-class FTargetingSourceContext : public MDKStruct
+class FTargetingSourceContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
 	CMember(AActor*)                                   SourceActor                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
 	CMember(AActor*)                                   InstigatorActor                                             OFFSET(get<T>, {0x8, 8, 0, 0})
-	SMember(FVector)                                   SourceLocation                                              OFFSET(get<T>, {0x10, 24, 0, 0})
-	SMember(FName)                                     SourceSocketName                                            OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FVector)                                   SourceLocation                                              OFFSET(getStruct<T>, {0x10, 24, 0, 0})
+	SMember(FName)                                     SourceSocketName                                            OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(UObject*)                                  SourceObject                                                OFFSET(get<T>, {0x30, 8, 0, 0})
 };
 
 /// Struct /Script/TargetingSystem.TargetingRequestData
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FTargetingRequestData : public MDKStruct
+class FTargetingRequestData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FDelegateProperty)                         TargetingRequestDynamicDelegate                             OFFSET(get<T>, {0x18, 12, 0, 0})
+	SMember(FDelegateProperty)                         TargetingRequestDynamicDelegate                             OFFSET(getStruct<T>, {0x18, 12, 0, 0})
 };
 
 /// Struct /Script/TargetingSystem.TargetingAsyncTaskData
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FTargetingAsyncTaskData : public MDKStruct
+class FTargetingAsyncTaskData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -313,8 +321,9 @@ public:
 
 /// Struct /Script/TargetingSystem.TargetingImmediateTaskData
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FTargetingImmediateTaskData : public MDKStruct
+class FTargetingImmediateTaskData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 
@@ -323,8 +332,9 @@ public:
 
 /// Struct /Script/TargetingSystem.TargetingDebugData
 /// Size: 0x0001 (0x000000 - 0x000001)
-class FTargetingDebugData : public MDKStruct
+class FTargetingDebugData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 1;
 

@@ -19,11 +19,11 @@ class UPictureInPictureClient : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FMulticastInlineDelegate)                  LoginSuccessEvent                                           OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  LogoutSuccessEvent                                          OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  QRCodeReceivedEvent                                         OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  ErrorDelegate                                               OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FString)                                   UserName                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  LoginSuccessEvent                                           OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  LogoutSuccessEvent                                          OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  QRCodeReceivedEvent                                         OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  ErrorDelegate                                               OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   UserName                                                    OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	CMember(UEpicCMSImage*)                            UserAvatarImage                                             OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UTexture2DDynamic*)                        CurrentQRCodeTexture                                        OFFSET(get<T>, {0x90, 8, 0, 0})
 
@@ -75,28 +75,28 @@ class UPictureInPictureMediaController : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 1752;
 
 public:
-	SMember(FString)                                   PartnerName                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   PartnerName                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	CMember(TArray<UPictureInPictureActionData*>)      ActionDataArray                                             OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FPIPVideoPlayerAssetConfig)                DefaultPlayerAssetConfig                                    OFFSET(get<T>, {0x58, 136, 0, 0})
-	SMember(FPIPVideoPlayerAssetConfig)                PlayerAssetConfig                                           OFFSET(get<T>, {0xE0, 136, 0, 0})
+	SMember(FPIPVideoPlayerAssetConfig)                DefaultPlayerAssetConfig                                    OFFSET(getStruct<T>, {0x58, 136, 0, 0})
+	SMember(FPIPVideoPlayerAssetConfig)                PlayerAssetConfig                                           OFFSET(getStruct<T>, {0xE0, 136, 0, 0})
 	CMember(UPictureInPicturePlayer*)                  VideoWidget                                                 OFFSET(get<T>, {0x168, 8, 0, 0})
-	SMember(FPIPVideoPlayerConfig)                     VideoWidgetConfig                                           OFFSET(get<T>, {0x170, 72, 0, 0})
+	SMember(FPIPVideoPlayerConfig)                     VideoWidgetConfig                                           OFFSET(getStruct<T>, {0x170, 72, 0, 0})
 	CMember(TWeakObjectPtr<UCommonLazyImage*>)         ThumbnailImageNext                                          OFFSET(get<T>, {0x1B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UCommonLazyImage*>)         ThumbnailImagePrevious                                      OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	DMember(bool)                                      bSupportsMultipleSources                                    OFFSET(get<bool>, {0x1C8, 1, 0, 0})
-	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(get<T>, {0x1D0, 488, 0, 0})
+	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(getStruct<T>, {0x1D0, 488, 0, 0})
 	CMember(TArray<FPiPPartnerSource>)                 Sources                                                     OFFSET(get<T>, {0x3B8, 16, 0, 0})
 	CMember(TArray<FPiPPartnerSource>)                 ValidSources                                                OFFSET(get<T>, {0x3C8, 16, 0, 0})
-	SMember(FMediaPlayerOptions)                       LocalOptions                                                OFFSET(get<T>, {0x3D8, 48, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BaseErrorEvent                                              OFFSET(get<T>, {0x408, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  BaseEnabledEvent                                            OFFSET(get<T>, {0x418, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SourcesChangedEvent                                         OFFSET(get<T>, {0x428, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  SourceSelectedEvent                                         OFFSET(get<T>, {0x438, 16, 0, 0})
+	SMember(FMediaPlayerOptions)                       LocalOptions                                                OFFSET(getStruct<T>, {0x3D8, 48, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BaseErrorEvent                                              OFFSET(getStruct<T>, {0x408, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  BaseEnabledEvent                                            OFFSET(getStruct<T>, {0x418, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SourcesChangedEvent                                         OFFSET(getStruct<T>, {0x428, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  SourceSelectedEvent                                         OFFSET(getStruct<T>, {0x438, 16, 0, 0})
 	CMember(TArray<FPictureInPictureActionConfig>)     InstanceActionData                                          OFFSET(get<T>, {0x450, 16, 0, 0})
 	CMember(UPictureInPictureAnalyticsManager*)        AnalyticsManager                                            OFFSET(get<T>, {0x460, 8, 0, 0})
-	SMember(FDateTime)                                 ActiveStartTime                                             OFFSET(get<T>, {0x468, 8, 0, 0})
-	SMember(FDateTime)                                 PausedStartTime                                             OFFSET(get<T>, {0x470, 8, 0, 0})
-	SMember(FPiPSuspendInfo)                           SuspendedInfo                                               OFFSET(get<T>, {0x480, 496, 0, 0})
+	SMember(FDateTime)                                 ActiveStartTime                                             OFFSET(getStruct<T>, {0x468, 8, 0, 0})
+	SMember(FDateTime)                                 PausedStartTime                                             OFFSET(getStruct<T>, {0x470, 8, 0, 0})
+	SMember(FPiPSuspendInfo)                           SuspendedInfo                                               OFFSET(getStruct<T>, {0x480, 496, 0, 0})
 
 
 	/// Functions
@@ -170,7 +170,7 @@ class UPictureInPicturePlayer : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 560;
 
 public:
-	SMember(FPIPVideoPlayerAssetConfig)                AssetConfig                                                 OFFSET(get<T>, {0x108, 136, 0, 0})
+	SMember(FPIPVideoPlayerAssetConfig)                AssetConfig                                                 OFFSET(getStruct<T>, {0x108, 136, 0, 0})
 	CMember(UPictureInPictureMediaPlayerCtrl*)         MediaController                                             OFFSET(get<T>, {0x190, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         DefaultSubmix                                               OFFSET(get<T>, {0x1E8, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         LicensedSubmix                                              OFFSET(get<T>, {0x1F0, 8, 0, 0})
@@ -215,16 +215,16 @@ class UPictureInPictureSubsystem : public UEngineSubsystem
 
 public:
 	CMember(TArray<UPictureInPicturePartnerDataAsset*>) AvailableClientsList                                       OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPartnerUpdateComplete                                     OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnPartnerChanged                                            OFFSET(get<T>, {0x50, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPartnerUpdateComplete                                     OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnPartnerChanged                                            OFFSET(getStruct<T>, {0x50, 16, 0, 0})
 	DMember(bool)                                      bPartnerListUpdated                                         OFFSET(get<bool>, {0x60, 1, 0, 0})
 	DMember(bool)                                      bIsSuspended                                                OFFSET(get<bool>, {0x61, 1, 0, 0})
 	DMember(bool)                                      bCMSInitialized                                             OFFSET(get<bool>, {0x62, 1, 0, 0})
-	SMember(FString)                                   CurrentPlatform                                             OFFSET(get<T>, {0x68, 16, 0, 0})
+	SMember(FString)                                   CurrentPlatform                                             OFFSET(getStruct<T>, {0x68, 16, 0, 0})
 	CMember(TMap<FString, UPictureInPicturePartnerControls*>) SupportedPartnerControls                             OFFSET(get<T>, {0x88, 80, 0, 0})
-	SMember(FString)                                   CurrentPartnerName                                          OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FString)                                   CurrentContinent                                            OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FString)                                   CurrentCountry                                              OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FString)                                   CurrentPartnerName                                          OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
+	SMember(FString)                                   CurrentContinent                                            OFFSET(getStruct<T>, {0xE8, 16, 0, 0})
+	SMember(FString)                                   CurrentCountry                                              OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<FString>)                           CurrentSubdivisions                                         OFFSET(get<T>, {0x108, 16, 0, 0})
 	CMember(UFortMediaCMSEventsComponent*)             CMSEventsComponent                                          OFFSET(get<T>, {0x118, 8, 0, 0})
 
@@ -288,13 +288,14 @@ public:
 
 /// Struct /Script/PictureInPictureCore.PiPSuspendInfo
 /// Size: 0x01F0 (0x000000 - 0x0001F0)
-class FPiPSuspendInfo : public MDKStruct
+class FPiPSuspendInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
-	SMember(FPiPPartnerSource)                         SourceSnapshot                                              OFFSET(get<T>, {0x0, 488, 0, 0})
+	SMember(FPiPPartnerSource)                         SourceSnapshot                                              OFFSET(getStruct<T>, {0x0, 488, 0, 0})
 	DMember(bool)                                      bEnabledState                                               OFFSET(get<bool>, {0x1E8, 1, 0, 0})
 };
 

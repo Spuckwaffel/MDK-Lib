@@ -81,11 +81,11 @@ class UMetaSoundPatch : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 856;
 
 public:
-	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(get<T>, {0x98, 448, 0, 0})
+	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(getStruct<T>, {0x98, 448, 0, 0})
 	CMember(TSet<FString>)                             ReferencedAssetClassKeys                                    OFFSET(get<T>, {0x258, 80, 0, 0})
 	CMember(TSet<UObject*>)                            ReferencedAssetClassObjects                                 OFFSET(get<T>, {0x2A8, 80, 0, 0})
 	CMember(TSet<FSoftObjectPath>)                     ReferenceAssetClassCache                                    OFFSET(get<T>, {0x2F8, 80, 0, 0})
-	SMember(FGuid)                                     AssetClassID                                                OFFSET(get<T>, {0x348, 16, 0, 0})
+	SMember(FGuid)                                     AssetClassID                                                OFFSET(getStruct<T>, {0x348, 16, 0, 0})
 };
 
 /// Class /Script/MetasoundEngine.MetaSoundAssetSubsystem
@@ -114,7 +114,7 @@ class UMetaSoundBuilderBase : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMetaSoundFrontendDocumentBuilder)         Builder                                                     OFFSET(get<T>, {0x28, 48, 0, 0})
+	SMember(FMetaSoundFrontendDocumentBuilder)         Builder                                                     OFFSET(getStruct<T>, {0x28, 48, 0, 0})
 	DMember(bool)                                      bIsAttached                                                 OFFSET(get<bool>, {0x58, 1, 0, 0})
 
 
@@ -314,18 +314,19 @@ class UMetaSoundSource : public USoundWaveProcedural
 	static inline constexpr uint64_t __MDKClassSize = 2176;
 
 public:
-	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(get<T>, {0x4F0, 448, 0, 0})
+	SMember(FMetasoundFrontendDocument)                RootMetaSoundDocument                                       OFFSET(getStruct<T>, {0x4F0, 448, 0, 0})
 	CMember(TSet<FString>)                             ReferencedAssetClassKeys                                    OFFSET(get<T>, {0x6B0, 80, 0, 0})
 	CMember(TSet<UObject*>)                            ReferencedAssetClassObjects                                 OFFSET(get<T>, {0x700, 80, 0, 0})
 	CMember(TSet<FSoftObjectPath>)                     ReferenceAssetClassCache                                    OFFSET(get<T>, {0x750, 80, 0, 0})
 	CMember(EMetaSoundOutputAudioFormat)               OutputFormat                                                OFFSET(get<T>, {0x7A0, 1, 0, 0})
-	SMember(FGuid)                                     AssetClassID                                                OFFSET(get<T>, {0x7A4, 16, 0, 0})
+	SMember(FGuid)                                     AssetClassID                                                OFFSET(getStruct<T>, {0x7A4, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundEngine.MetaSoundOutput
 /// Size: 0x000C (0x000004 - 0x000010)
 class FMetaSoundOutput : public FSoundGeneratorOutput
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -334,30 +335,33 @@ public:
 
 /// Struct /Script/MetasoundEngine.DefaultMetaSoundAssetAutoUpdateSettings
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FDefaultMetaSoundAssetAutoUpdateSettings : public MDKStruct
+class FDefaultMetaSoundAssetAutoUpdateSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FSoftObjectPath)                           Metasound                                                   OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FSoftObjectPath)                           Metasound                                                   OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/MetasoundEngine.MetaSoundAssetDirectory
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMetaSoundAssetDirectory : public MDKStruct
+class FMetaSoundAssetDirectory : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FDirectoryPath)                            Directory                                                   OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FDirectoryPath)                            Directory                                                   OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundEngine.MetaSoundAsyncAssetDependencies
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FMetaSoundAsyncAssetDependencies : public MDKStruct
+class FMetaSoundAsyncAssetDependencies : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
@@ -369,6 +373,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FMetaSoundBuilderNodeInputHandle : public FMetasoundFrontendVertexHandle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -379,6 +384,7 @@ public:
 /// Size: 0x0000 (0x000020 - 0x000020)
 class FMetaSoundBuilderNodeOutputHandle : public FMetasoundFrontendVertexHandle
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -387,24 +393,26 @@ public:
 
 /// Struct /Script/MetasoundEngine.MetaSoundNodeHandle
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FMetaSoundNodeHandle : public MDKStruct
+class FMetaSoundNodeHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FGuid)                                     NodeId                                                      OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FGuid)                                     NodeId                                                      OFFSET(getStruct<T>, {0x0, 16, 0, 0})
 };
 
 /// Struct /Script/MetasoundEngine.MetaSoundBuilderOptions
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMetaSoundBuilderOptions : public MDKStruct
+class FMetaSoundBuilderOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     Name                                                        OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(bool)                                      bForceUniqueClassName                                       OFFSET(get<bool>, {0x4, 1, 0, 0})
 	DMember(bool)                                      bAddToRegistry                                              OFFSET(get<bool>, {0x5, 1, 0, 0})
 	CMember(TScriptInterface<Class>)                   ExistingMetaSound                                           OFFSET(get<T>, {0x8, 16, 0, 0})

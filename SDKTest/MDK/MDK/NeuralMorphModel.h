@@ -130,32 +130,35 @@ public:
 
 /// Struct /Script/NeuralMorphModel.NeuralMorphBoneGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNeuralMorphBoneGroup : public MDKStruct
+class FNeuralMorphBoneGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FBoneReference>)                    BoneNames                                                   OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/NeuralMorphModel.NeuralMorphCurveGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNeuralMorphCurveGroup : public MDKStruct
+class FNeuralMorphCurveGroup : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FName)                                     GroupName                                                   OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     GroupName                                                   OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(TArray<FMLDeformerCurveReference>)         CurveNames                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
 };
 
 /// Struct /Script/NeuralMorphModel.NeuralMorphMaskInfo
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FNeuralMorphMaskInfo : public MDKStruct
+class FNeuralMorphMaskInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

@@ -17,7 +17,7 @@ class AFortPrefabSpawner : public AActor
 	static inline constexpr uint64_t __MDKClassSize = 704;
 
 public:
-	SMember(FGameplayTagContainer)                     RequiredProperties                                          OFFSET(get<T>, {0x298, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     RequiredProperties                                          OFFSET(getStruct<T>, {0x298, 32, 0, 0})
 	DMember(bool)                                      bWorldReadyCalled                                           OFFSET(get<bool>, {0x2B8, 1, 0, 0})
 };
 
@@ -31,19 +31,20 @@ class UFortRandomPrefabSpawnHelper : public UGameStateComponent
 public:
 	CMember(TArray<FFortRandomPrefabData>)             AllPrefabs                                                  OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FFortRandomPrefabData>)             PrefabPool                                                  OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FScalableFloat)                            bAcceptDuplicatesWhenOutOfUniquePrefabs                     OFFSET(get<T>, {0xD8, 40, 0, 0})
+	SMember(FScalableFloat)                            bAcceptDuplicatesWhenOutOfUniquePrefabs                     OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
 };
 
 /// Struct /Script/RandomPrefabSpawningRuntime.FortRandomPrefabData
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FFortRandomPrefabData : public MDKStruct
+class FFortRandomPrefabData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
 	CMember(UClass*)                                   Prefab                                                      OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x8, 32, 0, 0})
-	SMember(FScalableFloat)                            bEnabled                                                    OFFSET(get<T>, {0x28, 40, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x8, 32, 0, 0})
+	SMember(FScalableFloat)                            bEnabled                                                    OFFSET(getStruct<T>, {0x28, 40, 0, 0})
 };
 

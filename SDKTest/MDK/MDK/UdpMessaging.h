@@ -22,23 +22,24 @@ public:
 	DMember(uint32_t)                                  AutoRepairAttemptLimit                                      OFFSET(get<uint32_t>, {0x30, 4, 0, 0})
 	DMember(uint16_t)                                  WorkQueueSize                                               OFFSET(get<uint16_t>, {0x34, 2, 0, 0})
 	DMember(bool)                                      bStopServiceWhenAppDeactivates                              OFFSET(get<bool>, {0x36, 1, 0, 0})
-	SMember(FString)                                   UnicastEndpoint                                             OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FString)                                   MulticastEndpoint                                           OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FString)                                   UnicastEndpoint                                             OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   MulticastEndpoint                                           OFFSET(getStruct<T>, {0x48, 16, 0, 0})
 	CMember(EUdpMessageFormat)                         MessageFormat                                               OFFSET(get<T>, {0x58, 1, 0, 0})
 	DMember(char)                                      MulticastTimeToLive                                         OFFSET(get<char>, {0x59, 1, 0, 0})
 	CMember(TArray<FString>)                           StaticEndpoints                                             OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<FString>)                           ExcludedEndpoints                                           OFFSET(get<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bShareKnownNodesWithActiveConnections                       OFFSET(get<bool>, {0x80, 1, 0, 0})
 	DMember(bool)                                      EnableTunnel                                                OFFSET(get<bool>, {0x81, 1, 0, 0})
-	SMember(FString)                                   TunnelUnicastEndpoint                                       OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FString)                                   TunnelMulticastEndpoint                                     OFFSET(get<T>, {0x98, 16, 0, 0})
+	SMember(FString)                                   TunnelUnicastEndpoint                                       OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FString)                                   TunnelMulticastEndpoint                                     OFFSET(getStruct<T>, {0x98, 16, 0, 0})
 	CMember(TArray<FString>)                           RemoteTunnelEndpoints                                       OFFSET(get<T>, {0xA8, 16, 0, 0})
 };
 
 /// Struct /Script/UdpMessaging.UdpMockMessage
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FUdpMockMessage : public MDKStruct
+class FUdpMockMessage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

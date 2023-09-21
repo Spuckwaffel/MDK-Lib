@@ -39,7 +39,7 @@ public:
 	DMember(float)                                     RunSpeedThreshold                                           OFFSET(get<float>, {0x6F8, 4, 0, 0})
 	DMember(float)                                     JumpLandToMovementInterruptibleThreshold                    OFFSET(get<float>, {0x6FC, 4, 0, 0})
 	DMember(float)                                     MinTargetIsCloseDistance                                    OFFSET(get<float>, {0x700, 4, 0, 0})
-	SMember(FName)                                     CurveName_Interruptible                                     OFFSET(get<T>, {0x704, 4, 0, 0})
+	SMember(FName)                                     CurveName_Interruptible                                     OFFSET(getStruct<T>, {0x704, 4, 0, 0})
 };
 
 /// Class /Script/LabradorRuntime.FortLabradorComponent_Telemetry
@@ -51,7 +51,7 @@ class UFortLabradorComponent_Telemetry : public UFortAIComponent_Telemetry
 
 public:
 	DMember(bool)                                      bWasAwake                                                   OFFSET(get<bool>, {0x108, 1, 0, 0})
-	SMember(FString)                                   InstigatorAwakeNetIDString                                  OFFSET(get<T>, {0x110, 16, 0, 0})
+	SMember(FString)                                   InstigatorAwakeNetIDString                                  OFFSET(getStruct<T>, {0x110, 16, 0, 0})
 	CMember(ELabradorDespawnReason)                    DespawnReason                                               OFFSET(get<T>, {0x120, 1, 0, 0})
 	DMember(float)                                     DamageReceivedFromPlayers                                   OFFSET(get<float>, {0x124, 4, 0, 0})
 

@@ -17,7 +17,7 @@ class UMotoSynthPreset : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FMotoSynthRuntimeSettings)                 Settings                                                    OFFSET(get<T>, {0x28, 312, 0, 0})
+	SMember(FMotoSynthRuntimeSettings)                 Settings                                                    OFFSET(getStruct<T>, {0x28, 312, 0, 0})
 };
 
 /// Class /Script/MotoSynth.MotoSynthSource
@@ -30,7 +30,7 @@ class UMotoSynthSource : public UObject
 public:
 	DMember(bool)                                      bConvertTo8Bit                                              OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(float)                                     DownSampleFactor                                            OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FRuntimeFloatCurve)                        RpmCurve                                                    OFFSET(get<T>, {0x30, 136, 0, 0})
+	SMember(FRuntimeFloatCurve)                        RpmCurve                                                    OFFSET(getStruct<T>, {0x30, 136, 0, 0})
 	CMember(TArray<float>)                             SourceData                                                  OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(TArray<int16_t>)                           SourceDataPCM                                               OFFSET(get<T>, {0xC8, 16, 0, 0})
 	DMember(int32_t)                                   SourceSampleRate                                            OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
@@ -62,29 +62,30 @@ public:
 
 /// Struct /Script/MotoSynth.MotoSynthRuntimeSettings
 /// Size: 0x0138 (0x000000 - 0x000138)
-class FMotoSynthRuntimeSettings : public MDKStruct
+class FMotoSynthRuntimeSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
 	DMember(bool)                                      bSynthToneEnabled                                           OFFSET(get<bool>, {0x0, 1, 0, 0})
-	SMember(FVector2D)                                 SynthToneVolumeRange                                        OFFSET(get<T>, {0x8, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneFilterFrequencyRange                               OFFSET(get<T>, {0x18, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneVolumeRange                                        OFFSET(getStruct<T>, {0x8, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneFilterFrequencyRange                               OFFSET(getStruct<T>, {0x18, 16, 0, 0})
 	DMember(bool)                                      bSynthToneEnvelopeEnabled                                   OFFSET(get<bool>, {0x28, 1, 0, 0})
-	SMember(FVector2D)                                 SynthToneAttackTimeMsecRange                                OFFSET(get<T>, {0x30, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneAttackCurveRange                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneDecayTimeMsecRange                                 OFFSET(get<T>, {0x50, 16, 0, 0})
-	SMember(FVector2D)                                 SynthToneDecayCurveRange                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneAttackTimeMsecRange                                OFFSET(getStruct<T>, {0x30, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneAttackCurveRange                                   OFFSET(getStruct<T>, {0x40, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneDecayTimeMsecRange                                 OFFSET(getStruct<T>, {0x50, 16, 0, 0})
+	SMember(FVector2D)                                 SynthToneDecayCurveRange                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 	DMember(int32_t)                                   SynthOctaveShift                                            OFFSET(get<int32_t>, {0x70, 4, 0, 0})
 	DMember(bool)                                      bNoiseEnabled                                               OFFSET(get<bool>, {0x74, 1, 0, 0})
-	SMember(FVector2D)                                 NoiseVolumeRange                                            OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseVolumeRange                                            OFFSET(getStruct<T>, {0x78, 16, 0, 0})
 	DMember(bool)                                      bNoiseEnvelopeEnabled                                       OFFSET(get<bool>, {0x88, 1, 0, 0})
-	SMember(FVector2D)                                 NoiseLPFRange                                               OFFSET(get<T>, {0x90, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseAttackTimeMsecRange                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseAttackCurveRange                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseDecayTimeMsecRange                                     OFFSET(get<T>, {0xC0, 16, 0, 0})
-	SMember(FVector2D)                                 NoiseDecayCurveRange                                        OFFSET(get<T>, {0xD0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseLPFRange                                               OFFSET(getStruct<T>, {0x90, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseAttackTimeMsecRange                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseAttackCurveRange                                       OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseDecayTimeMsecRange                                     OFFSET(getStruct<T>, {0xC0, 16, 0, 0})
+	SMember(FVector2D)                                 NoiseDecayCurveRange                                        OFFSET(getStruct<T>, {0xD0, 16, 0, 0})
 	DMember(bool)                                      bGranularEngineEnabled                                      OFFSET(get<bool>, {0xE0, 1, 0, 0})
 	DMember(float)                                     GranularEngineVolume                                        OFFSET(get<float>, {0xE4, 4, 0, 0})
 	DMember(float)                                     GranularEnginePitchScale                                    OFFSET(get<float>, {0xE8, 4, 0, 0})
@@ -107,8 +108,9 @@ public:
 
 /// Struct /Script/MotoSynth.GrainTableEntry
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FGrainTableEntry : public MDKStruct
+class FGrainTableEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 

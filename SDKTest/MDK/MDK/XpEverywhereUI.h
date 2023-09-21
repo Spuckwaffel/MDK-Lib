@@ -19,7 +19,7 @@ class UXpEverywhereAccoladesWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
-	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x370, 2, 0, 0})
+	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(getStruct<T>, {0x370, 2, 0, 0})
 
 
 	/// Functions
@@ -92,7 +92,7 @@ public:
 	CMember(TArray<UFortNotificationEntry*>)           WidgetQueue                                                 OFFSET(get<T>, {0x370, 16, 0, 0})
 	CMember(UVerticalBox*)                             NotificationUpdatesBox                                      OFFSET(get<T>, {0x380, 8, 0, 0})
 	CMember(TArray<FXpEverywhereNotificationWidgetClass>) NotificationClassPoolData                                OFFSET(get<T>, {0x388, 16, 0, 0})
-	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x398, 2, 0, 0})
+	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(getStruct<T>, {0x398, 2, 0, 0})
 
 
 	/// Functions
@@ -108,13 +108,14 @@ class UXpEverywhereUIComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-	SMember(FGameplayTagContainer)                     XpEverywhereHiddenElementTags                               OFFSET(get<T>, {0x130, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     XpEverywhereHiddenElementTags                               OFFSET(getStruct<T>, {0x130, 32, 0, 0})
 };
 
 /// Struct /Script/XpEverywhereUI.XpEverywhereNotificationWidgetClass
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FXpEverywhereNotificationWidgetClass : public MDKStruct
+class FXpEverywhereNotificationWidgetClass : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

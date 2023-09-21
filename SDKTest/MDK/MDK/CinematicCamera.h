@@ -56,7 +56,7 @@ class ACineCameraActor : public ACameraActor
 	static inline constexpr uint64_t __MDKClassSize = 2576;
 
 public:
-	SMember(FCameraLookatTrackingSettings)             LookatTrackingSettings                                      OFFSET(get<T>, {0x9A0, 96, 0, 0})
+	SMember(FCameraLookatTrackingSettings)             LookatTrackingSettings                                      OFFSET(getStruct<T>, {0x9A0, 96, 0, 0})
 
 
 	/// Functions
@@ -72,11 +72,11 @@ class UCineCameraComponent : public UCameraComponent
 	static inline constexpr uint64_t __MDKClassSize = 2880;
 
 public:
-	SMember(FCameraFilmbackSettings)                   FilmbackSettings                                            OFFSET(get<T>, {0xA30, 12, 0, 0})
-	SMember(FCameraFilmbackSettings)                   Filmback                                                    OFFSET(get<T>, {0xA3C, 12, 0, 0})
-	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(get<T>, {0xA48, 28, 0, 0})
-	SMember(FCameraFocusSettings)                      FocusSettings                                               OFFSET(get<T>, {0xA68, 88, 0, 0})
-	SMember(FPlateCropSettings)                        CropSettings                                                OFFSET(get<T>, {0xAC0, 4, 0, 0})
+	SMember(FCameraFilmbackSettings)                   FilmbackSettings                                            OFFSET(getStruct<T>, {0xA30, 12, 0, 0})
+	SMember(FCameraFilmbackSettings)                   Filmback                                                    OFFSET(getStruct<T>, {0xA3C, 12, 0, 0})
+	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(getStruct<T>, {0xA48, 28, 0, 0})
+	SMember(FCameraFocusSettings)                      FocusSettings                                               OFFSET(getStruct<T>, {0xA68, 88, 0, 0})
+	SMember(FPlateCropSettings)                        CropSettings                                                OFFSET(getStruct<T>, {0xAC0, 4, 0, 0})
 	DMember(float)                                     CurrentFocalLength                                          OFFSET(get<float>, {0xAC4, 4, 0, 0})
 	DMember(float)                                     CurrentAperture                                             OFFSET(get<float>, {0xAC8, 4, 0, 0})
 	DMember(float)                                     CurrentFocusDistance                                        OFFSET(get<float>, {0xACC, 4, 0, 0})
@@ -84,9 +84,9 @@ public:
 	DMember(float)                                     CustomNearClippingPlane                                     OFFSET(get<float>, {0xAD4, 4, 0, 0})
 	CMember(TArray<FNamedFilmbackPreset>)              FilmbackPresets                                             OFFSET(get<T>, {0xAE0, 16, 0, 0})
 	CMember(TArray<FNamedLensPreset>)                  LensPresets                                                 OFFSET(get<T>, {0xAF0, 16, 0, 0})
-	SMember(FString)                                   DefaultFilmbackPresetName                                   OFFSET(get<T>, {0xB00, 16, 0, 0})
-	SMember(FString)                                   DefaultFilmbackPreset                                       OFFSET(get<T>, {0xB10, 16, 0, 0})
-	SMember(FString)                                   DefaultLensPresetName                                       OFFSET(get<T>, {0xB20, 16, 0, 0})
+	SMember(FString)                                   DefaultFilmbackPresetName                                   OFFSET(getStruct<T>, {0xB00, 16, 0, 0})
+	SMember(FString)                                   DefaultFilmbackPreset                                       OFFSET(getStruct<T>, {0xB10, 16, 0, 0})
+	SMember(FString)                                   DefaultLensPresetName                                       OFFSET(getStruct<T>, {0xB20, 16, 0, 0})
 	DMember(float)                                     DefaultLensFocalLength                                      OFFSET(get<float>, {0xB30, 4, 0, 0})
 	DMember(float)                                     DefaultLensFStop                                            OFFSET(get<float>, {0xB34, 4, 0, 0})
 
@@ -138,13 +138,13 @@ class UCineCameraSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 168;
 
 public:
-	SMember(FString)                                   DefaultLensPresetName                                       OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   DefaultLensPresetName                                       OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 	DMember(float)                                     DefaultLensFocalLength                                      OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(float)                                     DefaultLensFStop                                            OFFSET(get<float>, {0x44, 4, 0, 0})
 	CMember(TArray<FNamedLensPreset>)                  LensPresets                                                 OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FString)                                   DefaultFilmbackPreset                                       OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FString)                                   DefaultFilmbackPreset                                       OFFSET(getStruct<T>, {0x58, 16, 0, 0})
 	CMember(TArray<FNamedFilmbackPreset>)              FilmbackPresets                                             OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FString)                                   DefaultCropPresetName                                       OFFSET(get<T>, {0x78, 16, 0, 0})
+	SMember(FString)                                   DefaultCropPresetName                                       OFFSET(getStruct<T>, {0x78, 16, 0, 0})
 	CMember(TArray<FNamedPlateCropPreset>)             CropPresets                                                 OFFSET(get<T>, {0x88, 16, 0, 0})
 
 
@@ -183,15 +183,16 @@ public:
 
 /// Struct /Script/CinematicCamera.CameraFocusSettings
 /// Size: 0x0058 (0x000000 - 0x000058)
-class FCameraFocusSettings : public MDKStruct
+class FCameraFocusSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
 	CMember(ECameraFocusMethod)                        FocusMethod                                                 OFFSET(get<T>, {0x0, 1, 0, 0})
 	DMember(float)                                     ManualFocusDistance                                         OFFSET(get<float>, {0x4, 4, 0, 0})
-	SMember(FCameraTrackingFocusSettings)              TrackingFocusSettings                                       OFFSET(get<T>, {0x8, 64, 0, 0})
+	SMember(FCameraTrackingFocusSettings)              TrackingFocusSettings                                       OFFSET(getStruct<T>, {0x8, 64, 0, 0})
 	DMember(bool)                                      bSmoothFocusChanges                                         OFFSET(get<bool>, {0x48, 1, 1, 0})
 	DMember(float)                                     FocusSmoothingInterpSpeed                                   OFFSET(get<float>, {0x4C, 4, 0, 0})
 	DMember(float)                                     FocusOffset                                                 OFFSET(get<float>, {0x50, 4, 0, 0})
@@ -199,21 +200,23 @@ public:
 
 /// Struct /Script/CinematicCamera.CameraTrackingFocusSettings
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FCameraTrackingFocusSettings : public MDKStruct
+class FCameraTrackingFocusSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 
 public:
 	CMember(TWeakObjectPtr<AActor*>)                   ActorToTrack                                                OFFSET(get<T>, {0x0, 32, 0, 0})
-	SMember(FVector)                                   RelativeOffset                                              OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector)                                   RelativeOffset                                              OFFSET(getStruct<T>, {0x20, 24, 0, 0})
 	DMember(bool)                                      bDrawDebugTrackingFocusPoint                                OFFSET(get<bool>, {0x38, 1, 1, 0})
 };
 
 /// Struct /Script/CinematicCamera.CameraLensSettings
 /// Size: 0x001C (0x000000 - 0x00001C)
-class FCameraLensSettings : public MDKStruct
+class FCameraLensSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 28;
 
@@ -229,8 +232,9 @@ public:
 
 /// Struct /Script/CinematicCamera.CameraFilmbackSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FCameraFilmbackSettings : public MDKStruct
+class FCameraFilmbackSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -242,8 +246,9 @@ public:
 
 /// Struct /Script/CinematicCamera.CameraLookatTrackingSettings
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FCameraLookatTrackingSettings : public MDKStruct
+class FCameraLookatTrackingSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -252,38 +257,41 @@ public:
 	DMember(bool)                                      bDrawDebugLookAtTrackingPosition                            OFFSET(get<bool>, {0x0, 1, 1, 1})
 	DMember(float)                                     LookAtTrackingInterpSpeed                                   OFFSET(get<float>, {0x4, 4, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   ActorToTrack                                                OFFSET(get<T>, {0x20, 32, 0, 0})
-	SMember(FVector)                                   RelativeOffset                                              OFFSET(get<T>, {0x40, 24, 0, 0})
+	SMember(FVector)                                   RelativeOffset                                              OFFSET(getStruct<T>, {0x40, 24, 0, 0})
 	DMember(bool)                                      bAllowRoll                                                  OFFSET(get<bool>, {0x58, 1, 1, 0})
 };
 
 /// Struct /Script/CinematicCamera.NamedFilmbackPreset
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FNamedFilmbackPreset : public MDKStruct
+class FNamedFilmbackPreset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FCameraFilmbackSettings)                   FilmbackSettings                                            OFFSET(get<T>, {0x10, 12, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FCameraFilmbackSettings)                   FilmbackSettings                                            OFFSET(getStruct<T>, {0x10, 12, 0, 0})
 };
 
 /// Struct /Script/CinematicCamera.NamedLensPreset
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FNamedLensPreset : public MDKStruct
+class FNamedLensPreset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(get<T>, {0x10, 28, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FCameraLensSettings)                       LensSettings                                                OFFSET(getStruct<T>, {0x10, 28, 0, 0})
 };
 
 /// Struct /Script/CinematicCamera.PlateCropSettings
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FPlateCropSettings : public MDKStruct
+class FPlateCropSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -293,14 +301,15 @@ public:
 
 /// Struct /Script/CinematicCamera.NamedPlateCropPreset
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FNamedPlateCropPreset : public MDKStruct
+class FNamedPlateCropPreset : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FPlateCropSettings)                        CropSettings                                                OFFSET(get<T>, {0x10, 4, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FPlateCropSettings)                        CropSettings                                                OFFSET(getStruct<T>, {0x10, 4, 0, 0})
 };
 
 /// Enum /Script/CinematicCamera.ECameraFocusMethod

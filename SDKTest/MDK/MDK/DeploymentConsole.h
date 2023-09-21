@@ -18,14 +18,14 @@ class UDeploymentConsoleComponent : public UActorComponent
 
 public:
 	CMember(TArray<FDeploymentConsoleAircraftData>)    Aircrafts                                                   OFFSET(get<T>, {0xC8, 16, 0, 0})
-	SMember(FScalableFloat)                            RadiusPercentForRespawnMin                                  OFFSET(get<T>, {0xD8, 40, 0, 0})
-	SMember(FScalableFloat)                            RadiusPercentForRespawnMax                                  OFFSET(get<T>, {0x100, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxRespawnRadius                                            OFFSET(get<T>, {0x128, 40, 0, 0})
-	SMember(FScalableFloat)                            TeamMemberSpread                                            OFFSET(get<T>, {0x150, 40, 0, 0})
-	SMember(FScalableFloat)                            TraceForGroundStart                                         OFFSET(get<T>, {0x178, 40, 0, 0})
-	SMember(FScalableFloat)                            TraceForGroundEnd                                           OFFSET(get<T>, {0x1A0, 40, 0, 0})
-	SMember(FScalableFloat)                            MinHeightFromGround                                         OFFSET(get<T>, {0x1C8, 40, 0, 0})
-	SMember(FScalableFloat)                            MinHeightFromZero                                           OFFSET(get<T>, {0x1F0, 40, 0, 0})
+	SMember(FScalableFloat)                            RadiusPercentForRespawnMin                                  OFFSET(getStruct<T>, {0xD8, 40, 0, 0})
+	SMember(FScalableFloat)                            RadiusPercentForRespawnMax                                  OFFSET(getStruct<T>, {0x100, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxRespawnRadius                                            OFFSET(getStruct<T>, {0x128, 40, 0, 0})
+	SMember(FScalableFloat)                            TeamMemberSpread                                            OFFSET(getStruct<T>, {0x150, 40, 0, 0})
+	SMember(FScalableFloat)                            TraceForGroundStart                                         OFFSET(getStruct<T>, {0x178, 40, 0, 0})
+	SMember(FScalableFloat)                            TraceForGroundEnd                                           OFFSET(getStruct<T>, {0x1A0, 40, 0, 0})
+	SMember(FScalableFloat)                            MinHeightFromGround                                         OFFSET(getStruct<T>, {0x1C8, 40, 0, 0})
+	SMember(FScalableFloat)                            MinHeightFromZero                                           OFFSET(getStruct<T>, {0x1F0, 40, 0, 0})
 	CMember(TArray<FVector2D>)                         SpawnPoints                                                 OFFSET(get<T>, {0x218, 16, 0, 0})
 	CMember(TArray<FDeploymentConsoleTeamData>)        TeamSpawnData                                               OFFSET(get<T>, {0x228, 16, 0, 0})
 
@@ -87,8 +87,9 @@ public:
 
 /// Struct /Script/DeploymentConsole.DeploymentConsoleAircraftData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FDeploymentConsoleAircraftData : public MDKStruct
+class FDeploymentConsoleAircraftData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -99,8 +100,9 @@ public:
 
 /// Struct /Script/DeploymentConsole.DeploymentConsoleTeamData
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FDeploymentConsoleTeamData : public MDKStruct
+class FDeploymentConsoleTeamData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

@@ -19,9 +19,9 @@ public:
 	DMember(float)                                     OscillationDuration                                         OFFSET(get<float>, {0xD8, 4, 0, 0})
 	DMember(float)                                     OscillationBlendInTime                                      OFFSET(get<float>, {0xDC, 4, 0, 0})
 	DMember(float)                                     OscillationBlendOutTime                                     OFFSET(get<float>, {0xE0, 4, 0, 0})
-	SMember(FROscillator)                              RotOscillation                                              OFFSET(get<T>, {0xE4, 36, 0, 0})
-	SMember(FVOscillator)                              LocOscillation                                              OFFSET(get<T>, {0x108, 36, 0, 0})
-	SMember(FFOscillator)                              FOVOscillation                                              OFFSET(get<T>, {0x12C, 12, 0, 0})
+	SMember(FROscillator)                              RotOscillation                                              OFFSET(getStruct<T>, {0xE4, 36, 0, 0})
+	SMember(FVOscillator)                              LocOscillation                                              OFFSET(getStruct<T>, {0x108, 36, 0, 0})
+	SMember(FFOscillator)                              FOVOscillation                                              OFFSET(getStruct<T>, {0x12C, 12, 0, 0})
 	DMember(float)                                     AnimPlayRate                                                OFFSET(get<float>, {0x138, 4, 0, 0})
 	DMember(float)                                     AnimScale                                                   OFFSET(get<float>, {0x13C, 4, 0, 0})
 	DMember(float)                                     AnimBlendInTime                                             OFFSET(get<float>, {0x140, 4, 0, 0})
@@ -163,15 +163,15 @@ class UPerlinNoiseCameraShakePattern : public USimpleCameraShakePattern
 public:
 	DMember(float)                                     LocationAmplitudeMultiplier                                 OFFSET(get<float>, {0x58, 4, 0, 0})
 	DMember(float)                                     LocationFrequencyMultiplier                                 OFFSET(get<float>, {0x5C, 4, 0, 0})
-	SMember(FPerlinNoiseShaker)                        X                                                           OFFSET(get<T>, {0x60, 8, 0, 0})
-	SMember(FPerlinNoiseShaker)                        Y                                                           OFFSET(get<T>, {0x68, 8, 0, 0})
-	SMember(FPerlinNoiseShaker)                        Z                                                           OFFSET(get<T>, {0x70, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        X                                                           OFFSET(getStruct<T>, {0x60, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        Y                                                           OFFSET(getStruct<T>, {0x68, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        Z                                                           OFFSET(getStruct<T>, {0x70, 8, 0, 0})
 	DMember(float)                                     RotationAmplitudeMultiplier                                 OFFSET(get<float>, {0x78, 4, 0, 0})
 	DMember(float)                                     RotationFrequencyMultiplier                                 OFFSET(get<float>, {0x7C, 4, 0, 0})
-	SMember(FPerlinNoiseShaker)                        Pitch                                                       OFFSET(get<T>, {0x80, 8, 0, 0})
-	SMember(FPerlinNoiseShaker)                        Yaw                                                         OFFSET(get<T>, {0x88, 8, 0, 0})
-	SMember(FPerlinNoiseShaker)                        Roll                                                        OFFSET(get<T>, {0x90, 8, 0, 0})
-	SMember(FPerlinNoiseShaker)                        FOV                                                         OFFSET(get<T>, {0x98, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        Pitch                                                       OFFSET(getStruct<T>, {0x80, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        Yaw                                                         OFFSET(getStruct<T>, {0x88, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        Roll                                                        OFFSET(getStruct<T>, {0x90, 8, 0, 0})
+	SMember(FPerlinNoiseShaker)                        FOV                                                         OFFSET(getStruct<T>, {0x98, 8, 0, 0})
 };
 
 /// Class /Script/GameplayCameras.TestCameraShake
@@ -192,8 +192,8 @@ class UConstantCameraShakePattern : public USimpleCameraShakePattern
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FVector)                                   LocationOffset                                              OFFSET(get<T>, {0x58, 24, 0, 0})
-	SMember(FRotator)                                  RotationOffset                                              OFFSET(get<T>, {0x70, 24, 0, 0})
+	SMember(FVector)                                   LocationOffset                                              OFFSET(getStruct<T>, {0x58, 24, 0, 0})
+	SMember(FRotator)                                  RotationOffset                                              OFFSET(getStruct<T>, {0x70, 24, 0, 0})
 };
 
 /// Class /Script/GameplayCameras.WaveOscillatorCameraShakePattern
@@ -206,21 +206,22 @@ class UWaveOscillatorCameraShakePattern : public USimpleCameraShakePattern
 public:
 	DMember(float)                                     LocationAmplitudeMultiplier                                 OFFSET(get<float>, {0x58, 4, 0, 0})
 	DMember(float)                                     LocationFrequencyMultiplier                                 OFFSET(get<float>, {0x5C, 4, 0, 0})
-	SMember(FWaveOscillator)                           X                                                           OFFSET(get<T>, {0x60, 12, 0, 0})
-	SMember(FWaveOscillator)                           Y                                                           OFFSET(get<T>, {0x6C, 12, 0, 0})
-	SMember(FWaveOscillator)                           Z                                                           OFFSET(get<T>, {0x78, 12, 0, 0})
+	SMember(FWaveOscillator)                           X                                                           OFFSET(getStruct<T>, {0x60, 12, 0, 0})
+	SMember(FWaveOscillator)                           Y                                                           OFFSET(getStruct<T>, {0x6C, 12, 0, 0})
+	SMember(FWaveOscillator)                           Z                                                           OFFSET(getStruct<T>, {0x78, 12, 0, 0})
 	DMember(float)                                     RotationAmplitudeMultiplier                                 OFFSET(get<float>, {0x84, 4, 0, 0})
 	DMember(float)                                     RotationFrequencyMultiplier                                 OFFSET(get<float>, {0x88, 4, 0, 0})
-	SMember(FWaveOscillator)                           Pitch                                                       OFFSET(get<T>, {0x8C, 12, 0, 0})
-	SMember(FWaveOscillator)                           Yaw                                                         OFFSET(get<T>, {0x98, 12, 0, 0})
-	SMember(FWaveOscillator)                           Roll                                                        OFFSET(get<T>, {0xA4, 12, 0, 0})
-	SMember(FWaveOscillator)                           FOV                                                         OFFSET(get<T>, {0xB0, 12, 0, 0})
+	SMember(FWaveOscillator)                           Pitch                                                       OFFSET(getStruct<T>, {0x8C, 12, 0, 0})
+	SMember(FWaveOscillator)                           Yaw                                                         OFFSET(getStruct<T>, {0x98, 12, 0, 0})
+	SMember(FWaveOscillator)                           Roll                                                        OFFSET(getStruct<T>, {0xA4, 12, 0, 0})
+	SMember(FWaveOscillator)                           FOV                                                         OFFSET(getStruct<T>, {0xB0, 12, 0, 0})
 };
 
 /// Struct /Script/GameplayCameras.FOscillator
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FFOscillator : public MDKStruct
+class FFOscillator : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -233,34 +234,37 @@ public:
 
 /// Struct /Script/GameplayCameras.ROscillator
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FROscillator : public MDKStruct
+class FROscillator : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
 public:
-	SMember(FFOscillator)                              Pitch                                                       OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FFOscillator)                              Yaw                                                         OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FFOscillator)                              Roll                                                        OFFSET(get<T>, {0x18, 12, 0, 0})
+	SMember(FFOscillator)                              Pitch                                                       OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FFOscillator)                              Yaw                                                         OFFSET(getStruct<T>, {0xC, 12, 0, 0})
+	SMember(FFOscillator)                              Roll                                                        OFFSET(getStruct<T>, {0x18, 12, 0, 0})
 };
 
 /// Struct /Script/GameplayCameras.VOscillator
 /// Size: 0x0024 (0x000000 - 0x000024)
-class FVOscillator : public MDKStruct
+class FVOscillator : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 36;
 
 public:
-	SMember(FFOscillator)                              X                                                           OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FFOscillator)                              Y                                                           OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FFOscillator)                              Z                                                           OFFSET(get<T>, {0x18, 12, 0, 0})
+	SMember(FFOscillator)                              X                                                           OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FFOscillator)                              Y                                                           OFFSET(getStruct<T>, {0xC, 12, 0, 0})
+	SMember(FFOscillator)                              Z                                                           OFFSET(getStruct<T>, {0x18, 12, 0, 0})
 };
 
 /// Struct /Script/GameplayCameras.CameraAnimationParams
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FCameraAnimationParams : public MDKStruct
+class FCameraAnimationParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -276,13 +280,14 @@ public:
 	DMember(bool)                                      bRandomStartTime                                            OFFSET(get<bool>, {0x20, 1, 0, 0})
 	DMember(float)                                     DurationOverride                                            OFFSET(get<float>, {0x24, 4, 0, 0})
 	CMember(ECameraAnimationPlaySpace)                 Playspace                                                   OFFSET(get<T>, {0x28, 1, 0, 0})
-	SMember(FRotator)                                  UserPlaySpaceRot                                            OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FRotator)                                  UserPlaySpaceRot                                            OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 };
 
 /// Struct /Script/GameplayCameras.CameraAnimationHandle
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FCameraAnimationHandle : public MDKStruct
+class FCameraAnimationHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -291,15 +296,16 @@ public:
 
 /// Struct /Script/GameplayCameras.ActiveCameraAnimationInfo
 /// Size: 0x0078 (0x000000 - 0x000078)
-class FActiveCameraAnimationInfo : public MDKStruct
+class FActiveCameraAnimationInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
 	CMember(UCameraAnimationSequence*)                 Sequence                                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FCameraAnimationParams)                    Params                                                      OFFSET(get<T>, {0x8, 72, 0, 0})
-	SMember(FCameraAnimationHandle)                    Handle                                                      OFFSET(get<T>, {0x50, 4, 0, 0})
+	SMember(FCameraAnimationParams)                    Params                                                      OFFSET(getStruct<T>, {0x8, 72, 0, 0})
+	SMember(FCameraAnimationHandle)                    Handle                                                      OFFSET(getStruct<T>, {0x50, 4, 0, 0})
 	CMember(UCameraAnimationSequencePlayer*)           Player                                                      OFFSET(get<T>, {0x58, 8, 0, 0})
 	CMember(UCameraAnimationSequenceCameraStandIn*)    CameraStandIn                                               OFFSET(get<T>, {0x60, 8, 0, 0})
 	DMember(float)                                     EaseInCurrentTime                                           OFFSET(get<float>, {0x68, 4, 0, 0})
@@ -310,8 +316,9 @@ public:
 
 /// Struct /Script/GameplayCameras.PerlinNoiseShaker
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FPerlinNoiseShaker : public MDKStruct
+class FPerlinNoiseShaker : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -322,8 +329,9 @@ public:
 
 /// Struct /Script/GameplayCameras.WaveOscillator
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FWaveOscillator : public MDKStruct
+class FWaveOscillator : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

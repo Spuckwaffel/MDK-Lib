@@ -16,15 +16,15 @@ class ULatencyGraph : public UUserWidget
 	static inline constexpr uint64_t __MDKClassSize = 752;
 
 public:
-	SMember(FColor)                                    TotalLatencyLineColor                                       OFFSET(get<T>, {0x2A8, 4, 0, 0})
-	SMember(FColor)                                    GameLatencyLineColor                                        OFFSET(get<T>, {0x2AC, 4, 0, 0})
-	SMember(FColor)                                    RenderLatencyLineColor                                      OFFSET(get<T>, {0x2B0, 4, 0, 0})
-	SMember(FColor)                                    DriverLatencyLineColor                                      OFFSET(get<T>, {0x2B4, 4, 0, 0})
-	SMember(FColor)                                    OSWorkQueueLatencyLineColor                                 OFFSET(get<T>, {0x2B8, 4, 0, 0})
-	SMember(FColor)                                    GPURenderLatencyLineColor                                   OFFSET(get<T>, {0x2BC, 4, 0, 0})
-	SMember(FColor)                                    BackgroundColor                                             OFFSET(get<T>, {0x2C0, 4, 0, 0})
+	SMember(FColor)                                    TotalLatencyLineColor                                       OFFSET(getStruct<T>, {0x2A8, 4, 0, 0})
+	SMember(FColor)                                    GameLatencyLineColor                                        OFFSET(getStruct<T>, {0x2AC, 4, 0, 0})
+	SMember(FColor)                                    RenderLatencyLineColor                                      OFFSET(getStruct<T>, {0x2B0, 4, 0, 0})
+	SMember(FColor)                                    DriverLatencyLineColor                                      OFFSET(getStruct<T>, {0x2B4, 4, 0, 0})
+	SMember(FColor)                                    OSWorkQueueLatencyLineColor                                 OFFSET(getStruct<T>, {0x2B8, 4, 0, 0})
+	SMember(FColor)                                    GPURenderLatencyLineColor                                   OFFSET(getStruct<T>, {0x2BC, 4, 0, 0})
+	SMember(FColor)                                    BackgroundColor                                             OFFSET(getStruct<T>, {0x2C0, 4, 0, 0})
 	DMember(float)                                     MaxLatencyToGraph                                           OFFSET(get<float>, {0x2C4, 4, 0, 0})
-	SMember(FVector2D)                                 DesiredSize                                                 OFFSET(get<T>, {0x2C8, 16, 0, 0})
+	SMember(FVector2D)                                 DesiredSize                                                 OFFSET(getStruct<T>, {0x2C8, 16, 0, 0})
 };
 
 /// Class /Script/LatencyUI.LatencyWidget

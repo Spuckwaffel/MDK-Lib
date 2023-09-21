@@ -35,8 +35,8 @@ public:
 	CMember(UCommonTextBlock*)                         Text_VariantName                                            OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   SprayCustomizerClass                                        OFFSET(get<T>, {0x3B8, 32, 0, 0})
 	CMember(UFortVariantSprayCustomizerConfig*)        SprayCustomizerConfig                                       OFFSET(get<T>, {0x3D8, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       ClearAllSlotsInputAction                                    OFFSET(get<T>, {0x3E0, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       RandomizeSpraysInputAction                                  OFFSET(get<T>, {0x3F0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ClearAllSlotsInputAction                                    OFFSET(getStruct<T>, {0x3E0, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       RandomizeSpraysInputAction                                  OFFSET(getStruct<T>, {0x3F0, 16, 0, 0})
 	CMember(TWeakObjectPtr<UAthenaCosmeticItemDefinition*>) ItemDefinition                                         OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(TArray<FFortVariantRedirectorTileLoadedEmoteToRandomize>) LoadedEmotesToRandomize                      OFFSET(get<T>, {0x408, 16, 0, 0})
 
@@ -86,9 +86,9 @@ public:
 	CMember(UFortVariantSprayCustomizerSetting*)       Setting_Saturation                                          OFFSET(get<T>, {0x778, 8, 0, 0})
 	CMember(UFortVariantSprayCustomizerSetting*)       Setting_Wear                                                OFFSET(get<T>, {0x780, 8, 0, 0})
 	CMember(UFortVariantSprayCustomizerSetting*)       Setting_Scale                                               OFFSET(get<T>, {0x788, 8, 0, 0})
-	SMember(FDataTableRowHandle)                       TabLeftAction                                               OFFSET(get<T>, {0x790, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       TabRightAction                                              OFFSET(get<T>, {0x7A0, 16, 0, 0})
-	SMember(FGameplayTag)                              ItemShopPreviewSceneChangerTag                              OFFSET(get<T>, {0x7B0, 4, 0, 0})
+	SMember(FDataTableRowHandle)                       TabLeftAction                                               OFFSET(getStruct<T>, {0x790, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       TabRightAction                                              OFFSET(getStruct<T>, {0x7A0, 16, 0, 0})
+	SMember(FGameplayTag)                              ItemShopPreviewSceneChangerTag                              OFFSET(getStruct<T>, {0x7B0, 4, 0, 0})
 	CMember(UCommonButtonGroupLegacy*)                 TabButtonGroup                                              OFFSET(get<T>, {0x7B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UAthenaCosmeticItemDefinition*>) ItemDefinition                                         OFFSET(get<T>, {0x7C0, 8, 0, 0})
 	CMember(UFortCustomizableObjectSprayVariant*)      SprayVariant                                                OFFSET(get<T>, {0x7C8, 8, 0, 0})
@@ -124,19 +124,21 @@ public:
 
 /// Struct /Script/MeshCosmeticsUI.FortVariantSprayCustomizerChannelOptions
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FFortVariantSprayCustomizerChannelOptions : public MDKStruct
+class FFortVariantSprayCustomizerChannelOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
 public:
-	SMember(FRotator)                                  RotationOffset                                              OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FRotator)                                  RotationOffset                                              OFFSET(getStruct<T>, {0x0, 24, 0, 0})
 };
 
 /// Struct /Script/MeshCosmeticsUI.FortVariantSprayCustomizerCosmeticOptions
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FFortVariantSprayCustomizerCosmeticOptions : public MDKStruct
+class FFortVariantSprayCustomizerCosmeticOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -147,8 +149,9 @@ public:
 
 /// Struct /Script/MeshCosmeticsUI.FortVariantRedirectorTileLoadedEmoteToRandomize
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FFortVariantRedirectorTileLoadedEmoteToRandomize : public MDKStruct
+class FFortVariantRedirectorTileLoadedEmoteToRandomize : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 

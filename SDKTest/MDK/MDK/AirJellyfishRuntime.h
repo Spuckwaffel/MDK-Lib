@@ -19,6 +19,6 @@ class UFortAirJellyfishAnimInstance : public UFortAnimInstance
 public:
 	DMember(float)                                     RotatorLerpRate                                             OFFSET(get<float>, {0x538, 4, 0, 0})
 	DMember(float)                                     VelocityDirectionScalar                                     OFFSET(get<float>, {0x53C, 4, 0, 0})
-	SMember(FRotator)                                  RootRotation                                                OFFSET(get<T>, {0x540, 24, 0, 0})
+	SMember(FRotator)                                  RootRotation                                                OFFSET(getStruct<T>, {0x540, 24, 0, 0})
 };
 

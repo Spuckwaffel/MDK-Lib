@@ -8,8 +8,9 @@
 
 /// Struct /Script/EpicMediaOptions.EpicMediaOptions
 /// Size: 0x0108 (0x000000 - 0x000108)
-class FEpicMediaOptions : public MDKStruct
+class FEpicMediaOptions : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 264;
 

@@ -20,17 +20,18 @@ public:
 
 /// Struct /Script/FortOvershieldHelpers.FortOvershieldDelegateContainer
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FFortOvershieldDelegateContainer : public MDKStruct
+class FFortOvershieldDelegateContainer : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FDelegateProperty)                         OnOvershieldChanged                                         OFFSET(get<T>, {0x0, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnShieldedDamage                                            OFFSET(get<T>, {0xC, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnOvershieldedDamage                                        OFFSET(get<T>, {0x18, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnShieldDestroyed                                           OFFSET(get<T>, {0x24, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnOvershieldDestroyed                                       OFFSET(get<T>, {0x30, 12, 0, 0})
-	SMember(FDelegateProperty)                         OnDamageReceived                                            OFFSET(get<T>, {0x3C, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnOvershieldChanged                                         OFFSET(getStruct<T>, {0x0, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnShieldedDamage                                            OFFSET(getStruct<T>, {0xC, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnOvershieldedDamage                                        OFFSET(getStruct<T>, {0x18, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnShieldDestroyed                                           OFFSET(getStruct<T>, {0x24, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnOvershieldDestroyed                                       OFFSET(getStruct<T>, {0x30, 12, 0, 0})
+	SMember(FDelegateProperty)                         OnDamageReceived                                            OFFSET(getStruct<T>, {0x3C, 12, 0, 0})
 };
 

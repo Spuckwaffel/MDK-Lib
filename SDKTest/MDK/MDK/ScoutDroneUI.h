@@ -20,7 +20,7 @@ class UFortMobileActionButtonBehaviorExtension_ScoutDroneUse : public UFortMobil
 	static inline constexpr uint64_t __MDKClassSize = 160;
 
 public:
-	SMember(FGameplayTagContainer)                     ContextTagToCheck                                           OFFSET(get<T>, {0x80, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ContextTagToCheck                                           OFFSET(getStruct<T>, {0x80, 32, 0, 0})
 };
 
 /// Class /Script/ScoutDroneUI.FortMobileButtonBehaviorComponent_ScoutDronePickupItems
@@ -31,7 +31,7 @@ class UFortMobileButtonBehaviorComponent_ScoutDronePickupItems : public UFortMob
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-	SMember(FGameplayTagContainer)                     HoldingItemsTags                                            OFFSET(get<T>, {0x48, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     HoldingItemsTags                                            OFFSET(getStruct<T>, {0x48, 32, 0, 0})
 	CMember(TWeakObjectPtr<UFortControllerComponent_Interaction*>) InteractionComponent                            OFFSET(get<T>, {0x68, 8, 0, 0})
 };
 
@@ -45,7 +45,7 @@ class UDronePickUpIndicatorComponent : public UGameFrameworkComponent
 public:
 	CMember(UClass*)                                   ItemIndicatorType                                           OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(UClass*)                                   DbnoIndicatorType                                           OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(get<T>, {0xB0, 136, 0, 0})
+	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(getStruct<T>, {0xB0, 136, 0, 0})
 
 
 	/// Functions
@@ -65,22 +65,22 @@ class UScoutDroneHUD : public UUserWidget
 public:
 	DMember(float)                                     TimeToConfirmTargetCache                                    OFFSET(get<float>, {0x2A8, 4, 0, 0})
 	DMember(float)                                     InitialHealth                                               OFFSET(get<float>, {0x2AC, 4, 0, 0})
-	SMember(FScalableFloat)                            WarningRange                                                OFFSET(get<T>, {0x2B0, 40, 0, 0})
-	SMember(FScalableFloat)                            SignalLossRange                                             OFFSET(get<T>, {0x2D8, 40, 0, 0})
-	SMember(FScalableFloat)                            UpdateSignalInterval                                        OFFSET(get<T>, {0x300, 40, 0, 0})
-	SMember(FGameplayTag)                              MarkAbilityTag                                              OFFSET(get<T>, {0x328, 4, 0, 0})
-	SMember(FGameplayTag)                              DismissAbilityTag                                           OFFSET(get<T>, {0x32C, 4, 0, 0})
-	SMember(FGameplayTag)                              InteractAbilityTag                                          OFFSET(get<T>, {0x330, 4, 0, 0})
-	SMember(FGameplayTag)                              PickUpAbilityTag                                            OFFSET(get<T>, {0x334, 4, 0, 0})
-	SMember(FGameplayTag)                              PickUpTargetsChangedTag                                     OFFSET(get<T>, {0x338, 4, 0, 0})
-	SMember(FGameplayTag)                              SpeedBoostAbilityTag                                        OFFSET(get<T>, {0x33C, 4, 0, 0})
+	SMember(FScalableFloat)                            WarningRange                                                OFFSET(getStruct<T>, {0x2B0, 40, 0, 0})
+	SMember(FScalableFloat)                            SignalLossRange                                             OFFSET(getStruct<T>, {0x2D8, 40, 0, 0})
+	SMember(FScalableFloat)                            UpdateSignalInterval                                        OFFSET(getStruct<T>, {0x300, 40, 0, 0})
+	SMember(FGameplayTag)                              MarkAbilityTag                                              OFFSET(getStruct<T>, {0x328, 4, 0, 0})
+	SMember(FGameplayTag)                              DismissAbilityTag                                           OFFSET(getStruct<T>, {0x32C, 4, 0, 0})
+	SMember(FGameplayTag)                              InteractAbilityTag                                          OFFSET(getStruct<T>, {0x330, 4, 0, 0})
+	SMember(FGameplayTag)                              PickUpAbilityTag                                            OFFSET(getStruct<T>, {0x334, 4, 0, 0})
+	SMember(FGameplayTag)                              PickUpTargetsChangedTag                                     OFFSET(getStruct<T>, {0x338, 4, 0, 0})
+	SMember(FGameplayTag)                              SpeedBoostAbilityTag                                        OFFSET(getStruct<T>, {0x33C, 4, 0, 0})
 	CMember(UOverlay*)                                 Overlay_Health                                              OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_EnergyLevel                                         OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_Reticle                                             OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_TetheringIndicator                                  OFFSET(get<T>, {0x358, 8, 0, 0})
 	DMember(float)                                     MaxHealthCache                                              OFFSET(get<float>, {0x360, 4, 0, 0})
 	DMember(float)                                     MaxEnergyCache                                              OFFSET(get<float>, {0x364, 4, 0, 0})
-	SMember(FTimerHandle)                              SignalDataTimerHandle                                       OFFSET(get<T>, {0x3B0, 8, 0, 0})
+	SMember(FTimerHandle)                              SignalDataTimerHandle                                       OFFSET(getStruct<T>, {0x3B0, 8, 0, 0})
 	CMember(TArray<FScoutDroneWidgetIdentifier>)       HUDIdentifiers                                              OFFSET(get<T>, {0x3B8, 16, 0, 0})
 
 
@@ -143,7 +143,7 @@ class AScoutDroneUIDirector : public ADynamicUIDirectorBase
 	static inline constexpr uint64_t __MDKClassSize = 720;
 
 public:
-	SMember(FGameplayTagContainer)                     HUDTagsToHide                                               OFFSET(get<T>, {0x2B0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     HUDTagsToHide                                               OFFSET(getStruct<T>, {0x2B0, 32, 0, 0})
 
 
 	/// Functions
@@ -155,13 +155,14 @@ public:
 
 /// Struct /Script/ScoutDroneUI.ScoutDroneWidgetIdentifier
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FScoutDroneWidgetIdentifier : public MDKStruct
+class FScoutDroneWidgetIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(get<T>, {0x0, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     Tags                                                        OFFSET(getStruct<T>, {0x0, 32, 0, 0})
 	CMember(TWeakObjectPtr<UWidget*>)                  WeakWdiget                                                  OFFSET(get<T>, {0x20, 8, 0, 0})
 };
 

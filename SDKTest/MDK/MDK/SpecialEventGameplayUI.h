@@ -19,7 +19,7 @@ class UFortGameplayCinematicHostWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 840;
 
 public:
-	SMember(FName)                                     IntroWidgetEntryName                                        OFFSET(get<T>, {0x310, 4, 0, 0})
+	SMember(FName)                                     IntroWidgetEntryName                                        OFFSET(getStruct<T>, {0x310, 4, 0, 0})
 	CMember(TArray<FCinematicWidgetData>)              WidgetEntries                                               OFFSET(get<T>, {0x318, 16, 0, 0})
 	CMember(UAthenaLoadingScreenItemDefinition*)       LoadingScreenDefinition                                     OFFSET(get<T>, {0x328, 8, 0, 0})
 };
@@ -87,7 +87,7 @@ class USpecialEventPlayerInfoWidget : public UFortHUDElementWidget
 	static inline constexpr uint64_t __MDKClassSize = 816;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnRepresentedPlayerStateChanged                             OFFSET(get<T>, {0x318, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnRepresentedPlayerStateChanged                             OFFSET(getStruct<T>, {0x318, 16, 0, 0})
 
 
 	/// Functions
@@ -107,13 +107,14 @@ public:
 
 /// Struct /Script/SpecialEventGameplayUI.CinematicWidgetData
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FCinematicWidgetData : public MDKStruct
+class FCinematicWidgetData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
 public:
-	SMember(FName)                                     WidgetEntryName                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     WidgetEntryName                                             OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	CMember(UClass*)                                   WidgetClass                                                 OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 

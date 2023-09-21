@@ -133,7 +133,7 @@ class UGameFeaturePluginStateMachine : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
-	SMember(FGameFeaturePluginStateMachineProperties)  StateProperties                                             OFFSET(get<T>, {0x30, 200, 0, 0})
+	SMember(FGameFeaturePluginStateMachineProperties)  StateProperties                                             OFFSET(getStruct<T>, {0x30, 200, 0, 0})
 };
 
 /// Class /Script/GameFeatures.GameFeaturesProjectPolicies
@@ -178,7 +178,7 @@ class UGameFeaturesSubsystemSettings : public UDeveloperSettings
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FSoftClassPath)                            GameFeaturesManagerClassName                                OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FSoftClassPath)                            GameFeaturesManagerClassName                                OFFSET(getStruct<T>, {0x30, 24, 0, 0})
 	CMember(TArray<FString>)                           EnabledPlugins                                              OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<FString>)                           DisabledPlugins                                             OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TArray<FString>)                           AdditionalPluginMetadataKeys                                OFFSET(get<T>, {0x68, 16, 0, 0})
@@ -186,8 +186,9 @@ public:
 
 /// Struct /Script/GameFeatures.GameFeatureComponentEntry
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FGameFeatureComponentEntry : public MDKStruct
+class FGameFeatureComponentEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
@@ -200,13 +201,14 @@ public:
 
 /// Struct /Script/GameFeatures.DataRegistrySourceToAdd
 /// Size: 0x0050 (0x000000 - 0x000050)
-class FDataRegistrySourceToAdd : public MDKStruct
+class FDataRegistrySourceToAdd : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FName)                                     RegistryToAddTo                                             OFFSET(get<T>, {0x0, 4, 0, 0})
+	SMember(FName)                                     RegistryToAddTo                                             OFFSET(getStruct<T>, {0x0, 4, 0, 0})
 	DMember(int32_t)                                   AssetPriority                                               OFFSET(get<int32_t>, {0x4, 4, 0, 0})
 	DMember(bool)                                      bClientSource                                               OFFSET(get<bool>, {0x8, 1, 1, 0})
 	DMember(bool)                                      bServerSource                                               OFFSET(get<bool>, {0x8, 1, 1, 1})
@@ -216,8 +218,9 @@ public:
 
 /// Struct /Script/GameFeatures.GameFeaturePluginStateMachineProperties
 /// Size: 0x00C8 (0x000000 - 0x0000C8)
-class FGameFeaturePluginStateMachineProperties : public MDKStruct
+class FGameFeaturePluginStateMachineProperties : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
@@ -227,8 +230,9 @@ public:
 
 /// Struct /Script/GameFeatures.GameFeaturePluginIdentifier
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FGameFeaturePluginIdentifier : public MDKStruct
+class FGameFeaturePluginIdentifier : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
@@ -237,8 +241,9 @@ public:
 
 /// Struct /Script/GameFeatures.InstallBundlePluginProtocolMetaData
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FInstallBundlePluginProtocolMetaData : public MDKStruct
+class FInstallBundlePluginProtocolMetaData : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

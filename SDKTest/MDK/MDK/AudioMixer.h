@@ -26,12 +26,12 @@ class UAudioDeviceNotificationSubsystem : public UEngineSubsystem
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-	SMember(FMulticastInlineDelegate)                  DefaultCaptureDeviceChanged                                 OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DefaultRenderDeviceChanged                                  OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DeviceAdded                                                 OFFSET(get<T>, {0x88, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DeviceRemoved                                               OFFSET(get<T>, {0xB0, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DeviceStateChanged                                          OFFSET(get<T>, {0xD8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DeviceSwitched                                              OFFSET(get<T>, {0x100, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DefaultCaptureDeviceChanged                                 OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DefaultRenderDeviceChanged                                  OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DeviceAdded                                                 OFFSET(getStruct<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DeviceRemoved                                               OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DeviceStateChanged                                          OFFSET(getStruct<T>, {0xD8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DeviceSwitched                                              OFFSET(getStruct<T>, {0x100, 16, 0, 0})
 };
 
 /// Class /Script/AudioMixer.AudioMixerBlueprintLibrary
@@ -71,10 +71,10 @@ public:
 	DMember(bool)                                      bEnableBaseSubmix                                           OFFSET(get<bool>, {0x2A4, 1, 1, 1})
 	DMember(bool)                                      bEnableSubmixSends                                          OFFSET(get<bool>, {0x2A4, 1, 1, 2})
 	CMember(USoundAttenuation*)                        AttenuationSettings                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FSoundAttenuationSettings)                 AttenuationOverrides                                        OFFSET(get<T>, {0x2B0, 976, 0, 0})
+	SMember(FSoundAttenuationSettings)                 AttenuationOverrides                                        OFFSET(getStruct<T>, {0x2B0, 976, 0, 0})
 	CMember(USoundConcurrency*)                        ConcurrencySettings                                         OFFSET(get<T>, {0x680, 8, 0, 0})
 	CMember(TSet<USoundConcurrency*>)                  ConcurrencySet                                              OFFSET(get<T>, {0x688, 80, 0, 0})
-	SMember(FSoundModulationDefaultRoutingSettings)    ModulationRouting                                           OFFSET(get<T>, {0x6D8, 360, 0, 0})
+	SMember(FSoundModulationDefaultRoutingSettings)    ModulationRouting                                           OFFSET(getStruct<T>, {0x6D8, 360, 0, 0})
 	CMember(USoundClass*)                              SoundClass                                                  OFFSET(get<T>, {0x840, 8, 0, 0})
 	CMember(USoundEffectSourcePresetChain*)            SourceEffectChain                                           OFFSET(get<T>, {0x848, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         SoundSubmix                                                 OFFSET(get<T>, {0x850, 8, 0, 0})
@@ -85,7 +85,7 @@ public:
 	DMember(bool)                                      bIsPreviewSound                                             OFFSET(get<bool>, {0x888, 1, 1, 1})
 	DMember(int32_t)                                   EnvelopeFollowerAttackTime                                  OFFSET(get<int32_t>, {0x88C, 4, 0, 0})
 	DMember(int32_t)                                   EnvelopeFollowerReleaseTime                                 OFFSET(get<int32_t>, {0x890, 4, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnAudioEnvelopeValue                                        OFFSET(get<T>, {0x898, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnAudioEnvelopeValue                                        OFFSET(getStruct<T>, {0x898, 16, 0, 0})
 	CMember(USynthSound*)                              Synth                                                       OFFSET(get<T>, {0x8C8, 8, 0, 0})
 	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0x8D0, 8, 0, 0})
 
@@ -135,7 +135,7 @@ class USubmixEffectDynamicsProcessorPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-	SMember(FSubmixEffectDynamicsProcessorSettings)    Settings                                                    OFFSET(get<T>, {0xF0, 96, 0, 0})
+	SMember(FSubmixEffectDynamicsProcessorSettings)    Settings                                                    OFFSET(getStruct<T>, {0xF0, 96, 0, 0})
 
 
 	/// Functions
@@ -157,7 +157,7 @@ class USubmixEffectSubmixEQPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FSubmixEffectSubmixEQSettings)             Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
+	SMember(FSubmixEffectSubmixEQSettings)             Settings                                                    OFFSET(getStruct<T>, {0xA0, 16, 0, 0})
 
 
 	/// Functions
@@ -173,7 +173,7 @@ class USubmixEffectReverbPreset : public USoundEffectSubmixPreset
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-	SMember(FSubmixEffectReverbSettings)               Settings                                                    OFFSET(get<T>, {0xD0, 64, 0, 0})
+	SMember(FSubmixEffectReverbSettings)               Settings                                                    OFFSET(getStruct<T>, {0xD0, 64, 0, 0})
 
 
 	/// Functions
@@ -215,14 +215,15 @@ public:
 
 /// Struct /Script/AudioMixer.AudioOutputDeviceInfo
 /// Size: 0x0048 (0x000000 - 0x000048)
-class FAudioOutputDeviceInfo : public MDKStruct
+class FAudioOutputDeviceInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   DeviceID                                                    OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   Name                                                        OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   DeviceID                                                    OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	DMember(int32_t)                                   NumChannels                                                 OFFSET(get<int32_t>, {0x20, 4, 0, 0})
 	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x24, 4, 0, 0})
 	CMember(EAudioMixerStreamDataFormatType)           Format                                                      OFFSET(get<T>, {0x28, 1, 0, 0})
@@ -233,21 +234,23 @@ public:
 
 /// Struct /Script/AudioMixer.SwapAudioOutputResult
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FSwapAudioOutputResult : public MDKStruct
+class FSwapAudioOutputResult : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
-	SMember(FString)                                   CurrentDeviceId                                             OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FString)                                   RequestedDeviceId                                           OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FString)                                   CurrentDeviceId                                             OFFSET(getStruct<T>, {0x0, 16, 0, 0})
+	SMember(FString)                                   RequestedDeviceId                                           OFFSET(getStruct<T>, {0x10, 16, 0, 0})
 	CMember(ESwapAudioOutputDeviceResultState)         Result                                                      OFFSET(get<T>, {0x20, 1, 0, 0})
 };
 
 /// Struct /Script/AudioMixer.SubmixEffectDynamicProcessorFilterSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FSubmixEffectDynamicProcessorFilterSettings : public MDKStruct
+class FSubmixEffectDynamicProcessorFilterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 
@@ -259,8 +262,9 @@ public:
 
 /// Struct /Script/AudioMixer.SubmixEffectDynamicsProcessorSettings
 /// Size: 0x0060 (0x000000 - 0x000060)
-class FSubmixEffectDynamicsProcessorSettings : public MDKStruct
+class FSubmixEffectDynamicsProcessorSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
@@ -284,14 +288,15 @@ public:
 	DMember(bool)                                      bKeyAudition                                                OFFSET(get<bool>, {0x38, 1, 1, 3})
 	DMember(float)                                     KeyGainDb                                                   OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     OutputGainDb                                                OFFSET(get<float>, {0x40, 4, 0, 0})
-	SMember(FSubmixEffectDynamicProcessorFilterSettings) KeyHighshelf                                              OFFSET(get<T>, {0x44, 12, 0, 0})
-	SMember(FSubmixEffectDynamicProcessorFilterSettings) KeyLowshelf                                               OFFSET(get<T>, {0x50, 12, 0, 0})
+	SMember(FSubmixEffectDynamicProcessorFilterSettings) KeyHighshelf                                              OFFSET(getStruct<T>, {0x44, 12, 0, 0})
+	SMember(FSubmixEffectDynamicProcessorFilterSettings) KeyLowshelf                                               OFFSET(getStruct<T>, {0x50, 12, 0, 0})
 };
 
 /// Struct /Script/AudioMixer.SubmixEffectEQBand
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSubmixEffectEQBand : public MDKStruct
+class FSubmixEffectEQBand : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -304,8 +309,9 @@ public:
 
 /// Struct /Script/AudioMixer.SubmixEffectSubmixEQSettings
 /// Size: 0x0010 (0x000000 - 0x000010)
-class FSubmixEffectSubmixEQSettings : public MDKStruct
+class FSubmixEffectSubmixEQSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 16;
 
@@ -315,8 +321,9 @@ public:
 
 /// Struct /Script/AudioMixer.SubmixEffectReverbSettings
 /// Size: 0x0040 (0x000000 - 0x000040)
-class FSubmixEffectReverbSettings : public MDKStruct
+class FSubmixEffectReverbSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 64;
 

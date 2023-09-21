@@ -22,14 +22,14 @@ public:
 	DMember(float)                                     MeatballSpeed                                               OFFSET(get<float>, {0x600, 4, 0, 0})
 	DMember(float)                                     SteeringAngle                                               OFFSET(get<float>, {0x604, 4, 0, 0})
 	DMember(float)                                     BoostCharge                                                 OFFSET(get<float>, {0x608, 4, 0, 0})
-	SMember(FVector)                                   SeatOffset                                                  OFFSET(get<T>, {0x610, 24, 0, 0})
-	SMember(FRotator)                                  SeatRotation                                                OFFSET(get<T>, {0x628, 24, 0, 0})
-	SMember(FRotator)                                  CurrentDriveJiggle                                          OFFSET(get<T>, {0x640, 24, 0, 0})
-	SMember(FRotator)                                  SteeringRotator                                             OFFSET(get<T>, {0x658, 24, 0, 0})
-	SMember(FRotator)                                  SpeedGuageRotator                                           OFFSET(get<T>, {0x670, 24, 0, 0})
-	SMember(FRotator)                                  BoostPercentRotator                                         OFFSET(get<T>, {0x688, 24, 0, 0})
-	SMember(FRotator)                                  RandomJiggleRotatorMotorTop                                 OFFSET(get<T>, {0x6A0, 24, 0, 0})
-	SMember(FRotator)                                  RandomJiggleRotatorMotorBase                                OFFSET(get<T>, {0x6B8, 24, 0, 0})
+	SMember(FVector)                                   SeatOffset                                                  OFFSET(getStruct<T>, {0x610, 24, 0, 0})
+	SMember(FRotator)                                  SeatRotation                                                OFFSET(getStruct<T>, {0x628, 24, 0, 0})
+	SMember(FRotator)                                  CurrentDriveJiggle                                          OFFSET(getStruct<T>, {0x640, 24, 0, 0})
+	SMember(FRotator)                                  SteeringRotator                                             OFFSET(getStruct<T>, {0x658, 24, 0, 0})
+	SMember(FRotator)                                  SpeedGuageRotator                                           OFFSET(getStruct<T>, {0x670, 24, 0, 0})
+	SMember(FRotator)                                  BoostPercentRotator                                         OFFSET(getStruct<T>, {0x688, 24, 0, 0})
+	SMember(FRotator)                                  RandomJiggleRotatorMotorTop                                 OFFSET(getStruct<T>, {0x6A0, 24, 0, 0})
+	SMember(FRotator)                                  RandomJiggleRotatorMotorBase                                OFFSET(getStruct<T>, {0x6B8, 24, 0, 0})
 	DMember(bool)                                      bIsMovingForward                                            OFFSET(get<bool>, {0x6D0, 1, 0, 0})
 	DMember(bool)                                      bIsDrivingFast                                              OFFSET(get<bool>, {0x6D1, 1, 0, 0})
 	DMember(bool)                                      bIsBraking                                                  OFFSET(get<bool>, {0x6D2, 1, 0, 0})
@@ -61,7 +61,7 @@ class AFortMeatballVehicle : public AFortAthenaSKVehicle
 	static inline constexpr uint64_t __MDKClassSize = 7792;
 
 public:
-	SMember(FFortRechargingActionTimer)                BoostAction                                                 OFFSET(get<T>, {0x1B78, 216, 0, 0})
+	SMember(FFortRechargingActionTimer)                BoostAction                                                 OFFSET(getStruct<T>, {0x1B78, 216, 0, 0})
 	DMember(float)                                     FxNormalizationMaxSpeedKmh                                  OFFSET(get<float>, {0x1C50, 4, 0, 0})
 	CMember(UFortVehicleAudioVoice*)                   CacheAudioEngineUp                                          OFFSET(get<T>, {0x1C58, 8, 0, 0})
 	CMember(UFortVehicleAudioVoice*)                   CacheAudioEngineDown                                        OFFSET(get<T>, {0x1C60, 8, 0, 0})
@@ -85,8 +85,8 @@ public:
 	DMember(bool)                                      bLargeRumble                                                OFFSET(get<bool>, {0x1CE5, 1, 0, 0})
 	DMember(bool)                                      bTurnRumbleActive                                           OFFSET(get<bool>, {0x1CE6, 1, 0, 0})
 	DMember(bool)                                      bWaterDropsOnScreen                                         OFFSET(get<bool>, {0x1CE7, 1, 0, 0})
-	SMember(FGameplayTag)                              GCVehicleScreenDrips                                        OFFSET(get<T>, {0x1CE8, 4, 0, 0})
-	SMember(FGameplayCueParameters)                    GCParamsEmpty                                               OFFSET(get<T>, {0x1CF0, 208, 0, 0})
+	SMember(FGameplayTag)                              GCVehicleScreenDrips                                        OFFSET(getStruct<T>, {0x1CE8, 4, 0, 0})
+	SMember(FGameplayCueParameters)                    GCParamsEmpty                                               OFFSET(getStruct<T>, {0x1CF0, 208, 0, 0})
 	CMember(UClass*)                                   BoostingCamera                                              OFFSET(get<T>, {0x1DC0, 8, 0, 0})
 	CMember(UClass*)                                   VehicleCameraNoWeaponOverride                               OFFSET(get<T>, {0x1DC8, 8, 0, 0})
 	CMember(UFortMeatballVehicleConfigs*)              FortMeatballVehicleConfigs                                  OFFSET(get<T>, {0x1DE0, 8, 0, 0})
@@ -196,6 +196,7 @@ public:
 /// Size: 0x0028 (0x000188 - 0x0001B0)
 class FMeatballInPersistent : public FFortVehicleInPersistent
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 432;
 

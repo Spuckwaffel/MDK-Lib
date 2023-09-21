@@ -19,7 +19,7 @@ class UMusicSequencerHitComponent : public UActorComponent
 	static inline constexpr uint64_t __MDKClassSize = 480;
 
 public:
-	SMember(FMusicSequencerHitArray)                   MusicSequencerEventList                                     OFFSET(get<T>, {0xA0, 288, 0, 0})
+	SMember(FMusicSequencerHitArray)                   MusicSequencerEventList                                     OFFSET(getStruct<T>, {0xA0, 288, 0, 0})
 	CMember(TArray<USoundBase*>)                       LoadedSoundsList                                            OFFSET(get<T>, {0x1C0, 16, 0, 0})
 	CMember(TArray<UClass*>)                           SoundPreloadClassList                                       OFFSET(get<T>, {0x1D0, 16, 0, 0})
 
@@ -74,8 +74,9 @@ public:
 
 /// Struct /Script/MusicBlocks.MusicSequencerHitHandle
 /// Size: 0x0008 (0x000000 - 0x000008)
-class FMusicSequencerHitHandle : public MDKStruct
+class FMusicSequencerHitHandle : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 8;
 
@@ -87,24 +88,26 @@ public:
 /// Size: 0x0054 (0x00000C - 0x000060)
 class FMusicSequencerHitEntry : public FFastArraySerializerItem
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMusicSequencerHitHandle)                  Handle                                                      OFFSET(get<T>, {0x10, 8, 0, 0})
+	SMember(FMusicSequencerHitHandle)                  Handle                                                      OFFSET(getStruct<T>, {0x10, 8, 0, 0})
 	DMember(float)                                     ServerWorldTimeStart                                        OFFSET(get<float>, {0x18, 4, 0, 0})
 	CMember(UClass*)                                   ActorClass                                                  OFFSET(get<T>, {0x20, 8, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   Actor                                                       OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TWeakObjectPtr<APlayerState*>)             InstigatorPlayerState                                       OFFSET(get<T>, {0x30, 8, 0, 0})
-	SMember(FVector_NetQuantize)                       SoundLocation                                               OFFSET(get<T>, {0x38, 24, 0, 0})
+	SMember(FVector_NetQuantize)                       SoundLocation                                               OFFSET(getStruct<T>, {0x38, 24, 0, 0})
 	DMember(int32_t)                                   SoundIndex                                                  OFFSET(get<int32_t>, {0x50, 4, 0, 0})
-	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(get<T>, {0x58, 8, 0, 0})
+	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(getStruct<T>, {0x58, 8, 0, 0})
 };
 
 /// Struct /Script/MusicBlocks.MusicSequencerHitArray
 /// Size: 0x0018 (0x000108 - 0x000120)
 class FMusicSequencerHitArray : public FFastArraySerializer
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 288;
 

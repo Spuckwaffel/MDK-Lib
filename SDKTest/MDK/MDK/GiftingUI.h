@@ -163,10 +163,10 @@ public:
 	CMember(UCommonActionWidget*)                      ActionWidget_FilterTabsNext                                 OFFSET(get<T>, {0x7A0, 8, 0, 0})
 	CMember(UAthenaGiftingConfirmationScreen*)         ActivatableWidget_GiftingConfirmation                       OFFSET(get<T>, {0x7A8, 8, 0, 0})
 	DMember(float)                                     ItemCyclingInterval                                         OFFSET(get<float>, {0x7B0, 4, 0, 0})
-	SMember(FDataTableRowHandle)                       FilterTabsPreviousAction                                    OFFSET(get<T>, {0x7B8, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       FilterTabsNextAction                                        OFFSET(get<T>, {0x7C8, 16, 0, 0})
-	SMember(FText)                                     RegularGiftingPolicy                                        OFFSET(get<T>, {0x7D8, 24, 0, 0})
-	SMember(FText)                                     BattlePassGiftingPolicy                                     OFFSET(get<T>, {0x7F0, 24, 0, 0})
+	SMember(FDataTableRowHandle)                       FilterTabsPreviousAction                                    OFFSET(getStruct<T>, {0x7B8, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       FilterTabsNextAction                                        OFFSET(getStruct<T>, {0x7C8, 16, 0, 0})
+	SMember(FText)                                     RegularGiftingPolicy                                        OFFSET(getStruct<T>, {0x7D8, 24, 0, 0})
+	SMember(FText)                                     BattlePassGiftingPolicy                                     OFFSET(getStruct<T>, {0x7F0, 24, 0, 0})
 	CMember(TMap<UCommonButtonBase*, EFilterType>)     FilterMap                                                   OFFSET(get<T>, {0x868, 80, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   FilterGroup                                                 OFFSET(get<T>, {0x8B8, 8, 0, 0})
 	CMember(TArray<UFortItemDefinition*>)              ItemDefinitions                                             OFFSET(get<T>, {0x8C0, 16, 0, 0})
@@ -296,13 +296,14 @@ public:
 
 /// Struct /Script/GiftingUI.FortGiftingRecipientState
 /// Size: 0x0088 (0x000000 - 0x000088)
-class FFortGiftingRecipientState : public MDKStruct
+class FFortGiftingRecipientState : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 136;
 
 public:
-	SMember(FCatalogItemPrice)                         Price                                                       OFFSET(get<T>, {0x0, 80, 0, 0})
+	SMember(FCatalogItemPrice)                         Price                                                       OFFSET(getStruct<T>, {0x0, 80, 0, 0})
 	CMember(TArray<FItemQuantity>)                     Items                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
 };
 

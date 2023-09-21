@@ -48,13 +48,13 @@ class UDownloadOnDemandTabPanel : public UFortCreativeContentBrowserTabPanelBase
 	static inline constexpr uint64_t __MDKClassSize = 1240;
 
 public:
-	SMember(FDataTableRowHandle)                       AddProjectWithLinkCodeInputRowHandle                        OFFSET(get<T>, {0x430, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       AddSelectedProjectInputRowHandle                            OFFSET(get<T>, {0x440, 16, 0, 0})
-	SMember(FDataTableRowHandle)                       ManageSelectedProjectInputRowHandle                         OFFSET(get<T>, {0x450, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       AddProjectWithLinkCodeInputRowHandle                        OFFSET(getStruct<T>, {0x430, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       AddSelectedProjectInputRowHandle                            OFFSET(getStruct<T>, {0x440, 16, 0, 0})
+	SMember(FDataTableRowHandle)                       ManageSelectedProjectInputRowHandle                         OFFSET(getStruct<T>, {0x450, 16, 0, 0})
 	CMember(UClass*)                                   DownloadOnDemandProjectDetailsSidePanelClass                OFFSET(get<T>, {0x460, 8, 0, 0})
 	CMember(UClass*)                                   DownloadOnDemandAddProjectModalClass                        OFFSET(get<T>, {0x468, 8, 0, 0})
 	CMember(UClass*)                                   DownloadOnDemandMessageModalClass                           OFFSET(get<T>, {0x470, 8, 0, 0})
-	SMember(FString)                                   AddProjectsWithMnemonicEntitlementName                      OFFSET(get<T>, {0x478, 16, 0, 0})
+	SMember(FString)                                   AddProjectsWithMnemonicEntitlementName                      OFFSET(getStruct<T>, {0x478, 16, 0, 0})
 	CMember(UDownloadOnDemandProject*)                 SelectedProject                                             OFFSET(get<T>, {0x488, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_AddProjectParent                                    OFFSET(get<T>, {0x4A0, 8, 0, 0})
 	CMember(UCommonTileView*)                          CommonTileView_ProjectTiles                                 OFFSET(get<T>, {0x4A8, 8, 0, 0})
@@ -73,7 +73,7 @@ class UDownloadOnDemandTab_EntitlementCreationCondition : public UCreativeConten
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FString)                                   EntitlementName                                             OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FString)                                   EntitlementName                                             OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 };
 
 /// Class /Script/VKDownloadOnDemandUI.DownloadOnDemandAddProjectModal
@@ -181,8 +181,8 @@ class UDownloadOnDemandProjectTile : public UCommonButtonLegacy
 	static inline constexpr uint64_t __MDKClassSize = 5808;
 
 public:
-	SMember(FSlateBrush)                               SelectedHighlightBrush                                      OFFSET(get<T>, {0x14D0, 192, 0, 0})
-	SMember(FSlateBrush)                               HoveredHighlightBrush                                       OFFSET(get<T>, {0x1590, 192, 0, 0})
+	SMember(FSlateBrush)                               SelectedHighlightBrush                                      OFFSET(getStruct<T>, {0x14D0, 192, 0, 0})
+	SMember(FSlateBrush)                               HoveredHighlightBrush                                       OFFSET(getStruct<T>, {0x1590, 192, 0, 0})
 	DMember(bool)                                      bIsSelected                                                 OFFSET(get<bool>, {0x1650, 1, 0, 0})
 	CMember(UDownloadOnDemandProject*)                 Project                                                     OFFSET(get<T>, {0x1658, 8, 0, 0})
 	CMember(UDownloadOnDemandProjectTileImage*)        ProjectTileImage_Preview                                    OFFSET(get<T>, {0x1670, 8, 0, 0})

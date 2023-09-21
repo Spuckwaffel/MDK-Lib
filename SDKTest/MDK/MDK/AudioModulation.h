@@ -60,7 +60,7 @@ class USoundModulationGeneratorADEnvelope : public USoundModulationGenerator
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-	SMember(FSoundModulationADEnvelopeParams)          Params                                                      OFFSET(get<T>, {0x30, 20, 0, 0})
+	SMember(FSoundModulationADEnvelopeParams)          Params                                                      OFFSET(getStruct<T>, {0x30, 20, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationGeneratorEnvelopeFollower
@@ -71,7 +71,7 @@ class USoundModulationGeneratorEnvelopeFollower : public USoundModulationGenerat
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FEnvelopeFollowerGeneratorParams)          Params                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FEnvelopeFollowerGeneratorParams)          Params                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationGeneratorLFO
@@ -82,7 +82,7 @@ class USoundModulationGeneratorLFO : public USoundModulationGenerator
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSoundModulationLFOParams)                 Params                                                      OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FSoundModulationLFOParams)                 Params                                                      OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundControlBus
@@ -94,7 +94,7 @@ class USoundControlBus : public USoundModulatorBase
 
 public:
 	DMember(bool)                                      bBypass                                                     OFFSET(get<bool>, {0x30, 1, 0, 0})
-	SMember(FString)                                   Address                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FString)                                   Address                                                     OFFSET(getStruct<T>, {0x38, 16, 0, 0})
 	CMember(TArray<USoundModulationGenerator*>)        Generators                                                  OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(USoundModulationParameter*)                Parameter                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
 };
@@ -134,7 +134,7 @@ class USoundModulationParameter : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-	SMember(FSoundModulationParameterSettings)         Settings                                                    OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FSoundModulationParameterSettings)         Settings                                                    OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 };
 
 /// Class /Script/AudioModulation.SoundModulationParameterScaled
@@ -231,13 +231,14 @@ class USoundModulationPatch : public USoundModulatorBase
 	static inline constexpr uint64_t __MDKClassSize = 80;
 
 public:
-	SMember(FSoundControlModulationPatch)              PatchSettings                                               OFFSET(get<T>, {0x30, 32, 0, 0})
+	SMember(FSoundControlModulationPatch)              PatchSettings                                               OFFSET(getStruct<T>, {0x30, 32, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationADEnvelopeParams
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FSoundModulationADEnvelopeParams : public MDKStruct
+class FSoundModulationADEnvelopeParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -252,8 +253,9 @@ public:
 
 /// Struct /Script/AudioModulation.EnvelopeFollowerGeneratorParams
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FEnvelopeFollowerGeneratorParams : public MDKStruct
+class FEnvelopeFollowerGeneratorParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -268,8 +270,9 @@ public:
 
 /// Struct /Script/AudioModulation.SoundModulationLFOParams
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSoundModulationLFOParams : public MDKStruct
+class FSoundModulationLFOParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -287,20 +290,22 @@ public:
 
 /// Struct /Script/AudioModulation.SoundControlBusMixStage
 /// Size: 0x0028 (0x000000 - 0x000028)
-class FSoundControlBusMixStage : public MDKStruct
+class FSoundControlBusMixStage : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 	CMember(USoundControlBus*)                         Bus                                                         OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FSoundModulationMixValue)                  Value                                                       OFFSET(get<T>, {0x8, 32, 0, 0})
+	SMember(FSoundModulationMixValue)                  Value                                                       OFFSET(getStruct<T>, {0x8, 32, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundModulationMixValue
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSoundModulationMixValue : public MDKStruct
+class FSoundModulationMixValue : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
@@ -312,8 +317,9 @@ public:
 
 /// Struct /Script/AudioModulation.SoundModulationParameterSettings
 /// Size: 0x0004 (0x000000 - 0x000004)
-class FSoundModulationParameterSettings : public MDKStruct
+class FSoundModulationParameterSettings : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 4;
 
@@ -325,6 +331,7 @@ public:
 /// Size: 0x0000 (0x0000B8 - 0x0000B8)
 class FSoundModulationTransform : public FWaveTableTransform
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
@@ -333,21 +340,23 @@ public:
 
 /// Struct /Script/AudioModulation.SoundControlModulationInput
 /// Size: 0x00C8 (0x000000 - 0x0000C8)
-class FSoundControlModulationInput : public MDKStruct
+class FSoundControlModulationInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
 	DMember(bool)                                      bSampleAndHold                                              OFFSET(get<bool>, {0x0, 1, 1, 0})
-	SMember(FSoundModulationTransform)                 Transform                                                   OFFSET(get<T>, {0x8, 184, 0, 0})
+	SMember(FSoundModulationTransform)                 Transform                                                   OFFSET(getStruct<T>, {0x8, 184, 0, 0})
 	CMember(USoundControlBus*)                         Bus                                                         OFFSET(get<T>, {0xC0, 8, 0, 0})
 };
 
 /// Struct /Script/AudioModulation.SoundControlModulationPatch
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSoundControlModulationPatch : public MDKStruct
+class FSoundControlModulationPatch : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

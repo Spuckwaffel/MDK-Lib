@@ -21,13 +21,14 @@ public:
 
 /// Struct /Script/RenderTrace.PhysicalMaterialTraceInput
 /// Size: 0x0030 (0x000000 - 0x000030)
-class FPhysicalMaterialTraceInput : public MDKStruct
+class FPhysicalMaterialTraceInput : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
 	CMember(UPhysicalMaterial*)                        PhysicalMaterial                                            OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FExpressionInput)                          Input                                                       OFFSET(get<T>, {0x8, 40, 0, 0})
+	SMember(FExpressionInput)                          Input                                                       OFFSET(getStruct<T>, {0x8, 40, 0, 0})
 };
 

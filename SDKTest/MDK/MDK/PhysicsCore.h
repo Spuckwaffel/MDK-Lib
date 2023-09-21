@@ -26,7 +26,7 @@ class UBodySetupCore : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-	SMember(FName)                                     BoneName                                                    OFFSET(get<T>, {0x28, 4, 0, 0})
+	SMember(FName)                                     BoneName                                                    OFFSET(getStruct<T>, {0x28, 4, 0, 0})
 	CMember(TEnumAsByte<EPhysicsType>)                 PhysicsType                                                 OFFSET(get<T>, {0x2C, 1, 0, 0})
 	CMember(TEnumAsByte<ECollisionTraceFlag>)          CollisionTraceFlag                                          OFFSET(get<T>, {0x2D, 1, 0, 0})
 	CMember(TEnumAsByte<EBodyCollisionResponse>)       CollisionReponse                                            OFFSET(get<T>, {0x2E, 1, 0, 0})
@@ -72,7 +72,7 @@ public:
 	DMember(float)                                     DestructibleDamageThresholdScale                            OFFSET(get<float>, {0x50, 4, 0, 0})
 	CMember(UPhysicalMaterialPropertyBase*)            PhysicalMaterialProperty                                    OFFSET(get<T>, {0x58, 8, 0, 0})
 	CMember(TEnumAsByte<EPhysicalSurface>)             SurfaceType                                                 OFFSET(get<T>, {0x60, 1, 0, 0})
-	SMember(FPhysicalMaterialStrength)                 Strength                                                    OFFSET(get<T>, {0x64, 12, 0, 0})
+	SMember(FPhysicalMaterialStrength)                 Strength                                                    OFFSET(getStruct<T>, {0x64, 12, 0, 0})
 };
 
 /// Class /Script/PhysicsCore.PhysicsSettingsCore
@@ -106,13 +106,14 @@ public:
 	DMember(float)                                     MaxContactOffset                                            OFFSET(get<float>, {0x68, 4, 0, 0})
 	DMember(bool)                                      bSimulateSkeletalMeshOnDedicatedServer                      OFFSET(get<bool>, {0x6C, 1, 0, 0})
 	CMember(TEnumAsByte<ECollisionTraceFlag>)          DefaultShapeComplexity                                      OFFSET(get<T>, {0x6D, 1, 0, 0})
-	SMember(FChaosSolverConfiguration)                 SolverOptions                                               OFFSET(get<T>, {0x70, 104, 0, 0})
+	SMember(FChaosSolverConfiguration)                 SolverOptions                                               OFFSET(getStruct<T>, {0x70, 104, 0, 0})
 };
 
 /// Struct /Script/PhysicsCore.BodyInstanceCore
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FBodyInstanceCore : public MDKStruct
+class FBodyInstanceCore : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 
@@ -129,8 +130,9 @@ public:
 
 /// Struct /Script/PhysicsCore.PhysicalMaterialStrength
 /// Size: 0x000C (0x000000 - 0x00000C)
-class FPhysicalMaterialStrength : public MDKStruct
+class FPhysicalMaterialStrength : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 12;
 

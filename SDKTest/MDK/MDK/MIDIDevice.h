@@ -26,9 +26,9 @@ class UMIDIDeviceController : public UMIDIDeviceControllerBase
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMIDIEvent                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDIEvent                                                 OFFSET(getStruct<T>, {0x28, 16, 0, 0})
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x38, 4, 0, 0})
-	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x40, 16, 0, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(getStruct<T>, {0x40, 16, 0, 0})
 };
 
 /// Class /Script/MIDIDevice.MIDIDeviceInputController
@@ -39,15 +39,15 @@ class UMIDIDeviceInputController : public UMIDIDeviceControllerBase
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnMIDINoteOn                                                OFFSET(get<T>, {0x28, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMIDINoteOff                                               OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMIDIPitchBend                                             OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMIDIAftertouch                                            OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMIDIControlChange                                         OFFSET(get<T>, {0x68, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMIDIProgramChange                                         OFFSET(get<T>, {0x78, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnMIDIChannelAftertouch                                     OFFSET(get<T>, {0x88, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDINoteOn                                                OFFSET(getStruct<T>, {0x28, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDINoteOff                                               OFFSET(getStruct<T>, {0x38, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDIPitchBend                                             OFFSET(getStruct<T>, {0x48, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDIAftertouch                                            OFFSET(getStruct<T>, {0x58, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDIControlChange                                         OFFSET(getStruct<T>, {0x68, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDIProgramChange                                         OFFSET(getStruct<T>, {0x78, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnMIDIChannelAftertouch                                     OFFSET(getStruct<T>, {0x88, 16, 0, 0})
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0xB0, 4, 0, 0})
-	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0xB8, 16, 0, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(getStruct<T>, {0xB8, 16, 0, 0})
 };
 
 /// Class /Script/MIDIDevice.MIDIDeviceManager
@@ -69,7 +69,7 @@ class UMIDIDeviceOutputController : public UMIDIDeviceControllerBase
 
 public:
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(getStruct<T>, {0x30, 16, 0, 0})
 
 
 	/// Functions
@@ -93,14 +93,15 @@ public:
 
 /// Struct /Script/MIDIDevice.FoundMIDIDevice
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FFoundMIDIDevice : public MDKStruct
+class FFoundMIDIDevice : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(bool)                                      bCanReceiveFrom                                             OFFSET(get<bool>, {0x18, 1, 0, 0})
 	DMember(bool)                                      bCanSendTo                                                  OFFSET(get<bool>, {0x19, 1, 0, 0})
 	DMember(bool)                                      bIsAlreadyInUse                                             OFFSET(get<bool>, {0x1A, 1, 0, 0})
@@ -110,14 +111,15 @@ public:
 
 /// Struct /Script/MIDIDevice.MIDIDeviceInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FMIDIDeviceInfo : public MDKStruct
+class FMIDIDeviceInfo : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x0, 4, 0, 0})
-	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x8, 16, 0, 0})
+	SMember(FString)                                   DeviceName                                                  OFFSET(getStruct<T>, {0x8, 16, 0, 0})
 	DMember(bool)                                      bIsAlreadyInUse                                             OFFSET(get<bool>, {0x18, 1, 0, 0})
 	DMember(bool)                                      bIsDefaultDevice                                            OFFSET(get<bool>, {0x19, 1, 0, 0})
 };

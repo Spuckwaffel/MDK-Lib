@@ -39,8 +39,9 @@ public:
 
 /// Struct /Script/CosmeticsFrameworkModifiers.SoftModifierClassPtr
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FSoftModifierClassPtr : public MDKStruct
+class FSoftModifierClassPtr : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 

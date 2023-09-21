@@ -16,7 +16,7 @@ class UGameplayTask : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-	SMember(FName)                                     InstanceName                                                OFFSET(get<T>, {0x30, 4, 0, 0})
+	SMember(FName)                                     InstanceName                                                OFFSET(getStruct<T>, {0x30, 4, 0, 0})
 	CMember(ETaskResourceOverlapPolicy)                ResourceOverlapPolicy                                       OFFSET(get<T>, {0x36, 1, 0, 0})
 	CMember(UGameplayTask*)                            ChildTask                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
 
@@ -64,7 +64,7 @@ public:
 	CMember(TArray<UGameplayTask*>)                    TaskPriorityQueue                                           OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(TArray<UGameplayTask*>)                    TickingTasks                                                OFFSET(get<T>, {0xD8, 16, 0, 0})
 	CMember(TArray<UGameplayTask*>)                    KnownTasks                                                  OFFSET(get<T>, {0xE8, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnClaimedResourcesChange                                    OFFSET(get<T>, {0xF8, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnClaimedResourcesChange                                    OFFSET(getStruct<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<UGameplayTask*>)                    SimulatedTasks                                              OFFSET(get<T>, {0x108, 16, 0, 0})
 
 
@@ -93,8 +93,8 @@ class UGameplayTask_SpawnActor : public UGameplayTask
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-	SMember(FMulticastInlineDelegate)                  Success                                                     OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  DidNotSpawn                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  Success                                                     OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  DidNotSpawn                                                 OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 	CMember(UClass*)                                   ClassToSpawn                                                OFFSET(get<T>, {0xB0, 8, 0, 0})
 
 
@@ -115,8 +115,8 @@ class UGameplayTask_TimeLimitedExecution : public UGameplayTask
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(get<T>, {0x60, 16, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnTimeExpired                                               OFFSET(get<T>, {0x70, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(getStruct<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnTimeExpired                                               OFFSET(getStruct<T>, {0x70, 16, 0, 0})
 };
 
 /// Class /Script/GameplayTasks.GameplayTask_WaitDelay
@@ -127,7 +127,7 @@ class UGameplayTask_WaitDelay : public UGameplayTask
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(getStruct<T>, {0x60, 16, 0, 0})
 
 
 	/// Functions
@@ -139,8 +139,9 @@ public:
 
 /// Struct /Script/GameplayTasks.GameplayResourceSet
 /// Size: 0x0002 (0x000000 - 0x000002)
-class FGameplayResourceSet : public MDKStruct
+class FGameplayResourceSet : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 2;
 

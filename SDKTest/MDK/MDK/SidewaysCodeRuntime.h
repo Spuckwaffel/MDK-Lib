@@ -30,7 +30,7 @@ class UFortControllerComponent_Sideways : public UFortControllerComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-	SMember(FTimerHandle)                              UpdateClosestSidewaysHandle                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
+	SMember(FTimerHandle)                              UpdateClosestSidewaysHandle                                 OFFSET(getStruct<T>, {0xA8, 8, 0, 0})
 };
 
 /// Class /Script/SidewaysCodeRuntime.PlayspaceComponent_SidewaysDimension
@@ -64,7 +64,7 @@ class USidewaysStateComponent : public UGameFrameworkComponent
 public:
 	CMember(ESidewaysState)                            SidewaysState                                               OFFSET(get<T>, {0xA0, 1, 0, 0})
 	CMember(ASidewaysPlayspace*)                       SidewaysPlayspace                                           OFFSET(get<T>, {0xA8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnSidewaysStateChangedDelegate                              OFFSET(get<T>, {0xB0, 16, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnSidewaysStateChangedDelegate                              OFFSET(getStruct<T>, {0xB0, 16, 0, 0})
 
 
 	/// Functions
@@ -89,8 +89,8 @@ class USidewaysStateComponent_Player : public USidewaysStateComponent
 
 public:
 	CMember(TWeakObjectPtr<UMaterialParameterCollection*>) SidewaysMaterialParameterCollection                     OFFSET(get<T>, {0xC8, 32, 0, 0})
-	SMember(FName)                                     SidewaysBubbleLocationParameterNamesForLocalPlayers         OFFSET(get<T>, {0xE8, 8, 0, 0})
-	SMember(FName)                                     SidewaysBubbleRadiusParameterNamesForLocalPlayers           OFFSET(get<T>, {0xF0, 8, 0, 0})
+	SMember(FName)                                     SidewaysBubbleLocationParameterNamesForLocalPlayers         OFFSET(getStruct<T>, {0xE8, 8, 0, 0})
+	SMember(FName)                                     SidewaysBubbleRadiusParameterNamesForLocalPlayers           OFFSET(getStruct<T>, {0xF0, 8, 0, 0})
 	DMember(float)                                     ExtraCorruptionRadius                                       OFFSET(get<float>, {0xF8, 4, 0, 0})
 	DMember(float)                                     MinRadiusToHaveAnyCorruption                                OFFSET(get<float>, {0xFC, 4, 0, 0})
 	DMember(float)                                     MaxRadiusForScalingExtraCorruptionRadius                    OFFSET(get<float>, {0x100, 4, 0, 0})
@@ -106,8 +106,8 @@ class USidewaysFeatureAction_HoldGlobalData : public UGameFeatureAction
 
 public:
 	CMember(TWeakObjectPtr<UMaterialParameterCollection*>) SidewaysMaterialParameterCollection                     OFFSET(get<T>, {0x28, 32, 0, 0})
-	SMember(FName)                                     SidewaysBubbleLocationParameterNamesForLocalPlayers         OFFSET(get<T>, {0x48, 8, 0, 0})
-	SMember(FName)                                     SidewaysBubbleRadiusParameterNamesForLocalPlayers           OFFSET(get<T>, {0x50, 8, 0, 0})
+	SMember(FName)                                     SidewaysBubbleLocationParameterNamesForLocalPlayers         OFFSET(getStruct<T>, {0x48, 8, 0, 0})
+	SMember(FName)                                     SidewaysBubbleRadiusParameterNamesForLocalPlayers           OFFSET(getStruct<T>, {0x50, 8, 0, 0})
 };
 
 /// Class /Script/SidewaysCodeRuntime.SidewaysLibrary

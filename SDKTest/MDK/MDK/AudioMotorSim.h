@@ -79,8 +79,9 @@ public:
 
 /// Struct /Script/AudioMotorSim.AudioMotorSimInputContext
 /// Size: 0x002C (0x000000 - 0x00002C)
-class FAudioMotorSimInputContext : public MDKStruct
+class FAudioMotorSimInputContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 44;
 
@@ -103,8 +104,9 @@ public:
 
 /// Struct /Script/AudioMotorSim.AudioMotorSimRuntimeContext
 /// Size: 0x0014 (0x000000 - 0x000014)
-class FAudioMotorSimRuntimeContext : public MDKStruct
+class FAudioMotorSimRuntimeContext : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 20;
 
@@ -118,8 +120,9 @@ public:
 
 /// Struct /Script/AudioMotorSim.MotorSimEntry
 /// Size: 0x0018 (0x000000 - 0x000018)
-class FMotorSimEntry : public MDKStruct
+class FMotorSimEntry : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 24;
 

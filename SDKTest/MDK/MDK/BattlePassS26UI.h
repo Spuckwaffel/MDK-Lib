@@ -136,7 +136,7 @@ public:
 	CMember(UBorder*)                                  Tag_Cost                                                    OFFSET(get<T>, {0xA00, 8, 0, 0})
 	CMember(UBorder*)                                  Tag_Owned                                                   OFFSET(get<T>, {0xA08, 8, 0, 0})
 	CMember(UBorder*)                                  Tag_Delayed                                                 OFFSET(get<T>, {0xA10, 8, 0, 0})
-	SMember(FGameplayTag)                              QuestCategoryParentTag                                      OFFSET(get<T>, {0xA18, 4, 0, 0})
+	SMember(FGameplayTag)                              QuestCategoryParentTag                                      OFFSET(getStruct<T>, {0xA18, 4, 0, 0})
 	CMember(UClass*)                                   PreviewLoadingScreenWidgetClass                             OFFSET(get<T>, {0xA20, 8, 0, 0})
 	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       OFFSET(get<T>, {0xA80, 8, 0, 0})
 	CMember(UAthenaSeasonItemEntryBase*)               CurrentSelectedEntry                                        OFFSET(get<T>, {0xA88, 8, 0, 0})
@@ -208,7 +208,7 @@ class UFortBattlePassCustomSkinPageS26 : public UFortBattlePassCustomSkinPageBas
 	static inline constexpr uint64_t __MDKClassSize = 1480;
 
 public:
-	SMember(FString)                                   ClaimBaseItemTooltip_ClaimCheckTemplateId                   OFFSET(get<T>, {0x5B0, 16, 0, 0})
+	SMember(FString)                                   ClaimBaseItemTooltip_ClaimCheckTemplateId                   OFFSET(getStruct<T>, {0x5B0, 16, 0, 0})
 	CMember(UFortBattlePassTutorialTooltip*)           TutorialTooltip_ClaimBaseItem                               OFFSET(get<T>, {0x5C0, 8, 0, 0})
 };
 

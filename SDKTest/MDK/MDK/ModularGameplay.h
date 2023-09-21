@@ -80,15 +80,16 @@ public:
 
 /// Struct /Script/ModularGameplay.ActorInitStateChangedParams
 /// Size: 0x0020 (0x000000 - 0x000020)
-class FActorInitStateChangedParams : public MDKStruct
+class FActorInitStateChangedParams : public MDKBase
 { 
+	friend MDKHandler;
 	friend MDKBase;
 	static inline constexpr uint64_t __MDKClassSize = 32;
 
 public:
 	CMember(AActor*)                                   OwningActor                                                 OFFSET(get<T>, {0x0, 8, 0, 0})
-	SMember(FName)                                     FeatureName                                                 OFFSET(get<T>, {0x8, 4, 0, 0})
+	SMember(FName)                                     FeatureName                                                 OFFSET(getStruct<T>, {0x8, 4, 0, 0})
 	CMember(UObject*)                                  Implementer                                                 OFFSET(get<T>, {0x10, 8, 0, 0})
-	SMember(FGameplayTag)                              FeatureState                                                OFFSET(get<T>, {0x18, 4, 0, 0})
+	SMember(FGameplayTag)                              FeatureState                                                OFFSET(getStruct<T>, {0x18, 4, 0, 0})
 };
 
