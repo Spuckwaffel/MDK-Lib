@@ -19,8 +19,6 @@ class AWheelGrenadeWheel : public AAttachableWheel
 public:
 	DMember(float)                                     MaxHealth                                                   OFFSET(get<float>, {0x320, 4, 0, 0})
 	CMember(UFortAbilitySystemComponent*)              AbilitySystemComponent                                      OFFSET(get<T>, {0x328, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -32,3 +30,5 @@ public:
 	// float GetMaxHealth();                                                                                                    // [0x9eb1c18] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/WheelGrenadeRuntime.WheelGrenadeWheel.GetHealth
 	// float GetHealth();                                                                                                       // [0x9eb1bd8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+

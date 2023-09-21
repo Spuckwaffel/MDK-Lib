@@ -44,8 +44,6 @@ public:
 	CMember(UCommonTextBlock*)                         Text_EditMode                                               OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(UPanelWidget*)                             Panel_SquadListContainer                                    OFFSET(get<T>, {0x588, 8, 0, 0})
 	CMember(UAthenaSquadListBase*)                     AthenaSquadList                                             OFFSET(get<T>, {0x590, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,6 +51,8 @@ public:
 	// void OnMinigameStateChanged(EFortMinigameState MinigameState, EFortMinigameState PreviousMinigameState);                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/VKEditUI.VKConnectionIndicator.HandleMemorySamplerProgressUpdated
 	// void HandleMemorySamplerProgressUpdated(float Progress);                                                                 // [0x9eaeacc] Final|Native|Private 
+};
+
 /// Class /Script/VKEditUI.VKDebugMessagesBase
 /// Size: 0x0000 (0x000310 - 0x000310)
 class UVKDebugMessagesBase : public UFortHUDElementWidget

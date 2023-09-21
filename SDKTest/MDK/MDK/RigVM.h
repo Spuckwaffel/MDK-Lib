@@ -47,8 +47,6 @@ public:
 	CMember(TArray<FRigVMParameter>)                   Parameters                                                  OFFSET(get<T>, {0x168, 16, 0, 0})
 	CMember(TMap<FName, int32_t>)                      ParametersNameMap                                           OFFSET(get<T>, {0x178, 80, 0, 0})
 	CMember(URigVM*)                                   DeferredVMToCopy                                            OFFSET(get<T>, {0x300, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -100,6 +98,8 @@ public:
 	// bool Execute(FRigVMExtendedExecuteContext& Context, FName& InEntryName);                                                 // [0x6d745f0] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVM.AddRigVMFunction
 	// int32_t AddRigVMFunction(UScriptStruct* InRigVMStruct, FName& InMethodName);                                             // [0x6d7451c] Native|Public|HasOutParms 
+};
+
 /// Class /Script/RigVM.NameSpacedUserData
 /// Size: 0x00D8 (0x000028 - 0x000100)
 class UNameSpacedUserData : public UAssetUserData
@@ -120,8 +120,6 @@ class UDataAssetLink : public UNameSpacedUserData
 
 public:
 	CMember(UDataAsset*)                               DataAsset                                                   OFFSET(get<T>, {0x100, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -129,6 +127,8 @@ public:
 	// void SetDataAsset(UDataAsset* InDataAsset);                                                                              // [0x6d7566c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.DataAssetLink.GetDataAsset
 	// UDataAsset* GetDataAsset();                                                                                              // [0x6d74778] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RigVM.RigVMMemoryStorageGeneratorClass
 /// Size: 0x0040 (0x000200 - 0x000240)
 class URigVMMemoryStorageGeneratorClass : public UClass
@@ -169,8 +169,6 @@ class URigVMUserWorkflowOptions : public UObject
 public:
 	CMember(UObject*)                                  Subject                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
 	SMember(FRigVMUserWorkflow)                        Workflow                                                    OFFSET(get<T>, {0x30, 88, 0, 0})
-};
-
 
 
 	/// Functions
@@ -184,6 +182,8 @@ public:
 	// void ReportError(FString InMessage);                                                                                     // [0x6dbdb5c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RigVM.RigVMUserWorkflowOptions.IsValid
 	// bool IsValid();                                                                                                          // [0x6dbdb40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RigVM.RigVMHost
 /// Size: 0x0310 (0x000028 - 0x000338)
 class URigVMHost : public UObject
@@ -198,8 +198,6 @@ public:
 	SMember(FRigVMDrawContainer)                       DrawContainer                                               OFFSET(get<T>, {0x218, 24, 0, 0})
 	CMember(TArray<FName>)                             EventQueue                                                  OFFSET(get<T>, {0x248, 16, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x2E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -247,6 +245,8 @@ public:
 	// bool Execute(FName& InEventName);                                                                                        // [0x6dcabf4] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/RigVM.RigVMHost.CanExecute
 	// bool CanExecute();                                                                                                       // [0x18ca390] Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RigVM.RigVMEditorSettings
 /// Size: 0x0000 (0x000030 - 0x000030)
 class URigVMEditorSettings : public UDeveloperSettings

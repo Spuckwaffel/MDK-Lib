@@ -47,8 +47,6 @@ public:
 	DMember(int32_t)                                   DefaultNavDataIndexToDisplay                                OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
 	DMember(char)                                      EnabledVisualizers                                          OFFSET(get<char>, {0xC0, 1, 0, 0})
 	DMember(char)                                      NumNavMeshes                                                OFFSET(get<char>, {0xC1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -66,6 +64,8 @@ public:
 	// bool IsVisualizationEnabled(EAIDebuggerVisualization VisualizationType);                                                 // [0x97d0370] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIDebuggerRuntime.FortControllerComponent_AIDebugger.GetOrCreateRenderer
 	// UAIDebuggerRendererComponent* GetOrCreateRenderer();                                                                     // [0x97d034c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Enum /Script/AIDebuggerRuntime.EAIDebuggerVisualization
 /// Size: 0x03
 enum EAIDebuggerVisualization : uint8_t

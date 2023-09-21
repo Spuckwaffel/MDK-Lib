@@ -19,13 +19,13 @@ public:
 	DMember(int32_t)                                   FootfallsIndex                                              OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 	DMember(bool)                                      is_Running__                                                OFFSET(get<bool>, {0x3C, 1, 0, 0})
 	DMember(bool)                                      is_Sprinting__                                              OFFSET(get<bool>, {0x3D, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Irwin/FX/AnimNotify_Irwin_Footfalls.AnimNotify_Irwin_Footfalls_C.Received_Notify
 	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Enum /Inferno/FX/ENiagara_CurieAudioType.ENiagara_CurieAudioType
 /// Size: 0x05
 enum ENiagara_CurieAudioType : uint8_t

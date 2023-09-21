@@ -51,8 +51,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnBreakingEvents                                            OFFSET(get<T>, {0x3B0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTrailingEvents                                            OFFSET(get<T>, {0x3C0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnRemovalEvents                                             OFFSET(get<T>, {0x3D0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -90,6 +88,8 @@ public:
 	// void AddGeometryCollectionActor(AGeometryCollectionActor* GeometryCollectionActor);                                      // [0x5745528] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.ChaosDestructionListener.AddChaosSolverActor
 	// void AddChaosSolverActor(AChaosSolverActor* ChaosSolverActor);                                                           // [0x56ba1a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionActor
 /// Size: 0x0010 (0x000290 - 0x0002A0)
 class AGeometryCollectionActor : public AActor
@@ -100,13 +100,13 @@ class AGeometryCollectionActor : public AActor
 public:
 	CMember(UGeometryCollectionComponent*)             GeometryCollectionComponent                                 OFFSET(get<T>, {0x290, 8, 0, 0})
 	CMember(UGeometryCollectionDebugDrawComponent*)    GeometryCollectionDebugDrawComponent                        OFFSET(get<T>, {0x298, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionActor.RaycastSingle
 	// bool RaycastSingle(FVector Start, FVector End, FHitResult& OutHit);                                                      // [0x5746be4] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionCache
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UGeometryCollectionCache : public UObject
@@ -197,8 +197,6 @@ public:
 	CMember(UBodySetup*)                               DummyBodySetup                                              OFFSET(get<T>, {0xB80, 8, 0, 0})
 	CMember(UChaosGameplayEventDispatcher*)            EventDispatcher                                             OFFSET(get<T>, {0xB88, 8, 0, 0})
 	CMember(TArray<UInstancedStaticMeshComponent*>)    EmbeddedGeometryComponents                                  OFFSET(get<T>, {0xB90, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -288,6 +286,8 @@ public:
 	// void ApplyAssetDefaults();                                                                                               // [0x5745788] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollectionComponent.ApplyAngularVelocity
 	// void ApplyAngularVelocity(int32_t ItemIndex, FVector& AngularVelocity);                                                  // [0x574562c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionDebugDrawActor
 /// Size: 0x00C0 (0x000290 - 0x000350)
 class AGeometryCollectionDebugDrawActor : public AActor
@@ -456,8 +456,6 @@ public:
 	DMember(int32_t)                                   BoneSelectedMaterialIndex                                   OFFSET(get<int32_t>, {0x1BC, 4, 0, 0})
 	CMember(UMaterialInterface*)                       BoneSelectedMaterial                                        OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x1D8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -465,6 +463,8 @@ public:
 	// void SetEnableNanite(bool bValue);                                                                                       // [0x5747ea0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryCollectionEngine.GeometryCollection.SetConvertVertexColorsToSRGB
 	// void SetConvertVertexColorsToSRGB(bool bValue);                                                                          // [0x5747cbc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GeometryCollectionEngine.GeometryCollectionRenderLevelSetActor
 /// Size: 0x00F0 (0x000290 - 0x000380)
 class AGeometryCollectionRenderLevelSetActor : public AActor

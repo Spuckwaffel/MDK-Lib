@@ -53,8 +53,6 @@ public:
 	CMember(USlateAccessibleWidgetData*)               AccessibleWidgetData                                        OFFSET(get<T>, {0xE8, 8, 0, 0})
 	CMember(UWidgetNavigation*)                        Navigation                                                  OFFSET(get<T>, {0xF0, 8, 0, 0})
 	CMember(TArray<UPropertyBinding*>)                 NativeBindings                                              OFFSET(get<T>, {0x148, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -200,6 +198,8 @@ public:
 	// void ForceVolatile(bool bForce);                                                                                         // [0x58f21e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.Widget.ForceLayoutPrepass
 	// void ForceLayoutPrepass();                                                                                               // [0x282c310] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ListViewBase
 /// Size: 0x0120 (0x000178 - 0x000298)
 class UListViewBase : public UWidget
@@ -220,8 +220,6 @@ public:
 	DMember(bool)                                      bAllowDragging                                              OFFSET(get<bool>, {0x1B0, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnEntryReleased                                          OFFSET(get<T>, {0x1B8, 16, 0, 0})
 	SMember(FUserWidgetPool)                           EntryWidgetPool                                             OFFSET(get<T>, {0x1C8, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -243,6 +241,8 @@ public:
 	// float GetScrollOffset();                                                                                                 // [0x58f3264] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.ListViewBase.GetDisplayedEntryWidgets
 	// TArray<UUserWidget*> GetDisplayedEntryWidgets();                                                                         // [0x58f25f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.ListView
 /// Size: 0x0938 (0x000298 - 0x000BD0)
 class UListView : public UListViewBase
@@ -269,8 +269,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  BP_OnItemSelectionChanged                                   OFFSET(get<T>, {0xBA0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnItemScrolledIntoView                                   OFFSET(get<T>, {0xBB0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnListViewScrolled                                       OFFSET(get<T>, {0xBC0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -328,6 +326,8 @@ public:
 	// void BP_CancelScrollIntoView();                                                                                          // [0x58f1244] Final|RequiredAPI|Native|Private|BlueprintCallable 
 	// Function /Script/UMG.ListView.AddItem
 	// void AddItem(UObject* Item);                                                                                             // [0x58f0b10] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ListViewDesignerPreviewItem
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UListViewDesignerPreviewItem : public UObject
@@ -394,8 +394,6 @@ public:
 	SMember(FWidgetChild)                              DesiredFocusWidget                                          OFFSET(get<T>, {0x26C, 12, 0, 0})
 	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0x278, 8, 0, 0})
 	CMember(TArray<FAnimationEventBinding>)            AnimationCallbacks                                          OFFSET(get<T>, {0x280, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -589,6 +587,8 @@ public:
 	// bool AddToPlayerScreen(int32_t ZOrder);                                                                                  // [0x590aa08] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.UserWidget.AddExtension
 	// UUserWidgetExtension* AddExtension(UClass* InExtensionType);                                                             // [0x590a978] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.UserWidgetExtension
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UUserWidgetExtension : public UObject
@@ -736,8 +736,6 @@ class UUMGSequencePlayer : public UObject
 public:
 	CMember(UWidgetAnimation*)                         Animation                                                   OFFSET(get<T>, {0x220, 8, 0, 0})
 	SMember(FMovieSceneRootEvaluationTemplateInstance) RootTemplateInstance                                        OFFSET(get<T>, {0x230, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -745,6 +743,8 @@ public:
 	// void SetUserTag(FName InUserTag);                                                                                        // [0x58ce068] Final|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.UMGSequencePlayer.GetUserTag
 	// FName GetUserTag();                                                                                                      // [0x58cb7a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.UMGSequenceTickManager
 /// Size: 0x0098 (0x000028 - 0x0000C0)
 class UUMGSequenceTickManager : public UObject
@@ -769,8 +769,6 @@ public:
 	CMember(TArray<FWidgetAnimationBinding>)           AnimationBindings                                           OFFSET(get<T>, {0x70, 16, 0, 0})
 	DMember(bool)                                      bLegacyFinishOnStop                                         OFFSET(get<bool>, {0x80, 1, 0, 0})
 	SMember(FString)                                   DisplayLabel                                                OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -790,6 +788,8 @@ public:
 	// void BindToAnimationStarted(UUserWidget* Widget, FDelegateProperty Delegate);                                            // [0x58c9b80] Final|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.WidgetAnimation.BindToAnimationFinished
 	// void BindToAnimationFinished(UUserWidget* Widget, FDelegateProperty Delegate);                                           // [0x195fec0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.WidgetAnimationDelegateBinding
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UWidgetAnimationDelegateBinding : public UDynamicBlueprintBinding
@@ -810,8 +810,6 @@ class UWidgetAnimationPlayCallbackProxy : public UObject
 
 public:
 	SMember(FMulticastInlineDelegate)                  Finished                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -819,6 +817,8 @@ public:
 	// UWidgetAnimationPlayCallbackProxy* CreatePlayAnimationTimeRangeProxyObject(UUMGSequencePlayer*& Result, UUserWidget* Widget, UWidgetAnimation* InAnimation, float StartAtTime, float EndAtTime, int32_t NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PlayMode, float PlaybackSpeed); // [0x58ca39c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UMG.WidgetAnimationPlayCallbackProxy.CreatePlayAnimationProxyObject
 	// UWidgetAnimationPlayCallbackProxy* CreatePlayAnimationProxyObject(UUMGSequencePlayer*& Result, UUserWidget* Widget, UWidgetAnimation* InAnimation, float StartAtTime, int32_t NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode> PlayMode, float PlaybackSpeed); // [0x58c9ccc] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/UMG.PropertyBinding
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UPropertyBinding : public UObject
@@ -1012,13 +1012,13 @@ class UAsyncTaskDownloadImage : public UBlueprintAsyncActionBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFail                                                      OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/UMG.AsyncTaskDownloadImage.DownloadImage
 	// UAsyncTaskDownloadImage* DownloadImage(FString URL);                                                                     // [0x58cab78] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.GameViewportSubsystem
 /// Size: 0x0080 (0x000030 - 0x0000B0)
 class UGameViewportSubsystem : public UEngineSubsystem
@@ -1078,8 +1078,6 @@ class UPanelWidget : public UWidget
 
 public:
 	CMember(TArray<UPanelSlot*>)                       Slots                                                       OFFSET(get<T>, {0x178, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1103,6 +1101,8 @@ public:
 	// void ClearChildren();                                                                                                    // [0x1c67f28] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.PanelWidget.AddChild
 	// UPanelSlot* AddChild(UWidget* Content);                                                                                  // [0x2db5a04] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ContentWidget
 /// Size: 0x0000 (0x000190 - 0x000190)
 class UContentWidget : public UPanelWidget
@@ -1130,8 +1130,6 @@ public:
 	DMember(int32_t)                                   BlurRadius                                                  OFFSET(get<int32_t>, {0x1AC, 4, 0, 0})
 	SMember(FVector4)                                  CornerRadius                                                OFFSET(get<T>, {0x1B0, 32, 0, 0})
 	SMember(FSlateBrush)                               LowQualityFallbackBrush                                     OFFSET(get<T>, {0x1D0, 192, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1151,6 +1149,8 @@ public:
 	// void SetBlurRadius(int32_t InBlurRadius);                                                                                // [0x58cc700] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.BackgroundBlur.SetApplyAlphaToBlur
 	// void SetApplyAlphaToBlur(bool bInApplyAlphaToBlur);                                                                      // [0x58cc4a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.PanelSlot
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UPanelSlot : public UVisual
@@ -1174,8 +1174,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x49, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1185,6 +1183,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x58cd604] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.BackgroundBlurSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x58ccd68] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.Border
 /// Size: 0x0170 (0x000190 - 0x000300)
 class UBorder : public UContentWidget
@@ -1209,8 +1209,6 @@ public:
 	SMember(FDelegateProperty)                         OnMouseButtonUpEvent                                        OFFSET(get<T>, {0x2C8, 12, 0, 0})
 	SMember(FDelegateProperty)                         OnMouseMoveEvent                                            OFFSET(get<T>, {0x2D4, 12, 0, 0})
 	SMember(FDelegateProperty)                         OnMouseDoubleClickEvent                                     OFFSET(get<T>, {0x2E0, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1238,6 +1236,8 @@ public:
 	// void SetBrush(FSlateBrush& InBrush);                                                                                     // [0x179b028] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UMG.Border.GetDynamicMaterial
 	// UMaterialInstanceDynamic* GetDynamicMaterial();                                                                          // [0x289dc9c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.BorderSlot
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UBorderSlot : public UPanelSlot
@@ -1249,8 +1249,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x49, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1260,6 +1258,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x21ed96c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.BorderSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x297a050] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.Button
 /// Size: 0x0440 (0x000190 - 0x0005D0)
 class UButton : public UContentWidget
@@ -1280,8 +1280,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnReleased                                                  OFFSET(get<T>, {0x588, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnHovered                                                   OFFSET(get<T>, {0x598, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnUnhovered                                                 OFFSET(get<T>, {0x5A8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1299,6 +1297,8 @@ public:
 	// void SetBackgroundColor(FLinearColor InBackgroundColor);                                                                 // [0x58cc5a4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/UMG.Button.IsPressed
 	// bool IsPressed();                                                                                                        // [0x58cbe30] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.ButtonSlot
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UButtonSlot : public UPanelSlot
@@ -1310,8 +1310,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x49, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1321,6 +1319,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x58cd76c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ButtonSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x58cce6c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.CanvasPanel
 /// Size: 0x0010 (0x000190 - 0x0001A0)
 class UCanvasPanel : public UPanelWidget
@@ -1342,8 +1342,6 @@ public:
 	SMember(FAnchorData)                               LayoutData                                                  OFFSET(get<T>, {0x38, 64, 0, 0})
 	DMember(bool)                                      bAutoSize                                                   OFFSET(get<bool>, {0x78, 1, 0, 0})
 	DMember(int32_t)                                   ZOrder                                                      OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1383,6 +1381,8 @@ public:
 	// FAnchors GetAnchors();                                                                                                   // [0x58cb274] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.CanvasPanelSlot.GetAlignment
 	// FVector2D GetAlignment();                                                                                                // [0x58cb244] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.CheckBox
 /// Size: 0x0A50 (0x000190 - 0x000BE0)
 class UCheckBox : public UContentWidget
@@ -1400,8 +1400,6 @@ public:
 	CMember(TEnumAsByte<EButtonPressMethod>)           PressMethod                                                 OFFSET(get<T>, {0xBB3, 1, 0, 0})
 	DMember(bool)                                      IsFocusable                                                 OFFSET(get<bool>, {0xBB4, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnCheckStateChanged                                         OFFSET(get<T>, {0xBB8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1421,6 +1419,8 @@ public:
 	// bool IsChecked();                                                                                                        // [0x58cbb0c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.CheckBox.GetCheckedState
 	// ECheckBoxState GetCheckedState();                                                                                        // [0x58cb2cc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.WidgetCheckedStateRegistration
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UWidgetCheckedStateRegistration : public UWidgetEnumStateRegistration
@@ -1444,8 +1444,6 @@ public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x180, 4, 0, 0})
 	SMember(FSlateBrush)                               Image                                                       OFFSET(get<T>, {0x190, 192, 0, 0})
 	DMember(bool)                                      bEnableRadius                                               OFFSET(get<bool>, {0x250, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1455,6 +1453,8 @@ public:
 	// void SetPeriod(float InPeriod);                                                                                          // [0x58cd8d4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.CircularThrobber.SetNumberOfPieces
 	// void SetNumberOfPieces(int32_t InNumberOfPieces);                                                                        // [0x58cd2b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ComboBox
 /// Size: 0x0718 (0x000178 - 0x000890)
 class UComboBox : public UWidget
@@ -1492,8 +1492,6 @@ public:
 	SMember(FDelegateProperty)                         OnGenerateItemWidget                                        OFFSET(get<T>, {0x1AF8, 12, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSelectionChanged                                          OFFSET(get<T>, {0x1B08, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnOpening                                                   OFFSET(get<T>, {0x1B18, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1517,6 +1515,8 @@ public:
 	// void ClearOptions();                                                                                                     // [0x58c9c5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ComboBoxKey.AddOption
 	// void AddOption(FName Option);                                                                                            // [0x58c96f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ComboBoxString
 /// Size: 0x1A68 (0x000178 - 0x001BE0)
 class UComboBoxString : public UWidget
@@ -1540,8 +1540,6 @@ public:
 	SMember(FDelegateProperty)                         OnGenerateWidgetEvent                                       OFFSET(get<T>, {0x1B58, 12, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSelectionChanged                                          OFFSET(get<T>, {0x1B68, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnOpening                                                   OFFSET(get<T>, {0x1B78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1575,6 +1573,8 @@ public:
 	// void ClearOptions();                                                                                                     // [0x58f1970] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ComboBoxString.AddOption
 	// void AddOption(FString Option);                                                                                          // [0x58f0b90] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.DynamicEntryBoxBase
 /// Size: 0x00E0 (0x000178 - 0x000258)
 class UDynamicEntryBoxBase : public UWidget
@@ -1592,8 +1592,6 @@ public:
 	DMember(int32_t)                                   MaxElementSize                                              OFFSET(get<int32_t>, {0x1A8, 4, 0, 0})
 	SMember(FRadialBoxSettings)                        RadialBoxSettings                                           OFFSET(get<T>, {0x1AC, 16, 0, 0})
 	SMember(FUserWidgetPool)                           EntryWidgetPool                                             OFFSET(get<T>, {0x1D0, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1605,6 +1603,8 @@ public:
 	// int32_t GetNumEntries();                                                                                                 // [0x2e393f4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.DynamicEntryBoxBase.GetAllEntries
 	// TArray<UUserWidget*> GetAllEntries();                                                                                    // [0x276c880] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.DynamicEntryBox
 /// Size: 0x0008 (0x000258 - 0x000260)
 class UDynamicEntryBox : public UDynamicEntryBoxBase
@@ -1614,8 +1614,6 @@ class UDynamicEntryBox : public UDynamicEntryBoxBase
 
 public:
 	CMember(UClass*)                                   EntryWidgetClass                                            OFFSET(get<T>, {0x258, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1627,6 +1625,8 @@ public:
 	// UUserWidget* BP_CreateEntryOfClass(UClass* EntryClass);                                                                  // [0x58f1294] Final|RequiredAPI|Native|Private|BlueprintCallable 
 	// Function /Script/UMG.DynamicEntryBox.BP_CreateEntry
 	// UUserWidget* BP_CreateEntry();                                                                                           // [0x2beb894] Final|RequiredAPI|Native|Private|BlueprintCallable 
+};
+
 /// Class /Script/UMG.EditableText
 /// Size: 0x0368 (0x000178 - 0x0004E0)
 class UEditableText : public UWidget
@@ -1658,8 +1658,6 @@ public:
 	SMember(FShapedTextOptions)                        ShapedTextOptions                                           OFFSET(get<T>, {0x4A4, 3, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextChanged                                               OFFSET(get<T>, {0x4A8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextCommitted                                             OFFSET(get<T>, {0x4B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1695,6 +1693,8 @@ public:
 	// FText GetHintText();                                                                                                     // [0x58f2734] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.EditableText.GetFont
 	// FSlateFontInfo GetFont();                                                                                                // [0x2f724ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.EditableTextBox
 /// Size: 0x0E18 (0x000178 - 0x000F90)
 class UEditableTextBox : public UWidget
@@ -1726,8 +1726,6 @@ public:
 	SMember(FShapedTextOptions)                        ShapedTextOptions                                           OFFSET(get<T>, {0xF58, 3, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextChanged                                               OFFSET(get<T>, {0xF60, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextCommitted                                             OFFSET(get<T>, {0xF70, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1757,6 +1755,8 @@ public:
 	// FText GetText();                                                                                                         // [0x58f3334] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.EditableTextBox.ClearError
 	// void ClearError();                                                                                                       // [0x58f1884] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ExpandableArea
 /// Size: 0x02D8 (0x000178 - 0x000450)
 class UExpandableArea : public UWidget
@@ -1775,8 +1775,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnExpansionChanged                                          OFFSET(get<T>, {0x420, 16, 0, 0})
 	CMember(UWidget*)                                  HeaderContent                                               OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UWidget*)                                  BodyContent                                                 OFFSET(get<T>, {0x438, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1786,6 +1784,8 @@ public:
 	// void SetIsExpanded(bool IsExpanded);                                                                                     // [0x58f7bd0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ExpandableArea.GetIsExpanded
 	// bool GetIsExpanded();                                                                                                    // [0x58f28a8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.GridPanel
 /// Size: 0x0030 (0x000190 - 0x0001C0)
 class UGridPanel : public UPanelWidget
@@ -1796,8 +1796,6 @@ class UGridPanel : public UPanelWidget
 public:
 	CMember(TArray<float>)                             ColumnFill                                                  OFFSET(get<T>, {0x190, 16, 0, 0})
 	CMember(TArray<float>)                             RowFill                                                     OFFSET(get<T>, {0x1A0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1807,6 +1805,8 @@ public:
 	// void SetColumnFill(int32_t ColumnIndex, float Coefficient);                                                              // [0x58f5cf0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.GridPanel.AddChildToGrid
 	// UGridSlot* AddChildToGrid(UWidget* Content, int32_t InRow, int32_t InColumn);                                            // [0x2867f4c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.GridSlot
 /// Size: 0x0040 (0x000038 - 0x000078)
 class UGridSlot : public UPanelSlot
@@ -1824,8 +1824,6 @@ public:
 	DMember(int32_t)                                   ColumnSpan                                                  OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 	DMember(int32_t)                                   Layer                                                       OFFSET(get<int32_t>, {0x5C, 4, 0, 0})
 	SMember(FVector2D)                                 Nudge                                                       OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1847,6 +1845,8 @@ public:
 	// void SetColumnSpan(int32_t InColumnSpan);                                                                                // [0x2bc3e80] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.GridSlot.SetColumn
 	// void SetColumn(int32_t InColumn);                                                                                        // [0x2867e4c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.HorizontalBox
 /// Size: 0x0010 (0x000190 - 0x0001A0)
 class UHorizontalBox : public UPanelWidget
@@ -1869,8 +1869,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x58, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x59, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1882,6 +1880,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x21edcdc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.HorizontalBoxSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x1703b60] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.Image
 /// Size: 0x0138 (0x000178 - 0x0002B0)
 class UImage : public UWidget
@@ -1896,8 +1896,6 @@ public:
 	SMember(FDelegateProperty)                         ColorAndOpacityDelegate                                     OFFSET(get<T>, {0x25C, 12, 0, 0})
 	DMember(bool)                                      bFlipForRightToLeftFlowDirection                            OFFSET(get<bool>, {0x268, 1, 0, 0})
 	SMember(FDelegateProperty)                         OnMouseButtonDownEvent                                      OFFSET(get<T>, {0x26C, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1929,6 +1927,8 @@ public:
 	// void SetBrush(FSlateBrush& InBrush);                                                                                     // [0x292e1f8] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UMG.Image.GetDynamicMaterial
 	// UMaterialInstanceDynamic* GetDynamicMaterial();                                                                          // [0x1ad3604] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.InputKeySelector
 /// Size: 0x0778 (0x000178 - 0x0008F0)
 class UInputKeySelector : public UWidget
@@ -1948,8 +1948,6 @@ public:
 	CMember(TArray<FKey>)                              EscapeKeys                                                  OFFSET(get<T>, {0x8A8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnKeySelected                                               OFFSET(get<T>, {0x8B8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnIsSelectingKeyChanged                                     OFFSET(get<T>, {0x8C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1973,6 +1971,8 @@ public:
 	// void OnIsSelectingKeyChanged__DelegateSignature();                                                                       // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/UMG.InputKeySelector.GetIsSelectingKey
 	// bool GetIsSelectingKey();                                                                                                // [0x58f28c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.InvalidationBox
 /// Size: 0x0018 (0x000190 - 0x0001A8)
 class UInvalidationBox : public UContentWidget
@@ -1982,8 +1982,6 @@ class UInvalidationBox : public UContentWidget
 
 public:
 	DMember(bool)                                      bCanCache                                                   OFFSET(get<bool>, {0x190, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1993,6 +1991,8 @@ public:
 	// void InvalidateCache();                                                                                                  // [0x2d79908] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.InvalidationBox.GetCanCache
 	// bool GetCanCache();                                                                                                      // [0x58f23b4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.MenuAnchor
 /// Size: 0x0048 (0x000190 - 0x0001D8)
 class UMenuAnchor : public UContentWidget
@@ -2009,8 +2009,6 @@ public:
 	DMember(bool)                                      ShouldDeferPaintingAfterWindowContent                       OFFSET(get<bool>, {0x1B2, 1, 0, 0})
 	DMember(bool)                                      UseApplicationMenuStack                                     OFFSET(get<bool>, {0x1B3, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnMenuOpenChanged                                           OFFSET(get<T>, {0x1B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2034,6 +2032,8 @@ public:
 	// void FitInWindow(bool bFit);                                                                                             // [0x58f2160] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.MenuAnchor.Close
 	// void Close();                                                                                                            // [0x26d2b30] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.TextLayoutWidget
 /// Size: 0x0020 (0x000178 - 0x000198)
 class UTextLayoutWidget : public UWidget
@@ -2049,13 +2049,13 @@ public:
 	DMember(float)                                     WrapTextAt                                                  OFFSET(get<float>, {0x180, 4, 0, 0})
 	SMember(FMargin)                                   Margin                                                      OFFSET(get<T>, {0x184, 16, 0, 0})
 	DMember(float)                                     LineHeightPercentage                                        OFFSET(get<float>, {0x194, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/UMG.TextLayoutWidget.SetJustification
 	// void SetJustification(TEnumAsByte<ETextJustify> InJustification);                                                        // [0x22318a0] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.MultiLineEditableText
 /// Size: 0x0398 (0x000198 - 0x000530)
 class UMultiLineEditableText : public UTextLayoutWidget
@@ -2078,8 +2078,6 @@ public:
 	CMember(EVirtualKeyboardDismissAction)             VirtualKeyboardDismissAction                                OFFSET(get<T>, {0x4F7, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextChanged                                               OFFSET(get<T>, {0x4F8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextCommitted                                             OFFSET(get<T>, {0x508, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2107,6 +2105,8 @@ public:
 	// FText GetHintText();                                                                                                     // [0x58f2778] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.MultiLineEditableText.GetFont
 	// FSlateFontInfo GetFont();                                                                                                // [0x58f26dc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.MultiLineEditableTextBox
 /// Size: 0x0E08 (0x000198 - 0x000FA0)
 class UMultiLineEditableTextBox : public UTextLayoutWidget
@@ -2125,8 +2125,6 @@ public:
 	CMember(EVirtualKeyboardDismissAction)             VirtualKeyboardDismissAction                                OFFSET(get<T>, {0xF63, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextChanged                                               OFFSET(get<T>, {0xF68, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTextCommitted                                             OFFSET(get<T>, {0xF78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2150,6 +2148,8 @@ public:
 	// FText GetText();                                                                                                         // [0x58f33bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.MultiLineEditableTextBox.GetHintText
 	// FText GetHintText();                                                                                                     // [0x58f27bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.NamedSlot
 /// Size: 0x0010 (0x000190 - 0x0001A0)
 class UNamedSlot : public UContentWidget
@@ -2201,8 +2201,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x50, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x51, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2212,6 +2210,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x297e1c0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.OverlaySlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x25a81b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ProgressBar
 /// Size: 0x02B8 (0x000178 - 0x000430)
 class UProgressBar : public UWidget
@@ -2229,8 +2229,6 @@ public:
 	SMember(FDelegateProperty)                         PercentDelegate                                             OFFSET(get<T>, {0x3F8, 12, 0, 0})
 	SMember(FLinearColor)                              FillColorAndOpacity                                         OFFSET(get<T>, {0x404, 16, 0, 0})
 	SMember(FDelegateProperty)                         FillColorAndOpacityDelegate                                 OFFSET(get<T>, {0x414, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2240,6 +2238,8 @@ public:
 	// void SetIsMarquee(bool InbIsMarquee);                                                                                    // [0x58f7d04] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ProgressBar.SetFillColorAndOpacity
 	// void SetFillColorAndOpacity(FLinearColor InColor);                                                                       // [0x58f6bb0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/UMG.RetainerBox
 /// Size: 0x0030 (0x000190 - 0x0001C0)
 class URetainerBox : public UContentWidget
@@ -2255,8 +2255,6 @@ public:
 	DMember(int32_t)                                   PhaseCount                                                  OFFSET(get<int32_t>, {0x198, 4, 0, 0})
 	CMember(UMaterialInterface*)                       EffectMaterial                                              OFFSET(get<T>, {0x1A0, 8, 0, 0})
 	SMember(FName)                                     TextureParameter                                            OFFSET(get<T>, {0x1A8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2272,6 +2270,8 @@ public:
 	// void RequestRender();                                                                                                    // [0x58f5078] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.RetainerBox.GetEffectMaterial
 	// UMaterialInstanceDynamic* GetEffectMaterial();                                                                           // [0x58f2680] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.RichTextBlock
 /// Size: 0x0698 (0x000198 - 0x000830)
 class URichTextBlock : public UTextLayoutWidget
@@ -2290,8 +2290,6 @@ public:
 	CMember(ETextOverflowPolicy)                       TextOverflowPolicy                                          OFFSET(get<T>, {0x4E5, 1, 0, 0})
 	SMember(FTextBlockStyle)                           DefaultTextStyle                                            OFFSET(get<T>, {0x4F0, 784, 0, 0})
 	CMember(TArray<URichTextBlockDecorator*>)          InstanceDecorators                                          OFFSET(get<T>, {0x800, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2335,6 +2333,8 @@ public:
 	// URichTextBlockDecorator* GetDecoratorByClass(UClass* DecoratorClass);                                                    // [0x58f24e0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.RichTextBlock.ClearAllDefaultStyleOverrides
 	// void ClearAllDefaultStyleOverrides();                                                                                    // [0x58f1850] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.RichTextBlockDecorator
 /// Size: 0x0000 (0x000028 - 0x000028)
 class URichTextBlockDecorator : public UObject
@@ -2368,13 +2368,13 @@ public:
 	DMember(bool)                                      PadRight                                                    OFFSET(get<bool>, {0x191, 1, 0, 0})
 	DMember(bool)                                      PadTop                                                      OFFSET(get<bool>, {0x192, 1, 0, 0})
 	DMember(bool)                                      PadBottom                                                   OFFSET(get<bool>, {0x193, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/UMG.SafeZone.SetSidesToPad
 	// void SetSidesToPad(bool InPadLeft, bool InPadRight, bool InPadTop, bool InPadBottom);                                    // [0x58fa7fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.SafeZoneSlot
 /// Size: 0x0038 (0x000038 - 0x000070)
 class USafeZoneSlot : public UPanelSlot
@@ -2402,8 +2402,6 @@ public:
 	CMember(TEnumAsByte<EStretchDirection>)            StretchDirection                                            OFFSET(get<T>, {0x191, 1, 0, 0})
 	DMember(float)                                     UserSpecifiedScale                                          OFFSET(get<float>, {0x194, 4, 0, 0})
 	DMember(bool)                                      IgnoreInheritedScale                                        OFFSET(get<bool>, {0x198, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2415,6 +2413,8 @@ public:
 	// void SetStretch(TEnumAsByte<EStretch> InStretch);                                                                        // [0x21bdd5c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ScaleBox.SetIgnoreInheritedScale
 	// void SetIgnoreInheritedScale(bool bInIgnoreInheritedScale);                                                              // [0x58f7ad0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ScaleBoxSlot
 /// Size: 0x0018 (0x000038 - 0x000050)
 class UScaleBoxSlot : public UPanelSlot
@@ -2425,8 +2425,6 @@ class UScaleBoxSlot : public UPanelSlot
 public:
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x38, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x39, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2436,6 +2434,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x58f92f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ScaleBoxSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x58f7950] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ScrollBar
 /// Size: 0x0728 (0x000178 - 0x0008A0)
 class UScrollBar : public UWidget
@@ -2450,13 +2450,13 @@ public:
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x862, 1, 0, 0})
 	SMember(FVector2D)                                 Thickness                                                   OFFSET(get<T>, {0x868, 16, 0, 0})
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x878, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/UMG.ScrollBar.SetState
 	// void SetState(float InOffsetFraction, float InThumbSizeFraction);                                                        // [0x58fb050] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ScrollBox
 /// Size: 0x0A80 (0x000190 - 0x000C10)
 class UScrollBox : public UPanelWidget
@@ -2484,8 +2484,6 @@ public:
 	DMember(bool)                                      bAllowRightClickDragScrolling                               OFFSET(get<bool>, {0xBD5, 1, 0, 0})
 	DMember(float)                                     WheelScrollMultiplier                                       OFFSET(get<float>, {0xBD8, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnUserScrolled                                              OFFSET(get<T>, {0xBE0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2529,6 +2527,8 @@ public:
 	// float GetScrollOffset();                                                                                                 // [0x58f3284] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.ScrollBox.EndInertialScrolling
 	// void EndInertialScrolling();                                                                                             // [0x58f1a2c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.ScrollBoxSlot
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UScrollBoxSlot : public UPanelSlot
@@ -2541,8 +2541,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x50, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x51, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2552,6 +2550,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x58f9410] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.ScrollBoxSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x58f79d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.SizeBox
 /// Size: 0x0038 (0x000190 - 0x0001C8)
 class USizeBox : public UContentWidget
@@ -2576,8 +2576,6 @@ public:
 	DMember(bool)                                      bOverride_MaxDesiredHeight                                  OFFSET(get<bool>, {0x1C0, 1, 1, 5})
 	DMember(bool)                                      bOverride_MinAspectRatio                                    OFFSET(get<bool>, {0x1C0, 1, 1, 6})
 	DMember(bool)                                      bOverride_MaxAspectRatio                                    OFFSET(get<bool>, {0x1C0, 1, 1, 7})
-};
-
 
 
 	/// Functions
@@ -2613,6 +2611,8 @@ public:
 	// void ClearMaxAspectRatio();                                                                                              // [0x58f18d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.SizeBox.ClearHeightOverride
 	// void ClearHeightOverride();                                                                                              // [0x277c4f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.SizeBoxSlot
 /// Size: 0x0028 (0x000038 - 0x000060)
 class USizeBoxSlot : public UPanelSlot
@@ -2624,8 +2624,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x58, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x59, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2635,6 +2633,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x2e3db58] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.SizeBoxSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x58f7a50] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.Slider
 /// Size: 0x0548 (0x000178 - 0x0006C0)
 class USlider : public UWidget
@@ -2662,8 +2662,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(get<T>, {0x680, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(get<T>, {0x690, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(get<T>, {0x6A0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2687,6 +2685,8 @@ public:
 	// float GetValue();                                                                                                        // [0x1706778] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.Slider.GetNormalizedValue
 	// float GetNormalizedValue();                                                                                              // [0x58f2a98] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.Spacer
 /// Size: 0x0020 (0x000178 - 0x000198)
 class USpacer : public UWidget
@@ -2696,13 +2696,13 @@ class USpacer : public UWidget
 
 public:
 	SMember(FVector2D)                                 Size                                                        OFFSET(get<T>, {0x178, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/UMG.Spacer.SetSize
 	// void SetSize(FVector2D InSize);                                                                                          // [0x2d32450] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/UMG.SpinBox
 /// Size: 0x06A8 (0x000178 - 0x000820)
 class USpinBox : public UWidget
@@ -2739,8 +2739,6 @@ public:
 	DMember(float)                                     MaxValue                                                    OFFSET(get<float>, {0x7F8, 4, 0, 0})
 	DMember(float)                                     MinSliderValue                                              OFFSET(get<float>, {0x7FC, 4, 0, 0})
 	DMember(float)                                     MaxSliderValue                                              OFFSET(get<float>, {0x800, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2796,6 +2794,8 @@ public:
 	// void ClearMaxValue();                                                                                                    // [0x58f18f8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.SpinBox.ClearMaxSliderValue
 	// void ClearMaxSliderValue();                                                                                              // [0x58f18e4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.StackBox
 /// Size: 0x0018 (0x000190 - 0x0001A8)
 class UStackBox : public UPanelWidget
@@ -2805,8 +2805,6 @@ class UStackBox : public UPanelWidget
 
 public:
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x190, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2814,6 +2812,8 @@ public:
 	// bool ReplaceStackBoxChildAt(int32_t Index, UWidget* Content);                                                            // [0x58f4f6c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.StackBox.AddChildToStackBox
 	// UStackBoxSlot* AddChildToStackBox(UWidget* Content);                                                                     // [0x58f09d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.StackBoxSlot
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UStackBoxSlot : public UPanelSlot
@@ -2850,8 +2850,6 @@ public:
 	CMember(ETextTransformPolicy)                      TextTransformPolicy                                         OFFSET(get<T>, {0x331, 1, 0, 0})
 	CMember(ETextOverflowPolicy)                       TextOverflowPolicy                                          OFFSET(get<T>, {0x332, 1, 0, 0})
 	DMember(bool)                                      bSimpleTextMode                                             OFFSET(get<bool>, {0x333, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2887,6 +2885,8 @@ public:
 	// UMaterialInstanceDynamic* GetDynamicOutlineMaterial();                                                                   // [0x58f265c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.TextBlock.GetDynamicFontMaterial
 	// UMaterialInstanceDynamic* GetDynamicFontMaterial();                                                                      // [0x282bf70] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.Throbber
 /// Size: 0x00D8 (0x000178 - 0x000250)
 class UThrobber : public UWidget
@@ -2900,8 +2900,6 @@ public:
 	DMember(bool)                                      bAnimateVertically                                          OFFSET(get<bool>, {0x17D, 1, 0, 0})
 	DMember(bool)                                      bAnimateOpacity                                             OFFSET(get<bool>, {0x17E, 1, 0, 0})
 	SMember(FSlateBrush)                               Image                                                       OFFSET(get<T>, {0x180, 192, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2913,6 +2911,8 @@ public:
 	// void SetAnimateOpacity(bool bInAnimateOpacity);                                                                          // [0x58f570c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.Throbber.SetAnimateHorizontally
 	// void SetAnimateHorizontally(bool bInAnimateHorizontally);                                                                // [0x58f568c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.TileView
 /// Size: 0x0030 (0x000BD0 - 0x000C00)
 class UTileView : public UListView
@@ -2926,8 +2926,6 @@ public:
 	CMember(EListItemAlignment)                        TileAlignment                                               OFFSET(get<T>, {0xBD8, 1, 0, 0})
 	DMember(bool)                                      bWrapHorizontalNavigation                                   OFFSET(get<bool>, {0xBD9, 1, 0, 0})
 	DMember(bool)                                      bEntrySizeIncludesEntrySpacing                              OFFSET(get<bool>, {0xBF0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2941,6 +2939,8 @@ public:
 	// float GetEntryWidth();                                                                                                   // [0x58f26c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.TileView.GetEntryHeight
 	// float GetEntryHeight();                                                                                                  // [0x58f26ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.TreeView
 /// Size: 0x0060 (0x000BD0 - 0x000C30)
 class UTreeView : public UListView
@@ -2951,8 +2951,6 @@ class UTreeView : public UListView
 public:
 	SMember(FDelegateProperty)                         BP_OnGetItemChildren                                        OFFSET(get<T>, {0xBE0, 12, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnItemExpansionChanged                                   OFFSET(get<T>, {0xBF0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2962,6 +2960,8 @@ public:
 	// void ExpandAll();                                                                                                        // [0x58f1a40] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.TreeView.CollapseAll
 	// void CollapseAll();                                                                                                      // [0x58f19ac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.UniformGridPanel
 /// Size: 0x0028 (0x000190 - 0x0001B8)
 class UUniformGridPanel : public UPanelWidget
@@ -2973,8 +2973,6 @@ public:
 	SMember(FMargin)                                   SlotPadding                                                 OFFSET(get<T>, {0x190, 16, 0, 0})
 	DMember(float)                                     MinDesiredSlotWidth                                         OFFSET(get<float>, {0x1A0, 4, 0, 0})
 	DMember(float)                                     MinDesiredSlotHeight                                        OFFSET(get<float>, {0x1A4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2986,6 +2984,8 @@ public:
 	// void SetMinDesiredSlotHeight(float InMinDesiredSlotHeight);                                                              // [0x58f86fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.UniformGridPanel.AddChildToUniformGrid
 	// UUniformGridSlot* AddChildToUniformGrid(UWidget* Content, int32_t InRow, int32_t InColumn);                              // [0x23ffa58] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.UniformGridSlot
 /// Size: 0x0018 (0x000038 - 0x000050)
 class UUniformGridSlot : public UPanelSlot
@@ -2998,8 +2998,6 @@ public:
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x39, 1, 0, 0})
 	DMember(int32_t)                                   Row                                                         OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(int32_t)                                   Column                                                      OFFSET(get<int32_t>, {0x40, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3011,6 +3009,8 @@ public:
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x29784a4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.UniformGridSlot.SetColumn
 	// void SetColumn(int32_t InColumn);                                                                                        // [0x23ffd14] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.VerticalBox
 /// Size: 0x0010 (0x000190 - 0x0001A0)
 class UVerticalBox : public UPanelWidget
@@ -3033,8 +3033,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x50, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x51, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3046,6 +3044,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x21ee1e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.VerticalBoxSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x2eef9b8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.Viewport
 /// Size: 0x0050 (0x000190 - 0x0001E0)
 class UViewport : public UContentWidget
@@ -3055,8 +3055,6 @@ class UViewport : public UContentWidget
 
 public:
 	SMember(FLinearColor)                              BackgroundColor                                             OFFSET(get<T>, {0x190, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3072,6 +3070,8 @@ public:
 	// UWorld* GetViewportWorld();                                                                                              // [0x58f3574] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.Viewport.GetViewLocation
 	// FVector GetViewLocation();                                                                                               // [0x58f349c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.WidgetComponent
 /// Size: 0x0140 (0x0005A0 - 0x0006E0)
 class UWidgetComponent : public UMeshComponent
@@ -3118,8 +3118,6 @@ public:
 	DMember(float)                                     CylinderArcAngle                                            OFFSET(get<float>, {0x678, 4, 0, 0})
 	CMember(ETickMode)                                 TickMode                                                    OFFSET(get<T>, {0x67C, 1, 0, 0})
 	CMember(UUserWidget*)                              Widget                                                      OFFSET(get<T>, {0x6A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3199,6 +3197,8 @@ public:
 	// float GetCylinderArcAngle();                                                                                             // [0x335c448] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.WidgetComponent.GetCurrentDrawSize
 	// FVector2D GetCurrentDrawSize();                                                                                          // [0x58f24a8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.WidgetInteractionComponent
 /// Size: 0x02C0 (0x0002A0 - 0x000560)
 class UWidgetInteractionComponent : public USceneComponent
@@ -3226,8 +3226,6 @@ public:
 	DMember(bool)                                      bIsHoveredWidgetInteractable                                OFFSET(get<bool>, {0x550, 1, 0, 0})
 	DMember(bool)                                      bIsHoveredWidgetFocusable                                   OFFSET(get<bool>, {0x551, 1, 0, 0})
 	DMember(bool)                                      bIsHoveredWidgetHitTestVisible                              OFFSET(get<bool>, {0x552, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3261,6 +3259,8 @@ public:
 	// UWidgetComponent* GetHoveredWidgetComponent();                                                                           // [0x590ea94] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.WidgetInteractionComponent.Get2DHitLocation
 	// FVector2D Get2DHitLocation();                                                                                            // [0x590dfac] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.WidgetSwitcher
 /// Size: 0x0018 (0x000190 - 0x0001A8)
 class UWidgetSwitcher : public UPanelWidget
@@ -3270,8 +3270,6 @@ class UWidgetSwitcher : public UPanelWidget
 
 public:
 	DMember(int32_t)                                   ActiveWidgetIndex                                           OFFSET(get<int32_t>, {0x190, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3287,6 +3285,8 @@ public:
 	// int32_t GetActiveWidgetIndex();                                                                                          // [0x590e0d0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UMG.WidgetSwitcher.GetActiveWidget
 	// UWidget* GetActiveWidget();                                                                                              // [0x590e0ac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UMG.WidgetSwitcherSlot
 /// Size: 0x0020 (0x000038 - 0x000058)
 class UWidgetSwitcherSlot : public UPanelSlot
@@ -3298,8 +3298,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x50, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x51, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3309,6 +3307,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x5914460] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.WidgetSwitcherSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x5913744] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.WindowTitleBarArea
 /// Size: 0x0020 (0x000190 - 0x0001B0)
 class UWindowTitleBarArea : public UContentWidget
@@ -3319,8 +3319,6 @@ class UWindowTitleBarArea : public UContentWidget
 public:
 	DMember(bool)                                      bWindowButtonsEnabled                                       OFFSET(get<bool>, {0x190, 1, 0, 0})
 	DMember(bool)                                      bDoubleClickTogglesFullscreen                               OFFSET(get<bool>, {0x191, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3330,6 +3328,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x59145c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.WindowTitleBarArea.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x59137c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.WindowTitleBarAreaSlot
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UWindowTitleBarAreaSlot : public UPanelSlot
@@ -3341,8 +3341,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x49, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3352,6 +3350,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x5914730] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.WindowTitleBarAreaSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x5913844] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.WrapBox
 /// Size: 0x0028 (0x000190 - 0x0001B8)
 class UWrapBox : public UPanelWidget
@@ -3365,8 +3365,6 @@ public:
 	DMember(bool)                                      bExplicitWrapSize                                           OFFSET(get<bool>, {0x1A4, 1, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x1A5, 1, 0, 0})
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x1A6, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3376,6 +3374,8 @@ public:
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x59138c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.WrapBox.AddChildToWrapBox
 	// UWrapBoxSlot* AddChildToWrapBox(UWidget* Content);                                                                       // [0x590a8e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.WrapBoxSlot
 /// Size: 0x0020 (0x000038 - 0x000058)
 class UWrapBoxSlot : public UPanelSlot
@@ -3390,8 +3390,6 @@ public:
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x4D, 1, 0, 0})
 	DMember(bool)                                      bFillEmptySpace                                             OFFSET(get<bool>, {0x4E, 1, 0, 0})
 	DMember(bool)                                      bForceNewLine                                               OFFSET(get<bool>, {0x4F, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3407,6 +3405,8 @@ public:
 	// void SetFillSpanWhenLessThan(float InFillSpanWhenLessThan);                                                              // [0x5913288] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/UMG.WrapBoxSlot.SetFillEmptySpace
 	// void SetFillEmptySpace(bool InbFillEmptySpace);                                                                          // [0x5913208] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UMG.DragDropOperation
 /// Size: 0x0068 (0x000028 - 0x000090)
 class UDragDropOperation : public UObject
@@ -3423,8 +3423,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnDrop                                                      OFFSET(get<T>, {0x60, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnDragCancelled                                             OFFSET(get<T>, {0x70, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnDragged                                                   OFFSET(get<T>, {0x80, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3434,6 +3432,8 @@ public:
 	// void Dragged(FPointerEvent& PointerEvent);                                                                               // [0x590bccc] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/UMG.DragDropOperation.DragCancelled
 	// void DragCancelled(FPointerEvent& PointerEvent);                                                                         // [0x590bc24] RequiredAPI|Native|Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/UMG.SlateBlueprintLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USlateBlueprintLibrary : public UBlueprintFunctionLibrary

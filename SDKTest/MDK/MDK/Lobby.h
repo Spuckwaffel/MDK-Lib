@@ -21,8 +21,6 @@ public:
 	CMember(ALobbyBeaconState*)                        LobbyState                                                  OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(ALobbyBeaconPlayerState*)                  PlayerState                                                 OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(ELobbyBeaconJoinState)                     LobbyJoinServerState                                        OFFSET(get<T>, {0x331, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -52,6 +50,8 @@ public:
 	// void ClientJoinGame();                                                                                                   // [0x6ab5ca4] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/Lobby.LobbyBeaconClient.ClientAckJoiningServer
 	// void ClientAckJoiningServer();                                                                                           // [0x5c44714] Net|NetReliableNative|Event|Protected|NetClient 
+};
+
 /// Class /Script/Lobby.LobbyBeaconHost
 /// Size: 0x0030 (0x0002B8 - 0x0002E8)
 class ALobbyBeaconHost : public AOnlineBeaconHostObject
@@ -77,8 +77,6 @@ public:
 	SMember(FUniqueNetIdRepl)                          PartyOwnerUniqueId                                          OFFSET(get<T>, {0x2D8, 48, 0, 0})
 	DMember(bool)                                      bInLobby                                                    OFFSET(get<bool>, {0x308, 1, 0, 0})
 	CMember(AOnlineBeaconClient*)                      ClientActor                                                 OFFSET(get<T>, {0x310, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -88,6 +86,8 @@ public:
 	// void OnRep_PartyOwner();                                                                                                 // [0x6ab6538] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconPlayerState.OnRep_InLobby
 	// void OnRep_InLobby();                                                                                                    // [0x6ab64ec] Final|Native|Protected 
+};
+
 /// Class /Script/Lobby.LobbyBeaconState
 /// Size: 0x01A8 (0x000290 - 0x000438)
 class ALobbyBeaconState : public AInfo
@@ -101,8 +101,6 @@ public:
 	DMember(bool)                                      bLobbyStarted                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 	DMember(float)                                     WaitForPlayersTimeRemaining                                 OFFSET(get<float>, {0x2AC, 4, 0, 0})
 	SMember(FLobbyPlayerStateInfoArray)                Players                                                     OFFSET(get<T>, {0x2B0, 288, 0, 0})
-};
-
 
 
 	/// Functions
@@ -110,6 +108,8 @@ public:
 	// void OnRep_WaitForPlayersTimeRemaining();                                                                                // [0x6ab65a8] Final|Native|Protected 
 	// Function /Script/Lobby.LobbyBeaconState.OnRep_LobbyStarted
 	// void OnRep_LobbyStarted();                                                                                               // [0x6ab6524] Final|Native|Protected 
+};
+
 /// Struct /Script/Lobby.LobbyPlayerStateActorInfo
 /// Size: 0x000C (0x00000C - 0x000018)
 class FLobbyPlayerStateActorInfo : public FFastArraySerializerItem

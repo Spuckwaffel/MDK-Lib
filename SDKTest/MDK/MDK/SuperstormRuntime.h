@@ -44,8 +44,6 @@ public:
 	SMember(FGameplayTag)                              LightningAreaTargetTelegraphCue                             OFFSET(get<T>, {0x330, 4, 0, 0})
 	SMember(FGameplayTag)                              LightningBoltTargetTelegraphCue                             OFFSET(get<T>, {0x334, 4, 0, 0})
 	CMember(TArray<FTempestLightningBoltData>)         LightningBoltData                                           OFFSET(get<T>, {0x338, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,6 +51,8 @@ public:
 	// float GetLightningRadius();                                                                                              // [0x9e875c8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SuperstormRuntime.TempestLightningComponent.GetCloudHeight
 	// float GetCloudHeight();                                                                                                  // [0x9e87594] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SuperstormRuntime.TempestTornadoForcesComponent
 /// Size: 0x0490 (0x0000A0 - 0x000530)
 class UTempestTornadoForcesComponent : public UGameFrameworkComponent
@@ -82,8 +82,6 @@ public:
 	SMember(FTornadoClientSimulationArray)             ActorsToClientSimulate                                      OFFSET(get<T>, {0x200, 280, 0, 0})
 	SMember(FTargetingRequestHandle)                   AsyncTargetingHandle                                        OFFSET(get<T>, {0x430, 4, 0, 0})
 	CMember(TSet<AFortPlayerPawn*>)                    PreviouslyNearPlayers                                       OFFSET(get<T>, {0x438, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -91,6 +89,8 @@ public:
 	// void OnVehicleInTornadoPlayerExit(AFortPlayerControllerAthena* PlayerController, AFortAthenaVehicle* Vehicle);           // [0x9e8768c] Final|Native|Private 
 	// Function /Script/SuperstormRuntime.TempestTornadoForcesComponent.IsActorInTornado
 	// bool IsActorInTornado(AActor* Actor);                                                                                    // [0x9e875fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SuperstormRuntime.TornadoRadialForce
 /// Size: 0x0038 (0x000298 - 0x0002D0)
 class ATornadoRadialForce : public AFieldSystemActor

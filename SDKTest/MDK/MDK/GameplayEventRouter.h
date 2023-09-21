@@ -17,8 +17,6 @@ class UAsyncAction_StartListeningToEvent : public UBlueprintAsyncActionBase
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,6 +26,8 @@ public:
 	// UAsyncAction_StartListeningToEvent* StartListeningToEvent(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x63630ec] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToEvent.GetPayload
 	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x636278c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent
 /// Size: 0x0070 (0x000030 - 0x0000A0)
 class UAsyncAction_StartListeningToStatefulEvent : public UBlueprintAsyncActionBase
@@ -39,8 +39,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnEventReceived                                             OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSavedEventStateExists                                     OFFSET(get<T>, {0x40, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnEventStateCleared                                         OFFSET(get<T>, {0x50, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -50,6 +48,8 @@ public:
 	// UAsyncAction_StartListeningToStatefulEvent* StartListeningToStatefulEvent(UObject* WorldContextObject, UGameplayEventRouterComponent* Target, UScriptStruct* EventType, UObject* Context, EEventBubblingRule EventBubblingRule); // [0x210deec] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayEventRouter.AsyncAction_StartListeningToStatefulEvent.GetPayload
 	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x210c2c0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayEventRouter.GameplayEventRouterComponent
 /// Size: 0x0238 (0x0000A0 - 0x0002D8)
 class UGameplayEventRouterComponent : public UActorComponent

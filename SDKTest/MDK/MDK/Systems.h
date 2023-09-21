@@ -31,8 +31,6 @@ public:
 	DMember(bool)                                      IsSelectable                                                OFFSET(get<bool>, {0x2F8, 1, 0, 0})
 	DMember(bool)                                      IsSelected                                                  OFFSET(get<bool>, {0x2F9, 1, 0, 0})
 	DMember(bool)                                      IsLocked                                                    OFFSET(get<bool>, {0x2FA, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -80,6 +78,8 @@ public:
 	// void TransitionHovered(UWidgetAnimation* AnimTransition);                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
 	// Function /FortUILibrary/Systems/ModularButton/Blocks/WBP_UIKit_Block_Base.WBP_UIKit_Block_Base_C.TransitionState
 	// void TransitionState(UWidgetAnimation* TransitionAnimation, double TransitionTime, bool PlayForward);                    // [0x1ebf994] Private|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /FortUILibrary/Systems/ModularButton/WBP_UIKit_ButtonCTA_Base.WBP_UIKit_ButtonCTA_Base_C
 /// Size: 0x0570 (0x001480 - 0x0019F0)
 class UWBP_UIKit_ButtonCTA_Base_C : public UFortCTAButton
@@ -171,8 +171,6 @@ public:
 	CMember(UAudioComponent*)                          HoldSoundAudioComponent                                     OFFSET(get<T>, {0x19D8, 8, 0, 0})
 	CMember(UAudioComponent*)                          PressedSoundAudioComponent                                  OFFSET(get<T>, {0x19E0, 8, 0, 0})
 	DMember(double)                                    CurrentHoldProgress                                         OFFSET(get<double>, {0x19E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -270,6 +268,8 @@ public:
 	// void OnHoldCompleted__DelegateSignature();                                                                               // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /FortUILibrary/Systems/ModularButton/WBP_UIKit_ButtonCTA_Base.WBP_UIKit_ButtonCTA_Base_C.OnFocusChanged__DelegateSignature
 	// void OnFocusChanged__DelegateSignature(bool HasFocus);                                                                   // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /FortUILibrary/Systems/Dialog/WBP_UIKit_Scrim.WBP_UIKit_Scrim_C
 /// Size: 0x0050 (0x0002A8 - 0x0002F8)
 class UWBP_UIKit_Scrim_C : public UUserWidget
@@ -287,8 +287,6 @@ public:
 	DMember(double)                                    Blur                                                        OFFSET(get<double>, {0x2D8, 8, 0, 0})
 	SMember(FLinearColor)                              Dim_Color                                                   OFFSET(get<T>, {0x2E0, 16, 0, 0})
 	CMember(UMaterialInstance*)                        Dim_Material                                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -300,6 +298,8 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/Systems/Dialog/WBP_UIKit_Scrim.WBP_UIKit_Scrim_C.ExecuteUbergraph_WBP_UIKit_Scrim
 	// void ExecuteUbergraph_WBP_UIKit_Scrim(int32_t EntryPoint);                                                               // [0x1ebf994] Final                
+};
+
 /// Class /FortUILibrary/Systems/Dialog/WBP_UIKit_Dialog_Base.WBP_UIKit_Dialog_Base_C
 /// Size: 0x0538 (0x0003E8 - 0x000920)
 class UWBP_UIKit_Dialog_Base_C : public UUIKitDialogBase
@@ -331,8 +331,6 @@ public:
 	DMember(int32_t)                                   StartFocusButton                                            OFFSET(get<int32_t>, {0x910, 4, 0, 0})
 	DMember(bool)                                      ImageMatchTextureSize                                       OFFSET(get<bool>, {0x914, 1, 0, 0})
 	CMember(UDataTable*)                               DefaultInputActionDataTable                                 OFFSET(get<T>, {0x918, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -388,6 +386,8 @@ public:
 	// void ExecuteUbergraph_WBP_UIKit_Dialog_Base(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
 	// Function /FortUILibrary/Systems/Dialog/WBP_UIKit_Dialog_Base.WBP_UIKit_Dialog_Base_C.DialogButtonClickedDispatcher__DelegateSignature
 	// void DialogButtonClickedDispatcher__DelegateSignature(int32_t ButtonIndex);                                              // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_SizeBox.S_UI_SizeBox
 /// Size: 0x0080 (0x000000 - 0x000080)
 class FS_UI_SizeBox : public MDKStruct
@@ -444,18 +444,6 @@ public:
 	SMember(FS_UI_GridCell)                            Grid_19_3148B55D43C5889FC5D1FF82667A7D01                    OFFSET(get<T>, {0x18, 40, 0, 0})
 };
 
-/// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogImage.S_UI_DialogImage
-/// Size: 0x0050 (0x000000 - 0x000050)
-class FS_UI_DialogImage : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 80;
-
-public:
-	SMember(FS_UI_Placement)                           Placement_67_A94CBD4C4E96C298CF51F6B49895AE3D               OFFSET(get<T>, {0x0, 64, 0, 0})
-	SMember(FVector2D)                                 ImageSize_72_3E7C183E49CE6543B65BBEB8E5C3DEF9               OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogText.S_UI_DialogText
 /// Size: 0x00C0 (0x000000 - 0x0000C0)
 class FS_UI_DialogText : public MDKStruct
@@ -472,6 +460,18 @@ public:
 	DMember(double)                                    LineHeightPercentage_55_2509C2B04F6144283C7BADBF36AAA8F6    OFFSET(get<double>, {0xB0, 8, 0, 0})
 	DMember(bool)                                      AutoWrapText_58_064D5C3A4DD3D362216942A761DDC8D0            OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	DMember(int32_t)                                   WrapTextAt_68_39091237442DEAE1CAFAE3AB75A757F1              OFFSET(get<int32_t>, {0xBC, 4, 0, 0})
+};
+
+/// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogImage.S_UI_DialogImage
+/// Size: 0x0050 (0x000000 - 0x000050)
+class FS_UI_DialogImage : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+	SMember(FS_UI_Placement)                           Placement_67_A94CBD4C4E96C298CF51F6B49895AE3D               OFFSET(get<T>, {0x0, 64, 0, 0})
+	SMember(FVector2D)                                 ImageSize_72_3E7C183E49CE6543B65BBEB8E5C3DEF9               OFFSET(get<T>, {0x40, 16, 0, 0})
 };
 
 /// Struct /FortUILibrary/Systems/Dialog/Data/Structs/S_UI_DialogButtons.S_UI_DialogButtons

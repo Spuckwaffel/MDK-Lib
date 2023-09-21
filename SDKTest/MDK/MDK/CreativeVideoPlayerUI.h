@@ -24,8 +24,6 @@ public:
 	CMember(UImage*)                                   Image_VideoTexture                                          OFFSET(get<T>, {0x428, 8, 0, 0})
 	DMember(float)                                     SkipButtonTimeout                                           OFFSET(get<float>, {0x430, 4, 0, 0})
 	CMember(UAudioComponent*)                          SoundComponent                                              OFFSET(get<T>, {0x448, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -35,3 +33,5 @@ public:
 	// void OnSkipButtonActionProgress(float HeldPercent);                                                                      // [0x9a62180] Final|Native|Private 
 	// Function /Script/CreativeVideoPlayerUI.CreativeVideoPlayerFullScreenWidget.OnSkipButtonActionComplete
 	// void OnSkipButtonActionComplete();                                                                                       // [0x9a6216c] Final|Native|Private 
+};
+

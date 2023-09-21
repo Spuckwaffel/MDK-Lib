@@ -86,8 +86,6 @@ public:
 	CMember(TArray<FAthenaRadioStation>)               RadioStationList                                            OFFSET(get<T>, {0x438, 16, 0, 0})
 	CMember(UObject*)                                  DelegateContextObject                                       OFFSET(get<T>, {0x448, 8, 0, 0})
 	DMember(float)                                     MediaStartTimeFromInit                                      OFFSET(get<float>, {0x450, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -191,6 +189,8 @@ public:
 	// FFortMediaInBandMetadata GetMediaMetadata();                                                                             // [0x986fde8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SrirachaRanch.StreamingRadioPlayerComponent.GetBaseStreamingVideo
 	// UFortBaseStreamingVideo* GetBaseStreamingVideo();                                                                        // [0x986fdd0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SrirachaRanch.RadioContentSourceItemDefinition
 /// Size: 0x0018 (0x0003F0 - 0x000408)
 class URadioContentSourceItemDefinition : public UFortAccountItemDefinition

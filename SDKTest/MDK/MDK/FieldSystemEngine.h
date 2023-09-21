@@ -43,8 +43,6 @@ public:
 	CMember(TArray<TWeakObjectPtr>)                    SupportedSolvers                                            OFFSET(get<T>, {0x578, 16, 0, 0})
 	SMember(FFieldObjectCommands)                      ConstructionCommands                                        OFFSET(get<T>, {0x588, 48, 0, 0})
 	SMember(FFieldObjectCommands)                      BufferCommands                                              OFFSET(get<T>, {0x5B8, 48, 0, 0})
-};
-
 
 
 	/// Functions
@@ -70,6 +68,8 @@ public:
 	// void AddPersistentField(bool Enabled, TEnumAsByte<EFieldPhysicsType> Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field); // [0x332ad3c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/FieldSystemEngine.FieldSystemComponent.AddFieldCommand
 	// void AddFieldCommand(bool Enabled, TEnumAsByte<EFieldPhysicsType> Target, UFieldSystemMetaData* MetaData, UFieldNodeBase* Field); // [0x5711670] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/FieldSystemEngine.FieldSystemMetaData
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UFieldSystemMetaData : public UActorComponent
@@ -89,13 +89,13 @@ class UFieldSystemMetaDataIteration : public UFieldSystemMetaData
 
 public:
 	DMember(int32_t)                                   Iterations                                                  OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.FieldSystemMetaDataIteration.SetMetaDataIteration
 	// UFieldSystemMetaDataIteration* SetMetaDataIteration(int32_t Iterations);                                                 // [0x57133f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.FieldSystemMetaDataProcessingResolution
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UFieldSystemMetaDataProcessingResolution : public UFieldSystemMetaData
@@ -105,13 +105,13 @@ class UFieldSystemMetaDataProcessingResolution : public UFieldSystemMetaData
 
 public:
 	CMember(TEnumAsByte<EFieldResolutionType>)         ResolutionType                                              OFFSET(get<T>, {0xA0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.FieldSystemMetaDataProcessingResolution.SetMetaDataaProcessingResolutionType
 	// UFieldSystemMetaDataProcessingResolution* SetMetaDataaProcessingResolutionType(TEnumAsByte<EFieldResolutionType> ResolutionType); // [0x571347c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.FieldSystemMetaDataFilter
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UFieldSystemMetaDataFilter : public UFieldSystemMetaData
@@ -123,13 +123,13 @@ public:
 	CMember(TEnumAsByte<EFieldFilterType>)             FilterType                                                  OFFSET(get<T>, {0xA0, 1, 0, 0})
 	CMember(TEnumAsByte<EFieldObjectType>)             ObjectType                                                  OFFSET(get<T>, {0xA1, 1, 0, 0})
 	CMember(TEnumAsByte<EFieldPositionType>)           PositionType                                                OFFSET(get<T>, {0xA2, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.FieldSystemMetaDataFilter.SetMetaDataFilterType
 	// UFieldSystemMetaDataFilter* SetMetaDataFilterType(TEnumAsByte<EFieldFilterType> FilterType, TEnumAsByte<EFieldObjectType> ObjectType, TEnumAsByte<EFieldPositionType> PositionType); // [0x57132ec] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.FieldNodeBase
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UFieldNodeBase : public UActorComponent
@@ -179,13 +179,13 @@ class UUniformInteger : public UFieldNodeInt
 
 public:
 	DMember(int32_t)                                   Magnitude                                                   OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.UniformInteger.SetUniformInteger
 	// UUniformInteger* SetUniformInteger(int32_t Magnitude);                                                                   // [0x57133f0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.RadialIntMask
 /// Size: 0x0030 (0x0000A0 - 0x0000D0)
 class URadialIntMask : public UFieldNodeInt
@@ -199,13 +199,13 @@ public:
 	DMember(int32_t)                                   InteriorValue                                               OFFSET(get<int32_t>, {0xC0, 4, 0, 0})
 	DMember(int32_t)                                   ExteriorValue                                               OFFSET(get<int32_t>, {0xC4, 4, 0, 0})
 	CMember(TEnumAsByte<ESetMaskConditionType>)        SetMaskCondition                                            OFFSET(get<T>, {0xC8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.RadialIntMask.SetRadialIntMask
 	// URadialIntMask* SetRadialIntMask(float Radius, FVector Position, int32_t InteriorValue, int32_t ExteriorValue, TEnumAsByte<ESetMaskConditionType> SetMaskConditionIn); // [0x5713c80] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.UniformScalar
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UUniformScalar : public UFieldNodeFloat
@@ -215,13 +215,13 @@ class UUniformScalar : public UFieldNodeFloat
 
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.UniformScalar.SetUniformScalar
 	// UUniformScalar* SetUniformScalar(float Magnitude);                                                                       // [0x5714178] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.WaveScalar
 /// Size: 0x0030 (0x0000A0 - 0x0000D0)
 class UWaveScalar : public UFieldNodeFloat
@@ -236,13 +236,13 @@ public:
 	DMember(float)                                     Period                                                      OFFSET(get<float>, {0xC4, 4, 0, 0})
 	CMember(TEnumAsByte<EWaveFunctionType>)            Function                                                    OFFSET(get<T>, {0xC8, 1, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0xC9, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.WaveScalar.SetWaveScalar
 	// UWaveScalar* SetWaveScalar(float Magnitude, FVector Position, float WaveLength, float Period, float Time, TEnumAsByte<EWaveFunctionType> Function, TEnumAsByte<EFieldFalloffType> Falloff); // [0x2fe52f8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.RadialFalloff
 /// Size: 0x0038 (0x0000A0 - 0x0000D8)
 class URadialFalloff : public UFieldNodeFloat
@@ -258,13 +258,13 @@ public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0xB0, 4, 0, 0})
 	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xB8, 24, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0xD0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.RadialFalloff.SetRadialFalloff
 	// URadialFalloff* SetRadialFalloff(float Magnitude, float MinRange, float MaxRange, float Default, float Radius, FVector Position, TEnumAsByte<EFieldFalloffType> Falloff); // [0x29b330c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.PlaneFalloff
 /// Size: 0x0050 (0x0000A0 - 0x0000F0)
 class UPlaneFalloff : public UFieldNodeFloat
@@ -281,13 +281,13 @@ public:
 	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xB8, 24, 0, 0})
 	SMember(FVector)                                   Normal                                                      OFFSET(get<T>, {0xD0, 24, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0xE8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.PlaneFalloff.SetPlaneFalloff
 	// UPlaneFalloff* SetPlaneFalloff(float Magnitude, float MinRange, float MaxRange, float Default, float Distance, FVector Position, FVector Normal, TEnumAsByte<EFieldFalloffType> Falloff); // [0x571378c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.BoxFalloff
 /// Size: 0x0080 (0x0000A0 - 0x000120)
 class UBoxFalloff : public UFieldNodeFloat
@@ -302,13 +302,13 @@ public:
 	DMember(float)                                     Default                                                     OFFSET(get<float>, {0xAC, 4, 0, 0})
 	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0xB0, 96, 0, 0})
 	CMember(TEnumAsByte<EFieldFalloffType>)            Falloff                                                     OFFSET(get<T>, {0x110, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.BoxFalloff.SetBoxFalloff
 	// UBoxFalloff* SetBoxFalloff(float Magnitude, float MinRange, float MaxRange, float Default, FTransform Transform, TEnumAsByte<EFieldFalloffType> Falloff); // [0x5712db0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.NoiseField
 /// Size: 0x0070 (0x0000A0 - 0x000110)
 class UNoiseField : public UFieldNodeFloat
@@ -320,13 +320,13 @@ public:
 	DMember(float)                                     MinRange                                                    OFFSET(get<float>, {0xA0, 4, 0, 0})
 	DMember(float)                                     MaxRange                                                    OFFSET(get<float>, {0xA4, 4, 0, 0})
 	SMember(FTransform)                                Transform                                                   OFFSET(get<T>, {0xB0, 96, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.NoiseField.SetNoiseField
 	// UNoiseField* SetNoiseField(float MinRange, float MaxRange, FTransform Transform);                                        // [0x571350c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.UniformVector
 /// Size: 0x0020 (0x0000A0 - 0x0000C0)
 class UUniformVector : public UFieldNodeVector
@@ -337,13 +337,13 @@ class UUniformVector : public UFieldNodeVector
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
 	SMember(FVector)                                   Direction                                                   OFFSET(get<T>, {0xA8, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.UniformVector.SetUniformVector
 	// UUniformVector* SetUniformVector(float Magnitude, FVector Direction);                                                    // [0x57142b0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.RadialVector
 /// Size: 0x0020 (0x0000A0 - 0x0000C0)
 class URadialVector : public UFieldNodeVector
@@ -354,13 +354,13 @@ class URadialVector : public UFieldNodeVector
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
 	SMember(FVector)                                   Position                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.RadialVector.SetRadialVector
 	// URadialVector* SetRadialVector(float Magnitude, FVector Position);                                                       // [0x2afc65c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.RandomVector
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class URandomVector : public UFieldNodeVector
@@ -370,13 +370,13 @@ class URandomVector : public UFieldNodeVector
 
 public:
 	DMember(float)                                     Magnitude                                                   OFFSET(get<float>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.RandomVector.SetRandomVector
 	// URandomVector* SetRandomVector(float Magnitude);                                                                         // [0x5714178] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.OperatorField
 /// Size: 0x0020 (0x0000A0 - 0x0000C0)
 class UOperatorField : public UFieldNodeBase
@@ -389,13 +389,13 @@ public:
 	CMember(UFieldNodeBase*)                           RightField                                                  OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(UFieldNodeBase*)                           LeftField                                                   OFFSET(get<T>, {0xB0, 8, 0, 0})
 	CMember(TEnumAsByte<EFieldOperationType>)          Operation                                                   OFFSET(get<T>, {0xB8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.OperatorField.SetOperatorField
 	// UOperatorField* SetOperatorField(float Magnitude, UFieldNodeBase* LeftField, UFieldNodeBase* RightField, TEnumAsByte<EFieldOperationType> Operation); // [0x2a5114c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.ToIntegerField
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UToIntegerField : public UFieldNodeInt
@@ -405,13 +405,13 @@ class UToIntegerField : public UFieldNodeInt
 
 public:
 	CMember(UFieldNodeFloat*)                          FloatField                                                  OFFSET(get<T>, {0xA0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.ToIntegerField.SetToIntegerField
 	// UToIntegerField* SetToIntegerField(UFieldNodeFloat* FloatField);                                                         // [0x5714220] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.ToFloatField
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UToFloatField : public UFieldNodeFloat
@@ -421,13 +421,13 @@ class UToFloatField : public UFieldNodeFloat
 
 public:
 	CMember(UFieldNodeInt*)                            IntField                                                    OFFSET(get<T>, {0xA0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.ToFloatField.SetToFloatField
 	// UToFloatField* SetToFloatField(UFieldNodeInt* IntegerField);                                                             // [0x5714220] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.CullingField
 /// Size: 0x0018 (0x0000A0 - 0x0000B8)
 class UCullingField : public UFieldNodeBase
@@ -439,13 +439,13 @@ public:
 	CMember(UFieldNodeBase*)                           Culling                                                     OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(UFieldNodeBase*)                           Field                                                       OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(TEnumAsByte<EFieldCullingOperationType>)   Operation                                                   OFFSET(get<T>, {0xB0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FieldSystemEngine.CullingField.SetCullingField
 	// UCullingField* SetCullingField(UFieldNodeBase* Culling, UFieldNodeBase* Field, TEnumAsByte<EFieldCullingOperationType> Operation); // [0x57131e4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/FieldSystemEngine.ReturnResultsTerminal
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UReturnResultsTerminal : public UFieldNodeBase

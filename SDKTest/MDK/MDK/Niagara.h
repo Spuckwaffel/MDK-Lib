@@ -43,8 +43,6 @@ class UNiagaraDataChannelReader : public UObject
 
 public:
 	CMember(UNiagaraDataChannelHandler*)               Owner                                                       OFFSET(get<T>, {0x40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -70,6 +68,8 @@ public:
 	// int32_t Num();                                                                                                           // [0x66e99d8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelReader.InitAccess
 	// bool InitAccess(FNiagaraDataChannelSearchParameters SearchParams, bool bReadPrevFrameData);                              // [0x66e9148] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataChannelWriter
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UNiagaraDataChannelWriter : public UObject
@@ -79,8 +79,6 @@ class UNiagaraDataChannelWriter : public UObject
 
 public:
 	CMember(UNiagaraDataChannelHandler*)               Owner                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -108,6 +106,8 @@ public:
 	// int32_t Num();                                                                                                           // [0x66e9a00] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraDataChannelWriter.InitWrite
 	// bool InitWrite(FNiagaraDataChannelSearchParameters SearchParams, int32_t Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU); // [0x66e9408] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataChannelHandler
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UNiagaraDataChannelHandler : public UObject
@@ -119,8 +119,6 @@ public:
 	CMember(TWeakObjectPtr<UNiagaraDataChannel*>)      DataChannel                                                 OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UNiagaraDataChannelWriter*)                Writer                                                      OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(UNiagaraDataChannelReader*)                Reader                                                      OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -128,6 +126,8 @@ public:
 	// UNiagaraDataChannelWriter* GetDataChannelWriter();                                                                       // [0x66ef81c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataChannelHandler.GetDataChannelReader
 	// UNiagaraDataChannelReader* GetDataChannelReader();                                                                       // [0x66ef7f8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataChannelAsset
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UNiagaraDataChannelAsset : public UObject
@@ -483,13 +483,13 @@ public:
 	DMember(bool)                                      bManagedCaptureOnMovement                                   OFFSET(get<bool>, {0xB1, 1, 0, 0})
 	CMember(TArray<AActor*>)                           ManagedShowOnlyActors                                       OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(TMap<uint64_t, USceneCaptureComponent2D*>) ManagedCaptureComponents                                    OFFSET(get<T>, {0xD0, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceSceneCapture2D.SetSceneCapture2DManagedShowOnlyActors
 	// void SetSceneCapture2DManagedShowOnlyActors(UNiagaraComponent* NiagaraSystem, FName ParameterName, TArray<AActor*> ShowOnlyActors); // [0x67187d0] Final|RequiredAPI|Native|Static|Protected|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceSimCacheReader
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UNiagaraDataInterfaceSimCacheReader : public UNiagaraDataInterface
@@ -535,8 +535,6 @@ public:
 	SMember(FNiagaraUserParameterBinding)              LODIndexUserParameter                                       OFFSET(get<T>, {0x88, 24, 0, 0})
 	DMember(int32_t)                                   InstanceIndex                                               OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
 	CMember(TArray<FName>)                             FilteredSockets                                             OFFSET(get<T>, {0xA8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -544,6 +542,8 @@ public:
 	// void SetNiagaraStaticMeshDIInstanceIndex(UNiagaraComponent* NiagaraSystem, FName UserParameterName, int32_t NewInstanceIndex); // [0x674e678] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceStaticMesh.OnSourceEndPlay
 	// void OnSourceEndPlay(AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                              // [0x29c32a4] Final|RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceUObjectPropertyReader
 /// Size: 0x0060 (0x000038 - 0x000098)
 class UNiagaraDataInterfaceUObjectPropertyReader : public UNiagaraDataInterface
@@ -557,13 +557,13 @@ public:
 	CMember(TArray<FNiagaraUObjectPropertyReaderRemap>) PropertyRemap                                              OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   SourceActor                                                 OFFSET(get<T>, {0x68, 32, 0, 0})
 	CMember(UClass*)                                   SourceActorComponentClass                                   OFFSET(get<T>, {0x88, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceUObjectPropertyReader.SetUObjectReaderPropertyRemap
 	// void SetUObjectReaderPropertyRemap(UNiagaraComponent* NiagaraComponent, FName UserParameterName, FName GraphName, FName RemapName); // [0x674e794] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceVirtualTexture
 /// Size: 0x0020 (0x000038 - 0x000058)
 class UNiagaraDataInterfaceVirtualTexture : public UNiagaraDataInterface
@@ -684,8 +684,6 @@ class ANiagaraActor : public AActor
 public:
 	CMember(UNiagaraComponent*)                        NiagaraComponent                                            OFFSET(get<T>, {0x290, 8, 0, 0})
 	DMember(bool)                                      bDestroyOnSystemFinish                                      OFFSET(get<bool>, {0x298, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -695,6 +693,8 @@ public:
 	// void OnNiagaraSystemFinished(UNiagaraComponent* FinishedComponent);                                                      // [0x29f772c] Final|RequiredAPI|Native|Private 
 	// Function /Script/Niagara.NiagaraActor.GetDestroyOnSystemFinish
 	// bool GetDestroyOnSystemFinish();                                                                                         // [0x675d224] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Niagara.NiagaraBakerOutput
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UNiagaraBakerOutput : public UObject
@@ -819,8 +819,6 @@ public:
 	DMember(bool)                                      bAllowScalability                                           OFFSET(get<bool>, {0x6C8, 1, 1, 4})
 	CMember(UNiagaraSimCache*)                         SimCache                                                    OFFSET(get<T>, {0x7F8, 8, 0, 0})
 	CMember(UNiagaraCullProxyComponent*)               CullProxy                                                   OFFSET(get<T>, {0x800, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -988,6 +986,8 @@ public:
 	// void AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds);                                                // [0x675c8b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraComponent.AdvanceSimulation
 	// void AdvanceSimulation(int32_t TickCount, float TickDeltaSeconds);                                                       // [0x675c7f0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraComponentPool
 /// Size: 0x0058 (0x000028 - 0x000080)
 class UNiagaraComponentPool : public UObject
@@ -1436,8 +1436,6 @@ public:
 	CMember(ENiagaraGpuBufferFormat)                   OverrideBufferFormat                                        OFFSET(get<T>, {0x78, 1, 0, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x79, 1, 1, 0})
 	CMember(TMap<uint64_t, UTextureRenderTarget2DArray*>) ManagedRenderTargets                                     OFFSET(get<T>, {0xD0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1449,6 +1447,8 @@ public:
 	// bool FillTexture2D(UNiagaraComponent* Component, UTextureRenderTarget2D* Dest, int32_t AttributeIndex);                  // [0x67a07e8] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
 	// bool FillRawTexture2D(UNiagaraComponent* Component, UTextureRenderTarget2D* Dest, int32_t& TilesX, int32_t& TilesY);     // [0x67a0684] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid2DCollectionReader
 /// Size: 0x0020 (0x000120 - 0x000140)
 class UNiagaraDataInterfaceGrid2DCollectionReader : public UNiagaraDataInterfaceGrid2DCollection
@@ -1489,8 +1489,6 @@ public:
 	SMember(FNiagaraUserParameterBinding)              RenderTargetUserParameter                                   OFFSET(get<T>, {0x78, 24, 0, 0})
 	CMember(ENiagaraGpuBufferFormat)                   OverrideBufferFormat                                        OFFSET(get<T>, {0x90, 1, 0, 0})
 	DMember(bool)                                      bOverrideFormat                                             OFFSET(get<bool>, {0x91, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -1502,6 +1500,8 @@ public:
 	// bool FillVolumeTexture(UNiagaraComponent* Component, UVolumeTexture* Dest, int32_t AttributeIndex);                      // [0x67a07e8] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
 	// bool FillRawVolumeTexture(UNiagaraComponent* Component, UVolumeTexture* Dest, int32_t& TilesX, int32_t& TilesY, int32_t& TileZ); // [0x67cad88] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceGrid3DCollectionReader
 /// Size: 0x0020 (0x0000E8 - 0x000108)
 class UNiagaraDataInterfaceGrid3DCollectionReader : public UNiagaraDataInterfaceGrid3DCollection
@@ -1723,13 +1723,13 @@ public:
 	DMember(bool)                                      bExcludeBone                                                OFFSET(get<bool>, {0xD4, 1, 1, 0})
 	DMember(int32_t)                                   UvSetIndex                                                  OFFSET(get<int32_t>, {0xD8, 4, 0, 0})
 	DMember(bool)                                      bRequireCurrentFrameData                                    OFFSET(get<bool>, {0xDC, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraDataInterfaceSkeletalMesh.OnSourceEndPlay
 	// void OnSourceEndPlay(AActor* InSource, TEnumAsByte<EEndPlayReason> Reason);                                              // [0x29c3188] Final|RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/Niagara.NiagaraDataInterfaceSparseVolumeTexture
 /// Size: 0x0020 (0x000038 - 0x000058)
 class UNiagaraDataInterfaceSparseVolumeTexture : public UNiagaraDataInterface
@@ -2115,8 +2115,6 @@ public:
 	CMember(UNiagaraParameterCollection*)              Collection                                                  OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TArray<FNiagaraVariable>)                  OverridenParameters                                         OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FNiagaraParameterStore)                    ParameterStorage                                            OFFSET(get<T>, {0x40, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2152,6 +2150,8 @@ public:
 	// FLinearColor GetColorParameter(FString InVariableName);                                                                  // [0x6838f2c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
 	// bool GetBoolParameter(FString InVariableName);                                                                           // [0x683887c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraParameterCollection
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UNiagaraParameterCollection : public UObject
@@ -2179,8 +2179,6 @@ public:
 	CMember(UNiagaraEffectType*)                       EffectType                                                  OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(ANiagaraPerfBaselineActor*)                Owner                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TWeakObjectPtr<UNiagaraSystem*>)           System                                                      OFFSET(get<T>, {0x40, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2194,6 +2192,8 @@ public:
 	// void OnBeginTest();                                                                                                      // [0xd30dac] RequiredAPI|Native|Event|Public|BlueprintEvent 
 	// Function /Script/Niagara.NiagaraBaselineController.GetSystem
 	// UNiagaraSystem* GetSystem();                                                                                             // [0x5cdc07c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraBaselineController_Basic
 /// Size: 0x0018 (0x000060 - 0x000078)
 class UNiagaraBaselineController_Basic : public UNiagaraBaselineController
@@ -2352,8 +2352,6 @@ public:
 	DMember(int32_t)                                   NumX                                                        OFFSET(get<int32_t>, {0x2C0, 4, 0, 0})
 	DMember(int32_t)                                   NumY                                                        OFFSET(get<int32_t>, {0x2C4, 4, 0, 0})
 	CMember(TArray<UChildActorComponent*>)             PreviewComponents                                           OFFSET(get<T>, {0x2C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2365,6 +2363,8 @@ public:
 	// void DeactivatePreviews();                                                                                               // [0x6838868] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Niagara.NiagaraPreviewGrid.ActivatePreviews
 	// void ActivatePreviews(bool bReset);                                                                                      // [0x683808c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraRibbonRendererProperties
 /// Size: 0x0530 (0x0000B0 - 0x0005E0)
 class UNiagaraRibbonRendererProperties : public UNiagaraRendererProperties
@@ -2451,13 +2451,13 @@ public:
 	CMember(TArray<FNiagaraScriptResolvedDataInterfaceInfo>) ResolvedDataInterfaces                                OFFSET(get<T>, {0x3A8, 16, 0, 0})
 	CMember(TArray<FNiagaraResolvedUserDataInterfaceBinding>) ResolvedUserDataInterfaceBindings                    OFFSET(get<T>, {0x3B8, 16, 0, 0})
 	CMember(TArray<FNiagaraResolvedUObjectInfo>)       ResolvedUObjectInfos                                        OFFSET(get<T>, {0x3C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
 	// void RaiseOnGPUCompilationComplete();                                                                                    // [0x2d79908] Final|Native|Public  
+};
+
 /// Class /Script/Niagara.NiagaraSimCache
 /// Size: 0x01C0 (0x000028 - 0x0001E8)
 class UNiagaraSimCache : public UObject
@@ -2475,8 +2475,6 @@ public:
 	SMember(FNiagaraSimCacheLayout)                    CacheLayout                                                 OFFSET(get<T>, {0xC0, 192, 0, 0})
 	CMember(TArray<FNiagaraSimCacheFrame>)             CacheFrames                                                 OFFSET(get<T>, {0x180, 16, 0, 0})
 	CMember(TMap<FNiagaraVariableBase, UObject*>)      DataInterfaceStorage                                        OFFSET(get<T>, {0x190, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2518,6 +2516,8 @@ public:
 	// FName GetEmitterName(int32_t EmitterIndex);                                                                              // [0x6855d48] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Niagara.NiagaraSimCache.GetAttributeCaptureMode
 	// ENiagaraSimCacheAttributeCaptureMode GetAttributeCaptureMode();                                                          // [0x641109c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Niagara.AsyncNiagaraCaptureSimCache
 /// Size: 0x0100 (0x000030 - 0x000130)
 class UAsyncNiagaraCaptureSimCache : public UCancellableAsyncAction
@@ -2529,8 +2529,6 @@ public:
 	CMember(UNiagaraSimCache*)                         CaptureSimCache                                             OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        CaptureComponent                                            OFFSET(get<T>, {0x38, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  CaptureComplete                                             OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2542,6 +2540,8 @@ public:
 	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCacheMultiFrame(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, UNiagaraSimCache*& OutSimCache, int32_t NumFrames, int32_t CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime); // [0x6854da0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCache
 	// UAsyncNiagaraCaptureSimCache* CaptureNiagaraSimCache(UNiagaraSimCache* SimCache, FNiagaraSimCacheCreateParameters CreateParameters, UNiagaraComponent* NiagaraComponent, FNiagaraSimCacheCaptureParameters CaptureParameters, UNiagaraSimCache*& OutSimCache); // [0x685432c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Niagara.NiagaraSimCacheFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UNiagaraSimCacheFunctionLibrary : public UBlueprintFunctionLibrary

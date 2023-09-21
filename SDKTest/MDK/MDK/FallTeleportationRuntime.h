@@ -21,8 +21,6 @@ public:
 	CMember(UClass*)                                   ComponentToAddClass                                         OFFSET(get<T>, {0xC0, 8, 0, 0})
 	SMember(FScalableFloat)                            TeleportEnabled                                             OFFSET(get<T>, {0xC8, 40, 0, 0})
 	SMember(FScalableFloat)                            RemoveComponentRequestTimeOffset                            OFFSET(get<T>, {0xF0, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -30,6 +28,8 @@ public:
 	// void HandleWarmupCountdownEndTimeUpdated(float NewEndTime);                                                              // [0x9b9645c] Final|Native|Protected 
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportSpawnerComponent.HandleGamePhaseChanged
 	// void HandleGamePhaseChanged(FFortGamePhaseUpdatedEvent& Event);                                                          // [0x9b963d0] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/FallTeleportationRuntime.FortFallTeleportCheatManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortFallTeleportCheatManager : public UChildCheatManager
@@ -67,8 +67,6 @@ public:
 	DMember(int32_t)                                   TeleportLimitBeforeFail                                     OFFSET(get<int32_t>, {0x1BC, 4, 0, 0})
 	DMember(int32_t)                                   TeleportCount                                               OFFSET(get<int32_t>, {0x1C0, 4, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    OwningPawn                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -78,3 +76,5 @@ public:
 	// bool IsValidActorToTeleportOn(AActor* ActorToTeleportOn);                                                                // [0x9b965d0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FallTeleportationRuntime.FortFallTeleportComponentBase.IsTeleportLocationValid
 	// bool IsTeleportLocationValid(FVector& LocationToTest);                                                                   // [0x9b964d8] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+

@@ -263,8 +263,6 @@ class UUIStateChartContext : public UObject
 
 public:
 	CMember(TMap<FGameplayTag, UUIStateChartContextEntry*>) Store                                                  OFFSET(get<T>, {0x28, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -296,6 +294,8 @@ public:
 	// void BP_ApplyPlayerChanges(ULocalPlayer* LocalPlayer, FUIStateChartContextChangeSet& ContextChanges);                    // [0x9c1bbec] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/UIChart.UIStateChartContext.BP_ApplyCommonChanges
 	// void BP_ApplyCommonChanges(FUIStateChartContextChangeSet& ContextChanges);                                               // [0x9c1bb1c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/UIChart.UIStateChartContextEntry
 /// Size: 0x0080 (0x000028 - 0x0000A8)
 class UUIStateChartContextEntry : public UObject
@@ -306,8 +306,6 @@ class UUIStateChartContextEntry : public UObject
 public:
 	SMember(FString)                                   CommonValue                                                 OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TMap<ULocalPlayer*, FUIStateChartContextEntryOverride>) PlayerOverrides                                OFFSET(get<T>, {0x38, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -329,6 +327,8 @@ public:
 	// float GetCommonValueAsFloat();                                                                                           // [0x9c1e5a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UIChart.UIStateChartContextEntry.GetCommonValueAsBool
 	// bool GetCommonValueAsBool();                                                                                             // [0x9c1e54c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UIChart.UIStateChartManager
 /// Size: 0x00C8 (0x000030 - 0x0000F8)
 class UUIStateChartManager : public UGameInstanceSubsystem
@@ -341,8 +341,6 @@ public:
 	CMember(TArray<UUIStateChartManagerPlayer*>)       RemovedPlayerEntries                                        OFFSET(get<T>, {0x88, 16, 0, 0})
 	CMember(UUIStateChartContext*)                     Context                                                     OFFSET(get<T>, {0x98, 8, 0, 0})
 	CMember(UUIStateChartResourceCollection*)          GlobalResources                                             OFFSET(get<T>, {0xA0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -358,6 +356,8 @@ public:
 	// bool BP_DeactivateStateChart(int32_t Key, FGameplayTagContainer& AnimationHints, FUIStateChartContextChangeSet& ContextChanges, EUIStateTransitionUrgency Urgency); // [0x9c1c088] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/UIChart.UIStateChartManager.BP_AddStateChart
 	// int32_t BP_AddStateChart(UUIStateChart* StateChartAsset, ULocalPlayer* OwningLocalPlayer, FGameplayTagContainer& AnimationHints, FGameplayTag InitialStateTag, EUIStateTransitionUrgency Urgency); // [0x9c1b7b0] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/UIChart.UIStateChartManagerEntry
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UUIStateChartManagerEntry : public UObject

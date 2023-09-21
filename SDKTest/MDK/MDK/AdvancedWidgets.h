@@ -44,8 +44,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(get<T>, {0x760, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(get<T>, {0x770, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(get<T>, {0x780, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -89,3 +87,5 @@ public:
 	// float GetNormalizedSliderHandlePosition();                                                                               // [0x99e869c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AdvancedWidgets.RadialSlider.GetCustomDefaultValue
 	// float GetCustomDefaultValue();                                                                                           // [0x99e8674] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+

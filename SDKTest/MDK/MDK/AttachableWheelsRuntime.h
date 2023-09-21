@@ -21,8 +21,6 @@ public:
 	DMember(float)                                     WheelDistance                                               OFFSET(get<float>, {0x2B0, 4, 0, 0})
 	CMember(UPhysicsConstraintComponent*)              AxleConstraint                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	SMember(FAttachableWheelAttachData)                AttachData                                                  OFFSET(get<T>, {0x2C0, 88, 0, 0})
-};
-
 
 
 	/// Functions
@@ -48,6 +46,8 @@ public:
 	// bool AttachTo(UPrimitiveComponent* InComponent, FVector& WorldLocation, FVector& AxleDirection);                         // [0x9eb0c08] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheel.AttachInPlace
 	// bool AttachInPlace(UPrimitiveComponent* InComponent);                                                                    // [0x9eb0b78] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AttachableWheelsRuntime.AttachableWheelsComponent
 /// Size: 0x0050 (0x0000A0 - 0x0000F0)
 class UAttachableWheelsComponent : public UActorComponent
@@ -57,8 +57,6 @@ class UAttachableWheelsComponent : public UActorComponent
 
 public:
 	CMember(TSet<AAttachableWheel*>)                   AttachedWheels                                              OFFSET(get<T>, {0xA0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -78,6 +76,8 @@ public:
 	// void DrawDebug();                                                                                                        // [0x2d79908] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 	// Function /Script/AttachableWheelsRuntime.AttachableWheelsComponent.DetachAllWheels
 	// int32_t DetachAllWheels();                                                                                               // [0x9eb0e00] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/AttachableWheelsRuntime.AttachableWheelAttachData
 /// Size: 0x0058 (0x000000 - 0x000058)
 class FAttachableWheelAttachData : public MDKStruct

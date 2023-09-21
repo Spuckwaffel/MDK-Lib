@@ -31,8 +31,6 @@ public:
 	CMember(UCommonVisibilitySwitcher*)                Switcher_Props                                              OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UCommonTileView*)                          CommonTileView_ProjectAssetTiles                            OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TextBlock_NoPropsMessage                                    OFFSET(get<T>, {0x340, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -40,6 +38,8 @@ public:
 	// void UpdateProjectConfirmed();                                                                                           // [0x9eac244] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/VKDownloadOnDemandUI.DownloadOnDemandProjectManagementTab.RemoveProjectConfirmed
 	// void RemoveProjectConfirmed();                                                                                           // [0x9eac1a0] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/VKDownloadOnDemandUI.DownloadOnDemandTabPanel
 /// Size: 0x00A8 (0x000430 - 0x0004D8)
 class UDownloadOnDemandTabPanel : public UFortCreativeContentBrowserTabPanelBase
@@ -91,8 +91,6 @@ public:
 	CMember(UDownloadOnDemandProjectTileImage*)        ProjectTileImage_Preview                                    OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_ProjectTitle                                        OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TextBlock_ProjectTitle                                      OFFSET(get<T>, {0x428, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -100,6 +98,8 @@ public:
 	// void UpdateLightningViolator(ESlateVisibility InVisibility, FText& InText);                                              // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/VKDownloadOnDemandUI.DownloadOnDemandAddProjectModal.HandleDownloadLinkIdTextChanged
 	// void HandleDownloadLinkIdTextChanged(FText& InputLinkCode);                                                              // [0x9eac104] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/VKDownloadOnDemandUI.DownloadOnDemandMessageModal
 /// Size: 0x0018 (0x0003E8 - 0x000400)
 class UDownloadOnDemandMessageModal : public UCommonActivatableWidget
@@ -193,8 +193,6 @@ public:
 	CMember(USizeBox*)                                 SizeBox_Label                                               OFFSET(get<T>, {0x1698, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TextBlock_Label                                             OFFSET(get<T>, {0x16A0, 8, 0, 0})
 	CMember(UCommonBorder*)                            Border_Highlight                                            OFFSET(get<T>, {0x16A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -202,6 +200,8 @@ public:
 	// void UpdateLabel(bool bShowLabel);                                                                                       // [0x9eac1c4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/VKDownloadOnDemandUI.DownloadOnDemandProjectTile.OnLabelUpdated
 	// void OnLabelUpdated();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/VKDownloadOnDemandUI.DownloadOnDemandProjectTileImage
 /// Size: 0x0038 (0x0002A8 - 0x0002E0)
 class UDownloadOnDemandProjectTileImage : public UUserWidget

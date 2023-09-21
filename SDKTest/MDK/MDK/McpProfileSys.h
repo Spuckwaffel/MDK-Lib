@@ -48,23 +48,23 @@ public:
 	DMember(bool)                                      bProfileWriteLocked                                         OFFSET(get<bool>, {0xEC, 1, 0, 0})
 	SMember(FDateTime)                                 ProfileWriteLockExpireTime                                  OFFSET(get<T>, {0xF0, 8, 0, 0})
 	DMember(bool)                                      QueuedProfileUpdatingEnabled                                OFFSET(get<bool>, {0xF8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/McpProfileSys.McpProfile.UnlockProfileForWrite
-	// void UnlockProfileForWrite(FString Code, FDedicatedServerUrlContext& Context);                                           // [0xffff800962a00000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+	// void UnlockProfileForWrite(FString Code, FDedicatedServerUrlContext& Context);                                           // [0xffff8008353d0000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
 	// Function /Script/McpProfileSys.McpProfile.QueryPublicProfile
-	// void QueryPublicProfile(FBaseUrlContext& Context);                                                                       // [0xffff800962a00000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+	// void QueryPublicProfile(FBaseUrlContext& Context);                                                                       // [0xffff8008353d0000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
 	// Function /Script/McpProfileSys.McpProfile.QueryProfile
-	// void QueryProfile(FBaseUrlContext& Context);                                                                             // [0xffff800962a00000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+	// void QueryProfile(FBaseUrlContext& Context);                                                                             // [0xffff8008353d0000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
 	// Function /Script/McpProfileSys.McpProfile.LockProfileForWrite
-	// void LockProfileForWrite(FString Code, int32_t Timeout, FDedicatedServerUrlContext& Context);                            // [0xffff800962a00000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+	// void LockProfileForWrite(FString Code, int32_t Timeout, FDedicatedServerUrlContext& Context);                            // [0xffff8008353d0000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
 	// Function /Script/McpProfileSys.McpProfile.DeleteProfile
-	// void DeleteProfile(FClientUrlContext& Context);                                                                          // [0xffff800962a00000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+	// void DeleteProfile(FClientUrlContext& Context);                                                                          // [0xffff8008353d0000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
 	// Function /Script/McpProfileSys.McpProfile.DeleteAllProfiles
-	// void DeleteAllProfiles(FClientUrlContext& Context);                                                                      // [0xffff800962a00000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+	// void DeleteAllProfiles(FClientUrlContext& Context);                                                                      // [0xffff8008353d0000] Final|Net|NetReliableNetRequest|Native|Event|Private|HasOutParms 
+};
+
 /// Class /Script/McpProfileSys.McpProfileGroup
 /// Size: 0x0258 (0x000028 - 0x000280)
 class UMcpProfileGroup : public UObject

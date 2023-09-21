@@ -30,8 +30,6 @@ public:
 	CMember(TArray<UDynamicUIScene*>)                  DefaultScenes                                               OFFSET(get<T>, {0x290, 16, 0, 0})
 	CMember(TWeakObjectPtr<ULocalPlayer*>)             OwningLocalPlayer                                           OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	DMember(bool)                                      bEnabledDuringReplay                                        OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -43,6 +41,8 @@ public:
 	// ULocalPlayer* GetOwningLocalPlayer();                                                                                    // [0x6bcb408] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DynamicUI.DynamicUIDirectorBase.AddScene
 	// void AddScene(UDynamicUIScene* Scene);                                                                                   // [0x14336a0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/DynamicUI.DynamicUIConstraintBase
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UDynamicUIConstraintBase : public UObject
@@ -159,8 +159,6 @@ class UDynamicUIManager : public UWorldSubsystem
 
 public:
 	CMember(TMap<TWeakObjectPtr, FDynamicUIPlayerData>) PlayerDataMap                                              OFFSET(get<T>, {0x48, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -176,6 +174,8 @@ public:
 	// void AddScenes(TArray<UDynamicUIScene*> Scenes, APlayerController*& Player);                                             // [0x6bcb2e0] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicUI.DynamicUIManager.AddScene
 	// void AddScene(UDynamicUIScene* Scene, APlayerController*& Player);                                                       // [0x6bcaa88] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/DynamicUI.DynamicUIScene
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UDynamicUIScene : public UDataAsset

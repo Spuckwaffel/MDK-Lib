@@ -25,8 +25,6 @@ public:
 	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0x198, 8, 0, 0})
 	CMember(TArray<FEventModeWidgetCachedData>)        CachedWidgetData                                            OFFSET(get<T>, {0x1A0, 16, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   CurrentlyFocusedActor                                       OFFSET(get<T>, {0x1B0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -42,6 +40,8 @@ public:
 	// bool GetIsFocusAvailable();                                                                                              // [0x9b7b938] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventModeRuntime.FortGameFrameworkComponent_EventMode.GetIsEventModeActive
 	// bool GetIsEventModeActive();                                                                                             // [0x9b7b920] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventModeRuntime.FortWeapon_EventMode
 /// Size: 0x0000 (0x0011F8 - 0x0011F8)
 class AFortWeapon_EventMode : public AFortWeapon

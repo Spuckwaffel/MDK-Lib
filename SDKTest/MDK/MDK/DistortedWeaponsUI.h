@@ -22,8 +22,6 @@ public:
 	CMember(UFortWorldMultiItemXPComponent*)           CurrentXpComponent                                          OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UAthenaItemTierWidget*)                    ItemTierWidget                                              OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UFortKeybindWidget*)                       KeybindWidget                                               OFFSET(get<T>, {0x328, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,3 +51,5 @@ public:
 	// void HandlePowerUpPending();                                                                                             // [0x9b57508] Final|Native|Protected 
 	// Function /Script/DistortedWeaponsUI.ChromeWeaponInfoWidget.GetCurrentWeaponRarity
 	// EFortRarity GetCurrentWeaponRarity();                                                                                    // [0x9b574e4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+

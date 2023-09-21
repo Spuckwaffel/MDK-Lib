@@ -23,8 +23,6 @@ public:
 	SMember(FVoteRuntimeArray)                         VoteRuntimeList                                             OFFSET(get<T>, {0x280, 288, 0, 0})
 	SMember(FVoteSelectionResultsArray)                VoteResultsList                                             OFFSET(get<T>, {0x3A0, 288, 0, 0})
 	CMember(TMap<FUniqueNetIdRepl, FCastedVote>)       PlayerCastedVotesMap                                        OFFSET(get<T>, {0x4C0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -44,6 +42,8 @@ public:
 	// void ServerSubmitVotesAggregated(FName VoteSessionId, FName VoteId, FName VoteSelectionId, int32_t VoteDelta);           // [0xa22efa4] Net|NetReliableNative|Event|Protected|NetServer|NetValidate 
 	// Function /Script/VotingFramework.VoteBroadcasterComponent.OnVoteCasted
 	// void OnVoteCasted(FUniqueNetIdRepl& UserNetId, FGameplayTag& VoteSessionId, FGameplayTag& VoteId, FGameplayTag& VoteSelectionId); // [0xa22defc] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/VotingFramework.VoteDispatchSubsystem
 /// Size: 0x00A0 (0x000030 - 0x0000D0)
 class UVoteDispatchSubsystem : public UGameInstanceSubsystem
@@ -85,8 +85,6 @@ public:
 	SMember(FGameplayTagContainer)                     RequestedVoteSessionIds                                     OFFSET(get<T>, {0x120, 32, 0, 0})
 	SMember(FGameplayTagContainer)                     RequestedVoteIds                                            OFFSET(get<T>, {0x140, 32, 0, 0})
 	SMember(FGameplayTagContainer)                     RequestedVoteSelectionIds                                   OFFSET(get<T>, {0x160, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -106,6 +104,8 @@ public:
 	// void OnVoteEnd(FGameplayTag& VoteSessionId, FGameplayTag& VoteId, FGameplayTag& WinningVoteSelectionId, EVoteState VoteState); // [0xa22e2e8] Native|Protected|HasOutParms 
 	// Function /Script/VotingFramework.VoteListenerComponent.OnVoteChange
 	// void OnVoteChange(FGameplayTag& VoteSessionId, FGameplayTag& VoteId, FGameplayTag& VoteSelectionId, int32_t ServerVoteTotal, int32_t AllServersVoteTotal); // [0xa22e068] Native|Protected|HasOutParms 
+};
+
 /// Class /Script/VotingFramework.VoteResponderComponent
 /// Size: 0x0070 (0x000180 - 0x0001F0)
 class UVoteResponderComponent : public UVoteListenerComponent
@@ -119,8 +119,6 @@ public:
 	CMember(TMap<FUniqueNetIdRepl, FCastedVote>)       PlayerCastedVotesMap                                        OFFSET(get<T>, {0x198, 80, 0, 0})
 	SMember(FName)                                     ActiveVoteSessionId                                         OFFSET(get<T>, {0x1E8, 4, 0, 0})
 	SMember(FName)                                     ActiveVoteId                                                OFFSET(get<T>, {0x1EC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -132,6 +130,8 @@ public:
 	// void CastManualVoteSelection(APlayerState* InPlayerState, FGameplayTag& VoteSelection);                                  // [0xa22dd68] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/VotingFramework.VoteResponderComponent.CastDefaultVoteSelection
 	// void CastDefaultVoteSelection(APlayerState* InPlayerState);                                                              // [0xa22dce4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/VotingFramework.CastedVote
 /// Size: 0x000C (0x000000 - 0x00000C)
 class FCastedVote : public MDKStruct

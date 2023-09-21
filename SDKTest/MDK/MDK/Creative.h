@@ -22,8 +22,6 @@ class UGAT_Creative_TriggeredAbility_C : public UGAT_TriggeredAbility_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(TArray<FName>)                             OverriddenPropertyNames                                     OFFSET(get<T>, {0xB40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -37,6 +35,8 @@ public:
 	// void AbilityTimeout();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility.GAT_Creative_TriggeredAbility_C.ExecuteUbergraph_GAT_Creative_TriggeredAbility
 	// void ExecuteUbergraph_GAT_Creative_TriggeredAbility(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C
 /// Size: 0x0010 (0x000B50 - 0x000B60)
 class UGAT_Creative_TriggeredAbility_Pawn_C : public UGAT_Creative_TriggeredAbility_C
@@ -47,8 +47,6 @@ class UGAT_Creative_TriggeredAbility_Pawn_C : public UGAT_Creative_TriggeredAbil
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB50, 8, 0, 0})
 	CMember(AFortPawn*)                                AbilityOwner                                                OFFSET(get<T>, {0xB58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -58,6 +56,8 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Parents/GAT_Creative_TriggeredAbility_Pawn.GAT_Creative_TriggeredAbility_Pawn_C.ExecuteUbergraph_GAT_Creative_TriggeredAbility_Pawn
 	// void ExecuteUbergraph_GAT_Creative_TriggeredAbility_Pawn(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C
 /// Size: 0x0044 (0x000B60 - 0x000BA4)
 class UGA_Creative_OnKillSiphon_C : public UGAT_Creative_TriggeredAbility_Pawn_C
@@ -79,8 +79,6 @@ public:
 	SMember(FName)                                     NameGrantWood                                               OFFSET(get<T>, {0xB98, 4, 0, 0})
 	SMember(FName)                                     NameGrantStone                                              OFFSET(get<T>, {0xB9C, 4, 0, 0})
 	SMember(FName)                                     NameGrantMetal                                              OFFSET(get<T>, {0xBA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -106,6 +104,8 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Creative/Abilities/Siphon/GA_Creative_OnKillSiphon.GA_Creative_OnKillSiphon_C.ExecuteUbergraph_GA_Creative_OnKillSiphon
 	// void ExecuteUbergraph_GA_Creative_OnKillSiphon(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Creative/BuildingActors/GameplayActors/GE_LaunchedByVent.GE_LaunchedByVent_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_LaunchedByVent_C : public UGameplayEffect
@@ -164,8 +164,6 @@ public:
 	CMember(USoundBase*)                               SlidingDoorClose_Sound                                      OFFSET(get<T>, {0xDA0, 8, 0, 0})
 	CMember(USoundBase*)                               SlidingDoorOpen_Sound                                       OFFSET(get<T>, {0xDA8, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnDoorOpened                                                OFFSET(get<T>, {0xDB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -203,6 +201,8 @@ public:
 	// void ExecuteUbergraph_MilitaryBase_Door_01(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Creative/Sets/MilitaryBase/BuildingPieces/MilitaryBase_Door_01.MilitaryBase_Door_01_C.OnDoorOpened__DelegateSignature
 	// void OnDoorOpened__DelegateSignature();                                                                                  // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Struct /Game/Creative/Devices/Common/PawnHighlight.PawnHighlight
 /// Size: 0x0030 (0x000000 - 0x000030)
 class FPawnHighlight : public MDKStruct
@@ -219,17 +219,6 @@ public:
 	DMember(float)                                     UsesPulse_25_E29229F64E540F0617E4C4987AD77605               OFFSET(get<float>, {0x2C, 4, 0, 0})
 };
 
-/// Enum /Game/Creative/Devices/Common/Enums/ECreativeColorSetType.ECreativeColorSetType
-/// Size: 0x05
-enum ECreativeColorSetType : uint8_t
-{
-	ECreativeColorSetType__NewEnumerator00                                           = 0,
-	ECreativeColorSetType__NewEnumerator11                                           = 1,
-	ECreativeColorSetType__NewEnumerator22                                           = 2,
-	ECreativeColorSetType__NewEnumerator33                                           = 3,
-	ECreativeColorSetType__ECreativeColorSetType_MAX4                                = 4
-};
-
 /// Enum /Game/Creative/Devices/Common/Enums/EAwardScoreType.EAwardScoreType
 /// Size: 0x05
 enum EAwardScoreType : uint8_t
@@ -239,6 +228,17 @@ enum EAwardScoreType : uint8_t
 	EAwardScoreType__NewEnumerator22                                                 = 2,
 	EAwardScoreType__NewEnumerator33                                                 = 3,
 	EAwardScoreType__EAwardScoreType_MAX4                                            = 4
+};
+
+/// Enum /Game/Creative/Devices/Common/Enums/ECreativeColorSetType.ECreativeColorSetType
+/// Size: 0x05
+enum ECreativeColorSetType : uint8_t
+{
+	ECreativeColorSetType__NewEnumerator00                                           = 0,
+	ECreativeColorSetType__NewEnumerator11                                           = 1,
+	ECreativeColorSetType__NewEnumerator22                                           = 2,
+	ECreativeColorSetType__NewEnumerator33                                           = 3,
+	ECreativeColorSetType__ECreativeColorSetType_MAX4                                = 4
 };
 
 /// Enum /Game/Creative/Devices/Common/EBoolWithUnset.EBoolWithUnset

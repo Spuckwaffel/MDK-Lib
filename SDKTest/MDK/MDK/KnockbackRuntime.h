@@ -28,8 +28,6 @@ public:
 	SMember(FScalableFloat)                            PercentDamageLowMaxThreshold                                OFFSET(get<T>, {0x4C0, 40, 0, 0})
 	SMember(FScalableFloat)                            PercentDamageMediumMaxThreshold                             OFFSET(get<T>, {0x4E8, 40, 0, 0})
 	DMember(float)                                     KnockbackMultiplierInitialValue                             OFFSET(get<float>, {0x510, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -45,6 +43,8 @@ public:
 	// float GetKnockbackMultiplierInitialValue();                                                                              // [0x7cfb454] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/KnockbackRuntime.FortAthenaMutator_Knockback.GetAllPlayersKnockbackData
 	// TArray<FKnockbackMutatorData> GetAllPlayersKnockbackData();                                                              // [0x9c28180] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/KnockbackRuntime.FortGameplayAbility_KnockbackMutator
 /// Size: 0x0010 (0x000B28 - 0x000B38)
 class UFortGameplayAbility_KnockbackMutator : public UFortGameplayAbility
@@ -55,8 +55,6 @@ class UFortGameplayAbility_KnockbackMutator : public UFortGameplayAbility
 public:
 	CMember(AFortAthenaMutator_Knockback*)             CachedMutator                                               OFFSET(get<T>, {0xB28, 8, 0, 0})
 	CMember(UClass*)                                   MutatorClassToGet                                           OFFSET(get<T>, {0xB30, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -64,6 +62,8 @@ public:
 	// void SaveKnockbackData(FKnockbackMutatorData& InKnockbackData);                                                          // [0x9c289f4] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/KnockbackRuntime.FortGameplayAbility_KnockbackMutator.GetCachedMutator
 	// AFortAthenaMutator_Knockback* GetCachedMutator();                                                                        // [0x9c28808] Final|Native|Protected|BlueprintCallable|BlueprintPure 
+};
+
 /// Struct /Script/KnockbackRuntime.KnockbackMutatorData
 /// Size: 0x0014 (0x00000C - 0x000020)
 class FKnockbackMutatorData : public FFastArraySerializerItem

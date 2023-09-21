@@ -18,13 +18,13 @@ class UAudioGameplayVolumeMutator : public UAudioGameplayComponent
 
 public:
 	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0xA8, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioGameplayVolume.AudioGameplayVolumeMutator.SetPriority
 	// void SetPriority(int32_t InPriority);                                                                                    // [0x72e7e34] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioGameplayVolume.AttenuationVolumeComponent
 /// Size: 0x0010 (0x0000B0 - 0x0000C0)
 class UAttenuationVolumeComponent : public UAudioGameplayVolumeMutator
@@ -37,8 +37,6 @@ public:
 	DMember(float)                                     ExteriorTime                                                OFFSET(get<float>, {0xB4, 4, 0, 0})
 	DMember(float)                                     InteriorVolume                                              OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     InteriorTime                                                OFFSET(get<float>, {0xBC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -46,6 +44,8 @@ public:
 	// void SetInteriorVolume(float Volume, float InterpolateTime);                                                             // [0x72e7d60] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioGameplayVolume.AttenuationVolumeComponent.SetExteriorVolume
 	// void SetExteriorVolume(float Volume, float InterpolateTime);                                                             // [0x72e7c8c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioGameplayVolume.AudioGameplayVolume
 /// Size: 0x0030 (0x0002C8 - 0x0002F8)
 class AAudioGameplayVolume : public AVolume
@@ -58,8 +58,6 @@ public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x2D0, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnListenerEnterEvent                                        OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnListenerExitEvent                                         OFFSET(get<T>, {0x2E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -71,6 +69,8 @@ public:
 	// void OnListenerExit();                                                                                                   // [0x2bb5594] Native|Event|Public|BlueprintEvent 
 	// Function /Script/AudioGameplayVolume.AudioGameplayVolume.OnListenerEnter
 	// void OnListenerEnter();                                                                                                  // [0x2c813d4] Native|Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/AudioGameplayVolume.AudioGameplayVolumeComponent
 /// Size: 0x0028 (0x0000A8 - 0x0000D0)
 class UAudioGameplayVolumeComponent : public UAudioGameplayComponent
@@ -147,8 +147,6 @@ public:
 	DMember(float)                                     ExteriorLPFTime                                             OFFSET(get<float>, {0xB4, 4, 0, 0})
 	DMember(float)                                     InteriorLPF                                                 OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     InteriorLPFTime                                             OFFSET(get<float>, {0xBC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -156,6 +154,8 @@ public:
 	// void SetInteriorLPF(float Volume, float InterpolateTime);                                                                // [0x72e7d60] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioGameplayVolume.FilterVolumeComponent.SetExteriorLPF
 	// void SetExteriorLPF(float Volume, float InterpolateTime);                                                                // [0x72e7c8c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioGameplayVolume.ReverbVolumeComponent
 /// Size: 0x0020 (0x0000B0 - 0x0000D0)
 class UReverbVolumeComponent : public UAudioGameplayVolumeMutator
@@ -165,13 +165,13 @@ class UReverbVolumeComponent : public UAudioGameplayVolumeMutator
 
 public:
 	SMember(FReverbSettings)                           ReverbSettings                                              OFFSET(get<T>, {0xB0, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioGameplayVolume.ReverbVolumeComponent.SetReverbSettings
 	// void SetReverbSettings(FReverbSettings& NewReverbSettings);                                                              // [0x72e7ec0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AudioGameplayVolume.SubmixOverrideVolumeComponent
 /// Size: 0x0010 (0x0000B0 - 0x0000C0)
 class USubmixOverrideVolumeComponent : public UAudioGameplayVolumeMutator
@@ -181,13 +181,13 @@ class USubmixOverrideVolumeComponent : public UAudioGameplayVolumeMutator
 
 public:
 	CMember(TArray<FAudioVolumeSubmixOverrideSettings>) SubmixOverrideSettings                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioGameplayVolume.SubmixOverrideVolumeComponent.SetSubmixOverrideSettings
 	// void SetSubmixOverrideSettings(TArray<FAudioVolumeSubmixOverrideSettings>& NewSubmixOverrideSettings);                   // [0x72e7f78] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AudioGameplayVolume.SubmixSendVolumeComponent
 /// Size: 0x0010 (0x0000B0 - 0x0000C0)
 class USubmixSendVolumeComponent : public UAudioGameplayVolumeMutator
@@ -197,10 +197,10 @@ class USubmixSendVolumeComponent : public UAudioGameplayVolumeMutator
 
 public:
 	CMember(TArray<FAudioVolumeSubmixSendSettings>)    SubmixSendSettings                                          OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioGameplayVolume.SubmixSendVolumeComponent.SetSubmixSendSettings
 	// void SetSubmixSendSettings(TArray<FAudioVolumeSubmixSendSettings>& NewSubmixSendSettings);                               // [0x72e8044] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+

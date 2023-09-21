@@ -302,8 +302,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  PathUpdatedNotifier                                         OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FVector>)                           PathPoints                                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<ENavigationOptionFlag>)        RecalculateOnInvalidation                                   OFFSET(get<T>, {0x48, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -323,6 +321,8 @@ public:
 	// void EnableRecalculationOnInvalidation(TEnumAsByte<ENavigationOptionFlag> DoRecalculation);                              // [0x63c2748] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationPath.EnableDebugDrawing
 	// void EnableDebugDrawing(bool bShouldDrawDebugData, FLinearColor PathColor);                                              // [0x63c25a4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/NavigationSystem.NavigationSystemV1
 /// Size: 0x1560 (0x000028 - 0x001588)
 class UNavigationSystemV1 : public UNavigationSystemBase
@@ -357,8 +357,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnNavDataRegisteredEvent                                    OFFSET(get<T>, {0x100, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnNavigationGenerationFinishedDelegate                      OFFSET(get<T>, {0x110, 16, 0, 0})
 	SMember(FNavigationSystemRunMode)                  OperationMode                                               OFFSET(get<T>, {0x200, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -400,6 +398,8 @@ public:
 	// UNavigationPath* FindPathToLocationSynchronously(UObject* WorldContextObject, FVector& PathStart, FVector& PathEnd, AActor* PathfindingContext, UClass* FilterClass); // [0x63c2cbc] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
 	// UNavigationPath* FindPathToActorSynchronously(UObject* WorldContextObject, FVector& PathStart, AActor* GoalActor, float TetherDistance, AActor* PathfindingContext, UClass* FilterClass); // [0x63c27f0] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/NavigationSystem.NavigationSystemModuleConfig
 /// Size: 0x0008 (0x000050 - 0x000058)
 class UNavigationSystemModuleConfig : public UNavigationSystemConfig
@@ -477,13 +477,13 @@ class UNavRelevantComponent : public UActorComponent
 public:
 	DMember(bool)                                      bAttachToOwnersRoot                                         OFFSET(get<bool>, {0xE0, 1, 1, 0})
 	CMember(UObject*)                                  CachedNavParent                                             OFFSET(get<T>, {0xE8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
 	// void SetNavigationRelevancy(bool bRelevant);                                                                             // [0x6409af4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/NavigationSystem.NavLinkCustomComponent
 /// Size: 0x00F0 (0x0000F0 - 0x0001E0)
 class UNavLinkCustomComponent : public UNavRelevantComponent
@@ -632,13 +632,13 @@ public:
 	DMember(float)                                     TileSetUpdateInterval                                       OFFSET(get<float>, {0x56C, 4, 0, 0})
 	DMember(float)                                     HeuristicScale                                              OFFSET(get<float>, {0x570, 4, 0, 0})
 	DMember(float)                                     VerticalDeviationFromGroundCompensation                     OFFSET(get<float>, {0x574, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
 	// bool K2_ReplaceAreaInTileBounds(FBox Bounds, UClass* OldArea, UClass* NewArea, bool ReplaceLinks);                       // [0x63ecb50] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/NavigationSystem.RecastNavMeshDataChunk
 /// Size: 0x0010 (0x000030 - 0x000040)
 class URecastNavMeshDataChunk : public UNavigationDataChunk
@@ -661,13 +661,13 @@ public:
 	SMember(FVector)                                   FailsafeExtent                                              OFFSET(get<T>, {0xF8, 24, 0, 0})
 	CMember(ENavigationDataResolution)                 NavMeshResolution                                           OFFSET(get<T>, {0x110, 1, 0, 0})
 	DMember(bool)                                      bIncludeAgentHeight                                         OFFSET(get<bool>, {0x111, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavModifierComponent.SetAreaClass
 	// void SetAreaClass(UClass* NewAreaClass);                                                                                 // [0x6409a74] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/NavigationSystem.NavModifierVolume
 /// Size: 0x0018 (0x0002C8 - 0x0002E0)
 class ANavModifierVolume : public AVolume
@@ -679,13 +679,13 @@ public:
 	CMember(UClass*)                                   AreaClass                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(bool)                                      bMaskFillCollisionUnderneathForNavmesh                      OFFSET(get<bool>, {0x2D8, 1, 0, 0})
 	CMember(ENavigationDataResolution)                 NavMeshResolution                                           OFFSET(get<T>, {0x2D9, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NavigationSystem.NavModifierVolume.SetAreaClass
 	// void SetAreaClass(UClass* NewAreaClass);                                                                                 // [0x6409998] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/NavigationSystem.NavSystemConfigOverride
 /// Size: 0x0010 (0x000290 - 0x0002A0)
 class ANavSystemConfigOverride : public AActor

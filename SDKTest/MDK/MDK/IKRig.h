@@ -85,8 +85,6 @@ public:
 	SMember(FName)                                     CurrentTargetRetargetPose                                   OFFSET(get<T>, {0x194, 4, 0, 0})
 	CMember(TMap<FName, FIKRetargetPose>)              RetargetPoses                                               OFFSET(get<T>, {0x198, 80, 0, 0})
 	SMember(FName)                                     CurrentRetargetPose                                         OFFSET(get<T>, {0x1E8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -116,6 +114,8 @@ public:
 	// FTargetChainSettings GetChainSettingsFromRetargetProfile(FRetargetProfile& RetargetProfile, FName TargetChainName);      // [0x725e164] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/IKRig.IKRetargeter.GetChainSettingsFromRetargetAsset
 	// FTargetChainSettings GetChainSettingsFromRetargetAsset(UIKRetargeter* RetargetAsset, FName TargetChainName, FName OptionalProfileName); // [0x725de7c] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/IKRig.IKRetargetProcessor
 /// Size: 0x0338 (0x000028 - 0x000360)
 class UIKRetargetProcessor : public UObject

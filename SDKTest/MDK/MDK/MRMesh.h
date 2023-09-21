@@ -26,8 +26,6 @@ public:
 	SMember(FLinearColor)                              VertexColorFromConfidenceOne                                OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	DMember(float)                                     UpdateInterval                                              OFFSET(get<float>, {0x2E8, 4, 0, 0})
 	CMember(UMRMeshComponent*)                         MRMesh                                                      OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -37,6 +35,8 @@ public:
 	// void DisconnectMRMesh(UMRMeshComponent* InMRMeshPtr);                                                                    // [0x5999fcc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MRMesh.MockDataMeshTrackerComponent.ConnectMRMesh
 	// void ConnectMRMesh(UMRMeshComponent* InMRMeshPtr);                                                                       // [0x5999ed8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MRMesh.MRMeshBodyHolder
 /// Size: 0x0200 (0x000028 - 0x000228)
 class UMRMeshBodyHolder : public UObject
@@ -63,8 +63,6 @@ public:
 	DMember(bool)                                      bUpdateNavMeshOnMeshUpdate                                  OFFSET(get<bool>, {0x581, 1, 0, 0})
 	DMember(bool)                                      bNeverCreateCollisionMesh                                   OFFSET(get<bool>, {0x583, 1, 0, 0})
 	CMember(TArray<UMRMeshBodyHolder*>)                BodyHolders                                                 OFFSET(get<T>, {0x5C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -90,6 +88,8 @@ public:
 	// void ForceNavMeshUpdate();                                                                                               // [0x599a04c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MRMesh.MRMeshComponent.Clear
 	// void Clear();                                                                                                            // [0x5999e38] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MRMesh.MeshReconstructorBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMeshReconstructorBase : public UObject

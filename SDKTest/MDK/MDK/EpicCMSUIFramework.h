@@ -24,13 +24,13 @@ public:
 	SMember(FSlateBrush)                               LoadingFailFallback                                         OFFSET(get<T>, {0x3D0, 192, 0, 0})
 	CMember(UTexture2D*)                               ExternalMedia                                               OFFSET(get<T>, {0x490, 8, 0, 0})
 	DMember(bool)                                      bDownloadingExternalMedia                                   OFFSET(get<bool>, {0x498, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EpicCMSUIFramework.EpicCMSImage.SetMediaURL
 	// void SetMediaURL(FString MediaUrl);                                                                                      // [0x6c7b760] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EpicCMSUIFramework.EpicCMSLayoutBase
 /// Size: 0x0068 (0x0002A8 - 0x000310)
 class UEpicCMSLayoutBase : public UUserWidget
@@ -99,13 +99,13 @@ public:
 	CMember(UCommonTextBlock*)                         TitleTextBlock                                              OFFSET(get<T>, {0x1530, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         SubtitleTextBlock                                           OFFSET(get<T>, {0x1538, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         EyebrowTextBlock                                            OFFSET(get<T>, {0x1540, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileBase.Launch
 	// void Launch();                                                                                                           // [0x6c7b6a0] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/EpicCMSUIFramework.EpicCMSTileCarousel
 /// Size: 0x0050 (0x0002A8 - 0x0002F8)
 class UEpicCMSTileCarousel : public UUserWidget
@@ -122,8 +122,6 @@ public:
 	DMember(bool)                                      bShouldShowNavigationOnlyOnHover                            OFFSET(get<bool>, {0x2F0, 1, 0, 0})
 	DMember(bool)                                      bInputActionsForPaging                                      OFFSET(get<bool>, {0x2F1, 1, 0, 0})
 	DMember(bool)                                      bIsShowingNavigation                                        OFFSET(get<bool>, {0x2F2, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -143,6 +141,8 @@ public:
 	// void BeginAutoScrolling();                                                                                               // [0x6c7b5c0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EpicCMSUIFramework.EpicCMSTileCarousel.AddTilePage
 	// void AddTilePage(UWidget* TilePageWidget);                                                                               // [0x6c7b470] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/EpicCMSUIFramework.EpicCMSTileTypeMapping
 /// Size: 0x0020 (0x000008 - 0x000028)
 class FEpicCMSTileTypeMapping : public FTableRowBase

@@ -88,8 +88,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnAudioEnvelopeValue                                        OFFSET(get<T>, {0x898, 16, 0, 0})
 	CMember(USynthSound*)                              Synth                                                       OFFSET(get<T>, {0x8C8, 8, 0, 0})
 	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0x8D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -127,6 +125,8 @@ public:
 	// void FadeIn(float FadeInDuration, float FadeVolumeLevel, float StartTime, EAudioFaderCurve FadeCurve);                   // [0x2e5e930] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
 	// Function /Script/AudioMixer.SynthComponent.AdjustVolume
 	// void AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel, EAudioFaderCurve FadeCurve);                      // [0x593fe78] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset
 /// Size: 0x00E8 (0x000068 - 0x000150)
 class USubmixEffectDynamicsProcessorPreset : public USoundEffectSubmixPreset
@@ -136,8 +136,6 @@ class USubmixEffectDynamicsProcessorPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectDynamicsProcessorSettings)    Settings                                                    OFFSET(get<T>, {0xF0, 96, 0, 0})
-};
-
 
 
 	/// Functions
@@ -149,6 +147,8 @@ public:
 	// void SetAudioBus(UAudioBus* AudioBus);                                                                                   // [0x5942198] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SubmixEffectDynamicsProcessorPreset.ResetKey
 	// void ResetKey();                                                                                                         // [0x5941d40] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioMixer.SubmixEffectSubmixEQPreset
 /// Size: 0x0048 (0x000068 - 0x0000B0)
 class USubmixEffectSubmixEQPreset : public USoundEffectSubmixPreset
@@ -158,13 +158,13 @@ class USubmixEffectSubmixEQPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectSubmixEQSettings)             Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
 	// void SetSettings(FSubmixEffectSubmixEQSettings& InSettings);                                                             // [0x594322c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AudioMixer.SubmixEffectReverbPreset
 /// Size: 0x00A8 (0x000068 - 0x000110)
 class USubmixEffectReverbPreset : public USoundEffectSubmixPreset
@@ -174,8 +174,6 @@ class USubmixEffectReverbPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectReverbSettings)               Settings                                                    OFFSET(get<T>, {0xD0, 64, 0, 0})
-};
-
 
 
 	/// Functions
@@ -183,6 +181,8 @@ public:
 	// void SetSettingsWithReverbEffect(UReverbEffect* InReverbEffect, float WetLevel, float DryLevel);                         // [0x59438ec] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMixer.SubmixEffectReverbPreset.SetSettings
 	// void SetSettings(FSubmixEffectReverbSettings& InSettings);                                                               // [0x594314c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AudioMixer.AudioGenerator
 /// Size: 0x0080 (0x000028 - 0x0000A8)
 class UAudioGenerator : public UObject

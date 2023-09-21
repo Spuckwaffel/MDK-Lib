@@ -39,8 +39,6 @@ public:
 	CMember(TArray<FUniqueNetIdRepl>)                  RegisteredPlayerIds                                         OFFSET(get<T>, {0x1E8, 16, 0, 0})
 	CMember(TArray<FUniqueNetIdRepl>)                  NonRegisteredPlayerIds                                      OFFSET(get<T>, {0x1F8, 16, 0, 0})
 	CMember(EAutoplayOptions)                          CurrentAutoplayState                                        OFFSET(get<T>, {0x208, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -82,6 +80,8 @@ public:
 	// void OnAudioLoadComplete(FSoftObjectPath Audio);                                                                         // [0x9a8acfc] Final|Native|Private|HasDefaults 
 	// Function /Script/CRD_AudioPlayerRuntime.CreativeAudioComponent.OnAllPlayersUnregistered
 	// void OnAllPlayersUnregistered();                                                                                         // [0x2326950] Final|Native|Private 
+};
+
 /// Class /Script/CRD_AudioPlayerRuntime.CreativeAudioPlayerReplicationProxy
 /// Size: 0x0040 (0x000298 - 0x0002D8)
 class ACreativeAudioPlayerReplicationProxy : public ACreativePlayerReplicationProxy

@@ -18,8 +18,6 @@ class UThrowingToyTrackerComponent : public UActorComponent
 
 public:
 	SMember(FThrowingToyDataArray)                     ThrowingToysData                                            OFFSET(get<T>, {0xA0, 280, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,6 +31,8 @@ public:
 	// AActor* GetAndReleaseThrowingToy(FGuid& WorldItemGuid);                                                                  // [0x9a6c898] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/ThrowingToyRuntime.ThrowingToyTrackerComponent.AddThrowingToy
 	// void AddThrowingToy(AActor* ThrowingToyActor, FGuid& WorldItemGuid);                                                     // [0x9a6c778] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Struct /Script/ThrowingToyRuntime.ThrowingToyData
 /// Size: 0x001C (0x00000C - 0x000028)
 class FThrowingToyData : public FFastArraySerializerItem

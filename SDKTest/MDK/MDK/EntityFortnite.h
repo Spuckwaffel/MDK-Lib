@@ -51,8 +51,6 @@ class AEntityFortniteStormSpawner : public AActor
 
 public:
 	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -64,6 +62,8 @@ public:
 	// void Pause();                                                                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/EntityFortnite.EntityFortniteStormSpawner.Exists
 	// bool Exists();                                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent|Const 
+};
+
 /// Struct /Script/EntityFortnite.EntityFortniteStormPhase
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FEntityFortniteStormPhase : public MDKStruct

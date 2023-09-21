@@ -38,13 +38,13 @@ class UMVVMGameSubsystem : public UGameInstanceSubsystem
 
 public:
 	CMember(UMVVMViewModelCollectionObject*)           ViewModelCollection                                         OFFSET(get<T>, {0x30, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ModelViewViewModel.MVVMGameSubsystem.GetViewModelCollection
 	// UMVVMViewModelCollectionObject* GetViewModelCollection();                                                                // [0x5ae2078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ModelViewViewModel.MVVMSubsystem
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UMVVMSubsystem : public UEngineSubsystem
@@ -74,8 +74,6 @@ class UMVVMViewModelCollectionObject : public UObject
 
 public:
 	SMember(FMVVMViewModelCollection)                  ViewModelCollection                                         OFFSET(get<T>, {0x28, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -89,6 +87,8 @@ public:
 	// UMVVMViewModelBase* FindFirstViewModelInstanceOfType(UClass*& ViewModelClass);                                           // [0x6bd04b8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ModelViewViewModel.MVVMViewModelCollectionObject.AddViewModelInstance
 	// bool AddViewModelInstance(FMVVMViewModelContext Context, UMVVMViewModelBase* ViewModel);                                 // [0x6bd00dc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ModelViewViewModel.MVVMViewModelBlueprintGeneratedClass
 /// Size: 0x0000 (0x000368 - 0x000368)
 class UMVVMViewModelBlueprintGeneratedClass : public UBlueprintGeneratedClass
@@ -124,8 +124,6 @@ public:
 	DMember(bool)                                      bSourcesInitialized                                         OFFSET(get<bool>, {0x52, 1, 0, 0})
 	DMember(bool)                                      bBindingsInitialized                                        OFFSET(get<bool>, {0x53, 1, 0, 0})
 	DMember(bool)                                      bHasEveryTickBinding                                        OFFSET(get<bool>, {0x54, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -147,6 +145,8 @@ public:
 	// bool AreSourcesInitialized();                                                                                            // [0x6bd0390] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ModelViewViewModel.MVVMView.AreBindingsInitialized
 	// bool AreBindingsInitialized();                                                                                           // [0x6bd037c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ModelViewViewModel.MVVMViewClass
 /// Size: 0x0088 (0x000028 - 0x0000B0)
 class UMVVMViewClass : public UWidgetBlueprintGeneratedClassExtension

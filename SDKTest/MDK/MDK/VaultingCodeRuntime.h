@@ -24,8 +24,6 @@ public:
 	SMember(FGameplayTagContainer)                     HurdleTag                                                   OFFSET(get<T>, {0x78, 32, 0, 0})
 	SMember(FGameplayTag)                              HurdleStartedTag                                            OFFSET(get<T>, {0x98, 4, 0, 0})
 	SMember(FGameplayTagContainer)                     HurdleFinishedTag                                           OFFSET(get<T>, {0xA0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,6 +31,8 @@ public:
 	// bool IsContextualActionPrototypeActive();                                                                                // [0x9e6b860] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VaultingCodeRuntime.FortMovementMode_ExtLogicHurdle.BP_GetAnimationMontageInformation
 	// void BP_GetAnimationMontageInformation(FSynchedActionInfo SynchedActionInfo, EHurdleType Type, UAnimMontage*& AnimMontage, FName& StartSectionName, FName& MontageMiddleSectionName); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/VaultingCodeRuntime.HurdleCameraMode
 /// Size: 0x0200 (0x001B50 - 0x001D50)
 class UHurdleCameraMode : public UFortCameraMode_ThirdPerson
@@ -70,8 +70,6 @@ public:
 	DMember(double)                                    LastTeleportTime                                            OFFSET(get<double>, {0x878, 8, 0, 0})
 	SMember(FHurdleTargetingData)                      ParallelTargetingData                                       OFFSET(get<T>, {0x880, 304, 0, 0})
 	CMember(EHurdleState)                              ReplicatedHurdleState                                       OFFSET(get<T>, {0x9B1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -111,6 +109,8 @@ public:
 	// void BP_HandleHurdleEnded();                                                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/VaultingCodeRuntime.HurdleComponent.BP_CanStartHurdle
 	// void BP_CanStartHurdle(bool& OutCanStartHurdle);                                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/VaultingCodeRuntime.HurdleLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UHurdleLibrary : public UBlueprintFunctionLibrary

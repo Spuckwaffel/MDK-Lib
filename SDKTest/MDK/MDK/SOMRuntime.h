@@ -88,13 +88,13 @@ public:
 	CMember(TArray<AScriptedObjectMovement_StaticPath*>) RegisteredStaticPaths                                     OFFSET(get<T>, {0x150, 16, 0, 0})
 	CMember(AScriptedObjectMovement_StaticPath*)       CurrentlyMovingStaticPath                                   OFFSET(get<T>, {0x160, 8, 0, 0})
 	SMember(FScalableFloat)                            StaticPathCooldownBetweenMoves                              OFFSET(get<T>, {0x190, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SOMRuntime.FortGameStateComponent_ScriptedObjectMovementManager.HandleCurrentPlaylistReady
 	// void HandleCurrentPlaylistReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x998c40c] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase
 /// Size: 0x0218 (0x000978 - 0x000B90)
 class AFortScriptedObjectMovement_MovableObjectBase : public ABuildingGameplayActor
@@ -113,8 +113,6 @@ public:
 	DMember(bool)                                      bWaitingForBeginPlaySkip                                    OFFSET(get<bool>, {0xA89, 1, 0, 0})
 	CMember(AScriptedObjectMovement_StaticPath*)       StaticFollowPath                                            OFFSET(get<T>, {0xA90, 8, 0, 0})
 	SMember(FScriptedObjectMovement_StaticPathStepData) CurrentStepData                                            OFFSET(get<T>, {0xAA0, 240, 0, 0})
-};
-
 
 
 	/// Functions
@@ -154,6 +152,8 @@ public:
 	// bool BlockOverlappingStaticPathSteps();                                                                                  // [0x998a1d8] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/SOMRuntime.FortScriptedObjectMovement_MovableObjectBase.BeginMovingToStaticPathNode
 	// void BeginMovingToStaticPathNode(FScriptedObjectMovement_StaticPathStepData& StepData);                                  // [0x998a118] Native|Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SOMRuntime.ScriptedObjectMovement_CalendarCheatDefinition
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UScriptedObjectMovement_CalendarCheatDefinition : public UPrimaryDataAsset
@@ -183,8 +183,6 @@ public:
 	SMember(FString)                                   ExitSplineCalendarEvent                                     OFFSET(get<T>, {0x388, 16, 0, 0})
 	CMember(TArray<FStaticPathCalendarSplinePointGroup>) OrderedCalendarEventPointGroups                           OFFSET(get<T>, {0x398, 16, 0, 0})
 	CMember(UFortAsyncAction_CalendarMultiEventWatcher*) CalendarWatcherAction                                     OFFSET(get<T>, {0x4D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -200,6 +198,8 @@ public:
 	// void HandleCalendarEventActive(FString EventName, FTimespan TimeUntilEnd, FTimespan TimeSinceBegin, float TimespanRatio); // [0x998a5ac] Native|Protected|HasDefaults 
 	// Function /Script/SOMRuntime.ScriptedObjectMovement_StaticPath.GeneratePathData
 	// void GeneratePathData();                                                                                                 // [0x998a458] Final|Native|Public  
+};
+
 /// Struct /Script/SOMRuntime.ScriptedObjectMovement_AStarGraphWrapper
 /// Size: 0x0001 (0x000000 - 0x000001)
 class FScriptedObjectMovement_AStarGraphWrapper : public MDKStruct

@@ -105,8 +105,6 @@ public:
 	DMember(bool)                                      bDisableBooster                                             OFFSET(get<bool>, {0xB80, 1, 0, 0})
 	CMember(TWeakObjectPtr<AFortGrindRail*>)           HeadConnectedRail                                           OFFSET(get<T>, {0xB90, 32, 0, 0})
 	CMember(TWeakObjectPtr<AFortGrindRail*>)           TailConnectedRail                                           OFFSET(get<T>, {0xBB0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -142,6 +140,8 @@ public:
 	// void BPRerunConstructionScript();                                                                                        // [0x2d79908] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GrindRailRuntime.FortGrindRail.AllowSprinting
 	// bool AllowSprinting();                                                                                                   // [0x2cdffe0] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+};
+
 /// Class /Script/GrindRailRuntime.FortGrindRailConnector
 /// Size: 0x0000 (0x000978 - 0x000978)
 class AFortGrindRailConnector : public ABuildingGameplayActor
@@ -248,8 +248,6 @@ public:
 	DMember(bool)                                      bBothHandsDown                                              OFFSET(get<bool>, {0x70A, 1, 0, 0})
 	DMember(double)                                    TurnInPlaceAnimCurveValue                                   OFFSET(get<double>, {0x710, 8, 0, 0})
 	DMember(double)                                    TurnRotationAmountCurveValue                                OFFSET(get<double>, {0x718, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -261,6 +259,8 @@ public:
 	// void AnimNotify_EntryExit(UAnimNotify* Notify);                                                                          // [0x9a1ee38] Final|Native|Public  
 	// Function /Script/GrindRailRuntime.FortGrindRailLayerAnimInstance.AnimNotify_EntryEnter
 	// void AnimNotify_EntryEnter(UAnimNotify* Notify);                                                                         // [0x9a1edc8] Final|Native|Public  
+};
+
 /// Class /Script/GrindRailRuntime.GrindRailEditorComponent
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UGrindRailEditorComponent : public UActorComponent
@@ -318,8 +318,6 @@ public:
 	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0xB00, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB08, 8, 0, 0})
 	CMember(UFortPawnComponent_GrindRail*)             GrindComponent                                              OFFSET(get<T>, {0xB10, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -327,6 +325,8 @@ public:
 	// void OnForwardChanged(bool bNewState);                                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/GrindRailRuntime.FortGameplayCueNotifyLoop_Grinding.CacheReferences
 	// void CacheReferences(UAudioComponent* InAudioComponent, UFXSystemComponent* InEffectsComponent, AFortPlayerPawn* InPlayerPawn, UFortPawnComponent_GrindRail* InGrindComponent); // [0x9a1f1ac] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GrindRailRuntime.FortPawnComponent_GrindRail
 /// Size: 0x0B80 (0x0000A8 - 0x000C28)
 class UFortPawnComponent_GrindRail : public UFortPawnComponent
@@ -423,8 +423,6 @@ public:
 	SMember(FScalableFloat)                            FrictionWhenNotLeaning                                      OFFSET(get<T>, {0x9E8, 40, 0, 0})
 	SMember(FScalableFloat)                            SpeedMultiplierOnHitRailCap                                 OFFSET(get<T>, {0xA10, 40, 0, 0})
 	SMember(FScalableFloat)                            MinSpeedAfterBouncedOffRailCap                              OFFSET(get<T>, {0xA38, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -520,6 +518,8 @@ public:
 	// void AddTemporaryMoveIgnoreActor(ABuildingActor* BuildingActor, float IgnoreDuration);                                   // [0x9a1ed04] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/GrindRailRuntime.FortPawnComponent_GrindRail.AddMoveIgnoreActor
 	// bool AddMoveIgnoreActor(ABuildingActor* BuildingActor);                                                                  // [0x9a1ec74] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Struct /Script/GrindRailRuntime.FortAnimInput_GrindRail
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FFortAnimInput_GrindRail : public MDKStruct

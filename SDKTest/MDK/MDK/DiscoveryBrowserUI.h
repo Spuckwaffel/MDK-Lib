@@ -92,8 +92,6 @@ public:
 	CMember(UFortActivityCategoryPageView*)            CachedCategoryPageView                                      OFFSET(get<T>, {0x620, 8, 0, 0})
 	CMember(UFortActivityCreatorPageView*)             CachedCreatorPageView                                       OFFSET(get<T>, {0x628, 8, 0, 0})
 	DMember(bool)                                      bCCUModalEnabled                                            OFFSET(get<bool>, {0x630, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -107,6 +105,8 @@ public:
 	// void OnActivitySelected();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowser.HandleTabChanged
 	// void HandleTabChanged(FName TabId);                                                                                      // [0x9b56434] Final|Native|Private 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserColorSchemeAsset
 /// Size: 0x0050 (0x000030 - 0x000080)
 class UFortActivityBrowserColorSchemeAsset : public UDataAsset
@@ -163,8 +163,6 @@ public:
 	SMember(FText)                                     CurrentCTAButtonText                                        OFFSET(get<T>, {0x1528, 24, 0, 0})
 	SMember(FText)                                     JoinPartyText                                               OFFSET(get<T>, {0x1540, 24, 0, 0})
 	SMember(FText)                                     RequestToJoinText                                           OFFSET(get<T>, {0x1558, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -200,6 +198,8 @@ public:
 	// FText GetCTAButtonText();                                                                                                // [0x9b56098] Final|Native|Public|BlueprintCallable 
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserPlayWithFriendsTile.BP_PartyInformationUpdated
 	// void BP_PartyInformationUpdated(bool bInIsTileSelected);                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserRow
 /// Size: 0x00C0 (0x0002D0 - 0x000390)
 class UFortActivityBrowserRow : public UCommonUserWidget
@@ -210,8 +210,6 @@ class UFortActivityBrowserRow : public UCommonUserWidget
 public:
 	CMember(UCommonTextBlock*)                         Text_CategoryName                                           OFFSET(get<T>, {0x380, 8, 0, 0})
 	DMember(float)                                     MinimumVisibilityPercentageForRowActivation                 OFFSET(get<float>, {0x388, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -233,6 +231,8 @@ public:
 	// bool GetIsInPeekState();                                                                                                 // [0x9b56260] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserRow.GetIsActive
 	// bool GetIsActive();                                                                                                      // [0x82b9c84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserRowHero
 /// Size: 0x0080 (0x000390 - 0x000410)
 class UFortActivityBrowserRowHero : public UFortActivityBrowserRow
@@ -249,8 +249,6 @@ public:
 	CMember(UFortActivityVideoCycle*)                  ActivityVideoCycleWidget                                    OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         BoundKeyArtOutroAnimation                                   OFFSET(get<T>, {0x3D8, 8, 0, 0})
 	DMember(bool)                                      bShouldAutoCycle                                            OFFSET(get<bool>, {0x3E2, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -300,6 +298,8 @@ public:
 	// void CycleNextActivity();                                                                                                // [0x9b55fd8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserRowHero.CheckUpdateDetailsDelay
 	// void CheckUpdateDetailsDelay();                                                                                          // [0x9b55fb0] Final|Native|Private 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserRowList
 /// Size: 0x0020 (0x000390 - 0x0003B0)
 class UFortActivityBrowserRowList : public UFortActivityBrowserRow
@@ -311,13 +311,13 @@ public:
 	CMember(UFortActivityListView*)                    ListView_Activities                                         OFFSET(get<T>, {0x390, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_PageLeft                                             OFFSET(get<T>, {0x398, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_PageRight                                            OFFSET(get<T>, {0x3A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserRowList.OnQueryStatusChanged
 	// void OnQueryStatusChanged(bool bIsActive);                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserRowPromoted
 /// Size: 0x0008 (0x000390 - 0x000398)
 class UFortActivityBrowserRowPromoted : public UFortActivityBrowserRow
@@ -327,13 +327,13 @@ class UFortActivityBrowserRowPromoted : public UFortActivityBrowserRow
 
 public:
 	CMember(UCommonTextBlock*)                         Text_ActivityName                                           OFFSET(get<T>, {0x390, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserRowPromoted.OnPreviewImageChanged
 	// void OnPreviewImageChanged(bool bIsLoading, UTexture* Texture);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserView
 /// Size: 0x00A8 (0x000438 - 0x0004E0)
 class UFortActivityBrowserView : public UFortActivityView
@@ -348,8 +348,6 @@ public:
 	DMember(bool)                                      bShowMobileAcceptButton                                     OFFSET(get<bool>, {0x443, 1, 0, 0})
 	DMember(bool)                                      bShowBackToTopButton                                        OFFSET(get<bool>, {0x444, 1, 0, 0})
 	SMember(FName)                                     DiscoverySurfaceName                                        OFFSET(get<T>, {0x448, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -357,6 +355,8 @@ public:
 	// void OnSurfaceDataDirty();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserView.GetInvalidActivityReason
 	// EFortInvalidActivityReason GetInvalidActivityReason();                                                                   // [0x9b561d4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserRowView
 /// Size: 0x0190 (0x0004E0 - 0x000670)
 class UFortActivityBrowserRowView : public UFortActivityBrowserView
@@ -370,8 +370,6 @@ public:
 	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x558, 4, 0, 0})
 	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x560, 240, 0, 0})
 	CMember(UFortSwipePanel*)                          SwipePanel_Navigation                                       OFFSET(get<T>, {0x650, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -383,6 +381,8 @@ public:
 	// void OnListViewScrolled(float ItemOffset, float DistanceRemaining);                                                      // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserRowView.OnActivityUpdated
 	// void OnActivityUpdated();                                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityBrowserTile
 /// Size: 0x0040 (0x0014E0 - 0x001520)
 class UFortActivityBrowserTile : public UFortActivityBrowserTileBase
@@ -392,13 +392,13 @@ class UFortActivityBrowserTile : public UFortActivityBrowserTileBase
 
 public:
 	CMember(UFortActivityTileDetailsDisplay*)          Display_TileDetails                                         OFFSET(get<T>, {0x14D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DiscoveryBrowserUI.FortActivityBrowserTile.HandleActivitySelected
 	// void HandleActivitySelected();                                                                                           // [0x9b56380] Final|Native|Private 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityPlayerBrowserView
 /// Size: 0x0130 (0x0004E0 - 0x000610)
 class UFortActivityPlayerBrowserView : public UFortActivityBrowserView
@@ -412,8 +412,6 @@ public:
 	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4F8, 4, 0, 0})
 	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x500, 240, 0, 0})
 	CMember(EFortCreativeDiscoveryPlayHistoryType)     PlayHistoryProviderType                                     OFFSET(get<T>, {0x5F0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -427,6 +425,8 @@ public:
 	// void OnPlayViewIntro();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityPlayerBrowserView.BP_OnTileViewUpdated
 	// void BP_OnTileViewUpdated();                                                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityCategoryPageView
 /// Size: 0x0040 (0x000610 - 0x000650)
 class UFortActivityCategoryPageView : public UFortActivityPlayerBrowserView
@@ -462,13 +462,13 @@ class UFortActivityCategoryTile : public UFortActivityTileViewTileBase
 
 public:
 	CMember(UCommonTextBlock*)                         Text_CategoryTitle                                          OFFSET(get<T>, {0x1500, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DiscoveryBrowserUI.FortActivityCategoryTile.OnTileActiveSet
 	// void OnTileActiveSet(bool bIsTileActive);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityCategoryTilePanel
 /// Size: 0x0070 (0x0002D0 - 0x000340)
 class UFortActivityCategoryTilePanel : public UCommonUserWidget
@@ -496,8 +496,6 @@ public:
 	CMember(UFortActivityCategoryTilePanel*)           TilePanel_Featured                                          OFFSET(get<T>, {0x5E0, 8, 0, 0})
 	CMember(UFortActivityCategoryTilePanel*)           TilePanel_All                                               OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(UFortActivityCategoryTilePanel*)           CurrentSelectedPanel                                        OFFSET(get<T>, {0x5F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -511,6 +509,8 @@ public:
 	// UFortActivityCategoryTilePanel* GetTopMostVisiblePanel();                                                                // [0x82ddf5c] Native|Event|Protected|BlueprintEvent|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityCategoryView.GetCurrentSelectedPanel
 	// UFortActivityCategoryTilePanel* GetCurrentSelectedPanel();                                                               // [0x7e0bf44] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityCreateView
 /// Size: 0x0120 (0x0004E0 - 0x000600)
 class UFortActivityCreateView : public UFortActivityBrowserView
@@ -522,8 +522,6 @@ public:
 	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4E8, 4, 0, 0})
 	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x4F0, 240, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_Create                                               OFFSET(get<T>, {0x5E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -531,6 +529,8 @@ public:
 	// void OnCreativeActivityUpdated();                                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityCreateView.GetInvalidCreativeActivityReason
 	// EFortInvalidActivityReason GetInvalidCreativeActivityReason();                                                           // [0x9b5623c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityCreatorPageView
 /// Size: 0x0090 (0x000650 - 0x0006E0)
 class UFortActivityCreatorPageView : public UFortActivityCategoryPageView
@@ -543,8 +543,6 @@ public:
 	DMember(int32_t)                                   AmountOfCreatorLinkEntriesQueried                           OFFSET(get<int32_t>, {0x680, 4, 0, 0})
 	DMember(int32_t)                                   ProcessedCreatorLinkEntries                                 OFFSET(get<int32_t>, {0x684, 4, 0, 0})
 	DMember(int32_t)                                   AmountOfEntriesQueried                                      OFFSET(get<int32_t>, {0x688, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -552,6 +550,8 @@ public:
 	// void OnNoContentFoundForCreator();                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityCreatorPageView.OnCreatorActivitiesQueryFinished
 	// void OnCreatorActivitiesQueryFinished();                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityDiscoverView
 /// Size: 0x00A0 (0x000670 - 0x000710)
 class UFortActivityDiscoverView : public UFortActivityBrowserRowView
@@ -570,8 +570,6 @@ public:
 	CMember(UFortActivatableMovieWidget*)              ActivityMovieWidget                                         OFFSET(get<T>, {0x6A0, 8, 0, 0})
 	CMember(UFortActivatableMovieWidget*)              PromotedActivityMovieWidget                                 OFFSET(get<T>, {0x6A8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         BoundKeyArtOutroAnimation                                   OFFSET(get<T>, {0x6F8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -609,6 +607,8 @@ public:
 	// UTexture* GetCurrentTexture();                                                                                           // [0x9b56104] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityDiscoverView.CheckUpdateDetailsDelay
 	// void CheckUpdateDetailsDelay();                                                                                          // [0x9b55fc4] Final|Native|Private 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityDiscoverViewV2
 /// Size: 0x00A0 (0x000670 - 0x000710)
 class UFortActivityDiscoverViewV2 : public UFortActivityBrowserRowView
@@ -622,8 +622,6 @@ public:
 	CMember(TWeakObjectPtr<UClass*>)                   SoftCustomMatchmakingModalClass                             OFFSET(get<T>, {0x6B0, 32, 0, 0})
 	SMember(FDataTableRowHandle)                       BackToTopInputAction                                        OFFSET(get<T>, {0x6D8, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       CustomKeyInputAction                                        OFFSET(get<T>, {0x6F0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -635,6 +633,8 @@ public:
 	// bool IsShowingSeasonalContent();                                                                                         // [0x9b56884] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityDiscoverViewV2.IsShowingPromotedContent
 	// bool IsShowingPromotedContent();                                                                                         // [0x9b56808] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityFavoriteBrowserView
 /// Size: 0x0000 (0x000610 - 0x000610)
 class UFortActivityFavoriteBrowserView : public UFortActivityPlayerBrowserView
@@ -669,8 +669,6 @@ public:
 	DMember(float)                                     EntrySpacing                                                OFFSET(get<float>, {0x388, 4, 0, 0})
 	DMember(bool)                                      bCircularNavigationEnabled                                  OFFSET(get<bool>, {0x38C, 1, 0, 0})
 	CMember(TMap<EActivityBrowserTileStyle, UClass*>)  TileTypes                                                   OFFSET(get<T>, {0x390, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -678,6 +676,8 @@ public:
 	// int32_t GetInViewCount();                                                                                                // [0x9b5618c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityListView.AddTileType
 	// void AddTileType(EActivityBrowserTileStyle style, UClass* WidgetClass);                                                  // [0x9b55ed4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityLobbyTile
 /// Size: 0x0070 (0x0014C0 - 0x001530)
 class UFortActivityLobbyTile : public UCommonButtonLegacy
@@ -691,8 +691,6 @@ public:
 	CMember(UClass*)                                   ActivityModeSetSelectionModalClass                          OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UFortGameActivityProvider*)                ActivityProvider                                            OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(TArray<UFortGameActivity*>)                CachedQueriedActivities                                     OFFSET(get<T>, {0x14E0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -716,6 +714,8 @@ public:
 	// bool IsActivityEpicCreated();                                                                                            // [0x9b566a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityLobbyTile.GetChildActivityDisplayName
 	// FText GetChildActivityDisplayName();                                                                                     // [0xfc6c04] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityModeSetSelectionModal
 /// Size: 0x0068 (0x000400 - 0x000468)
 class UFortActivityModeSetSelectionModal : public UFortActivityModeSetSelectionModalBase
@@ -731,8 +731,6 @@ public:
 	CMember(UFortActivitySquadFillButton*)             Button_ActivitySquadFill                                    OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UFortActivityPrivacyButton*)               Button_ActivityPrivacy                                      OFFSET(get<T>, {0x450, 8, 0, 0})
 	CMember(UFortActivityHabaneroButton*)              Button_Activity_Habanero                                    OFFSET(get<T>, {0x458, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -752,6 +750,8 @@ public:
 	// void OnActivityChanged(UFortGameActivity* GameActivity, FString StartingSelectedMnemonic);                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivityModeSetSelectionModal.IsCreativeModeSetActivity
 	// bool IsCreativeModeSetActivity();                                                                                        // [0x9b56740] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityPlayerBrowserTile
 /// Size: 0x0050 (0x001500 - 0x001550)
 class UFortActivityPlayerBrowserTile : public UFortActivityTileViewTileBase
@@ -762,13 +762,13 @@ class UFortActivityPlayerBrowserTile : public UFortActivityTileViewTileBase
 public:
 	CMember(UFortActivityTileDetailsDisplay*)          Display_TileDetails                                         OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_LastPlayedDate                                         OFFSET(get<T>, {0x1508, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DiscoveryBrowserUI.FortActivityPlayerBrowserTile.HandleActivitySelected
 	// void HandleActivitySelected();                                                                                           // [0x9b56394] Final|Native|Private 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityPlayerView
 /// Size: 0x0140 (0x0004E0 - 0x000620)
 class UFortActivityPlayerView : public UFortActivityBrowserView
@@ -807,8 +807,6 @@ public:
 	SMember(FName)                                     TabNameID                                                   OFFSET(get<T>, {0x4E8, 4, 0, 0})
 	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x4F0, 240, 0, 0})
 	CMember(UEditableText*)                            EditableText_IslandLink                                     OFFSET(get<T>, {0x5E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -820,6 +818,8 @@ public:
 	// void HandleTextCommitted(FText& InText, TEnumAsByte<ETextCommit> CommitInfo);                                            // [0x9b56550] Final|Native|Private|HasOutParms 
 	// Function /Script/DiscoveryBrowserUI.FortActivitySearchView.HandleTextChanged
 	// void HandleTextChanged(FText& Text);                                                                                     // [0x9b564b4] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivitySeasonalBrowserView
 /// Size: 0x0000 (0x000610 - 0x000610)
 class UFortActivitySeasonalBrowserView : public UFortActivityPlayerBrowserView
@@ -843,8 +843,6 @@ public:
 	CMember(UFortActivityCreatorPageView*)             CachedCreatorPageView                                       OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(TMap<FName, UFortActivityBrowserColorSchemeAsset*>) ColorSchemes                                       OFFSET(get<T>, {0x70, 80, 0, 0})
 	CMember(UFortActivityBrowserColorSchemeAsset*)     CurrentColorScheme                                          OFFSET(get<T>, {0xC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -852,6 +850,8 @@ public:
 	// void OnSwapColorScheme(bool bInIsUsingAlternateColorScheme);                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DiscoveryBrowserUI.FortActivitySelector.OnEnableColorScheme
 	// void OnEnableColorScheme(bool bIsColorSchemeActive);                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityTileDetailsDisplay
 /// Size: 0x0170 (0x001470 - 0x0015E0)
 class UFortActivityTileDetailsDisplay : public UCommonButtonBase
@@ -879,8 +879,6 @@ public:
 	CMember(UClass*)                                   ActivityDetailsModalClass                                   OFFSET(get<T>, {0x1530, 8, 0, 0})
 	CMember(UClass*)                                   ActivityCreatorPageViewClass                                OFFSET(get<T>, {0x1538, 8, 0, 0})
 	CMember(UClass*)                                   ActivityCampaignPurchaseScreenClass                         OFFSET(get<T>, {0x1540, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -936,6 +934,8 @@ public:
 	// FString GetActivityCreatorDisplayText();                                                                                 // [0x9b56058] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DiscoveryBrowserUI.FortActivityTileDetailsDisplay.DoesActivityRequirePurchase
 	// bool DoesActivityRequirePurchase();                                                                                      // [0x9b55ff0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.FortActivityTileView
 /// Size: 0x0000 (0x000C00 - 0x000C00)
 class UFortActivityTileView : public UCommonTileView
@@ -973,13 +973,13 @@ public:
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x398, 1, 0, 0})
 	DMember(float)                                     EntrySpacing                                                OFFSET(get<float>, {0x39C, 4, 0, 0})
 	DMember(bool)                                      bCircularNavigationEnabled                                  OFFSET(get<bool>, {0x3A0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DiscoveryBrowserUI.FortDiscoverItemListView.GetInViewCount
 	// int32_t GetInViewCount();                                                                                                // [0x9b561b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DiscoveryBrowserUI.ActivityLibraryComponent
 /// Size: 0x0018 (0x0000A0 - 0x0000B8)
 class UActivityLibraryComponent : public UActorComponent

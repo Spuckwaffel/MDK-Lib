@@ -26,8 +26,6 @@ public:
 	SMember(FScalableFloat)                            InvincibilityEnabledByDataRegistry                          OFFSET(get<T>, {0x178, 40, 0, 0})
 	SMember(FScalableFloat)                            FastIterationEnabledByDataRegistry                          OFFSET(get<T>, {0x1A0, 40, 0, 0})
 	CMember(UClass*)                                   AIDebuggerClass                                             OFFSET(get<T>, {0x1C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -37,3 +35,5 @@ public:
 	// void OnMutatorUpdated();                                                                                                 // [0x9a44224] Final|Native|Public  
 	// Function /Script/CreativeDebugMenuRuntime.FortControllerComponent_CreativeDebugger.OnMinigameStateChanged
 	// void OnMinigameStateChanged(AFortMinigame* Minigame, EFortMinigameState MinigameState);                                  // [0x9a44160] Final|Native|Public  
+};
+

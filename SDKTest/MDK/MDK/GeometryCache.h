@@ -36,13 +36,13 @@ class AGeometryCacheActor : public AActor
 
 public:
 	CMember(UGeometryCacheComponent*)                  GeometryCacheComponent                                      OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
 	// UGeometryCacheComponent* GetGeometryCacheComponent();                                                                    // [0x57069a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/GeometryCache.GeometryCacheCodecBase
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UGeometryCacheCodecBase : public UObject
@@ -96,8 +96,6 @@ public:
 	DMember(bool)                                      bManualTick                                                 OFFSET(get<bool>, {0x610, 1, 0, 0})
 	DMember(bool)                                      bOverrideWireframeColor                                     OFFSET(get<bool>, {0x611, 1, 0, 0})
 	SMember(FLinearColor)                              WireframeOverrideColor                                      OFFSET(get<T>, {0x614, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -157,6 +155,8 @@ public:
 	// float GetDuration();                                                                                                     // [0x9cc3bbc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryCache.GeometryCacheComponent.GetAnimationTime
 	// float GetAnimationTime();                                                                                                // [0x9cc3b88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/GeometryCache.GeometryCacheTrack
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UGeometryCacheTrack : public UObject
@@ -177,13 +177,13 @@ class UGeometryCacheTrack_FlipbookAnimation : public UGeometryCacheTrack
 
 public:
 	DMember(uint32_t)                                  NumMeshSamples                                              OFFSET(get<uint32_t>, {0x58, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
 	// void AddMeshSample(FGeometryCacheMeshData& MeshData, float SampleTime);                                                  // [0x9cc39c8] Final|Native|Public|HasOutParms 
+};
+
 /// Class /Script/GeometryCache.GeometryCacheTrackStreamable
 /// Size: 0x0080 (0x000058 - 0x0000D8)
 class UGeometryCacheTrackStreamable : public UGeometryCacheTrack

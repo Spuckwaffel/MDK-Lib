@@ -58,8 +58,6 @@ public:
 	SMember(FBattlePassLandingPageButtonTexts)         DelayedTexts                                                OFFSET(get<T>, {0x1590, 72, 0, 0})
 	SMember(FBattlePassLandingPageButtonTexts)         SubscribedTexts                                             OFFSET(get<T>, {0x15D8, 72, 0, 0})
 	SMember(FBattlePassLandingPageButtonDisplayBehaviorData) DisplayBehaviorData                                   OFFSET(get<T>, {0x1620, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -75,6 +73,8 @@ public:
 	// void OnDisplayDetailsUpdated(FBattlePassLandingPageButtonDisplayDetails& NewDisplayDetails);                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/BattlePassBase.BattlePassLandingPageButton.GetBattlePassDisplayDetails
 	// FBattlePassLandingPageButtonDisplayDetails GetBattlePassDisplayDetails();                                                // [0x211849c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/BattlePassBase.BattlePassRewardPageBase
 /// Size: 0x0118 (0x0003E8 - 0x000500)
 class UBattlePassRewardPageBase : public UCommonActivatableWidget
@@ -111,8 +111,6 @@ public:
 	CMember(URichTextBlock*)                           Text_CategoryTitle                                          OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UFortBattlePassTile*)                      PreviewedTile                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	DMember(int32_t)                                   OwnedRewards                                                OFFSET(get<int32_t>, {0x2E8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -126,6 +124,8 @@ public:
 	// void OnLockedProgressUpdated(int32_t CurrentlyOwnedBeforeCategory, int32_t TotalRewardsBeforeCategory, float LockedProgress); // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassCustomSkinCategoryTile.FocusTile
 	// void FocusTile(int32_t Index);                                                                                           // [0x9890560] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassCustomSkinPageBase
 /// Size: 0x01C8 (0x0003E8 - 0x0005B0)
 class UFortBattlePassCustomSkinPageBase : public UCommonActivatableWidget
@@ -158,8 +158,6 @@ public:
 	CMember(UAthenaSeasonItemDefinition*)              SeasonItemDefinition                                        OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(UFortBattlePassTile*)                      FocusedReward                                               OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UScrollBox*)                               ScrollBox_Pages                                             OFFSET(get<T>, {0x580, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -171,6 +169,8 @@ public:
 	// void OnCostChanged(int32_t Cost);                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassBulkBuyPageBase.HandleUserScrolled
 	// void HandleUserScrolled(float ScrollAmount);                                                                             // [0x9891850] Final|Native|Protected 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassCheckBoxButton
 /// Size: 0x0010 (0x001470 - 0x001480)
 class UFortBattlePassCheckBoxButton : public UCommonButtonBase
@@ -192,8 +192,6 @@ public:
 	CMember(TArray<UFortPersistentResourceItemDefinition*>) CustomizationPageSeasonalResources                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<UFortPersistentResourceItemDefinition*>) AllSeasonalResources                                   OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TMap<ERewardPageType, FSeasonalResourceList>) RewardPageSeasonalResources                              OFFSET(get<T>, {0x58, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -209,6 +207,8 @@ public:
 	// FText GetCurrentChapterAsText(bool bFullText);                                                                           // [0x9890618] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassContext.CanPurchaseBattlePassLevel
 	// bool CanPurchaseBattlePassLevel();                                                                                       // [0x989053c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassResourcesWidgetBase
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortBattlePassResourcesWidgetBase : public UFortGlobalSeasonResourceWidget
@@ -219,8 +219,6 @@ class UFortBattlePassResourcesWidgetBase : public UFortGlobalSeasonResourceWidge
 public:
 	CMember(UClass*)                                   ResourceCounterClass                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UDynamicEntryBox*)                         EntryBox_ResourceCounters                                   OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -228,6 +226,8 @@ public:
 	// void ShowResourcesInfoModal();                                                                                           // [0x9891d88] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassResourcesWidgetBase.OnShowMoreInfo
 	// void OnShowMoreInfo(bool bShouldShowMoreInfo);                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassCurrencyPanel
 /// Size: 0x0040 (0x0002E0 - 0x000320)
 class UFortBattlePassCurrencyPanel : public UFortBattlePassResourcesWidgetBase
@@ -253,13 +253,13 @@ public:
 	CMember(TWeakObjectPtr<UObject*>)                  BattlePassDefaultIcon                                       OFFSET(get<T>, {0x2A8, 32, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  BattlePassOwnedIcon                                         OFFSET(get<T>, {0x2C8, 32, 0, 0})
 	CMember(UFortLazyImage*)                           LazyImage_BattlePassIcon                                    OFFSET(get<T>, {0x2E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/BattlePassBase.FortBattlePassDynamicIcon.OnBattlePassInfoUpdated
 	// void OnBattlePassInfoUpdated(bool bOwnsBattlePass);                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent|Const 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassLevelCount
 /// Size: 0x0010 (0x0002A8 - 0x0002B8)
 class UFortBattlePassLevelCount : public UUserWidget
@@ -313,8 +313,6 @@ public:
 	DMember(int32_t)                                   BundleAmount                                                OFFSET(get<int32_t>, {0x46C, 4, 0, 0})
 	CMember(UFortItemDefinition*)                      LevelPreviewItem                                            OFFSET(get<T>, {0x470, 8, 0, 0})
 	CMember(UAthenaSeasonItemData_BattleStar*)         BattleStarData                                              OFFSET(get<T>, {0x478, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -334,6 +332,8 @@ public:
 	// void HandlePurchaseMultiComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, TArray<FString>& OfferIdList); // [0x989110c] Final|Native|Private|HasOutParms 
 	// Function /Script/BattlePassBase.FortBattlePassPurchaseResourcesWidget.HandlePurchaseComplete
 	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString OfferId);                 // [0x98908e8] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassResourceCounter
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortBattlePassResourceCounter : public UCommonUserWidget
@@ -363,8 +363,6 @@ public:
 	CMember(UGridPanel*)                               GridPanel_Rewards                                           OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UFortBattlePassTileBase*)                  DefaultFocusTile                                            OFFSET(get<T>, {0x480, 8, 0, 0})
 	CMember(TWeakObjectPtr<UCommonButtonBase*>)        LastFocusedTile                                             OFFSET(get<T>, {0x488, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -372,6 +370,8 @@ public:
 	// void OnPageUnselected();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassRewardGrid.OnPageSelected
 	// void OnPageSelected();                                                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassRewardGridHeader
 /// Size: 0x0008 (0x0002A8 - 0x0002B0)
 class UFortBattlePassRewardGridHeader : public UUserWidget
@@ -397,8 +397,6 @@ public:
 	CMember(UGridPanel*)                               GridPanel_Rewards                                           OFFSET(get<T>, {0x460, 8, 0, 0})
 	CMember(UFortBattlePassTileBase*)                  DefaultFocusTile                                            OFFSET(get<T>, {0x468, 8, 0, 0})
 	CMember(TWeakObjectPtr<UCommonButtonBase*>)        LastFocusedTile                                             OFFSET(get<T>, {0x470, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -406,6 +404,8 @@ public:
 	// void OnPageUnselected();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/BattlePassBase.FortBattlePassRewardTrack.OnPageSelected
 	// void OnPageSelected();                                                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassTileBase
 /// Size: 0x00C0 (0x001510 - 0x0015D0)
 class UFortBattlePassTileBase : public UFortHoldableButton
@@ -421,8 +421,6 @@ public:
 	SMember(FVector2D)                                 TileDesiredCellSpan                                         OFFSET(get<T>, {0x1580, 16, 0, 0})
 	DMember(float)                                     UnitHeight                                                  OFFSET(get<float>, {0x1590, 4, 0, 0})
 	DMember(float)                                     UnitWidth                                                   OFFSET(get<float>, {0x1594, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -452,6 +450,8 @@ public:
 	// BattlePassTileAvailabilityStates GetState();                                                                             // [0x98908d0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTileBase.AreAnyGrantedItemsEquipped
 	// bool AreAnyGrantedItemsEquipped();                                                                                       // [0x9890510] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassTile
 /// Size: 0x0070 (0x0015D0 - 0x001640)
 class UFortBattlePassTile : public UFortBattlePassTileBase
@@ -463,8 +463,6 @@ public:
 	CMember(UFortLazyImage*)                           Image_RewardItem                                            OFFSET(get<T>, {0x15E8, 8, 0, 0})
 	CMember(UImage*)                                   Image_Currency                                              OFFSET(get<T>, {0x15F0, 8, 0, 0})
 	DMember(bool)                                      bIsOnBulkBuyMode                                            OFFSET(get<bool>, {0x15F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -492,6 +490,8 @@ public:
 	// bool IsAffordable();                                                                                                     // [0x98918f0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/BattlePassBase.FortBattlePassTile.HasPrerequisites
 	// bool HasPrerequisites();                                                                                                 // [0x98918cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/BattlePassBase.FortBattlePassTutorialTooltip
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortBattlePassTutorialTooltip : public UCommonUserWidget
@@ -501,8 +501,6 @@ class UFortBattlePassTutorialTooltip : public UCommonUserWidget
 
 public:
 	CMember(UCommonRichTextBlock*)                     Text_Tooltip                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -514,6 +512,8 @@ public:
 	// void SetText(FText Text);                                                                                                // [0x9891c58] Final|Native|Public|BlueprintCallable 
 	// Function /Script/BattlePassBase.FortBattlePassTutorialTooltip.HideTooltip
 	// void HideTooltip();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/BattlePassBase.RebootRallyQuestPanel
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
 class URebootRallyQuestPanel : public UUserWidget

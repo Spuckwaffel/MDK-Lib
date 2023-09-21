@@ -19,8 +19,6 @@ public:
 	SMember(FName)                                     InstanceName                                                OFFSET(get<T>, {0x30, 4, 0, 0})
 	CMember(ETaskResourceOverlapPolicy)                ResourceOverlapPolicy                                       OFFSET(get<T>, {0x36, 1, 0, 0})
 	CMember(UGameplayTask*)                            ChildTask                                                   OFFSET(get<T>, {0x58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -30,6 +28,8 @@ public:
 	// void GenericGameplayTaskDelegate__DelegateSignature();                                                                   // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/GameplayTasks.GameplayTask.EndTask
 	// void EndTask();                                                                                                          // [0x637e30c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayTasks.GameplayTaskOwnerInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGameplayTaskOwnerInterface : public UInterface
@@ -66,8 +66,6 @@ public:
 	CMember(TArray<UGameplayTask*>)                    KnownTasks                                                  OFFSET(get<T>, {0xE8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnClaimedResourcesChange                                    OFFSET(get<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<UGameplayTask*>)                    SimulatedTasks                                              OFFSET(get<T>, {0x108, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -75,6 +73,8 @@ public:
 	// void OnRep_SimulatedTasks(TArray<UGameplayTask*>& PreviousSimulatedTasks);                                               // [0x19f9ef4] Final|RequiredAPI|Native|Public|HasOutParms 
 	// Function /Script/GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
 	// EGameplayTaskRunResult K2_RunGameplayTask(TScriptInterface<Class> TaskOwner, UGameplayTask* Task, char Priority, TArray<UClass*> AdditionalRequiredResources, TArray<UClass*> AdditionalClaimedResources); // [0x637e3e8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayTasks.GameplayTask_ClaimResource
 /// Size: 0x0000 (0x000060 - 0x000060)
 class UGameplayTask_ClaimResource : public UGameplayTask
@@ -96,8 +96,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  Success                                                     OFFSET(get<T>, {0x60, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  DidNotSpawn                                                 OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(UClass*)                                   ClassToSpawn                                                OFFSET(get<T>, {0xB0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -107,6 +105,8 @@ public:
 	// void FinishSpawningActor(UObject* WorldContextObject, AActor* SpawnedActor);                                             // [0x637e320] Native|Public|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask_SpawnActor.BeginSpawningActor
 	// bool BeginSpawningActor(UObject* WorldContextObject, AActor*& SpawnedActor);                                             // [0x637d898] Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayTasks.GameplayTask_TimeLimitedExecution
 /// Size: 0x0038 (0x000060 - 0x000098)
 class UGameplayTask_TimeLimitedExecution : public UGameplayTask
@@ -128,8 +128,6 @@ class UGameplayTask_WaitDelay : public UGameplayTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -137,6 +135,8 @@ public:
 	// UGameplayTask_WaitDelay* TaskWaitDelay(TScriptInterface<Class> TaskOwner, float Time, char Priority);                    // [0x637f010] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
 	// void TaskDelayDelegate__DelegateSignature();                                                                             // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Struct /Script/GameplayTasks.GameplayResourceSet
 /// Size: 0x0002 (0x000000 - 0x000002)
 class FGameplayResourceSet : public MDKStruct

@@ -27,8 +27,6 @@ public:
 	DMember(float)                                     VisibilityMinNonfriendly                                    OFFSET(get<float>, {0x9AC, 4, 0, 0})
 	DMember(float)                                     VisibilityLevelChangeRate                                   OFFSET(get<float>, {0x9B0, 4, 0, 0})
 	CMember(TMap<FName, FFortGameCueCloakModifier>)    CloakModifiersByNameMap                                     OFFSET(get<T>, {0x9B8, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -40,6 +38,8 @@ public:
 	// bool SetModifierCanBeEnabled(FName& ModifierName, bool bNewCanBeEnabled);                                                // [0x9a0a250] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/CloakGameplay.FortGameCueNotifyLoop_Cloak.GetCurrentModifierValues
 	// bool GetCurrentModifierValues(float& OutVisibilityMultiplier, float& OutVisibilityAddition, FName& ModifierName);        // [0x9a0a124] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/CloakGameplay.FortGameCueCloakModifier
 /// Size: 0x00D0 (0x000000 - 0x0000D0)
 class FFortGameCueCloakModifier : public MDKStruct

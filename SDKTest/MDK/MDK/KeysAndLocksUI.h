@@ -19,8 +19,6 @@ class UKeyPlayerInfoWidget : public UFortHUDElementWidget
 
 public:
 	SMember(FGameplayTag)                              KeyStatusTag                                                OFFSET(get<T>, {0x318, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,3 +26,5 @@ public:
 	// void OnKeyStatusActivated(AFortPlayerStateAthena* InPlayerState, bool bActivated);                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/KeysAndLocksUI.KeyPlayerInfoWidget.HandleGameplayTagEvent
 	// void HandleGameplayTagEvent(FGameplayTag UpdatedTag, int32_t TagCount);                                                  // [0x9bcbd74] Final|Native|Protected 
+};
+

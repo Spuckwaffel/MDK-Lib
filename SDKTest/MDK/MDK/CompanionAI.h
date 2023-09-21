@@ -18,8 +18,6 @@ class UPingComponentBase : public UAIComponent
 
 public:
 	CMember(UFortPawnComponent_AIBotPingCommand*)      CachedAIBotPingCommand                                      OFFSET(get<T>, {0xA0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -27,3 +25,5 @@ public:
 	// void HandleOnNPCUnconvertedEvent(AFortPawn* UnconvertedFortPawn, EUnconvertReason UnconvertReason);                      // [0x990e82c] Final|Native|Private 
 	// Function /Script/CompanionAI.PingComponentBase.HandleOnNPCConvertedEvent
 	// void HandleOnNPCConvertedEvent(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                     // [0x990e76c] Final|Native|Private 
+};
+

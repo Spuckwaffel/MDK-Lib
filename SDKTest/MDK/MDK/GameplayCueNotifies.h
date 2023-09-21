@@ -32,8 +32,6 @@ public:
 	CMember(UAudioComponent*)                          Audio                                                       OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          StormPawn                                                   OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	DMember(bool)                                      bBoundAudioPercent                                          OFFSET(get<bool>, {0x9A8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -49,6 +47,8 @@ public:
 	// void Deactivated();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/StWStorm/GCNL_EdgeOfStorm.GCNL_EdgeOfStorm_C.ExecuteUbergraph_GCNL_EdgeOfStorm
 	// void ExecuteUbergraph_GCNL_EdgeOfStorm(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/GameplayCueNotifies/Death/EliminationBotVFXInterface.EliminationBotVFXInterface_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UEliminationBotVFXInterface_C : public UInterface
@@ -109,8 +109,6 @@ public:
 	SMember(FGuid)                                     Material_Override_ID                                        OFFSET(get<T>, {0x6C0, 16, 0, 0})
 	SMember(FFortPawnMaterialOverrideCopiedParameters) Copied_Parameters                                           OFFSET(get<T>, {0x6D0, 48, 0, 0})
 	SMember(FDelegateHandleController)                 Delegate_Handle_Controller                                  OFFSET(get<T>, {0x700, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -154,6 +152,8 @@ public:
 	// void TriggerVFX();                                                                                                       // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/Death/GCN_RezIn.GCN_RezIn_C.ExecuteUbergraph_GCN_RezIn
 	// void ExecuteUbergraph_GCN_RezIn(int32_t EntryPoint);                                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/GameplayCueNotifies/Death/GCN_RezOut.GCN_RezOut_C
 /// Size: 0x01F0 (0x000548 - 0x000738)
 class AGCN_RezOut_C : public AFortGameplayCueNotify_BurstLatent
@@ -210,8 +210,6 @@ public:
 	DMember(double)                                    DelayBetweenAnimAndVFX                                      OFFSET(get<double>, {0x6F0, 8, 0, 0})
 	SMember(FGuid)                                     Material_Override_ID                                        OFFSET(get<T>, {0x6F8, 16, 0, 0})
 	SMember(FFortPawnMaterialOverrideCopiedParameters) Copied_Parameters                                           OFFSET(get<T>, {0x708, 48, 0, 0})
-};
-
 
 
 	/// Functions
@@ -255,6 +253,8 @@ public:
 	// void TriggerVFX();                                                                                                       // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/Death/GCN_RezOut.GCN_RezOut_C.ExecuteUbergraph_GCN_RezOut
 	// void ExecuteUbergraph_GCN_RezOut(int32_t EntryPoint);                                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/GameplayCueNotifies/Death/GCN_RezIn_CreativeRespawn.GCN_RezIn_CreativeRespawn_C
 /// Size: 0x0000 (0x000710 - 0x000710)
 class AGCN_RezIn_CreativeRespawn_C : public AGCN_RezIn_C
@@ -279,8 +279,6 @@ public:
 	CMember(UTimelineComponent*)                       CapsuleFadeTL                                               OFFSET(get<T>, {0x558, 8, 0, 0})
 	DMember(double)                                    Starting_Min_Capsule_Shadow_Vis                             OFFSET(get<double>, {0x560, 8, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           SkeletalMesh                                                OFFSET(get<T>, {0x568, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -294,6 +292,8 @@ public:
 	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/Death/GC_Abilities_Death_FadeCapsule_Athena.GC_Abilities_Death_FadeCapsule_Athena_C.ExecuteUbergraph_GC_Abilities_Death_FadeCapsule_Athena
 	// void ExecuteUbergraph_GC_Abilities_Death_FadeCapsule_Athena(int32_t EntryPoint);                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/GameplayCueNotifies/Death/GC_Abilities_Death_FadeCapsule_StW.GC_Abilities_Death_FadeCapsule_StW_C
 /// Size: 0x0030 (0x000548 - 0x000578)
 class AGC_Abilities_Death_FadeCapsule_StW_C : public AFortGameplayCueNotify_BurstLatent
@@ -308,8 +308,6 @@ public:
 	CMember(UTimelineComponent*)                       CapsuleFadeTL                                               OFFSET(get<T>, {0x558, 8, 0, 0})
 	DMember(double)                                    Starting_Min_Capsule_Shadow_Vis                             OFFSET(get<double>, {0x560, 8, 0, 0})
 	CMember(TArray<USkeletalMeshComponent*>)           SkeletalMesh                                                OFFSET(get<T>, {0x568, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -323,6 +321,8 @@ public:
 	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/Death/GC_Abilities_Death_FadeCapsule_StW.GC_Abilities_Death_FadeCapsule_StW_C.ExecuteUbergraph_GC_Abilities_Death_FadeCapsule_StW
 	// void ExecuteUbergraph_GC_Abilities_Death_FadeCapsule_StW(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/GameplayCueNotifies/Death/GCN_RezOut_NPC.GCN_RezOut_NPC_C
 /// Size: 0x0010 (0x000738 - 0x000748)
 class AGCN_RezOut_NPC_C : public AGCN_RezOut_C
@@ -333,8 +333,6 @@ class AGCN_RezOut_NPC_C : public AGCN_RezOut_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x738, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnNPCDeath                                             OFFSET(get<T>, {0x740, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -342,6 +340,8 @@ public:
 	// void Pre-Sequence Change();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/Death/GCN_RezOut_NPC.GCN_RezOut_NPC_C.ExecuteUbergraph_GCN_RezOut_NPC
 	// void ExecuteUbergraph_GCN_RezOut_NPC(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
+};
+
 /// Class /Game/GameplayCueNotifies/Death/GCN_NPC_Interaction_RezOut_Glitch.GCN_NPC_Interaction_RezOut_Glitch_C
 /// Size: 0x0010 (0x000738 - 0x000748)
 class AGCN_NPC_Interaction_RezOut_Glitch_C : public AGCN_RezOut_C
@@ -352,8 +352,6 @@ class AGCN_NPC_Interaction_RezOut_Glitch_C : public AGCN_RezOut_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x738, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnNPCDeath                                             OFFSET(get<T>, {0x740, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -361,6 +359,8 @@ public:
 	// void Spawn Dissolve VFX();                                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/GameplayCueNotifies/Death/GCN_NPC_Interaction_RezOut_Glitch.GCN_NPC_Interaction_RezOut_Glitch_C.ExecuteUbergraph_GCN_NPC_Interaction_RezOut_Glitch
 	// void ExecuteUbergraph_GCN_NPC_Interaction_RezOut_Glitch(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /TacticalSprintGame/GameplayCueNotifies/GCNL_Athena_Player_TacticalSprint_EnergyDrain.GCNL_Athena_Player_TacticalSprint_EnergyDrain_C
 /// Size: 0x0038 (0x000990 - 0x0009C8)
 class AGCNL_Athena_Player_TacticalSprint_EnergyDrain_C : public AFortGameplayCueNotify_Loop
@@ -375,8 +375,6 @@ public:
 	CMember(UTacticalSprintEnergyComponent_C*)         TacSprintComp                                               OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	CMember(AActor*)                                   Pawn                                                        OFFSET(get<T>, {0x9B8, 8, 0, 0})
 	DMember(double)                                    CurrentEnergyPercentage                                     OFFSET(get<double>, {0x9C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -388,6 +386,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /TacticalSprintGame/GameplayCueNotifies/GCNL_Athena_Player_TacticalSprint_EnergyDrain.GCNL_Athena_Player_TacticalSprint_EnergyDrain_C.ExecuteUbergraph_GCNL_Athena_Player_TacticalSprint_EnergyDrain
 	// void ExecuteUbergraph_GCNL_Athena_Player_TacticalSprint_EnergyDrain(int32_t EntryPoint);                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /TacticalSprintGame/GameplayCueNotifies/GCNL_Athena_Player_TacticalSprint_Speedlines.GCNL_Athena_Player_TacticalSprint_Speedlines_C
 /// Size: 0x0048 (0x000990 - 0x0009D8)
 class AGCNL_Athena_Player_TacticalSprint_Speedlines_C : public AFortGameplayCueNotify_Loop
@@ -404,8 +404,6 @@ public:
 	CMember(AFortPlayerPawn*)                          As_Fort_Player_Pawn                                         OFFSET(get<T>, {0x9C0, 8, 0, 0})
 	DMember(int32_t)                                   SurfaceTypeInt                                              OFFSET(get<int32_t>, {0x9C8, 4, 0, 0})
 	SMember(FTimerHandle)                              LoopUpdateTimer                                             OFFSET(get<T>, {0x9D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -425,3 +423,5 @@ public:
 	// void UpdateSurfaceType();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /TacticalSprintGame/GameplayCueNotifies/GCNL_Athena_Player_TacticalSprint_Speedlines.GCNL_Athena_Player_TacticalSprint_Speedlines_C.ExecuteUbergraph_GCNL_Athena_Player_TacticalSprint_Speedlines
 	// void ExecuteUbergraph_GCNL_Athena_Player_TacticalSprint_Speedlines(int32_t EntryPoint);                                  // [0x1ebf994] Final|HasDefaults    
+};
+

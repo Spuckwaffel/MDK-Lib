@@ -113,8 +113,6 @@ public:
 	CMember(TWeakObjectPtr<AFortHoagieVehicle*>)       Vehicle                                                     OFFSET(get<T>, {0x29C, 8, 0, 0})
 	CMember(UFortLayeredAudioComponent*)               EngineAudio                                                 OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UFortLayeredAudioComponent*)               RotorAudio                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -124,6 +122,8 @@ public:
 	// void CacheHoagieVehicle(AFortHoagieVehicle* InVehicle);                                                                  // [0x98bc568] Final|Native|Public|BlueprintCallable 
 	// Function /Script/HoagieRuntime.FortHoagieAudioController.CacheAudioComponents
 	// void CacheAudioComponents(UFortLayeredAudioComponent* InEngine, UFortLayeredAudioComponent* InRotor);                    // [0x98bc49c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/HoagieRuntime.FortHoagieVehicle
 /// Size: 0x0620 (0x001B80 - 0x0021A0)
 class AFortHoagieVehicle : public AFortAthenaSKVehicle
@@ -200,8 +200,6 @@ public:
 	DMember(float)                                     CurrentHLODDistanceOverrideScale                            OFFSET(get<float>, {0x203C, 4, 0, 0})
 	DMember(float)                                     CurrentHLODMaxDrawDistanceScale                             OFFSET(get<float>, {0x2040, 4, 0, 0})
 	SMember(FHoagieDeathEffectInfo)                    CachedDeathEffectInfo                                       OFFSET(get<T>, {0x2050, 328, 0, 0})
-};
-
 
 
 	/// Functions
@@ -305,6 +303,8 @@ public:
 	// float GetBoostCooldown();                                                                                                // [0x98bc688] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/HoagieRuntime.FortHoagieVehicle.GetAltitude
 	// float GetAltitude();                                                                                                     // [0x98bc668] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/HoagieRuntime.FortHoagieVehicleConfigs
 /// Size: 0x0238 (0x0008B0 - 0x000AE8)
 class UFortHoagieVehicleConfigs : public UFortPhysicsVehicleConfigs

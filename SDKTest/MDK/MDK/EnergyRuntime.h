@@ -41,8 +41,6 @@ public:
 	DMember(bool)                                      bRechargingEnabled                                          OFFSET(get<bool>, {0x2E0, 1, 1, 0})
 	DMember(bool)                                      bIsRecharging                                               OFFSET(get<bool>, {0x2E0, 1, 1, 1})
 	DMember(bool)                                      bIsUsingEnergy                                              OFFSET(get<bool>, {0x2E0, 1, 1, 2})
-};
-
 
 
 	/// Functions
@@ -78,6 +76,8 @@ public:
 	// void ApplyRegenDataOverride(FGameplayTag& RegenOverrideIdentifier, float NewRechargeAmountPerSecond, float NewRechargeDelayInSeconds, float NewRechargePercentageLimit); // [0x99594c4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/EnergyRuntime.FortComponent_Energy.AddEnergy
 	// bool AddEnergy(float& OutAmountOfEnergyAdded, float AmountOfEnergyToAdd, UObject* OptionalEnergySource, bool bBroadcastEnergyPercentChanged); // [0x995923c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/EnergyRuntime.EnergyChannelingData
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FEnergyChannelingData : public MDKStruct

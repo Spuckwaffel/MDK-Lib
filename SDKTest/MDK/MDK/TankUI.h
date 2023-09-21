@@ -34,8 +34,6 @@ public:
 	DMember(float)                                     MaxTurretPitch                                              OFFSET(get<float>, {0x48C, 4, 0, 0})
 	DMember(bool)                                      bDistanceMeterEnabled                                       OFFSET(get<bool>, {0x490, 1, 0, 0})
 	DMember(bool)                                      bTankOrientationEventsEnabled                               OFFSET(get<bool>, {0x491, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -65,3 +63,5 @@ public:
 	// void HandleOnEquipMountedWeapon(AFortWeaponRanged* EquippedMountedWeapon);                                               // [0x9a5f57c] Final|Native|Private 
 	// Function /Script/TankUI.TankVehicleReticle.HandleOnDamageablePartHealthChanged
 	// void HandleOnDamageablePartHealthChanged(FVehicleDamageablePartConfig& PartConfig, FVehicleDamageablePart& Part, bool bNewlyDisabled, bool bNewlyEnabled); // [0x9a5f230] Final|Native|Private|HasOutParms 
+};
+

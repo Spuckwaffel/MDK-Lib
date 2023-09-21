@@ -42,8 +42,6 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x360, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x368, 32, 0, 0})
 	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x388, 176, 0, 0})
-};
-
 
 
 	/// Functions
@@ -51,6 +49,8 @@ public:
 	// void AnimGraph(FPoseLink InSourcePose, FPoseLink& AnimGraph);                                                            // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_Locomotion_Prototype_Template.Player_Locomotion_Prototype_Template_C.ExecuteUbergraph_Player_Locomotion_Prototype_Template
 	// void ExecuteUbergraph_Player_Locomotion_Prototype_Template(int32_t EntryPoint);                                          // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/AnimLayerInterface/ItemAnimLayerInterface.ItemAnimLayerInterface_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UItemAnimLayerInterface_C : public UAnimLayerInterface
@@ -273,8 +273,6 @@ public:
 	SMember(FVector)                                   RightHandOverride                                           OFFSET(get<T>, {0x7778, 24, 0, 0})
 	SMember(FVector)                                   LeftHandOverride                                            OFFSET(get<T>, {0x7790, 24, 0, 0})
 	SMember(FName)                                     EmoteAnimOffsetCurveName                                    OFFSET(get<T>, {0x77A8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -336,6 +334,8 @@ public:
 	// void AnimGraph(FPoseLink InPosePostTurnInPlace, FPoseLink& AnimGraph);                                                   // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ProceduralAdjustments_AnimBP.Player_ProceduralAdjustments_AnimBP_C.ExecuteUbergraph_Player_ProceduralAdjustments_AnimBP
 	// void ExecuteUbergraph_Player_ProceduralAdjustments_AnimBP(int32_t EntryPoint);                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C
 /// Size: 0x07C8 (0x0008D0 - 0x001098)
 class UFP_Procedural2_C : public UFortFirstPersonProceduralAnimInstance
@@ -357,8 +357,6 @@ public:
 	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0xF30, 32, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0xF50, 32, 0, 0})
 	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone4                                   OFFSET(get<T>, {0xF70, 296, 0, 0})
-};
-
 
 
 	/// Functions
@@ -366,6 +364,8 @@ public:
 	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/Male/Male_Avg_Base/FP_Procedural2.FP_Procedural2_C.ExecuteUbergraph_FP_Procedural2
 	// void ExecuteUbergraph_FP_Procedural2(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C
 /// Size: 0x1988 (0x0006A0 - 0x002028)
 class UPlayer_ZipLine_AnimBP_C : public UFortZiplineAnimInstance
@@ -454,8 +454,6 @@ public:
 	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(get<T>, {0x1EE0, 200, 0, 0})
 	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0x1FA8, 120, 0, 0})
 	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x2020, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -505,6 +503,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_ZipLine_AnimBP.Player_ZipLine_AnimBP_C.ExecuteUbergraph_Player_ZipLine_AnimBP
 	// void ExecuteUbergraph_Player_ZipLine_AnimBP(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C
 /// Size: 0x00E8 (0x000350 - 0x000438)
 class UPlayer_RigidBodyPBA_AnimBP_Template_C : public UAnimInstance
@@ -518,8 +518,6 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x360, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x368, 32, 0, 0})
 	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x388, 176, 0, 0})
-};
-
 
 
 	/// Functions
@@ -527,6 +525,8 @@ public:
 	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphTemplates/Player_RigidBodyPBA_AnimBP_Template.Player_RigidBodyPBA_AnimBP_Template_C.ExecuteUbergraph_Player_RigidBodyPBA_AnimBP_Template
 	// void ExecuteUbergraph_Player_RigidBodyPBA_AnimBP_Template(int32_t EntryPoint);                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_SourcePose_AnimBP.Player_SourcePose_AnimBP_C
 /// Size: 0x0550 (0x0015D0 - 0x001B20)
 class UPlayer_SourcePose_AnimBP_C : public UFortPlayerAnimInstanceProxy
@@ -556,8 +556,6 @@ public:
 	SMember(FAnimNode_SequenceEvaluator)               AnimGraphNode_SequenceEvaluator6                            OFFSET(get<T>, {0x1A58, 64, 0, 0})
 	SMember(FAnimNode_SequenceEvaluator)               AnimGraphNode_SequenceEvaluator7                            OFFSET(get<T>, {0x1A98, 64, 0, 0})
 	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(get<T>, {0x1AD8, 72, 0, 0})
-};
-
 
 
 	/// Functions
@@ -567,6 +565,8 @@ public:
 	// void ResetBlendListNode(FAnimUpdateContext& Context, FAnimNodeReference& Node);                                          // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_SourcePose_AnimBP.Player_SourcePose_AnimBP_C.ExecuteUbergraph_Player_SourcePose_AnimBP
 	// void ExecuteUbergraph_Player_SourcePose_AnimBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Enemies/Blueprints/EnemyPawn_Interface.EnemyPawn_Interface_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UEnemyPawn_Interface_C : public UInterface
@@ -632,8 +632,6 @@ public:
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(get<T>, {0x15E8, 200, 0, 0})
 	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0x16B0, 120, 0, 0})
 	SMember(FAnimNode_Inertialization)                 AnimGraphNode_Inertialization                               OFFSET(get<T>, {0x1728, 272, 0, 0})
-};
-
 
 
 	/// Functions
@@ -641,6 +639,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Sprint_AnimBP.Player_Sprint_AnimBP_C.ExecuteUbergraph_Player_Sprint_AnimBP
 	// void ExecuteUbergraph_Player_Sprint_AnimBP(int32_t EntryPoint);                                                          // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C
 /// Size: 0x1578 (0x000680 - 0x001BF8)
 class UPlayer_Goop_AnimBP_C : public UFortGoopAnimInstance
@@ -714,8 +714,6 @@ public:
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x19F0, 200, 0, 0})
 	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0x1AB8, 120, 0, 0})
 	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(get<T>, {0x1B30, 200, 0, 0})
-};
-
 
 
 	/// Functions
@@ -765,6 +763,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Goop_AnimBP.Player_Goop_AnimBP_C.ExecuteUbergraph_Player_Goop_AnimBP
 	// void ExecuteUbergraph_Player_Goop_AnimBP(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C
 /// Size: 0x2CB0 (0x0015D0 - 0x004280)
 class UPlayer_InAir_AnimBP_C : public UFortPlayerAnimInstanceProxy
@@ -912,8 +912,6 @@ public:
 	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose7                                 OFFSET(get<T>, {0x4200, 16, 0, 0})
 	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(get<T>, {0x4210, 72, 0, 0})
 	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(get<T>, {0x4258, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -963,6 +961,169 @@ public:
 	// void AnimGraph(FPoseLink SourcePose, FPoseLink& AnimGraph);                                                              // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_InAir_AnimBP.Player_InAir_AnimBP_C.ExecuteUbergraph_Player_InAir_AnimBP
 	// void ExecuteUbergraph_Player_InAir_AnimBP(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C
+/// Size: 0x2970 (0x0015E0 - 0x003F50)
+class UPlayer_TacticalState_AnimBP_C : public UFortPlayerTacticalStateAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 16208;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x15E0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(get<T>, {0x15E8, 36, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x1610, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x1618, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x1620, 32, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(get<T>, {0x1640, 200, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(get<T>, {0x1708, 72, 0, 0})
+	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(get<T>, {0x1750, 16, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(get<T>, {0x1760, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(get<T>, {0x17A8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(get<T>, {0x17F0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(get<T>, {0x1838, 72, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x1880, 176, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(get<T>, {0x1930, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(get<T>, {0x1978, 72, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(get<T>, {0x19C0, 32, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(get<T>, {0x19E0, 40, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(get<T>, {0x1A08, 200, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(get<T>, {0x1AD0, 112, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(get<T>, {0x1B40, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x1B60, 200, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(get<T>, {0x1C28, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(get<T>, {0x1C50, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(get<T>, {0x1C78, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(get<T>, {0x1CA0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(get<T>, {0x1CC8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(get<T>, {0x1CF0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(get<T>, {0x1D18, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(get<T>, {0x1D40, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(get<T>, {0x1D68, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(get<T>, {0x1D90, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(get<T>, {0x1DB8, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(get<T>, {0x1E00, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(get<T>, {0x1E20, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(get<T>, {0x1E48, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(get<T>, {0x1E70, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(get<T>, {0x1E98, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(get<T>, {0x1EC0, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(get<T>, {0x1EE8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(get<T>, {0x1F30, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(get<T>, {0x1F78, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(get<T>, {0x1FC0, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(get<T>, {0x1FE0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(get<T>, {0x2028, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(get<T>, {0x2070, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(get<T>, {0x20B8, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(get<T>, {0x20D8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(get<T>, {0x2120, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(get<T>, {0x2168, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(get<T>, {0x21B0, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(get<T>, {0x21D0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(get<T>, {0x2218, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(get<T>, {0x2260, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(get<T>, {0x22A8, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(get<T>, {0x22C8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(get<T>, {0x2310, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(get<T>, {0x2358, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult6                                  OFFSET(get<T>, {0x23A0, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(get<T>, {0x23C0, 40, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(get<T>, {0x23E8, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult7                                  OFFSET(get<T>, {0x24B0, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(get<T>, {0x24D0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(get<T>, {0x24F8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(get<T>, {0x2520, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(get<T>, {0x2548, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(get<T>, {0x2570, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(get<T>, {0x2598, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(get<T>, {0x25C0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(get<T>, {0x25E8, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(get<T>, {0x2610, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(get<T>, {0x2658, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(get<T>, {0x26A0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult8                                  OFFSET(get<T>, {0x26E8, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(get<T>, {0x2708, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(get<T>, {0x2750, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(get<T>, {0x2798, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult9                                  OFFSET(get<T>, {0x27E0, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(get<T>, {0x2800, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(get<T>, {0x2848, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(get<T>, {0x2890, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult10                                 OFFSET(get<T>, {0x28D8, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(get<T>, {0x28F8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(get<T>, {0x2940, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(get<T>, {0x2988, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult11                                 OFFSET(get<T>, {0x29D0, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer25                              OFFSET(get<T>, {0x29F0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(get<T>, {0x2A38, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer26                              OFFSET(get<T>, {0x2A80, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult12                                 OFFSET(get<T>, {0x2AC8, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer27                              OFFSET(get<T>, {0x2AE8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(get<T>, {0x2B30, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer28                              OFFSET(get<T>, {0x2B78, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult13                                 OFFSET(get<T>, {0x2BC0, 32, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(get<T>, {0x2BE0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer29                              OFFSET(get<T>, {0x2C28, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer30                              OFFSET(get<T>, {0x2C70, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult14                                 OFFSET(get<T>, {0x2CB8, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer31                              OFFSET(get<T>, {0x2CD8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(get<T>, {0x2D20, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer32                              OFFSET(get<T>, {0x2D68, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult15                                 OFFSET(get<T>, {0x2DB0, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult24                            OFFSET(get<T>, {0x2DD0, 40, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine2                                 OFFSET(get<T>, {0x2DF8, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult16                                 OFFSET(get<T>, {0x2EC0, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult25                            OFFSET(get<T>, {0x2EE0, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer33                              OFFSET(get<T>, {0x2F08, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult17                                 OFFSET(get<T>, {0x2F50, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer34                              OFFSET(get<T>, {0x2F70, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult18                                 OFFSET(get<T>, {0x2FB8, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer35                              OFFSET(get<T>, {0x2FD8, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult19                                 OFFSET(get<T>, {0x3020, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine3                                 OFFSET(get<T>, {0x3040, 200, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0x3108, 120, 0, 0})
+	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone                                OFFSET(get<T>, {0x3180, 176, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(get<T>, {0x3230, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(get<T>, {0x32A0, 200, 0, 0})
+	SMember(FAnimNode_DeadBlending)                    AnimGraphNode_DeadBlending                                  OFFSET(get<T>, {0x3370, 1184, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(get<T>, {0x3810, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult26                            OFFSET(get<T>, {0x3830, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult27                            OFFSET(get<T>, {0x3858, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult28                            OFFSET(get<T>, {0x3880, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult29                            OFFSET(get<T>, {0x38A8, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult30                            OFFSET(get<T>, {0x38D0, 40, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult31                            OFFSET(get<T>, {0x38F8, 40, 0, 0})
+	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(get<T>, {0x3920, 288, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer36                              OFFSET(get<T>, {0x3A40, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult20                                 OFFSET(get<T>, {0x3A88, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult32                            OFFSET(get<T>, {0x3AA8, 40, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer37                              OFFSET(get<T>, {0x3AD0, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult21                                 OFFSET(get<T>, {0x3B18, 32, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer38                              OFFSET(get<T>, {0x3B38, 72, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult22                                 OFFSET(get<T>, {0x3B80, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine4                                 OFFSET(get<T>, {0x3BA0, 200, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(get<T>, {0x3C68, 72, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(get<T>, {0x3CB0, 200, 0, 0})
+	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(get<T>, {0x3D78, 200, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(get<T>, {0x3E40, 72, 0, 0})
+	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(get<T>, {0x3E88, 120, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(get<T>, {0x3F00, 40, 0, 0})
+	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(get<T>, {0x3F28, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.WeaponBoneFixLayer
+	// void WeaponBoneFixLayer(FPoseLink InPose, FPoseLink& WeaponBoneFixLayer);                                                // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.TacticalSprintLayer
+	// void TacticalSprintLayer(FPoseLink& TacticalSprintLayer);                                                                // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.ExecuteUbergraph_Player_TacticalState_AnimBP
+	// void ExecuteUbergraph_Player_TacticalState_AnimBP(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/AnimLayerInterface/MovementModeLayerInterface.MovementModeLayerInterface_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMovementModeLayerInterface_C : public UAnimLayerInterface
@@ -1067,8 +1228,6 @@ public:
 	DMember(double)                                    __CustomProperty_Pitch_61C65E4944F5DB18DC8B6496B9622A88     OFFSET(get<double>, {0x35F0, 8, 0, 0})
 	DMember(double)                                    __CustomProperty_Yaw_61C65E4944F5DB18DC8B6496B9622A88       OFFSET(get<double>, {0x35F8, 8, 0, 0})
 	DMember(double)                                    __CustomProperty_AimOffsetAlpha_61C65E4944F5DB18DC8B6496B9622A88 OFFSET(get<double>, {0x3600, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1140,6 +1299,8 @@ public:
 	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FullBodyAimOffsets_AnimBP.Player_FullBodyAimOffsets_AnimBP_C.ExecuteUbergraph_Player_FullBodyAimOffsets_AnimBP
 	// void ExecuteUbergraph_Player_FullBodyAimOffsets_AnimBP(int32_t EntryPoint);                                              // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_PropertiesDebug_AnimBP.Player_PropertiesDebug_AnimBP_C
 /// Size: 0x0048 (0x0004C0 - 0x000508)
 class UPlayer_PropertiesDebug_AnimBP_C : public UFortPlayerDebugAnimInstance
@@ -1153,8 +1314,6 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x4D0, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x4D8, 32, 0, 0})
 	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(get<T>, {0x4F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1162,6 +1321,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_PropertiesDebug_AnimBP.Player_PropertiesDebug_AnimBP_C.ExecuteUbergraph_Player_PropertiesDebug_AnimBP
 	// void ExecuteUbergraph_Player_PropertiesDebug_AnimBP(int32_t EntryPoint);                                                 // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C
 /// Size: 0x3E10 (0x0015D0 - 0x0053E0)
 class UPlayer_LocomotionAdditives_AnimBP_C : public UFortPlayerAnimInstanceProxy
@@ -1355,8 +1516,6 @@ public:
 	DMember(double)                                    StartAnimBlendTime                                          OFFSET(get<double>, {0x53C8, 8, 0, 0})
 	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x53D0, 8, 0, 0})
 	DMember(double)                                    CrouchPlayRate                                              OFFSET(get<double>, {0x53D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1418,6 +1577,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LocomotionAdditives_AnimBP.Player_LocomotionAdditives_AnimBP_C.ExecuteUbergraph_Player_LocomotionAdditives_AnimBP
 	// void ExecuteUbergraph_Player_LocomotionAdditives_AnimBP(int32_t EntryPoint);                                             // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C
 /// Size: 0x3AB0 (0x000BA0 - 0x004650)
 class UPlayer_LowerBodyJog_AnimBP_C : public UFortWalkAnimInstance
@@ -1591,8 +1752,6 @@ public:
 	DMember(double)                                    CrouchPlayRate                                              OFFSET(get<double>, {0x4638, 8, 0, 0})
 	DMember(double)                                    PivotAnimBlendTime                                          OFFSET(get<double>, {0x4640, 8, 0, 0})
 	DMember(double)                                    StartAnimBlendTime                                          OFFSET(get<double>, {0x4648, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1648,6 +1807,8 @@ public:
 	// void AnimGraph(FPoseLink UpperBody, FPoseLink& AnimGraph);                                                               // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_LowerBodyJog_AnimBP.Player_LowerBodyJog_AnimBP_C.ExecuteUbergraph_Player_LowerBodyJog_AnimBP
 	// void ExecuteUbergraph_Player_LowerBodyJog_AnimBP(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C
 /// Size: 0x20E8 (0x0015D0 - 0x0036B8)
 class UPlayer_Land_AnimBP_C : public UFortPlayerLandingAnimInstance
@@ -1764,8 +1925,6 @@ public:
 	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(get<T>, {0x3588, 72, 0, 0})
 	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(get<T>, {0x35D0, 32, 0, 0})
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x35F0, 200, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1819,6 +1978,8 @@ public:
 	// void OnLandingUpdate(FAnimUpdateContext& Context, FAnimNodeReference& Node);                                             // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_Land_AnimBP.Player_Land_AnimBP_C.ExecuteUbergraph_Player_Land_AnimBP
 	// void ExecuteUbergraph_Player_Land_AnimBP(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_BuildingPose_AnimBP.Player_BuildingPose_AnimBP_C
 /// Size: 0x04E0 (0x000460 - 0x000940)
 class UPlayer_BuildingPose_AnimBP_C : public UFortPlayerBuildingAnimInstance
@@ -1850,8 +2011,6 @@ public:
 	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(get<T>, {0x830, 32, 0, 0})
 	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(get<T>, {0x850, 40, 0, 0})
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x878, 200, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1859,6 +2018,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_BuildingPose_AnimBP.Player_BuildingPose_AnimBP_C.ExecuteUbergraph_Player_BuildingPose_AnimBP
 	// void ExecuteUbergraph_Player_BuildingPose_AnimBP(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/Blueprints/FortPlayerAnimComponentBP.FortPlayerAnimComponentBP_C
 /// Size: 0x0000 (0x000D60 - 0x000D60)
 class UFortPlayerAnimComponentBP_C : public UFortPlayerAnimationComponent
@@ -1960,8 +2121,6 @@ public:
 	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(get<T>, {0x2338, 40, 0, 0})
 	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(get<T>, {0x2360, 40, 0, 0})
 	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace1                        OFFSET(get<T>, {0x2388, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1969,50 +2128,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_DBNOCarried_AnimBP.Player_DBNOCarried_AnimBP_C.ExecuteUbergraph_Player_DBNOCarried_AnimBP
 	// void ExecuteUbergraph_Player_DBNOCarried_AnimBP(int32_t EntryPoint);                                                     // [0x1ebf994] Final                
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FreeFlying_AnimBP.Player_FreeFlying_AnimBP_C
-/// Size: 0x0810 (0x0015D0 - 0x001DE0)
-class UPlayer_FreeFlying_AnimBP_C : public UFortPlayerAnimInstanceProxy
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7648;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x15D0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(get<T>, {0x15D8, 72, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x1620, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x1628, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x1630, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(get<T>, {0x1650, 40, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(get<T>, {0x1678, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(get<T>, {0x16C0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(get<T>, {0x1708, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(get<T>, {0x1750, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(get<T>, {0x1798, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(get<T>, {0x17E0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(get<T>, {0x1828, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(get<T>, {0x1870, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(get<T>, {0x18E0, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(get<T>, {0x19A8, 32, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(get<T>, {0x19C8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(get<T>, {0x1A10, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(get<T>, {0x1A58, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(get<T>, {0x1AA0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(get<T>, {0x1AE8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(get<T>, {0x1B30, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(get<T>, {0x1B78, 72, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(get<T>, {0x1BC0, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(get<T>, {0x1C30, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(get<T>, {0x1CF8, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x1D18, 200, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FreeFlying_AnimBP.Player_FreeFlying_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FreeFlying_AnimBP.Player_FreeFlying_AnimBP_C.ExecuteUbergraph_Player_FreeFlying_AnimBP
-	// void ExecuteUbergraph_Player_FreeFlying_AnimBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
 /// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_DBNO_AnimBP.Player_DBNO_AnimBP_C
 /// Size: 0x08C9 (0x000470 - 0x000D39)
 class UPlayer_DBNO_AnimBP_C : public UFortDBNOAnimInstance
@@ -2055,8 +2172,6 @@ public:
 	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0xBF0, 32, 0, 0})
 	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(get<T>, {0xC10, 296, 0, 0})
 	DMember(bool)                                      AdjustLargeBody                                             OFFSET(get<bool>, {0xD38, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2064,6 +2179,52 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_DBNO_AnimBP.Player_DBNO_AnimBP_C.ExecuteUbergraph_Player_DBNO_AnimBP
 	// void ExecuteUbergraph_Player_DBNO_AnimBP(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
+/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FreeFlying_AnimBP.Player_FreeFlying_AnimBP_C
+/// Size: 0x0810 (0x0015D0 - 0x001DE0)
+class UPlayer_FreeFlying_AnimBP_C : public UFortPlayerAnimInstanceProxy
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 7648;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x15D0, 8, 0, 0})
+	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(get<T>, {0x15D8, 72, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x1620, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x1628, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x1630, 32, 0, 0})
+	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(get<T>, {0x1650, 40, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(get<T>, {0x1678, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(get<T>, {0x16C0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(get<T>, {0x1708, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(get<T>, {0x1750, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(get<T>, {0x1798, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(get<T>, {0x17E0, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(get<T>, {0x1828, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(get<T>, {0x1870, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(get<T>, {0x18E0, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(get<T>, {0x19A8, 32, 0, 0})
+	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum1                              OFFSET(get<T>, {0x19C8, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(get<T>, {0x1A10, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(get<T>, {0x1A58, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(get<T>, {0x1AA0, 72, 0, 0})
+	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(get<T>, {0x1AE8, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(get<T>, {0x1B30, 72, 0, 0})
+	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(get<T>, {0x1B78, 72, 0, 0})
+	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(get<T>, {0x1BC0, 112, 0, 0})
+	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(get<T>, {0x1C30, 200, 0, 0})
+	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(get<T>, {0x1CF8, 32, 0, 0})
+	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x1D18, 200, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FreeFlying_AnimBP.Player_FreeFlying_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_FreeFlying_AnimBP.Player_FreeFlying_AnimBP_C.ExecuteUbergraph_Player_FreeFlying_AnimBP
+	// void ExecuteUbergraph_Player_FreeFlying_AnimBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/Blueprints/FortPlayerLinkedAnimGraphComponentBP.FortPlayerLinkedAnimGraphComponentBP_C
 /// Size: 0x0000 (0x000178 - 0x000178)
 class UFortPlayerLinkedAnimGraphComponentBP_C : public UFortLinkedAnimGraphComponent
@@ -2435,8 +2596,6 @@ public:
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine12                                OFFSET(get<T>, {0x9198, 200, 0, 0})
 	DMember(bool)                                      ParaGlide_TriggerAnim                                       OFFSET(get<bool>, {0x9260, 1, 0, 0})
 	DMember(bool)                                      BlockAnimRule                                               OFFSET(get<bool>, {0x9261, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2444,677 +2603,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_SkyDiveAndGlide_AnimBP.Player_SkyDiveAndGlide_AnimBP_C.ExecuteUbergraph_Player_SkyDiveAndGlide_AnimBP
 	// void ExecuteUbergraph_Player_SkyDiveAndGlide_AnimBP(int32_t EntryPoint);                                                 // [0x1ebf994] Final                
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Default.TeamID_Default_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_Default_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
 };
 
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Lime.TeamID_Lime_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_Lime_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_04.TeamID_PvP_04_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_04_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_03.TeamID_PvP_03_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_03_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Orange.TeamID_Orange_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_Orange_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_07.TeamID_PvP_07_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_07_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_05.TeamID_PvP_05_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_05_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_06.TeamID_PvP_06_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_06_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_10_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_10_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_12_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_12_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_11_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_11_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_15_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_15_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_14_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_14_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_13_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_13_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_18_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_18_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_17_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_17_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_19_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_19_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_16_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_16_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_23_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_23_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_21_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_21_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_20_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_20_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_26_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_26_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_25_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_25_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_24_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_24_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_22_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_22_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_30_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_30_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_28_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_28_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_27_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_27_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_32_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_32_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_33_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_33_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_31_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_31_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_29_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_29_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_37_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_37_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_36_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_36_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_35_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_35_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_34_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_34_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_41_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_41_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_39_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_39_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_40_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_40_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_38_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_38_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_44_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_44_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_42_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_42_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_43_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_43_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_48_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_48_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_45_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_45_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_46_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_46_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_50_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_50_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_49_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_49_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_47_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_47_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_08.TeamID_PvP_08_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_08_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_09.TeamID_PvP_09_C
-/// Size: 0x0000 (0x000038 - 0x000038)
-class UTeamID_PvP_09_C : public UFortTeamIdentification
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 56;
-
-public:
-};
-
-/// Class /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C
-/// Size: 0x2970 (0x0015E0 - 0x003F50)
-class UPlayer_TacticalState_AnimBP_C : public UFortPlayerTacticalStateAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 16208;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x15E0, 8, 0, 0})
-	SMember(FAnimBlueprintGeneratedMutableData)        __AnimBlueprintMutables                                     OFFSET(get<T>, {0x15E8, 36, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x1610, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x1618, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x1620, 32, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive                                 OFFSET(get<T>, {0x1640, 200, 0, 0})
-	SMember(FAnimNode_BlendListByEnum)                 AnimGraphNode_BlendListByEnum                               OFFSET(get<T>, {0x1708, 72, 0, 0})
-	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose                                  OFFSET(get<T>, {0x1750, 16, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer                                OFFSET(get<T>, {0x1760, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(get<T>, {0x17A8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer2                               OFFSET(get<T>, {0x17F0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer3                               OFFSET(get<T>, {0x1838, 72, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_LinkedInputPose                               OFFSET(get<T>, {0x1880, 176, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer4                               OFFSET(get<T>, {0x1930, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer5                               OFFSET(get<T>, {0x1978, 72, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root1                                         OFFSET(get<T>, {0x19C0, 32, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose                                 OFFSET(get<T>, {0x19E0, 40, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive1                                OFFSET(get<T>, {0x1A08, 200, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer                              OFFSET(get<T>, {0x1AD0, 112, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult                                   OFFSET(get<T>, {0x1B40, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine                                  OFFSET(get<T>, {0x1B60, 200, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult                              OFFSET(get<T>, {0x1C28, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult1                             OFFSET(get<T>, {0x1C50, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult2                             OFFSET(get<T>, {0x1C78, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult3                             OFFSET(get<T>, {0x1CA0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult4                             OFFSET(get<T>, {0x1CC8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult5                             OFFSET(get<T>, {0x1CF0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult6                             OFFSET(get<T>, {0x1D18, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult7                             OFFSET(get<T>, {0x1D40, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult8                             OFFSET(get<T>, {0x1D68, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult9                             OFFSET(get<T>, {0x1D90, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer6                               OFFSET(get<T>, {0x1DB8, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult1                                  OFFSET(get<T>, {0x1E00, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult10                            OFFSET(get<T>, {0x1E20, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult11                            OFFSET(get<T>, {0x1E48, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult12                            OFFSET(get<T>, {0x1E70, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult13                            OFFSET(get<T>, {0x1E98, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult14                            OFFSET(get<T>, {0x1EC0, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer7                               OFFSET(get<T>, {0x1EE8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool                               OFFSET(get<T>, {0x1F30, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer8                               OFFSET(get<T>, {0x1F78, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult2                                  OFFSET(get<T>, {0x1FC0, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool1                              OFFSET(get<T>, {0x1FE0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer9                               OFFSET(get<T>, {0x2028, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer10                              OFFSET(get<T>, {0x2070, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult3                                  OFFSET(get<T>, {0x20B8, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool2                              OFFSET(get<T>, {0x20D8, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer11                              OFFSET(get<T>, {0x2120, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer12                              OFFSET(get<T>, {0x2168, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult4                                  OFFSET(get<T>, {0x21B0, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer13                              OFFSET(get<T>, {0x21D0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool3                              OFFSET(get<T>, {0x2218, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer14                              OFFSET(get<T>, {0x2260, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult5                                  OFFSET(get<T>, {0x22A8, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer15                              OFFSET(get<T>, {0x22C8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool4                              OFFSET(get<T>, {0x2310, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer16                              OFFSET(get<T>, {0x2358, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult6                                  OFFSET(get<T>, {0x23A0, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult15                            OFFSET(get<T>, {0x23C0, 40, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(get<T>, {0x23E8, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult7                                  OFFSET(get<T>, {0x24B0, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult16                            OFFSET(get<T>, {0x24D0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult17                            OFFSET(get<T>, {0x24F8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult18                            OFFSET(get<T>, {0x2520, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult19                            OFFSET(get<T>, {0x2548, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult20                            OFFSET(get<T>, {0x2570, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult21                            OFFSET(get<T>, {0x2598, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult22                            OFFSET(get<T>, {0x25C0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult23                            OFFSET(get<T>, {0x25E8, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer17                              OFFSET(get<T>, {0x2610, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer18                              OFFSET(get<T>, {0x2658, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool5                              OFFSET(get<T>, {0x26A0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult8                                  OFFSET(get<T>, {0x26E8, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer19                              OFFSET(get<T>, {0x2708, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool6                              OFFSET(get<T>, {0x2750, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer20                              OFFSET(get<T>, {0x2798, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult9                                  OFFSET(get<T>, {0x27E0, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool7                              OFFSET(get<T>, {0x2800, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer21                              OFFSET(get<T>, {0x2848, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer22                              OFFSET(get<T>, {0x2890, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult10                                 OFFSET(get<T>, {0x28D8, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer23                              OFFSET(get<T>, {0x28F8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool8                              OFFSET(get<T>, {0x2940, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer24                              OFFSET(get<T>, {0x2988, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult11                                 OFFSET(get<T>, {0x29D0, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer25                              OFFSET(get<T>, {0x29F0, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool9                              OFFSET(get<T>, {0x2A38, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer26                              OFFSET(get<T>, {0x2A80, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult12                                 OFFSET(get<T>, {0x2AC8, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer27                              OFFSET(get<T>, {0x2AE8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool10                             OFFSET(get<T>, {0x2B30, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer28                              OFFSET(get<T>, {0x2B78, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult13                                 OFFSET(get<T>, {0x2BC0, 32, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool11                             OFFSET(get<T>, {0x2BE0, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer29                              OFFSET(get<T>, {0x2C28, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer30                              OFFSET(get<T>, {0x2C70, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult14                                 OFFSET(get<T>, {0x2CB8, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer31                              OFFSET(get<T>, {0x2CD8, 72, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool12                             OFFSET(get<T>, {0x2D20, 72, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer32                              OFFSET(get<T>, {0x2D68, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult15                                 OFFSET(get<T>, {0x2DB0, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult24                            OFFSET(get<T>, {0x2DD0, 40, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine2                                 OFFSET(get<T>, {0x2DF8, 200, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult16                                 OFFSET(get<T>, {0x2EC0, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult25                            OFFSET(get<T>, {0x2EE0, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer33                              OFFSET(get<T>, {0x2F08, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult17                                 OFFSET(get<T>, {0x2F50, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer34                              OFFSET(get<T>, {0x2F70, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult18                                 OFFSET(get<T>, {0x2FB8, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer35                              OFFSET(get<T>, {0x2FD8, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult19                                 OFFSET(get<T>, {0x3020, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine3                                 OFFSET(get<T>, {0x3040, 200, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose                                OFFSET(get<T>, {0x3108, 120, 0, 0})
-	SMember(FAnimNode_RotateRootBone)                  AnimGraphNode_RotateRootBone                                OFFSET(get<T>, {0x3180, 176, 0, 0})
-	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer1                             OFFSET(get<T>, {0x3230, 112, 0, 0})
-	SMember(FAnimNode_ApplyAdditive)                   AnimGraphNode_ApplyAdditive2                                OFFSET(get<T>, {0x32A0, 200, 0, 0})
-	SMember(FAnimNode_DeadBlending)                    AnimGraphNode_DeadBlending                                  OFFSET(get<T>, {0x3370, 1184, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(get<T>, {0x3810, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult26                            OFFSET(get<T>, {0x3830, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult27                            OFFSET(get<T>, {0x3858, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult28                            OFFSET(get<T>, {0x3880, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult29                            OFFSET(get<T>, {0x38A8, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult30                            OFFSET(get<T>, {0x38D0, 40, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult31                            OFFSET(get<T>, {0x38F8, 40, 0, 0})
-	SMember(FAnimNode_ModifyCurve)                     AnimGraphNode_ModifyCurve                                   OFFSET(get<T>, {0x3920, 288, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer36                              OFFSET(get<T>, {0x3A40, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult20                                 OFFSET(get<T>, {0x3A88, 32, 0, 0})
-	SMember(FAnimNode_TransitionResult)                AnimGraphNode_TransitionResult32                            OFFSET(get<T>, {0x3AA8, 40, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer37                              OFFSET(get<T>, {0x3AD0, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult21                                 OFFSET(get<T>, {0x3B18, 32, 0, 0})
-	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer38                              OFFSET(get<T>, {0x3B38, 72, 0, 0})
-	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult22                                 OFFSET(get<T>, {0x3B80, 32, 0, 0})
-	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine4                                 OFFSET(get<T>, {0x3BA0, 200, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool13                             OFFSET(get<T>, {0x3C68, 72, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer                               OFFSET(get<T>, {0x3CB0, 200, 0, 0})
-	SMember(FAnimNode_LinkedAnimLayer)                 AnimGraphNode_LinkedAnimLayer1                              OFFSET(get<T>, {0x3D78, 200, 0, 0})
-	SMember(FAnimNode_BlendListByBool)                 AnimGraphNode_BlendListByBool14                             OFFSET(get<T>, {0x3E40, 72, 0, 0})
-	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(get<T>, {0x3E88, 120, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose1                                OFFSET(get<T>, {0x3F00, 40, 0, 0})
-	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose2                                OFFSET(get<T>, {0x3F28, 40, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.WeaponBoneFixLayer
-	// void WeaponBoneFixLayer(FPoseLink InPose, FPoseLink& WeaponBoneFixLayer);                                                // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.TacticalSprintLayer
-	// void TacticalSprintLayer(FPoseLink& TacticalSprintLayer);                                                                // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Characters/Player/AnimationBlueprints/LinkedAnimGraphs/Player_TacticalState_AnimBP.Player_TacticalState_AnimBP_C.ExecuteUbergraph_Player_TacticalState_AnimBP
-	// void ExecuteUbergraph_Player_TacticalState_AnimBP(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/Fortnite_M_Avg_Player_AnimBlueprint.Fortnite_M_Avg_Player_AnimBlueprint_C
 /// Size: 0x95F0 (0x001910 - 0x00AF00)
 class UFortnite_M_Avg_Player_AnimBlueprint_C : public UFortPlayerAnimInstance
@@ -3517,8 +3007,6 @@ public:
 	SMember(FVector)                                   RightHandOverride                                           OFFSET(get<T>, {0xAEE0, 24, 0, 0})
 	DMember(bool)                                      ParaGlide_TriggerAnim                                       OFFSET(get<bool>, {0xAEF8, 1, 0, 0})
 	SMember(FName)                                     EmoteAnimOffsetCurveName                                    OFFSET(get<T>, {0xAEFC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3636,6 +3124,8 @@ public:
 	// void Indigo_Boost__DelegateSignature();                                                                                  // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/Male/Male_Avg_Base/Fortnite_M_Avg_Player_AnimBlueprint.Fortnite_M_Avg_Player_AnimBlueprint_C.MenuScreenDispatcher__DelegateSignature
 	// void MenuScreenDispatcher__DelegateSignature(UFortPlayerAnimInstance* CharPart);                                         // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/LayerAnimBP/SwimmingAnimBP.SwimmingAnimBP_C
 /// Size: 0x4598 (0x0009D0 - 0x004F68)
 class USwimmingAnimBP_C : public UFortSwimmingLayerAnimInstance
@@ -3857,8 +3347,6 @@ public:
 	DMember(bool)                                      ChangeMovementToVelocityFromAccel                           OFFSET(get<bool>, {0x4F51, 1, 0, 0})
 	DMember(double)                                    LocalAccelYawAngleAtStart                                   OFFSET(get<double>, {0x4F58, 8, 0, 0})
 	DMember(double)                                    PivotAngle                                                  OFFSET(get<double>, {0x4F60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3896,6 +3384,518 @@ public:
 	// void AnimNotify_SwimMovementAccelAdditive_Exited_Layer();                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/Male/Male_Avg_Base/LayerAnimBP/SwimmingAnimBP.SwimmingAnimBP_C.ExecuteUbergraph_SwimmingAnimBP
 	// void ExecuteUbergraph_SwimmingAnimBP(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Lime.TeamID_Lime_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_Lime_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Default.TeamID_Default_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_Default_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_03.TeamID_PvP_03_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_03_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_Orange.TeamID_Orange_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_Orange_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_05.TeamID_PvP_05_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_05_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_04.TeamID_PvP_04_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_04_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_07.TeamID_PvP_07_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_07_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_06.TeamID_PvP_06_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_06_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_10_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_10_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_12_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_12_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_11_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_11_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_14_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_14_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_13_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_13_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_16_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_16_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_15_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_15_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_18_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_18_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_17_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_17_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_20_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_20_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_19_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_19_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_23_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_23_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_24_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_24_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_22_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_22_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_21_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_21_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_28_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_28_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_27_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_27_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_26_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_26_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_25_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_25_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_31_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_31_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_32_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_32_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_30_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_30_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_29_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_29_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_36_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_36_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_35_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_35_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_34_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_34_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_33_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_33_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_40_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_40_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_38_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_38_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_37_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_37_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_42_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_42_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_41_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_41_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_39_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_39_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_45_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_45_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_46_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_46_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_43_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_43_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_48_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_48_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_47_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_47_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_44_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_44_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_09.TeamID_PvP_09_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_09_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_49_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_49_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP_08.TeamID_PvP_08_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_08_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
+/// Class /Game/Characters/CharacterColorSwatches/TeamIdentification/TeamID_PvP.TeamID_PvP_50_C
+/// Size: 0x0000 (0x000038 - 0x000038)
+class UTeamID_PvP_50_C : public UFortTeamIdentification
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 56;
+
+public:
+};
+
 /// Class /Game/Characters/Player/Common/PhysicalRimlight/PhysicalRimlight.PhysicalRimlight_C
 /// Size: 0x00E0 (0x000290 - 0x000370)
 class APhysicalRimlight_C : public AActor
@@ -3919,8 +3919,6 @@ public:
 	SMember(FName)                                     Sunlight_Color_Param_name                                   OFFSET(get<T>, {0x358, 4, 0, 0})
 	DMember(double)                                    Rimlight_CvarBoost                                          OFFSET(get<double>, {0x360, 8, 0, 0})
 	DMember(double)                                    RimlightVerticalOffset                                      OFFSET(get<double>, {0x368, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3942,6 +3940,8 @@ public:
 	// void Day Phase (EFortDayPhase CurrentDayPhase, EFortDayPhase PreviousDayPhase, bool bAtCreation);                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/Common/PhysicalRimlight/PhysicalRimlight.PhysicalRimlight_C.ExecuteUbergraph_PhysicalRimlight
 	// void ExecuteUbergraph_PhysicalRimlight(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Characters/Player/Male/Male_Avg_Base/LayerAnimBP/SlidingLayerAnimBP.SlidingLayerAnimBP_C
 /// Size: 0x1648 (0x0004D0 - 0x001B18)
 class USlidingLayerAnimBP_C : public UFortSlidingLayerAnimInstance
@@ -4027,8 +4027,6 @@ public:
 	DMember(bool)                                      InitiatedSlideUpHill                                        OFFSET(get<bool>, {0x1B08, 1, 0, 0})
 	DMember(bool)                                      BypassEntry                                                 OFFSET(get<bool>, {0x1B09, 1, 0, 0})
 	DMember(double)                                    SpineTweakLean                                              OFFSET(get<double>, {0x1B10, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4054,6 +4052,8 @@ public:
 	// void EvaluateGraphExposedInputs_ExecuteUbergraph_SlidingLayerAnimBP_AnimGraphNode_ApplyMeshSpaceAdditive_CA45D1154A0385BF8F15FBB40CA66AD6(); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Characters/Player/Male/Male_Avg_Base/LayerAnimBP/SlidingLayerAnimBP.SlidingLayerAnimBP_C.ExecuteUbergraph_SlidingLayerAnimBP
 	// void ExecuteUbergraph_SlidingLayerAnimBP(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Characters/Player/Female/Medium/Bodies/F_MED_Ramirez_Fallback/Meshes/F_MED_Ramirez_Fallback_Skeleton_AnimBlueprint.F_MED_Ramirez_Fallback_Skeleton_AnimBlueprint_C
 /// Size: 0x0188 (0x000700 - 0x000888)
 class UF_MED_Ramirez_Fallback_Skeleton_AnimBlueprint_C : public UCustomCharacterPartAnimInstance
@@ -4067,8 +4067,6 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
 	SMember(FAnimNode_CopyPoseFromMesh)                AnimGraphNode_CopyPoseFromMesh                              OFFSET(get<T>, {0x738, 336, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4076,6 +4074,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Characters/Player/Female/Medium/Bodies/F_MED_Ramirez_Fallback/Meshes/F_MED_Ramirez_Fallback_Skeleton_AnimBlueprint.F_MED_Ramirez_Fallback_Skeleton_AnimBlueprint_C.ExecuteUbergraph_F_MED_Ramirez_Fallback_Skeleton_AnimBlueprint
 	// void ExecuteUbergraph_F_MED_Ramirez_Fallback_Skeleton_AnimBlueprint(int32_t EntryPoint);                                 // [0x1ebf994] Final                
+};
+
 /// Struct /Game/Characters/Survivors/Struct_SurvivorScriptedAbilities.Struct_SurvivorScriptedAbilities
 /// Size: 0x0024 (0x000000 - 0x000024)
 class FStruct_SurvivorScriptedAbilities : public MDKStruct

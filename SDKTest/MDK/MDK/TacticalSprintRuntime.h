@@ -46,8 +46,6 @@ public:
 	SMember(FScalableFloat)                            HF_TacSprintEnabled                                         OFFSET(get<T>, {0x248, 40, 0, 0})
 	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0x270, 8, 0, 0})
 	SMember(FGameplayTag)                              CameraModeTag                                               OFFSET(get<T>, {0x278, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -65,6 +63,8 @@ public:
 	// void HandleMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PreviousMovementMode, char PreviousCustomMode); // [0x99601c8] Final|Native|Public  
 	// Function /Script/TacticalSprintRuntime.FortMovementMode_ELTacSprint.HandleFailedToSprint
 	// void HandleFailedToSprint();                                                                                             // [0x99601b4] Final|Native|Public  
+};
+
 /// Class /Script/TacticalSprintRuntime.FortPlayerControllerComponent_TacticalSprint
 /// Size: 0x0138 (0x0000A0 - 0x0001D8)
 class UFortPlayerControllerComponent_TacticalSprint : public UControllerComponent
@@ -90,8 +90,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnTacticalSprintEnded                                       OFFSET(get<T>, {0x148, 16, 0, 0})
 	SMember(FTimerHandle)                              StopWantingToSprintTimerReceipt                             OFFSET(get<T>, {0x158, 8, 0, 0})
 	CMember(UInputComponent*)                          InputComponent                                              OFFSET(get<T>, {0x1C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -113,6 +111,8 @@ public:
 	// void OnAutoRunChanged(bool bAutoRunIsOn);                                                                                // [0x9960a8c] Final|Native|Private 
 	// Function /Script/TacticalSprintRuntime.FortPlayerControllerComponent_TacticalSprint.LogAndVisualLog
 	// void LogAndVisualLog(UObject* LoggingSource, ESprintLoggingVerbosityLevel Verbosity, FString& LogString);                // [0x9960388] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/TacticalSprintRuntime.FortMovementMode_TacSprintRuntimeData
 /// Size: 0x0018 (0x000010 - 0x000028)
 class FFortMovementMode_TacSprintRuntimeData : public FFortMovementMode_BaseExtRuntimeData

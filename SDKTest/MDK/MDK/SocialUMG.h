@@ -50,8 +50,6 @@ public:
 	CMember(UCommonButtonBase*)                        Button_SendMessage                                          OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UDynamicEntryBox*)                         EntryBox_JoinedChannels                                     OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UScrollBox*)                               ScrollBox_Channels                                          OFFSET(get<T>, {0x2F8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,6 +65,8 @@ public:
 	// void FocusEditableText();                                                                                                // [0x712f140] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SocialUMG.SocialChatContainer.DynamicHandleMessageTextCommitted
 	// void DynamicHandleMessageTextCommitted(FText& MessageText, TEnumAsByte<ETextCommit> CommitMethod);                       // [0x712f004] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/SocialUMG.SocialChatMessageEntry
 /// Size: 0x0160 (0x0002A8 - 0x000408)
 class USocialChatMessageEntry : public UUserWidget
@@ -78,8 +78,6 @@ public:
 	SMember(FSocialChatMessageEntryStyle)              DefaultStyle                                                OFFSET(get<T>, {0x2C0, 312, 0, 0})
 	CMember(UCommonRichTextBlock*)                     RichText_Message                                            OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UButton*)                                  Button_MessageButton                                        OFFSET(get<T>, {0x400, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -87,6 +85,8 @@ public:
 	// void OnMessageSet();                                                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SocialUMG.SocialChatMessageEntry.CanInteract
 	// bool CanInteract();                                                                                                      // [0x2cdffe0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SocialUMG.SocialChatMessageList
 /// Size: 0x0118 (0x000298 - 0x0003B0)
 class USocialChatMessageList : public UListViewBase
@@ -111,13 +111,13 @@ public:
 	CMember(USocialGroupChannel*)                      SocialGroup                                                 OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UTextBlock*)                               Text_GroupName                                              OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x14E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SocialUMG.SocialGroupListEntry.HandleGetMenuContent
 	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x712f1a8] Final|Native|Protected 
+};
+
 /// Class /Script/SocialUMG.SocialGroupTreeView
 /// Size: 0x0020 (0x000C30 - 0x000C50)
 class USocialGroupTreeView : public UTreeView
@@ -144,8 +144,6 @@ public:
 	SMember(FLinearColor)                              AlertingIndicatorColor                                      OFFSET(get<T>, {0x14D0, 16, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_InteractionName                                        OFFSET(get<T>, {0x1560, 8, 0, 0})
 	CMember(UBorder*)                                  Border_InteractionIndicator                                 OFFSET(get<T>, {0x1568, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -155,6 +153,8 @@ public:
 	// bool IsPlatformOnlyFriend();                                                                                             // [0x712f320] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SocialUMG.SocialInteractionButton.GetInteractionName
 	// FName GetInteractionName();                                                                                              // [0x712f174] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SocialUMG.SocialActionMenu
 /// Size: 0x0040 (0x0003E8 - 0x000428)
 class USocialActionMenu : public UCommonActivatableWidget
@@ -180,8 +180,6 @@ public:
 	CMember(UTextBlock*)                               Text_ConfirmationLabel                                      OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_Confirm                                              OFFSET(get<T>, {0x480, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_Decline                                              OFFSET(get<T>, {0x488, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -189,6 +187,8 @@ public:
 	// void OnToggleConfirmation(bool bIsVisible);                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SocialUMG.SocialInteractionMenu.GetFirstEntryToCenter
 	// UWidget* GetFirstEntryToCenter();                                                                                        // [0x712f154] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SocialUMG.SocialNameTextBlock
 /// Size: 0x0020 (0x000870 - 0x000890)
 class USocialNameTextBlock : public UCommonRichTextBlock
@@ -227,8 +227,6 @@ class USocialListInteractableEntryBase : public USocialListEntryBase
 public:
 	CMember(UClass*)                                   ActionMenuClass                                             OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UMenuAnchor*)                              MenuAnchor_Actions                                          OFFSET(get<T>, {0x14E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -236,6 +234,8 @@ public:
 	// void HandleMenuOpenChanged(bool bIsMenuOpen);                                                                            // [0x712f288] Final|Native|Private 
 	// Function /Script/SocialUMG.SocialListInteractableEntryBase.HandleGetMenuContent
 	// UUserWidget* HandleGetMenuContent();                                                                                     // [0x712f1cc] Final|Native|Protected 
+};
+
 /// Class /Script/SocialUMG.SocialListUserEntryBase
 /// Size: 0x0020 (0x0014F0 - 0x001510)
 class USocialListUserEntryBase : public USocialListInteractableEntryBase

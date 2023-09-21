@@ -33,8 +33,6 @@ class UFortGameplayCinematicWidget : public UCommonActivatableWidget
 
 public:
 	DMember(bool)                                      bSkipCinematics                                             OFFSET(get<bool>, {0x3F0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -42,6 +40,8 @@ public:
 	// void OnStartCinematic();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SpecialEventGameplayUI.FortGameplayCinematicWidget.OnCinematicFinished
 	// void OnCinematicFinished();                                                                                              // [0x9e58f58] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SpecialEventGameplayUI.FortGameplayIntroPanelWidget
 /// Size: 0x0020 (0x0003E8 - 0x000408)
 class UFortGameplayIntroPanelWidget : public UCommonActivatableWidget
@@ -62,8 +62,6 @@ class USpecialEventCursorWidget : public UUserWidget
 public:
 	DMember(bool)                                      bAutomaticallyChangeVisibility                              OFFSET(get<bool>, {0x2B0, 1, 0, 0})
 	CMember(USpecialEventCursorPawnComponent*)         CursorPawnComponent                                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -79,6 +77,8 @@ public:
 	// void BP_OnDesiredVisibilityChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& CursorModeTag, bool bShouldBeVisible); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/SpecialEventGameplayUI.SpecialEventCursorWidget.BP_OnCursorModeChanged
 	// void BP_OnCursorModeChanged(USpecialEventCursorPawnComponent* InCursorPawnComponent, FGameplayTag& NewCursorModeTag, FGameplayTag& OldCursorModeTag); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SpecialEventGameplayUI.SpecialEventPlayerInfoWidget
 /// Size: 0x0020 (0x000310 - 0x000330)
 class USpecialEventPlayerInfoWidget : public UFortHUDElementWidget
@@ -88,13 +88,13 @@ class USpecialEventPlayerInfoWidget : public UFortHUDElementWidget
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnRepresentedPlayerStateChanged                             OFFSET(get<T>, {0x318, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SpecialEventGameplayUI.SpecialEventPlayerInfoWidget.GetRepresentedPlayerState
 	// AFortPlayerStateAthena* GetRepresentedPlayerState();                                                                     // [0x9e58dc8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SpecialEventGameplayUI.SpecialEventUILibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USpecialEventUILibrary : public UBlueprintFunctionLibrary

@@ -26,8 +26,6 @@ public:
 	SMember(FString)                                   UserName                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(UEpicCMSImage*)                            UserAvatarImage                                             OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UTexture2DDynamic*)                        CurrentQRCodeTexture                                        OFFSET(get<T>, {0x90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -47,6 +45,8 @@ public:
 	// void CheckLogin(UObject* InWorldContext);                                                                                // [0x922bf94] Native|Public|BlueprintCallable 
 	// Function /Script/PictureInPictureCore.PictureInPictureClient.BeginLogin
 	// void BeginLogin(UObject* InWorldContext);                                                                                // [0x9b98aa4] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/PictureInPictureCore.PictureInPictureCheatManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UPictureInPictureCheatManager : public UChildCheatManager
@@ -97,8 +97,6 @@ public:
 	SMember(FDateTime)                                 ActiveStartTime                                             OFFSET(get<T>, {0x468, 8, 0, 0})
 	SMember(FDateTime)                                 PausedStartTime                                             OFFSET(get<T>, {0x470, 8, 0, 0})
 	SMember(FPiPSuspendInfo)                           SuspendedInfo                                               OFFSET(get<T>, {0x480, 496, 0, 0})
-};
-
 
 
 	/// Functions
@@ -152,6 +150,8 @@ public:
 	// TArray<UPictureInPictureActionData*> GetActions();                                                                       // [0x9ce372c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/PictureInPictureCore.PictureInPictureMediaController.Exit
 	// void Exit(bool bStop);                                                                                                   // [0x5d68110] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/PictureInPictureCore.PictureInPictureMediaPlayerCtrl
 /// Size: 0x0010 (0x000108 - 0x000118)
 class UPictureInPictureMediaPlayerCtrl : public UFortMediaPlayerCtrl
@@ -174,8 +174,6 @@ public:
 	CMember(UPictureInPictureMediaPlayerCtrl*)         MediaController                                             OFFSET(get<T>, {0x190, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         DefaultSubmix                                               OFFSET(get<T>, {0x1E8, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         LicensedSubmix                                              OFFSET(get<T>, {0x1F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -193,6 +191,8 @@ public:
 	// void HandleUCPAudioChanged(UFortClientSettingsRecord* Settings);                                                         // [0x9ce6330] Final|Native|Private 
 	// Function /Script/PictureInPictureCore.PictureInPicturePlayer.FlushPlayerAssetConfig
 	// void FlushPlayerAssetConfig();                                                                                           // [0x9ce3718] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/PictureInPictureCore.PictureInPicturePartnerControls
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UPictureInPicturePartnerControls : public UObject
@@ -227,8 +227,6 @@ public:
 	SMember(FString)                                   CurrentCountry                                              OFFSET(get<T>, {0xF8, 16, 0, 0})
 	CMember(TArray<FString>)                           CurrentSubdivisions                                         OFFSET(get<T>, {0x108, 16, 0, 0})
 	CMember(UFortMediaCMSEventsComponent*)             CMSEventsComponent                                          OFFSET(get<T>, {0x118, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -286,6 +284,8 @@ public:
 	// bool GetAutoEnableSetting();                                                                                             // [0x9ce37a4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/PictureInPictureCore.PictureInPictureSubsystem.EnableFullScreenPiPOption
 	// void EnableFullScreenPiPOption(bool bEnable);                                                                            // [0x9ce3698] Final|Native|Public  
+};
+
 /// Struct /Script/PictureInPictureCore.PiPSuspendInfo
 /// Size: 0x01F0 (0x000000 - 0x0001F0)
 class FPiPSuspendInfo : public MDKStruct

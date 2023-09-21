@@ -38,8 +38,6 @@ public:
 	DMember(int32_t)                                   CurrentLockOnCount                                          OFFSET(get<int32_t>, {0x174, 4, 0, 0})
 	DMember(float)                                     TargetToReticleDistanceNormalized                           OFFSET(get<float>, {0x178, 4, 0, 0})
 	CMember(TWeakObjectPtr<AFortPawn*>)                LockOnTarget                                                OFFSET(get<T>, {0x17C, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -51,6 +49,8 @@ public:
 	// float GetLockOnProgress();                                                                                               // [0x9db35d0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AutoAimWeaponRuntime.AutoAimWeaponPawnComponent.GetCurrentLockOnCount
 	// int32_t GetCurrentLockOnCount();                                                                                         // [0x9db35b8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/AutoAimWeaponRuntime.AutoAimWeaponBoneSegmentData
 /// Size: 0x000C (0x000000 - 0x00000C)
 class FAutoAimWeaponBoneSegmentData : public MDKStruct

@@ -23,13 +23,13 @@ class UFortUIManagerComponent_VictoryCrowns : public UFortControllerComponent
 public:
 	CMember(UClass*)                                   VictoryCrownsIndicatorClass                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
 	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(get<T>, {0xB0, 136, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VictoryCrownsUI.FortUIManagerComponent_VictoryCrowns.RebuildBearerIndicators
 	// void RebuildBearerIndicators(TArray<AFortPlayerStateAthena*>& CrownBearerList);                                          // [0x9e96dfc] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/VictoryCrownsUI.VictoryCrownsBearerInfoBase
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UVictoryCrownsBearerInfoBase : public UCommonUserWidget
@@ -40,8 +40,6 @@ class UVictoryCrownsBearerInfoBase : public UCommonUserWidget
 public:
 	CMember(TWeakObjectPtr<AFortPlayerStateAthena*>)   WeakPSA                                                     OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_PlayerName                                             OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -49,6 +47,8 @@ public:
 	// void SetPlayerState(AFortPlayerStateAthena* InPlayerState);                                                              // [0x9e96f48] Final|Native|Public|BlueprintCallable 
 	// Function /Script/VictoryCrownsUI.VictoryCrownsBearerInfoBase.OnSetPlayerState
 	// void OnSetPlayerState(AFortPlayerStateAthena* PSA);                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/VictoryCrownsUI.VictoryCrownsIndicator
 /// Size: 0x0028 (0x0003B8 - 0x0003E0)
 class UVictoryCrownsIndicator : public UFortActorIndicatorWidget
@@ -90,8 +90,6 @@ public:
 	CMember(UDynamicEntryBox*)                         EntryBox_BearerList                                         OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	CMember(UCommonActionWidget*)                      TipActionWidget                                             OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	SMember(FDataTableRowHandle)                       CloseObjectInputAction                                      OFFSET(get<T>, {0x3F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -113,3 +111,5 @@ public:
 	// void OnButtonClose();                                                                                                    // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
 	// Function /Script/VictoryCrownsUI.VictoryCrownsPreGameWidget.FadeOutTimerFinished
 	// void FadeOutTimerFinished();                                                                                             // [0x9e96d0c] Final|Native|Private 
+};
+

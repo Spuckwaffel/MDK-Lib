@@ -132,8 +132,6 @@ public:
 	DMember(double)                                    Time_when_you_ll_be_able_to_splash_again                    OFFSET(get<double>, {0x4AF8, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnOverlapWaterVolume                                        OFFSET(get<T>, {0x4B00, 16, 0, 0})
 	CMember(TArray<FCharacterPartMidArrayStruct>)      PawnPartMaterials                                           OFFSET(get<T>, {0x4B10, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -151,6 +149,8 @@ public:
 	// void ExecuteUbergraph_PlayerPawn_Generic_Parent(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Abilities/Player/Pawns/PlayerPawn_Generic_Parent.PlayerPawn_Generic_Parent_C.OnOverlapWaterVolume__DelegateSignature
 	// void OnOverlapWaterVolume__DelegateSignature(bool bIsInWater, AFortPlayerPawn* Pawn, AActor* Water);                     // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Abilities/NPC/Generic/GE_ImpactImmunity.GE_ImpactImmunity_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_ImpactImmunity_C : public UGameplayEffect
@@ -193,8 +193,6 @@ public:
 	SMember(FName)                                     FullBodyHitMontageSection                                   OFFSET(get<T>, {0xB88, 4, 0, 0})
 	DMember(bool)                                      EndAbilityOnBlendOut                                        OFFSET(get<bool>, {0xB8C, 1, 0, 0})
 	DMember(double)                                    Duration_NoAnim                                             OFFSET(get<double>, {0xB90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -218,6 +216,8 @@ public:
 	// void PickFullBodyHitMontageSection();                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/NPC/Generic/GAB_GenericApplyFullBodyHit.GAB_GenericApplyFullBodyHit_C.ExecuteUbergraph_GAB_GenericApplyFullBodyHit
 	// void ExecuteUbergraph_GAB_GenericApplyFullBodyHit(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/B_FortGlobalAbilityTargetingActor.B_FortGlobalAbilityTargetingActor_C
 /// Size: 0x0000 (0x000290 - 0x000290)
 class AB_FortGlobalAbilityTargetingActor_C : public AFortGlobalAbilityTargetingActor
@@ -258,8 +258,6 @@ class UGA_TrapBuildGeneric_C : public UFortGameplayAbility
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FGameplayTag)                              PlacedCue                                                   OFFSET(get<T>, {0xB30, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -267,6 +265,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Traps/Generic/GA_TrapBuildGeneric.GA_TrapBuildGeneric_C.ExecuteUbergraph_GA_TrapBuildGeneric
 	// void ExecuteUbergraph_GA_TrapBuildGeneric(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Emotes/GameplayCues/GCNS_GM_OnDisplayEmoji.GCNS_GM_OnDisplayEmoji_C
 /// Size: 0x0000 (0x000230 - 0x000230)
 class UGCNS_GM_OnDisplayEmoji_C : public UGameplayCueNotify_OnDisplayEmoji
@@ -297,8 +297,6 @@ class UGCNS_GM_OnDisplayChatEmoji_C : public UFortGameplayCueNotify_Simple
 public:
 	SMember(FVector)                                   ParticleRelativeOffset                                      OFFSET(get<T>, {0x68, 24, 0, 0})
 	CMember(USoundBase*)                               BubbleSound                                                 OFFSET(get<T>, {0x80, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -312,6 +310,8 @@ public:
 	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Game/Abilities/Emotes/GameplayCues/GCNS_GM_OnDisplayChatEmoji.GCNS_GM_OnDisplayChatEmoji_C.OnStartParticleSystemSpawned
 	// void OnStartParticleSystemSpawned(UParticleSystemComponent* SpawnedParticleSysComponent, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Abilities/Player/Athena/GCN_Athena_Bush.GCN_Athena_Bush_C
 /// Size: 0x0090 (0x000990 - 0x000A20)
 class AGCN_Athena_Bush_C : public AFortGameplayCueNotify_Loop
@@ -338,8 +338,6 @@ public:
 	DMember(double)                                    TargetOpacity                                               OFFSET(get<double>, {0xA08, 8, 0, 0})
 	CMember(UParticleSystem*)                          BushDestructionVFX                                          OFFSET(get<T>, {0xA10, 8, 0, 0})
 	CMember(USoundBase*)                               BushDestructionSFX                                          OFFSET(get<T>, {0xA18, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -357,6 +355,8 @@ public:
 	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Abilities/Player/Athena/GCN_Athena_Bush.GCN_Athena_Bush_C.ExecuteUbergraph_GCN_Athena_Bush
 	// void ExecuteUbergraph_GCN_Athena_Bush(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Player/Pawns/PlayerPawn_Generic.PlayerPawn_Generic_C
 /// Size: 0x05F8 (0x004B20 - 0x005118)
 class APlayerPawn_Generic_C : public APlayerPawn_Generic_Parent_C
@@ -486,8 +486,6 @@ public:
 	CMember(TMap<TEnumAsByte, USkeletalMeshComponent*>) ShieldSkMeshes                                             OFFSET(get<T>, {0x50B8, 80, 0, 0})
 	DMember(int32_t)                                   L_ShieldMIDIndex                                            OFFSET(get<int32_t>, {0x5108, 4, 0, 0})
 	CMember(USkeletalMeshComponent*)                   NullPart_Mesh                                               OFFSET(get<T>, {0x5110, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -673,6 +671,8 @@ public:
 	// void SwingRightEnd__DelegateSignature();                                                                                 // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Player/Pawns/PlayerPawn_Generic.PlayerPawn_Generic_C.SwingRight__DelegateSignature
 	// void SwingRight__DelegateSignature();                                                                                    // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Abilities/Player/Athena/GCNL_Athena_Tether.GCNL_Athena_Tether_C
 /// Size: 0x0088 (0x000990 - 0x000A18)
 class AGCNL_Athena_Tether_C : public AFortGameplayCueNotify_Loop
@@ -698,8 +698,6 @@ public:
 	SMember(FTimerHandle)                              ScaleInSkisTimerHandle                                      OFFSET(get<T>, {0x9F8, 8, 0, 0})
 	DMember(double)                                    SkiScaleInDelay                                             OFFSET(get<double>, {0xA00, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   CameraLensEffectInterface                                   OFFSET(get<T>, {0xA08, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -735,6 +733,8 @@ public:
 	// void ScaleInSkisForPlayer();                                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Player/Athena/GCNL_Athena_Tether.GCNL_Athena_Tether_C.ExecuteUbergraph_GCNL_Athena_Tether
 	// void ExecuteUbergraph_GCNL_Athena_Tether(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Emotes/GAB_Emote_Generic.GAB_Emote_Generic_C
 /// Size: 0x0059 (0x000B28 - 0x000B81)
 class UGAB_Emote_Generic_C : public UFortGameplayAbility
@@ -755,8 +755,6 @@ public:
 	SMember(FName)                                     HUDElementVisibilityReasonName                              OFFSET(get<T>, {0xB78, 4, 0, 0})
 	DMember(int32_t)                                   WaitForLoadedCount                                          OFFSET(get<int32_t>, {0xB7C, 4, 0, 0})
 	DMember(bool)                                      bClearInteractOnActivate                                    OFFSET(get<bool>, {0xB80, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -796,6 +794,8 @@ public:
 	// void NonMontageAsyncAssetsReady();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Emotes/GAB_Emote_Generic.GAB_Emote_Generic_C.ExecuteUbergraph_GAB_Emote_Generic
 	// void ExecuteUbergraph_GAB_Emote_Generic(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Sprays/GAB_Spray_Generic.GAB_Spray_Generic_C
 /// Size: 0x0067 (0x000B81 - 0x000BE8)
 class UGAB_Spray_Generic_C : public UGAB_Emote_Generic_C
@@ -810,8 +810,6 @@ public:
 	DMember(double)                                    DecalTraceDistance                                          OFFSET(get<double>, {0xBA0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UAnimMontage*>)             DefaultSprayMontage_M                                       OFFSET(get<T>, {0xBA8, 32, 0, 0})
 	CMember(TWeakObjectPtr<UAnimMontage*>)             DefaultSprayMontage_F                                       OFFSET(get<T>, {0xBC8, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -823,6 +821,8 @@ public:
 	// void OnMontageStartedPlaying();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Sprays/GAB_Spray_Generic.GAB_Spray_Generic_C.ExecuteUbergraph_GAB_Spray_Generic
 	// void ExecuteUbergraph_GAB_Spray_Generic(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Emotes/GAB_Emote_Generic_Transformation.GAB_Emote_Generic_Transformation_C
 /// Size: 0x0000 (0x000B81 - 0x000B81)
 class UGAB_Emote_Generic_Transformation_C : public UGAB_Emote_Generic_C
@@ -872,8 +872,6 @@ class UGA_Athena_Player_PreSlideFeedback_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -885,6 +883,18 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_PreSlideFeedback.GA_Athena_Player_PreSlideFeedback_C.ExecuteUbergraph_GA_Athena_Player_PreSlideFeedback
 	// void ExecuteUbergraph_GA_Athena_Player_PreSlideFeedback(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Player/Commando/TacticalPerks/Clusterbomb/GE_Commando_Tactical_ClusterBomb_Damage.GE_Commando_Tactical_ClusterBomb_Damage_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Commando_Tactical_ClusterBomb_Damage_C : public UGET_DirectPhysicalDamage_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Game/Abilities/Player/Generic/GameplayEffects/GE_Generic_Character_Launch.GE_Generic_Character_Launch_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Generic_Character_Launch_C : public UGameplayEffect
@@ -908,16 +918,6 @@ public:
 /// Class /Game/Abilities/Weapons/Ranged/GE_Ranged_GenericDamage_Explosive.GE_Ranged_GenericDamage_Explosive_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Ranged_GenericDamage_Explosive_C : public UGET_DirectPhysicalDamage_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
-/// Class /Game/Abilities/Player/Commando/TacticalPerks/Clusterbomb/GE_Commando_Tactical_ClusterBomb_Damage.GE_Commando_Tactical_ClusterBomb_Damage_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Commando_Tactical_ClusterBomb_Damage_C : public UGET_DirectPhysicalDamage_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -975,8 +975,6 @@ class UGA_Interrogate_GC_C : public UFortGameplayAbility
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FGameplayTag)                              Cue                                                         OFFSET(get<T>, {0xB30, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -986,6 +984,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Abilities/Player/Interrogation/GA_Interrogate_GC.GA_Interrogate_GC_C.ExecuteUbergraph_GA_Interrogate_GC
 	// void ExecuteUbergraph_GA_Interrogate_GC(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Player/Interrogation/GE_Interrogate_GC.GE_Interrogate_GC_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Interrogate_GC_C : public UGameplayEffect
@@ -1055,8 +1055,6 @@ class UCameraModifier_Athena_Sliding_C : public USlidingCameraModifier
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x100, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1064,6 +1062,8 @@ public:
 	// void BlendOut();                                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Player/Sliding/CameraModifier_Athena_Sliding.CameraModifier_Athena_Sliding_C.ExecuteUbergraph_CameraModifier_Athena_Sliding
 	// void ExecuteUbergraph_CameraModifier_Athena_Sliding(int32_t EntryPoint);                                                 // [0x1ebf994] Final                
+};
+
 /// Class /Game/Abilities/Player/Commando/Actives/FragGrenade/GE_Commando_FragGrenadeCooldown.GE_Commando_FragGrenadeCooldown_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Commando_FragGrenadeCooldown_C : public UGET_Cooldown_Hero_Active_C
@@ -1085,8 +1085,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FGameplayTag)                              TC_AbilitiesGenericTriggeredAbilityActivate                 OFFSET(get<T>, {0xB30, 4, 0, 0})
 	DMember(bool)                                      bPlayerHolsterState                                         OFFSET(get<bool>, {0xB34, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1100,6 +1098,8 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Abilities/Player/Parents/GAT_TriggeredAbility.GAT_TriggeredAbility_C.ExecuteUbergraph_GAT_TriggeredAbility
 	// void ExecuteUbergraph_GAT_TriggeredAbility(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/NPC/Generic/GE_TransferKnockback.GE_TransferKnockback_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_TransferKnockback_C : public UGameplayEffect
@@ -1157,8 +1157,6 @@ public:
 	SMember(FGameplayTag)                              Event_Control_Ended                                         OFFSET(get<T>, {0xC48, 4, 0, 0})
 	SMember(FGameplayTag)                              GC_TrapKnockback_Tag                                        OFFSET(get<T>, {0xC4C, 4, 0, 0})
 	DMember(bool)                                      AllowKnockbackAnimation                                     OFFSET(get<bool>, {0xC50, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1232,6 +1230,8 @@ public:
 	// void DebugLine();                                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/NPC/Generic/GAB_GenericApplyKnockback.GAB_GenericApplyKnockback_C.ExecuteUbergraph_GAB_GenericApplyKnockback
 	// void ExecuteUbergraph_GAB_GenericApplyKnockback(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Weapons/Ranged/GE_Impulse.GE_Impulse_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Impulse_C : public UGameplayEffect
@@ -1271,8 +1271,6 @@ class UGA_DefaultPlayer_PetOtherPet_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1288,6 +1286,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_PetOtherPet.GA_DefaultPlayer_PetOtherPet_C.ExecuteUbergraph_GA_DefaultPlayer_PetOtherPet
 	// void ExecuteUbergraph_GA_DefaultPlayer_PetOtherPet(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
+};
+
 /// Class /Game/Abilities/Weapons/Ranged/GE_Damage_Explosive_LineOfSight.GE_Damage_Explosive_LineOfSight_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Damage_Explosive_LineOfSight_C : public UGE_Ranged_GenericDamage_Explosive_C
@@ -1317,8 +1317,6 @@ class UGA_DefaultPlayer_InteractUse_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1334,6 +1332,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractUse.GA_DefaultPlayer_InteractUse_C.ExecuteUbergraph_GA_DefaultPlayer_InteractUse
 	// void ExecuteUbergraph_GA_DefaultPlayer_InteractUse(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
+};
+
 /// Class /Game/Abilities/Player/Sliding/CamShake_Athena_Player_Slide.CamShake_Athena_Player_Slide_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UCamShake_Athena_Player_Slide_C : public ULegacyCameraShake
@@ -1361,8 +1361,6 @@ public:
 	SMember(FVector)                                   ExplosionLocation                                           OFFSET(get<T>, {0xAB8, 24, 0, 0})
 	DMember(double)                                    MinExplosionDelay                                           OFFSET(get<double>, {0xAD0, 8, 0, 0})
 	DMember(double)                                    MaxExplosionDelay                                           OFFSET(get<double>, {0xAD8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1376,6 +1374,8 @@ public:
 	// void OnExploded(TArray<AActor*>& HitActors, TArray<FHitResult>& HitResults);                                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Abilities/Player/Perks/Hero/ClusterBomb/B_Prj_Commando_FragGrenade_Cluster.B_Prj_Commando_FragGrenade_Cluster_C.ExecuteUbergraph_B_Prj_Commando_FragGrenade_Cluster
 	// void ExecuteUbergraph_B_Prj_Commando_FragGrenade_Cluster(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/NPC/Generic/GAB_CarryPlayer.GAB_CarryPlayer_C
 /// Size: 0x0034 (0x000B58 - 0x000B8C)
 class UGAB_CarryPlayer_C : public UFortGameplayAbility_CarryPlayer
@@ -1390,8 +1390,6 @@ public:
 	DMember(bool)                                      bCompletedPickup                                            OFFSET(get<bool>, {0xB6C, 1, 0, 0})
 	SMember(FVector)                                   PickupLocation                                              OFFSET(get<T>, {0xB70, 24, 0, 0})
 	DMember(int32_t)                                   CarryLongDistanceThreshold                                  OFFSET(get<int32_t>, {0xB88, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1411,33 +1409,8 @@ public:
 	// void OnFortPlayerHitByVehicle_Event(AFortAthenaVehicle* InstigatingVehicle);                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/NPC/Generic/GAB_CarryPlayer.GAB_CarryPlayer_C.ExecuteUbergraph_GAB_CarryPlayer
 	// void ExecuteUbergraph_GAB_CarryPlayer(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C
-/// Size: 0x0010 (0x000B58 - 0x000B68)
-class UGAB_ThrowPlayer_C : public UFortGameplayAbility_CarryPlayer
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2920;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.Completed_45B7744E4902B26207BAA1954E6BCDEE
-	// void Completed_45B7744E4902B26207BAA1954E6BCDEE(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.Cancelled_45B7744E4902B26207BAA1954E6BCDEE
-	// void Cancelled_45B7744E4902B26207BAA1954E6BCDEE(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.Triggered_45B7744E4902B26207BAA1954E6BCDEE
-	// void Triggered_45B7744E4902B26207BAA1954E6BCDEE(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.ExecuteUbergraph_GAB_ThrowPlayer
-	// void ExecuteUbergraph_GAB_ThrowPlayer(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Abilities/NPC/Generic/GAB_DropPlayer.GAB_DropPlayer_C
 /// Size: 0x0010 (0x000B58 - 0x000B68)
 class UGAB_DropPlayer_C : public UFortGameplayAbility_CarryPlayer
@@ -1448,8 +1421,6 @@ class UGAB_DropPlayer_C : public UFortGameplayAbility_CarryPlayer
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1465,6 +1436,35 @@ public:
 	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/NPC/Generic/GAB_DropPlayer.GAB_DropPlayer_C.ExecuteUbergraph_GAB_DropPlayer
 	// void ExecuteUbergraph_GAB_DropPlayer(int32_t EntryPoint);                                                                // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C
+/// Size: 0x0010 (0x000B58 - 0x000B68)
+class UGAB_ThrowPlayer_C : public UFortGameplayAbility_CarryPlayer
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2920;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.Completed_45B7744E4902B26207BAA1954E6BCDEE
+	// void Completed_45B7744E4902B26207BAA1954E6BCDEE(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.Cancelled_45B7744E4902B26207BAA1954E6BCDEE
+	// void Cancelled_45B7744E4902B26207BAA1954E6BCDEE(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.Triggered_45B7744E4902B26207BAA1954E6BCDEE
+	// void Triggered_45B7744E4902B26207BAA1954E6BCDEE(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_ThrowPlayer.GAB_ThrowPlayer_C.ExecuteUbergraph_GAB_ThrowPlayer
+	// void ExecuteUbergraph_GAB_ThrowPlayer(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Player/Parents/GAT_ActiveAbility.GAT_ActiveAbility_C
 /// Size: 0x0028 (0x000B28 - 0x000B50)
 class UGAT_ActiveAbility_C : public UFortGameplayAbility
@@ -1480,8 +1480,6 @@ public:
 	SMember(FActiveGameplayEffectHandle)               GEH_KnockBackImmunity                                       OFFSET(get<T>, {0xB40, 8, 0, 0})
 	DMember(bool)                                      bPlayerHolsterState                                         OFFSET(get<bool>, {0xB48, 1, 0, 0})
 	SMember(FGameplayTag)                              TC_AbilitiesGenericActiveAbilityEndAbility                  OFFSET(get<T>, {0xB4C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1505,6 +1503,8 @@ public:
 	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Player/Parents/GAT_ActiveAbility.GAT_ActiveAbility_C.ExecuteUbergraph_GAT_ActiveAbility
 	// void ExecuteUbergraph_GAT_ActiveAbility(int32_t EntryPoint);                                                             // [0x1ebf994] Final                
+};
+
 /// Class /Game/Abilities/Player/Commando/Actives/FragGrenade/AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C
 /// Size: 0x0400 (0x0006D0 - 0x000AD0)
 class AAOE_Commando_KeepOutExplosion_C : public AFortAreaOfEffectCloud
@@ -1520,8 +1520,6 @@ public:
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x6F0, 8, 0, 0})
 	DMember(double)                                    Radius                                                      OFFSET(get<double>, {0x6F8, 8, 0, 0})
 	SMember(FSoundAttenuationSettings)                 AOE_Sound_Attenuation_Based_On_Radius                       OFFSET(get<T>, {0x700, 976, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1535,6 +1533,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Player/Commando/Actives/FragGrenade/AOE_Commando_KeepOutExplosion.AOE_Commando_KeepOutExplosion_C.ExecuteUbergraph_AOE_Commando_KeepOutExplosion
 	// void ExecuteUbergraph_AOE_Commando_KeepOutExplosion(int32_t EntryPoint);                                                 // [0x1ebf994] Final                
+};
+
 /// Class /Game/Abilities/Player/Parents/GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C
 /// Size: 0x0030 (0x000B50 - 0x000B80)
 class UGAT_ActiveAbility_Hero_C : public UGAT_ActiveAbility_C
@@ -1550,8 +1550,6 @@ public:
 	CMember(UAbilitySystemComponent*)                  Owner_ASC                                                   OFFSET(get<T>, {0xB60, 8, 0, 0})
 	CMember(UClass*)                                   GE_CooldownModifier                                         OFFSET(get<T>, {0xB68, 8, 0, 0})
 	CMember(TArray<FActiveGameplayEffectHandle>)       Active_Cooldown_Modifiers                                   OFFSET(get<T>, {0xB70, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1565,6 +1563,8 @@ public:
 	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Player/Parents/GAT_ActiveAbility_Hero.GAT_ActiveAbility_Hero_C.ExecuteUbergraph_GAT_ActiveAbility_Hero
 	// void ExecuteUbergraph_GAT_ActiveAbility_Hero(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Player/Parents/GAT_CommandoActiveAbility.GAT_CommandoActiveAbility_C
 /// Size: 0x00C2 (0x000B80 - 0x000C42)
 class UGAT_CommandoActiveAbility_C : public UGAT_ActiveAbility_Hero_C
@@ -1578,8 +1578,6 @@ public:
 	CMember(AFortPawn*)                                CommandoPlayerPawn                                          OFFSET(get<T>, {0xC38, 8, 0, 0})
 	DMember(bool)                                      isAutoCommitted                                             OFFSET(get<bool>, {0xC40, 1, 0, 0})
 	DMember(bool)                                      isStaminaLockedOut                                          OFFSET(get<bool>, {0xC41, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1587,487 +1585,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Abilities/Player/Parents/GAT_CommandoActiveAbility.GAT_CommandoActiveAbility_C.ExecuteUbergraph_GAT_CommandoActiveAbility
 	// void ExecuteUbergraph_GAT_CommandoActiveAbility(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C
-/// Size: 0x01D4 (0x000B28 - 0x000CFC)
-class UGAB_GenericDeath_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3324;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(UAnimMontage*)                             DeathMontage                                                OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FName)                                     DeathMontageSectionName                                     OFFSET(get<T>, {0xB38, 4, 0, 0})
-	SMember(FVector)                                   DeathHitDirection                                           OFFSET(get<T>, {0xB40, 24, 0, 0})
-	SMember(FHitResult)                                DeathHitResult                                              OFFSET(get<T>, {0xB58, 224, 0, 0})
-	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0xC38, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     SpawnDroneTags                                              OFFSET(get<T>, {0xC58, 32, 0, 0})
-	CMember(UAnimMontage*)                             Front                                                       OFFSET(get<T>, {0xC78, 8, 0, 0})
-	CMember(UAnimMontage*)                             Left                                                        OFFSET(get<T>, {0xC80, 8, 0, 0})
-	CMember(UAnimMontage*)                             Right                                                       OFFSET(get<T>, {0xC88, 8, 0, 0})
-	CMember(UAnimMontage*)                             Back                                                        OFFSET(get<T>, {0xC90, 8, 0, 0})
-	CMember(UAnimMontage*)                             Head_Front                                                  OFFSET(get<T>, {0xC98, 8, 0, 0})
-	CMember(UAnimMontage*)                             Head_Left                                                   OFFSET(get<T>, {0xCA0, 8, 0, 0})
-	CMember(UAnimMontage*)                             Head_Right                                                  OFFSET(get<T>, {0xCA8, 8, 0, 0})
-	CMember(UAnimMontage*)                             Head_Back                                                   OFFSET(get<T>, {0xCB0, 8, 0, 0})
-	DMember(int32_t)                                   FrontSectionNameCount                                       OFFSET(get<int32_t>, {0xCB8, 4, 0, 0})
-	DMember(int32_t)                                   LeftSectionNameCount                                        OFFSET(get<int32_t>, {0xCBC, 4, 0, 0})
-	DMember(int32_t)                                   RightSectionNameCount                                       OFFSET(get<int32_t>, {0xCC0, 4, 0, 0})
-	DMember(int32_t)                                   BackSectionNameCount                                        OFFSET(get<int32_t>, {0xCC4, 4, 0, 0})
-	DMember(int32_t)                                   Head_FrontSectionNameCount                                  OFFSET(get<int32_t>, {0xCC8, 4, 0, 0})
-	DMember(int32_t)                                   Head_LeftSectionNameCount                                   OFFSET(get<int32_t>, {0xCCC, 4, 0, 0})
-	DMember(int32_t)                                   Head_RightSectionNameCount                                  OFFSET(get<int32_t>, {0xCD0, 4, 0, 0})
-	DMember(int32_t)                                   Head_BackSectionNameCount                                   OFFSET(get<int32_t>, {0xCD4, 4, 0, 0})
-	SMember(FName)                                     FrontMontageSectionPrefix                                   OFFSET(get<T>, {0xCD8, 4, 0, 0})
-	SMember(FName)                                     BackMontageSectionPrefix                                    OFFSET(get<T>, {0xCDC, 4, 0, 0})
-	SMember(FName)                                     LeftMontageSectionPrefix                                    OFFSET(get<T>, {0xCE0, 4, 0, 0})
-	SMember(FName)                                     RightMontageSectionPrefix                                   OFFSET(get<T>, {0xCE4, 4, 0, 0})
-	SMember(FName)                                     HeadFrontMontageSectionPrefix                               OFFSET(get<T>, {0xCE8, 4, 0, 0})
-	SMember(FName)                                     HeadBackMontageSectionPrefix                                OFFSET(get<T>, {0xCEC, 4, 0, 0})
-	SMember(FName)                                     HeadLeftMontageSectionPrefix                                OFFSET(get<T>, {0xCF0, 4, 0, 0})
-	SMember(FName)                                     HeadRightMontageSectionPrefix                               OFFSET(get<T>, {0xCF4, 4, 0, 0})
-	SMember(FGameplayTag)                              TeleportOutCue                                              OFFSET(get<T>, {0xCF8, 4, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.GetRandomSectionName
-	// void GetRandomSectionName(int32_t MaxNumberOfSections, FName OriginalSectionName, FName& SectionName);                   // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.InitializeDeathHitDirection
-	// void InitializeDeathHitDirection(FGameplayEventData EventHitData);                                                       // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnCancelled_CD8A514040DDA2A4EF94DD913E1B01E4
-	// void OnCancelled_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnInterrupted_CD8A514040DDA2A4EF94DD913E1B01E4
-	// void OnInterrupted_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnBlendOut_CD8A514040DDA2A4EF94DD913E1B01E4
-	// void OnBlendOut_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnCompleted_CD8A514040DDA2A4EF94DD913E1B01E4
-	// void OnCompleted_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.PickDeathMontageSection
-	// void PickDeathMontageSection();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.ExecuteUbergraph_GAB_GenericDeath
-	// void ExecuteUbergraph_GAB_GenericDeath(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C
-/// Size: 0x0014 (0x000CFC - 0x000D10)
-class UGA_DefaultPlayer_Death_C : public UGAB_GenericDeath_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3344;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xD00, 8, 0, 0})
-	SMember(FGameplayTag)                              FadeCapsuleStWCue                                           OFFSET(get<T>, {0xD08, 4, 0, 0})
-	SMember(FGameplayTag)                              FadeCapsuleAthenaCue                                        OFFSET(get<T>, {0xD0C, 4, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C.PickDeathMontageSection
-	// void PickDeathMontageSection();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C.ExecuteUbergraph_GA_DefaultPlayer_Death
-	// void ExecuteUbergraph_GA_DefaultPlayer_Death(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
-/// Class /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C
-/// Size: 0x0480 (0x000B28 - 0x000FA8)
-class UGAB_InterrogatePlayer_Reveal_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4008;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xB38, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          InterrogatedPlayer                                          OFFSET(get<T>, {0xB40, 8, 0, 0})
-	CMember(UAnimMontage*)                             Anim_Reveal                                                 OFFSET(get<T>, {0xB48, 8, 0, 0})
-	CMember(UAnimMontage*)                             Anim_End                                                    OFFSET(get<T>, {0xB50, 8, 0, 0})
-	SMember(FName)                                     RevealHolster                                               OFFSET(get<T>, {0xB58, 4, 0, 0})
-	SMember(FGameplayTag)                              GC_Reveal                                                   OFFSET(get<T>, {0xB5C, 4, 0, 0})
-	SMember(FScalableFloat)                            MarkDurationPlayer                                          OFFSET(get<T>, {0xB60, 40, 0, 0})
-	SMember(FScalableFloat)                            MarkDurationNPC                                             OFFSET(get<T>, {0xB88, 40, 0, 0})
-	SMember(FScalableFloat)                            MarkRadius                                                  OFFSET(get<T>, {0xBB0, 40, 0, 0})
-	CMember(TArray<AActor*>)                           SquadmatesToMark                                            OFFSET(get<T>, {0xBD8, 16, 0, 0})
-	SMember(FTimerHandle)                              Timer_Reveal                                                OFFSET(get<T>, {0xBE8, 8, 0, 0})
-	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(get<T>, {0xBF0, 4, 0, 0})
-	DMember(double)                                    RevealDuration                                              OFFSET(get<double>, {0xBF8, 8, 0, 0})
-	DMember(double)                                    EndAbilityDelay                                             OFFSET(get<double>, {0xC00, 8, 0, 0})
-	DMember(double)                                    SweepDelay                                                  OFFSET(get<double>, {0xC08, 8, 0, 0})
-	DMember(bool)                                      Cancelled                                                   OFFSET(get<bool>, {0xC10, 1, 0, 0})
-	DMember(bool)                                      Ending                                                      OFFSET(get<bool>, {0xC11, 1, 0, 0})
-	SMember(FString)                                   IndicatorGroup                                              OFFSET(get<T>, {0xC18, 16, 0, 0})
-	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0xC28, 8, 0, 0})
-	CMember(TArray<AActor*>)                           ActorsToMark                                                OFFSET(get<T>, {0xC30, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(get<T>, {0xC40, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     NPCTagsToMark                                               OFFSET(get<T>, {0xC60, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ChestTagsToMark                                             OFFSET(get<T>, {0xC80, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayItemTagsToMark                                      OFFSET(get<T>, {0xCA0, 32, 0, 0})
-	SMember(FName)                                     ParticleSystemParamName                                     OFFSET(get<T>, {0xCC0, 4, 0, 0})
-	CMember(UParticleSystem*)                          IndicatedPS                                                 OFFSET(get<T>, {0xCC8, 8, 0, 0})
-	CMember(USoundBase*)                               IndicatedSound                                              OFFSET(get<T>, {0xCD0, 8, 0, 0})
-	SMember(FVector)                                   PSOffset                                                    OFFSET(get<T>, {0xCD8, 24, 0, 0})
-	SMember(FName)                                     PSVectorParamName                                           OFFSET(get<T>, {0xCF0, 4, 0, 0})
-	SMember(FVector)                                   PSDBNOOffset                                                OFFSET(get<T>, {0xCF8, 24, 0, 0})
-	SMember(FName)                                     EnemyStencilName                                            OFFSET(get<T>, {0xD10, 4, 0, 0})
-	SMember(FName)                                     TreasureChestStencilName                                    OFFSET(get<T>, {0xD14, 4, 0, 0})
-	DMember(double)                                    StepTime                                                    OFFSET(get<double>, {0xD18, 8, 0, 0})
-	DMember(bool)                                      testbool                                                    OFFSET(get<bool>, {0xD20, 1, 0, 0})
-	SMember(FScalableFloat)                            EnemyStencilID                                              OFFSET(get<T>, {0xD28, 40, 0, 0})
-	SMember(FScalableFloat)                            StencilStepTime                                             OFFSET(get<T>, {0xD50, 40, 0, 0})
-	SMember(FScalableFloat)                            bUseDefaultStencil                                          OFFSET(get<T>, {0xD78, 40, 0, 0})
-	SMember(FScalableFloat)                            IndicatorStepTime                                           OFFSET(get<T>, {0xDA0, 40, 0, 0})
-	SMember(FGameplayTagQuery)                         NPCGameplayTagQuery                                         OFFSET(get<T>, {0xDC8, 72, 0, 0})
-	SMember(FIndicatedActorData)                       IndicatedActorDataPlayers                                   OFFSET(get<T>, {0xE10, 248, 0, 0})
-	SMember(FStenciledActorData)                       StenciledActorDataPlayers                                   OFFSET(get<T>, {0xF08, 128, 0, 0})
-	SMember(FGameplayTagContainer)                     T_QuestTagContainer                                         OFFSET(get<T>, {0xF88, 32, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GetTeamMembers
-	// TArray<AFortPlayerStateAthena*> GetTeamMembers(APawn* Target, bool bIncludeSelf);                                        // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GAB_InterrogatePlayer_Reveal_AutoGenFunc
-	// void GAB_InterrogatePlayer_Reveal_AutoGenFunc(AActor* IndicatedActor);                                                   // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ToggleReticleVisibility
-	// void ToggleReticleVisibility(bool Hide);                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Reveal
-	// void Reveal();                                                                                                           // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndAbilityCleanup
-	// void EndAbilityCleanup();                                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.InitAbility
-	// void InitAbility();                                                                                                      // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_23F3C2DB411862D627ACFCA8233F7B33
-	// void Completed_23F3C2DB411862D627ACFCA8233F7B33(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_23F3C2DB411862D627ACFCA8233F7B33
-	// void Cancelled_23F3C2DB411862D627ACFCA8233F7B33(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_23F3C2DB411862D627ACFCA8233F7B33
-	// void Triggered_23F3C2DB411862D627ACFCA8233F7B33(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_3C2C8C224B62B00BDEEAF5AF38A401C1
-	// void Completed_3C2C8C224B62B00BDEEAF5AF38A401C1(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1
-	// void Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1
-	// void Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.OnFinish_68B3C6D14B44CCD3170ABDA038C1203E
-	// void OnFinish_68B3C6D14B44CCD3170ABDA038C1203E();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.OnDied_Event
-	// void OnDied_Event(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndInterrogation
-	// void EndInterrogation();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ExecuteUbergraph_GAB_InterrogatePlayer_Reveal
-	// void ExecuteUbergraph_GAB_InterrogatePlayer_Reveal(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C
-/// Size: 0x0118 (0x000B58 - 0x000C70)
-class UGAB_InterrogatePlayer_Search_C : public UFortGameplayAbility_CarryPlayer
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3184;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
-	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xB68, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          InterrogatedPlayer                                          OFFSET(get<T>, {0xB70, 8, 0, 0})
-	CMember(UAnimMontage*)                             Anim_Search                                                 OFFSET(get<T>, {0xB78, 8, 0, 0})
-	SMember(FName)                                     InterrogateHolster                                          OFFSET(get<T>, {0xB80, 4, 0, 0})
-	SMember(FName)                                     LootTierGroupName                                           OFFSET(get<T>, {0xB84, 4, 0, 0})
-	CMember(UFortWorldItemDefinition*)                 ItemDefinition                                              OFFSET(get<T>, {0xB88, 8, 0, 0})
-	DMember(int32_t)                                   NumberToSpawn                                               OFFSET(get<int32_t>, {0xB90, 4, 0, 0})
-	SMember(FVector)                                   LootSpawnOffset                                             OFFSET(get<T>, {0xB98, 24, 0, 0})
-	SMember(FScalableFloat)                            MaxDropsInstance                                            OFFSET(get<T>, {0xBB0, 40, 0, 0})
-	DMember(int32_t)                                   NumDropsInstance                                            OFFSET(get<int32_t>, {0xBD8, 4, 0, 0})
-	SMember(FScalableFloat)                            KeycardDropBias                                             OFFSET(get<T>, {0xBE0, 40, 0, 0})
-	CMember(TArray<UFortWorldItemDefinition*>)         KeycardItemDefinitions                                      OFFSET(get<T>, {0xC08, 16, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_Yacht                                             OFFSET(get<T>, {0xC18, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_OilRig                                            OFFSET(get<T>, {0xC1C, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_SharkIsland                                       OFFSET(get<T>, {0xC20, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_HQ                                                OFFSET(get<T>, {0xC24, 4, 0, 0})
-	SMember(FGameplayTag)                              T_Keycard_MountainBase                                      OFFSET(get<T>, {0xC28, 4, 0, 0})
-	SMember(FTimerHandle)                              Timer_Interrogation                                         OFFSET(get<T>, {0xC30, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(get<T>, {0xC38, 32, 0, 0})
-	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(get<T>, {0xC58, 4, 0, 0})
-	CMember(UClass*)                                   GE_Cooldown                                                 OFFSET(get<T>, {0xC60, 8, 0, 0})
-	CMember(UClass*)                                   GE_PickedUp                                                 OFFSET(get<T>, {0xC68, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ApplyGameplayEffectToNPC
-	// void ApplyGameplayEffectToNPC(UClass* GameplayEffect);                                                                   // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropKeycard
-	// void DropKeycard();                                                                                                      // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.GetKeycardToDrop
-	// void GetKeycardToDrop(bool& HasKeycard, UFortWorldItemDefinition*& Output);                                              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropLoot
-	// void DropLoot();                                                                                                         // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ToggleReticleVisibility
-	// void ToggleReticleVisibility(bool Hide);                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.EndAbilityCleanup
-	// void EndAbilityCleanup();                                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.InitAbility
-	// void InitAbility();                                                                                                      // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Completed_6BBDC9B445D4280492A25E8E5EA7A53D
-	// void Completed_6BBDC9B445D4280492A25E8E5EA7A53D(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Cancelled_6BBDC9B445D4280492A25E8E5EA7A53D
-	// void Cancelled_6BBDC9B445D4280492A25E8E5EA7A53D(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Triggered_6BBDC9B445D4280492A25E8E5EA7A53D
-	// void Triggered_6BBDC9B445D4280492A25E8E5EA7A53D(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Added_9291D75D4A0949E1C5B7E49C1FD11F8B
-	// void Added_9291D75D4A0949E1C5B7E49C1FD11F8B();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnPress_2000C5AE43E9D757FF188B85CF911E39
-	// void OnPress_2000C5AE43E9D757FF188B85CF911E39(float TimeWaited);                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event
-	// void OnDied_Event(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event
-	// void OnDied_Event(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ExecuteUbergraph_GAB_InterrogatePlayer_Search
-	// void ExecuteUbergraph_GAB_InterrogatePlayer_Search(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C
-/// Size: 0x0030 (0x000B28 - 0x000B58)
-class UGAB_AthenaDBNORevive_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTag)                              EC_AppliedEffect                                            OFFSET(get<T>, {0xB30, 4, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FGameplayTag)                              ResurrectCue                                                OFFSET(get<T>, {0xB40, 4, 0, 0})
-	SMember(FGameplayTag)                              ResurrectAthenaCue                                          OFFSET(get<T>, {0xB44, 4, 0, 0})
-	CMember(UAnimMontage*)                             DBNOMontageOutro                                            OFFSET(get<T>, {0xB48, 8, 0, 0})
-	CMember(UAnimMontage*)                             DBNOMontageOutroSwimming                                    OFFSET(get<T>, {0xB50, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Get DBNO Outro Montage
-	// void Get DBNO Outro Montage(UAnimMontage*& DBNOMontageOutro);                                                            // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Completed_23712DBC45E68EA0C91A4895CBD8B3A6
-	// void Completed_23712DBC45E68EA0C91A4895CBD8B3A6(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Cancelled_23712DBC45E68EA0C91A4895CBD8B3A6
-	// void Cancelled_23712DBC45E68EA0C91A4895CBD8B3A6(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Triggered_23712DBC45E68EA0C91A4895CBD8B3A6
-	// void Triggered_23712DBC45E68EA0C91A4895CBD8B3A6(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Cancelled_779E7BAA49FEAD286C5164B83CDFD609
-	// void Cancelled_779E7BAA49FEAD286C5164B83CDFD609(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Targeted_779E7BAA49FEAD286C5164B83CDFD609
-	// void Targeted_779E7BAA49FEAD286C5164B83CDFD609(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Removed_620488CD4F8BFC035EC7328664732683
-	// void Removed_620488CD4F8BFC035EC7328664732683();                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.ExecuteUbergraph_GAB_AthenaDBNORevive
-	// void ExecuteUbergraph_GAB_AthenaDBNORevive(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C
-/// Size: 0x01E8 (0x000B28 - 0x000D10)
-class UGA_DefaultPlayer_InteractSearch_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3344;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FGameplayTag)                              RefillGasTankTag                                            OFFSET(get<T>, {0xB38, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RefillGasTankMontage                                        OFFSET(get<T>, {0xB40, 88, 0, 0})
-	SMember(FGameplayTag)                              CatchFireflyTag                                             OFFSET(get<T>, {0xB98, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           FireflyCatchMontage                                         OFFSET(get<T>, {0xBA0, 88, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           RefillVehicleFuelMontage                                    OFFSET(get<T>, {0xBF8, 88, 0, 0})
-	SMember(FGameplayTag)                              GasCanRefillVehicleTag                                      OFFSET(get<T>, {0xC50, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           DBNOMontageInfo                                             OFFSET(get<T>, {0xC58, 88, 0, 0})
-	SMember(FGameplayTag)                              Tag_UseOverrideSearchMontage                                OFFSET(get<T>, {0xCB0, 4, 0, 0})
-	SMember(FFortGameplayAbilityMontageInfo)           OverrideSearchMontageInfo                                   OFFSET(get<T>, {0xCB8, 88, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.EndInteractSearch
-	// void EndInteractSearch();                                                                                                // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.StartInteractSearch
-	// void StartInteractSearch();                                                                                              // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_B697D9B445CA2BFDB1328D93C33FBCF3
-	// void Completed_B697D9B445CA2BFDB1328D93C33FBCF3(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_B697D9B445CA2BFDB1328D93C33FBCF3
-	// void Cancelled_B697D9B445CA2BFDB1328D93C33FBCF3(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_B697D9B445CA2BFDB1328D93C33FBCF3
-	// void Triggered_B697D9B445CA2BFDB1328D93C33FBCF3(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_72217B3542CE776DEDDBB3A7B5D6D343
-	// void Completed_72217B3542CE776DEDDBB3A7B5D6D343(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_72217B3542CE776DEDDBB3A7B5D6D343
-	// void Cancelled_72217B3542CE776DEDDBB3A7B5D6D343(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_72217B3542CE776DEDDBB3A7B5D6D343
-	// void Triggered_72217B3542CE776DEDDBB3A7B5D6D343(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_6A38D93A428260E68695388965BFA176
-	// void Completed_6A38D93A428260E68695388965BFA176(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_6A38D93A428260E68695388965BFA176
-	// void Cancelled_6A38D93A428260E68695388965BFA176(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_6A38D93A428260E68695388965BFA176
-	// void Triggered_6A38D93A428260E68695388965BFA176(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_5EB1B64344DD00ABFE41E2857DC3FB38
-	// void Completed_5EB1B64344DD00ABFE41E2857DC3FB38(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_5EB1B64344DD00ABFE41E2857DC3FB38
-	// void Cancelled_5EB1B64344DD00ABFE41E2857DC3FB38(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_5EB1B64344DD00ABFE41E2857DC3FB38
-	// void Triggered_5EB1B64344DD00ABFE41E2857DC3FB38(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_3E01853F4E8362C959E7B4B82217702E
-	// void Completed_3E01853F4E8362C959E7B4B82217702E(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_3E01853F4E8362C959E7B4B82217702E
-	// void Cancelled_3E01853F4E8362C959E7B4B82217702E(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_3E01853F4E8362C959E7B4B82217702E
-	// void Triggered_3E01853F4E8362C959E7B4B82217702E(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_64A40E14483311B0BA6F95B516CA6468
-	// void Completed_64A40E14483311B0BA6F95B516CA6468(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_64A40E14483311B0BA6F95B516CA6468
-	// void Cancelled_64A40E14483311B0BA6F95B516CA6468(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_64A40E14483311B0BA6F95B516CA6468
-	// void Triggered_64A40E14483311B0BA6F95B516CA6468(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.ExecuteUbergraph_GA_DefaultPlayer_InteractSearch
-	// void ExecuteUbergraph_GA_DefaultPlayer_InteractSearch(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C
-/// Size: 0x0E58 (0x000B28 - 0x001980)
-class UGA_Athena_Player_Slide_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6528;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(UClass*)                                   CameraShake                                                 OFFSET(get<T>, {0xB30, 8, 0, 0})
-	CMember(UClass*)                                   Camera_Mode_Class                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FGameplayTag)                              CameraShakeGCNL                                             OFFSET(get<T>, {0xB40, 4, 0, 0})
-	CMember(UClass*)                                   CameraModifier                                              OFFSET(get<T>, {0xB48, 8, 0, 0})
-	DMember(double)                                    MinAngleForMomentum                                         OFFSET(get<double>, {0xB50, 8, 0, 0})
-	SMember(FGameplayTag)                              SpeedlinesCue                                               OFFSET(get<T>, {0xB58, 4, 0, 0})
-	CMember(UClass*)                                   StartSlideCameraShake                                       OFFSET(get<T>, {0xB60, 8, 0, 0})
-	DMember(double)                                    AdditionalLaunchVelocityOffRamp                             OFFSET(get<double>, {0xB68, 8, 0, 0})
-	SMember(FSlidingControlParams)                     DefaultSlidingParams                                        OFFSET(get<T>, {0xB70, 1688, 0, 0})
-	SMember(FSlidingControlParams)                     PostDashGroundSlidingParams                                 OFFSET(get<T>, {0x1208, 1688, 0, 0})
-	DMember(double)                                    LevelGroundSlideDuration                                    OFFSET(get<double>, {0x18A0, 8, 0, 0})
-	SMember(FTimerHandle)                              EndLevelGroundSlideTimerHandle                              OFFSET(get<T>, {0x18A8, 8, 0, 0})
-	SMember(FScalableFloat)                            DashDuration                                                OFFSET(get<T>, {0x18B0, 40, 0, 0})
-	SMember(FTimerHandle)                              CameraFXDelay                                               OFFSET(get<T>, {0x18D8, 8, 0, 0})
-	SMember(FGameplayTag)                              PlayerGameplayCue                                           OFFSET(get<T>, {0x18E0, 4, 0, 0})
-	DMember(double)                                    CameraShakeDelay                                            OFFSET(get<double>, {0x18E8, 8, 0, 0})
-	SMember(FScalableFloat)                            MinAdditionalMomentum                                       OFFSET(get<T>, {0x18F0, 40, 0, 0})
-	SMember(FScalableFloat)                            MaxAdditionalMomentum                                       OFFSET(get<T>, {0x1918, 40, 0, 0})
-	SMember(FScalableFloat)                            MinAngleForAdditionalMomentum                               OFFSET(get<T>, {0x1940, 40, 0, 0})
-	DMember(bool)                                      Prev_FallingGracePeriodState                                OFFSET(get<bool>, {0x1968, 1, 0, 0})
-	CMember(UCameraModifier*)                          SlideCameraModifier                                         OFFSET(get<T>, {0x1970, 8, 0, 0})
-	SMember(FTimerHandle)                              AddMomentumTimerHandle                                      OFFSET(get<T>, {0x1978, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.EndAbilityServerSide
-	// void EndAbilityServerSide();                                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.EndAbilityClientSide
-	// void EndAbilityClientSide();                                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.BuildDataRegistryResolverScope
-	// bool BuildDataRegistryResolverScope(TArray<FName>& InOutResolverScopes, int32_t& InOutPriority);                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.AddMomentum
-	// void AddMomentum();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.EndLevelGroundSlide
-	// void EndLevelGroundSlide();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.CameraFX
-	// void CameraFX();                                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.OnFinishedCharacterCustomization_Event
-	// void OnFinishedCharacterCustomization_Event(AFortPlayerPawn* Pawn);                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.ForceRemoveSlideGC
-	// void ForceRemoveSlideGC();                                                                                               // [0x1ebf994] Net|NetReliableNetMulticast|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.ExecuteUbergraph_GA_Athena_Player_Slide
-	// void ExecuteUbergraph_GA_Athena_Player_Slide(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C
-/// Size: 0x01B1 (0x000B28 - 0x000CD9)
-class UGAB_AthenaDBNO_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3289;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(UAnimMontage*)                             DeathMontage                                                OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FVector)                                   DeathHitDirection                                           OFFSET(get<T>, {0xB38, 24, 0, 0})
-	SMember(FHitResult)                                DeathHitResult                                              OFFSET(get<T>, {0xB50, 224, 0, 0})
-	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0xC30, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     GameplayStatusAfflicted                                     OFFSET(get<T>, {0xC50, 32, 0, 0})
-	CMember(UAnimMontage*)                             DeathMontageSkydive                                         OFFSET(get<T>, {0xC70, 8, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               DBNOBleedGEHandle                                           OFFSET(get<T>, {0xC78, 8, 0, 0})
-	SMember(FName)                                     HolsterId                                                   OFFSET(get<T>, {0xC80, 4, 0, 0})
-	CMember(UAnimMontage*)                             DeathMontageSwimming                                        OFFSET(get<T>, {0xC88, 8, 0, 0})
-	CMember(AFortPlayerPawnAthena*)                    FortPlayerPawn                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
-	CMember(UClass*)                                   DBNOStart_GE_Class                                          OFFSET(get<T>, {0xC98, 8, 0, 0})
-	DMember(bool)                                      ImprovedDBNO                                                OFFSET(get<bool>, {0xCA0, 1, 0, 0})
-	SMember(FGameplayTagContainer)                     Old_DBNO_Block_Tags                                         OFFSET(get<T>, {0xCA8, 32, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               GE_Handle__Health_Bonus                                     OFFSET(get<T>, {0xCC8, 8, 0, 0})
-	DMember(double)                                    TenacityAmount                                              OFFSET(get<double>, {0xCD0, 8, 0, 0})
-	CMember(ETenacityType)                             TenacityType                                                OFFSET(get<T>, {0xCD8, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Custom Tenacity
-	// void Get Custom Tenacity(double& Tenacity);                                                                              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Max Health Tenacity
-	// void Get Max Health Tenacity(double& Tenacity);                                                                          // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Apply Health Bonus
-	// void Apply Health Bonus(FActiveGameplayEffectHandle& EffectHandle);                                                      // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.ApplyBleeding
-	// void ApplyBleeding(FActiveGameplayEffectHandle& EffectHandle);                                                           // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get DBNO Montage
-	// UAnimMontage* Get DBNO Montage();                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Initial Heal Amount
-	// void Get Initial Heal Amount(double& Health);                                                                            // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.InitializeDeathHitDirection
-	// void InitializeDeathHitDirection(FGameplayEventData EventHitData);                                                       // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCancelled_F0F6785443BD2E74F5591884CB19F35F
-	// void OnCancelled_F0F6785443BD2E74F5591884CB19F35F();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnInterrupted_F0F6785443BD2E74F5591884CB19F35F
-	// void OnInterrupted_F0F6785443BD2E74F5591884CB19F35F();                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnBlendOut_F0F6785443BD2E74F5591884CB19F35F
-	// void OnBlendOut_F0F6785443BD2E74F5591884CB19F35F();                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCompleted_F0F6785443BD2E74F5591884CB19F35F
-	// void OnCompleted_F0F6785443BD2E74F5591884CB19F35F();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6
-	// void OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6();                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnStateEnded_C85094F843D5075FE4872C95AFC5D6B6
-	// void OnStateEnded_C85094F843D5075FE4872C95AFC5D6B6();                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.DropHeldObjects
-	// void DropHeldObjects();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.ExecuteUbergraph_GAB_AthenaDBNO
-	// void ExecuteUbergraph_GAB_AthenaDBNO(int32_t EntryPoint);                                                                // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Abilities/Player/Commando/Actives/FragGrenade/B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C
 /// Size: 0x02F4 (0x000A88 - 0x000D7C)
 class AB_Prj_Commando_FragGrenade_C : public AFortProjectileBase
@@ -2104,8 +1623,6 @@ public:
 	SMember(FFortGameplayEffectContainerSpec)          Cluster_Tactical_Container_Spec                             OFFSET(get<T>, {0xCA0, 184, 0, 0})
 	SMember(FGameplayTagContainer)                     TC_ActorTagsThatShouldExplodeOnOverlap                      OFFSET(get<T>, {0xD58, 32, 0, 0})
 	SMember(FGameplayTag)                              T_Event_GrenadeExploded                                     OFFSET(get<T>, {0xD78, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2151,6 +1668,8 @@ public:
 	// void SendExplodedEvent();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Player/Commando/Actives/FragGrenade/B_Prj_Commando_FragGrenade.B_Prj_Commando_FragGrenade_C.ExecuteUbergraph_B_Prj_Commando_FragGrenade
 	// void ExecuteUbergraph_B_Prj_Commando_FragGrenade(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Player/Commando/Actives/FragGrenade/TT_Commando_FragGrenade.TT_Commando_FragGrenade_C
 /// Size: 0x0000 (0x000158 - 0x000158)
 class UTT_Commando_FragGrenade_C : public UFortGameplayAbilityTooltip
@@ -2239,8 +1758,6 @@ public:
 	SMember(FScalableFloat)                            SF_BiggerIsBetterRadius_T02                                 OFFSET(get<T>, {0xF48, 40, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            DummyCollisionChannel                                       OFFSET(get<T>, {0xF70, 1, 0, 0})
 	SMember(FGameplayTag)                              ThrowCue                                                    OFFSET(get<T>, {0xF74, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2292,6 +1809,489 @@ public:
 	// void ServerSpawnProjectile();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Player/Commando/Actives/FragGrenade/GA_Commando_FragGrenade_WithTrajectory.GA_Commando_FragGrenade_WithTrajectory_C.ExecuteUbergraph_GA_Commando_FragGrenade_WithTrajectory
 	// void ExecuteUbergraph_GA_Commando_FragGrenade_WithTrajectory(int32_t EntryPoint);                                        // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C
+/// Size: 0x01D4 (0x000B28 - 0x000CFC)
+class UGAB_GenericDeath_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3324;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(UAnimMontage*)                             DeathMontage                                                OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FName)                                     DeathMontageSectionName                                     OFFSET(get<T>, {0xB38, 4, 0, 0})
+	SMember(FVector)                                   DeathHitDirection                                           OFFSET(get<T>, {0xB40, 24, 0, 0})
+	SMember(FHitResult)                                DeathHitResult                                              OFFSET(get<T>, {0xB58, 224, 0, 0})
+	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0xC38, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     SpawnDroneTags                                              OFFSET(get<T>, {0xC58, 32, 0, 0})
+	CMember(UAnimMontage*)                             Front                                                       OFFSET(get<T>, {0xC78, 8, 0, 0})
+	CMember(UAnimMontage*)                             Left                                                        OFFSET(get<T>, {0xC80, 8, 0, 0})
+	CMember(UAnimMontage*)                             Right                                                       OFFSET(get<T>, {0xC88, 8, 0, 0})
+	CMember(UAnimMontage*)                             Back                                                        OFFSET(get<T>, {0xC90, 8, 0, 0})
+	CMember(UAnimMontage*)                             Head_Front                                                  OFFSET(get<T>, {0xC98, 8, 0, 0})
+	CMember(UAnimMontage*)                             Head_Left                                                   OFFSET(get<T>, {0xCA0, 8, 0, 0})
+	CMember(UAnimMontage*)                             Head_Right                                                  OFFSET(get<T>, {0xCA8, 8, 0, 0})
+	CMember(UAnimMontage*)                             Head_Back                                                   OFFSET(get<T>, {0xCB0, 8, 0, 0})
+	DMember(int32_t)                                   FrontSectionNameCount                                       OFFSET(get<int32_t>, {0xCB8, 4, 0, 0})
+	DMember(int32_t)                                   LeftSectionNameCount                                        OFFSET(get<int32_t>, {0xCBC, 4, 0, 0})
+	DMember(int32_t)                                   RightSectionNameCount                                       OFFSET(get<int32_t>, {0xCC0, 4, 0, 0})
+	DMember(int32_t)                                   BackSectionNameCount                                        OFFSET(get<int32_t>, {0xCC4, 4, 0, 0})
+	DMember(int32_t)                                   Head_FrontSectionNameCount                                  OFFSET(get<int32_t>, {0xCC8, 4, 0, 0})
+	DMember(int32_t)                                   Head_LeftSectionNameCount                                   OFFSET(get<int32_t>, {0xCCC, 4, 0, 0})
+	DMember(int32_t)                                   Head_RightSectionNameCount                                  OFFSET(get<int32_t>, {0xCD0, 4, 0, 0})
+	DMember(int32_t)                                   Head_BackSectionNameCount                                   OFFSET(get<int32_t>, {0xCD4, 4, 0, 0})
+	SMember(FName)                                     FrontMontageSectionPrefix                                   OFFSET(get<T>, {0xCD8, 4, 0, 0})
+	SMember(FName)                                     BackMontageSectionPrefix                                    OFFSET(get<T>, {0xCDC, 4, 0, 0})
+	SMember(FName)                                     LeftMontageSectionPrefix                                    OFFSET(get<T>, {0xCE0, 4, 0, 0})
+	SMember(FName)                                     RightMontageSectionPrefix                                   OFFSET(get<T>, {0xCE4, 4, 0, 0})
+	SMember(FName)                                     HeadFrontMontageSectionPrefix                               OFFSET(get<T>, {0xCE8, 4, 0, 0})
+	SMember(FName)                                     HeadBackMontageSectionPrefix                                OFFSET(get<T>, {0xCEC, 4, 0, 0})
+	SMember(FName)                                     HeadLeftMontageSectionPrefix                                OFFSET(get<T>, {0xCF0, 4, 0, 0})
+	SMember(FName)                                     HeadRightMontageSectionPrefix                               OFFSET(get<T>, {0xCF4, 4, 0, 0})
+	SMember(FGameplayTag)                              TeleportOutCue                                              OFFSET(get<T>, {0xCF8, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.GetRandomSectionName
+	// void GetRandomSectionName(int32_t MaxNumberOfSections, FName OriginalSectionName, FName& SectionName);                   // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.InitializeDeathHitDirection
+	// void InitializeDeathHitDirection(FGameplayEventData EventHitData);                                                       // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnCancelled_CD8A514040DDA2A4EF94DD913E1B01E4
+	// void OnCancelled_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnInterrupted_CD8A514040DDA2A4EF94DD913E1B01E4
+	// void OnInterrupted_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnBlendOut_CD8A514040DDA2A4EF94DD913E1B01E4
+	// void OnBlendOut_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.OnCompleted_CD8A514040DDA2A4EF94DD913E1B01E4
+	// void OnCompleted_CD8A514040DDA2A4EF94DD913E1B01E4();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.PickDeathMontageSection
+	// void PickDeathMontageSection();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_GenericDeath.GAB_GenericDeath_C.ExecuteUbergraph_GAB_GenericDeath
+	// void ExecuteUbergraph_GAB_GenericDeath(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C
+/// Size: 0x0014 (0x000CFC - 0x000D10)
+class UGA_DefaultPlayer_Death_C : public UGAB_GenericDeath_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3344;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xD00, 8, 0, 0})
+	SMember(FGameplayTag)                              FadeCapsuleStWCue                                           OFFSET(get<T>, {0xD08, 4, 0, 0})
+	SMember(FGameplayTag)                              FadeCapsuleAthenaCue                                        OFFSET(get<T>, {0xD0C, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C.PickDeathMontageSection
+	// void PickDeathMontageSection();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_Death.GA_DefaultPlayer_Death_C.ExecuteUbergraph_GA_DefaultPlayer_Death
+	// void ExecuteUbergraph_GA_DefaultPlayer_Death(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
+/// Class /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C
+/// Size: 0x0118 (0x000B58 - 0x000C70)
+class UGAB_InterrogatePlayer_Search_C : public UFortGameplayAbility_CarryPlayer
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3184;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB58, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB60, 8, 0, 0})
+	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xB68, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          InterrogatedPlayer                                          OFFSET(get<T>, {0xB70, 8, 0, 0})
+	CMember(UAnimMontage*)                             Anim_Search                                                 OFFSET(get<T>, {0xB78, 8, 0, 0})
+	SMember(FName)                                     InterrogateHolster                                          OFFSET(get<T>, {0xB80, 4, 0, 0})
+	SMember(FName)                                     LootTierGroupName                                           OFFSET(get<T>, {0xB84, 4, 0, 0})
+	CMember(UFortWorldItemDefinition*)                 ItemDefinition                                              OFFSET(get<T>, {0xB88, 8, 0, 0})
+	DMember(int32_t)                                   NumberToSpawn                                               OFFSET(get<int32_t>, {0xB90, 4, 0, 0})
+	SMember(FVector)                                   LootSpawnOffset                                             OFFSET(get<T>, {0xB98, 24, 0, 0})
+	SMember(FScalableFloat)                            MaxDropsInstance                                            OFFSET(get<T>, {0xBB0, 40, 0, 0})
+	DMember(int32_t)                                   NumDropsInstance                                            OFFSET(get<int32_t>, {0xBD8, 4, 0, 0})
+	SMember(FScalableFloat)                            KeycardDropBias                                             OFFSET(get<T>, {0xBE0, 40, 0, 0})
+	CMember(TArray<UFortWorldItemDefinition*>)         KeycardItemDefinitions                                      OFFSET(get<T>, {0xC08, 16, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_Yacht                                             OFFSET(get<T>, {0xC18, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_OilRig                                            OFFSET(get<T>, {0xC1C, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_SharkIsland                                       OFFSET(get<T>, {0xC20, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_HQ                                                OFFSET(get<T>, {0xC24, 4, 0, 0})
+	SMember(FGameplayTag)                              T_Keycard_MountainBase                                      OFFSET(get<T>, {0xC28, 4, 0, 0})
+	SMember(FTimerHandle)                              Timer_Interrogation                                         OFFSET(get<T>, {0xC30, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(get<T>, {0xC38, 32, 0, 0})
+	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(get<T>, {0xC58, 4, 0, 0})
+	CMember(UClass*)                                   GE_Cooldown                                                 OFFSET(get<T>, {0xC60, 8, 0, 0})
+	CMember(UClass*)                                   GE_PickedUp                                                 OFFSET(get<T>, {0xC68, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ApplyGameplayEffectToNPC
+	// void ApplyGameplayEffectToNPC(UClass* GameplayEffect);                                                                   // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropKeycard
+	// void DropKeycard();                                                                                                      // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.GetKeycardToDrop
+	// void GetKeycardToDrop(bool& HasKeycard, UFortWorldItemDefinition*& Output);                                              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.DropLoot
+	// void DropLoot();                                                                                                         // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ToggleReticleVisibility
+	// void ToggleReticleVisibility(bool Hide);                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.EndAbilityCleanup
+	// void EndAbilityCleanup();                                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.InitAbility
+	// void InitAbility();                                                                                                      // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Completed_6BBDC9B445D4280492A25E8E5EA7A53D
+	// void Completed_6BBDC9B445D4280492A25E8E5EA7A53D(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Cancelled_6BBDC9B445D4280492A25E8E5EA7A53D
+	// void Cancelled_6BBDC9B445D4280492A25E8E5EA7A53D(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Triggered_6BBDC9B445D4280492A25E8E5EA7A53D
+	// void Triggered_6BBDC9B445D4280492A25E8E5EA7A53D(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.Added_9291D75D4A0949E1C5B7E49C1FD11F8B
+	// void Added_9291D75D4A0949E1C5B7E49C1FD11F8B();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnPress_2000C5AE43E9D757FF188B85CF911E39
+	// void OnPress_2000C5AE43E9D757FF188B85CF911E39(float TimeWaited);                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event
+	// void OnDied_Event(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.OnDied_Event
+	// void OnDied_Event(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Search.GAB_InterrogatePlayer_Search_C.ExecuteUbergraph_GAB_InterrogatePlayer_Search
+	// void ExecuteUbergraph_GAB_InterrogatePlayer_Search(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C
+/// Size: 0x0480 (0x000B28 - 0x000FA8)
+class UGAB_InterrogatePlayer_Reveal_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4008;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
+	CMember(AFortPlayerControllerAthena*)              PlayerController                                            OFFSET(get<T>, {0xB38, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          InterrogatedPlayer                                          OFFSET(get<T>, {0xB40, 8, 0, 0})
+	CMember(UAnimMontage*)                             Anim_Reveal                                                 OFFSET(get<T>, {0xB48, 8, 0, 0})
+	CMember(UAnimMontage*)                             Anim_End                                                    OFFSET(get<T>, {0xB50, 8, 0, 0})
+	SMember(FName)                                     RevealHolster                                               OFFSET(get<T>, {0xB58, 4, 0, 0})
+	SMember(FGameplayTag)                              GC_Reveal                                                   OFFSET(get<T>, {0xB5C, 4, 0, 0})
+	SMember(FScalableFloat)                            MarkDurationPlayer                                          OFFSET(get<T>, {0xB60, 40, 0, 0})
+	SMember(FScalableFloat)                            MarkDurationNPC                                             OFFSET(get<T>, {0xB88, 40, 0, 0})
+	SMember(FScalableFloat)                            MarkRadius                                                  OFFSET(get<T>, {0xBB0, 40, 0, 0})
+	CMember(TArray<AActor*>)                           SquadmatesToMark                                            OFFSET(get<T>, {0xBD8, 16, 0, 0})
+	SMember(FTimerHandle)                              Timer_Reveal                                                OFFSET(get<T>, {0xBE8, 8, 0, 0})
+	SMember(FGameplayTag)                              T_NPC                                                       OFFSET(get<T>, {0xBF0, 4, 0, 0})
+	DMember(double)                                    RevealDuration                                              OFFSET(get<double>, {0xBF8, 8, 0, 0})
+	DMember(double)                                    EndAbilityDelay                                             OFFSET(get<double>, {0xC00, 8, 0, 0})
+	DMember(double)                                    SweepDelay                                                  OFFSET(get<double>, {0xC08, 8, 0, 0})
+	DMember(bool)                                      Cancelled                                                   OFFSET(get<bool>, {0xC10, 1, 0, 0})
+	DMember(bool)                                      Ending                                                      OFFSET(get<bool>, {0xC11, 1, 0, 0})
+	SMember(FString)                                   IndicatorGroup                                              OFFSET(get<T>, {0xC18, 16, 0, 0})
+	CMember(UClass*)                                   CameraMode                                                  OFFSET(get<T>, {0xC28, 8, 0, 0})
+	CMember(TArray<AActor*>)                           ActorsToMark                                                OFFSET(get<T>, {0xC30, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     T_ReticleHUD                                                OFFSET(get<T>, {0xC40, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     NPCTagsToMark                                               OFFSET(get<T>, {0xC60, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ChestTagsToMark                                             OFFSET(get<T>, {0xC80, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayItemTagsToMark                                      OFFSET(get<T>, {0xCA0, 32, 0, 0})
+	SMember(FName)                                     ParticleSystemParamName                                     OFFSET(get<T>, {0xCC0, 4, 0, 0})
+	CMember(UParticleSystem*)                          IndicatedPS                                                 OFFSET(get<T>, {0xCC8, 8, 0, 0})
+	CMember(USoundBase*)                               IndicatedSound                                              OFFSET(get<T>, {0xCD0, 8, 0, 0})
+	SMember(FVector)                                   PSOffset                                                    OFFSET(get<T>, {0xCD8, 24, 0, 0})
+	SMember(FName)                                     PSVectorParamName                                           OFFSET(get<T>, {0xCF0, 4, 0, 0})
+	SMember(FVector)                                   PSDBNOOffset                                                OFFSET(get<T>, {0xCF8, 24, 0, 0})
+	SMember(FName)                                     EnemyStencilName                                            OFFSET(get<T>, {0xD10, 4, 0, 0})
+	SMember(FName)                                     TreasureChestStencilName                                    OFFSET(get<T>, {0xD14, 4, 0, 0})
+	DMember(double)                                    StepTime                                                    OFFSET(get<double>, {0xD18, 8, 0, 0})
+	DMember(bool)                                      testbool                                                    OFFSET(get<bool>, {0xD20, 1, 0, 0})
+	SMember(FScalableFloat)                            EnemyStencilID                                              OFFSET(get<T>, {0xD28, 40, 0, 0})
+	SMember(FScalableFloat)                            StencilStepTime                                             OFFSET(get<T>, {0xD50, 40, 0, 0})
+	SMember(FScalableFloat)                            bUseDefaultStencil                                          OFFSET(get<T>, {0xD78, 40, 0, 0})
+	SMember(FScalableFloat)                            IndicatorStepTime                                           OFFSET(get<T>, {0xDA0, 40, 0, 0})
+	SMember(FGameplayTagQuery)                         NPCGameplayTagQuery                                         OFFSET(get<T>, {0xDC8, 72, 0, 0})
+	SMember(FIndicatedActorData)                       IndicatedActorDataPlayers                                   OFFSET(get<T>, {0xE10, 248, 0, 0})
+	SMember(FStenciledActorData)                       StenciledActorDataPlayers                                   OFFSET(get<T>, {0xF08, 128, 0, 0})
+	SMember(FGameplayTagContainer)                     T_QuestTagContainer                                         OFFSET(get<T>, {0xF88, 32, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GetTeamMembers
+	// TArray<AFortPlayerStateAthena*> GetTeamMembers(APawn* Target, bool bIncludeSelf);                                        // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.GAB_InterrogatePlayer_Reveal_AutoGenFunc
+	// void GAB_InterrogatePlayer_Reveal_AutoGenFunc(AActor* IndicatedActor);                                                   // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ToggleReticleVisibility
+	// void ToggleReticleVisibility(bool Hide);                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Reveal
+	// void Reveal();                                                                                                           // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndAbilityCleanup
+	// void EndAbilityCleanup();                                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.InitAbility
+	// void InitAbility();                                                                                                      // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_23F3C2DB411862D627ACFCA8233F7B33
+	// void Completed_23F3C2DB411862D627ACFCA8233F7B33(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_23F3C2DB411862D627ACFCA8233F7B33
+	// void Cancelled_23F3C2DB411862D627ACFCA8233F7B33(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_23F3C2DB411862D627ACFCA8233F7B33
+	// void Triggered_23F3C2DB411862D627ACFCA8233F7B33(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Completed_3C2C8C224B62B00BDEEAF5AF38A401C1
+	// void Completed_3C2C8C224B62B00BDEEAF5AF38A401C1(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1
+	// void Cancelled_3C2C8C224B62B00BDEEAF5AF38A401C1(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1
+	// void Triggered_3C2C8C224B62B00BDEEAF5AF38A401C1(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.OnFinish_68B3C6D14B44CCD3170ABDA038C1203E
+	// void OnFinish_68B3C6D14B44CCD3170ABDA038C1203E();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.OnDied_Event
+	// void OnDied_Event(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.EndInterrogation
+	// void EndInterrogation();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/Player/Interrogation/GAB_InterrogatePlayer_Reveal.GAB_InterrogatePlayer_Reveal_C.ExecuteUbergraph_GAB_InterrogatePlayer_Reveal
+	// void ExecuteUbergraph_GAB_InterrogatePlayer_Reveal(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C
+/// Size: 0x0030 (0x000B28 - 0x000B58)
+class UGAB_AthenaDBNORevive_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTag)                              EC_AppliedEffect                                            OFFSET(get<T>, {0xB30, 4, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FGameplayTag)                              ResurrectCue                                                OFFSET(get<T>, {0xB40, 4, 0, 0})
+	SMember(FGameplayTag)                              ResurrectAthenaCue                                          OFFSET(get<T>, {0xB44, 4, 0, 0})
+	CMember(UAnimMontage*)                             DBNOMontageOutro                                            OFFSET(get<T>, {0xB48, 8, 0, 0})
+	CMember(UAnimMontage*)                             DBNOMontageOutroSwimming                                    OFFSET(get<T>, {0xB50, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Get DBNO Outro Montage
+	// void Get DBNO Outro Montage(UAnimMontage*& DBNOMontageOutro);                                                            // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Completed_23712DBC45E68EA0C91A4895CBD8B3A6
+	// void Completed_23712DBC45E68EA0C91A4895CBD8B3A6(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Cancelled_23712DBC45E68EA0C91A4895CBD8B3A6
+	// void Cancelled_23712DBC45E68EA0C91A4895CBD8B3A6(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Triggered_23712DBC45E68EA0C91A4895CBD8B3A6
+	// void Triggered_23712DBC45E68EA0C91A4895CBD8B3A6(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Cancelled_779E7BAA49FEAD286C5164B83CDFD609
+	// void Cancelled_779E7BAA49FEAD286C5164B83CDFD609(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Targeted_779E7BAA49FEAD286C5164B83CDFD609
+	// void Targeted_779E7BAA49FEAD286C5164B83CDFD609(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.Removed_620488CD4F8BFC035EC7328664732683
+	// void Removed_620488CD4F8BFC035EC7328664732683();                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNORevive.GAB_AthenaDBNORevive_C.ExecuteUbergraph_GAB_AthenaDBNORevive
+	// void ExecuteUbergraph_GAB_AthenaDBNORevive(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C
+/// Size: 0x01E8 (0x000B28 - 0x000D10)
+class UGA_DefaultPlayer_InteractSearch_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3344;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FGameplayTag)                              RefillGasTankTag                                            OFFSET(get<T>, {0xB38, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RefillGasTankMontage                                        OFFSET(get<T>, {0xB40, 88, 0, 0})
+	SMember(FGameplayTag)                              CatchFireflyTag                                             OFFSET(get<T>, {0xB98, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           FireflyCatchMontage                                         OFFSET(get<T>, {0xBA0, 88, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           RefillVehicleFuelMontage                                    OFFSET(get<T>, {0xBF8, 88, 0, 0})
+	SMember(FGameplayTag)                              GasCanRefillVehicleTag                                      OFFSET(get<T>, {0xC50, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           DBNOMontageInfo                                             OFFSET(get<T>, {0xC58, 88, 0, 0})
+	SMember(FGameplayTag)                              Tag_UseOverrideSearchMontage                                OFFSET(get<T>, {0xCB0, 4, 0, 0})
+	SMember(FFortGameplayAbilityMontageInfo)           OverrideSearchMontageInfo                                   OFFSET(get<T>, {0xCB8, 88, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.EndInteractSearch
+	// void EndInteractSearch();                                                                                                // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.StartInteractSearch
+	// void StartInteractSearch();                                                                                              // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_B697D9B445CA2BFDB1328D93C33FBCF3
+	// void Completed_B697D9B445CA2BFDB1328D93C33FBCF3(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_B697D9B445CA2BFDB1328D93C33FBCF3
+	// void Cancelled_B697D9B445CA2BFDB1328D93C33FBCF3(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_B697D9B445CA2BFDB1328D93C33FBCF3
+	// void Triggered_B697D9B445CA2BFDB1328D93C33FBCF3(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_72217B3542CE776DEDDBB3A7B5D6D343
+	// void Completed_72217B3542CE776DEDDBB3A7B5D6D343(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_72217B3542CE776DEDDBB3A7B5D6D343
+	// void Cancelled_72217B3542CE776DEDDBB3A7B5D6D343(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_72217B3542CE776DEDDBB3A7B5D6D343
+	// void Triggered_72217B3542CE776DEDDBB3A7B5D6D343(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_6A38D93A428260E68695388965BFA176
+	// void Completed_6A38D93A428260E68695388965BFA176(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_6A38D93A428260E68695388965BFA176
+	// void Cancelled_6A38D93A428260E68695388965BFA176(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_6A38D93A428260E68695388965BFA176
+	// void Triggered_6A38D93A428260E68695388965BFA176(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_5EB1B64344DD00ABFE41E2857DC3FB38
+	// void Completed_5EB1B64344DD00ABFE41E2857DC3FB38(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_5EB1B64344DD00ABFE41E2857DC3FB38
+	// void Cancelled_5EB1B64344DD00ABFE41E2857DC3FB38(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_5EB1B64344DD00ABFE41E2857DC3FB38
+	// void Triggered_5EB1B64344DD00ABFE41E2857DC3FB38(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_3E01853F4E8362C959E7B4B82217702E
+	// void Completed_3E01853F4E8362C959E7B4B82217702E(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_3E01853F4E8362C959E7B4B82217702E
+	// void Cancelled_3E01853F4E8362C959E7B4B82217702E(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_3E01853F4E8362C959E7B4B82217702E
+	// void Triggered_3E01853F4E8362C959E7B4B82217702E(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Completed_64A40E14483311B0BA6F95B516CA6468
+	// void Completed_64A40E14483311B0BA6F95B516CA6468(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Cancelled_64A40E14483311B0BA6F95B516CA6468
+	// void Cancelled_64A40E14483311B0BA6F95B516CA6468(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.Triggered_64A40E14483311B0BA6F95B516CA6468
+	// void Triggered_64A40E14483311B0BA6F95B516CA6468(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/Player/Generic/Traits/DefaultPlayer/GA_DefaultPlayer_InteractSearch.GA_DefaultPlayer_InteractSearch_C.ExecuteUbergraph_GA_DefaultPlayer_InteractSearch
+	// void ExecuteUbergraph_GA_DefaultPlayer_InteractSearch(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C
+/// Size: 0x0E58 (0x000B28 - 0x001980)
+class UGA_Athena_Player_Slide_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6528;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(UClass*)                                   CameraShake                                                 OFFSET(get<T>, {0xB30, 8, 0, 0})
+	CMember(UClass*)                                   Camera_Mode_Class                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FGameplayTag)                              CameraShakeGCNL                                             OFFSET(get<T>, {0xB40, 4, 0, 0})
+	CMember(UClass*)                                   CameraModifier                                              OFFSET(get<T>, {0xB48, 8, 0, 0})
+	DMember(double)                                    MinAngleForMomentum                                         OFFSET(get<double>, {0xB50, 8, 0, 0})
+	SMember(FGameplayTag)                              SpeedlinesCue                                               OFFSET(get<T>, {0xB58, 4, 0, 0})
+	CMember(UClass*)                                   StartSlideCameraShake                                       OFFSET(get<T>, {0xB60, 8, 0, 0})
+	DMember(double)                                    AdditionalLaunchVelocityOffRamp                             OFFSET(get<double>, {0xB68, 8, 0, 0})
+	SMember(FSlidingControlParams)                     DefaultSlidingParams                                        OFFSET(get<T>, {0xB70, 1688, 0, 0})
+	SMember(FSlidingControlParams)                     PostDashGroundSlidingParams                                 OFFSET(get<T>, {0x1208, 1688, 0, 0})
+	DMember(double)                                    LevelGroundSlideDuration                                    OFFSET(get<double>, {0x18A0, 8, 0, 0})
+	SMember(FTimerHandle)                              EndLevelGroundSlideTimerHandle                              OFFSET(get<T>, {0x18A8, 8, 0, 0})
+	SMember(FScalableFloat)                            DashDuration                                                OFFSET(get<T>, {0x18B0, 40, 0, 0})
+	SMember(FTimerHandle)                              CameraFXDelay                                               OFFSET(get<T>, {0x18D8, 8, 0, 0})
+	SMember(FGameplayTag)                              PlayerGameplayCue                                           OFFSET(get<T>, {0x18E0, 4, 0, 0})
+	DMember(double)                                    CameraShakeDelay                                            OFFSET(get<double>, {0x18E8, 8, 0, 0})
+	SMember(FScalableFloat)                            MinAdditionalMomentum                                       OFFSET(get<T>, {0x18F0, 40, 0, 0})
+	SMember(FScalableFloat)                            MaxAdditionalMomentum                                       OFFSET(get<T>, {0x1918, 40, 0, 0})
+	SMember(FScalableFloat)                            MinAngleForAdditionalMomentum                               OFFSET(get<T>, {0x1940, 40, 0, 0})
+	DMember(bool)                                      Prev_FallingGracePeriodState                                OFFSET(get<bool>, {0x1968, 1, 0, 0})
+	CMember(UCameraModifier*)                          SlideCameraModifier                                         OFFSET(get<T>, {0x1970, 8, 0, 0})
+	SMember(FTimerHandle)                              AddMomentumTimerHandle                                      OFFSET(get<T>, {0x1978, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.EndAbilityServerSide
+	// void EndAbilityServerSide();                                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.EndAbilityClientSide
+	// void EndAbilityClientSide();                                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.BuildDataRegistryResolverScope
+	// bool BuildDataRegistryResolverScope(TArray<FName>& InOutResolverScopes, int32_t& InOutPriority);                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.AddMomentum
+	// void AddMomentum();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.EndLevelGroundSlide
+	// void EndLevelGroundSlide();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.CameraFX
+	// void CameraFX();                                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.OnFinishedCharacterCustomization_Event
+	// void OnFinishedCharacterCustomization_Event(AFortPlayerPawn* Pawn);                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.ForceRemoveSlideGC
+	// void ForceRemoveSlideGC();                                                                                               // [0x1ebf994] Net|NetReliableNetMulticast|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Sliding/GA_Athena_Player_Slide.GA_Athena_Player_Slide_C.ExecuteUbergraph_GA_Athena_Player_Slide
+	// void ExecuteUbergraph_GA_Athena_Player_Slide(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C
+/// Size: 0x01B1 (0x000B28 - 0x000CD9)
+class UGAB_AthenaDBNO_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3289;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(UAnimMontage*)                             DeathMontage                                                OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FVector)                                   DeathHitDirection                                           OFFSET(get<T>, {0xB38, 24, 0, 0})
+	SMember(FHitResult)                                DeathHitResult                                              OFFSET(get<T>, {0xB50, 224, 0, 0})
+	SMember(FGameplayTagContainer)                     DamageTags                                                  OFFSET(get<T>, {0xC30, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     GameplayStatusAfflicted                                     OFFSET(get<T>, {0xC50, 32, 0, 0})
+	CMember(UAnimMontage*)                             DeathMontageSkydive                                         OFFSET(get<T>, {0xC70, 8, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               DBNOBleedGEHandle                                           OFFSET(get<T>, {0xC78, 8, 0, 0})
+	SMember(FName)                                     HolsterId                                                   OFFSET(get<T>, {0xC80, 4, 0, 0})
+	CMember(UAnimMontage*)                             DeathMontageSwimming                                        OFFSET(get<T>, {0xC88, 8, 0, 0})
+	CMember(AFortPlayerPawnAthena*)                    FortPlayerPawn                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
+	CMember(UClass*)                                   DBNOStart_GE_Class                                          OFFSET(get<T>, {0xC98, 8, 0, 0})
+	DMember(bool)                                      ImprovedDBNO                                                OFFSET(get<bool>, {0xCA0, 1, 0, 0})
+	SMember(FGameplayTagContainer)                     Old_DBNO_Block_Tags                                         OFFSET(get<T>, {0xCA8, 32, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               GE_Handle__Health_Bonus                                     OFFSET(get<T>, {0xCC8, 8, 0, 0})
+	DMember(double)                                    TenacityAmount                                              OFFSET(get<double>, {0xCD0, 8, 0, 0})
+	CMember(ETenacityType)                             TenacityType                                                OFFSET(get<T>, {0xCD8, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Custom Tenacity
+	// void Get Custom Tenacity(double& Tenacity);                                                                              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Max Health Tenacity
+	// void Get Max Health Tenacity(double& Tenacity);                                                                          // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Apply Health Bonus
+	// void Apply Health Bonus(FActiveGameplayEffectHandle& EffectHandle);                                                      // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.ApplyBleeding
+	// void ApplyBleeding(FActiveGameplayEffectHandle& EffectHandle);                                                           // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get DBNO Montage
+	// UAnimMontage* Get DBNO Montage();                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.Get Initial Heal Amount
+	// void Get Initial Heal Amount(double& Health);                                                                            // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.InitializeDeathHitDirection
+	// void InitializeDeathHitDirection(FGameplayEventData EventHitData);                                                       // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCancelled_F0F6785443BD2E74F5591884CB19F35F
+	// void OnCancelled_F0F6785443BD2E74F5591884CB19F35F();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnInterrupted_F0F6785443BD2E74F5591884CB19F35F
+	// void OnInterrupted_F0F6785443BD2E74F5591884CB19F35F();                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnBlendOut_F0F6785443BD2E74F5591884CB19F35F
+	// void OnBlendOut_F0F6785443BD2E74F5591884CB19F35F();                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnCompleted_F0F6785443BD2E74F5591884CB19F35F
+	// void OnCompleted_F0F6785443BD2E74F5591884CB19F35F();                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6
+	// void OnStateInterrupted_C85094F843D5075FE4872C95AFC5D6B6();                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.OnStateEnded_C85094F843D5075FE4872C95AFC5D6B6
+	// void OnStateEnded_C85094F843D5075FE4872C95AFC5D6B6();                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.DropHeldObjects
+	// void DropHeldObjects();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/NPC/Generic/GAB_AthenaDBNO.GAB_AthenaDBNO_C.ExecuteUbergraph_GAB_AthenaDBNO
+	// void ExecuteUbergraph_GAB_AthenaDBNO(int32_t EntryPoint);                                                                // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/AccountBuff/Buff_PartyXPBoost.Buff_PartyXPBoost_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UBuff_PartyXPBoost_C : public UGameplayEffect
@@ -2322,90 +2322,6 @@ class UGE_Resist_Damage_AoE_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C
-/// Size: 0x0010 (0x000380 - 0x000390)
-class AGCNL_PurpleStuff_C : public AFortGameplayCueNotify_Looping
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 912;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-	CMember(APlayerPawn_Athena_Generic_C*)             PlayerActor                                                 OFFSET(get<T>, {0x388, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.OnRemove
-	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.OnActive
-	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.ReceiveTick
-	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.ExecuteUbergraph_GCNL_PurpleStuff
-	// void ExecuteUbergraph_GCNL_PurpleStuff(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C
-/// Size: 0x0010 (0x000990 - 0x0009A0)
-class AGCNL_Creative_PossessProp_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2464;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x998, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.OnActive
-	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.OnApplication
-	// void OnApplication(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.ExecuteUbergraph_GCNL_Creative_PossessProp
-	// void ExecuteUbergraph_GCNL_Creative_PossessProp(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Abilities/Player/Commando/Actives/FragGrenade/GC/GC_Commando_FragGrenade_Throw.GC_Commando_FragGrenade_Throw_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGC_Commando_FragGrenade_Throw_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Abilities/Player/GC/GC_Teleport_Out.GC_Teleport_Out_C
-/// Size: 0x0008 (0x000068 - 0x000070)
-class UGC_Teleport_Out_C : public UFortGameplayCueNotify_Simple
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 112;
-
-public:
-	DMember(double)                                    Default_Play_Length                                         OFFSET(get<double>, {0x68, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Abilities/Player/GC/GC_Teleport_Out.GC_Teleport_Out_C.OnExecute
-	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
-/// Class /Game/Abilities/Player/GC/GC_Abilities_Activation_DBNOResurrect_Athena.GC_Abilities_Activation_DBNOResurrect_Athena_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGC_Abilities_Activation_DBNOResurrect_Athena_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
 /// Class /Game/Abilities/Player/Athena/GCN_Athena_LowGravity.GCN_Athena_LowGravity_C
 /// Size: 0x0038 (0x0003C8 - 0x000400)
 class AGCN_Athena_LowGravity_C : public AFortGameplayCueNotifyLoop_LowGravity
@@ -2421,8 +2337,6 @@ public:
 	SMember(FTimerHandle)                              ExpirationSoundTimer                                        OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	DMember(double)                                    MaxDrawDistance                                             OFFSET(get<double>, {0x3F0, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       LoopingFX                                                   OFFSET(get<T>, {0x3F8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2444,6 +2358,56 @@ public:
 	// void ClearExpireTell();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Abilities/Player/Athena/GCN_Athena_LowGravity.GCN_Athena_LowGravity_C.ExecuteUbergraph_GCN_Athena_LowGravity
 	// void ExecuteUbergraph_GCN_Athena_LowGravity(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C
+/// Size: 0x0010 (0x000380 - 0x000390)
+class AGCNL_PurpleStuff_C : public AFortGameplayCueNotify_Looping
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 912;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
+	CMember(APlayerPawn_Athena_Generic_C*)             PlayerActor                                                 OFFSET(get<T>, {0x388, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.OnRemove
+	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.OnActive
+	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.ReceiveTick
+	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Abilities/Items/GCNL_PurpleStuff.GCNL_PurpleStuff_C.ExecuteUbergraph_GCNL_PurpleStuff
+	// void ExecuteUbergraph_GCNL_PurpleStuff(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C
+/// Size: 0x0010 (0x000990 - 0x0009A0)
+class AGCNL_Creative_PossessProp_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2464;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x998, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.OnActive
+	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.OnApplication
+	// void OnApplication(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Abilities/Player/Athena/GCNL_Creative_PossessProp.GCNL_Creative_PossessProp_C.ExecuteUbergraph_GCNL_Creative_PossessProp
+	// void ExecuteUbergraph_GCNL_Creative_PossessProp(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Abilities/Player/Athena/GCN_Athena_LowGravity_ZipLine.GCN_Athena_LowGravity_ZipLine_C
 /// Size: 0x0008 (0x000400 - 0x000408)
 class AGCN_Athena_LowGravity_ZipLine_C : public AGCN_Athena_LowGravity_C
@@ -2453,8 +2417,6 @@ class AGCN_Athena_LowGravity_ZipLine_C : public AGCN_Athena_LowGravity_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x400, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2462,6 +2424,44 @@ public:
 	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Abilities/Player/Athena/GCN_Athena_LowGravity_ZipLine.GCN_Athena_LowGravity_ZipLine_C.ExecuteUbergraph_GCN_Athena_LowGravity_ZipLine
 	// void ExecuteUbergraph_GCN_Athena_LowGravity_ZipLine(int32_t EntryPoint);                                                 // [0x1ebf994] Final                
+};
+
+/// Class /Game/Abilities/Player/Commando/Actives/FragGrenade/GC/GC_Commando_FragGrenade_Throw.GC_Commando_FragGrenade_Throw_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGC_Commando_FragGrenade_Throw_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Abilities/Player/GC/GC_Teleport_Out.GC_Teleport_Out_C
+/// Size: 0x0008 (0x000068 - 0x000070)
+class UGC_Teleport_Out_C : public UFortGameplayCueNotify_Simple
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	DMember(double)                                    Default_Play_Length                                         OFFSET(get<double>, {0x68, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Abilities/Player/GC/GC_Teleport_Out.GC_Teleport_Out_C.OnExecute
+	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+};
+
+/// Class /Game/Abilities/Player/GC/GC_Abilities_Activation_DBNOResurrect_Athena.GC_Abilities_Activation_DBNOResurrect_Athena_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGC_Abilities_Activation_DBNOResurrect_Athena_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
 /// Class /Game/Abilities/Player/GC/GC_Abilities_Activation_DBNOResurrect.GC_Abilities_Activation_DBNOResurrect_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGC_Abilities_Activation_DBNOResurrect_C : public UFortGameplayCueNotify_Burst
@@ -2507,8 +2507,6 @@ public:
 	DMember(double)                                    MaxRotationRateYaw                                          OFFSET(get<double>, {0xB48, 8, 0, 0})
 	SMember(FGameplayTag)                              GCN_BoostTag                                                OFFSET(get<T>, {0xB50, 4, 0, 0})
 	CMember(UFortGameplayAbility*)                     TargetAbilityCached                                         OFFSET(get<T>, {0xB58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2518,6 +2516,8 @@ public:
 	// void FireBoostEffectsOnPlayerMulti(AActor* PlayerTarget);                                                                // [0x1ebf994] Net|NetMulticast|BlueprintCallable|BlueprintEvent 
 	// Function /RidingContent/Abilities/Irwin/GA_NPC_Irwin_Prey_Burt_Charge_RidingHelper.GA_NPC_Irwin_Prey_Burt_Charge_RidingHelper_C.ExecuteUbergraph_GA_NPC_Irwin_Prey_Burt_Charge_RidingHelper
 	// void ExecuteUbergraph_GA_NPC_Irwin_Prey_Burt_Charge_RidingHelper(int32_t EntryPoint);                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Abilities/Base/GE_Riding_Creature_EnergyCritical_Base.GE_Riding_Creature_EnergyCritical_Base_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Creature_EnergyCritical_Base_C : public UGameplayEffect
@@ -2596,8 +2596,6 @@ public:
 	SMember(FGameplayTag)                              BuildingTargetingApplicationTag                             OFFSET(get<T>, {0xE50, 4, 0, 0})
 	SMember(FGameplayTag)                              TC_BuildingTypePlayer                                       OFFSET(get<T>, {0xE54, 4, 0, 0})
 	CMember(UClass*)                                   GE_NPC_MMR_Scaling_AbilityCooldown                          OFFSET(get<T>, {0xE58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2669,6 +2667,8 @@ public:
 	// void BeginDestroyBuildings(FGameplayTag TargetSelectionApplicationTag, bool DoContinuousTargetSelection);                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/AI/Abilities/NPC/Parents/GA_NPC_Parent.GA_NPC_Parent_C.ExecuteUbergraph_GA_NPC_Parent
 	// void ExecuteUbergraph_GA_NPC_Parent(int32_t EntryPoint);                                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Abilities/Base/GA_Riding_Creature_EnergyDepleted_Base.GA_Riding_Creature_EnergyDepleted_Base_C
 /// Size: 0x0008 (0x000E60 - 0x000E68)
 class UGA_Riding_Creature_EnergyDepleted_Base_C : public UGA_NPC_Parent_C
@@ -2678,8 +2678,6 @@ class UGA_Riding_Creature_EnergyDepleted_Base_C : public UGA_NPC_Parent_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xE60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2691,6 +2689,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Abilities/Base/GA_Riding_Creature_EnergyDepleted_Base.GA_Riding_Creature_EnergyDepleted_Base_C.ExecuteUbergraph_GA_Riding_Creature_EnergyDepleted_Base
 	// void ExecuteUbergraph_GA_Riding_Creature_EnergyDepleted_Base(int32_t EntryPoint);                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Abilities/Irwin/GA_Riding_Creature_EnergyDepleted_Grandma.GA_Riding_Creature_EnergyDepleted_Grandma_C
 /// Size: 0x0000 (0x000E68 - 0x000E68)
 class UGA_Riding_Creature_EnergyDepleted_Grandma_C : public UGA_Riding_Creature_EnergyDepleted_Base_C
@@ -2742,8 +2742,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          InUseLoopAudio                                              OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(AActor*)                                   Target                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2755,6 +2753,8 @@ public:
 	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Abilities/Player/Athena/GCNL_Athena_AppleSun_Bounced.GCNL_Athena_AppleSun_Bounced_C.ExecuteUbergraph_GCNL_Athena_AppleSun_Bounced
 	// void ExecuteUbergraph_GCNL_Athena_AppleSun_Bounced(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Struct /Game/Abilities/Player/Pawns/CharacterPartMidArrayStruct.CharacterPartMidArrayStruct
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FCharacterPartMidArrayStruct : public MDKStruct
@@ -2827,9 +2827,9 @@ class UGE_AntiGrav_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Irwin/Characters/Parents/Abilities/TargetSlots/Ranged/GE_NPC_Behavior_TargetSlots_Ranged_SlotInUse.GE_NPC_Behavior_TargetSlots_Ranged_SlotInUse_C
+/// Class /Game/Athena/AI/Abilities/NPC/GE_NPC_Challenged.GE_NPC_Challenged_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_NPC_Behavior_TargetSlots_Ranged_SlotInUse_C : public UGameplayEffect
+class UGE_NPC_Challenged_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -2837,9 +2837,9 @@ class UGE_NPC_Behavior_TargetSlots_Ranged_SlotInUse_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/AI/Abilities/NPC/GE_NPC_Challenged.GE_NPC_Challenged_C
+/// Class /Game/Athena/Irwin/Characters/Parents/Abilities/TargetSlots/Ranged/GE_NPC_Behavior_TargetSlots_Ranged_SlotInUse.GE_NPC_Behavior_TargetSlots_Ranged_SlotInUse_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_NPC_Challenged_C : public UGameplayEffect
+class UGE_NPC_Behavior_TargetSlots_Ranged_SlotInUse_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -2867,16 +2867,6 @@ class UGE_Athena_TillLandFallDamageImmunity_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/BuildingActors/FortVolumeManager_BP.FortVolumeManager_BP_C
-/// Size: 0x0000 (0x000610 - 0x000610)
-class AFortVolumeManager_BP_C : public AFortVolumeManager
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1552;
-
-public:
-};
-
 /// Class /Game/Athena/AI/Controllers/NPC_Wildlife_Controller_Parent.NPC_Wildlife_Controller_Parent_C
 /// Size: 0x0010 (0x0005F0 - 0x000600)
 class ANPC_Wildlife_Controller_Parent_C : public AAthenaAIController
@@ -2887,6 +2877,16 @@ class ANPC_Wildlife_Controller_Parent_C : public AAthenaAIController
 public:
 	CMember(UAthenaMarkerComponent*)                   AthenaMarker                                                OFFSET(get<T>, {0x5F0, 8, 0, 0})
 	CMember(UFortAthenaNpcPatrollingComponent*)        FortAthenaNpcPatrolling                                     OFFSET(get<T>, {0x5F8, 8, 0, 0})
+};
+
+/// Class /Game/Athena/BuildingActors/FortVolumeManager_BP.FortVolumeManager_BP_C
+/// Size: 0x0000 (0x000610 - 0x000610)
+class AFortVolumeManager_BP_C : public AFortVolumeManager
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1552;
+
+public:
 };
 
 /// Class /Game/Athena/Irwin/Characters/Parents/Abilities/TargetSlots/Ranged/GE_NPC_Behavior_TargetSlots_Ranged_OverrideSlot.GE_NPC_Behavior_TargetSlots_Ranged_OverrideSlot_C
@@ -3009,22 +3009,22 @@ class UNavFilter_Phoebe_C : public UNavigationQueryFilter
 public:
 };
 
-/// Class /Game/Athena/AI/MANG/Abilities/GE_NPC_Status_Stressed_Cooldown.GE_NPC_Status_Stressed_Cooldown_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_NPC_Status_Stressed_Cooldown_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
 /// Class /Game/Athena/AI/NPCs/Base/BPI_NonParticipant.BPI_NonParticipant_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UBPI_NonParticipant_C : public UInterface
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Game/Athena/AI/MANG/Abilities/GE_NPC_Status_Stressed_Cooldown.GE_NPC_Status_Stressed_Cooldown_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_NPC_Status_Stressed_Cooldown_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
 
 public:
 };
@@ -3109,16 +3109,6 @@ class UAI_skill_phoebe_bot_harvest_C : public UFortAthenaAIBotHarvestSkillSet
 public:
 };
 
-/// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_healing.AI_skill_phoebe_bot_healing_C
-/// Size: 0x0000 (0x000070 - 0x000070)
-class UAI_skill_phoebe_bot_healing_C : public UFortAthenaAIBotHealingSkillSet
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 112;
-
-public:
-};
-
 /// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_attacking.AI_skill_phoebe_bot_attacking_C
 /// Size: 0x0000 (0x000550 - 0x000550)
 class UAI_skill_phoebe_bot_attacking_C : public UFortAthenaAIBotAttackingSkillSet
@@ -3135,6 +3125,16 @@ class UAI_skill_phoebe_bot_warmup_C : public UFortAthenaAIBotWarmupSkillSet
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 168;
+
+public:
+};
+
+/// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_healing.AI_skill_phoebe_bot_healing_C
+/// Size: 0x0000 (0x000070 - 0x000070)
+class UAI_skill_phoebe_bot_healing_C : public UFortAthenaAIBotHealingSkillSet
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
 };
@@ -3216,8 +3216,6 @@ public:
 	SMember(FAnimNode_SequencePlayer)                  AnimGraphNode_SequencePlayer1                               OFFSET(get<T>, {0xFC0, 72, 0, 0})
 	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(get<T>, {0x1008, 120, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root2                                         OFFSET(get<T>, {0x1080, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3229,14 +3227,6 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/AI/MANG/AnimSet/MANG_PatrolLayerAnimBP.MANG_PatrolLayerAnimBP_C.ExecuteUbergraph_MANG_PatrolLayerAnimBP
 	// void ExecuteUbergraph_MANG_PatrolLayerAnimBP(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
-/// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_looting.AI_skill_phoebe_bot_looting_C
-/// Size: 0x0000 (0x0002A0 - 0x0002A0)
-class UAI_skill_phoebe_bot_looting_C : public UFortAthenaAIBotLootingSkillSet
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 672;
-
-public:
 };
 
 /// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_perception.AI_skill_phoebe_bot_perception_C
@@ -3245,6 +3235,16 @@ class UAI_skill_phoebe_bot_perception_C : public UFortAthenaAIBotPerceptionSkill
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 3296;
+
+public:
+};
+
+/// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_looting.AI_skill_phoebe_bot_looting_C
+/// Size: 0x0000 (0x0002A0 - 0x0002A0)
+class UAI_skill_phoebe_bot_looting_C : public UFortAthenaAIBotLootingSkillSet
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 672;
 
 public:
 };
@@ -3313,8 +3313,6 @@ public:
 	SMember(FGameplayTag)                              LoopingMultiInteractTag                                     OFFSET(get<T>, {0x168, 4, 0, 0})
 	DMember(double)                                    RequiredDuration                                            OFFSET(get<double>, {0x170, 8, 0, 0})
 	DMember(bool)                                      GCNLApplied                                                 OFFSET(get<bool>, {0x178, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3334,6 +3332,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Athena/Items/Components/MultiInteractActorComponent.MultiInteractActorComponent_C.ExecuteUbergraph_MultiInteractActorComponent
 	// void ExecuteUbergraph_MultiInteractActorComponent(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/MappedEffects/Lockout/GA_Athena_Lockout.GA_Athena_Lockout_C
 /// Size: 0x0018 (0x000B28 - 0x000B40)
 class UGA_Athena_Lockout_C : public UFortGameplayAbility
@@ -3345,8 +3345,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FTimerHandle)                              Timer_LockoutFailsafe                                       OFFSET(get<T>, {0xB30, 8, 0, 0})
 	DMember(double)                                    LockoutFailsafeTime                                         OFFSET(get<double>, {0xB38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3360,6 +3358,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Athena/MappedEffects/Lockout/GA_Athena_Lockout.GA_Athena_Lockout_C.ExecuteUbergraph_GA_Athena_Lockout
 	// void ExecuteUbergraph_GA_Athena_Lockout(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/MappedEffects/Lockout/GE_Athena_Lockout.GE_Athena_Lockout_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_Lockout_C : public UGameplayEffect
@@ -3410,8 +3410,6 @@ public:
 	DMember(bool)                                      ApplyInAirOnly                                              OFFSET(get<bool>, {0xB80, 1, 0, 0})
 	SMember(FGameplayTag)                              TagIsRiding                                                 OFFSET(get<T>, {0xB84, 4, 0, 0})
 	CMember(TArray<UAbilityTask_WaitGameplayTagAdded*>) WaitTagAsyncTasks                                          OFFSET(get<T>, {0xB88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3439,6 +3437,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Athena/Items/Parents/FallImmunity/GA_Athena_TillLandFallDamageImmunity_Parent.GA_Athena_TillLandFallDamageImmunity_Parent_C.ExecuteUbergraph_GA_Athena_TillLandFallDamageImmunity_Parent
 	// void ExecuteUbergraph_GA_Athena_TillLandFallDamageImmunity_Parent(int32_t EntryPoint);                                   // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Environments/Blueprints/DudeBro/GE_Athena_FallDmgImmune_FX.GE_Athena_FallDmgImmune_FX_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_FallDmgImmune_FX_C : public UGameplayEffect
@@ -3489,9 +3489,9 @@ class UGE_ColdBreath_V2_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Irwin/Characters/Parents/Abilities/TargetSlots/Melee/GE_NPC_Behavior_TargetSlots_Melee_AbandonSlot.GE_NPC_Behavior_TargetSlots_Melee_AbandonSlot_C
+/// Class /Game/Athena/Items/Quests/QuestAbilities/QuestGEs/GE_Quest_Converted_Irwin.GE_Quest_Converted_Irwin_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_NPC_Behavior_TargetSlots_Melee_AbandonSlot_C : public UGameplayEffect
+class UGE_Quest_Converted_Irwin_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -3499,9 +3499,9 @@ class UGE_NPC_Behavior_TargetSlots_Melee_AbandonSlot_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Items/Quests/QuestAbilities/QuestGEs/GE_Quest_Converted_Irwin.GE_Quest_Converted_Irwin_C
+/// Class /Game/Athena/Irwin/Characters/Parents/Abilities/TargetSlots/Melee/GE_NPC_Behavior_TargetSlots_Melee_AbandonSlot.GE_NPC_Behavior_TargetSlots_Melee_AbandonSlot_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Quest_Converted_Irwin_C : public UGameplayEffect
+class UGE_NPC_Behavior_TargetSlots_Melee_AbandonSlot_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -3552,8 +3552,6 @@ public:
 	CMember(TWeakObjectPtr<UTexture2D*>)               Icon_BackToMe                                               OFFSET(get<T>, {0x368, 32, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               Icon_Revive                                                 OFFSET(get<T>, {0x388, 32, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               Icon_Attack                                                 OFFSET(get<T>, {0x3A8, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3575,6 +3573,8 @@ public:
 	// void InitNPCCommandIcon(FLinearColor Color);                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/HUD/Actors/ConvertedMarkerInfo.ConvertedMarkerInfo_C.ExecuteUbergraph_ConvertedMarkerInfo
 	// void ExecuteUbergraph_ConvertedMarkerInfo(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/HUD/Actors/NPCStatusWidgetBar.NPCStatusWidgetBar_C
 /// Size: 0x00F1 (0x0002A8 - 0x000399)
 class UNPCStatusWidgetBar_C : public UUserWidget
@@ -3602,8 +3602,6 @@ public:
 	SMember(FLinearColor)                              FillColor1_100Percent                                       OFFSET(get<T>, {0x378, 16, 0, 0})
 	SMember(FLinearColor)                              FillColor2_100Percent                                       OFFSET(get<T>, {0x388, 16, 0, 0})
 	DMember(bool)                                      DifferentProgressColors                                     OFFSET(get<bool>, {0x398, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3617,6 +3615,8 @@ public:
 	// void SetNumPips(int32_t NumPips);                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/HUD/Actors/NPCStatusWidgetBar.NPCStatusWidgetBar_C.ExecuteUbergraph_NPCStatusWidgetBar
 	// void ExecuteUbergraph_NPCStatusWidgetBar(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/HUD/Actors/NPCStatusWidget.NPCStatusWidget_C
 /// Size: 0x0068 (0x000388 - 0x0003F0)
 class UNPCStatusWidget_C : public UNPCStatusWidgetBase
@@ -3637,8 +3637,6 @@ public:
 	DMember(double)                                    CurrentShieldPercent                                        OFFSET(get<double>, {0x3D8, 8, 0, 0})
 	DMember(bool)                                      KeepVisibilityOn                                            OFFSET(get<bool>, {0x3E0, 1, 0, 0})
 	CMember(AFortPawn*)                                FortPawn                                                    OFFSET(get<T>, {0x3E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3662,6 +3660,8 @@ public:
 	// void ExecuteUbergraph_NPCStatusWidget(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Athena/HUD/Actors/NPCStatusWidget.NPCStatusWidget_C.VisibilityChanged__DelegateSignature
 	// void VisibilityChanged__DelegateSignature(bool bVisible);                                                                // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/HUD/Actors/NPCStatusWidget_AIBoss.NPCStatusWidget_AIBoss_C
 /// Size: 0x0084 (0x0002A8 - 0x00032C)
 class UNPCStatusWidget_AIBoss_C : public UUserWidget
@@ -3686,8 +3686,6 @@ public:
 	DMember(int32_t)                                   NumHealthPips                                               OFFSET(get<int32_t>, {0x318, 4, 0, 0})
 	DMember(double)                                    MaxShield                                                   OFFSET(get<double>, {0x320, 8, 0, 0})
 	DMember(int32_t)                                   NumShieldPips                                               OFFSET(get<int32_t>, {0x328, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3707,6 +3705,8 @@ public:
 	// void ExecuteUbergraph_NPCStatusWidget_AIBoss(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Athena/HUD/Actors/NPCStatusWidget_AIBoss.NPCStatusWidget_AIBoss_C.VisibilityChanged__DelegateSignature
 	// void VisibilityChanged__DelegateSignature(bool bVisible);                                                                // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_rangeAttack.AI_skill_phoebe_bot_rangeAttack_C
 /// Size: 0x0000 (0x000700 - 0x000700)
 class UAI_skill_phoebe_bot_rangeAttack_C : public UFortAthenaAIBotRangeAttackSkillSet
@@ -3737,64 +3737,6 @@ class UAthenaFunctionLibrary_C : public UBlueprintFunctionLibrary
 public:
 };
 
-/// Class /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C
-/// Size: 0x0120 (0x000290 - 0x0003B0)
-class ABP_Frontend_ShopBG_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 944;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     StandardBackgroundPlane1                                    OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     StandardBackgroundPlane                                     OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     Cone                                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     Plane                                                       OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     BackgroundTexturePlane                                      OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     VeryLargeBackgroundPlane                                    OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(USceneComponent*)                          Scene_Signal                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	SMember(FRotator)                                  Rot_Intro                                                   OFFSET(get<T>, {0x2E0, 24, 0, 0})
-	SMember(FRotator)                                  NextRot                                                     OFFSET(get<T>, {0x2F8, 24, 0, 0})
-	SMember(FRotator)                                  Rot                                                         OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FRotator)                                  Rot1                                                        OFFSET(get<T>, {0x328, 24, 0, 0})
-	DMember(double)                                    PlayRate                                                    OFFSET(get<double>, {0x340, 8, 0, 0})
-	SMember(FRotator)                                  Rot_IntroStart                                              OFFSET(get<T>, {0x348, 24, 0, 0})
-	DMember(bool)                                      bHasEvent                                                   OFFSET(get<bool>, {0x360, 1, 0, 0})
-	DMember(double)                                    YInitial                                                    OFFSET(get<double>, {0x368, 8, 0, 0})
-	DMember(double)                                    YEnd                                                        OFFSET(get<double>, {0x370, 8, 0, 0})
-	CMember(UMaterialInstanceDynamic*)                 Mid                                                         OFFSET(get<T>, {0x378, 8, 0, 0})
-	CMember(ACMSLobbyDirector_C*)                      CMSDirector                                                 OFFSET(get<T>, {0x380, 8, 0, 0})
-	SMember(FString)                                   BPEnvName                                                   OFFSET(get<T>, {0x388, 16, 0, 0})
-	DMember(bool)                                      ShopEntered                                                 OFFSET(get<bool>, {0x398, 1, 0, 0})
-	SMember(FTimerHandle)                              DonutSeqTimerHandle                                         OFFSET(get<T>, {0x3A0, 8, 0, 0})
-	CMember(AActor*)                                   DomeObstruction                                             OFFSET(get<T>, {0x3A8, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicBG
-	// void SetDynamicBG(UTexture* InTexture);                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.EnableDynamicShopBG
-	// void EnableDynamicShopBG();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicEnvironmentEvent
-	// void SetDynamicEnvironmentEvent(FString InPresetEnvName);                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.DebugShopBG
-	// void DebugShopBG();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleRequestHide
-	// void HandleRequestHide();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleItemShopEntered
-	// void HandleItemShopEntered();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleStoreEntered
-	// void HandleStoreEntered();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ResetDonut
-	// void ResetDonut();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ExecuteUbergraph_BP_Frontend_ShopBG
-	// void ExecuteUbergraph_BP_Frontend_ShopBG(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/AI/Phoebe/Skillsets/AI_skill_phoebe_bot_playstyle.AI_skill_phoebe_bot_playstyle_C
 /// Size: 0x0000 (0x000108 - 0x000108)
 class UAI_skill_phoebe_bot_playstyle_C : public UFortAthenaAIBotPlayStyleSkillSet
@@ -3843,8 +3785,6 @@ public:
 	SMember(FActiveGameplayEffectHandle)               GE_PatrollingSpeedHandle                                    OFFSET(get<T>, {0x1768, 8, 0, 0})
 	SMember(FRotator)                                  SavedRotationRate                                           OFFSET(get<T>, {0x1770, 24, 0, 0})
 	SMember(FRotator)                                  PatrollingRotationRate                                      OFFSET(get<T>, {0x1788, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3854,6 +3794,8 @@ public:
 	// void BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature(); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/AI/NPCs/Base/BP_BotController_NPC_Base.BP_BotController_NPC_Base_C.ExecuteUbergraph_BP_BotController_NPC_Base
 	// void ExecuteUbergraph_BP_BotController_NPC_Base(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Sounds/Weapons/BulletWhips/BulletWhipTrackerComponent_Default.BulletWhipTrackerComponent_Default_C
 /// Size: 0x0000 (0x0000F8 - 0x0000F8)
 class UBulletWhipTrackerComponent_Default_C : public UBulletWhipTrackerComponentBase
@@ -3892,8 +3834,6 @@ public:
 	CMember(TArray<FString>)                           SupportedTagLevels                                          OFFSET(get<T>, {0x168, 16, 0, 0})
 	DMember(double)                                    SpecialSurfacePadding                                       OFFSET(get<double>, {0x178, 8, 0, 0})
 	CMember(USoundMix*)                                AmbientAudioSoundMix                                        OFFSET(get<T>, {0x180, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3917,36 +3857,8 @@ public:
 	// void Update();                                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Sounds/Ambient/BP_AmbientAudioController.BP_AmbientAudioController_C.ExecuteUbergraph_BP_AmbientAudioController
 	// void ExecuteUbergraph_BP_AmbientAudioController(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/DrivableVehicles/GE_VehicleDamage_PhysicsObject_Global.GE_VehicleDamage_PhysicsObject_Global_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_VehicleDamage_PhysicsObject_Global_C : public UGet_DirectDamageParent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
 };
 
-/// Class /Game/Athena/Athena_GameState.Athena_GameState_C
-/// Size: 0x0018 (0x0032B0 - 0x0032C8)
-class AAthena_GameState_C : public AFortGameStateBR
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 13000;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x32B0, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x32B8, 8, 0, 0})
-	CMember(USoundBase*)                               Victory_Royale_Sound                                        OFFSET(get<T>, {0x32C0, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Athena_GameState.Athena_GameState_C.OnWinnerAnnounced
-	// void OnWinnerAnnounced();                                                                                                // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Athena_GameState.Athena_GameState_C.ExecuteUbergraph_Athena_GameState
-	// void ExecuteUbergraph_Athena_GameState(int32_t EntryPoint);                                                              // [0x1ebf994] Final                
 /// Class /Game/Athena/PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C
 /// Size: 0x00F0 (0x005A80 - 0x005B70)
 class APlayerPawn_Athena_Generic_Parent_C : public AFortPlayerPawnAthena
@@ -3972,8 +3884,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnPlayHit                                                   OFFSET(get<T>, {0x5B40, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnEnteredVehicleDispatcher                                  OFFSET(get<T>, {0x5B50, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnExitedVehicleDispatcher                                   OFFSET(get<T>, {0x5B60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3999,6 +3909,38 @@ public:
 	// void OnPlayHit__DelegateSignature(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, FHitResult& Hit);        // [0x1ebf994] Public|Delegate|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/PlayerPawn_Athena_Generic_Parent.PlayerPawn_Athena_Generic_Parent_C.ShootingTargetReactToJump__DelegateSignature
 	// void ShootingTargetReactToJump__DelegateSignature(AFortPlayerPawnAthena* JumpingPlayer);                                 // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Athena/Athena_GameState.Athena_GameState_C
+/// Size: 0x0018 (0x0032B0 - 0x0032C8)
+class AAthena_GameState_C : public AFortGameStateBR
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 13000;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x32B0, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x32B8, 8, 0, 0})
+	CMember(USoundBase*)                               Victory_Royale_Sound                                        OFFSET(get<T>, {0x32C0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Athena_GameState.Athena_GameState_C.OnWinnerAnnounced
+	// void OnWinnerAnnounced();                                                                                                // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Athena_GameState.Athena_GameState_C.ExecuteUbergraph_Athena_GameState
+	// void ExecuteUbergraph_Athena_GameState(int32_t EntryPoint);                                                              // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/DrivableVehicles/GE_VehicleDamage_PhysicsObject_Global.GE_VehicleDamage_PhysicsObject_Global_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_VehicleDamage_PhysicsObject_Global_C : public UGet_DirectDamageParent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Creative_Powerup_HealthPositive.GCNL_Creative_Powerup_HealthPositive_C
 /// Size: 0x0000 (0x000990 - 0x000990)
 class AGCNL_Creative_Powerup_HealthPositive_C : public AFortGameplayCueNotify_Loop
@@ -4096,8 +4038,6 @@ public:
 	DMember(double)                                    CachedCapsuleHalfHeight                                     OFFSET(get<double>, {0x5E28, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnCharacterPartsMIDInitialized                              OFFSET(get<T>, {0x5E30, 16, 0, 0})
 	CMember(USkeletalMeshComponent*)                   NullPart_Mesh                                               OFFSET(get<T>, {0x5E40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4193,6 +4133,8 @@ public:
 	// void AnimNotify_End__DelegateSignature();                                                                                // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/PlayerPawn_Athena_Generic.PlayerPawn_Athena_Generic_C.AnimNotify_Begin__DelegateSignature
 	// void AnimNotify_Begin__DelegateSignature(bool bActive);                                                                  // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C
 /// Size: 0x08F0 (0x005E48 - 0x006738)
 class APlayerPawn_Athena_C : public APlayerPawn_Athena_Generic_C
@@ -4372,8 +4314,6 @@ public:
 	SMember(FString)                                   LCVar_Name                                                  OFFSET(get<T>, {0x66F8, 16, 0, 0})
 	CMember(APhysicalRimlight_C*)                      PhysicalRimlightActor                                       OFFSET(get<T>, {0x6708, 8, 0, 0})
 	SMember(FScalableFloat)                            UGC_RimLightIntensity                                       OFFSET(get<T>, {0x6710, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4677,6 +4617,8 @@ public:
 	// void ResOut__DelegateSignature();                                                                                        // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C.ResIn__DelegateSignature
 	// void ResIn__DelegateSignature();                                                                                         // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/AI/Phoebe/BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C
 /// Size: 0x0014 (0x006738 - 0x00674C)
 class ABP_PlayerPawn_Athena_Phoebe_C : public APlayerPawn_Athena_C
@@ -4689,8 +4631,6 @@ public:
 	SMember(FName)                                     AIEvaluator_CharacterLaunchedKeyName                        OFFSET(get<T>, {0x6740, 4, 0, 0})
 	DMember(bool)                                      bUseCosmeticVariants                                        OFFSET(get<bool>, {0x6744, 1, 0, 0})
 	DMember(int32_t)                                   CosmeticVariantID                                           OFFSET(get<int32_t>, {0x6748, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4704,6 +4644,8 @@ public:
 	// void OnCharacterCustomizationCompleted(AFortPlayerPawn* Pawn);                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/AI/Phoebe/BP_PlayerPawn_Athena_Phoebe.BP_PlayerPawn_Athena_Phoebe_C.ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe
 	// void ExecuteUbergraph_BP_PlayerPawn_Athena_Phoebe(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/AI/NPCs/Base/Abilities/GAB_ApplyFullBodyHit_NonParticipant.GAB_ApplyFullBodyHit_NonParticipant_C
 /// Size: 0x0000 (0x000B98 - 0x000B98)
 class UGAB_ApplyFullBodyHit_NonParticipant_C : public UGAB_GenericApplyFullBodyHit_C
@@ -4779,8 +4721,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnAlertLevelChanged                                         OFFSET(get<T>, {0x6948, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnDeath                                                     OFFSET(get<T>, {0x6958, 16, 0, 0})
 	SMember(FTimerHandle)                              IdleVOTimerHandle                                           OFFSET(get<T>, {0x6968, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4890,6 +4830,8 @@ public:
 	// void OnAlertLevelChanged__DelegateSignature(EAlertLevel OldAlertLevel, EAlertLevel NewAlertLevel);                       // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.BP_PlayerPawn_NonParticipant_C.OnTargetChanged__DelegateSignature
 	// void OnTargetChanged__DelegateSignature(AActor* NewTarget);                                                              // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Parent.NPC_Pawn_Parent_C
 /// Size: 0x086C (0x003480 - 0x003CEC)
 class ANPC_Pawn_Parent_C : public AFortAIPawn
@@ -5042,8 +4984,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  NPCAlertLevelUpdated                                        OFFSET(get<T>, {0x3CB8, 16, 0, 0})
 	SMember(FGameplayTagContainer)                     GameplayTagsToBlockHitReact                                 OFFSET(get<T>, {0x3CC8, 32, 0, 0})
 	SMember(FGameplayTag)                              GCInstantDeathTag                                           OFFSET(get<T>, {0x3CE8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5301,6 +5241,91 @@ public:
 	// void NPCScaleMeshOutCompleted__DelegateSignature();                                                                      // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Parent.NPC_Pawn_Parent_C.NPCScaleMeshInCompleted__DelegateSignature
 	// void NPCScaleMeshInCompleted__DelegateSignature();                                                                       // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C
+/// Size: 0x007A (0x006970 - 0x0069EA)
+class ABP_PlayerPawn_Tandem_C : public ABP_PlayerPawn_NonParticipant_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 27114;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6970, 8, 0, 0})
+	CMember(UFortWidgetComponent*)                     NPCStatusWidget                                             OFFSET(get<T>, {0x6978, 8, 0, 0})
+	DMember(bool)                                      IsConverted                                                 OFFSET(get<bool>, {0x6980, 1, 0, 0})
+	DMember(char)                                      Leader_Team                                                 OFFSET(get<char>, {0x6981, 1, 0, 0})
+	SMember(FStruct_NPC_HealthInfo)                    HealthInfo                                                  OFFSET(get<T>, {0x6988, 32, 0, 0})
+	DMember(bool)                                      NPCStatusWidgetHealthBarDisabled                            OFFSET(get<bool>, {0x69A8, 1, 0, 0})
+	SMember(FScalableFloat)                            ShowHealth                                                  OFFSET(get<T>, {0x69B0, 40, 0, 0})
+	DMember(double)                                    NPCHealthBarHideTimeAfterDeath                              OFFSET(get<double>, {0x69D8, 8, 0, 0})
+	DMember(double)                                    NPCMaxDistanceFromDamageINstigatorToDrawHealthBar           OFFSET(get<double>, {0x69E0, 8, 0, 0})
+	DMember(bool)                                      IsHealthCheatEnabled                                        OFFSET(get<bool>, {0x69E8, 1, 0, 0})
+	DMember(bool)                                      IsTandemHealthEnabled                                       OFFSET(get<bool>, {0x69E9, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.UpdatePawnHealthHUD
+	// void UpdatePawnHealthHUD();                                                                                              // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.OnRep_HealthInfo
+	// void OnRep_HealthInfo();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.HandlePawnUnconverted
+	// void HandlePawnUnconverted(AFortPawn* UnconvertedPawn);                                                                  // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.HandlePawnConverted
+	// void HandlePawnConverted(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                           // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.UpdateConvertIndicator
+	// void UpdateConvertIndicator();                                                                                           // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.StartHealthBar
+	// void StartHealthBar();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.StartUpdatingHealthWidget
+	// void StartUpdatingHealthWidget();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.StopUpdatingHealthWidget
+	// void StopUpdatingHealthWidget();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.PawnHealthChanged
+	// void PawnHealthChanged();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.ReceiveEndPlay
+	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.OnDeathPlayEffects
+	// void OnDeathPlayEffects(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.NPCSetupHealthBarOnDeath
+	// void NPCSetupHealthBarOnDeath();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.WidgetVisibilityChanged
+	// void WidgetVisibilityChanged(bool bVisible);                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.NPCTandemDisableHealthBar
+	// void NPCTandemDisableHealthBar();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.NPCTandemEnableHealthBars
+	// void NPCTandemEnableHealthBars();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.EnableHiredTandemHealthBar
+	// void EnableHiredTandemHealthBar();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.EnableTandemHealthBar
+	// void EnableTandemHealthBar();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.ExecuteUbergraph_BP_PlayerPawn_Tandem
+	// void ExecuteUbergraph_BP_PlayerPawn_Tandem(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C
+/// Size: 0x0028 (0x000628 - 0x000650)
+class UNPCConvertedIndicatorMarker_C : public UAthenaMarkedActorIndicator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1616;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x628, 8, 0, 0})
+	CMember(UImage*)                                   IrwinIndicator                                              OFFSET(get<T>, {0x630, 8, 0, 0})
+	CMember(UConvertedMarkerInfo_C*)                   RidingMarkerInfo                                            OFFSET(get<T>, {0x638, 8, 0, 0})
+	SMember(FLinearColor)                              CachedColor                                                 OFFSET(get<T>, {0x640, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C.OnSetMarkerData
+	// void OnSetMarkerData(FFortWorldMarkerData& FortWorldMarkerData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C.OnPingCommandEvent
+	// void OnPingCommandEvent(PingCommandType CommandType);                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C.ExecuteUbergraph_NPCConvertedIndicatorMarker
+	// void ExecuteUbergraph_NPCConvertedIndicatorMarker(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.NPC_Pawn_Wildlife_Parent_C
 /// Size: 0x01A4 (0x003CEC - 0x003E90)
 class ANPC_Pawn_Wildlife_Parent_C : public ANPC_Pawn_Parent_C
@@ -5346,8 +5371,6 @@ public:
 	CMember(UClass*)                                   StuckBouncing_GE                                            OFFSET(get<T>, {0x3E78, 8, 0, 0})
 	DMember(double)                                    StuckBouncing_UnstuckVelocityMaxZRotationAngle              OFFSET(get<double>, {0x3E80, 8, 0, 0})
 	DMember(double)                                    StuckBouncing_UnstuckVelocity                               OFFSET(get<double>, {0x3E88, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5443,89 +5466,8 @@ public:
 	// void ConvertedDispatcher__DelegateSignature(bool Converted, AFortPawn* InstigatorPawn);                                  // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.NPC_Pawn_Wildlife_Parent_C.OnPickupGrabbed_Destroyed__DelegateSignature
 	// void OnPickupGrabbed_Destroyed__DelegateSignature(ANPC_Pawn_Wildlife_Parent_C* WildlifePawn, AActor* ActorGrabbed);      // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
-/// Class /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C
-/// Size: 0x0028 (0x000628 - 0x000650)
-class UNPCConvertedIndicatorMarker_C : public UAthenaMarkedActorIndicator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1616;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x628, 8, 0, 0})
-	CMember(UImage*)                                   IrwinIndicator                                              OFFSET(get<T>, {0x630, 8, 0, 0})
-	CMember(UConvertedMarkerInfo_C*)                   RidingMarkerInfo                                            OFFSET(get<T>, {0x638, 8, 0, 0})
-	SMember(FLinearColor)                              CachedColor                                                 OFFSET(get<T>, {0x640, 16, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C.OnSetMarkerData
-	// void OnSetMarkerData(FFortWorldMarkerData& FortWorldMarkerData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C.OnPingCommandEvent
-	// void OnPingCommandEvent(PingCommandType CommandType);                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/HUD/Actors/NPCConvertedIndicatorMarker.NPCConvertedIndicatorMarker_C.ExecuteUbergraph_NPCConvertedIndicatorMarker
-	// void ExecuteUbergraph_NPCConvertedIndicatorMarker(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C
-/// Size: 0x007A (0x006970 - 0x0069EA)
-class ABP_PlayerPawn_Tandem_C : public ABP_PlayerPawn_NonParticipant_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 27114;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6970, 8, 0, 0})
-	CMember(UFortWidgetComponent*)                     NPCStatusWidget                                             OFFSET(get<T>, {0x6978, 8, 0, 0})
-	DMember(bool)                                      IsConverted                                                 OFFSET(get<bool>, {0x6980, 1, 0, 0})
-	DMember(char)                                      Leader_Team                                                 OFFSET(get<char>, {0x6981, 1, 0, 0})
-	SMember(FStruct_NPC_HealthInfo)                    HealthInfo                                                  OFFSET(get<T>, {0x6988, 32, 0, 0})
-	DMember(bool)                                      NPCStatusWidgetHealthBarDisabled                            OFFSET(get<bool>, {0x69A8, 1, 0, 0})
-	SMember(FScalableFloat)                            ShowHealth                                                  OFFSET(get<T>, {0x69B0, 40, 0, 0})
-	DMember(double)                                    NPCHealthBarHideTimeAfterDeath                              OFFSET(get<double>, {0x69D8, 8, 0, 0})
-	DMember(double)                                    NPCMaxDistanceFromDamageINstigatorToDrawHealthBar           OFFSET(get<double>, {0x69E0, 8, 0, 0})
-	DMember(bool)                                      IsHealthCheatEnabled                                        OFFSET(get<bool>, {0x69E8, 1, 0, 0})
-	DMember(bool)                                      IsTandemHealthEnabled                                       OFFSET(get<bool>, {0x69E9, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.UpdatePawnHealthHUD
-	// void UpdatePawnHealthHUD();                                                                                              // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.OnRep_HealthInfo
-	// void OnRep_HealthInfo();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.HandlePawnUnconverted
-	// void HandlePawnUnconverted(AFortPawn* UnconvertedPawn);                                                                  // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.HandlePawnConverted
-	// void HandlePawnConverted(AFortPawn* InstigatorPawn, AFortPawn* ConvertedPawn);                                           // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.UpdateConvertIndicator
-	// void UpdateConvertIndicator();                                                                                           // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.StartHealthBar
-	// void StartHealthBar();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.StartUpdatingHealthWidget
-	// void StartUpdatingHealthWidget();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.StopUpdatingHealthWidget
-	// void StopUpdatingHealthWidget();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.PawnHealthChanged
-	// void PawnHealthChanged();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.ReceiveEndPlay
-	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.OnDeathPlayEffects
-	// void OnDeathPlayEffects(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.NPCSetupHealthBarOnDeath
-	// void NPCSetupHealthBarOnDeath();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.WidgetVisibilityChanged
-	// void WidgetVisibilityChanged(bool bVisible);                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.NPCTandemDisableHealthBar
-	// void NPCTandemDisableHealthBar();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.NPCTandemEnableHealthBars
-	// void NPCTandemEnableHealthBars();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.EnableHiredTandemHealthBar
-	// void EnableHiredTandemHealthBar();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.EnableTandemHealthBar
-	// void EnableTandemHealthBar();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.BP_PlayerPawn_Tandem_C.ExecuteUbergraph_BP_PlayerPawn_Tandem
-	// void ExecuteUbergraph_BP_PlayerPawn_Tandem(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/QuestInteractables/AthenaQuestFunctionLibrary.AthenaQuestFunctionLibrary_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAthenaQuestFunctionLibrary_C : public UBlueprintFunctionLibrary
@@ -5562,8 +5504,6 @@ public:
 	DMember(double)                                    SpawnStartTimeDelay                                         OFFSET(get<double>, {0xC58, 8, 0, 0})
 	DMember(bool)                                      bIsFrontEndPreview                                          OFFSET(get<bool>, {0xC60, 1, 0, 0})
 	DMember(bool)                                      bDestroyOnTrapPlaced                                        OFFSET(get<bool>, {0xC61, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5611,6 +5551,8 @@ public:
 	// void OnWallDestoryed(AActor* DestroyedActor);                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Cosmetics/Sprays/BP_SprayDecal.BP_SprayDecal_C.ExecuteUbergraph_BP_SprayDecal
 	// void ExecuteUbergraph_BP_SprayDecal(int32_t EntryPoint);                                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/ZipLine/GE_Athena_ZipLine_FallDamageImmunityFX.GE_Athena_ZipLine_FallDamageImmunityFX_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_ZipLine_FallDamageImmunityFX_C : public UGameplayEffect
@@ -5621,9 +5563,9 @@ class UGE_Athena_ZipLine_FallDamageImmunityFX_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_ExitingProp_NoJump.GE_Athena_HidingProp_ExitingProp_NoJump_C
+/// Class /Game/Athena/Environments/Blueprints/SurfaceEffects/GE_SurfaceChange_Lava.GE_SurfaceChange_Lava_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Athena_HidingProp_ExitingProp_NoJump_C : public UGameplayEffect
+class UGE_SurfaceChange_Lava_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -5631,9 +5573,9 @@ class UGE_Athena_HidingProp_ExitingProp_NoJump_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Environments/Blueprints/SurfaceEffects/GE_SurfaceChange_Lava.GE_SurfaceChange_Lava_C
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_ExitingProp_NoJump.GE_Athena_HidingProp_ExitingProp_NoJump_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_SurfaceChange_Lava_C : public UGameplayEffect
+class UGE_Athena_HidingProp_ExitingProp_NoJump_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -5691,16 +5633,6 @@ class UGE_Athena_ZipLine_Passive_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GE_WilliePete_PlayerLaunch_ApplyGC.GE_WilliePete_PlayerLaunch_ApplyGC_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_WilliePete_PlayerLaunch_ApplyGC_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_BlockMovement.GA_Athena_HidingProp_BlockMovement_C
 /// Size: 0x0008 (0x000B28 - 0x000B30)
 class UGA_Athena_HidingProp_BlockMovement_C : public UFortGameplayAbility
@@ -5710,8 +5642,6 @@ class UGA_Athena_HidingProp_BlockMovement_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5719,9 +5649,21 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_BlockMovement.GA_Athena_HidingProp_BlockMovement_C.ExecuteUbergraph_GA_Athena_HidingProp_BlockMovement
 	// void ExecuteUbergraph_GA_Athena_HidingProp_BlockMovement(int32_t EntryPoint);                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_GettingInProp.GE_Athena_HidingProp_GettingInProp_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_HidingProp_GettingInProp_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GE_WilliePete_PlayerLaunch_ApplyGC.GE_WilliePete_PlayerLaunch_ApplyGC_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_WilliePete_PlayerLaunch_ApplyGC_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -5759,16 +5701,6 @@ class UGE_Athena_DBNO_HealthBonus_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/DrivableVehicles/GE_AthenaInVehicle.GE_AthenaInVehicle_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_AthenaInVehicle_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
 /// Class /Game/Athena/Items/Consumables/FloppingRabbit/GA_Athena_Tethered_PassiveTriggered.GA_Athena_Tethered_PassiveTriggered_C
 /// Size: 0x0014 (0x000B28 - 0x000B3C)
 class UGA_Athena_Tethered_PassiveTriggered_C : public UFortGameplayAbility
@@ -5781,8 +5713,6 @@ public:
 	SMember(FGameplayTag)                              GCN_BoostTag                                                OFFSET(get<T>, {0xB30, 4, 0, 0})
 	SMember(FGameplayTag)                              GCN_JumpTag                                                 OFFSET(get<T>, {0xB34, 4, 0, 0})
 	SMember(FGameplayTag)                              ZiplineExit                                                 OFFSET(get<T>, {0xB38, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5790,6 +5720,18 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/FloppingRabbit/GA_Athena_Tethered_PassiveTriggered.GA_Athena_Tethered_PassiveTriggered_C.ExecuteUbergraph_GA_Athena_Tethered_PassiveTriggered
 	// void ExecuteUbergraph_GA_Athena_Tethered_PassiveTriggered(int32_t EntryPoint);                                           // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/DrivableVehicles/GE_AthenaInVehicle.GE_AthenaInVehicle_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_AthenaInVehicle_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_ExitingProp.GE_Athena_HidingProp_ExitingProp_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_HidingProp_ExitingProp_C : public UGameplayEffect
@@ -5798,6 +5740,24 @@ class UGE_Athena_HidingProp_ExitingProp_C : public UGameplayEffect
 	static inline constexpr uint64_t __MDKClassSize = 2664;
 
 public:
+};
+
+/// Class /Game/Athena/DrivableVehicles/GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C
+/// Size: 0x0008 (0x000B28 - 0x000B30)
+class UGA_AthenaEnterVehicle_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2864;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/DrivableVehicles/GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/DrivableVehicles/GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C.ExecuteUbergraph_GA_AthenaEnterVehicle
+	// void ExecuteUbergraph_GA_AthenaEnterVehicle(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/DrivableVehicles/GA_AthenaExitVehicle.GA_AthenaExitVehicle_C
@@ -5811,8 +5771,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FGameplayTag)                              Keep_DBNO_players_in_Vehicles                               OFFSET(get<T>, {0xB30, 4, 0, 0})
 	SMember(FGameplayTagContainer)                     Event_Damage_Died_Tags                                      OFFSET(get<T>, {0xB38, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5820,24 +5778,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/DrivableVehicles/GA_AthenaExitVehicle.GA_AthenaExitVehicle_C.ExecuteUbergraph_GA_AthenaExitVehicle
 	// void ExecuteUbergraph_GA_AthenaExitVehicle(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/DrivableVehicles/GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C
-/// Size: 0x0008 (0x000B28 - 0x000B30)
-class UGA_AthenaEnterVehicle_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2864;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/DrivableVehicles/GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/DrivableVehicles/GA_AthenaEnterVehicle.GA_AthenaEnterVehicle_C.ExecuteUbergraph_GA_AthenaEnterVehicle
-	// void ExecuteUbergraph_GA_AthenaEnterVehicle(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_HidingProp_DestroyStructure.GE_HidingProp_DestroyStructure_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_HidingProp_DestroyStructure_C : public UGameplayEffect
@@ -5848,52 +5790,6 @@ class UGE_HidingProp_DestroyStructure_C : public UGameplayEffect
 public:
 };
 
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C
-/// Size: 0x0010 (0x0003D0 - 0x0003E0)
-class AB_WilliePete_WaterBodyChild_C : public AFortWaterBodyActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 992;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
-	CMember(UArrowComponent*)                          Debug                                                       OFFSET(get<T>, {0x3D8, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C.ExecuteUbergraph_B_WilliePete_WaterBodyChild
-	// void ExecuteUbergraph_B_WilliePete_WaterBodyChild(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
-/// Class /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C
-/// Size: 0x0020 (0x000B28 - 0x000B48)
-class UGA_SurfaceChange_Ice_IceCheckOnTimer_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2888;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          FortPlayerPawn                                              OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FTimerHandle)                              TraceTimer                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FTimerHandle)                              OffIceTimer                                                 OFFSET(get<T>, {0xB40, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.TraceForTerrain
-	// void TraceForTerrain();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.RemoveIceGE
-	// void RemoveIceGE();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.ExecuteUbergraph_GA_SurfaceChange_Ice_IceCheckOnTimer
-	// void ExecuteUbergraph_GA_SurfaceChange_Ice_IceCheckOnTimer(int32_t EntryPoint);                                          // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/Consumables/ThrownConsumables/IceGrenade/GA_Athena_RemoveIceFeetOnWater.GA_Athena_RemoveIceFeetOnWater_C
 /// Size: 0x0010 (0x000B28 - 0x000B38)
 class UGA_Athena_RemoveIceFeetOnWater_C : public UFortGameplayAbility
@@ -5904,8 +5800,6 @@ class UGA_Athena_RemoveIceFeetOnWater_C : public UFortGameplayAbility
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          Fort_Player_Pawn                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5917,6 +5811,8 @@ public:
 	// void On Movement Mode Changed(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/ThrownConsumables/IceGrenade/GA_Athena_RemoveIceFeetOnWater.GA_Athena_RemoveIceFeetOnWater_C.ExecuteUbergraph_GA_Athena_RemoveIceFeetOnWater
 	// void ExecuteUbergraph_GA_Athena_RemoveIceFeetOnWater(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/DrivableVehicles/GA_Vehicle_ExitHoldEvent.GA_Vehicle_ExitHoldEvent_C
 /// Size: 0x0030 (0x000B28 - 0x000B58)
 class UGA_Vehicle_ExitHoldEvent_C : public UFortGameplayAbility
@@ -5931,8 +5827,6 @@ public:
 	CMember(AFortPlayerController*)                    PlayerController                                            OFFSET(get<T>, {0xB40, 8, 0, 0})
 	CMember(UAbilityTask_WaitGameplayEvent*)           OnHoldExitStartedAsyncTask                                  OFFSET(get<T>, {0xB48, 8, 0, 0})
 	CMember(UAbilityTask_WaitGameplayEvent*)           OnHoldExitStoppedAsyncTask                                  OFFSET(get<T>, {0xB50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5954,6 +5848,54 @@ public:
 	// void On Fully Exit Vehicle();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/DrivableVehicles/GA_Vehicle_ExitHoldEvent.GA_Vehicle_ExitHoldEvent_C.ExecuteUbergraph_GA_Vehicle_ExitHoldEvent
 	// void ExecuteUbergraph_GA_Vehicle_ExitHoldEvent(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C
+/// Size: 0x0010 (0x0003D0 - 0x0003E0)
+class AB_WilliePete_WaterBodyChild_C : public AFortWaterBodyActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 992;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
+	CMember(UArrowComponent*)                          Debug                                                       OFFSET(get<T>, {0x3D8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_WilliePete_WaterBodyChild.B_WilliePete_WaterBodyChild_C.ExecuteUbergraph_B_WilliePete_WaterBodyChild
+	// void ExecuteUbergraph_B_WilliePete_WaterBodyChild(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C
+/// Size: 0x0020 (0x000B28 - 0x000B48)
+class UGA_SurfaceChange_Ice_IceCheckOnTimer_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2888;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          FortPlayerPawn                                              OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FTimerHandle)                              TraceTimer                                                  OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FTimerHandle)                              OffIceTimer                                                 OFFSET(get<T>, {0xB40, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.TraceForTerrain
+	// void TraceForTerrain();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.RemoveIceGE
+	// void RemoveIceGE();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GA_SurfaceChange_Ice_IceCheckOnTimer.GA_SurfaceChange_Ice_IceCheckOnTimer_C.ExecuteUbergraph_GA_SurfaceChange_Ice_IceCheckOnTimer
+	// void ExecuteUbergraph_GA_SurfaceChange_Ice_IceCheckOnTimer(int32_t EntryPoint);                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/ForagedItems/Rift/GE_Rift_Athena_Teleport.GE_Rift_Athena_Teleport_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Rift_Athena_Teleport_C : public UGameplayEffect
@@ -5983,8 +5925,6 @@ class UGA_DuelObserver_C : public UFortGameplayAbility_ObserveDuels
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5994,6 +5934,8 @@ public:
 	// void OnDuelChange(EDuelState NewDuelState, FDuelOverlayData& ChangedDuelOverlayData);                                    // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/HUD/Duel/GA_DuelObserver.GA_DuelObserver_C.ExecuteUbergraph_GA_DuelObserver
 	// void ExecuteUbergraph_GA_DuelObserver(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Gameplay/Sword/GE_Blade_LeapSlam_BuildingDestroy.GE_Blade_LeapSlam_BuildingDestroy_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Blade_LeapSlam_BuildingDestroy_C : public UGET_DirectPhysicalDamage_C
@@ -6032,6 +5974,25 @@ class UGE_ZipLine_Damage_Structure_C : public UGET_DirectPhysicalDamage_C
 	static inline constexpr uint64_t __MDKClassSize = 2664;
 
 public:
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_LandedOn.GA_Athena_HidingProp_LandedOn_C
+/// Size: 0x0030 (0x000B28 - 0x000B58)
+class UGA_Athena_HidingProp_LandedOn_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FScalableFloat)                            HidingEnabled                                               OFFSET(get<T>, {0xB30, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_LandedOn.GA_Athena_HidingProp_LandedOn_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_LandedOn.GA_Athena_HidingProp_LandedOn_C.ExecuteUbergraph_GA_Athena_HidingProp_LandedOn
+	// void ExecuteUbergraph_GA_Athena_HidingProp_LandedOn(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/Environments/Blueprints/SurfaceEffects/GE_SurfaceChange_Ice.GE_SurfaceChange_Ice_C
@@ -6081,8 +6042,6 @@ public:
 	SMember(FScalableFloat)                            MaxZiplineVel                                               OFFSET(get<T>, {0xBC8, 40, 0, 0})
 	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0xBF0, 1, 0, 0})
 	SMember(FScalableFloat)                            MinJumpVertStrength                                         OFFSET(get<T>, {0xBF8, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6092,25 +6051,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/ZipLine/GA_Athena_ZipLine_ReachedEnd.GA_Athena_ZipLine_ReachedEnd_C.ExecuteUbergraph_GA_Athena_ZipLine_ReachedEnd
 	// void ExecuteUbergraph_GA_Athena_ZipLine_ReachedEnd(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_LandedOn.GA_Athena_HidingProp_LandedOn_C
-/// Size: 0x0030 (0x000B28 - 0x000B58)
-class UGA_Athena_HidingProp_LandedOn_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FScalableFloat)                            HidingEnabled                                               OFFSET(get<T>, {0xB30, 40, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_LandedOn.GA_Athena_HidingProp_LandedOn_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_LandedOn.GA_Athena_HidingProp_LandedOn_C.ExecuteUbergraph_GA_Athena_HidingProp_LandedOn
-	// void ExecuteUbergraph_GA_Athena_HidingProp_LandedOn(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/HidingProp_CameraModifier.HidingProp_CameraModifier_C
 /// Size: 0x0008 (0x000048 - 0x000050)
 class UHidingProp_CameraModifier_C : public UCameraModifier
@@ -6120,13 +6062,13 @@ class UHidingProp_CameraModifier_C : public UCameraModifier
 
 public:
 	CMember(AFortPlayerPawn*)                          Pawn                                                        OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/HidingProp_CameraModifier.HidingProp_CameraModifier_C.BlueprintModifyCamera
 	// void BlueprintModifyCamera(float DeltaTime, FVector ViewLocation, FRotator ViewRotation, float FOV, FVector& NewViewLocation, FRotator& NewViewRotation, float& NewFOV); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_Teleporting.GE_Athena_HidingProp_Teleporting_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_HidingProp_Teleporting_C : public UGameplayEffect
@@ -6147,8 +6089,6 @@ class UGAT_Athena_PurpleStuff_C : public UGAT_TriggeredAbility_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6156,6 +6096,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/PurpleStuff/GAT_Athena_PurpleStuff.GAT_Athena_PurpleStuff_C.ExecuteUbergraph_GAT_Athena_PurpleStuff
 	// void ExecuteUbergraph_GAT_Athena_PurpleStuff(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/PurpleStuff/GE_Athena_PurpleStuff_Health.GE_Athena_PurpleStuff_Health_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_PurpleStuff_Health_C : public UGameplayEffect
@@ -6164,6 +6106,27 @@ class UGE_Athena_PurpleStuff_Health_C : public UGameplayEffect
 	static inline constexpr uint64_t __MDKClassSize = 2664;
 
 public:
+};
+
+/// Class /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C
+/// Size: 0x0028 (0x000B28 - 0x000B50)
+class UGA_AthenaInVehicle_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2896;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ExitTag                                                     OFFSET(get<T>, {0xB30, 32, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C.ExecuteUbergraph_GA_AthenaInVehicle
+	// void ExecuteUbergraph_GA_AthenaInVehicle(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/Environments/Blueprints/DudeBro/GE_DudebroDamageWallsLOTS.GE_DudebroDamageWallsLOTS_C
@@ -6207,8 +6170,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(get<T>, {0xB30, 32, 0, 0})
 	SMember(FScalableFloat)                            Row_bDisablePlayerCollision                                 OFFSET(get<T>, {0xB50, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6220,6 +6181,8 @@ public:
 	// void GrapplerFailSafe();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_HidingInProp.GA_Athena_HidingProp_HidingInProp_C.ExecuteUbergraph_GA_Athena_HidingProp_HidingInProp
 	// void ExecuteUbergraph_GA_Athena_HidingProp_HidingInProp(int32_t EntryPoint);                                             // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_HidingInProp.GE_Athena_HidingProp_HidingInProp_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_HidingProp_HidingInProp_C : public UGameplayEffect
@@ -6267,8 +6230,6 @@ public:
 	DMember(int32_t)                                   NumVentsToHitForQuest                                       OFFSET(get<int32_t>, {0xB60, 4, 0, 0})
 	SMember(FGameplayTag)                              Tag_to_Check                                                OFFSET(get<T>, {0xB64, 4, 0, 0})
 	SMember(FGameplayTag)                              VentBlocked                                                 OFFSET(get<T>, {0xB68, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6286,27 +6247,8 @@ public:
 	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Environments/Blueprints/DudeBro/GA_DudeBro_Vent.GA_DudeBro_Vent_C.ExecuteUbergraph_GA_DudeBro_Vent
 	// void ExecuteUbergraph_GA_DudeBro_Vent(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C
-/// Size: 0x0028 (0x000B28 - 0x000B50)
-class UGA_AthenaInVehicle_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2896;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ExitTag                                                     OFFSET(get<T>, {0xB30, 32, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/DrivableVehicles/GA_AthenaInVehicle.GA_AthenaInVehicle_C.ExecuteUbergraph_GA_AthenaInVehicle
-	// void ExecuteUbergraph_GA_AthenaInVehicle(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_TeleportCoolDown.GE_Athena_HidingProp_TeleportCoolDown_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Athena_HidingProp_TeleportCoolDown_C : public UGameplayEffect
@@ -6373,8 +6315,6 @@ public:
 	SMember(FScalableFloat)                            IceLingerDuration                                           OFFSET(get<T>, {0xD78, 40, 0, 0})
 	SMember(FGameplayTagContainer)                     PreviousSurfaceTagContainer                                 OFFSET(get<T>, {0xDA0, 32, 0, 0})
 	CMember(UAsyncAction_StartListeningToStatefulEvent*) GamePhaseUpdatedAsyncTask                                 OFFSET(get<T>, {0xDC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6404,14 +6344,6 @@ public:
 	// void GamePhaseChanged(EAthenaGamePhase GamePhase);                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Environments/Blueprints/SurfaceEffects/GAB_SurfaceChange.GAB_SurfaceChange_C.ExecuteUbergraph_GAB_SurfaceChange
 	// void ExecuteUbergraph_GAB_SurfaceChange(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/Consumables/Grenade/BP_ProjectileTrajectory_Athena.BP_ProjectileTrajectory_Athena_C
-/// Size: 0x0000 (0x000309 - 0x000309)
-class ABP_ProjectileTrajectory_Athena_C : public ABP_ProjectileTrajectory_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 777;
-
-public:
 };
 
 /// Class /Game/Athena/Items/Consumables/ZipLine/GA_Athena_ZipLine_Jump.GA_Athena_ZipLine_Jump_C
@@ -6428,8 +6360,6 @@ public:
 	SMember(FVector)                                   ImpulseVec                                                  OFFSET(get<T>, {0xB60, 24, 0, 0})
 	SMember(FScalableFloat)                            JumpVertStrength                                            OFFSET(get<T>, {0xB78, 40, 0, 0})
 	SMember(FScalableFloat)                            JumpLateralDamper                                           OFFSET(get<T>, {0xBA0, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6439,80 +6369,18 @@ public:
 	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/ZipLine/GA_Athena_ZipLine_Jump.GA_Athena_ZipLine_Jump_C.ExecuteUbergraph_GA_Athena_ZipLine_Jump
 	// void ExecuteUbergraph_GA_Athena_ZipLine_Jump(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
-/// Class /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C
-/// Size: 0x0139 (0x000C90 - 0x000DC9)
-class APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C : public AFortAthenaSplineZipline
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3529;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
-	CMember(UStaticMesh*)                              SplineStaticMesh                                            OFFSET(get<T>, {0xC98, 8, 0, 0})
-	DMember(double)                                    TangentSmoothStrength                                       OFFSET(get<double>, {0xCA0, 8, 0, 0})
-	DMember(bool)                                      AutoSmoothTangents                                          OFFSET(get<bool>, {0xCA8, 1, 0, 0})
-	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardMeshAxis                                             OFFSET(get<T>, {0xCA9, 1, 0, 0})
-	SMember(FVector)                                   MotorOffset                                                 OFFSET(get<T>, {0xCB0, 24, 0, 0})
-	CMember(AActor*)                                   PoleA                                                       OFFSET(get<T>, {0xCC8, 8, 0, 0})
-	CMember(AActor*)                                   PoleB                                                       OFFSET(get<T>, {0xCD0, 8, 0, 0})
-	SMember(FVector)                                   PoleASocketLocation                                         OFFSET(get<T>, {0xCD8, 24, 0, 0})
-	SMember(FVector)                                   PoleBSocketLocation                                         OFFSET(get<T>, {0xCF0, 24, 0, 0})
-	DMember(int32_t)                                   LowerPointID                                                OFFSET(get<int32_t>, {0xD08, 4, 0, 0})
-	DMember(int32_t)                                   HigherPointID                                               OFFSET(get<int32_t>, {0xD0C, 4, 0, 0})
-	SMember(FVector)                                   HigherEndLocation                                           OFFSET(get<T>, {0xD10, 24, 0, 0})
-	SMember(FVector)                                   LowerEndLocation                                            OFFSET(get<T>, {0xD28, 24, 0, 0})
-	DMember(double)                                    AutoLinearFactorLow                                         OFFSET(get<double>, {0xD40, 8, 0, 0})
-	DMember(double)                                    AutoLinearFactorHigh                                        OFFSET(get<double>, {0xD48, 8, 0, 0})
-	DMember(double)                                    AutoSplineTangentLengthCoef                                 OFFSET(get<double>, {0xD50, 8, 0, 0})
-	DMember(double)                                    AutoSplineTangentHorizCoef                                  OFFSET(get<double>, {0xD58, 8, 0, 0})
-	DMember(double)                                    AutoSplineTangentVertCoef                                   OFFSET(get<double>, {0xD60, 8, 0, 0})
-	DMember(bool)                                      Auto_Set_Spline_Ends                                        OFFSET(get<bool>, {0xD68, 1, 0, 0})
-	DMember(bool)                                      Auto_Set_Spline_Mids                                        OFFSET(get<bool>, {0xD69, 1, 0, 0})
-	CMember(TArray<UMaterialInstanceDynamic*>)         SplineMaterials                                             OFFSET(get<T>, {0xD70, 16, 0, 0})
-	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(get<T>, {0xD80, 32, 0, 0})
-	DMember(double)                                    TilingDivisor                                               OFFSET(get<double>, {0xDA0, 8, 0, 0})
-	CMember(TArray<USplineMeshComponent*>)             SplineMeshComponents                                        OFFSET(get<T>, {0xDA8, 16, 0, 0})
-	CMember(TArray<AFortPlayerPawn*>)                  PlayerPawnArray                                             OFFSET(get<T>, {0xDB8, 16, 0, 0})
-	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0xDC8, 1, 0, 0})
 };
 
+/// Class /Game/Athena/Items/Consumables/Grenade/BP_ProjectileTrajectory_Athena.BP_ProjectileTrajectory_Athena_C
+/// Size: 0x0000 (0x000309 - 0x000309)
+class ABP_ProjectileTrajectory_Athena_C : public ABP_ProjectileTrajectory_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 777;
 
+public:
+};
 
-	/// Functions
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.RemovePlayerFromZipliningArray
-	// void RemovePlayerFromZipliningArray(AFortPlayerPawn*& Item);                                                             // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.AddPlayerToZipliningArray
-	// void AddPlayerToZipliningArray(AFortPlayerPawn*& NewItem);                                                               // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.SetCableTilingBySplineLength
-	// void SetCableTilingBySplineLength(UMeshComponent* Target);                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.BlueprintCanInteract
-	// bool BlueprintCanInteract(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted, TEnumAsByte<TInteractionType> InteractionType); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.GetAutoHorizAndVertVectors
-	// void GetAutoHorizAndVertVectors(FVector highVector, FVector LowVector, FVector& VertVec, FVector& HorizVec);             // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.Calc Auto Location At Alpha
-	// void Calc Auto Location At Alpha(double InAlpha, bool DrawDebug, FVector& PointLocation);                                // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.SetSplinePositionAndTangent
-	// void SetSplinePositionAndTangent(bool SetPosition, bool SetTangent, int32_t ID);                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.CalculatePositionOfPoles
-	// void CalculatePositionOfPoles();                                                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.AutoSmoothTanget
-	// void AutoSmoothTanget(FVector Tangent, FVector PointA, FVector PointB, FVector& SmoothedTangent);                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.AddSplineMeshSegment
-	// void AddSplineMeshSegment(USplineMeshComponent*& SplineMeshSegment);                                                     // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.WaitThenSetDynamicSpline
-	// void WaitThenSetDynamicSpline();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.OnDeathServer
-	// void OnDeathServer(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AController* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.OnZipliningStarted
-	// void OnZipliningStarted(AFortPlayerPawn* InteractingPawn, UPrimitiveComponent* InteractComponent);                       // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.OnZipliningStopped
-	// void OnZipliningStopped(AFortPlayerPawn* InteractingPawn, UPrimitiveComponent* InteractComponent, float ZiplineUsageDuration); // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.ExecuteUbergraph_PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline
-	// void ExecuteUbergraph_PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline(int32_t EntryPoint);                                    // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/Consumables/ZipLine/SplineZipline/BP_Athena_Environmental_ZipLine_Spline.BP_Athena_Environmental_ZipLine_Spline_C
 /// Size: 0x0128 (0x000C90 - 0x000DB8)
 class ABP_Athena_Environmental_ZipLine_Spline_C : public AFortAthenaSplineZipline
@@ -6547,8 +6415,6 @@ public:
 	CMember(TArray<UMaterialInstanceDynamic*>)         SplineMaterials                                             OFFSET(get<T>, {0xD80, 16, 0, 0})
 	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(get<T>, {0xD90, 32, 0, 0})
 	DMember(double)                                    TilingDivisor                                               OFFSET(get<double>, {0xDB0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6588,6 +6454,82 @@ public:
 	// void OnZipliningStopped(AFortPlayerPawn* InteractingPawn, UPrimitiveComponent* InteractComponent, float ZiplineUsageDuration); // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/ZipLine/SplineZipline/BP_Athena_Environmental_ZipLine_Spline.BP_Athena_Environmental_ZipLine_Spline_C.ExecuteUbergraph_BP_Athena_Environmental_ZipLine_Spline
 	// void ExecuteUbergraph_BP_Athena_Environmental_ZipLine_Spline(int32_t EntryPoint);                                        // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C
+/// Size: 0x0139 (0x000C90 - 0x000DC9)
+class APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C : public AFortAthenaSplineZipline
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3529;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC90, 8, 0, 0})
+	CMember(UStaticMesh*)                              SplineStaticMesh                                            OFFSET(get<T>, {0xC98, 8, 0, 0})
+	DMember(double)                                    TangentSmoothStrength                                       OFFSET(get<double>, {0xCA0, 8, 0, 0})
+	DMember(bool)                                      AutoSmoothTangents                                          OFFSET(get<bool>, {0xCA8, 1, 0, 0})
+	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardMeshAxis                                             OFFSET(get<T>, {0xCA9, 1, 0, 0})
+	SMember(FVector)                                   MotorOffset                                                 OFFSET(get<T>, {0xCB0, 24, 0, 0})
+	CMember(AActor*)                                   PoleA                                                       OFFSET(get<T>, {0xCC8, 8, 0, 0})
+	CMember(AActor*)                                   PoleB                                                       OFFSET(get<T>, {0xCD0, 8, 0, 0})
+	SMember(FVector)                                   PoleASocketLocation                                         OFFSET(get<T>, {0xCD8, 24, 0, 0})
+	SMember(FVector)                                   PoleBSocketLocation                                         OFFSET(get<T>, {0xCF0, 24, 0, 0})
+	DMember(int32_t)                                   LowerPointID                                                OFFSET(get<int32_t>, {0xD08, 4, 0, 0})
+	DMember(int32_t)                                   HigherPointID                                               OFFSET(get<int32_t>, {0xD0C, 4, 0, 0})
+	SMember(FVector)                                   HigherEndLocation                                           OFFSET(get<T>, {0xD10, 24, 0, 0})
+	SMember(FVector)                                   LowerEndLocation                                            OFFSET(get<T>, {0xD28, 24, 0, 0})
+	DMember(double)                                    AutoLinearFactorLow                                         OFFSET(get<double>, {0xD40, 8, 0, 0})
+	DMember(double)                                    AutoLinearFactorHigh                                        OFFSET(get<double>, {0xD48, 8, 0, 0})
+	DMember(double)                                    AutoSplineTangentLengthCoef                                 OFFSET(get<double>, {0xD50, 8, 0, 0})
+	DMember(double)                                    AutoSplineTangentHorizCoef                                  OFFSET(get<double>, {0xD58, 8, 0, 0})
+	DMember(double)                                    AutoSplineTangentVertCoef                                   OFFSET(get<double>, {0xD60, 8, 0, 0})
+	DMember(bool)                                      Auto_Set_Spline_Ends                                        OFFSET(get<bool>, {0xD68, 1, 0, 0})
+	DMember(bool)                                      Auto_Set_Spline_Mids                                        OFFSET(get<bool>, {0xD69, 1, 0, 0})
+	CMember(TArray<UMaterialInstanceDynamic*>)         SplineMaterials                                             OFFSET(get<T>, {0xD70, 16, 0, 0})
+	SMember(FGameplayTagContainer)                     BlockInteractTags                                           OFFSET(get<T>, {0xD80, 32, 0, 0})
+	DMember(double)                                    TilingDivisor                                               OFFSET(get<double>, {0xDA0, 8, 0, 0})
+	CMember(TArray<USplineMeshComponent*>)             SplineMeshComponents                                        OFFSET(get<T>, {0xDA8, 16, 0, 0})
+	CMember(TArray<AFortPlayerPawn*>)                  PlayerPawnArray                                             OFFSET(get<T>, {0xDB8, 16, 0, 0})
+	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0xDC8, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.RemovePlayerFromZipliningArray
+	// void RemovePlayerFromZipliningArray(AFortPlayerPawn*& Item);                                                             // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.AddPlayerToZipliningArray
+	// void AddPlayerToZipliningArray(AFortPlayerPawn*& NewItem);                                                               // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.SetCableTilingBySplineLength
+	// void SetCableTilingBySplineLength(UMeshComponent* Target);                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.BlueprintCanInteract
+	// bool BlueprintCanInteract(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted, TEnumAsByte<TInteractionType> InteractionType); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.GetAutoHorizAndVertVectors
+	// void GetAutoHorizAndVertVectors(FVector highVector, FVector LowVector, FVector& VertVec, FVector& HorizVec);             // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.Calc Auto Location At Alpha
+	// void Calc Auto Location At Alpha(double InAlpha, bool DrawDebug, FVector& PointLocation);                                // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.SetSplinePositionAndTangent
+	// void SetSplinePositionAndTangent(bool SetPosition, bool SetTangent, int32_t ID);                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.CalculatePositionOfPoles
+	// void CalculatePositionOfPoles();                                                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.AutoSmoothTanget
+	// void AutoSmoothTanget(FVector Tangent, FVector PointA, FVector PointB, FVector& SmoothedTangent);                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.AddSplineMeshSegment
+	// void AddSplineMeshSegment(USplineMeshComponent*& SplineMeshSegment);                                                     // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.WaitThenSetDynamicSpline
+	// void WaitThenSetDynamicSpline();                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.OnDeathServer
+	// void OnDeathServer(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AController* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.OnZipliningStarted
+	// void OnZipliningStarted(AFortPlayerPawn* InteractingPawn, UPrimitiveComponent* InteractComponent);                       // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.OnZipliningStopped
+	// void OnZipliningStopped(AFortPlayerPawn* InteractingPawn, UPrimitiveComponent* InteractComponent, float ZiplineUsageDuration); // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/ZipLine/PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline.PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C.ExecuteUbergraph_PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline
+	// void ExecuteUbergraph_PROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline(int32_t EntryPoint);                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/Parents/GA_Athena_Consumable_Throw_Parent.GA_Athena_Consumable_Throw_Parent_C
 /// Size: 0x0448 (0x000B88 - 0x000FD0)
 class UGA_Athena_Consumable_Throw_Parent_C : public UFortGameplayAbility_ThrowTrajectory
@@ -6650,8 +6592,6 @@ public:
 	DMember(float)                                     Trajectory_Initial_Distance                                 OFFSET(get<float>, {0xFC0, 4, 0, 0})
 	DMember(bool)                                      Projectile_Trajectory_Data_Initialized                      OFFSET(get<bool>, {0xFC4, 1, 0, 0})
 	DMember(double)                                    Projectile_Gravity_Scale_to_Use                             OFFSET(get<double>, {0xFC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6757,6 +6697,8 @@ public:
 	// void ExecuteUbergraph_GA_Athena_Consumable_Throw_Parent(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Athena/Items/Consumables/Parents/GA_Athena_Consumable_Throw_Parent.GA_Athena_Consumable_Throw_Parent_C.OnProjectileSpawn__DelegateSignature
 	// void OnProjectileSpawn__DelegateSignature();                                                                             // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/Playlists/DefaultModifiers/GE_DefaultTurboBuildSettings.GE_DefaultTurboBuildSettings_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_DefaultTurboBuildSettings_C : public UGameplayEffect
@@ -6795,8 +6737,6 @@ public:
 	SMember(FScalableFloat)                            BreakStructuresOnTetherEnabled                              OFFSET(get<T>, {0xB60, 40, 0, 0})
 	SMember(FScalableFloat)                            BreakStructuresOnTetherRange                                OFFSET(get<T>, {0xB88, 40, 0, 0})
 	SMember(FGameplayTag)                              Event_FishingForceEnd                                       OFFSET(get<T>, {0xBB0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6812,6 +6752,8 @@ public:
 	// void BreakBuildingsAtPlayerInDirectionOfTether();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/FloppingRabbit/GA_Athena_Tethered.GA_Athena_Tethered_C.ExecuteUbergraph_GA_Athena_Tethered
 	// void ExecuteUbergraph_GA_Athena_Tethered(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/HUD/Team/RebootCardIndicator.RebootCardIndicator_C
 /// Size: 0x0030 (0x000658 - 0x000688)
 class URebootCardIndicator_C : public UAthenaRebootCardIndicator
@@ -6826,8 +6768,6 @@ public:
 	CMember(UImage*)                                   Image_RebootIcon                                            OFFSET(get<T>, {0x670, 8, 0, 0})
 	CMember(USpacer*)                                  IndicatorSpacer                                             OFFSET(get<T>, {0x678, 8, 0, 0})
 	CMember(UHorizontalBox*)                           RebootCountdownContainer                                    OFFSET(get<T>, {0x680, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6837,6 +6777,8 @@ public:
 	// void HandleDisplayForSelf(bool bSelf);                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/HUD/Team/RebootCardIndicator.RebootCardIndicator_C.ExecuteUbergraph_RebootCardIndicator
 	// void ExecuteUbergraph_RebootCardIndicator(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Items/ForagedItems/Rift/GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C
 /// Size: 0x00F8 (0x000B28 - 0x000C20)
 class UGA_Rift_Athena_Skydive_C : public UFortGameplayAbility
@@ -6862,8 +6804,6 @@ public:
 	SMember(FTimerHandle)                              SafetyTimer                                                 OFFSET(get<T>, {0xBE0, 8, 0, 0})
 	SMember(FVector)                                   NewVar                                                      OFFSET(get<T>, {0xBE8, 24, 0, 0})
 	SMember(FGameplayTagContainer)                     UnblockTagsIfPassenger                                      OFFSET(get<T>, {0xC00, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6895,6 +6835,8 @@ public:
 	// void HandleForceEnd();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/ForagedItems/Rift/GA_Rift_Athena_Skydive.GA_Rift_Athena_Skydive_C.ExecuteUbergraph_GA_Rift_Athena_Skydive
 	// void ExecuteUbergraph_GA_Rift_Athena_Skydive(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/HUD/AthenaEliminationIndicator.AthenaEliminationIndicator_C
 /// Size: 0x0028 (0x000630 - 0x000658)
 class UAthenaEliminationIndicator_C : public UAthenaEliminationIndicator
@@ -6908,8 +6850,6 @@ public:
 	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x640, 8, 0, 0})
 	CMember(UImage*)                                   Arrow                                                       OFFSET(get<T>, {0x648, 8, 0, 0})
 	CMember(UImage*)                                   Image_Diamondpulse                                          OFFSET(get<T>, {0x650, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -6917,6 +6857,35 @@ public:
 	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/Athena/HUD/AthenaEliminationIndicator.AthenaEliminationIndicator_C.ExecuteUbergraph_AthenaEliminationIndicator
 	// void ExecuteUbergraph_AthenaEliminationIndicator(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C
+/// Size: 0x0030 (0x000B28 - 0x000B58)
+class UGA_Athena_Slurp_OLD_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
+	DMember(int32_t)                                   IncreCheck                                                  OFFSET(get<int32_t>, {0xB38, 4, 0, 0})
+	DMember(double)                                    MaxTicks                                                    OFFSET(get<double>, {0xB40, 8, 0, 0})
+	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(get<T>, {0xB48, 8, 0, 0})
+	DMember(double)                                    TickRate                                                    OFFSET(get<double>, {0xB50, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ApplyHealthOrShield
+	// void ApplyHealthOrShield();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ExecuteUbergraph_GA_Athena_Slurp_OLD
+	// void ExecuteUbergraph_GA_Athena_Slurp_OLD(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/Grenade/B_Prj_Athena_Grenade_Base.B_Prj_Athena_Grenade_Base_C
 /// Size: 0x0185 (0x000A88 - 0x000C0D)
 class AB_Prj_Athena_Grenade_Base_C : public AFortProjectileBase
@@ -6962,8 +6931,6 @@ public:
 	CMember(UFXSystemAsset*)                           FX_Physical_Surface                                         OFFSET(get<T>, {0xC00, 8, 0, 0})
 	DMember(int32_t)                                   PhysicalSurfaceID                                           OFFSET(get<int32_t>, {0xC08, 4, 0, 0})
 	DMember(bool)                                      bShowFuseSoundIndicator                                     OFFSET(get<bool>, {0xC0C, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7007,6 +6974,8 @@ public:
 	// void AysncLoad();                                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/Grenade/B_Prj_Athena_Grenade_Base.B_Prj_Athena_Grenade_Base_C.ExecuteUbergraph_B_Prj_Athena_Grenade_Base
 	// void ExecuteUbergraph_B_Prj_Athena_Grenade_Base(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/Grenade/B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C
 /// Size: 0x003B (0x000C0D - 0x000C48)
 class AB_Prj_Athena_FragGrenade_C : public AB_Prj_Athena_Grenade_Base_C
@@ -7023,8 +6992,6 @@ public:
 	CMember(UTimelineComponent*)                       PreExploWarning                                             OFFSET(get<T>, {0xC30, 8, 0, 0})
 	SMember(FGameplayTag)                              FeedbackCue                                                 OFFSET(get<T>, {0xC38, 4, 0, 0})
 	CMember(UNiagaraSystem*)                           Niagara_Bounse                                              OFFSET(get<T>, {0xC40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7048,146 +7015,50 @@ public:
 	// void BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_3_WaterInteractionOnExitWater__DelegateSignature(AFortWaterBodyActor* WaterBody, UFortWaterInteractionComponent* WaterInteractionComponent, bool bIsLastBody); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Items/Consumables/Grenade/B_Prj_Athena_FragGrenade.B_Prj_Athena_FragGrenade_C.ExecuteUbergraph_B_Prj_Athena_FragGrenade
 	// void ExecuteUbergraph_B_Prj_Athena_FragGrenade(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C
-/// Size: 0x0030 (0x000B28 - 0x000B58)
-class UGA_Athena_Slurp_OLD_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	DMember(int32_t)                                   IncreCheck                                                  OFFSET(get<int32_t>, {0xB38, 4, 0, 0})
-	DMember(double)                                    MaxTicks                                                    OFFSET(get<double>, {0xB40, 8, 0, 0})
-	SMember(FTimerHandle)                              TimerHandle                                                 OFFSET(get<T>, {0xB48, 8, 0, 0})
-	DMember(double)                                    TickRate                                                    OFFSET(get<double>, {0xB50, 8, 0, 0})
 };
 
+/// Class /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C
+/// Size: 0x0028 (0x000FD0 - 0x000FF8)
+class UGA_Athena_Grenade_Rethrow_C : public UGA_Athena_Consumable_Throw_Parent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4088;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xFD0, 8, 0, 0})
+	CMember(AFortProjectileBase*)                      Projectile                                                  OFFSET(get<T>, {0xFD8, 8, 0, 0})
+	DMember(double)                                    TossDelay                                                   OFFSET(get<double>, {0xFE0, 8, 0, 0})
+	SMember(FName)                                     HolsterId                                                   OFFSET(get<T>, {0xFE8, 4, 0, 0})
+	DMember(double)                                    PostThrowEndDelay                                           OFFSET(get<double>, {0xFF0, 8, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_ActivateAbility
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.DetachProjectile
+	// void DetachProjectile();                                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.AttachProjectile
+	// void AttachProjectile();                                                                                                 // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.Completed_3B7299CC49B6C5C075996A9C8DDF315F
+	// void Completed_3B7299CC49B6C5C075996A9C8DDF315F(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.Cancelled_3B7299CC49B6C5C075996A9C8DDF315F
+	// void Cancelled_3B7299CC49B6C5C075996A9C8DDF315F(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.Triggered_3B7299CC49B6C5C075996A9C8DDF315F
+	// void Triggered_3B7299CC49B6C5C075996A9C8DDF315F(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.OnFinish_B295E6694DBD8B2B2478A38EA60F5624
+	// void OnFinish_B295E6694DBD8B2B2478A38EA60F5624();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.K2_ActivateAbility
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.K2_OnEndAbility
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.K2_OnEndAbility
 	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ApplyHealthOrShield
-	// void ApplyHealthOrShield();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/PurpleStuff/GA_Athena_Slurp_OLD.GA_Athena_Slurp_OLD_C.ExecuteUbergraph_GA_Athena_Slurp_OLD
-	// void ExecuteUbergraph_GA_Athena_Slurp_OLD(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C
-/// Size: 0x00F3 (0x000A80 - 0x000B73)
-class ABGA_Athena_SCMachine_Pickup_C : public ABuildingGameplayActorSpawnChip
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2931;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA80, 8, 0, 0})
-	CMember(UCapsuleComponent*)                        OverlapCollision                                            OFFSET(get<T>, {0xA88, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     ParentMesh                                                  OFFSET(get<T>, {0xA90, 8, 0, 0})
-	CMember(UFortLinkToActorComponent*)                FortLinkToActor                                             OFFSET(get<T>, {0xA98, 8, 0, 0})
-	CMember(UAudioComponent*)                          SC_Machine_Memory_Card_Loop_Cue                             OFFSET(get<T>, {0xAA0, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 SpawnInEffect                                               OFFSET(get<T>, {0xAA8, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     BackgroundGlow                                              OFFSET(get<T>, {0xAB0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     Card                                                        OFFSET(get<T>, {0xAB8, 8, 0, 0})
-	DMember(int32_t)                                   UnHide                                                      OFFSET(get<int32_t>, {0xAC0, 4, 0, 0})
-	DMember(double)                                    DelayBeforeUnhide                                           OFFSET(get<double>, {0xAC8, 8, 0, 0})
-	DMember(char)                                      OwnerTeam                                                   OFFSET(get<char>, {0xAD0, 1, 0, 0})
-	SMember(FTimerHandle)                              Timer_DestroyPickup                                         OFFSET(get<T>, {0xAD8, 8, 0, 0})
-	SMember(FScalableFloat)                            Row_PickupLife                                              OFFSET(get<T>, {0xAE0, 40, 0, 0})
-	SMember(FText)                                     InteractText                                                OFFSET(get<T>, {0xB08, 24, 0, 0})
-	CMember(UParticleSystem*)                          SpawnOutParticle                                            OFFSET(get<T>, {0xB20, 8, 0, 0})
-	CMember(USoundBase*)                               PickupSound                                                 OFFSET(get<T>, {0xB28, 8, 0, 0})
-	DMember(bool)                                      SpawnSoundPlayed                                            OFFSET(get<bool>, {0xB30, 1, 0, 0})
-	CMember(USoundBase*)                               SpawnInSound                                                OFFSET(get<T>, {0xB38, 8, 0, 0})
-	DMember(bool)                                      IsPendingKill                                               OFFSET(get<bool>, {0xB40, 1, 0, 0})
-	DMember(bool)                                      HideAndKill                                                 OFFSET(get<bool>, {0xB41, 1, 0, 0})
-	SMember(FScalableFloat)                            Row_PickUpInteractTime                                      OFFSET(get<T>, {0xB48, 40, 0, 0})
-	DMember(bool)                                      IsDelayingDeath                                             OFFSET(get<bool>, {0xB70, 1, 0, 0})
-	DMember(bool)                                      OwnerDiedInVortex                                           OFFSET(get<bool>, {0xB71, 1, 0, 0})
-	DMember(bool)                                      CollectedPickup                                             OFFSET(get<bool>, {0xB72, 1, 0, 0})
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.ThrowProjectile
+	// void ThrowProjectile();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.RethrowProjectile
+	// void RethrowProjectile();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.AttemptSpawnThrownProjectile
+	// void AttemptSpawnThrownProjectile();                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.ExecuteUbergraph_GA_Athena_Grenade_Rethrow
+	// void ExecuteUbergraph_GA_Athena_Grenade_Rethrow(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BuildDataRegistryResolverScope
-	// bool BuildDataRegistryResolverScope(TArray<FName>& InOutResolverScopes, int32_t& InOutPriority);                         // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.GetCacheContextOverride
-	// UObject* GetCacheContextOverride();                                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_CollectedPickup
-	// void OnRep_CollectedPickup();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintGetInteractionTime
-	// bool BlueprintGetInteractionTime(AFortPawn* InteractingPawn, float& OutInteractionTime, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.CanHandleCleanupEvents
-	// bool CanHandleCleanupEvents();                                                                                           // [0x1ebf994] Event|Protected|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_HideAndKill
-	// void OnRep_HideAndKill();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ShouldDie
-	// bool ShouldDie(float Damage, AController* EventInstigator, AActor* DamageCauser);                                        // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintGetInteractionString
-	// FText BlueprintGetInteractionString(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintCanInteract
-	// bool BlueprintCanInteract(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted, TEnumAsByte<TInteractionType> InteractionType); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_UnHide
-	// void OnRep_UnHide();                                                                                                     // [0x1ebf994] HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DestroyPickup
-	// void DestroyPickup();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintOnInteract
-	// void BlueprintOnInteract(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.CollectPickup
-	// void CollectPickup();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnDestroyPickup
-	// void OnDestroyPickup();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.SpawnSound
-	// void SpawnSound();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnDeathServer
-	// void OnDeathServer(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AController* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.HideAndKillPickup
-	// void HideAndKillPickup();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DelayDestroyPickup
-	// void DelayDestroyPickup();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-	// void BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1ebf994] HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BndEvt__BGA_Athena_SCMachine_Pickup_FortLinkToActor_K2Node_ComponentBoundEvent_4_OnLinkedActorDestroyed__DelegateSignature
-	// void BndEvt__BGA_Athena_SCMachine_Pickup_FortLinkToActor_K2Node_ComponentBoundEvent_4_OnLinkedActorDestroyed__DelegateSignature(AActor* DamageCauser); // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ExecuteUbergraph_BGA_Athena_SCMachine_Pickup
-	// void ExecuteUbergraph_BGA_Athena_SCMachine_Pickup(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C
-/// Size: 0x0058 (0x000B28 - 0x000B80)
-class UGA_Athena_SCMachine_Passive_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2944;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawnAthena*)                    PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	SMember(FVector)                                   SpawnZOffset                                                OFFSET(get<T>, {0xB38, 24, 0, 0})
-	SMember(FGameplayTag)                              BlockChipSpawnTag                                           OFFSET(get<T>, {0xB50, 4, 0, 0})
-	SMember(FScalableFloat)                            DropRebootCards                                             OFFSET(get<T>, {0xB58, 40, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.CheckPlayerChipSpawnEnabled
-	// void CheckPlayerChipSpawnEnabled(bool& IsChipSpawnEnabled);                                                              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Check Resurrection Active
-	// void Check Resurrection Active(bool& bEnabled);                                                                          // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.SaveOutPlayer
-	// void SaveOutPlayer();                                                                                                    // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Spawn
-	// void Spawn();                                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.K2_ActivateAbilityFromEvent
-	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.ExecuteUbergraph_GA_Athena_SCMachine_Passive
-	// void ExecuteUbergraph_GA_Athena_SCMachine_Passive(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/Consumables/ZipLine/GA_Athena_ZipLine_SmashParent.GA_Athena_ZipLine_SmashParent_C
 /// Size: 0x00B0 (0x000B40 - 0x000BF0)
 class UGA_Athena_ZipLine_SmashParent_C : public UFortGameplayAbility_ZiplineSmashBase
@@ -7215,8 +7086,6 @@ public:
 	SMember(FGameplayTag)                              ZiplineExitTag                                              OFFSET(get<T>, {0xBC8, 4, 0, 0})
 	SMember(FVector)                                   Smash_Box_Extent                                            OFFSET(get<T>, {0xBD0, 24, 0, 0})
 	DMember(double)                                    SmashBoxPosAdditionalZ                                      OFFSET(get<double>, {0xBE8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7302,6 +7171,8 @@ public:
 	// void ZiplinePostBegin_Event();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/ZipLine/GA_Athena_ZipLine_SmashParent.GA_Athena_ZipLine_SmashParent_C.ExecuteUbergraph_GA_Athena_ZipLine_SmashParent
 	// void ExecuteUbergraph_GA_Athena_ZipLine_SmashParent(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/ZipLine/GA_Athena_ZipLine_Smash.GA_Athena_ZipLine_Smash_C
 /// Size: 0x0000 (0x000BF0 - 0x000BF0)
 class UGA_Athena_ZipLine_Smash_C : public UGA_Athena_ZipLine_SmashParent_C
@@ -7351,8 +7222,6 @@ public:
 	DMember(double)                                    Random_Time_Scale_Percent                                   OFFSET(get<double>, {0xCB0, 8, 0, 0})
 	DMember(double)                                    CodeControlled_CurrentPlayLength                            OFFSET(get<double>, {0xCB8, 8, 0, 0})
 	DMember(double)                                    Snow_Coverage_Amount                                        OFFSET(get<double>, {0xCC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7372,62 +7241,224 @@ public:
 	// void OnSetSearched();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/BuildingActors/Props/Building/ActorBlueprints/Containers/Athena_Prop_ParentBuildingContainerBlueprint.Athena_Prop_ParentBuildingContainerBlueprint_C.ExecuteUbergraph_Athena_Prop_ParentBuildingContainerBlueprint
 	// void ExecuteUbergraph_Athena_Prop_ParentBuildingContainerBlueprint(int32_t EntryPoint);                                  // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C
-/// Size: 0x0098 (0x000B28 - 0x000BC0)
-class UGA_Athena_HidingProp_Teleport_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3008;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0xB30, 16, 0, 0})
-	CMember(AB_HidingProp_C*)                          HidingProp                                                  OFFSET(get<T>, {0xB40, 8, 0, 0})
-	CMember(AB_HidingProp_C*)                          TargetTeleporter                                            OFFSET(get<T>, {0xB48, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     T_HudElementToHide                                          OFFSET(get<T>, {0xB50, 32, 0, 0})
-	SMember(FGameplayTag)                              TargetPropTeleportingCue                                    OFFSET(get<T>, {0xB70, 4, 0, 0})
-	SMember(FTimerHandle)                              WobbleHandle                                                OFFSET(get<T>, {0xB78, 8, 0, 0})
-	SMember(FGameplayTag)                              WobbleCue                                                   OFFSET(get<T>, {0xB80, 4, 0, 0})
-	DMember(double)                                    ServerWorldTime                                             OFFSET(get<double>, {0xB88, 8, 0, 0})
-	SMember(FGameplayTag)                              EnterCue                                                    OFFSET(get<T>, {0xB90, 4, 0, 0})
-	SMember(FGameplayTag)                              HidingInPropTag                                             OFFSET(get<T>, {0xB94, 4, 0, 0})
-	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(get<T>, {0xB98, 32, 0, 0})
-	SMember(FActiveGameplayEffectHandle)               TeleportingGEOnPlayer                                       OFFSET(get<T>, {0xBB8, 8, 0, 0})
 };
 
+/// Class /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C
+/// Size: 0x00F3 (0x000A80 - 0x000B73)
+class ABGA_Athena_SCMachine_Pickup_C : public ABuildingGameplayActorSpawnChip
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2931;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA80, 8, 0, 0})
+	CMember(UCapsuleComponent*)                        OverlapCollision                                            OFFSET(get<T>, {0xA88, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     ParentMesh                                                  OFFSET(get<T>, {0xA90, 8, 0, 0})
+	CMember(UFortLinkToActorComponent*)                FortLinkToActor                                             OFFSET(get<T>, {0xA98, 8, 0, 0})
+	CMember(UAudioComponent*)                          SC_Machine_Memory_Card_Loop_Cue                             OFFSET(get<T>, {0xAA0, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 SpawnInEffect                                               OFFSET(get<T>, {0xAA8, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     BackgroundGlow                                              OFFSET(get<T>, {0xAB0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     Card                                                        OFFSET(get<T>, {0xAB8, 8, 0, 0})
+	DMember(int32_t)                                   UnHide                                                      OFFSET(get<int32_t>, {0xAC0, 4, 0, 0})
+	DMember(double)                                    DelayBeforeUnhide                                           OFFSET(get<double>, {0xAC8, 8, 0, 0})
+	DMember(char)                                      OwnerTeam                                                   OFFSET(get<char>, {0xAD0, 1, 0, 0})
+	SMember(FTimerHandle)                              Timer_DestroyPickup                                         OFFSET(get<T>, {0xAD8, 8, 0, 0})
+	SMember(FScalableFloat)                            Row_PickupLife                                              OFFSET(get<T>, {0xAE0, 40, 0, 0})
+	SMember(FText)                                     InteractText                                                OFFSET(get<T>, {0xB08, 24, 0, 0})
+	CMember(UParticleSystem*)                          SpawnOutParticle                                            OFFSET(get<T>, {0xB20, 8, 0, 0})
+	CMember(USoundBase*)                               PickupSound                                                 OFFSET(get<T>, {0xB28, 8, 0, 0})
+	DMember(bool)                                      SpawnSoundPlayed                                            OFFSET(get<bool>, {0xB30, 1, 0, 0})
+	CMember(USoundBase*)                               SpawnInSound                                                OFFSET(get<T>, {0xB38, 8, 0, 0})
+	DMember(bool)                                      IsPendingKill                                               OFFSET(get<bool>, {0xB40, 1, 0, 0})
+	DMember(bool)                                      HideAndKill                                                 OFFSET(get<bool>, {0xB41, 1, 0, 0})
+	SMember(FScalableFloat)                            Row_PickUpInteractTime                                      OFFSET(get<T>, {0xB48, 40, 0, 0})
+	DMember(bool)                                      IsDelayingDeath                                             OFFSET(get<bool>, {0xB70, 1, 0, 0})
+	DMember(bool)                                      OwnerDiedInVortex                                           OFFSET(get<bool>, {0xB71, 1, 0, 0})
+	DMember(bool)                                      CollectedPickup                                             OFFSET(get<bool>, {0xB72, 1, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_FD079A2341CDD832DF47CD975DFC3BB3
-	// void Added_FD079A2341CDD832DF47CD975DFC3BB3();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnComplete_EE0FA6804073079396C44591432259C0
-	// void OnComplete_EE0FA6804073079396C44591432259C0();                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_67FE14EA4DF2D8C2DB494AA89443681B
-	// void Added_67FE14EA4DF2D8C2DB494AA89443681B();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_CB8220A04B74338E758C11B7371D4630
-	// void Added_CB8220A04B74338E758C11B7371D4630();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_F96D6DD549939CA425D2D1BE1AD32090
-	// void Added_F96D6DD549939CA425D2D1BE1AD32090();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.EventReceived_ABAD14334D754F46E9037882BF0256B6
-	// void EventReceived_ABAD14334D754F46E9037882BF0256B6(FGameplayEventData Payload);                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.QuestUpdate
-	// void QuestUpdate(AFortPawn* Pawn);                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Wobble
-	// void Wobble();                                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnPawnDied
-	// void OnPawnDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.GrapplerFailSafe
-	// void GrapplerFailSafe(AFortPawn* FortPawn);                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.FailedToActivatePassiveAbility
-	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.ExecuteUbergraph_GA_Athena_HidingProp_Teleport
-	// void ExecuteUbergraph_GA_Athena_HidingProp_Teleport(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.NewEventDispatcher_0__DelegateSignature
-	// void NewEventDispatcher_0__DelegateSignature();                                                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BuildDataRegistryResolverScope
+	// bool BuildDataRegistryResolverScope(TArray<FName>& InOutResolverScopes, int32_t& InOutPriority);                         // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.GetCacheContextOverride
+	// UObject* GetCacheContextOverride();                                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_CollectedPickup
+	// void OnRep_CollectedPickup();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintGetInteractionTime
+	// bool BlueprintGetInteractionTime(AFortPawn* InteractingPawn, float& OutInteractionTime, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.CanHandleCleanupEvents
+	// bool CanHandleCleanupEvents();                                                                                           // [0x1ebf994] Event|Protected|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_HideAndKill
+	// void OnRep_HideAndKill();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ShouldDie
+	// bool ShouldDie(float Damage, AController* EventInstigator, AActor* DamageCauser);                                        // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintGetInteractionString
+	// FText BlueprintGetInteractionString(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintCanInteract
+	// bool BlueprintCanInteract(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted, TEnumAsByte<TInteractionType> InteractionType); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnRep_UnHide
+	// void OnRep_UnHide();                                                                                                     // [0x1ebf994] HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DestroyPickup
+	// void DestroyPickup();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BlueprintOnInteract
+	// void BlueprintOnInteract(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.CollectPickup
+	// void CollectPickup();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnDestroyPickup
+	// void OnDestroyPickup();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.SpawnSound
+	// void SpawnSound();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.OnDeathServer
+	// void OnDeathServer(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AController* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintAuthorityOnly|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.HideAndKillPickup
+	// void HideAndKillPickup();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.DelayDestroyPickup
+	// void DelayDestroyPickup();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+	// void BndEvt__Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x1ebf994] HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.BndEvt__BGA_Athena_SCMachine_Pickup_FortLinkToActor_K2Node_ComponentBoundEvent_4_OnLinkedActorDestroyed__DelegateSignature
+	// void BndEvt__BGA_Athena_SCMachine_Pickup_FortLinkToActor_K2Node_ComponentBoundEvent_4_OnLinkedActorDestroyed__DelegateSignature(AActor* DamageCauser); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/BGA_Athena_SCMachine_Pickup.BGA_Athena_SCMachine_Pickup_C.ExecuteUbergraph_BGA_Athena_SCMachine_Pickup
+	// void ExecuteUbergraph_BGA_Athena_SCMachine_Pickup(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C
+/// Size: 0x0058 (0x000B28 - 0x000B80)
+class UGA_Athena_SCMachine_Passive_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2944;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawnAthena*)                    PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
+	SMember(FVector)                                   SpawnZOffset                                                OFFSET(get<T>, {0xB38, 24, 0, 0})
+	SMember(FGameplayTag)                              BlockChipSpawnTag                                           OFFSET(get<T>, {0xB50, 4, 0, 0})
+	SMember(FScalableFloat)                            DropRebootCards                                             OFFSET(get<T>, {0xB58, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.CheckPlayerChipSpawnEnabled
+	// void CheckPlayerChipSpawnEnabled(bool& IsChipSpawnEnabled);                                                              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Check Resurrection Active
+	// void Check Resurrection Active(bool& bEnabled);                                                                          // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.SaveOutPlayer
+	// void SaveOutPlayer();                                                                                                    // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.Spawn
+	// void Spawn();                                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.K2_ActivateAbilityFromEvent
+	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/SCMachine/GA_Athena_SCMachine_Passive.GA_Athena_SCMachine_Passive_C.ExecuteUbergraph_GA_Athena_SCMachine_Passive
+	// void ExecuteUbergraph_GA_Athena_SCMachine_Passive(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/HUD/Team/RebootVanIndicator.RebootVanIndicator_C
+/// Size: 0x0040 (0x000638 - 0x000678)
+class URebootVanIndicator_C : public UAthenaRebootVanIndicator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1656;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x638, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x640, 8, 0, 0})
+	CMember(UBorder*)                                  Border_Nameplate                                            OFFSET(get<T>, {0x648, 8, 0, 0})
+	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x650, 8, 0, 0})
+	CMember(UImage*)                                   Image_RebootIcon                                            OFFSET(get<T>, {0x658, 8, 0, 0})
+	CMember(UImage*)                                   Image_SmallIndicator                                        OFFSET(get<T>, {0x660, 8, 0, 0})
+	CMember(UImage*)                                   Image_Van                                                   OFFSET(get<T>, {0x668, 8, 0, 0})
+	CMember(USpacer*)                                  IndicatorSpacer                                             OFFSET(get<T>, {0x670, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/HUD/Team/RebootVanIndicator.RebootVanIndicator_C.Construct
+	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/Athena/HUD/Team/RebootVanIndicator.RebootVanIndicator_C.ExecuteUbergraph_RebootVanIndicator
+	// void ExecuteUbergraph_RebootVanIndicator(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C
+/// Size: 0x0111 (0x000668 - 0x000779)
+class UContextTutorialIndicator_C : public UAthenaContextTutorialIndicator
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1913;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x668, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_in_bounce                                                OFFSET(get<T>, {0x670, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Text_Out_Fast                                            OFFSET(get<T>, {0x678, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Marker_Out02                                             OFFSET(get<T>, {0x680, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Marker_Out01                                             OFFSET(get<T>, {0x688, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Text_Out                                                 OFFSET(get<T>, {0x690, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Text_in                                                  OFFSET(get<T>, {0x698, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Arrow_Disappear                                          OFFSET(get<T>, {0x6A0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Arrow_Bounce                                             OFFSET(get<T>, {0x6A8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Arrow_Transition                                         OFFSET(get<T>, {0x6B0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Out_Arrow_Marker                                         OFFSET(get<T>, {0x6B8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Marker_FadeIN                                            OFFSET(get<T>, {0x6C0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Arrow_Fade                                               OFFSET(get<T>, {0x6C8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_in_Spin_Arrow_Marker                                     OFFSET(get<T>, {0x6D0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_DiamondBox_Fade                                          OFFSET(get<T>, {0x6D8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Diamond_Disappear                                        OFFSET(get<T>, {0x6E0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Marker_MoveReaction                                      OFFSET(get<T>, {0x6E8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_in_DiamondBox_Spin                                       OFFSET(get<T>, {0x6F0, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_Marker_Idle                                              OFFSET(get<T>, {0x6F8, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_in_Diamond_Spin                                          OFFSET(get<T>, {0x700, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_border                                                   OFFSET(get<T>, {0x708, 8, 0, 0})
+	CMember(UWidgetAnimation*)                         ST_in                                                       OFFSET(get<T>, {0x710, 8, 0, 0})
+	CMember(UImage*)                                   Circle                                                      OFFSET(get<T>, {0x718, 8, 0, 0})
+	CMember(UImage*)                                   Circle1                                                     OFFSET(get<T>, {0x720, 8, 0, 0})
+	CMember(UCommonTextBlock*)                         Description                                                 OFFSET(get<T>, {0x728, 8, 0, 0})
+	CMember(UEditableTextBox*)                         DescriptionOLD                                              OFFSET(get<T>, {0x730, 8, 0, 0})
+	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x738, 8, 0, 0})
+	CMember(UImage*)                                   Icon1                                                       OFFSET(get<T>, {0x740, 8, 0, 0})
+	CMember(UImage*)                                   Image_SmallIndicator                                        OFFSET(get<T>, {0x748, 8, 0, 0})
+	CMember(UImage*)                                   Image_SmallIndicator_Child                                  OFFSET(get<T>, {0x750, 8, 0, 0})
+	CMember(UImage*)                                   Sign                                                        OFFSET(get<T>, {0x758, 8, 0, 0})
+	CMember(UImage*)                                   Sign1                                                       OFFSET(get<T>, {0x760, 8, 0, 0})
+	CMember(UImage*)                                   White_Box_Child                                             OFFSET(get<T>, {0x768, 8, 0, 0})
+	CMember(UImage*)                                   White_Box_Solo                                              OFFSET(get<T>, {0x770, 8, 0, 0})
+	DMember(bool)                                      bIntroAnimationDone                                         OFFSET(get<bool>, {0x778, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_FBBD6B5248E73C61005758B21F90D160
+	// void Finished_FBBD6B5248E73C61005758B21F90D160();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_191D6D204EA6EF5125923CB749C84A4A
+	// void Finished_191D6D204EA6EF5125923CB749C84A4A();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_5FDAD1724A4ABC34EC3B7F9D90839344
+	// void Finished_5FDAD1724A4ABC34EC3B7F9D90839344();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_6F1BBAF94537A4D7945ED5A452FC1188
+	// void Finished_6F1BBAF94537A4D7945ED5A452FC1188();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.PlayOutAnimation
+	// void PlayOutAnimation();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Construct
+	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.SetIndicatorText
+	// void SetIndicatorText(FText& Text);                                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.PlayBounceAnimation
+	// void PlayBounceAnimation();                                                                                              // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.PlayInAnimation
+	// void PlayInAnimation();                                                                                                  // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.ExecuteUbergraph_ContextTutorialIndicator
+	// void ExecuteUbergraph_ContextTutorialIndicator(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/MappedEffects/GE_Athena_DBNO_Start.GE_Athena_DBNO_Start_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Athena_DBNO_Start_C : public UGE_Map_Fortitude_To_Health_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/B_HidingProp.B_HidingProp_C
 /// Size: 0x0570 (0x000C10 - 0x001180)
 class AB_HidingProp_C : public AFortHidingProp
@@ -7530,8 +7561,6 @@ public:
 	DMember(double)                                    MoveToActorDurationOverride                                 OFFSET(get<double>, {0x10B8, 8, 0, 0})
 	SMember(FMarkedActorDisplayInfo)                   MarkerDisplay                                               OFFSET(get<T>, {0x10C0, 168, 0, 0})
 	SMember(FVector)                                   MarkerPositionOffset                                        OFFSET(get<T>, {0x1168, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7643,75 +7672,8 @@ public:
 	// void BP_HandleExitPressed(AFortPlayerPawn* TargetPlayerPawn);                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/B_HidingProp.B_HidingProp_C.ExecuteUbergraph_B_HidingProp
 	// void ExecuteUbergraph_B_HidingProp(int32_t EntryPoint);                                                                  // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GE_WilliePete_PlayerLaunch_Granted.GE_WilliePete_PlayerLaunch_Granted_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_WilliePete_PlayerLaunch_Granted_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
 };
 
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_ApplyTeleportGA.GE_Athena_HidingProp_ApplyTeleportGA_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Athena_HidingProp_ApplyTeleportGA_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
-};
-
-/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C
-/// Size: 0x0078 (0x000B28 - 0x000BA0)
-class UGA_WilliePete_PlayerLaunch_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2976;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawnAthena*)                    OwningPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-	CMember(UAnimMontage*)                             ExitMontage                                                 OFFSET(get<T>, {0xB38, 8, 0, 0})
-	SMember(FScalableFloat)                            LaunchHeightValue                                           OFFSET(get<T>, {0xB40, 40, 0, 0})
-	CMember(AB_HidingProp_WilliePete_C*)               WilliePeteLauncher                                          OFFSET(get<T>, {0xB68, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     PlayerLaunchTag                                             OFFSET(get<T>, {0xB70, 32, 0, 0})
-	CMember(UClass*)                                   GE_WilliePete_PlayerLaunch_ApplyGC                          OFFSET(get<T>, {0xB90, 8, 0, 0})
-	CMember(AFortPlayerPawnAthena*)                    TeleportExitPlayer                                          OFFSET(get<T>, {0xB98, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.StructureTraceLoop
-	// void StructureTraceLoop();                                                                                               // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.BreakBlockingStructure
-	// void BreakBlockingStructure(AActor* HitActor);                                                                           // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnNotifyEnd_A0F03A1445141EA659E282AFE77CEA62
-	// void OnNotifyEnd_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnNotifyBegin_A0F03A1445141EA659E282AFE77CEA62
-	// void OnNotifyBegin_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnCancelled_A0F03A1445141EA659E282AFE77CEA62
-	// void OnCancelled_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnInterrupted_A0F03A1445141EA659E282AFE77CEA62
-	// void OnInterrupted_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnBlendOut_A0F03A1445141EA659E282AFE77CEA62
-	// void OnBlendOut_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnCompleted_A0F03A1445141EA659E282AFE77CEA62
-	// void OnCompleted_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.Redeploy Glider
-	// void Redeploy Glider();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.End Skydive
-	// void End Skydive(FHitResult& Hit);                                                                                       // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ActorHit
-	// void ActorHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, FHitResult& Hit);                            // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.FailedToActivatePassiveAbility
-	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ExecuteUbergraph_GA_WilliePete_PlayerLaunch
-	// void ExecuteUbergraph_GA_WilliePete_PlayerLaunch(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_HidingProp_WilliePete.B_HidingProp_WilliePete_C
 /// Size: 0x0232 (0x001180 - 0x0013B2)
 class AB_HidingProp_WilliePete_C : public AB_HidingProp_C
@@ -7752,8 +7714,6 @@ public:
 	DMember(double)                                    PickupSpeedMult                                             OFFSET(get<double>, {0x13A8, 8, 0, 0})
 	DMember(bool)                                      bSetSilentDie                                               OFFSET(get<bool>, {0x13B0, 1, 0, 0})
 	DMember(bool)                                      bSetSpawnedWaterBody                                        OFFSET(get<bool>, {0x13B1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7787,6 +7747,133 @@ public:
 	// void ResetGravity(FHitResult& Hit);                                                                                      // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/B_HidingProp_WilliePete.B_HidingProp_WilliePete_C.ExecuteUbergraph_B_HidingProp_WilliePete
 	// void ExecuteUbergraph_B_HidingProp_WilliePete(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GE_WilliePete_PlayerLaunch_Granted.GE_WilliePete_PlayerLaunch_Granted_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_WilliePete_PlayerLaunch_Granted_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GE_Athena_HidingProp_ApplyTeleportGA.GE_Athena_HidingProp_ApplyTeleportGA_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Athena_HidingProp_ApplyTeleportGA_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C
+/// Size: 0x0078 (0x000B28 - 0x000BA0)
+class UGA_WilliePete_PlayerLaunch_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2976;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawnAthena*)                    OwningPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
+	CMember(UAnimMontage*)                             ExitMontage                                                 OFFSET(get<T>, {0xB38, 8, 0, 0})
+	SMember(FScalableFloat)                            LaunchHeightValue                                           OFFSET(get<T>, {0xB40, 40, 0, 0})
+	CMember(AB_HidingProp_WilliePete_C*)               WilliePeteLauncher                                          OFFSET(get<T>, {0xB68, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     PlayerLaunchTag                                             OFFSET(get<T>, {0xB70, 32, 0, 0})
+	CMember(UClass*)                                   GE_WilliePete_PlayerLaunch_ApplyGC                          OFFSET(get<T>, {0xB90, 8, 0, 0})
+	CMember(AFortPlayerPawnAthena*)                    TeleportExitPlayer                                          OFFSET(get<T>, {0xB98, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.StructureTraceLoop
+	// void StructureTraceLoop();                                                                                               // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.BreakBlockingStructure
+	// void BreakBlockingStructure(AActor* HitActor);                                                                           // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnNotifyEnd_A0F03A1445141EA659E282AFE77CEA62
+	// void OnNotifyEnd_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnNotifyBegin_A0F03A1445141EA659E282AFE77CEA62
+	// void OnNotifyBegin_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnCancelled_A0F03A1445141EA659E282AFE77CEA62
+	// void OnCancelled_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnInterrupted_A0F03A1445141EA659E282AFE77CEA62
+	// void OnInterrupted_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnBlendOut_A0F03A1445141EA659E282AFE77CEA62
+	// void OnBlendOut_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.OnCompleted_A0F03A1445141EA659E282AFE77CEA62
+	// void OnCompleted_A0F03A1445141EA659E282AFE77CEA62(FGameplayTag NotifyTag);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.Redeploy Glider
+	// void Redeploy Glider();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.End Skydive
+	// void End Skydive(FHitResult& Hit);                                                                                       // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ActorHit
+	// void ActorHit(AActor* SelfActor, AActor* OtherActor, FVector NormalImpulse, FHitResult& Hit);                            // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.FailedToActivatePassiveAbility
+	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/Props/GA_WilliePete_PlayerLaunch.GA_WilliePete_PlayerLaunch_C.ExecuteUbergraph_GA_WilliePete_PlayerLaunch
+	// void ExecuteUbergraph_GA_WilliePete_PlayerLaunch(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C
+/// Size: 0x0098 (0x000B28 - 0x000BC0)
+class UGA_Athena_HidingProp_Teleport_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3008;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0xB30, 16, 0, 0})
+	CMember(AB_HidingProp_C*)                          HidingProp                                                  OFFSET(get<T>, {0xB40, 8, 0, 0})
+	CMember(AB_HidingProp_C*)                          TargetTeleporter                                            OFFSET(get<T>, {0xB48, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     T_HudElementToHide                                          OFFSET(get<T>, {0xB50, 32, 0, 0})
+	SMember(FGameplayTag)                              TargetPropTeleportingCue                                    OFFSET(get<T>, {0xB70, 4, 0, 0})
+	SMember(FTimerHandle)                              WobbleHandle                                                OFFSET(get<T>, {0xB78, 8, 0, 0})
+	SMember(FGameplayTag)                              WobbleCue                                                   OFFSET(get<T>, {0xB80, 4, 0, 0})
+	DMember(double)                                    ServerWorldTime                                             OFFSET(get<double>, {0xB88, 8, 0, 0})
+	SMember(FGameplayTag)                              EnterCue                                                    OFFSET(get<T>, {0xB90, 4, 0, 0})
+	SMember(FGameplayTag)                              HidingInPropTag                                             OFFSET(get<T>, {0xB94, 4, 0, 0})
+	SMember(FGameplayTagContainer)                     ChangeEquipmentTag                                          OFFSET(get<T>, {0xB98, 32, 0, 0})
+	SMember(FActiveGameplayEffectHandle)               TeleportingGEOnPlayer                                       OFFSET(get<T>, {0xBB8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_FD079A2341CDD832DF47CD975DFC3BB3
+	// void Added_FD079A2341CDD832DF47CD975DFC3BB3();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnComplete_EE0FA6804073079396C44591432259C0
+	// void OnComplete_EE0FA6804073079396C44591432259C0();                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_67FE14EA4DF2D8C2DB494AA89443681B
+	// void Added_67FE14EA4DF2D8C2DB494AA89443681B();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_CB8220A04B74338E758C11B7371D4630
+	// void Added_CB8220A04B74338E758C11B7371D4630();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Added_F96D6DD549939CA425D2D1BE1AD32090
+	// void Added_F96D6DD549939CA425D2D1BE1AD32090();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.EventReceived_ABAD14334D754F46E9037882BF0256B6
+	// void EventReceived_ABAD14334D754F46E9037882BF0256B6(FGameplayEventData Payload);                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_OnEndAbility
+	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.QuestUpdate
+	// void QuestUpdate(AFortPawn* Pawn);                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.Wobble
+	// void Wobble();                                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.OnPawnDied
+	// void OnPawnDied(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.GrapplerFailSafe
+	// void GrapplerFailSafe(AFortPawn* FortPawn);                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.FailedToActivatePassiveAbility
+	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.ExecuteUbergraph_GA_Athena_HidingProp_Teleport
+	// void ExecuteUbergraph_GA_Athena_HidingProp_Teleport(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Teleport.GA_Athena_HidingProp_Teleport_C.NewEventDispatcher_0__DelegateSignature
+	// void NewEventDispatcher_0__DelegateSignature();                                                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_JumpOut.GA_Athena_HidingProp_JumpOut_C
 /// Size: 0x0008 (0x000B28 - 0x000B30)
 class UGA_Athena_HidingProp_JumpOut_C : public UFortGameplayAbility
@@ -7796,8 +7883,6 @@ class UGA_Athena_HidingProp_JumpOut_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7807,58 +7892,8 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_JumpOut.GA_Athena_HidingProp_JumpOut_C.ExecuteUbergraph_GA_Athena_HidingProp_JumpOut
 	// void ExecuteUbergraph_GA_Athena_HidingProp_JumpOut(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/MappedEffects/GE_Athena_DBNO_Start.GE_Athena_DBNO_Start_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Athena_DBNO_Start_C : public UGE_Map_Fortitude_To_Health_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
 };
 
-/// Class /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C
-/// Size: 0x0028 (0x000FD0 - 0x000FF8)
-class UGA_Athena_Grenade_Rethrow_C : public UGA_Athena_Consumable_Throw_Parent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4088;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xFD0, 8, 0, 0})
-	CMember(AFortProjectileBase*)                      Projectile                                                  OFFSET(get<T>, {0xFD8, 8, 0, 0})
-	DMember(double)                                    TossDelay                                                   OFFSET(get<double>, {0xFE0, 8, 0, 0})
-	SMember(FName)                                     HolsterId                                                   OFFSET(get<T>, {0xFE8, 4, 0, 0})
-	DMember(double)                                    PostThrowEndDelay                                           OFFSET(get<double>, {0xFF0, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.DetachProjectile
-	// void DetachProjectile();                                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.AttachProjectile
-	// void AttachProjectile();                                                                                                 // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.Completed_3B7299CC49B6C5C075996A9C8DDF315F
-	// void Completed_3B7299CC49B6C5C075996A9C8DDF315F(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.Cancelled_3B7299CC49B6C5C075996A9C8DDF315F
-	// void Cancelled_3B7299CC49B6C5C075996A9C8DDF315F(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.Triggered_3B7299CC49B6C5C075996A9C8DDF315F
-	// void Triggered_3B7299CC49B6C5C075996A9C8DDF315F(FGameplayAbilityTargetDataHandle& TargetData, FGameplayTag ApplicationTag); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.OnFinish_B295E6694DBD8B2B2478A38EA60F5624
-	// void OnFinish_B295E6694DBD8B2B2478A38EA60F5624();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.K2_OnEndAbility
-	// void K2_OnEndAbility(bool bWasCancelled);                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.ThrowProjectile
-	// void ThrowProjectile();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.RethrowProjectile
-	// void RethrowProjectile();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.AttemptSpawnThrownProjectile
-	// void AttemptSpawnThrownProjectile();                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Consumables/Grenade/GA_Athena_Grenade_Rethrow.GA_Athena_Grenade_Rethrow_C.ExecuteUbergraph_GA_Athena_Grenade_Rethrow
-	// void ExecuteUbergraph_GA_Athena_Grenade_Rethrow(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Hide.GA_Athena_HidingProp_Hide_C
 /// Size: 0x0170 (0x000B28 - 0x000C98)
 class UGA_Athena_HidingProp_Hide_C : public UFortGameplayAbility
@@ -7887,8 +7922,6 @@ public:
 	SMember(FTimerHandle)                              LockOnTimer                                                 OFFSET(get<T>, {0xC60, 8, 0, 0})
 	SMember(FVector)                                   HideLocationForwardVectorWorldPos                           OFFSET(get<T>, {0xC68, 24, 0, 0})
 	SMember(FRotator)                                  HideLocationForwardVectorWorldRot                           OFFSET(get<T>, {0xC80, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -7944,99 +7977,8 @@ public:
 	// void Event_LockOnProp();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/EnvironmentalItems/HidingProps/GA_Athena_HidingProp_Hide.GA_Athena_HidingProp_Hide_C.ExecuteUbergraph_GA_Athena_HidingProp_Hide
 	// void ExecuteUbergraph_GA_Athena_HidingProp_Hide(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/HUD/Team/RebootVanIndicator.RebootVanIndicator_C
-/// Size: 0x0040 (0x000638 - 0x000678)
-class URebootVanIndicator_C : public UAthenaRebootVanIndicator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1656;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x638, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         Intro                                                       OFFSET(get<T>, {0x640, 8, 0, 0})
-	CMember(UBorder*)                                  Border_Nameplate                                            OFFSET(get<T>, {0x648, 8, 0, 0})
-	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x650, 8, 0, 0})
-	CMember(UImage*)                                   Image_RebootIcon                                            OFFSET(get<T>, {0x658, 8, 0, 0})
-	CMember(UImage*)                                   Image_SmallIndicator                                        OFFSET(get<T>, {0x660, 8, 0, 0})
-	CMember(UImage*)                                   Image_Van                                                   OFFSET(get<T>, {0x668, 8, 0, 0})
-	CMember(USpacer*)                                  IndicatorSpacer                                             OFFSET(get<T>, {0x670, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/HUD/Team/RebootVanIndicator.RebootVanIndicator_C.Construct
-	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/Athena/HUD/Team/RebootVanIndicator.RebootVanIndicator_C.ExecuteUbergraph_RebootVanIndicator
-	// void ExecuteUbergraph_RebootVanIndicator(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
-/// Class /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C
-/// Size: 0x0111 (0x000668 - 0x000779)
-class UContextTutorialIndicator_C : public UAthenaContextTutorialIndicator
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1913;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x668, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_in_bounce                                                OFFSET(get<T>, {0x670, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Text_Out_Fast                                            OFFSET(get<T>, {0x678, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Marker_Out02                                             OFFSET(get<T>, {0x680, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Marker_Out01                                             OFFSET(get<T>, {0x688, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Text_Out                                                 OFFSET(get<T>, {0x690, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Text_in                                                  OFFSET(get<T>, {0x698, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Arrow_Disappear                                          OFFSET(get<T>, {0x6A0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Arrow_Bounce                                             OFFSET(get<T>, {0x6A8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Arrow_Transition                                         OFFSET(get<T>, {0x6B0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Out_Arrow_Marker                                         OFFSET(get<T>, {0x6B8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Marker_FadeIN                                            OFFSET(get<T>, {0x6C0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Arrow_Fade                                               OFFSET(get<T>, {0x6C8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_in_Spin_Arrow_Marker                                     OFFSET(get<T>, {0x6D0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_DiamondBox_Fade                                          OFFSET(get<T>, {0x6D8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Diamond_Disappear                                        OFFSET(get<T>, {0x6E0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Marker_MoveReaction                                      OFFSET(get<T>, {0x6E8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_in_DiamondBox_Spin                                       OFFSET(get<T>, {0x6F0, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_Marker_Idle                                              OFFSET(get<T>, {0x6F8, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_in_Diamond_Spin                                          OFFSET(get<T>, {0x700, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_border                                                   OFFSET(get<T>, {0x708, 8, 0, 0})
-	CMember(UWidgetAnimation*)                         ST_in                                                       OFFSET(get<T>, {0x710, 8, 0, 0})
-	CMember(UImage*)                                   Circle                                                      OFFSET(get<T>, {0x718, 8, 0, 0})
-	CMember(UImage*)                                   Circle1                                                     OFFSET(get<T>, {0x720, 8, 0, 0})
-	CMember(UCommonTextBlock*)                         Description                                                 OFFSET(get<T>, {0x728, 8, 0, 0})
-	CMember(UEditableTextBox*)                         DescriptionOLD                                              OFFSET(get<T>, {0x730, 8, 0, 0})
-	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x738, 8, 0, 0})
-	CMember(UImage*)                                   Icon1                                                       OFFSET(get<T>, {0x740, 8, 0, 0})
-	CMember(UImage*)                                   Image_SmallIndicator                                        OFFSET(get<T>, {0x748, 8, 0, 0})
-	CMember(UImage*)                                   Image_SmallIndicator_Child                                  OFFSET(get<T>, {0x750, 8, 0, 0})
-	CMember(UImage*)                                   Sign                                                        OFFSET(get<T>, {0x758, 8, 0, 0})
-	CMember(UImage*)                                   Sign1                                                       OFFSET(get<T>, {0x760, 8, 0, 0})
-	CMember(UImage*)                                   White_Box_Child                                             OFFSET(get<T>, {0x768, 8, 0, 0})
-	CMember(UImage*)                                   White_Box_Solo                                              OFFSET(get<T>, {0x770, 8, 0, 0})
-	DMember(bool)                                      bIntroAnimationDone                                         OFFSET(get<bool>, {0x778, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_FBBD6B5248E73C61005758B21F90D160
-	// void Finished_FBBD6B5248E73C61005758B21F90D160();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_191D6D204EA6EF5125923CB749C84A4A
-	// void Finished_191D6D204EA6EF5125923CB749C84A4A();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_5FDAD1724A4ABC34EC3B7F9D90839344
-	// void Finished_5FDAD1724A4ABC34EC3B7F9D90839344();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Finished_6F1BBAF94537A4D7945ED5A452FC1188
-	// void Finished_6F1BBAF94537A4D7945ED5A452FC1188();                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.PlayOutAnimation
-	// void PlayOutAnimation();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.Construct
-	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.SetIndicatorText
-	// void SetIndicatorText(FText& Text);                                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.PlayBounceAnimation
-	// void PlayBounceAnimation();                                                                                              // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.PlayInAnimation
-	// void PlayInAnimation();                                                                                                  // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Tutorial/Contextual/ContextTutorialIndicator.ContextTutorialIndicator_C.ExecuteUbergraph_ContextTutorialIndicator
-	// void ExecuteUbergraph_ContextTutorialIndicator(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Settings/Screens/PressAnyKey.PressAnyKey_C
 /// Size: 0x0000 (0x0005A0 - 0x0005A0)
 class UPressAnyKey_C : public UFortSettingsPressAnyKey
@@ -8081,8 +8023,6 @@ public:
 	CMember(UCommonBorder*)                            CommonBorder                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(USizeBox*)                                 PrimaryKeybindTextSizeBox                                   OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(USizeBox*)                                 SecondaryKeybindTextSizeBox                                 OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8096,6 +8036,8 @@ public:
 	// void OnListItemObjectSet(UObject* ListItemObject);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Settings/Screens/PreviewUnbindAction.PreviewUnbindAction_C.ExecuteUbergraph_PreviewUnbindAction
 	// void ExecuteUbergraph_PreviewUnbindAction(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/UI/Matchmaking/SimpleCommonButton.SimpleCommonButton_C
 /// Size: 0x0000 (0x0014C0 - 0x0014C0)
 class USimpleCommonButton_C : public UCommonButtonLegacy
@@ -8135,8 +8077,6 @@ class UControllerActionsMenu_C : public UFortControllerActionsMenu
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8144,6 +8084,8 @@ public:
 	// void BP_OnActivated();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Settings/ControllerActionsMenu.ControllerActionsMenu_C.ExecuteUbergraph_ControllerActionsMenu
 	// void ExecuteUbergraph_ControllerActionsMenu(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/CustomEntries/SettingsRotator_Narrow.SettingsRotator_Narrow_C
 /// Size: 0x0018 (0x0014D0 - 0x0014E8)
 class USettingsRotator_Narrow_C : public UFortSettingsRotator
@@ -8155,8 +8097,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         RotatorHover                                                OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(UBorder*)                                  Background                                                  OFFSET(get<T>, {0x14E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8172,6 +8112,8 @@ public:
 	// void OnUnHover Animation();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Settings/CustomEntries/SettingsRotator_Narrow.SettingsRotator_Narrow_C.ExecuteUbergraph_SettingsRotator_Narrow
 	// void ExecuteUbergraph_SettingsRotator_Narrow(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/SettingsRotator.SettingsRotator_C
 /// Size: 0x0010 (0x0014D0 - 0x0014E0)
 class USettingsRotator_C : public UFortSettingsRotator
@@ -8182,8 +8124,6 @@ class USettingsRotator_C : public UFortSettingsRotator
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14D0, 8, 0, 0})
 	CMember(UBorder*)                                  Background                                                  OFFSET(get<T>, {0x14D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8195,6 +8135,8 @@ public:
 	// void BP_OnDefaultOptionSpecified(int32_t DefaultOptionIndex);                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsRotator.SettingsRotator_C.ExecuteUbergraph_SettingsRotator
 	// void ExecuteUbergraph_SettingsRotator(int32_t EntryPoint);                                                               // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/SettingEntryBackground.SettingEntryBackground_C
 /// Size: 0x0028 (0x0002A8 - 0x0002D0)
 class USettingEntryBackground_C : public UUserWidget
@@ -8207,8 +8149,6 @@ public:
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UNamedSlot*)                               Content                                                     OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnMouseEnterChanged                                         OFFSET(get<T>, {0x2C0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8220,6 +8160,8 @@ public:
 	// void ExecuteUbergraph_SettingEntryBackground(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Athena/Settings/SettingEntryBackground.SettingEntryBackground_C.OnMouseEnterChanged__DelegateSignature
 	// void OnMouseEnterChanged__DelegateSignature(bool IsEnterEvent);                                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/Settings/CustomEntries/SettingsListEntry_Discrete_Narrow.SettingsListEntry_Discrete_Narrow_C
 /// Size: 0x0030 (0x000340 - 0x000370)
 class USettingsListEntry_Discrete_Narrow_C : public UFortSettingsListEntrySetting_Discrete
@@ -8234,8 +8176,6 @@ public:
 	CMember(UIconTextButton_C*)                        Button_SecondOption                                         OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          OptionsSets                                                 OFFSET(get<T>, {0x360, 8, 0, 0})
 	CMember(UHorizontalBox*)                           Several_Options                                             OFFSET(get<T>, {0x368, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8247,6 +8187,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/CustomEntries/SettingsListEntry_Discrete_Narrow.SettingsListEntry_Discrete_Narrow_C.ExecuteUbergraph_SettingsListEntry_Discrete_Narrow
 	// void ExecuteUbergraph_SettingsListEntry_Discrete_Narrow(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_Missing.SettingsListEntry_Missing_C
 /// Size: 0x0018 (0x000310 - 0x000328)
 class USettingsListEntry_Missing_C : public UFortSettingsListEntry_Setting
@@ -8258,8 +8200,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_SettingName                                            OFFSET(get<T>, {0x320, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8269,6 +8209,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsListEntry_Missing.SettingsListEntry_Missing_C.ExecuteUbergraph_SettingsListEntry_Missing
 	// void ExecuteUbergraph_SettingsListEntry_Missing(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_Discrete.SettingsListEntry_Discrete_C
 /// Size: 0x0030 (0x000340 - 0x000370)
 class USettingsListEntry_Discrete_C : public UFortSettingsListEntrySetting_Discrete
@@ -8283,8 +8225,6 @@ public:
 	CMember(UIconTextButton_C*)                        Button_SecondOption                                         OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          OptionsSets                                                 OFFSET(get<T>, {0x360, 8, 0, 0})
 	CMember(UHorizontalBox*)                           Several_Options                                             OFFSET(get<T>, {0x368, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8296,6 +8236,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsListEntry_Discrete.SettingsListEntry_Discrete_C.ExecuteUbergraph_SettingsListEntry_Discrete
 	// void ExecuteUbergraph_SettingsListEntry_Discrete(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/CustomEntries/SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C
 /// Size: 0x0020 (0x000330 - 0x000350)
 class USettingsListEntry_Scalar_Narrow_C : public UFortSettingsListEntrySetting_Scalar
@@ -8308,8 +8250,6 @@ public:
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UImage*)                                   DefaultValueLayer                                           OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             Progress                                                    OFFSET(get<T>, {0x348, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8325,6 +8265,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/CustomEntries/SettingsListEntry_Scalar_Narrow.SettingsListEntry_Scalar_Narrow_C.ExecuteUbergraph_SettingsListEntry_Scalar_Narrow
 	// void ExecuteUbergraph_SettingsListEntry_Scalar_Narrow(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_Scalar.SettingsListEntry_Scalar_C
 /// Size: 0x0020 (0x000330 - 0x000350)
 class USettingsListEntry_Scalar_C : public UFortSettingsListEntrySetting_Scalar
@@ -8337,8 +8279,6 @@ public:
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UImage*)                                   DefaultValueLayer                                           OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             Progress                                                    OFFSET(get<T>, {0x348, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8354,6 +8294,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsListEntry_Scalar.SettingsListEntry_Scalar_C.ExecuteUbergraph_SettingsListEntry_Scalar
 	// void ExecuteUbergraph_SettingsListEntry_Scalar(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_Action.SettingsListEntry_Action_C
 /// Size: 0x0010 (0x000320 - 0x000330)
 class USettingsListEntry_Action_C : public UFortSettingsListEntrySetting_Action
@@ -8364,8 +8306,6 @@ class USettingsListEntry_Action_C : public UFortSettingsListEntrySetting_Action
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x328, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8379,6 +8319,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsListEntry_Action.SettingsListEntry_Action_C.ExecuteUbergraph_SettingsListEntry_Action
 	// void ExecuteUbergraph_SettingsListEntry_Action(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C
 /// Size: 0x0010 (0x000320 - 0x000330)
 class USettingsListEntry_SubCollection_C : public UFortSettingsListEntrySetting_Navigation
@@ -8389,8 +8331,6 @@ class USettingsListEntry_SubCollection_C : public UFortSettingsListEntrySetting_
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x328, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8404,6 +8344,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsListEntry_SubCollection.SettingsListEntry_SubCollection_C.ExecuteUbergraph_SettingsListEntry_SubCollection
 	// void ExecuteUbergraph_SettingsListEntry_SubCollection(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/Screens/KeyboardPresetRotator.KeyboardPresetRotator_C
 /// Size: 0x0048 (0x0002D0 - 0x000318)
 class UKeyboardPresetRotator_C : public UCommonUserWidget
@@ -8421,8 +8363,6 @@ public:
 	CMember(UTextRotatorWhite_C*)                      TextRotator                                                 OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(int32_t)                                   SelectedIndex                                               OFFSET(get<int32_t>, {0x308, 4, 0, 0})
 	DMember(double)                                    Spacer_Width                                                OFFSET(get<double>, {0x310, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8448,6 +8388,8 @@ public:
 	// void BndEvt__KeyboardPresetRotator_TextRotator_K2Node_ComponentBoundEvent_3_OnRotated__DelegateSignature(int32_t Value); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Settings/Screens/KeyboardPresetRotator.KeyboardPresetRotator_C.ExecuteUbergraph_KeyboardPresetRotator
 	// void ExecuteUbergraph_KeyboardPresetRotator(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/UI/Frontend/Parties/JoinVoiceChannelButton.JoinVoiceChannelButton_C
 /// Size: 0x0010 (0x0014C0 - 0x0014D0)
 class UJoinVoiceChannelButton_C : public UFortJoinVoiceChannelButton
@@ -8458,8 +8400,6 @@ class UJoinVoiceChannelButton_C : public UFortJoinVoiceChannelButton
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8469,6 +8409,8 @@ public:
 	// void BP_OnUnhovered();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/UI/Frontend/Parties/JoinVoiceChannelButton.JoinVoiceChannelButton_C.ExecuteUbergraph_JoinVoiceChannelButton
 	// void ExecuteUbergraph_JoinVoiceChannelButton(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/UI/Frontend/Parties/LeavePlatformPartyButton.LeavePlatformPartyButton_C
 /// Size: 0x0018 (0x0014C0 - 0x0014D8)
 class ULeavePlatformPartyButton_C : public UCommonButtonLegacy
@@ -8480,8 +8422,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         CommonTextBlock                                             OFFSET(get<T>, {0x14D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8493,6 +8433,8 @@ public:
 	// void BP_OnUnhovered();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/UI/Frontend/Parties/LeavePlatformPartyButton.LeavePlatformPartyButton_C.ExecuteUbergraph_LeavePlatformPartyButton
 	// void ExecuteUbergraph_LeavePlatformPartyButton(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_KeyboardInput.SettingsListEntry_KeyboardInput_C
 /// Size: 0x0010 (0x000350 - 0x000360)
 class USettingsListEntry_KeyboardInput_C : public UFortSettingsListEntrySetting_KeyboardInput
@@ -8503,8 +8445,6 @@ class USettingsListEntry_KeyboardInput_C : public UFortSettingsListEntrySetting_
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         OnHover                                                     OFFSET(get<T>, {0x358, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8516,6 +8456,8 @@ public:
 	// void OnMouseLeave(FPointerEvent& MouseEvent);                                                                            // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Settings/SettingsListEntry_KeyboardInput.SettingsListEntry_KeyboardInput_C.ExecuteUbergraph_SettingsListEntry_KeyboardInput
 	// void ExecuteUbergraph_SettingsListEntry_KeyboardInput(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/SettingsListEntry_ControllerButton.SettingsListEntry_ControllerButton_C
 /// Size: 0x0010 (0x000330 - 0x000340)
 class USettingsListEntry_ControllerButton_C : public UFortSettingsListEntrySetting_ControllerButton
@@ -8526,8 +8468,6 @@ class USettingsListEntry_ControllerButton_C : public UFortSettingsListEntrySetti
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(USimpleCommonButton_C*)                    Button_ControllerAction                                     OFFSET(get<T>, {0x338, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8537,6 +8477,8 @@ public:
 	// void BndEvt__Button_ControllerAction_K2Node_ComponentBoundEvent_0_CommonButtonClicked__DelegateSignature(UCommonButtonLegacy* Button); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Settings/SettingsListEntry_ControllerButton.SettingsListEntry_ControllerButton_C.ExecuteUbergraph_SettingsListEntry_ControllerButton
 	// void ExecuteUbergraph_SettingsListEntry_ControllerButton(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Settings/GameSettingsDetailView.GameSettingsDetailView_C
 /// Size: 0x0000 (0x000380 - 0x000380)
 class UGameSettingsDetailView_C : public UFortSettingDetailView
@@ -8567,8 +8509,6 @@ class UTabGamepadBindings_New_C : public UFortTabGamepadButtonMappingOptions_Tem
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8578,6 +8518,8 @@ public:
 	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Settings/Legacy/TabGamepadBindings_New.TabGamepadBindings_New_C.ExecuteUbergraph_TabGamepadBindings_New
 	// void ExecuteUbergraph_TabGamepadBindings_New(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabMouseAndKeyboardOptions_New_C : public UFortTabMouseAndKeyboardOptions_TempNew
@@ -8587,8 +8529,6 @@ class UTabMouseAndKeyboardOptions_New_C : public UFortTabMouseAndKeyboardOptions
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8598,6 +8538,32 @@ public:
 	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Settings/Legacy/TabMouseAndKeyboardOptions_New.TabMouseAndKeyboardOptions_New_C.ExecuteUbergraph_TabMouseAndKeyboardOptions_New
 	// void ExecuteUbergraph_TabMouseAndKeyboardOptions_New(int32_t EntryPoint);                                                // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C
+/// Size: 0x0008 (0x000430 - 0x000438)
+class UTabTouchOptions_New_C : public UFortTabTouchOptions_TempNew
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1080;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.OnComplete_F4680C974FD91F0C7CA9F7A7014B7056
+	// void OnComplete_F4680C974FD91F0C7CA9F7A7014B7056(UUserWidget* UserWidget);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.CenterOnTab
+	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.SettingValueChanged
+	// void SettingValueChanged(double Value);                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature
+	// void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(UFortSetting* Setting, FName Action); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.ExecuteUbergraph_TabTouchOptions_New
+	// void ExecuteUbergraph_TabTouchOptions_New(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabAccountOptions_New.TabAccountOptions_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabAccountOptions_New_C : public UFortTabAccountOptions_TempNew
@@ -8607,8 +8573,6 @@ class UTabAccountOptions_New_C : public UFortTabAccountOptions_TempNew
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8624,50 +8588,8 @@ public:
 	// void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(UFortSetting* Setting, FName Action); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Settings/Legacy/TabAccountOptions_New.TabAccountOptions_New_C.ExecuteUbergraph_TabAccountOptions_New
 	// void ExecuteUbergraph_TabAccountOptions_New(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
-/// Class /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C
-/// Size: 0x0008 (0x000430 - 0x000438)
-class UTabTouchOptions_New_C : public UFortTabTouchOptions_TempNew
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1080;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.OnComplete_F4680C974FD91F0C7CA9F7A7014B7056
-	// void OnComplete_F4680C974FD91F0C7CA9F7A7014B7056(UUserWidget* UserWidget);                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.CenterOnTab
-	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.SettingValueChanged
-	// void SettingValueChanged(double Value);                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature
-	// void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(UFortSetting* Setting, FName Action); // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/Settings/Legacy/TabTouchOptions_New.TabTouchOptions_New_C.ExecuteUbergraph_TabTouchOptions_New
-	// void ExecuteUbergraph_TabTouchOptions_New(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
-/// Class /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C
-/// Size: 0x0008 (0x000430 - 0x000438)
-class UTabAudioOptions_New_C : public UFortTabAudioOptions_TempNew
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1080;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C.SettingValueChanged
-	// void SettingValueChanged(double Value);                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C.CenterOnTab
-	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C.ExecuteUbergraph_TabAudioOptions_New
-	// void ExecuteUbergraph_TabAudioOptions_New(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
 /// Class /Game/Athena/Settings/Legacy/TabTouchWeaponOptions_New.TabTouchWeaponOptions_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabTouchWeaponOptions_New_C : public UFortTabTouchWeaponOptions_TempNew
@@ -8677,8 +8599,6 @@ class UTabTouchWeaponOptions_New_C : public UFortTabTouchWeaponOptions_TempNew
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8688,6 +8608,28 @@ public:
 	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Settings/Legacy/TabTouchWeaponOptions_New.TabTouchWeaponOptions_New_C.ExecuteUbergraph_TabTouchWeaponOptions_New
 	// void ExecuteUbergraph_TabTouchWeaponOptions_New(int32_t EntryPoint);                                                     // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C
+/// Size: 0x0008 (0x000430 - 0x000438)
+class UTabAudioOptions_New_C : public UFortTabAudioOptions_TempNew
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1080;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C.SettingValueChanged
+	// void SettingValueChanged(double Value);                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C.CenterOnTab
+	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Settings/Legacy/TabAudioOptions_New.TabAudioOptions_New_C.ExecuteUbergraph_TabAudioOptions_New
+	// void ExecuteUbergraph_TabAudioOptions_New(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabHUDOptions_New.TabHUDOptions_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabHUDOptions_New_C : public UFortTabHUDOptions_TempNew
@@ -8697,8 +8639,6 @@ class UTabHUDOptions_New_C : public UFortTabHUDOptions_TempNew
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8708,6 +8648,8 @@ public:
 	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Settings/Legacy/TabHUDOptions_New.TabHUDOptions_New_C.ExecuteUbergraph_TabHUDOptions_New
 	// void ExecuteUbergraph_TabHUDOptions_New(int32_t EntryPoint);                                                             // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabVideoOptions_New.TabVideoOptions_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabVideoOptions_New_C : public UFortTabVideoOptions_TempNew
@@ -8717,8 +8659,6 @@ class UTabVideoOptions_New_C : public UFortTabVideoOptions_TempNew
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8732,6 +8672,8 @@ public:
 	// void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(UFortSetting* Setting, FName Action); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Settings/Legacy/TabVideoOptions_New.TabVideoOptions_New_C.ExecuteUbergraph_TabVideoOptions_New
 	// void ExecuteUbergraph_TabVideoOptions_New(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabControllerSettings_New.TabControllerSettings_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabControllerSettings_New_C : public UFortTabGamepadOptions_TempNew
@@ -8741,8 +8683,6 @@ class UTabControllerSettings_New_C : public UFortTabGamepadOptions_TempNew
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8752,6 +8692,8 @@ public:
 	// void CenterOnTab();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Settings/Legacy/TabControllerSettings_New.TabControllerSettings_New_C.ExecuteUbergraph_TabControllerSettings_New
 	// void ExecuteUbergraph_TabControllerSettings_New(int32_t EntryPoint);                                                     // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UTabMouseAndKeyboardBindingOptions_New_C : public UFortTabMouseAndKeyboardBindingsOptions_TempNew
@@ -8761,8 +8703,6 @@ class UTabMouseAndKeyboardBindingOptions_New_C : public UFortTabMouseAndKeyboard
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8778,6 +8718,8 @@ public:
 	// void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(UFortSetting* Setting, FName Action); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Settings/Legacy/TabMouseAndKeyboardBindingOptions_New.TabMouseAndKeyboardBindingOptions_New_C.ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New
 	// void ExecuteUbergraph_TabMouseAndKeyboardBindingOptions_New(int32_t EntryPoint);                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Settings/Legacy/TabGameplayOptions_New.TabGameplayOptions_New_C
 /// Size: 0x0010 (0x000430 - 0x000440)
 class UTabGameplayOptions_New_C : public UFortTabGameplayOptions_TempNew
@@ -8788,8 +8730,6 @@ class UTabGameplayOptions_New_C : public UFortTabGameplayOptions_TempNew
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UFortHUDElementWrapper_C*)                 FortHUDElementWrapper                                       OFFSET(get<T>, {0x438, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8805,6 +8745,8 @@ public:
 	// void BndEvt__Settings_Panel_K2Node_ComponentBoundEvent_1_OnExecuteNamedActionBP__DelegateSignature(UFortSetting* Setting, FName Action); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Settings/Legacy/TabGameplayOptions_New.TabGameplayOptions_New_C.ExecuteUbergraph_TabGameplayOptions_New
 	// void ExecuteUbergraph_TabGameplayOptions_New(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GE_BoostJump_Equipped.GE_BoostJump_Equipped_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_BoostJump_Equipped_C : public UGameplayEffect
@@ -8838,8 +8780,6 @@ public:
 	SMember(FActiveGameplayEffectHandle)               GE_Hover_Instance                                           OFFSET(get<T>, {0xB50, 8, 0, 0})
 	DMember(double)                                    RequiredFuelToActivate                                      OFFSET(get<double>, {0xB58, 8, 0, 0})
 	CMember(UClass*)                                   GE_Hover                                                    OFFSET(get<T>, {0xB60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8855,6 +8795,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_JumpHover.GA_BoostJumpPack_JumpHover_C.ExecuteUbergraph_GA_BoostJumpPack_JumpHover
 	// void ExecuteUbergraph_GA_BoostJumpPack_JumpHover(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GE_BoostJump_IsUsingJetpack.GE_BoostJump_IsUsingJetpack_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_BoostJump_IsUsingJetpack_C : public UGameplayEffect
@@ -8950,8 +8892,6 @@ public:
 	DMember(bool)                                      bFirstBoost                                                 OFFSET(get<bool>, {0xD70, 1, 0, 0})
 	SMember(FGameplayTag)                              BoostEndCue                                                 OFFSET(get<T>, {0xD74, 4, 0, 0})
 	SMember(FGameplayTag)                              BoostOutOfFuelEndCue                                        OFFSET(get<T>, {0xD78, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9069,6 +9009,18 @@ public:
 	// void OnEnterVehicle();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack.GA_BoostJumpPack_C.ExecuteUbergraph_GA_BoostJumpPack
 	// void ExecuteUbergraph_GA_BoostJumpPack(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Papaya.GA_BoostJumpPack_Papaya_C
+/// Size: 0x0000 (0x000D7C - 0x000D7C)
+class UGA_BoostJumpPack_Papaya_C : public UGA_BoostJumpPack_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3452;
+
+public:
+};
+
 /// Class /Game/Athena/Sounds/Weapons/BulletWhips/BulletWhipTrackerComponent_Crossbow.BulletWhipTrackerComponent_Crossbow_C
 /// Size: 0x0000 (0x0000F8 - 0x0000F8)
 class UBulletWhipTrackerComponent_Crossbow_C : public UBulletWhipTrackerComponentBase
@@ -9091,8 +9043,6 @@ public:
 	DMember(float)                                     FullBlinkTimeline_Blink_108772B949790E60DC9BE1BAC70C2EA1    OFFSET(get<float>, {0x4A8, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           FullBlinkTimeline__Direction_108772B949790E60DC9BE1BAC70C2EA1 OFFSET(get<T>, {0x4AC, 1, 0, 0})
 	CMember(UTimelineComponent*)                       FullBlinkTimeline                                           OFFSET(get<T>, {0x4B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9104,90 +9054,8 @@ public:
 	// void ResetBlink(AFortPlayerPawn* PlayerPawn);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCL_BoostJumpPack_FuelRegen.GCL_BoostJumpPack_FuelRegen_C.ExecuteUbergraph_GCL_BoostJumpPack_FuelRegen
 	// void ExecuteUbergraph_GCL_BoostJumpPack_FuelRegen(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
-/// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Papaya.GA_BoostJumpPack_Papaya_C
-/// Size: 0x0000 (0x000D7C - 0x000D7C)
-class UGA_BoostJumpPack_Papaya_C : public UGA_BoostJumpPack_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3452;
-
-public:
 };
 
-/// Class /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C
-/// Size: 0x0028 (0x001290 - 0x0012B8)
-class ADA_Glider_Item_C : public AFortCustomizableAbilityDecoTool
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4792;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1290, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(get<T>, {0x1298, 32, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.IsOnGround
-	// void IsOnGround(bool& bOnGround);                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.RaiseUsageError
-	// void RaiseUsageError(FGameplayTagContainer& FailedReason);                                                               // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.BPPressTrigger
-	// void BPPressTrigger(AFortDecoHelper* FortDecoHelper);                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.ExecuteUbergraph_DA_Glider_Item
-	// void ExecuteUbergraph_DA_Glider_Item(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
-/// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C
-/// Size: 0x0048 (0x001290 - 0x0012D8)
-class ADA_BoostJumpPack_C : public AFortCustomizableAbilityDecoTool
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4824;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1290, 8, 0, 0})
-	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(get<T>, {0x1298, 32, 0, 0})
-	SMember(FGameplayTagContainer)                     ErrorReasonGamepad                                          OFFSET(get<T>, {0x12B8, 32, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.IsOnGround
-	// void IsOnGround(bool& bOnGround);                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.RaiseUsageError
-	// void RaiseUsageError(FGameplayTagContainer& FailedReason);                                                               // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.BPPressTrigger
-	// void BPPressTrigger(AFortDecoHelper* FortDecoHelper);                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.ExecuteUbergraph_DA_BoostJumpPack
-	// void ExecuteUbergraph_DA_BoostJumpPack(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C
-/// Size: 0x0010 (0x000B28 - 0x000B38)
-class UGA_BoostJumpPack_Equip_C : public UFortGameplayAbility
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2872;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.GetGadgetItem
-	// UFortItem* GetGadgetItem(AFortPlayerPawn* Pawn);                                                                         // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.GetPlayerController
-	// void GetPlayerController(AFortPlayerPawn* Pawn, AFortPlayerControllerZone*& AsFort Player Controller Zone);              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.IsAuthority
-	// void IsAuthority(bool& bAuthority);                                                                                      // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.K2_CanActivateAbility
-	// bool K2_CanActivateAbility(FGameplayAbilityActorInfo ActorInfo, FGameplayAbilitySpecHandle Handle, FGameplayTagContainer& RelevantTags); // [0x1ebf994] Event|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.K2_ActivateAbility
-	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.ExecuteUbergraph_GA_BoostJumpPack_Equip
-	// void ExecuteUbergraph_GA_BoostJumpPack_Equip(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
 /// Class /Game/Athena/GameplayCueNotifies/GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C
 /// Size: 0x00C8 (0x000AD0 - 0x000B98)
 class AGCL_BoostJumpPack_Hovering_C : public AGameplayCueNotify_Jetpack_Hovering
@@ -9213,8 +9081,6 @@ public:
 	CMember(UFXSystemComponent*)                       VFX                                                         OFFSET(get<T>, {0xB80, 8, 0, 0})
 	CMember(UParticleSystem*)                          P_GroundInteraction                                         OFFSET(get<T>, {0xB88, 8, 0, 0})
 	CMember(UFXSystemAsset*)                           NS_Hover                                                    OFFSET(get<T>, {0xB90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9236,6 +9102,82 @@ public:
 	// void TryToPlayGroundEffects();                                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCL_BoostJumpPack_Hovering.GCL_BoostJumpPack_Hovering_C.ExecuteUbergraph_GCL_BoostJumpPack_Hovering
 	// void ExecuteUbergraph_GCL_BoostJumpPack_Hovering(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C
+/// Size: 0x0010 (0x000B28 - 0x000B38)
+class UGA_BoostJumpPack_Equip_C : public UFortGameplayAbility
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2872;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          PlayerPawn                                                  OFFSET(get<T>, {0xB30, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.GetGadgetItem
+	// UFortItem* GetGadgetItem(AFortPlayerPawn* Pawn);                                                                         // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.GetPlayerController
+	// void GetPlayerController(AFortPlayerPawn* Pawn, AFortPlayerControllerZone*& AsFort Player Controller Zone);              // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.IsAuthority
+	// void IsAuthority(bool& bAuthority);                                                                                      // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.K2_CanActivateAbility
+	// bool K2_CanActivateAbility(FGameplayAbilityActorInfo ActorInfo, FGameplayAbilitySpecHandle Handle, FGameplayTagContainer& RelevantTags); // [0x1ebf994] Event|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.K2_ActivateAbility
+	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/GA_BoostJumpPack_Equip.GA_BoostJumpPack_Equip_C.ExecuteUbergraph_GA_BoostJumpPack_Equip
+	// void ExecuteUbergraph_GA_BoostJumpPack_Equip(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C
+/// Size: 0x0028 (0x001290 - 0x0012B8)
+class ADA_Glider_Item_C : public AFortCustomizableAbilityDecoTool
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4792;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1290, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(get<T>, {0x1298, 32, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.IsOnGround
+	// void IsOnGround(bool& bOnGround);                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.RaiseUsageError
+	// void RaiseUsageError(FGameplayTagContainer& FailedReason);                                                               // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.BPPressTrigger
+	// void BPPressTrigger(AFortDecoHelper* FortDecoHelper);                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/GliderItem/DA_Glider_Item.DA_Glider_Item_C.ExecuteUbergraph_DA_Glider_Item
+	// void ExecuteUbergraph_DA_Glider_Item(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
+};
+
+/// Class /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C
+/// Size: 0x0048 (0x001290 - 0x0012D8)
+class ADA_BoostJumpPack_C : public AFortCustomizableAbilityDecoTool
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4824;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1290, 8, 0, 0})
+	SMember(FGameplayTagContainer)                     ErrorReason                                                 OFFSET(get<T>, {0x1298, 32, 0, 0})
+	SMember(FGameplayTagContainer)                     ErrorReasonGamepad                                          OFFSET(get<T>, {0x12B8, 32, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.IsOnGround
+	// void IsOnGround(bool& bOnGround);                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.RaiseUsageError
+	// void RaiseUsageError(FGameplayTagContainer& FailedReason);                                                               // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.BPPressTrigger
+	// void BPPressTrigger(AFortDecoHelper* FortDecoHelper);                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/DA_BoostJumpPack.DA_BoostJumpPack_C.ExecuteUbergraph_DA_BoostJumpPack
+	// void ExecuteUbergraph_DA_BoostJumpPack(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/B_AthenaAlwaysLoadedContentHack.B_AthenaAlwaysLoadedContentHack_C
 /// Size: 0x0028 (0x000290 - 0x0002B8)
 class AB_AthenaAlwaysLoadedContentHack_C : public AActor
@@ -9247,6 +9189,64 @@ public:
 	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x290, 8, 0, 0})
 	CMember(TArray<UObject*>)                          HardObjectList                                              OFFSET(get<T>, {0x298, 16, 0, 0})
 	CMember(TArray<UClass*>)                           HardClassList                                               OFFSET(get<T>, {0x2A8, 16, 0, 0})
+};
+
+/// Class /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C
+/// Size: 0x0120 (0x000290 - 0x0003B0)
+class ABP_Frontend_ShopBG_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 944;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     StandardBackgroundPlane1                                    OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     StandardBackgroundPlane                                     OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     Cone                                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     Plane                                                       OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     BackgroundTexturePlane                                      OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     VeryLargeBackgroundPlane                                    OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(USceneComponent*)                          Scene_Signal                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	SMember(FRotator)                                  Rot_Intro                                                   OFFSET(get<T>, {0x2E0, 24, 0, 0})
+	SMember(FRotator)                                  NextRot                                                     OFFSET(get<T>, {0x2F8, 24, 0, 0})
+	SMember(FRotator)                                  Rot                                                         OFFSET(get<T>, {0x310, 24, 0, 0})
+	SMember(FRotator)                                  Rot1                                                        OFFSET(get<T>, {0x328, 24, 0, 0})
+	DMember(double)                                    PlayRate                                                    OFFSET(get<double>, {0x340, 8, 0, 0})
+	SMember(FRotator)                                  Rot_IntroStart                                              OFFSET(get<T>, {0x348, 24, 0, 0})
+	DMember(bool)                                      bHasEvent                                                   OFFSET(get<bool>, {0x360, 1, 0, 0})
+	DMember(double)                                    YInitial                                                    OFFSET(get<double>, {0x368, 8, 0, 0})
+	DMember(double)                                    YEnd                                                        OFFSET(get<double>, {0x370, 8, 0, 0})
+	CMember(UMaterialInstanceDynamic*)                 Mid                                                         OFFSET(get<T>, {0x378, 8, 0, 0})
+	CMember(ACMSLobbyDirector_C*)                      CMSDirector                                                 OFFSET(get<T>, {0x380, 8, 0, 0})
+	SMember(FString)                                   BPEnvName                                                   OFFSET(get<T>, {0x388, 16, 0, 0})
+	DMember(bool)                                      ShopEntered                                                 OFFSET(get<bool>, {0x398, 1, 0, 0})
+	SMember(FTimerHandle)                              DonutSeqTimerHandle                                         OFFSET(get<T>, {0x3A0, 8, 0, 0})
+	CMember(AActor*)                                   DomeObstruction                                             OFFSET(get<T>, {0x3A8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicBG
+	// void SetDynamicBG(UTexture* InTexture);                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.EnableDynamicShopBG
+	// void EnableDynamicShopBG();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.SetDynamicEnvironmentEvent
+	// void SetDynamicEnvironmentEvent(FString InPresetEnvName);                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.DebugShopBG
+	// void DebugShopBG();                                                                                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleRequestHide
+	// void HandleRequestHide();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleItemShopEntered
+	// void HandleItemShopEntered();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.HandleStoreEntered
+	// void HandleStoreEntered();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ResetDonut
+	// void ResetDonut();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/UI/Frontend/Art/BP_Frontend_ShopBG.BP_Frontend_ShopBG_C.ExecuteUbergraph_BP_Frontend_ShopBG
+	// void ExecuteUbergraph_BP_Frontend_ShopBG(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/Cosmetics/Emotes/B_EmotePreviewDisplay.B_EmotePreviewDisplay_C
@@ -9266,8 +9266,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnEmoteSetupFinished                                        OFFSET(get<T>, {0x2F0, 16, 0, 0})
 	CMember(UAthenaShoutItemDefinition*)               ShoutItemDefinition                                         OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(TArray<UAudioComponent*>)                  DynamicallySpawnedSounds                                    OFFSET(get<T>, {0x308, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9289,6 +9287,8 @@ public:
 	// void ExecuteUbergraph_B_EmotePreviewDisplay(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Athena/Cosmetics/Emotes/B_EmotePreviewDisplay.B_EmotePreviewDisplay_C.OnEmoteSetupFinished__DelegateSignature
 	// void OnEmoteSetupFinished__DelegateSignature();                                                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Athena/UI/Customization/AthenaItemTextureVariantPicker.AthenaItemTextureVariantPicker_C
 /// Size: 0x0018 (0x0004B0 - 0x0004C8)
 class UAthenaItemTextureVariantPicker_C : public UFortVariantItemTexturePicker
@@ -9300,8 +9300,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x4B0, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     TextBlock_AllItemsArchived                                  OFFSET(get<T>, {0x4B8, 8, 0, 0})
 	CMember(UWidgetSwitcher*)                          WidgetSwitcher_AvailableItems                               OFFSET(get<T>, {0x4C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9311,14 +9309,6 @@ public:
 	// void OnToggleAllItemsArchivedMessage(bool bDisplay);                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/UI/Customization/AthenaItemTextureVariantPicker.AthenaItemTextureVariantPicker_C.ExecuteUbergraph_AthenaItemTextureVariantPicker
 	// void ExecuteUbergraph_AthenaItemTextureVariantPicker(int32_t EntryPoint);                                                // [0x1ebf994] Final                
-/// Class /Game/Athena/UI/Customization/AthenaVariantTileCustomizationSelector.AthenaVariantTileCustomizationSelector_C
-/// Size: 0x0000 (0x0003D0 - 0x0003D0)
-class UAthenaVariantTileCustomizationSelector_C : public UFortVariantSelector
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 976;
-
-public:
 };
 
 /// Class /Game/Athena/UI/Customization/AthenaRichColorVariantPicker.AthenaRichColorVariantPicker_C
@@ -9327,6 +9317,16 @@ class UAthenaRichColorVariantPicker_C : public UFortVariantRichColorPicker
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1008;
+
+public:
+};
+
+/// Class /Game/Athena/UI/Customization/AthenaVariantTileCustomizationSelector.AthenaVariantTileCustomizationSelector_C
+/// Size: 0x0000 (0x0003D0 - 0x0003D0)
+class UAthenaVariantTileCustomizationSelector_C : public UFortVariantSelector
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 976;
 
 public:
 };
@@ -9342,8 +9342,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x1560, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         WarningPulse                                                OFFSET(get<T>, {0x1568, 8, 0, 0})
 	CMember(UImage*)                                   Image_Conflict                                              OFFSET(get<T>, {0x1570, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9355,12 +9353,24 @@ public:
 	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /Game/Athena/UI/Customization/AthenaVariantTileButton.AthenaVariantTileButton_C.ExecuteUbergraph_AthenaVariantTileButton
 	// void ExecuteUbergraph_AthenaVariantTileButton(int32_t EntryPoint);                                                       // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/UI/Customization/AthenaVariantNumericalCustomizationSelector.AthenaVariantNumericalCustomizationSelector_C
 /// Size: 0x0000 (0x0003F0 - 0x0003F0)
 class UAthenaVariantNumericalCustomizationSelector_C : public UFortVariantNumericalPicker
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 1008;
+
+public:
+};
+
+/// Class /Game/Athena/UI/Challenges/Art/ChallengeTile_EmptyButton.ChallengeTile_EmptyButton_C
+/// Size: 0x0000 (0x000730 - 0x000730)
+class UChallengeTile_EmptyButton_C : public UCommonButtonStyle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1840;
 
 public:
 };
@@ -9376,8 +9386,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D8, 8, 0, 0})
 	CMember(UOverlay*)                                 Panel_Value                                                 OFFSET(get<T>, {0x3E0, 8, 0, 0})
 	CMember(USimpleMaterialProgressBar_C*)             Progress                                                    OFFSET(get<T>, {0x3E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9385,6 +9393,8 @@ public:
 	// void OnUpdateValue(float NormalizedValue, bool bIsLocked);                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/UI/Customization/AthenaFloatSliderVariantPicker.AthenaFloatSliderVariantPicker_C.ExecuteUbergraph_AthenaFloatSliderVariantPicker
 	// void ExecuteUbergraph_AthenaFloatSliderVariantPicker(int32_t EntryPoint);                                                // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/DrivableVehicles/PapayaBoundarySpline.PapayaBoundarySpline_C
 /// Size: 0x0010 (0x000290 - 0x0002A0)
 class APapayaBoundarySpline_C : public AActor
@@ -9517,16 +9527,6 @@ class UMissionGen_NoBuildBR_Duo_C : public UFortMissionGenerator
 public:
 };
 
-/// Class /Game/Athena/UI/Challenges/Art/ChallengeTile_EmptyButton.ChallengeTile_EmptyButton_C
-/// Size: 0x0000 (0x000730 - 0x000730)
-class UChallengeTile_EmptyButton_C : public UCommonButtonStyle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1840;
-
-public:
-};
-
 /// Class /Game/Athena/UI/InGame/Leto/LetoPlayerAvatar.LetoPlayerAvatar_C
 /// Size: 0x0000 (0x0002D8 - 0x0002D8)
 class ULetoPlayerAvatar_C : public ULetoPlayerAvatar
@@ -9575,6 +9575,26 @@ public:
 	CMember(UImage*)                                   Skin_Text_Bullet                                            OFFSET(get<T>, {0x2C0, 8, 0, 0})
 };
 
+/// Class /Game/Athena/Playset/Minigames/StatFilters/MinigameStat_Score.MinigameStat_Score_C
+/// Size: 0x0000 (0x000190 - 0x000190)
+class UMinigameStat_Score_C : public UFortMinigameStatFilter
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 400;
+
+public:
+};
+
+/// Class /Game/Athena/Items/ForagedItems/EnvCampFire/Campfire_Interface.Campfire_Interface_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UCampfire_Interface_C : public UInterface
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
 /// Class /Game/Athena/Items/Gameplay/BackPacks/CarminePack/FX/B_Ground_CameraShake_Heavy.B_Ground_CameraShake_Heavy_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_Ground_CameraShake_Heavy_C : public ULegacyCameraShake
@@ -9599,8 +9619,6 @@ public:
 	CMember(AActor*)                                   My_Target                                                   OFFSET(get<T>, {0x9A8, 8, 0, 0})
 	SMember(FTimerHandle)                              Timer                                                       OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	DMember(double)                                    LoopingCheckTime                                            OFFSET(get<double>, {0x9B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9616,6 +9634,71 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_PlayerWorldPFX_Persistent.GCN_Loop_PlayerWorldPFX_Persistent_C.ExecuteUbergraph_GCN_Loop_PlayerWorldPFX_Persistent
 	// void ExecuteUbergraph_GCN_Loop_PlayerWorldPFX_Persistent(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C
+/// Size: 0x0070 (0x000990 - 0x000A00)
+class AGCN_Loop_GhostMode_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2560;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	DMember(float)                                     FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E       OFFSET(get<float>, {0x998, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E OFFSET(get<T>, {0x99C, 1, 0, 0})
+	CMember(UTimelineComponent*)                       FadeMaterialsTL                                             OFFSET(get<T>, {0x9A0, 8, 0, 0})
+	SMember(FLinearColor)                              HitGlowColor                                                OFFSET(get<T>, {0x9A8, 16, 0, 0})
+	SMember(FLinearColor)                              HotGlowOuterColor                                           OFFSET(get<T>, {0x9B8, 16, 0, 0})
+	DMember(double)                                    HitGlowFresnelBrightness                                    OFFSET(get<double>, {0x9C8, 8, 0, 0})
+	DMember(double)                                    HitGlowFresnelExponent                                      OFFSET(get<double>, {0x9D0, 8, 0, 0})
+	DMember(double)                                    Glow_Priority                                               OFFSET(get<double>, {0x9D8, 8, 0, 0})
+	CMember(USoundBase*)                               StopSoundCue                                                OFFSET(get<T>, {0x9E0, 8, 0, 0})
+	CMember(USoundBase*)                               StartSoundCue                                               OFFSET(get<T>, {0x9E8, 8, 0, 0})
+	CMember(TScriptInterface<BlueprintGeneratedClass>) TargetPawn                                                  OFFSET(get<T>, {0x9F0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.Highlight Lerp
+	// void Highlight Lerp(double Alpha, FPawnHighlight& Highlight);                                                            // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__FinishedFunc
+	// void FadeMaterialsTL__FinishedFunc();                                                                                    // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__UpdateFunc
+	// void FadeMaterialsTL__UpdateFunc();                                                                                      // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.OnRemoval
+	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsIn
+	// void FadeMaterialsIn();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsOut
+	// void FadeMaterialsOut();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.ExecuteUbergraph_GCN_Loop_GhostMode
+	// void ExecuteUbergraph_GCN_Loop_GhostMode(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_CreativeInvulnerable.GCN_Loop_CreativeInvulnerable_C
+/// Size: 0x0000 (0x000A00 - 0x000A00)
+class AGCN_Loop_CreativeInvulnerable_C : public AGCN_Loop_GhostMode_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2560;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_FallDamageImmunity.GCNL_Athena_FallDamageImmunity_C
+/// Size: 0x0010 (0x0009D8 - 0x0009E8)
+class AGCNL_Athena_FallDamageImmunity_C : public AFortGameplayCueNotifyAthena_FallDamageImmunity
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2536;
+
+public:
+	CMember(UAudioComponent*)                          InUseLoopAudio                                              OFFSET(get<T>, {0x9D8, 8, 0, 0})
+	CMember(AActor*)                                   Target                                                      OFFSET(get<T>, {0x9E0, 8, 0, 0})
+};
+
 /// Class /Game/Athena/Environments/DudeBro/B_DudeBro_VortexLoop_Shake.B_DudeBro_VortexLoop_Shake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_DudeBro_VortexLoop_Shake_C : public ULegacyCameraShake
@@ -9634,6 +9717,37 @@ class UB_DudeBro_VortexActivate_Shake_C : public ULegacyCameraShake
 	static inline constexpr uint64_t __MDKClassSize = 496;
 
 public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C
+/// Size: 0x0031 (0x000990 - 0x0009C1)
+class AGCNL_Vent_Enter_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2497;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
+	DMember(float)                                     FadePPVol_LERP_6D28D8B64202D10F474B48B80194DA6D             OFFSET(get<float>, {0x9A0, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           FadePPVol__Direction_6D28D8B64202D10F474B48B80194DA6D       OFFSET(get<T>, {0x9A4, 1, 0, 0})
+	CMember(UTimelineComponent*)                       FadePPVol                                                   OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	CMember(UClass*)                                   CameraShakeClass                                            OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	CMember(ULegacyCameraShake*)                       CameraShake                                                 OFFSET(get<T>, {0x9B8, 8, 0, 0})
+	DMember(bool)                                      UsePP                                                       OFFSET(get<bool>, {0x9C0, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.FadePPVol__FinishedFunc
+	// void FadePPVol__FinishedFunc();                                                                                          // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.FadePPVol__UpdateFunc
+	// void FadePPVol__UpdateFunc();                                                                                            // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.OnRemoval
+	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.ExecuteUbergraph_GCNL_Vent_Enter
+	// void ExecuteUbergraph_GCNL_Vent_Enter(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_Wobble.GCN_Athena_HidingProp_Wobble_C
@@ -9692,8 +9806,6 @@ public:
 	CMember(USoundBase*)                               SoundLoopOnAccel                                            OFFSET(get<T>, {0xAF8, 8, 0, 0})
 	DMember(bool)                                      bIsFirstJump                                                OFFSET(get<bool>, {0xB00, 1, 0, 0})
 	CMember(UFXSystemComponent*)                       VFX_Reference                                               OFFSET(get<T>, {0xB08, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9707,6 +9819,8 @@ public:
 	// void On Pawn Landed(FHitResult& Hit);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCL_BoostJumpPack_Hovering_Infinite.GCL_BoostJumpPack_Hovering_Infinite_C.ExecuteUbergraph_GCL_BoostJumpPack_Hovering_Infinite
 	// void ExecuteUbergraph_GCL_BoostJumpPack_Hovering_Infinite(int32_t EntryPoint);                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCL_BoostJumpPack_Hovering_Papaya.GCL_BoostJumpPack_Hovering_Papaya_C
 /// Size: 0x0000 (0x000B10 - 0x000B10)
 class AGCL_BoostJumpPack_Hovering_Papaya_C : public AGCL_BoostJumpPack_Hovering_Infinite_C
@@ -9726,8 +9840,6 @@ class AGCNL_Athena_HidingProp_Collision_C : public AFortGameplayCueNotify_Loop
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9737,6 +9849,8 @@ public:
 	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Collision.GCNL_Athena_HidingProp_Collision_C.ExecuteUbergraph_GCNL_Athena_HidingProp_Collision
 	// void ExecuteUbergraph_GCNL_Athena_HidingProp_Collision(int32_t EntryPoint);                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_PropTeleporting.GCNL_Athena_HidingProp_PropTeleporting_C
 /// Size: 0x0008 (0x000990 - 0x000998)
 class AGCNL_Athena_HidingProp_PropTeleporting_C : public AFortGameplayCueNotify_Loop
@@ -9746,8 +9860,6 @@ class AGCNL_Athena_HidingProp_PropTeleporting_C : public AFortGameplayCueNotify_
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9755,6 +9867,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_PropTeleporting.GCNL_Athena_HidingProp_PropTeleporting_C.ExecuteUbergraph_GCNL_Athena_HidingProp_PropTeleporting
 	// void ExecuteUbergraph_GCNL_Athena_HidingProp_PropTeleporting(int32_t EntryPoint);                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_Surface_Parent.GCNL_Athena_Surface_Parent_C
 /// Size: 0x0012 (0x000990 - 0x0009A2)
 class AGCNL_Athena_Surface_Parent_C : public AFortGameplayCueNotify_Loop
@@ -9767,8 +9881,6 @@ public:
 	CMember(AFortPlayerPawn*)                          TargetPawn                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(bool)                                      Debug                                                       OFFSET(get<bool>, {0x9A0, 1, 0, 0})
 	DMember(bool)                                      Is_in_Water                                                 OFFSET(get<bool>, {0x9A1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9780,6 +9892,8 @@ public:
 	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_Surface_Parent.GCNL_Athena_Surface_Parent_C.ExecuteUbergraph_GCNL_Athena_Surface_Parent
 	// void ExecuteUbergraph_GCNL_Athena_Surface_Parent(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/ShadowBomb/FX/CamShake_Shadow_Bomb.CamShake_Shadow_Bomb_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UCamShake_Shadow_Bomb_C : public ULegacyCameraShake
@@ -9790,9 +9904,79 @@ class UCamShake_Shadow_Bomb_C : public ULegacyCameraShake
 public:
 };
 
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_Teleporter_Enter.GCN_Athena_HidingProp_Teleporter_Enter_C
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C
+/// Size: 0x0040 (0x000990 - 0x0009D0)
+class AGCNL_EnvCampFire_Doused_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2512;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	DMember(float)                                     Fade_Doused_Smoke_Fade_50A77D974140FDA04967E2BABB987458     OFFSET(get<float>, {0x998, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           Fade_Doused_Smoke__Direction_50A77D974140FDA04967E2BABB987458 OFFSET(get<T>, {0x99C, 1, 0, 0})
+	CMember(UTimelineComponent*)                       Fade_Doused_Smoke                                           OFFSET(get<T>, {0x9A0, 8, 0, 0})
+	SMember(FScalableFloat)                            Row_Duration                                                OFFSET(get<T>, {0x9A8, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.Fade Doused Smoke__FinishedFunc
+	// void Fade Doused Smoke__FinishedFunc();                                                                                  // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.Fade Doused Smoke__UpdateFunc
+	// void Fade Doused Smoke__UpdateFunc();                                                                                    // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.OnRemoval
+	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.DestroyOnDestroy
+	// void DestroyOnDestroy(AActor* DestroyedActor);                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.ExecuteUbergraph_GCNL_EnvCampFire_Doused
+	// void ExecuteUbergraph_GCNL_EnvCampFire_Doused(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Stoke.GCNL_EnvCampFire_Stoke_C
+/// Size: 0x0058 (0x000990 - 0x0009E8)
+class AGCNL_EnvCampFire_Stoke_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2536;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FScalableFloat)                            Row_TickInterval                                            OFFSET(get<T>, {0x998, 40, 0, 0})
+	SMember(FScalableFloat)                            Row_MaxHeals                                                OFFSET(get<T>, {0x9C0, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Stoke.GCNL_EnvCampFire_Stoke_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Stoke.GCNL_EnvCampFire_Stoke_C.ExecuteUbergraph_GCNL_EnvCampFire_Stoke
+	// void ExecuteUbergraph_GCNL_EnvCampFire_Stoke(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_Enter.GCN_Athena_HidingProp_HayStack_Enter_C
 /// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_Teleporter_Enter_C : public UFortGameplayCueNotify_Burst
+class UGCN_Athena_HidingProp_HayStack_Enter_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_LandedOn.GCN_Athena_HidingProp_HayStack_LandedOn_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Athena_HidingProp_HayStack_LandedOn_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_Exit.GCN_Athena_HidingProp_HayStack_Exit_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Athena_HidingProp_HayStack_Exit_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -9820,9 +10004,29 @@ class UGCN_Athena_HidingProp_WilliePete_Enter_C : public UFortGameplayCueNotify_
 public:
 };
 
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_WilliePete_Rustle.GCN_Athena_HidingProp_WilliePete_Rustle_C
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_Exit_Player.GCN_Athena_HidingProp_HayStack_Exit_Player_C
 /// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_WilliePete_Rustle_C : public UFortGameplayCueNotify_Burst
+class UGCN_Athena_HidingProp_HayStack_Exit_Player_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_WhileEntering.GCN_Athena_HidingProp_HayStack_WhileEntering_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Athena_HidingProp_HayStack_WhileEntering_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_Teleporter_Enter.GCN_Athena_HidingProp_Teleporter_Enter_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Athena_HidingProp_Teleporter_Enter_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -9840,9 +10044,9 @@ class UGCN_Athena_HidingProp_WilliePete_LandedOn_C : public UFortGameplayCueNoti
 public:
 };
 
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_WilliePete_ExitPlayer.GCN_Athena_HidingProp_WilliePete_ExitPlayer_C
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_WilliePete_Rustle.GCN_Athena_HidingProp_WilliePete_Rustle_C
 /// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_WilliePete_ExitPlayer_C : public UFortGameplayCueNotify_Burst
+class UGCN_Athena_HidingProp_WilliePete_Rustle_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -9853,6 +10057,16 @@ public:
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_WilliePete_WhileEntering.GCN_Athena_HidingProp_WilliePete_WhileEntering_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Athena_HidingProp_WilliePete_WhileEntering_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_WilliePete_ExitPlayer.GCN_Athena_HidingProp_WilliePete_ExitPlayer_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Athena_HidingProp_WilliePete_ExitPlayer_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -9909,13 +10123,13 @@ class UGCN_BoostJumpPack_Boost_C : public UFortGameplayCueNotify_Simple
 
 public:
 	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0x68, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Athena/GameplayCueNotifies/GCN_BoostJumpPack_Boost.GCN_BoostJumpPack_Boost_C.OnStartParticleSystemSpawned
 	// void OnStartParticleSystemSpawned(UParticleSystemComponent* SpawnedParticleSysComponent, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_ColdBreath_V2.GCN_Loop_ColdBreath_V2_C
 /// Size: 0x0000 (0x000990 - 0x000990)
 class AGCN_Loop_ColdBreath_V2_C : public AFortGameplayCueNotify_Loop
@@ -9924,6 +10138,38 @@ class AGCN_Loop_ColdBreath_V2_C : public AFortGameplayCueNotify_Loop
 	static inline constexpr uint64_t __MDKClassSize = 2448;
 
 public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C
+/// Size: 0x0038 (0x000990 - 0x0009C8)
+class AGCN_Loop_Ice_Feet_Environmental_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2504;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
+	CMember(TArray<UFXSystemComponent*>)               SpawnedEmitters                                             OFFSET(get<T>, {0x9A0, 16, 0, 0})
+	CMember(UFortCollisionAudioComponent*)             CollisionAudioComp                                          OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	CMember(TArray<UAudioComponent*>)                  SpawnedAudioComps                                           OFFSET(get<T>, {0x9B8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.AttachFX
+	// void AttachFX(USceneComponent* Mesh);                                                                                    // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.ReceiveTick
+	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.OnPawnMovementModeChanged
+	// void OnPawnMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.On Footstep Event
+	// void On Footstep Event();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.OnLoopingStartGeneric
+	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.OnRemovalGeneric
+	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.ExecuteUbergraph_GCN_Loop_Ice_Feet_Environmental
+	// void ExecuteUbergraph_GCN_Loop_Ice_Feet_Environmental(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_SnowFlakes_CameraAttached.GCN_Loop_SnowFlakes_CameraAttached_C
@@ -9935,8 +10181,6 @@ class AGCN_Loop_SnowFlakes_CameraAttached_C : public AFortGameplayCueNotify_Loop
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9944,6 +10188,8 @@ public:
 	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_SnowFlakes_CameraAttached.GCN_Loop_SnowFlakes_CameraAttached_C.ExecuteUbergraph_GCN_Loop_SnowFlakes_CameraAttached
 	// void ExecuteUbergraph_GCN_Loop_SnowFlakes_CameraAttached(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_SnowFlakes_CameraAttached_Niagara.GCN_Loop_SnowFlakes_CameraAttached_Niagara_C
 /// Size: 0x0014 (0x000990 - 0x0009A4)
 class AGCN_Loop_SnowFlakes_CameraAttached_Niagara_C : public AFortGameplayCueNotify_Loop
@@ -9955,8 +10201,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UNiagaraComponent*)                        ReturnValue                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
 	DMember(int32_t)                                   NewVar                                                      OFFSET(get<int32_t>, {0x9A0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9964,9 +10208,44 @@ public:
 	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_SnowFlakes_CameraAttached_Niagara.GCN_Loop_SnowFlakes_CameraAttached_Niagara_C.ExecuteUbergraph_GCN_Loop_SnowFlakes_CameraAttached_Niagara
 	// void ExecuteUbergraph_GCN_Loop_SnowFlakes_CameraAttached_Niagara(int32_t EntryPoint);                                    // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Zipline_SpeedLines.GCN_Zipline_SpeedLines_C
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C
+/// Size: 0x0038 (0x000990 - 0x0009C8)
+class AGCN_Loop_Snow_Whiteout_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2504;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
+	DMember(float)                                     FadeinOut_Post_BDCA5FC943E3CD00D42B59A9A0D1C530             OFFSET(get<float>, {0x9A0, 4, 0, 0})
+	DMember(float)                                     FadeinOut_Fade_BDCA5FC943E3CD00D42B59A9A0D1C530             OFFSET(get<float>, {0x9A4, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           FadeinOut__Direction_BDCA5FC943E3CD00D42B59A9A0D1C530       OFFSET(get<T>, {0x9A8, 1, 0, 0})
+	CMember(UTimelineComponent*)                       FadeInOut                                                   OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	CMember(USoundBase*)                               SoundOnFadeIn                                               OFFSET(get<T>, {0x9B8, 8, 0, 0})
+	CMember(USoundBase*)                               SoundOnFadeOut                                              OFFSET(get<T>, {0x9C0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.FadeinOut__FinishedFunc
+	// void FadeinOut__FinishedFunc();                                                                                          // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.FadeinOut__UpdateFunc
+	// void FadeinOut__UpdateFunc();                                                                                            // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.ReceiveDestroyed
+	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.OnRemoval
+	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.ExecuteUbergraph_GCN_Loop_Snow_Whiteout
+	// void ExecuteUbergraph_GCN_Loop_Snow_Whiteout(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Tether_Smash.GCN_Tether_Smash_C
 /// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Zipline_SpeedLines_C : public UFortGameplayCueNotify_Burst
+class UGCN_Tether_Smash_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -9977,6 +10256,16 @@ public:
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Zipline_Smash.GCN_Zipline_Smash_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Zipline_Smash_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Zipline_SpeedLines.GCN_Zipline_SpeedLines_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Zipline_SpeedLines_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -9996,8 +10285,6 @@ public:
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(TArray<FPhysicsLogAnalyticsStruct>)        PhysicsLogData                                              OFFSET(get<T>, {0x2A0, 16, 0, 0})
 	CMember(UAsyncAction_StartListeningToStatefulEvent*) GamePhaseUpdatedAsyncTask                                 OFFSET(get<T>, {0x2B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10031,6 +10318,8 @@ public:
 	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/PhysicsActors/PhysicsTreeLog/B_PhysicsTree_Reporter.B_PhysicsTree_Reporter_C.ExecuteUbergraph_B_PhysicsTree_Reporter
 	// void ExecuteUbergraph_B_PhysicsTree_Reporter(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionRemove.GCN_MultiInteractionRemove_C
 /// Size: 0x0010 (0x000218 - 0x000228)
 class UGCN_MultiInteractionRemove_C : public UFortGameplayCueNotify_Burst
@@ -10041,8 +10330,6 @@ class UGCN_MultiInteractionRemove_C : public UFortGameplayCueNotify_Burst
 public:
 	CMember(USoundBase*)                               DBNO_Player_Removed_Sound                                   OFFSET(get<T>, {0x218, 8, 0, 0})
 	CMember(USoundBase*)                               Default_Player_Removed_Sound                                OFFSET(get<T>, {0x220, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10050,200 +10337,6 @@ public:
 	// void OnBurstGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionRemove.GCN_MultiInteractionRemove_C.OnBurst
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C
-/// Size: 0x0016 (0x0009A2 - 0x0009B8)
-class AGCNL_Athena_ChromeSurface_C : public AGCNL_Athena_Surface_Parent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2488;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          LocalTarget                                                 OFFSET(get<T>, {0x9B0, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C.OnApplicationGeneric
-	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C.OnRemovalGeneric
-	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C.ExecuteUbergraph_GCNL_Athena_ChromeSurface
-	// void ExecuteUbergraph_GCNL_Athena_ChromeSurface(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/Consumables/ZipLine/CameraShake_ZipLine_DownhillSpeed.CameraShake_ZipLine_DownhillSpeed_C
-/// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UCameraShake_ZipLine_DownhillSpeed_C : public ULegacyCameraShake
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionAdd.GCN_MultiInteractionAdd_C
-/// Size: 0x0010 (0x000218 - 0x000228)
-class UGCN_MultiInteractionAdd_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 552;
-
-public:
-	CMember(USoundBase*)                               DBNO_Player_Joined_Sound                                    OFFSET(get<T>, {0x218, 8, 0, 0})
-	CMember(USoundBase*)                               Default_Player_Joined_Sound                                 OFFSET(get<T>, {0x220, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionAdd.GCN_MultiInteractionAdd_C.OnBurstGeneric
-	// void OnBurstGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionAdd.GCN_MultiInteractionAdd_C.OnBurst
-	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C
-/// Size: 0x0088 (0x000990 - 0x000A18)
-class AGCNL_Athena_MultiInteract_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2584;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(UAudioComponent*)                          Audio                                                       OFFSET(get<T>, {0x998, 8, 0, 0})
-	DMember(double)                                    CurrentPitch                                                OFFSET(get<double>, {0x9A0, 8, 0, 0})
-	DMember(double)                                    TargetPitch                                                 OFFSET(get<double>, {0x9A8, 8, 0, 0})
-	CMember(TMap<int32_t, double>)                     Player_Pitch_Map                                            OFFSET(get<T>, {0x9B0, 80, 0, 0})
-	DMember(double)                                    PreviousPitch                                               OFFSET(get<double>, {0xA00, 8, 0, 0})
-	SMember(FTimerHandle)                              TargetProgressHandle                                        OFFSET(get<T>, {0xA08, 8, 0, 0})
-	CMember(APlayerPawn_Athena_C*)                     Effect_Causer_Pawn                                          OFFSET(get<T>, {0xA10, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.OnApplicationGeneric
-	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.OnRemovalGeneric
-	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.CheckTargetProgress
-	// void CheckTargetProgress();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.OnActorCountChanged
-	// void OnActorCountChanged(int32_t InteractingActorCount, float MultiInteractMultiplier, float InteractingDuration);       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.ExecuteUbergraph_GCNL_Athena_MultiInteract
-	// void ExecuteUbergraph_GCNL_Athena_MultiInteract(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C
-/// Size: 0x0080 (0x000BB8 - 0x000C38)
-class AProp_PhysicsBoulder_Parent_C : public ABuildingProp
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3128;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBB8, 8, 0, 0})
-	CMember(UFortSoundIndicatorComponent*)             Sound_Indicator                                             OFFSET(get<T>, {0xBC0, 8, 0, 0})
-	SMember(FVector)                                   LastImpactNormal                                            OFFSET(get<T>, {0xBC8, 24, 0, 0})
-	SMember(FScalableFloat)                            VerticalImpulseRatio                                        OFFSET(get<T>, {0xBE0, 40, 0, 0})
-	DMember(double)                                    NextPotentialLaunchTime                                     OFFSET(get<double>, {0xC08, 8, 0, 0})
-	DMember(double)                                    LaunchDelay                                                 OFFSET(get<double>, {0xC10, 8, 0, 0})
-	CMember(TArray<FScalableFloat>)                    PlayerImpactTiers                                           OFFSET(get<T>, {0xC18, 16, 0, 0})
-	CMember(TArray<FScalableFloat>)                    PlayerImpulseTiers                                          OFFSET(get<T>, {0xC28, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.GetPlayerImpulseVelocityFromImpactVelocity
-	// void GetPlayerImpulseVelocityFromImpactVelocity(double Impact, bool& Minimum Met, double& Impulse);                      // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.ComponentHit
-	// void ComponentHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.ExecuteUbergraph_Prop_PhysicsBoulder_Parent
-	// void ExecuteUbergraph_Prop_PhysicsBoulder_Parent(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C
-/// Size: 0x0028 (0x000C38 - 0x000C60)
-class AProp_PhysicsBoulder_Granite_C : public AProp_PhysicsBoulder_Parent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3168;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC38, 8, 0, 0})
-	CMember(UNiagaraSystem*)                           NS_RollingEffects                                           OFFSET(get<T>, {0xC40, 8, 0, 0})
-	SMember(FName)                                     RollingEffectsVector3VarName                                OFFSET(get<T>, {0xC48, 4, 0, 0})
-	CMember(UNiagaraSystem*)                           OnSpawnFX_One                                               OFFSET(get<T>, {0xC50, 8, 0, 0})
-	CMember(UNiagaraSystem*)                           OnSpawnFX_Two                                               OFFSET(get<T>, {0xC58, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.OnDeathPlayEffects
-	// void OnDeathPlayEffects(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.ReceiveHit
-	// void ReceiveHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.ExecuteUbergraph_Prop_PhysicsBoulder_Granite
-	// void ExecuteUbergraph_Prop_PhysicsBoulder_Granite(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C
-/// Size: 0x00D8 (0x000AD0 - 0x000BA8)
-class AGCNL_Jetpack_Hover_Lateral_C : public AGameplayCueNotify_Jetpack_Hovering
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2984;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xAD0, 8, 0, 0})
-	DMember(bool)                                      bJetpackAudioEnabled                                        OFFSET(get<bool>, {0xAD8, 1, 0, 0})
-	CMember(USoundBase*)                               SoundOnStart                                                OFFSET(get<T>, {0xAE0, 8, 0, 0})
-	CMember(USoundBase*)                               SoundOnStop                                                 OFFSET(get<T>, {0xAE8, 8, 0, 0})
-	CMember(USoundBase*)                               SoundLoopOnIdle                                             OFFSET(get<T>, {0xAF0, 8, 0, 0})
-	CMember(USoundBase*)                               SoundLoopOnAccel                                            OFFSET(get<T>, {0xAF8, 8, 0, 0})
-	CMember(USoundBase*)                               SoundLoopOnOutOfFuel                                        OFFSET(get<T>, {0xB00, 8, 0, 0})
-	CMember(USoundBase*)                               SoundOnFuelWarning                                          OFFSET(get<T>, {0xB08, 8, 0, 0})
-	CMember(USoundBase*)                               SoundOnOutOfFuel                                            OFFSET(get<T>, {0xB10, 8, 0, 0})
-	DMember(bool)                                      bIsFirstJump                                                OFFSET(get<bool>, {0xB18, 1, 0, 0})
-	CMember(UParticleSystemComponent*)                 GroundInteract                                              OFFSET(get<T>, {0xB20, 8, 0, 0})
-	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   Milo_Check                                                  OFFSET(get<T>, {0xB28, 32, 0, 0})
-	CMember(TWeakObjectPtr<UObject*>)                  Milo_Backpack                                               OFFSET(get<T>, {0xB48, 32, 0, 0})
-	SMember(FVector)                                   Milo_LightScale                                             OFFSET(get<T>, {0xB68, 24, 0, 0})
-	CMember(UParticleSystem*)                          HoverEffect                                                 OFFSET(get<T>, {0xB80, 8, 0, 0})
-	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0xB88, 4, 0, 0})
-	CMember(UParticleSystem*)                          P_GroundInteract                                            OFFSET(get<T>, {0xB90, 8, 0, 0})
-	CMember(UFXSystemComponent*)                       HoverFXSystem                                               OFFSET(get<T>, {0xB98, 8, 0, 0})
-	CMember(UFXSystemAsset*)                           NS_Hover                                                    OFFSET(get<T>, {0xBA0, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.SetJetpackAudioEnabled
-	// void SetJetpackAudioEnabled(bool Enabled);                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.OnRemove
-	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.OnActive
-	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.ResetFX
-	// void ResetFX();                                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.K2_HandleGameplayCue
-	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.ReceiveDestroyed
-	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.TryToPlayGroundEffects
-	// void TryToPlayGroundEffects();                                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.ExecuteUbergraph_GCNL_Jetpack_Hover_Lateral
-	// void ExecuteUbergraph_GCNL_Jetpack_Hover_Lateral(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_FallDamageImmunity.GCNL_Athena_FallDamageImmunity_C
-/// Size: 0x0010 (0x0009D8 - 0x0009E8)
-class AGCNL_Athena_FallDamageImmunity_C : public AFortGameplayCueNotifyAthena_FallDamageImmunity
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2536;
-
-public:
-	CMember(UAudioComponent*)                          InUseLoopAudio                                              OFFSET(get<T>, {0x9D8, 8, 0, 0})
-	CMember(AActor*)                                   Target                                                      OFFSET(get<T>, {0x9E0, 8, 0, 0})
 };
 
 /// Class /Game/Athena/Items/ForagedItems/Rift/FX/BP_CameraLens_CrackExit.BP_CameraLens_CrackExit_C
@@ -10284,8 +10377,6 @@ public:
 	CMember(AActor*)                                   LensEffectActor                                             OFFSET(get<T>, {0x9C0, 8, 0, 0})
 	CMember(USoundMix*)                                _1pMixMod                                                   OFFSET(get<T>, {0x9C8, 8, 0, 0})
 	CMember(AFortPlayerPawn*)                          OwningActor                                                 OFFSET(get<T>, {0x9D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10301,14 +10392,40 @@ public:
 	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting.GCNL_Athena_HidingProp_Teleporting_C.ExecuteUbergraph_GCNL_Athena_HidingProp_Teleporting
 	// void ExecuteUbergraph_GCNL_Athena_HidingProp_Teleporting(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Items/ForagedItems/SpookyMist/FX/CamShake_Spooky_Dive.CamShake_Spooky_Dive_C
-/// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UCamShake_Spooky_Dive_C : public ULegacyCameraShake
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C
+/// Size: 0x0048 (0x000990 - 0x0009D8)
+class AGCNL_Athena_HidingProp_Teleporting_WilliePete_C : public AFortGameplayCueNotify_Loop
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
+	static inline constexpr uint64_t __MDKClassSize = 2520;
 
 public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	DMember(float)                                     Timeline_0_LerpWhiteWash_7F6EEB5A42EA09E354D8B4A32C35C459   OFFSET(get<float>, {0x998, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_7F6EEB5A42EA09E354D8B4A32C35C459      OFFSET(get<T>, {0x99C, 1, 0, 0})
+	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
+	CMember(UAudioComponent*)                          _1PTravelAudio                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	CMember(TScriptInterface<Class>)                   LensEffectInterface                                         OFFSET(get<T>, {0x9B0, 16, 0, 0})
+	CMember(AActor*)                                   LensEffectActor                                             OFFSET(get<T>, {0x9C0, 8, 0, 0})
+	CMember(USoundMix*)                                _1pMixMod                                                   OFFSET(get<T>, {0x9C8, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          OwningActor                                                 OFFSET(get<T>, {0x9D0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.Timeline_0__FinishedFunc
+	// void Timeline_0__FinishedFunc();                                                                                         // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.Timeline_0__UpdateFunc
+	// void Timeline_0__UpdateFunc();                                                                                           // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.Timeline_0__DoFlash__EventFunc
+	// void Timeline_0__DoFlash__EventFunc();                                                                                   // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.OnLoopingStart
+	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.OnRemoval
+	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.ExecuteUbergraph_GCNL_Athena_HidingProp_Teleporting_WilliePete
+	// void ExecuteUbergraph_GCNL_Athena_HidingProp_Teleporting_WilliePete(int32_t EntryPoint);                                 // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /Game/Athena/GameplayCueNotifies/GCL_Cornfield_Movement.GCL_Cornfield_Movement_C
@@ -10320,8 +10437,6 @@ class AGCL_Cornfield_Movement_C : public AFortGameplayCueNotify_Loop
 
 public:
 	CMember(AFortPlayerPawn*)                          TargetPawn                                                  OFFSET(get<T>, {0x990, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10329,6 +10444,18 @@ public:
 	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCL_Cornfield_Movement.GCL_Cornfield_Movement_C.OnActive
 	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Athena/Items/ForagedItems/SpookyMist/FX/CamShake_Spooky_Dive.CamShake_Spooky_Dive_C
+/// Size: 0x0000 (0x0001F0 - 0x0001F0)
+class UCamShake_Spooky_Dive_C : public ULegacyCameraShake
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_UnderwaterDamage.GCNL_Athena_UnderwaterDamage_C
 /// Size: 0x0028 (0x000990 - 0x0009B8)
 class AGCNL_Athena_UnderwaterDamage_C : public AFortGameplayCueNotify_Loop
@@ -10342,8 +10469,6 @@ public:
 	CMember(USoundBase*)                               DamageTickSound                                             OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(USoundMix*)                                DrownSoundMix                                               OFFSET(get<T>, {0x9A8, 8, 0, 0})
 	CMember(AActor*)                                   LocalTargetPawn                                             OFFSET(get<T>, {0x9B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10355,6 +10480,8 @@ public:
 	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_UnderwaterDamage.GCNL_Athena_UnderwaterDamage_C.ExecuteUbergraph_GCNL_Athena_UnderwaterDamage
 	// void ExecuteUbergraph_GCNL_Athena_UnderwaterDamage(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_Shadow_Bomb.GCN_Loop_Shadow_Bomb_C
 /// Size: 0x01D0 (0x000990 - 0x000B60)
 class AGCN_Loop_Shadow_Bomb_C : public AFortGameplayCueNotify_Loop
@@ -10392,8 +10519,6 @@ public:
 	DMember(double)                                    TellDuration                                                OFFSET(get<double>, {0xB48, 8, 0, 0})
 	DMember(double)                                    ExpireTellOpacity                                           OFFSET(get<double>, {0xB50, 8, 0, 0})
 	DMember(double)                                    SmokeBombDurationUserSpecified                              OFFSET(get<double>, {0xB58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10431,6 +10556,8 @@ public:
 	// void OnWeaponEquippedDelegate_Event(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Shadow_Bomb.GCN_Loop_Shadow_Bomb_C.ExecuteUbergraph_GCN_Loop_Shadow_Bomb
 	// void ExecuteUbergraph_GCN_Loop_Shadow_Bomb(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C
 /// Size: 0x0020 (0x000B30 - 0x000B50)
 class AGCN_Loop_SpookyMist_C : public AFortGameplayCueNotifyLoop_SpookyMist
@@ -10444,8 +10571,6 @@ public:
 	DMember(float)                                     Timeline_Interaction_Fade_In_Out_Visbility_5529D6B24898E091AFB4668B43CFAB50 OFFSET(get<float>, {0xB40, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_Interaction_Fade_In_Out__Direction_5529D6B24898E091AFB4668B43CFAB50 OFFSET(get<T>, {0xB44, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline_Interaction_Fade_In_Out                            OFFSET(get<T>, {0xB48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10463,6 +10588,8 @@ public:
 	// void EndedInteract();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_SpookyMist.GCN_Loop_SpookyMist_C.ExecuteUbergraph_GCN_Loop_SpookyMist
 	// void ExecuteUbergraph_GCN_Loop_SpookyMist(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_Tether_FallLanding.GCN_Athena_Tether_FallLanding_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Athena_Tether_FallLanding_C : public UFortGameplayCueNotify_Burst
@@ -10499,8 +10626,6 @@ public:
 	CMember(USoundBase*)                               Aggro_Sound                                                 OFFSET(get<T>, {0xA60, 8, 0, 0})
 	CMember(USoundBase*)                               SearchingSound                                              OFFSET(get<T>, {0xA68, 8, 0, 0})
 	CMember(AFortPawn*)                                Pawn_Converter                                              OFFSET(get<T>, {0xA70, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10510,6 +10635,192 @@ public:
 	// void OnApplication(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_AthenaAI_NonParticipant_AlertState.GCNL_AthenaAI_NonParticipant_AlertState_C.ExecuteUbergraph_GCNL_AthenaAI_NonParticipant_AlertState
 	// void ExecuteUbergraph_GCNL_AthenaAI_NonParticipant_AlertState(int32_t EntryPoint);                                       // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C
+/// Size: 0x0016 (0x0009A2 - 0x0009B8)
+class AGCNL_Athena_ChromeSurface_C : public AGCNL_Athena_Surface_Parent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2488;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	CMember(AFortPlayerPawn*)                          LocalTarget                                                 OFFSET(get<T>, {0x9B0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C.OnApplicationGeneric
+	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C.OnRemovalGeneric
+	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_ChromeSurface.GCNL_Athena_ChromeSurface_C.ExecuteUbergraph_GCNL_Athena_ChromeSurface
+	// void ExecuteUbergraph_GCNL_Athena_ChromeSurface(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/Consumables/ZipLine/CameraShake_ZipLine_DownhillSpeed.CameraShake_ZipLine_DownhillSpeed_C
+/// Size: 0x0000 (0x0001F0 - 0x0001F0)
+class UCameraShake_ZipLine_DownhillSpeed_C : public ULegacyCameraShake
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionAdd.GCN_MultiInteractionAdd_C
+/// Size: 0x0010 (0x000218 - 0x000228)
+class UGCN_MultiInteractionAdd_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 552;
+
+public:
+	CMember(USoundBase*)                               DBNO_Player_Joined_Sound                                    OFFSET(get<T>, {0x218, 8, 0, 0})
+	CMember(USoundBase*)                               Default_Player_Joined_Sound                                 OFFSET(get<T>, {0x220, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionAdd.GCN_MultiInteractionAdd_C.OnBurstGeneric
+	// void OnBurstGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_MultiInteractionAdd.GCN_MultiInteractionAdd_C.OnBurst
+	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C
+/// Size: 0x0088 (0x000990 - 0x000A18)
+class AGCNL_Athena_MultiInteract_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2584;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(UAudioComponent*)                          Audio                                                       OFFSET(get<T>, {0x998, 8, 0, 0})
+	DMember(double)                                    CurrentPitch                                                OFFSET(get<double>, {0x9A0, 8, 0, 0})
+	DMember(double)                                    TargetPitch                                                 OFFSET(get<double>, {0x9A8, 8, 0, 0})
+	CMember(TMap<int32_t, double>)                     Player_Pitch_Map                                            OFFSET(get<T>, {0x9B0, 80, 0, 0})
+	DMember(double)                                    PreviousPitch                                               OFFSET(get<double>, {0xA00, 8, 0, 0})
+	SMember(FTimerHandle)                              TargetProgressHandle                                        OFFSET(get<T>, {0xA08, 8, 0, 0})
+	CMember(APlayerPawn_Athena_C*)                     Effect_Causer_Pawn                                          OFFSET(get<T>, {0xA10, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.OnApplicationGeneric
+	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.OnRemovalGeneric
+	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.CheckTargetProgress
+	// void CheckTargetProgress();                                                                                              // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.OnActorCountChanged
+	// void OnActorCountChanged(int32_t InteractingActorCount, float MultiInteractMultiplier, float InteractingDuration);       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_MultiInteract.GCNL_Athena_MultiInteract_C.ExecuteUbergraph_GCNL_Athena_MultiInteract
+	// void ExecuteUbergraph_GCNL_Athena_MultiInteract(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C
+/// Size: 0x0080 (0x000BB8 - 0x000C38)
+class AProp_PhysicsBoulder_Parent_C : public ABuildingProp
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3128;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xBB8, 8, 0, 0})
+	CMember(UFortSoundIndicatorComponent*)             Sound_Indicator                                             OFFSET(get<T>, {0xBC0, 8, 0, 0})
+	SMember(FVector)                                   LastImpactNormal                                            OFFSET(get<T>, {0xBC8, 24, 0, 0})
+	SMember(FScalableFloat)                            VerticalImpulseRatio                                        OFFSET(get<T>, {0xBE0, 40, 0, 0})
+	DMember(double)                                    NextPotentialLaunchTime                                     OFFSET(get<double>, {0xC08, 8, 0, 0})
+	DMember(double)                                    LaunchDelay                                                 OFFSET(get<double>, {0xC10, 8, 0, 0})
+	CMember(TArray<FScalableFloat>)                    PlayerImpactTiers                                           OFFSET(get<T>, {0xC18, 16, 0, 0})
+	CMember(TArray<FScalableFloat>)                    PlayerImpulseTiers                                          OFFSET(get<T>, {0xC28, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.GetPlayerImpulseVelocityFromImpactVelocity
+	// void GetPlayerImpulseVelocityFromImpactVelocity(double Impact, bool& Minimum Met, double& Impulse);                      // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.ComponentHit
+	// void ComponentHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Parent.Prop_PhysicsBoulder_Parent_C.ExecuteUbergraph_Prop_PhysicsBoulder_Parent
+	// void ExecuteUbergraph_Prop_PhysicsBoulder_Parent(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C
+/// Size: 0x0028 (0x000C38 - 0x000C60)
+class AProp_PhysicsBoulder_Granite_C : public AProp_PhysicsBoulder_Parent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3168;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC38, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           NS_RollingEffects                                           OFFSET(get<T>, {0xC40, 8, 0, 0})
+	SMember(FName)                                     RollingEffectsVector3VarName                                OFFSET(get<T>, {0xC48, 4, 0, 0})
+	CMember(UNiagaraSystem*)                           OnSpawnFX_One                                               OFFSET(get<T>, {0xC50, 8, 0, 0})
+	CMember(UNiagaraSystem*)                           OnSpawnFX_Two                                               OFFSET(get<T>, {0xC58, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.OnDeathPlayEffects
+	// void OnDeathPlayEffects(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.ReceiveHit
+	// void ReceiveHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Granite.Prop_PhysicsBoulder_Granite_C.ExecuteUbergraph_Prop_PhysicsBoulder_Granite
+	// void ExecuteUbergraph_Prop_PhysicsBoulder_Granite(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C
+/// Size: 0x00D8 (0x000AD0 - 0x000BA8)
+class AGCNL_Jetpack_Hover_Lateral_C : public AGameplayCueNotify_Jetpack_Hovering
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2984;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xAD0, 8, 0, 0})
+	DMember(bool)                                      bJetpackAudioEnabled                                        OFFSET(get<bool>, {0xAD8, 1, 0, 0})
+	CMember(USoundBase*)                               SoundOnStart                                                OFFSET(get<T>, {0xAE0, 8, 0, 0})
+	CMember(USoundBase*)                               SoundOnStop                                                 OFFSET(get<T>, {0xAE8, 8, 0, 0})
+	CMember(USoundBase*)                               SoundLoopOnIdle                                             OFFSET(get<T>, {0xAF0, 8, 0, 0})
+	CMember(USoundBase*)                               SoundLoopOnAccel                                            OFFSET(get<T>, {0xAF8, 8, 0, 0})
+	CMember(USoundBase*)                               SoundLoopOnOutOfFuel                                        OFFSET(get<T>, {0xB00, 8, 0, 0})
+	CMember(USoundBase*)                               SoundOnFuelWarning                                          OFFSET(get<T>, {0xB08, 8, 0, 0})
+	CMember(USoundBase*)                               SoundOnOutOfFuel                                            OFFSET(get<T>, {0xB10, 8, 0, 0})
+	DMember(bool)                                      bIsFirstJump                                                OFFSET(get<bool>, {0xB18, 1, 0, 0})
+	CMember(UParticleSystemComponent*)                 GroundInteract                                              OFFSET(get<T>, {0xB20, 8, 0, 0})
+	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   Milo_Check                                                  OFFSET(get<T>, {0xB28, 32, 0, 0})
+	CMember(TWeakObjectPtr<UObject*>)                  Milo_Backpack                                               OFFSET(get<T>, {0xB48, 32, 0, 0})
+	SMember(FVector)                                   Milo_LightScale                                             OFFSET(get<T>, {0xB68, 24, 0, 0})
+	CMember(UParticleSystem*)                          HoverEffect                                                 OFFSET(get<T>, {0xB80, 8, 0, 0})
+	SMember(FName)                                     AttachSocketName                                            OFFSET(get<T>, {0xB88, 4, 0, 0})
+	CMember(UParticleSystem*)                          P_GroundInteract                                            OFFSET(get<T>, {0xB90, 8, 0, 0})
+	CMember(UFXSystemComponent*)                       HoverFXSystem                                               OFFSET(get<T>, {0xB98, 8, 0, 0})
+	CMember(UFXSystemAsset*)                           NS_Hover                                                    OFFSET(get<T>, {0xBA0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.SetJetpackAudioEnabled
+	// void SetJetpackAudioEnabled(bool Enabled);                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.OnRemove
+	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.OnActive
+	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.ResetFX
+	// void ResetFX();                                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.K2_HandleGameplayCue
+	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.ReceiveDestroyed
+	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.TryToPlayGroundEffects
+	// void TryToPlayGroundEffects();                                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCNL_Jetpack_Hover_Lateral.GCNL_Jetpack_Hover_Lateral_C.ExecuteUbergraph_GCNL_Jetpack_Hover_Lateral
+	// void ExecuteUbergraph_GCNL_Jetpack_Hover_Lateral(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Status_DanceStunned.GCNL_Status_DanceStunned_C
 /// Size: 0x0010 (0x000990 - 0x0009A0)
 class AGCNL_Status_DanceStunned_C : public AFortGameplayCueNotify_Loop
@@ -10520,8 +10831,6 @@ class AGCNL_Status_DanceStunned_C : public AFortGameplayCueNotify_Loop
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 Active_Confetti                                             OFFSET(get<T>, {0x998, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10531,6 +10840,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Status_DanceStunned.GCNL_Status_DanceStunned_C.ExecuteUbergraph_GCNL_Status_DanceStunned
 	// void ExecuteUbergraph_GCNL_Status_DanceStunned(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_SnowSurface.GCNL_Athena_SnowSurface_C
 /// Size: 0x00F6 (0x0009A2 - 0x000A98)
 class AGCNL_Athena_SnowSurface_C : public AGCNL_Athena_Surface_Parent_C
@@ -10545,8 +10856,6 @@ public:
 	DMember(bool)                                      bReplayMode                                                 OFFSET(get<bool>, {0x9B9, 1, 0, 0})
 	CMember(AFortReplaySpectatorAthena*)               ReplayController                                            OFFSET(get<T>, {0x9C0, 8, 0, 0})
 	SMember(FGameplayCueParameters)                    GCParameters                                                OFFSET(get<T>, {0x9C8, 208, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10562,6 +10871,8 @@ public:
 	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_SnowSurface.GCNL_Athena_SnowSurface_C.ExecuteUbergraph_GCNL_Athena_SnowSurface
 	// void ExecuteUbergraph_GCNL_Athena_SnowSurface(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_SandSurface.GCNL_Athena_SandSurface_C
 /// Size: 0x0026 (0x0009A2 - 0x0009C8)
 class AGCNL_Athena_SandSurface_C : public AGCNL_Athena_Surface_Parent_C
@@ -10575,8 +10886,6 @@ public:
 	DMember(bool)                                      bNotValid                                                   OFFSET(get<bool>, {0x9B8, 1, 0, 0})
 	DMember(bool)                                      bReplayMode                                                 OFFSET(get<bool>, {0x9B9, 1, 0, 0})
 	CMember(AFortReplaySpectatorAthena*)               ReplayController                                            OFFSET(get<T>, {0x9C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10586,141 +10895,8 @@ public:
 	// void OnLoopingStartNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_SandSurface.GCNL_Athena_SandSurface_C.ExecuteUbergraph_GCNL_Athena_SandSurface
 	// void ExecuteUbergraph_GCNL_Athena_SandSurface(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C
-/// Size: 0x00B1 (0x000990 - 0x000A41)
-class AGC_Athena_OutsideSafeZone_C : public AFortGameplayCueNotifyLoop_OutsideSafeZone
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2625;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(UPointLightComponent*)                     Random_Lighting_Light                                       OFFSET(get<T>, {0x998, 8, 0, 0})
-	DMember(float)                                     LightningFlashTL_LERP_3FDEC95248645BE865DCD0840F99915A      OFFSET(get<float>, {0x9A0, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           LightningFlashTL__Direction_3FDEC95248645BE865DCD0840F99915A OFFSET(get<T>, {0x9A4, 1, 0, 0})
-	CMember(UTimelineComponent*)                       LightningFlashTL                                            OFFSET(get<T>, {0x9A8, 8, 0, 0})
-	CMember(USoundBase*)                               Storm_Sound                                                 OFFSET(get<T>, {0x9B0, 8, 0, 0})
-	DMember(double)                                    LightningFlashDiameter                                      OFFSET(get<double>, {0x9B8, 8, 0, 0})
-	DMember(double)                                    LightningFlashHeight                                        OFFSET(get<double>, {0x9C0, 8, 0, 0})
-	SMember(FVector)                                   Lightning_Spawn_Location                                    OFFSET(get<T>, {0x9C8, 24, 0, 0})
-	DMember(double)                                    _ChanceOfLightningMesh                                      OFFSET(get<double>, {0x9E0, 8, 0, 0})
-	DMember(double)                                    Lightning_Intensity                                         OFFSET(get<double>, {0x9E8, 8, 0, 0})
-	DMember(double)                                    LightningIntensityMin                                       OFFSET(get<double>, {0x9F0, 8, 0, 0})
-	DMember(double)                                    LightningIntensityMax                                       OFFSET(get<double>, {0x9F8, 8, 0, 0})
-	DMember(double)                                    LightningTimelinePlaySpeedMin                               OFFSET(get<double>, {0xA00, 8, 0, 0})
-	DMember(double)                                    LightningTimelinePlaySpeedMax                               OFFSET(get<double>, {0xA08, 8, 0, 0})
-	CMember(APlayerPawn_Athena_Generic_C*)             Player_Pawn                                                 OFFSET(get<T>, {0xA10, 8, 0, 0})
-	DMember(double)                                    LightningFlashRepeatDelayMin                                OFFSET(get<double>, {0xA18, 8, 0, 0})
-	DMember(double)                                    LightningFlashRepeatDelayMax                                OFFSET(get<double>, {0xA20, 8, 0, 0})
-	DMember(int32_t)                                   Storm_Stage                                                 OFFSET(get<int32_t>, {0xA28, 4, 0, 0})
-	SMember(FGameplayTag)                              StormAudioTag_Low                                           OFFSET(get<T>, {0xA2C, 4, 0, 0})
-	SMember(FGameplayTag)                              StormAudioTag_Medium                                        OFFSET(get<T>, {0xA30, 4, 0, 0})
-	SMember(FGameplayTag)                              StormAudioTag_High                                          OFFSET(get<T>, {0xA34, 4, 0, 0})
-	CMember(UAmbientAudioDataAsset*)                   StormAudioBank                                              OFFSET(get<T>, {0xA38, 8, 0, 0})
-	DMember(bool)                                      StormEffectsEnabled                                         OFFSET(get<bool>, {0xA40, 1, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Random Lighting Flashes
-	// void Random Lighting Flashes();                                                                                          // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Get Location in Circle XY
-	// void Get Location in Circle XY(FVector& Location Local Space);                                                           // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.LightningFlashTL__FinishedFunc
-	// void LightningFlashTL__FinishedFunc();                                                                                   // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.LightningFlashTL__UpdateFunc
-	// void LightningFlashTL__UpdateFunc();                                                                                     // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.FlashTimeline
-	// void FlashTimeline();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnStormEffectsEnabled
-	// void OnStormEffectsEnabled(bool bEnabled);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnLoopingStartGeneric
-	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnRemovalGeneric
-	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.ExecuteUbergraph_GC_Athena_OutsideSafeZone
-	// void ExecuteUbergraph_GC_Athena_OutsideSafeZone(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage02.GC_Athena_OutsideSafeZone_Stage02_C
-/// Size: 0x0000 (0x000A41 - 0x000A41)
-class AGC_Athena_OutsideSafeZone_Stage02_C : public AGC_Athena_OutsideSafeZone_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2625;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C
-/// Size: 0x000F (0x000A41 - 0x000A50)
-class AGC_Athena_OutsideSafeZone_Stage03_C : public AGC_Athena_OutsideSafeZone_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2640;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA48, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C.On Distant Lightning Spawn
-	// void On Distant Lightning Spawn(FName EventName, float EmitterTime, FVector Location, FVector Velocity);                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C.ExecuteUbergraph_GC_Athena_OutsideSafeZone_Stage03
-	// void ExecuteUbergraph_GC_Athena_OutsideSafeZone_Stage03(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/Playset/Minigames/StatFilters/MinigameStat_Score.MinigameStat_Score_C
-/// Size: 0x0000 (0x000190 - 0x000190)
-class UMinigameStat_Score_C : public UFortMinigameStatFilter
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 400;
-
-public:
-};
-
-/// Class /Game/Athena/Items/ForagedItems/EnvCampFire/Campfire_Interface.Campfire_Interface_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UCampfire_Interface_C : public UInterface
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C
-/// Size: 0x0040 (0x000990 - 0x0009D0)
-class AGCNL_EnvCampFire_Doused_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2512;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	DMember(float)                                     Fade_Doused_Smoke_Fade_50A77D974140FDA04967E2BABB987458     OFFSET(get<float>, {0x998, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           Fade_Doused_Smoke__Direction_50A77D974140FDA04967E2BABB987458 OFFSET(get<T>, {0x99C, 1, 0, 0})
-	CMember(UTimelineComponent*)                       Fade_Doused_Smoke                                           OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	SMember(FScalableFloat)                            Row_Duration                                                OFFSET(get<T>, {0x9A8, 40, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.Fade Doused Smoke__FinishedFunc
-	// void Fade Doused Smoke__FinishedFunc();                                                                                  // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.Fade Doused Smoke__UpdateFunc
-	// void Fade Doused Smoke__UpdateFunc();                                                                                    // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.OnRemoval
-	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.DestroyOnDestroy
-	// void DestroyOnDestroy(AActor* DestroyedActor);                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Doused.GCNL_EnvCampFire_Doused_C.ExecuteUbergraph_GCNL_EnvCampFire_Doused
-	// void ExecuteUbergraph_GCNL_EnvCampFire_Doused(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_WilliePete_Exit.GCN_Athena_HidingProp_WilliePete_Exit_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Athena_HidingProp_WilliePete_Exit_C : public UFortGameplayCueNotify_Burst
@@ -10731,203 +10907,6 @@ class UGCN_Athena_HidingProp_WilliePete_Exit_C : public UFortGameplayCueNotify_B
 public:
 };
 
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Tether_Smash.GCN_Tether_Smash_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Tether_Smash_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C
-/// Size: 0x0038 (0x000990 - 0x0009C8)
-class AGCN_Loop_Ice_Feet_Environmental_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2504;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(AActor*)                                   TargetActor                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
-	CMember(TArray<UFXSystemComponent*>)               SpawnedEmitters                                             OFFSET(get<T>, {0x9A0, 16, 0, 0})
-	CMember(UFortCollisionAudioComponent*)             CollisionAudioComp                                          OFFSET(get<T>, {0x9B0, 8, 0, 0})
-	CMember(TArray<UAudioComponent*>)                  SpawnedAudioComps                                           OFFSET(get<T>, {0x9B8, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.AttachFX
-	// void AttachFX(USceneComponent* Mesh);                                                                                    // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.ReceiveTick
-	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.OnPawnMovementModeChanged
-	// void OnPawnMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.On Footstep Event
-	// void On Footstep Event();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.OnLoopingStartGeneric
-	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.OnRemovalGeneric
-	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Ice_Feet_Environmental.GCN_Loop_Ice_Feet_Environmental_C.ExecuteUbergraph_GCN_Loop_Ice_Feet_Environmental
-	// void ExecuteUbergraph_GCN_Loop_Ice_Feet_Environmental(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_Enter.GCN_Athena_HidingProp_HayStack_Enter_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_HayStack_Enter_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_LandedOn.GCN_Athena_HidingProp_HayStack_LandedOn_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_HayStack_LandedOn_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C
-/// Size: 0x0070 (0x000990 - 0x000A00)
-class AGCN_Loop_GhostMode_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2560;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	DMember(float)                                     FadeMaterialsTL_Lerp_D7B0BAAD47F48403BE23B98F38D8CA3E       OFFSET(get<float>, {0x998, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           FadeMaterialsTL__Direction_D7B0BAAD47F48403BE23B98F38D8CA3E OFFSET(get<T>, {0x99C, 1, 0, 0})
-	CMember(UTimelineComponent*)                       FadeMaterialsTL                                             OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	SMember(FLinearColor)                              HitGlowColor                                                OFFSET(get<T>, {0x9A8, 16, 0, 0})
-	SMember(FLinearColor)                              HotGlowOuterColor                                           OFFSET(get<T>, {0x9B8, 16, 0, 0})
-	DMember(double)                                    HitGlowFresnelBrightness                                    OFFSET(get<double>, {0x9C8, 8, 0, 0})
-	DMember(double)                                    HitGlowFresnelExponent                                      OFFSET(get<double>, {0x9D0, 8, 0, 0})
-	DMember(double)                                    Glow_Priority                                               OFFSET(get<double>, {0x9D8, 8, 0, 0})
-	CMember(USoundBase*)                               StopSoundCue                                                OFFSET(get<T>, {0x9E0, 8, 0, 0})
-	CMember(USoundBase*)                               StartSoundCue                                               OFFSET(get<T>, {0x9E8, 8, 0, 0})
-	CMember(TScriptInterface<BlueprintGeneratedClass>) TargetPawn                                                  OFFSET(get<T>, {0x9F0, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.Highlight Lerp
-	// void Highlight Lerp(double Alpha, FPawnHighlight& Highlight);                                                            // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__FinishedFunc
-	// void FadeMaterialsTL__FinishedFunc();                                                                                    // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsTL__UpdateFunc
-	// void FadeMaterialsTL__UpdateFunc();                                                                                      // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.OnRemoval
-	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsIn
-	// void FadeMaterialsIn();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.FadeMaterialsOut
-	// void FadeMaterialsOut();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_GhostMode.GCN_Loop_GhostMode_C.ExecuteUbergraph_GCN_Loop_GhostMode
-	// void ExecuteUbergraph_GCN_Loop_GhostMode(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_CreativeInvulnerable.GCN_Loop_CreativeInvulnerable_C
-/// Size: 0x0000 (0x000A00 - 0x000A00)
-class AGCN_Loop_CreativeInvulnerable_C : public AGCN_Loop_GhostMode_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2560;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Stoke.GCNL_EnvCampFire_Stoke_C
-/// Size: 0x0058 (0x000990 - 0x0009E8)
-class AGCNL_EnvCampFire_Stoke_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2536;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	SMember(FScalableFloat)                            Row_TickInterval                                            OFFSET(get<T>, {0x998, 40, 0, 0})
-	SMember(FScalableFloat)                            Row_MaxHeals                                                OFFSET(get<T>, {0x9C0, 40, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Stoke.GCNL_EnvCampFire_Stoke_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_EnvCampFire_Stoke.GCNL_EnvCampFire_Stoke_C.ExecuteUbergraph_GCNL_EnvCampFire_Stoke
-	// void ExecuteUbergraph_GCNL_EnvCampFire_Stoke(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_WhileEntering.GCN_Athena_HidingProp_HayStack_WhileEntering_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_HayStack_WhileEntering_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_Exit.GCN_Athena_HidingProp_HayStack_Exit_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_HayStack_Exit_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_HidingProp_HayStack_Exit_Player.GCN_Athena_HidingProp_HayStack_Exit_Player_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Athena_HidingProp_HayStack_Exit_Player_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C
-/// Size: 0x0048 (0x000990 - 0x0009D8)
-class AGCNL_Athena_HidingProp_Teleporting_WilliePete_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2520;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	DMember(float)                                     Timeline_0_LerpWhiteWash_7F6EEB5A42EA09E354D8B4A32C35C459   OFFSET(get<float>, {0x998, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_7F6EEB5A42EA09E354D8B4A32C35C459      OFFSET(get<T>, {0x99C, 1, 0, 0})
-	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	CMember(UAudioComponent*)                          _1PTravelAudio                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
-	CMember(TScriptInterface<Class>)                   LensEffectInterface                                         OFFSET(get<T>, {0x9B0, 16, 0, 0})
-	CMember(AActor*)                                   LensEffectActor                                             OFFSET(get<T>, {0x9C0, 8, 0, 0})
-	CMember(USoundMix*)                                _1pMixMod                                                   OFFSET(get<T>, {0x9C8, 8, 0, 0})
-	CMember(AFortPlayerPawn*)                          OwningActor                                                 OFFSET(get<T>, {0x9D0, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.Timeline_0__FinishedFunc
-	// void Timeline_0__FinishedFunc();                                                                                         // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.Timeline_0__UpdateFunc
-	// void Timeline_0__UpdateFunc();                                                                                           // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.Timeline_0__DoFlash__EventFunc
-	// void Timeline_0__DoFlash__EventFunc();                                                                                   // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.OnRemoval
-	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_HidingProp_Teleporting_WilliePete.GCNL_Athena_HidingProp_Teleporting_WilliePete_C.ExecuteUbergraph_GCNL_Athena_HidingProp_Teleporting_WilliePete
-	// void ExecuteUbergraph_GCNL_Athena_HidingProp_Teleporting_WilliePete(int32_t EntryPoint);                                 // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/Apollo/Water/Blueprints/BP_FluidSim_FN.BP_FluidSim_FN_C
 /// Size: 0x01C0 (0x000570 - 0x000730)
 class ABP_FluidSim_FN_C : public ABP_FluidSim_01_C
@@ -10943,8 +10922,6 @@ public:
 	CMember(TArray<AFortPawn*>)                        RelevantFortPawns                                           OFFSET(get<T>, {0x6C8, 16, 0, 0})
 	DMember(bool)                                      Use_FN_Pawn_Forces                                          OFFSET(get<bool>, {0x6D8, 1, 0, 0})
 	CMember(TMap<FGameplayTag, FFluidForceDynamic>)    VehicleTypeMap                                              OFFSET(get<T>, {0x6E0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10956,6 +10933,8 @@ public:
 	// void GetPlayerPawnForces();                                                                                              // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Apollo/Water/Blueprints/BP_FluidSim_FN.BP_FluidSim_FN_C.ExecuteUbergraph_BP_FluidSim_FN
 	// void ExecuteUbergraph_BP_FluidSim_FN(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
+};
+
 /// Class /Game/Athena/Items/PhysicsActors/PhysicsTreeLog/BGA_PhysicsTreeLog.BGA_PhysicsTreeLog_C
 /// Size: 0x02C0 (0x000BB8 - 0x000E78)
 class ABGA_PhysicsTreeLog_C : public ABuildingProp
@@ -11002,8 +10981,6 @@ public:
 	DMember(double)                                    LogLength                                                   OFFSET(get<double>, {0xE40, 8, 0, 0})
 	DMember(bool)                                      CanPlayDeathEffects                                         OFFSET(get<bool>, {0xE48, 1, 0, 0})
 	SMember(FScalableFloat)                            bSplitWhenCutBySaber                                        OFFSET(get<T>, {0xE50, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11049,70 +11026,115 @@ public:
 	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Athena/Items/PhysicsActors/PhysicsTreeLog/BGA_PhysicsTreeLog.BGA_PhysicsTreeLog_C.ExecuteUbergraph_BGA_PhysicsTreeLog
 	// void ExecuteUbergraph_BGA_PhysicsTreeLog(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C
-/// Size: 0x0038 (0x000990 - 0x0009C8)
-class AGCN_Loop_Snow_Whiteout_C : public AFortGameplayCueNotify_Loop
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C
+/// Size: 0x00B1 (0x000990 - 0x000A41)
+class AGC_Athena_OutsideSafeZone_C : public AFortGameplayCueNotifyLoop_OutsideSafeZone
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2504;
+	static inline constexpr uint64_t __MDKClassSize = 2625;
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
-	DMember(float)                                     FadeinOut_Post_BDCA5FC943E3CD00D42B59A9A0D1C530             OFFSET(get<float>, {0x9A0, 4, 0, 0})
-	DMember(float)                                     FadeinOut_Fade_BDCA5FC943E3CD00D42B59A9A0D1C530             OFFSET(get<float>, {0x9A4, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           FadeinOut__Direction_BDCA5FC943E3CD00D42B59A9A0D1C530       OFFSET(get<T>, {0x9A8, 1, 0, 0})
-	CMember(UTimelineComponent*)                       FadeInOut                                                   OFFSET(get<T>, {0x9B0, 8, 0, 0})
-	CMember(USoundBase*)                               SoundOnFadeIn                                               OFFSET(get<T>, {0x9B8, 8, 0, 0})
-	CMember(USoundBase*)                               SoundOnFadeOut                                              OFFSET(get<T>, {0x9C0, 8, 0, 0})
-};
-
+	CMember(UPointLightComponent*)                     Random_Lighting_Light                                       OFFSET(get<T>, {0x998, 8, 0, 0})
+	DMember(float)                                     LightningFlashTL_LERP_3FDEC95248645BE865DCD0840F99915A      OFFSET(get<float>, {0x9A0, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           LightningFlashTL__Direction_3FDEC95248645BE865DCD0840F99915A OFFSET(get<T>, {0x9A4, 1, 0, 0})
+	CMember(UTimelineComponent*)                       LightningFlashTL                                            OFFSET(get<T>, {0x9A8, 8, 0, 0})
+	CMember(USoundBase*)                               Storm_Sound                                                 OFFSET(get<T>, {0x9B0, 8, 0, 0})
+	DMember(double)                                    LightningFlashDiameter                                      OFFSET(get<double>, {0x9B8, 8, 0, 0})
+	DMember(double)                                    LightningFlashHeight                                        OFFSET(get<double>, {0x9C0, 8, 0, 0})
+	SMember(FVector)                                   Lightning_Spawn_Location                                    OFFSET(get<T>, {0x9C8, 24, 0, 0})
+	DMember(double)                                    _ChanceOfLightningMesh                                      OFFSET(get<double>, {0x9E0, 8, 0, 0})
+	DMember(double)                                    Lightning_Intensity                                         OFFSET(get<double>, {0x9E8, 8, 0, 0})
+	DMember(double)                                    LightningIntensityMin                                       OFFSET(get<double>, {0x9F0, 8, 0, 0})
+	DMember(double)                                    LightningIntensityMax                                       OFFSET(get<double>, {0x9F8, 8, 0, 0})
+	DMember(double)                                    LightningTimelinePlaySpeedMin                               OFFSET(get<double>, {0xA00, 8, 0, 0})
+	DMember(double)                                    LightningTimelinePlaySpeedMax                               OFFSET(get<double>, {0xA08, 8, 0, 0})
+	CMember(APlayerPawn_Athena_Generic_C*)             Player_Pawn                                                 OFFSET(get<T>, {0xA10, 8, 0, 0})
+	DMember(double)                                    LightningFlashRepeatDelayMin                                OFFSET(get<double>, {0xA18, 8, 0, 0})
+	DMember(double)                                    LightningFlashRepeatDelayMax                                OFFSET(get<double>, {0xA20, 8, 0, 0})
+	DMember(int32_t)                                   Storm_Stage                                                 OFFSET(get<int32_t>, {0xA28, 4, 0, 0})
+	SMember(FGameplayTag)                              StormAudioTag_Low                                           OFFSET(get<T>, {0xA2C, 4, 0, 0})
+	SMember(FGameplayTag)                              StormAudioTag_Medium                                        OFFSET(get<T>, {0xA30, 4, 0, 0})
+	SMember(FGameplayTag)                              StormAudioTag_High                                          OFFSET(get<T>, {0xA34, 4, 0, 0})
+	CMember(UAmbientAudioDataAsset*)                   StormAudioBank                                              OFFSET(get<T>, {0xA38, 8, 0, 0})
+	DMember(bool)                                      StormEffectsEnabled                                         OFFSET(get<bool>, {0xA40, 1, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.FadeinOut__FinishedFunc
-	// void FadeinOut__FinishedFunc();                                                                                          // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.FadeinOut__UpdateFunc
-	// void FadeinOut__UpdateFunc();                                                                                            // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.ReceiveDestroyed
-	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.OnRemoval
-	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.OnLoopingStart
-	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Snow_Whiteout.GCN_Loop_Snow_Whiteout_C.ExecuteUbergraph_GCN_Loop_Snow_Whiteout
-	// void ExecuteUbergraph_GCN_Loop_Snow_Whiteout(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C
-/// Size: 0x0031 (0x000990 - 0x0009C1)
-class AGCNL_Vent_Enter_C : public AFortGameplayCueNotify_Loop
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Random Lighting Flashes
+	// void Random Lighting Flashes();                                                                                          // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.Get Location in Circle XY
+	// void Get Location in Circle XY(FVector& Location Local Space);                                                           // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.LightningFlashTL__FinishedFunc
+	// void LightningFlashTL__FinishedFunc();                                                                                   // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.LightningFlashTL__UpdateFunc
+	// void LightningFlashTL__UpdateFunc();                                                                                     // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.FlashTimeline
+	// void FlashTimeline();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnStormEffectsEnabled
+	// void OnStormEffectsEnabled(bool bEnabled);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnLoopingStartGeneric
+	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.OnRemovalGeneric
+	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone.GC_Athena_OutsideSafeZone_C.ExecuteUbergraph_GC_Athena_OutsideSafeZone
+	// void ExecuteUbergraph_GC_Athena_OutsideSafeZone(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage02.GC_Athena_OutsideSafeZone_Stage02_C
+/// Size: 0x0000 (0x000A41 - 0x000A41)
+class AGC_Athena_OutsideSafeZone_Stage02_C : public AGC_Athena_OutsideSafeZone_C
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2497;
+	static inline constexpr uint64_t __MDKClassSize = 2625;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x998, 8, 0, 0})
-	DMember(float)                                     FadePPVol_LERP_6D28D8B64202D10F474B48B80194DA6D             OFFSET(get<float>, {0x9A0, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           FadePPVol__Direction_6D28D8B64202D10F474B48B80194DA6D       OFFSET(get<T>, {0x9A4, 1, 0, 0})
-	CMember(UTimelineComponent*)                       FadePPVol                                                   OFFSET(get<T>, {0x9A8, 8, 0, 0})
-	CMember(UClass*)                                   CameraShakeClass                                            OFFSET(get<T>, {0x9B0, 8, 0, 0})
-	CMember(ULegacyCameraShake*)                       CameraShake                                                 OFFSET(get<T>, {0x9B8, 8, 0, 0})
-	DMember(bool)                                      UsePP                                                       OFFSET(get<bool>, {0x9C0, 1, 0, 0})
 };
 
+/// Class /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C
+/// Size: 0x000F (0x000A41 - 0x000A50)
+class AGC_Athena_OutsideSafeZone_Stage03_C : public AGC_Athena_OutsideSafeZone_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2640;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA48, 8, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.FadePPVol__FinishedFunc
-	// void FadePPVol__FinishedFunc();                                                                                          // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.FadePPVol__UpdateFunc
-	// void FadePPVol__UpdateFunc();                                                                                            // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.OnLoopingStart
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C.OnLoopingStart
 	// void OnLoopingStart(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.OnRemoval
-	// void OnRemoval(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCNL_Vent_Enter.GCNL_Vent_Enter_C.ExecuteUbergraph_GCNL_Vent_Enter
-	// void ExecuteUbergraph_GCNL_Vent_Enter(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C.On Distant Lightning Spawn
+	// void On Distant Lightning Spawn(FName EventName, float EmitterTime, FVector Location, FVector Velocity);                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GC_Athena_OutsideSafeZone_Stage03.GC_Athena_OutsideSafeZone_Stage03_C.ExecuteUbergraph_GC_Athena_OutsideSafeZone_Stage03
+	// void ExecuteUbergraph_GC_Athena_OutsideSafeZone_Stage03(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C
+/// Size: 0x0008 (0x000C38 - 0x000C40)
+class AProp_PhysicsBoulder_Desert_01_C : public AProp_PhysicsBoulder_Parent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 3136;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC38, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.OnDeathPlayEffects
+	// void OnDeathPlayEffects(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.ReceiveHit
+	// void ReceiveHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.ExecuteUbergraph_Prop_PhysicsBoulder_Desert_01
+	// void ExecuteUbergraph_Prop_PhysicsBoulder_Desert_01(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_Parent.GCNL_RollingEffects_Parent_C
 /// Size: 0x0028 (0x000AF0 - 0x000B18)
 class AGCNL_RollingEffects_Parent_C : public AFortGameplayCueNotifyLoop_PhysicsObjectRolling
@@ -11126,8 +11148,6 @@ public:
 	CMember(USoundBase*)                               SoundAssetSmall                                             OFFSET(get<T>, {0xB00, 8, 0, 0})
 	CMember(USoundBase*)                               SoundAssetMedium                                            OFFSET(get<T>, {0xB08, 8, 0, 0})
 	CMember(USoundBase*)                               SoundAssetLarge                                             OFFSET(get<T>, {0xB10, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11141,6 +11161,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_Parent.GCNL_RollingEffects_Parent_C.ExecuteUbergraph_GCNL_RollingEffects_Parent
 	// void ExecuteUbergraph_GCNL_RollingEffects_Parent(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_Propane.GCNL_RollingEffects_Propane_C
 /// Size: 0x0000 (0x000B18 - 0x000B18)
 class AGCNL_RollingEffects_Propane_C : public AGCNL_RollingEffects_Parent_C
@@ -11160,8 +11182,6 @@ class AGCNL_RollingEffects_PhysicsTree_C : public AGCNL_RollingEffects_Parent_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB18, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11171,6 +11191,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_PhysicsTree.GCNL_RollingEffects_PhysicsTree_C.ExecuteUbergraph_GCNL_RollingEffects_PhysicsTree
 	// void ExecuteUbergraph_GCNL_RollingEffects_PhysicsTree(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Loop_Hot_Feet_Environmental.GCN_Loop_Hot_Feet_Environmental_C
 /// Size: 0x0060 (0x000990 - 0x0009F0)
 class AGCN_Loop_Hot_Feet_Environmental_C : public AFortGameplayCueNotify_Loop
@@ -11189,8 +11211,6 @@ public:
 	CMember(TArray<UAudioComponent*>)                  SpawnedAudioComps                                           OFFSET(get<T>, {0x9D0, 16, 0, 0})
 	CMember(USoundBase*)                               SC_OnJumpOrBeginFalling                                     OFFSET(get<T>, {0x9E0, 8, 0, 0})
 	CMember(USoundBase*)                               SC_OnLand                                                   OFFSET(get<T>, {0x9E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11212,6 +11232,8 @@ public:
 	// void ReceiveHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Loop_Hot_Feet_Environmental.GCN_Loop_Hot_Feet_Environmental_C.ExecuteUbergraph_GCN_Loop_Hot_Feet_Environmental
 	// void ExecuteUbergraph_GCN_Loop_Hot_Feet_Environmental(int32_t EntryPoint);                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Burst_Hot_Feet_Environmental.GCN_Burst_Hot_Feet_Environmental_C
 /// Size: 0x0001 (0x000218 - 0x000219)
 class UGCN_Burst_Hot_Feet_Environmental_C : public UFortGameplayCueNotify_Burst
@@ -11253,6 +11275,16 @@ class UGCN_CollisionEffects_Stone_C : public UGCN_CollisionEffects_Parent_C
 public:
 };
 
+/// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_PhysicsBoulder.GCN_CollisionEffects_PhysicsBoulder_C
+/// Size: 0x0000 (0x000370 - 0x000370)
+class UGCN_CollisionEffects_PhysicsBoulder_C : public UGCN_CollisionEffects_Parent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 880;
+
+public:
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Water.GCN_CollisionEffects_Water_C
 /// Size: 0x0018 (0x000370 - 0x000388)
 class UGCN_CollisionEffects_Water_C : public UGCN_CollisionEffects_Parent_C
@@ -11263,8 +11295,6 @@ class UGCN_CollisionEffects_Water_C : public UGCN_CollisionEffects_Parent_C
 public:
 	DMember(int32_t)                                   FXSize                                                      OFFSET(get<int32_t>, {0x370, 4, 0, 0})
 	CMember(TArray<UNiagaraSystem*>)                   WaterSplash                                                 OFFSET(get<T>, {0x378, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11272,6 +11302,8 @@ public:
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Water.GCN_CollisionEffects_Water_C.GetObjectSizeParam
 	// void GetObjectSizeParam(AActor* PhysicsObject, int32_t& Size);                                                           // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Water_GiantBeachBall.GCN_CollisionEffects_Water_GiantBeachBall_C
 /// Size: 0x0018 (0x000370 - 0x000388)
 class UGCN_CollisionEffects_Water_GiantBeachBall_C : public UGCN_CollisionEffects_Parent_C
@@ -11282,8 +11314,6 @@ class UGCN_CollisionEffects_Water_GiantBeachBall_C : public UGCN_CollisionEffect
 public:
 	DMember(int32_t)                                   FXSize                                                      OFFSET(get<int32_t>, {0x370, 4, 0, 0})
 	CMember(TArray<UNiagaraSystem*>)                   WaterSplash                                                 OFFSET(get<T>, {0x378, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11291,6 +11321,8 @@ public:
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Water_GiantBeachBall.GCN_CollisionEffects_Water_GiantBeachBall_C.GetObjectSizeParam
 	// void GetObjectSizeParam(AActor* PhysicsObject, int32_t& Size);                                                           // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_MovementEffects_BeachBall.GCNL_MovementEffects_BeachBall_C
 /// Size: 0x0000 (0x000B18 - 0x000B18)
 class AGCNL_MovementEffects_BeachBall_C : public AGCNL_RollingEffects_Parent_C
@@ -11332,8 +11364,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA70, 8, 0, 0})
 	CMember(UAudioComponent*)                          AttachSoundAudioComp                                        OFFSET(get<T>, {0xA78, 8, 0, 0})
 	CMember(TArray<bool>)                              NewVar                                                      OFFSET(get<T>, {0xA80, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11343,6 +11373,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Zipline_Travel.GCNL_Zipline_Travel_C.ExecuteUbergraph_GCNL_Zipline_Travel
 	// void ExecuteUbergraph_GCNL_Zipline_Travel(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_BoostJumpPack_InitialBoost.GCN_BoostJumpPack_InitialBoost_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_BoostJumpPack_InitialBoost_C : public UFortGameplayCueNotify_Burst
@@ -11389,8 +11421,6 @@ public:
 	DMember(double)                                    MinCamShakeFreq                                             OFFSET(get<double>, {0x9B8, 8, 0, 0})
 	DMember(double)                                    MaxCamShakeFreq                                             OFFSET(get<double>, {0x9C0, 8, 0, 0})
 	SMember(FTimerHandle)                              CameraShakeTimerHandle                                      OFFSET(get<T>, {0x9C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11402,6 +11432,8 @@ public:
 	// void CameraShakeTimer();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Zipline_Downhill.GCNL_Zipline_Downhill_C.ExecuteUbergraph_GCNL_Zipline_Downhill
 	// void ExecuteUbergraph_GCNL_Zipline_Downhill(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_Player_Sliding_CameraShake.GCNL_Athena_Player_Sliding_CameraShake_C
 /// Size: 0x0081 (0x000990 - 0x000A11)
 class AGCNL_Athena_Player_Sliding_CameraShake_C : public AFortGameplayCueNotify_Loop
@@ -11424,8 +11456,6 @@ public:
 	SMember(FScalableFloat)                            MaxSlideSpeed                                               OFFSET(get<T>, {0x9E0, 40, 0, 0})
 	DMember(double)                                    CameraShakeSpeed                                            OFFSET(get<double>, {0xA08, 8, 0, 0})
 	DMember(bool)                                      bIsSuperHigh                                                OFFSET(get<bool>, {0xA10, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11443,6 +11473,8 @@ public:
 	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_Player_Sliding_CameraShake.GCNL_Athena_Player_Sliding_CameraShake_C.ExecuteUbergraph_GCNL_Athena_Player_Sliding_CameraShake
 	// void ExecuteUbergraph_GCNL_Athena_Player_Sliding_CameraShake(int32_t EntryPoint);                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_Player_Sliding_Speedlines.GCNL_Athena_Player_Sliding_Speedlines_C
 /// Size: 0x0038 (0x000990 - 0x0009C8)
 class AGCNL_Athena_Player_Sliding_Speedlines_C : public AFortGameplayCueNotify_Loop
@@ -11459,8 +11491,6 @@ public:
 	DMember(bool)                                      bIsGraceFalling                                             OFFSET(get<bool>, {0x9B8, 1, 0, 0})
 	DMember(bool)                                      bTickFree                                                   OFFSET(get<bool>, {0x9B9, 1, 0, 0})
 	SMember(FTimerHandle)                              DustStateTimerHandle                                        OFFSET(get<T>, {0x9C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11476,6 +11506,8 @@ public:
 	// void UpdateDustState();                                                                                                  // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_Player_Sliding_Speedlines.GCNL_Athena_Player_Sliding_Speedlines_C.ExecuteUbergraph_GCNL_Athena_Player_Sliding_Speedlines
 	// void ExecuteUbergraph_GCNL_Athena_Player_Sliding_Speedlines(int32_t EntryPoint);                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_Player_TomatoSprinkle_Ended.GCN_Athena_Player_TomatoSprinkle_Ended_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Athena_Player_TomatoSprinkle_Ended_C : public UFortGameplayCueNotify_Burst
@@ -11546,9 +11578,9 @@ class UGCN_CollisionEffects_Wood_C : public UGCN_CollisionEffects_Parent_C
 public:
 };
 
-/// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Generic.GCN_CollisionEffects_Generic_C
+/// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_GiantBeachBall.GCN_CollisionEffects_GiantBeachBall_C
 /// Size: 0x0000 (0x000370 - 0x000370)
-class UGCN_CollisionEffects_Generic_C : public UGCN_CollisionEffects_Parent_C
+class UGCN_CollisionEffects_GiantBeachBall_C : public UGCN_CollisionEffects_Parent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 880;
@@ -11556,9 +11588,9 @@ class UGCN_CollisionEffects_Generic_C : public UGCN_CollisionEffects_Parent_C
 public:
 };
 
-/// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_GiantBeachBall.GCN_CollisionEffects_GiantBeachBall_C
+/// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Generic.GCN_CollisionEffects_Generic_C
 /// Size: 0x0000 (0x000370 - 0x000370)
-class UGCN_CollisionEffects_GiantBeachBall_C : public UGCN_CollisionEffects_Parent_C
+class UGCN_CollisionEffects_Generic_C : public UGCN_CollisionEffects_Parent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 880;
@@ -11586,38 +11618,6 @@ class AGCNL_RollingEffects_Metal_C : public AGCNL_RollingEffects_Parent_C
 public:
 };
 
-/// Class /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C
-/// Size: 0x0008 (0x000C38 - 0x000C40)
-class AProp_PhysicsBoulder_Desert_01_C : public AProp_PhysicsBoulder_Parent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 3136;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xC38, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.OnDeathPlayEffects
-	// void OnDeathPlayEffects(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x1ebf994] BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.ReceiveHit
-	// void ReceiveHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, FHitResult& Hit); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/Items/PhysicsActors/PhysicsBoulder/Prop_PhysicsBoulder_Desert_01.Prop_PhysicsBoulder_Desert_01_C.ExecuteUbergraph_Prop_PhysicsBoulder_Desert_01
-	// void ExecuteUbergraph_Prop_PhysicsBoulder_Desert_01(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_PhysicsBoulder.GCN_CollisionEffects_PhysicsBoulder_C
-/// Size: 0x0000 (0x000370 - 0x000370)
-class UGCN_CollisionEffects_PhysicsBoulder_C : public UGCN_CollisionEffects_Parent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 880;
-
-public:
-};
-
 /// Class /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_Generic.GCNL_RollingEffects_Generic_C
 /// Size: 0x0000 (0x000B18 - 0x000B18)
 class AGCNL_RollingEffects_Generic_C : public AGCNL_RollingEffects_Parent_C
@@ -11637,8 +11637,6 @@ class AGCNL_RollingEffects_Stone_C : public AGCNL_RollingEffects_Parent_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB18, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11648,6 +11646,81 @@ public:
 	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_Stone.GCNL_RollingEffects_Stone_C.ExecuteUbergraph_GCNL_RollingEffects_Stone
 	// void ExecuteUbergraph_GCNL_RollingEffects_Stone(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C
+/// Size: 0x0080 (0x000548 - 0x0005C8)
+class AGCN_Athena_Interrogation_Reveal_Stencil_Latent_C : public AFortGameplayCueNotify_BurstLatent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1480;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
+	DMember(double)                                    SweepDuration                                               OFFSET(get<double>, {0x558, 8, 0, 0})
+	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(get<T>, {0x560, 8, 0, 0})
+	DMember(double)                                    SweepRadius                                                 OFFSET(get<double>, {0x568, 8, 0, 0})
+	SMember(FVector)                                   LocalPlayerLocation                                         OFFSET(get<T>, {0x570, 24, 0, 0})
+	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x588, 8, 0, 0})
+	DMember(double)                                    DelayBeforeSweep                                            OFFSET(get<double>, {0x590, 8, 0, 0})
+	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(get<T>, {0x598, 8, 0, 0})
+	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(get<T>, {0x5A0, 40, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.OnExecute
+	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.BeginSweepFX
+	// void BeginSweepFX();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.EndSweepFX
+	// void EndSweepFX();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.ReceiveEndPlay
+	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.PlayWorldSweep
+	// void PlayWorldSweep();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Stencil_Latent
+	// void ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Stencil_Latent(int32_t EntryPoint);                                // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C
+/// Size: 0x00A1 (0x000548 - 0x0005E9)
+class AGCN_Athena_Interrogation_Reveal_Latent_C : public AFortGameplayCueNotify_BurstLatent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1513;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
+	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
+	DMember(double)                                    SweepDuration                                               OFFSET(get<double>, {0x558, 8, 0, 0})
+	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(get<T>, {0x560, 8, 0, 0})
+	DMember(double)                                    SweepRadius                                                 OFFSET(get<double>, {0x568, 8, 0, 0})
+	SMember(FVector)                                   SourceObjectLocation                                        OFFSET(get<T>, {0x570, 24, 0, 0})
+	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x588, 8, 0, 0})
+	DMember(double)                                    DelayBeforeSweep                                            OFFSET(get<double>, {0x590, 8, 0, 0})
+	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(get<T>, {0x598, 8, 0, 0})
+	SMember(FVector)                                   ParticleRelativeLocation                                    OFFSET(get<T>, {0x5A0, 24, 0, 0})
+	CMember(USoundMix*)                                RevealSoundMix                                              OFFSET(get<T>, {0x5B8, 8, 0, 0})
+	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(get<T>, {0x5C0, 40, 0, 0})
+	DMember(bool)                                      bShouldPlayParticleEffectOnHand                             OFFSET(get<bool>, {0x5E8, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.OnExecute
+	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.BeginSweepFX
+	// void BeginSweepFX();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.EndSweepFX
+	// void EndSweepFX();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.ReceiveEndPlay
+	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.PlayWorldSweep
+	// void PlayWorldSweep();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Latent
+	// void ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Latent(int32_t EntryPoint);                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Athena_Player_Sliding_Player.GCNL_Athena_Player_Sliding_Player_C
 /// Size: 0x0078 (0x000A20 - 0x000A98)
 class AGCNL_Athena_Player_Sliding_Player_C : public AFortGameplayCueNotifyLoop_Sliding
@@ -11671,8 +11744,6 @@ public:
 	SMember(FTimerHandle)                              SpeedLineTimerHandle                                        OFFSET(get<T>, {0xA80, 8, 0, 0})
 	DMember(int32_t)                                   SurfaceTypeInt                                              OFFSET(get<int32_t>, {0xA88, 4, 0, 0})
 	SMember(FTimerHandle)                              SlideAudioTimerHandle                                       OFFSET(get<T>, {0xA90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11708,79 +11779,8 @@ public:
 	// void UpdateSurfaceType();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/GameplayCueNotifies/GCNL_Athena_Player_Sliding_Player.GCNL_Athena_Player_Sliding_Player_C.ExecuteUbergraph_GCNL_Athena_Player_Sliding_Player
 	// void ExecuteUbergraph_GCNL_Athena_Player_Sliding_Player(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C
-/// Size: 0x0080 (0x000548 - 0x0005C8)
-class AGCN_Athena_Interrogation_Reveal_Stencil_Latent_C : public AFortGameplayCueNotify_BurstLatent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1480;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
-	DMember(double)                                    SweepDuration                                               OFFSET(get<double>, {0x558, 8, 0, 0})
-	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(get<T>, {0x560, 8, 0, 0})
-	DMember(double)                                    SweepRadius                                                 OFFSET(get<double>, {0x568, 8, 0, 0})
-	SMember(FVector)                                   LocalPlayerLocation                                         OFFSET(get<T>, {0x570, 24, 0, 0})
-	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x588, 8, 0, 0})
-	DMember(double)                                    DelayBeforeSweep                                            OFFSET(get<double>, {0x590, 8, 0, 0})
-	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(get<T>, {0x5A0, 40, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.OnExecute
-	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.BeginSweepFX
-	// void BeginSweepFX();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.EndSweepFX
-	// void EndSweepFX();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.ReceiveEndPlay
-	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.PlayWorldSweep
-	// void PlayWorldSweep();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Stencil_Latent.GCN_Athena_Interrogation_Reveal_Stencil_Latent_C.ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Stencil_Latent
-	// void ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Stencil_Latent(int32_t EntryPoint);                                // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C
-/// Size: 0x00A1 (0x000548 - 0x0005E9)
-class AGCN_Athena_Interrogation_Reveal_Latent_C : public AFortGameplayCueNotify_BurstLatent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1513;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
-	CMember(UPostProcessComponent*)                    PostProcess                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
-	DMember(double)                                    SweepDuration                                               OFFSET(get<double>, {0x558, 8, 0, 0})
-	SMember(FTimerHandle)                              SweepDelayHandle                                            OFFSET(get<T>, {0x560, 8, 0, 0})
-	DMember(double)                                    SweepRadius                                                 OFFSET(get<double>, {0x568, 8, 0, 0})
-	SMember(FVector)                                   SourceObjectLocation                                        OFFSET(get<T>, {0x570, 24, 0, 0})
-	CMember(APlayerPawn_Athena_C*)                     PlayerPawnAthena                                            OFFSET(get<T>, {0x588, 8, 0, 0})
-	DMember(double)                                    DelayBeforeSweep                                            OFFSET(get<double>, {0x590, 8, 0, 0})
-	SMember(FTimerHandle)                              DelayBeforeSweepHandle                                      OFFSET(get<T>, {0x598, 8, 0, 0})
-	SMember(FVector)                                   ParticleRelativeLocation                                    OFFSET(get<T>, {0x5A0, 24, 0, 0})
-	CMember(USoundMix*)                                RevealSoundMix                                              OFFSET(get<T>, {0x5B8, 8, 0, 0})
-	SMember(FScalableFloat)                            StencilDuration                                             OFFSET(get<T>, {0x5C0, 40, 0, 0})
-	DMember(bool)                                      bShouldPlayParticleEffectOnHand                             OFFSET(get<bool>, {0x5E8, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.OnExecute
-	// bool OnExecute(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                    // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.BeginSweepFX
-	// void BeginSweepFX();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.EndSweepFX
-	// void EndSweepFX();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.ReceiveEndPlay
-	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.PlayWorldSweep
-	// void PlayWorldSweep();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_Interrogation_Reveal_Latent.GCN_Athena_Interrogation_Reveal_Latent_C.ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Latent
-	// void ExecuteUbergraph_GCN_Athena_Interrogation_Reveal_Latent(int32_t EntryPoint);                                        // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Sliding_Oneshot.GCN_Sliding_Oneshot_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Sliding_Oneshot_C : public UFortGameplayCueNotify_Burst
@@ -11902,8 +11902,6 @@ public:
 	DMember(bool)                                      HideOnDeath                                                 OFFSET(get<bool>, {0x9A1, 1, 0, 0})
 	DMember(bool)                                      bAttached                                                   OFFSET(get<bool>, {0x9A2, 1, 0, 0})
 	SMember(FGameplayTag)                              GC_Death                                                    OFFSET(get<T>, {0x9A4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11935,6 +11933,8 @@ public:
 	// void BndEvt__BGA_LinkedActorWithGravity_Parent_FortLinkToActor_K2Node_ComponentBoundEvent_1_OnLinkedPhysicsObjectWake__DelegateSignature(AActor* PhysicsObject); // [0x1ebf994] BlueprintEvent       
 	// Function /Game/Athena/Items/Parents/LinkedActor/BGA_LinkedActorWithGravity_Parent.BGA_LinkedActorWithGravity_Parent_C.ExecuteUbergraph_BGA_LinkedActorWithGravity_Parent
 	// void ExecuteUbergraph_BGA_LinkedActorWithGravity_Parent(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/HeldObjects/HeldObjectVersion2/BGA_HeldObject_Parent.BGA_HeldObject_Parent_C
 /// Size: 0x0238 (0x000978 - 0x000BB0)
 class ABGA_HeldObject_Parent_C : public ABuildingGameplayActor
@@ -11986,8 +11986,6 @@ public:
 	DMember(bool)                                      RestoreDefaultPawnCollisionOnInteract                       OFFSET(get<bool>, {0xBA1, 1, 0, 0})
 	DMember(bool)                                      IsAttachedToVehicle                                         OFFSET(get<bool>, {0xBA2, 1, 0, 0})
 	CMember(AActor*)                                   VehicleAttached                                             OFFSET(get<T>, {0xBA8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12071,6 +12069,8 @@ public:
 	// void OnVehicleDestroyed(AActor* DestroyedActor);                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/HeldObjects/HeldObjectVersion2/BGA_HeldObject_Parent.BGA_HeldObject_Parent_C.ExecuteUbergraph_BGA_HeldObject_Parent
 	// void ExecuteUbergraph_BGA_HeldObject_Parent(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Apollo/Environments/Landscape/Water/FortWaterBodyBP.FortWaterBodyBP_C
 /// Size: 0x0010 (0x0003D0 - 0x0003E0)
 class AFortWaterBodyBP_C : public AFortWaterBodyActor
@@ -12081,8 +12081,6 @@ class AFortWaterBodyBP_C : public AFortWaterBodyActor
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3D0, 8, 0, 0})
 	CMember(ABP_FluidSim_FN_C*)                        FluidSimBP                                                  OFFSET(get<T>, {0x3D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12092,6 +12090,8 @@ public:
 	// void OnReceivedBulletImpact(FHitResult& Hit);                                                                            // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Game/Athena/Apollo/Environments/Landscape/Water/FortWaterBodyBP.FortWaterBodyBP_C.ExecuteUbergraph_FortWaterBodyBP
 	// void ExecuteUbergraph_FortWaterBodyBP(int32_t EntryPoint);                                                               // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/Consumables/Parents/BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C
 /// Size: 0x02B9 (0x000978 - 0x000C31)
 class ABGA_Athena_WithGravity_Parent_C : public ABuildingGameplayActor
@@ -12134,8 +12134,6 @@ public:
 	SMember(FVector)                                   StopSimServerLocation                                       OFFSET(get<T>, {0xC10, 24, 0, 0})
 	DMember(double)                                    BounceAwayFromLocation_MinSpeed                             OFFSET(get<double>, {0xC28, 8, 0, 0})
 	DMember(bool)                                      BounceOffTires                                              OFFSET(get<bool>, {0xC30, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12189,6 +12187,8 @@ public:
 	// void OnUnderneathPhysicsObjectAwakeChanged(UPrimitiveComponent* SimulatingComponent, bool bIsAwake);                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/Parents/BGA_Athena_WithGravity_Parent.BGA_Athena_WithGravity_Parent_C.ExecuteUbergraph_BGA_Athena_WithGravity_Parent
 	// void ExecuteUbergraph_BGA_Athena_WithGravity_Parent(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/Items/EnvironmentalItems/ExplosiveProps/FuelIndicator.FuelIndicator_C
 /// Size: 0x0010 (0x000978 - 0x000988)
 class AFuelIndicator_C : public ABuildingGameplayActor
@@ -12267,8 +12267,6 @@ public:
 	SMember(FVector)                                   Player_Location                                             OFFSET(get<T>, {0xC00, 24, 0, 0})
 	SMember(FVector)                                   TeleportLocationOffset                                      OFFSET(get<T>, {0xC18, 24, 0, 0})
 	CMember(TSet<AActor*>)                             BeganOverlapList                                            OFFSET(get<T>, {0xC30, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12342,6 +12340,8 @@ public:
 	// void ForceRiftTeleport(AActor* Target Actor);                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Athena/Items/Consumables/RiftItem/BGA_RiftPortal_Item_Athena.BGA_RiftPortal_Item_Athena_C.ExecuteUbergraph_BGA_RiftPortal_Item_Athena
 	// void ExecuteUbergraph_BGA_RiftPortal_Item_Athena(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Athena/HUD/Bacchus/WidgetBehaviors/EmptyBehavior.EmptyBehavior_C
 /// Size: 0x0000 (0x0000B0 - 0x0000B0)
 class UEmptyBehavior_C : public UHUDWidgetBehavior
@@ -12380,30 +12380,14 @@ class UGCN_Athena_GenericHeldObject_HitPlayer_C : public UFortGameplayCueNotify_
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	CMember(USoundBase*)                               Sound_To_Play                                               OFFSET(get<T>, {0x218, 8, 0, 0})
-};
-
+	CMember(USoundBase*)                               Sound_to_Play                                               OFFSET(get<T>, {0x218, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_HitPlayer.GCN_Athena_GenericHeldObject_HitPlayer_C.OnBurst
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_HitWorld.GCN_Athena_GenericHeldObject_HitWorld_C
-/// Size: 0x0008 (0x000218 - 0x000220)
-class UGCN_Athena_GenericHeldObject_HitWorld_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 544;
-
-public:
-	CMember(USoundBase*)                               Sound_To_Play                                               OFFSET(get<T>, {0x218, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_HitWorld.GCN_Athena_GenericHeldObject_HitWorld_C.OnBurst
-	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_Throw.GCN_Athena_GenericHeldObject_Throw_C
 /// Size: 0x0008 (0x000218 - 0x000220)
 class UGCN_Athena_GenericHeldObject_Throw_C : public UFortGameplayCueNotify_Burst
@@ -12413,13 +12397,29 @@ class UGCN_Athena_GenericHeldObject_Throw_C : public UFortGameplayCueNotify_Burs
 
 public:
 	CMember(USoundBase*)                               Throw_Sound                                                 OFFSET(get<T>, {0x218, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_Throw.GCN_Athena_GenericHeldObject_Throw_C.OnBurst
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
+/// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_HitWorld.GCN_Athena_GenericHeldObject_HitWorld_C
+/// Size: 0x0008 (0x000218 - 0x000220)
+class UGCN_Athena_GenericHeldObject_HitWorld_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 544;
+
+public:
+	CMember(USoundBase*)                               Sound_to_Play                                               OFFSET(get<T>, {0x218, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_HitWorld.GCN_Athena_GenericHeldObject_HitWorld_C.OnBurst
+	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/Creative/BattleLab/GCN_BattleLab_GenericObject_Death.GCN_BattleLab_GenericObject_Death_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_BattleLab_GenericObject_Death_C : public UFortGameplayCueNotify_Burst
@@ -12438,14 +12438,14 @@ class UGCN_Athena_GenericHeldObject_EnterWater_C : public UFortGameplayCueNotify
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-	CMember(USoundBase*)                               Sound_To_Play                                               OFFSET(get<T>, {0x218, 8, 0, 0})
-};
-
+	CMember(USoundBase*)                               Sound_to_Play                                               OFFSET(get<T>, {0x218, 8, 0, 0})
 
 
 	/// Functions
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_EnterWater.GCN_Athena_GenericHeldObject_EnterWater_C.OnBurst
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_PickUp.GCN_Athena_GenericHeldObject_PickUp_C
 /// Size: 0x0008 (0x000218 - 0x000220)
 class UGCN_Athena_GenericHeldObject_PickUp_C : public UFortGameplayCueNotify_Burst
@@ -12455,13 +12455,13 @@ class UGCN_Athena_GenericHeldObject_PickUp_C : public UFortGameplayCueNotify_Bur
 
 public:
 	CMember(USoundBase*)                               Pick_Up_Sound                                               OFFSET(get<T>, {0x218, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Athena/GameplayCueNotifies/GCN_Athena_GenericHeldObject_PickUp.GCN_Athena_GenericHeldObject_PickUp_C.OnBurst
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Athena/GameplayCueNotifies/GCNL_Creative_PowerupSparks.GCNL_Creative_PowerupSparks_C
 /// Size: 0x0000 (0x000990 - 0x000990)
 class AGCNL_Creative_PowerupSparks_C : public AFortGameplayCueNotify_Loop
@@ -12720,16 +12720,6 @@ class Uv2_PlayerCameraModeRanged_C : public Uv2_PlayerCameraModeBase_C
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Original/Ranged3PCamera.Ranged3PCamera_C
-/// Size: 0x0000 (0x0001E8 - 0x0001E8)
-class URanged3PCamera_C : public UFort3PCam_Default
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
-
-public:
-};
-
 /// Class /Game/Blueprints/Camera/v2_OverShoulder/v2_PlayerCameraModeTargetingVeryShortRange.v2_PlayerCameraModeTargetingVeryShortRange_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class Uv2_PlayerCameraModeTargetingVeryShortRange_C : public Uv2_PlayerCameraModeRanged_C
@@ -12750,16 +12740,6 @@ class Uv2_PlayerCameraModeMelee_C : public Uv2_PlayerCameraModeBase_C
 public:
 };
 
-/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeBase.v3_PlayerCameraModeBase_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv3_PlayerCameraModeBase_C : public UFortCameraMode_ThirdPerson
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
 /// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCamera_DBNO.Athena_PlayerCamera_DBNO_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class UAthena_PlayerCamera_DBNO_C : public UAthena_PlayerCameraModeBase_C
@@ -12770,9 +12750,49 @@ class UAthena_PlayerCamera_DBNO_C : public UAthena_PlayerCameraModeBase_C
 public:
 };
 
+/// Class /Game/Blueprints/Camera/Original/Ranged3PCamera.Ranged3PCamera_C
+/// Size: 0x0000 (0x0001E8 - 0x0001E8)
+class URanged3PCamera_C : public UFort3PCam_Default
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 488;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeBase.v3_PlayerCameraModeBase_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class Uv3_PlayerCameraModeBase_C : public UFortCameraMode_ThirdPerson
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeRanged.v3_PlayerCameraModeRanged_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class Uv3_PlayerCameraModeRanged_C : public Uv3_PlayerCameraModeBase_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
 /// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraMode_WaterSprintBoost.Athena_PlayerCameraMode_WaterSprintBoost_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class UAthena_PlayerCameraMode_WaterSprintBoost_C : public UAthena_PlayerCameraModeBase_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingVeryShortRange.v3_PlayerCameraModeTargetingVeryShortRange_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class Uv3_PlayerCameraModeTargetingVeryShortRange_C : public Uv3_PlayerCameraModeRanged_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -12800,32 +12820,22 @@ class Uv1_PlayerCameraModeMelee_C : public Uv1_PlayerCameraModeBase_C
 public:
 };
 
-/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeRanged.v3_PlayerCameraModeRanged_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv3_PlayerCameraModeRanged_C : public Uv3_PlayerCameraModeBase_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
-/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingVeryShortRange.v3_PlayerCameraModeTargetingVeryShortRange_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv3_PlayerCameraModeTargetingVeryShortRange_C : public Uv3_PlayerCameraModeRanged_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
 /// Class /Game/Blueprints/Camera/Laurent_v1/v1_PlayerCameraModeTargetingVeryShortRange.v1_PlayerCameraModeTargetingVeryShortRange_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class Uv1_PlayerCameraModeTargetingVeryShortRange_C : public Uv1_PlayerCameraModeBase_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/Original/Targeting3PCamera_LongRange.Targeting3PCamera_LongRange_C
+/// Size: 0x0000 (0x0001E8 - 0x0001E8)
+class UTargeting3PCamera_LongRange_C : public UFort3PCam_Targeting
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
 };
@@ -12860,6 +12870,16 @@ class Uv1_PlayerCameraModeTargetingPistol_C : public Uv1_PlayerCameraModeBase_C
 public:
 };
 
+/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraMode_RespawnedAir.Athena_PlayerCameraMode_RespawnedAir_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class UAthena_PlayerCameraMode_RespawnedAir_C : public UFortCameraMode_RespawnedAir
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
 /// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeMelee.v3_PlayerCameraModeMelee_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class Uv3_PlayerCameraModeMelee_C : public Uv3_PlayerCameraModeBase_C
@@ -12880,26 +12900,6 @@ class UHoverboardCameraMode_C : public UFortHoverboardCameraMode
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Original/Targeting3PCamera_LongRange.Targeting3PCamera_LongRange_C
-/// Size: 0x0000 (0x0001E8 - 0x0001E8)
-class UTargeting3PCamera_LongRange_C : public UFort3PCam_Targeting
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
-
-public:
-};
-
-/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraMode_RespawnedAir.Athena_PlayerCameraMode_RespawnedAir_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class UAthena_PlayerCameraMode_RespawnedAir_C : public UFortCameraMode_RespawnedAir
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
 /// Class /Game/Blueprints/Camera/v3_MPR/PlayerCameraMode_DBNO.PlayerCameraMode_DBNO_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class UPlayerCameraMode_DBNO_C : public Uv3_PlayerCameraModeBase_C
@@ -12910,19 +12910,9 @@ class UPlayerCameraMode_DBNO_C : public Uv3_PlayerCameraModeBase_C
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Laurent_v1/v1_PlayerCameraModeTargetingRifle.v1_PlayerCameraModeTargetingRifle_C
+/// Class /Game/Blueprints/Camera/Laurent_v1/v1_PlayerCameraModeTargetingScope.v1_PlayerCameraModeTargetingScope_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv1_PlayerCameraModeTargetingRifle_C : public Uv1_PlayerCameraModeBase_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
-/// Class /Game/Blueprints/Camera/v2_OverShoulder/v2_PlayerCameraModeTargetingPistol.v2_PlayerCameraModeTargetingPistol_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv2_PlayerCameraModeTargetingPistol_C : public Uv2_PlayerCameraModeRanged_C
+class Uv1_PlayerCameraModeTargetingScope_C : public Uv1_PlayerCameraModeBase_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -12940,9 +12930,9 @@ class UTargeting3PCamera_VeryShortRange_C : public UFort3PCam_Targeting
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Laurent_v1/v1_PlayerCameraModeTargetingScope.v1_PlayerCameraModeTargetingScope_C
+/// Class /Game/Blueprints/Camera/v2_OverShoulder/v2_PlayerCameraModeTargetingPistol.v2_PlayerCameraModeTargetingPistol_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv1_PlayerCameraModeTargetingScope_C : public Uv1_PlayerCameraModeBase_C
+class Uv2_PlayerCameraModeTargetingPistol_C : public Uv2_PlayerCameraModeRanged_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -12950,12 +12940,22 @@ class Uv1_PlayerCameraModeTargetingScope_C : public Uv1_PlayerCameraModeBase_C
 public:
 };
 
-/// Class /Game/Blueprints/Camera/v2_OverShoulder/v2_PlayerCameraModeTargetingScope.v2_PlayerCameraModeTargetingScope_C
+/// Class /Game/Blueprints/Camera/Laurent_v1/v1_PlayerCameraModeTargetingRifle.v1_PlayerCameraModeTargetingRifle_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv2_PlayerCameraModeTargetingScope_C : public Uv2_PlayerCameraModeRanged_C
+class Uv1_PlayerCameraModeTargetingRifle_C : public Uv1_PlayerCameraModeBase_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/Original/Targeting3PCamera.Targeting3PCamera_C
+/// Size: 0x0000 (0x0001E8 - 0x0001E8)
+class UTargeting3PCamera_C : public UFort3PCam_Targeting
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
 };
@@ -12970,16 +12970,6 @@ class UDefault3PCamera_C : public UFort3PCam_Default
 public:
 };
 
-/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingScope.v3_PlayerCameraModeTargetingScope_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv3_PlayerCameraModeTargetingScope_C : public Uv3_PlayerCameraModeRanged_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
 /// Class /Game/Blueprints/Camera/Original/CinematicCamera_MatineeTransition.CinematicCamera_MatineeTransition_C
 /// Size: 0x0000 (0x000068 - 0x000068)
 class UCinematicCamera_MatineeTransition_C : public UFortCinematicCamera
@@ -12990,9 +12980,19 @@ class UCinematicCamera_MatineeTransition_C : public UFortCinematicCamera
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeSkydiveDive.Athena_PlayerCameraModeSkydiveDive_C
+/// Class /Game/Blueprints/Camera/v2_OverShoulder/v2_PlayerCameraModeTargetingScope.v2_PlayerCameraModeTargetingScope_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class UAthena_PlayerCameraModeSkydiveDive_C : public UAthena_PlayerCameraModeBase_C
+class Uv2_PlayerCameraModeTargetingScope_C : public Uv2_PlayerCameraModeRanged_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraHoisted.Athena_PlayerCameraHoisted_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class UAthena_PlayerCameraHoisted_C : public UAthena_PlayerCameraModeBase_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -13003,6 +13003,16 @@ public:
 /// Class /Game/Blueprints/Camera/v2_OverShoulder/v2_PlayerCameraModeTargetingRifle.v2_PlayerCameraModeTargetingRifle_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class Uv2_PlayerCameraModeTargetingRifle_C : public Uv2_PlayerCameraModeRanged_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingScope.v3_PlayerCameraModeTargetingScope_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class Uv3_PlayerCameraModeTargetingScope_C : public Uv3_PlayerCameraModeRanged_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -13030,9 +13040,29 @@ class USniper3PCamera_C : public UFort3PCam_Default
 public:
 };
 
+/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeSkydiveDive.Athena_PlayerCameraModeSkydiveDive_C
+/// Size: 0x0000 (0x001B50 - 0x001B50)
+class UAthena_PlayerCameraModeSkydiveDive_C : public UAthena_PlayerCameraModeBase_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6992;
+
+public:
+};
+
 /// Class /Game/Blueprints/Camera/Original/Targeting3PCamera_MidRange.Targeting3PCamera_MidRange_C
 /// Size: 0x0000 (0x0001E8 - 0x0001E8)
 class UTargeting3PCamera_MidRange_C : public UFort3PCam_Targeting
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 488;
+
+public:
+};
+
+/// Class /Game/Blueprints/Camera/Original/Targeting3PCamera_Scope.Targeting3PCamera_Scope_C
+/// Size: 0x0000 (0x0001E8 - 0x0001E8)
+class UTargeting3PCamera_Scope_C : public UFort3PCam_Targeting
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 488;
@@ -13050,9 +13080,9 @@ class UAthena_PlayerCameraModeSkydiveGlide_C : public UAthena_PlayerCameraModeBa
 public:
 };
 
-/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingPistol.v3_PlayerCameraModeTargetingPistol_C
+/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingRifle.v3_PlayerCameraModeTargetingRifle_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv3_PlayerCameraModeTargetingPistol_C : public Uv3_PlayerCameraModeRanged_C
+class Uv3_PlayerCameraModeTargetingRifle_C : public Uv3_PlayerCameraModeRanged_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -13060,9 +13090,9 @@ class Uv3_PlayerCameraModeTargetingPistol_C : public Uv3_PlayerCameraModeRanged_
 public:
 };
 
-/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingRifle.v3_PlayerCameraModeTargetingRifle_C
+/// Class /Game/Blueprints/Camera/v3_MPR/v3_PlayerCameraModeTargetingPistol.v3_PlayerCameraModeTargetingPistol_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class Uv3_PlayerCameraModeTargetingRifle_C : public Uv3_PlayerCameraModeRanged_C
+class Uv3_PlayerCameraModeTargetingPistol_C : public Uv3_PlayerCameraModeRanged_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
@@ -13080,16 +13110,6 @@ class Uv1_PlayerCameraModeRanged_C : public Uv1_PlayerCameraModeBase_C
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeTargetingTethered.Athena_PlayerCameraModeTargetingTethered_C
-/// Size: 0x0000 (0x001B50 - 0x001B50)
-class UAthena_PlayerCameraModeTargetingTethered_C : public UAthena_PlayerCameraModeRangedTargeting_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
 /// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeSkydiveParachute.Athena_PlayerCameraModeSkydiveParachute_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class UAthena_PlayerCameraModeSkydiveParachute_C : public UAthena_PlayerCameraModeBase_C
@@ -13100,32 +13120,12 @@ class UAthena_PlayerCameraModeSkydiveParachute_C : public UAthena_PlayerCameraMo
 public:
 };
 
-/// Class /Game/Blueprints/Camera/Original/Targeting3PCamera.Targeting3PCamera_C
-/// Size: 0x0000 (0x0001E8 - 0x0001E8)
-class UTargeting3PCamera_C : public UFort3PCam_Targeting
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
-
-public:
-};
-
-/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraHoisted.Athena_PlayerCameraHoisted_C
+/// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeTargetingTethered.Athena_PlayerCameraModeTargetingTethered_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
-class UAthena_PlayerCameraHoisted_C : public UAthena_PlayerCameraModeBase_C
+class UAthena_PlayerCameraModeTargetingTethered_C : public UAthena_PlayerCameraModeRangedTargeting_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 6992;
-
-public:
-};
-
-/// Class /Game/Blueprints/Camera/Original/Targeting3PCamera_Scope.Targeting3PCamera_Scope_C
-/// Size: 0x0000 (0x0001E8 - 0x0001E8)
-class UTargeting3PCamera_Scope_C : public UFort3PCam_Targeting
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 488;
 
 public:
 };
@@ -13177,8 +13177,6 @@ public:
 	CMember(UParticleSystemComponent*)                 CharacterAttached                                           OFFSET(get<T>, {0x348, 8, 0, 0})
 	DMember(bool)                                      InLobby                                                     OFFSET(get<bool>, {0x350, 1, 0, 0})
 	CMember(USkeletalMeshComponent*)                   Mesh_for_Attachment                                         OFFSET(get<T>, {0x358, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13196,6 +13194,8 @@ public:
 	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Blueprints/Adventures/SpawnTeleporter/BP_TeleportationDrone.BP_TeleportationDrone_C.ExecuteUbergraph_BP_TeleportationDrone
 	// void ExecuteUbergraph_BP_TeleportationDrone(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Blueprints/Adventures/SpawnTeleporter/BP_VictoryDrone.BP_VictoryDrone_C
 /// Size: 0x0070 (0x000318 - 0x000388)
 class ABP_VictoryDrone_C : public APawn
@@ -13220,8 +13220,6 @@ public:
 	DMember(bool)                                      isDecoy                                                     OFFSET(get<bool>, {0x370, 1, 0, 0})
 	CMember(USkeletalMeshComponent*)                   Mesh_for_Attachment                                         OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(USoundBase*)                               SoundOnNPCDeath                                             OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13247,6 +13245,8 @@ public:
 	// void ExecuteUbergraph_BP_VictoryDrone(int32_t EntryPoint);                                                               // [0x1ebf994] Final                
 	// Function /Game/Blueprints/Adventures/SpawnTeleporter/BP_VictoryDrone.BP_VictoryDrone_C.SpawnOutAnimEndedDispatcher__DelegateSignature
 	// void SpawnOutAnimEndedDispatcher__DelegateSignature(ABP_VictoryDrone_C* Drone);                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Blueprints/Camera/Athena/Athena_PlayerCameraMode_Harveting_1blade_1P.Athena_PlayerCameraMode_Harveting_1blade_1P_C
 /// Size: 0x0000 (0x001B50 - 0x001B50)
 class UAthena_PlayerCameraMode_Harveting_1blade_1P_C : public UAthena_PlayerCameraMode_1P_C
@@ -13274,8 +13274,6 @@ public:
 	SMember(FVector2D)                                 Quad_Size                                                   OFFSET(get<T>, {0x318, 16, 0, 0})
 	DMember(bool)                                      Use_Terrain_Velocity_and_Height_Texture                     OFFSET(get<bool>, {0x328, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 External_Water_MID_To_Update                                OFFSET(get<T>, {0x330, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13285,6 +13283,8 @@ public:
 	// void Set Flood Water Level();                                                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /FortWater/Blueprints/LandscapeWaterInfo.LandscapeWaterInfo_C.ExecuteUbergraph_LandscapeWaterInfo
 	// void ExecuteUbergraph_LandscapeWaterInfo(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Blueprints/Components/GSC_MiniMapDataOverride.GSC_MiniMapDataOverride_C
 /// Size: 0x0000 (0x0000C0 - 0x0000C0)
 class UGSC_MiniMapDataOverride_C : public UFortGameStateComponent_MiniMapDataOverride
@@ -13344,8 +13344,6 @@ class UGA_GrindRail_KeybindDisplay_C : public UFortGameplayAbility_KeybindDispla
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13353,6 +13351,8 @@ public:
 	// void K2_ActivateAbility();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /GrindRail/Blueprints/GA_GrindRail_KeybindDisplay.GA_GrindRail_KeybindDisplay_C.ExecuteUbergraph_GA_GrindRail_KeybindDisplay
 	// void ExecuteUbergraph_GA_GrindRail_KeybindDisplay(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /GrindRail/Blueprints/GE_GrindRail_VehicleDamage.GE_GrindRail_VehicleDamage_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_GrindRail_VehicleDamage_C : public UGet_DirectDamageParent_C
@@ -13450,8 +13450,6 @@ public:
 	DMember(bool)                                      Allow_Manual_Tip_Rotation                                   OFFSET(get<bool>, {0xE68, 1, 0, 0})
 	DMember(double)                                    JumpingOffDirectionDetectionTolerance                       OFFSET(get<double>, {0xE70, 8, 0, 0})
 	SMember(FScalableFloat)                            MaxAngleBetweenVelocityAndNormalForExitDetection            OFFSET(get<T>, {0xE78, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13557,6 +13555,8 @@ public:
 	// void GenerateMeshesAlongSpline();                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /GrindRail/Blueprints/BGA_GrindRail.BGA_GrindRail_C.ExecuteUbergraph_BGA_GrindRail
 	// void ExecuteUbergraph_BGA_GrindRail(int32_t EntryPoint);                                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /GrindRail/Blueprints/BP_GrindingComponent.BP_GrindingComponent_C
 /// Size: 0x0360 (0x000C28 - 0x000F88)
 class UBP_GrindingComponent_C : public UFortPawnComponent_GrindRail
@@ -13622,8 +13622,6 @@ public:
 	DMember(double)                                    SF_MinSpeedAfterBouncedOffRailCap                           OFFSET(get<double>, {0xF50, 8, 0, 0})
 	SMember(FScalableFloat)                            SF_RemoveGASmashAfterDelay                                  OFFSET(get<T>, {0xF58, 40, 0, 0})
 	SMember(FTimerHandle)                              RemoveIsGrindingTimer                                       OFFSET(get<T>, {0xF80, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13733,6 +13731,8 @@ public:
 	// void OnFeetLanded__DelegateSignature();                                                                                  // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /GrindRail/Blueprints/BP_GrindingComponent.BP_GrindingComponent_C.JumpedOff__DelegateSignature
 	// void JumpedOff__DelegateSignature();                                                                                     // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /GrindRail/Blueprints/GA_GrindRail_Smash.GA_GrindRail_Smash_C
 /// Size: 0x0050 (0x000B40 - 0x000B90)
 class UGA_GrindRail_Smash_C : public UFortGameplayAbility_ZiplineSmashBase
@@ -13749,8 +13749,6 @@ public:
 	CMember(UBP_GrindingComponent_C*)                  GrindingComp                                                OFFSET(get<T>, {0xB78, 8, 0, 0})
 	DMember(bool)                                      bSmashNonPlayerBuilt                                        OFFSET(get<bool>, {0xB80, 1, 0, 0})
 	CMember(UClass*)                                   DeviceDamageEffect                                          OFFSET(get<T>, {0xB88, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13766,6 +13764,8 @@ public:
 	// void EndAsyncBreakNearbyStructuresOverlap(TArray<AActor*>& OverlapActors);                                               // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /GrindRail/Blueprints/GA_GrindRail_Smash.GA_GrindRail_Smash_C.ExecuteUbergraph_GA_GrindRail_Smash
 	// void ExecuteUbergraph_GA_GrindRail_Smash(int32_t EntryPoint);                                                            // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /GrindRail/Blueprints/GE_GrindRail_IsGrinding.GE_GrindRail_IsGrinding_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_GrindRail_IsGrinding_C : public UGameplayEffect
@@ -13788,8 +13788,6 @@ public:
 	CMember(APlayerPawn_Athena_C*)                     Player                                                      OFFSET(get<T>, {0xB60, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     BlockingTags                                                OFFSET(get<T>, {0xB68, 32, 0, 0})
 	CMember(UBP_GrindingComponent_C*)                  GrindingComponent                                           OFFSET(get<T>, {0xB88, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13809,6 +13807,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /GrindRail/Blueprints/GA_Action_ADS_GrindRail.GA_Action_ADS_GrindRail_C.ExecuteUbergraph_GA_Action_ADS_GrindRail
 	// void ExecuteUbergraph_GA_Action_ADS_GrindRail(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /GrindRail/Blueprints/CameraModifier_Grinding.CameraModifier_Grinding_C
 /// Size: 0x01A8 (0x0009C0 - 0x000B68)
 class UCameraModifier_Grinding_C : public UFortCameraModifier_Grinding
@@ -13841,8 +13841,6 @@ public:
 	SMember(FScalableFloat)                            BaseUpOffsetMultiplier                                      OFFSET(get<T>, {0xAF0, 40, 0, 0})
 	SMember(FScalableFloat)                            SprintingUpOffsetMultiplier                                 OFFSET(get<T>, {0xB18, 40, 0, 0})
 	SMember(FScalableFloat)                            BoostedUpOffsetMultiplier                                   OFFSET(get<T>, {0xB40, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13856,6 +13854,8 @@ public:
 	// void TurnOn();                                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /GrindRail/Blueprints/CameraModifier_Grinding.CameraModifier_Grinding_C.ExecuteUbergraph_CameraModifier_Grinding
 	// void ExecuteUbergraph_CameraModifier_Grinding(int32_t EntryPoint);                                                       // [0x1ebf994] Final                
+};
+
 /// Class /GrindRail/Blueprints/FFandCameraShake/CameraShake_LandOnRailBurst.CameraShake_LandOnRailBurst_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UCameraShake_LandOnRailBurst_C : public ULegacyCameraShake

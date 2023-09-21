@@ -20,8 +20,6 @@ public:
 	SMember(FLinearColor)                              FlickerColor                                                OFFSET(get<T>, {0x150, 16, 0, 0})
 	DMember(float)                                     ShortCircuitMinDelay                                        OFFSET(get<float>, {0x160, 4, 0, 0})
 	DMember(float)                                     ShortCircuitMaxDelay                                        OFFSET(get<float>, {0x164, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -35,6 +33,8 @@ public:
 	// void StartShortCircuitUpdate(UTimelineComponent* ShortCircuitTimeline);                                                  // [0x9adc52c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/PointLight.PointLightNativeComponent.StartRhythmUpdate
 	// void StartRhythmUpdate(FTimerHandle& TimerHandle, float Rate);                                                           // [0x9adc3f4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/PointLight.PointLightRhythmParameters
 /// Size: 0x0038 (0x000000 - 0x000038)
 class FPointLightRhythmParameters : public MDKStruct

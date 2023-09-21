@@ -21,13 +21,13 @@ public:
 	SMember(FReplicationProxy)                         ReplicationProxy_Autonomous                                 OFFSET(get<T>, {0x1A0, 80, 0, 0})
 	SMember(FReplicationProxy)                         ReplicationProxy_Simulated                                  OFFSET(get<T>, {0x1F0, 80, 0, 0})
 	SMember(FReplicationProxy)                         ReplicationProxy_Replay                                     OFFSET(get<T>, {0x240, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NetworkPrediction.NetworkPredictionComponent.ServerReceiveClientInput
 	// void ServerReceiveClientInput(FServerReplicationRPCParameter ProxyParameter);                                            // [0x6bdffc4] Net|Native|Event|Protected|NetServer|NetValidate 
+};
+
 /// Class /Script/NetworkPrediction.NetworkPredictionPhysicsComponent
 /// Size: 0x0120 (0x0000A0 - 0x0001C0)
 class UNetworkPredictionPhysicsComponent : public UActorComponent

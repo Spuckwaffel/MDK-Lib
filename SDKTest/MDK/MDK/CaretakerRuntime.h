@@ -92,8 +92,6 @@ public:
 	DMember(float)                                     FourthFootPhaseMin                                          OFFSET(get<float>, {0x5B4, 4, 0, 0})
 	DMember(float)                                     FootPhaseMax                                                OFFSET(get<float>, {0x5B8, 4, 0, 0})
 	CMember(UFortAnimWorldStriderComponent*)           WorldStriderComponent                                       OFFSET(get<T>, {0x5C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -107,3 +105,5 @@ public:
 	// float GetWalkPlayRateValue();                                                                                            // [0x9a07278] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CaretakerRuntime.FortAIAnimInstance_Caretaker.GetStartAnimPosition
 	// float GetStartAnimPosition();                                                                                            // [0x9a0724c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+

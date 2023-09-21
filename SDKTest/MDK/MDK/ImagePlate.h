@@ -28,8 +28,6 @@ class UImagePlateComponent : public UPrimitiveComponent
 
 public:
 	SMember(FImagePlateParameters)                     Plate                                                       OFFSET(get<T>, {0x568, 64, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// void OnRenderTextureChanged();                                                                                           // [0xa008758] Final|Native|Public  
 	// Function /Script/ImagePlate.ImagePlateComponent.GetPlate
 	// FImagePlateParameters GetPlate();                                                                                        // [0xa008718] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ImagePlate.ImagePlateSettings
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UImagePlateSettings : public UObject

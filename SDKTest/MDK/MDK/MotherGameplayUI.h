@@ -27,8 +27,6 @@ public:
 	SMember(FName)                                     SetMarkerPositionMessagePropertyName                        OFFSET(get<T>, {0x340, 4, 0, 0})
 	SMember(FEventMessageTag)                          TargetDamagedMessageTag                                     OFFSET(get<T>, {0x344, 4, 0, 0})
 	CMember(UScriptStruct*)                            TargetDamagedMessageType                                    OFFSET(get<T>, {0x348, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -40,6 +38,8 @@ public:
 	// void OnParasiteDetached();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/MotherGameplayUI.AvocadoEaterHealthBarWidget.OnParasiteAttached
 	// void OnParasiteAttached();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/MotherGameplayUI.FortGravyGoblinReticleExtensionWidget
 /// Size: 0x0020 (0x000328 - 0x000348)
 class UFortGravyGoblinReticleExtensionWidget : public UFortWeaponReticleExtensionWidgetBase
@@ -71,8 +71,6 @@ public:
 	CMember(UFortKeybindWidget*)                       Keybind_ActivateAction                                      OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UFortKeybindWidget*)                       Keybind_CycleCategoryAction                                 OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UFortKeybindWidget*)                       Keybind_CyclePropAction                                     OFFSET(get<T>, {0x338, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -80,6 +78,8 @@ public:
 	// void OnPropIndexChanged(FText& CategoryText, int32_t PropIndex, int32_t MaxPropCount, int32_t CategoryIndex, int32_t MaxCategoryCount); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/MotherGameplayUI.FortPaddleGingerReticleExtensionWidget.OnPropActivationChanged
 	// void OnPropActivationChanged(bool Activated);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/MotherGameplayUI.FortReactorGradeReticleExtensionWidget
 /// Size: 0x0000 (0x000328 - 0x000328)
 class UFortReactorGradeReticleExtensionWidget : public UFortWeaponReticleExtensionWidgetBase

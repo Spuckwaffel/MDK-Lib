@@ -102,8 +102,6 @@ public:
 	CMember(TArray<UObject*>)                          Pipelines                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(UInterchangeBaseNodeContainer*)            TransientNodeContainer                                      OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(TArray<UObject*>)                          TransientPipelines                                          OFFSET(get<T>, {0x70, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -127,6 +125,8 @@ public:
 	// int32_t GetNumberOfPipelines();                                                                                          // [0xa56ad28] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/InterchangeEngine.InterchangeAssetImportData.GetNodeContainer
 	// UInterchangeBaseNodeContainer* GetNodeContainer();                                                                       // [0xa56ad04] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/InterchangeEngine.InterchangePipelineStackOverride
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UInterchangePipelineStackOverride : public UObject
@@ -136,8 +136,6 @@ class UInterchangePipelineStackOverride : public UObject
 
 public:
 	CMember(TArray<FSoftObjectPath>)                   OverridePipelines                                           OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -147,6 +145,8 @@ public:
 	// void AddPipeline(UInterchangePipelineBase* PipelineBase);                                                                // [0xa56a554] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeEngine.InterchangePipelineStackOverride.AddBlueprintPipeline
 	// void AddBlueprintPipeline(UInterchangeBlueprintPipelineBase* PipelineBase);                                              // [0xa56a554] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/InterchangeEngine.InterchangeManager
 /// Size: 0x01B8 (0x000028 - 0x0001E0)
 class UInterchangeManager : public UObject
@@ -158,8 +158,6 @@ public:
 	CMember(TSet<UClass*>)                             RegisteredTranslatorsClass                                  OFFSET(get<T>, {0xD8, 80, 0, 0})
 	CMember(TMap<UClass*, UClass*>)                    RegisteredFactoryClasses                                    OFFSET(get<T>, {0x128, 80, 0, 0})
 	CMember(TMap<UClass*, UInterchangeWriterBase*>)    RegisteredWriters                                           OFFSET(get<T>, {0x178, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -177,6 +175,8 @@ public:
 	// bool ExportAsset(UObject* Asset, bool bIsAutomated);                                                                     // [0x8d7e9b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeEngine.InterchangeManager.CreateSourceData
 	// UInterchangeSourceData* CreateSourceData(FString InFilename);                                                            // [0xa56a634] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/InterchangeEngine.InterchangeMeshUtilities
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UInterchangeMeshUtilities : public UObject

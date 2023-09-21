@@ -41,8 +41,6 @@ public:
 	SMember(FGameplayTagContainer)                     MetaTags                                                    OFFSET(get<T>, {0x38, 32, 0, 0})
 	SMember(FCosmeticLoadoutSlotRequirements)          Requirements                                                OFFSET(get<T>, {0x58, 80, 0, 0})
 	SMember(FPrimaryAssetId)                           DefaultCosmeticItemId                                       OFFSET(get<T>, {0xA8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -54,6 +52,8 @@ public:
 	// FGameplayTagContainer GetMetaTags();                                                                                     // [0x74f7fdc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CosmeticsFrameworkLoadouts.CosmeticLoadoutSlotTemplate.GetDefaultCosmeticItemId
 	// FPrimaryAssetId GetDefaultCosmeticItemId();                                                                              // [0x597bd64] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/CosmeticsFrameworkLoadouts.CosmeticBackendLoadout
 /// Size: 0x0040 (0x000000 - 0x000040)
 class FCosmeticBackendLoadout : public MDKStruct

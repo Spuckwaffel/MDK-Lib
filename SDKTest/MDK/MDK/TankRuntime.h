@@ -113,13 +113,13 @@ public:
 	DMember(float)                                     MIDEngineHealthRatio                                        OFFSET(get<float>, {0x768, 4, 0, 0})
 	CMember(TMap<EVehicleSeats, FTankAnimAimingData>)  AimingData                                                  OFFSET(get<T>, {0x770, 80, 0, 0})
 	SMember(FRotator)                                  PreviousTurretAimRotation                                   OFFSET(get<T>, {0x7C0, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/TankRuntime.FortTankVehicleAnimInstance.UpdateMIDEngineProperties
 	// void UpdateMIDEngineProperties(float DeltaSeconds, float EngineHealthRatio);                                             // [0x9a5dcd8] Final|Native|Private|BlueprintCallable 
+};
+
 /// Class /Script/TankRuntime.FortTankVehicleAudioController
 /// Size: 0x0400 (0x0002F0 - 0x0006F0)
 class AFortTankVehicleAudioController : public AFortVehicleAudioController
@@ -144,8 +144,6 @@ public:
 	SMember(FFortAudioFloatParameter)                  TurretHorizontalMovementParam                               OFFSET(get<T>, {0x5C8, 56, 0, 0})
 	SMember(FFortAudioFloatParameter)                  TurretVerticalMovementParam                                 OFFSET(get<T>, {0x600, 56, 0, 0})
 	SMember(FTankAudioUpdateContext)                   Context                                                     OFFSET(get<T>, {0x638, 184, 0, 0})
-};
-
 
 
 	/// Functions
@@ -157,6 +155,8 @@ public:
 	// void PlayAccelOneShot();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/TankRuntime.FortTankVehicleAudioController.GetTankVehicleActor
 	// AFortTankVehicle* GetTankVehicleActor();                                                                                 // [0x9a5dc94] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/TankRuntime.TankWeaponAimingData
 /// Size: 0x01C0 (0x000000 - 0x0001C0)
 class FTankWeaponAimingData : public MDKStruct

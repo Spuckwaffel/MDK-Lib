@@ -534,8 +534,6 @@ public:
 	SMember(FString)                                   Author                                                      OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FDateTime)                                 Created                                                     OFFSET(get<T>, {0x40, 8, 0, 0})
 	SMember(FString)                                   Notes                                                       OFFSET(get<T>, {0x48, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -551,6 +549,8 @@ public:
 	// FDateTime GetCreated();                                                                                                  // [0x5706700] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneMetaData.GetAuthor
 	// FString GetAuthor();                                                                                                     // [0x57064bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MovieScene.MovieSceneTrack
 /// Size: 0x0040 (0x000058 - 0x000098)
 class UMovieSceneTrack : public UMovieSceneSignedObject
@@ -600,8 +600,6 @@ public:
 	DMember(bool)                                      bIsInfinite                                                 OFFSET(get<bool>, {0xCC, 1, 1, 0})
 	DMember(bool)                                      bSupportsInfiniteRange                                      OFFSET(get<bool>, {0xD0, 1, 0, 0})
 	SMember(FOptionalMovieSceneBlendType)              BlendType                                                   OFFSET(get<T>, {0xD1, 2, 0, 0})
-};
-
 
 
 	/// Functions
@@ -641,6 +639,8 @@ public:
 	// FColor GetColorTint();                                                                                                   // [0x57066d0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSection.GetBlendType
 	// FOptionalMovieSceneBlendType GetBlendType();                                                                             // [0x5706504] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MovieScene.MovieSceneSequence
 /// Size: 0x0010 (0x000058 - 0x000068)
 class UMovieSceneSequence : public UMovieSceneSignedObject
@@ -654,8 +654,6 @@ public:
 	DMember(bool)                                      bParentContextsAreSignificant                               OFFSET(get<bool>, {0x61, 1, 0, 0})
 	DMember(bool)                                      bPlayableDirectly                                           OFFSET(get<bool>, {0x62, 1, 0, 0})
 	CMember(EMovieSceneSequenceFlags)                  SequenceFlags                                               OFFSET(get<T>, {0x63, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -665,6 +663,8 @@ public:
 	// TArray<FMovieSceneObjectBindingID> FindBindingsByTag(FName InBindingName);                                               // [0x5706428] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieScene.MovieSceneSequence.FindBindingByTag
 	// FMovieSceneObjectBindingID FindBindingByTag(FName InBindingName);                                                        // [0x5706388] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MovieScene.MovieSceneSequencePlayer
 /// Size: 0x04A0 (0x000028 - 0x0004C8)
 class UMovieSceneSequencePlayer : public UObject
@@ -692,8 +692,6 @@ public:
 	SMember(FMovieSceneSequenceReplProperties)         NetSyncProps                                                OFFSET(get<T>, {0x3E8, 20, 0, 0})
 	CMember(TScriptInterface<Class>)                   PlaybackClient                                              OFFSET(get<T>, {0x400, 16, 0, 0})
 	CMember(UMovieSceneSequenceTickManager*)           TickManager                                                 OFFSET(get<T>, {0x410, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -771,6 +769,8 @@ public:
 	// TArray<UObject*> GetBoundObjects(FMovieSceneObjectBindingID ObjectBinding);                                              // [0x5706520] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection
 	// void ChangePlaybackDirection();                                                                                          // [0x5706374] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MovieScene.MovieSceneSequenceTickManager
 /// Size: 0x0070 (0x000028 - 0x000098)
 class UMovieSceneSequenceTickManager : public UObject
@@ -829,8 +829,6 @@ public:
 	DMember(float)                                     PrerollTime                                                 OFFSET(get<float>, {0x128, 4, 0, 0})
 	DMember(char)                                      NetworkMask                                                 OFFSET(get<char>, {0x12C, 1, 0, 0})
 	CMember(UMovieSceneSequence*)                      SubSequence                                                 OFFSET(get<T>, {0x130, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -838,6 +836,8 @@ public:
 	// void SetSequence(UMovieSceneSequence* Sequence);                                                                         // [0x57090bc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieScene.MovieSceneSubSection.GetSequence
 	// UMovieSceneSequence* GetSequence();                                                                                      // [0x2b10250] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MovieScene.TestMovieSceneTrack
 /// Size: 0x0020 (0x000098 - 0x0000B8)
 class UTestMovieSceneTrack : public UMovieSceneTrack

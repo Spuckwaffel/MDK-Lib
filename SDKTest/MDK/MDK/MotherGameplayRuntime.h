@@ -32,8 +32,6 @@ public:
 	SMember(FGameplayTagContainer)                     TargetIsOwnVehicleTag                                       OFFSET(get<T>, {0x220, 32, 0, 0})
 	SMember(FMulticastInlineDelegate)                  FoundTargetDelegate                                         OFFSET(get<T>, {0x240, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  DeactivateReticleDelegate                                   OFFSET(get<T>, {0x250, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -43,6 +41,8 @@ public:
 	// bool FindTargetProjectile(AActor* OwningPlayer, FVector& TraceStart, FVector& TraceEnd, float TargetingRadius);          // [0x99368a4] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MotherGameplayRuntime.GravityGunTargetTrackingComponent.FindTargetActor
 	// void FindTargetActor(AActor* OwningPlayer, FVector& TraceStart, FVector& TraceEnd);                                      // [0x99366c0] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/MotherGameplayRuntime.FortCabbageIglooVehicle
 /// Size: 0x0000 (0x0026B0 - 0x0026B0)
 class AFortCabbageIglooVehicle : public AFortOctopusVehicle
@@ -115,8 +115,6 @@ public:
 	SMember(FScalableFloat)                            MinHitDistance                                              OFFSET(get<T>, {0x9B8, 40, 0, 0})
 	SMember(FScalableFloat)                            HitObjectsLimit                                             OFFSET(get<T>, {0x9E0, 40, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            TraceChannel                                                OFFSET(get<T>, {0xA0C, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -126,6 +124,8 @@ public:
 	// void OnEndPointUpdated(FVector& FoundPoint);                                                                             // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
 	// Function /Script/MotherGameplayRuntime.ReactorGradeGameplayCue_ChargeUp.GetFoundEndPoint
 	// FVector GetFoundEndPoint();                                                                                              // [0x9936d9c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/MotherGameplayRuntime.GravyGoblinActivatable_Event
 /// Size: 0x0001 (0x000000 - 0x000001)
 class FGravyGoblinActivatable_Event : public MDKStruct

@@ -23,8 +23,6 @@ public:
 	DMember(bool)                                      bConsumeAllActions                                          OFFSET(get<bool>, {0x410, 1, 0, 0})
 	DMember(bool)                                      bExposeActionsExternally                                    OFFSET(get<bool>, {0x411, 1, 0, 0})
 	DMember(bool)                                      bShouldBypassStack                                          OFFSET(get<bool>, {0x412, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -88,6 +86,8 @@ public:
 	// void AddInputActionHandlerWithPopup(UDataTable* DataTable, FName RowName, FDelegateProperty CommitedEvent, UCommonPopupMenuLegacy* PopupMenu); // [0x6c2e948] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUILegacy.CommonActivatablePanelLegacy.AddInputActionHandler
 	// void AddInputActionHandler(UDataTable* DataTable, FName RowName, FDelegateProperty CommitedEvent);                       // [0x6c2e840] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUILegacy.CommonButtonInternalLegacy
 /// Size: 0x0000 (0x000640 - 0x000640)
 class UCommonButtonInternalLegacy : public UCommonButtonInternalBase
@@ -111,8 +111,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnButtonDoubleClicked                                       OFFSET(get<T>, {0x1490, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnButtonHovered                                             OFFSET(get<T>, {0x14A0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnButtonUnhovered                                           OFFSET(get<T>, {0x14B0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -128,6 +126,8 @@ public:
 	// void HandleOnButtonDoubleClicked(UCommonButtonBase* Button);                                                             // [0x6c3035c] Final|Native|Private 
 	// Function /Script/CommonUILegacy.CommonButtonLegacy.HandleOnButtonClicked
 	// void HandleOnButtonClicked(UCommonButtonBase* Button);                                                                   // [0x2f26850] Final|Native|Private 
+};
+
 /// Class /Script/CommonUILegacy.CommonGlobalInputHandlerLegacy
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UCommonGlobalInputHandlerLegacy : public UObject
@@ -150,8 +150,6 @@ public:
 	CMember(TArray<UCommonActivatablePanelLegacy*>)    ActivatablePanelStack                                       OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(UCommonGlobalInputHandlerLegacy*)          GlobalInputHandler                                          OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(TArray<FOperation>)                        Operations                                                  OFFSET(get<T>, {0xE8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -179,6 +177,8 @@ public:
 	// int32_t GetGlobalInputHandlerPriorityFilter();                                                                           // [0x6c2f734] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUILegacy.CommonInputManagerLegacy.GetAvailableInputActions
 	// bool GetAvailableInputActions(TArray<FCommonInputActionHandlerData>& AvailableInputActions);                             // [0x6c2efec] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/CommonUILegacy.CommonInputReflectorLegacy
 /// Size: 0x0030 (0x0002D0 - 0x000300)
 class UCommonInputReflectorLegacy : public UCommonUserWidget
@@ -190,13 +190,13 @@ public:
 	CMember(UClass*)                                   ButtonType                                                  OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(TArray<UCommonButtonLegacy*>)              ActiveButtons                                               OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	CMember(TArray<UCommonButtonLegacy*>)              InactiveButtons                                             OFFSET(get<T>, {0x2E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUILegacy.CommonInputReflectorLegacy.OnButtonAdded
 	// void OnButtonAdded(UCommonButtonLegacy* AddedButton, FCommonInputActionHandlerData& Data);                               // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/CommonUILegacy.CommonPopupButtonLegacy
 /// Size: 0x0010 (0x0014C0 - 0x0014D0)
 class UCommonPopupButtonLegacy : public UCommonButtonLegacy
@@ -207,13 +207,13 @@ class UCommonPopupButtonLegacy : public UCommonButtonLegacy
 public:
 	CMember(UMenuAnchor*)                              PopupMenuAnchor                                             OFFSET(get<T>, {0x14C0, 8, 0, 0})
 	CMember(UCommonPopupMenuLegacy*)                   PopupMenu                                                   OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUILegacy.CommonPopupButtonLegacy.GetMenuAnchorWidget
 	// UUserWidget* GetMenuAnchorWidget();                                                                                      // [0x6c2fe28] Final|Native|Private 
+};
+
 /// Class /Script/CommonUILegacy.CommonPopupMenuLegacy
 /// Size: 0x0018 (0x000520 - 0x000538)
 class UCommonPopupMenuLegacy : public UCommonActivatablePanelLegacy
@@ -225,8 +225,6 @@ public:
 	DMember(bool)                                      bUseInputStack                                              OFFSET(get<bool>, {0x520, 1, 0, 0})
 	CMember(TWeakObjectPtr<UMenuAnchor*>)              OwningMenuAnchor                                            OFFSET(get<T>, {0x524, 8, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  ContextProvidingObject                                      OFFSET(get<T>, {0x52C, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -242,6 +240,8 @@ public:
 	// void HandlePreDifferentContextProviderSet();                                                                             // [0x6c303f4] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/CommonUILegacy.CommonPopupMenuLegacy.HandlePostDifferentContextProviderSet
 	// void HandlePostDifferentContextProviderSet();                                                                            // [0x6c303dc] Native|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CommonUILegacy.CommonTabListWidgetLegacy
 /// Size: 0x0020 (0x0003C0 - 0x0003E0)
 class UCommonTabListWidgetLegacy : public UCommonTabListWidgetBase
@@ -252,8 +252,6 @@ class UCommonTabListWidgetLegacy : public UCommonTabListWidgetBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnTabButtonCreated                                          OFFSET(get<T>, {0x3C0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTabButtonRemoved                                          OFFSET(get<T>, {0x3D0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -271,6 +269,8 @@ public:
 	// void HandleOnTabButtonCreated(FName TabId, UCommonButtonBase* TabButton);                                                // [0x2f71ab8] Final|Native|Private 
 	// Function /Script/CommonUILegacy.CommonTabListWidgetLegacy.GetTabButtonByID
 	// UCommonButtonLegacy* GetTabButtonByID(FName TabNameID);                                                                  // [0x6c2fe40] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/CommonUILegacy.CommonUISubsystemLegacy
 /// Size: 0x0030 (0x000040 - 0x000070)
 class UCommonUISubsystemLegacy : public UCommonUISubsystemBase
@@ -281,8 +281,6 @@ class UCommonUISubsystemLegacy : public UCommonUISubsystemBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnInputSuspensionChanged                                    OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(UCommonInputManagerLegacy*)                CommonInputManager                                          OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -290,6 +288,8 @@ public:
 	// void InputSuspensionChanged__DelegateSignature(bool bInputSuspended);                                                    // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/CommonUILegacy.CommonUISubsystemLegacy.GetInputManager
 	// UCommonInputManagerLegacy* GetInputManager();                                                                            // [0x6c2fe10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUILegacy.CommonVisibilityWidgetLegacy
 /// Size: 0x0010 (0x000320 - 0x000330)
 class UCommonVisibilityWidgetLegacy : public UCommonBorder
@@ -323,8 +323,6 @@ class UCommonWidgetStackLegacy : public UCommonVisibilitySwitcher
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnActiveWidgetChangedLegacyEvent                            OFFSET(get<T>, {0x1C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -338,6 +336,8 @@ public:
 	// void DeactivateWidget();                                                                                                 // [0x6c2efd8] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/CommonUILegacy.CommonWidgetStackLegacy.ActivateWidget
 	// void ActivateWidget();                                                                                                   // [0x6c2e814] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/CommonUILegacy.CommonWidgetSwitcherLegacy
 /// Size: 0x0028 (0x000218 - 0x000240)
 class UCommonWidgetSwitcherLegacy : public UCommonAnimatedSwitcher
@@ -350,8 +350,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnActiveWidgetChanged                                       OFFSET(get<T>, {0x228, 16, 0, 0})
 	DMember(bool)                                      bWidgetActivationEnabled                                    OFFSET(get<bool>, {0x238, 1, 0, 0})
 	DMember(bool)                                      bOutroPanelBelow                                            OFFSET(get<bool>, {0x239, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -365,6 +363,8 @@ public:
 	// void DeactivateWidget();                                                                                                 // [0x2e146ac] Native|Public|BlueprintCallable 
 	// Function /Script/CommonUILegacy.CommonWidgetSwitcherLegacy.ActivateWidget
 	// void ActivateWidget();                                                                                                   // [0x6c2e828] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUILegacy.CommonButtonGroupLegacy
 /// Size: 0x00A0 (0x000110 - 0x0001B0)
 class UCommonButtonGroupLegacy : public UCommonButtonGroupBase
@@ -377,8 +377,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnHoveredButtonChanged                                      OFFSET(get<T>, {0x138, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnButtonClicked                                             OFFSET(get<T>, {0x160, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnButtonDoubleClicked                                       OFFSET(get<T>, {0x188, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -414,6 +412,8 @@ public:
 	// UCommonButtonLegacy* GetButtonAtIndex(int32_t Index);                                                                    // [0x6c2f6a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUILegacy.CommonButtonGroupLegacy.CreateButtonGroup
 	// UCommonButtonGroupLegacy* CreateButtonGroup(UObject* ContextObject, bool bInSelectionRequired);                          // [0x6c2ef08] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUILegacy.CommonUIActionRouterLegacy
 /// Size: 0x0008 (0x000170 - 0x000178)
 class UCommonUIActionRouterLegacy : public UCommonUIActionRouterBase

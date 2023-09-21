@@ -28,8 +28,6 @@ public:
 	SMember(FScalableFloat)                            TargetPitchToDive                                           OFFSET(get<T>, {0xC40, 40, 0, 0})
 	SMember(FScalableFloat)                            DivingGravityScale                                          OFFSET(get<T>, {0xC68, 40, 0, 0})
 	SMember(FScalableFloat)                            MaxSpeedDivingGravityScale                                  OFFSET(get<T>, {0xC90, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -37,6 +35,8 @@ public:
 	// void BP_OnDroneStoppedDiving();                                                                                          // [0x1ebf994] BlueprintAuthorityOnly|Event|Protected|BlueprintEvent 
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_Dive.BP_OnDroneStartedDiving
 	// void BP_OnDroneStartedDiving();                                                                                          // [0x1ebf994] BlueprintAuthorityOnly|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_TargetingBase
 /// Size: 0x0048 (0x000B28 - 0x000B70)
 class UFortGameplayAbility_ScoutDrone_TargetingBase : public UFortGameplayAbility
@@ -50,8 +50,6 @@ public:
 	SMember(FTimerHandle)                              TargetingTimerHandle                                        OFFSET(get<T>, {0xB38, 8, 0, 0})
 	SMember(FScalableFloat)                            TargetingInterval                                           OFFSET(get<T>, {0xB40, 40, 0, 0})
 	DMember(bool)                                      bUseControllerAsInstigator                                  OFFSET(get<bool>, {0xB68, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -61,6 +59,8 @@ public:
 	// void StartTargeting();                                                                                                   // [0x9a3ed40] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_TargetingBase.BP_OnTargetsFound
 	// void BP_OnTargetsFound(FTargetingRequestHandle& TargetingHandle);                                                        // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_SpeedBoost
 /// Size: 0x00F0 (0x000B70 - 0x000C60)
 class UFortGameplayAbility_ScoutDrone_SpeedBoost : public UFortGameplayAbility_ScoutDrone_TargetingBase
@@ -78,8 +78,6 @@ public:
 	CMember(TArray<TEnumAsByte>)                       DoorBashCollisionTypesForPawn                               OFFSET(get<T>, {0xC00, 16, 0, 0})
 	SMember(FScalableFloat)                            DoorBashEnabled                                             OFFSET(get<T>, {0xC10, 40, 0, 0})
 	SMember(FScalableFloat)                            DamageOnBoostEnabled                                        OFFSET(get<T>, {0xC38, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -87,6 +85,8 @@ public:
 	// void OnDoorBashed(FHitResult& HitResult, UFortBuildingWallDoorComponent* BashedDoor);                                    // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_SpeedBoost.OnBoostedIntoActor
 	// void OnBoostedIntoActor(FHitResult& HitResult);                                                                          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortScoutDroneAnalyticsComponent
 /// Size: 0x00B0 (0x0000A8 - 0x000158)
 class UFortScoutDroneAnalyticsComponent : public UFortControllerComponent
@@ -214,13 +214,13 @@ class UFortGameplayAbility_ScoutDrone_Dismiss : public UFortGameplayAbility
 
 public:
 	SMember(FScoutDroneDeferredDestructionData)        DismissDelayData                                            OFFSET(get<T>, {0xB28, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_Dismiss.GetControlledDrone
 	// AFortScoutDrone* GetControlledDrone();                                                                                   // [0x9a3dbb0] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_MarkPotentialTargets
 /// Size: 0x0130 (0x000B70 - 0x000CA0)
 class UFortGameplayAbility_ScoutDrone_MarkPotentialTargets : public UFortGameplayAbility_ScoutDrone_TargetingBase
@@ -231,8 +231,6 @@ class UFortGameplayAbility_ScoutDrone_MarkPotentialTargets : public UFortGamepla
 public:
 	SMember(FIndicatedActorData)                       IndicatedActorData                                          OFFSET(get<T>, {0xB70, 248, 0, 0})
 	SMember(FScalableFloat)                            MaxNumberOfPotentialTargets                                 OFFSET(get<T>, {0xC78, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -240,6 +238,8 @@ public:
 	// void OnStoppedHighlightingTarget(AActor* Target);                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_MarkPotentialTargets.OnStartHighlightingTarget
 	// void OnStartHighlightingTarget(AActor* Target);                                                                          // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/ScoutDroneRuntime.ScoutDronePassiveMarkPayload
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UScoutDronePassiveMarkPayload : public UObject
@@ -267,8 +267,6 @@ public:
 	CMember(AActor*)                                   CurrentTarget                                               OFFSET(get<T>, {0xD40, 8, 0, 0})
 	SMember(FTimerHandle)                              TargetConfirmationTimerHandle                               OFFSET(get<T>, {0xD48, 8, 0, 0})
 	CMember(UScoutDronePassiveMarkPayload*)            PayloadCache                                                OFFSET(get<T>, {0xD50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -278,6 +276,8 @@ public:
 	// void OnActorIndicatorExpired(AActor* IndicatedActor);                                                                    // [0x9a3ddb4] Final|Native|Private 
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_PassiveMark.BP_OnTargetStatusChanged
 	// void BP_OnTargetStatusChanged(AActor* ActiveTarget);                                                                     // [0x1ebf994] BlueprintAuthorityOnly|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/ScoutDroneRuntime.ScoutDronePickUpTargetsPayload
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UScoutDronePickUpTargetsPayload : public UObject
@@ -301,13 +301,13 @@ public:
 	CMember(UScoutDronePickUpTargetsPayload*)          PayloadCache                                                OFFSET(get<T>, {0xBA0, 8, 0, 0})
 	SMember(FScalableFloat)                            PickupToggleCooldownDuration                                OFFSET(get<T>, {0xBA8, 40, 0, 0})
 	CMember(UClass*)                                   AttachedPawnGEClass                                         OFFSET(get<T>, {0xBE0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_PickUp.ServerConfirmTargets
 	// void ServerConfirmTargets();                                                                                             // [0x7616530] Final|Net|NetReliableNative|Event|Private|NetServer 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_Tether
 /// Size: 0x0078 (0x000B28 - 0x000BA0)
 class UFortGameplayAbility_ScoutDrone_Tether : public UFortGameplayAbility
@@ -323,8 +323,6 @@ public:
 	SMember(FTimerHandle)                              TetheringTimerHandle                                        OFFSET(get<T>, {0xB80, 8, 0, 0})
 	SMember(FTimerHandle)                              TetheringReportTimerHandle                                  OFFSET(get<T>, {0xB88, 8, 0, 0})
 	SMember(FScoutDroneDeferredDestructionData)        DismissDelayData                                            OFFSET(get<T>, {0xB90, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -336,6 +334,8 @@ public:
 	// void OnRep_bIsInWarningRange();                                                                                          // [0x9a3e944] Final|Native|Private 
 	// Function /Script/ScoutDroneRuntime.FortGameplayAbility_ScoutDrone_Tether.OnRep_bIsInSignalLossRange
 	// void OnRep_bIsInSignalLossRange();                                                                                       // [0x9a3e8ec] Final|Native|Private 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortAthenaMutator_ScoutDrone
 /// Size: 0x0048 (0x000338 - 0x000380)
 class AFortAthenaMutator_ScoutDrone : public AFortAthenaMutator
@@ -347,13 +347,13 @@ public:
 	SMember(FGameplayTagContainer)                     DroneAllowedInteractionTags                                 OFFSET(get<T>, {0x338, 32, 0, 0})
 	SMember(FGameplayTagContainer)                     DroneBlockedInteractionTags                                 OFFSET(get<T>, {0x358, 32, 0, 0})
 	DMember(bool)                                      bIsControllingDrone                                         OFFSET(get<bool>, {0x378, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ScoutDroneRuntime.FortAthenaMutator_ScoutDrone.OnViewTargetChanged
 	// void OnViewTargetChanged(AFortPlayerController* PlayerController, AActor* OldViewTarget, AActor* NewViewTarget);         // [0x9a3e958] Final|Native|Private 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortChargingSet_ScoutDroneEnergy
 /// Size: 0x00C0 (0x000048 - 0x000108)
 class UFortChargingSet_ScoutDroneEnergy : public UFortChargingSet_Base
@@ -366,13 +366,13 @@ public:
 	SMember(FFortGameplayAttributeData)                MaxEnergy                                                   OFFSET(get<T>, {0x70, 40, 0, 0})
 	SMember(FFortGameplayAttributeData)                EnergyChargeRate                                            OFFSET(get<T>, {0x98, 40, 0, 0})
 	SMember(FFortGameplayAttributeData)                ServerTimeEnergyIncrements                                  OFFSET(get<T>, {0xC0, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ScoutDroneRuntime.FortChargingSet_ScoutDroneEnergy.OnRep_Energy
 	// void OnRep_Energy(FFortGameplayAttributeData& OldValue);                                                                 // [0x9a3e82c] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortScoutDrone
 /// Size: 0x0190 (0x000660 - 0x0007F0)
 class AFortScoutDrone : public ACharacter
@@ -412,8 +412,6 @@ public:
 	SMember(FName)                                     IsEnemyAudioParamName                                       OFFSET(get<T>, {0x7D4, 4, 0, 0})
 	SMember(FName)                                     ThrustAmountAudioParamName                                  OFFSET(get<T>, {0x7D8, 4, 0, 0})
 	DMember(float)                                     ThrustSoundThreshold                                        OFFSET(get<float>, {0x7DC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -439,6 +437,8 @@ public:
 	// AFortPawn* GetControllingPlayerPawn();                                                                                   // [0x9a3dc18] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ScoutDroneRuntime.FortScoutDrone.GameplayCue_Damage
 	// void GameplayCue_Damage(TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters Parameters);                    // [0x9a3d9d4] Native|Protected     
+};
+
 /// Class /Script/ScoutDroneRuntime.FortScoutDroneCameraMode
 /// Size: 0x0008 (0x0001E8 - 0x0001F0)
 class UFortScoutDroneCameraMode : public UFort3PCameraMode
@@ -489,8 +489,6 @@ public:
 	SMember(FScalableFloat)                            DismissButtonPressCooldown                                  OFFSET(get<T>, {0x2F0, 40, 0, 0})
 	SMember(FViewTargetTransitionParams)               PlayerToDroneTransitionParams                               OFFSET(get<T>, {0x320, 16, 0, 0})
 	SMember(FGameplayTagContainer)                     InterruptingPlayerTags                                      OFFSET(get<T>, {0x338, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -520,6 +518,8 @@ public:
 	// void BP_OnDismissalStarted(bool bInstantDismissal, FGameplayTag DismissalReason);                                        // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Script/ScoutDroneRuntime.FortScoutDroneControllingComponent.BP_OnDestructionStarted
 	// void BP_OnDestructionStarted(bool bInstantDestruction, FGameplayTag DismissalReason);                                    // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/ScoutDroneRuntime.FortScoutDroneCooldownMagnitudeCalculation
 /// Size: 0x0028 (0x000040 - 0x000068)
 class UFortScoutDroneCooldownMagnitudeCalculation : public UFortGameplayModMagnitudeCalculation
@@ -587,8 +587,6 @@ public:
 	SMember(FScalableFloat)                            MaxPickupSpread                                             OFFSET(get<T>, {0x160, 40, 0, 0})
 	SMember(FScalableFloat)                            PickupTossSpeed                                             OFFSET(get<T>, {0x188, 40, 0, 0})
 	SMember(FGameplayTagContainer)                     ItemsPickupTags                                             OFFSET(get<T>, {0x1B0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -610,6 +608,8 @@ public:
 	// void BP_OnActorsDetached();                                                                                              // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Script/ScoutDroneRuntime.FortScoutDronePickupManager.BP_OnActorsAttached
 	// void BP_OnActorsAttached();                                                                                              // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
+};
+
 /// Struct /Script/ScoutDroneRuntime.FortScoutDroneDiveTransitionData
 /// Size: 0x0030 (0x000000 - 0x000030)
 class FFortScoutDroneDiveTransitionData : public MDKStruct

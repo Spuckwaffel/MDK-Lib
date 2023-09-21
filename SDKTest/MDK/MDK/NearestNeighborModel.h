@@ -31,13 +31,13 @@ public:
 	DMember(int32_t)                                   NumInputs                                                   OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 	DMember(int32_t)                                   NumOutputs                                                  OFFSET(get<int32_t>, {0x2C, 4, 0, 0})
 	CMember(TArray<FNearestNeighborNetworkParameter>)  Parameters                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NearestNeighborModel.NearestNeighborNetworkLayer.AddParameter
 	// void AddParameter(TArray<float>& Values, TArray<int32_t>& Shape);                                                        // [0x9cd4f00] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/NearestNeighborModel.NearestNeighborNetworkLayer_Gemm_Prelu
 /// Size: 0x0000 (0x000040 - 0x000040)
 class UNearestNeighborNetworkLayer_Gemm_Prelu : public UNearestNeighborNetworkLayer
@@ -67,8 +67,6 @@ class UNearestNeighborOptimizedNetwork : public UObject
 
 public:
 	CMember(TArray<UNearestNeighborNetworkLayer*>)     Layers                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -76,6 +74,8 @@ public:
 	// void Empty();                                                                                                            // [0x128ea78] Native|Public|BlueprintCallable 
 	// Function /Script/NearestNeighborModel.NearestNeighborOptimizedNetwork.AddLayer
 	// UNearestNeighborNetworkLayer* AddLayer(int32_t LayerType);                                                               // [0x9cd4e2c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/NearestNeighborModel.NearestNeighborOptimizedNetworkInstance
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UNearestNeighborOptimizedNetworkInstance : public UObject
@@ -114,8 +114,6 @@ public:
 	DMember(float)                                     NearestNeighborOffsetWeight                                 OFFSET(get<float>, {0x1D4, 4, 0, 0})
 	CMember(UNearestNeighborOptimizedNetwork*)         OptimizedNetwork                                            OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	DMember(bool)                                      bUseOptimizedNetwork                                        OFFSET(get<bool>, {0x1E0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -149,6 +147,8 @@ public:
 	// int32_t GetNumNeighbors(int32_t PartId);                                                                                 // [0x9cd51f4] Final|Native|Private|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NearestNeighborModel.NearestNeighborModel.ClipInputs
 	// TArray<float> ClipInputs(TArray<float>& Input);                                                                          // [0x9cd5014] Final|Native|Private|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/NearestNeighborModel.NearestNeighborModelInputInfo
 /// Size: 0x0010 (0x000068 - 0x000078)
 class UNearestNeighborModelInputInfo : public UMLDeformerMorphModelInputInfo
@@ -169,13 +169,13 @@ class UNearestNeighborModelInstance : public UMLDeformerMorphModelInstance
 
 public:
 	CMember(UNearestNeighborOptimizedNetworkInstance*) OptimizedNetworkInstance                                    OFFSET(get<T>, {0xC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NearestNeighborModel.NearestNeighborModelInstance.Eval
 	// TArray<float> Eval(TArray<float>& InputData);                                                                            // [0x9cd512c] Final|Native|Private|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/NearestNeighborModel.OptimusSkeletonWithQuatsDataInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UOptimusSkeletonWithQuatsDataInterface : public UOptimusComputeDataInterface

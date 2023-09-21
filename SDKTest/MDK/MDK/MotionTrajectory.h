@@ -26,8 +26,6 @@ public:
 	DMember(float)                                     MaxControllerRotationRate                                   OFFSET(get<float>, {0xC8, 4, 0, 0})
 	CMember(USkeletalMeshComponent*)                   SkelMeshComponent                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(UCharacterMovementComponent*)              CharacterMovementComponent                                  OFFSET(get<T>, {0xD8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -37,6 +35,8 @@ public:
 	// void OnMovementUpdated(float DeltaSeconds, FVector OldLocation, FVector OldVelocity);                                    // [0xa3f4818] Final|Native|Protected|HasDefaults 
 	// Function /Script/MotionTrajectory.CharacterTrajectoryComponent.GetFacingFromMeshComponent
 	// FRotator GetFacingFromMeshComponent(USkeletalMeshComponent* MeshComponent);                                              // [0xa3f4770] Native|Event|Public|HasDefaults|BlueprintEvent|Const 
+};
+
 /// Class /Script/MotionTrajectory.CharacterMovementTrajectoryLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCharacterMovementTrajectoryLibrary : public UBlueprintFunctionLibrary

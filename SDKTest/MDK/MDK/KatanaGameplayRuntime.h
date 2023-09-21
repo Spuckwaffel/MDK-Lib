@@ -132,8 +132,6 @@ public:
 	CMember(TMap<EFortKatanaPrimaryAttackVariation, FFortKatanaPrimaryAttackVariationInfo>) PrimaryAttackVariationInfos OFFSET(get<T>, {0x2B8, 80, 0, 0})
 	DMember(float)                                     PrimaryAttackMinForwardMovement                             OFFSET(get<float>, {0x308, 4, 0, 0})
 	CMember(TEnumAsByte<ECollisionChannel>)            PrimaryAttackObstructionTraceChannel                        OFFSET(get<T>, {0x30C, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -141,6 +139,8 @@ public:
 	// FVector PerformPrimaryAttackTargeting(EFortKatanaPrimaryAttackVariation AttackVariation);                                // [0x99687e4] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/KatanaGameplayRuntime.KatanaTargetingComponent.PerformDashTargeting
 	// bool PerformDashTargeting(FFortKatanaDashTargetingInfo& OutDashTargetingInfo);                                           // [0x9968704] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/KatanaGameplayRuntime.AbilityTask_ApplyRootMotion_KatanaDashForce
 /// Size: 0x0008 (0x000120 - 0x000128)
 class UAbilityTask_ApplyRootMotion_KatanaDashForce : public UAbilityTask_ApplyRootMotionMoveToForce
@@ -150,13 +150,13 @@ class UAbilityTask_ApplyRootMotion_KatanaDashForce : public UAbilityTask_ApplyRo
 
 public:
 	DMember(float)                                     HeightAboveGround                                           OFFSET(get<float>, {0x120, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/KatanaGameplayRuntime.AbilityTask_ApplyRootMotion_KatanaDashForce.ApplyRootMotion_KatanaDashForce
 	// UAbilityTask_ApplyRootMotion_KatanaDashForce* ApplyRootMotion_KatanaDashForce(UGameplayAbility* InOwningAbility, FName InTaskInstanceName, FVector InTargetLocation, float InDuration, float InHeightAboveGround, bool bInSetNewMovementMode, TEnumAsByte<EMovementMode> InMovementMode, bool bInRestrictSpeedToExpected, UCurveVector* InPathOffsetCurve, ERootMotionFinishVelocityMode InVelocityOnFinishMode, FVector InSetVelocityOnFinish, float InClampVelocityOnFinish); // [0x9967b4c] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Struct /Script/KatanaGameplayRuntime.FortKatanaPrimaryAttackVariationInfo
 /// Size: 0x0098 (0x000000 - 0x000098)
 class FFortKatanaPrimaryAttackVariationInfo : public MDKStruct

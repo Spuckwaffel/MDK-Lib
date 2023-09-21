@@ -27,8 +27,6 @@ public:
 	CMember(UCurveVector*)                             IntroFXCurve                                                OFFSET(get<T>, {0xA18, 8, 0, 0})
 	CMember(UTimelineComponent*)                       IntroFXTimeline                                             OFFSET(get<T>, {0xA20, 8, 0, 0})
 	CMember(UFXSystemComponent*)                       CrownParticleComponent                                      OFFSET(get<T>, {0xA28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -38,6 +36,8 @@ public:
 	// void OnIntroFXTimelineTick(FVector CurveValue);                                                                          // [0x17b3040] Final|Native|Protected|HasDefaults 
 	// Function /Script/VictoryCrownsRuntime.FortGameplayCueNotify_CrownWear.ApplyCrownWear
 	// void ApplyCrownWear(TArray<UFXSystemComponent*>& ParticleComponents);                                                    // [0x21e5764] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/VictoryCrownsRuntime.FortVictoryCrownViewModel
 /// Size: 0x0010 (0x000068 - 0x000078)
 class UFortVictoryCrownViewModel : public UMVVMViewModelBase
@@ -50,8 +50,6 @@ public:
 	DMember(bool)                                      bHasWonCrownInMatch                                         OFFSET(get<bool>, {0x6C, 1, 0, 0})
 	DMember(bool)                                      bHasWonRoyalRoyale                                          OFFSET(get<bool>, {0x6D, 1, 0, 0})
 	CMember(TWeakObjectPtr<UFortControllerComponent_VictoryCrowns*>) BoundVictoryCrownsComponent                   OFFSET(get<T>, {0x70, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -59,6 +57,8 @@ public:
 	// void HandleOnHasWonRoyalRoyale();                                                                                        // [0x9e93238] Final|Native|Private 
 	// Function /Script/VictoryCrownsRuntime.FortVictoryCrownViewModel.HandleOnHasWonCrownInMatch
 	// void HandleOnHasWonCrownInMatch();                                                                                       // [0x9e93224] Final|Native|Private 
+};
+
 /// Class /Script/VictoryCrownsRuntime.FortControllerComponent_VictoryCrowns
 /// Size: 0x01C0 (0x0000A8 - 0x000268)
 class UFortControllerComponent_VictoryCrowns : public UFortControllerComponent
@@ -80,8 +80,6 @@ public:
 	SMember(FVictoryCrownAccountData)                  VictoryCrownAccountData                                     OFFSET(get<T>, {0x180, 16, 0, 0})
 	SMember(FScalableFloat)                            InitialGrantDelay                                           OFFSET(get<T>, {0x190, 40, 0, 0})
 	DMember(bool)                                      bKillFeedBroadcastReady                                     OFFSET(get<bool>, {0x260, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -125,6 +123,8 @@ public:
 	// bool AuthorityHasHeldCrownItem(UFortItem* CrownItem);                                                                    // [0x9e92d18] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable|Const 
 	// Function /Script/VictoryCrownsRuntime.FortControllerComponent_VictoryCrowns.AuthorityHasDroppedCrownItem
 	// bool AuthorityHasDroppedCrownItem(UFortItem* CrownItem);                                                                 // [0x9e92c88] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/VictoryCrownsRuntime.FortCosmeticStatObject_HasCrown
 /// Size: 0x0008 (0x000088 - 0x000090)
 class UFortCosmeticStatObject_HasCrown : public UFortCosmeticStatObject
@@ -170,8 +170,6 @@ public:
 	CMember(TArray<AFortPlayerStateAthena*>)           CrownBearerPlayerStates                                     OFFSET(get<T>, {0xA0, 16, 0, 0})
 	SMember(FText)                                     KillFeedFormat_Dropped                                      OFFSET(get<T>, {0xB0, 24, 0, 0})
 	SMember(FText)                                     KillFeedFormat_PickedUp                                     OFFSET(get<T>, {0xC8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -183,6 +181,8 @@ public:
 	// void HandleCrownStatusChanged(AFortPlayerControllerAthena* FortPlayerControllerAthena, UFortItem* CrownItem);            // [0x9e92fc8] Final|Native|Protected 
 	// Function /Script/VictoryCrownsRuntime.FortGameStateComponent_VictoryCrowns.ClientKillFeedMessage
 	// void ClientKillFeedMessage(AFortPlayerStateAthena* FortPSA, bool bAdded);                                                // [0x1ea9180] Net|NetReliableNative|Event|NetMulticast|Public 
+};
+
 /// Class /Script/VictoryCrownsRuntime.FortPawnComponent_VictoryCrownsFrontEnd
 /// Size: 0x0018 (0x0000A8 - 0x0000C0)
 class UFortPawnComponent_VictoryCrownsFrontEnd : public UFortPawnComponent
@@ -195,13 +195,13 @@ public:
 	DMember(bool)                                      bInitializeSuccess                                          OFFSET(get<bool>, {0xB0, 1, 0, 0})
 	DMember(bool)                                      bSelectedPlaylistSupportCrown                               OFFSET(get<bool>, {0xB1, 1, 0, 0})
 	CMember(UFortSocialParty*)                         PersistentParty                                             OFFSET(get<T>, {0xB8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VictoryCrownsRuntime.FortPawnComponent_VictoryCrownsFrontEnd.PlaylistChanged
 	// void PlaylistChanged();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/VictoryCrownsRuntime.FortPlayerStateComponent_VictoryCrowns
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UFortPlayerStateComponent_VictoryCrowns : public UFortPlayerStateComponent
@@ -211,13 +211,13 @@ class UFortPlayerStateComponent_VictoryCrowns : public UFortPlayerStateComponent
 
 public:
 	DMember(bool)                                      bHasWonRoyalRoyale                                          OFFSET(get<bool>, {0xA0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VictoryCrownsRuntime.FortPlayerStateComponent_VictoryCrowns.GetWonRoyalRoyale
 	// bool GetWonRoyalRoyale();                                                                                                // [0x754416c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/VictoryCrownsRuntime.VictoryCrownPlaylistData
 /// Size: 0x0008 (0x000008 - 0x000010)
 class FVictoryCrownPlaylistData : public FTableRowBase

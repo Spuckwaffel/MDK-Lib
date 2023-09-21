@@ -71,8 +71,6 @@ public:
 	CMember(ULearningAgentsPolicy*)                    Policy                                                      OFFSET(get<T>, {0xA0, 8, 0, 0})
 	DMember(bool)                                      bIsTraining                                                 OFFSET(get<bool>, {0xA8, 1, 0, 0})
 	DMember(bool)                                      bHasTrainingFailed                                          OFFSET(get<bool>, {0xA9, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -88,6 +86,8 @@ public:
 	// void EndTraining();                                                                                                      // [0xa1128f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgentsTraining.LearningAgentsImitationTrainer.BeginTraining
 	// void BeginTraining(ULearningAgentsPolicy* InPolicy, ULearningAgentsRecording* Recording, FLearningAgentsImitationTrainerSettings& ImitationTrainerSettings, FLearningAgentsImitationTrainerTrainingSettings& ImitationTrainerTrainingSettings, FLearningAgentsTrainerPathSettings& ImitationTrainerPathSettings, bool bReinitializePolicyNetwork); // [0xa1120d8] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgentsTraining.LearningAgentsRecorder
 /// Size: 0x4538 (0x0000C0 - 0x0045F8)
 class ULearningAgentsRecorder : public ULearningAgentsManagerComponent
@@ -99,8 +99,6 @@ public:
 	CMember(ULearningAgentsInteractor*)                Interactor                                                  OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(ULearningAgentsRecording*)                 Recording                                                   OFFSET(get<T>, {0xC8, 8, 0, 0})
 	DMember(bool)                                      bIsRecording                                                OFFSET(get<bool>, {0xD0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -130,6 +128,8 @@ public:
 	// void AppendRecordingFromFile(FFilePath& File);                                                                           // [0xa1111d8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgentsTraining.LearningAgentsRecorder.AddExperience
 	// void AddExperience();                                                                                                    // [0xa10ff74] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgentsTraining.LearningAgentsRecording
 /// Size: 0x0010 (0x000030 - 0x000040)
 class ULearningAgentsRecording : public UDataAsset
@@ -139,8 +139,6 @@ class ULearningAgentsRecording : public UDataAsset
 
 public:
 	CMember(TArray<FLearningAgentsRecord>)             Records                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -156,6 +154,8 @@ public:
 	// void AppendRecordingToAsset(ULearningAgentsRecording* RecordingAsset);                                                   // [0xa111fd8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgentsTraining.LearningAgentsRecording.AppendRecordingFromFile
 	// void AppendRecordingFromFile(FFilePath& File);                                                                           // [0xa111898] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgentsTraining.LearningAgentsReward
 /// Size: 0x0118 (0x000028 - 0x000140)
 class ULearningAgentsReward : public UObject
@@ -242,8 +242,6 @@ public:
 	DMember(bool)                                      bHasTrainingFailed                                          OFFSET(get<bool>, {0xD9, 1, 0, 0})
 	CMember(TArray<ULearningAgentsReward*>)            RewardObjects                                               OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(TArray<ULearningAgentsCompletion*>)        CompletionObjects                                           OFFSET(get<T>, {0xF0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -279,6 +277,8 @@ public:
 	// void EndTraining();                                                                                                      // [0xa11290c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgentsTraining.LearningAgentsTrainer.BeginTraining
 	// void BeginTraining(FLearningAgentsTrainerTrainingSettings& TrainerTrainingSettings, FLearningAgentsTrainerGameSettings& TrainerGameSettings, FLearningAgentsTrainerPathSettings& TrainerPathSettings, FLearningAgentsCriticSettings& CriticSettings, bool bReinitializePolicyNetwork, bool bReinitializeCriticNetwork, bool bResetAgentsOnBegin); // [0xa1123cc] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/LearningAgentsTraining.LearningAgentsImitationTrainerSettings
 /// Size: 0x0004 (0x000000 - 0x000004)
 class FLearningAgentsImitationTrainerSettings : public MDKStruct

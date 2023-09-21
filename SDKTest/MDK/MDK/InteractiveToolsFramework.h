@@ -30,8 +30,6 @@ public:
 	DMember(float)                                     HoverSizeMultiplier                                         OFFSET(get<float>, {0x578, 4, 0, 0})
 	DMember(float)                                     PixelHitDistanceThreshold                                   OFFSET(get<float>, {0x57C, 4, 0, 0})
 	CMember(UGizmoViewContext*)                        GizmoViewContext                                            OFFSET(get<T>, {0x588, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// void UpdateWorldLocalState(bool bWorldIn);                                                                               // [0xa3adf88] Final|Native|Public  
 	// Function /Script/InteractiveToolsFramework.GizmoBaseComponent.UpdateHoverState
 	// void UpdateHoverState(bool bHoveringIn);                                                                                 // [0xa3adcec] Final|Native|Public  
+};
+
 /// Class /Script/InteractiveToolsFramework.InteractiveCommandArguments
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UInteractiveCommandArguments : public UObject

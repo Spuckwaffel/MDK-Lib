@@ -22,8 +22,6 @@ public:
 	CMember(UNevadaTargetIndicator*)                   TargetIndicator                                             OFFSET(get<T>, {0x488, 8, 0, 0})
 	CMember(AFortNevadaVehicle*)                       OwningNevadaVehicle                                         OFFSET(get<T>, {0x490, 8, 0, 0})
 	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(get<T>, {0x4A0, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -47,6 +45,8 @@ public:
 	// void OnEnergyCannonEnabledChanged(bool bEnabled);                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/NevadaUI.FortNevadaVehicleReticle.OnBatteryChanged
 	// void OnBatteryChanged(float BatteryLevel);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/NevadaUI.NevadaTargetIndicator
 /// Size: 0x0000 (0x0003B8 - 0x0003B8)
 class UNevadaTargetIndicator : public UFortActorIndicatorWidget

@@ -32,8 +32,6 @@ public:
 	CMember(UCanvasPanel*)                             CanvasPanel_Cosmetic                                        OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UFortQuestMapScreen*)                      ParentScreen                                                OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UFortQuestMapNodeLayout*)                  NodeLayout                                                  OFFSET(get<T>, {0x318, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -47,6 +45,8 @@ public:
 	// void OnPlayLayoutFadeInAnimation();                                                                                      // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestMapViewer.HandleLayoutOutroAnimationFinished
 	// void HandleLayoutOutroAnimationFinished();                                                                               // [0x9d3bc38] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortArmoryScreen
 /// Size: 0x0000 (0x0003E8 - 0x0003E8)
 class UFortArmoryScreen : public UCommonActivatableWidget
@@ -77,8 +77,6 @@ class UFortCommandScreen : public UCommonActivatableWidget
 public:
 	SMember(FDataTableRowHandle)                       ShowAllStatsActionData                                      OFFSET(get<T>, {0x3E8, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       InspectHeroActionData                                       OFFSET(get<T>, {0x3F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -90,6 +88,8 @@ public:
 	// void HandleUpgradeInspectHero();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCommandScreen.HandleShowAllStats
 	// void HandleShowAllStats();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookGenericRewardWidget
 /// Size: 0x0018 (0x0002D0 - 0x0002E8)
 class UFortCollectionBookGenericRewardWidget : public UCommonUserWidget
@@ -103,8 +103,6 @@ public:
 	CMember(ESlateVisibility)                          VisibilityWhenRewardSpecified                               OFFSET(get<T>, {0x2D5, 1, 0, 0})
 	CMember(UFortCollectionBookRewardCardWidget*)      RewardCardWidget                                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(ECollectionBookRewardStatus)               RewardStatus                                                OFFSET(get<T>, {0x2E0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -122,6 +120,8 @@ public:
 	// ECollectionBookRewardStatus GetRewardStatus();                                                                           // [0x82245fc] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookGenericRewardWidget.ClearRewards
 	// void ClearRewards();                                                                                                     // [0x8b9a58c] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookHelpWidget
 /// Size: 0x0000 (0x000558 - 0x000558)
 class UFortCollectionBookHelpWidget : public UFortActivatablePanel
@@ -156,8 +156,6 @@ public:
 	CMember(UFortCollectionBookCategory*)              LastSelectedCategory                                        OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(TArray<UFortCollectionBookCategory*>)      CategoryObjectPool                                          OFFSET(get<T>, {0x300, 16, 0, 0})
 	CMember(UCommonTreeView*)                          PageTreeViewWidget                                          OFFSET(get<T>, {0x310, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -167,6 +165,8 @@ public:
 	// void OnActivated();                                                                                                      // [0x12084a0] Native|Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookOverviewWidget.HandlePagesChanged
 	// void HandlePagesChanged(UFortCollectionBookManager* CBManager);                                                          // [0x9d3bd84] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookPageCompletionRewardWidget
 /// Size: 0x0000 (0x0002E8 - 0x0002E8)
 class UFortCollectionBookPageCompletionRewardWidget : public UFortCollectionBookGenericRewardWidget
@@ -193,8 +193,6 @@ public:
 	CMember(TWeakObjectPtr<UClass*>)                   RewardDetailsModalWidgetClass                               OFFSET(get<T>, {0x2F8, 32, 0, 0})
 	SMember(FText)                                     ModalTitle                                                  OFFSET(get<T>, {0x318, 24, 0, 0})
 	CMember(UFortCollectionBookRewardModalWidget*)     RewardDetailsModalWidget                                    OFFSET(get<T>, {0x330, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -208,6 +206,8 @@ public:
 	// void OnDetailsPageChanged(UFortCollectionBookPage* InNewDetailsPage);                                                    // [0x74d2ae8] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookPageDetailsWidget.HandleRewardDetailsModalWidgetDeactivated
 	// void HandleRewardDetailsModalWidgetDeactivated(UCommonActivatablePanelLegacy* DeactivatedPanel);                         // [0x9d3c600] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookPageListWidget
 /// Size: 0x0030 (0x0014C0 - 0x0014F0)
 class UFortCollectionBookPageListWidget : public UCommonButtonLegacy
@@ -221,8 +221,6 @@ public:
 	CMember(UCommonTextBlock*)                         PageCompletionWidget                                        OFFSET(get<T>, {0x14D8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UObject*>)                  AssociatedPageOrCategory                                    OFFSET(get<T>, {0x14E0, 8, 0, 0})
 	DMember(bool)                                      bIsExpanded                                                 OFFSET(get<bool>, {0x14E8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -236,6 +234,8 @@ public:
 	// void OnPageDetailsUpdated(int32_t AvailableSlots, int32_t FilledSlots, int32_t TotalSlots, EFortCollectionBookState State); // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookPageListWidget.OnCategoryDetailsUpdated
 	// void OnCategoryDetailsUpdated(int32_t AvailableSlots, int32_t FilledSlots, int32_t TotalSlots);                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookPicker
 /// Size: 0x0028 (0x000408 - 0x000430)
 class UFortCollectionBookPicker : public UFortItemPickerBase
@@ -247,8 +247,6 @@ public:
 	CMember(UClass*)                                   MulchConfirmationModalClass                                 OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UFortAccountItem*)                         CurrentSlottedItem                                          OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UFortMulchConfirmationModalWidget*)        MulchConfirmationModal                                      OFFSET(get<T>, {0x428, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -264,6 +262,8 @@ public:
 	// void NotifyPanelActivated();                                                                                             // [0x9d3cec0] Native|Protected|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookPicker.HideMulchConfirmationModal
 	// void HideMulchConfirmationModal();                                                                                       // [0x9d3cae8] Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookPrimaryPanel
 /// Size: 0x00C8 (0x0003E8 - 0x0004B0)
 class UFortCollectionBookPrimaryPanel : public UCommonActivatableWidget
@@ -281,8 +281,6 @@ public:
 	CMember(UCommonTileView*)                          SectionTileViewWidget                                       OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(ECollectionBookPrimaryNavTarget)           CurrentNavTarget                                            OFFSET(get<T>, {0x448, 1, 0, 0})
 	CMember(UFortCollectionBookSection*)               LastClickedSection                                          OFFSET(get<T>, {0x450, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -298,6 +296,8 @@ public:
 	// void OnCollectionBookPageClicked(UFortCollectionBookPage* ClickedPage);                                                  // [0x9d3d0a8] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookPrimaryPanel.OnBackActionExecuted
 	// void OnBackActionExecuted();                                                                                             // [0x9d3cef8] Final|Native|Public  
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookPrimaryPanel_Legacy
 /// Size: 0x00C0 (0x000520 - 0x0005E0)
 class UFortCollectionBookPrimaryPanel_Legacy : public UCommonActivatablePanelLegacy
@@ -315,8 +315,6 @@ public:
 	CMember(UCommonTileView*)                          SectionTileViewWidget                                       OFFSET(get<T>, {0x578, 8, 0, 0})
 	CMember(ECollectionBookPrimaryNavTarget)           CurrentNavTarget                                            OFFSET(get<T>, {0x580, 1, 0, 0})
 	CMember(UFortCollectionBookSection*)               LastClickedSection                                          OFFSET(get<T>, {0x588, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -332,6 +330,8 @@ public:
 	// void OnCollectionBookPageClicked(UFortCollectionBookPage* ClickedPage);                                                  // [0x9d3d12c] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookPrimaryPanel_Legacy.OnBackActionExecuted
 	// void OnBackActionExecuted(bool& bPassThrough);                                                                           // [0x9d3cf0c] Final|Native|Public|HasOutParms 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookProgressionRewardDetailInspectWidget
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortCollectionBookProgressionRewardDetailInspectWidget : public UCommonUserWidget
@@ -343,8 +343,6 @@ public:
 	CMember(UCommonNumericTextBlock*)                  LevelTextWidget                                             OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UFortRewardInfoWidget_Legacy*)             RewardWidget                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UWidget*)                                  CheckmarkImage                                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -354,6 +352,8 @@ public:
 	// void OnXPRequiredChanged(int32_t NewXPRequired);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookProgressionRewardDetailInspectWidget.GetXPRequired
 	// int32_t GetXPRequired();                                                                                                 // [0x92ccd8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookProgressionRewardsModalWidget
 /// Size: 0x0060 (0x000558 - 0x0005B8)
 class UFortCollectionBookProgressionRewardsModalWidget : public UFortActivatablePanel
@@ -370,8 +370,6 @@ public:
 	CMember(UCommonTextBlock*)                         XPTextWidget                                                OFFSET(get<T>, {0x5A0, 8, 0, 0})
 	CMember(UCommonNumericTextBlock*)                  LevelTextWidget                                             OFFSET(get<T>, {0x5A8, 8, 0, 0})
 	CMember(UCommonButtonGroupLegacy*)                 ButtonGroup                                                 OFFSET(get<T>, {0x5B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -381,6 +379,8 @@ public:
 	// void OnLevelProgressionSet(int32_t CurrentLevel, float NextLvlPct, int32_t MaxAchievedLevel);                            // [0x9d3d75c] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookProgressionRewardsModalWidget.InspectItemBP
 	// void InspectItemBP(UFortItem* Item);                                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookProgressionRewardsPreviewWidget
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortCollectionBookProgressionRewardsPreviewWidget : public UCommonUserWidget
@@ -403,13 +403,13 @@ class UFortCollectionBookProgressionRewardWidget : public UFortCollectionBookGen
 public:
 	CMember(UCommonNumericTextBlock*)                  LevelTextWidget                                             OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         DisplayNameWidget                                           OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortCollectionBookProgressionRewardWidget.SetAssociatedLevel
 	// void SetAssociatedLevel(int32_t Level);                                                                                  // [0x9d3fbb8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookProgressWidget
 /// Size: 0x0058 (0x0002D0 - 0x000328)
 class UFortCollectionBookProgressWidget : public UCommonUserWidget
@@ -427,8 +427,6 @@ public:
 	CMember(UCommonButtonLegacy*)                      DetailsButtonWidget                                         OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UFortCollectionBookPageDetailsWidget*)     PageDetailsWidget                                           OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(UFortCollectionBookProgressionRewardsModalWidget*) DetailsModalWidget                                  OFFSET(get<T>, {0x320, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -446,6 +444,8 @@ public:
 	// void OnCollectionBookLevelChanged(int32_t NewLevel);                                                                     // [0x7f07fb4] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookProgressWidget.HandleDetailsModalWidgetDeactivated
 	// void HandleDetailsModalWidgetDeactivated(UCommonActivatablePanelLegacy* DeactivatedPanel);                               // [0x9d3b98c] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookRecycleSlotResultsWidget
 /// Size: 0x0018 (0x0002D0 - 0x0002E8)
 class UFortCollectionBookRecycleSlotResultsWidget : public UCommonUserWidget
@@ -457,13 +457,13 @@ public:
 	CMember(UPanelWidget*)                             RecycleResultsWidget                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(EFortItemCardSize)                         ItemCardSize                                                OFFSET(get<T>, {0x2D8, 1, 0, 0})
 	CMember(UFortAccountItem*)                         ItemToRecycle                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortCollectionBookRecycleSlotResultsWidget.SetCurrentItemToRecycle
 	// void SetCurrentItemToRecycle(UFortAccountItem* InItemToRecycle);                                                         // [0x9d3fd3c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookRewardCardWidget
 /// Size: 0x0088 (0x0002D0 - 0x000358)
 class UFortCollectionBookRewardCardWidget : public UCommonUserWidget
@@ -483,8 +483,6 @@ public:
 	SMember(FFortRewardInfo)                           RepresentedRewards                                          OFFSET(get<T>, {0x308, 48, 0, 0})
 	CMember(TArray<UFortItem*>)                        DummyItems                                                  OFFSET(get<T>, {0x338, 16, 0, 0})
 	SMember(FTimerHandle)                              UpdateCardTimer                                             OFFSET(get<T>, {0x348, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -496,6 +494,8 @@ public:
 	// bool HasRewards();                                                                                                       // [0x76175c8] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookRewardCardWidget.ClearRewards
 	// void ClearRewards();                                                                                                     // [0x12084a0] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookRewardModalWidget
 /// Size: 0x0050 (0x000520 - 0x000570)
 class UFortCollectionBookRewardModalWidget : public UCommonActivatablePanelLegacy
@@ -523,13 +523,13 @@ public:
 	SMember(FText)                                     ModalTitle                                                  OFFSET(get<T>, {0x310, 24, 0, 0})
 	CMember(UFortCollectionBookRewardModalWidget*)     RewardDetailsModalWidget                                    OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UFortCollectionBookSection*)               Section                                                     OFFSET(get<T>, {0x330, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSectionCompletionRewardWidget.HandleRewardDetailsModalWidgetDeactivated
 	// void HandleRewardDetailsModalWidgetDeactivated(UCommonActivatablePanelLegacy* DeactivatedPanel);                         // [0x9d3c680] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookSectionPanel
 /// Size: 0x01D0 (0x000520 - 0x0006F0)
 class UFortCollectionBookSectionPanel : public UCommonActivatablePanelLegacy
@@ -574,8 +574,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnUnslotItemConfirmEvent                                    OFFSET(get<T>, {0x6A0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnInspectItemEvent                                          OFFSET(get<T>, {0x6B0, 16, 0, 0})
 	CMember(UClass*)                                   SlotConfirmationModalClass                                  OFFSET(get<T>, {0x6E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -615,6 +613,8 @@ public:
 	// void OnInspectActionExecuted(bool& bPassThrough);                                                                        // [0x9d3d4e8] Final|Native|Protected|HasOutParms 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSectionPanel.OnBackActionExecuted
 	// void OnBackActionExecuted(bool& bPassThrough);                                                                           // [0x9d3cf98] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookSectionTileWidget
 /// Size: 0x0070 (0x0014C0 - 0x001530)
 class UFortCollectionBookSectionTileWidget : public UCommonButtonLegacy
@@ -633,8 +633,6 @@ public:
 	CMember(UFortCollectionBookGenericRewardWidget*)   SectionRewardWidget                                         OFFSET(get<T>, {0x1510, 8, 0, 0})
 	CMember(UFortCollectionBookSection*)               AssociatedSection                                           OFFSET(get<T>, {0x1518, 8, 0, 0})
 	CMember(TArray<UFortCollectionBookSlotWidget*>)    SlotWidgets                                                 OFFSET(get<T>, {0x1520, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -644,6 +642,8 @@ public:
 	// void OnItemUnslotted(UFortAccountItem* ItemUnslotted, UFortAccountItem* OldSlottedItem, FName SlotId);                   // [0x9d3d660] Native|Protected     
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSectionTileWidget.OnItemSlotted
 	// void OnItemSlotted(UFortAccountItem* ItemSlotted, FName SlotId);                                                         // [0x9d3d598] Native|Protected     
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookSlotButton
 /// Size: 0x0040 (0x0014C0 - 0x001500)
 class UFortCollectionBookSlotButton : public UCommonButtonLegacy
@@ -654,8 +654,6 @@ class UFortCollectionBookSlotButton : public UCommonButtonLegacy
 public:
 	CMember(UFortCollectionBookSlotWidget*)            CollectionBookSlotWidget                                    OFFSET(get<T>, {0x14C0, 8, 0, 0})
 	CMember(UMenuAnchor*)                              PopupMenuAnchor                                             OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -665,6 +663,8 @@ public:
 	// void OnSlottedItemUpdated();                                                                                             // [0x9d3eb90] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSlotButton.GetPopupMenu
 	// UUserWidget* GetPopupMenu();                                                                                             // [0x9d3ac34] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookSlotConfirmationModal
 /// Size: 0x0058 (0x000558 - 0x0005B0)
 class UFortCollectionBookSlotConfirmationModal : public UFortActivatablePanel
@@ -680,8 +680,6 @@ public:
 	CMember(UFortCollectionBookRecycleSlotResultsWidget*) RecycleSlotResultsWidget                                 OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_SlotItem                                             OFFSET(get<T>, {0x588, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_Back                                                 OFFSET(get<T>, {0x590, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -691,6 +689,8 @@ public:
 	// void OnSlotItemRequested();                                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSlotConfirmationModal.HandleSlotItemComplete
 	// void HandleSlotItemComplete(UFortAccountItem* SlottedItem, FName SlotId);                                                // [0x9d3c700] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookSlotDetailsWidget
 /// Size: 0x0000 (0x0002D0 - 0x0002D0)
 class UFortCollectionBookSlotDetailsWidget : public UCommonUserWidget
@@ -716,8 +716,6 @@ public:
 	CMember(UFortCollectionBookSection*)               AssociatedSection                                           OFFSET(get<T>, {0x310, 8, 0, 0})
 	DMember(int32_t)                                   PreviousSelectedButtonIdx                                   OFFSET(get<int32_t>, {0x360, 4, 0, 0})
 	DMember(int32_t)                                   CurrentSelectedButtonIdx                                    OFFSET(get<int32_t>, {0x364, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -727,6 +725,8 @@ public:
 	// void OnSlotButtonClicked(UCommonButtonLegacy* ClickedButton, int32_t ButtonIdx);                                         // [0x9d3e4fc] Native|Protected     
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSlotView.OnSelectedSlotButtonChanged
 	// void OnSelectedSlotButtonChanged(UCommonButtonLegacy* SelectedButton, int32_t ButtonIdx);                                // [0x9d3e434] Native|Protected     
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookSlotWidget
 /// Size: 0x0128 (0x0002D0 - 0x0003F8)
 class UFortCollectionBookSlotWidget : public UCommonUserWidget
@@ -751,8 +751,6 @@ public:
 	SMember(FText)                                     ItemInSlotCanBeUpgradedText                                 OFFSET(get<T>, {0x3A0, 24, 0, 0})
 	SMember(FText)                                     ItemInSlotCanBeEvolvedText                                  OFFSET(get<T>, {0x3B8, 24, 0, 0})
 	CMember(UFortItem*)                                SlottedItemRepresentation                                   OFFSET(get<T>, {0x3D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -778,6 +776,8 @@ public:
 	// int32_t GetNumItemsToSlot();                                                                                             // [0x9d3ac10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookSlotWidget.FortCollectionBookSlottedItemUpdatedDelegate__DelegateSignature
 	// void FortCollectionBookSlottedItemUpdatedDelegate__DelegateSignature();                                                  // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookWidget
 /// Size: 0x0030 (0x000558 - 0x000588)
 class UFortCollectionBookWidget : public UFortActivatablePanel
@@ -792,8 +792,6 @@ public:
 	CMember(UFortCollectionBookSectionPanel*)          SectionPanelWidget                                          OFFSET(get<T>, {0x570, 8, 0, 0})
 	DMember(int32_t)                                   PrimaryPanelIdx                                             OFFSET(get<int32_t>, {0x578, 4, 0, 0})
 	DMember(int32_t)                                   SectionPanelIdx                                             OFFSET(get<int32_t>, {0x57C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -809,6 +807,8 @@ public:
 	// void OnCollectionBookPageSelected(UFortCollectionBookPage* SelectedPage);                                                // [0x9d3d12c] Native|Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookWidget.OnCollectionBookPageClicked
 	// void OnCollectionBookPageClicked(UFortCollectionBookPage* ClickedPage);                                                  // [0x9d3d1b0] Native|Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCollectionBookWidget_Legacy
 /// Size: 0x0030 (0x000558 - 0x000588)
 class UFortCollectionBookWidget_Legacy : public UFortActivatablePanel
@@ -823,8 +823,6 @@ public:
 	CMember(UFortCollectionBookSectionPanel*)          SectionPanelWidget                                          OFFSET(get<T>, {0x570, 8, 0, 0})
 	DMember(int32_t)                                   PrimaryPanelIdx                                             OFFSET(get<int32_t>, {0x578, 4, 0, 0})
 	DMember(int32_t)                                   SectionPanelIdx                                             OFFSET(get<int32_t>, {0x57C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -840,6 +838,8 @@ public:
 	// void OnCollectionBookPageSelected(UFortCollectionBookPage* SelectedPage);                                                // [0x9d3d12c] Native|Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortCollectionBookWidget_Legacy.OnCollectionBookPageClicked
 	// void OnCollectionBookPageClicked(UFortCollectionBookPage* ClickedPage);                                                  // [0x9d3d1b0] Native|Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortAbilitySystemContext
 /// Size: 0x0050 (0x000030 - 0x000080)
 class UFortAbilitySystemContext : public UBlueprintContextBase
@@ -866,8 +866,6 @@ public:
 	CMember(UVerticalBox*)                             VerticalBox_FeatureItems                                    OFFSET(get<T>, {0x4B0, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_DailyItems                                      OFFSET(get<T>, {0x4B8, 8, 0, 0})
 	CMember(UScaleBox*)                                ScaleBox_Main                                               OFFSET(get<T>, {0x4C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -885,6 +883,8 @@ public:
 	// FDateTime GetSeasonStoreEndDate();                                                                                       // [0x9d3adb4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortDirectAcquisitionWidgetBase.GetDailyStoreEndDate
 	// FDateTime GetDailyStoreEndDate();                                                                                        // [0x9d3a620] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortDirectAcquisitionWidgetBase_Legacy
 /// Size: 0x0058 (0x0005E0 - 0x000638)
 class UFortDirectAcquisitionWidgetBase_Legacy : public UFortMtxStoreRootBase_Legacy
@@ -901,8 +901,6 @@ public:
 	CMember(UVerticalBox*)                             VerticalBox_FeatureItems                                    OFFSET(get<T>, {0x620, 8, 0, 0})
 	CMember(UVerticalBox*)                             VerticalBox_DailyItems                                      OFFSET(get<T>, {0x628, 8, 0, 0})
 	CMember(UScaleBox*)                                ScaleBox_Main                                               OFFSET(get<T>, {0x630, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -920,6 +918,8 @@ public:
 	// FDateTime GetSeasonStoreEndDate();                                                                                       // [0x9d3adb4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortDirectAcquisitionWidgetBase_Legacy.GetDailyStoreEndDate
 	// FDateTime GetDailyStoreEndDate();                                                                                        // [0x9d3a620] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionBuildSquadWidget
 /// Size: 0x0060 (0x000520 - 0x000580)
 class UFortExpeditionBuildSquadWidget : public UCommonActivatablePanelLegacy
@@ -935,8 +935,6 @@ public:
 	CMember(UFortSquadSlotItemPicker*)                 ExpeditionSquadSlotPicker                                   OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortItemViewContext_ExpeditionSquadSlotsView*) ItemViewContext_ExpeditionSlotsView                    OFFSET(get<T>, {0x548, 8, 0, 0})
 	CMember(UFortItemViewContext_ExpeditionSquadSlotItemPicker*) ItemViewContext_ExpeditionSlotItemPicker          OFFSET(get<T>, {0x550, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -958,6 +956,8 @@ public:
 	// void HandleDifferentSquadSlotSelected(int32_t SquadSlotIndex);                                                           // [0x9d3ba0c] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortExpeditionBuildSquadWidget.ClearTemporaryExpeditionSquadState
 	// void ClearTemporaryExpeditionSquadState(bool bPreviewOnly);                                                              // [0x9d3a30c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionDetailsWidget
 /// Size: 0x0040 (0x0002D0 - 0x000310)
 class UFortExpeditionDetailsWidget : public UCommonUserWidget
@@ -970,8 +970,6 @@ public:
 	CMember(UFortSquadSlotsView*)                      ExpeditionSquadSlotsView                                    OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	SMember(FName)                                     CurrentSquadId                                              OFFSET(get<T>, {0x2E0, 4, 0, 0})
 	CMember(UFortItemViewContext_ExpeditionSquadSlotsView*) ItemViewContext_ExpeditionSlotsView                    OFFSET(get<T>, {0x2E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -983,6 +981,8 @@ public:
 	// void RequestAbandonExpedition();                                                                                         // [0x9d3f9bc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortExpeditionDetailsWidget.HandleAbandonExpeditionCompleted
 	// void HandleAbandonExpeditionCompleted(UFortExpeditionItem* Expedition, bool bSuccess);                                   // [0x9d3b5e4] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionExpiresWidget
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortExpeditionExpiresWidget : public UCommonUserWidget
@@ -992,8 +992,6 @@ class UFortExpeditionExpiresWidget : public UCommonUserWidget
 
 public:
 	CMember(TWeakObjectPtr<UFortExpeditionItem*>)      Item                                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1001,6 +999,8 @@ public:
 	// void SetData(UFortExpeditionItem* InItem);                                                                               // [0x74d2ae8] Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortExpeditionExpiresWidget.OnExpeditionExpirationUpdated
 	// void OnExpeditionExpirationUpdated();                                                                                    // [0x1284044] Native|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionListItemWidget
 /// Size: 0x0020 (0x0014C0 - 0x0014E0)
 class UFortExpeditionListItemWidget : public UCommonButtonLegacy
@@ -1010,13 +1010,13 @@ class UFortExpeditionListItemWidget : public UCommonButtonLegacy
 
 public:
 	CMember(TWeakObjectPtr<UFortExpeditionItem*>)      Item                                                        OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortExpeditionListItemWidget.OnItemChanged
 	// void OnItemChanged();                                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionListViewWidget
 /// Size: 0x0030 (0x0002D0 - 0x000300)
 class UFortExpeditionListViewWidget : public UCommonUserWidget
@@ -1030,8 +1030,6 @@ public:
 	CMember(UCommonListView*)                          ExpeditionListView                                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	SMember(FName)                                     CurrentTabNameId                                            OFFSET(get<T>, {0x2F8, 4, 0, 0})
 	CMember(EFortExpeditionListSort)                   SortType                                                    OFFSET(get<T>, {0x2FC, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1039,6 +1037,8 @@ public:
 	// void SetExpeditionListSortType(EFortExpeditionListSort InSortType);                                                      // [0x9d40584] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortExpeditionListViewWidget.GetExpeditionListSortName
 	// FText GetExpeditionListSortName();                                                                                       // [0x9d3a6cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionMasterWidget
 /// Size: 0x0020 (0x000520 - 0x000540)
 class UFortExpeditionMasterWidget : public UCommonActivatablePanelLegacy
@@ -1061,8 +1061,6 @@ public:
 	CMember(TArray<FExpeditionTabInfo>)                TabListRegistrationInfo                                     OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	CMember(UFortTabListWidgetBase_Legacy*)            ExpeditionTabList                                           OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UFortExpeditionListViewWidget*)            ExpeditionListView                                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1076,6 +1074,8 @@ public:
 	// void HandleExpeditionTabSelected(FName TabNameID);                                                                       // [0x9d3ba90] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortExpeditionOverviewWidget.HandleExpeditionTabButtonCreated
 	// void HandleExpeditionTabButtonCreated(FName TabNameID, UCommonButtonBase* TabButton);                                    // [0x7c4f494] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionPickVehicleWidget
 /// Size: 0x0008 (0x000520 - 0x000528)
 class UFortExpeditionPickVehicleWidget : public UCommonActivatablePanelLegacy
@@ -1085,13 +1085,13 @@ class UFortExpeditionPickVehicleWidget : public UCommonActivatablePanelLegacy
 
 public:
 	CMember(TWeakObjectPtr<UFortExpeditionItem*>)      Item                                                        OFFSET(get<T>, {0x520, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortExpeditionPickVehicleWidget.SetData
 	// void SetData(UFortExpeditionItem* InItem);                                                                               // [0x8ea2558] Native|Event|Public|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionReturnsWidget
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortExpeditionReturnsWidget : public UCommonUserWidget
@@ -1101,8 +1101,6 @@ class UFortExpeditionReturnsWidget : public UCommonUserWidget
 
 public:
 	CMember(TWeakObjectPtr<UFortExpeditionItem*>)      Item                                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1110,6 +1108,8 @@ public:
 	// void SetData(UFortExpeditionItem* InItem);                                                                               // [0x74d2ae8] Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortExpeditionReturnsWidget.OnExpeditionInProgressUpdated
 	// void OnExpeditionInProgressUpdated();                                                                                    // [0x1284044] Native|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionRewardsWidget
 /// Size: 0x0028 (0x0002D0 - 0x0002F8)
 class UFortExpeditionRewardsWidget : public UCommonUserWidget
@@ -1121,8 +1121,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnAllExpeditionsCollected                                   OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	CMember(UCommonTileView*)                          RewardsTileView                                             OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	DMember(bool)                                      bPendingCollection                                          OFFSET(get<bool>, {0x2E8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1132,6 +1130,8 @@ public:
 	// void ProcessNextReward();                                                                                                // [0x9d3eea0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortExpeditionRewardsWidget.HandleCollectionExpeditionCompleted
 	// void HandleCollectionExpeditionCompleted(bool bMcpSuccess, UFortExpeditionItem* Expedition, bool bExpeditionSuccess, TArray<FFortItemInstanceQuantityPair>& Rewards); // [0x9d3b6e4] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionSummaryWidget
 /// Size: 0x0058 (0x0002D0 - 0x000328)
 class UFortExpeditionSummaryWidget : public UCommonUserWidget
@@ -1155,8 +1155,6 @@ public:
 	DMember(int32_t)                                   SeaExpeditionsTotal                                         OFFSET(get<int32_t>, {0x300, 4, 0, 0})
 	DMember(int32_t)                                   SeaExpeditionsAvailable                                     OFFSET(get<int32_t>, {0x304, 4, 0, 0})
 	CMember(TArray<UFortExpeditionItem*>)              InProgressExpeditions                                       OFFSET(get<T>, {0x308, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1166,6 +1164,8 @@ public:
 	// void OnRefreshSummaryWidget();                                                                                           // [0x1284044] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortExpeditionSummaryWidget.BindInventoryDelegates
 	// void BindInventoryDelegates();                                                                                           // [0x9d39dd4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortExpeditionUtilities
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortExpeditionUtilities : public UBlueprintFunctionLibrary
@@ -1200,8 +1200,6 @@ public:
 	CMember(UWidget*)                                  ImageContent                                                OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UFortVideoPlayerWidget*)                   VideoWidget                                                 OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         ImageWidget                                                 OFFSET(get<T>, {0x578, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1219,6 +1217,8 @@ public:
 	// TWeakObjectPtr<UTexture2D*> GetLargeIcon();                                                                              // [0x9d3aa4c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortFeatureUnlockWidget.GetDescription
 	// FText GetDescription();                                                                                                  // [0x9d3a64c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortResultsWidgetSTW
 /// Size: 0x00C8 (0x0003E8 - 0x0004B0)
 class UFortResultsWidgetSTW : public UCommonActivatableWidget
@@ -1233,8 +1233,6 @@ public:
 	CMember(TArray<UFortItem*>)                        RewardedItems                                               OFFSET(get<T>, {0x488, 16, 0, 0})
 	CMember(TArray<UFortItem*>)                        RewardedAccountItems                                        OFFSET(get<T>, {0x498, 16, 0, 0})
 	CMember(UCommonUserWidget*)                        Radial_Picker                                               OFFSET(get<T>, {0x4A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1266,6 +1264,8 @@ public:
 	// int32_t GetTotalMissionPointsEarned();                                                                                   // [0x9d3b27c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortResultsWidgetSTW.GetRewardsByType
 	// void GetRewardsByType(EFortRewardItemTypeSTW Type, TArray<UFortItem*>& OutRewards);                                      // [0x9d3ac9c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSTWUIData
 /// Size: 0x0020 (0x000030 - 0x000050)
 class UFortSTWUIData : public UFortSTWUIDataBase
@@ -1324,8 +1324,6 @@ public:
 	CMember(UImage*)                                   TierImage2                                                  OFFSET(get<T>, {0x5B8, 8, 0, 0})
 	CMember(UImage*)                                   TierImage3                                                  OFFSET(get<T>, {0x5C0, 8, 0, 0})
 	CMember(UImage*)                                   TierImage4                                                  OFFSET(get<T>, {0x5C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1359,6 +1357,8 @@ public:
 	// void CraftTargetItem();                                                                                                  // [0x9d3a410] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortItemCraftingOptionsActivatablePanel_STW.CraftAndSlotTargetItem
 	// void CraftAndSlotTargetItem();                                                                                           // [0x9d3a3a0] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemDetailsActivatablePanel_STW
 /// Size: 0x0048 (0x0003E8 - 0x000430)
 class UFortItemDetailsActivatablePanel_STW : public UCommonActivatableWidget
@@ -1372,8 +1372,6 @@ public:
 	CMember(TWeakObjectPtr<UFortItemManagementScreen_STW*>) HostItemManagementScreen                               OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UFortTooltipLoadingWrapper*)               ItemToDetailLoadingWrapper                                  OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UCommonLoadGuard*)                         ItemToDetailLoadGuard                                       OFFSET(get<T>, {0x428, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1385,6 +1383,8 @@ public:
 	// void HandleDifferentItemToCompareSetBP();                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortItemDetailsActivatablePanel_STW.HandleConsumeItemProgressChangedBP
 	// void HandleConsumeItemProgressChangedBP();                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemDetailsModeActivatablePanel_STW
 /// Size: 0x0008 (0x000430 - 0x000438)
 class UFortItemDetailsModeActivatablePanel_STW : public UFortItemDetailsActivatablePanel_STW
@@ -1394,13 +1394,13 @@ class UFortItemDetailsModeActivatablePanel_STW : public UFortItemDetailsActivata
 
 public:
 	CMember(UCommonWidgetSwitcherLegacy*)              DetailPanelWidgetSwitcher                                   OFFSET(get<T>, {0x430, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortItemDetailsModeActivatablePanel_STW.HandleOnActiveWidgetChanged
 	// void HandleOnActiveWidgetChanged(UWidget* ActiveWidget, int32_t ActiveWidgetIndex);                                      // [0x9d3bcb4] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemCompareModeActivatablePanel_STW
 /// Size: 0x0010 (0x000430 - 0x000440)
 class UFortItemCompareModeActivatablePanel_STW : public UFortItemDetailsActivatablePanel_STW
@@ -1436,8 +1436,6 @@ public:
 	CMember(TWeakObjectPtr<UFortItemManagementScreen_STW*>) HostItemManagementScreen                               OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(TArray<EFortInventoryCustomFilter>)        AvailableFilters                                            OFFSET(get<T>, {0x560, 16, 0, 0})
 	CMember(TSet<EFortInventoryCustomFilter>)          LocalCustomFilterSet                                        OFFSET(get<T>, {0x570, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1457,6 +1455,8 @@ public:
 	// void DisableAllFilters();                                                                                                // [0x9d3a4bc] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortItemManagementCustomFilterModalWidget_STW.CommitCustomFilters
 	// void CommitCustomFilters();                                                                                              // [0x9d3a38c] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemManagementInventoryPanel_STW
 /// Size: 0x01D8 (0x0002D0 - 0x0004A8)
 class UFortItemManagementInventoryPanel_STW : public UCommonUserWidget
@@ -1488,8 +1488,6 @@ public:
 	CMember(TMap<FName, int32_t>)                      QuickbarEquipSlotIndices                                    OFFSET(get<T>, {0x3B8, 80, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x498, 8, 0, 0})
 	CMember(UWidget*)                                  WidgetToCenter                                              OFFSET(get<T>, {0x4A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1565,6 +1563,8 @@ public:
 	// void AdvanceSelection();                                                                                                 // [0x9d39b88] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortItemManagementInventoryPanel_STW.AddItemStackToMulch
 	// void AddItemStackToMulch(UFortItem* Item, int32_t Count);                                                                // [0x93c5704] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemManagementItemTileButton_STW
 /// Size: 0x0070 (0x001500 - 0x001570)
 class UFortItemManagementItemTileButton_STW : public UFortItemTileButton
@@ -1584,8 +1584,6 @@ public:
 	DMember(bool)                                      ShowCollectionBookIndicator                                 OFFSET(get<bool>, {0x1520, 1, 0, 0})
 	DMember(bool)                                      ShowRefundIndicator                                         OFFSET(get<bool>, {0x1521, 1, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x1568, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1619,6 +1617,8 @@ public:
 	// EFortItemManagementMode GetItemManagementMode();                                                                         // [0x9d65fcc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortItemManagementItemTileButton_STW.GetHomebaseSquadSlotForItem
 	// FHomebaseSquadSlotId GetHomebaseSquadSlotForItem();                                                                      // [0x93c70fc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemManagementItemDetailsPanel_STW
 /// Size: 0x0020 (0x0003A8 - 0x0003C8)
 class UFortItemManagementItemDetailsPanel_STW : public UFortItemDetailsHostPanel
@@ -1630,8 +1630,6 @@ public:
 	DMember(bool)                                      HasItemMarkedForMulching                                    OFFSET(get<bool>, {0x3A8, 1, 0, 0})
 	CMember(TWeakObjectPtr<UFortItemManagementScreen_STW*>) HostItemManagementScreen                               OFFSET(get<T>, {0x3AC, 8, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x3C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1641,6 +1639,8 @@ public:
 	// void HandleHasItemMarkedForMulchingChanged();                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortItemManagementItemDetailsPanel_STW.GetAmmoTypeItemDefinitions
 	// TArray<UFortAmmoItemDefinition*> GetAmmoTypeItemDefinitions();                                                           // [0x93c62c8] Final|Native|Static|Protected|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemManagementMulchDetailsPanel_STW
 /// Size: 0x0028 (0x0002D0 - 0x0002F8)
 class UFortItemManagementMulchDetailsPanel_STW : public UCommonUserWidget
@@ -1652,8 +1652,6 @@ public:
 	CMember(UFortItemQuantityListBase*)                ResourceList                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   HostItemManagementMulchPanel                                OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1669,6 +1667,8 @@ public:
 	// TArray<int32_t> GetItemCountsToMulch();                                                                                  // [0x93c7254] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortItemManagementMulchDetailsPanel_STW.CommitMulch
 	// void CommitMulch();                                                                                                      // [0x93c5b44] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemManagementModeDetailsPanel_STW
 /// Size: 0x0030 (0x0002D0 - 0x000300)
 class UFortItemManagementModeDetailsPanel_STW : public UCommonUserWidget
@@ -1682,8 +1682,6 @@ public:
 	CMember(UFortItemDetailsActivatablePanel_STW*)     ComparisonModeItemDetailsPanel                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UFortItemDetailsActivatablePanel_STW*)     MulchModeItemDetailsPanel                                   OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortItemManagementScreen_STW*>) HostItemManagementScreen                               OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1693,6 +1691,8 @@ public:
 	// void HandleDifferentItemManagementModeSetBP();                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortItemManagementModeDetailsPanel_STW.GetItemManagementMode
 	// EFortItemManagementMode GetItemManagementMode();                                                                         // [0x9d65ff0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemManagementScreen_STW
 /// Size: 0x0158 (0x0003E8 - 0x000540)
 class UFortItemManagementScreen_STW : public UCommonActivatableWidget
@@ -1714,8 +1714,6 @@ public:
 	CMember(UFortMulchConfirmationModalWidget*)        MulchConfirmationModal                                      OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UFortItemManagementCustomFilterModalWidget_STW*) CustomFilterModal                                     OFFSET(get<T>, {0x518, 8, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x528, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1821,6 +1819,8 @@ public:
 	// bool CanEquipItem(UFortItem* Item);                                                                                      // [0x93c587c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortItemManagementScreen_STW.CancelInventoryPanelTileViewRefresh
 	// void CancelInventoryPanelTileViewRefresh();                                                                              // [0x9d64b98] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.MainMenu_STW
 /// Size: 0x0130 (0x0003E8 - 0x000518)
 class UMainMenu_STW : public UCommonActivatableWidget
@@ -1851,8 +1851,6 @@ public:
 	SMember(FText)                                     ExitDescription                                             OFFSET(get<T>, {0x4D0, 24, 0, 0})
 	DMember(bool)                                      bIsMainMenuOpen                                             OFFSET(get<bool>, {0x4E8, 1, 0, 0})
 	CMember(UFortCampaignTabsScreenBase*)              MainTabsScreen                                              OFFSET(get<T>, {0x510, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1864,6 +1862,8 @@ public:
 	// bool ShouldShowLeaveExperienceButton();                                                                                  // [0x9d6a354] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.MainMenu_STW.IsActiveTabMainShop
 	// bool IsActiveTabMainShop();                                                                                              // [0x9d67c48] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortUIStateWidget_STWFrontend
 /// Size: 0x0070 (0x000400 - 0x000470)
 class UFortUIStateWidget_STWFrontend : public UFortUIStateWidgetBase
@@ -1892,8 +1892,6 @@ public:
 	CMember(UFortRejoinWindowBase*)                    RejoinWindow                                                OFFSET(get<T>, {0x400, 8, 0, 0})
 	SMember(FDataTableRowHandle)                       TutorialCompleteStatHandle                                  OFFSET(get<T>, {0x408, 16, 0, 0})
 	CMember(UClass*)                                   RejoinWindowClass                                           OFFSET(get<T>, {0x418, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1907,6 +1905,8 @@ public:
 	// void HandleLobbyTimeUpdated(int32_t TimeRemaining);                                                                      // [0x9d67690] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortUIStateWidget_STWJoinServer.HandleLobbyDisconnected
 	// void HandleLobbyDisconnected();                                                                                          // [0x9d6767c] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.TopBar_STW
 /// Size: 0x0098 (0x0003E8 - 0x000480)
 class UTopBar_STW : public UCommonActivatableWidget
@@ -1921,8 +1921,6 @@ public:
 	CMember(UMainMenu_STW*)                            MainMenu                                                    OFFSET(get<T>, {0x458, 8, 0, 0})
 	CMember(UImage*)                                   Image_ActiveInvitesNotification                             OFFSET(get<T>, {0x460, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_Social                                               OFFSET(get<T>, {0x468, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1932,6 +1930,8 @@ public:
 	// void OnSocialMenuOpened();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.TopBar_STW.OnShouldShowPhoenixDisplay
 	// void OnShouldShowPhoenixDisplay(bool bShow, UFortPhoenixSeasonDisplayInfo* PhoenixDisplayInfo);                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutGadgetPicker
 /// Size: 0x0020 (0x000408 - 0x000428)
 class UFortHeroLoadoutGadgetPicker : public UFortItemPickerBase
@@ -1943,8 +1943,6 @@ public:
 	CMember(TWeakObjectPtr<UFortCampaignHeroLoadoutItem*>) TargetLoadoutItem                                       OFFSET(get<T>, {0x408, 8, 0, 0})
 	DMember(int32_t)                                   TargetSlotIndex                                             OFFSET(get<int32_t>, {0x410, 4, 0, 0})
 	CMember(TArray<UFortItem*>)                        TemporaryGadgetItemInstances                                OFFSET(get<T>, {0x418, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1952,6 +1950,8 @@ public:
 	// void SetTargetLoadoutSlot(UFortCampaignHeroLoadoutItem* LoadoutItem, int32_t SlotIndex);                                 // [0x9d69f34] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutGadgetPicker.HandleDifferentTargetLoadoutSlotSetBP
 	// void HandleDifferentTargetLoadoutSlotSetBP();                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutHeroPicker
 /// Size: 0x00C0 (0x000408 - 0x0004C8)
 class UFortHeroLoadoutHeroPicker : public UFortItemPickerBase
@@ -1965,8 +1965,6 @@ public:
 	SMember(FName)                                     TargetSlotName                                              OFFSET(get<T>, {0x418, 4, 0, 0})
 	CMember(UClass*)                                   FilterTabButtonType                                         OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(TMap<FName, FFortTabButtonLabelInfo>)      TabButtonLabelInfoMap                                       OFFSET(get<T>, {0x428, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1984,6 +1982,8 @@ public:
 	// FName GetCurrentlySelectedTab();                                                                                         // [0x9d656ac] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutHeroPicker.AssociateFilterTabList
 	// void AssociateFilterTabList(UFortTabListWidgetBase_Legacy* ExternalFilterTabList);                                       // [0x9d6481c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutHeroPickerFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortHeroLoadoutHeroPickerFunctionLibrary : public UBlueprintFunctionLibrary
@@ -2022,8 +2022,6 @@ public:
 	DMember(bool)                                      bAutoShowDetails                                            OFFSET(get<bool>, {0x550, 1, 0, 0})
 	DMember(bool)                                      bItemDetailsHidden                                          OFFSET(get<bool>, {0x551, 1, 0, 0})
 	DMember(float)                                     HideItemInfoHeaderDurationSecs                              OFFSET(get<float>, {0x554, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2065,6 +2063,8 @@ public:
 	// UWidget* GetWidgetForFramingViewedItem();                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutScreenBase.GetIsReadOnly
 	// bool GetIsReadOnly();                                                                                                    // [0x9d65f6c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutScreenLegacy
 /// Size: 0x0000 (0x0006A0 - 0x0006A0)
 class UFortHeroLoadoutScreenLegacy : public UFortActivatablePanelWithItemPreview
@@ -2089,8 +2089,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnRequestChangeHero                                         OFFSET(get<T>, {0x14D0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnContextMenuOpenChanged                                    OFFSET(get<T>, {0x14E0, 16, 0, 0})
 	CMember(UMenuAnchor*)                              ContextMenuAnchor                                           OFFSET(get<T>, {0x14F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2102,6 +2100,8 @@ public:
 	// bool IsContextMenuOpen();                                                                                                // [0x9d67cd4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutSlotButton.HandleMenuOpenChanged
 	// void HandleMenuOpenChanged(bool bIsMenuOpen);                                                                            // [0x9d678b4] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutTeamPerkPicker
 /// Size: 0x0008 (0x000408 - 0x000410)
 class UFortHeroLoadoutTeamPerkPicker : public UFortItemPickerBase
@@ -2111,8 +2111,6 @@ class UFortHeroLoadoutTeamPerkPicker : public UFortItemPickerBase
 
 public:
 	CMember(TWeakObjectPtr<UFortCampaignHeroLoadoutItem*>) TargetLoadoutItem                                       OFFSET(get<T>, {0x408, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2120,6 +2118,8 @@ public:
 	// void SetTargetLoadout(UFortCampaignHeroLoadoutItem* LoadoutItem);                                                        // [0x9d69eb4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutTeamPerkPicker.HandleDifferentTargetLoadoutSetBP
 	// void HandleDifferentTargetLoadoutSetBP();                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCampaignTabsScreenBase
 /// Size: 0x0078 (0x0003E8 - 0x000460)
 class UFortCampaignTabsScreenBase : public UCommonActivatableWidget
@@ -2133,8 +2133,6 @@ public:
 	CMember(UFortTabListWidgetBase*)                   TopTabList                                                  OFFSET(get<T>, {0x440, 8, 0, 0})
 	CMember(UClass*)                                   MainTabSet                                                  OFFSET(get<T>, {0x448, 8, 0, 0})
 	CMember(UCommonAnimatedSwitcher*)                  Switcher_TabContent                                         OFFSET(get<T>, {0x458, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2150,6 +2148,8 @@ public:
 	// void HandleFeatureStateChanged(EFortUIFeature ChangedFeature, EFortUIFeatureState NewState, EFortUIFeatureStateReason Reason); // [0x9d66fc0] Final|Native|Protected 
 	// Function /Script/SaveTheWorldUI.FortCampaignTabsScreenBase.ConstructTabs
 	// void ConstructTabs();                                                                                                    // [0x9d64c70] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortCampaignTabsScreenBase_Legacy
 /// Size: 0x0070 (0x000520 - 0x000590)
 class UFortCampaignTabsScreenBase_Legacy : public UCommonActivatablePanelLegacy
@@ -2162,8 +2162,6 @@ public:
 	CMember(UHorizontalBox*)                           TopTabContainer                                             OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UFortTabListWidgetBase_Legacy*)            TopTabList                                                  OFFSET(get<T>, {0x578, 8, 0, 0})
 	CMember(UClass*)                                   MainTabSet                                                  OFFSET(get<T>, {0x580, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2177,6 +2175,8 @@ public:
 	// void HandleFeatureNavigateRequest(EFortUIFeature Feature);                                                               // [0x9d66f40] Final|Native|Protected 
 	// Function /Script/SaveTheWorldUI.FortCampaignTabsScreenBase_Legacy.ConstructTabs
 	// void ConstructTabs();                                                                                                    // [0x9d64c84] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.StoreCardObject
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UStoreCardObject : public UObject
@@ -2201,8 +2201,6 @@ public:
 	CMember(UCommonTileView*)                          TileView                                                    OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(UClass*)                                   MulchConfirmationModalClass                                 OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortMulchConfirmationModalWidget*)        MulchConfirmationModal                                      OFFSET(get<T>, {0x560, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2230,6 +2228,8 @@ public:
 	// void FinalizeFavoriteStatus();                                                                                           // [0x9d654b8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortStoreSummary.CloseSummaryScreen
 	// void CloseSummaryScreen();                                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortStoreSummaryItemButton
 /// Size: 0x0050 (0x0014C0 - 0x001510)
 class UFortStoreSummaryItemButton : public UCommonButtonLegacy
@@ -2242,8 +2242,6 @@ public:
 	CMember(UMenuAnchor*)                              PopupMenuAnchor                                             OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	CMember(UStoreCardObject*)                         StoreCardObject                                             OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x1500, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2259,6 +2257,8 @@ public:
 	// UStoreCardObject* GetStoreCardObject();                                                                                  // [0x9d665f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortStoreSummaryItemButton.GetPopupMenu
 	// UUserWidget* GetPopupMenu();                                                                                             // [0x9d661c0] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortStoreSummaryItemButton_Legacy
 /// Size: 0x0050 (0x0014C0 - 0x001510)
 class UFortStoreSummaryItemButton_Legacy : public UCommonButtonLegacy
@@ -2271,8 +2271,6 @@ public:
 	CMember(UMenuAnchor*)                              PopupMenuAnchor                                             OFFSET(get<T>, {0x14F0, 8, 0, 0})
 	CMember(UStoreCardObject*)                         StoreCardObject                                             OFFSET(get<T>, {0x14F8, 8, 0, 0})
 	CMember(UFortInventoryContext*)                    InventoryContext                                            OFFSET(get<T>, {0x1500, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2290,6 +2288,8 @@ public:
 	// UStoreCardObject* GetStoreCardObject();                                                                                  // [0x9d665f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortStoreSummaryItemButton_Legacy.GetPopupMenu
 	// UUserWidget* GetPopupMenu();                                                                                             // [0x9d661c0] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortStoreSummaryItemPopupMenu
 /// Size: 0x0008 (0x000540 - 0x000548)
 class UFortStoreSummaryItemPopupMenu : public UFortPopupMenu
@@ -2322,8 +2322,6 @@ public:
 	CMember(UCommonTileView*)                          TileView                                                    OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(UClass*)                                   MulchConfirmationModalClass                                 OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortMulchConfirmationModalWidget*)        MulchConfirmationModal                                      OFFSET(get<T>, {0x560, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2351,6 +2349,8 @@ public:
 	// void FinalizeFavoriteStatus();                                                                                           // [0x9d65508] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortStoreSummary_Legacy.CloseSummaryScreen
 	// void CloseSummaryScreen();                                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutGadgetTileBase
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortHeroLoadoutGadgetTileBase : public UCommonUserWidget
@@ -2363,8 +2363,6 @@ public:
 	CMember(UCommonLazyImage*)                         Image_Icon                                                  OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(URichTextBlock*)                           RichText_Description                                        OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UFortGadgetItemDefinition*)                GadgetToRepresent                                           OFFSET(get<T>, {0x2E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2372,6 +2370,8 @@ public:
 	// void SetGadgetToRepresent(UFortGadgetItemDefinition* GadgetItemDefinition);                                              // [0x9d69358] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutGadgetTileBase.OnGadgetUpdated
 	// void OnGadgetUpdated(bool bIsValidGadget);                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutInGameScreenBase
 /// Size: 0x0050 (0x000520 - 0x000570)
 class UFortHeroLoadoutInGameScreenBase : public UCommonActivatablePanelLegacy
@@ -2388,8 +2388,6 @@ public:
 	CMember(UFortHeroLoadoutGadgetTileBase*)           GadgetTile_Gadget1                                          OFFSET(get<T>, {0x550, 8, 0, 0})
 	CMember(UFortHeroLoadoutGadgetTileBase*)           GadgetTile_Gadget2                                          OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(TArray<UFortHeroLoadoutGadgetTileBase*>)   GadgetTiles                                                 OFFSET(get<T>, {0x560, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2397,6 +2395,8 @@ public:
 	// void OnPerkWidgetAdded(UGridSlot* GridSlot);                                                                             // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutInGameScreenBase.GetGadgetDefinitionBySlot
 	// UFortGadgetItemDefinition* GetGadgetDefinitionBySlot(int32_t SlotIndex);                                                 // [0x9d65e38] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroLoadoutPerkTileBase
 /// Size: 0x0088 (0x0002D0 - 0x000358)
 class UFortHeroLoadoutPerkTileBase : public UCommonUserWidget
@@ -2416,13 +2416,13 @@ public:
 	DMember(float)                                     InactiveOpacity                                             OFFSET(get<float>, {0x328, 4, 0, 0})
 	DMember(float)                                     ActiveOpacity                                               OFFSET(get<float>, {0x32C, 4, 0, 0})
 	CMember(UFortAbilityKit*)                          AbilityKit                                                  OFFSET(get<T>, {0x330, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortHeroLoadoutPerkTileBase.OnPerkInitialized
 	// void OnPerkInitialized(EFortHeroPerkDisplayType InPerkType, bool bActive, bool bShowWarning);                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortAlterationModOptinScreenBase
 /// Size: 0x0018 (0x000520 - 0x000538)
 class UFortAlterationModOptinScreenBase : public UCommonActivatablePanelLegacy
@@ -2432,8 +2432,6 @@ class UFortAlterationModOptinScreenBase : public UCommonActivatablePanelLegacy
 
 public:
 	CMember(UFortItem*)                                ItemToOptin                                                 OFFSET(get<T>, {0x520, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2447,6 +2445,8 @@ public:
 	// void OnItemConversionComplete();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortAlterationModOptinScreenBase.ConvertItemAlterations
 	// void ConvertItemAlterations();                                                                                           // [0x9d64d18] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortAlterationModScreenBase
 /// Size: 0x0060 (0x000558 - 0x0005B8)
 class UFortAlterationModScreenBase : public UFortActivatablePanel
@@ -2463,8 +2463,6 @@ public:
 	SMember(FDataTableRowHandle)                       BackInputAction                                             OFFSET(get<T>, {0x580, 16, 0, 0})
 	CMember(TWeakObjectPtr<UFortAlterableItem*>)       AlterableItem                                               OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(UFortAlterationOption*)                    CurrentAlterationOptionInternal                             OFFSET(get<T>, {0x598, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2490,6 +2488,8 @@ public:
 	// void CancelSelection();                                                                                                  // [0x9d64bfc] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortAlterationModScreenBase.AreIngredientRequirementsMent
 	// bool AreIngredientRequirementsMent(TArray<FFortItemQuantityPair>& RequiredIngredients);                                  // [0x9d64718] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemInspectionScreen
 /// Size: 0x00F8 (0x0006A0 - 0x000798)
 class UFortItemInspectionScreen : public UFortActivatablePanelWithItemPreview
@@ -2511,8 +2511,6 @@ public:
 	CMember(UClass*)                                   AlterationModOptinScreenClass                               OFFSET(get<T>, {0x708, 8, 0, 0})
 	CMember(UClass*)                                   AlterationModScreenClass                                    OFFSET(get<T>, {0x710, 8, 0, 0})
 	CMember(TWeakObjectPtr<UDataTable*>)               RefundDescriptionsDataTable                                 OFFSET(get<T>, {0x718, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2552,6 +2550,8 @@ public:
 	// bool DoesItemHaveLegacyAlterations();                                                                                    // [0x9d65018] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortItemInspectionScreen.DoAlterationModification
 	// void DoAlterationModification();                                                                                         // [0x9d64f60] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortItemInspectCycleWidget
 /// Size: 0x0050 (0x0002D0 - 0x000320)
 class UFortItemInspectCycleWidget : public UCommonUserWidget
@@ -2565,8 +2565,6 @@ public:
 	CMember(TWeakObjectPtr<UFortItem*>)                ItemToRepresent                                             OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	SMember(FDataTableRowHandle)                       PreviousItemActionRowHandle                                 OFFSET(get<T>, {0x2F0, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       NextItemActionRowHandle                                     OFFSET(get<T>, {0x300, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2586,6 +2584,8 @@ public:
 	// void OnItemCycled(UFortItem* OldItem, UFortItem* NewItem, int32_t OffsetFromPreviousItem);                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortItemInspectCycleWidget.GetItemWithOffset_BP
 	// UFortItem* GetItemWithOffset_BP(int32_t IndexOffset);                                                                    // [0x9d660a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortAlterationOption
 /// Size: 0x0040 (0x0014C0 - 0x001500)
 class UFortAlterationOption : public UCommonButtonLegacy
@@ -2595,8 +2595,6 @@ class UFortAlterationOption : public UCommonButtonLegacy
 
 public:
 	SMember(FAlterationOption)                         AlterationOption                                            OFFSET(get<T>, {0x14C8, 48, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2614,6 +2612,8 @@ public:
 	// EFortAlterationOptionType GetAlterationOptionType();                                                                     // [0x9d65604] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortAlterationOption.GetAlterationDefinition
 	// UFortAlterationItemDefinition* GetAlterationDefinition();                                                                // [0x9d655e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortAlterationOptionsBase
 /// Size: 0x00A0 (0x0002D0 - 0x000370)
 class UFortAlterationOptionsBase : public UCommonUserWidget
@@ -2629,8 +2629,6 @@ public:
 	DMember(bool)                                      bUpgradeOptionExists                                        OFFSET(get<bool>, {0x31C, 1, 0, 0})
 	SMember(FAlterationOption)                         UpgradeOption                                               OFFSET(get<T>, {0x320, 48, 0, 0})
 	CMember(TArray<FAlterationOption>)                 RespecOptions                                               OFFSET(get<T>, {0x350, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2648,6 +2646,8 @@ public:
 	// void HandleAlterationsOptionHovered(UCommonButtonLegacy* AlterationOptionButton, int32_t GroupIndex);                    // [0x9d66cf0] Final|Native|Public  
 	// Function /Script/SaveTheWorldUI.FortAlterationOptionsBase.DoAlterationOptionsExist
 	// bool DoAlterationOptionsExist(EFortAlterationOptionType OptionType);                                                     // [0x9d64f74] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortMissionActivationInfoSTW
 /// Size: 0x0150 (0x000028 - 0x000178)
 class UFortMissionActivationInfoSTW : public UObject
@@ -2660,8 +2660,6 @@ public:
 	CMember(AFortPlayerController*)                    FortPC                                                      OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(AFortGameStateZone*)                       GameStateZone                                               OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(UCurveFloat*)                              DifficultyIncreaseBluGloCurve                               OFFSET(get<T>, {0xB0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2719,6 +2717,8 @@ public:
 	// bool DoesPrimaryMissionContainTags(FGameplayTagContainer& Tags);                                                         // [0x943f478] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortMissionActivationInfoSTW.CanRequestVote
 	// bool CanRequestVote(EFortVoteType VoteType);                                                                             // [0x943f290] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortMissionActivationWidgetSTWPanel
 /// Size: 0x0028 (0x0002D0 - 0x0002F8)
 class UFortMissionActivationWidgetSTWPanel : public UCommonUserWidget
@@ -2728,8 +2728,6 @@ class UFortMissionActivationWidgetSTWPanel : public UCommonUserWidget
 
 public:
 	CMember(UFortMissionActivationInfoSTW*)            InfoObject                                                  OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2745,6 +2743,8 @@ public:
 	// void OnActiveVoteChangedBP(EFortVoteType VoteType, bool bIsVoteActive, int32_t VoteResult);                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortMissionActivationWidgetSTWPanel.InfoObjectUpdated
 	// void InfoObjectUpdated();                                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortMissionActivationWidgetSTW
 /// Size: 0x0050 (0x0003E8 - 0x000438)
 class UFortMissionActivationWidgetSTW : public UCommonActivatableWidget
@@ -2756,8 +2756,6 @@ public:
 	CMember(UFortMissionActivationInfoSTW*)            InfoObject                                                  OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     ReadyUpObjectiveHandle                                      OFFSET(get<T>, {0x3F0, 32, 0, 0})
 	CMember(UCurveFloat*)                              DifficultyIncreaseBluGloCurve                               OFFSET(get<T>, {0x410, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2777,6 +2775,8 @@ public:
 	// void OnActiveVoteChangedBP(EFortVoteType VoteType, bool bIsVoteActive, int32_t VoteResult);                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortMissionActivationWidgetSTW.GetCurrentState
 	// EFortMissionActivationWidgetSTWState GetCurrentState();                                                                  // [0x30028c0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortOutpostScreen
 /// Size: 0x0000 (0x0003E8 - 0x0003E8)
 class UFortOutpostScreen : public UCommonActivatableWidget
@@ -2806,8 +2806,6 @@ class UFortJournalQuestDetails : public UCommonUserWidget
 
 public:
 	CMember(UFortQuestItem*)                           CurrentQuest                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2833,6 +2831,8 @@ public:
 	// bool CanPartyLeaderPlayQuest();                                                                                          // [0x9d64b30] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortJournalQuestDetails.CanGotoQuest
 	// bool CanGotoQuest();                                                                                                     // [0x9d64b04] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortJournalQuestProgressBar
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortJournalQuestProgressBar : public UCommonUserWidget
@@ -2842,13 +2842,13 @@ class UFortJournalQuestProgressBar : public UCommonUserWidget
 
 public:
 	CMember(TWeakObjectPtr<UFortQuestObjectiveInfo*>)  QuestObjectiveInfo                                          OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortJournalQuestProgressBar.GetProgressDetails
 	// void GetProgressDetails(FText& OutNumerator, FText& OutDenominator, float& OutFraction);                                 // [0x9d661e4] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortLayoutQuestNode
 /// Size: 0x0028 (0x0002D0 - 0x0002F8)
 class UFortLayoutQuestNode : public UCommonUserWidget
@@ -2886,8 +2886,6 @@ public:
 	SMember(FSlateColor)                               ArrowColor                                                  OFFSET(get<T>, {0x1470, 20, 0, 0})
 	SMember(FSlateColor)                               HoverColor                                                  OFFSET(get<T>, {0x1484, 20, 0, 0})
 	SMember(FSlateColor)                               ShadowColor                                                 OFFSET(get<T>, {0x1498, 20, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2899,6 +2897,8 @@ public:
 	// void OnIsInteractiveSet(bool bIsInteractive);                                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortProgressArrowButton.OnArrowColorSet
 	// void OnArrowColorSet();                                                                                                  // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortProgressArrowButton_Legacy
 /// Size: 0x0040 (0x0014C0 - 0x001500)
 class UFortProgressArrowButton_Legacy : public UCommonButtonLegacy
@@ -2910,8 +2910,6 @@ public:
 	SMember(FSlateColor)                               ArrowColor                                                  OFFSET(get<T>, {0x14C0, 20, 0, 0})
 	SMember(FSlateColor)                               HoverColor                                                  OFFSET(get<T>, {0x14D4, 20, 0, 0})
 	SMember(FSlateColor)                               ShadowColor                                                 OFFSET(get<T>, {0x14E8, 20, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2923,6 +2921,8 @@ public:
 	// void OnIsInteractiveSet(bool bIsInteractive);                                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortProgressArrowButton_Legacy.OnArrowColorSet
 	// void OnArrowColorSet();                                                                                                  // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestExpiresWidget
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortQuestExpiresWidget : public UCommonUserWidget
@@ -2932,8 +2932,6 @@ class UFortQuestExpiresWidget : public UCommonUserWidget
 
 public:
 	CMember(TWeakObjectPtr<UFortQuestItem*>)           Item                                                        OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2941,6 +2939,8 @@ public:
 	// void SetData(UFortQuestItem* InItem);                                                                                    // [0x74d2ae8] Native|Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestExpiresWidget.OnQuestExpirationUpdated
 	// void OnQuestExpirationUpdated();                                                                                         // [0x1284044] Native|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapCosmeticListWidget
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortQuestMapCosmeticListWidget : public UCommonUserWidget
@@ -2962,8 +2962,6 @@ public:
 	CMember(UClass*)                                   QuestConversationClass                                      OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(float)                                     QuestUpdateDelayTime                                        OFFSET(get<float>, {0x2D8, 4, 0, 0})
 	SMember(FTimerHandle)                              QuestUpdateTimerHandle                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2973,6 +2971,8 @@ public:
 	// void SetQuestToDisplay(UFortQuestItemDefinition* QuestDef);                                                              // [0x6c7b61c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortQuestMapDetailsPanelBase.HandleQuestsUpdatedInternal
 	// void HandleQuestsUpdatedInternal();                                                                                      // [0x9d67af8] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapDetailsPanel
 /// Size: 0x00B0 (0x0002E8 - 0x000398)
 class UFortQuestMapDetailsPanel : public UFortQuestMapDetailsPanelBase
@@ -3055,8 +3055,6 @@ public:
 	CMember(USoundBase*)                               OverrideSound                                               OFFSET(get<T>, {0x498, 8, 0, 0})
 	CMember(UAudioComponent*)                          SoundLoop                                                   OFFSET(get<T>, {0x4A0, 8, 0, 0})
 	CMember(UFortQuestMapData*)                        QuestMapData                                                OFFSET(get<T>, {0x4A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3098,6 +3096,8 @@ public:
 	// int32_t GetEventCount();                                                                                                 // [0x9d65760] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortQuestMapEventCallout.DeactivateCallout
 	// void DeactivateCallout();                                                                                                // [0x9d64f38] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapEventCallout_Legacy
 /// Size: 0x0138 (0x000558 - 0x000690)
 class UFortQuestMapEventCallout_Legacy : public UFortActivatablePanel
@@ -3122,8 +3122,6 @@ public:
 	CMember(USoundBase*)                               OverrideSound                                               OFFSET(get<T>, {0x608, 8, 0, 0})
 	CMember(UAudioComponent*)                          SoundLoop                                                   OFFSET(get<T>, {0x610, 8, 0, 0})
 	CMember(UFortQuestMapData*)                        QuestMapData                                                OFFSET(get<T>, {0x618, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3165,6 +3163,8 @@ public:
 	// int32_t GetEventCount();                                                                                                 // [0x675d340] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortQuestMapEventCallout_Legacy.DeactivateCallout
 	// void DeactivateCallout();                                                                                                // [0x9d64f4c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapEventDetailsPanel
 /// Size: 0x0098 (0x0002E8 - 0x000380)
 class UFortQuestMapEventDetailsPanel : public UFortQuestMapDetailsPanelBase
@@ -3322,8 +3322,6 @@ public:
 	CMember(USizeBox*)                                 EndArrow                                                    OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   QuestButtonGroup                                            OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UFortQuestMapScreen*)                      ParentScreen                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3331,6 +3329,8 @@ public:
 	// void HandleQuestIndexSelectionModelIndexChanged(bool bUpdateButtonSelection);                                            // [0x9d67a78] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortQuestMapNodeLayout.HandleQuestButtonSelected
 	// void HandleQuestButtonSelected(UCommonButtonBase* SelectedQuestButton, int32_t ButtonIndex);                             // [0x9d679b4] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapNodeLayout_Legacy
 /// Size: 0x0068 (0x0002A8 - 0x000310)
 class UFortQuestMapNodeLayout_Legacy : public UUserWidget
@@ -3346,8 +3346,6 @@ public:
 	CMember(USizeBox*)                                 EndArrow                                                    OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(UCommonButtonGroupLegacy*)                 QuestButtonGroup                                            OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UFortQuestMapScreen_Legacy*)               ParentScreen                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3355,6 +3353,8 @@ public:
 	// void HandleQuestIndexSelectionModelIndexChanged(bool bUpdateButtonSelection);                                            // [0x9d933d8] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortQuestMapNodeLayout_Legacy.HandleQuestButtonSelected
 	// void HandleQuestButtonSelected(UCommonButtonLegacy* SelectedQuestButton, int32_t ButtonIndex);                           // [0x9d679b4] Final|Native|Private 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapQuestTile
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortQuestMapQuestTile : public UCommonUserWidget
@@ -3365,8 +3365,6 @@ class UFortQuestMapQuestTile : public UCommonUserWidget
 public:
 	CMember(UCommonButtonBase*)                        QuestButton                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	SMember(FFortQuestMapNode)                         QuestNodeData                                               OFFSET(get<T>, {0x2D8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3376,6 +3374,8 @@ public:
 	// void HandleQuestDataChangedBP();                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestMapQuestTile.GetQuestNodeData
 	// void GetQuestNodeData(UFortQuestItemDefinition*& QuestItemDefinition, FFortQuestMapNode& NodeData);                      // [0x9d91dbc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapQuestTile_Legacy
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortQuestMapQuestTile_Legacy : public UCommonUserWidget
@@ -3386,8 +3386,6 @@ class UFortQuestMapQuestTile_Legacy : public UCommonUserWidget
 public:
 	CMember(UCommonButtonLegacy*)                      QuestButton                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	SMember(FFortQuestMapNode)                         QuestNodeData                                               OFFSET(get<T>, {0x2D8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3397,6 +3395,8 @@ public:
 	// void HandleQuestDataChangedBP();                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestMapQuestTile_Legacy.GetQuestNodeData
 	// void GetQuestNodeData(UFortQuestItemDefinition*& QuestItemDefinition, FFortQuestMapNode& NodeData);                      // [0x9d91dbc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapScreen
 /// Size: 0x00B8 (0x0003E8 - 0x0004A0)
 class UFortQuestMapScreen : public UCommonActivatableWidget
@@ -3419,8 +3419,6 @@ public:
 	SMember(FDataTableRowHandle)                       CurrentQuestAction                                          OFFSET(get<T>, {0x460, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       STWNewsAction                                               OFFSET(get<T>, {0x470, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       BackAction                                                  OFFSET(get<T>, {0x480, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3474,6 +3472,8 @@ public:
 	// void ClaimQuestRewards(UFortQuestItem* QuestItem);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestMapScreen.CheckForNewMainQuest
 	// void CheckForNewMainQuest();                                                                                             // [0x9d90c48] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapScreen_Legacy
 /// Size: 0x0068 (0x000520 - 0x000588)
 class UFortQuestMapScreen_Legacy : public UCommonActivatablePanelLegacy
@@ -3491,8 +3491,6 @@ public:
 	CMember(UFortQuestMapDataAsset*)                   CampaignQuestMapDataTable                                   OFFSET(get<T>, {0x548, 8, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 CutoffQuest                                                 OFFSET(get<T>, {0x550, 8, 0, 0})
 	CMember(UFortQuestMapDataAsset*)                   CurrentQuestMapDataTable                                    OFFSET(get<T>, {0x558, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3540,6 +3538,8 @@ public:
 	// bool GetBeyondCutoffQuest();                                                                                             // [0x9d90fac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortQuestMapScreen_Legacy.CheckForNewMainQuest
 	// void CheckForNewMainQuest();                                                                                             // [0x9d90c9c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestMapViewer_Legacy
 /// Size: 0x0080 (0x0002D0 - 0x000350)
 class UFortQuestMapViewer_Legacy : public UCommonUserWidget
@@ -3556,8 +3556,6 @@ public:
 	CMember(UCanvasPanel*)                             CanvasPanel_Cosmetic                                        OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UFortQuestMapScreen_Legacy*)               ParentScreen                                                OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UFortQuestMapNodeLayout_Legacy*)           NodeLayout                                                  OFFSET(get<T>, {0x318, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3571,6 +3569,8 @@ public:
 	// void OnPlayLayoutFadeInAnimation();                                                                                      // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestMapViewer_Legacy.HandleLayoutOutroAnimationFinished
 	// void HandleLayoutOutroAnimationFinished();                                                                               // [0x9d92b0c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestPlayButton
 /// Size: 0x0008 (0x0002D0 - 0x0002D8)
 class UFortQuestPlayButton : public UCommonUserWidget
@@ -3580,8 +3580,6 @@ class UFortQuestPlayButton : public UCommonUserWidget
 
 public:
 	CMember(UFortQuestItem*)                           QuestItem                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3599,6 +3597,8 @@ public:
 	// bool CanPlayQuest();                                                                                                     // [0x9d90c24] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortQuestPlayButton.AttemptToPlayQuest
 	// void AttemptToPlayQuest();                                                                                               // [0x9d90b44] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestTreeItemWidget
 /// Size: 0x0010 (0x001470 - 0x001480)
 class UFortQuestTreeItemWidget : public UCommonButtonBase
@@ -3608,8 +3608,6 @@ class UFortQuestTreeItemWidget : public UCommonButtonBase
 
 public:
 	CMember(TWeakObjectPtr<UObject*>)                  QuestOrCategory                                             OFFSET(get<T>, {0x1478, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3621,6 +3619,8 @@ public:
 	// void OnQuestsUpdated();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestTreeItemWidget.HandleQuestsUpdated
 	// void HandleQuestsUpdated();                                                                                              // [0x9d93454] Final|Native|Protected 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestTreeItemWidget_Legacy
 /// Size: 0x0010 (0x0014C0 - 0x0014D0)
 class UFortQuestTreeItemWidget_Legacy : public UCommonButtonLegacy
@@ -3630,8 +3630,6 @@ class UFortQuestTreeItemWidget_Legacy : public UCommonButtonLegacy
 
 public:
 	CMember(TWeakObjectPtr<UObject*>)                  QuestOrCategory                                             OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3643,6 +3641,8 @@ public:
 	// void OnQuestsUpdated();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestTreeItemWidget_Legacy.HandleQuestsUpdated
 	// void HandleQuestsUpdated();                                                                                              // [0x9d93468] Final|Native|Protected 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestScreen
 /// Size: 0x00F8 (0x0003E8 - 0x0004E0)
 class UFortQuestScreen : public UCommonActivatableWidget
@@ -3664,8 +3664,6 @@ public:
 	SMember(FDataTableRowHandle)                       PinQuestAction                                              OFFSET(get<T>, {0x470, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       UnpinQuestAction                                            OFFSET(get<T>, {0x480, 16, 0, 0})
 	SMember(FDataTableRowHandle)                       StopConversationAction                                      OFFSET(get<T>, {0x490, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3701,6 +3699,8 @@ public:
 	// void BP_HandleAbandonQuestAction();                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortQuestScreen.AttemptToPlayQuest
 	// void AttemptToPlayQuest(UFortQuestItem* QuestItem);                                                                      // [0x9d90b58] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortQuestScreen_Legacy
 /// Size: 0x0000 (0x000558 - 0x000558)
 class UFortQuestScreen_Legacy : public UFortActivatablePanel
@@ -3720,8 +3720,6 @@ class UFortResearchMenuBase : public UFortActivatablePanel
 
 public:
 	CMember(UFortItemDefinition*)                      ResearchRespecToken                                         OFFSET(get<T>, {0x558, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3741,6 +3739,8 @@ public:
 	// int32_t GetClaimableResearchPointEstimate();                                                                             // [0x9d90fc4] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortResearchMenuBase.AreResearchRespecTokensAvailable
 	// bool AreResearchRespecTokensAvailable();                                                                                 // [0x9d90b1c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortResearchStatTileWidget
 /// Size: 0x0040 (0x0002A8 - 0x0002E8)
 class UFortResearchStatTileWidget : public UUserWidget
@@ -3756,8 +3756,6 @@ public:
 	SMember(FName)                                     StatPersonalCumulativeCurveName                             OFFSET(get<T>, {0x2C0, 4, 0, 0})
 	SMember(FName)                                     StatTeamDeltaCurveName                                      OFFSET(get<T>, {0x2C4, 4, 0, 0})
 	SMember(FName)                                     StatTeamCumulativeCurveName                                 OFFSET(get<T>, {0x2C8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3785,6 +3783,8 @@ public:
 	// int32_t GetCurrentCombinedStatValue();                                                                                   // [0x9d9101c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortResearchStatTileWidget.GetCostToIncreaseStat
 	// int32_t GetCostToIncreaseStat();                                                                                         // [0x9d90fe8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortRewardNotificationData
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UFortRewardNotificationData : public UObject
@@ -3794,13 +3794,13 @@ class UFortRewardNotificationData : public UObject
 
 public:
 	CMember(EFrontEndRewardType)                       RewardType                                                  OFFSET(get<T>, {0x28, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortRewardNotificationData.GetIconBrush
 	// bool GetIconBrush(FSlateBrush& IconBrush, TEnumAsByte<EFortBrushSize> BrushSize);                                        // [0x9d912fc] Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortRewardCollectionBookData
 /// Size: 0x0060 (0x000030 - 0x000090)
 class UFortRewardCollectionBookData : public UFortRewardNotificationData
@@ -3822,8 +3822,6 @@ class UFortRewardNotificationSubWidget : public UCommonUserWidget
 public:
 	SMember(FMulticastInlineDelegate)                  OnTransitionInComplete                                      OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTransitionOutComplete                                     OFFSET(get<T>, {0x2E0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3871,6 +3869,8 @@ public:
 	// void Init(UFortRewardNotificationWidget* MainWidget);                                                                    // [0x9d936e4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortRewardNotificationSubWidget.AddInputActionHandler
 	// void AddInputActionHandler(UDataTable* DataTable, FName RowName, FDelegateProperty CommittedEvent);                      // [0x9d90764] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortRewardConversationWidget
 /// Size: 0x0000 (0x0002F8 - 0x0002F8)
 class UFortRewardConversationWidget : public UFortRewardNotificationSubWidget
@@ -3922,8 +3922,6 @@ class UFortRewardExpeditionWidget : public UFortRewardNotificationSubWidget
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnMcpError                                                  OFFSET(get<T>, {0x2F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3931,6 +3929,8 @@ public:
 	// void OnCollectExpeditionCompleted(UFortExpeditionItem* Expedition, bool bSucceeded, TArray<FFortItemInstanceQuantityPair>& Rewards); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortRewardExpeditionWidget.CollectExpedition
 	// void CollectExpedition(UFortExpeditionItem* Expedition);                                                                 // [0x9d90d04] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortRewardGiftBoxData
 /// Size: 0x0008 (0x000030 - 0x000038)
 class UFortRewardGiftBoxData : public UFortRewardNotificationData
@@ -3996,8 +3996,6 @@ public:
 	SMember(FFortSwipeDetector)                        SwipeDetector                                               OFFSET(get<T>, {0x550, 144, 0, 0})
 	CMember(UClass*)                                   MulchConfirmationModalClass                                 OFFSET(get<T>, {0x600, 8, 0, 0})
 	CMember(UFortMulchConfirmationModalWidget*)        MulchConfirmationModal                                      OFFSET(get<T>, {0x608, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4101,6 +4099,8 @@ public:
 	// void AddDifficultyIncreaseRewardData();                                                                                  // [0x9d9050c] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortRewardNotificationWidget.AddCollectionBookData
 	// void AddCollectionBookData(FFortCollectionBookRewards& CollectionBookRewards);                                           // [0x9d90420] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortRewardPhoenixLevelUpData
 /// Size: 0x0018 (0x000030 - 0x000048)
 class UFortRewardPhoenixLevelUpData : public UFortRewardNotificationData
@@ -4220,8 +4220,6 @@ public:
 	CMember(UClass*)                                   DisableAutoSlottingToClearSquadPromptAction                 OFFSET(get<T>, {0x650, 8, 0, 0})
 	CMember(UFortItemViewContext_SquadSlotsView*)      ItemViewContext_SquadSlotsView                              OFFSET(get<T>, {0x668, 8, 0, 0})
 	CMember(UFortItemViewContext_SquadSlotItemPicker*) ItemViewContext_SquadSlotItemPicker                         OFFSET(get<T>, {0x670, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4293,6 +4291,8 @@ public:
 	// FName GetIdOfSquadToManageBP();                                                                                          // [0x7b74da8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSquadManagementScreenBase.ClearSquad
 	// void ClearSquad();                                                                                                       // [0x9d90cf0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHeroSquadManagementScreen
 /// Size: 0x0020 (0x000678 - 0x000698)
 class UFortHeroSquadManagementScreen : public UFortSquadManagementScreenBase
@@ -4303,13 +4303,13 @@ class UFortHeroSquadManagementScreen : public UFortSquadManagementScreenBase
 public:
 	SMember(FDataTableRowHandle)                       ManageDefendersInputActionRowHandle                         OFFSET(get<T>, {0x678, 16, 0, 0})
 	CMember(UFortHeroSquadBonusPerksWidgetBase*)       BonusPerksWidget                                            OFFSET(get<T>, {0x688, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortHeroSquadManagementScreen.PlayFeedbackForSlottingPerson
 	// void PlayFeedbackForSlottingPerson(UFortCharacter* Character, int32_t SlotIndex);                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadIcon
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortSquadIcon : public UCommonUserWidget
@@ -4321,8 +4321,6 @@ public:
 	SMember(FName)                                     Name                                                        OFFSET(get<T>, {0x2D0, 4, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x2D4, 1, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4330,6 +4328,8 @@ public:
 	// void SetSquad(FName& InName);                                                                                            // [0x9d9672c] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortSquadIcon.HandleDifferentSquadSetBP
 	// void HandleDifferentSquadSetBP();                                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadLandingPageDefenderSquadDetails
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortSquadLandingPageDefenderSquadDetails : public UCommonUserWidget
@@ -4340,8 +4340,6 @@ class UFortSquadLandingPageDefenderSquadDetails : public UCommonUserWidget
 public:
 	CMember(UCommonTextBlock*)                         OutpostName                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonNumericTextBlock*)                  PowerRating                                                 OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4351,6 +4349,8 @@ public:
 	// void HandleDefenderSquadInfoSetBP(FFortLandingPageDefenderSummaryInfo& DefenderSummaryInfo);                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortSquadLandingPageDefenderSquadDetails.HandleAddDefenderSquadMemberBP
 	// void HandleAddDefenderSquadMemberBP(FName& SquadId, int32_t Index);                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadLandingPageDefenderSquadDetailsLocked
 /// Size: 0x0008 (0x0002D0 - 0x0002D8)
 class UFortSquadLandingPageDefenderSquadDetailsLocked : public UCommonUserWidget
@@ -4360,13 +4360,13 @@ class UFortSquadLandingPageDefenderSquadDetailsLocked : public UCommonUserWidget
 
 public:
 	CMember(UCommonTextBlock*)                         OutpostName                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortSquadLandingPageDefenderSquadDetailsLocked.SetDefenderSquadInfo
 	// void SetDefenderSquadInfo(FFortLandingPageDefenderSummaryInfo& DefenderSummaryInfo);                                     // [0x9d95324] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadLandingPageDefenderSummary
 /// Size: 0x0008 (0x0002D0 - 0x0002D8)
 class UFortSquadLandingPageDefenderSummary : public UCommonUserWidget
@@ -4389,8 +4389,6 @@ public:
 	CMember(UFortSquadStatValueWithIcon*)              OffenseStatValue                                            OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UFortSquadStatValueWithIcon*)              ResistanceStatValue                                         OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UFortSquadStatValueWithIcon*)              TechStatValue                                               OFFSET(get<T>, {0x2E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4398,6 +4396,8 @@ public:
 	// void HandleClearSetBonusSummaryLineItemsBP();                                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortSquadLandingPageSurvivorSummary.HandleAddSetBonusSummaryLineItemBP
 	// void HandleAddSetBonusSummaryLineItemBP(FFortAttributeModifierAccumulation AttributeModifierAccumulation);               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadManagementItemViewContextBase
 /// Size: 0x00D0 (0x000028 - 0x0000F8)
 class UFortSquadManagementItemViewContextBase : public UObject
@@ -4458,8 +4458,6 @@ class UFortSquadSlotDetailsPanel : public UCommonUserWidget
 public:
 	CMember(UFortSquadSlotItemDetailsHostPanel*)       ItemDetailsPanel                                            OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   ItemViewContext                                             OFFSET(get<T>, {0x2F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4483,6 +4481,8 @@ public:
 	// UFortItem* GetItemInSquadSlotBP(ULocalPlayer* LocalPlayer);                                                              // [0x9d919e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSquadSlotDetailsPanel.GetIdOfSquadSlotToManageBP
 	// void GetIdOfSquadSlotToManageBP(FName& OutSquadId, int32_t& OutSquadSlotIndex);                                          // [0x9d91470] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadSlotItemDetailElementWidget
 /// Size: 0x0020 (0x000328 - 0x000348)
 class UFortSquadSlotItemDetailElementWidget : public UFortItemDetailElementWidget
@@ -4512,8 +4512,6 @@ class UFortSquadSlotItemPicker : public UFortItemPickerBase
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnSortChanged                                               OFFSET(get<T>, {0x440, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4527,6 +4525,8 @@ public:
 	// void FortSquadSlotSortChanged__DelegateSignature(ESquadSlotSortType CurrentSortType, ESquadSlotType SquadSlotType);      // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/SaveTheWorldUI.FortSquadSlotItemPicker.CycleSortType
 	// void CycleSortType();                                                                                                    // [0x9d90f80] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadSlotItemPickerTileButton
 /// Size: 0x0010 (0x001500 - 0x001510)
 class UFortSquadSlotItemPickerTileButton : public UFortItemTileButton
@@ -4546,8 +4546,6 @@ class UFortSquadSlotSelectorPopupMenu : public UFortPopupMenu_Legacy
 
 public:
 	DMember(bool)                                      bReadOnlyModeWIFE                                           OFFSET(get<bool>, {0x540, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4555,6 +4553,8 @@ public:
 	// bool IsScreenWIFE();                                                                                                     // [0x9d94180] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSquadSlotSelectorPopupMenu.GetHostButton
 	// UFortSquadSlotSelectorButton* GetHostButton();                                                                           // [0x9d912b0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadSlotSurvivorTraitMatchesDetailWidget
 /// Size: 0x0028 (0x000348 - 0x000370)
 class UFortSquadSlotSurvivorTraitMatchesDetailWidget : public UFortSquadSlotItemDetailElementWidget
@@ -4569,13 +4569,13 @@ public:
 	DMember(bool)                                      MatchesLeaderPersonality                                    OFFSET(get<bool>, {0x350, 1, 0, 0})
 	DMember(int32_t)                                   MatchingSetBonusCount                                       OFFSET(get<int32_t>, {0x354, 4, 0, 0})
 	DMember(int32_t)                                   SetBonusSize                                                OFFSET(get<int32_t>, {0x358, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortSquadSlotSurvivorTraitMatchesDetailWidget.HandleTraitValuesUpdatedBP
 	// void HandleTraitValuesUpdatedBP();                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadSlotSelectorButton
 /// Size: 0x0080 (0x0014C0 - 0x001540)
 class UFortSquadSlotSelectorButton : public UCommonButtonLegacy
@@ -4589,8 +4589,6 @@ public:
 	CMember(UFortSquadSlotWidget*)                     SquadSlotWidget                                             OFFSET(get<T>, {0x1500, 8, 0, 0})
 	CMember(UMenuAnchor*)                              PopupMenuAnchor                                             OFFSET(get<T>, {0x1508, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   ItemViewContext                                             OFFSET(get<T>, {0x1510, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4614,6 +4612,8 @@ public:
 	// bool GetInPreviewMode();                                                                                                 // [0x9d919b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSquadSlotSelectorButton.GetIdOfSquadSlotToManageBP
 	// void GetIdOfSquadSlotToManageBP(FName& OutSquadId, int32_t& OutSquadSlotIndex);                                          // [0x9d917e0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadSlotsView
 /// Size: 0x00F8 (0x0002D0 - 0x0003C8)
 class UFortSquadSlotsView : public UCommonUserWidget
@@ -4633,8 +4633,6 @@ public:
 	CMember(UClass*)                                   DisableAutoSlottingToOpenSquadSlotPromptAction              OFFSET(get<T>, {0x370, 8, 0, 0})
 	CMember(UFortCommittableButtonGroup*)              SquadSlotButtonGroup                                        OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   ItemViewContext                                             OFFSET(get<T>, {0x3B0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4670,6 +4668,8 @@ public:
 	// FName GetIdOfSquadToManageBP();                                                                                          // [0x9045ba4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSquadSlotsView.CreateAndAddSquadSlotButton
 	// UFortSquadSlotSelectorButton* CreateAndAddSquadSlotButton(int32_t SquadSlotIndex, FHomebaseSquadSlot& SquadSlotDefinition, UWidget*& OutSquadSlotButtonHost); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadSlotWidget
 /// Size: 0x0090 (0x000178 - 0x000208)
 class UFortSquadSlotWidget : public UWidget
@@ -4681,8 +4681,6 @@ public:
 	CMember(EFortItemCardSize)                         ItemCardSize                                                OFFSET(get<T>, {0x198, 1, 0, 0})
 	CMember(UFortMultiSizeItemCard*)                   SlottedItemCard                                             OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	CMember(TScriptInterface<Class>)                   ItemViewContext                                             OFFSET(get<T>, {0x1E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4696,6 +4694,8 @@ public:
 	// UFortItem* GetItemInSquadSlotBP(ULocalPlayer* LocalPlayer);                                                              // [0x9d91be0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSquadSlotWidget.GetIdOfSquadSlotToManageBP
 	// void GetIdOfSquadSlotToManageBP(FName& OutSquadId, int32_t& OutSquadSlotIndex);                                          // [0x9d918bc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadStatsWidgetBase
 /// Size: 0x0038 (0x0002D0 - 0x000308)
 class UFortSquadStatsWidgetBase : public UCommonUserWidget
@@ -4706,8 +4706,6 @@ class UFortSquadStatsWidgetBase : public UCommonUserWidget
 public:
 	CMember(TArray<UFortAttributeListItem_NUI*>)       OverviewStats                                               OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	CMember(UFortAttributeList_NUI*)                   DetailedStats                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4721,6 +4719,8 @@ public:
 	// void HandlePowerRatingChanged_BP(bool bHasTeamMebers);                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortSquadStatsWidgetBase.GetLocalPlayerId
 	// FUniqueNetIdRepl GetLocalPlayerId();                                                                                     // [0x9d91c6c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadStatValueWithIcon
 /// Size: 0x0088 (0x0002D0 - 0x000358)
 class UFortSquadStatValueWithIcon : public UCommonUserWidget
@@ -4734,13 +4734,13 @@ public:
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x340, 1, 0, 0})
 	CMember(UCommonNumericTextBlock*)                  Value                                                       OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x350, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortSquadStatValueWithIcon.HandleDifferentAttributeSetBP
 	// void HandleDifferentAttributeSetBP();                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSquadTypeLandingPageBase
 /// Size: 0x0030 (0x000558 - 0x000588)
 class UFortSquadTypeLandingPageBase : public UFortActivatablePanel
@@ -4754,8 +4754,6 @@ public:
 	SMember(FDataTableRowHandle)                       BackInputActionRowHandle                                    OFFSET(get<T>, {0x560, 16, 0, 0})
 	CMember(EFortFrontendInventoryFilter)              ItemManagementScreenFilter                                  OFFSET(get<T>, {0x570, 1, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    SquadSelectorButtons                                        OFFSET(get<T>, {0x578, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4769,6 +4767,8 @@ public:
 	// void HandleBackInputAction(bool& bPassThrough);                                                                          // [0x9d92644] Final|Native|Protected|HasOutParms|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortSquadTypeLandingPageBase.CreateAndAddSquadButton
 	// UFortSquadSelectorButton* CreateAndAddSquadButton(FName& SquadId);                                                       // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortStatIcon
 /// Size: 0x0048 (0x0002D0 - 0x000318)
 class UFortStatIcon : public UCommonUserWidget
@@ -4780,8 +4780,6 @@ public:
 	SMember(FGameplayAttribute)                        Attribute                                                   OFFSET(get<T>, {0x2D0, 56, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x308, 1, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x310, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4789,6 +4787,8 @@ public:
 	// void SetAttribute(FGameplayAttribute& InAttribute);                                                                      // [0x9d94fac] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortStatIcon.HandleDifferentAttributeSetBP
 	// void HandleDifferentAttributeSetBP();                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSurvivorSquadManagementScreen
 /// Size: 0x00E0 (0x000678 - 0x000758)
 class UFortSurvivorSquadManagementScreen : public UFortSquadManagementScreenBase
@@ -4798,8 +4798,6 @@ class UFortSurvivorSquadManagementScreen : public UFortSquadManagementScreenBase
 
 public:
 	CMember(UFortSurvivorSquadStatMatchesBase*)        StatMatchesWidget                                           OFFSET(get<T>, {0x678, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4809,6 +4807,8 @@ public:
 	// void ShowHelpDialog();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortSurvivorSquadManagementScreen.PlayFeedbackForSlottingPerson
 	// void PlayFeedbackForSlottingPerson(UFortWorker* Worker, int32_t SlotIndex, FFortSurvivorSquadSlottingFeedbackData& FeedbackData); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSurvivorSquadSelectorButton
 /// Size: 0x0020 (0x0014E0 - 0x001500)
 class UFortSurvivorSquadSelectorButton : public UFortSquadSelectorButton
@@ -4819,8 +4819,6 @@ class UFortSurvivorSquadSelectorButton : public UFortSquadSelectorButton
 public:
 	CMember(TArray<FGameplayAttribute>)                FortStatAttributes                                          OFFSET(get<T>, {0x14D8, 16, 0, 0})
 	CMember(TArray<FGameplayAttribute>)                FortTeamStatAttributes                                      OFFSET(get<T>, {0x14E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4830,6 +4828,8 @@ public:
 	// bool TryGetSquadMembers(TArray<UFortWorker*>& OutSquadMembers);                                                          // [0x9d97504] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/SaveTheWorldUI.FortSurvivorSquadSelectorButton.TryGetPersonalityMatches
 	// bool TryGetPersonalityMatches(FFortSurvivorSquadSelectorButtonPersonalityMatches& OutPersonalityMatches);                // [0x9d96be8] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSurvivorSquadStatMatchBase
 /// Size: 0x04D0 (0x0002D0 - 0x0007A0)
 class UFortSurvivorSquadStatMatchBase : public UCommonUserWidget
@@ -4839,13 +4839,13 @@ class UFortSurvivorSquadStatMatchBase : public UCommonUserWidget
 
 public:
 	SMember(FFortUISurvivorSquadStatMatch)             StatMatch                                                   OFFSET(get<T>, {0x2E0, 1216, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortSurvivorSquadStatMatchBase.OnStatMatchUpdated
 	// void OnStatMatchUpdated(FFortUISurvivorSquadStatMatch UpdatedMatch);                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSurvivorSquadStatMatchesBase
 /// Size: 0x0030 (0x000300 - 0x000330)
 class UFortSurvivorSquadStatMatchesBase : public UFortSquadStatDetailsWidget
@@ -4857,8 +4857,6 @@ public:
 	CMember(UClass*)                                   StatMatchClass                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      bSummaryView                                                OFFSET(get<bool>, {0x308, 1, 0, 0})
 	CMember(TArray<UFortSurvivorSquadStatMatchBase*>)  StatMatches                                                 OFFSET(get<T>, {0x310, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4874,6 +4872,8 @@ public:
 	// FName GetIdOfSquadToManageBP();                                                                                          // [0x9045ba4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortSurvivorSquadStatMatchesBase.AddStatMatch
 	// void AddStatMatch(UFortSurvivorSquadStatMatchBase* SetBonus);                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortSurvivorSquadSummaryStatItem
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortSurvivorSquadSummaryStatItem : public UCommonUserWidget
@@ -4886,13 +4886,13 @@ public:
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Value                                                       OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Name                                                        OFFSET(get<T>, {0x2E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortSurvivorSquadSummaryStatItem.SetAttributeModifierAccumulation
 	// void SetAttributeModifierAccumulation(FFortAttributeModifierAccumulation& Accumulation);                                 // [0x9db06cc] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortWorkerSetBonusIcon
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortWorkerSetBonusIcon : public UCommonUserWidget
@@ -4904,8 +4904,6 @@ public:
 	SMember(FGameplayTag)                              GameplayTag                                                 OFFSET(get<T>, {0x2D0, 4, 0, 0})
 	CMember(TEnumAsByte<EFortBrushSize>)               ImageSize                                                   OFFSET(get<T>, {0x2D4, 1, 0, 0})
 	CMember(UImage*)                                   Icon                                                        OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4913,6 +4911,8 @@ public:
 	// void SetGameplayTag(FGameplayTag& InGameplayTag);                                                                        // [0x9db07a8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortWorkerSetBonusIcon.HandleDifferentGameplayTagSetBP
 	// void HandleDifferentGameplayTagSetBP();                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortStatsOverviewDetailsBase
 /// Size: 0x0038 (0x0002D0 - 0x000308)
 class UFortStatsOverviewDetailsBase : public UCommonUserWidget
@@ -4923,8 +4923,6 @@ class UFortStatsOverviewDetailsBase : public UCommonUserWidget
 public:
 	CMember(TArray<UFortAttributeListItem_NUI*>)       OverviewStats                                               OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	CMember(UFortAttributeList_NUI*)                   DetailedStats                                               OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4934,6 +4932,8 @@ public:
 	// void ListenForChanges(bool bListen);                                                                                     // [0x9db03e4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SaveTheWorldUI.FortStatsOverviewDetailsBase.GetLocalPlayerId
 	// FUniqueNetIdRepl GetLocalPlayerId();                                                                                     // [0x9d91c6c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortLlamaStoreData
 /// Size: 0x0040 (0x000030 - 0x000070)
 class UFortLlamaStoreData : public UPrimaryDataAsset
@@ -4971,8 +4971,6 @@ public:
 	CMember(UFortLlamaStoreOfferInfo*)                 PendingPurchaseOffer                                        OFFSET(get<T>, {0x528, 8, 0, 0})
 	CMember(UCommonActivatablePanelLegacy*)            StoreOpeningCardPack                                        OFFSET(get<T>, {0x530, 8, 0, 0})
 	DMember(bool)                                      bHideSoldOffers                                             OFFSET(get<bool>, {0x538, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4990,6 +4988,8 @@ public:
 	// void HandleAddVBucks();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortLlamaStoreBase.CreateTencentPuchaseOpenModal
 	// void CreateTencentPuchaseOpenModal();                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortLlamaStoreBase_Legacy
 /// Size: 0x0078 (0x000638 - 0x0006B0)
 class UFortLlamaStoreBase_Legacy : public UFortDirectAcquisitionWidgetBase_Legacy
@@ -5007,8 +5007,6 @@ public:
 	CMember(UFortLlamaStoreOfferInfo*)                 PendingPurchaseOffer                                        OFFSET(get<T>, {0x670, 8, 0, 0})
 	CMember(UCommonActivatablePanelLegacy*)            StoreOpeningCardPack                                        OFFSET(get<T>, {0x678, 8, 0, 0})
 	DMember(bool)                                      bHideSoldOffers                                             OFFSET(get<bool>, {0x680, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5022,6 +5020,8 @@ public:
 	// void OnStorePurchaseCompleted();                                                                                         // [0x9db0568] Final|Native|Private 
 	// Function /Script/SaveTheWorldUI.FortLlamaStoreBase_Legacy.CreateTencentPuchaseOpenModal
 	// void CreateTencentPuchaseOpenModal();                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortLlamaStoreDetailsBase
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortLlamaStoreDetailsBase : public UCommonUserWidget
@@ -5032,8 +5032,6 @@ class UFortLlamaStoreDetailsBase : public UCommonUserWidget
 public:
 	CMember(UFortStoreFrontOfferInfo*)                 OfferInfo                                                   OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonTileView*)                          ItemTileView                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5051,6 +5049,8 @@ public:
 	// int32_t GetNewItemCount();                                                                                               // [0x92ccd8c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortLlamaStoreDetailsBase.GetChoiceItemCount
 	// int32_t GetChoiceItemCount();                                                                                            // [0x9d910e8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortLlamaStoreInspectionScreen
 /// Size: 0x0010 (0x000818 - 0x000828)
 class UFortLlamaStoreInspectionScreen : public UFortStoreFrontOfferDetailsWidgetBase
@@ -5061,8 +5061,6 @@ class UFortLlamaStoreInspectionScreen : public UFortStoreFrontOfferDetailsWidget
 public:
 	CMember(UCommonTileView*)                          GrantedItemTileView                                         OFFSET(get<T>, {0x818, 8, 0, 0})
 	DMember(bool)                                      bIsInChoiceViewMode                                         OFFSET(get<bool>, {0x820, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5072,6 +5070,8 @@ public:
 	// UFortCardPackItem* GetSelectedCardPack();                                                                                // [0x9daf868] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortLlamaStoreInspectionScreen.GetInspectChoiceInputState
 	// EInputActionState GetInspectChoiceInputState();                                                                          // [0x9daf6e4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortOpenCardPackModal
 /// Size: 0x0040 (0x000558 - 0x000598)
 class UFortOpenCardPackModal : public UFortActivatablePanel
@@ -5125,8 +5125,6 @@ public:
 	CMember(UFortUINavigationManager*)                 NavigationManager                                           OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UFortWeaponReticleExtensionWidgetBase*)    CurrentCustomReticleExtension                               OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(TArray<UFortWeaponReticleExtensionWidgetBase*>) RecentReticleExtensions                                OFFSET(get<T>, {0x538, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5136,6 +5134,8 @@ public:
 	// void HandlePickerOpenRequest(EFortPickerMode Mode, int32_t InitialOption, bool bIgnoreFirstAccept);                      // [0x9db01a0] Final|Native|Protected 
 	// Function /Script/SaveTheWorldUI.StWHUD.HandleCursorModeChanged
 	// void HandleCursorModeChanged(bool bCursorModeEnabled, FName ActionName, UUserWidget* CursorModeContentWidget);           // [0x9db0098] Final|Native|Protected 
+};
+
 /// Class /Script/SaveTheWorldUI.FortTheaterSelect
 /// Size: 0x0030 (0x0003E8 - 0x000418)
 class UFortTheaterSelect : public UCommonActivatableWidget
@@ -5146,8 +5146,6 @@ class UFortTheaterSelect : public UCommonActivatableWidget
 public:
 	CMember(UOverlay*)                                 OverlayMain                                                 OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 DefaultRequiredCompletedQuest                               OFFSET(get<T>, {0x410, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5157,6 +5155,8 @@ public:
 	// void OnNavigationLeft();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortTheaterSelect.GetTheaterRecommendedRatingRange
 	// bool GetTheaterRecommendedRatingRange(FString UniqueID, int32_t& Minimum, int32_t& Maximum);                             // [0x9daf8b4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortTheaterSelect_Legacy
 /// Size: 0x0030 (0x000520 - 0x000550)
 class UFortTheaterSelect_Legacy : public UCommonActivatablePanelLegacy
@@ -5167,8 +5167,6 @@ class UFortTheaterSelect_Legacy : public UCommonActivatablePanelLegacy
 public:
 	CMember(UOverlay*)                                 OverlayMain                                                 OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(UFortQuestItemDefinition*)                 DefaultRequiredCompletedQuest                               OFFSET(get<T>, {0x548, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5178,6 +5176,8 @@ public:
 	// void OnNavigationLeft();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortTheaterSelect_Legacy.GetTheaterRecommendedRatingRange
 	// bool GetTheaterRecommendedRatingRange(FString UniqueID, int32_t& Minimum, int32_t& Maximum);                             // [0x9daf8b4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortHomebaseNodeItemTooltip
 /// Size: 0x0020 (0x000050 - 0x000070)
 class UFortHomebaseNodeItemTooltip : public UFortItemTooltip
@@ -5198,8 +5198,6 @@ class UFortUpgradeDetailsBase : public UCommonUserWidget
 public:
 	CMember(UMediaPlayer*)                             VideoPlayer                                                 OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UFortUpgradeInfo*)                         UpgradeInfo                                                 OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5213,6 +5211,8 @@ public:
 	// void OnScreenActive();                                                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/SaveTheWorldUI.FortUpgradeDetailsBase.OnPurchaseComplete
 	// void OnPurchaseComplete();                                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortUpgradeInfo
 /// Size: 0x0088 (0x000028 - 0x0000B0)
 class UFortUpgradeInfo : public UObject
@@ -5222,8 +5222,6 @@ class UFortUpgradeInfo : public UObject
 
 public:
 	CMember(UFortHomebaseNodeItemDefinition*)          NodeItemDef                                                 OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5265,6 +5263,8 @@ public:
 	// bool CanAffordUpgrade();                                                                                                 // [0x9daf3dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortUpgradeInfo.BackwardPreview
 	// void BackwardPreview();                                                                                                  // [0x9daf3a0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SaveTheWorldUI.FortUpgradeScreenBase
 /// Size: 0x00C8 (0x000520 - 0x0005E8)
 class UFortUpgradeScreenBase : public UCommonActivatablePanelLegacy
@@ -5279,8 +5279,6 @@ public:
 	CMember(UFortUpgradeDetailsBase*)                  Details                                                     OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(TMap<FName, EHomebaseNodeType>)            TabToNodeTypeMap                                            OFFSET(get<T>, {0x540, 80, 0, 0})
 	CMember(UFortItemDefinition*)                      UpgradesRespecToken                                         OFFSET(get<T>, {0x590, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5306,6 +5304,8 @@ public:
 	// bool CanPreview();                                                                                                       // [0x9daf410] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortUpgradeScreenBase.AreUpgradesRespecTokensAvailable
 	// bool AreUpgradesRespecTokensAvailable();                                                                                 // [0x9daf378] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortUpgradeScreenBase_Legacy
 /// Size: 0x00C8 (0x000520 - 0x0005E8)
 class UFortUpgradeScreenBase_Legacy : public UCommonActivatablePanelLegacy
@@ -5320,8 +5320,6 @@ public:
 	CMember(UFortUpgradeDetailsBase*)                  Details                                                     OFFSET(get<T>, {0x538, 8, 0, 0})
 	CMember(TMap<FName, EHomebaseNodeType>)            TabToNodeTypeMap                                            OFFSET(get<T>, {0x540, 80, 0, 0})
 	CMember(UFortItemDefinition*)                      UpgradesRespecToken                                         OFFSET(get<T>, {0x590, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5347,6 +5345,8 @@ public:
 	// bool CanPreview();                                                                                                       // [0x9daf410] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SaveTheWorldUI.FortUpgradeScreenBase_Legacy.AreUpgradesRespecTokensAvailable
 	// bool AreUpgradesRespecTokensAvailable();                                                                                 // [0x9daf378] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SaveTheWorldUI.FortUpgradeTileBase
 /// Size: 0x0010 (0x0014C0 - 0x0014D0)
 class UFortUpgradeTileBase : public UCommonButtonLegacy
@@ -5356,13 +5356,13 @@ class UFortUpgradeTileBase : public UCommonButtonLegacy
 
 public:
 	CMember(UFortUpgradeInfo*)                         UpgradeInfo                                                 OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortUpgradeTileBase.OnDataRefresh
 	// void OnDataRefresh(bool bUpgrade);                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/SaveTheWorldUI.FortUpgradeTileBase_Legacy
 /// Size: 0x0010 (0x0014C0 - 0x0014D0)
 class UFortUpgradeTileBase_Legacy : public UCommonButtonLegacy
@@ -5372,13 +5372,13 @@ class UFortUpgradeTileBase_Legacy : public UCommonButtonLegacy
 
 public:
 	CMember(UFortUpgradeInfo*)                         UpgradeInfo                                                 OFFSET(get<T>, {0x14C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SaveTheWorldUI.FortUpgradeTileBase_Legacy.OnDataRefresh
 	// void OnDataRefresh(bool bUpgrade);                                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Struct /Script/SaveTheWorldUI.SquadSlotSortTypes
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FSquadSlotSortTypes : public MDKStruct

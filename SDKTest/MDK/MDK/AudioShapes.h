@@ -24,8 +24,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnAudibleStateChanged                                       OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TMap<FName, UAudioComponent*>)             AudioComponents                                             OFFSET(get<T>, {0xD0, 80, 0, 0})
 	CMember(TArray<APlayerController*>)                LocalControllers                                            OFFSET(get<T>, {0x120, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -35,6 +33,8 @@ public:
 	// void Enable();                                                                                                           // [0x1284298] Native|Protected|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeComponent.Disable
 	// void Disable();                                                                                                          // [0x2326950] Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/AudioShapes.AudioShapePrimitiveComponent
 /// Size: 0x0088 (0x000140 - 0x0001C8)
 class UAudioShapePrimitiveComponent : public UAudioShapeComponent
@@ -49,8 +49,6 @@ public:
 	DMember(bool)                                      bUseOwningActorTransform                                    OFFSET(get<bool>, {0x160, 1, 0, 0})
 	DMember(bool)                                      bAutoRefreshShape                                           OFFSET(get<bool>, {0x161, 1, 0, 0})
 	SMember(FVector)                                   ActorTransformScale                                         OFFSET(get<T>, {0x168, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -60,6 +58,8 @@ public:
 	// UAudioComponent* GetInsideAudioComponent();                                                                              // [0x6c75f50] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/AudioShapes.AudioShapePrimitiveComponent.GetEdgeAudioComponent
 	// UAudioComponent* GetEdgeAudioComponent();                                                                                // [0x6c75efc] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/AudioShapes.AudioShapeBoxComponent
 /// Size: 0x0068 (0x0001C8 - 0x000230)
 class UAudioShapeBoxComponent : public UAudioShapePrimitiveComponent
@@ -69,13 +69,13 @@ class UAudioShapeBoxComponent : public UAudioShapePrimitiveComponent
 
 public:
 	SMember(FTransform)                                BoxTransform                                                OFFSET(get<T>, {0x1D0, 96, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapeBoxComponent.SetBoxTransform
 	// void SetBoxTransform(FTransform& InTransform);                                                                           // [0x6c76104] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AudioShapes.AudioShapeCylinderComponent
 /// Size: 0x0008 (0x0001C8 - 0x0001D0)
 class UAudioShapeCylinderComponent : public UAudioShapePrimitiveComponent
@@ -86,8 +86,6 @@ class UAudioShapeCylinderComponent : public UAudioShapePrimitiveComponent
 public:
 	DMember(float)                                     HalfHeight                                                  OFFSET(get<float>, {0x1C8, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1CC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -95,6 +93,8 @@ public:
 	// void SetRadius(float InRadius);                                                                                          // [0x6c762c8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeCylinderComponent.SetHalfHeight
 	// void SetHalfHeight(float InHalfHeight);                                                                                  // [0x6c7623c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioShapes.AudioShapeLineComponent
 /// Size: 0x0030 (0x0001C8 - 0x0001F8)
 class UAudioShapeLineComponent : public UAudioShapePrimitiveComponent
@@ -105,8 +105,6 @@ class UAudioShapeLineComponent : public UAudioShapePrimitiveComponent
 public:
 	SMember(FVector)                                   StartPoint                                                  OFFSET(get<T>, {0x1C8, 24, 0, 0})
 	SMember(FVector)                                   EndPoint                                                    OFFSET(get<T>, {0x1E0, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -114,6 +112,8 @@ public:
 	// void SetStartPoint(FVector& InStartPoint);                                                                               // [0x2a0e0ec] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/AudioShapes.AudioShapeLineComponent.SetEndPoint
 	// void SetEndPoint(FVector& InEndPoint);                                                                                   // [0x2a0e1e8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AudioShapes.AudioShapeLineListComponent
 /// Size: 0x0018 (0x0001C8 - 0x0001E0)
 class UAudioShapeLineListComponent : public UAudioShapePrimitiveComponent
@@ -124,8 +124,6 @@ class UAudioShapeLineListComponent : public UAudioShapePrimitiveComponent
 public:
 	CMember(TArray<FVector>)                           PointList                                                   OFFSET(get<T>, {0x1C8, 16, 0, 0})
 	DMember(bool)                                      bClosedLoop                                                 OFFSET(get<bool>, {0x1D8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -137,6 +135,8 @@ public:
 	// void GetPoints(TArray<FVector>& OutPoints);                                                                              // [0x6c75fc0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioShapes.AudioShapeLineListComponent.AddPoint
 	// int32_t AddPoint(FVector& InPoint);                                                                                      // [0x6c75dc8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AudioShapes.AudioShapeSphereComponent
 /// Size: 0x0008 (0x0001C8 - 0x0001D0)
 class UAudioShapeSphereComponent : public UAudioShapePrimitiveComponent
@@ -146,13 +146,13 @@ class UAudioShapeSphereComponent : public UAudioShapePrimitiveComponent
 
 public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x1C8, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioShapes.AudioShapeSphereComponent.SetRadius
 	// void SetRadius(float InRadius);                                                                                          // [0x6c7623c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioShapes.AudioShapeSubsystem
 /// Size: 0x0058 (0x000030 - 0x000088)
 class UAudioShapeSubsystem : public UWorldSubsystem

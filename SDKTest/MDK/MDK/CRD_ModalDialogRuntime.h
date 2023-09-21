@@ -20,8 +20,6 @@ public:
 	CMember(UWidgetAnimation*)                         BoundAnim_Open                                              OFFSET(get<T>, {0x3E8, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         BoundAnim_Response                                          OFFSET(get<T>, {0x3F0, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnResponseAnimationFinished                                 OFFSET(get<T>, {0x3F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -35,6 +33,8 @@ public:
 	// void AttemptToPlayResponseAnimation();                                                                                   // [0x9ac62b4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRD_ModalDialogRuntime.ModalDialogVariant.AttemptToPlayOpenAnimation
 	// void AttemptToPlayOpenAnimation();                                                                                       // [0x9ac6274] Final|Native|Public|BlueprintCallable 
+};
+
 /// Enum /Script/CRD_ModalDialogRuntime.ECreativeModalBackActionBoundButtonOption
 /// Size: 0x09
 enum ECreativeModalBackActionBoundButtonOption : uint8_t

@@ -80,8 +80,6 @@ public:
 	SMember(FDagwoodManagedState)                      ReplicatedManagedState                                      OFFSET(get<T>, {0x140, 1112, 0, 0})
 	SMember(FDagwoodManagedState)                      InManagedState                                              OFFSET(get<T>, {0x598, 1112, 0, 0})
 	SMember(FDagwoodManagedState)                      OutManagedState                                             OFFSET(get<T>, {0x9F0, 1112, 0, 0})
-};
-
 
 
 	/// Functions
@@ -97,6 +95,8 @@ public:
 	// FDagwoodInPersistent GetState_GT();                                                                                      // [0x986b4f0] Final|Native|Public|Const 
 	// Function /Script/ValetRuntime.DagwoodNetworkPhysicsComponent.GetPendingInputCmd
 	// FFortDagwoodCmd GetPendingInputCmd();                                                                                    // [0x986b4bc] Final|Native|Public|Const 
+};
+
 /// Class /Script/ValetRuntime.NetworkPhysicsManager
 /// Size: 0x60E8 (0x000030 - 0x006118)
 class UNetworkPhysicsManager : public UWorldSubsystem
@@ -117,13 +117,13 @@ class AFortAthenaMutator_OverrideValetVehicleParameters : public AFortAthenaMuta
 public:
 	SMember(FScalableFloat)                            MinInitialVehicleFuelPercent                                OFFSET(get<T>, {0x338, 40, 0, 0})
 	SMember(FScalableFloat)                            MaxInitialVehicleFuelPercent                                OFFSET(get<T>, {0x360, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ValetRuntime.FortAthenaMutator_OverrideValetVehicleParameters.OnPlaylistLoaded
 	// void OnPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContainerTags);                                 // [0x7b4c210] Final|Native|Public|HasOutParms 
+};
+
 /// Class /Script/ValetRuntime.FortCameraMode_Dagwood
 /// Size: 0x0040 (0x001B70 - 0x001BB0)
 class UFortCameraMode_Dagwood : public UFortCameraMode_AthenaVehicle
@@ -286,8 +286,6 @@ public:
 	CMember(UStaticMesh*)                              TireBootMesh                                                OFFSET(get<T>, {0x21A8, 8, 0, 0})
 	CMember(TMap<int32_t, FDagwoodActionDefForUI>)     MapSelfDestructActionDefForUI                               OFFSET(get<T>, {0x21B0, 80, 0, 0})
 	DMember(float)                                     MinimumTimeBetweenSelfDestructPromptChanges                 OFFSET(get<float>, {0x2200, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -383,6 +381,8 @@ public:
 	// void ApplyRuntimeModifiers();                                                                                            // [0x986b350] Final|Native|Private 
 	// Function /Script/ValetRuntime.FortDagwoodVehicle.AddRuntimeGearsInfoOnServer
 	// void AddRuntimeGearsInfoOnServer(FRuntimeGearInfo& GearInfo);                                                            // [0x986b2bc] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/ValetRuntime.FortDagwoodVehicleAnimInstance
 /// Size: 0x0060 (0x000600 - 0x000660)
 class UFortDagwoodVehicleAnimInstance : public UFortVehicleAnimInstance
@@ -544,8 +544,6 @@ class UFortDagwoodVehicleManager : public UGameStateComponent
 public:
 	DMember(bool)                                      bHasUpdatedPropReplacement                                  OFFSET(get<bool>, {0xA0, 1, 0, 0})
 	DMember(int32_t)                                   NumVehiclesSpawnedWithTireMod                               OFFSET(get<int32_t>, {0xA4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -557,6 +555,8 @@ public:
 	// void OnVehicleSpawned(AFortAthenaVehicle* Vehicle);                                                                      // [0x986bc10] Final|Native|Public  
 	// Function /Script/ValetRuntime.FortDagwoodVehicleManager.CustomHandleActorStreamedInEditor
 	// void CustomHandleActorStreamedInEditor(AActor* SourceActor);                                                             // [0x56ba1a4] Final|Native|Public  
+};
+
 /// Class /Script/ValetRuntime.FortValetAudioController
 /// Size: 0x0150 (0x000290 - 0x0003E0)
 class AFortValetAudioController : public AActor
@@ -624,8 +624,6 @@ public:
 	CMember(UAudioComponent*)                          BoostAudioComponent_Native                                  OFFSET(get<T>, {0x3B8, 8, 0, 0})
 	CMember(USynthComponentMoto*)                      SynthComponentMoto_Native                                   OFFSET(get<T>, {0x3C0, 8, 0, 0})
 	CMember(UFortCollisionAudioComponent*)             SuspensionCollisionComponent_Native                         OFFSET(get<T>, {0x3C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -637,6 +635,8 @@ public:
 	// void OnSuspensionCollision_Native(bool& OutResult, float& OutMagnitude);                                                 // [0x986bb38] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ValetRuntime.FortValetAudioController.CacheValetVehicle
 	// void CacheValetVehicle(AFortDagwoodVehicle* InVehicle);                                                                  // [0x986b364] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ValetRuntime.FortValetGameFeatureData
 /// Size: 0x0078 (0x000498 - 0x000510)
 class UFortValetGameFeatureData : public UFortGameFeatureData

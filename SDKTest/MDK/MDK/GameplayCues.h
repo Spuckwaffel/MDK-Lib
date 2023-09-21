@@ -22,8 +22,6 @@ class AGCNL_Irwin_Player_Prey_Nug_Float_C : public AFortGameplayCueNotify_Loop
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          FloatSound                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -35,6 +33,8 @@ public:
 	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Irwin/GameplayCues/GCNL_Irwin_Player_Prey_Nug_Float.GCNL_Irwin_Player_Prey_Nug_Float_C.ExecuteUbergraph_GCNL_Irwin_Player_Prey_Nug_Float
 	// void ExecuteUbergraph_GCNL_Irwin_Player_Prey_Nug_Float(int32_t EntryPoint);                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_LuredInterest.GCN_Irwin_PlayerInteraction_LuredInterest_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Irwin_PlayerInteraction_LuredInterest_C : public UFortGameplayCueNotify_Burst
@@ -56,8 +56,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(USoundBase*)                               SlideSound                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          SlidingSoundComponent                                       OFFSET(get<T>, {0x9A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,22 +65,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Irwin/GameplayCues/GCNL_Irwin_Slide.GCNL_Irwin_Slide_C.ExecuteUbergraph_GCNL_Irwin_Slide
 	// void ExecuteUbergraph_GCNL_Irwin_Slide(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
-/// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C
-/// Size: 0x0008 (0x000218 - 0x000220)
-class UGCN_Irwin_PlayerInteraction_Untamed_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 544;
-
-public:
-	CMember(USkeletalMeshComponent*)                   NewVar                                                      OFFSET(get<T>, {0x218, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C.OnBurstNiagara
-	// void OnBurstNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 /// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Tamed.GCN_Irwin_PlayerInteraction_Tamed_C
 /// Size: 0x0008 (0x000218 - 0x000220)
 class UGCN_Irwin_PlayerInteraction_Tamed_C : public UFortGameplayCueNotify_Burst
@@ -92,16 +76,32 @@ class UGCN_Irwin_PlayerInteraction_Tamed_C : public UFortGameplayCueNotify_Burst
 
 public:
 	CMember(USkeletalMeshComponent*)                   NewVar                                                      OFFSET(get<T>, {0x218, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Tamed.GCN_Irwin_PlayerInteraction_Tamed_C.OnBurstNiagara
 	// void OnBurstNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-/// Class /RidingContent/GameplayCues/GCN_Riding_MountLanded_Default.GCN_Riding_MountLanded_Default_C
+};
+
+/// Class /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C
+/// Size: 0x0008 (0x000218 - 0x000220)
+class UGCN_Irwin_PlayerInteraction_Untamed_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 544;
+
+public:
+	CMember(USkeletalMeshComponent*)                   NewVar                                                      OFFSET(get<T>, {0x218, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Irwin/GameplayCues/GCN_Irwin_PlayerInteraction_Untamed.GCN_Irwin_PlayerInteraction_Untamed_C.OnBurstNiagara
+	// void OnBurstNiagara(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UNiagaraComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
+/// Class /RidingContent/GameplayCues/GCN_Riding_JumpOnCreature.GCN_Riding_JumpOnCreature_C
 /// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Riding_MountLanded_Default_C : public UFortGameplayCueNotify_Burst
+class UGCN_Riding_JumpOnCreature_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
@@ -123,8 +123,6 @@ public:
 	CMember(USoundBase*)                               BoostSound                                                  OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UAudioComponent*)                          BoostAudioComponent                                         OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(USoundBase*)                               BoostEndSound                                               OFFSET(get<T>, {0x570, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -136,49 +134,8 @@ public:
 	// void BoostEndEvent();                                                                                                    // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /RidingContent/GameplayCues/GCN_BurtCharging_Player_Latent.GCN_BurtCharging_Player_Latent_C.ExecuteUbergraph_GCN_BurtCharging_Player_Latent
 	// void ExecuteUbergraph_GCN_BurtCharging_Player_Latent(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
-/// Class /RidingContent/GameplayCues/GCN_Riding_MountLanded_Boar.GCN_Riding_MountLanded_Boar_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Riding_MountLanded_Boar_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
 };
 
-/// Class /RidingContent/GameplayCues/GCN_Riding_BoarSprintImpact_Default.GCN_Riding_BoarSprintImpact_Default_C
-/// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Riding_BoarSprintImpact_Default_C : public UFortGameplayCueNotify_Burst
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 536;
-
-public:
-};
-
-/// Class /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C
-/// Size: 0x0020 (0x000990 - 0x0009B0)
-class AGCNL_Riding_Sprint_CameraShake_C : public AFortGameplayCueNotify_Loop
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2480;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	CMember(AFortPlayerController*)                    FortPlayerController                                        OFFSET(get<T>, {0x998, 8, 0, 0})
-	CMember(UCameraShakeBase*)                         FOVFlare                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
-	CMember(UCameraShakeBase*)                         ShakeNoise                                                  OFFSET(get<T>, {0x9A8, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C.OnRemove
-	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C.OnLoopingStartGeneric
-	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C.ExecuteUbergraph_GCNL_Riding_Sprint_CameraShake
-	// void ExecuteUbergraph_GCNL_Riding_Sprint_CameraShake(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
 /// Class /RidingContent/GameplayCues/GCNL_PlayerIsRiding.GCNL_PlayerIsRiding_C
 /// Size: 0x00D0 (0x000990 - 0x000A60)
 class AGCNL_PlayerIsRiding_C : public AFortGameplayCueNotify_Loop
@@ -211,8 +168,6 @@ public:
 	DMember(bool)                                      bSprinting                                                  OFFSET(get<bool>, {0xA48, 1, 0, 0})
 	DMember(double)                                    MaxSpeed                                                    OFFSET(get<double>, {0xA50, 8, 0, 0})
 	DMember(double)                                    MaxSpeedClamped                                             OFFSET(get<double>, {0xA58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -240,14 +195,49 @@ public:
 	// void StartLoopingAudio();                                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /RidingContent/GameplayCues/GCNL_PlayerIsRiding.GCNL_PlayerIsRiding_C.ExecuteUbergraph_GCNL_PlayerIsRiding
 	// void ExecuteUbergraph_GCNL_PlayerIsRiding(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
-/// Class /RidingContent/GameplayCues/GCN_Riding_JumpOnCreature.GCN_Riding_JumpOnCreature_C
+};
+
+/// Class /RidingContent/GameplayCues/GCN_Riding_MountLanded_Default.GCN_Riding_MountLanded_Default_C
 /// Size: 0x0000 (0x000218 - 0x000218)
-class UGCN_Riding_JumpOnCreature_C : public UFortGameplayCueNotify_Burst
+class UGCN_Riding_MountLanded_Default_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
+};
+
+/// Class /RidingContent/GameplayCues/GCN_Riding_MountLanded_Boar.GCN_Riding_MountLanded_Boar_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Riding_MountLanded_Boar_C : public UFortGameplayCueNotify_Burst
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 536;
+
+public:
+};
+
+/// Class /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C
+/// Size: 0x0020 (0x000990 - 0x0009B0)
+class AGCNL_Riding_Sprint_CameraShake_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2480;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	CMember(AFortPlayerController*)                    FortPlayerController                                        OFFSET(get<T>, {0x998, 8, 0, 0})
+	CMember(UCameraShakeBase*)                         FOVFlare                                                    OFFSET(get<T>, {0x9A0, 8, 0, 0})
+	CMember(UCameraShakeBase*)                         ShakeNoise                                                  OFFSET(get<T>, {0x9A8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C.OnRemove
+	// bool OnRemove(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C.OnLoopingStartGeneric
+	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /RidingContent/GameplayCues/GCNL_Riding_Sprint_CameraShake.GCNL_Riding_Sprint_CameraShake_C.ExecuteUbergraph_GCNL_Riding_Sprint_CameraShake
+	// void ExecuteUbergraph_GCNL_Riding_Sprint_CameraShake(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
 };
 
 /// Class /RidingContent/GameplayCues/GCNL_RidingSprint_SpeedLines.GCNL_RidingSprint_SpeedLines_C
@@ -261,8 +251,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(USoundBase*)                               SpeedLinesAudio                                             OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          SpeedlinesAudioComp                                         OFFSET(get<T>, {0x9A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -272,6 +260,32 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /RidingContent/GameplayCues/GCNL_RidingSprint_SpeedLines.GCNL_RidingSprint_SpeedLines_C.ExecuteUbergraph_GCNL_RidingSprint_SpeedLines
 	// void ExecuteUbergraph_GCNL_RidingSprint_SpeedLines(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C
+/// Size: 0x0018 (0x000990 - 0x0009A8)
+class AGCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C : public AFortGameplayCueNotify_Loop
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2472;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
+	SMember(FGameplayTag)                              TacticalSprintTag                                           OFFSET(get<T>, {0x998, 4, 0, 0})
+	CMember(UFXSystemComponent*)                       MainNS                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.Added_7482F31A49360978B87F339D76FC2BB7
+	// void Added_7482F31A49360978B87F339D76FC2BB7();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.Removed_AD34CCD44592FD2F05DB47BDF9413ACC
+	// void Removed_AD34CCD44592FD2F05DB47BDF9413ACC();                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.OnApplicationGeneric
+	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.ExecuteUbergraph_GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount
+	// void ExecuteUbergraph_GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount(int32_t EntryPoint);                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/GameplayCues/GCN_Riding_BoarSprintImpact_BuildDestroyed.GCN_Riding_BoarSprintImpact_BuildDestroyed_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_Riding_BoarSprintImpact_BuildDestroyed_C : public UFortGameplayCueNotify_Burst
@@ -302,30 +316,16 @@ class UGCN_Riding_BoarSprintImpact_Pawn_C : public UFortGameplayCueNotify_Burst
 public:
 };
 
-/// Class /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C
-/// Size: 0x0018 (0x000990 - 0x0009A8)
-class AGCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C : public AFortGameplayCueNotify_Loop
+/// Class /RidingContent/GameplayCues/GCN_Riding_BoarSprintImpact_Default.GCN_Riding_BoarSprintImpact_Default_C
+/// Size: 0x0000 (0x000218 - 0x000218)
+class UGCN_Riding_BoarSprintImpact_Default_C : public UFortGameplayCueNotify_Burst
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2472;
+	static inline constexpr uint64_t __MDKClassSize = 536;
 
 public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
-	SMember(FGameplayTag)                              TacticalSprintTag                                           OFFSET(get<T>, {0x998, 4, 0, 0})
-	CMember(UFXSystemComponent*)                       MainNS                                                      OFFSET(get<T>, {0x9A0, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.Added_7482F31A49360978B87F339D76FC2BB7
-	// void Added_7482F31A49360978B87F339D76FC2BB7();                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.Removed_AD34CCD44592FD2F05DB47BDF9413ACC
-	// void Removed_AD34CCD44592FD2F05DB47BDF9413ACC();                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.OnApplicationGeneric
-	// void OnApplicationGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
-	// Function /Energy/GameplayCues/GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount.GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount_C.ExecuteUbergraph_GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount
-	// void ExecuteUbergraph_GCNL_Athena_Energy_ConstantRegen_Active_WildlifeMount(int32_t EntryPoint);                         // [0x1ebf994] Final|HasDefaults    
 /// Class /GrindRail/GameplayCues/GCN_Burst_LandOnRail.GCN_Burst_LandOnRail_C
 /// Size: 0x0008 (0x000218 - 0x000220)
 class UGCN_Burst_LandOnRail_C : public UFortGameplayCueNotify_Burst
@@ -336,13 +336,13 @@ class UGCN_Burst_LandOnRail_C : public UFortGameplayCueNotify_Burst
 public:
 	SMember(FGameplayTag)                              JumpLand                                                    OFFSET(get<T>, {0x218, 4, 0, 0})
 	SMember(FGameplayTag)                              StartLand                                                   OFFSET(get<T>, {0x21C, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /GrindRail/GameplayCues/GCN_Burst_LandOnRail.GCN_Burst_LandOnRail_C.OnBurstGeneric
 	// void OnBurstGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /GrindRail/GameplayCues/GCNL_Grinding.GCNL_Grinding_C
 /// Size: 0x0091 (0x000B20 - 0x000BB1)
 class AGCNL_Grinding_C : public AFortGameplayCueNotifyLoop_Grinding
@@ -371,8 +371,6 @@ public:
 	CMember(USoundBase*)                               JumpUpSound                                                 OFFSET(get<T>, {0xBA0, 8, 0, 0})
 	CMember(UAudioComponent*)                          LeanForwardAudio                                            OFFSET(get<T>, {0xBA8, 8, 0, 0})
 	DMember(bool)                                      bGrinding                                                   OFFSET(get<bool>, {0xBB0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -406,6 +404,8 @@ public:
 	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /GrindRail/GameplayCues/GCNL_Grinding.GCNL_Grinding_C.ExecuteUbergraph_GCNL_Grinding
 	// void ExecuteUbergraph_GCNL_Grinding(int32_t EntryPoint);                                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /GrindRail/GameplayCues/GCNL_GrindSprinting.GCNL_GrindSprinting_C
 /// Size: 0x0018 (0x000990 - 0x0009A8)
 class AGCNL_GrindSprinting_C : public AFortGameplayCueNotify_Loop
@@ -417,8 +417,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x990, 8, 0, 0})
 	CMember(UAudioComponent*)                          BoostAudio                                                  OFFSET(get<T>, {0x998, 8, 0, 0})
 	CMember(UAudioComponent*)                          BoostEndAudio                                               OFFSET(get<T>, {0x9A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -428,6 +426,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /GrindRail/GameplayCues/GCNL_GrindSprinting.GCNL_GrindSprinting_C.ExecuteUbergraph_GCNL_GrindSprinting
 	// void ExecuteUbergraph_GCNL_GrindSprinting(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Ascender/GameplayCues/GC_Ascender_LinkToDestroyed.GC_Ascender_LinkToDestroyed_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGC_Ascender_LinkToDestroyed_C : public UFortGameplayCueNotify_Burst
@@ -461,8 +461,6 @@ public:
 	SMember(FScalableFloat)                            Audio_Vizualizer_Range                                      OFFSET(get<T>, {0xA78, 40, 0, 0})
 	SMember(FScalableFloat)                            Audio_Vizualizer_Ping_Frequency                             OFFSET(get<T>, {0xAA0, 40, 0, 0})
 	SMember(FTimerHandle)                              timer_handle                                                OFFSET(get<T>, {0xAC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -474,6 +472,8 @@ public:
 	// void OnLoopingStartGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /VictoryCrownsGameplay/GameplayCues/GCNL_Athena_VictoryCrown_CrownWearer_Looping.GCNL_Athena_VictoryCrown_CrownWearer_Looping_C.ExecuteUbergraph_GCNL_Athena_VictoryCrown_CrownWearer_Looping
 	// void ExecuteUbergraph_GCNL_Athena_VictoryCrown_CrownWearer_Looping(int32_t EntryPoint);                                  // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Ascender/GameplayCues/GCNL_Ascender_Ascent.GCNL_Ascender_Ascent_C
 /// Size: 0x0060 (0x000990 - 0x0009F0)
 class AGCNL_Ascender_Ascent_C : public AFortGameplayCueNotify_Loop
@@ -490,8 +490,6 @@ public:
 	DMember(double)                                    MaxCamShakeFreq                                             OFFSET(get<double>, {0x9B8, 8, 0, 0})
 	CMember(ULegacyCameraShake*)                       matineeCamShake                                             OFFSET(get<T>, {0x9C0, 8, 0, 0})
 	SMember(FScalableFloat)                            MaxAscenderSpeed                                            OFFSET(get<T>, {0x9C8, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -505,6 +503,8 @@ public:
 	// void CameraShakeTimer();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Ascender/GameplayCues/GCNL_Ascender_Ascent.GCNL_Ascender_Ascent_C.ExecuteUbergraph_GCNL_Ascender_Ascent
 	// void ExecuteUbergraph_GCNL_Ascender_Ascent(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /GrindRail/GameplayCues/GCNL_GeneralAccelerationFeedback.GCNL_GeneralAccelerationFeedback_C
 /// Size: 0x0000 (0x000990 - 0x000990)
 class AGCNL_GeneralAccelerationFeedback_C : public AFortGameplayCueNotify_Loop
@@ -524,13 +524,13 @@ class UGCN_Ascender_SpeedLines_C : public UFortGameplayCueNotify_Burst
 
 public:
 	CMember(UMaterialInterface*)                       Decal_Material                                              OFFSET(get<T>, {0x218, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Ascender/GameplayCues/GCN_Ascender_SpeedLines.GCN_Ascender_SpeedLines_C.OnBurst
 	// void OnBurst(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UParticleSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /GrindRail/GameplayCues/GCNL_GrindBoostFast.GCNL_GrindBoostFast_C
 /// Size: 0x0000 (0x000990 - 0x000990)
 class AGCNL_GrindBoostFast_C : public AFortGameplayCueNotify_Loop
@@ -564,8 +564,6 @@ public:
 	CMember(AActor*)                                   My_Target                                                   OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0x9A8, 8, 0, 0})
 	CMember(UTexture*)                                 Override_Icon                                               OFFSET(get<T>, {0x9B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -577,6 +575,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Ascender/GameplayCues/GCNL_Ascender_Descent.GCNL_Ascender_Descent_C.ExecuteUbergraph_GCNL_Ascender_Descent
 	// void ExecuteUbergraph_GCNL_Ascender_Descent(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /MidMatchRadioTowerGameplay/GameplayCues/GCN_MMObj_RadioTower_NotificationSuccess.GCN_MMObj_RadioTower_NotificationSuccess_C
 /// Size: 0x000C (0x000548 - 0x000554)
 class AGCN_MMObj_RadioTower_NotificationSuccess_C : public AFortGameplayCueNotify_BurstLatent
@@ -587,8 +587,6 @@ class AGCN_MMObj_RadioTower_NotificationSuccess_C : public AFortGameplayCueNotif
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x548, 8, 0, 0})
 	SMember(FGameplayTag)                              SuccessNotificationTag                                      OFFSET(get<T>, {0x550, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -596,6 +594,8 @@ public:
 	// void OnBurstGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent|Const 
 	// Function /MidMatchRadioTowerGameplay/GameplayCues/GCN_MMObj_RadioTower_NotificationSuccess.GCN_MMObj_RadioTower_NotificationSuccess_C.ExecuteUbergraph_GCN_MMObj_RadioTower_NotificationSuccess
 	// void ExecuteUbergraph_GCN_MMObj_RadioTower_NotificationSuccess(int32_t EntryPoint);                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /EmeraldGlass_D/GameplayCues/SereneYardCues/GCN_SereneYard_Spawn.GCN_SereneYard_Spawn_C
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UGCN_SereneYard_Spawn_C : public UFortGameplayCueNotify_Burst

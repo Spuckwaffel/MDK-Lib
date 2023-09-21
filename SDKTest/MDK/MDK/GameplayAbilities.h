@@ -234,8 +234,6 @@ class UAbilityAsync_WaitAttributeChanged : public UAbilityAsync
 
 public:
 	SMember(FMulticastInlineDelegate)                  Changed                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -243,6 +241,8 @@ public:
 	// UAbilityAsync_WaitAttributeChanged* WaitForAttributeChanged(AActor* TargetActor, FGameplayAttribute Attribute, bool OnlyTriggerOnce); // [0x6892984] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityAsync_WaitAttributeChanged.AsyncWaitAttributeChangedDelegate__DelegateSignature
 	// void AsyncWaitAttributeChangedDelegate__DelegateSignature(FGameplayAttribute Attribute, float NewValue, float OldValue); // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied
 /// Size: 0x0150 (0x000038 - 0x000188)
 class UAbilityAsync_WaitGameplayEffectApplied : public UAbilityAsync
@@ -252,8 +252,6 @@ class UAbilityAsync_WaitGameplayEffectApplied : public UAbilityAsync
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnApplied                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -261,6 +259,8 @@ public:
 	// UAbilityAsync_WaitGameplayEffectApplied* WaitGameplayEffectAppliedToActor(AActor* TargetActor, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, bool TriggerOnce, bool ListenForPeriodicEffect); // [0x6892c8c] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied.OnAppliedDelegate__DelegateSignature
 	// void OnAppliedDelegate__DelegateSignature(AActor* Source, FGameplayEffectSpecHandle SpecHandle, FActiveGameplayEffectHandle ActiveHandle); // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayEvent
 /// Size: 0x0020 (0x000038 - 0x000058)
 class UAbilityAsync_WaitGameplayEvent : public UAbilityAsync
@@ -270,8 +270,6 @@ class UAbilityAsync_WaitGameplayEvent : public UAbilityAsync
 
 public:
 	SMember(FMulticastInlineDelegate)                  EventReceived                                               OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -279,6 +277,8 @@ public:
 	// UAbilityAsync_WaitGameplayEvent* WaitGameplayEventToActor(AActor* TargetActor, FGameplayTag EventTag, bool OnlyTriggerOnce, bool OnlyMatchExact); // [0x264d4dc] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayEvent.EventReceivedDelegate__DelegateSignature
 	// void EventReceivedDelegate__DelegateSignature(FGameplayEventData Payload);                                               // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayTag
 /// Size: 0x0018 (0x000038 - 0x000050)
 class UAbilityAsync_WaitGameplayTag : public UAbilityAsync
@@ -298,13 +298,13 @@ class UAbilityAsync_WaitGameplayTagAdded : public UAbilityAsync_WaitGameplayTag
 
 public:
 	SMember(FMulticastInlineDelegate)                  Added                                                       OFFSET(get<T>, {0x50, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagAdded.WaitGameplayTagAddToActor
 	// UAbilityAsync_WaitGameplayTagAdded* WaitGameplayTagAddToActor(AActor* TargetActor, FGameplayTag tag, bool OnlyTriggerOnce); // [0x264da30] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagRemoved
 /// Size: 0x0010 (0x000050 - 0x000060)
 class UAbilityAsync_WaitGameplayTagRemoved : public UAbilityAsync_WaitGameplayTag
@@ -314,13 +314,13 @@ class UAbilityAsync_WaitGameplayTagRemoved : public UAbilityAsync_WaitGameplayTa
 
 public:
 	SMember(FMulticastInlineDelegate)                  Removed                                                     OFFSET(get<T>, {0x50, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagRemoved.WaitGameplayTagRemoveFromActor
 	// UAbilityAsync_WaitGameplayTagRemoved* WaitGameplayTagRemoveFromActor(AActor* TargetActor, FGameplayTag tag, bool OnlyTriggerOnce); // [0x264d7a8] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagQuery
 /// Size: 0x00D0 (0x000038 - 0x000108)
 class UAbilityAsync_WaitGameplayTagQuery : public UAbilityAsync
@@ -330,13 +330,13 @@ class UAbilityAsync_WaitGameplayTagQuery : public UAbilityAsync
 
 public:
 	SMember(FMulticastInlineDelegate)                  Triggered                                                   OFFSET(get<T>, {0xF8, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityAsync_WaitGameplayTagQuery.WaitGameplayTagQueryOnActor
 	// UAbilityAsync_WaitGameplayTagQuery* WaitGameplayTagQueryOnActor(AActor* TargetActor, FGameplayTagQuery TagQuery, EWaitGameplayTagQueryTriggerCondition TriggerCondition, bool bOnlyTriggerOnce); // [0x264d198] Final|Native|Static|Protected|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.GameplayAbility
 /// Size: 0x0390 (0x000028 - 0x0003B8)
 class UGameplayAbility : public UObject
@@ -375,8 +375,6 @@ public:
 	DMember(bool)                                      bIsCancelable                                               OFFSET(get<bool>, {0x39A, 1, 0, 0})
 	DMember(bool)                                      bIsBlockingOtherAbilities                                   OFFSET(get<bool>, {0x39B, 1, 0, 0})
 	DMember(bool)                                      bMarkPendingKillOnAbilityEnd                                OFFSET(get<bool>, {0x3B0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -492,6 +490,8 @@ public:
 	// TArray<FActiveGameplayEffectHandle> BP_ApplyGameplayEffectToTarget(FGameplayAbilityTargetDataHandle TargetData, UClass* GameplayEffectClass, int32_t GameplayEffectLevel, int32_t Stacks); // [0x688e960] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/GameplayAbilities.GameplayAbility.BP_ApplyGameplayEffectToOwner
 	// FActiveGameplayEffectHandle BP_ApplyGameplayEffectToOwner(UClass* GameplayEffectClass, int32_t GameplayEffectLevel, int32_t Stacks); // [0x688e85c] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.GameplayAbilitySet
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UGameplayAbilitySet : public UDataAsset
@@ -522,8 +522,6 @@ public:
 	SMember(FGameplayTargetDataFilterHandle)           Filter                                                      OFFSET(get<T>, {0x3B0, 16, 0, 0})
 	DMember(bool)                                      bDebug                                                      OFFSET(get<bool>, {0x3C0, 1, 0, 0})
 	CMember(UAbilitySystemComponent*)                  GenericDelegateBoundASC                                     OFFSET(get<T>, {0x3D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -531,6 +529,8 @@ public:
 	// void ConfirmTargeting();                                                                                                 // [0x2bea0f4] Native|Public        
 	// Function /Script/GameplayAbilities.GameplayAbilityTargetActor.CancelTargeting
 	// void CancelTargeting();                                                                                                  // [0xfcc560] Native|Public        
+};
+
 /// Class /Script/GameplayAbilities.GameplayAbilityTargetActor_Trace
 /// Size: 0x0020 (0x0003E0 - 0x000400)
 class AGameplayAbilityTargetActor_Trace : public AGameplayAbilityTargetActor
@@ -604,8 +604,6 @@ public:
 	DMember(bool)                                      bIsTargetAnActor                                            OFFSET(get<bool>, {0x2AB, 1, 0, 0})
 	CMember(APlayerController*)                        PrimaryPC                                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(AGameplayAbilityTargetActor*)              TargetingActor                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -621,6 +619,8 @@ public:
 	// void OnParametersInitialized();                                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/GameplayAbilities.GameplayAbilityWorldReticle.FaceTowardSource
 	// void FaceTowardSource(bool bFaceIn2D);                                                                                   // [0x688fb14] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.GameplayAbilityWorldReticle_ActorVisualization
 /// Size: 0x0018 (0x0002C0 - 0x0002D8)
 class AGameplayAbilityWorldReticle_ActorVisualization : public AGameplayAbilityWorldReticle
@@ -700,13 +700,13 @@ public:
 	DMember(bool)                                      bIsAdditive                                                 OFFSET(get<bool>, {0xE8, 1, 0, 0})
 	CMember(UCurveFloat*)                              StrengthOverTime                                            OFFSET(get<T>, {0xF0, 8, 0, 0})
 	DMember(bool)                                      bEnableGravity                                              OFFSET(get<bool>, {0xF8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionConstantForce.ApplyRootMotionConstantForce
 	// UAbilityTask_ApplyRootMotionConstantForce* ApplyRootMotionConstantForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector WorldDirection, float Strength, float Duration, bool bIsAdditive, UCurveFloat* StrengthOverTime, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool bEnableGravity); // [0x6889114] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce
 /// Size: 0x0068 (0x0000B8 - 0x000120)
 class UAbilityTask_ApplyRootMotionJumpForce : public UAbilityTask_ApplyRootMotion_Base
@@ -725,8 +725,6 @@ public:
 	DMember(bool)                                      bFinishOnLanded                                             OFFSET(get<bool>, {0x100, 1, 0, 0})
 	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(UCurveFloat*)                              TimeMappingCurve                                            OFFSET(get<T>, {0x110, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -736,6 +734,8 @@ public:
 	// void Finish();                                                                                                           // [0x688fb94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionJumpForce.ApplyRootMotionJumpForce
 	// UAbilityTask_ApplyRootMotionJumpForce* ApplyRootMotionJumpForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FRotator Rotation, float Distance, float Height, float Duration, float MinimumLandedTriggerTime, bool bFinishOnLanded, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, UCurveVector* PathOffsetCurve, UCurveFloat* TimeMappingCurve); // [0x6889bc0] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce
 /// Size: 0x00A0 (0x0000B8 - 0x000158)
 class UAbilityTask_ApplyRootMotionMoveToActorForce : public UAbilityTask_ApplyRootMotion_Base
@@ -759,8 +759,6 @@ public:
 	CMember(UCurveFloat*)                              TimeMappingCurve                                            OFFSET(get<T>, {0x138, 8, 0, 0})
 	CMember(UCurveFloat*)                              TargetLerpSpeedHorizontalCurve                              OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(UCurveFloat*)                              TargetLerpSpeedVerticalCurve                                OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -772,6 +770,8 @@ public:
 	// UAbilityTask_ApplyRootMotionMoveToActorForce* ApplyRootMotionMoveToTargetDataActorForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FGameplayAbilityTargetDataHandle TargetDataHandle, int32_t TargetDataIndex, int32_t TargetActorIndex, FVector TargetLocationOffset, ERootMotionMoveToActorTargetOffsetType OffsetAlignment, float Duration, UCurveFloat* TargetLerpSpeedHorizontal, UCurveFloat* TargetLerpSpeedVertical, bool bSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool bRestrictSpeedToExpected, UCurveVector* PathOffsetCurve, UCurveFloat* TimeMappingCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool bDisableDestinationReachedInterrupt); // [0x688c370] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToActorForce.ApplyRootMotionMoveToActorForce
 	// UAbilityTask_ApplyRootMotionMoveToActorForce* ApplyRootMotionMoveToActorForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, AActor* TargetActor, FVector TargetLocationOffset, ERootMotionMoveToActorTargetOffsetType OffsetAlignment, float Duration, UCurveFloat* TargetLerpSpeedHorizontal, UCurveFloat* TargetLerpSpeedVertical, bool bSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool bRestrictSpeedToExpected, UCurveVector* PathOffsetCurve, UCurveFloat* TimeMappingCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool bDisableDestinationReachedInterrupt); // [0x688a88c] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToForce
 /// Size: 0x0068 (0x0000B8 - 0x000120)
 class UAbilityTask_ApplyRootMotionMoveToForce : public UAbilityTask_ApplyRootMotion_Base
@@ -789,13 +789,13 @@ public:
 	CMember(TEnumAsByte<EMovementMode>)                NewMovementMode                                             OFFSET(get<T>, {0x10D, 1, 0, 0})
 	DMember(bool)                                      bRestrictSpeedToExpected                                    OFFSET(get<bool>, {0x10E, 1, 0, 0})
 	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x110, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionMoveToForce.ApplyRootMotionMoveToForce
 	// UAbilityTask_ApplyRootMotionMoveToForce* ApplyRootMotionMoveToForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector TargetLocation, float Duration, bool bSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool bRestrictSpeedToExpected, UCurveVector* PathOffsetCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish); // [0x688b8c8] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce
 /// Size: 0x0070 (0x0000B8 - 0x000128)
 class UAbilityTask_ApplyRootMotionRadialForce : public UAbilityTask_ApplyRootMotion_Base
@@ -817,13 +817,13 @@ public:
 	CMember(UCurveFloat*)                              StrengthOverTime                                            OFFSET(get<T>, {0x100, 8, 0, 0})
 	DMember(bool)                                      bUseFixedWorldDirection                                     OFFSET(get<bool>, {0x108, 1, 0, 0})
 	SMember(FRotator)                                  FixedWorldDirection                                         OFFSET(get<T>, {0x110, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_ApplyRootMotionRadialForce.ApplyRootMotionRadialForce
 	// UAbilityTask_ApplyRootMotionRadialForce* ApplyRootMotionRadialForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, AActor* LocationActor, float Strength, float Duration, float Radius, bool bIsPush, bool bIsAdditive, bool bNoZForce, UCurveFloat* StrengthDistanceFalloff, UCurveFloat* StrengthOverTime, bool bUseFixedWorldDirection, FRotator FixedWorldDirection, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish); // [0x688d720] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_MoveToLocation
 /// Size: 0x0068 (0x000078 - 0x0000E0)
 class UAbilityTask_MoveToLocation : public UAbilityTask
@@ -838,13 +838,13 @@ public:
 	DMember(float)                                     DurationOfMovement                                          OFFSET(get<float>, {0xC0, 4, 0, 0})
 	CMember(UCurveFloat*)                              LerpCurve                                                   OFFSET(get<T>, {0xD0, 8, 0, 0})
 	CMember(UCurveVector*)                             LerpCurveVector                                             OFFSET(get<T>, {0xD8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_MoveToLocation.MoveToLocation
 	// UAbilityTask_MoveToLocation* MoveToLocation(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, float Duration, UCurveFloat* OptionalInterpolationCurve, UCurveVector* OptionalVectorInterpolationCurve); // [0x6891d48] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_NetworkSyncPoint
 /// Size: 0x0018 (0x000078 - 0x000090)
 class UAbilityTask_NetworkSyncPoint : public UAbilityTask
@@ -854,8 +854,6 @@ class UAbilityTask_NetworkSyncPoint : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnSync                                                      OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -863,6 +861,8 @@ public:
 	// UAbilityTask_NetworkSyncPoint* WaitNetSync(UGameplayAbility* OwningAbility, EAbilityTaskNetSyncType SyncType);           // [0x689343c] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_NetworkSyncPoint.OnSignalCallback
 	// void OnSignalCallback();                                                                                                 // [0x68924d0] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait
 /// Size: 0x0088 (0x000078 - 0x000100)
 class UAbilityTask_PlayMontageAndWait : public UAbilityTask
@@ -882,8 +882,6 @@ public:
 	DMember(float)                                     StartTimeSeconds                                            OFFSET(get<float>, {0xF4, 4, 0, 0})
 	DMember(bool)                                      bStopWhenAbilityEnds                                        OFFSET(get<bool>, {0xF8, 1, 0, 0})
 	DMember(bool)                                      bAllowInterruptAfterBlendOut                                OFFSET(get<bool>, {0xF9, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -897,6 +895,8 @@ public:
 	// void OnGameplayAbilityCancelled();                                                                                       // [0x6892270] Final|Native|Public  
 	// Function /Script/GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy
 	// UAbilityTask_PlayMontageAndWait* CreatePlayMontageAndWaitProxy(UGameplayAbility* OwningAbility, FName TaskInstanceName, UAnimMontage* MontageToPlay, float Rate, FName StartSection, bool bStopWhenAbilityEnds, float AnimRootMotionTranslationScale, float StartTimeSeconds, bool bAllowInterruptAfterBlendOut); // [0x688f784] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_Repeat
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_Repeat : public UAbilityTask
@@ -907,13 +907,13 @@ class UAbilityTask_Repeat : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnPerformAction                                             OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFinished                                                  OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_Repeat.RepeatAction
 	// UAbilityTask_Repeat* RepeatAction(UGameplayAbility* OwningAbility, float TimeBetweenActions, int32_t TotalActionCount);  // [0x68e16e0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_SpawnActor
 /// Size: 0x0048 (0x000078 - 0x0000C0)
 class UAbilityTask_SpawnActor : public UAbilityTask
@@ -924,8 +924,6 @@ class UAbilityTask_SpawnActor : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  Success                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  DidNotSpawn                                                 OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -935,6 +933,8 @@ public:
 	// void FinishSpawningActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, AActor* SpawnedActor); // [0x68d7710] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_SpawnActor.BeginSpawningActor
 	// bool BeginSpawningActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, UClass* Class, AActor*& SpawnedActor); // [0x68d1da4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_StartAbilityState
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_StartAbilityState : public UAbilityTask
@@ -945,13 +945,13 @@ class UAbilityTask_StartAbilityState : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnStateEnded                                                OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnStateInterrupted                                          OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_StartAbilityState.StartAbilityState
 	// UAbilityTask_StartAbilityState* StartAbilityState(UGameplayAbility* OwningAbility, FName StateName, bool bEndCurrentState); // [0x68e57c4] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_VisualizeTargeting
 /// Size: 0x0028 (0x000078 - 0x0000A0)
 class UAbilityTask_VisualizeTargeting : public UAbilityTask
@@ -961,8 +961,6 @@ class UAbilityTask_VisualizeTargeting : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  TimeElapsed                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -974,6 +972,8 @@ public:
 	// void FinishSpawningActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* SpawnedActor);                    // [0x68d7a08] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor
 	// bool BeginSpawningActor(UGameplayAbility* OwningAbility, UClass* Class, AGameplayAbilityTargetActor*& SpawnedActor);     // [0x68d20ec] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate
 /// Size: 0x00F8 (0x000078 - 0x000170)
 class UAbilityTask_WaitAbilityActivate : public UAbilityTask
@@ -983,8 +983,6 @@ class UAbilityTask_WaitAbilityActivate : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnActivate                                                  OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -996,6 +994,8 @@ public:
 	// UAbilityTask_WaitAbilityActivate* WaitForAbilityActivate(UGameplayAbility* OwningAbility, FGameplayTag WithTag, FGameplayTag WithoutTag, bool IncludeTriggeredAbilities, bool TriggerOnce); // [0x68e72c0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityActivate.OnAbilityActivate
 	// void OnAbilityActivate(UGameplayAbility* ActivatedAbility);                                                              // [0x68dff90] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAbilityCommit
 /// Size: 0x0070 (0x000078 - 0x0000E8)
 class UAbilityTask_WaitAbilityCommit : public UAbilityTask
@@ -1005,8 +1005,6 @@ class UAbilityTask_WaitAbilityCommit : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnCommit                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1016,6 +1014,8 @@ public:
 	// UAbilityTask_WaitAbilityCommit* WaitForAbilityCommit(UGameplayAbility* OwningAbility, FGameplayTag WithTag, FGameplayTag WithoutTage, bool TriggerOnce); // [0x68e8008] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitAbilityCommit.OnAbilityCommit
 	// void OnAbilityCommit(UGameplayAbility* ActivatedAbility);                                                                // [0x68e0010] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAttributeChange
 /// Size: 0x0070 (0x000078 - 0x0000E8)
 class UAbilityTask_WaitAttributeChange : public UAbilityTask
@@ -1026,8 +1026,6 @@ class UAbilityTask_WaitAttributeChange : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1035,6 +1033,8 @@ public:
 	// UAbilityTask_WaitAttributeChange* WaitForAttributeChangeWithComparison(UGameplayAbility* OwningAbility, FGameplayAttribute InAttribute, FGameplayTag InWithTag, FGameplayTag InWithoutTag, TEnumAsByte<EWaitAttributeChangeComparison> InComparisonType, float InComparisonValue, bool TriggerOnce, AActor* OptionalExternalOwner); // [0x68e9b74] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChange.WaitForAttributeChange
 	// UAbilityTask_WaitAttributeChange* WaitForAttributeChange(UGameplayAbility* OwningAbility, FGameplayAttribute Attribute, FGameplayTag WithSrcTag, FGameplayTag WithoutSrcTag, bool TriggerOnce, AActor* OptionalExternalOwner); // [0x68e86c0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold
 /// Size: 0x00C0 (0x000078 - 0x000138)
 class UAbilityTask_WaitAttributeChangeRatioThreshold : public UAbilityTask
@@ -1045,13 +1045,13 @@ class UAbilityTask_WaitAttributeChangeRatioThreshold : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0x130, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold.WaitForAttributeChangeRatioThreshold
 	// UAbilityTask_WaitAttributeChangeRatioThreshold* WaitForAttributeChangeRatioThreshold(UGameplayAbility* OwningAbility, FGameplayAttribute AttributeNumerator, FGameplayAttribute AttributeDenominator, TEnumAsByte<EWaitAttributeChangeComparison> ComparisonType, float ComparisonValue, bool bTriggerOnce, AActor* OptionalExternalOwner); // [0x68e8d0c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold
 /// Size: 0x0070 (0x000078 - 0x0000E8)
 class UAbilityTask_WaitAttributeChangeThreshold : public UAbilityTask
@@ -1062,13 +1062,13 @@ class UAbilityTask_WaitAttributeChangeThreshold : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold.WaitForAttributeChangeThreshold
 	// UAbilityTask_WaitAttributeChangeThreshold* WaitForAttributeChangeThreshold(UGameplayAbility* OwningAbility, FGameplayAttribute Attribute, TEnumAsByte<EWaitAttributeChangeComparison> ComparisonType, float ComparisonValue, bool bTriggerOnce, AActor* OptionalExternalOwner); // [0x68e951c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitCancel
 /// Size: 0x0018 (0x000078 - 0x000090)
 class UAbilityTask_WaitCancel : public UAbilityTask
@@ -1078,8 +1078,6 @@ class UAbilityTask_WaitCancel : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnCancel                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1089,6 +1087,8 @@ public:
 	// void OnLocalCancelCallback();                                                                                            // [0x68e0bf0] Final|Native|Public  
 	// Function /Script/GameplayAbilities.AbilityTask_WaitCancel.OnCancelCallback
 	// void OnCancelCallback();                                                                                                 // [0x68e02c0] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitConfirm
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitConfirm : public UAbilityTask
@@ -1098,8 +1098,6 @@ class UAbilityTask_WaitConfirm : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnConfirm                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1107,6 +1105,8 @@ public:
 	// UAbilityTask_WaitConfirm* WaitConfirm(UGameplayAbility* OwningAbility);                                                  // [0x68e7070] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirm.OnConfirmCallback
 	// void OnConfirmCallback(UGameplayAbility* InAbility);                                                                     // [0x68e02e8] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel
 /// Size: 0x0028 (0x000078 - 0x0000A0)
 class UAbilityTask_WaitConfirmCancel : public UAbilityTask
@@ -1117,8 +1117,6 @@ class UAbilityTask_WaitConfirmCancel : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnConfirm                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnCancel                                                    OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1132,6 +1130,8 @@ public:
 	// void OnConfirmCallback();                                                                                                // [0x68e0368] Final|Native|Public  
 	// Function /Script/GameplayAbilities.AbilityTask_WaitConfirmCancel.OnCancelCallback
 	// void OnCancelCallback();                                                                                                 // [0x68e02d4] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitDelay
 /// Size: 0x0018 (0x000078 - 0x000090)
 class UAbilityTask_WaitDelay : public UAbilityTask
@@ -1141,13 +1141,13 @@ class UAbilityTask_WaitDelay : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnFinish                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitDelay.WaitDelay
 	// UAbilityTask_WaitDelay* WaitDelay(UGameplayAbility* OwningAbility, float Time);                                          // [0x68e71f0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied
 /// Size: 0x01C8 (0x000078 - 0x000240)
 class UAbilityTask_WaitGameplayEffectApplied : public UAbilityTask
@@ -1157,13 +1157,13 @@ class UAbilityTask_WaitGameplayEffectApplied : public UAbilityTask
 
 public:
 	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0x230, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied.OnApplyGameplayEffectCallback
 	// void OnApplyGameplayEffectCallback(UAbilitySystemComponent* Target, FGameplayEffectSpec& SpecApplied, FActiveGameplayEffectHandle ActiveHandle); // [0x68e0090] Final|Native|Public|HasOutParms 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self
 /// Size: 0x0020 (0x000240 - 0x000260)
 class UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGameplayEffectApplied
@@ -1173,8 +1173,6 @@ class UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGame
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnApplied                                                   OFFSET(get<T>, {0x240, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1182,6 +1180,8 @@ public:
 	// UAbilityTask_WaitGameplayEffectApplied_Self* WaitGameplayEffectAppliedToSelf_Query(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagQuery SourceTagQuery, FGameplayTagQuery TargetTagQuery, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect); // [0x68eb0b0] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Self.WaitGameplayEffectAppliedToSelf
 	// UAbilityTask_WaitGameplayEffectApplied_Self* WaitGameplayEffectAppliedToSelf(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect); // [0x68ea7d8] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target
 /// Size: 0x0020 (0x000240 - 0x000260)
 class UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGameplayEffectApplied
@@ -1191,8 +1191,6 @@ class UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGa
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnApplied                                                   OFFSET(get<T>, {0x240, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1200,6 +1198,8 @@ public:
 	// UAbilityTask_WaitGameplayEffectApplied_Target* WaitGameplayEffectAppliedToTarget_Query(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle SourceFilter, FGameplayTagQuery SourceTagQuery, FGameplayTagQuery TargetTagQuery, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffect); // [0x68ec214] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectApplied_Target.WaitGameplayEffectAppliedToTarget
 	// UAbilityTask_WaitGameplayEffectApplied_Target* WaitGameplayEffectAppliedToTarget(UGameplayAbility* OwningAbility, FGameplayTargetDataFilterHandle TargetFilter, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, bool TriggerOnce, AActor* OptionalExternalOwner, bool ListenForPeriodicEffects); // [0x68eb93c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectBlockedImmunity
 /// Size: 0x0138 (0x000078 - 0x0001B0)
 class UAbilityTask_WaitGameplayEffectBlockedImmunity : public UAbilityTask
@@ -1210,13 +1210,13 @@ class UAbilityTask_WaitGameplayEffectBlockedImmunity : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  bLocked                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UAbilitySystemComponent*)                  ExternalOwner                                               OFFSET(get<T>, {0x1A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectBlockedImmunity.WaitGameplayEffectBlockedByImmunity
 	// UAbilityTask_WaitGameplayEffectBlockedImmunity* WaitGameplayEffectBlockedByImmunity(UGameplayAbility* OwningAbility, FGameplayTagRequirements SourceTagRequirements, FGameplayTagRequirements TargetTagRequirements, AActor* OptionalExternalTarget, bool OnlyTriggerOnce); // [0x68ecaa0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved
 /// Size: 0x0040 (0x000078 - 0x0000B8)
 class UAbilityTask_WaitGameplayEffectRemoved : public UAbilityTask
@@ -1227,8 +1227,6 @@ class UAbilityTask_WaitGameplayEffectRemoved : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnRemoved                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  InvalidHandle                                               OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1236,6 +1234,8 @@ public:
 	// UAbilityTask_WaitGameplayEffectRemoved* WaitForGameplayEffectRemoved(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle); // [0x68ea3f8] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectRemoved.OnGameplayEffectRemoved
 	// void OnGameplayEffectRemoved(FGameplayEffectRemovalInfo& InGameplayEffectRemovalInfo);                                   // [0x68e037c] Final|Native|Public|HasOutParms 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectStackChange
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_WaitGameplayEffectStackChange : public UAbilityTask
@@ -1246,8 +1246,6 @@ class UAbilityTask_WaitGameplayEffectStackChange : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  InvalidHandle                                               OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1255,6 +1253,8 @@ public:
 	// UAbilityTask_WaitGameplayEffectStackChange* WaitForGameplayEffectStackChange(UGameplayAbility* OwningAbility, FActiveGameplayEffectHandle Handle); // [0x68ea588] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEffectStackChange.OnGameplayEffectStackChange
 	// void OnGameplayEffectStackChange(FActiveGameplayEffectHandle Handle, int32_t NewCount, int32_t OldCount);                // [0x68e04a4] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayEvent
 /// Size: 0x0030 (0x000078 - 0x0000A8)
 class UAbilityTask_WaitGameplayEvent : public UAbilityTask
@@ -1265,13 +1265,13 @@ class UAbilityTask_WaitGameplayEvent : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  EventReceived                                               OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      OFFSET(get<T>, {0x90, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayEvent.WaitGameplayEvent
 	// UAbilityTask_WaitGameplayEvent* WaitGameplayEvent(UGameplayAbility* OwningAbility, FGameplayTag EventTag, AActor* OptionalExternalTarget, bool OnlyTriggerOnce, bool OnlyMatchExact); // [0x68ed07c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTag
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitGameplayTag : public UAbilityTask
@@ -1281,13 +1281,13 @@ class UAbilityTask_WaitGameplayTag : public UAbilityTask
 
 public:
 	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      OFFSET(get<T>, {0x80, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTag.GameplayTagCallback
 	// void GameplayTagCallback(FGameplayTag tag, int32_t NewCount);                                                            // [0x68d7ff0] Native|Public        
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTagAdded
 /// Size: 0x0010 (0x000098 - 0x0000A8)
 class UAbilityTask_WaitGameplayTagAdded : public UAbilityTask_WaitGameplayTag
@@ -1297,13 +1297,13 @@ class UAbilityTask_WaitGameplayTagAdded : public UAbilityTask_WaitGameplayTag
 
 public:
 	SMember(FMulticastInlineDelegate)                  Added                                                       OFFSET(get<T>, {0x98, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagAdded.WaitGameplayTagAdd
 	// UAbilityTask_WaitGameplayTagAdded* WaitGameplayTagAdd(UGameplayAbility* OwningAbility, FGameplayTag tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce); // [0x68ed550] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTagRemoved
 /// Size: 0x0010 (0x000098 - 0x0000A8)
 class UAbilityTask_WaitGameplayTagRemoved : public UAbilityTask_WaitGameplayTag
@@ -1313,13 +1313,13 @@ class UAbilityTask_WaitGameplayTagRemoved : public UAbilityTask_WaitGameplayTag
 
 public:
 	SMember(FMulticastInlineDelegate)                  Removed                                                     OFFSET(get<T>, {0x98, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagRemoved.WaitGameplayTagRemove
 	// UAbilityTask_WaitGameplayTagRemoved* WaitGameplayTagRemove(UGameplayAbility* OwningAbility, FGameplayTag tag, AActor* InOptionalExternalTarget, bool OnlyTriggerOnce); // [0x68ede34] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitGameplayTagQuery
 /// Size: 0x00E0 (0x000078 - 0x000158)
 class UAbilityTask_WaitGameplayTagQuery : public UAbilityTask
@@ -1330,8 +1330,6 @@ class UAbilityTask_WaitGameplayTagQuery : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  Triggered                                                   OFFSET(get<T>, {0x138, 16, 0, 0})
 	CMember(UAbilitySystemComponent*)                  OptionalExternalTarget                                      OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1339,6 +1337,8 @@ public:
 	// UAbilityTask_WaitGameplayTagQuery* WaitGameplayTagQuery(UGameplayAbility* OwningAbility, FGameplayTagQuery TagQuery, AActor* InOptionalExternalTarget, EWaitGameplayTagQueryTriggerCondition TriggerCondition, bool bOnlyTriggerOnce); // [0x68ed914] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitGameplayTagQuery.UpdateTargetTags
 	// void UpdateTargetTags(FGameplayTag tag, int32_t NewCount);                                                               // [0x68e6acc] Final|Native|Protected 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitInputPress
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitInputPress : public UAbilityTask
@@ -1348,8 +1348,6 @@ class UAbilityTask_WaitInputPress : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnPress                                                     OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1357,6 +1355,8 @@ public:
 	// UAbilityTask_WaitInputPress* WaitInputPress(UGameplayAbility* OwningAbility, bool bTestAlreadyPressed);                  // [0x68ee1f8] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitInputPress.OnPressCallback
 	// void OnPressCallback();                                                                                                  // [0x68e0d74] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitInputRelease
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitInputRelease : public UAbilityTask
@@ -1366,8 +1366,6 @@ class UAbilityTask_WaitInputRelease : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnRelease                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1375,6 +1373,8 @@ public:
 	// UAbilityTask_WaitInputRelease* WaitInputRelease(UGameplayAbility* OwningAbility, bool bTestAlreadyReleased);             // [0x68ee300] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitInputRelease.OnReleaseCallback
 	// void OnReleaseCallback();                                                                                                // [0x68e0d88] Final|Native|Public  
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitMovementModeChange
 /// Size: 0x0020 (0x000078 - 0x000098)
 class UAbilityTask_WaitMovementModeChange : public UAbilityTask
@@ -1384,8 +1384,6 @@ class UAbilityTask_WaitMovementModeChange : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnChange                                                    OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1393,6 +1391,8 @@ public:
 	// void OnMovementModeChange(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode);  // [0x68e0c2c] Final|Native|Public  
 	// Function /Script/GameplayAbilities.AbilityTask_WaitMovementModeChange.CreateWaitMovementModeChange
 	// UAbilityTask_WaitMovementModeChange* CreateWaitMovementModeChange(UGameplayAbility* OwningAbility, TEnumAsByte<EMovementMode> NewMode); // [0x68d3a1c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitOverlap
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAbilityTask_WaitOverlap : public UAbilityTask
@@ -1402,8 +1402,6 @@ class UAbilityTask_WaitOverlap : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnOverlap                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1411,6 +1409,8 @@ public:
 	// UAbilityTask_WaitOverlap* WaitForOverlap(UGameplayAbility* OwningAbility);                                               // [0x68ea718] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitOverlap.OnHitCallback
 	// void OnHitCallback(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, FHitResult& Hit); // [0x68e0828] Final|Native|Public|HasOutParms|HasDefaults 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitTargetData
 /// Size: 0x0040 (0x000078 - 0x0000B8)
 class UAbilityTask_WaitTargetData : public UAbilityTask
@@ -1423,8 +1423,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  Cancelled                                                   OFFSET(get<T>, {0x88, 16, 0, 0})
 	CMember(UClass*)                                   TargetClass                                                 OFFSET(get<T>, {0x98, 8, 0, 0})
 	CMember(AGameplayAbilityTargetActor*)              TargetActor                                                 OFFSET(get<T>, {0xA0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1444,6 +1442,8 @@ public:
 	// void FinishSpawningActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* SpawnedActor);                    // [0x68d7b54] Native|Public|BlueprintCallable 
 	// Function /Script/GameplayAbilities.AbilityTask_WaitTargetData.BeginSpawningActor
 	// bool BeginSpawningActor(UGameplayAbility* OwningAbility, UClass* Class, AGameplayAbilityTargetActor*& SpawnedActor);     // [0x68d21f4] Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilityTask_WaitVelocityChange
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UAbilityTask_WaitVelocityChange : public UAbilityTask
@@ -1454,13 +1454,13 @@ class UAbilityTask_WaitVelocityChange : public UAbilityTask
 public:
 	SMember(FMulticastInlineDelegate)                  OnVelocityChage                                             OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UMovementComponent*)                       CachedMovementComponent                                     OFFSET(get<T>, {0x88, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.AbilityTask_WaitVelocityChange.CreateWaitVelocityChange
 	// UAbilityTask_WaitVelocityChange* CreateWaitVelocityChange(UGameplayAbility* OwningAbility, FVector Direction, float MinimumMagnitude); // [0x68d3b20] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.AbilitySystemBlueprintLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAbilitySystemBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -1506,8 +1506,6 @@ public:
 	CMember(TArray<UAttributeSet*>)                    SpawnedAttributes                                           OFFSET(get<T>, {0x1098, 16, 0, 0})
 	SMember(FMinimalReplicationTagCountMap)            ReplicatedLooseTags                                         OFFSET(get<T>, {0x10B8, 96, 0, 0})
 	SMember(FReplicatedPredictionKeyMap)               ReplicatedPredictionKeyMap                                  OFFSET(get<T>, {0x1120, 280, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1695,6 +1693,8 @@ public:
 	// void AbilityConfirmOrCancel__DelegateSignature();                                                                        // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/GameplayAbilities.AbilitySystemComponent.AbilityAbilityKey__DelegateSignature
 	// void AbilityAbilityKey__DelegateSignature(int32_t InputID);                                                              // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Class /Script/GameplayAbilities.AbilitySystemDebugHUDExtension
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAbilitySystemDebugHUDExtension : public UObject
@@ -1937,8 +1937,6 @@ public:
 	DMember(bool)                                      bAllowMultipleOnActiveEvents                                OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 	DMember(bool)                                      bAllowMultipleWhileActiveEvents                             OFFSET(get<bool>, {0x2A9, 1, 0, 0})
 	DMember(int32_t)                                   NumPreallocatedInstances                                    OFFSET(get<int32_t>, {0x2AC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1956,6 +1954,8 @@ public:
 	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/GameplayAbilities.GameplayCueNotify_Actor.K2_EndGameplayCue
 	// void K2_EndGameplayCue();                                                                                                // [0x1d5de88] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.GameplayCueNotify_Static
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UGameplayCueNotify_Static : public UObject
@@ -1967,8 +1967,6 @@ public:
 	SMember(FGameplayTag)                              GameplayCueTag                                              OFFSET(get<T>, {0x28, 4, 0, 0})
 	SMember(FName)                                     GameplayCueName                                             OFFSET(get<T>, {0x2C, 4, 0, 0})
 	DMember(bool)                                      IsOverride                                                  OFFSET(get<bool>, {0x30, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1982,6 +1980,8 @@ public:
 	// bool OnActive(AActor* MyTarget, FGameplayCueParameters& Parameters);                                                     // [0x2ad13c4] Native|Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/GameplayAbilities.GameplayCueNotify_Static.K2_HandleGameplayCue
 	// void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent> EventType, FGameplayCueParameters& Parameters); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/GameplayAbilities.GameplayCueNotify_Burst
 /// Size: 0x0310 (0x000038 - 0x000348)
 class UGameplayCueNotify_Burst : public UGameplayCueNotify_Static
@@ -1993,13 +1993,13 @@ public:
 	SMember(FGameplayCueNotify_SpawnCondition)         DefaultSpawnCondition                                       OFFSET(get<T>, {0x38, 56, 0, 0})
 	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        OFFSET(get<T>, {0x70, 64, 0, 0})
 	SMember(FGameplayCueNotify_BurstEffects)           BurstEffects                                                OFFSET(get<T>, {0xB0, 664, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.GameplayCueNotify_Burst.OnBurst
 	// void OnBurst(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/GameplayAbilities.GameplayCueNotify_BurstLatent
 /// Size: 0x0368 (0x0002F8 - 0x000660)
 class AGameplayCueNotify_BurstLatent : public AGameplayCueNotify_Actor
@@ -2012,13 +2012,13 @@ public:
 	SMember(FGameplayCueNotify_PlacementInfo)          DefaultPlacementInfo                                        OFFSET(get<T>, {0x330, 64, 0, 0})
 	SMember(FGameplayCueNotify_BurstEffects)           BurstEffects                                                OFFSET(get<T>, {0x370, 664, 0, 0})
 	SMember(FGameplayCueNotify_SpawnResult)            BurstSpawnResults                                           OFFSET(get<T>, {0x608, 88, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.GameplayCueNotify_BurstLatent.OnBurst
 	// void OnBurst(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);          // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/GameplayAbilities.GameplayCueNotify_HitImpact
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UGameplayCueNotify_HitImpact : public UGameplayCueNotify_Static
@@ -2049,8 +2049,6 @@ public:
 	SMember(FGameplayCueNotify_SpawnResult)            RecurringSpawnResults                                       OFFSET(get<T>, {0xB40, 88, 0, 0})
 	SMember(FGameplayCueNotify_BurstEffects)           RemovalEffects                                              OFFSET(get<T>, {0xB98, 664, 0, 0})
 	SMember(FGameplayCueNotify_SpawnResult)            RemovalSpawnResults                                         OFFSET(get<T>, {0xE30, 88, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2062,6 +2060,8 @@ public:
 	// void OnLoopingStart(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/GameplayAbilities.GameplayCueNotify_Looping.OnApplication
 	// void OnApplication(AActor* Target, FGameplayCueParameters& Parameters, FGameplayCueNotify_SpawnResult& SpawnResults);    // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/GameplayAbilities.GameplayCueSet
 /// Size: 0x0060 (0x000030 - 0x000090)
 class UGameplayCueSet : public UDataAsset
@@ -2123,13 +2123,13 @@ class UGameplayEffectExecutionCalculation : public UGameplayEffectCalculation
 
 public:
 	DMember(bool)                                      bRequiresPassedInTags                                       OFFSET(get<bool>, {0x38, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.GameplayEffectExecutionCalculation.Execute
 	// void Execute(FGameplayEffectCustomExecutionParameters& ExecutionParams, FGameplayEffectCustomExecutionOutput& OutExecutionOutput); // [0x691ce20] Native|Event|Public|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/GameplayAbilities.GameplayModMagnitudeCalculation
 /// Size: 0x0008 (0x000038 - 0x000040)
 class UGameplayModMagnitudeCalculation : public UGameplayEffectCalculation
@@ -2139,8 +2139,6 @@ class UGameplayModMagnitudeCalculation : public UGameplayEffectCalculation
 
 public:
 	DMember(bool)                                      bAllowNonNetAuthorityDependencyRegistration                 OFFSET(get<bool>, {0x38, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2164,6 +2162,8 @@ public:
 	// float GetSetByCallerMagnitudeByName(FGameplayEffectSpec& EffectSpec, FName& MagnitudeName);                              // [0x691cf54] Final|Native|Protected|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/GameplayAbilities.GameplayModMagnitudeCalculation.CalculateBaseMagnitude
 	// float CalculateBaseMagnitude(FGameplayEffectSpec& Spec);                                                                 // [0x691cb20] Native|Event|Public|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/GameplayAbilities.GameplayTagReponseTable
 /// Size: 0x0200 (0x000030 - 0x000230)
 class UGameplayTagReponseTable : public UDataAsset
@@ -2173,13 +2173,13 @@ class UGameplayTagReponseTable : public UDataAsset
 
 public:
 	CMember(TArray<FGameplayTagResponseTableEntry>)    Entries                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.GameplayTagReponseTable.TagResponseEvent
 	// void TagResponseEvent(FGameplayTag tag, int32_t NewCount, UAbilitySystemComponent* ASC, int32_t idx);                    // [0x691db0c] Final|Native|Protected 
+};
+
 /// Class /Script/GameplayAbilities.MovieSceneGameplayCueTriggerSection
 /// Size: 0x00F8 (0x000108 - 0x000200)
 class UMovieSceneGameplayCueTriggerSection : public UMovieSceneHookSection
@@ -2211,13 +2211,13 @@ class UMovieSceneGameplayCueTrack : public UMovieSceneNameableTrack
 
 public:
 	CMember(TArray<UMovieSceneSection*>)               Sections                                                    OFFSET(get<T>, {0x98, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayAbilities.MovieSceneGameplayCueTrack.SetSequencerTrackHandler
 	// void SetSequencerTrackHandler(FDelegateProperty InGameplayCueTrackHandler);                                              // [0x691da8c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayAbilities.TickableAttributeSetInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTickableAttributeSetInterface : public UInterface

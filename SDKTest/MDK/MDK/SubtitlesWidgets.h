@@ -40,13 +40,13 @@ public:
 	SMember(FText)                                     PreviewText                                                 OFFSET(get<T>, {0x190, 24, 0, 0})
 	SMember(FTextBlockStyle)                           GeneratedStyle                                              OFFSET(get<T>, {0x1B0, 784, 0, 0})
 	SMember(FSlateBrush)                               GeneratedBackgroundBorder                                   OFFSET(get<T>, {0x4C0, 192, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SubtitlesWidgets.SubtitleDisplay.HasSubtitles
 	// bool HasSubtitles();                                                                                                     // [0x713dedc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SubtitlesWidgets.SubtitleDisplayNative
 /// Size: 0x03F8 (0x000028 - 0x000420)
 class USubtitleDisplayNative : public UObject
@@ -69,8 +69,6 @@ class UFortMediaSubtitlesPlayer : public UObject
 
 public:
 	CMember(UOverlays*)                                SourceSubtitles                                             OFFSET(get<T>, {0x30, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -82,6 +80,8 @@ public:
 	// void Play();                                                                                                             // [0x713df2c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SubtitlesWidgets.FortMediaSubtitlesPlayer.BindToMediaPlayer
 	// void BindToMediaPlayer(UMediaPlayer* InMediaPlayer);                                                                     // [0x713dde8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SubtitlesWidgets.SubtitleDisplaySubsystem
 /// Size: 0x0020 (0x000030 - 0x000050)
 class USubtitleDisplaySubsystem : public UGameInstanceSubsystem

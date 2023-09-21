@@ -32,8 +32,6 @@ class AB_PlayerHealthDamage_CameraLensEffect_C : public AEmitterCameraLensEffect
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -41,6 +39,8 @@ public:
 	// void PassParticle_Parameter(double NewParam, bool First_Hit);                                                            // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerHealthDamage_CameraLensEffect.B_PlayerHealthDamage_CameraLensEffect_C.ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect
 	// void ExecuteUbergraph_B_PlayerHealthDamage_CameraLensEffect(int32_t EntryPoint);                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Medium_Explosion_CameraShake.B_Medium_Explosion_CameraShake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_Medium_Explosion_CameraShake_C : public ULegacyCameraShake
@@ -87,8 +87,6 @@ public:
 	SMember(FRuntimeFloatCurve)                        Gunshot_Falloff_Melee                                       OFFSET(get<T>, {0x668, 136, 0, 0})
 	SMember(FRuntimeFloatCurve)                        Glider_Falloff                                              OFFSET(get<T>, {0x6F0, 136, 0, 0})
 	SMember(FRuntimeFloatCurve)                        Plane_Falloff                                               OFFSET(get<T>, {0x778, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -102,6 +100,25 @@ public:
 	// FRuntimeFloatCurve GetWeaponCurve();                                                                                     // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_SoundIndicator_01.B_SoundIndicator_01_C.ExecuteUbergraph_B_SoundIndicator_01
 	// void ExecuteUbergraph_B_SoundIndicator_01(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
+/// Class /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C
+/// Size: 0x0018 (0x000088 - 0x0000A0)
+class UAnimNotify_NiagaraNotify_SetBodyType_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 160;
+
+public:
+	CMember(TEnumAsByte<EFortCustomPartType>)          Part_Type                                                   OFFSET(get<T>, {0x88, 1, 0, 0})
+	SMember(FString)                                   Skeletal_Mesh_User_Name                                     OFFSET(get<T>, {0x90, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C.Received_NotifyBegin
+	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C
 /// Size: 0x0008 (0x000388 - 0x000390)
 class AB_PlayerShieldDamage_CameraLensEffect_C : public AB_PlayerHealthDamage_CameraLensEffect_C
@@ -111,8 +128,6 @@ class AB_PlayerShieldDamage_CameraLensEffect_C : public AB_PlayerHealthDamage_Ca
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x388, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -120,6 +135,8 @@ public:
 	// void PassParticle_Parameter_Shield(double NewParam);                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_PlayerShieldDamage_CameraLensEffect.B_PlayerShieldDamage_CameraLensEffect_C.ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect
 	// void ExecuteUbergraph_B_PlayerShieldDamage_CameraLensEffect(int32_t EntryPoint);                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/BluePrints/WeakPointEffect/WeakSpot.WeakSpot_C
 /// Size: 0x00C0 (0x000308 - 0x0003C8)
 class AWeakSpot_C : public ABuildingWeakSpot
@@ -150,8 +167,6 @@ public:
 	CMember(UParticleSystem*)                          IdleTemplate                                                OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 ConnectMID                                                  OFFSET(get<T>, {0x3B8, 8, 0, 0})
 	SMember(FTimerHandle)                              HideMeshTimer                                               OFFSET(get<T>, {0x3C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -171,142 +186,8 @@ public:
 	// void HideMesh();                                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/BluePrints/WeakPointEffect/WeakSpot.WeakSpot_C.ExecuteUbergraph_WeakSpot
 	// void ExecuteUbergraph_WeakSpot(int32_t EntryPoint);                                                                      // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C
-/// Size: 0x0144 (0x000458 - 0x00059C)
-class AB_Pickups_Parent_C : public AFortPickupsParent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1436;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x458, 8, 0, 0})
-	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x460, 8, 0, 0})
-	DMember(float)                                     MobileSelectedTL_LerpInteactoIcon_FF208F9641BE589B76EF698B94309EA7 OFFSET(get<float>, {0x468, 4, 0, 0})
-	DMember(float)                                     MobileSelectedTL_LerpObject_FF208F9641BE589B76EF698B94309EA7 OFFSET(get<float>, {0x46C, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           MobileSelectedTL__Direction_FF208F9641BE589B76EF698B94309EA7 OFFSET(get<T>, {0x470, 1, 0, 0})
-	CMember(UTimelineComponent*)                       MobileSelectedTL                                            OFFSET(get<T>, {0x478, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     Static_Mesh_Pickup                                          OFFSET(get<T>, {0x480, 8, 0, 0})
-	CMember(USkeletalMeshComponent*)                   Skeletal_Mesh_Pickup                                        OFFSET(get<T>, {0x488, 8, 0, 0})
-	CMember(UPrimitiveComponent*)                      SkeletalOrStaticMeshAssetPrimitive                          OFFSET(get<T>, {0x490, 8, 0, 0})
-	DMember(int32_t)                                   CurrentElementIndex                                         OFFSET(get<int32_t>, {0x498, 4, 0, 0})
-	DMember(double)                                    Component_Radius__Scaled_                                   OFFSET(get<double>, {0x4A0, 8, 0, 0})
-	DMember(double)                                    Component_Radius_Multiplier                                 OFFSET(get<double>, {0x4A8, 8, 0, 0})
-	CMember(TArray<FLinearColor>)                      Outline_Rarity_Colors                                       OFFSET(get<T>, {0x4B0, 16, 0, 0})
-	DMember(double)                                    Component_Radius                                            OFFSET(get<double>, {0x4C0, 8, 0, 0})
-	CMember(UParticleSystem*)                          Picked_Up_Trail_PS_Old                                      OFFSET(get<T>, {0x4C8, 8, 0, 0})
-	CMember(TArray<double>)                            Sparkle_Spawn_Rate__Picked_Up_                              OFFSET(get<T>, {0x4D0, 16, 0, 0})
-	CMember(TArray<double>)                            Lifetime__Picked_Up_                                        OFFSET(get<T>, {0x4E0, 16, 0, 0})
-	CMember(UForceFeedbackEffect*)                     PickupForceFeedback_Old                                     OFFSET(get<T>, {0x4F0, 8, 0, 0})
-	DMember(bool)                                      HasUniqueMaterialIds                                        OFFSET(get<bool>, {0x4F8, 1, 0, 0})
-	CMember(TArray<FLinearColor>)                      BackgroundRarityColors                                      OFFSET(get<T>, {0x500, 16, 0, 0})
-	DMember(double)                                    Random_Rotation                                             OFFSET(get<double>, {0x510, 8, 0, 0})
-	SMember(FVector)                                   MobileSelectedOffset                                        OFFSET(get<T>, {0x518, 24, 0, 0})
-	SMember(FVector)                                   MobileSelectedScale                                         OFFSET(get<T>, {0x530, 24, 0, 0})
-	CMember(UStaticMeshComponent*)                     MobileInteractIcon                                          OFFSET(get<T>, {0x548, 8, 0, 0})
-	SMember(FVector)                                   MobileInteractIconLocation                                  OFFSET(get<T>, {0x550, 24, 0, 0})
-	SMember(FVector)                                   MobileInteractIconScale                                     OFFSET(get<T>, {0x568, 24, 0, 0})
-	CMember(UMaterialInterface*)                       MobileInteractionMaterial                                   OFFSET(get<T>, {0x580, 8, 0, 0})
-	DMember(bool)                                      PickedUp                                                    OFFSET(get<bool>, {0x588, 1, 0, 0})
-	SMember(FLinearColor)                              MissionItemOutlineColor                                     OFFSET(get<T>, {0x58C, 16, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.GetViewDistanceQuality
-	// int32_t GetViewDistanceQuality();                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.Setup View Distances
-	// void Setup View Distances(int32_t& viewDistanceQuality);                                                                 // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.Mobile Interation Icon Setup
-	// void Mobile Interation Icon Setup();                                                                                     // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetVisibleMobileInteractIcon
-	// void SetVisibleMobileInteractIcon(bool Visible);                                                                         // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetActiveBackgroundParticleSystem
-	// void SetActiveBackgroundParticleSystem(bool Active, bool Reset);                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetHiddenBackgroundVisualComponents
-	// void SetHiddenBackgroundVisualComponents(bool Hidden);                                                                   // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.DestroyBackgroundVisualComponents
-	// void DestroyBackgroundVisualComponents();                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.ScaleHologramTimingsForPvP
-	// void ScaleHologramTimingsForPvP();                                                                                       // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetHologramPickedUpParams
-	// void SetHologramPickedUpParams(bool Tier 0);                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SpawnPickedUpTrailPS
-	// void SpawnPickedUpTrailPS();                                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.MobileSelectedTL__FinishedFunc
-	// void MobileSelectedTL__FinishedFunc();                                                                                   // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.MobileSelectedTL__UpdateFunc
-	// void MobileSelectedTL__UpdateFunc();                                                                                     // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.EnableBacchusHighlight
-	// void EnableBacchusHighlight();                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.DisableBacchusHighlight
-	// void DisableBacchusHighlight();                                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.HideBackgroundAndSpotlight
-	// void HideBackgroundAndSpotlight();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.OnAttached
-	// void OnAttached();                                                                                                       // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.OnTossed
-	// void OnTossed();                                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.OnPickedUp
-	// void OnPickedUp(AFortPawn* PickupTarget);                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.ExecuteUbergraph_B_Pickups_Parent
-	// void ExecuteUbergraph_B_Pickups_Parent(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C
-/// Size: 0x003C (0x00059C - 0x0005D8)
-class AB_Pickups_Default_C : public AB_Pickups_Parent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1496;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5A0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     BG_Dark                                                     OFFSET(get<T>, {0x5A8, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     BG                                                          OFFSET(get<T>, {0x5B0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     rarePickupFXMesh                                            OFFSET(get<T>, {0x5B8, 8, 0, 0})
-	CMember(USpotLightComponent*)                      SpotLightComp                                               OFFSET(get<T>, {0x5C0, 8, 0, 0})
-	CMember(UNiagaraComponent*)                        rareAmbientEmitter                                          OFFSET(get<T>, {0x5C8, 8, 0, 0})
-	CMember(USoundBase*)                               Pickup_Sound                                                OFFSET(get<T>, {0x5D0, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.Setup View Distances
-	// void Setup View Distances(int32_t& viewDistanceQuality);                                                                 // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.initializeSpotlightComponent
-	// void initializeSpotlightComponent();                                                                                     // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.AddRareFX
-	// void AddRareFX();                                                                                                        // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.Set Initial BKGD Param
-	// void Set Initial BKGD Param(UMaterialInstanceDynamic* Mid);                                                              // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.HideBackgroundAndSpotlight
-	// void HideBackgroundAndSpotlight();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.OnPickedUp
-	// void OnPickedUp(AFortPawn* PickupTarget);                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.OnTossed
-	// void OnTossed();                                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setDrawDistances
-	// void setDrawDistances(double BG, double bgdark, double gun);                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_Gun
-	// void setMaxDraw_Gun(double BG);                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_BGDark
-	// void setMaxDraw_BGDark(double BG);                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_BG
-	// void setMaxDraw_BG(double BG);                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_RareMesh
-	// void setMaxDraw_RareMesh(double BG);                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_RareFX
-	// void setMaxDraw_RareFX(double BG);                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.drawDark
-	// void drawDark();                                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.ExecuteUbergraph_B_Pickups_Default
-	// void ExecuteUbergraph_B_Pickups_Default(int32_t EntryPoint);                                                             // [0x1ebf994] Final                
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C
 /// Size: 0x0018 (0x000380 - 0x000398)
 class AB_CameraLens_Boat_Droplets_C : public AEmitterCameraLensEffectBase
@@ -319,8 +200,6 @@ public:
 	DMember(float)                                     Timeline_0_Alpha_0C9ACFAF463718824428D0A86CC5D789           OFFSET(get<float>, {0x388, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_0C9ACFAF463718824428D0A86CC5D789      OFFSET(get<T>, {0x38C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x390, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -334,6 +213,8 @@ public:
 	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Boat_Droplets.B_CameraLens_Boat_Droplets_C.ExecuteUbergraph_B_CameraLens_Boat_Droplets
 	// void ExecuteUbergraph_B_CameraLens_Boat_Droplets(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_Camera_Shake_Pulse_Flash.BP_Camera_Shake_Pulse_Flash_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UBP_Camera_Shake_Pulse_Flash_C : public ULegacyCameraShake
@@ -384,8 +265,6 @@ public:
 	CMember(TArray<UMaterialInterface*>)               ListOfMaterialsExemptFromReparenting                        OFFSET(get<T>, {0x3F0, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Original_MIDs                                               OFFSET(get<T>, {0x400, 16, 0, 0})
 	DMember(int32_t)                                   Increment_End                                               OFFSET(get<int32_t>, {0x410, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -419,6 +298,144 @@ public:
 	// void UpdateExternalParameters(TArray<UMaterialInstanceDynamic*>& MID Array, TArray<USkeletalMeshComponent*>& External MEsh Component Array); // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Effects/Characters/Generic/ResIn/DuplicateResOutMesh.DuplicateResOutMesh_C.ExecuteUbergraph_DuplicateResOutMesh
 	// void ExecuteUbergraph_DuplicateResOutMesh(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C
+/// Size: 0x0144 (0x000458 - 0x00059C)
+class AB_Pickups_Parent_C : public AFortPickupsParent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1436;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x458, 8, 0, 0})
+	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x460, 8, 0, 0})
+	DMember(float)                                     MobileSelectedTL_LerpInteactoIcon_FF208F9641BE589B76EF698B94309EA7 OFFSET(get<float>, {0x468, 4, 0, 0})
+	DMember(float)                                     MobileSelectedTL_LerpObject_FF208F9641BE589B76EF698B94309EA7 OFFSET(get<float>, {0x46C, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           MobileSelectedTL__Direction_FF208F9641BE589B76EF698B94309EA7 OFFSET(get<T>, {0x470, 1, 0, 0})
+	CMember(UTimelineComponent*)                       MobileSelectedTL                                            OFFSET(get<T>, {0x478, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     Static_Mesh_Pickup                                          OFFSET(get<T>, {0x480, 8, 0, 0})
+	CMember(USkeletalMeshComponent*)                   Skeletal_Mesh_Pickup                                        OFFSET(get<T>, {0x488, 8, 0, 0})
+	CMember(UPrimitiveComponent*)                      SkeletalOrStaticMeshAssetPrimitive                          OFFSET(get<T>, {0x490, 8, 0, 0})
+	DMember(int32_t)                                   CurrentElementIndex                                         OFFSET(get<int32_t>, {0x498, 4, 0, 0})
+	DMember(double)                                    Component_Radius__Scaled_                                   OFFSET(get<double>, {0x4A0, 8, 0, 0})
+	DMember(double)                                    Component_Radius_Multiplier                                 OFFSET(get<double>, {0x4A8, 8, 0, 0})
+	CMember(TArray<FLinearColor>)                      Outline_Rarity_Colors                                       OFFSET(get<T>, {0x4B0, 16, 0, 0})
+	DMember(double)                                    Component_Radius                                            OFFSET(get<double>, {0x4C0, 8, 0, 0})
+	CMember(UParticleSystem*)                          Picked_Up_Trail_PS_Old                                      OFFSET(get<T>, {0x4C8, 8, 0, 0})
+	CMember(TArray<double>)                            Sparkle_Spawn_Rate__Picked_Up_                              OFFSET(get<T>, {0x4D0, 16, 0, 0})
+	CMember(TArray<double>)                            Lifetime__Picked_Up_                                        OFFSET(get<T>, {0x4E0, 16, 0, 0})
+	CMember(UForceFeedbackEffect*)                     PickupForceFeedback_Old                                     OFFSET(get<T>, {0x4F0, 8, 0, 0})
+	DMember(bool)                                      HasUniqueMaterialIds                                        OFFSET(get<bool>, {0x4F8, 1, 0, 0})
+	CMember(TArray<FLinearColor>)                      BackgroundRarityColors                                      OFFSET(get<T>, {0x500, 16, 0, 0})
+	DMember(double)                                    Random_Rotation                                             OFFSET(get<double>, {0x510, 8, 0, 0})
+	SMember(FVector)                                   MobileSelectedOffset                                        OFFSET(get<T>, {0x518, 24, 0, 0})
+	SMember(FVector)                                   MobileSelectedScale                                         OFFSET(get<T>, {0x530, 24, 0, 0})
+	CMember(UStaticMeshComponent*)                     MobileInteractIcon                                          OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FVector)                                   MobileInteractIconLocation                                  OFFSET(get<T>, {0x550, 24, 0, 0})
+	SMember(FVector)                                   MobileInteractIconScale                                     OFFSET(get<T>, {0x568, 24, 0, 0})
+	CMember(UMaterialInterface*)                       MobileInteractionMaterial                                   OFFSET(get<T>, {0x580, 8, 0, 0})
+	DMember(bool)                                      PickedUp                                                    OFFSET(get<bool>, {0x588, 1, 0, 0})
+	SMember(FLinearColor)                              MissionItemOutlineColor                                     OFFSET(get<T>, {0x58C, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.GetViewDistanceQuality
+	// int32_t GetViewDistanceQuality();                                                                                        // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.Setup View Distances
+	// void Setup View Distances(int32_t& viewDistanceQuality);                                                                 // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.Mobile Interation Icon Setup
+	// void Mobile Interation Icon Setup();                                                                                     // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetVisibleMobileInteractIcon
+	// void SetVisibleMobileInteractIcon(bool Visible);                                                                         // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetActiveBackgroundParticleSystem
+	// void SetActiveBackgroundParticleSystem(bool Active, bool Reset);                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetHiddenBackgroundVisualComponents
+	// void SetHiddenBackgroundVisualComponents(bool Hidden);                                                                   // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.DestroyBackgroundVisualComponents
+	// void DestroyBackgroundVisualComponents();                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.ScaleHologramTimingsForPvP
+	// void ScaleHologramTimingsForPvP();                                                                                       // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SetHologramPickedUpParams
+	// void SetHologramPickedUpParams(bool Tier 0);                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.SpawnPickedUpTrailPS
+	// void SpawnPickedUpTrailPS();                                                                                             // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.MobileSelectedTL__FinishedFunc
+	// void MobileSelectedTL__FinishedFunc();                                                                                   // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.MobileSelectedTL__UpdateFunc
+	// void MobileSelectedTL__UpdateFunc();                                                                                     // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.EnableBacchusHighlight
+	// void EnableBacchusHighlight();                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.DisableBacchusHighlight
+	// void DisableBacchusHighlight();                                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.HideBackgroundAndSpotlight
+	// void HideBackgroundAndSpotlight();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.OnAttached
+	// void OnAttached();                                                                                                       // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.OnTossed
+	// void OnTossed();                                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.OnPickedUp
+	// void OnPickedUp(AFortPawn* PickupTarget);                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Parent.B_Pickups_Parent_C.ExecuteUbergraph_B_Pickups_Parent
+	// void ExecuteUbergraph_B_Pickups_Parent(int32_t EntryPoint);                                                              // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C
+/// Size: 0x003C (0x00059C - 0x0005D8)
+class AB_Pickups_Default_C : public AB_Pickups_Parent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1496;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5A0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     BG_Dark                                                     OFFSET(get<T>, {0x5A8, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     BG                                                          OFFSET(get<T>, {0x5B0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     rarePickupFXMesh                                            OFFSET(get<T>, {0x5B8, 8, 0, 0})
+	CMember(USpotLightComponent*)                      SpotLightComp                                               OFFSET(get<T>, {0x5C0, 8, 0, 0})
+	CMember(UNiagaraComponent*)                        rareAmbientEmitter                                          OFFSET(get<T>, {0x5C8, 8, 0, 0})
+	CMember(USoundBase*)                               Pickup_Sound                                                OFFSET(get<T>, {0x5D0, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.Setup View Distances
+	// void Setup View Distances(int32_t& viewDistanceQuality);                                                                 // [0x1ebf994] Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.initializeSpotlightComponent
+	// void initializeSpotlightComponent();                                                                                     // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.AddRareFX
+	// void AddRareFX();                                                                                                        // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.Set Initial BKGD Param
+	// void Set Initial BKGD Param(UMaterialInstanceDynamic* Mid);                                                              // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.HideBackgroundAndSpotlight
+	// void HideBackgroundAndSpotlight();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.OnPickedUp
+	// void OnPickedUp(AFortPawn* PickupTarget);                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.OnTossed
+	// void OnTossed();                                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setDrawDistances
+	// void setDrawDistances(double BG, double bgdark, double gun);                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_Gun
+	// void setMaxDraw_Gun(double BG);                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_BGDark
+	// void setMaxDraw_BGDark(double BG);                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_BG
+	// void setMaxDraw_BG(double BG);                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_RareMesh
+	// void setMaxDraw_RareMesh(double BG);                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.setMaxDraw_RareFX
+	// void setMaxDraw_RareFX(double BG);                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.drawDark
+	// void drawDark();                                                                                                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Gameplay/Pickups/B_Pickups_Default.B_Pickups_Default_C.ExecuteUbergraph_B_Pickups_Default
+	// void ExecuteUbergraph_B_Pickups_Default(int32_t EntryPoint);                                                             // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Niagara/Blueprints/PhsyicsFields/FN_RadialForce.FN_RadialForce_C
 /// Size: 0x00B4 (0x000298 - 0x00034C)
 class AFN_RadialForce_C : public AFieldSystemActor
@@ -450,8 +467,6 @@ public:
 	DMember(double)                                    Impact_Radius                                               OFFSET(get<double>, {0x338, 8, 0, 0})
 	DMember(double)                                    Strength                                                    OFFSET(get<double>, {0x340, 8, 0, 0})
 	DMember(float)                                     DelayTime                                                   OFFSET(get<float>, {0x348, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -461,23 +476,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Niagara/Blueprints/PhsyicsFields/FN_RadialForce.FN_RadialForce_C.ExecuteUbergraph_FN_RadialForce
 	// void ExecuteUbergraph_FN_RadialForce(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
-/// Class /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C
-/// Size: 0x0018 (0x000088 - 0x0000A0)
-class UAnimNotify_NiagaraNotify_SetBodyType_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 160;
-
-public:
-	CMember(TEnumAsByte<EFortCustomPartType>)          Part_Type                                                   OFFSET(get<T>, {0x88, 1, 0, 0})
-	SMember(FString)                                   Skeletal_Mesh_User_Name                                     OFFSET(get<T>, {0x90, 16, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Effects/Niagara/Blueprints/AnimNotify_NiagaraNotify_SetBodyType.AnimNotify_NiagaraNotify_SetBodyType_C.Received_NotifyBegin
-	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 /// Class /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C
 /// Size: 0x0019 (0x000088 - 0x0000A1)
 class UFN_TimedNiagaraNotify_C : public UFortAnimNotifyState_TimedNiagaraEffectVariant
@@ -491,8 +491,6 @@ public:
 	DMember(bool)                                      Set_in_Water_Niagara_Variable                               OFFSET(get<bool>, {0x8A, 1, 0, 0})
 	CMember(TArray<FAnimCurveParameterPair>)           AnimCurveParameterPair                                      OFFSET(get<T>, {0x90, 16, 0, 0})
 	DMember(bool)                                      IsLargeBodyPawn                                             OFFSET(get<bool>, {0xA0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -500,6 +498,8 @@ public:
 	// bool Received_NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Effects/Niagara/Blueprints/FN_TimedNiagaraNotify/FN_TimedNiagaraNotify.FN_TimedNiagaraNotify_C.Received_NotifyBegin
 	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Small_Vertical_Jolt_CameraShake.B_Small_Vertical_Jolt_CameraShake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_Small_Vertical_Jolt_CameraShake_C : public ULegacyCameraShake
@@ -522,8 +522,6 @@ public:
 	DMember(float)                                     Timeline_0_Alpha_3D5AA2144E9B8D6D3B409B845315B143           OFFSET(get<float>, {0x388, 4, 0, 0})
 	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_3D5AA2144E9B8D6D3B409B845315B143      OFFSET(get<T>, {0x38C, 1, 0, 0})
 	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x390, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -537,6 +535,8 @@ public:
 	// void ReceiveDestroyed();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Geyser.B_CameraLens_Geyser_C.ExecuteUbergraph_B_CameraLens_Geyser
 	// void ExecuteUbergraph_B_CameraLens_Geyser(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Splash_Water_Droplets.B_CameraLens_Splash_Water_Droplets_C
 /// Size: 0x0008 (0x000380 - 0x000388)
 class AB_CameraLens_Splash_Water_Droplets_C : public AEmitterCameraLensEffectBase
@@ -546,8 +546,6 @@ class AB_CameraLens_Splash_Water_Droplets_C : public AEmitterCameraLensEffectBas
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -555,6 +553,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Splash_Water_Droplets.B_CameraLens_Splash_Water_Droplets_C.ExecuteUbergraph_B_CameraLens_Splash_Water_Droplets
 	// void ExecuteUbergraph_B_CameraLens_Splash_Water_Droplets(int32_t EntryPoint);                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraShake_PortalWarp.BP_CameraShake_PortalWarp_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UBP_CameraShake_PortalWarp_C : public ULegacyCameraShake
@@ -584,8 +584,6 @@ class AB_CameraLens_SwimBoost_C : public AEmitterCameraLensEffectBase
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -593,9 +591,21 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SwimBoost.B_CameraLens_SwimBoost_C.ExecuteUbergraph_B_CameraLens_SwimBoost
 	// void ExecuteUbergraph_B_CameraLens_SwimBoost(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping.BP_CameraLens_HidingProp_Teleporting_Looping_C
 /// Size: 0x0000 (0x000380 - 0x000380)
 class ABP_CameraLens_HidingProp_Teleporting_Looping_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 896;
+
+public:
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete.BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C
+/// Size: 0x0000 (0x000380 - 0x000380)
+class ABP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C : public AEmitterCameraLensEffectBase
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 896;
@@ -612,8 +622,6 @@ class AB_CameraLens_Drown_Damage_C : public AEmitterCameraLensEffectBase
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -621,6 +629,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Drown_Damage.B_CameraLens_Drown_Damage_C.ExecuteUbergraph_B_CameraLens_Drown_Damage
 	// void ExecuteUbergraph_B_CameraLens_Drown_Damage(int32_t EntryPoint);                                                     // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_Loop.B_CameraLens_Shadow_Bomb_Loop_C
 /// Size: 0x0008 (0x000380 - 0x000388)
 class AB_CameraLens_Shadow_Bomb_Loop_C : public AEmitterCameraLensEffectBase
@@ -630,8 +640,6 @@ class AB_CameraLens_Shadow_Bomb_Loop_C : public AEmitterCameraLensEffectBase
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -639,6 +647,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_Loop.B_CameraLens_Shadow_Bomb_Loop_C.ExecuteUbergraph_B_CameraLens_Shadow_Bomb_Loop
 	// void ExecuteUbergraph_B_CameraLens_Shadow_Bomb_Loop(int32_t EntryPoint);                                                 // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_End.B_CameraLens_Shadow_Bomb_End_C
 /// Size: 0x0008 (0x000380 - 0x000388)
 class AB_CameraLens_Shadow_Bomb_End_C : public AEmitterCameraLensEffectBase
@@ -648,8 +658,6 @@ class AB_CameraLens_Shadow_Bomb_End_C : public AEmitterCameraLensEffectBase
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -657,24 +665,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Shadow_Bomb_End.B_CameraLens_Shadow_Bomb_End_C.ExecuteUbergraph_B_CameraLens_Shadow_Bomb_End
 	// void ExecuteUbergraph_B_CameraLens_Shadow_Bomb_End(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C
-/// Size: 0x0008 (0x000380 - 0x000388)
-class AB_CameraLens_SpookyMist_End_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 904;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ExecuteUbergraph_B_CameraLens_SpookyMist_End
-	// void ExecuteUbergraph_B_CameraLens_SpookyMist_End(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
 /// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C
 /// Size: 0x0008 (0x000380 - 0x000388)
 class AB_CameraLens_SpookyMist_Loop_C : public AEmitterCameraLensEffectBase
@@ -684,8 +676,6 @@ class AB_CameraLens_SpookyMist_Loop_C : public AEmitterCameraLensEffectBase
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -693,22 +683,32 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_Loop.B_CameraLens_SpookyMist_Loop_C.ExecuteUbergraph_B_CameraLens_SpookyMist_Loop
 	// void ExecuteUbergraph_B_CameraLens_SpookyMist_Loop(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C
+/// Size: 0x0008 (0x000380 - 0x000388)
+class AB_CameraLens_SpookyMist_End_C : public AEmitterCameraLensEffectBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 904;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_SpookyMist_End.B_CameraLens_SpookyMist_End_C.ExecuteUbergraph_B_CameraLens_SpookyMist_End
+	// void ExecuteUbergraph_B_CameraLens_SpookyMist_End(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Fort_Effects/BluePrints/CameraShakes/B_Small_Explosion_CameraShake.B_Small_Explosion_CameraShake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UB_Small_Explosion_CameraShake_C : public ULegacyCameraShake
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 496;
-
-public:
-};
-
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete.BP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C
-/// Size: 0x0000 (0x000380 - 0x000380)
-class ABP_CameraLens_HidingProp_Teleporting_Looping_WilliePete_C : public AEmitterCameraLensEffectBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 896;
 
 public:
 };
@@ -733,8 +733,6 @@ class AB_CameraLens_Lava_Bouncing_C : public AEmitterCameraLensEffectBase
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x380, 8, 0, 0})
 	CMember(UParticleSystemComponent*)                 P_Camera_Lava_Bouncing                                      OFFSET(get<T>, {0x388, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -742,6 +740,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_Lava_Bouncing.B_CameraLens_Lava_Bouncing_C.ExecuteUbergraph_B_CameraLens_Lava_Bouncing
 	// void ExecuteUbergraph_B_CameraLens_Lava_Bouncing(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Effects/Niagara/Blueprints/AnimNotifyState_NiagaraNotify_SetParameters.AnimNotifyState_NiagaraNotify_SetParameters_C
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAnimNotifyState_NiagaraNotify_SetParameters_C : public UAnimNotifyState_TimedNiagaraEffect
@@ -751,16 +751,16 @@ class UAnimNotifyState_NiagaraNotify_SetParameters_C : public UAnimNotifyState_T
 
 public:
 	CMember(TArray<FStruc_NiagaraParameters>)          Parameter_Setup                                             OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Effects/Niagara/Blueprints/AnimNotifyState_NiagaraNotify_SetParameters.AnimNotifyState_NiagaraNotify_SetParameters_C.Received_NotifyTick
 	// bool Received_NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_SpeedLines_Looping_Camera_Lens_Riding.BP_SpeedLines_Looping_Camera_Lens_Riding_C
+};
+
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_SpeedLines_Looping_Camera_LensV2.BP_SpeedLines_Looping_Camera_LensV2_C
 /// Size: 0x0000 (0x000380 - 0x000380)
-class ABP_SpeedLines_Looping_Camera_Lens_Riding_C : public AEmitterCameraLensEffectBase
+class ABP_SpeedLines_Looping_Camera_LensV2_C : public AEmitterCameraLensEffectBase
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 896;
@@ -768,9 +768,9 @@ class ABP_SpeedLines_Looping_Camera_Lens_Riding_C : public AEmitterCameraLensEff
 public:
 };
 
-/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_SpeedLines_Looping_Camera_LensV2.BP_SpeedLines_Looping_Camera_LensV2_C
+/// Class /Game/Effects/Fort_Effects/Camera_Effects/BP_SpeedLines_Looping_Camera_Lens_Riding.BP_SpeedLines_Looping_Camera_Lens_Riding_C
 /// Size: 0x0000 (0x000380 - 0x000380)
-class ABP_SpeedLines_Looping_Camera_LensV2_C : public AEmitterCameraLensEffectBase
+class ABP_SpeedLines_Looping_Camera_Lens_Riding_C : public AEmitterCameraLensEffectBase
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 896;

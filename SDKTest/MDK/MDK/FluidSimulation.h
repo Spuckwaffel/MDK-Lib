@@ -76,8 +76,6 @@ public:
 	CMember(UTextureRenderTarget2D*)                   DebugRippleRT1                                              OFFSET(get<T>, {0x558, 8, 0, 0})
 	CMember(UTextureRenderTarget2D*)                   DebugRippleRT2                                              OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UTextureRenderTarget2D*)                   DebugRippleRTCurrent                                        OFFSET(get<T>, {0x568, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -165,6 +163,8 @@ public:
 	// void SetAllSimParamsInFixedTimeStep(bool bool);                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /FortWater/FluidSimulation/Blueprints/BP_FluidSim_01.BP_FluidSim_01_C.ExecuteUbergraph_BP_FluidSim_01
 	// void ExecuteUbergraph_BP_FluidSim_01(int32_t EntryPoint);                                                                // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Struct /FortWater/FluidSimulation/Blueprints/Structs/FluidForceSocketInfo.FluidForceSocketInfo
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FFluidForceSocketInfo : public MDKStruct

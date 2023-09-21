@@ -30,8 +30,6 @@ class UAchievementQueryCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// UAchievementQueryCallbackProxy* CacheAchievements(UObject* WorldContextObject, APlayerController* PlayerController);     // [0x60b2664] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.AchievementQueryCallbackProxy.CacheAchievementDescriptions
 	// UAchievementQueryCallbackProxy* CacheAchievementDescriptions(UObject* WorldContextObject, APlayerController* PlayerController); // [0x60b2508] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy
 /// Size: 0x0050 (0x000030 - 0x000080)
 class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -49,13 +49,13 @@ class UAchievementWriteCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
 	// UAchievementWriteCallbackProxy* WriteAchievementProgress(UObject* WorldContextObject, APlayerController* PlayerController, FName AchievementName, float Progress, int32_t UserTag); // [0x60b7290] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.ConnectionCallbackProxy
 /// Size: 0x0048 (0x000030 - 0x000078)
 class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -66,13 +66,13 @@ class UConnectionCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.ConnectionCallbackProxy.ConnectToService
 	// UConnectionCallbackProxy* ConnectToService(UObject* WorldContextObject, APlayerController* PlayerController);            // [0x60b27c0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy
 /// Size: 0x0068 (0x000030 - 0x000098)
 class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -83,13 +83,13 @@ class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.CreateSessionCallbackProxy.CreateSession
 	// UCreateSessionCallbackProxy* CreateSession(UObject* WorldContextObject, APlayerController* PlayerController, int32_t PublicConnections, bool bUseLAN); // [0x60b4ed0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy
 /// Size: 0x0048 (0x000030 - 0x000078)
 class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -100,13 +100,13 @@ class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.DestroySessionCallbackProxy.DestroySession
 	// UDestroySessionCallbackProxy* DestroySession(UObject* WorldContextObject, APlayerController* PlayerController);          // [0x60b50b4] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.EndMatchCallbackProxy
 /// Size: 0x0050 (0x000030 - 0x000080)
 class UEndMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -117,13 +117,13 @@ class UEndMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.EndMatchCallbackProxy.EndMatch
 	// UEndMatchCallbackProxy* EndMatch(UObject* WorldContextObject, APlayerController* PlayerController, TScriptInterface<Class> MatchActor, FString MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome); // [0x60b520c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.EndTurnCallbackProxy
 /// Size: 0x0048 (0x000030 - 0x000078)
 class UEndTurnCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -134,13 +134,13 @@ class UEndTurnCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
 	// UEndTurnCallbackProxy* EndTurn(UObject* WorldContextObject, APlayerController* PlayerController, FString MatchID, TScriptInterface<Class> TurnBasedMatchInterface); // [0x60b5740] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy
 /// Size: 0x0060 (0x000030 - 0x000090)
 class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -151,8 +151,6 @@ class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -166,6 +164,8 @@ public:
 	// int32_t GetCurrentPlayers(FBlueprintSessionResult& Result);                                                              // [0x60b6c0c] Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
 	// UFindSessionsCallbackProxy* FindSessions(UObject* WorldContextObject, APlayerController* PlayerController, int32_t MaxResults, bool bUseLAN); // [0x60b5f94] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy
 /// Size: 0x0058 (0x000030 - 0x000088)
 class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
@@ -176,13 +176,13 @@ class UFindTurnBasedMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.FindTurnBasedMatchCallbackProxy.FindTurnBasedMatch
 	// UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(UObject* WorldContextObject, APlayerController* PlayerController, TScriptInterface<Class> MatchActor, int32_t MinPlayers, int32_t MaxPlayers, int32_t PlayerGroup, bool ShowExistingMatches); // [0x60b6178] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2
 /// Size: 0x0080 (0x000028 - 0x0000A8)
 class UInAppPurchaseCallbackProxy2 : public UObject
@@ -193,8 +193,6 @@ class UInAppPurchaseCallbackProxy2 : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -204,6 +202,8 @@ public:
 	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchaseQueryOwned(APlayerController* PlayerController);          // [0x60b45e4] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCallbackProxy2.CreateProxyObjectForInAppPurchase
 	// UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchase(APlayerController* PlayerController, FInAppPurchaseProductRequest2& ProductRequest); // [0x60b2b28] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy
 /// Size: 0x0078 (0x000028 - 0x0000A0)
 class UInAppPurchaseCheckoutCallbackProxy : public UObject
@@ -214,13 +214,13 @@ class UInAppPurchaseCheckoutCallbackProxy : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy.CreateProxyObjectForInAppPurchaseCheckout
 	// UInAppPurchaseCheckoutCallbackProxy* CreateProxyObjectForInAppPurchaseCheckout(APlayerController* PlayerController, FInAppPurchaseProductRequest2& ProductRequest); // [0x60b3228] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseFinalizeProxy
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UInAppPurchaseFinalizeProxy : public UObject
@@ -241,13 +241,13 @@ class UInAppPurchaseQueryCallbackProxy2 : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
 	// UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(APlayerController* PlayerController, TArray<FString>& ProductIdentifiers); // [0x60b432c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UInAppPurchaseReceiptsCallbackProxy : public UObject
@@ -258,8 +258,6 @@ class UInAppPurchaseReceiptsCallbackProxy : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -269,6 +267,8 @@ public:
 	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseQueryOwnedProducts(APlayerController* PlayerController); // [0x60b4858] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseGetKnownReceipts
 	// UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseGetKnownReceipts(APlayerController* PlayerController); // [0x60b413c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
 /// Size: 0x0088 (0x000028 - 0x0000B0)
 class UInAppPurchaseRestoreCallbackProxy2 : public UObject
@@ -279,13 +279,13 @@ class UInAppPurchaseRestoreCallbackProxy2 : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2.CreateProxyObjectForInAppPurchaseRestore
 	// UInAppPurchaseRestoreCallbackProxy2* CreateProxyObjectForInAppPurchaseRestore(TArray<FInAppPurchaseProductRequest2>& ConsumableProductFlags, APlayerController* PlayerController); // [0x60b48fc] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.IpConnection
 /// Size: 0x0090 (0x001DF8 - 0x001E88)
 class UIpConnection : public UNetConnection
@@ -328,13 +328,13 @@ class UJoinSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
 	// UJoinSessionCallbackProxy* JoinSession(UObject* WorldContextObject, APlayerController* PlayerController, FBlueprintSessionResult& SearchResult); // [0x60b6f3c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.LeaderboardBlueprintLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class ULeaderboardBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -355,13 +355,13 @@ class ULeaderboardFlushCallbackProxy : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
 	// ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(APlayerController* PlayerController, FName SessionName);       // [0x60b2918] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy
 /// Size: 0x0068 (0x000028 - 0x000090)
 class ULeaderboardQueryCallbackProxy : public UObject
@@ -372,13 +372,13 @@ class ULeaderboardQueryCallbackProxy : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
 	// ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(APlayerController* PlayerController, FName StatName);       // [0x60b4df0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.LogoutCallbackProxy
 /// Size: 0x0038 (0x000030 - 0x000068)
 class ULogoutCallbackProxy : public UBlueprintAsyncActionBase
@@ -389,13 +389,13 @@ class ULogoutCallbackProxy : public UBlueprintAsyncActionBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.LogoutCallbackProxy.Logout
 	// ULogoutCallbackProxy* Logout(UObject* WorldContextObject, APlayerController* PlayerController);                          // [0x60b7138] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.OnlineBeacon
 /// Size: 0x0030 (0x000290 - 0x0002C0)
 class AOnlineBeacon : public AActor
@@ -420,13 +420,13 @@ public:
 	CMember(AOnlineBeaconHostObject*)                  BeaconOwner                                                 OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UNetConnection*)                           BeaconConnection                                            OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(EBeaconConnectionState)                    ConnectionState                                             OFFSET(get<T>, {0x2D0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.OnlineBeaconClient.ClientOnConnected
 	// void ClientOnConnected();                                                                                                // [0xfcc560] Final|Net|NetReliableNative|Event|Private|NetClient 
+};
+
 /// Class /Script/OnlineSubsystemUtils.OnlineBeaconHost
 /// Size: 0x0110 (0x0002C0 - 0x0003D0)
 class AOnlineBeaconHost : public AOnlineBeacon
@@ -515,8 +515,6 @@ public:
 	CMember(EClientRequestType)                        RequestType                                                 OFFSET(get<T>, {0x3B8, 1, 0, 0})
 	DMember(bool)                                      bPendingReservationSent                                     OFFSET(get<bool>, {0x3B9, 1, 0, 0})
 	DMember(bool)                                      bCancelReservation                                          OFFSET(get<bool>, {0x3BA, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -538,6 +536,8 @@ public:
 	// void ClientReservationResponse(TEnumAsByte<EPartyReservationResult> ReservationResponse);                                // [0x60d2810] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
 	// void ClientCancelReservationResponse(TEnumAsByte<EPartyReservationResult> ReservationResponse);                          // [0x60d2708] Net|NetReliableNative|Event|Public|NetClient 
+};
+
 /// Class /Script/OnlineSubsystemUtils.PartyBeaconHost
 /// Size: 0x0078 (0x0002B8 - 0x000330)
 class APartyBeaconHost : public AOnlineBeaconHostObject
@@ -587,13 +587,13 @@ class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
 	// UQuitMatchCallbackProxy* QuitMatch(UObject* WorldContextObject, APlayerController* PlayerController, FString MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int32_t TurnTimeoutInSeconds); // [0x60d4688] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy
 /// Size: 0x0030 (0x000030 - 0x000060)
 class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase
@@ -604,13 +604,13 @@ class UShowLoginUICallbackProxy : public UBlueprintAsyncActionBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/OnlineSubsystemUtils.ShowLoginUICallbackProxy.ShowExternalLoginUI
 	// UShowLoginUICallbackProxy* ShowExternalLoginUI(UObject* WorldContextObject, APlayerController* InPlayerController);      // [0x60d5bf0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconClient
 /// Size: 0x00F8 (0x000320 - 0x000418)
 class ASpectatorBeaconClient : public AOnlineBeaconClient
@@ -624,8 +624,6 @@ public:
 	CMember(ESpectatorClientRequestType)               RequestType                                                 OFFSET(get<T>, {0x3E8, 1, 0, 0})
 	DMember(bool)                                      bPendingReservationSent                                     OFFSET(get<bool>, {0x3E9, 1, 0, 0})
 	DMember(bool)                                      bCancelReservation                                          OFFSET(get<bool>, {0x3EA, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -641,6 +639,8 @@ public:
 	// void ClientReservationResponse(TEnumAsByte<ESpectatorReservationResult> ReservationResponse);                            // [0x60d2894] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/OnlineSubsystemUtils.SpectatorBeaconClient.ClientCancelReservationResponse
 	// void ClientCancelReservationResponse(TEnumAsByte<ESpectatorReservationResult> ReservationResponse);                      // [0x60d278c] Net|NetReliableNative|Event|Public|NetClient 
+};
+
 /// Class /Script/OnlineSubsystemUtils.SpectatorBeaconHost
 /// Size: 0x0078 (0x0002B8 - 0x000330)
 class ASpectatorBeaconHost : public AOnlineBeaconHostObject

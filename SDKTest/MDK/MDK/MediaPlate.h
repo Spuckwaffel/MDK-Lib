@@ -60,8 +60,6 @@ public:
 	SMember(FVector2D)                                 MeshRange                                                   OFFSET(get<T>, {0x108, 16, 0, 0})
 	CMember(TArray<UMediaTexture*>)                    MediaTextures                                               OFFSET(get<T>, {0x118, 16, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x128, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -105,6 +103,8 @@ public:
 	// bool GetIsAspectRatioAuto();                                                                                             // [0x7f0c9a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaPlate.MediaPlateComponent.Close
 	// void Close();                                                                                                            // [0xa66bb60] Final|Native|Public|BlueprintCallable 
+};
+
 /// Enum /Script/MediaPlate.EMediaPlateEventState
 /// Size: 0x08
 enum EMediaPlateEventState : uint8_t

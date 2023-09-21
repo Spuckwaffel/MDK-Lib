@@ -34,8 +34,6 @@ public:
 	CMember(EStartMode)                                StartMode                                                   OFFSET(get<T>, {0x299, 1, 0, 0})
 	DMember(float)                                     StartTime                                                   OFFSET(get<float>, {0x29C, 4, 0, 0})
 	CMember(TArray<FObservedComponent>)                ObservedComponents                                          OFFSET(get<T>, {0x2A8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -57,6 +55,8 @@ public:
 	// void EnablePlaybackByCache(FName InCacheName, bool bEnable);                                                             // [0xa4328dc] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/ChaosCaching.ChaosCacheManager.EnablePlayback
 	// void EnablePlayback(int32_t Index, bool bEnable);                                                                        // [0xa43280c] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/ChaosCaching.ChaosCachePlayer
 /// Size: 0x0000 (0x000340 - 0x000340)
 class AChaosCachePlayer : public AChaosCacheManager

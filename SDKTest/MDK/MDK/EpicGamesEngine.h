@@ -22,8 +22,6 @@ public:
 	SMember(FVerseActionMappingArray)                  ReplicatedActionMappingArray                                OFFSET(get<T>, {0xD8, 288, 0, 0})
 	SMember(FVerseAxisMappingArray)                    ReplicatedAxisMappingArray                                  OFFSET(get<T>, {0x1F8, 288, 0, 0})
 	SMember(FVerseInputBindingArray)                   ReplicatedInputBindingArray                                 OFFSET(get<T>, {0x318, 288, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,6 +29,8 @@ public:
 	// void ServerTriggerAxis(FName AxisName, float Value);                                                                     // [0x96d03dc] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
 	// Function /Script/EpicGamesEngine.VerseUEInputComponentBase.ServerTriggerAction
 	// void ServerTriggerAction(FName ActionName, TEnumAsByte<EInputEvent> InputEvent);                                         // [0x96d02f0] Final|Net|NetReliableNative|Event|Private|NetServer|NetValidate 
+};
+
 /// Struct /Script/EpicGamesEngine.VerseActionMapping
 /// Size: 0x0024 (0x00000C - 0x000030)
 class FVerseActionMapping : public FFastArraySerializerItem

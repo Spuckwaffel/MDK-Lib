@@ -179,8 +179,6 @@ public:
 	CMember(UTemplateSequencePlayer*)                  SequencePlayer                                              OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	SMember(FSoftObjectPath)                           TemplateSequence                                            OFFSET(get<T>, {0x2C0, 24, 0, 0})
 	SMember(FTemplateSequenceBindingOverrideData)      BindingOverride                                             OFFSET(get<T>, {0x2D8, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -194,6 +192,8 @@ public:
 	// UTemplateSequencePlayer* GetSequencePlayer();                                                                            // [0x6c70e34] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TemplateSequence.TemplateSequenceActor.GetSequence
 	// UTemplateSequence* GetSequence();                                                                                        // [0x6c70e10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/TemplateSequence.TemplateSequencePlayer
 /// Size: 0x0008 (0x0004C8 - 0x0004D0)
 class UTemplateSequencePlayer : public UMovieSceneSequencePlayer

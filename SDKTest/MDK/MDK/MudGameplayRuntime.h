@@ -23,8 +23,6 @@ public:
 	SMember(FGameplayTag)                              SprintingTag                                                OFFSET(get<T>, {0xB0, 4, 0, 0})
 	SMember(FGameplayTag)                              AttachParentCoveredEventTag                                 OFFSET(get<T>, {0xB4, 4, 0, 0})
 	SMember(FGameplayTag)                              CreatureSprintingTag                                        OFFSET(get<T>, {0xB8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -46,3 +44,5 @@ public:
 	// void HandleSurfaceTypeChanged(AActor* SurfaceActor, TEnumAsByte<EPhysicalSurface> CurrentSurfaceType, TEnumAsByte<EPhysicalSurface> PrevSurfaceType); // [0x272f06c] Final|Native|Private 
 	// Function /Script/MudGameplayRuntime.FortPawnComponent_Mud.HandleASCInitialized
 	// void HandleASCInitialized(UFortAbilitySystemComponent* AbilitySystemComponent, AFortPlayerPawn* AffectedPawn);           // [0x128b28c] Final|Native|Private 
+};
+

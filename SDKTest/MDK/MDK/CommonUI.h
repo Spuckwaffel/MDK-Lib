@@ -56,8 +56,6 @@ public:
 	CMember(TArray<FDataTableRowHandle>)               InputActions                                                OFFSET(get<T>, {0x320, 16, 0, 0})
 	CMember(UInputAction*)                             EnhancedInputAction                                         OFFSET(get<T>, {0x330, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 ProgressDynamicMaterial                                     OFFSET(get<T>, {0x340, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -77,6 +75,8 @@ public:
 	// FSlateBrush GetIcon();                                                                                                   // [0x2970b84] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonActionWidget.GetDisplayText
 	// FText GetDisplayText();                                                                                                  // [0x2866eb4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonUserWidget
 /// Size: 0x0028 (0x0002A8 - 0x0002D0)
 class UCommonUserWidget : public UUserWidget
@@ -87,13 +87,13 @@ class UCommonUserWidget : public UUserWidget
 public:
 	DMember(bool)                                      bDisplayInActionBar                                         OFFSET(get<bool>, {0x2A8, 1, 0, 0})
 	DMember(bool)                                      bConsumePointerInput                                        OFFSET(get<bool>, {0x2A9, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.CommonUserWidget.SetConsumePointerInput
 	// void SetConsumePointerInput(bool bInConsumePointerInput);                                                                // [0x6647704] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonActivatableWidget
 /// Size: 0x0118 (0x0002D0 - 0x0003E8)
 class UCommonActivatableWidget : public UCommonUserWidget
@@ -120,8 +120,6 @@ public:
 	CMember(ESlateVisibility)                          ActivatedVisibility                                         OFFSET(get<T>, {0x3E1, 1, 0, 0})
 	DMember(bool)                                      bSetVisibilityOnDeactivated                                 OFFSET(get<bool>, {0x3E2, 1, 0, 0})
 	CMember(ESlateVisibility)                          DeactivatedVisibility                                       OFFSET(get<T>, {0x3E3, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -147,6 +145,8 @@ public:
 	// void BindVisibilityToActivation(UCommonActivatableWidget* ActivatableWidget);                                            // [0x6644b14] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.CommonActivatableWidget.ActivateWidget
 	// void ActivateWidget();                                                                                                   // [0x66448d0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonAnimatedSwitcher
 /// Size: 0x0070 (0x0001A8 - 0x000218)
 class UCommonAnimatedSwitcher : public UWidgetSwitcher
@@ -158,8 +158,6 @@ public:
 	CMember(ECommonSwitcherTransition)                 TransitionType                                              OFFSET(get<T>, {0x1D8, 1, 0, 0})
 	CMember(ETransitionCurve)                          TransitionCurveType                                         OFFSET(get<T>, {0x1D9, 1, 0, 0})
 	DMember(float)                                     TransitionDuration                                          OFFSET(get<float>, {0x1DC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -175,6 +173,8 @@ public:
 	// void ActivatePreviousWidget(bool bCanWrap);                                                                              // [0x664483c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.CommonAnimatedSwitcher.ActivateNextWidget
 	// void ActivateNextWidget(bool bCanWrap);                                                                                  // [0x66447bc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonActivatableWidgetSwitcher
 /// Size: 0x0010 (0x000218 - 0x000228)
 class UCommonActivatableWidgetSwitcher : public UCommonAnimatedSwitcher
@@ -194,13 +194,13 @@ class UCommonBorderStyle : public UObject
 
 public:
 	SMember(FSlateBrush)                               Background                                                  OFFSET(get<T>, {0x30, 192, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.CommonBorderStyle.GetBackgroundBrush
 	// void GetBackgroundBrush(FSlateBrush& Brush);                                                                             // [0x66451b0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonBorder
 /// Size: 0x0020 (0x000300 - 0x000320)
 class UCommonBorder : public UBorder
@@ -212,13 +212,13 @@ public:
 	CMember(UClass*)                                   style                                                       OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      bReducePaddingBySafezone                                    OFFSET(get<bool>, {0x308, 1, 0, 0})
 	SMember(FMargin)                                   MinimumPadding                                              OFFSET(get<T>, {0x30C, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.CommonBorder.SetStyle
 	// void SetStyle(UClass* InStyle);                                                                                          // [0x6649014] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonButtonStyle
 /// Size: 0x0708 (0x000028 - 0x000730)
 class UCommonButtonStyle : public UObject
@@ -251,8 +251,6 @@ public:
 	SMember(FSlateSound)                               HoveredSlateSound                                           OFFSET(get<T>, {0x6D8, 24, 0, 0})
 	SMember(FCommonButtonStyleOptionalSlateSound)      SelectedHoveredSlateSound                                   OFFSET(get<T>, {0x6F0, 32, 0, 0})
 	SMember(FCommonButtonStyleOptionalSlateSound)      LockedHoveredSlateSound                                     OFFSET(get<T>, {0x710, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -286,6 +284,8 @@ public:
 	// void GetCustomPadding(FMargin& OutCustomPadding);                                                                        // [0x66455a0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonButtonStyle.GetButtonPadding
 	// void GetButtonPadding(FMargin& OutButtonPadding);                                                                        // [0x66452e0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonButtonInternalBase
 /// Size: 0x0070 (0x0005D0 - 0x000640)
 class UCommonButtonInternalBase : public UButton
@@ -353,8 +353,6 @@ public:
 	SMember(FButtonStyle)                              LockedStyle                                                 OFFSET(get<T>, {0xFA0, 944, 0, 0})
 	DMember(bool)                                      bStopDoubleClickPropagation                                 OFFSET(get<bool>, {0x1350, 1, 1, 0})
 	CMember(UCommonActionWidget*)                      InputActionWidget                                           OFFSET(get<T>, {0x1468, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -516,6 +514,8 @@ public:
 	// void BP_OnDeselected();                                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CommonUI.CommonButtonBase.BP_OnClicked
 	// void BP_OnClicked();                                                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CommonUI.WidgetLockedStateRegistration
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UWidgetLockedStateRegistration : public UWidgetBinaryStateRegistration
@@ -551,8 +551,6 @@ public:
 	DMember(bool)                                      bIsScrollingEnabled                                         OFFSET(get<bool>, {0x360, 1, 0, 0})
 	DMember(bool)                                      bDisplayAllCaps                                             OFFSET(get<bool>, {0x361, 1, 0, 0})
 	DMember(bool)                                      bAutoCollapseWithEmptyText                                  OFFSET(get<bool>, {0x362, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -576,6 +574,8 @@ public:
 	// float GetMobileFontSizeMultiplier();                                                                                     // [0x335bfc8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonTextBlock.GetMargin
 	// FMargin GetMargin();                                                                                                     // [0x6645ac8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonDateTimeTextBlock
 /// Size: 0x0050 (0x000380 - 0x0003D0)
 class UCommonDateTimeTextBlock : public UCommonTextBlock
@@ -630,8 +630,6 @@ public:
 	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(get<T>, {0x2B0, 192, 0, 0})
 	SMember(FName)                                     MaterialTextureParamName                                    OFFSET(get<T>, {0x370, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(get<T>, {0x378, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -645,6 +643,8 @@ public:
 	// void SetBrushFromLazyDisplayAsset(TWeakObjectPtr<UObject*>& LazyObject, bool bMatchTextureSize);                         // [0x6647474] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/CommonUI.CommonLazyImage.IsLoading
 	// bool IsLoading();                                                                                                        // [0x6646a30] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonLazyWidget
 /// Size: 0x0148 (0x000178 - 0x0002C0)
 class UCommonLazyWidget : public UWidget
@@ -656,8 +656,6 @@ public:
 	SMember(FSlateBrush)                               LoadingBackgroundBrush                                      OFFSET(get<T>, {0x180, 192, 0, 0})
 	CMember(UUserWidget*)                              Content                                                     OFFSET(get<T>, {0x240, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(get<T>, {0x270, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -667,6 +665,8 @@ public:
 	// bool IsLoading();                                                                                                        // [0x6646a60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonLazyWidget.GetContent
 	// UUserWidget* GetContent();                                                                                               // [0x66453fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonListView
 /// Size: 0x0000 (0x000BD0 - 0x000BD0)
 class UCommonListView : public UListView
@@ -688,8 +688,6 @@ public:
 	SMember(FMargin)                                   Padding                                                     OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TEnumAsByte<EHorizontalAlignment>)         HorizontalAlignment                                         OFFSET(get<T>, {0x48, 1, 0, 0})
 	CMember(TEnumAsByte<EVerticalAlignment>)           VerticalAlignment                                           OFFSET(get<T>, {0x49, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -699,6 +697,8 @@ public:
 	// void SetPadding(FMargin InPadding);                                                                                      // [0x66489d4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.LoadGuardSlot.SetHorizontalAlignment
 	// void SetHorizontalAlignment(TEnumAsByte<EHorizontalAlignment> InHorizontalAlignment);                                    // [0x6647dbc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonLoadGuard
 /// Size: 0x0150 (0x000190 - 0x0002E0)
 class UCommonLoadGuard : public UContentWidget
@@ -714,8 +714,6 @@ public:
 	CMember(UClass*)                                   TextStyle                                                   OFFSET(get<T>, {0x280, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  BP_OnLoadingStateChanged                                    OFFSET(get<T>, {0x288, 16, 0, 0})
 	SMember(FSoftObjectPath)                           SpinnerMaterialPath                                         OFFSET(get<T>, {0x298, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -729,6 +727,8 @@ public:
 	// bool IsLoading();                                                                                                        // [0x6646a90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonLoadGuard.BP_GuardAndLoadAsset
 	// void BP_GuardAndLoadAsset(TWeakObjectPtr<UObject*>& InLazyAsset, FDelegateProperty& OnAssetLoaded);                      // [0x6644980] Final|Native|Private|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonNumericTextBlock
 /// Size: 0x00A0 (0x000380 - 0x000420)
 class UCommonNumericTextBlock : public UCommonTextBlock
@@ -749,8 +749,6 @@ public:
 	DMember(float)                                     PostInterpolationShrinkDuration                             OFFSET(get<float>, {0x3DC, 4, 0, 0})
 	DMember(bool)                                      PerformSizeInterpolation                                    OFFSET(get<bool>, {0x3E0, 1, 0, 0})
 	DMember(bool)                                      IsPercentage                                                OFFSET(get<bool>, {0x3E1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -772,6 +770,8 @@ public:
 	// void InterpolateToValue(float TargetValue, float MaximumInterpolationDuration, float MinimumChangeRate, float OutroOffset); // [0x6646898] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.CommonNumericTextBlock.GetTargetValue
 	// float GetTargetValue();                                                                                                  // [0x66463f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonPoolableWidgetInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCommonPoolableWidgetInterface : public UInterface
@@ -798,13 +798,13 @@ public:
 	DMember(bool)                                      bIsScrollingEnabled                                         OFFSET(get<bool>, {0x850, 1, 0, 0})
 	DMember(bool)                                      bDisplayAllCaps                                             OFFSET(get<bool>, {0x851, 1, 0, 0})
 	DMember(bool)                                      bAutoCollapseWithEmptyText                                  OFFSET(get<bool>, {0x852, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.CommonRichTextBlock.SetScrollingEnabled
 	// void SetScrollingEnabled(bool bInIsScrollingEnabled);                                                                    // [0x301b840] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonRotator
 /// Size: 0x0060 (0x001470 - 0x0014D0)
 class UCommonRotator : public UCommonButtonBase
@@ -815,8 +815,6 @@ class UCommonRotator : public UCommonButtonBase
 public:
 	SMember(FMulticastInlineDelegate)                  OnRotated                                                   OFFSET(get<T>, {0x1480, 16, 0, 0})
 	CMember(UCommonTextBlock*)                         MyText                                                      OFFSET(get<T>, {0x14A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -836,6 +834,8 @@ public:
 	// void BP_OnOptionsPopulated(int32_t Count);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CommonUI.CommonRotator.BP_OnOptionSelected
 	// void BP_OnOptionSelected(int32_t Index);                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CommonUI.CommonTabListWidgetBase
 /// Size: 0x00F0 (0x0002D0 - 0x0003C0)
 class UCommonTabListWidgetBase : public UCommonUserWidget
@@ -857,8 +857,6 @@ public:
 	CMember(TWeakObjectPtr<UCommonAnimatedSwitcher*>)  LinkedSwitcher                                              OFFSET(get<T>, {0x344, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   TabButtonGroup                                              OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(TMap<FName, FCommonRegisteredTabInfo>)     RegisteredTabsByID                                          OFFSET(get<T>, {0x360, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -916,6 +914,8 @@ public:
 	// FName GetActiveTab();                                                                                                    // [0x5a01d44] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonTabListWidgetBase.DisableTabWithReason
 	// void DisableTabWithReason(FName TabNameID, FText& Reason);                                                               // [0x6644e4c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonTextStyle
 /// Size: 0x0178 (0x000028 - 0x0001A0)
 class UCommonTextStyle : public UObject
@@ -932,8 +932,6 @@ public:
 	SMember(FMargin)                                   Margin                                                      OFFSET(get<T>, {0xB8, 16, 0, 0})
 	SMember(FSlateBrush)                               StrikeBrush                                                 OFFSET(get<T>, {0xD0, 192, 0, 0})
 	DMember(float)                                     LineHeightPercentage                                        OFFSET(get<float>, {0x190, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -951,6 +949,8 @@ public:
 	// void GetFont(FSlateFontInfo& OutFont);                                                                                   // [0x6645854] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonTextStyle.GetColor
 	// void GetColor(FLinearColor& OutColor);                                                                                   // [0x6645370] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonUI.CommonTextScrollStyle
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UCommonTextScrollStyle : public UObject
@@ -1121,8 +1121,6 @@ public:
 	DMember(int32_t)                                   ActiveWidgetIndex                                           OFFSET(get<int32_t>, {0x1A4, 4, 0, 0})
 	DMember(bool)                                      bAutoActivateSlot                                           OFFSET(get<bool>, {0x1A8, 1, 0, 0})
 	DMember(bool)                                      bActivateFirstSlotOnAdding                                  OFFSET(get<bool>, {0x1A9, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1142,6 +1140,8 @@ public:
 	// void DeactivateVisibleSlot();                                                                                            // [0x6644cf4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.CommonVisibilitySwitcher.ActivateVisibleSlot
 	// void ActivateVisibleSlot();                                                                                              // [0x66448bc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonVisibilitySwitcherSlot
 /// Size: 0x0010 (0x000058 - 0x000068)
 class UCommonVisibilitySwitcherSlot : public UOverlaySlot
@@ -1166,13 +1166,13 @@ public:
 	DMember(bool)                                      bShowForTouch                                               OFFSET(get<bool>, {0x372, 1, 0, 0})
 	CMember(ESlateVisibility)                          VisibleType                                                 OFFSET(get<T>, {0x373, 1, 0, 0})
 	CMember(ESlateVisibility)                          HiddenType                                                  OFFSET(get<T>, {0x374, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.UCommonVisibilityWidgetBase.GetRegisteredPlatforms
 	// TArray<FName> GetRegisteredPlatforms();                                                                                  // [0x6645db4] Final|Native|Static|Protected 
+};
+
 /// Class /Script/CommonUI.CommonVisualAttachment
 /// Size: 0x0020 (0x0001C8 - 0x0001E8)
 class UCommonVisualAttachment : public USizeBox
@@ -1194,8 +1194,6 @@ class UCommonWidgetCarousel : public UPanelWidget
 public:
 	DMember(int32_t)                                   ActiveWidgetIndex                                           OFFSET(get<int32_t>, {0x190, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnCurrentPageIndexChanged                                   OFFSET(get<T>, {0x198, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1215,6 +1213,8 @@ public:
 	// void EndAutoScrolling();                                                                                                 // [0x6644f28] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.CommonWidgetCarousel.BeginAutoScrolling
 	// void BeginAutoScrolling(float ScrollInterval);                                                                           // [0x6644a94] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonWidgetCarouselNavBar
 /// Size: 0x0048 (0x000178 - 0x0001C0)
 class UCommonWidgetCarouselNavBar : public UWidget
@@ -1228,8 +1228,6 @@ public:
 	CMember(UCommonWidgetCarousel*)                    LinkedCarousel                                              OFFSET(get<T>, {0x1A0, 8, 0, 0})
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup                                                 OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(TArray<UCommonButtonBase*>)                Buttons                                                     OFFSET(get<T>, {0x1B0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1239,6 +1237,8 @@ public:
 	// void HandlePageChanged(UCommonWidgetCarousel* CommonCarousel, int32_t PageIndex);                                        // [0x664662c] Final|Native|Protected 
 	// Function /Script/CommonUI.CommonWidgetCarouselNavBar.HandleButtonClicked
 	// void HandleButtonClicked(UCommonButtonBase* AssociatedButton, int32_t ButtonIndex);                                      // [0x66464bc] Final|Native|Protected 
+};
+
 /// Class /Script/CommonUI.CommonWidgetGroupBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCommonWidgetGroupBase : public UObject
@@ -1263,8 +1263,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnButtonBaseDoubleClicked                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSelectionCleared                                          OFFSET(get<T>, {0xC8, 16, 0, 0})
 	DMember(bool)                                      bSelectionRequired                                          OFFSET(get<bool>, {0xF0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1302,6 +1300,8 @@ public:
 	// int32_t FindButtonIndex(UCommonButtonBase* ButtonToFind);                                                                // [0x6644f3c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonUI.CommonButtonGroupBase.DeselectAll
 	// void DeselectAll();                                                                                                      // [0x6644d9c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonBoundActionBar
 /// Size: 0x0018 (0x000258 - 0x000270)
 class UCommonBoundActionBar : public UDynamicEntryBoxBase
@@ -1313,13 +1313,13 @@ public:
 	CMember(UClass*)                                   ActionButtonClass                                           OFFSET(get<T>, {0x260, 8, 0, 0})
 	DMember(bool)                                      bDisplayOwningPlayerActionsOnly                             OFFSET(get<bool>, {0x268, 1, 0, 0})
 	DMember(bool)                                      bIgnoreDuplicateActions                                     OFFSET(get<bool>, {0x269, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.CommonBoundActionBar.SetDisplayOwningPlayerActionsOnly
 	// void SetDisplayOwningPlayerActionsOnly(bool bShouldOnlyDisplayOwningPlayerActions);                                      // [0x2a98674] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonBoundActionButton
 /// Size: 0x0020 (0x001470 - 0x001490)
 class UCommonBoundActionButton : public UCommonButtonBase
@@ -1329,13 +1329,13 @@ class UCommonBoundActionButton : public UCommonButtonBase
 
 public:
 	CMember(UCommonTextBlock*)                         Text_ActionName                                             OFFSET(get<T>, {0x1478, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonUI.CommonBoundActionButton.OnUpdateInputAction
 	// void OnUpdateInputAction();                                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CommonUI.CommonGenericInputActionDataTable
 /// Size: 0x0000 (0x0000B0 - 0x0000B0)
 class UCommonGenericInputActionDataTable : public UDataTable
@@ -1395,8 +1395,6 @@ public:
 	CMember(TArray<UCommonActivatableWidget*>)         WidgetList                                                  OFFSET(get<T>, {0x198, 16, 0, 0})
 	CMember(UCommonActivatableWidget*)                 DisplayedWidget                                             OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	SMember(FUserWidgetPool)                           GeneratedWidgetsPool                                        OFFSET(get<T>, {0x1B0, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1412,6 +1410,8 @@ public:
 	// void ClearWidgets();                                                                                                     // [0x6644ce0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CommonUI.CommonActivatableWidgetContainerBase.BP_AddWidget
 	// UCommonActivatableWidget* BP_AddWidget(UClass* ActivatableWidgetClass);                                                  // [0x66448e4] Final|Native|Private|BlueprintCallable 
+};
+
 /// Class /Script/CommonUI.CommonActivatableWidgetStack
 /// Size: 0x0010 (0x000298 - 0x0002A8)
 class UCommonActivatableWidgetStack : public UCommonActivatableWidgetContainerBase

@@ -100,8 +100,6 @@ public:
 	SMember(FChaosDebugSubstepControl)                 ChaosDebugSubstepControl                                    OFFSET(get<T>, {0x354, 3, 0, 0})
 	CMember(UBillboardComponent*)                      SpriteComponent                                             OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UChaosGameplayEventDispatcher*)            GameplayEventDispatcherComponent                            OFFSET(get<T>, {0x378, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -109,6 +107,8 @@ public:
 	// void SetSolverActive(bool bActive);                                                                                      // [0x570e6d8] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver
 	// void SetAsCurrentWorldSolver();                                                                                          // [0x570e6c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ChaosSolverEngine.ChaosSolverSettings
 /// Size: 0x0020 (0x000030 - 0x000050)
 class UChaosSolverSettings : public UDeveloperSettings

@@ -66,8 +66,6 @@ public:
 	DMember(float)                                     Weight                                                      OFFSET(get<float>, {0xD8, 4, 0, 0})
 	DMember(int32_t)                                   QualityLevel                                                OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
 	CMember(UMLDeformerModelInstance*)                 ModelInstance                                               OFFSET(get<T>, {0xE0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -89,6 +87,8 @@ public:
 	// UMLDeformerAsset* GetDeformerAsset();                                                                                    // [0x82ba578] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MLDeformerFramework.MLDeformerComponent.FindSkeletalMeshComponent
 	// USkeletalMeshComponent* FindSkeletalMeshComponent(UMLDeformerAsset* Asset);                                              // [0x9ccaf00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MLDeformerFramework.MLDeformerComponentSource
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMLDeformerComponentSource : public UOptimusComponentSource
@@ -193,8 +193,6 @@ public:
 	DMember(float)                                     MorphCompressionLevel                                       OFFSET(get<float>, {0x170, 4, 0, 0})
 	CMember(EMLDeformerMaskChannel)                    MaskChannel                                                 OFFSET(get<T>, {0x174, 1, 0, 0})
 	DMember(bool)                                      bInvertMaskChannel                                          OFFSET(get<bool>, {0x175, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -206,6 +204,8 @@ public:
 	// void SetMorphTargetDeltas(TArray<FVector3f>& Deltas);                                                                    // [0x9ccb0fc] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MLDeformerFramework.MLDeformerMorphModel.SetMorphTargetDeltaFloats
 	// void SetMorphTargetDeltaFloats(TArray<float>& Deltas);                                                                   // [0x9ccb05c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MLDeformerFramework.MLDeformerMorphModelInputInfo
 /// Size: 0x0000 (0x000068 - 0x000068)
 class UMLDeformerMorphModelInputInfo : public UMLDeformerInputInfo

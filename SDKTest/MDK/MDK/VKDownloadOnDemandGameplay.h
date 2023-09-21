@@ -20,13 +20,13 @@ public:
 	CMember(UDownloadOnDemandPlot*)                    Plot                                                        OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(TArray<UDownloadOnDemandProject*>)         UserOwnedProjects                                           OFFSET(get<T>, {0x1B0, 16, 0, 0})
 	CMember(TArray<UDownloadOnDemandProjectContent*>)  ShelvedContents                                             OFFSET(get<T>, {0x1C0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VKDownloadOnDemandGameplay.DownloadOnDemandComponent.HandleMnemonicsFromValkyriePaletteProviderReceived
 	// void HandleMnemonicsFromValkyriePaletteProviderReceived(TArray<FString>& Mnemonics);                                     // [0x9ea55c0] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/VKDownloadOnDemandGameplay.DownloadOnDemandPlot
 /// Size: 0x0098 (0x000028 - 0x0000C0)
 class UDownloadOnDemandPlot : public UObject

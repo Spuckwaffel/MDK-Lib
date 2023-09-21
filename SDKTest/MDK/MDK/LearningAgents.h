@@ -100,8 +100,6 @@ public:
 	DMember(bool)                                      bIsSetup                                                    OFFSET(get<bool>, {0xA0, 1, 0, 0})
 	CMember(ALearningAgentsManager*)                   Manager                                                     OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(TArray<ULearningAgentsHelper*>)            HelperObjects                                               OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -121,6 +119,8 @@ public:
 	// void AgentsRemoved(TArray<int32_t>& AgentIds);                                                                           // [0xa060fac] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/LearningAgents.LearningAgentsManagerComponent.AgentsAdded
 	// void AgentsAdded(TArray<int32_t>& AgentIds);                                                                             // [0xa060f0c] Native|Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/LearningAgents.LearningAgentsController
 /// Size: 0x0050 (0x0000C0 - 0x000110)
 class ULearningAgentsController : public ULearningAgentsManagerComponent
@@ -130,8 +130,6 @@ class ULearningAgentsController : public ULearningAgentsManagerComponent
 
 public:
 	CMember(ULearningAgentsInteractor*)                Interactor                                                  OFFSET(get<T>, {0xC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -145,6 +143,8 @@ public:
 	// ULearningAgentsInteractor* GetInteractor(UClass* InteractorClass);                                                       // [0xa057a00] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsController.EncodeActions
 	// void EncodeActions();                                                                                                    // [0xa057268] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgents.LearningAgentsCritic
 /// Size: 0x0158 (0x0000C0 - 0x000218)
 class ULearningAgentsCritic : public ULearningAgentsManagerComponent
@@ -155,8 +155,6 @@ class ULearningAgentsCritic : public ULearningAgentsManagerComponent
 public:
 	CMember(ULearningAgentsInteractor*)                Interactor                                                  OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(ULearningAgentsNeuralNetwork*)             Network                                                     OFFSET(get<T>, {0xC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -176,6 +174,8 @@ public:
 	// float GetEstimatedDiscountedReturn(int32_t AgentId);                                                                     // [0xa0577fc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsCritic.EvaluateCritic
 	// void EvaluateCritic();                                                                                                   // [0xa05727c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgents.LearningAgentsHelper
 /// Size: 0x0008 (0x000028 - 0x000030)
 class ULearningAgentsHelper : public UObject
@@ -247,8 +247,6 @@ class ULearningAgentsInteractor : public ULearningAgentsManagerComponent
 public:
 	CMember(TArray<ULearningAgentsObservation*>)       ObservationObjects                                          OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<ULearningAgentsAction*>)            ActionObjects                                               OFFSET(get<T>, {0xD0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -270,6 +268,8 @@ public:
 	// void EncodeObservations();                                                                                               // [0xa061060] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsInteractor.DecodeActions
 	// void DecodeActions();                                                                                                    // [0xa06104c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgents.LearningAgentsManager
 /// Size: 0x0088 (0x000290 - 0x000318)
 class ALearningAgentsManager : public AActor
@@ -280,8 +280,6 @@ class ALearningAgentsManager : public AActor
 public:
 	DMember(int32_t)                                   MaxAgentNum                                                 OFFSET(get<int32_t>, {0x290, 4, 0, 0})
 	CMember(TArray<UObject*>)                          Agents                                                      OFFSET(get<T>, {0x298, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -323,6 +321,8 @@ public:
 	// void AddAgents(TArray<int32_t>& OutAgentIds, TArray<UObject*>& InAgents);                                                // [0xa05d318] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LearningAgents.LearningAgentsManager.AddAgent
 	// int32_t AddAgent(UObject* Agent);                                                                                        // [0xa05d288] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LearningAgents.LearningAgentsNeuralNetwork
 /// Size: 0x0010 (0x000030 - 0x000040)
 class ULearningAgentsNeuralNetwork : public UDataAsset
@@ -674,8 +674,6 @@ class ULearningAgentsPolicy : public ULearningAgentsManagerComponent
 public:
 	CMember(ULearningAgentsInteractor*)                Interactor                                                  OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(ULearningAgentsNeuralNetwork*)             Network                                                     OFFSET(get<T>, {0xC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -699,6 +697,8 @@ public:
 	// float GetActionNoiseScale();                                                                                             // [0xa0dec90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LearningAgents.LearningAgentsPolicy.EvaluatePolicy
 	// void EvaluatePolicy();                                                                                                   // [0xa0dec7c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/LearningAgents.LearningAgentsCriticSettings
 /// Size: 0x000C (0x000000 - 0x00000C)
 class FLearningAgentsCriticSettings : public MDKStruct

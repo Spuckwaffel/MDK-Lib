@@ -49,8 +49,6 @@ public:
 	CMember(TMap<FString, FLevelSequenceObject>)       PossessedObjects                                            OFFSET(get<T>, {0x1B8, 80, 0, 0})
 	CMember(UClass*)                                   DirectorClass                                               OFFSET(get<T>, {0x208, 8, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x210, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -62,6 +60,8 @@ public:
 	// UObject* FindMetaDataByClass(UClass* InClass);                                                                           // [0x59914f8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequence.CopyMetaData
 	// UObject* CopyMetaData(UObject* InMetaData);                                                                              // [0x59914f8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LevelSequence.LevelSequenceBurnInInitSettings
 /// Size: 0x0000 (0x000028 - 0x000028)
 class ULevelSequenceBurnInInitSettings : public UObject
@@ -83,13 +83,13 @@ public:
 	DMember(bool)                                      bUseBurnIn                                                  OFFSET(get<bool>, {0x28, 1, 0, 0})
 	SMember(FSoftClassPath)                            BurnInClass                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
 	CMember(ULevelSequenceBurnInInitSettings*)         Settings                                                    OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
 	// void SetBurnIn(FSoftClassPath InBurnInClass);                                                                            // [0x5992da0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/LevelSequence.LevelSequenceActor
 /// Size: 0x00A0 (0x000290 - 0x000330)
 class ALevelSequenceActor : public AActor
@@ -111,8 +111,6 @@ public:
 	CMember(ULevelSequenceBurnIn*)                     BurnInInstance                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      bShowBurnin                                                 OFFSET(get<bool>, {0x308, 1, 0, 0})
 	SMember(FWorldPartitionResolveData)                WorldPartitionResolveData                                   OFFSET(get<T>, {0x310, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -150,6 +148,8 @@ public:
 	// void AddBindingByTag(FName BindingTag, AActor* Actor, bool bAllowBindingsFromAsset);                                     // [0x5991400] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceActor.AddBinding
 	// void AddBinding(FMovieSceneObjectBindingID Binding, AActor* Actor, bool bAllowBindingsFromAsset);                        // [0x5991058] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LevelSequence.ReplicatedLevelSequenceActor
 /// Size: 0x0000 (0x000330 - 0x000330)
 class AReplicatedLevelSequenceActor : public ALevelSequenceActor
@@ -181,8 +181,6 @@ class ULevelSequenceBurnIn : public UUserWidget
 public:
 	SMember(FLevelSequencePlayerSnapshot)              FrameInformation                                            OFFSET(get<T>, {0x2A8, 192, 0, 0})
 	CMember(ALevelSequenceActor*)                      LevelSequenceActor                                          OFFSET(get<T>, {0x368, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -190,6 +188,8 @@ public:
 	// void SetSettings(UObject* InSettings);                                                                                   // [0x1ebf994] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/LevelSequence.LevelSequenceBurnIn.GetSettingsClass
 	// UClass* GetSettingsClass();                                                                                              // [0x599234c] RequiredAPI|Native|Event|Public|BlueprintEvent|Const 
+};
+
 /// Class /Script/LevelSequence.LevelSequenceDirector
 /// Size: 0x0010 (0x000028 - 0x000038)
 class ULevelSequenceDirector : public UObject
@@ -201,8 +201,6 @@ public:
 	CMember(ULevelSequencePlayer*)                     Player                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
 	DMember(int32_t)                                   SubSequenceID                                               OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(int32_t)                                   MovieScenePlayerIndex                                       OFFSET(get<int32_t>, {0x34, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -224,6 +222,8 @@ public:
 	// TArray<AActor*> GetBoundActors(FMovieSceneObjectBindingID ObjectBinding);                                                // [0x5991d1c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LevelSequence.LevelSequenceDirector.GetBoundActor
 	// AActor* GetBoundActor(FMovieSceneObjectBindingID ObjectBinding);                                                         // [0x5991b8c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LevelSequence.LegacyLevelSequenceDirectorBlueprint
 /// Size: 0x0000 (0x0000A8 - 0x0000A8)
 class ULegacyLevelSequenceDirectorBlueprint : public UBlueprint
@@ -243,8 +243,6 @@ class ULevelSequencePlayer : public UMovieSceneSequencePlayer
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnCameraCut                                                 OFFSET(get<T>, {0x4C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -252,6 +250,8 @@ public:
 	// UCameraComponent* GetActiveCameraComponent();                                                                            // [0x5991b64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequencePlayer.CreateLevelSequencePlayer
 	// ULevelSequencePlayer* CreateLevelSequencePlayer(UObject* WorldContextObject, ULevelSequence* LevelSequence, FMovieSceneSequencePlaybackSettings Settings, ALevelSequenceActor*& OutActor); // [0x5991568] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/LevelSequence.LevelSequenceProjectSettings
 /// Size: 0x0030 (0x000030 - 0x000060)
 class ULevelSequenceProjectSettings : public UDeveloperSettings
@@ -277,8 +277,6 @@ public:
 	CMember(ALevelSequenceActor*)                      Sequence                                                    OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UMediaComponent*)                          MediaComponent                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	DMember(float)                                     ServerStartTimeSeconds                                      OFFSET(get<float>, {0x2A8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -292,6 +290,8 @@ public:
 	// ALevelSequenceActor* GetSequence();                                                                                      // [0x599229c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LevelSequence.LevelSequenceMediaController.GetMediaComponent
 	// UMediaComponent* GetMediaComponent();                                                                                    // [0x591a5ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/LevelSequence.LevelSequenceCameraSettings
 /// Size: 0x0002 (0x000000 - 0x000002)
 class FLevelSequenceCameraSettings : public MDKStruct

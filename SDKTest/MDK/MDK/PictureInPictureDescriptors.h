@@ -40,13 +40,13 @@ public:
 	SMember(FMulticastInlineDelegate)                  ActionEvent                                                 OFFSET(get<T>, {0x120, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  ActionFiredEvent                                            OFFSET(get<T>, {0x130, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  CallbackEvent                                               OFFSET(get<T>, {0x158, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/PictureInPictureDescriptors.PictureInPictureActionData.CallEvent
 	// void CallEvent();                                                                                                        // [0x128ea78] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/PictureInPictureDescriptors.PictureInPictureSourceActionData
 /// Size: 0x0020 (0x000170 - 0x000190)
 class UPictureInPictureSourceActionData : public UPictureInPictureActionData

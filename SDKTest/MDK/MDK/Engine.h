@@ -103,8 +103,6 @@ public:
 	SMember(FMulticastSparseDelegate)                  OnEndPlay                                                   OFFSET(get<T>, {0x1EF, 1, 0, 0})
 	CMember(TArray<UActorComponent*>)                  InstanceComponents                                          OFFSET(get<T>, {0x270, 16, 0, 0})
 	CMember(TArray<UActorComponent*>)                  BlueprintCreatedComponents                                  OFFSET(get<T>, {0x280, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -388,6 +386,8 @@ public:
 	// UActorComponent* AddComponent(FName TemplateName, bool bManualAttachment, FTransform& RelativeTransform, UObject* ComponentTemplateContext, bool bDeferredFinish); // [0x19bb7dc] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.Actor.ActorHasTag
 	// bool ActorHasTag(FName tag);                                                                                             // [0x2da8758] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.HUD
 /// Size: 0x00F0 (0x000290 - 0x000380)
 class AHUD : public AActor
@@ -412,8 +412,6 @@ public:
 	CMember(TArray<FDebugTextInfo>)                    DebugTextList                                               OFFSET(get<T>, {0x2F0, 16, 0, 0})
 	CMember(UClass*)                                   ShowDebugTargetDesiredClass                                 OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(AActor*)                                   ShowDebugTargetActor                                        OFFSET(get<T>, {0x308, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -475,6 +473,8 @@ public:
 	// void AddHitBox(FVector2D Position, FVector2D Size, FName InName, bool bConsumesInput, int32_t Priority);                 // [0x5c83014] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.HUD.AddDebugText
 	// void AddDebugText(FString DebugText, AActor* SrcActor, float Duration, FVector Offset, FVector DesiredOffset, FColor TextColor, bool bSkipOverwriteCheck, bool bAbsoluteLocation, bool bKeepAttachedToActor, UFont* InFont, float FontScale, bool bDrawShadow); // [0x5c81c90] Final|RequiredAPI|Net|NetReliableNative|Event|Public|HasDefaults|NetClient 
+};
+
 /// Class /Script/Engine.BlueprintFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UBlueprintFunctionLibrary : public UObject
@@ -508,8 +508,6 @@ public:
 	CMember(EComponentCreationMethod)                  CreationMethod                                              OFFSET(get<T>, {0x8D, 1, 0, 0})
 	SMember(FMulticastSparseDelegate)                  OnComponentActivated                                        OFFSET(get<T>, {0x8E, 1, 0, 0})
 	SMember(FMulticastSparseDelegate)                  OnComponentDeactivated                                      OFFSET(get<T>, {0x8F, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -567,6 +565,8 @@ public:
 	// void AddTickPrerequisiteActor(AActor* PrerequisiteActor);                                                                // [0x5b32c60] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.ActorComponent.Activate
 	// void Activate(bool bReset);                                                                                              // [0x17ba948] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SceneComponent
 /// Size: 0x0200 (0x0000A0 - 0x0002A0)
 class USceneComponent : public UActorComponent
@@ -604,8 +604,6 @@ public:
 	CMember(TEnumAsByte<EComponentMobility>)           Mobility                                                    OFFSET(get<T>, {0x18B, 1, 0, 0})
 	CMember(TEnumAsByte<EDetailMode>)                  DetailMode                                                  OFFSET(get<T>, {0x18C, 1, 0, 0})
 	SMember(FMulticastSparseDelegate)                  PhysicsVolumeChangedDelegate                                OFFSET(get<T>, {0x18D, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -731,6 +729,8 @@ public:
 	// bool DoesSocketExist(FName InSocketName);                                                                                // [0x59faa38] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.SceneComponent.DetachFromParent
 	// void DetachFromParent(bool bMaintainWorldPosition, bool bCallModify);                                                    // [0x59fa970] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PrimitiveComponent
 /// Size: 0x02D0 (0x0002A0 - 0x000570)
 class UPrimitiveComponent : public USceneComponent
@@ -845,8 +845,6 @@ public:
 	CMember(ERendererStencilMask)                      CustomDepthStencilWriteMask                                 OFFSET(get<T>, {0x538, 1, 0, 0})
 	DMember(char)                                      ExcludeFromHLODLevels                                       OFFSET(get<char>, {0x558, 1, 0, 0})
 	CMember(UPrimitiveComponent*)                      LODParentPrimitive                                          OFFSET(get<T>, {0x560, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1134,6 +1132,8 @@ public:
 	// void AddAngularImpulseInRadians(FVector Impulse, FName BoneName, bool bVelChange);                                       // [0x59e7a74] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.PrimitiveComponent.AddAngularImpulseInDegrees
 	// void AddAngularImpulseInDegrees(FVector Impulse, FName BoneName, bool bVelChange);                                       // [0x59e76e0] Final|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Info
 /// Size: 0x0000 (0x000290 - 0x000290)
 class AInfo : public AActor
@@ -1156,8 +1156,6 @@ public:
 	CMember(UMaterialInterface*)                       OverlayMaterial                                             OFFSET(get<T>, {0x578, 8, 0, 0})
 	DMember(float)                                     OverlayMaterialMaxDrawDistance                              OFFSET(get<float>, {0x580, 4, 0, 0})
 	DMember(bool)                                      bEnableMaterialParameterCaching                             OFFSET(get<bool>, {0x598, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -1183,6 +1181,8 @@ public:
 	// TArray<UMaterialInterface*> GetMaterials();                                                                              // [0x293c51c] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.MeshComponent.GetMaterialIndex
 	// int32_t GetMaterialIndex(FName MaterialSlotName);                                                                        // [0x2b0df2c] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.StaticMeshComponent
 /// Size: 0x0080 (0x0005A0 - 0x000620)
 class UStaticMeshComponent : public UMeshComponent
@@ -1224,8 +1224,6 @@ public:
 	CMember(TArray<FStaticMeshComponentLODInfo>)       LodData                                                     OFFSET(get<T>, {0x5D8, 16, 0, 0})
 	CMember(TArray<FStreamingTextureBuildInfo>)        StreamingTextureData                                        OFFSET(get<T>, {0x5E8, 16, 0, 0})
 	SMember(FLightmassPrimitiveSettings)               LightmassSettings                                           OFFSET(get<T>, {0x5F8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1251,6 +1249,8 @@ public:
 	// void GetLocalBounds(FVector& min, FVector& max);                                                                         // [0x5b919d0] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.StaticMeshComponent.GetInitialEvaluateWorldPositionOffset
 	// bool GetInitialEvaluateWorldPositionOffset();                                                                            // [0x5b91690] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.InstancedStaticMeshComponent
 /// Size: 0x0150 (0x000620 - 0x000770)
 class UInstancedStaticMeshComponent : public UStaticMeshComponent
@@ -1270,8 +1270,6 @@ public:
 	CMember(TArray<int32_t>)                           InstanceReorderTable                                        OFFSET(get<T>, {0x680, 16, 0, 0})
 	DMember(int32_t)                                   NumPendingLightmaps                                         OFFSET(get<int32_t>, {0x754, 4, 0, 0})
 	CMember(TArray<FInstancedStaticMeshMappingInfo>)   CachedMappings                                              OFFSET(get<T>, {0x758, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1311,6 +1309,8 @@ public:
 	// TArray<int32_t> AddInstances(TArray<FTransform>& InstanceTransforms, bool bShouldReturnIndices, bool bWorldSpace);       // [0x59ccfe4] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.InstancedStaticMeshComponent.AddInstance
 	// int32_t AddInstance(FTransform& InstanceTransform, bool bWorldSpace);                                                    // [0x1e51674] RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.HierarchicalInstancedStaticMeshComponent
 /// Size: 0x0190 (0x000770 - 0x000900)
 class UHierarchicalInstancedStaticMeshComponent : public UInstancedStaticMeshComponent
@@ -1332,8 +1332,6 @@ public:
 	SMember(FBoxSphereBounds)                          CacheMeshExtendedBounds                                     OFFSET(get<T>, {0x840, 56, 0, 0})
 	DMember(bool)                                      bDisableCollision                                           OFFSET(get<bool>, {0x878, 1, 0, 0})
 	DMember(int32_t)                                   InstanceCountToRender                                       OFFSET(get<int32_t>, {0x87C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1341,6 +1339,8 @@ public:
 	// void SetLODDistanceScale(float InLODDistanceScale);                                                                      // [0x59cb318] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.HierarchicalInstancedStaticMeshComponent.GetLODDistanceScale
 	// float GetLODDistanceScale();                                                                                             // [0x59ca2b0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.PartitionActor
 /// Size: 0x0000 (0x000290 - 0x000290)
 class APartitionActor : public AActor
@@ -1373,13 +1373,13 @@ public:
 	DMember(bool)                                      bStaticMeshReplicateMovement                                OFFSET(get<bool>, {0x298, 1, 0, 0})
 	CMember(EPhysicsReplicationMode)                   StaticMeshPhysicsReplicationMode                            OFFSET(get<T>, {0x299, 1, 0, 0})
 	CMember(ENavDataGatheringMode)                     NavigationGeometryGatheringMode                             OFFSET(get<T>, {0x29A, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.StaticMeshActor.SetMobility
 	// void SetMobility(TEnumAsByte<EComponentMobility> InMobility);                                                            // [0x5f795a8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Brush
 /// Size: 0x0038 (0x000290 - 0x0002C8)
 class ABrush : public AActor
@@ -1429,13 +1429,13 @@ public:
 	DMember(bool)                                      bForceMiplevelsToBeResident                                 OFFSET(get<bool>, {0xBC, 1, 1, 3})
 	DMember(bool)                                      bIgnoreStreamingMipBias                                     OFFSET(get<bool>, {0xBC, 1, 1, 4})
 	DMember(bool)                                      bUseCinematicMipLevels                                      OFFSET(get<bool>, {0xBC, 1, 1, 5})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.StreamableRenderAsset.SetForceMipLevelsToBeResident
 	// void SetForceMipLevelsToBeResident(float Seconds, int32_t CinematicLODGroupMask);                                        // [0x5f86490] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.MaterialInterface
 /// Size: 0x0088 (0x000028 - 0x0000B0)
 class UMaterialInterface : public UObject
@@ -1450,8 +1450,6 @@ public:
 	SMember(FLightmassMaterialInterfaceSettings)       LightmassSettings                                           OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(TArray<FMaterialTextureInfo>)              TextureStreamingData                                        OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1471,6 +1469,8 @@ public:
 	// TEnumAsByte<EBlendMode> GetBlendMode();                                                                                  // [0x59ddbe8] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.MaterialInterface.GetBaseMaterial
 	// UMaterial* GetBaseMaterial();                                                                                            // [0x319e3b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.MaterialInstance
 /// Size: 0x0190 (0x0000B0 - 0x000240)
 class UMaterialInstance : public UMaterialInterface
@@ -1505,8 +1505,6 @@ class UMaterialInstanceConstant : public UMaterialInstance
 
 public:
 	CMember(UPhysicalMaterialMask*)                    PhysMaterialMask                                            OFFSET(get<T>, {0x240, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1516,6 +1514,8 @@ public:
 	// UTexture* K2_GetTextureParameterValue(FName ParameterName);                                                              // [0x5d869f8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.MaterialInstanceConstant.K2_GetScalarParameterValue
 	// float K2_GetScalarParameterValue(FName ParameterName);                                                                   // [0x5d868c4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.MaterialExpression
 /// Size: 0x0088 (0x000028 - 0x0000B0)
 class UMaterialExpression : public UObject
@@ -1646,8 +1646,6 @@ class UTimecodeProvider : public UObject
 
 public:
 	DMember(float)                                     FrameDelay                                                  OFFSET(get<float>, {0x28, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1667,6 +1665,8 @@ public:
 	// bool FetchTimecode(FQualifiedFrameTime& OutFrameTime);                                                                   // [0x5bf99d8] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.TimecodeProvider.FetchAndUpdate
 	// void FetchAndUpdate();                                                                                                   // [0x599a338] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.EdGraphNode
 /// Size: 0x0070 (0x000028 - 0x000098)
 class UEdGraphNode : public UObject
@@ -1785,8 +1785,6 @@ public:
 	DMember(float)                                     CapsuleIndirectShadowMinVisibility                          OFFSET(get<float>, {0x7CC, 4, 0, 0})
 	SMember(FBoxSphereBounds)                          CachedWorldOrLocalSpaceBounds                               OFFSET(get<T>, {0x808, 56, 0, 0})
 	SMember(FMatrix)                                   CachedWorldToLocalTransform                                 OFFSET(get<T>, {0x840, 128, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1890,6 +1888,8 @@ public:
 	// void ClearSkinWeightOverride(int32_t LODIndex);                                                                          // [0x59fd9b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.SkinnedMeshComponent.BoneIsChildOf
 	// bool BoneIsChildOf(FName BoneName, FName ParentBoneName);                                                                // [0x59fd8f4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.SkeletalMeshComponent
 /// Size: 0x06B0 (0x0008E0 - 0x000F90)
 class USkeletalMeshComponent : public USkinnedMeshComponent
@@ -1963,8 +1963,6 @@ public:
 	DMember(uint32_t)                                  LastPoseTickFrame                                           OFFSET(get<uint32_t>, {0xBD8, 4, 0, 0})
 	CMember(UClothingSimulationInteractor*)            ClothingInteractor                                          OFFSET(get<T>, {0xC70, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnAnimInitialized                                           OFFSET(get<T>, {0xD30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2176,6 +2174,8 @@ public:
 	// void AddForceToAllBodiesBelow(FVector Force, FName BoneName, bool bAccelChange, bool bIncludeSelf);                      // [0x5b6dc80] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.SkeletalMeshComponent.AccumulateAllBodiesBelowPhysicsBlendWeight
 	// void AccumulateAllBodiesBelowPhysicsBlendWeight(FName& InBoneName, float AddPhysicsBlendWeight, bool bSkipCustomPhysicsType); // [0x5b6daa8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AnimInstance
 /// Size: 0x0328 (0x000028 - 0x000350)
 class UAnimInstance : public UObject
@@ -2199,8 +2199,6 @@ public:
 	SMember(FAnimNotifyQueue)                          NotifyQueue                                                 OFFSET(get<T>, {0x150, 112, 0, 0})
 	CMember(TArray<FAnimNotifyEvent>)                  ActiveAnimNotifyState                                       OFFSET(get<T>, {0x1C0, 16, 0, 0})
 	CMember(TArray<FAnimNotifyEventReference>)         ActiveAnimNotifyEventReference                              OFFSET(get<T>, {0x1D0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2420,6 +2418,8 @@ public:
 	// void BlueprintBeginPlay();                                                                                               // [0x1ebf994] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/Engine.AnimInstance.Blueprint_GetSlotMontageLocalWeight
 	// float Blueprint_GetSlotMontageLocalWeight(FName SlotNodeName);                                                           // [0x5a4b614] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.BlueprintAsyncActionBase
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UBlueprintAsyncActionBase : public UObject
@@ -2535,13 +2535,13 @@ public:
 	DMember(float)                                     FOVAngle                                                    OFFSET(get<float>, {0x2B0, 4, 0, 0})
 	DMember(float)                                     PostProcessBlendWeight                                      OFFSET(get<float>, {0x2B4, 4, 0, 0})
 	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(get<T>, {0x2C0, 1760, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.CameraActor.GetAutoActivatePlayerIndex
 	// int32_t GetAutoActivatePlayerIndex();                                                                                    // [0x5ab48c4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.CameraComponent
 /// Size: 0x0790 (0x0002A0 - 0x000A30)
 class UCameraComponent : public USceneComponent
@@ -2564,8 +2564,6 @@ public:
 	CMember(TEnumAsByte<ECameraProjectionMode>)        ProjectionMode                                              OFFSET(get<T>, {0x2B6, 1, 0, 0})
 	DMember(float)                                     PostProcessBlendWeight                                      OFFSET(get<float>, {0x320, 4, 0, 0})
 	SMember(FPostProcessSettings)                      PostProcessSettings                                         OFFSET(get<T>, {0x350, 1760, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2597,6 +2595,8 @@ public:
 	// void GetCameraView(float DeltaTime, FMinimalViewInfo& DesiredView);                                                      // [0x5ab48e4] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.CameraComponent.AddOrUpdateBlendable
 	// void AddOrUpdateBlendable(TScriptInterface<Class> InBlendableObject, float InWeight);                                    // [0x5ab410c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AudioEngineSubsystem
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UAudioEngineSubsystem : public UDynamicSubsystem
@@ -2638,13 +2638,13 @@ public:
 	CMember(TArray<FSoundSourceBusSendInfo>)           BusSends                                                    OFFSET(get<T>, {0x138, 16, 0, 0})
 	CMember(TArray<FSoundSourceBusSendInfo>)           PreEffectBusSends                                           OFFSET(get<T>, {0x148, 16, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x158, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.SoundBase.IsAttenuationSettingsEditable
 	// bool IsAttenuationSettingsEditable();                                                                                    // [0x5f5f3fc] Native|Public|Const  
+};
+
 /// Class /Script/Engine.SoundWave
 /// Size: 0x02C8 (0x000168 - 0x000430)
 class USoundWave : public USoundBase
@@ -2682,8 +2682,6 @@ public:
 	CMember(TArray<FSubtitleCue>)                      Subtitles                                                   OFFSET(get<T>, {0x3C0, 16, 0, 0})
 	CMember(UCurveTable*)                              Curves                                                      OFFSET(get<T>, {0x3D0, 8, 0, 0})
 	CMember(UCurveTable*)                              InternalCurves                                              OFFSET(get<T>, {0x3D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2695,6 +2693,8 @@ public:
 	// TArray<FSoundWaveCuePoint> GetLoopRegions();                                                                             // [0x5a01cb8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.SoundWave.GetCuePoints
 	// TArray<FSoundWaveCuePoint> GetCuePoints();                                                                               // [0x5a0198c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.SoundWaveProcedural
 /// Size: 0x0050 (0x000430 - 0x000480)
 class USoundWaveProcedural : public USoundWave
@@ -2750,8 +2750,6 @@ public:
 	DMember(bool)                                      bNotOfflineProcessed                                        OFFSET(get<bool>, {0xFD, 1, 1, 4})
 	DMember(bool)                                      bAsyncResourceReleaseHasBeenStarted                         OFFSET(get<bool>, {0xFD, 1, 1, 5})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x100, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2761,6 +2759,8 @@ public:
 	// void Blueprint_GetTextureSourceDiskAndMemorySize(int64_t& OutDiskSize, int64_t& OutMemorySize);                          // [0x5f8de18] Final|Native|Public|HasOutParms|BlueprintCallable|Const 
 	// Function /Script/Engine.Texture.Blueprint_GetMemorySize
 	// int64_t Blueprint_GetMemorySize();                                                                                       // [0x5f8ddac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.ActiveSoundUpdateInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UActiveSoundUpdateInterface : public UInterface
@@ -2866,13 +2866,13 @@ public:
 	CMember(USkeleton*)                                Skeleton                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<UAnimMetaData*>)                    MetaData                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x70, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AnimationAsset.GetPlayLength
 	// float GetPlayLength();                                                                                                   // [0x2b53f0c] Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.AnimSequenceBase
 /// Size: 0x0030 (0x000080 - 0x0000B0)
 class UAnimSequenceBase : public UAnimationAsset
@@ -3262,8 +3262,6 @@ class UDataLayerManager : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnDataLayerInstanceRuntimeStateChanged                      OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TSet<UObject*>)                            ReferencedObjects                                           OFFSET(get<T>, {0x38, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3279,6 +3277,8 @@ public:
 	// UDataLayerInstance* GetDataLayerInstanceFromAsset(UDataLayerAsset* InDataLayerAsset);                                    // [0x30059e4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DataLayerManager.GetDataLayerInstanceEffectiveRuntimeState
 	// EDataLayerRuntimeState GetDataLayerInstanceEffectiveRuntimeState(UDataLayerInstance* InDataLayerInstance);               // [0x59c62e4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DebugGarbageCollectionGraph
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UDebugGarbageCollectionGraph : public UObject
@@ -3352,8 +3352,6 @@ class ALight : public AActor
 public:
 	CMember(ULightComponent*)                          LightComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x298, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -3383,6 +3381,8 @@ public:
 	// FLinearColor GetLightColor();                                                                                            // [0x5d67550] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.Light.GetBrightness
 	// float GetBrightness();                                                                                                   // [0x5d674e8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DirectionalLight
 /// Size: 0x0000 (0x0002A0 - 0x0002A0)
 class ADirectionalLight : public ALight
@@ -3645,8 +3645,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnParticleBurst                                             OFFSET(get<T>, {0x2B0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnParticleDeath                                             OFFSET(get<T>, {0x2C0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnParticleCollide                                           OFFSET(get<T>, {0x2D0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3674,6 +3672,8 @@ public:
 	// void Deactivate();                                                                                                       // [0x5de47fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.Emitter.Activate
 	// void Activate();                                                                                                         // [0x5de47e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.EmitterCameraLensEffectBase
 /// Size: 0x00A0 (0x0002E0 - 0x000380)
 class AEmitterCameraLensEffectBase : public AEmitter
@@ -3980,13 +3980,13 @@ class AExponentialHeightFog : public AInfo
 public:
 	CMember(UExponentialHeightFogComponent*)           Component                                                   OFFSET(get<T>, {0x290, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x298, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.ExponentialHeightFog.OnRep_bEnabled
 	// void OnRep_bEnabled();                                                                                                   // [0x276cd34] Native|Public        
+};
+
 /// Class /Script/Engine.ExponentialHeightFogComponent
 /// Size: 0x00E0 (0x0002A0 - 0x000380)
 class UExponentialHeightFogComponent : public USceneComponent
@@ -4023,8 +4023,6 @@ public:
 	DMember(float)                                     VolumetricFogNearFadeInDistance                             OFFSET(get<float>, {0x368, 4, 0, 0})
 	DMember(float)                                     VolumetricFogStaticLightingScatteringIntensity              OFFSET(get<float>, {0x36C, 4, 0, 0})
 	DMember(bool)                                      bOverrideLightColorsWithFogInscatteringColors               OFFSET(get<bool>, {0x370, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4076,6 +4074,8 @@ public:
 	// void SetDirectionalInscatteringExponent(float Value);                                                                    // [0x59cab80] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.ExponentialHeightFogComponent.SetDirectionalInscatteringColor
 	// void SetDirectionalInscatteringColor(FLinearColor Value);                                                                // [0x59caa24] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Exporter
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UExporter : public UObject
@@ -4094,8 +4094,6 @@ public:
 	DMember(bool)                                      bSelectedOnly                                               OFFSET(get<bool>, {0x60, 1, 1, 1})
 	DMember(bool)                                      bForceFileOperations                                        OFFSET(get<bool>, {0x60, 1, 1, 2})
 	CMember(UAssetExportTask*)                         ExportTask                                                  OFFSET(get<T>, {0x68, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4105,6 +4103,8 @@ public:
 	// bool RunAssetExportTasks(TArray<UAssetExportTask*>& ExportTasks);                                                        // [0x59ca348] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.Exporter.RunAssetExportTask
 	// bool RunAssetExportTask(UAssetExportTask* Task);                                                                         // [0x59ca2c8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.FieldNotificationLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFieldNotificationLibrary : public UBlueprintFunctionLibrary
@@ -4200,8 +4200,6 @@ class ASpotLight : public ALight
 
 public:
 	CMember(USpotLightComponent*)                      SpotLightComponent                                          OFFSET(get<T>, {0x2A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4209,6 +4207,8 @@ public:
 	// void SetOuterConeAngle(float NewOuterConeAngle);                                                                         // [0x5f79628] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.SpotLight.SetInnerConeAngle
 	// void SetInnerConeAngle(float NewInnerConeAngle);                                                                         // [0x5f79414] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.GeneratedMeshAreaLight
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
 class AGeneratedMeshAreaLight : public ASpotLight
@@ -4515,8 +4515,6 @@ public:
 	CMember(UWorldComposition*)                        WorldComposition                                            OFFSET(get<T>, {0x710, 8, 0, 0})
 	CMember(UContentBundleManager*)                    ContentBundleManager                                        OFFSET(get<T>, {0x718, 8, 0, 0})
 	SMember(FWorldPSCPool)                             PSCPool                                                     OFFSET(get<T>, {0x7D0, 88, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4526,6 +4524,8 @@ public:
 	// void HandleTimelineScrubbed();                                                                                           // [0x5fedba4] Final|Native|Public  
 	// Function /Script/Engine.World.GetDataLayerManager
 	// UDataLayerManager* GetDataLayerManager();                                                                                // [0x5feda60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.LevelStreaming
 /// Size: 0x0158 (0x000028 - 0x000180)
 class ULevelStreaming : public UObject
@@ -4558,8 +4558,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnLevelHidden                                               OFFSET(get<T>, {0x138, 16, 0, 0})
 	CMember(ULevel*)                                   LoadedLevel                                                 OFFSET(get<T>, {0x148, 8, 0, 0})
 	CMember(ULevel*)                                   PendingUnloadLevel                                          OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4591,6 +4589,8 @@ public:
 	// bool GetIsRequestingUnloadAndRemoval();                                                                                  // [0x5d67514] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.LevelStreaming.CreateInstance
 	// ULevelStreaming* CreateInstance(FString UniqueInstanceName);                                                             // [0x5d669b4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.LevelStreamingAlwaysLoaded
 /// Size: 0x0000 (0x000180 - 0x000180)
 class ULevelStreamingAlwaysLoaded : public ULevelStreaming
@@ -4611,8 +4611,6 @@ class ULevelStreamingDynamic : public ULevelStreaming
 public:
 	DMember(bool)                                      bInitiallyLoaded                                            OFFSET(get<bool>, {0x180, 1, 1, 0})
 	DMember(bool)                                      bInitiallyVisible                                           OFFSET(get<bool>, {0x180, 1, 1, 1})
-};
-
 
 
 	/// Functions
@@ -4620,6 +4618,8 @@ public:
 	// ULevelStreamingDynamic* LoadLevelInstanceBySoftObjectPtr(UObject* WorldContextObject, TWeakObjectPtr<UWorld*> Level, FVector Location, FRotator Rotation, bool& bOutSuccess, FString OptionalLevelNameOverride, UClass* OptionalLevelStreamingClass, bool bLoadAsTempPackage); // [0x59d88bc] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.LevelStreamingDynamic.LoadLevelInstance
 	// ULevelStreamingDynamic* LoadLevelInstance(UObject* WorldContextObject, FString LevelName, FVector Location, FRotator Rotation, bool& bOutSuccess, FString OptionalLevelNameOverride, UClass* OptionalLevelStreamingClass, bool bLoadAsTempPackage); // [0x59d7adc] Final|RequiredAPI|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.LevelStreamingPersistent
 /// Size: 0x0000 (0x000180 - 0x000180)
 class ULevelStreamingPersistent : public ULevelStreaming
@@ -4672,8 +4672,6 @@ public:
 	DMember(float)                                     IndirectLightingIntensity                                   OFFSET(get<float>, {0x2CC, 4, 0, 0})
 	DMember(float)                                     VolumetricScatteringIntensity                               OFFSET(get<float>, {0x2D0, 4, 0, 0})
 	DMember(int32_t)                                   SamplesPerPixel                                             OFFSET(get<int32_t>, {0x2D4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4695,6 +4693,8 @@ public:
 	// void SetAffectGlobalIllumination(bool bNewValue);                                                                        // [0x59d99d0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.LightComponentBase.GetLightColor
 	// FLinearColor GetLightColor();                                                                                            // [0x59d789c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.Texture2D
 /// Size: 0x0020 (0x000138 - 0x000158)
 class UTexture2D : public UTexture
@@ -4708,8 +4708,6 @@ public:
 	CMember(TEnumAsByte<TextureAddress>)               AddressX                                                    OFFSET(get<T>, {0x13D, 1, 0, 0})
 	CMember(TEnumAsByte<TextureAddress>)               AddressY                                                    OFFSET(get<T>, {0x13E, 1, 0, 0})
 	SMember(FIntPoint)                                 ImportedSize                                                OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -4717,6 +4715,8 @@ public:
 	// int32_t Blueprint_GetSizeY();                                                                                            // [0x5f8ddf8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.Texture2D.Blueprint_GetSizeX
 	// int32_t Blueprint_GetSizeX();                                                                                            // [0x5f8ddd8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.LightMapTexture2D
 /// Size: 0x0008 (0x000158 - 0x000160)
 class ULightMapTexture2D : public UTexture2D
@@ -5416,13 +5416,13 @@ public:
 	SMember(FExpressionInput)                          InputFalse                                                  OFFSET(get<T>, {0xD8, 40, 0, 0})
 	CMember(TArray<FDataDrivenShaderPlatformInfoInput>) DDSPIPropertyNames                                         OFFSET(get<T>, {0x100, 16, 0, 0})
 	DMember(bool)                                      bContainsInvalidProperty                                    OFFSET(get<bool>, {0x110, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.MaterialExpressionDataDrivenShaderPlatformInfoSwitch.GetNameOptions
 	// TArray<FString> GetNameOptions();                                                                                        // [0x59dbd9c] Final|Native|Public|Const 
+};
+
 /// Class /Script/Engine.MaterialExpressionDBufferTexture
 /// Size: 0x0030 (0x0000B0 - 0x0000E0)
 class UMaterialExpressionDBufferTexture : public UMaterialExpression
@@ -8610,13 +8610,13 @@ public:
 	SMember(FBox)                                      CustomOcclusionBounds                                       OFFSET(get<T>, {0x110, 56, 0, 0})
 	CMember(TArray<FLODSoloTrack>)                     SoloTracking                                                OFFSET(get<T>, {0x148, 16, 0, 0})
 	CMember(TArray<FNamedEmitterMaterial>)             NamedMaterialSlots                                          OFFSET(get<T>, {0x158, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.ParticleSystem.ContainsEmitterType
 	// bool ContainsEmitterType(UClass* TypeData);                                                                              // [0x59dfe0c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ParticleModule
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UParticleModule : public UObject
@@ -10307,8 +10307,6 @@ public:
 	CMember(EAttachmentRule)                           AutoAttachRotationRule                                      OFFSET(get<T>, {0x6DD, 1, 0, 0})
 	CMember(EAttachmentRule)                           AutoAttachScaleRule                                         OFFSET(get<T>, {0x6DE, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSystemFinished                                            OFFSET(get<T>, {0x730, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10360,6 +10358,8 @@ public:
 	// UMaterialInstanceDynamic* CreateNamedDynamicMaterialInstance(FName InName, UMaterialInterface* SourceMaterial);          // [0x59e1b78] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.ParticleSystemComponent.BeginTrails
 	// void BeginTrails(FName InFirstSocketName, FName InSecondSocketName, TEnumAsByte<ETrailWidthMode> InWidthMode, float InWidth); // [0x2908d44] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ParticleSystemReplay
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UParticleSystemReplay : public UObject
@@ -10406,8 +10406,6 @@ public:
 	CMember(TEnumAsByte<ECollisionChannel>)            SpringChannel                                               OFFSET(get<T>, {0x2B0, 1, 0, 0})
 	DMember(bool)                                      bIgnoreSelf                                                 OFFSET(get<bool>, {0x2B1, 1, 0, 0})
 	DMember(float)                                     SpringCompression                                           OFFSET(get<float>, {0x2B4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10419,6 +10417,8 @@ public:
 	// FVector GetSpringCurrentEndPoint();                                                                                      // [0x59e44bc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.PhysicsSpringComponent.GetNormalizedCompressionScalar
 	// float GetNormalizedCompressionScalar();                                                                                  // [0x59e427c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.PhysicsThreadLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UPhysicsThreadLibrary : public UBlueprintFunctionLibrary
@@ -10476,13 +10476,13 @@ class APlanarReflection : public ASceneCapture
 public:
 	CMember(UPlanarReflectionComponent*)               PlanarReflectionComponent                                   OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	DMember(bool)                                      bShowPreviewPlane                                           OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.PlanarReflection.OnInterpToggle
 	// void OnInterpToggle(bool bEnable);                                                                                       // [0x59e452c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SceneCaptureComponent
 /// Size: 0x00C0 (0x0002A0 - 0x000360)
 class USceneCaptureComponent : public USceneComponent
@@ -10506,8 +10506,6 @@ public:
 	DMember(bool)                                      bUseRayTracingIfEnabled                                     OFFSET(get<bool>, {0x2F4, 1, 0, 0})
 	CMember(TArray<FEngineShowFlagsSetting>)           ShowFlagSettings                                            OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	SMember(FString)                                   ProfilingEventName                                          OFFSET(get<T>, {0x338, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10529,6 +10527,8 @@ public:
 	// void ClearShowOnlyComponents();                                                                                          // [0x5b6ead4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.SceneCaptureComponent.ClearHiddenComponents
 	// void ClearHiddenComponents();                                                                                            // [0x5b6eaa4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PlanarReflectionComponent
 /// Size: 0x0160 (0x000360 - 0x0004C0)
 class UPlanarReflectionComponent : public USceneCaptureComponent
@@ -10589,8 +10589,6 @@ public:
 	DMember(int32_t)                                   tag                                                         OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	SMember(FString)                                   StringResponse                                              OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TArray<char>)                              BinaryResponse                                              OFFSET(get<T>, {0x50, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10600,6 +10598,8 @@ public:
 	// FString GetHeaderValue(FString HeaderName);                                                                              // [0x59e3b34] Native|Public        
 	// Function /Script/Engine.PlatformInterfaceWebResponse.GetHeader
 	// void GetHeader(int32_t HeaderIndex, FString& Header, FString& Value);                                                    // [0x59e2e18] Native|Public|HasOutParms 
+};
+
 /// Class /Script/Engine.PlayerCameraManager
 /// Size: 0x2120 (0x000290 - 0x0023B0)
 class APlayerCameraManager : public AActor
@@ -10639,8 +10639,6 @@ public:
 	DMember(float)                                     ViewRollMin                                                 OFFSET(get<float>, {0x2394, 4, 0, 0})
 	DMember(float)                                     ViewRollMax                                                 OFFSET(get<float>, {0x2398, 4, 0, 0})
 	DMember(float)                                     ServerUpdateCameraTimeout                                   OFFSET(get<float>, {0x23A0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10704,6 +10702,8 @@ public:
 	// TScriptInterface<Class> AddGenericCameraLensEffect(UClass* LensEffectEmitterClass);                                      // [0x59e1368] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.PlayerCameraManager.AddCameraLensEffect
 	// AEmitterCameraLensEffectBase* AddCameraLensEffect(UClass* LensEffectEmitterClass);                                       // [0x59e0f54] RequiredAPI|Native|Public 
+};
+
 /// Class /Script/Engine.PluginBlueprintLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UPluginBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -10723,8 +10723,6 @@ class APointLight : public ALight
 
 public:
 	CMember(UPointLightComponent*)                     PointLightComponent                                         OFFSET(get<T>, {0x2A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10732,6 +10730,8 @@ public:
 	// void SetRadius(float NewRadius);                                                                                         // [0x59f8660] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.PointLight.SetLightFalloffExponent
 	// void SetLightFalloffExponent(float NewLightFalloffExponent);                                                             // [0x59f72bc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Polys
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UPolys : public UObject
@@ -10774,8 +10774,6 @@ class ARadialForceActor : public ARigidBodyBase
 
 public:
 	CMember(URadialForceComponent*)                    ForceComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10787,6 +10785,8 @@ public:
 	// void EnableForce();                                                                                                      // [0xfcccd4] Native|Public|BlueprintCallable 
 	// Function /Script/Engine.RadialForceActor.DisableForce
 	// void DisableForce();                                                                                                     // [0x59e45b4] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ReplicationDriver
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UReplicationDriver : public UObject
@@ -10887,13 +10887,13 @@ class ASceneCapture2D : public ASceneCapture
 
 public:
 	CMember(USceneCaptureComponent2D*)                 CaptureComponent2D                                          OFFSET(get<T>, {0x2A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.SceneCapture2D.OnInterpToggle
 	// void OnInterpToggle(bool bEnable);                                                                                       // [0x59e452c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SceneCaptureComponent2D
 /// Size: 0x07F0 (0x000360 - 0x000B50)
 class USceneCaptureComponent2D : public USceneCaptureComponent
@@ -10922,8 +10922,6 @@ public:
 	SMember(FVector)                                   ClipPlaneNormal                                             OFFSET(get<T>, {0xB18, 24, 0, 0})
 	DMember(bool)                                      bCameraCutThisFrame                                         OFFSET(get<bool>, {0xB30, 1, 1, 0})
 	DMember(bool)                                      bConsiderUnrenderedOpaquePixelAsFullyTranslucent            OFFSET(get<bool>, {0xB30, 1, 1, 1})
-};
-
 
 
 	/// Functions
@@ -10933,6 +10931,8 @@ public:
 	// void CaptureScene();                                                                                                     // [0x59fa95c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.SceneCaptureComponent2D.AddOrUpdateBlendable
 	// void AddOrUpdateBlendable(TScriptInterface<Class> InBlendableObject, float InWeight);                                    // [0x59fa6cc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SceneCaptureComponentCube
 /// Size: 0x0010 (0x000360 - 0x000370)
 class USceneCaptureComponentCube : public USceneCaptureComponent
@@ -10943,13 +10943,13 @@ class USceneCaptureComponentCube : public USceneCaptureComponent
 public:
 	CMember(UTextureRenderTargetCube*)                 TextureTarget                                               OFFSET(get<T>, {0x358, 8, 0, 0})
 	DMember(bool)                                      bCaptureRotation                                            OFFSET(get<bool>, {0x360, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.SceneCaptureComponentCube.CaptureScene
 	// void CaptureScene();                                                                                                     // [0x59fa95c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SceneCaptureCube
 /// Size: 0x0008 (0x0002A0 - 0x0002A8)
 class ASceneCaptureCube : public ASceneCapture
@@ -10959,13 +10959,13 @@ class ASceneCaptureCube : public ASceneCapture
 
 public:
 	CMember(USceneCaptureComponentCube*)               CaptureComponentCube                                        OFFSET(get<T>, {0x2A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.SceneCaptureCube.OnInterpToggle
 	// void OnInterpToggle(bool bEnable);                                                                                       // [0x59e452c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ShadowMapTexture2D
 /// Size: 0x0008 (0x000158 - 0x000160)
 class UShadowMapTexture2D : public UTexture2D
@@ -10991,8 +10991,6 @@ public:
 	SMember(FRotator)                                  RelativeRotation                                            OFFSET(get<T>, {0x48, 24, 0, 0})
 	SMember(FVector)                                   RelativeScale                                               OFFSET(get<T>, {0x60, 24, 0, 0})
 	DMember(bool)                                      bForceAlwaysAnimated                                        OFFSET(get<bool>, {0x78, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11000,6 +10998,8 @@ public:
 	// void InitializeSocketFromLocation(USkeletalMeshComponent* SkelComp, FVector WorldLocation, FVector WorldNormal);         // [0x59fe5f4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.SkeletalMeshSocket.GetSocketLocation
 	// FVector GetSocketLocation(USkeletalMeshComponent* SkelComp);                                                             // [0x59fe4e8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.SkyLight
 /// Size: 0x0010 (0x000290 - 0x0002A0)
 class ASkyLight : public AInfo
@@ -11010,13 +11010,13 @@ class ASkyLight : public AInfo
 public:
 	CMember(USkyLightComponent*)                       LightComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x298, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.SkyLight.OnRep_bEnabled
 	// void OnRep_bEnabled();                                                                                                   // [0x276cd34] RequiredAPI|Native|Public 
+};
+
 /// Class /Script/Engine.SkyLightComponent
 /// Size: 0x01F0 (0x0002E0 - 0x0004D0)
 class USkyLightComponent : public ULightComponentBase
@@ -11047,8 +11047,6 @@ public:
 	CMember(TEnumAsByte<EOcclusionCombineMode>)        OcclusionCombineMode                                        OFFSET(get<T>, {0x330, 1, 0, 0})
 	DMember(bool)                                      bShowIlluminanceMeter                                       OFFSET(get<bool>, {0x334, 1, 1, 0})
 	CMember(UTextureCube*)                             BlendDestinationCubemap                                     OFFSET(get<T>, {0x3E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11078,6 +11076,8 @@ public:
 	// void SetCubemap(UTextureCube* NewCubemap);                                                                               // [0x59fec58] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.SkyLightComponent.RecaptureSky
 	// void RecaptureSky();                                                                                                     // [0x59feb04] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SMInstanceManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USMInstanceManager : public UInterface
@@ -11263,8 +11263,6 @@ public:
 	DMember(float)                                     FrameRate                                                   OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(int32_t)                                   MipLevel                                                    OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
 	DMember(bool)                                      bBlockingStreamingRequests                                  OFFSET(get<bool>, {0x40, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11286,6 +11284,8 @@ public:
 	// void GetCurrentFramesForInterpolation(USparseVolumeTextureFrame*& Frame0, USparseVolumeTextureFrame*& Frame1, float& LerpAlpha); // [0x5a01a28] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.AnimatedSparseVolumeTextureController.GetCurrentFrame
 	// USparseVolumeTextureFrame* GetCurrentFrame();                                                                            // [0x5a019c8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SphereReflectionCapture
 /// Size: 0x0008 (0x000298 - 0x0002A0)
 class ASphereReflectionCapture : public AReflectionCapture
@@ -11356,8 +11356,6 @@ public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     OverlayArc                                                  OFFSET(get<float>, {0x2C, 4, 0, 0})
 	DMember(int32_t)                                   Height                                                      OFFSET(get<int32_t>, {0x30, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11367,6 +11365,8 @@ public:
 	// void SetOverlayArc(float InOverlayArc);                                                                                  // [0x5a02328] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.StereoLayerShapeCylinder.SetHeight
 	// void SetHeight(int32_t InHeight);                                                                                        // [0x5a02210] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.StereoLayerShapeCubemap
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UStereoLayerShapeCubemap : public UStereoLayerShape
@@ -11392,13 +11392,13 @@ public:
 	SMember(FVector2D)                                 LeftBias                                                    OFFSET(get<T>, {0x98, 16, 0, 0})
 	SMember(FVector2D)                                 RightBias                                                   OFFSET(get<T>, {0xA8, 16, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0xB8, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.StereoLayerShapeEquirect.SetEquirectProps
 	// void SetEquirectProps(FEquirectProps InScaleBiases);                                                                     // [0x5a02044] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.StereoLayerComponent
 /// Size: 0x0190 (0x0002A0 - 0x000430)
 class UStereoLayerComponent : public USceneComponent
@@ -11423,8 +11423,6 @@ public:
 	CMember(TEnumAsByte<EStereoLayerShape>)            StereoLayerShape                                            OFFSET(get<T>, {0x3A1, 1, 0, 0})
 	CMember(UStereoLayerShape*)                        Shape                                                       OFFSET(get<T>, {0x3A8, 8, 0, 0})
 	DMember(int32_t)                                   Priority                                                    OFFSET(get<int32_t>, {0x3B0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11452,6 +11450,8 @@ public:
 	// int32_t GetPriority();                                                                                                   // [0x5a01d44] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.StereoLayerComponent.GetLeftTexture
 	// UTexture* GetLeftTexture();                                                                                              // [0x2833d84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.SubUVAnimation
 /// Size: 0x0040 (0x000028 - 0x000068)
 class USubUVAnimation : public UObject
@@ -11513,8 +11513,6 @@ public:
 	DMember(float)                                     HorizSpacingAdjust                                          OFFSET(get<float>, {0x5A8, 4, 0, 0})
 	DMember(float)                                     VertSpacingAdjust                                           OFFSET(get<float>, {0x5AC, 4, 0, 0})
 	DMember(bool)                                      bAlwaysRenderAsText                                         OFFSET(get<bool>, {0x5B0, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -11546,6 +11544,8 @@ public:
 	// FVector GetTextWorldSize();                                                                                              // [0x5a03468] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.TextRenderComponent.GetTextLocalSize
 	// FVector GetTextLocalSize();                                                                                              // [0x5a033dc] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.TextureEncodingProjectSettings
 /// Size: 0x0018 (0x000030 - 0x000048)
 class UTextureEncodingProjectSettings : public UDeveloperSettings
@@ -11588,8 +11588,6 @@ class UTimelineComponent : public UActorComponent
 public:
 	SMember(FTimeline)                                 TheTimeline                                                 OFFSET(get<T>, {0xA0, 144, 0, 0})
 	DMember(bool)                                      bIgnoreTimeDilation                                         OFFSET(get<bool>, {0x130, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -11653,6 +11651,8 @@ public:
 	// void AddInterpFloat(UCurveFloat* FloatCurve, FDelegateProperty InterpFunc, FName PropertyName, FName TrackName);         // [0x5a02e58] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.TimelineComponent.AddEvent
 	// void AddEvent(float Time, FDelegateProperty EventFunc);                                                                  // [0x5a02d7c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.TriggerBase
 /// Size: 0x0008 (0x000290 - 0x000298)
 class ATriggerBase : public AActor
@@ -11775,13 +11775,13 @@ public:
 	DMember(float)                                     Intensity                                                   OFFSET(get<float>, {0x570, 4, 0, 0})
 	DMember(float)                                     Tightness                                                   OFFSET(get<float>, {0x574, 4, 0, 0})
 	DMember(bool)                                      bPreviewVectorField                                         OFFSET(get<bool>, {0x578, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.VectorFieldComponent.SetIntensity
 	// void SetIntensity(float NewIntensity);                                                                                   // [0x5a17da0] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.VectorFieldStatic
 /// Size: 0x0050 (0x000068 - 0x0000B8)
 class UVectorFieldStatic : public UVectorField
@@ -11820,8 +11820,6 @@ public:
 	DMember(float)                                     MaxGustAmount                                               OFFSET(get<float>, {0x2AC, 4, 0, 0})
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x2B0, 4, 0, 0})
 	DMember(bool)                                      bPointWind                                                  OFFSET(get<bool>, {0x2B4, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -11837,6 +11835,8 @@ public:
 	// void SetMinimumGustAmount(float InNewMinGust);                                                                           // [0x5a17eac] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.WindDirectionalSourceComponent.SetMaximumGustAmount
 	// void SetMaximumGustAmount(float InNewMaxGust);                                                                           // [0x5a17e24] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.WorldPartitionEditorLoaderAdapter
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UWorldPartitionEditorLoaderAdapter : public UObject
@@ -11962,8 +11962,6 @@ public:
 	CMember(UClass*)                                   DefaultBookmarkClass                                        OFFSET(get<T>, {0x488, 8, 0, 0})
 	CMember(TArray<UBookmarkBase*>)                    BookmarkArray                                               OFFSET(get<T>, {0x490, 16, 0, 0})
 	CMember(UClass*)                                   LastBookmarkClass                                           OFFSET(get<T>, {0x4A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -11971,6 +11969,8 @@ public:
 	// void OnRep_WorldGravityZ();                                                                                              // [0x276cd34] RequiredAPI|Native|Public 
 	// Function /Script/Engine.WorldSettings.OnRep_NaniteSettings
 	// void OnRep_NaniteSettings();                                                                                             // [0x59e45b4] RequiredAPI|Native|Public 
+};
+
 /// Class /Script/Engine.Texture2DArray
 /// Size: 0x00A8 (0x000138 - 0x0001E0)
 class UTexture2DArray : public UTexture
@@ -12105,8 +12105,6 @@ public:
 	DMember(float)                                     ArtificialRadiusExpansion                                   OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(float)                                     TestHeightDifference                                        OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(float)                                     HeightCheckMargin                                           OFFSET(get<float>, {0x48, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12118,6 +12116,8 @@ public:
 	// int32_t GetNewAvoidanceUID();                                                                                            // [0x5a33268] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.AvoidanceManager.GetAvoidanceVelocityForComponent
 	// FVector GetAvoidanceVelocityForComponent(UMovementComponent* MovementComp);                                              // [0x5a33164] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.NavCollisionBase
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UNavCollisionBase : public UObject
@@ -12149,8 +12149,6 @@ class AAmbientSound : public AActor
 
 public:
 	CMember(UAudioComponent*)                          AudioComponent                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12164,6 +12162,8 @@ public:
 	// void FadeIn(float FadeInDuration, float FadeVolumeLevel);                                                                // [0x5a32fc4] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.AmbientSound.AdjustVolume
 	// void AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel);                                                  // [0x5a32efc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AimOffsetBlendSpace
 /// Size: 0x0000 (0x0001C0 - 0x0001C0)
 class UAimOffsetBlendSpace : public UBlendSpace
@@ -12222,13 +12222,13 @@ public:
 	CMember(TArray<FMirrorFindReplaceExpression>)      MirrorFindReplaceExpressions                                OFFSET(get<T>, {0x108, 16, 0, 0})
 	SMember(FFrameRate)                                DefaultFrameRate                                            OFFSET(get<T>, {0x118, 8, 0, 0})
 	DMember(bool)                                      bEnforceSupportedFrameRates                                 OFFSET(get<bool>, {0x120, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AnimationSettings.GetBoneCustomAttributeNamesToImport
 	// TArray<FString> GetBoneCustomAttributeNamesToImport();                                                                   // [0x5a4ba1c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.AnimBlueprintGeneratedStruct
 /// Size: 0x0000 (0x0000C0 - 0x0000C0)
 class UAnimBlueprintGeneratedStruct : public UScriptStruct
@@ -12556,8 +12556,6 @@ public:
 	CMember(TArray<int32_t>)                           BranchingPointStateNotifyIndices                            OFFSET(get<T>, {0x1A0, 16, 0, 0})
 	SMember(FTimeStretchCurve)                         TimeStretchCurve                                            OFFSET(get<T>, {0x1B0, 40, 0, 0})
 	SMember(FName)                                     TimeStretchCurveName                                        OFFSET(get<T>, {0x1D8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12583,6 +12581,8 @@ public:
 	// FAlphaBlendArgs GetBlendInArgs();                                                                                        // [0x5a6bc00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.AnimMontage.CreateSlotAnimationAsDynamicMontage_WithBlendSettings
 	// UAnimMontage* CreateSlotAnimationAsDynamicMontage_WithBlendSettings(UAnimSequenceBase* Asset, FName SlotNodeName, FMontageBlendSettings& BlendInSettings, FMontageBlendSettings& BlendOutSettings, float InPlayRate, int32_t LoopCount, float InBlendOutTriggerTime); // [0x5a6b74c] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AnimNotifyLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAnimNotifyLibrary : public UBlueprintFunctionLibrary
@@ -12652,13 +12652,13 @@ public:
 	CMember(TEnumAsByte<ETrailWidthMode>)              WidthScaleMode                                              OFFSET(get<T>, {0x40, 1, 0, 0})
 	SMember(FName)                                     WidthScaleCurve                                             OFFSET(get<T>, {0x44, 4, 0, 0})
 	DMember(bool)                                      bRecycleSpawnedSystems                                      OFFSET(get<bool>, {0x48, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AnimNotifyState_Trail.OverridePSTemplate
 	// UParticleSystem* OverridePSTemplate(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation);                     // [0x1ebf994] RequiredAPI|Event|Public|BlueprintEvent|Const 
+};
+
 /// Class /Script/Engine.AnimNotify_PauseClothingSimulation
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UAnimNotify_PauseClothingSimulation : public UAnimNotify
@@ -12788,8 +12788,6 @@ class UAnimSingleNodeInstance : public UAnimInstance
 public:
 	CMember(UAnimationAsset*)                          CurrentAsset                                                OFFSET(get<T>, {0x348, 8, 0, 0})
 	SMember(FDelegateProperty)                         PostEvaluateAnimEvent                                       OFFSET(get<T>, {0x350, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12823,6 +12821,8 @@ public:
 	// float GetLength();                                                                                                       // [0x5a79118] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.AnimSingleNodeInstance.GetAnimationAsset
 	// UAnimationAsset* GetAnimationAsset();                                                                                    // [0x5a790f0] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.AnimStateMachineTypes
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAnimStateMachineTypes : public UObject
@@ -12892,8 +12892,6 @@ public:
 	CMember(TArray<UBlendProfile*>)                    BlendProfiles                                               OFFSET(get<T>, {0x250, 16, 0, 0})
 	CMember(TArray<FAnimSlotGroup>)                    SlotGroups                                                  OFFSET(get<T>, {0x260, 16, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x3E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -12903,6 +12901,8 @@ public:
 	// void AddCompatibleSkeletonSoft(TWeakObjectPtr<USkeleton*>& SourceSkeleton);                                              // [0x5a91dd4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.Skeleton.AddCompatibleSkeleton
 	// void AddCompatibleSkeleton(USkeleton* SourceSkeleton);                                                                   // [0x5a91d54] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.BlendProfile
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UBlendProfile : public UObject
@@ -13084,8 +13084,6 @@ public:
 	CMember(UPhysicsAsset*)                            ReplicatedPhysAsset                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       ReplicatedMaterial0                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       ReplicatedMaterial1                                         OFFSET(get<T>, {0x2B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13097,6 +13095,8 @@ public:
 	// void OnRep_ReplicatedMaterial1();                                                                                        // [0x2bea0f4] RequiredAPI|Native|Public 
 	// Function /Script/Engine.SkeletalMeshActor.OnRep_ReplicatedMaterial0
 	// void OnRep_ReplicatedMaterial0();                                                                                        // [0x59e45b4] RequiredAPI|Native|Public 
+};
+
 /// Class /Script/Engine.AnimBlueprint
 /// Size: 0x0028 (0x0000A8 - 0x0000D0)
 class UAnimBlueprint : public UBlueprint
@@ -13156,13 +13156,13 @@ class UAsyncActionLoadPrimaryAsset : public UAsyncActionLoadPrimaryAssetBase
 
 public:
 	SMember(FMulticastInlineDelegate)                  Completed                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AsyncActionLoadPrimaryAsset.AsyncLoadPrimaryAsset
 	// UAsyncActionLoadPrimaryAsset* AsyncLoadPrimaryAsset(UObject* WorldContextObject, FPrimaryAssetId PrimaryAsset, TArray<FName>& LoadBundles); // [0x5a9c4ac] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AsyncActionLoadPrimaryAssetClass
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAsyncActionLoadPrimaryAssetClass : public UAsyncActionLoadPrimaryAssetBase
@@ -13172,13 +13172,13 @@ class UAsyncActionLoadPrimaryAssetClass : public UAsyncActionLoadPrimaryAssetBas
 
 public:
 	SMember(FMulticastInlineDelegate)                  Completed                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AsyncActionLoadPrimaryAssetClass.AsyncLoadPrimaryAssetClass
 	// UAsyncActionLoadPrimaryAssetClass* AsyncLoadPrimaryAssetClass(UObject* WorldContextObject, FPrimaryAssetId PrimaryAsset, TArray<FName>& LoadBundles); // [0x5a9c6b4] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AsyncActionLoadPrimaryAssetList
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAsyncActionLoadPrimaryAssetList : public UAsyncActionLoadPrimaryAssetBase
@@ -13188,13 +13188,13 @@ class UAsyncActionLoadPrimaryAssetList : public UAsyncActionLoadPrimaryAssetBase
 
 public:
 	SMember(FMulticastInlineDelegate)                  Completed                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AsyncActionLoadPrimaryAssetList.AsyncLoadPrimaryAssetList
 	// UAsyncActionLoadPrimaryAssetList* AsyncLoadPrimaryAssetList(UObject* WorldContextObject, TArray<FPrimaryAssetId>& PrimaryAssetList, TArray<FName>& LoadBundles); // [0x5a9ca40] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AsyncActionLoadPrimaryAssetClassList
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAsyncActionLoadPrimaryAssetClassList : public UAsyncActionLoadPrimaryAssetBase
@@ -13204,13 +13204,13 @@ class UAsyncActionLoadPrimaryAssetClassList : public UAsyncActionLoadPrimaryAsse
 
 public:
 	SMember(FMulticastInlineDelegate)                  Completed                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AsyncActionLoadPrimaryAssetClassList.AsyncLoadPrimaryAssetClassList
 	// UAsyncActionLoadPrimaryAssetClassList* AsyncLoadPrimaryAssetClassList(UObject* WorldContextObject, TArray<FPrimaryAssetId>& PrimaryAssetList, TArray<FName>& LoadBundles); // [0x5a9c8bc] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AsyncActionChangePrimaryAssetBundles
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAsyncActionChangePrimaryAssetBundles : public UAsyncActionLoadPrimaryAssetBase
@@ -13220,8 +13220,6 @@ class UAsyncActionChangePrimaryAssetBundles : public UAsyncActionLoadPrimaryAsse
 
 public:
 	SMember(FMulticastInlineDelegate)                  Completed                                                   OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13229,6 +13227,8 @@ public:
 	// UAsyncActionChangePrimaryAssetBundles* AsyncChangeBundleStateForPrimaryAssetList(UObject* WorldContextObject, TArray<FPrimaryAssetId>& PrimaryAssetList, TArray<FName>& AddBundles, TArray<FName>& RemoveBundles); // [0x5a9c2b0] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.AsyncActionChangePrimaryAssetBundles.AsyncChangeBundleStateForMatchingPrimaryAssets
 	// UAsyncActionChangePrimaryAssetBundles* AsyncChangeBundleStateForMatchingPrimaryAssets(UObject* WorldContextObject, TArray<FName>& NewBundles, TArray<FName>& OldBundles); // [0x5a9c12c] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AtmosphericFog
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AAtmosphericFog : public AInfo
@@ -13272,8 +13272,6 @@ public:
 	DMember(float)                                     TransmittanceMinLightElevationAngle                         OFFSET(get<float>, {0x338, 4, 0, 0})
 	DMember(float)                                     AerialPerspectiveStartDepth                                 OFFSET(get<float>, {0x33C, 4, 0, 0})
 	SMember(FGuid)                                     bStaticLightingBuiltGUID                                    OFFSET(get<T>, {0x380, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13323,6 +13321,8 @@ public:
 	// FVector GetOverridenAtmosphereLightDirection(int32_t AtmosphereLightIndex);                                              // [0x5b922c4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.SkyAtmosphereComponent.GetAtmosphereTransmitanceOnGroundAtPlanetTop
 	// FLinearColor GetAtmosphereTransmitanceOnGroundAtPlanetTop(UDirectionalLightComponent* DirectionalLight);                 // [0x5b908f0] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.AtmosphericFogComponent
 /// Size: 0x0000 (0x0003A0 - 0x0003A0)
 class UAtmosphericFogComponent : public USkyAtmosphereComponent
@@ -13397,8 +13397,6 @@ public:
 	SMember(FInteriorSettings)                         AmbientZoneSettings                                         OFFSET(get<T>, {0x2F0, 36, 0, 0})
 	CMember(TArray<FAudioVolumeSubmixSendSettings>)    SubmixSendSettings                                          OFFSET(get<T>, {0x318, 16, 0, 0})
 	CMember(TArray<FAudioVolumeSubmixOverrideSettings>) SubmixOverrideSettings                                     OFFSET(get<T>, {0x328, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13416,6 +13414,8 @@ public:
 	// void SetEnabled(bool bNewEnabled);                                                                                       // [0x5ab5828] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.AudioVolume.OnRep_bEnabled
 	// void OnRep_bEnabled();                                                                                                   // [0x2bb5594] Final|RequiredAPI|Native|Private 
+};
+
 /// Class /Script/Engine.ActorSoundParameterInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UActorSoundParameterInterface : public UInterface
@@ -13571,8 +13571,6 @@ public:
 	DMember(float)                                     AlphaInTime                                                 OFFSET(get<float>, {0x38, 4, 0, 0})
 	DMember(float)                                     AlphaOutTime                                                OFFSET(get<float>, {0x3C, 4, 0, 0})
 	DMember(float)                                     Alpha                                                       OFFSET(get<float>, {0x40, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13590,6 +13588,8 @@ public:
 	// void BlueprintModifyPostProcess(float DeltaTime, float& PostProcessBlendWeight, FPostProcessSettings& PostProcessSettings); // [0x1ebf994] RequiredAPI|BlueprintCosmetic|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/Engine.CameraModifier.BlueprintModifyCamera
 	// void BlueprintModifyCamera(float DeltaTime, FVector ViewLocation, FRotator ViewRotation, float FOV, FVector& NewViewLocation, FRotator& NewViewRotation, float& NewFOV); // [0x1ebf994] RequiredAPI|BlueprintCosmetic|Event|Public|HasOutParms|HasDefaults|BlueprintEvent 
+};
+
 /// Class /Script/Engine.CameraModifier_CameraShake
 /// Size: 0x0068 (0x000048 - 0x0000B0)
 class UCameraModifier_CameraShake : public UCameraModifier
@@ -13615,8 +13615,6 @@ public:
 	DMember(float)                                     ShakeScale                                                  OFFSET(get<float>, {0x2C, 4, 0, 0})
 	CMember(UCameraShakePattern*)                      RootShakePattern                                            OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(APlayerCameraManager*)                     CameraManager                                               OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13624,6 +13622,8 @@ public:
 	// void SetRootShakePattern(UCameraShakePattern* InPattern);                                                                // [0x5ae6abc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.CameraShakeBase.GetRootShakePattern
 	// UCameraShakePattern* GetRootShakePattern();                                                                              // [0x5ae2078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.CameraShakePattern
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCameraShakePattern : public UObject
@@ -13658,8 +13658,6 @@ public:
 	DMember(float)                                     OuterAttenuationRadius                                      OFFSET(get<float>, {0x2A8, 4, 0, 0})
 	CMember(UClass*)                                   CameraShake                                                 OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	DMember(bool)                                      bAutoStart                                                  OFFSET(get<bool>, {0x2B8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13673,6 +13671,8 @@ public:
 	// void Start();                                                                                                            // [0x1c62c00] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.CameraShakeSourceComponent.GetAttenuationFactor
 	// float GetAttenuationFactor(FVector& Location);                                                                           // [0x5ae1eac] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.TextureRenderTarget
 /// Size: 0x0008 (0x000138 - 0x000140)
 class UTextureRenderTarget : public UTexture
@@ -13719,8 +13719,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnCanvasRenderTargetUpdate                                  OFFSET(get<T>, {0x168, 16, 0, 0})
 	CMember(TWeakObjectPtr<UWorld*>)                   World                                                       OFFSET(get<T>, {0x178, 8, 0, 0})
 	DMember(bool)                                      bShouldClearRenderTargetOnReceiveUpdate                     OFFSET(get<bool>, {0x180, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13732,6 +13730,8 @@ public:
 	// void GetSize(int32_t& Width, int32_t& Height);                                                                           // [0x5ae2090] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure 
 	// Function /Script/Engine.CanvasRenderTarget2D.CreateCanvasRenderTarget2D
 	// UCanvasRenderTarget2D* CreateCanvasRenderTarget2D(UObject* WorldContextObject, UClass* CanvasRenderTarget2DClass, int32_t Width, int32_t Height); // [0x5ae16b8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Pawn
 /// Size: 0x0088 (0x000290 - 0x000318)
 class APawn : public AActor
@@ -13759,8 +13759,6 @@ public:
 	SMember(FVector)                                   ControlInputVector                                          OFFSET(get<T>, {0x2E0, 24, 0, 0})
 	SMember(FVector)                                   LastControlInputVector                                      OFFSET(get<T>, {0x2F8, 24, 0, 0})
 	CMember(UClass*)                                   OverrideInputComponentClass                                 OFFSET(get<T>, {0x310, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13830,6 +13828,8 @@ public:
 	// void AddControllerRollInput(float Val);                                                                                  // [0x5e3128c] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.Pawn.AddControllerPitchInput
 	// void AddControllerPitchInput(float Val);                                                                                 // [0x5e31208] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Character
 /// Size: 0x0348 (0x000318 - 0x000660)
 class ACharacter : public APawn
@@ -13878,8 +13878,6 @@ public:
 	SMember(FRootMotionMovementParams)                 ClientRootMotionParams                                      OFFSET(get<T>, {0x510, 112, 0, 0})
 	CMember(TArray<FSimulatedRootMotionReplicatedMove>) RootMotionRepMoves                                         OFFSET(get<T>, {0x580, 16, 0, 0})
 	SMember(FRepRootMotionMontage)                     RepRootMotion                                               OFFSET(get<T>, {0x590, 208, 0, 0})
-};
-
 
 
 	/// Functions
@@ -13979,6 +13977,8 @@ public:
 	// bool CanCrouch();                                                                                                        // [0x5ade728] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.Character.CacheInitialMeshOffset
 	// void CacheInitialMeshOffset(FVector MeshRelativeLocation, FRotator MeshRelativeRotation);                                // [0x5ade478] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Controller
 /// Size: 0x0098 (0x000290 - 0x000328)
 class AController : public AActor
@@ -13996,8 +13996,6 @@ public:
 	CMember(USceneComponent*)                          TransformComponent                                          OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	SMember(FRotator)                                  ControlRotation                                             OFFSET(get<T>, {0x308, 24, 0, 0})
 	DMember(bool)                                      bAttachToPawn                                               OFFSET(get<bool>, {0x320, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -14057,6 +14055,8 @@ public:
 	// void ClientSetRotation(FRotator NewRotation, bool bResetCamera);                                                         // [0x5b8edac] RequiredAPI|Net|NetReliableNative|Event|Public|HasDefaults|NetClient|NetValidate 
 	// Function /Script/Engine.Controller.ClientSetLocation
 	// void ClientSetLocation(FVector NewLocation, FRotator NewRotation);                                                       // [0x5b8eab0] RequiredAPI|Net|NetReliableNative|Event|Public|HasDefaults|NetClient|NetValidate 
+};
+
 /// Class /Script/Engine.PlayerController
 /// Size: 0x0528 (0x000328 - 0x000850)
 class APlayerController : public AController
@@ -14121,8 +14121,6 @@ public:
 	CMember(ASpectatorPawn*)                           SpectatorPawn                                               OFFSET(get<T>, {0x6B0, 8, 0, 0})
 	DMember(bool)                                      bIsLocalPlayerController                                    OFFSET(get<bool>, {0x6BC, 1, 0, 0})
 	SMember(FVector)                                   SpawnLocation                                               OFFSET(get<T>, {0x6C0, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -14448,6 +14446,8 @@ public:
 	// void AddPitchInput(float Val);                                                                                           // [0x5e98b8c] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.PlayerController.ActivateTouchInterface
 	// void ActivateTouchInterface(UTouchInterface* NewTouchInterface);                                                         // [0x5e987f4] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.CheatManager
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UCheatManager : public UObject
@@ -14459,8 +14459,6 @@ public:
 	CMember(ADebugCameraController*)                   DebugCameraControllerRef                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UClass*)                                   DebugCameraControllerClass                                  OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<UCheatManagerExtension*>)           CheatManagerExtensions                                      OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -14578,6 +14576,8 @@ public:
 	// void BugItGo(float X, float Y, float Z, float Pitch, float Yaw, float Roll);                                             // [0x5add934] RequiredAPI|Exec|Native|Public 
 	// Function /Script/Engine.CheatManager.BugIt
 	// void BugIt(FString ScreenShotDescription);                                                                               // [0x5add284] RequiredAPI|Exec|Native|Public 
+};
+
 /// Class /Script/Engine.CheatManagerExtension
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCheatManagerExtension : public UObject
@@ -14690,8 +14690,6 @@ public:
 	DMember(float)                                     ScreenSize                                                  OFFSET(get<float>, {0x574, 4, 0, 0})
 	DMember(bool)                                      bIsScreenSizeScaled                                         OFFSET(get<bool>, {0x578, 1, 1, 0})
 	DMember(bool)                                      bTreatAsASprite                                             OFFSET(get<bool>, {0x578, 1, 1, 1})
-};
-
 
 
 	/// Functions
@@ -14711,6 +14709,8 @@ public:
 	// void SetArrowFColor(FColor NewColor);                                                                                    // [0x5b355a8] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.ArrowComponent.SetArrowColor
 	// void SetArrowColor(FLinearColor NewColor);                                                                               // [0x5b35448] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.InitialActiveSoundParams
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UInitialActiveSoundParams : public UObject
@@ -14777,8 +14777,6 @@ public:
 	SMember(FDelegateProperty)                         OnQueueSubtitles                                            OFFSET(get<T>, {0xB50, 12, 0, 0})
 	CMember(TWeakObjectPtr<USceneComponent*>)          AutoAttachParent                                            OFFSET(get<T>, {0xB70, 8, 0, 0})
 	SMember(FName)                                     AutoAttachSocketName                                        OFFSET(get<T>, {0xB78, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -14856,6 +14854,8 @@ public:
 	// void AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeLevel, EAudioFaderCurve FadeCurve);                      // [0x5b32e2c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.AudioComponent.AdjustAttenuation
 	// void AdjustAttenuation(FSoundAttenuationSettings& InAttenuationSettings);                                                // [0x5b32d68] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.BillboardComponent
 /// Size: 0x0020 (0x000570 - 0x000590)
 class UBillboardComponent : public UPrimitiveComponent
@@ -14872,8 +14872,6 @@ public:
 	DMember(float)                                     V                                                           OFFSET(get<float>, {0x580, 4, 0, 0})
 	DMember(float)                                     VL                                                          OFFSET(get<float>, {0x584, 4, 0, 0})
 	DMember(float)                                     OpacityMaskRefVal                                           OFFSET(get<float>, {0x588, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -14885,6 +14883,8 @@ public:
 	// void SetSprite(UTexture2D* NewSprite);                                                                                   // [0x599a2b4] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.BillboardComponent.SetOpacityMaskRefVal
 	// void SetOpacityMaskRefVal(float RefVal);                                                                                 // [0x5b365c4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.BoundsCopyComponent
 /// Size: 0x00A0 (0x0000A0 - 0x000140)
 class UBoundsCopyComponent : public UActorComponent
@@ -14930,8 +14930,6 @@ class UBoxComponent : public UShapeComponent
 public:
 	SMember(FVector)                                   BoxExtent                                                   OFFSET(get<T>, {0x588, 24, 0, 0})
 	DMember(float)                                     LineThickness                                               OFFSET(get<float>, {0x5A0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -14943,6 +14941,8 @@ public:
 	// FVector GetUnscaledBoxExtent();                                                                                          // [0x5b34338] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.BoxComponent.GetScaledBoxExtent
 	// FVector GetScaledBoxExtent();                                                                                            // [0x2dc9870] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.BrushComponent
 /// Size: 0x0010 (0x000570 - 0x000580)
 class UBrushComponent : public UPrimitiveComponent
@@ -14963,8 +14963,6 @@ class UCapsuleComponent : public UShapeComponent
 	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-};
-
 
 
 	/// Functions
@@ -14996,6 +14994,8 @@ public:
 	// float GetScaledCapsuleHalfHeight_WithoutHemisphere();                                                                    // [0x5b33fc0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.CapsuleComponent.GetScaledCapsuleHalfHeight
 	// float GetScaledCapsuleHalfHeight();                                                                                      // [0x5b33f84] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.MovementComponent
 /// Size: 0x0068 (0x0000A0 - 0x000108)
 class UMovementComponent : public UActorComponent
@@ -15018,8 +15018,6 @@ public:
 	DMember(bool)                                      bAutoRegisterPhysicsVolumeUpdates                           OFFSET(get<bool>, {0x100, 1, 1, 6})
 	DMember(bool)                                      bComponentShouldUpdatePhysicsVolume                         OFFSET(get<bool>, {0x100, 1, 1, 7})
 	CMember(EPlaneConstraintAxisSetting)               PlaneConstraintAxisSetting                                  OFFSET(get<T>, {0x103, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15063,6 +15061,8 @@ public:
 	// FVector ConstrainLocationToPlane(FVector Location);                                                                      // [0x5b5763c] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.MovementComponent.ConstrainDirectionToPlane
 	// FVector ConstrainDirectionToPlane(FVector Direction);                                                                    // [0x5b574a4] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.NavMovementComponent
 /// Size: 0x0040 (0x000108 - 0x000148)
 class UNavMovementComponent : public UMovementComponent
@@ -15078,8 +15078,6 @@ public:
 	DMember(bool)                                      bUseFixedBrakingDistanceForPaths                            OFFSET(get<bool>, {0x13C, 1, 1, 2})
 	SMember(FMovementProperties)                       MovementState                                               OFFSET(get<T>, {0x13D, 1, 0, 0})
 	CMember(UObject*)                                  PathFollowingComp                                           OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15097,6 +15095,8 @@ public:
 	// bool IsFalling();                                                                                                        // [0x2739710] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.NavMovementComponent.IsCrouching
 	// bool IsCrouching();                                                                                                      // [0x5b58b38] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.PawnMovementComponent
 /// Size: 0x0008 (0x000148 - 0x000150)
 class UPawnMovementComponent : public UNavMovementComponent
@@ -15106,8 +15106,6 @@ class UPawnMovementComponent : public UNavMovementComponent
 
 public:
 	CMember(APawn*)                                    PawnOwner                                                   OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15127,6 +15125,8 @@ public:
 	// FVector ConsumeInputVector();                                                                                            // [0x5b5796c] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.PawnMovementComponent.AddInputVector
 	// void AddInputVector(FVector WorldVector, bool bForce);                                                                   // [0x5b57044] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.CharacterMovementComponent
 /// Size: 0x0DE0 (0x000150 - 0x000F30)
 class UCharacterMovementComponent : public UPawnMovementComponent
@@ -15293,8 +15293,6 @@ public:
 	SMember(FRootMotionSourceGroup)                    ServerCorrectionRootMotion                                  OFFSET(get<T>, {0xCD8, 72, 0, 0})
 	SMember(FRootMotionMovementParams)                 RootMotionParams                                            OFFSET(get<T>, {0xE80, 112, 0, 0})
 	SMember(FVector)                                   AnimRootMotionVelocity                                      OFFSET(get<T>, {0xEF0, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15378,6 +15376,8 @@ public:
 	// void AddImpulse(FVector Impulse, bool bVelocityChange);                                                                  // [0x5b329c4] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.CharacterMovementComponent.AddForce
 	// void AddForce(FVector Force);                                                                                            // [0x5b32854] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ChildActorComponent
 /// Size: 0x0040 (0x0002A0 - 0x0002E0)
 class UChildActorComponent : public USceneComponent
@@ -15390,8 +15390,6 @@ public:
 	CMember(AActor*)                                   ChildActor                                                  OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(AActor*)                                   ChildActorTemplate                                          OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	DMember(bool)                                      bChildActorIsTransient                                      OFFSET(get<bool>, {0x2D0, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -15401,6 +15399,8 @@ public:
 	// void OnRep_ChildActor();                                                                                                 // [0x2e78014] Final|Native|Private 
 	// Function /Script/Engine.ChildActorComponent.OnChildActorDestroyed
 	// void OnChildActorDestroyed(AActor* Actor);                                                                               // [0x1901d18] Final|RequiredAPI|Native|Private 
+};
+
 /// Class /Script/Engine.DecalComponent
 /// Size: 0x0060 (0x0002A0 - 0x000300)
 class UDecalComponent : public USceneComponent
@@ -15419,8 +15419,6 @@ public:
 	DMember(bool)                                      bDestroyOwnerAfterFade                                      OFFSET(get<bool>, {0x2C0, 1, 1, 0})
 	SMember(FVector)                                   DecalSize                                                   OFFSET(get<T>, {0x2C8, 24, 0, 0})
 	SMember(FLinearColor)                              DecalColor                                                  OFFSET(get<T>, {0x2E0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15448,6 +15446,8 @@ public:
 	// UMaterialInterface* GetDecalMaterial();                                                                                  // [0x591a5ec] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DecalComponent.CreateDynamicMaterialInstance
 	// UMaterialInstanceDynamic* CreateDynamicMaterialInstance();                                                               // [0x1db2240] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.LightComponent
 /// Size: 0x0110 (0x0002E0 - 0x0003F0)
 class ULightComponent : public ULightComponentBase
@@ -15490,8 +15490,6 @@ public:
 	SMember(FColor)                                    BloomTint                                                   OFFSET(get<T>, {0x368, 4, 0, 0})
 	DMember(bool)                                      bUseRayTracedDistanceFieldShadows                           OFFSET(get<bool>, {0x36C, 1, 0, 0})
 	DMember(float)                                     RayStartOffsetDepthScale                                    OFFSET(get<float>, {0x370, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15547,6 +15545,8 @@ public:
 	// void SetBloomMaxBrightness(float NewValue);                                                                              // [0x5b5a634] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.LightComponent.SetAffectTranslucentLighting
 	// void SetAffectTranslucentLighting(bool bNewValue);                                                                       // [0x5b5a47c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.DirectionalLightComponent
 /// Size: 0x00D0 (0x0003F0 - 0x0004C0)
 class UDirectionalLightComponent : public ULightComponent
@@ -15596,8 +15596,6 @@ public:
 	DMember(bool)                                      bCastModulatedShadows                                       OFFSET(get<bool>, {0x4A8, 1, 1, 0})
 	SMember(FColor)                                    ModulatedShadowColor                                        OFFSET(get<T>, {0x4AC, 4, 0, 0})
 	DMember(float)                                     ShadowAmount                                                OFFSET(get<float>, {0x4B0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15637,6 +15635,8 @@ public:
 	// void SetAtmosphereSunLightIndex(int32_t NewValue);                                                                       // [0x5b5a57c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.DirectionalLightComponent.SetAtmosphereSunLight
 	// void SetAtmosphereSunLight(bool bNewValue);                                                                              // [0x5b5a4fc] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.DrawFrustumComponent
 /// Size: 0x0020 (0x000570 - 0x000590)
 class UDrawFrustumComponent : public UPrimitiveComponent
@@ -15662,8 +15662,6 @@ class USphereComponent : public UShapeComponent
 	static inline constexpr uint64_t __MDKClassSize = 1424;
 
 public:
-};
-
 
 
 	/// Functions
@@ -15675,6 +15673,8 @@ public:
 	// float GetShapeScale();                                                                                                   // [0x5b342cc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.SphereComponent.GetScaledSphereRadius
 	// float GetScaledSphereRadius();                                                                                           // [0x2f881b0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DrawSphereComponent
 /// Size: 0x0000 (0x000590 - 0x000590)
 class UDrawSphereComponent : public USphereComponent
@@ -15703,8 +15703,6 @@ public:
 	CMember(UForceFeedbackAttenuation*)                AttenuationSettings                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	SMember(FForceFeedbackAttenuationSettings)         AttenuationOverrides                                        OFFSET(get<T>, {0x2B8, 192, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnForceFeedbackFinished                                     OFFSET(get<T>, {0x378, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15720,6 +15718,8 @@ public:
 	// bool BP_GetAttenuationSettingsToApply(FForceFeedbackAttenuationSettings& OutAttenuationSettings);                        // [0x5b573bc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.ForceFeedbackComponent.AdjustAttenuation
 	// void AdjustAttenuation(FForceFeedbackAttenuationSettings& InAttenuationSettings);                                        // [0x5b572e0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.HeterogeneousVolumeComponent
 /// Size: 0x0050 (0x0005A0 - 0x0005F0)
 class UHeterogeneousVolumeComponent : public UMeshComponent
@@ -15742,8 +15742,6 @@ public:
 	DMember(float)                                     ShadowBiasFactor                                            OFFSET(get<float>, {0x5D0, 4, 0, 0})
 	DMember(float)                                     LightingDownsampleFactor                                    OFFSET(get<float>, {0x5D4, 4, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 MaterialInstanceDynamic                                     OFFSET(get<T>, {0x5D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15761,6 +15759,8 @@ public:
 	// void SetEndFrame(float NewValue);                                                                                        // [0x5b5bedc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.HeterogeneousVolumeComponent.Play
 	// void Play();                                                                                                             // [0x5b59cac] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.HeterogeneousVolume
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AHeterogeneousVolume : public AInfo
@@ -15781,8 +15781,6 @@ class UInputComponent : public UActorComponent
 
 public:
 	CMember(TArray<FCachedKeyToActionInfo>)            CachedKeyToActionInfo                                       OFFSET(get<T>, {0x110, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15806,6 +15804,8 @@ public:
 	// void GetControllerAnalogStickState(TEnumAsByte<EControllerAnalogStick> WhichStick, float& StickX, float& StickY);        // [0x5b580d0] Final|RequiredAPI|Native|Private|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.InputComponent.GetControllerAnalogKeyState
 	// float GetControllerAnalogKeyState(FKey Key);                                                                             // [0x5b57e74] Final|RequiredAPI|Native|Private|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.InterpToMovementComponent
 /// Size: 0x00B0 (0x000108 - 0x0001B8)
 class UInterpToMovementComponent : public UMovementComponent
@@ -15829,8 +15829,6 @@ public:
 	DMember(float)                                     MaxSimulationTimeStep                                       OFFSET(get<float>, {0x168, 4, 0, 0})
 	DMember(int32_t)                                   MaxSimulationIterations                                     OFFSET(get<int32_t>, {0x16C, 4, 0, 0})
 	CMember(TArray<FInterpControlPoint>)               ControlPoints                                               OFFSET(get<T>, {0x170, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15854,6 +15852,8 @@ public:
 	// void FinaliseControlPoints();                                                                                            // [0x5b57a28] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.InterpToMovementComponent.AddControlPointPosition
 	// void AddControlPointPosition(FVector Pos, bool bPositionIsRelative);                                                     // [0x5b56bcc] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.LineBatchComponent
 /// Size: 0x0040 (0x000570 - 0x0005B0)
 class ULineBatchComponent : public UPrimitiveComponent
@@ -15896,8 +15896,6 @@ public:
 	DMember(float)                                     Radius                                                      OFFSET(get<float>, {0x3F0, 4, 0, 0})
 	DMember(float)                                     AttenuationRadius                                           OFFSET(get<float>, {0x3F4, 4, 0, 0})
 	SMember(FLightmassPointLightSettings)              LightmassSettings                                           OFFSET(get<T>, {0x3F8, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15907,6 +15905,8 @@ public:
 	// void SetAttenuationRadius(float NewRadius);                                                                              // [0x293c2a0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.LocalLightComponent.GetUnitsConversionFactor
 	// float GetUnitsConversionFactor(ELightUnits SrcUnits, ELightUnits TargetUnits, float CosHalfConeAngle);                   // [0x5b587e4] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/Engine.LODSyncComponent
 /// Size: 0x0098 (0x0000A0 - 0x000138)
 class ULODSyncComponent : public UActorComponent
@@ -15924,13 +15924,13 @@ public:
 	DMember(int32_t)                                   CurrentNumLODs                                              OFFSET(get<int32_t>, {0x114, 4, 0, 0})
 	CMember(TArray<UPrimitiveComponent*>)              DriveComponents                                             OFFSET(get<T>, {0x118, 16, 0, 0})
 	CMember(TArray<UPrimitiveComponent*>)              SubComponents                                               OFFSET(get<T>, {0x128, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.LODSyncComponent.GetLODSyncDebugText
 	// FString GetLODSyncDebugText();                                                                                           // [0x5b58524] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.MaterialBillboardComponent
 /// Size: 0x0010 (0x000570 - 0x000580)
 class UMaterialBillboardComponent : public UPrimitiveComponent
@@ -15940,8 +15940,6 @@ class UMaterialBillboardComponent : public UPrimitiveComponent
 
 public:
 	CMember(TArray<FMaterialSpriteElement>)            Elements                                                    OFFSET(get<T>, {0x568, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -15949,6 +15947,8 @@ public:
 	// void SetElements(TArray<FMaterialSpriteElement>& NewElements);                                                           // [0x5b5b698] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.MaterialBillboardComponent.AddElement
 	// void AddElement(UMaterialInterface* Material, UCurveFloat* DistanceToOpacityCurve, bool bSizeIsInScreenSpace, float BaseSizeX, float BaseSizeY, UCurveFloat* DistanceToSizeCurve); // [0x5b56e68] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ModelComponent
 /// Size: 0x0040 (0x000570 - 0x0005B0)
 class UModelComponent : public UPrimitiveComponent
@@ -15975,13 +15975,13 @@ public:
 	DMember(float)                                     LastRemoteNoiseTime                                         OFFSET(get<float>, {0xC8, 4, 0, 0})
 	DMember(float)                                     LastLocalNoiseVolume                                        OFFSET(get<float>, {0xCC, 4, 0, 0})
 	DMember(float)                                     LastLocalNoiseTime                                          OFFSET(get<float>, {0xD0, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.PawnNoiseEmitterComponent.MakeNoise
 	// void MakeNoise(AActor* NoiseMaker, float Loudness, FVector& NoiseLocation);                                              // [0x5b594ac] RequiredAPI|BlueprintAuthorityOnly|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PlatformEventsComponent
 /// Size: 0x0020 (0x0000A0 - 0x0000C0)
 class UPlatformEventsComponent : public UActorComponent
@@ -15992,8 +15992,6 @@ class UPlatformEventsComponent : public UActorComponent
 public:
 	SMember(FMulticastInlineDelegate)                  PlatformChangedToLaptopModeDelegate                         OFFSET(get<T>, {0xA0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  PlatformChangedToTabletModeDelegate                         OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16005,6 +16003,8 @@ public:
 	// bool IsInTabletMode();                                                                                                   // [0x5b58c4c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.PlatformEventsComponent.IsInLaptopMode
 	// bool IsInLaptopMode();                                                                                                   // [0x5b58c20] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PointLightComponent
 /// Size: 0x0010 (0x000410 - 0x000420)
 class UPointLightComponent : public ULocalLightComponent
@@ -16018,8 +16018,6 @@ public:
 	DMember(float)                                     SourceRadius                                                OFFSET(get<float>, {0x410, 4, 0, 0})
 	DMember(float)                                     SoftSourceRadius                                            OFFSET(get<float>, {0x414, 4, 0, 0})
 	DMember(float)                                     SourceLength                                                OFFSET(get<float>, {0x418, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16035,6 +16033,8 @@ public:
 	// void SetLightFalloffExponent(float NewLightFalloffExponent);                                                             // [0x5b5c66c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.PointLightComponent.SetInverseExposureBlend
 	// void SetInverseExposureBlend(float NewInverseExposureBlend);                                                             // [0x2c878b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PoseableMeshComponent
 /// Size: 0x0160 (0x0008E0 - 0x000A40)
 class UPoseableMeshComponent : public USkinnedMeshComponent
@@ -16059,13 +16059,13 @@ public:
 	DMember(float)                                     BlendWeight                                                 OFFSET(get<float>, {0x998, 4, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x99C, 1, 1, 0})
 	DMember(bool)                                      bUnbound                                                    OFFSET(get<bool>, {0x99C, 1, 1, 1})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.PostProcessComponent.AddOrUpdateBlendable
 	// void AddOrUpdateBlendable(TScriptInterface<Class> InBlendableObject, float InWeight);                                    // [0x34071f4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ProjectileMovementComponent
 /// Size: 0x0158 (0x000108 - 0x000260)
 class UProjectileMovementComponent : public UMovementComponent
@@ -16113,8 +16113,6 @@ public:
 	DMember(float)                                     ThrottleInterpolationThresholdNotRenderedLongTime           OFFSET(get<float>, {0x19C, 4, 0, 0})
 	DMember(int32_t)                                   ThrottleInterpolationSkipFramesRecent                       OFFSET(get<int32_t>, {0x1A0, 4, 0, 0})
 	DMember(int32_t)                                   ThrottleInterpolationSkipFramesNotRecent                    OFFSET(get<int32_t>, {0x1A4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16138,6 +16136,8 @@ public:
 	// bool IsVelocityUnderSimulationThreshold();                                                                               // [0x5b58d7c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.ProjectileMovementComponent.IsInterpolationComplete
 	// bool IsInterpolationComplete();                                                                                          // [0x5b58c78] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.RectLightComponent
 /// Size: 0x0020 (0x000410 - 0x000430)
 class URectLightComponent : public ULocalLightComponent
@@ -16151,8 +16151,6 @@ public:
 	DMember(float)                                     BarnDoorAngle                                               OFFSET(get<float>, {0x410, 4, 0, 0})
 	DMember(float)                                     BarnDoorLength                                              OFFSET(get<float>, {0x414, 4, 0, 0})
 	CMember(UTexture*)                                 SourceTexture                                               OFFSET(get<T>, {0x418, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16166,6 +16164,8 @@ public:
 	// void SetBarnDoorLength(float NewValue);                                                                                  // [0x5b74a30] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.RectLightComponent.SetBarnDoorAngle
 	// void SetBarnDoorAngle(float NewValue);                                                                                   // [0x5b749b0] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.RotatingMovementComponent
 /// Size: 0x0038 (0x000108 - 0x000140)
 class URotatingMovementComponent : public UMovementComponent
@@ -16200,13 +16200,13 @@ public:
 	CMember(TEnumAsByte<ETextureLossyCompressionAmount>) LossyCompressionAmount                                    OFFSET(get<T>, {0x2ED, 1, 0, 0})
 	DMember(bool)                                      bUseStreamingLowMipsInEditor                                OFFSET(get<bool>, {0x2EE, 1, 0, 0})
 	DMember(bool)                                      bBuildDebugStreamingMips                                    OFFSET(get<bool>, {0x2EF, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.RuntimeVirtualTextureComponent.Invalidate
 	// void Invalidate(FBoxSphereBounds& WorldBounds);                                                                          // [0x5b72b70] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SkyAtmosphere
 /// Size: 0x0008 (0x000290 - 0x000298)
 class ASkyAtmosphere : public AInfo
@@ -16253,8 +16253,6 @@ public:
 	DMember(bool)                                      bLoopPositionOverride                                       OFFSET(get<bool>, {0x64A, 1, 0, 0})
 	DMember(float)                                     LoopPosition                                                OFFSET(get<float>, {0x64C, 4, 0, 0})
 	SMember(FVector)                                   DefaultUpVector                                             OFFSET(get<T>, {0x650, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16472,6 +16470,8 @@ public:
 	// void AddPoints(TArray<FSplinePoint>& Points, bool bUpdateSpline);                                                        // [0x5b8db78] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.SplineComponent.AddPoint
 	// void AddPoint(FSplinePoint& Point, bool bUpdateSpline);                                                                  // [0x5b8d9c0] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SplineMeshComponent
 /// Size: 0x0100 (0x000620 - 0x000720)
 class USplineMeshComponent : public UStaticMeshComponent
@@ -16492,8 +16492,6 @@ public:
 	CMember(TEnumAsByte<ESplineMeshAxis>)              ForwardAxis                                                 OFFSET(get<T>, {0x715, 1, 0, 0})
 	DMember(float)                                     VirtualTextureMainPassMaxDrawDistance                       OFFSET(get<float>, {0x718, 4, 0, 0})
 	DMember(bool)                                      bNeverNeedsCookedCollisionData                              OFFSET(get<bool>, {0x71C, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -16561,6 +16559,8 @@ public:
 	// float GetBoundaryMin();                                                                                                  // [0x5b909fc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.SplineMeshComponent.GetBoundaryMax
 	// float GetBoundaryMax();                                                                                                  // [0x5b909e4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.SpotLightComponent
 /// Size: 0x0010 (0x000420 - 0x000430)
 class USpotLightComponent : public UPointLightComponent
@@ -16571,8 +16571,6 @@ class USpotLightComponent : public UPointLightComponent
 public:
 	DMember(float)                                     InnerConeAngle                                              OFFSET(get<float>, {0x420, 4, 0, 0})
 	DMember(float)                                     OuterConeAngle                                              OFFSET(get<float>, {0x424, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16580,6 +16578,8 @@ public:
 	// void SetOuterConeAngle(float NewOuterConeAngle);                                                                         // [0x5b97b38] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.SpotLightComponent.SetInnerConeAngle
 	// void SetInnerConeAngle(float NewInnerConeAngle);                                                                         // [0x5b97124] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.VolumetricCloudComponent
 /// Size: 0x0070 (0x0002A0 - 0x000310)
 class UVolumetricCloudComponent : public USceneComponent
@@ -16612,8 +16612,6 @@ public:
 	DMember(float)                                     AerialPespectiveRayleighScatteringFadeDistance              OFFSET(get<float>, {0x2FC, 4, 0, 0})
 	DMember(float)                                     AerialPespectiveMieScatteringStartDistance                  OFFSET(get<float>, {0x300, 4, 0, 0})
 	DMember(float)                                     AerialPespectiveMieScatteringFadeDistance                   OFFSET(get<float>, {0x304, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16651,6 +16649,8 @@ public:
 	// void SetGroundAlbedo(FColor NewValue);                                                                                   // [0x5b96d80] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.VolumetricCloudComponent.SetbUsePerSampleAtmosphericLightTransmittance
 	// void SetbUsePerSampleAtmosphericLightTransmittance(bool NewValue);                                                       // [0x5b9aa84] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.VolumetricCloud
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AVolumetricCloud : public AInfo
@@ -16680,8 +16680,6 @@ public:
 	CMember(EStreamingSourcePriority)                  Priority                                                    OFFSET(get<T>, {0xF0, 1, 0, 0})
 	DMember(bool)                                      bStreamingSourceEnabled                                     OFFSET(get<bool>, {0xF1, 1, 0, 0})
 	CMember(EStreamingSourceTargetState)               TargetState                                                 OFFSET(get<T>, {0xF2, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16693,6 +16691,8 @@ public:
 	// void EnableStreamingSource();                                                                                            // [0x5b8f6e8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.WorldPartitionStreamingSourceComponent.DisableStreamingSource
 	// void DisableStreamingSource();                                                                                           // [0x5b8f308] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.CurveTable
 /// Size: 0x0078 (0x000028 - 0x0000A0)
 class UCurveTable : public UObject
@@ -16858,13 +16858,13 @@ class UCurveFloat : public UCurveBase
 public:
 	SMember(FRichCurve)                                FloatCurve                                                  OFFSET(get<T>, {0x30, 128, 0, 0})
 	DMember(bool)                                      bIsEventCurve                                               OFFSET(get<bool>, {0xB0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.CurveFloat.GetFloatValue
 	// float GetFloatValue(float InTime);                                                                                       // [0x2a74024] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.CurveLinearColor
 /// Size: 0x0220 (0x000030 - 0x000250)
 class UCurveLinearColor : public UCurveBase
@@ -16881,8 +16881,6 @@ public:
 	DMember(float)                                     AdjustVibrance                                              OFFSET(get<float>, {0x240, 4, 0, 0})
 	DMember(float)                                     AdjustMinAlpha                                              OFFSET(get<float>, {0x244, 4, 0, 0})
 	DMember(float)                                     AdjustMaxAlpha                                              OFFSET(get<float>, {0x248, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -16892,6 +16890,8 @@ public:
 	// FLinearColor GetLinearColorValue(float InTime);                                                                          // [0x5b91934] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.CurveLinearColor.GetClampedLinearColorValue
 	// FLinearColor GetClampedLinearColorValue(float InTime);                                                                   // [0x5b90a14] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.CurveLinearColorAtlas
 /// Size: 0x0020 (0x000158 - 0x000178)
 class UCurveLinearColorAtlas : public UTexture2D
@@ -16904,13 +16904,13 @@ public:
 	DMember(bool)                                      bSquareResolution                                           OFFSET(get<bool>, {0x15C, 1, 1, 0})
 	DMember(uint32_t)                                  TextureHeight                                               OFFSET(get<uint32_t>, {0x160, 4, 0, 0})
 	CMember(TArray<UCurveLinearColor*>)                GradientCurves                                              OFFSET(get<T>, {0x168, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.CurveLinearColorAtlas.GetCurvePosition
 	// bool GetCurvePosition(UCurveLinearColor* InCurve, float& Position);                                                      // [0x5b90aec] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.CurveVector
 /// Size: 0x0180 (0x000030 - 0x0001B0)
 class UCurveVector : public UCurveBase
@@ -16920,13 +16920,13 @@ class UCurveVector : public UCurveBase
 
 public:
 	SMember(FRichCurve)                                FloatCurves                                                 OFFSET(get<T>, {0x30, 384, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.CurveVector.GetVectorValue
 	// FVector GetVectorValue(float InTime);                                                                                    // [0x5bbb880] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DamageType
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UDamageType : public UObject
@@ -17012,8 +17012,6 @@ public:
 	DMember(float)                                     InitialMaxSpeed                                             OFFSET(get<float>, {0x964, 4, 0, 0})
 	DMember(float)                                     InitialAccel                                                OFFSET(get<float>, {0x968, 4, 0, 0})
 	DMember(float)                                     InitialDecel                                                OFFSET(get<float>, {0x96C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -17031,6 +17029,8 @@ public:
 	// void ReceiveOnActivate(APlayerController* OriginalPC);                                                                   // [0x1ebf994] RequiredAPI|Event|Public|BlueprintEvent 
 	// Function /Script/Engine.DebugCameraController.GetSelectedActor
 	// AActor* GetSelectedActor();                                                                                              // [0x5bbb858] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DebugCameraControllerSettings
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UDebugCameraControllerSettings : public UDeveloperSettings
@@ -17091,8 +17091,6 @@ class ADecalActor : public AActor
 
 public:
 	CMember(UDecalComponent*)                          Decal                                                       OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -17102,6 +17100,8 @@ public:
 	// UMaterialInterface* GetDecalMaterial();                                                                                  // [0x5bda320] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DecalActor.CreateDynamicMaterialInstance
 	// UMaterialInstanceDynamic* CreateDynamicMaterialInstance();                                                               // [0x2756744] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.DefaultPawn
 /// Size: 0x0028 (0x000318 - 0x000340)
 class ADefaultPawn : public APawn
@@ -17116,8 +17116,6 @@ public:
 	CMember(USphereComponent*)                         CollisionComponent                                          OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UStaticMeshComponent*)                     MeshComponent                                               OFFSET(get<T>, {0x330, 8, 0, 0})
 	DMember(bool)                                      bAddDefaultMovementBindings                                 OFFSET(get<bool>, {0x338, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -17131,6 +17129,8 @@ public:
 	// void MoveForward(float Val);                                                                                             // [0x5bda3cc] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.DefaultPawn.LookUpAtRate
 	// void LookUpAtRate(float Rate);                                                                                           // [0x5bda348] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PhysicsVolume
 /// Size: 0x0010 (0x0002C8 - 0x0002D8)
 class APhysicsVolume : public AVolume
@@ -17629,13 +17629,13 @@ class UAutoDestroySubsystem : public UTickableWorldSubsystem
 
 public:
 	CMember(TArray<AActor*>)                           ActorsToPoll                                                OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.AutoDestroySubsystem.OnActorEndPlay
 	// void OnActorEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                                           // [0x5bface8] Final|Native|Private 
+};
+
 /// Class /Script/Engine.CancellableAsyncAction
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UCancellableAsyncAction : public UBlueprintAsyncActionBase
@@ -17860,8 +17860,6 @@ class UAsyncActionHandleSaveGame : public UBlueprintAsyncActionBase
 public:
 	SMember(FMulticastInlineDelegate)                  Completed                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(USaveGame*)                                SaveGameObject                                              OFFSET(get<T>, {0x60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -17869,6 +17867,8 @@ public:
 	// UAsyncActionHandleSaveGame* AsyncSaveGameToSlot(UObject* WorldContextObject, USaveGame* SaveGameObject, FString SlotName, int32_t UserIndex); // [0x5c2a4d0] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/Engine.AsyncActionHandleSaveGame.AsyncLoadGameFromSlot
 	// UAsyncActionHandleSaveGame* AsyncLoadGameFromSlot(UObject* WorldContextObject, FString SlotName, int32_t UserIndex);     // [0x5c29584] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ForceFeedbackEffect
 /// Size: 0x0078 (0x000028 - 0x0000A0)
 class UForceFeedbackEffect : public UObject
@@ -17892,8 +17892,6 @@ class UInputDeviceProperty : public UObject
 
 public:
 	DMember(float)                                     PropertyDuration                                            OFFSET(get<float>, {0x28, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -17903,6 +17901,8 @@ public:
 	// void EvaluateDeviceProperty(FPlatformUserId PlatformUser, FInputDeviceId DeviceID, float DeltaTime, float Duration);     // [0x5c3008c] RequiredAPI|Native|Event|Protected|BlueprintEvent 
 	// Function /Script/Engine.InputDeviceProperty.ApplyDeviceProperty
 	// void ApplyDeviceProperty(FPlatformUserId UserId, FInputDeviceId DeviceID);                                               // [0x5c281bc] RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/Engine.ColorInputDeviceProperty
 /// Size: 0x0068 (0x000030 - 0x000098)
 class UColorInputDeviceProperty : public UInputDeviceProperty
@@ -17997,8 +17997,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnInputHardwareDeviceChanged                                OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TSet<FActiveDeviceProperty>)               ActiveProperties                                            OFFSET(get<T>, {0x48, 80, 0, 0})
 	CMember(TSet<FInputDevicePropertyHandle>)          PropertiesPendingRemoval                                    OFFSET(get<T>, {0x98, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18018,6 +18016,8 @@ public:
 	// UInputDeviceProperty* GetActiveDeviceProperty(FInputDevicePropertyHandle Handle);                                        // [0x5c30b04] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.InputDeviceSubsystem.ActivateDevicePropertyOfClass
 	// FInputDevicePropertyHandle ActivateDevicePropertyOfClass(UClass* PropertyClass, FActivateDevicePropertyParams& Params);  // [0x5c2783c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PlayerStateCountLimiterConfig
 /// Size: 0x0000 (0x000040 - 0x000040)
 class UPlayerStateCountLimiterConfig : public UNetObjectCountLimiterConfig
@@ -18053,8 +18053,6 @@ public:
 	DMember(int32_t)                                   CurrentSaveRequest                                          OFFSET(get<int32_t>, {0x48, 4, 0, 0})
 	DMember(int32_t)                                   LastSuccessfulSaveRequest                                   OFFSET(get<int32_t>, {0x4C, 4, 0, 0})
 	DMember(int32_t)                                   LastErrorSaveRequest                                        OFFSET(get<int32_t>, {0x50, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18098,6 +18096,8 @@ public:
 	// bool AsyncSaveGameToSlotForLocalPlayer();                                                                                // [0x18ca390] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.LocalPlayerSaveGame.AsyncLoadOrCreateSaveGameForLocalPlayer
 	// bool AsyncLoadOrCreateSaveGameForLocalPlayer(UClass* SaveGameClass, APlayerController* LocalPlayerController, FString SlotName, FDelegateProperty Delegate); // [0x5c29cb8] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SpringArmComponent
 /// Size: 0x0100 (0x0002A0 - 0x0003A0)
 class USpringArmComponent : public USceneComponent
@@ -18125,8 +18125,6 @@ public:
 	DMember(float)                                     CameraLagMaxTimeStep                                        OFFSET(get<float>, {0x2EC, 4, 0, 0})
 	DMember(float)                                     CameraLagMaxDistance                                        OFFSET(get<float>, {0x2F0, 4, 0, 0})
 	DMember(bool)                                      bClampToMaxPhysicsDeltaTime                                 OFFSET(get<bool>, {0x2F4, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -18136,6 +18134,8 @@ public:
 	// FVector GetUnfixedCameraPosition();                                                                                      // [0x5c348c4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.SpringArmComponent.GetTargetRotation
 	// FRotator GetTargetRotation();                                                                                            // [0x5c3488c] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.TouchInterface
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UTouchInterface : public UObject
@@ -18168,8 +18168,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnPawnControllerChangedDelegates                            OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnInputDeviceConnectionChange                               OFFSET(get<T>, {0xA0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnUserInputDevicePairingChange                              OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18185,6 +18183,8 @@ public:
 	// void DebugRemovePlayer(int32_t ControllerId);                                                                            // [0x5c2ec74] RequiredAPI|Exec|Native|Public 
 	// Function /Script/Engine.GameInstance.DebugCreatePlayer
 	// void DebugCreatePlayer(int32_t ControllerId);                                                                            // [0x5c2ebf0] RequiredAPI|Exec|Native|Public 
+};
+
 /// Class /Script/Engine.GameModeBase
 /// Size: 0x00A0 (0x000290 - 0x000330)
 class AGameModeBase : public AInfo
@@ -18210,8 +18210,6 @@ public:
 	DMember(bool)                                      bUseSeamlessTravel                                          OFFSET(get<bool>, {0x318, 1, 1, 0})
 	DMember(bool)                                      bStartPlayersAsSpectators                                   OFFSET(get<bool>, {0x318, 1, 1, 1})
 	DMember(bool)                                      bPauseable                                                  OFFSET(get<bool>, {0x318, 1, 1, 2})
-};
-
 
 
 	/// Functions
@@ -18273,6 +18271,8 @@ public:
 	// void ChangeName(AController* Controller, FString NewName, bool bNameChange);                                             // [0x5c2d65c] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.GameModeBase.CanSpectate
 	// bool CanSpectate(APlayerController* Viewer, APlayerState* ViewTarget);                                                   // [0x5c2d57c] RequiredAPI|Native|Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/Engine.GameMode
 /// Size: 0x0048 (0x000330 - 0x000378)
 class AGameMode : public AGameModeBase
@@ -18293,8 +18293,6 @@ public:
 	DMember(float)                                     InactivePlayerStateLifeSpan                                 OFFSET(get<float>, {0x368, 4, 0, 0})
 	DMember(int32_t)                                   MaxInactivePlayers                                          OFFSET(get<int32_t>, {0x36C, 4, 0, 0})
 	DMember(bool)                                      bHandleDedicatedServerReplays                               OFFSET(get<bool>, {0x370, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18318,6 +18316,8 @@ public:
 	// void EndMatch();                                                                                                         // [0x5c30074] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.GameMode.AbortMatch
 	// void AbortMatch();                                                                                                       // [0x34137a0] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.GameplayStatics
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGameplayStatics : public UBlueprintFunctionLibrary
@@ -18361,8 +18361,6 @@ public:
 	DMember(double)                                    ReplicatedWorldTimeSecondsDouble                            OFFSET(get<double>, {0x2C0, 8, 0, 0})
 	DMember(float)                                     ServerWorldTimeSecondsDelta                                 OFFSET(get<float>, {0x2C8, 4, 0, 0})
 	DMember(float)                                     ServerWorldTimeSecondsUpdateFrequency                       OFFSET(get<float>, {0x2CC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18388,6 +18386,8 @@ public:
 	// float GetPlayerStartTime(AController* Controller);                                                                       // [0x5c34150] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.GameStateBase.GetPlayerRespawnDelay
 	// float GetPlayerRespawnDelay(AController* Controller);                                                                    // [0x5c340bc] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.GameState
 /// Size: 0x0018 (0x0002E8 - 0x000300)
 class AGameState : public AGameStateBase
@@ -18399,8 +18399,6 @@ public:
 	SMember(FName)                                     MatchState                                                  OFFSET(get<T>, {0x2E8, 4, 0, 0})
 	SMember(FName)                                     PreviousMatchState                                          OFFSET(get<T>, {0x2EC, 4, 0, 0})
 	DMember(int32_t)                                   ElapsedTime                                                 OFFSET(get<int32_t>, {0x2F0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18408,6 +18406,8 @@ public:
 	// void OnRep_MatchState();                                                                                                 // [0x11a0db4] RequiredAPI|Native|Public 
 	// Function /Script/Engine.GameState.OnRep_ElapsedTime
 	// void OnRep_ElapsedTime();                                                                                                // [0x37bff00] RequiredAPI|Native|Public 
+};
+
 /// Class /Script/Engine.GameUserSettings
 /// Size: 0x0120 (0x000028 - 0x000148)
 class UGameUserSettings : public UObject
@@ -18446,8 +18446,6 @@ public:
 	DMember(bool)                                      bUseHDRDisplayOutput                                        OFFSET(get<bool>, {0x10C, 1, 0, 0})
 	DMember(int32_t)                                   HDRDisplayOutputNits                                        OFFSET(get<int32_t>, {0x110, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnGameUserSettingsUINeedsUpdate                             OFFSET(get<T>, {0x138, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18595,6 +18593,8 @@ public:
 	// void ApplyNonResolutionSettings();                                                                                       // [0x599a338] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.GameUserSettings.ApplyHardwareBenchmarkResults
 	// void ApplyHardwareBenchmarkResults();                                                                                    // [0x5ae7fdc] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ScriptViewportClient
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UScriptViewportClient : public UObject
@@ -18618,8 +18618,6 @@ public:
 	DMember(int32_t)                                   MaxSplitscreenPlayers                                       OFFSET(get<int32_t>, {0x68, 4, 0, 0})
 	CMember(UWorld*)                                   World                                                       OFFSET(get<T>, {0x78, 8, 0, 0})
 	CMember(UGameInstance*)                            GameInstance                                                OFFSET(get<T>, {0x80, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -18629,6 +18627,8 @@ public:
 	// void ShowTitleSafeArea();                                                                                                // [0x599a338] RequiredAPI|Exec|Native|Public 
 	// Function /Script/Engine.GameViewportClient.SetConsoleTarget
 	// void SetConsoleTarget(int32_t PlayerIndex);                                                                              // [0x5c6e4c8] RequiredAPI|Exec|Native|Public 
+};
+
 /// Class /Script/Engine.HLODProxy
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UHLODProxy : public UObject
@@ -19069,13 +19069,13 @@ public:
 	CMember(ULevelInstanceComponent*)                  LevelInstanceComponent                                      OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(TWeakObjectPtr<UWorld*>)                   CookedWorldAsset                                            OFFSET(get<T>, {0x2A0, 32, 0, 0})
 	SMember(FGuid)                                     LevelInstanceSpawnGuid                                      OFFSET(get<T>, {0x2C0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.LevelInstance.OnRep_LevelInstanceSpawnGuid
 	// void OnRep_LevelInstanceSpawnGuid();                                                                                     // [0x5d67694] Final|RequiredAPI|Native|Public 
+};
+
 /// Class /Script/Engine.LevelInstanceComponent
 /// Size: 0x0000 (0x0002A0 - 0x0002A0)
 class ULevelInstanceComponent : public USceneComponent
@@ -19165,8 +19165,6 @@ class ALevelScriptActor : public AActor
 
 public:
 	DMember(bool)                                      bInputEnabled                                               OFFSET(get<bool>, {0x290, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -19178,6 +19176,8 @@ public:
 	// bool RemoteEvent(FName EventName);                                                                                       // [0x5d6776c] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.LevelScriptActor.LevelReset
 	// void LevelReset();                                                                                                       // [0x1ebf994] RequiredAPI|BlueprintAuthorityOnly|Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/Engine.LevelScriptBlueprint
 /// Size: 0x0000 (0x0000A8 - 0x0000A8)
 class ULevelScriptBlueprint : public UBlueprint
@@ -19265,8 +19265,6 @@ public:
 	CMember(TMap<int32_t, AActor*>)                    Actors                                                      OFFSET(get<T>, {0x2C0, 80, 0, 0})
 	CMember(TArray<int32_t>)                           FreeIndices                                                 OFFSET(get<T>, {0x320, 16, 0, 0})
 	CMember(TArray<bool>)                              ValidIndices                                                OFFSET(get<T>, {0x330, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -19274,6 +19272,8 @@ public:
 	// void OnSpawnedActorDestroyed(AActor* DestroyedActor);                                                                    // [0x5d676ec] Final|RequiredAPI|Native|Private 
 	// Function /Script/Engine.LightWeightInstanceManager.OnRep_Transforms
 	// void OnRep_Transforms();                                                                                                 // [0x31146a0] RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/Engine.LightWeightInstanceStaticMeshManager
 /// Size: 0x0060 (0x000340 - 0x0003A0)
 class ALightWeightInstanceStaticMeshManager : public ALightWeightInstanceManager
@@ -19286,13 +19286,13 @@ public:
 	CMember(UHierarchicalInstancedStaticMeshComponent*) InstancedStaticMeshComponent                               OFFSET(get<T>, {0x368, 8, 0, 0})
 	CMember(TArray<int32_t>)                           RenderingIndicesToDataIndices                               OFFSET(get<T>, {0x370, 16, 0, 0})
 	CMember(TArray<int32_t>)                           DataIndicesToRenderingIndices                               OFFSET(get<T>, {0x380, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.LightWeightInstanceStaticMeshManager.OnRep_StaticMesh
 	// void OnRep_StaticMesh();                                                                                                 // [0x5d755d0] Final|RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/Engine.LocalPlayer
 /// Size: 0x0268 (0x000048 - 0x0002B0)
 class ULocalPlayer : public UPlayer
@@ -19318,8 +19318,6 @@ class ALocationVolume : public AVolume
 public:
 	SMember(FColor)                                    DebugColor                                                  OFFSET(get<T>, {0x2D0, 4, 0, 0})
 	DMember(bool)                                      bIsRuntime                                                  OFFSET(get<bool>, {0x2D4, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -19329,6 +19327,8 @@ public:
 	// void Load();                                                                                                             // [0x2d79908] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.LocationVolume.IsLoaded
 	// bool IsLoaded();                                                                                                         // [0x2a22dac] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.LODActor
 /// Size: 0x0088 (0x000290 - 0x000318)
 class ALODActor : public AActor
@@ -19345,13 +19345,13 @@ public:
 	DMember(int32_t)                                   LODLevel                                                    OFFSET(get<int32_t>, {0x2F8, 4, 0, 0})
 	CMember(TArray<AActor*>)                           SubActors                                                   OFFSET(get<T>, {0x300, 16, 0, 0})
 	DMember(char)                                      CachedNumHLODLevels                                         OFFSET(get<char>, {0x310, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.LODActor.OnSubActorEndPlay
 	// void OnSubActorEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> Reason);                                               // [0x5d755e4] Final|RequiredAPI|Native|Private 
+};
+
 /// Class /Script/Engine.MaterialInstanceActor
 /// Size: 0x0010 (0x000290 - 0x0002A0)
 class AMaterialInstanceActor : public AActor
@@ -19552,8 +19552,6 @@ public:
 	SMember(FGuid)                                     StateId                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FCollectionScalarParameter>)        ScalarParameters                                            OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<FCollectionVectorParameter>)        VectorParameters                                            OFFSET(get<T>, {0x48, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -19565,6 +19563,8 @@ public:
 	// TArray<FName> GetScalarParameterNames();                                                                                 // [0x5d86594] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.MaterialParameterCollection.GetScalarParameterDefaultValue
 	// float GetScalarParameterDefaultValue(FName ParameterName, bool& bParameterFound);                                        // [0x5d864c4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.MeshMergeCullingVolume
 /// Size: 0x0000 (0x0002C8 - 0x0002C8)
 class AMeshMergeCullingVolume : public AVolume
@@ -19871,8 +19871,6 @@ public:
 	CMember(TArray<UAsyncPhysicsData*>)                BufferedData                                                OFFSET(get<T>, {0xA8, 16, 0, 0})
 	CMember(UAsyncPhysicsData*)                        DataToConsume                                               OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(UAsyncPhysicsData*)                        DataToWrite                                                 OFFSET(get<T>, {0xC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -19882,6 +19880,8 @@ public:
 	// UAsyncPhysicsData* GetDataToWrite();                                                                                     // [0x5e33928] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.AsyncPhysicsInputComponent.GetDataToConsume
 	// UAsyncPhysicsData* GetDataToConsume();                                                                                   // [0x5e33898] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.BodySetup
 /// Size: 0x02C0 (0x000030 - 0x0002F0)
 class UBodySetup : public UBodySetupCore
@@ -19915,13 +19915,13 @@ class AClusterUnionActor : public AActor
 
 public:
 	CMember(UClusterUnionComponent*)                   ClusterUnion                                                OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.ClusterUnionActor.GetClusterUnionComponent
 	// UClusterUnionComponent* GetClusterUnionComponent();                                                                      // [0x57069a8] Final|Native|Public|Const 
+};
+
 /// Class /Script/Engine.ClusterUnionComponent
 /// Size: 0x0230 (0x000570 - 0x0007A0)
 class UClusterUnionComponent : public UPrimitiveComponent
@@ -19936,8 +19936,6 @@ public:
 	CMember(TArray<FComponentReference>)               ClusteredComponentsReferences                               OFFSET(get<T>, {0x598, 16, 0, 0})
 	CMember(TMap<int32_t, FClusterUnionParticleCandidateData>) UniqueIdxToComponent                                OFFSET(get<T>, {0x6E8, 80, 0, 0})
 	SMember(FClusterUnionReplicatedData)               ReplicatedRigidState                                        OFFSET(get<T>, {0x738, 2, 0, 0})
-};
-
 
 
 	/// Functions
@@ -19963,6 +19961,8 @@ public:
 	// void ForceSetChildToParent(UPrimitiveComponent* InComponent, TArray<int32_t>& BoneIds, TArray<FTransform>& ChildToParent); // [0x5e31a74] Final|RequiredAPI|Native|Protected|HasOutParms 
 	// Function /Script/Engine.ClusterUnionComponent.AddComponentToCluster
 	// void AddComponentToCluster(UPrimitiveComponent* InComponent, TArray<int32_t>& BoneIds);                                  // [0x5e31124] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.ClusterUnionReplicatedProxyComponent
 /// Size: 0x0058 (0x0000A0 - 0x0000F8)
 class UClusterUnionReplicatedProxyComponent : public UActorComponent
@@ -19980,8 +19980,6 @@ public:
 	CMember(TArray<FTransform>)                        ParticleChildToParents                                      OFFSET(get<T>, {0xD0, 16, 0, 0})
 	DMember(bool)                                      bNetUpdateParticleChildToParents                            OFFSET(get<bool>, {0xE0, 1, 0, 0})
 	DMember(bool)                                      bIsPendingDeletion                                          OFFSET(get<bool>, {0xE1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20007,6 +20005,8 @@ public:
 	// bool IsPendingDeletion();                                                                                                // [0x5e35c5c] Final|Native|Public  
 	// Function /Script/Engine.ClusterUnionReplicatedProxyComponent.GetParentClusterUnionComponent
 	// UClusterUnionComponent* GetParentClusterUnionComponent();                                                                // [0x5e353c0] Final|Native|Public|Const 
+};
+
 /// Class /Script/Engine.ConstraintInstanceBlueprintLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UConstraintInstanceBlueprintLibrary : public UBlueprintFunctionLibrary
@@ -20037,8 +20037,6 @@ class UNetworkPhysicsComponent : public UActorComponent
 public:
 	CMember(TArray<char>)                              ReplicatedInputs                                            OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<char>)                              ReplicatedStates                                            OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20048,6 +20046,8 @@ public:
 	// void OnRep_SetReplicatedStates();                                                                                        // [0x5e5f0bc] Final|RequiredAPI|Native|Protected 
 	// Function /Script/Engine.NetworkPhysicsComponent.OnRep_SetReplicatedInputs
 	// void OnRep_SetReplicatedInputs();                                                                                        // [0x5e5f0a8] Final|RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/Engine.PhysicalAnimationComponent
 /// Size: 0x0040 (0x0000A0 - 0x0000E0)
 class UPhysicalAnimationComponent : public UActorComponent
@@ -20058,8 +20058,6 @@ class UPhysicalAnimationComponent : public UActorComponent
 public:
 	DMember(float)                                     StrengthMultiplyer                                          OFFSET(get<float>, {0xA0, 4, 0, 0})
 	CMember(USkeletalMeshComponent*)                   SkeletalMeshComponent                                       OFFSET(get<T>, {0xA8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20075,6 +20073,8 @@ public:
 	// void ApplyPhysicalAnimationSettings(FName BodyName, FPhysicalAnimationData& PhysicalAnimationData);                      // [0x5e5deb8] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.PhysicalAnimationComponent.ApplyPhysicalAnimationProfileBelow
 	// void ApplyPhysicalAnimationProfileBelow(FName BodyName, FName ProfileName, bool bIncludeSelf, bool bClearNotFound);      // [0x5e5dd6c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PhysicalMaterialMask
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UPhysicalMaterialMask : public UObject
@@ -20163,8 +20163,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnConstraintBroken                                          OFFSET(get<T>, {0x2D8, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnPlasticDeformation                                        OFFSET(get<T>, {0x2E8, 16, 0, 0})
 	SMember(FConstraintInstance)                       ConstraintInstance                                          OFFSET(get<T>, {0x2F8, 616, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20246,6 +20244,8 @@ public:
 	// void GetConstrainedComponents(UPrimitiveComponent*& OutComponent1, FName& OutBoneName1, UPrimitiveComponent*& OutComponent2, FName& OutBoneName2); // [0x5e5e288] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.PhysicsConstraintComponent.BreakConstraint
 	// void BreakConstraint();                                                                                                  // [0x5e5e190] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PhysicsConstraintTemplate
 /// Size: 0x03D8 (0x000028 - 0x000400)
 class UPhysicsConstraintTemplate : public UObject
@@ -20276,8 +20276,6 @@ public:
 	DMember(float)                                     AngularDamping                                              OFFSET(get<float>, {0xB8, 4, 0, 0})
 	DMember(float)                                     AngularStiffness                                            OFFSET(get<float>, {0xBC, 4, 0, 0})
 	DMember(float)                                     InterpolationSpeed                                          OFFSET(get<float>, {0x180, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20309,6 +20307,8 @@ public:
 	// void GetTargetLocationAndRotation(FVector& TargetLocation, FRotator& TargetRotation);                                    // [0x5e5e728] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.PhysicsHandleComponent.GetGrabbedComponent
 	// UPrimitiveComponent* GetGrabbedComponent();                                                                              // [0x2bcf41c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.PhysicsSettings
 /// Size: 0x0110 (0x0000D8 - 0x0001E8)
 class UPhysicsSettings : public UPhysicsSettingsCore
@@ -20344,13 +20344,13 @@ public:
 	SMember(FBroadphaseSettings)                       DefaultBroadphaseSettings                                   OFFSET(get<T>, {0x160, 128, 0, 0})
 	DMember(float)                                     MinDeltaVelocityForHitEvents                                OFFSET(get<float>, {0x1E0, 4, 0, 0})
 	SMember(FChaosPhysicsSettings)                     ChaosSettings                                               OFFSET(get<T>, {0x1E4, 3, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.PhysicsSettings.GetPhysicsHistoryCount
 	// int32_t GetPhysicsHistoryCount();                                                                                        // [0x5e5e6d4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.PhysicsThruster
 /// Size: 0x0008 (0x000290 - 0x000298)
 class APhysicsThruster : public ARigidBodyBase
@@ -20378,8 +20378,6 @@ public:
 	DMember(float)                                     ForceStrength                                               OFFSET(get<float>, {0x2B0, 4, 0, 0})
 	DMember(float)                                     DestructibleDamage                                          OFFSET(get<float>, {0x2B4, 4, 0, 0})
 	CMember(TArray<TEnumAsByte>)                       ObjectTypesToAffect                                         OFFSET(get<T>, {0x2B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20389,6 +20387,8 @@ public:
 	// void FireImpulse();                                                                                                      // [0x5b59e94] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.RadialForceComponent.AddObjectTypeToAffect
 	// void AddObjectTypeToAffect(TEnumAsByte<EObjectTypeQuery> ObjectType);                                                    // [0x5e98878] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PhysicsFieldComponent
 /// Size: 0x00E0 (0x0002A0 - 0x000380)
 class UPhysicsFieldComponent : public USceneComponent
@@ -20454,8 +20454,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnPawnSet                                                   OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	CMember(APawn*)                                    PawnPrivate                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
 	SMember(FString)                                   PlayerNamePrivate                                           OFFSET(get<T>, {0x328, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20497,6 +20495,8 @@ public:
 	// char GetCompressedPing();                                                                                                // [0x5e9e998] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.PlayerState.BP_GetUniqueId
 	// FUniqueNetIdRepl BP_GetUniqueId();                                                                                       // [0x5e98d18] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.PostProcessVolume
 /// Size: 0x06F8 (0x0002C8 - 0x0009C0)
 class APostProcessVolume : public AVolume
@@ -20511,13 +20511,13 @@ public:
 	DMember(float)                                     BlendWeight                                                 OFFSET(get<float>, {0x9B8, 4, 0, 0})
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x9BC, 1, 1, 0})
 	DMember(bool)                                      bUnbound                                                    OFFSET(get<bool>, {0x9BC, 1, 1, 1})
-};
-
 
 
 	/// Functions
 	// Function /Script/Engine.PostProcessVolume.AddOrUpdateBlendable
 	// void AddOrUpdateBlendable(TScriptInterface<Class> InBlendableObject, float InWeight);                                    // [0x5e988fc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.PrecomputedVisibilityVolume
 /// Size: 0x0000 (0x0002C8 - 0x0002C8)
 class APrecomputedVisibilityVolume : public AVolume
@@ -20807,8 +20807,6 @@ class UReplaySubsystem : public UGameInstanceSubsystem
 
 public:
 	DMember(bool)                                      bLoadDefaultMapOnStop                                       OFFSET(get<bool>, {0x30, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -20822,6 +20820,8 @@ public:
 	// float GetReplayCurrentTime();                                                                                            // [0x5eeba88] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.ReplaySubsystem.GetActiveReplayName
 	// FString GetActiveReplayName();                                                                                           // [0x5eeba48] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.ReverbEffect
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UReverbEffect : public UObject
@@ -20941,8 +20941,6 @@ public:
 	CMember(UMeshDeformer*)                            DefaultMeshDeformer                                         OFFSET(get<T>, {0x4C8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       OverlayMaterial                                             OFFSET(get<T>, {0x4D0, 8, 0, 0})
 	DMember(float)                                     OverlayMaterialMaxDrawDistance                              OFFSET(get<float>, {0x4D8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -21004,6 +21002,8 @@ public:
 	// FBoxSphereBounds GetBounds();                                                                                            // [0x5f0738c] RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.SkeletalMesh.FindSocketAndIndex
 	// USkeletalMeshSocket* FindSocketAndIndex(FName InSocketName, int32_t& OutIndex);                                          // [0x5f07218] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.SkeletalMeshEditorData
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USkeletalMeshEditorData : public UObject
@@ -21489,8 +21489,6 @@ public:
 	DMember(bool)                                      bSendToAudioLink                                            OFFSET(get<bool>, {0x188, 1, 1, 0})
 	CMember(UAudioLinkSettingsAbstract*)               AudioLinkSettings                                           OFFSET(get<T>, {0x190, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSubmixRecordedFileDone                                    OFFSET(get<T>, {0x198, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -21524,6 +21522,8 @@ public:
 	// void AddSpectralAnalysisDelegate(UObject* WorldContextObject, TArray<FSoundSubmixSpectralAnalysisBandSettings>& InBandSettings, FDelegateProperty& OnSubmixSpectralAnalysisBP, float UpdateRate, float DecibelNoiseFloor, bool bDoNormalize, bool bDoAutoRange, float AutoRangeAttackTime, float AutoRangeReleaseTime); // [0x5f5eb08] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.SoundSubmix.AddEnvelopeFollowerDelegate
 	// void AddEnvelopeFollowerDelegate(UObject* WorldContextObject, FDelegateProperty& OnSubmixEnvelopeBP);                    // [0x5f5ea20] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.SoundfieldSubmix
 /// Size: 0x0028 (0x000048 - 0x000070)
 class USoundfieldSubmix : public USoundSubmixWithParentBase
@@ -21633,8 +21633,6 @@ public:
 	DMember(int32_t)                                   ElementToIgnoreForTexFactor                                 OFFSET(get<int32_t>, {0x230, 4, 0, 0})
 	CMember(TArray<UAssetUserData*>)                   AssetUserData                                               OFFSET(get<T>, {0x238, 16, 0, 0})
 	CMember(UNavCollisionBase*)                        NavCollision                                                OFFSET(get<T>, {0x248, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -21688,6 +21686,8 @@ public:
 	// void AddSocket(UStaticMeshSocket* Socket);                                                                               // [0x5f77d44] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/Engine.StaticMesh.AddMaterial
 	// FName AddMaterial(UMaterialInterface* Material);                                                                         // [0x5f77b68] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Engine.StaticMeshDescriptionBulkData
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UStaticMeshDescriptionBulkData : public UMeshDescriptionBaseBulkData
@@ -22008,8 +22008,6 @@ public:
 	CMember(UTexture2D*)                               DefaultTexture                                              OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(UTexture2D*)                               GradientTexture0                                            OFFSET(get<T>, {0x78, 8, 0, 0})
 	CMember(UReporterGraph*)                           ReporterGraph                                               OFFSET(get<T>, {0x80, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22039,6 +22037,8 @@ public:
 	// void K2_DrawBorder(UTexture* BorderTexture, UTexture* BackgroundTexture, UTexture* LeftBorderTexture, UTexture* RightBorderTexture, UTexture* TopBorderTexture, UTexture* BottomBorderTexture, FVector2D ScreenPosition, FVector2D ScreenSize, FVector2D CoordinatePosition, FVector2D CoordinateSize, FLinearColor RenderColor, FVector2D BorderScale, FVector2D BackgroundScale, float Rotation, FVector2D PivotPoint, FVector2D CornerSize); // [0x5fcfc90] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/Engine.Canvas.K2_Deproject
 	// void K2_Deproject(FVector2D ScreenPosition, FVector& WorldOrigin, FVector& WorldDirection);                              // [0x5fcf8d8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Engine.Console
 /// Size: 0x0108 (0x000028 - 0x000130)
 class UConsole : public UObject
@@ -22093,8 +22093,6 @@ public:
 	CMember(TWeakObjectPtr<UClass*>)                   DefaultInputComponentClass                                  OFFSET(get<T>, {0xE0, 32, 0, 0})
 	SMember(FSoftObjectPath)                           DefaultTouchInterface                                       OFFSET(get<T>, {0x100, 24, 0, 0})
 	CMember(TArray<FKey>)                              ConsoleKeys                                                 OFFSET(get<T>, {0x118, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22120,6 +22118,8 @@ public:
 	// void AddAxisMapping(FInputAxisKeyMapping& KeyMapping, bool bForceRebuildKeymaps);                                        // [0x5fcef0c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Engine.InputSettings.AddActionMapping
 	// void AddActionMapping(FInputActionKeyMapping& KeyMapping, bool bForceRebuildKeymaps);                                    // [0x5fced28] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Engine.InputPlatformSettings
 /// Size: 0x0028 (0x000040 - 0x000068)
 class UInputPlatformSettings : public UPlatformSettings
@@ -22146,8 +22146,6 @@ class UPlayerInput : public UObject
 public:
 	CMember(TArray<FKeyBind>)                          DebugExecBindings                                           OFFSET(get<T>, {0x1A0, 16, 0, 0})
 	CMember(TArray<FName>)                             InvertedAxis                                                OFFSET(get<T>, {0x1E0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22163,6 +22161,8 @@ public:
 	// APlayerController* GetOuterAPlayerController();                                                                          // [0x5fcf618] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.PlayerInput.ClearSmoothing
 	// void ClearSmoothing();                                                                                                   // [0x5fcf170] Final|RequiredAPI|Exec|Native|Public 
+};
+
 /// Class /Script/Engine.VectorFieldVolume
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AVectorFieldVolume : public AActor
@@ -22234,8 +22234,6 @@ class UVOIPTalker : public UActorComponent
 
 public:
 	SMember(FVoiceSettings)                            Settings                                                    OFFSET(get<T>, {0xA0, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22249,6 +22247,8 @@ public:
 	// void BPOnTalkingEnd();                                                                                                   // [0x1bf68a0] RequiredAPI|Native|Event|Protected|BlueprintEvent 
 	// Function /Script/Engine.VOIPTalker.BPOnTalkingBegin
 	// void BPOnTalkingBegin(UAudioComponent* AudioComponent);                                                                  // [0x5fcf0ec] RequiredAPI|Native|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/Engine.VOIPStatics
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVOIPStatics : public UBlueprintFunctionLibrary
@@ -22315,8 +22315,6 @@ public:
 	CMember(TEnumAsByte<TextureGroup>)                 LODGroup                                                    OFFSET(get<T>, {0x40, 1, 0, 0})
 	DMember(int32_t)                                   Size                                                        OFFSET(get<int32_t>, {0x44, 4, 0, 0})
 	CMember(URuntimeVirtualTextureStreamingProxy*)     StreamingTexture                                            OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22330,6 +22328,8 @@ public:
 	// int32_t GetSize();                                                                                                       // [0x5fedadc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.RuntimeVirtualTexture.GetPageTableSize
 	// int32_t GetPageTableSize();                                                                                              // [0x5feda90] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.RuntimeVirtualTextureVolume
 /// Size: 0x0008 (0x000290 - 0x000298)
 class ARuntimeVirtualTextureVolume : public AActor
@@ -22526,8 +22526,6 @@ public:
 	CMember(TArray<FName>)                             RepLoadedDataLayerNames                                     OFFSET(get<T>, {0x430, 16, 0, 0})
 	CMember(TArray<FName>)                             RepEffectiveActiveDataLayerNames                            OFFSET(get<T>, {0x4E0, 16, 0, 0})
 	CMember(TArray<FName>)                             RepEffectiveLoadedDataLayerNames                            OFFSET(get<T>, {0x4F0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22541,6 +22539,8 @@ public:
 	// void OnRep_ActiveDataLayerNames();                                                                                       // [0x327e208] Final|RequiredAPI|Native|Protected 
 	// Function /Script/Engine.WorldDataLayers.OnDataLayerRuntimeStateChanged
 	// void OnDataLayerRuntimeStateChanged(UDataLayerInstance* InDataLayer, EDataLayerRuntimeState InState);                    // [0x2d5ec20] RequiredAPI|Net|NetReliableNative|Event|NetMulticast|Public 
+};
+
 /// Class /Script/Engine.DataLayer
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UDataLayer : public UObject
@@ -22555,8 +22555,6 @@ public:
 	SMember(FColor)                                    DebugColor                                                  OFFSET(get<T>, {0x34, 4, 0, 0})
 	CMember(UDataLayer*)                               Parent                                                      OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<UDataLayer*>)                       Children                                                    OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22582,6 +22580,8 @@ public:
 	// FName GetDataLayerLabel();                                                                                               // [0x5ffe568] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DataLayer.Equals
 	// bool Equals(FActorDataLayer& ActorDataLayer);                                                                            // [0x5ffdef4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DataLayerAsset
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UDataLayerAsset : public UObject
@@ -22593,8 +22593,6 @@ public:
 	CMember(EDataLayerType)                            DataLayerType                                               OFFSET(get<T>, {0x28, 1, 0, 0})
 	DMember(bool)                                      bSupportsActorFilters                                       OFFSET(get<bool>, {0x29, 1, 0, 0})
 	SMember(FColor)                                    DebugColor                                                  OFFSET(get<T>, {0x2C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22604,6 +22602,8 @@ public:
 	// EDataLayerType GetType();                                                                                                // [0x335ba00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DataLayerAsset.GetDebugColor
 	// FColor GetDebugColor();                                                                                                  // [0x5ffe6ac] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DataLayerInstance
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UDataLayerInstance : public UObject
@@ -22615,8 +22615,6 @@ public:
 	CMember(EDataLayerRuntimeState)                    InitialRuntimeState                                         OFFSET(get<T>, {0x28, 1, 0, 0})
 	CMember(UDataLayerInstance*)                       Parent                                                      OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<UDataLayerInstance*>)               Children                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22634,6 +22632,8 @@ public:
 	// EDataLayerRuntimeState GetInitialRuntimeState();                                                                         // [0x5ffe75c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DataLayerInstance.GetDebugColor
 	// FColor GetDebugColor();                                                                                                  // [0x5ffe6c0] Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DataLayerInstancePrivate
 /// Size: 0x0018 (0x000048 - 0x000060)
 class UDataLayerInstancePrivate : public UDataLayerInstance
@@ -22677,8 +22677,6 @@ class UDataLayerSubsystem : public UWorldSubsystem
 public:
 	SMember(FMulticastInlineDelegate)                  OnDataLayerRuntimeStateChanged                              OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   DataLayerLoadingPolicyClass                                 OFFSET(get<T>, {0x40, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -22720,6 +22718,8 @@ public:
 	// UDataLayerInstance* GetDataLayer(FActorDataLayer& InDataLayer);                                                          // [0x5ffe03c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Engine.DataLayerSubsystem.GetActiveDataLayerNames
 	// TSet<FName> GetActiveDataLayerNames();                                                                                   // [0x5ffdf8c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Engine.DeprecatedDataLayerInstance
 /// Size: 0x0010 (0x000048 - 0x000058)
 class UDeprecatedDataLayerInstance : public UDataLayerInstance
@@ -23042,8 +23042,6 @@ class UWorldPartitionRuntimeLevelStreamingCell : public UWorldPartitionRuntimeCe
 
 public:
 	CMember(UWorldPartitionLevelStreamingDynamic*)     LevelStreaming                                              OFFSET(get<T>, {0x88, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -23051,6 +23049,8 @@ public:
 	// void OnLevelShown();                                                                                                     // [0x18a5c94] Final|RequiredAPI|Native|Private 
 	// Function /Script/Engine.WorldPartitionRuntimeLevelStreamingCell.OnLevelHidden
 	// void OnLevelHidden();                                                                                                    // [0x18a59dc] Final|RequiredAPI|Native|Private 
+};
+
 /// Class /Script/Engine.SpatialHashRuntimeGridInfo
 /// Size: 0x0008 (0x000290 - 0x000298)
 class ASpatialHashRuntimeGridInfo : public AInfo

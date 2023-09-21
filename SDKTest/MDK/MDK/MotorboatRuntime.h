@@ -93,8 +93,6 @@ public:
 	DMember(int32_t)                                   WaterLineStartPontoonIndex                                  OFFSET(get<int32_t>, {0x1DE8, 4, 0, 0})
 	DMember(int32_t)                                   WaterLineEndPontoonIndex                                    OFFSET(get<int32_t>, {0x1DEC, 4, 0, 0})
 	DMember(bool)                                      bBoostFailed                                                OFFSET(get<bool>, {0x1E30, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -130,6 +128,8 @@ public:
 	// void CacheGroundFXComponent(UNiagaraComponent* InGroundFXComponent);                                                     // [0x3159db0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotorboatRuntime.FortMeatballVehicle.CacheAudioPointers
 	// void CacheAudioPointers(UFortVehicleAudioVoice* InAudioEngineUp, UFortVehicleAudioVoice* InAudioEngineDown, UFortVehicleAudioVoice* InAudioWakeTurn, UFortVehicleAudioVoice* InAudioWakeSpeed, UFortVehicleAudioVoice* InAudioScrape, UFortVehicleAudioVoice* InAudioEngineOutOfFuel); // [0x2efb040] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MotorboatRuntime.FortMeatballVehicleConfigs
 /// Size: 0x00D0 (0x0008B0 - 0x000980)
 class UFortMeatballVehicleConfigs : public UFortPhysicsVehicleConfigs

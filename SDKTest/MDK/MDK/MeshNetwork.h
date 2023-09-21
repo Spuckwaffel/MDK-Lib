@@ -22,8 +22,6 @@ public:
 	SMember(FDateTime)                                 MeshPingTime                                                OFFSET(get<T>, {0x368, 8, 0, 0})
 	CMember(TArray<FString>)                           ParentIds                                                   OFFSET(get<T>, {0x370, 16, 0, 0})
 	SMember(FString)                                   ClientId                                                    OFFSET(get<T>, {0x380, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// void OnRep_MeshPingTime();                                                                                               // [0x3417154] Native|Protected     
 	// Function /Script/MeshNetwork.MeshBeaconClient.OnRep_ConnectedToRoot
 	// void OnRep_ConnectedToRoot();                                                                                            // [0x6f0ad30] Final|Native|Protected 
+};
+
 /// Class /Script/MeshNetwork.MeshBeaconHost
 /// Size: 0x0008 (0x0003D0 - 0x0003D8)
 class AMeshBeaconHost : public AOnlineBeaconHost
@@ -92,8 +92,6 @@ public:
 	CMember(EMeshNetworkRelevancy)                     MeshRelevancy                                               OFFSET(get<T>, {0xA0, 1, 0, 0})
 	CMember(TMap<FString, FAggregatedFunction>)        AggregatedFunctions                                         OFFSET(get<T>, {0xA8, 80, 0, 0})
 	CMember(TMap<FName, FAggregatedFunctionConfig>)    AggregatedFunctionConfigs                                   OFFSET(get<T>, {0xF8, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -101,6 +99,8 @@ public:
 	// bool IsConnectedToMeshRoot();                                                                                            // [0x6f0ace4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MeshNetwork.MeshNetworkComponent.GetMeshNetworkNodeType
 	// EMeshNetworkNodeType GetMeshNetworkNodeType();                                                                           // [0x6f0a084] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MeshNetwork.MeshNetworkSubsystem
 /// Size: 0x00D8 (0x000030 - 0x000108)
 class UMeshNetworkSubsystem : public UGameInstanceSubsystem
@@ -118,8 +118,6 @@ public:
 	CMember(EMeshNetworkNodeType)                      GameServerNodeType                                          OFFSET(get<T>, {0xB1, 1, 0, 0})
 	DMember(bool)                                      bConnectedToRoot                                            OFFSET(get<bool>, {0xB2, 1, 0, 0})
 	DMember(bool)                                      bMetadataReceived                                           OFFSET(get<bool>, {0xB3, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -141,6 +139,8 @@ public:
 	// void EnableMeshReplication(AActor* Actor, UClass* MeshComponentClass);                                                   // [0x6f09fa0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MeshNetwork.MeshNetworkSubsystem.DisableMeshReplication
 	// void DisableMeshReplication(AActor* Actor);                                                                              // [0x6f09f30] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MeshNetwork.MeshReplicationGraphConnection
 /// Size: 0x0000 (0x000378 - 0x000378)
 class UMeshReplicationGraphConnection : public UNetReplicationGraphConnection

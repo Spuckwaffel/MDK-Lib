@@ -107,8 +107,6 @@ public:
 	SMember(FName)                                     PlayerHandAttachRight                                       OFFSET(get<T>, {0xA8C, 4, 0, 0})
 	SMember(FName)                                     DisableHandAttachCurveName                                  OFFSET(get<T>, {0xA90, 4, 0, 0})
 	SMember(FName)                                     AllowRidingNoiseAdditiveCurveName                           OFFSET(get<T>, {0xA94, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -122,6 +120,8 @@ public:
 	// void PlaceHandIKTargets();                                                                                               // [0x5ae76ac] Native|Event|Protected|BlueprintEvent 
 	// Function /Script/RidingCodeRuntime.FortVehicleLayerAnimInstance_Riding.BlueprintCollectRidableAnimBPData
 	// void BlueprintCollectRidableAnimBPData(UAnimInstance* RidableAnimInstance);                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/RidingCodeRuntime.RidingCheatManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class URidingCheatManager : public UChildCheatManager
@@ -178,8 +178,6 @@ public:
 	SMember(FRidingPettingData)                        PettingData                                                 OFFSET(get<T>, {0x2A0, 272, 0, 0})
 	SMember(FTimerHandle)                              RestoreCollisionHandle                                      OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	DMember(bool)                                      bIsSprinting                                                OFFSET(get<bool>, {0x3C8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -215,6 +213,8 @@ public:
 	// bool CanBeRiddenBP(URiderComponent* Rider);                                                                              // [0x9881e5c] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
 	// Function /Script/RidingCodeRuntime.RidableComponent.CanBePet
 	// bool CanBePet(URiderComponent* Rider);                                                                                   // [0x7c82d1c] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+};
+
 /// Class /Script/RidingCodeRuntime.ControllableRidableComponent
 /// Size: 0x02D0 (0x0003E0 - 0x0006B0)
 class UControllableRidableComponent : public URidableComponent
@@ -237,8 +237,6 @@ public:
 	SMember(FRidableControlParams)                     RidableControlParams                                        OFFSET(get<T>, {0x430, 520, 0, 0})
 	SMember(FScalableFloat)                            JumpUpwardGravityScale                                      OFFSET(get<T>, {0x660, 40, 0, 0})
 	SMember(FScalableFloat)                            JumpDownwardGravityScale                                    OFFSET(get<T>, {0x688, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -272,6 +270,8 @@ public:
 	// void CancelBuildBar();                                                                                                   // [0x9881f14] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/RidingCodeRuntime.ControllableRidableComponent.CanBeControlled
 	// bool CanBeControlled(URiderComponent* Rider);                                                                            // [0x9881dc8] Native|Event|Public|BlueprintEvent|Const 
+};
+
 /// Class /Script/RidingCodeRuntime.RiderComponent
 /// Size: 0x05C8 (0x0000A8 - 0x000670)
 class URiderComponent : public UFortPawnOverrideComponent
@@ -337,8 +337,6 @@ public:
 	SMember(FScalableFloat)                            TraceRadius                                                 OFFSET(get<T>, {0x588, 40, 0, 0})
 	SMember(FScalableFloat)                            TraceLength                                                 OFFSET(get<T>, {0x5B0, 40, 0, 0})
 	DMember(bool)                                      bPreventExitRidingFromInput                                 OFFSET(get<bool>, {0x5D8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -392,6 +390,8 @@ public:
 	// void ClientNotifyEmoteFailure(FGameplayTagContainer ErrorTags);                                                          // [0x9881f9c] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/RidingCodeRuntime.RiderComponent.ClientHandleFinishedCharacterCustomization
 	// void ClientHandleFinishedCharacterCustomization(AFortPlayerPawn* PlayerPawn);                                            // [0x250c954] Final|Native|Protected 
+};
+
 /// Class /Script/RidingCodeRuntime.ControllingRiderComponent
 /// Size: 0x0058 (0x000670 - 0x0006C8)
 class UControllingRiderComponent : public URiderComponent
@@ -412,8 +412,6 @@ public:
 	CMember(UFortInputComponent*)                      ControllingRiderInputComponent                              OFFSET(get<T>, {0x6A8, 8, 0, 0})
 	DMember(float)                                     AutoRunDoubleTapTimestamp                                   OFFSET(get<float>, {0x6C0, 4, 0, 0})
 	DMember(bool)                                      bCanBePet                                                   OFFSET(get<bool>, {0x6C4, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -461,6 +459,8 @@ public:
 	// void ControllingActor_OnMoveForward(float Val);                                                                          // [0x98821a4] Final|Native|Protected 
 	// Function /Script/RidingCodeRuntime.ControllingRiderComponent.ControllingActor_OnJumpInput
 	// void ControllingActor_OnJumpInput(bool bPressed);                                                                        // [0x9882124] Final|Native|Protected 
+};
+
 /// Class /Script/RidingCodeRuntime.FortCameraMode_Riding
 /// Size: 0x0020 (0x001B50 - 0x001B70)
 class UFortCameraMode_Riding : public UFortCameraMode_ThirdPerson
@@ -501,13 +501,13 @@ class UFortAthenaPettingWildlifeTelemetryData : public UFortAthenaAITelemetryDat
 
 public:
 	DMember(int32_t)                                   PetCount                                                    OFFSET(get<int32_t>, {0x28, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/RidingCodeRuntime.FortAthenaPettingWildlifeTelemetryData.OnPetted
 	// void OnPetted();                                                                                                         // [0x9883abc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/RidingCodeRuntime.RidingControlInputStateReliable
 /// Size: 0x0001 (0x000000 - 0x000001)
 class FRidingControlInputStateReliable : public MDKStruct

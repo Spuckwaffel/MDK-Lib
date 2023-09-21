@@ -19,8 +19,6 @@ public:
 	CMember(TArray<char>)                              CookedCompressedBytes                                       OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<uint64_t>)                          CookedAnimSequenceMappings                                  OFFSET(get<T>, {0x38, 16, 0, 0})
 	DMember(uint32_t)                                  MaxStreamRequestSizeKB                                      OFFSET(get<uint32_t>, {0x160, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,6 +26,8 @@ public:
 	// void SetVisualFidelity(UObject* WorldContextObject, FLatentActionInfo LatentInfo, UAnimationCompressionLibraryDatabase* DatabaseAsset, ACLVisualFidelityChangeResult& Result, ACLVisualFidelity VisualFidelity); // [0xa36bbf8] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/ACLPlugin.AnimationCompressionLibraryDatabase.GetVisualFidelity
 	// ACLVisualFidelity GetVisualFidelity(UAnimationCompressionLibraryDatabase* DatabaseAsset);                                // [0xa36bb78] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/ACLPlugin.AnimBoneCompressionCodec_ACLBase
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UAnimBoneCompressionCodec_ACLBase : public UAnimBoneCompressionCodec

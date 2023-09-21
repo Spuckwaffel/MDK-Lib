@@ -22,8 +22,6 @@ public:
 	SMember(FStateTreeReference)                       StateTreeRef                                                OFFSET(get<T>, {0x110, 24, 0, 0})
 	DMember(bool)                                      bStartLogicAutomatically                                    OFFSET(get<bool>, {0x128, 1, 0, 0})
 	SMember(FStateTreeInstanceData)                    InstanceData                                                OFFSET(get<T>, {0x130, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,6 +31,8 @@ public:
 	// void SendStateTreeEvent(FStateTreeEvent& Event);                                                                         // [0x9b674f8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/GameplayStateTreeModule.StateTreeComponent.GetStateTreeRunStatus
 	// EStateTreeRunStatus GetStateTreeRunStatus();                                                                             // [0x9b674c0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/GameplayStateTreeModule.StateTreeComponentSchema
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UStateTreeComponentSchema : public UStateTreeSchema

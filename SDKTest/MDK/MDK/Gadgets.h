@@ -52,8 +52,6 @@ public:
 	SMember(FVector)                                   CurrentDesired_Zipline_Offset                               OFFSET(get<T>, {0x370, 24, 0, 0})
 	CMember(APROTOTYPE_BP_Athena_Dynamic_ZipLine_Spline_C*) DynamicZiplineSpline                                   OFFSET(get<T>, {0x388, 8, 0, 0})
 	CMember(USplineComponent*)                         NewVar                                                      OFFSET(get<T>, {0x390, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -89,6 +87,8 @@ public:
 	// void UpdateMotorToDynSpline();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness.BP_ZipLine_Athena_Harness_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness
 	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C
 /// Size: 0x0048 (0x000398 - 0x0003E0)
 class ABP_ZipLine_Athena_Harness_Yellow_C : public ABP_ZipLine_Athena_Harness_C
@@ -108,8 +108,6 @@ public:
 	CMember(UTimelineComponent*)                       spark                                                       OFFSET(get<T>, {0x3C8, 8, 0, 0})
 	DMember(double)                                    BeginLocation_z                                             OFFSET(get<double>, {0x3D0, 8, 0, 0})
 	DMember(double)                                    Location                                                    OFFSET(get<double>, {0x3D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -131,6 +129,8 @@ public:
 	// void ResetBlue();                                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Zipline/Meshes/BP_ZipLine_Athena_Harness_Yellow.BP_ZipLine_Athena_Harness_Yellow_C.ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow
 	// void ExecuteUbergraph_BP_ZipLine_Athena_Harness_Yellow(int32_t EntryPoint);                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Gadgets/Assets/VinderTech_GliderChute/Glider_Bistro_Monster_Female/Scripts/VariantScript_Glider_BistroAstronaut_Style.VariantScript_Glider_BistroAstronaut_Style_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVariantScript_Glider_BistroAstronaut_Style_C : public UFortLoadoutTagDrivenVariantScript
@@ -157,8 +157,6 @@ public:
 	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x440, 2384, 0, 0})
 	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0xD90, 32, 0, 0})
 	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0xDB0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -166,3 +164,5 @@ public:
 	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Gadgets/Assets/Fringe_Plank/Meshes/Fringe_Plank_AnimBP.Fringe_Plank_AnimBP_C.ExecuteUbergraph_Fringe_Plank_AnimBP
 	// void ExecuteUbergraph_Fringe_Plank_AnimBP(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+

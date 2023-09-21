@@ -19,10 +19,10 @@ class UFortGameStateComponent_MidMatchObjectiveParent : public UFortGameStateCom
 
 public:
 	SMember(FName)                                     ObjectiveCompletedStatName                                  OFFSET(get<T>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MidMatchObjectivesGameplayRuntime.FortGameStateComponent_MidMatchObjectiveParent.SetObjectiveCompletedStat
 	// void SetObjectiveCompletedStat(char SquadId);                                                                            // [0x875a5b0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+

@@ -22,13 +22,13 @@ public:
 	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0xB0, 40, 0, 0})
 	CMember(UFortGamestateComponent_DynamicRollTableManager*) TableManager                                         OFFSET(get<T>, {0xD8, 8, 0, 0})
 	SMember(FRandomStream)                             SeededRNG                                                   OFFSET(get<T>, {0x144, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DynamicRollTablesRuntime.FortControllerComponent_DynamicRollPlayerComponent.AuthorityRollChoices
 	// TArray<FFortDynamicRollResult> AuthorityRollChoices(int32_t NumChoices, TArray<UFortItemDefinition*>& IgnoreItems);      // [0x9918b0c] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/DynamicRollTablesRuntime.FortGamestateComponent_DynamicRollTableManager
 /// Size: 0x0238 (0x0000A0 - 0x0002D8)
 class UFortGamestateComponent_DynamicRollTableManager : public UFortGameStateComponent
@@ -40,13 +40,13 @@ public:
 	SMember(FDataRegistryType)                         DataRegistryType_BaseWeights                                OFFSET(get<T>, {0xD0, 4, 0, 0})
 	SMember(FDataRegistryType)                         DataRegistryType_WeightModifiers                            OFFSET(get<T>, {0xD4, 4, 0, 0})
 	SMember(FScalableFloat)                            Enabled                                                     OFFSET(get<T>, {0xD8, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DynamicRollTablesRuntime.FortGamestateComponent_DynamicRollTableManager.HandlePlaylistDataReady
 	// void HandlePlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x3400eec] Final|Native|Private|HasOutParms 
+};
+
 /// Struct /Script/DynamicRollTablesRuntime.FortDynamicRollResult
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FFortDynamicRollResult : public MDKStruct

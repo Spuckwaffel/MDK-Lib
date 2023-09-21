@@ -33,8 +33,6 @@ public:
 	CMember(UClass*)                                   DeflateEffectClass                                          OFFSET(get<T>, {0x30, 8, 0, 0})
 	DMember(int32_t)                                   MinBalloonsOnPlayer                                         OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 	DMember(int32_t)                                   MaxBalloonsOnPlayer                                         OFFSET(get<int32_t>, {0x3C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -42,6 +40,8 @@ public:
 	// void ReleaseBalloonOnSelf(int32_t NumBalloons);                                                                          // [0x5cc6328] Final|BlueprintAuthorityOnly|Exec|Native|Public|Const 
 	// Function /Script/WindRuntime.WindCheatManager.InflateBalloonOnSelf
 	// void InflateBalloonOnSelf(int32_t NumBalloons);                                                                          // [0x5cc6328] Final|BlueprintAuthorityOnly|Exec|Native|Public|Const 
+};
+
 /// Class /Script/WindRuntime.WindField
 /// Size: 0x0108 (0x000298 - 0x0003A0)
 class AWindField : public AFieldSystemActor
@@ -56,8 +56,6 @@ public:
 	DMember(float)                                     OutgoingDuration                                            OFFSET(get<float>, {0x2A4, 4, 0, 0})
 	DMember(float)                                     StrengthMultiplier                                          OFFSET(get<float>, {0x2A8, 4, 0, 0})
 	DMember(bool)                                      bIsActive                                                   OFFSET(get<bool>, {0x2AC, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -75,6 +73,8 @@ public:
 	// void AddIgnoredActor(AActor* Actor);                                                                                     // [0x9ec1f08] Final|Native|Public|BlueprintCallable 
 	// Function /Script/WindRuntime.WindField.AddCollider
 	// void AddCollider(UShapeComponent* ShapeComponent);                                                                       // [0x9ec1e88] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/WindRuntime.LinearWindField
 /// Size: 0x0090 (0x0003A0 - 0x000430)
 class ALinearWindField : public AWindField
@@ -180,8 +180,6 @@ public:
 	CMember(UOperatorField*)                           BoxOperatorField                                            OFFSET(get<T>, {0x1090, 8, 0, 0})
 	CMember(TArray<FWindSplineMeshData>)               MeshDataArray                                               OFFSET(get<T>, {0x1098, 16, 0, 0})
 	CMember(TArray<UFXSystemComponent*>)               FXComponents                                                OFFSET(get<T>, {0x10A8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -199,6 +197,8 @@ public:
 	// void Enable();                                                                                                           // [0x9ec20e8] Final|Native|Protected 
 	// Function /Script/WindRuntime.WindSplineComponent.Disable
 	// void Disable();                                                                                                          // [0x9ec20d4] Final|Native|Protected 
+};
+
 /// Struct /Script/WindRuntime.RootMotionSource_ConstantWindForce
 /// Size: 0x0020 (0x0000E0 - 0x000100)
 class FRootMotionSource_ConstantWindForce : public FRootMotionSource

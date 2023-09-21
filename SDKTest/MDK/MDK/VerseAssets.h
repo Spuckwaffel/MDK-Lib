@@ -19,10 +19,10 @@ public:
 	CMember(TWeakObjectPtr<UObject*>)                  AssetForEditor                                              OFFSET(get<T>, {0x30, 32, 0, 0})
 	SMember(FName)                                     AssetPathName                                               OFFSET(get<T>, {0x50, 4, 0, 0})
 	CMember(UObject*)                                  Object                                                      OFFSET(get<T>, {0x58, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VerseAssets.VerseAssetPtr.OnRep_AssetPathName
 	// void OnRep_AssetPathName();                                                                                              // [0x96d4c50] Final|Native|Protected 
+};
+

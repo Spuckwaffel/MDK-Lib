@@ -43,13 +43,13 @@ public:
 	DMember(bool)                                      bExportLights                                               OFFSET(get<bool>, {0x9B, 1, 0, 0})
 	DMember(bool)                                      bExportCameras                                              OFFSET(get<bool>, {0x9C, 1, 0, 0})
 	CMember(EGLTFMaterialVariantMode)                  ExportMaterialVariants                                      OFFSET(get<T>, {0x9D, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GLTFExporter.GLTFExportOptions.ResetToDefault
 	// void ResetToDefault();                                                                                                   // [0xa49448c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GLTFExporter.GLTFExporter
 /// Size: 0x0000 (0x000078 - 0x000078)
 class UGLTFExporter : public UExporter
@@ -143,13 +143,13 @@ public:
 	CMember(TEnumAsByte<TextureFilter>)                DefaultMaterialBakeFilter                                   OFFSET(get<T>, {0x2A, 1, 0, 0})
 	CMember(TEnumAsByte<TextureAddress>)               DefaultMaterialBakeTiling                                   OFFSET(get<T>, {0x2B, 1, 0, 0})
 	CMember(TMap<EGLTFMaterialPropertyGroup, FGLTFOverrideMaterialBakeSettings>) DefaultInputBakeSettings          OFFSET(get<T>, {0x30, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GLTFExporter.GLTFProxyOptions.ResetToDefault
 	// void ResetToDefault();                                                                                                   // [0xa4944a0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GLTFExporter.GLTFMaterialExportOptions
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UGLTFMaterialExportOptions : public UAssetUserData

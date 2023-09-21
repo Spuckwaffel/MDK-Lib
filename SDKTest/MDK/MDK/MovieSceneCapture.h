@@ -16,8 +16,6 @@ class UMovieSceneCaptureProtocolBase : public UObject
 
 public:
 	CMember(EMovieSceneCaptureProtocolState)           State                                                       OFFSET(get<T>, {0x50, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -25,6 +23,8 @@ public:
 	// bool IsCapturing();                                                                                                      // [0x59604a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneCapture.MovieSceneCaptureProtocolBase.GetState
 	// EMovieSceneCaptureProtocolState GetState();                                                                              // [0x5960460] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MovieSceneCapture.MovieSceneAudioCaptureProtocolBase
 /// Size: 0x0000 (0x000058 - 0x000058)
 class UMovieSceneAudioCaptureProtocolBase : public UMovieSceneCaptureProtocolBase
@@ -183,8 +183,6 @@ public:
 	DMember(bool)                                      bCloseEditorWhenCaptureStarts                               OFFSET(get<bool>, {0xE9, 1, 0, 0})
 	SMember(FString)                                   AdditionalCommandLineArguments                              OFFSET(get<T>, {0xF0, 16, 0, 0})
 	SMember(FString)                                   InheritedCommandLineArguments                               OFFSET(get<T>, {0x100, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -196,6 +194,8 @@ public:
 	// UMovieSceneCaptureProtocolBase* GetImageCaptureProtocol();                                                               // [0x5960448] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneCapture.MovieSceneCapture.GetAudioCaptureProtocol
 	// UMovieSceneCaptureProtocolBase* GetAudioCaptureProtocol();                                                               // [0x59603a8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MovieSceneCapture.LevelCapture
 /// Size: 0x0020 (0x000228 - 0x000248)
 class ULevelCapture : public UMovieSceneCapture
@@ -227,8 +227,6 @@ class UUserDefinedCaptureProtocol : public UMovieSceneImageCaptureProtocolBase
 
 public:
 	CMember(UWorld*)                                   World                                                       OFFSET(get<T>, {0x58, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -264,6 +262,8 @@ public:
 	// FFrameMetrics GetCurrentFrameMetrics();                                                                                  // [0x5960430] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MovieSceneCapture.UserDefinedCaptureProtocol.GenerateFilename
 	// FString GenerateFilename(FFrameMetrics& InFrameMetrics);                                                                 // [0x596016c] RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol
 /// Size: 0x0008 (0x0000D8 - 0x0000E0)
 class UUserDefinedImageCaptureProtocol : public UUserDefinedCaptureProtocol
@@ -275,8 +275,6 @@ public:
 	CMember(EDesiredImageFormat)                       Format                                                      OFFSET(get<T>, {0xD8, 1, 0, 0})
 	DMember(bool)                                      bEnableCompression                                          OFFSET(get<bool>, {0xD9, 1, 0, 0})
 	DMember(int32_t)                                   CompressionQuality                                          OFFSET(get<int32_t>, {0xDC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -286,6 +284,8 @@ public:
 	// FString GenerateFilenameForCurrentFrame();                                                                               // [0x596035c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MovieSceneCapture.UserDefinedImageCaptureProtocol.GenerateFilenameForBuffer
 	// FString GenerateFilenameForBuffer(UTexture* Buffer, FCapturedPixelsID& StreamID);                                        // [0x596022c] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MovieSceneCapture.VideoCaptureProtocol
 /// Size: 0x0018 (0x000068 - 0x000080)
 class UVideoCaptureProtocol : public UFrameGrabberProtocol

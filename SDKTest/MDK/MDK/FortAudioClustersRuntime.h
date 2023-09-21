@@ -42,13 +42,13 @@ public:
 	CMember(TArray<FGameFeatureAudioClusterEntry>)     Clusters                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TMap<FName, FGameplayTag>)                 OverrideTable                                               OFFSET(get<T>, {0x38, 80, 0, 0})
 	SMember(FName)                                     DisabledActorTag                                            OFFSET(get<T>, {0x88, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortAudioClustersRuntime.GameFeatureAction_AddAudioCluster.HandleRegisteredActorDeath
 	// void HandleRegisteredActorDeath(float Damage, FGameplayTagContainer& DamageTags, FVector Momentum, FHitResult& HitInfo, AFortPawn* InstigatedBy, AActor* DamageCauser, FGameplayEffectContextHandle EffectContext); // [0x25c4500] Final|Native|Private|HasOutParms|HasDefaults 
+};
+
 /// Class /Script/FortAudioClustersRuntime.GameFeatureAction_AddAudioClusterConfigMaps
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UGameFeatureAction_AddAudioClusterConfigMaps : public UGameFeatureAction

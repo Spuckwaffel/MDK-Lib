@@ -42,8 +42,6 @@ public:
 	DMember(bool)                                      bIsClambering                                               OFFSET(get<bool>, {0xBDF, 1, 0, 0})
 	DMember(bool)                                      bBlockedTag                                                 OFFSET(get<bool>, {0xBE0, 1, 0, 0})
 	DMember(bool)                                      bGliderTag                                                  OFFSET(get<bool>, {0xBE1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,3 +51,5 @@ public:
 	// void UpdateCanCrashpad();                                                                                                // [0x99d1500] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/HopscotchWeaponsGameplayRuntime.FortGameplayAbility_AppleSunSmall_Passive.OnPlayerMovementModeChanged
 	// void OnPlayerMovementModeChanged(ACharacter* Character, TEnumAsByte<EMovementMode> PrevMovementMode, char PreviousCustomMode); // [0x99d1220] Final|Native|Private 
+};
+

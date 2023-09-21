@@ -50,8 +50,6 @@ public:
 	SMember(FLinearColor)                              CritColor_Outline2                                          OFFSET(get<T>, {0x410, 16, 0, 0})
 	SMember(FLinearColor)                              ElimColor_Outline2                                          OFFSET(get<T>, {0x420, 16, 0, 0})
 	SMember(FGameplayTag)                              UseNativeMarkerTag                                          OFFSET(get<T>, {0x430, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,3 +65,5 @@ public:
 	// void OnDisplayHitNotify(double InDamage, bool bInCritical, bool bInFatal, bool bInShield, AActor* InPawn, FVector HitLocation, FGameplayTagContainer Tags); // [0x9bbdd10] Final|Native|Protected|HasDefaults|BlueprintCallable 
 	// Function /Script/HitTicksUI.FortUserWidget_HitTicks.HudScaleChanged
 	// void HudScaleChanged();                                                                                                  // [0x9bbdcfc] Final|Native|Protected|BlueprintCallable 
+};
+

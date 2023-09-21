@@ -81,8 +81,6 @@ class UComputeGraphComponent : public UActorComponent
 public:
 	CMember(UComputeGraph*)                            ComputeGraph                                                OFFSET(get<T>, {0xA0, 8, 0, 0})
 	SMember(FComputeGraphInstance)                     ComputeGraphInstance                                        OFFSET(get<T>, {0xA8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -92,6 +90,8 @@ public:
 	// void DestroyDataProviders();                                                                                             // [0x9c3c54c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ComputeFramework.ComputeGraphComponent.CreateDataProviders
 	// void CreateDataProviders(int32_t InBindingIndex, UObject* InBindingObject);                                              // [0x9c3c47c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ComputeFramework.ComputeKernel
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UComputeKernel : public UObject

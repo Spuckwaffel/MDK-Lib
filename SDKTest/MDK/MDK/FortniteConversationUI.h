@@ -32,13 +32,13 @@ class UFortItemTransactionBrief : public UFortConversationOptionBrief
 public:
 	CMember(UFortTransactionStrip*)                    TransactionStrip_Main                                       OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UFortItem*)                                DisplayItem                                                 OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.FortItemTransactionBrief.OnTransactionInfoReceived
 	// void OnTransactionInfoReceived(UFortItem* Item);                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortApplyAbilityBrief
 /// Size: 0x0020 (0x0002E8 - 0x000308)
 class UFortApplyAbilityBrief : public UFortItemTransactionBrief
@@ -49,8 +49,6 @@ class UFortApplyAbilityBrief : public UFortItemTransactionBrief
 public:
 	SMember(FText)                                     PurchaseServiceText                                         OFFSET(get<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Display                                                OFFSET(get<T>, {0x300, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -58,6 +56,8 @@ public:
 	// void OnUnableToPurchase(EPreventAbilityUseReason Reason);                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortApplyAbilityBrief.OnAbleToPurchase
 	// void OnAbleToPurchase();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortBasicBrief
 /// Size: 0x0000 (0x0002D0 - 0x0002D0)
 class UFortBasicBrief : public UFortConversationOptionBrief
@@ -80,8 +80,6 @@ public:
 	CMember(UFortTransactionStrip*)                    TransactionStrip_Main                                       OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UFortItem*)                                DisplayItem                                                 OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(TMap<FName, FDataDrivenServiceBriefConfig>) ServiceConfigs                                             OFFSET(get<T>, {0x2F0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -93,6 +91,8 @@ public:
 	// void OnItemInfoReceived(UFortItem* Item, int32_t StackSize);                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortBasicItemBrief.OnAbleToUse
 	// void OnAbleToUse(bool bShowWarningMessage);                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortBuyBrief
 /// Size: 0x0000 (0x0002E8 - 0x0002E8)
 class UFortBuyBrief : public UFortItemTransactionBrief
@@ -124,8 +124,6 @@ public:
 	CMember(UImage*)                                   NPCIcon                                                     OFFSET(get<T>, {0x470, 8, 0, 0})
 	CMember(UTexture2D*)                               CustomDialogMarkerIndicatorIcon                             OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UTexture2D*)                               DefaultDialogMarkerIndicatorIcon                            OFFSET(get<T>, {0x480, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -139,6 +137,8 @@ public:
 	// void OnConversationActorProximityChanged(EInteractionRange TargetInteractionRange, UFortNonPlayerConversationParticipantComponent* ConversationComponent); // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortConversationMarker.OnCanInteract
 	// void OnCanInteract(bool bCanInteract);                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortConversationMessageWidget
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
 class UFortConversationMessageWidget : public UUserWidget
@@ -163,8 +163,6 @@ public:
 	CMember(TWeakObjectPtr<UObject*>)                  DefaultSoftTaskIcon                                         OFFSET(get<T>, {0x1540, 32, 0, 0})
 	CMember(TWeakObjectPtr<USoundBase*>)               DefaultConfirmChoiceSound                                   OFFSET(get<T>, {0x1560, 32, 0, 0})
 	CMember(TWeakObjectPtr<USoundBase*>)               DefaultHoverChoiceSound                                     OFFSET(get<T>, {0x1580, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -182,6 +180,8 @@ public:
 	// bool IsAvailable();                                                                                                      // [0x98de120] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/FortniteConversationUI.FortConversationOption.GetUnlockLevel
 	// int32_t GetUnlockLevel();                                                                                                // [0x98ddd00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/FortniteConversationUI.FortConversationOptionsPanel
 /// Size: 0x0018 (0x000190 - 0x0001A8)
 class UFortConversationOptionsPanel : public UPanelWidget
@@ -192,13 +192,13 @@ class UFortConversationOptionsPanel : public UPanelWidget
 public:
 	DMember(int32_t)                                   MaxRows                                                     OFFSET(get<int32_t>, {0x1A0, 4, 0, 0})
 	DMember(int32_t)                                   MiddleColumnWidth                                           OFFSET(get<int32_t>, {0x1A4, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.FortConversationOptionsPanel.AddChildToDynamicPanel
 	// UPanelSlot* AddChildToDynamicPanel(UWidget* Content);                                                                    // [0x98dd4c0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/FortniteConversationUI.FortConversationScreen
 /// Size: 0x01C8 (0x0003E8 - 0x0005B0)
 class UFortConversationScreen : public UCommonActivatableWidget
@@ -234,8 +234,6 @@ public:
 	CMember(UWidget*)                                  Overlay_WheelContainer                                      OFFSET(get<T>, {0x598, 8, 0, 0})
 	CMember(UImage*)                                   Image_Background                                            OFFSET(get<T>, {0x5A0, 8, 0, 0})
 	CMember(UImage*)                                   Image_LoadingSpinner                                        OFFSET(get<T>, {0x5A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -253,6 +251,8 @@ public:
 	// void OnConversationOptionUnavailable(UFortRadialSlot* SelectedEntry);                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortConversationScreen.EndConversation
 	// void EndConversation();                                                                                                  // [0x2e5eb60] Native|Protected     
+};
+
 /// Class /Script/FortniteConversationUI.FortDataDrivenServiceBrief
 /// Size: 0x0078 (0x0002D0 - 0x000348)
 class UFortDataDrivenServiceBrief : public UFortConversationOptionBrief
@@ -266,8 +266,6 @@ public:
 	CMember(UCommonTextBlock*)                         Text_StockRemaining                                         OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UFortTransactionStrip*)                    TransactionStrip_Main                                       OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(TMap<FName, FDataDrivenServiceBriefConfig>) ServiceConfigs                                             OFFSET(get<T>, {0x2F8, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -277,6 +275,8 @@ public:
 	// void OnTransactionInfoReceived(UFortItem* Item);                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortDataDrivenServiceBrief.OnAbleToPurchase
 	// void OnAbleToPurchase();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortDuelBrief
 /// Size: 0x0028 (0x0002E8 - 0x000310)
 class UFortDuelBrief : public UFortItemTransactionBrief
@@ -288,13 +288,13 @@ public:
 	SMember(FText)                                     TextTemplate                                                OFFSET(get<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Objective                                              OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UCommonTileView*)                          TileView                                                    OFFSET(get<T>, {0x308, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.FortDuelBrief.DisplayLootItems
 	// void DisplayLootItems(TArray<UFortItem*>& Items);                                                                        // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortHireBrief
 /// Size: 0x0020 (0x0002E8 - 0x000308)
 class UFortHireBrief : public UFortItemTransactionBrief
@@ -305,13 +305,13 @@ class UFortHireBrief : public UFortItemTransactionBrief
 public:
 	SMember(FText)                                     TextTemplate                                                OFFSET(get<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Objective                                              OFFSET(get<T>, {0x300, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.FortHireBrief.HandleNPCDismissal
 	// void HandleNPCDismissal(bool bAtMaxNPCNum, bool bWillDismissNPCAtHire);                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortIntelBrief
 /// Size: 0x0020 (0x0002E8 - 0x000308)
 class UFortIntelBrief : public UFortItemTransactionBrief
@@ -339,8 +339,6 @@ public:
 	CMember(UFortLazyImage*)                           LazyImage_Icon                                              OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(UFortTransactionStrip*)                    TransactionStrip_Main                                       OFFSET(get<T>, {0x3A8, 8, 0, 0})
 	CMember(TMap<FName, FDataDrivenServiceBriefConfig>) ServiceConfigs                                             OFFSET(get<T>, {0x3B0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -352,6 +350,8 @@ public:
 	// void InitializeFromContext(FConversationContext& ConversationContext);                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortItemFundBrief.GetDataForKey
 	// FText GetDataForKey(FString Key, bool bUseIndexAdjustment);                                                              // [0x98dd5ec] Final|Native|Private|BlueprintCallable 
+};
+
 /// Class /Script/FortniteConversationUI.FortSingleItemFundBrief
 /// Size: 0x0068 (0x0002D0 - 0x000338)
 class UFortSingleItemFundBrief : public UFortConversationOptionBrief
@@ -375,13 +375,13 @@ class UFortMultiItemFundBrief : public UFortSingleItemFundBrief
 public:
 	CMember(UFortItemFundBrief*)                       Item_EntrySecondary                                         OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UFortItemFundBrief*)                       Item_EntryTertiary                                          OFFSET(get<T>, {0x340, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.FortMultiItemFundBrief.UpdateSelectedVisuals
 	// void UpdateSelectedVisuals(int32_t SelectedIndex);                                                                       // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortNPCTextDisplay
 /// Size: 0x0010 (0x0002A8 - 0x0002B8)
 class UFortNPCTextDisplay : public UUserWidget
@@ -392,8 +392,6 @@ class UFortNPCTextDisplay : public UUserWidget
 public:
 	CMember(UCommonRichTextBlock*)                     Text_Message                                                OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UFortLazyImage*)                           LazyImage_NPCImage                                          OFFSET(get<T>, {0x2B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -401,6 +399,8 @@ public:
 	// void OnTextUpdated();                                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortNPCTextDisplay.OnItemNameUpdated
 	// void OnItemNameUpdated(FString ItemName);                                                                                // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortPlayerConversationUIComponent
 /// Size: 0x0140 (0x0000A0 - 0x0001E0)
 class UFortPlayerConversationUIComponent : public UActorComponent
@@ -417,13 +417,13 @@ public:
 	CMember(UClass*)                                   DialogWidgetClass                                           OFFSET(get<T>, {0x128, 8, 0, 0})
 	CMember(UClass*)                                   DialogMarkerClass                                           OFFSET(get<T>, {0x130, 8, 0, 0})
 	SMember(FUserWidgetPool)                           DialogWidgetPool                                            OFFSET(get<T>, {0x138, 136, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.FortPlayerConversationUIComponent.OnMinigameStarted
 	// void OnMinigameStarted();                                                                                                // [0x98de17c] Final|Native|Private 
+};
+
 /// Class /Script/FortniteConversationUI.FortQuestBrief
 /// Size: 0x0050 (0x0002D0 - 0x000320)
 class UFortQuestBrief : public UFortConversationOptionBrief
@@ -439,8 +439,6 @@ public:
 	CMember(UCommonTextBlock*)                         Text_ExpirationTime                                         OFFSET(get<T>, {0x308, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         LazyImage_QuestProviderImage                                OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(UOverlay*)                                 Overlay_QuestProvider                                       OFFSET(get<T>, {0x318, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -448,6 +446,8 @@ public:
 	// void OnQuestInformationRecieved(FText& Objective, FFortRarityItemData& RarityData, FGameplayTag& CategoryTag, int32_t XPReward, int32_t MoneyReward); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortQuestBrief.OnQuestExpirationTimeSet
 	// void OnQuestExpirationTimeSet(bool bDisplayExpirationTime);                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortShowFutureStormCircleBrief
 /// Size: 0x0020 (0x0002E8 - 0x000308)
 class UFortShowFutureStormCircleBrief : public UFortItemTransactionBrief
@@ -458,8 +458,6 @@ class UFortShowFutureStormCircleBrief : public UFortItemTransactionBrief
 public:
 	SMember(FText)                                     PurchaseServiceText                                         OFFSET(get<T>, {0x2E8, 24, 0, 0})
 	CMember(UCommonRichTextBlock*)                     Text_Display                                                OFFSET(get<T>, {0x300, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -467,6 +465,8 @@ public:
 	// void OnUnableToPurchase(EPreventUseStormCircleServiceReason Reason);                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortShowFutureStormCircleBrief.OnAbleToPurchase
 	// void OnAbleToPurchase();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/FortniteConversationUI.FortSingleOrMultiItemFundBrief
 /// Size: 0x0050 (0x0002D0 - 0x000320)
 class UFortSingleOrMultiItemFundBrief : public UFortConversationOptionBrief
@@ -491,8 +491,6 @@ public:
 	CMember(UCommonTextBlock*)                         Text_CostDescription                                        OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UFortWorldItemDefinition*>) CachedGlobalCurrency                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UFortWorldItemDefinition*)                 ResourceCurrency                                            OFFSET(get<T>, {0x2C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -502,6 +500,8 @@ public:
 	// void OnSetTransactionCostVisibility(bool bVisible);                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/FortniteConversationUI.FortTransactionStrip.HandleOnItemCountChanged
 	// void HandleOnItemCountChanged(TScriptInterface<Class> InventoryOwner, UFortItemDefinition* Definition, int32_t Delta);   // [0x98ddd90] Final|Native|Private 
+};
+
 /// Class /Script/FortniteConversationUI.FortUpgradeBrief
 /// Size: 0x0000 (0x0002E8 - 0x0002E8)
 class UFortUpgradeBrief : public UFortItemTransactionBrief
@@ -524,13 +524,13 @@ public:
 	CMember(UButton*)                                  MobileButtonTouchInformation                                OFFSET(get<T>, {0x5B8, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        MobileCloseButton                                           OFFSET(get<T>, {0x5C8, 8, 0, 0})
 	CMember(UCommonVisibilitySwitcher*)                Switcher_CenteredDetails                                    OFFSET(get<T>, {0x5D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortniteConversationUI.MobileConversationScreen.OnHandleConfirmClicked
 	// void OnHandleConfirmClicked();                                                                                           // [0x98de168] Final|Native|Protected 
+};
+
 /// Enum /Script/FortniteConversationUI.ECannotBuyReason
 /// Size: 0x03
 enum ECannotBuyReason : uint8_t

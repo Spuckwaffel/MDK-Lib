@@ -41,13 +41,13 @@ public:
 	CMember(USceneComponent*)                          TransformComponent                                          OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(USplineComponent*)                         RailSplineComponent                                         OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(USceneComponent*)                          RailCameraMount                                             OFFSET(get<T>, {0x2A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CinematicCamera.CameraRig_Rail.GetRailSplineComponent
 	// USplineComponent* GetRailSplineComponent();                                                                              // [0x591a5ec] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/CinematicCamera.CineCameraActor
 /// Size: 0x0070 (0x0009A0 - 0x000A10)
 class ACineCameraActor : public ACameraActor
@@ -57,13 +57,13 @@ class ACineCameraActor : public ACameraActor
 
 public:
 	SMember(FCameraLookatTrackingSettings)             LookatTrackingSettings                                      OFFSET(get<T>, {0x9A0, 96, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CinematicCamera.CineCameraActor.GetCineCameraComponent
 	// UCineCameraComponent* GetCineCameraComponent();                                                                          // [0x59179e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CinematicCamera.CineCameraComponent
 /// Size: 0x0110 (0x000A30 - 0x000B40)
 class UCineCameraComponent : public UCameraComponent
@@ -89,8 +89,6 @@ public:
 	SMember(FString)                                   DefaultLensPresetName                                       OFFSET(get<T>, {0xB20, 16, 0, 0})
 	DMember(float)                                     DefaultLensFocalLength                                      OFFSET(get<float>, {0xB30, 4, 0, 0})
 	DMember(float)                                     DefaultLensFStop                                            OFFSET(get<float>, {0xB34, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -130,6 +128,8 @@ public:
 	// FString GetDefaultFilmbackPresetName();                                                                                  // [0x5918814] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CinematicCamera.CineCameraComponent.GetCropPresetName
 	// FString GetCropPresetName();                                                                                             // [0x5918120] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CinematicCamera.CineCameraSettings
 /// Size: 0x0078 (0x000030 - 0x0000A8)
 class UCineCameraSettings : public UDeveloperSettings
@@ -146,8 +146,6 @@ public:
 	CMember(TArray<FNamedFilmbackPreset>)              FilmbackPresets                                             OFFSET(get<T>, {0x68, 16, 0, 0})
 	SMember(FString)                                   DefaultCropPresetName                                       OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(TArray<FNamedPlateCropPreset>)             CropPresets                                                 OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -181,6 +179,8 @@ public:
 	// bool GetCropPresetByName(FString PresetName, FPlateCropSettings& CropSettings);                                          // [0x5917a30] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/CinematicCamera.CineCameraSettings.GetCineCameraSettings
 	// UCineCameraSettings* GetCineCameraSettings();                                                                            // [0x5917a00] Final|Native|Static|Private|BlueprintCallable 
+};
+
 /// Struct /Script/CinematicCamera.CameraFocusSettings
 /// Size: 0x0058 (0x000000 - 0x000058)
 class FCameraFocusSettings : public MDKStruct

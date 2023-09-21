@@ -67,8 +67,6 @@ public:
 	DMember(bool)                                      bDisableEvaluateLiveLinkWhenSpawnable                       OFFSET(get<bool>, {0x128, 1, 0, 0})
 	DMember(bool)                                      bEvaluateLiveLink                                           OFFSET(get<bool>, {0x129, 1, 0, 0})
 	DMember(bool)                                      bUpdateInPreviewEditor                                      OFFSET(get<bool>, {0x12A, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -76,6 +74,8 @@ public:
 	// void SetSubjectRepresentation(FLiveLinkSubjectRepresentation InSubjectRepresentation);                                   // [0xa148844] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LiveLinkComponents.LiveLinkComponentController.GetSubjectRepresentation
 	// FLiveLinkSubjectRepresentation GetSubjectRepresentation();                                                               // [0xa148828] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/LiveLinkComponents.LiveLinkTransformControllerData
 /// Size: 0x0006 (0x000000 - 0x000006)
 class FLiveLinkTransformControllerData : public MDKStruct

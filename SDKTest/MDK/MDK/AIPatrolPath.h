@@ -48,8 +48,6 @@ public:
 	CMember(AFortAthenaPatrolPoint*)                   PatrolPointActor                                            OFFSET(get<T>, {0x318, 8, 0, 0})
 	CMember(TArray<UAIPatrolPathComponent*>)           MultiSelectActorToEnterList                                 OFFSET(get<T>, {0x320, 16, 0, 0})
 	CMember(UAIPatrolPathEditorComponent*)             PatrolPathEditorComponent                                   OFFSET(get<T>, {0x370, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -121,6 +119,8 @@ public:
 	// void GeneratePathPoints(EFortCreativePatrolPathGroup PatrolPathGroup, bool bGenerationCausedByDuplication);              // [0x9a7d668] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AIPatrolPath.AIPatrolPathComponent.CanNextPointBeReached
 	// bool CanNextPointBeReached();                                                                                            // [0x9a7d648] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/AIPatrolPath.PatrolPathSegmentDetails
 /// Size: 0x0108 (0x000000 - 0x000108)
 class FPatrolPathSegmentDetails : public MDKStruct

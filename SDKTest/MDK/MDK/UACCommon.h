@@ -17,8 +17,6 @@ class UUACNetworkComponent : public UActorComponent
 
 public:
 	DMember(int32_t)                                   PlayerId                                                    OFFSET(get<int32_t>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,3 +26,5 @@ public:
 	// void SendPacketToClient(char EnhPacketType, TArray<char> Data);                                                          // [0x72fdb98] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/UACCommon.UACNetworkComponent.SendClientHello
 	// void SendClientHello(uint32_t SessionKey);                                                                               // [0x72fda40] Net|NetReliableNative|Event|Public|NetClient 
+};
+

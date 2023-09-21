@@ -22,8 +22,6 @@ public:
 	DMember(float)                                     MinimumDisplayTime                                          OFFSET(get<float>, {0x314, 4, 0, 0})
 	DMember(float)                                     UpdateTime                                                  OFFSET(get<float>, {0x318, 4, 0, 0})
 	DMember(float)                                     InitialDelay                                                OFFSET(get<float>, {0x31C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -43,6 +41,8 @@ public:
 	// float GetPing();                                                                                                         // [0xa203124] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/NetUI.BadNetworkIndicator.GetPacketLoss
 	// float GetPacketLoss();                                                                                                   // [0xa2030fc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/NetUI.NetDebugWidget
 /// Size: 0x00E8 (0x0002A8 - 0x000390)
 class UNetDebugWidget : public UUserWidget
@@ -58,8 +58,6 @@ public:
 	CMember(UCommonTextBlock*)                         PacketOutLossUI                                             OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         UpBandwidthUI                                               OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         DownBandwidthUI                                             OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,6 +65,8 @@ public:
 	// void StopTimer();                                                                                                        // [0x3405344] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/NetUI.NetDebugWidget.StartTimer
 	// void StartTimer();                                                                                                       // [0xa203200] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/NetUI.NetGraph
 /// Size: 0x0038 (0x0002A8 - 0x0002E0)
 class UNetGraph : public UUserWidget

@@ -16,12 +16,12 @@
 /// dependency: SpecialSurfaceCoverageRuntime
 /// dependency: VictoryCrownsRuntime
 
-/// Class /SpecialSurfaceCoverage/Items/SnowSurfaceCoverageMap_GSC.SnowSurfaceCoverageMap_GSC_C
-/// Size: 0x0000 (0x000110 - 0x000110)
-class USnowSurfaceCoverageMap_GSC_C : public UFortGameStateComponent_SurfaceCoverageMap
+/// Class /RankedPermanentQuests/Items/B_CosmeticStatObject_HabaneroProgression_Season26.B_CosmeticStatObject_HabaneroProgression_Season26_C
+/// Size: 0x0000 (0x0000D8 - 0x0000D8)
+class UB_CosmeticStatObject_HabaneroProgression_Season26_C : public UFortCosmeticStatObject_HabaneroProgressionSeasonal
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 272;
+	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
 };
@@ -36,12 +36,12 @@ class UB_CosmeticStatObject_HabaneroProgression_C : public UFortCosmeticStatObje
 public:
 };
 
-/// Class /RankedPermanentQuests/Items/B_CosmeticStatObject_HabaneroProgression_Season26.B_CosmeticStatObject_HabaneroProgression_Season26_C
-/// Size: 0x0000 (0x0000D8 - 0x0000D8)
-class UB_CosmeticStatObject_HabaneroProgression_Season26_C : public UFortCosmeticStatObject_HabaneroProgressionSeasonal
+/// Class /SpecialSurfaceCoverage/Items/SnowSurfaceCoverageMap_GSC.SnowSurfaceCoverageMap_GSC_C
+/// Size: 0x0000 (0x000110 - 0x000110)
+class USnowSurfaceCoverageMap_GSC_C : public UFortGameStateComponent_SurfaceCoverageMap
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 216;
+	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
 };
@@ -49,6 +49,16 @@ public:
 /// Class /VictoryCrownsGameplay/Items/B_CosmeticStatObject_TotalVictoryCrowns.B_CosmeticStatObject_TotalVictoryCrowns_C
 /// Size: 0x0000 (0x000090 - 0x000090)
 class UB_CosmeticStatObject_TotalVictoryCrowns_C : public UFortCosmeticStatObject_TotalVictoryCrowns
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+};
+
+/// Class /VictoryCrownsGameplay/Items/B_CosmeticStatObject_HasCrown.B_CosmeticStatObject_HasCrown_C
+/// Size: 0x0000 (0x000090 - 0x000090)
+class UB_CosmeticStatObject_HasCrown_C : public UFortCosmeticStatObject_HasCrown
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 144;
@@ -76,16 +86,6 @@ class UB_CosmeticStatObject_TotalRoyalRoyales_C : public UFortCosmeticStatObject
 public:
 };
 
-/// Class /VictoryCrownsGameplay/Items/B_CosmeticStatObject_HasCrown.B_CosmeticStatObject_HasCrown_C
-/// Size: 0x0000 (0x000090 - 0x000090)
-class UB_CosmeticStatObject_HasCrown_C : public UFortCosmeticStatObject_HasCrown
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 144;
-
-public:
-};
-
 /// Class /VictoryCrownsGameplay/Items/VictoryCrownComponent.VictoryCrownComponent_C
 /// Size: 0x0008 (0x000268 - 0x000270)
 class UVictoryCrownComponent_C : public UFortControllerComponent_VictoryCrowns
@@ -95,8 +95,6 @@ class UVictoryCrownComponent_C : public UFortControllerComponent_VictoryCrowns
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x268, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -104,6 +102,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /VictoryCrownsGameplay/Items/VictoryCrownComponent.VictoryCrownComponent_C.ExecuteUbergraph_VictoryCrownComponent
 	// void ExecuteUbergraph_VictoryCrownComponent(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
 /// Class /VictoryCrownsGameplay/Items/VictoryCrownFrontEndPawnComponent.VictoryCrownFrontEndPawnComponent_C
 /// Size: 0x001A (0x0000C0 - 0x0000DA)
 class UVictoryCrownFrontEndPawnComponent_C : public UFortPawnComponent_VictoryCrownsFrontEnd
@@ -117,8 +117,6 @@ public:
 	CMember(APlayerPawn_Athena_C*)                     AthenaPawn                                                  OFFSET(get<T>, {0xD0, 8, 0, 0})
 	DMember(bool)                                      AccountHasCrown                                             OFFSET(get<bool>, {0xD8, 1, 0, 0})
 	DMember(bool)                                      AppliedCrownFX                                              OFFSET(get<bool>, {0xD9, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -134,6 +132,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /VictoryCrownsGameplay/Items/VictoryCrownFrontEndPawnComponent.VictoryCrownFrontEndPawnComponent_C.ExecuteUbergraph_VictoryCrownFrontEndPawnComponent
 	// void ExecuteUbergraph_VictoryCrownFrontEndPawnComponent(int32_t EntryPoint);                                             // [0x1ebf994] Final                
+};
+
 /// Class /RocketRamGameplay/Items/RocketRam/CameraEffects/CameraShake_ActiveThrust_RocketRam.CameraShake_ActiveThrust_RocketRam_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UCameraShake_ActiveThrust_RocketRam_C : public ULegacyCameraShake
@@ -170,8 +170,6 @@ public:
 	CMember(USoundBase*)                               WindDownSoundCue                                            OFFSET(get<T>, {0x9A0, 8, 0, 0})
 	CMember(UAudioComponent*)                          WindDownAudioComponent                                      OFFSET(get<T>, {0x9A8, 8, 0, 0})
 	CMember(AActor*)                                   CurrentTarget                                               OFFSET(get<T>, {0x9B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -185,6 +183,8 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /RocketRamGameplay/Items/RocketRam/GameplayCues/GCNL_RocketRam_FreeFalling.GCNL_RocketRam_FreeFalling_C.ExecuteUbergraph_GCNL_RocketRam_FreeFalling
 	// void ExecuteUbergraph_GCNL_RocketRam_FreeFalling(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RocketRamGameplay/Items/RocketRam/GameplayCues/GCNL_RocketRam_ActiveThrusting.GCNL_RocketRam_ActiveThrusting_C
 /// Size: 0x0038 (0x000990 - 0x0009C8)
 class AGCNL_RocketRam_ActiveThrusting_C : public AFortGameplayCueNotify_Loop
@@ -200,8 +200,6 @@ public:
 	CMember(USoundBase*)                               FireInAirSoundCue                                           OFFSET(get<T>, {0x9B0, 8, 0, 0})
 	CMember(UAudioComponent*)                          FireInAirAudioComponent                                     OFFSET(get<T>, {0x9B8, 8, 0, 0})
 	CMember(AActor*)                                   CurrentTarget                                               OFFSET(get<T>, {0x9C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -215,3 +213,5 @@ public:
 	// void OnRemovalGeneric(AActor* MyTarget, FGameplayCueParameters& Parameters, TArray<UFXSystemComponent*>& ParticleComponents, TArray<UAudioComponent*>& AudioComponents, ULegacyCameraShake* BurstCameraShakeInstance, ADecalActor* BurstDecalInstance); // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /RocketRamGameplay/Items/RocketRam/GameplayCues/GCNL_RocketRam_ActiveThrusting.GCNL_RocketRam_ActiveThrusting_C.ExecuteUbergraph_GCNL_RocketRam_ActiveThrusting
 	// void ExecuteUbergraph_GCNL_RocketRam_ActiveThrusting(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
+};
+

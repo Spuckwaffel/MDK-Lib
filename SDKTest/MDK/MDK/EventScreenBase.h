@@ -102,8 +102,6 @@ public:
 	CMember(UCommonButtonBase*)                        Button_Back                                                 OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_CloseMobile                                          OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UScrollBox*)                               SB_Vertical                                                 OFFSET(get<T>, {0x410, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -115,6 +113,8 @@ public:
 	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventMoreInfoModal.GetEventScreenData
 	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9b922f4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.FortEventPurchaseLevelsModal
 /// Size: 0x0070 (0x0003F0 - 0x000460)
 class UFortEventPurchaseLevelsModal : public UFortEventModalBase
@@ -135,8 +135,6 @@ public:
 	DMember(int32_t)                                   CurrentVBucks                                               OFFSET(get<int32_t>, {0x430, 4, 0, 0})
 	DMember(int32_t)                                   OfferResourceQuantity                                       OFFSET(get<int32_t>, {0x434, 4, 0, 0})
 	DMember(bool)                                      bAnimateListViewFromEmpty                                   OFFSET(get<bool>, {0x438, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -152,6 +150,8 @@ public:
 	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString InOfferId);               // [0x9b92510] Final|Native|Private|HasOutParms 
 	// Function /Script/EventScreenBase.FortEventPurchaseLevelsModal.GetEventScreenData
 	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9b9231c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.FortPurchasePremiumTrackBody
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
 class UFortPurchasePremiumTrackBody : public UUserWidget
@@ -178,8 +178,6 @@ public:
 	CMember(UCommonButtonBase*)                        Button_CloseMobile                                          OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_PreviewReward                                        OFFSET(get<T>, {0x420, 8, 0, 0})
 	DMember(int32_t)                                   CurrentVBucks                                               OFFSET(get<int32_t>, {0x428, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -193,6 +191,8 @@ public:
 	// void HandlePurchaseComplete(bool bSuccess, TArray<FPurchasedItemInfo>& PurchasedItems, FString InOfferId);               // [0x9b92510] Final|Native|Private|HasOutParms 
 	// Function /Script/EventScreenBase.FortEventPurchasePremiumTrackModal.GetEventScreenData
 	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9b92344] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.FortEventListViewWidgetBase
 /// Size: 0x0008 (0x0002A8 - 0x0002B0)
 class UFortEventListViewWidgetBase : public UUserWidget
@@ -213,8 +213,6 @@ class UFortEventRewardTracksWidget : public UFortEventListViewWidgetBase
 public:
 	CMember(UDynamicEntryBox*)                         DynamicEntryBox_RewardTracks                                OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	DMember(bool)                                      bPreviewMode                                                OFFSET(get<bool>, {0x2B8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -226,6 +224,8 @@ public:
 	// void BPOnSetRewardItem(int32_t RequiredProgress, int32_t RemainingProgress, float RewardProgressPercent, float PreviewProgressPercent, float OverallProgressPercent, bool bInPreviewMode); // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardTracksWidget.BPOnEventScreenDataSet
 	// void BPOnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/EventScreenBase.FortEventSpacerWidget
 /// Size: 0x0000 (0x0002B0 - 0x0002B0)
 class UFortEventSpacerWidget : public UFortEventListViewWidgetBase
@@ -250,8 +250,6 @@ public:
 	DMember(bool)                                      bPreviewMode                                                OFFSET(get<bool>, {0x2C1, 1, 0, 0})
 	DMember(bool)                                      bInPreviewSelectedState                                     OFFSET(get<bool>, {0x2C2, 1, 0, 0})
 	DMember(bool)                                      bInPremiumUpgradeState                                      OFFSET(get<bool>, {0x2C3, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -285,6 +283,8 @@ public:
 	// void OnEventScreenDataSet(UFortEventScreenData* InEventScreenData);                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventRewardWidget.GetEventScreenData
 	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9b9236c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.FortEventScreenBase
 /// Size: 0x0440 (0x000708 - 0x000B48)
 class UFortEventScreenBase : public UFortItemPreviewScreen
@@ -317,8 +317,6 @@ public:
 	DMember(float)                                     TimeBetweenVariantsRestart                                  OFFSET(get<float>, {0x7D0, 4, 0, 0})
 	DMember(float)                                     TimeBetweenVariants                                         OFFSET(get<float>, {0x7D4, 4, 0, 0})
 	CMember(TArray<FFortCosmeticVariantPreview>)       CachedVariantPreviews                                       OFFSET(get<T>, {0x7D8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -370,6 +368,8 @@ public:
 	// UMaterialInstanceDynamic* GetVaultWorldBackgroundMID();                                                                  // [0x9b92394] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EventScreenBase.FortEventScreenBase.GetActiveModal
 	// UFortEventModalBase* GetActiveModal();                                                                                   // [0x9b922a4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.EventScreenListView
 /// Size: 0x01E0 (0x000298 - 0x000478)
 class UEventScreenListView : public UListViewBase
@@ -390,8 +390,6 @@ public:
 	DMember(bool)                                      bPreviewMode                                                OFFSET(get<bool>, {0x3FC, 1, 0, 0})
 	CMember(UCurveFloat*)                              ProgressAnimationCurve                                      OFFSET(get<T>, {0x400, 8, 0, 0})
 	DMember(bool)                                      bCanAnimateOnceComplete                                     OFFSET(get<bool>, {0x408, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -399,6 +397,8 @@ public:
 	// void SetNativeTickAllowed(bool bAllowed);                                                                                // [0x9b93678] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EventScreenBase.EventScreenListView.GetEventScreenData
 	// UFortEventScreenData* GetEventScreenData();                                                                              // [0x9b922cc] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.FortEventTokenCollectionWidget
 /// Size: 0x0060 (0x0002A8 - 0x000308)
 class UFortEventTokenCollectionWidget : public UUserWidget
@@ -412,13 +412,13 @@ public:
 	CMember(UImage*)                                   Image_Glow                                                  OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UTexture2D*>)               FallbackBrush                                               OFFSET(get<T>, {0x2C0, 32, 0, 0})
 	CMember(TWeakObjectPtr<UFortTokenType*>)           TokenDefinition                                             OFFSET(get<T>, {0x2E0, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTokenCollectionWidget.OnRefreshIcon
 	// void OnRefreshIcon(bool IsCollected, bool bIsFirstViewAfterCollection);                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/EventScreenBase.FortEventTrackerModule
 /// Size: 0x0008 (0x0002A8 - 0x0002B0)
 class UFortEventTrackerModule : public UUserWidget
@@ -468,13 +468,13 @@ class UFortEventTrackerModule_RewardRemaining : public UFortEventTrackerModule
 
 public:
 	CMember(UCommonButtonBase*)                        Button_PurchasePremium                                      OFFSET(get<T>, {0x2B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTrackerModule_RewardRemaining.OnPopulateRemaining
 	// void OnPopulateRemaining(int32_t ResourceNeeded, int32_t TotalResourceRequired, bool bRequiresPremiumTrackPurchase);     // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/EventScreenBase.FortEventTrackerModule_ProgressiveRewards
 /// Size: 0x0008 (0x0002B0 - 0x0002B8)
 class UFortEventTrackerModule_ProgressiveRewards : public UFortEventTrackerModule
@@ -484,13 +484,13 @@ class UFortEventTrackerModule_ProgressiveRewards : public UFortEventTrackerModul
 
 public:
 	CMember(UEventScreenListView*)                     ListView_Rewards                                            OFFSET(get<T>, {0x2B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EventScreenBase.FortEventTrackerModule_ProgressiveRewards.OnPopulateCompletionMessage
 	// void OnPopulateCompletionMessage(bool bIsComplete, FText& CompletionText);                                               // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/EventScreenBase.FortEventTrackerModule_Collection
 /// Size: 0x0000 (0x0002B0 - 0x0002B0)
 class UFortEventTrackerModule_Collection : public UFortEventTrackerModule
@@ -510,8 +510,6 @@ class UFortEventTrackerModule_Banner : public UFortEventTrackerModule
 
 public:
 	CMember(UFortLazyImage*)                           LazyImage_BannerArt                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -521,6 +519,8 @@ public:
 	// void OnPopulateBannerText(FText& BannerText);                                                                            // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventTrackerModule_Banner.OnCTACompleted
 	// void OnCTACompleted(bool bIsComplete);                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/EventScreenBase.FortEventTrackerModule_PremiumUpsell
 /// Size: 0x0070 (0x0002B0 - 0x000320)
 class UFortEventTrackerModule_PremiumUpsell : public UFortEventTrackerModule
@@ -532,8 +532,6 @@ public:
 	CMember(UFortCTAButton*)                           Button_Prompt                                               OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	SMember(FText)                                     PromptTextUnowned                                           OFFSET(get<T>, {0x2B8, 24, 0, 0})
 	SMember(FText)                                     PromptTextOwned                                             OFFSET(get<T>, {0x2D0, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -543,6 +541,8 @@ public:
 	// void OnIconLoaded(UTexture* LoadedTexture);                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/EventScreenBase.FortEventTrackerModule_PremiumUpsell.IsPremiumTrackOwned
 	// bool IsPremiumTrackOwned();                                                                                              // [0x9b93660] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EventScreenBase.FortEventTrackerModule_CustomText
 /// Size: 0x0000 (0x0002B0 - 0x0002B0)
 class UFortEventTrackerModule_CustomText : public UFortEventTrackerModule

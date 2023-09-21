@@ -27,8 +27,6 @@ public:
 	SMember(FPropertyPathTestStruct)                   StructRef                                                   OFFSET(get<T>, {0xA0, 80, 0, 0})
 	SMember(FPropertyPathTestStruct)                   StructConstRef                                              OFFSET(get<T>, {0xF0, 80, 0, 0})
 	CMember(UPropertyPathTestObject*)                  InnerObject                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -48,6 +46,8 @@ public:
 	// FPropertyPathTestStruct GetStruct();                                                                                     // [0x5132764] Final|Native|Public|Const 
 	// Function /Script/PropertyPath.PropertyPathTestObject.GetFloat
 	// float GetFloat();                                                                                                        // [0x5132748] Final|Native|Public|Const 
+};
+
 /// Struct /Script/PropertyPath.PropertyPathSegment
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FPropertyPathSegment : public MDKStruct

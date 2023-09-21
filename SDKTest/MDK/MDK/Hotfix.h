@@ -19,13 +19,13 @@ public:
 	SMember(FString)                                   HotfixManagerClassName                                      OFFSET(get<T>, {0x238, 16, 0, 0})
 	SMember(FString)                                   DebugPrefix                                                 OFFSET(get<T>, {0x248, 16, 0, 0})
 	CMember(TArray<UObject*>)                          AssetsHotfixedFromIniFiles                                  OFFSET(get<T>, {0x258, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Hotfix.OnlineHotfixManager.StartHotfixProcess
 	// void StartHotfixProcess();                                                                                               // [0x5ae1e10] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Hotfix.UpdateManager
 /// Size: 0x01D0 (0x000028 - 0x0001F8)
 class UUpdateManager : public UObject

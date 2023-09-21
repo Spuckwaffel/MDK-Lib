@@ -48,8 +48,6 @@ public:
 	CMember(TArray<UAssembledMeshSchema*>)             MeshParts                                                   OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FAssembledComponentReferences>)     MeshPartComponents                                          OFFSET(get<T>, {0xC0, 16, 0, 0})
 	DMember(bool)                                      bAssignMeshPartsOnBeginPlay                                 OFFSET(get<bool>, {0xD0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -65,6 +63,8 @@ public:
 	// void GatherAndAssignAssembledMeshParts();                                                                                // [0x1284298] Native|Public        
 	// Function /Script/AssembledMeshSystem.AssembledMeshUserComponent.CustomizationCompleted
 	// void CustomizationCompleted(int32_t PartIndex);                                                                          // [0x65fea68] Final|Native|Private 
+};
+
 /// Struct /Script/AssembledMeshSystem.AssembledMeshAttachmentRules
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FAssembledMeshAttachmentRules : public MDKStruct

@@ -179,8 +179,6 @@ class AReplicationGraphDebugActor : public AActor
 public:
 	CMember(UReplicationGraph*)                        ReplicationGraph                                            OFFSET(get<T>, {0x290, 8, 0, 0})
 	CMember(UNetReplicationGraphConnection*)           ConnectionManager                                           OFFSET(get<T>, {0x298, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -202,6 +200,8 @@ public:
 	// void ServerCellInfo();                                                                                                   // [0x2c813d4] Net|NetReliableNative|Event|Public|NetServer 
 	// Function /Script/ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo
 	// void ClientCellInfo(FVector CellLocation, FVector CellExtent, TArray<AActor*> Actors);                                   // [0x6efdb9c] Net|NetReliableNative|Event|Public|HasDefaults|NetClient 
+};
+
 /// Struct /Script/ReplicationGraph.ConnectionAlwaysRelevantNodePair
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FConnectionAlwaysRelevantNodePair : public MDKStruct

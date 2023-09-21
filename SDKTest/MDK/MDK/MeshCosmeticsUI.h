@@ -39,13 +39,13 @@ public:
 	SMember(FDataTableRowHandle)                       RandomizeSpraysInputAction                                  OFFSET(get<T>, {0x3F0, 16, 0, 0})
 	CMember(TWeakObjectPtr<UAthenaCosmeticItemDefinition*>) ItemDefinition                                         OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(TArray<FFortVariantRedirectorTileLoadedEmoteToRandomize>) LoadedEmotesToRandomize                      OFFSET(get<T>, {0x408, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MeshCosmeticsUI.FortVariantRedirectorTile.HandleBoundaryNavigation
 	// UWidget* HandleBoundaryNavigation(EUINavigation InNavigation);                                                           // [0x9c0a34c] Final|Native|Private 
+};
+
 /// Class /Script/MeshCosmeticsUI.FortVariantRedirectorTileButton
 /// Size: 0x0060 (0x001470 - 0x0014D0)
 class UFortVariantRedirectorTileButton : public UCommonButtonBase
@@ -92,8 +92,6 @@ public:
 	CMember(UCommonButtonGroupLegacy*)                 TabButtonGroup                                              OFFSET(get<T>, {0x7B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UAthenaCosmeticItemDefinition*>) ItemDefinition                                         OFFSET(get<T>, {0x7C0, 8, 0, 0})
 	CMember(UFortCustomizableObjectSprayVariant*)      SprayVariant                                                OFFSET(get<T>, {0x7C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -101,6 +99,8 @@ public:
 	// void BP_SetVariantEditorMode(bool bIsLockerMode);                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/MeshCosmeticsUI.FortVariantSprayCustomizer.BP_SetChannelSlotIcon
 	// void BP_SetChannelSlotIcon(TWeakObjectPtr<UObject*>& ChannelSlotIcon);                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/MeshCosmeticsUI.FortVariantSprayCustomizerSetting
 /// Size: 0x0040 (0x0002A8 - 0x0002E8)
 class UFortVariantSprayCustomizerSetting : public UUserWidget
@@ -111,8 +111,6 @@ class UFortVariantSprayCustomizerSetting : public UUserWidget
 public:
 	CMember(UAnalogSlider*)                            Slider_Value                                                OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	DMember(float)                                     CommitDelay                                                 OFFSET(get<float>, {0x2B0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -122,6 +120,8 @@ public:
 	// void BP_OnSetConstraints(FFloatRange& Constraints);                                                                      // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/MeshCosmeticsUI.FortVariantSprayCustomizerSetting.BP_OnChangeValue
 	// void BP_OnChangeValue(float Value, float NormalizedValue);                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Struct /Script/MeshCosmeticsUI.FortVariantSprayCustomizerChannelOptions
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FFortVariantSprayCustomizerChannelOptions : public MDKStruct

@@ -272,8 +272,6 @@ public:
 	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(get<T>, {0x4490, 16, 0, 0})
 	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult30                                 OFFSET(get<T>, {0x44A0, 32, 0, 0})
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine7                                 OFFSET(get<T>, {0x44C0, 200, 0, 0})
-};
-
 
 
 	/// Functions
@@ -293,6 +291,8 @@ public:
 	// void AnimNotify_LandEnter();                                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Irwin/AI/Prey/Burt/Animations/Burt_AnimBP.Burt_AnimBP_C.ExecuteUbergraph_Burt_AnimBP
 	// void ExecuteUbergraph_Burt_AnimBP(int32_t EntryPoint);                                                                   // [0x1ebf994] Final                
+};
+
 /// Class /Irwin/AI/Interfaces/Fauna_Jump_AnimInterface.Fauna_Jump_AnimInterface_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFauna_Jump_AnimInterface_C : public UAnimLayerInterface
@@ -531,8 +531,6 @@ public:
 	SMember(FAnimNode_RefPose)                         AnimGraphNode_IdentityPose3                                 OFFSET(get<T>, {0x4D00, 16, 0, 0})
 	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult35                                 OFFSET(get<T>, {0x4D10, 32, 0, 0})
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine8                                 OFFSET(get<T>, {0x4D30, 200, 0, 0})
-};
-
 
 
 	/// Functions
@@ -552,9 +550,11 @@ public:
 	// void AnimNotify_LandEnter();                                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Irwin/AI/Predators/Grandma/Animations/Grandma_AnimBP.Grandma_AnimBP_C.ExecuteUbergraph_Grandma_AnimBP
 	// void ExecuteUbergraph_Grandma_AnimBP(int32_t EntryPoint);                                                                // [0x1ebf994] Final                
-/// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_VehicleDmg.GE_RidingSprint_VehicleDmg_C
+};
+
+/// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_PawnDmg.GE_RidingSprint_PawnDmg_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_RidingSprint_VehicleDmg_C : public UGET_DirectPhysicalDamage_C
+class UGE_RidingSprint_PawnDmg_C : public UGET_DirectPhysicalDamage_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -562,9 +562,9 @@ class UGE_RidingSprint_VehicleDmg_C : public UGET_DirectPhysicalDamage_C
 public:
 };
 
-/// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_PawnDmg.GE_RidingSprint_PawnDmg_C
+/// Class /Irwin/AI/Prey/Burt/Abilities/GE_RidingSprint_VehicleDmg.GE_RidingSprint_VehicleDmg_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_RidingSprint_PawnDmg_C : public UGET_DirectPhysicalDamage_C
+class UGE_RidingSprint_VehicleDmg_C : public UGET_DirectPhysicalDamage_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;

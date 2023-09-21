@@ -56,8 +56,6 @@ public:
 	DMember(float)                                     CubeAngleLimitDegrees                                       OFFSET(get<float>, {0x4E0, 4, 0, 0})
 	CMember(UFortCorruptionSequenceData*)              CorruptionSequence                                          OFFSET(get<T>, {0x4E8, 8, 0, 0})
 	CMember(TArray<FTravelerStepCorruptionOverrideData>) TravelerCorruptionStepPercentOverrides                    OFFSET(get<T>, {0x4F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -65,6 +63,8 @@ public:
 	// void EditorGetCorruptionGenerationData(FCubeMovement_CorruptionGenerationData& OutData);                                 // [0x99b6acc] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CorruptionGameplayCodeRuntime.CubeMovementStaticPath.ClearAllGeneratedSplinesAndLockedData
 	// void ClearAllGeneratedSplinesAndLockedData();                                                                            // [0x99b68ec] Final|Native|Protected 
+};
+
 /// Class /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort
 /// Size: 0x0068 (0x000490 - 0x0004F8)
 class AFortAthenaMutator_WarEffort : public AFortAthenaMutator_GameModeBase
@@ -77,8 +77,6 @@ public:
 	CMember(TArray<FWarEffortMutatorChoiceData>)       WeaponChoices                                               OFFSET(get<T>, {0x4B8, 16, 0, 0})
 	CMember(TArray<FPrimaryAssetId>)                   PreloadedItemList                                           OFFSET(get<T>, {0x4C8, 16, 0, 0})
 	DMember(bool)                                      bCanPreloadItems                                            OFFSET(get<bool>, {0x4D8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -94,6 +92,8 @@ public:
 	// void SetFundingManagerReady(bool bIsReady);                                                                              // [0x99b7794] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CorruptionGameplayCodeRuntime.FortAthenaMutator_WarEffort.OnRep_PreloadedItemList
 	// void OnRep_PreloadedItemList();                                                                                          // [0x99b7780] Final|Native|Protected 
+};
+
 /// Class /Script/CorruptionGameplayCodeRuntime.WarEffortMeshActor
 /// Size: 0x0088 (0x000290 - 0x000318)
 class AWarEffortMeshActor : public AInfo
@@ -106,8 +106,6 @@ public:
 	CMember(TArray<FGameplayTag>)                      ActiveFundedItems                                           OFFSET(get<T>, {0x298, 16, 0, 0})
 	CMember(TArray<FGameplayTag>)                      ActiveTryBeforeYouBuyItems                                  OFFSET(get<T>, {0x2A8, 16, 0, 0})
 	CMember(TArray<FWarEffortFundingData>)             CurrentFundingData                                          OFFSET(get<T>, {0x2B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -117,6 +115,8 @@ public:
 	// void OnRep_ActiveTryBeforeYouBuyItems();                                                                                 // [0x99b7758] Final|Native|Protected 
 	// Function /Script/CorruptionGameplayCodeRuntime.WarEffortMeshActor.OnRep_ActiveFundedItems
 	// void OnRep_ActiveFundedItems();                                                                                          // [0x99b7744] Final|Native|Protected 
+};
+
 /// Struct /Script/CorruptionGameplayCodeRuntime.WarEffortFundingOptionData
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FWarEffortFundingOptionData : public MDKStruct

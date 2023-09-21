@@ -47,8 +47,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnEncounterActorDead                                        OFFSET(get<T>, {0x1F0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnEncounterEnded                                            OFFSET(get<T>, {0x200, 16, 0, 0})
 	CMember(TWeakObjectPtr<ALivingWorldEncounterPrefab*>) EncounterPrefab                                          OFFSET(get<T>, {0x210, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -80,6 +78,8 @@ public:
 	// void EndMobEncounter(FGameplayTag& MobIdentifier);                                                                       // [0x9b78370] Final|RequiredAPI|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/EncountersRuntime.EncounterMobManagerComponent.EndAndCleanupAllMobEncounters
 	// void EndAndCleanupAllMobEncounters();                                                                                    // [0x9b7835c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EncountersRuntime.StartLWMEncounterDelegateHandler
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UStartLWMEncounterDelegateHandler : public UObject
@@ -122,8 +122,6 @@ public:
 	DMember(bool)                                      bShouldPersist                                              OFFSET(get<bool>, {0x348, 1, 0, 0})
 	SMember(FGuid)                                     SavedActorGuid                                              OFFSET(get<T>, {0x368, 16, 0, 0})
 	CMember(UEncounterStateTreeComponent*)             EncounterStateTreeComponent                                 OFFSET(get<T>, {0x378, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -131,6 +129,8 @@ public:
 	// void OnCleanup();                                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/EncountersRuntime.EncounterGameplayVolume.IsDoneCleaningUp
 	// bool IsDoneCleaningUp();                                                                                                 // [0x986e4c8] Native|Event|Public|BlueprintEvent|Const 
+};
+
 /// Class /Script/EncountersRuntime.EncounterItem
 /// Size: 0x0020 (0x000088 - 0x0000A8)
 class UEncounterItem : public UFortItem
@@ -182,8 +182,6 @@ public:
 	CMember(TWeakObjectPtr<AActor*>)                   CenterActorOverride                                         OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(TSet<APlayerController*>)                  ExplicitContributors                                        OFFSET(get<T>, {0xB0, 80, 0, 0})
 	CMember(TWeakObjectPtr<UEncounterItem*>)           EncounterItem                                               OFFSET(get<T>, {0x100, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -211,6 +209,8 @@ public:
 	// bool GetVariable_Bool(FGameplayTag& VarName);                                                                            // [0x9b784f4] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EncountersRuntime.EncounterManagerComponent.AddExplicitContributor
 	// void AddExplicitContributor(APlayerController* Contributor);                                                             // [0x9b782d8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EncountersRuntime.EncounterStateTreeComponent
 /// Size: 0x0000 (0x000148 - 0x000148)
 class UEncounterStateTreeComponent : public UStateTreeComponent
@@ -232,13 +232,13 @@ public:
 	CMember(TArray<FEncounterPrefabEntry>)             EncounterEntries                                            OFFSET(get<T>, {0x958, 16, 0, 0})
 	CMember(UEncounterItem*)                           EncounterItem                                               OFFSET(get<T>, {0x968, 8, 0, 0})
 	CMember(TWeakObjectPtr<UEncounterItemDefinition*>) EncounterDefinition                                         OFFSET(get<T>, {0x970, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EncountersRuntime.LivingWorldEncounterPrefab.OnRep_EncounterDefinition
 	// void OnRep_EncounterDefinition();                                                                                        // [0x9b79c40] Final|Native|Private 
+};
+
 /// Struct /Script/EncountersRuntime.EncounterMobSpawnInfo
 /// Size: 0x00A0 (0x000000 - 0x0000A0)
 class FEncounterMobSpawnInfo : public MDKStruct

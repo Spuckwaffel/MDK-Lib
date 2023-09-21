@@ -19,8 +19,6 @@ class UPOIBannerToastSocialAvatar : public UFortHUDElementWidget
 
 public:
 	CMember(UFortSocialAvatarIcon*)                    Icon_SocialAvatar                                           OFFSET(get<T>, {0x310, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,6 +26,8 @@ public:
 	// void SetSocialAvatarTexture(TWeakObjectPtr<UTexture2D*> AvatarTexture);                                                  // [0x9bcb954] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/POIBannerUI.POIBannerToastSocialAvatar.SetSocialAvatar
 	// void SetSocialAvatar(AFortPlayerState* PlayerState);                                                                     // [0x9bcb78c] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/POIBannerUI.POIBannerToastWidgetBase
 /// Size: 0x0048 (0x000310 - 0x000358)
 class UPOIBannerToastWidgetBase : public UFortHUDElementWidget
@@ -37,8 +37,6 @@ class UPOIBannerToastWidgetBase : public UFortHUDElementWidget
 
 public:
 	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x350, 2, 0, 0})
-};
-
 
 
 	/// Functions
@@ -52,3 +50,5 @@ public:
 	// void K2_OnBecomeActive();                                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/POIBannerUI.POIBannerToastWidgetBase.GetLocationTextFromTag
 	// FText GetLocationTextFromTag(FGameplayTag& LocationTag);                                                                 // [0x9bcb698] Final|Native|Protected|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+

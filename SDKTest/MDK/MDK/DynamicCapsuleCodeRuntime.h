@@ -20,8 +20,6 @@ class UDynamicCapsuleComponent : public UFortPawnComponent
 public:
 	CMember(TArray<FDynamicCapsuleEntry>)              DynamicCapsuleEntryStack                                    OFFSET(get<T>, {0xA8, 16, 0, 0})
 	SMember(FDynamicCapsuleState)                      ReplicatedCapsuleState                                      OFFSET(get<T>, {0xB8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// bool ApplyDynamicCapsuleWithLocationAdjust(FGameplayTag& tag, float CapsuleRadius, float CapsuleHalfHeight, double NewRelativeMeshHeight); // [0x9b5f9c4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/DynamicCapsuleCodeRuntime.DynamicCapsuleComponent.ApplyDynamicCapsule
 	// bool ApplyDynamicCapsule(FGameplayTag& tag, float CapsuleRadius, float CapsuleHalfHeight);                               // [0x9b5f7ec] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/DynamicCapsuleCodeRuntime.AnimNotifyState_SetCapsuleSize
 /// Size: 0x0018 (0x000030 - 0x000048)
 class UAnimNotifyState_SetCapsuleSize : public UAnimNotifyState

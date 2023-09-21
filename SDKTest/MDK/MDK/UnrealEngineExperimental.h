@@ -18,8 +18,6 @@ class UControllerComponentDebugDraw : public UControllerComponent
 
 public:
 	CMember(TArray<FPersistentLineBatcher>)            PersistentLineBatchers                                      OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -47,6 +45,8 @@ public:
 	// void ClearChannel(uint32_t ChannelId);                                                                                   // [0x66c0a7c] RequiredAPI|Net|NetReliableNative|Event|Public|NetClient|Const 
 	// Function /Script/UnrealEngineExperimental.ControllerComponentDebugDraw.Clear
 	// void Clear(uint32_t ChannelId, uint32_t InstanceID);                                                                     // [0x66c0800] RequiredAPI|Net|NetReliableNative|Event|Public|NetClient|Const 
+};
+
 /// Struct /Script/UnrealEngineExperimental.PersistentLineBatcher
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FPersistentLineBatcher : public MDKStruct

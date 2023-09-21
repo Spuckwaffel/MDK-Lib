@@ -35,13 +35,13 @@ public:
 	CMember(UCommonButtonBase*)                        Button_KoalaDummy                                           OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UFortLazyImage*)                           QrCodeImage                                                 OFFSET(get<T>, {0x408, 8, 0, 0})
 	SMember(FString)                                   QRCodeURL                                                   OFFSET(get<T>, {0x410, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/KoalaUI.FortSidebarPanelKoala.OnConnectionChanged
 	// void OnConnectionChanged(bool bConnected);                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/KoalaUI.FortUIGameFeatureAction_AttemptKoalaModal
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UFortUIGameFeatureAction_AttemptKoalaModal : public UFortUIGameFeatureAction_PostFrontendFlowActions
@@ -88,8 +88,6 @@ public:
 	DMember(int32_t)                                   MockClipUploadLongTime                                      OFFSET(get<int32_t>, {0x4A8, 4, 0, 0})
 	DMember(int32_t)                                   MockClipCreateShortTime                                     OFFSET(get<int32_t>, {0x4AC, 4, 0, 0})
 	DMember(int32_t)                                   MockClipCreateLongTime                                      OFFSET(get<int32_t>, {0x4B0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -125,6 +123,8 @@ public:
 	// int32_t GetUploadingClipCount();                                                                                         // [0x9bc65d4] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/KoalaUI.KoalaHUDWidget.GetTrackedClipCount
 	// int32_t GetTrackedClipCount();                                                                                           // [0x916c218] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/KoalaUI.KoalaMainMenuButton
 /// Size: 0x0010 (0x0015F0 - 0x001600)
 class UKoalaMainMenuButton : public UFortMainMenuButtonExtension

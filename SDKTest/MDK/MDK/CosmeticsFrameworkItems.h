@@ -17,8 +17,6 @@ class UCosmeticDataComponent : public UActorComponent
 
 public:
 	CMember(TMap<FGameplayTag, FInstancedStructContainer>) PropertyContainers                                      OFFSET(get<T>, {0xA0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,6 +26,8 @@ public:
 	// bool BP_FindProperty(FGameplayTag SlotTag, FGameplayTag PropertyTag, FCosmeticPropertyBase& OutProperty);                // [0x74f5004] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/CosmeticsFrameworkItems.CosmeticDataComponent.BP_AddOrOverrideProperty
 	// bool BP_AddOrOverrideProperty(FGameplayTag SlotTag, FCosmeticPropertyBase& Property);                                    // [0x74f4d3c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/CosmeticsFrameworkItems.CosmeticPropertyBase
 /// Size: 0x0004 (0x000000 - 0x000004)
 class FCosmeticPropertyBase : public MDKStruct

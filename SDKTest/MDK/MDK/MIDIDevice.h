@@ -70,8 +70,6 @@ class UMIDIDeviceOutputController : public UMIDIDeviceControllerBase
 public:
 	DMember(int32_t)                                   DeviceID                                                    OFFSET(get<int32_t>, {0x28, 4, 0, 0})
 	SMember(FString)                                   DeviceName                                                  OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -91,6 +89,8 @@ public:
 	// void SendMIDIControlChange(int32_t Channel, int32_t Type, int32_t Value);                                                // [0xa286310] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MIDIDevice.MIDIDeviceOutputController.SendMIDIChannelAftertouch
 	// void SendMIDIChannelAftertouch(int32_t Channel, float Amount);                                                           // [0xa28624c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/MIDIDevice.FoundMIDIDevice
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FFoundMIDIDevice : public MDKStruct

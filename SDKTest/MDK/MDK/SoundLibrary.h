@@ -26,8 +26,6 @@ public:
 	DMember(bool)                                      bForwardToAttachedActors                                    OFFSET(get<bool>, {0x35, 1, 0, 0})
 	DMember(bool)                                      bAutoResetContext                                           OFFSET(get<bool>, {0x36, 1, 0, 0})
 	SMember(FGameplayTagContainer)                     PlaybackTags                                                OFFSET(get<T>, {0x38, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -41,6 +39,8 @@ public:
 	// bool GatherActorTargets(TArray<AActor*>& OutActors);                                                                     // [0x16d0584] Native|Event|Public|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/SoundLibrary.SoundLibraryContext.CreateEventName
 	// bool CreateEventName(FGameplayTag& OutEventName);                                                                        // [0x16d0ba4] Native|Event|Public|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/SoundLibrary.SoundLibraryAnimContext
 /// Size: 0x0040 (0x000058 - 0x000098)
 class USoundLibraryAnimContext : public USoundLibraryContext
@@ -54,13 +54,13 @@ public:
 	CMember(TWeakObjectPtr<USkeletalMeshComponent*>)   MeshComponent                                               OFFSET(get<T>, {0x84, 8, 0, 0})
 	DMember(bool)                                      bSupportsNotifyEnd                                          OFFSET(get<bool>, {0x8C, 1, 0, 0})
 	DMember(float)                                     AnimRate                                                    OFFSET(get<float>, {0x90, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SoundLibrary.SoundLibraryAnimContext.ConfigureContext
 	// void ConfigureContext(AActor* OwningActor, UAnimSequenceBase* InAnimation, FSoundLibraryAnimContextSettings& InSettings); // [0x65f7d18] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SoundLibrary.SoundLibraryAnimNotifyHelper
 /// Size: 0x0010 (0x000028 - 0x000038)
 class USoundLibraryAnimNotifyHelper : public UObject
@@ -124,8 +124,6 @@ public:
 	CMember(TMap<FGameplayTag, TWeakObjectPtr>)        FullLibrary                                                 OFFSET(get<T>, {0xF0, 80, 0, 0})
 	CMember(TArray<USoundBase*>)                       LoadedSoundObjects                                          OFFSET(get<T>, {0x140, 16, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    Assets                                                      OFFSET(get<T>, {0x150, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -137,6 +135,8 @@ public:
 	// USoundBase* FindSound(FGameplayTag InTag);                                                                               // [0x65f80ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SoundLibrary.SoundLibrary.AddSound
 	// void AddSound(FGameplayTag InTag, USoundBase* InSound);                                                                  // [0x65f7aa4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SoundLibrary.SoundLibraryComponent
 /// Size: 0x0090 (0x0000A8 - 0x000138)
 class USoundLibraryComponent : public UAudioGameplayComponent
@@ -150,8 +150,6 @@ public:
 	CMember(TArray<USoundLibrary*>)                    Libraries                                                   OFFSET(get<T>, {0xC0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSoundLibraryPlayEvent                                     OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(USoundLibraryContext*)                     Context                                                     OFFSET(get<T>, {0x130, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -179,6 +177,8 @@ public:
 	// void AddLibrary(USoundLibrary* InLibrary);                                                                               // [0x65f79ec] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SoundLibrary.SoundLibraryComponent.AddLibraries
 	// void AddLibraries(TArray<USoundLibrary*>& InLibraries);                                                                  // [0x65f794c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SoundLibrary.SoundLibraryProviderInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USoundLibraryProviderInterface : public UInterface
@@ -220,13 +220,13 @@ class USoundLibrarySimpleContext : public USoundLibraryContext
 
 public:
 	SMember(FSoundLibrarySimpleContextSettings)        Settings                                                    OFFSET(get<T>, {0x58, 88, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SoundLibrary.SoundLibrarySimpleContext.ConfigureContext
 	// void ConfigureContext(AActor* OwningActor, FSoundLibrarySimpleContextSettings& InSettings);                              // [0x65f7f40] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SoundLibrary.SoundLibrarySubsystem
 /// Size: 0x0068 (0x000030 - 0x000098)
 class USoundLibrarySubsystem : public UWorldSubsystem
@@ -238,8 +238,6 @@ public:
 	CMember(TArray<USoundLibraryCollection*>)          LibraryCollections                                          OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(USoundLibrarySimpleContext*)               SimpleContext                                               OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(TMap<uint32_t, FSoundLibraryActorData>)    ActorDataMap                                                OFFSET(get<T>, {0x48, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -269,6 +267,8 @@ public:
 	// void AddLibraries(AActor* Actor, TArray<USoundLibrary*> Libraries);                                                      // [0x1dfb134] Final|Native|Public|BlueprintCallable 
 	// Function /Script/SoundLibrary.SoundLibrarySubsystem.AddContext
 	// USoundLibraryContext* AddContext(AActor* Actor, UClass* ContextClass);                                                   // [0x65f775c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/SoundLibrary.SoundLibraryTagHelperFunctions
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USoundLibraryTagHelperFunctions : public UObject

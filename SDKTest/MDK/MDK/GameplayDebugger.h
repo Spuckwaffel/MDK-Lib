@@ -23,8 +23,6 @@ public:
 	SMember(FGameplayDebuggerDebugActor)               DebugActor                                                  OFFSET(get<T>, {0x2B8, 16, 0, 0})
 	SMember(FGameplayDebuggerVisLogSync)               VisLogSync                                                  OFFSET(get<T>, {0x2C8, 16, 0, 0})
 	CMember(UGameplayDebuggerRenderingComponent*)      RenderingComp                                               OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -46,6 +44,8 @@ public:
 	// void OnRep_ReplicatedData();                                                                                             // [0x6378a1c] Final|RequiredAPI|Native|Protected 
 	// Function /Script/GameplayDebugger.GameplayDebuggerCategoryReplicator.ClientDataPackPacket
 	// void ClientDataPackPacket(FGameplayDebuggerDataPackRPCParams Params);                                                    // [0x6378898] RequiredAPI|Net|NetReliableNative|Event|Protected|NetClient 
+};
+
 /// Class /Script/GameplayDebugger.GameplayDebuggerConfig
 /// Size: 0x0230 (0x000028 - 0x000258)
 class UGameplayDebuggerConfig : public UObject

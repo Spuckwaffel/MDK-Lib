@@ -22,8 +22,6 @@ class UFortMantisLayerAnimInstance : public UFortPlayerAnimInstanceProxy
 
 public:
 	SMember(FFortMantisReplicatedAnimInstanceInfo)     MantisAnimInstanceInfo                                      OFFSET(get<T>, {0x15C8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,6 +29,8 @@ public:
 	// void OnMantisTechniqueStarted(int32_t TechniqueIndex, FName TechniqueName);                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortMantisLayerAnimInstance.OnMantisTechniqueEnded
 	// void OnMantisTechniqueEnded(int32_t TechniqueIndex, FName TechniqueName);                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/MantisRuntime.FortItemLayerAnimInstance_UncleBrolly
 /// Size: 0x0090 (0x0006D0 - 0x000760)
 class UFortItemLayerAnimInstance_UncleBrolly : public UFortItemLayerAnimInstance
@@ -159,8 +159,6 @@ public:
 	CMember(UFortMantisPawnComponent*)                 MantisPawnComponent                                         OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UAbilityTask_PlayMontageAndWait*)          MontageTask                                                 OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(UAbilityTask_ApplyRootMotion_Base*)        RootMotionTask                                              OFFSET(get<T>, {0xB40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -188,6 +186,8 @@ public:
 	// void BP_OnMantisInputEvent(EFortMantisTechniqueActivationInputType InputType, EFortMantisTechniqueActivationTimingType InputTiming, bool bDidInputStartTechnique, bool bDidInputQueueTechnique, float InputHeldDuration); // [0x1ebf994] BlueprintCosmetic|Event|Protected|BlueprintEvent 
 	// Function /Script/MantisRuntime.FortGameplayAbility_Mantis.BP_MantisAbilityTechniqueStarted
 	// void BP_MantisAbilityTechniqueStarted(FGameplayTagContainer OwningTags, FName SequenceName, bool StartsSequence, bool EndsSequence); // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/MantisRuntime.FortMantisData
 /// Size: 0x0040 (0x000030 - 0x000070)
 class UFortMantisData : public UDataAsset
@@ -215,8 +215,6 @@ public:
 	CMember(TMap<UAnimMontage*, FFortMantisMontageData>) MontageDataMap                                            OFFSET(get<T>, {0x178, 80, 0, 0})
 	CMember(UFortMantisData*)                          MantisData                                                  OFFSET(get<T>, {0x1C8, 8, 0, 0})
 	CMember(AFortWeapon*)                              Weapon                                                      OFFSET(get<T>, {0x1D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -248,6 +246,8 @@ public:
 	// AActor* GetLockOnTarget();                                                                                               // [0x98f5788] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MantisRuntime.FortMantisPawnComponent.GetCurrentTechniqueMetadata
 	// FFortMantisTechniqueMetadata GetCurrentTechniqueMetadata();                                                              // [0x98f5578] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MantisRuntime.FortMantisWeaponComponent
 /// Size: 0x0040 (0x0000A0 - 0x0000E0)
 class UFortMantisWeaponComponent : public UFortWeaponComponent
@@ -262,8 +262,6 @@ public:
 	CMember(TWeakObjectPtr<UFortMantisPawnComponent*>) MantisPawnComponent                                         OFFSET(get<T>, {0xAC, 8, 0, 0})
 	SMember(FFortMantisReplicatedAnimInstanceInfo)     AnimInstanceInfo                                            OFFSET(get<T>, {0xC0, 16, 0, 0})
 	SMember(FFortMantisReplicatedAnimInstanceInfo)     ReplayAnimInstanceInfo                                      OFFSET(get<T>, {0xD0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -285,6 +283,8 @@ public:
 	// void OnEquip(AFortWeapon* Weapon);                                                                                       // [0x98f5978] Final|Native|Protected 
 	// Function /Script/MantisRuntime.FortMantisWeaponComponent.GetAnimInstanceInfo
 	// FFortMantisReplicatedAnimInstanceInfo GetAnimInstanceInfo();                                                             // [0x98f555c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/MantisRuntime.FortMantisTechniqueMetadata
 /// Size: 0x0140 (0x000000 - 0x000140)
 class FFortMantisTechniqueMetadata : public MDKStruct

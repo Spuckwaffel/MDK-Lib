@@ -57,8 +57,6 @@ class UModularSynthComponent : public USynthComponent
 
 public:
 	DMember(int32_t)                                   VoiceCount                                                  OFFSET(get<int32_t>, {0x900, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -180,6 +178,8 @@ public:
 	// void NoteOff(float Note, bool bAllNotesOff, bool bKillAllNotes);                                                         // [0x6c59d48] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.ModularSynthComponent.CreatePatch
 	// FPatchId CreatePatch(ESynth1PatchSource PatchSource, TArray<FSynth1PatchCable>& PatchCables, bool bEnableByDefault);     // [0x6c58ca0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectBitCrusherPreset
 /// Size: 0x01A8 (0x000068 - 0x000210)
 class USourceEffectBitCrusherPreset : public USoundEffectSourcePreset
@@ -189,8 +189,6 @@ class USourceEffectBitCrusherPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectBitCrusherSettings)           Settings                                                    OFFSET(get<T>, {0x150, 192, 0, 0})
-};
-
 
 
 	/// Functions
@@ -210,6 +208,8 @@ public:
 	// void SetBitModulators(TSet<USoundModulatorBase*>& InModulators);                                                         // [0x6c5ab34] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Synthesis.SourceEffectBitCrusherPreset.SetBitModulator
 	// void SetBitModulator(USoundModulatorBase* Modulator);                                                                    // [0x6c5aa94] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectChorusPreset
 /// Size: 0x0478 (0x000068 - 0x0004E0)
 class USourceEffectChorusPreset : public USoundEffectSourcePreset
@@ -219,8 +219,6 @@ class USourceEffectChorusPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectChorusSettings)               Settings                                                    OFFSET(get<T>, {0x2B8, 552, 0, 0})
-};
-
 
 
 	/// Functions
@@ -264,6 +262,8 @@ public:
 	// void SetDepthModulator(USoundModulatorBase* Modulator);                                                                  // [0x6c5b504] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.SourceEffectChorusPreset.SetDepth
 	// void SetDepth(float Depth);                                                                                              // [0x6c5b484] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectConvolutionReverbPreset
 /// Size: 0x0058 (0x000068 - 0x0000C0)
 class USourceEffectConvolutionReverbPreset : public USoundEffectSourcePreset
@@ -276,8 +276,6 @@ public:
 	SMember(FSourceEffectConvolutionReverbSettings)    Settings                                                    OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(ESubmixEffectConvolutionReverbBlockSize)   BlockSize                                                   OFFSET(get<T>, {0x80, 1, 0, 0})
 	DMember(bool)                                      bEnableHardwareAcceleration                                 OFFSET(get<bool>, {0x81, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -285,6 +283,8 @@ public:
 	// void SetSettings(FSourceEffectConvolutionReverbSettings& InSettings);                                                    // [0x6c60440] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Synthesis.SourceEffectConvolutionReverbPreset.SetImpulseResponse
 	// void SetImpulseResponse(UAudioImpulseResponse* InImpulseResponse);                                                       // [0x6c5d7a0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectDynamicsProcessorPreset
 /// Size: 0x0078 (0x000068 - 0x0000E0)
 class USourceEffectDynamicsProcessorPreset : public USoundEffectSourcePreset
@@ -294,13 +294,13 @@ class USourceEffectDynamicsProcessorPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectDynamicsProcessorSettings)    Settings                                                    OFFSET(get<T>, {0xB8, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
 	// void SetSettings(FSourceEffectDynamicsProcessorSettings& InSettings);                                                    // [0x6c604f0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.EnvelopeFollowerListener
 /// Size: 0x0020 (0x0000A0 - 0x0000C0)
 class UEnvelopeFollowerListener : public UActorComponent
@@ -321,8 +321,6 @@ class USourceEffectEnvelopeFollowerPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectEnvelopeFollowerSettings)     Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -332,6 +330,8 @@ public:
 	// void SetSettings(FSourceEffectEnvelopeFollowerSettings& InSettings);                                                     // [0x6c60690] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
 	// void RegisterEnvelopeFollowerListener(UEnvelopeFollowerListener* EnvelopeFollowerListener);                              // [0x6c5a21c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectEQPreset
 /// Size: 0x0048 (0x000068 - 0x0000B0)
 class USourceEffectEQPreset : public USoundEffectSourcePreset
@@ -341,13 +341,13 @@ class USourceEffectEQPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectEQSettings)                   Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectEQPreset.SetSettings
 	// void SetSettings(FSourceEffectEQSettings& InSettings);                                                                   // [0x6c605c4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectFilterPreset
 /// Size: 0x0068 (0x000068 - 0x0000D0)
 class USourceEffectFilterPreset : public USoundEffectSourcePreset
@@ -357,13 +357,13 @@ class USourceEffectFilterPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectFilterSettings)               Settings                                                    OFFSET(get<T>, {0xB0, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectFilterPreset.SetSettings
 	// void SetSettings(FSourceEffectFilterSettings& InSettings);                                                               // [0x6c6072c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectFoldbackDistortionPreset
 /// Size: 0x0040 (0x000068 - 0x0000A8)
 class USourceEffectFoldbackDistortionPreset : public USoundEffectSourcePreset
@@ -373,13 +373,13 @@ class USourceEffectFoldbackDistortionPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectFoldbackDistortionSettings)   Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectFoldbackDistortionPreset.SetSettings
 	// void SetSettings(FSourceEffectFoldbackDistortionSettings& InSettings);                                                   // [0x6c60df4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectMidSideSpreaderPreset
 /// Size: 0x0038 (0x000068 - 0x0000A0)
 class USourceEffectMidSideSpreaderPreset : public USoundEffectSourcePreset
@@ -389,13 +389,13 @@ class USourceEffectMidSideSpreaderPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectMidSideSpreaderSettings)      Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectMidSideSpreaderPreset.SetSettings
 	// void SetSettings(FSourceEffectMidSideSpreaderSettings& InSettings);                                                      // [0x6c60e8c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectMotionFilterPreset
 /// Size: 0x0118 (0x000068 - 0x000180)
 class USourceEffectMotionFilterPreset : public USoundEffectSourcePreset
@@ -405,13 +405,13 @@ class USourceEffectMotionFilterPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectMotionFilterSettings)         Settings                                                    OFFSET(get<T>, {0x108, 120, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectMotionFilterPreset.SetSettings
 	// void SetSettings(FSourceEffectMotionFilterSettings& InSettings);                                                         // [0x6c60f24] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectPannerPreset
 /// Size: 0x0038 (0x000068 - 0x0000A0)
 class USourceEffectPannerPreset : public USoundEffectSourcePreset
@@ -421,13 +421,13 @@ class USourceEffectPannerPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectPannerSettings)               Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectPannerPreset.SetSettings
 	// void SetSettings(FSourceEffectPannerSettings& InSettings);                                                               // [0x6c6100c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectPhaserPreset
 /// Size: 0x0048 (0x000068 - 0x0000B0)
 class USourceEffectPhaserPreset : public USoundEffectSourcePreset
@@ -437,13 +437,13 @@ class USourceEffectPhaserPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectPhaserSettings)               Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectPhaserPreset.SetSettings
 	// void SetSettings(FSourceEffectPhaserSettings& InSettings);                                                               // [0x6c610a0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectRingModulationPreset
 /// Size: 0x0068 (0x000068 - 0x0000D0)
 class USourceEffectRingModulationPreset : public USoundEffectSourcePreset
@@ -453,13 +453,13 @@ class USourceEffectRingModulationPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectRingModulationSettings)       Settings                                                    OFFSET(get<T>, {0xB0, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectRingModulationPreset.SetSettings
 	// void SetSettings(FSourceEffectRingModulationSettings& InSettings);                                                       // [0x6c61140] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectSimpleDelayPreset
 /// Size: 0x0058 (0x000068 - 0x0000C0)
 class USourceEffectSimpleDelayPreset : public USoundEffectSourcePreset
@@ -469,13 +469,13 @@ class USourceEffectSimpleDelayPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectSimpleDelaySettings)          Settings                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectSimpleDelayPreset.SetSettings
 	// void SetSettings(FSourceEffectSimpleDelaySettings& InSettings);                                                          // [0x6c611dc] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectStereoDelayPreset
 /// Size: 0x0070 (0x000068 - 0x0000D8)
 class USourceEffectStereoDelayPreset : public USoundEffectSourcePreset
@@ -485,13 +485,13 @@ class USourceEffectStereoDelayPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectStereoDelaySettings)          Settings                                                    OFFSET(get<T>, {0xB4, 36, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectStereoDelayPreset.SetSettings
 	// void SetSettings(FSourceEffectStereoDelaySettings& InSettings);                                                          // [0x6c612a4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SourceEffectWaveShaperPreset
 /// Size: 0x0038 (0x000068 - 0x0000A0)
 class USourceEffectWaveShaperPreset : public USoundEffectSourcePreset
@@ -501,13 +501,13 @@ class USourceEffectWaveShaperPreset : public USoundEffectSourcePreset
 
 public:
 	SMember(FSourceEffectWaveShaperSettings)           Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SourceEffectWaveShaperPreset.SetSettings
 	// void SetSettings(FSourceEffectWaveShaperSettings& InSettings);                                                           // [0x6c6100c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectConvolutionReverbPreset
 /// Size: 0x0098 (0x000068 - 0x000100)
 class USubmixEffectConvolutionReverbPreset : public USoundEffectSubmixPreset
@@ -520,8 +520,6 @@ public:
 	SMember(FSubmixEffectConvolutionReverbSettings)    Settings                                                    OFFSET(get<T>, {0x70, 48, 0, 0})
 	CMember(ESubmixEffectConvolutionReverbBlockSize)   BlockSize                                                   OFFSET(get<T>, {0xA0, 1, 0, 0})
 	DMember(bool)                                      bEnableHardwareAcceleration                                 OFFSET(get<bool>, {0xA1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -529,6 +527,8 @@ public:
 	// void SetSettings(FSubmixEffectConvolutionReverbSettings& InSettings);                                                    // [0x6c61334] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Synthesis.SubmixEffectConvolutionReverbPreset.SetImpulseResponse
 	// void SetImpulseResponse(UAudioImpulseResponse* InImpulseResponse);                                                       // [0x6c5d828] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectDelayStatics
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USubmixEffectDelayStatics : public UBlueprintFunctionLibrary
@@ -549,8 +549,6 @@ class USubmixEffectDelayPreset : public USoundEffectSubmixPreset
 public:
 	SMember(FSubmixEffectDelaySettings)                Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
 	SMember(FSubmixEffectDelaySettings)                DynamicSettings                                             OFFSET(get<T>, {0xA8, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -564,6 +562,8 @@ public:
 	// void SetDefaultSettings(FSubmixEffectDelaySettings& InSettings);                                                         // [0x6c5b190] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Synthesis.SubmixEffectDelayPreset.GetMaxDelayInMilliseconds
 	// float GetMaxDelayInMilliseconds();                                                                                       // [0x315ad40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Synthesis.SubmixEffectFilterPreset
 /// Size: 0x0040 (0x000068 - 0x0000A8)
 class USubmixEffectFilterPreset : public USoundEffectSubmixPreset
@@ -573,8 +573,6 @@ class USubmixEffectFilterPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectFilterSettings)               Settings                                                    OFFSET(get<T>, {0x9C, 12, 0, 0})
-};
-
 
 
 	/// Functions
@@ -592,6 +590,8 @@ public:
 	// void SetFilterCutoffFrequency(float InFrequency);                                                                        // [0x6c5c110] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.SubmixEffectFilterPreset.SetFilterAlgorithm
 	// void SetFilterAlgorithm(ESubmixFilterAlgorithm InAlgorithm);                                                             // [0x6c5c074] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectFlexiverbPreset
 /// Size: 0x0048 (0x000068 - 0x0000B0)
 class USubmixEffectFlexiverbPreset : public USoundEffectSubmixPreset
@@ -601,13 +601,13 @@ class USubmixEffectFlexiverbPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectFlexiverbSettings)            Settings                                                    OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectFlexiverbPreset.SetSettings
 	// void SetSettings(FSubmixEffectFlexiverbSettings& InSettings);                                                            // [0x6c61574] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectMultibandCompressorPreset
 /// Size: 0x0098 (0x000068 - 0x000100)
 class USubmixEffectMultibandCompressorPreset : public USoundEffectSubmixPreset
@@ -617,8 +617,6 @@ class USubmixEffectMultibandCompressorPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectMultibandCompressorSettings)  Settings                                                    OFFSET(get<T>, {0xC8, 56, 0, 0})
-};
-
 
 
 	/// Functions
@@ -630,6 +628,8 @@ public:
 	// void SetAudioBus(UAudioBus* AudioBus);                                                                                   // [0x6c5a9b4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.SubmixEffectMultibandCompressorPreset.ResetKey
 	// void ResetKey();                                                                                                         // [0x6c5a32c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectStereoDelayPreset
 /// Size: 0x0070 (0x000068 - 0x0000D8)
 class USubmixEffectStereoDelayPreset : public USoundEffectSubmixPreset
@@ -639,13 +639,13 @@ class USubmixEffectStereoDelayPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectStereoDelaySettings)          Settings                                                    OFFSET(get<T>, {0xB4, 36, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectStereoDelayPreset.SetSettings
 	// void SetSettings(FSubmixEffectStereoDelaySettings& InSettings);                                                          // [0xea14f0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectStereoToQuadPreset
 /// Size: 0x0038 (0x000068 - 0x0000A0)
 class USubmixEffectStereoToQuadPreset : public USoundEffectSubmixPreset
@@ -655,13 +655,13 @@ class USubmixEffectStereoToQuadPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectStereoToQuadSettings)         Settings                                                    OFFSET(get<T>, {0x98, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Synthesis.SubmixEffectStereoToQuadPreset.SetSettings
 	// void SetSettings(FSubmixEffectStereoToQuadSettings& InSettings);                                                         // [0x6c61cf4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SubmixEffectTapDelayPreset
 /// Size: 0x0070 (0x000068 - 0x0000D8)
 class USubmixEffectTapDelayPreset : public USoundEffectSubmixPreset
@@ -671,8 +671,6 @@ class USubmixEffectTapDelayPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FSubmixEffectTapDelaySettings)             Settings                                                    OFFSET(get<T>, {0xA8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -692,6 +690,8 @@ public:
 	// float GetMaxDelayInMilliseconds();                                                                                       // [0x58f324c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.SubmixEffectTapDelayPreset.AddTap
 	// void AddTap(int32_t& TapId);                                                                                             // [0x6c58c14] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.GranularSynth
 /// Size: 0x03E0 (0x000900 - 0x000CE0)
 class UGranularSynth : public USynthComponent
@@ -701,8 +701,6 @@ class UGranularSynth : public USynthComponent
 
 public:
 	CMember(USoundWave*)                               GranulatedSoundWave                                         OFFSET(get<T>, {0x900, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -746,6 +744,8 @@ public:
 	// float GetSampleDuration();                                                                                               // [0x6c59980] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Synthesis.GranularSynth.GetCurrentPlayheadTime
 	// float GetCurrentPlayheadTime();                                                                                          // [0x6c594ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Synthesis.MonoWaveTableSynthPreset
 /// Size: 0x0148 (0x000028 - 0x000170)
 class UMonoWaveTableSynthPreset : public UObject
@@ -773,8 +773,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnTableAltered                                              OFFSET(get<T>, {0x900, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnNumTablesChanged                                          OFFSET(get<T>, {0x910, 16, 0, 0})
 	CMember(UMonoWaveTableSynthPreset*)                CurrentPreset                                               OFFSET(get<T>, {0x920, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -866,6 +864,8 @@ public:
 	// TArray<float> GetKeyFrameValuesForTable(float TableIndex);                                                               // [0x6c59594] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Synthesis.SynthComponentMonoWaveTable.GetCurveTangent
 	// float GetCurveTangent(int32_t TableIndex);                                                                               // [0x6c59504] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SynthComponentToneGenerator
 /// Size: 0x00F0 (0x000900 - 0x0009F0)
 class USynthComponentToneGenerator : public USynthComponent
@@ -879,8 +879,6 @@ public:
 	SMember(FRuntimeFloatCurve)                        DistanceAttenuationCurve                                    OFFSET(get<T>, {0x908, 136, 0, 0})
 	SMember(FVector2D)                                 DistanceRange                                               OFFSET(get<T>, {0x990, 16, 0, 0})
 	DMember(float)                                     AttenuationDbAtMaxRange                                     OFFSET(get<float>, {0x9A0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -888,6 +886,8 @@ public:
 	// void SetVolume(float InVolume);                                                                                          // [0x6c6326c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.SynthComponentToneGenerator.SetFrequency
 	// void SetFrequency(float InFrequency);                                                                                    // [0x6c5cbdc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Synthesis.SynthSamplePlayer
 /// Size: 0x0130 (0x000900 - 0x000A30)
 class USynthSamplePlayer : public USynthComponent
@@ -899,8 +899,6 @@ public:
 	CMember(USoundWave*)                               SoundWave                                                   OFFSET(get<T>, {0x900, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSampleLoaded                                              OFFSET(get<T>, {0x908, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSamplePlaybackProgress                                    OFFSET(get<T>, {0x918, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -922,6 +920,8 @@ public:
 	// float GetCurrentPlaybackProgressTime();                                                                                  // [0x6c594d4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Synthesis.SynthSamplePlayer.GetCurrentPlaybackProgressPercent
 	// float GetCurrentPlaybackProgressPercent();                                                                               // [0x6c594b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Synthesis.SynthesisUtilitiesBlueprintFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USynthesisUtilitiesBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
@@ -956,8 +956,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(get<T>, {0x5D0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChangedX                                             OFFSET(get<T>, {0x5E0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChangedY                                             OFFSET(get<T>, {0x5F0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -973,6 +971,8 @@ public:
 	// void SetIndentHandle(bool InValue);                                                                                      // [0x6c5d8b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.Synth2DSlider.GetValue
 	// FVector2D GetValue();                                                                                                    // [0x6c59b94] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Synthesis.SynthKnob
 /// Size: 0x03E8 (0x000178 - 0x000560)
 class USynthKnob : public UWidget
@@ -997,8 +997,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureBegin                                    OFFSET(get<T>, {0x518, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnControllerCaptureEnd                                      OFFSET(get<T>, {0x528, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(get<T>, {0x538, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1010,6 +1008,8 @@ public:
 	// void SetLocked(bool InValue);                                                                                            // [0x6c5e2e0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Synthesis.SynthKnob.GetValue
 	// float GetValue();                                                                                                        // [0x6c59c10] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/Synthesis.Synth1PatchCable
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FSynth1PatchCable : public MDKStruct

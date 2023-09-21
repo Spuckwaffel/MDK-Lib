@@ -20,8 +20,6 @@ class AEmeraldGlassIceWallChunk : public ABuildingProp
 public:
 	CMember(TWeakObjectPtr<AEmeraldGlassIceWallChunk*>) ParentChunk                                                OFFSET(get<T>, {0xBB8, 8, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    IceWallActorClassDenyList                                   OFFSET(get<T>, {0xBC0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,6 +29,8 @@ public:
 	// void FindSupportingActors(TArray<AActor*>& InOutSupportingActors, bool bAllowIceWallsAsSupportingActors, TArray<AEmeraldGlassIceWallChunk*>& ChunksInMyWall); // [0x9b637e0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/EmeraldGlass_DRuntime.EmeraldGlassIceWallChunk.AttachActors
 	// void AttachActors(TArray<AEmeraldGlassIceWallChunk*>& ChunksInMyWall, TArray<AActor*>& SupportingActors, AActor* DirectBase); // [0x9b62fb4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class UFortControllerComponent_SereneYard : public UControllerComponent
@@ -40,8 +40,6 @@ class UFortControllerComponent_SereneYard : public UControllerComponent
 
 public:
 	CMember(TArray<TWeakObjectPtr>)                    TrackedInstances                                            OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,6 +51,8 @@ public:
 	// ABuildingGameplayActor* GetOldestTrackedInstance();                                                                      // [0x9b64754] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EmeraldGlass_DRuntime.FortControllerComponent_SereneYard.AddTrackedInstance
 	// void AddTrackedInstance(ABuildingGameplayActor* TrackedInstance);                                                        // [0x9b62e84] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EmeraldGlass_DRuntime.SereneYardFunctionLibraryNative
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USereneYardFunctionLibraryNative : public UBlueprintFunctionLibrary

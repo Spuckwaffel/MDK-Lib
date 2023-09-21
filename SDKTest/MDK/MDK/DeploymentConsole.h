@@ -28,8 +28,6 @@ public:
 	SMember(FScalableFloat)                            MinHeightFromZero                                           OFFSET(get<T>, {0x1F0, 40, 0, 0})
 	CMember(TArray<FVector2D>)                         SpawnPoints                                                 OFFSET(get<T>, {0x218, 16, 0, 0})
 	CMember(TArray<FDeploymentConsoleTeamData>)        TeamSpawnData                                               OFFSET(get<T>, {0x228, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -75,6 +73,8 @@ public:
 	// FRotator CalculateSpawnRotationFromLocation(FVector& InSpawnLocation);                                                   // [0x9a519b8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/DeploymentConsole.DeploymentConsoleComponent.AdjustLocationToValidHeight
 	// FVector AdjustLocationToValidHeight(FVector& RespawnLocation);                                                           // [0x9a518ac] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/DeploymentConsole.FortAthenaMutator_CR_Respawn
 /// Size: 0x0000 (0x000338 - 0x000338)
 class AFortAthenaMutator_CR_Respawn : public AFortAthenaMutator

@@ -47,8 +47,6 @@ public:
 	SMember(FString)                                   StreamID_Development                                        OFFSET(get<T>, {0x500, 16, 0, 0})
 	CMember(UMediaSource*)                             LocalFilePlaybackAsset                                      OFFSET(get<T>, {0x510, 8, 0, 0})
 	DMember(double)                                    HighestFramerate                                            OFFSET(get<double>, {0x518, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -84,6 +82,8 @@ public:
 	// void ClearSyncTimes();                                                                                                   // [0x6d482b0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EpicStreamMediaSource.EpicStreamMediaSource.CancelVideoUrlRequest
 	// void CancelVideoUrlRequest(bool bInCancelled);                                                                           // [0x6d48230] Final|Native|Public|BlueprintCallable 
+};
+
 /// Enum /Script/EpicStreamMediaSource.UCPTypes
 /// Size: 0x05
 enum UCPTypes : uint8_t

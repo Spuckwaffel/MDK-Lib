@@ -36,8 +36,6 @@ public:
 	SMember(FVector)                                   Velocity                                                    OFFSET(get<T>, {0xB10, 24, 0, 0})
 	SMember(FVector)                                   PreviousFrameVelocity                                       OFFSET(get<T>, {0xB28, 24, 0, 0})
 	SMember(FVector)                                   OriginalServerSpawnLocation                                 OFFSET(get<T>, {0xB40, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,6 +65,8 @@ public:
 	// float GetGravityZ();                                                                                                     // [0x9a617e8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/SupplyDropRadioRuntime.BuildingGameplayActorSupplyDropRadio.GetBalloonState
 	// ESupplyDropRadioBalloonState GetBalloonState();                                                                          // [0x9a617d0] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SupplyDropRadioRuntime.FortSupplyDropRadioAttachActorComponent
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UFortSupplyDropRadioAttachActorComponent : public UActorComponent

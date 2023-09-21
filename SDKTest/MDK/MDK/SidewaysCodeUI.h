@@ -20,8 +20,6 @@ class USidewaysWidgetBase : public UFortHUDElementWidget
 public:
 	CMember(AFortPlayspaceReplicatedState*)            ReplicatedState                                             OFFSET(get<T>, {0x310, 8, 0, 0})
 	CMember(ESidewaysState)                            CurrentSidewaysState                                        OFFSET(get<T>, {0x318, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -41,3 +39,5 @@ public:
 	// void HandleFortPawnChanged(AFortPawn* PossessedPawn);                                                                    // [0x99b9bd4] Final|Native|Protected 
 	// Function /Script/SidewaysCodeUI.SidewaysWidgetBase.ConfigureUIFromPlayspace
 	// void ConfigureUIFromPlayspace(ASidewaysPlayspace* Playspace);                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+

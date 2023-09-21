@@ -68,8 +68,6 @@ class UClothingSimulationInteractor : public UObject
 
 public:
 	CMember(TMap<FName, UClothingInteractor*>)         ClothingInteractors                                         OFFSET(get<T>, {0x28, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -103,6 +101,8 @@ public:
 	// void DisableGravityOverride();                                                                                           // [0x1fd6cc8] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/ClothingSystemRuntimeInterface.ClothingSimulationInteractor.ClothConfigUpdated
 	// void ClothConfigUpdated();                                                                                               // [0xd30dac] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ClothingSystemRuntimeInterface.ClothPhysicalMeshDataBase_Legacy
 /// Size: 0x00B8 (0x000028 - 0x0000E0)
 class UClothPhysicalMeshDataBase_Legacy : public UObject

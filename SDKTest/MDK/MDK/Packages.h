@@ -36,8 +36,6 @@ public:
 	DMember(bool)                                      ShowTestMesh                                                OFFSET(get<bool>, {0x2F8, 1, 0, 0})
 	DMember(bool)                                      HasExecutedConstuctionScript                                OFFSET(get<bool>, {0x2F9, 1, 0, 0})
 	DMember(bool)                                      Is_Deep_Water_Asset_                                        OFFSET(get<bool>, {0x2FA, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -73,6 +71,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/_WaterMeshBlueprintMaster._WaterMeshBlueprintMaster_C.ExecuteUbergraph__WaterMeshBlueprintMaster
 	// void ExecuteUbergraph__WaterMeshBlueprintMaster(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Struct /Game/Packages/DS_Fortnite_Terrain_NoLOD/Blueprints/WaterMeshAssetsToReplace.WaterMeshAssetsToReplace
 /// Size: 0x0014 (0x000000 - 0x000014)
 class FWaterMeshAssetsToReplace : public MDKStruct

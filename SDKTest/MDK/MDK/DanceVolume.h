@@ -23,8 +23,6 @@ public:
 	CMember(AFortPlayerPawn*)                          OwnerPlayerPawn                                             OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   OwnerMeshComponent                                          OFFSET(get<T>, {0xC0, 8, 0, 0})
 	CMember(USkeletalMeshComponent*)                   LeaderMeshComponent                                         OFFSET(get<T>, {0xC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -46,6 +44,8 @@ public:
 	// AFortPlayerPawn* GetOwnerFortPlayerPawn();                                                                               // [0x826c3bc] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/DanceVolume.DanceSynchronizerComponent.CalculateDanceMontagePlayRate
 	// float CalculateDanceMontagePlayRate(float CurrentTempo, UAnimMontage* Montage, FDanceBeatInfo& DanceBeatInfo);           // [0x9a9e1a0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/DanceVolume.DanceVolumeLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDanceVolumeLibrary : public UBlueprintFunctionLibrary

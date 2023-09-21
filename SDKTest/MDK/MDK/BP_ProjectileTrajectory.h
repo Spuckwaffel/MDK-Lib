@@ -28,8 +28,6 @@ public:
 	DMember(bool)                                      ShouldUpdate                                                OFFSET(get<bool>, {0x2F8, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 InvalidSplineMID                                            OFFSET(get<T>, {0x300, 8, 0, 0})
 	DMember(bool)                                      bIsTrajectoryValid                                          OFFSET(get<bool>, {0x308, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -51,3 +49,5 @@ public:
 	// void UpdateTargetMeshVisibility();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/BP_ProjectileTrajectory.BP_ProjectileTrajectory_C.ExecuteUbergraph_BP_ProjectileTrajectory
 	// void ExecuteUbergraph_BP_ProjectileTrajectory(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+

@@ -38,8 +38,6 @@ class UAudioAnalyzer : public UObject
 public:
 	CMember(UAudioBus*)                                AudioBus                                                    OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UAudioAnalyzerSubsystem*)                  AudioAnalyzerSubsystem                                      OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -47,6 +45,8 @@ public:
 	// void StopAnalyzing(UObject* WorldContextObject);                                                                         // [0x982ad8c] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
 	// Function /Script/AudioAnalyzer.AudioAnalyzer.StartAnalyzing
 	// void StartAnalyzing(UObject* WorldContextObject, UAudioBus* AudioBusToAnalyze);                                          // [0x982a9e8] Final|RequiredAPI|BlueprintCosmetic|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioAnalyzer.AudioAnalyzerNRTSettings
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAudioAnalyzerNRTSettings : public UAudioAnalyzerAssetBase

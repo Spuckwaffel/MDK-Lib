@@ -47,8 +47,6 @@ public:
 	DMember(float)                                     CableWidth                                                  OFFSET(get<float>, {0x62C, 4, 0, 0})
 	DMember(int32_t)                                   NumSides                                                    OFFSET(get<int32_t>, {0x630, 4, 0, 0})
 	DMember(float)                                     TileMaterial                                                OFFSET(get<float>, {0x634, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -62,3 +60,5 @@ public:
 	// USceneComponent* GetAttachedComponent();                                                                                 // [0x7215cac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CableComponent.CableComponent.GetAttachedActor
 	// AActor* GetAttachedActor();                                                                                              // [0x7215c84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+

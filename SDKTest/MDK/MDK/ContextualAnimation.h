@@ -52,8 +52,6 @@ class UContextualAnimManager : public UObject
 public:
 	CMember(TSet<UContextualAnimSceneActorComponent*>) SceneActorCompContainer                                     OFFSET(get<T>, {0x30, 80, 0, 0})
 	CMember(TArray<UContextualAnimSceneInstance*>)     Instances                                                   OFFSET(get<T>, {0x80, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -69,6 +67,8 @@ public:
 	// UContextualAnimManager* GetContextualAnimManager(UObject* WorldContextObject);                                           // [0x7460d98] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/ContextualAnimation.ContextualAnimManager.BP_TryStartScene
 	// UContextualAnimSceneInstance* BP_TryStartScene(UContextualAnimSceneAsset* SceneAsset, FContextualAnimStartSceneParams& Params); // [0x745fa38] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/ContextualAnimation.ContextualAnimSceneActorComponent
 /// Size: 0x0120 (0x000570 - 0x000690)
 class UContextualAnimSceneActorComponent : public UPrimitiveComponent
@@ -88,8 +88,6 @@ public:
 	SMember(FContextualAnimRepTransitionData)          RepTransitionSingleActorData                                OFFSET(get<T>, {0x630, 24, 0, 0})
 	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(get<T>, {0x648, 40, 0, 0})
 	CMember(TArray<FContextualAnimIKTarget>)           IKTargets                                                   OFFSET(get<T>, {0x670, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -127,6 +125,8 @@ public:
 	// TArray<FContextualAnimIKTarget> GetIKTargets();                                                                          // [0x7460f88] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneActorComponent.GetIKTargetByGoalName
 	// FContextualAnimIKTarget GetIKTargetByGoalName(FName GoalName);                                                           // [0x7460ea4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ContextualAnimation.ContextualAnimRolesAsset
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UContextualAnimRolesAsset : public UDataAsset
@@ -155,8 +155,6 @@ public:
 	DMember(bool)                                      bDisableCollisionBetweenActors                              OFFSET(get<bool>, {0x70, 1, 0, 0})
 	DMember(bool)                                      bPrecomputeAlignmentTracks                                  OFFSET(get<bool>, {0x71, 1, 0, 0})
 	DMember(int32_t)                                   SampleRate                                                  OFFSET(get<int32_t>, {0x74, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -178,6 +176,8 @@ public:
 	// int32_t BP_FindAnimSetIndexByAnimation(int32_t SectionIdx, UAnimSequenceBase* Animation);                                // [0x745c6f8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneAsset.BP_FindAnimationForRole
 	// UAnimSequenceBase* BP_FindAnimationForRole(int32_t SectionIdx, int32_t AnimSetIdx, FName Role);                          // [0x745c818] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ContextualAnimation.ContextualAnimSceneInstance
 /// Size: 0x00A8 (0x000028 - 0x0000D0)
 class UContextualAnimSceneInstance : public UObject
@@ -194,8 +194,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnNotifyEnd                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
 	CMember(UContextualAnimSceneAsset*)                SceneAsset                                                  OFFSET(get<T>, {0x88, 8, 0, 0})
 	SMember(FContextualAnimSceneBindings)              Bindings                                                    OFFSET(get<T>, {0x90, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -207,6 +205,8 @@ public:
 	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x74614ec] Final|Native|Protected 
 	// Function /Script/ContextualAnimation.ContextualAnimSceneInstance.GetActorByRole
 	// AActor* GetActorByRole(FName Role);                                                                                      // [0x745fb84] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ContextualAnimation.ContextualAnimSelectionCriterion
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UContextualAnimSelectionCriterion : public UObject

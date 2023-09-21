@@ -20,13 +20,13 @@ class UWBP_Mobile_Augment_Selection_Proxy_C : public UFortMobileHUDElementProxy
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x3B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /PlayerAugmentsUI/MobileUI/HLT/Widgets/WBP_Mobile_Augment_Selection_Proxy.WBP_Mobile_Augment_Selection_Proxy_C.ExecuteUbergraph_WBP_Mobile_Augment_Selection_Proxy
 	// void ExecuteUbergraph_WBP_Mobile_Augment_Selection_Proxy(int32_t EntryPoint);                                            // [0x1ebf994] Final                
+};
+
 /// Class /PlayerAugmentsUI/MobileUI/HLT/BB_AugmentsList.BB_AugmentsList_C
 /// Size: 0x0000 (0x000120 - 0x000120)
 class UBB_AugmentsList_C : public UFortMobileActionButtonBehavior
@@ -107,8 +107,6 @@ class UWBP_Mobile_Augment_SelectionTimer_C : public UFortMobilePlayerAugmentTime
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UWBP_Augment_SelectionTimer_C*)            WBP_Augment_SelectionTimer                                  OFFSET(get<T>, {0x350, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -116,3 +114,5 @@ public:
 	// void BP_OnHUDElementVisibilityChanged(FGameplayTagContainer& HiddenElementTagContainer, bool bForceCollapse);            // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /PlayerAugmentsUI/MobileUI/HLT/Widgets/WBP_Mobile_Augment_SelectionTimer.WBP_Mobile_Augment_SelectionTimer_C.ExecuteUbergraph_WBP_Mobile_Augment_SelectionTimer
 	// void ExecuteUbergraph_WBP_Mobile_Augment_SelectionTimer(int32_t EntryPoint);                                             // [0x1ebf994] Final|HasDefaults    
+};
+

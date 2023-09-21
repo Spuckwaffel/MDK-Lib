@@ -65,8 +65,6 @@ public:
 	DMember(int32_t)                                   NumberOfButtons                                             OFFSET(get<int32_t>, {0x1E4, 4, 0, 0})
 	CMember(ECreativeModalBackActionBoundButtonOption) BackActionBoundButton                                       OFFSET(get<T>, {0x1E8, 1, 0, 0})
 	CMember(ECreativeModalDialogViewmodelResponse)     Response                                                    OFFSET(get<T>, {0x1E9, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -130,6 +128,8 @@ public:
 	// FDataTableRowHandle GetButton1TriggeringInputAction();                                                                   // [0x9ac769c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_ModalDialogUI.CreativeModalDialogViewmodel.GetBackgroundVisibility
 	// ESlateVisibility GetBackgroundVisibility();                                                                              // [0x9ac7678] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CRD_ModalDialogUI.CreativeModalDialogWidget
 /// Size: 0x0010 (0x0003E8 - 0x0003F8)
 class UCreativeModalDialogWidget : public UCommonActivatableWidget

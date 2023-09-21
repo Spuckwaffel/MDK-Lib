@@ -17,8 +17,6 @@ class AElectraDataChannelPlayer : public AActor
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnTerminalError                                             OFFSET(get<T>, {0x290, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -32,6 +30,8 @@ public:
 	// void PlayFromFile(FString InFilename);                                                                                   // [0x9ab4264] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ElectraDataChannelRuntime.ElectraDataChannelPlayer.EndPlayback
 	// void EndPlayback();                                                                                                      // [0x9ab423c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ElectraDataChannelRuntime.ElectraDataChannelRecorder
 /// Size: 0x0038 (0x000290 - 0x0002C8)
 class AElectraDataChannelRecorder : public AActor

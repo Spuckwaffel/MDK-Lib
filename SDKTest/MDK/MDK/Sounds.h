@@ -38,8 +38,6 @@ public:
 	DMember(double)                                    LastTriggerTime                                             OFFSET(get<double>, {0xC0, 8, 0, 0})
 	CMember(UAudioComponent*)                          Audio_Component                                             OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(USoundEffectSourcePresetChain*)            SourceChainToApply                                          OFFSET(get<T>, {0xD0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,6 +51,8 @@ public:
 	// void Deprecated Set Sound Bank(UFortTaggedSoundBank* SoundBank);                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.NPC_VoiceComponent_C.PlayVoiceLine
 	// void PlayVoiceLine(FGameplayTag& Gameplay Tag, UAudioComponent* AudioComponent, bool& Success);                          // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Sounds/SoundLibrary/Contexts/Foley/BP_AnimPreviewFoleyComponent.BP_AnimPreviewFoleyComponent_C
 /// Size: 0x0000 (0x000138 - 0x000138)
 class UBP_AnimPreviewFoleyComponent_C : public USoundLibraryComponent
@@ -106,8 +106,6 @@ public:
 	CMember(TMap<TEnumAsByte, USoundBase*>)            SoundMap                                                    OFFSET(get<T>, {0xB0, 80, 0, 0})
 	SMember(FVector)                                   Location                                                    OFFSET(get<T>, {0x100, 24, 0, 0})
 	DMember(bool)                                      IsSurfaceTypeSet                                            OFFSET(get<bool>, {0x118, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -121,6 +119,8 @@ public:
 	// void Test Delay();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.BP_SurfaceTypeSoundComponent_C.ExecuteUbergraph_BP_SurfaceTypeSoundComponent
 	// void ExecuteUbergraph_BP_SurfaceTypeSoundComponent(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
+};
+
 /// Class /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C
 /// Size: 0x0032 (0x000290 - 0x0002C2)
 class AFort_Entry_Music_Controller_BP_C : public AFortEntryMusicController
@@ -137,8 +137,6 @@ public:
 	CMember(UAthenaMusicPackItemDefinition*)           MusicPackToPlayLater                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(bool)                                      bCanRetriggerNextMusicPack                                  OFFSET(get<bool>, {0x2C0, 1, 0, 0})
 	DMember(bool)                                      bRegisteredForAnalysis                                      OFFSET(get<bool>, {0x2C1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -158,6 +156,8 @@ public:
 	// void StartMusic();                                                                                                       // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/Fort_Entry_Music_Controller_BP.Fort_Entry_Music_Controller_BP_C.ExecuteUbergraph_Fort_Entry_Music_Controller_BP
 	// void ExecuteUbergraph_Fort_Entry_Music_Controller_BP(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C
 /// Size: 0x0080 (0x0002A8 - 0x000328)
 class UWB_AudioAnalysis_FloatGraph_C : public UUserWidget
@@ -180,8 +180,6 @@ public:
 	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0x30C, 16, 0, 0})
 	DMember(int32_t)                                   VectorIndex                                                 OFFSET(get<int32_t>, {0x31C, 4, 0, 0})
 	CMember(UMaterialParameterCollection*)             Collection                                                  OFFSET(get<T>, {0x320, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -201,6 +199,8 @@ public:
 	// void Initialize MPC(FName Parameter, UMaterialParameterCollection* Collection, int32_t VectorIndex);                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_FloatGraph.WB_AudioAnalysis_FloatGraph_C.ExecuteUbergraph_WB_AudioAnalysis_FloatGraph
 	// void ExecuteUbergraph_WB_AudioAnalysis_FloatGraph(int32_t EntryPoint);                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C
 /// Size: 0x0020 (0x0002A8 - 0x0002C8)
 class UWB_AudioAnalysis_UI_C : public UFortAudioAnalysisDebugWidget
@@ -212,8 +212,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	CMember(UVerticalBox*)                             GraphBox                                                    OFFSET(get<T>, {0x2B0, 8, 0, 0})
 	CMember(TArray<UWB_AudioAnalysis_FloatGraph_C*>)   Widgets                                                     OFFSET(get<T>, {0x2B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -225,6 +223,8 @@ public:
 	// void ClearParameters();                                                                                                  // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.WB_AudioAnalysis_UI_C.ExecuteUbergraph_WB_AudioAnalysis_UI
 	// void ExecuteUbergraph_WB_AudioAnalysis_UI(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C
 /// Size: 0x003C (0x0002A8 - 0x0002E4)
 class UB_MusicEventDebugWidget_C : public UMusicEventSubsystemDebugWidget
@@ -239,8 +239,6 @@ public:
 	SMember(FString)                                   AssetFilter                                                 OFFSET(get<T>, {0x2C0, 16, 0, 0})
 	CMember(TArray<UMusicEventInstance*>)              Instances                                                   OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	DMember(int32_t)                                   FontSize                                                    OFFSET(get<int32_t>, {0x2E0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -256,6 +254,8 @@ public:
 	// void SetMusicEventFontSize(int32_t Size);                                                                                // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventDebugWidget.B_MusicEventDebugWidget_C.ExecuteUbergraph_B_MusicEventDebugWidget
 	// void ExecuteUbergraph_B_MusicEventDebugWidget(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C
 /// Size: 0x0028 (0x0002A8 - 0x0002D0)
 class UB_MusicEventInstanceWidget_C : public UUserWidget
@@ -269,8 +269,6 @@ public:
 	CMember(UMusicEventInstance*)                      EventInstance                                               OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	DMember(double)                                    Distance                                                    OFFSET(get<double>, {0x2C0, 8, 0, 0})
 	CMember(UB_MusicEventDebugWidget_C*)               DebugWidget                                                 OFFSET(get<T>, {0x2C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -290,118 +288,14 @@ public:
 	// void OnListItemObjectSet(UObject* ListItemObject);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Sounds/MusicEventSubsystem/B_MusicEventInstanceWidget.B_MusicEventInstanceWidget_C.ExecuteUbergraph_B_MusicEventInstanceWidget
 	// void ExecuteUbergraph_B_MusicEventInstanceWidget(int32_t EntryPoint);                                                    // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Sounds/SoundLibrary/Contexts/Creatures/B_CreatureAnimSoundLibraryContext.B_CreatureAnimSoundLibraryContext_C
 /// Size: 0x0000 (0x000098 - 0x000098)
 class UB_CreatureAnimSoundLibraryContext_C : public USoundLibraryAnimContext
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 152;
-
-public:
-};
-
-/// Class /Game/Sounds/Fort_Player/Interaction/SLC_InteractionPlayerDefault.SLC_InteractionPlayerDefault_C
-/// Size: 0x0000 (0x000138 - 0x000138)
-class USLC_InteractionPlayerDefault_C : public USoundLibraryComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 312;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent.BP_HitNotifySoundLibraryComponent_C
-/// Size: 0x0000 (0x000188 - 0x000188)
-class UBP_HitNotifySoundLibraryComponent_C : public UFortHitNotifySoundLibraryComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 392;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent_FortAthenaVehicle.BP_HitNotifySoundLibraryComponent_FortAthenaVehicle_C
-/// Size: 0x0000 (0x000188 - 0x000188)
-class UBP_HitNotifySoundLibraryComponent_FortAthenaVehicle_C : public UBP_HitNotifySoundLibraryComponent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 392;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C
-/// Size: 0x0020 (0x000198 - 0x0001B8)
-class UBP_SkydiveSoundLibraryComponent_C : public UFortSkydiveSoundLibraryComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 440;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x198, 8, 0, 0})
-	SMember(FGameplayTag)                              SkydiveEventTag                                             OFFSET(get<T>, {0x1A0, 4, 0, 0})
-	CMember(TArray<UAudioComponent*>)                  Components                                                  OFFSET(get<T>, {0x1A8, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnEventPlayed
-	// void OnEventPlayed(FGameplayTag InEventName);                                                                            // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundPlayed
-	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundStopped
-	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ExecuteUbergraph_BP_SkydiveSoundLibraryComponent
-	// void ExecuteUbergraph_BP_SkydiveSoundLibraryComponent(int32_t EntryPoint);                                               // [0x1ebf994] Final                
-/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent_FortPawn.BP_HitNotifySoundLibraryComponent_FortPawn_C
-/// Size: 0x0000 (0x000188 - 0x000188)
-class UBP_HitNotifySoundLibraryComponent_FortPawn_C : public UBP_HitNotifySoundLibraryComponent_C
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 392;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryContext.BP_HitNotifySoundLibraryContext_C
-/// Size: 0x0000 (0x000108 - 0x000108)
-class UBP_HitNotifySoundLibraryContext_C : public UFortHitNotifySoundLibraryContext
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 264;
-
-public:
-};
-
-/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C
-/// Size: 0x0004 (0x000188 - 0x00018C)
-class UB_WeaponSoundLibraryComponent_C : public UFortWeaponSoundLibraryComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 396;
-
-public:
-	SMember(FGameplayTag)                              FireEvent                                                   OFFSET(get<T>, {0x188, 4, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundPlayed
-	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundStopped
-	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.TryHandleFireEvent
-	// void TryHandleFireEvent(FGameplayTag Event, UAudioComponent* Component);                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C
-/// Size: 0x0000 (0x0000B0 - 0x0000B0)
-class UB_WeaponSoundLibraryContext_C : public USoundLibrarySimpleContext
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
 };
@@ -424,8 +318,6 @@ public:
 	CMember(TEnumAsByte<PlayerWaterDepthEnum>)         PlayerWaterDepth                                            OFFSET(get<T>, {0x128, 1, 0, 0})
 	CMember(TEnumAsByte<PlayerWaterDepthEnum>)         CurrentWaterDepth                                           OFFSET(get<T>, {0x129, 1, 0, 0})
 	DMember(bool)                                      WaterDepthChanged                                           OFFSET(get<bool>, {0x12A, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -449,6 +341,114 @@ public:
 	// void OnViewTargetSet(AActor* Actor);                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/BP_AudioParameterComponent_Pawn.BP_AudioParameterComponent_Pawn_C.ExecuteUbergraph_BP_AudioParameterComponent_Pawn
 	// void ExecuteUbergraph_BP_AudioParameterComponent_Pawn(int32_t EntryPoint);                                               // [0x1ebf994] Final                
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryContext.B_WeaponSoundLibraryContext_C
+/// Size: 0x0000 (0x0000B0 - 0x0000B0)
+class UB_WeaponSoundLibraryContext_C : public USoundLibrarySimpleContext
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 176;
+
+public:
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C
+/// Size: 0x0004 (0x000188 - 0x00018C)
+class UB_WeaponSoundLibraryComponent_C : public UFortWeaponSoundLibraryComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 396;
+
+public:
+	SMember(FGameplayTag)                              FireEvent                                                   OFFSET(get<T>, {0x188, 4, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundPlayed
+	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.OnSoundStopped
+	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Weapons/B_WeaponSoundLibraryComponent.B_WeaponSoundLibraryComponent_C.TryHandleFireEvent
+	// void TryHandleFireEvent(FGameplayTag Event, UAudioComponent* Component);                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryContext.BP_HitNotifySoundLibraryContext_C
+/// Size: 0x0000 (0x000108 - 0x000108)
+class UBP_HitNotifySoundLibraryContext_C : public UFortHitNotifySoundLibraryContext
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 264;
+
+public:
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent.BP_HitNotifySoundLibraryComponent_C
+/// Size: 0x0000 (0x000188 - 0x000188)
+class UBP_HitNotifySoundLibraryComponent_C : public UFortHitNotifySoundLibraryComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 392;
+
+public:
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent_FortPawn.BP_HitNotifySoundLibraryComponent_FortPawn_C
+/// Size: 0x0000 (0x000188 - 0x000188)
+class UBP_HitNotifySoundLibraryComponent_FortPawn_C : public UBP_HitNotifySoundLibraryComponent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 392;
+
+public:
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C
+/// Size: 0x0020 (0x000198 - 0x0001B8)
+class UBP_SkydiveSoundLibraryComponent_C : public UFortSkydiveSoundLibraryComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 440;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x198, 8, 0, 0})
+	SMember(FGameplayTag)                              SkydiveEventTag                                             OFFSET(get<T>, {0x1A0, 4, 0, 0})
+	CMember(TArray<UAudioComponent*>)                  Components                                                  OFFSET(get<T>, {0x1A8, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnEventPlayed
+	// void OnEventPlayed(FGameplayTag InEventName);                                                                            // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundPlayed
+	// void OnSoundPlayed(FGameplayTag InEventName, UAudioComponent* InComponent);                                              // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.OnSoundStopped
+	// void OnSoundStopped(FGameplayTag InEventName, UAudioComponent* InComponent, bool& bStopped);                             // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Sounds/SoundLibrary/Contexts/Skydive/BP_SkydiveSoundLibraryComponent.BP_SkydiveSoundLibraryComponent_C.ExecuteUbergraph_BP_SkydiveSoundLibraryComponent
+	// void ExecuteUbergraph_BP_SkydiveSoundLibraryComponent(int32_t EntryPoint);                                               // [0x1ebf994] Final                
+};
+
+/// Class /Game/Sounds/SoundLibrary/Contexts/HitNotify/BP_HitNotifySoundLibraryComponent_FortAthenaVehicle.BP_HitNotifySoundLibraryComponent_FortAthenaVehicle_C
+/// Size: 0x0000 (0x000188 - 0x000188)
+class UBP_HitNotifySoundLibraryComponent_FortAthenaVehicle_C : public UBP_HitNotifySoundLibraryComponent_C
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 392;
+
+public:
+};
+
+/// Class /Game/Sounds/Fort_Player/Interaction/SLC_InteractionPlayerDefault.SLC_InteractionPlayerDefault_C
+/// Size: 0x0000 (0x000138 - 0x000138)
+class USLC_InteractionPlayerDefault_C : public USoundLibraryComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 312;
+
+public:
+};
+
 /// Struct /Game/Sounds/Fort_Audio_Blueprints/AudioParameterComponent/AudioParameterQueryData.AudioParameterQueryData
 /// Size: 0x0068 (0x000000 - 0x000068)
 class FAudioParameterQueryData : public MDKStruct

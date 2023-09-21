@@ -46,8 +46,6 @@ public:
 	CMember(UClass*)                                   ItemIndicatorType                                           OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(UClass*)                                   DbnoIndicatorType                                           OFFSET(get<T>, {0xA8, 8, 0, 0})
 	SMember(FUserWidgetPool)                           IndicatorPool                                               OFFSET(get<T>, {0xB0, 136, 0, 0})
-};
-
 
 
 	/// Functions
@@ -55,6 +53,8 @@ public:
 	// void OnDroneDestroyed(AActor* DestroyedActor);                                                                           // [0x9a423a0] Final|Native|Protected 
 	// Function /Script/ScoutDroneUI.DronePickUpIndicatorComponent.Init
 	// void Init(AFortScoutDrone* Drone);                                                                                       // [0x9a421bc] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/ScoutDroneUI.ScoutDroneHUD
 /// Size: 0x0120 (0x0002A8 - 0x0003C8)
 class UScoutDroneHUD : public UUserWidget
@@ -82,8 +82,6 @@ public:
 	DMember(float)                                     MaxEnergyCache                                              OFFSET(get<float>, {0x364, 4, 0, 0})
 	SMember(FTimerHandle)                              SignalDataTimerHandle                                       OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(TArray<FScoutDroneWidgetIdentifier>)       HUDIdentifiers                                              OFFSET(get<T>, {0x3B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -125,6 +123,8 @@ public:
 	// float GetTargetConfirmationTime();                                                                                       // [0x9a42194] Final|Native|Private|BlueprintCallable 
 	// Function /Script/ScoutDroneUI.ScoutDroneHUD.GetControlledDrone
 	// AFortScoutDrone* GetControlledDrone();                                                                                   // [0x9a42170] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ScoutDroneUI.ScoutDroneTetherIndicator
 /// Size: 0x0020 (0x0002A8 - 0x0002C8)
 class UScoutDroneTetherIndicator : public UUserWidget
@@ -144,8 +144,6 @@ class AScoutDroneUIDirector : public ADynamicUIDirectorBase
 
 public:
 	SMember(FGameplayTagContainer)                     HUDTagsToHide                                               OFFSET(get<T>, {0x2B0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -153,6 +151,8 @@ public:
 	// void BP_OnScoutDroneDismissed();                                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/ScoutDroneUI.ScoutDroneUIDirector.BP_OnScoutDroneDeployed
 	// void BP_OnScoutDroneDeployed();                                                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Struct /Script/ScoutDroneUI.ScoutDroneWidgetIdentifier
 /// Size: 0x0028 (0x000000 - 0x000028)
 class FScoutDroneWidgetIdentifier : public MDKStruct

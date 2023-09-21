@@ -18,8 +18,6 @@ class ULevelVariantSets : public UObject
 public:
 	CMember(UBlueprintGeneratedClass*)                 DirectorClass                                               OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(TArray<UVariantSet*>)                      VariantSets                                                 OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -29,6 +27,8 @@ public:
 	// UVariantSet* GetVariantSet(int32_t VariantSetIndex);                                                                     // [0xa4533a8] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/VariantManagerContent.LevelVariantSets.GetNumVariantSets
 	// int32_t GetNumVariantSets();                                                                                             // [0x5c31240] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/VariantManagerContent.LevelVariantSetsActor
 /// Size: 0x0068 (0x000290 - 0x0002F8)
 class ALevelVariantSetsActor : public AActor
@@ -39,8 +39,6 @@ class ALevelVariantSetsActor : public AActor
 public:
 	SMember(FSoftObjectPath)                           LevelVariantSets                                            OFFSET(get<T>, {0x290, 24, 0, 0})
 	CMember(TMap<UBlueprintGeneratedClass*, ULevelVariantSetsFunctionDirector*>) DirectorInstances                 OFFSET(get<T>, {0x2A8, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -52,6 +50,8 @@ public:
 	// void SetLevelVariantSets(ULevelVariantSets* InVariantSets);                                                              // [0xa453e50] Final|Native|Public|BlueprintCallable 
 	// Function /Script/VariantManagerContent.LevelVariantSetsActor.GetLevelVariantSets
 	// ULevelVariantSets* GetLevelVariantSets(bool bLoad);                                                                      // [0xa452ab8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/VariantManagerContent.LevelVariantSetsFunctionDirector
 /// Size: 0x0018 (0x000028 - 0x000040)
 class ULevelVariantSetsFunctionDirector : public UObject
@@ -80,8 +80,6 @@ public:
 	CMember(UClass*)                                   LeafPropertyClass                                           OFFSET(get<T>, {0x128, 8, 0, 0})
 	CMember(TArray<char>)                              ValueBytes                                                  OFFSET(get<T>, {0x138, 16, 0, 0})
 	CMember(EPropertyValueCategory)                    PropCategory                                                OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -91,6 +89,8 @@ public:
 	// FText GetPropertyTooltip();                                                                                              // [0xa452be4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VariantManagerContent.PropertyValue.GetFullDisplayString
 	// FString GetFullDisplayString();                                                                                          // [0xa452a9c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/VariantManagerContent.PropertyValueTransform
 /// Size: 0x0000 (0x0001B0 - 0x0001B0)
 class UPropertyValueTransform : public UPropertyValue
@@ -161,8 +161,6 @@ class ASwitchActor : public AActor
 public:
 	CMember(USceneComponent*)                          SceneComponent                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	DMember(int32_t)                                   LastSelectedOption                                          OFFSET(get<int32_t>, {0x2B0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -172,6 +170,8 @@ public:
 	// int32_t GetSelectedOption();                                                                                             // [0x5b584e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VariantManagerContent.SwitchActor.GetOptions
 	// TArray<AActor*> GetOptions();                                                                                            // [0xa452b5c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/VariantManagerContent.Variant
 /// Size: 0x0058 (0x000028 - 0x000080)
 class UVariant : public UObject
@@ -184,8 +184,6 @@ public:
 	SMember(FText)                                     DisplayText                                                 OFFSET(get<T>, {0x38, 24, 0, 0})
 	CMember(TArray<UVariantObjectBinding*>)            ObjectBindings                                              OFFSET(get<T>, {0x68, 16, 0, 0})
 	CMember(UTexture2D*)                               Thumbnail                                                   OFFSET(get<T>, {0x78, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -225,6 +223,8 @@ public:
 	// void DeleteDependency(int32_t Index);                                                                                    // [0xa452668] Final|Native|Public  
 	// Function /Script/VariantManagerContent.Variant.AddDependency
 	// int32_t AddDependency(FVariantDependency& Dependency);                                                                   // [0xa4525bc] Final|Native|Public|HasOutParms 
+};
+
 /// Class /Script/VariantManagerContent.VariantObjectBinding
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UVariantObjectBinding : public UObject
@@ -252,8 +252,6 @@ public:
 	DMember(bool)                                      bExpanded                                                   OFFSET(get<bool>, {0x58, 1, 0, 0})
 	CMember(TArray<UVariant*>)                         Variants                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
 	CMember(UTexture2D*)                               Thumbnail                                                   OFFSET(get<T>, {0x70, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -279,6 +277,8 @@ public:
 	// int32_t GetNumVariants();                                                                                                // [0xa452b48] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VariantManagerContent.VariantSet.GetDisplayText
 	// FText GetDisplayText();                                                                                                  // [0xa452a58] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/VariantManagerContent.FunctionCaller
 /// Size: 0x0004 (0x000000 - 0x000004)
 class FFunctionCaller : public MDKStruct

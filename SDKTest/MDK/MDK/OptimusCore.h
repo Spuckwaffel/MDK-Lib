@@ -619,8 +619,6 @@ public:
 	CMember(TArray<UOptimusNodePin*>)                  Pins                                                        OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(TSet<FName>)                               ExpandedPins                                                OFFSET(get<T>, {0x68, 80, 0, 0})
 	CMember(EOptimusDiagnosticLevel)                   DiagnosticLevel                                             OFFSET(get<T>, {0xB8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -634,6 +632,8 @@ public:
 	// FVector2D GetGraphPosition();                                                                                            // [0x9caeb04] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusNode.GetDisplayName
 	// FText GetDisplayName();                                                                                                  // [0x950f3e4] Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/OptimusCore.OptimusNode_DataInterface
 /// Size: 0x0018 (0x000110 - 0x000128)
 class UOptimusNode_DataInterface : public UOptimusNode
@@ -921,8 +921,6 @@ public:
 	CMember(UOptimusComponentSourceBindingContainer*)  Bindings                                                    OFFSET(get<T>, {0x80, 8, 0, 0})
 	CMember(UOptimusVariableContainer*)                Variables                                                   OFFSET(get<T>, {0x88, 8, 0, 0})
 	CMember(UOptimusResourceContainer*)                Resources                                                   OFFSET(get<T>, {0x90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -932,6 +930,8 @@ public:
 	// TArray<UOptimusResourceDescription*> GetResources();                                                                     // [0x9caeba4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusDeformer.GetComponentBindings
 	// TArray<UOptimusComponentSourceBinding*> GetComponentBindings();                                                          // [0x9caea64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/OptimusCore.OptimusDeformerInstanceSettings
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UOptimusDeformerInstanceSettings : public UMeshDeformerInstanceSettings
@@ -956,8 +956,6 @@ public:
 	CMember(TWeakObjectPtr<UOptimusDeformerInstanceSettings*>) InstanceSettings                                    OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TArray<FOptimusDeformerInstanceExecInfo>)  ComputeGraphExecInfos                                       OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(UOptimusVariableContainer*)                Variables                                                   OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -977,6 +975,8 @@ public:
 	// TArray<UOptimusVariableDescription*> GetVariables();                                                                     // [0x9caec40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/OptimusCore.OptimusDeformerInstance.EnqueueTriggerGraph
 	// bool EnqueueTriggerGraph(FName InTriggerGraphName);                                                                      // [0x9cae8ec] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/OptimusCore.OptimusNodeGraph
 /// Size: 0x0058 (0x000028 - 0x000080)
 class UOptimusNodeGraph : public UObject
@@ -989,8 +989,6 @@ public:
 	CMember(TArray<UOptimusNode*>)                     Nodes                                                       OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<UOptimusNodeLink*>)                 Links                                                       OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<UOptimusNodeGraph*>)                Subgraphs                                                   OFFSET(get<T>, {0x58, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1056,6 +1054,8 @@ public:
 	// UOptimusNode* AddDataInterfaceNode(UClass* InDataInterfaceClass, FVector2D& InPosition);                                 // [0x9cac8f8] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/OptimusCore.OptimusNodeGraph.AddComponentBindingGetNode
 	// UOptimusNode* AddComponentBindingGetNode(UOptimusComponentSourceBinding* InComponentBinding, FVector2D& InPosition);     // [0x9cac81c] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/OptimusCore.OptimusNodeSubGraph
 /// Size: 0x0030 (0x000080 - 0x0000B0)
 class UOptimusNodeSubGraph : public UOptimusNodeGraph

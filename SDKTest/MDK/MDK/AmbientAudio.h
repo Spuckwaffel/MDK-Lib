@@ -22,8 +22,6 @@ public:
 	DMember(float)                                     CrossfadeTime                                               OFFSET(get<float>, {0xBC, 4, 0, 0})
 	SMember(FGuid)                                     AmbientGuid                                                 OFFSET(get<T>, {0xC0, 16, 0, 0})
 	SMember(FName)                                     DisplayName                                                 OFFSET(get<T>, {0xD0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,6 +31,8 @@ public:
 	// void SetCrossfadeTime(float InCrossfadeTime);                                                                            // [0x713b7cc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioComponent.SetAmbientAsset
 	// void SetAmbientAsset(UAmbientAudioDataAsset* InAmbientAsset);                                                            // [0x713b73c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AmbientAudio.AmbientAudioDataAsset
 /// Size: 0x0028 (0x000030 - 0x000058)
 class UAmbientAudioDataAsset : public UDataAsset
@@ -58,8 +58,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnEntryChanged                                              OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(TArray<UAmbientAudioComponent*>)           AmbientComponents                                           OFFSET(get<T>, {0x58, 16, 0, 0})
 	CMember(AAmbientAudioParameterActor*)              ParameterActor                                              OFFSET(get<T>, {0x68, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -73,6 +71,8 @@ public:
 	// void AddGameplayTag(FGameplayTag GameplayTag);                                                                           // [0x713b5e8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AmbientAudio.AmbientAudioSubsystem.AddAmbientEntry
 	// void AddAmbientEntry(FName AmbientName, UAmbientAudioDataAsset* Asset, int32_t Priority, float CrossfadeTime);           // [0x27a7bd8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AmbientAudio.AmbientAudioParameterActor
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AAmbientAudioParameterActor : public AActor

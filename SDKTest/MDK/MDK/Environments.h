@@ -11,6 +11,136 @@
 /// dependency: FortniteUI
 /// dependency: UMG
 
+/// Class /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C
+/// Size: 0x0120 (0x000290 - 0x0003B0)
+class ACameraAnimationTransition_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 944;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
+	DMember(float)                                     Timeline_0_NewTrack_0_2750533A46B9AEF2BE294F8153FE4FD4      OFFSET(get<float>, {0x2A0, 4, 0, 0})
+	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_2750533A46B9AEF2BE294F8153FE4FD4      OFFSET(get<T>, {0x2A4, 1, 0, 0})
+	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraBR                                                    OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	SMember(FTransform)                                CameraLocationBR                                            OFFSET(get<T>, {0x2C0, 96, 0, 0})
+	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraBR16Player                                            OFFSET(get<T>, {0x320, 8, 0, 0})
+	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraCreative                                              OFFSET(get<T>, {0x328, 8, 0, 0})
+	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraCreative16Player                                      OFFSET(get<T>, {0x330, 8, 0, 0})
+	SMember(FTransform)                                CameraLocationCreative                                      OFFSET(get<T>, {0x340, 96, 0, 0})
+	DMember(double)                                    FOVPostion1                                                 OFFSET(get<double>, {0x3A0, 8, 0, 0})
+	DMember(double)                                    FOVPostion2                                                 OFFSET(get<double>, {0x3A8, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.Timeline_0__FinishedFunc
+	// void Timeline_0__FinishedFunc();                                                                                         // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.Timeline_0__UpdateFunc
+	// void Timeline_0__UpdateFunc();                                                                                           // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.MoveCameraUp
+	// void MoveCameraUp();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.MoveCameraDown
+	// void MoveCameraDown();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.ExecuteUbergraph_CameraAnimationTransition
+	// void ExecuteUbergraph_CameraAnimationTransition(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C
+/// Size: 0x008C (0x000290 - 0x00031C)
+class ABP_FortniteLobbyLightSwitcher_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 796;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(ADirectionalLight*)                        DirectionLight                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(ASkyLight*)                                SkyLight                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(TArray<APointLight*>)                      Pointlights                                                 OFFSET(get<T>, {0x2B0, 16, 0, 0})
+	CMember(AExponentialHeightFog*)                    ExponentialHeightFog                                        OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(ADirectionalLight*)                        DirectionalLight_LowDetailMode                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(TArray<AEmitter*>)                         ParticleSystems                                             OFFSET(get<T>, {0x2D0, 16, 0, 0})
+	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x2E0, 1, 0, 0})
+	DMember(bool)                                      DebugLOWQualityLighting                                     OFFSET(get<bool>, {0x2E1, 1, 0, 0})
+	CMember(ASkyLight*)                                SkyLight_LowDetailMode                                      OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(AExponentialHeightFog*)                    ExponentialHeightfog_LowDetailMode                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	DMember(bool)                                      LOW_FX_Setting_Use_MobileLighting                           OFFSET(get<bool>, {0x2F8, 1, 0, 0})
+	DMember(bool)                                      IsLightalreadyActive                                        OFFSET(get<bool>, {0x2F9, 1, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(get<T>, {0x2FC, 16, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(get<T>, {0x30C, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.SetVisiblityofDetailSpecificMeshes
+	// void SetVisiblityofDetailSpecificMeshes();                                                                               // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.SetVisiblityofSceneLighting
+	// void SetVisiblityofSceneLighting(bool Activate);                                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.EnableLobbySetLighting
+	// void EnableLobbySetLighting();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.DisableLobbySetLighting
+	// void DisableLobbySetLighting();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.UpdateSettings
+	// void UpdateSettings();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.ExecuteUbergraph_BP_FortniteLobbyLightSwitcher
+	// void ExecuteUbergraph_BP_FortniteLobbyLightSwitcher(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C
+/// Size: 0x0071 (0x000A00 - 0x000A71)
+class AFortnitePartyBackdrop_Camera_C : public AFortCameraBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2673;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0xA08, 8, 0, 0})
+	SMember(FTransform)                                SavedTransform                                              OFFSET(get<T>, {0xA10, 96, 0, 0})
+	DMember(bool)                                      Active                                                      OFFSET(get<bool>, {0xA70, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.BP_OnActivated
+	// void BP_OnActivated(AFortPlayerController* PlayerController);                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.BP_OnDeactivated
+	// void BP_OnDeactivated(AFortPlayerController* PlayerController);                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.Reset Location
+	// void Reset Location();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.ManualActivate
+	// void ManualActivate();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.ExecuteUbergraph_FortnitePartyBackdrop_Camera
+	// void ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/BP_DetailLevelMesh.BP_DetailLevelMesh_C
+/// Size: 0x001A (0x000290 - 0x0002AA)
+class ABP_DetailLevelMesh_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 682;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     StaticMesh                                                  OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	DMember(bool)                                      AlwaysVisible                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
+	DMember(bool)                                      NotVisibleOnSwitch                                          OFFSET(get<bool>, {0x2A9, 1, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_DetailLevelMesh.BP_DetailLevelMesh_C.ExecuteUbergraph_BP_DetailLevelMesh
+	// void ExecuteUbergraph_BP_DetailLevelMesh(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/PartyDisplayManagerBP.PartyDisplayManagerBP_C
 /// Size: 0x01DC (0x000648 - 0x000824)
 class APartyDisplayManagerBP_C : public APartyDisplayManager
@@ -78,8 +208,6 @@ public:
 	CMember(UParticleSystemComponent*)                 TransitionFXComponent                                       OFFSET(get<T>, {0x810, 8, 0, 0})
 	CMember(UParticleSystem*)                          CharSwapTransitionFXLoop                                    OFFSET(get<T>, {0x818, 8, 0, 0})
 	SMember(FName)                                     HideElementsOnlyConsidersRedChannel                         OFFSET(get<T>, {0x820, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -161,6 +289,332 @@ public:
 	// void OnMeshLODStreamingFinished();                                                                                       // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/PartyDisplayManagerBP.PartyDisplayManagerBP_C.ExecuteUbergraph_PartyDisplayManagerBP
 	// void ExecuteUbergraph_PartyDisplayManagerBP(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C
+/// Size: 0x00F0 (0x0006B0 - 0x0007A0)
+class AItemOnPawnPreview_C : public AFortItemPreviewOnPawnActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1952;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6B0, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x6B8, 8, 0, 0})
+	CMember(UDirectionalLightComponent*)               Directional_Light_For_Atmosphere_PC                         OFFSET(get<T>, {0x6C0, 8, 0, 0})
+	CMember(USkyLightComponent*)                       SkyLightPC                                                  OFFSET(get<T>, {0x6C8, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x6D0, 8, 0, 0})
+	CMember(USkyLightComponent*)                       SkyLightLowMobile                                           OFFSET(get<T>, {0x6D8, 8, 0, 0})
+	CMember(UDirectionalLightComponent*)               DirectionalLightMobile                                      OFFSET(get<T>, {0x6E0, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight_StandaloneForSwitch                                OFFSET(get<T>, {0x6E8, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight5                                                   OFFSET(get<T>, {0x6F0, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight6                                                   OFFSET(get<T>, {0x6F8, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLigh3                                                    OFFSET(get<T>, {0x700, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight2                                                   OFFSET(get<T>, {0x708, 8, 0, 0})
+	CMember(USpotLightComponent*)                      BounceRear1                                                 OFFSET(get<T>, {0x710, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimLowerRight1                                              OFFSET(get<T>, {0x718, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimLeft1                                                    OFFSET(get<T>, {0x720, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimTopRight1                                                OFFSET(get<T>, {0x728, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimBottomLeft1                                              OFFSET(get<T>, {0x730, 8, 0, 0})
+	CMember(USpotLightComponent*)                      Bounce1                                                     OFFSET(get<T>, {0x738, 8, 0, 0})
+	CMember(USceneComponent*)                          LightTransform                                              OFFSET(get<T>, {0x740, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     Plane                                                       OFFSET(get<T>, {0x748, 8, 0, 0})
+	CMember(USkeletalMeshComponent*)                   Sample_Mesh                                                 OFFSET(get<T>, {0x750, 8, 0, 0})
+	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x758, 1, 0, 0})
+	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x759, 1, 0, 0})
+	DMember(bool)                                      debugConstructionLighting                                   OFFSET(get<bool>, {0x75A, 1, 0, 0})
+	CMember(UParticleSystemComponent*)                 ObscuringLoopEmitter                                        OFFSET(get<T>, {0x760, 8, 0, 0})
+	SMember(FRotator)                                  ToonLightRotatio                                            OFFSET(get<T>, {0x768, 24, 0, 0})
+	DMember(bool)                                      bIsBattlePassReward                                         OFFSET(get<bool>, {0x780, 1, 0, 0})
+	SMember(FTimerHandle)                              LOD_StreamingSafetyTimer                                    OFFSET(get<T>, {0x788, 8, 0, 0})
+	CMember(UMaterialInterface*)                       DefaultFloorMaterial                                        OFFSET(get<T>, {0x790, 8, 0, 0})
+	CMember(UMaterialInterface*)                       CustomFloorMaterial                                         OFFSET(get<T>, {0x798, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.Get LOD Streaming Safety Duration
+	// void Get LOD Streaming Safety Duration();                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent|BlueprintPure 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchErebusLighting
+	// void SwitchErebusLighting(bool Visibility);                                                                              // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SetFloorEnabled
+	// void SetFloorEnabled(bool Show Floor);                                                                                   // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.LightControl
+	// void LightControl(bool Active);                                                                                          // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchPCLighting
+	// void SwitchPCLighting(bool Visibility);                                                                                  // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchMobileLighting
+	// void SwitchMobileLighting(bool NewParam);                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.UpdateSettings
+	// void UpdateSettings();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnPreviewVisualsSpawned
+	// void OnPreviewVisualsSpawned(bool bUseSecondaryTransitionEffects, bool bShowFloor);                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnSetFloorMaterial
+	// void OnSetFloorMaterial(UMaterialInterface* InMaterialInstance);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnAllLODStreamingComplete
+	// void OnAllLODStreamingComplete();                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnCurrentVisualsCleanedUp
+	// void OnCurrentVisualsCleanedUp();                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnUpdateFloorMaterial
+	// void OnUpdateFloorMaterial(bool bEnableAutotestBackground);                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.Backup_LODStreamingFailed
+	// void Backup_LODStreamingFailed();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SpawnSoundPlayback
+	// void SpawnSoundPlayback();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.ExecuteUbergraph_ItemOnPawnPreview
+	// void ExecuteUbergraph_ItemOnPawnPreview(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C
+/// Size: 0x0050 (0x000290 - 0x0002E0)
+class AVaultWeaponPlacementHelper_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 736;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CUBE                                                        OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Sparkle                                         OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Swirl02                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Swirl01                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CharacterPlacement                                          OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0x2D0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.GetFrontendAnimInstance
+	// void GetFrontendAnimInstance();                                                                                          // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.OnFrontEndCameraChanged
+	// void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);                                      // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.Initialize
+	// void Initialize();                                                                                                       // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.InitializeContextEvents
+	// void InitializeContextEvents();                                                                                          // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.ItemRez
+	// void ItemRez();                                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.ExecuteUbergraph_VaultWeaponPlacementHelper
+	// void ExecuteUbergraph_VaultWeaponPlacementHelper(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.NewEventDispatcher_0__DelegateSignature
+	// void NewEventDispatcher_0__DelegateSignature();                                                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C
+/// Size: 0x00C8 (0x000290 - 0x000358)
+class AVaultCharacterPlacementHelper_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 856;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     floor                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(UStaticMeshComponent*)                     CharacterPlacement                                          OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	SMember(FTransform)                                OriginalTransform                                           OFFSET(get<T>, {0x2B0, 96, 0, 0})
+	SMember(FVector)                                   OffsetTranslate                                             OFFSET(get<T>, {0x310, 24, 0, 0})
+	SMember(FRotator)                                  OffsetRotate                                                OFFSET(get<T>, {0x328, 24, 0, 0})
+	DMember(bool)                                      Athena                                                      OFFSET(get<bool>, {0x340, 1, 0, 0})
+	SMember(FMulticastInlineDelegate)                  OnZoomLevelUpdated                                          OFFSET(get<T>, {0x348, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UpdatePosition For Camera
+	// void UpdatePosition For Camera(EFrontEndCamera FrontEndCamera);                                                          // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|HasDefaults|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.SubGameChanged_Event
+	// void SubGameChanged_Event(ESubGame SubGame);                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.OnFrontEndCameraChanged
+	// void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ExecuteUbergraph_VaultCharacterPlacementHelper
+	// void ExecuteUbergraph_VaultCharacterPlacementHelper(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.OnZoomLevelUpdated__DelegateSignature
+	// void OnZoomLevelUpdated__DelegateSignature(double CurrentZoomLevel);                                                     // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C
+/// Size: 0x0028 (0x0002A8 - 0x0002D0)
+class UUI_Background_Strings_C : public UUserWidget
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 720;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(UCommonRichTextBlock*)                     CustomString                                                OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	SMember(FText)                                     CustomText                                                  OFFSET(get<T>, {0x2B8, 24, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C.PreConstruct
+	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C.Construct
+	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C.ExecuteUbergraph_UI_Background_Strings
+	// void ExecuteUbergraph_UI_Background_Strings(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
+/// Class /Game/Environments/FrontEnd/BackPlates/Blueprint/BP_Background_Raytracing.BP_Background_Raytracing_C
+/// Size: 0x0040 (0x000290 - 0x0002D0)
+class ABP_Background_Raytracing_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 720;
+
+public:
+	CMember(UStaticMeshComponent*)                     SM_InvertedSphere_BackPlate_Half                            OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
+	DMember(bool)                                      FullSphere                                                  OFFSET(get<bool>, {0x2A0, 1, 0, 0})
+	DMember(bool)                                      UseCubemap                                                  OFFSET(get<bool>, {0x2A1, 1, 0, 0})
+	DMember(double)                                    Brightness                                                  OFFSET(get<double>, {0x2A8, 8, 0, 0})
+	CMember(UTexture*)                                 _2dTexture                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UTexture*)                                 Cubemap                                                     OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	SMember(FLinearColor)                              FadeColor                                                   OFFSET(get<T>, {0x2C0, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/BackPlates/Blueprint/BP_Background_Raytracing.BP_Background_Raytracing_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+};
+
+/// Class /Game/Environments/FrontEnd/BackPlates/CMSLobbyDirector.CMSLobbyDirector_C
+/// Size: 0x0008 (0x000460 - 0x000468)
+class ACMSLobbyDirector_C : public ADynamicBackgroundDirector
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 1128;
+
+public:
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x460, 8, 0, 0})
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C
+/// Size: 0x0010 (0x000290 - 0x0002A0)
+class ABP_CharacterRimlightDisabler_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 672;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C.ReceiveEndPlay
+	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C.ExecuteUbergraph_BP_CharacterRimlightDisabler
+	// void ExecuteUbergraph_BP_CharacterRimlightDisabler(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C
+/// Size: 0x0020 (0x000A00 - 0x000A20)
+class AFortnitePartyHeroSelect_Camera_C : public AFortCameraBase
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2592;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
+	CMember(UCameraComponent*)                         CameraActor                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
+	DMember(bool)                                      MouseDown                                                   OFFSET(get<bool>, {0xA10, 1, 0, 0})
+	CMember(AFortPlayerPawn*)                          CachedPawn                                                  OFFSET(get<T>, {0xA18, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMousePress
+	// void HandleMousePress();                                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMouseRelease
+	// void HandleMouseRelease();                                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent
+	// void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent(FKey Key);                                                           // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent
+	// void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent(FKey Key);                                                           // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent
+	// void InpActEvt_RightMouseButton_K2Node_InputKeyEvent(FKey Key);                                                          // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent
+	// void InpActEvt_RightMouseButton_K2Node_InputKeyEvent(FKey Key);                                                          // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.BP_OnActivated
+	// void BP_OnActivated(AFortPlayerController* PlayerController);                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.BP_OnDeactivated
+	// void BP_OnDeactivated(AFortPlayerController* PlayerController);                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ReceiveTick
+	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ExecuteUbergraph_FortnitePartyHeroSelect_Camera
+	// void ExecuteUbergraph_FortnitePartyHeroSelect_Camera(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C
+/// Size: 0x00D0 (0x000290 - 0x000360)
+class AVaultCharacterLightingBP_C : public AActor
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 864;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x298, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight4                                                   OFFSET(get<T>, {0x2A0, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight3                                                   OFFSET(get<T>, {0x2A8, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight2                                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
+	CMember(UPostProcessComponent*)                    PostProcess_Mobile                                          OFFSET(get<T>, {0x2B8, 8, 0, 0})
+	CMember(UPostProcessComponent*)                    PostProcess_LOWPC                                           OFFSET(get<T>, {0x2C0, 8, 0, 0})
+	CMember(USkyLightComponent*)                       SkyLight_LOWPC                                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
+	CMember(UDirectionalLightComponent*)               DirectionalLight_LOWPC                                      OFFSET(get<T>, {0x2D0, 8, 0, 0})
+	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2D8, 8, 0, 0})
+	CMember(UDirectionalLightComponent*)               DirectionalLightMobile                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
+	CMember(USkyLightComponent*)                       SkyLightLowMobil                                            OFFSET(get<T>, {0x2E8, 8, 0, 0})
+	CMember(USkyLightComponent*)                       SkyLight                                                    OFFSET(get<T>, {0x2F0, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimLowerRight                                               OFFSET(get<T>, {0x2F8, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimLeft                                                     OFFSET(get<T>, {0x300, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimTopRight                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
+	CMember(USpotLightComponent*)                      RimBottomLeft                                               OFFSET(get<T>, {0x310, 8, 0, 0})
+	CMember(USpotLightComponent*)                      KeyLight                                                    OFFSET(get<T>, {0x318, 8, 0, 0})
+	CMember(USpotLightComponent*)                      Bounce                                                      OFFSET(get<T>, {0x320, 8, 0, 0})
+	CMember(USpotLightComponent*)                      BounceRear                                                  OFFSET(get<T>, {0x328, 8, 0, 0})
+	CMember(USceneComponent*)                          SharedRoot                                                  OFFSET(get<T>, {0x330, 8, 0, 0})
+	DMember(bool)                                      DebugMobile_Lighting                                        OFFSET(get<bool>, {0x338, 1, 0, 0})
+	DMember(bool)                                      DebugLightingPC                                             OFFSET(get<bool>, {0x339, 1, 0, 0})
+	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x33A, 1, 0, 0})
+	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x33B, 1, 0, 0})
+	DMember(bool)                                      DebugLighting_LOWDetailPC                                   OFFSET(get<bool>, {0x33C, 1, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(get<T>, {0x340, 16, 0, 0})
+	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(get<T>, {0x350, 16, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting_LOWDetail
+	// void SwitchPCLighting_LOWDetail(bool Visibility);                                                                        // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting
+	// void SwitchPCLighting(bool Visibility);                                                                                  // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchMobileLighting
+	// void SwitchMobileLighting(bool Visibilty);                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.UserConstructionScript
+	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.UpdateSettings
+	// void UpdateSettings();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.ToggleLighting
+	// void ToggleLighting();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.OVERRIDELIGHTING
+	// void OVERRIDELIGHTING();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.LightControl
+	// void LightControl(bool NewParam);                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.ReceiveBeginPlay
+	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
+	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.ExecuteUbergraph_VaultCharacterLightingBP
+	// void ExecuteUbergraph_VaultCharacterLightingBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/VaultWorld.VaultWorld_C
 /// Size: 0x0009 (0x000338 - 0x000341)
 class AVaultWorld_C : public AFortItemPreviewWorld
@@ -171,8 +625,6 @@ class AVaultWorld_C : public AFortItemPreviewWorld
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x338, 8, 0, 0})
 	DMember(bool)                                      bIsPrimaryBackgroundActive                                  OFFSET(get<bool>, {0x340, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -182,6 +634,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/VaultWorld.VaultWorld_C.ExecuteUbergraph_VaultWorld
 	// void ExecuteUbergraph_VaultWorld(int32_t EntryPoint);                                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/SpecialEventVaultWorld.SpecialEventVaultWorld_C
 /// Size: 0x0087 (0x000341 - 0x0003C8)
 class ASpecialEventVaultWorld_C : public AVaultWorld_C
@@ -213,8 +667,6 @@ public:
 	CMember(UTimelineComponent*)                       TransitionBackward                                          OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(UMaterialInstance*)                        FloorMI                                                     OFFSET(get<T>, {0x3B8, 8, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 FloorMID                                                    OFFSET(get<T>, {0x3C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -262,6 +714,8 @@ public:
 	// void OnUpdateMaterialIndex(int32_t MaterialIndex);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/SpecialEventVaultWorld.SpecialEventVaultWorld_C.ExecuteUbergraph_SpecialEventVaultWorld
 	// void ExecuteUbergraph_SpecialEventVaultWorld(int32_t EntryPoint);                                                        // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemPreviewSideSwap.ItemPreviewSideSwap_C
 /// Size: 0x0180 (0x0003D0 - 0x000550)
 class AItemPreviewSideSwap_C : public AItemPreviewSwapper
@@ -311,8 +765,6 @@ public:
 	SMember(FRotator)                                  OrigRotationOffset                                          OFFSET(get<T>, {0x528, 24, 0, 0})
 	CMember(UFortAccountItemDefinition*)               Primary_Requested_Item                                      OFFSET(get<T>, {0x540, 8, 0, 0})
 	CMember(UFortAccountItemDefinition*)               Previous_Requested_Item                                     OFFSET(get<T>, {0x548, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -364,6 +816,8 @@ public:
 	// void ExecuteUbergraph_ItemPreviewSideSwap(int32_t EntryPoint);                                                           // [0x1ebf994] Final|HasDefaults    
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemPreviewSideSwap.ItemPreviewSideSwap_C.On New Item Spawned__DelegateSignature
 	// void On New Item Spawned__DelegateSignature(bool Should Show Floor);                                                     // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/BattlePassVaultWorld.BattlePassVaultWorld_C
 /// Size: 0x00E7 (0x000341 - 0x000428)
 class ABattlePassVaultWorld_C : public AVaultWorld_C
@@ -415,8 +869,6 @@ public:
 	DMember(float)                                     PageA_X_Offset                                              OFFSET(get<float>, {0x41C, 4, 0, 0})
 	DMember(float)                                     PageB_X_Offset                                              OFFSET(get<float>, {0x420, 4, 0, 0})
 	DMember(float)                                     X_Offset_Anim_Distance                                      OFFSET(get<float>, {0x424, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -480,6 +932,8 @@ public:
 	// void OnSetupMaterialBackground(UMaterialInterface* LoadedBackgroundMaterial, FVaultWorldBackgroundData& BackgroundInfo); // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/BattlePassVaultWorld.BattlePassVaultWorld_C.ExecuteUbergraph_BattlePassVaultWorld
 	// void ExecuteUbergraph_BattlePassVaultWorld(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/VaultRotator.VaultRotator_C
 /// Size: 0x01B8 (0x0003C8 - 0x000580)
 class AVaultRotator_C : public AItemPreviewRotator
@@ -528,8 +982,6 @@ public:
 	DMember(double)                                    TargetZoomLevel                                             OFFSET(get<double>, {0x548, 8, 0, 0})
 	SMember(FRotator)                                  StartingRotationOffset                                      OFFSET(get<T>, {0x550, 24, 0, 0})
 	SMember(FRotator)                                  TargetRotationOffset                                        OFFSET(get<T>, {0x568, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -585,6 +1037,8 @@ public:
 	// void OnTargetZoomLevelCanceled();                                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/VaultRotator.VaultRotator_C.ExecuteUbergraph_VaultRotator
 	// void ExecuteUbergraph_VaultRotator(int32_t EntryPoint);                                                                  // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/VaultSceneSinglePedestal.VaultSceneSinglePedestal_C
 /// Size: 0x0000 (0x000360 - 0x000360)
 class AVaultSceneSinglePedestal_C : public AItemPreviewScene
@@ -605,8 +1059,6 @@ class AItemPreviewPedestal_C : public AFortCameraTargetPedestal
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	DMember(bool)                                      Floor_Enabled                                               OFFSET(get<bool>, {0x5F0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -616,6 +1068,8 @@ public:
 	// void OnItemDisplayed(EFortItemType ItemType);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemPreviewPedestal.ItemPreviewPedestal_C.ExecuteUbergraph_ItemPreviewPedestal
 	// void ExecuteUbergraph_ItemPreviewPedestal(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
+};
+
 /// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/WrapPreview.WrapPreview_C
 /// Size: 0x00B4 (0x000560 - 0x000614)
 class AWrapPreview_C : public AAthenaWrapPreviewActor
@@ -650,8 +1104,6 @@ public:
 	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x611, 1, 0, 0})
 	DMember(bool)                                      FloorEverAllowed                                            OFFSET(get<bool>, {0x612, 1, 0, 0})
 	DMember(bool)                                      debugConstructionLighting                                   OFFSET(get<bool>, {0x613, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -681,457 +1133,5 @@ public:
 	// void OnUpdateFloorMaterial(bool bEnableAutotestBackground);                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/WrapPreview.WrapPreview_C.ExecuteUbergraph_WrapPreview
 	// void ExecuteUbergraph_WrapPreview(int32_t EntryPoint);                                                                   // [0x1ebf994] Final                
-/// Class /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C
-/// Size: 0x0120 (0x000290 - 0x0003B0)
-class ACameraAnimationTransition_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 944;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
-	DMember(float)                                     Timeline_0_NewTrack_0_2750533A46B9AEF2BE294F8153FE4FD4      OFFSET(get<float>, {0x2A0, 4, 0, 0})
-	CMember(TEnumAsByte<ETimelineDirection>)           Timeline_0__Direction_2750533A46B9AEF2BE294F8153FE4FD4      OFFSET(get<T>, {0x2A4, 1, 0, 0})
-	CMember(UTimelineComponent*)                       Timeline                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraBR                                                    OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FTransform)                                CameraLocationBR                                            OFFSET(get<T>, {0x2C0, 96, 0, 0})
-	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraBR16Player                                            OFFSET(get<T>, {0x320, 8, 0, 0})
-	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraCreative                                              OFFSET(get<T>, {0x328, 8, 0, 0})
-	CMember(AFortnitePartyBackdrop_Camera_C*)          CameraCreative16Player                                      OFFSET(get<T>, {0x330, 8, 0, 0})
-	SMember(FTransform)                                CameraLocationCreative                                      OFFSET(get<T>, {0x340, 96, 0, 0})
-	DMember(double)                                    FOVPostion1                                                 OFFSET(get<double>, {0x3A0, 8, 0, 0})
-	DMember(double)                                    FOVPostion2                                                 OFFSET(get<double>, {0x3A8, 8, 0, 0})
 };
 
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.Timeline_0__FinishedFunc
-	// void Timeline_0__FinishedFunc();                                                                                         // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.Timeline_0__UpdateFunc
-	// void Timeline_0__UpdateFunc();                                                                                           // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.MoveCameraUp
-	// void MoveCameraUp();                                                                                                     // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.MoveCameraDown
-	// void MoveCameraDown();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/CameraAnimationTransition.CameraAnimationTransition_C.ExecuteUbergraph_CameraAnimationTransition
-	// void ExecuteUbergraph_CameraAnimationTransition(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C
-/// Size: 0x008C (0x000290 - 0x00031C)
-class ABP_FortniteLobbyLightSwitcher_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 796;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(ADirectionalLight*)                        DirectionLight                                              OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(ASkyLight*)                                SkyLight                                                    OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(TArray<APointLight*>)                      Pointlights                                                 OFFSET(get<T>, {0x2B0, 16, 0, 0})
-	CMember(AExponentialHeightFog*)                    ExponentialHeightFog                                        OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(ADirectionalLight*)                        DirectionalLight_LowDetailMode                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(TArray<AEmitter*>)                         ParticleSystems                                             OFFSET(get<T>, {0x2D0, 16, 0, 0})
-	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x2E0, 1, 0, 0})
-	DMember(bool)                                      DebugLOWQualityLighting                                     OFFSET(get<bool>, {0x2E1, 1, 0, 0})
-	CMember(ASkyLight*)                                SkyLight_LowDetailMode                                      OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(AExponentialHeightFog*)                    ExponentialHeightfog_LowDetailMode                          OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	DMember(bool)                                      LOW_FX_Setting_Use_MobileLighting                           OFFSET(get<bool>, {0x2F8, 1, 0, 0})
-	DMember(bool)                                      IsLightalreadyActive                                        OFFSET(get<bool>, {0x2F9, 1, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(get<T>, {0x2FC, 16, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(get<T>, {0x30C, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.SetVisiblityofDetailSpecificMeshes
-	// void SetVisiblityofDetailSpecificMeshes();                                                                               // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.SetVisiblityofSceneLighting
-	// void SetVisiblityofSceneLighting(bool Activate);                                                                         // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.EnableLobbySetLighting
-	// void EnableLobbySetLighting();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.DisableLobbySetLighting
-	// void DisableLobbySetLighting();                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.UpdateSettings
-	// void UpdateSettings();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_FortniteLobbyLightSwitcher.BP_FortniteLobbyLightSwitcher_C.ExecuteUbergraph_BP_FortniteLobbyLightSwitcher
-	// void ExecuteUbergraph_BP_FortniteLobbyLightSwitcher(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C
-/// Size: 0x0071 (0x000A00 - 0x000A71)
-class AFortnitePartyBackdrop_Camera_C : public AFortCameraBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2673;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0xA08, 8, 0, 0})
-	SMember(FTransform)                                SavedTransform                                              OFFSET(get<T>, {0xA10, 96, 0, 0})
-	DMember(bool)                                      Active                                                      OFFSET(get<bool>, {0xA70, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.BP_OnActivated
-	// void BP_OnActivated(AFortPlayerController* PlayerController);                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.BP_OnDeactivated
-	// void BP_OnDeactivated(AFortPlayerController* PlayerController);                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.Reset Location
-	// void Reset Location();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.ManualActivate
-	// void ManualActivate();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyBackdrop_Camera.FortnitePartyBackdrop_Camera_C.ExecuteUbergraph_FortnitePartyBackdrop_Camera
-	// void ExecuteUbergraph_FortnitePartyBackdrop_Camera(int32_t EntryPoint);                                                  // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Environments/FrontEnd/Blueprints/BP_DetailLevelMesh.BP_DetailLevelMesh_C
-/// Size: 0x001A (0x000290 - 0x0002AA)
-class ABP_DetailLevelMesh_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 682;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     StaticMesh                                                  OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	DMember(bool)                                      AlwaysVisible                                               OFFSET(get<bool>, {0x2A8, 1, 0, 0})
-	DMember(bool)                                      NotVisibleOnSwitch                                          OFFSET(get<bool>, {0x2A9, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_DetailLevelMesh.BP_DetailLevelMesh_C.ExecuteUbergraph_BP_DetailLevelMesh
-	// void ExecuteUbergraph_BP_DetailLevelMesh(int32_t EntryPoint);                                                            // [0x1ebf994] Final                
-/// Class /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C
-/// Size: 0x00F0 (0x0006B0 - 0x0007A0)
-class AItemOnPawnPreview_C : public AFortItemPreviewOnPawnActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1952;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x6B0, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x6B8, 8, 0, 0})
-	CMember(UDirectionalLightComponent*)               Directional_Light_For_Atmosphere_PC                         OFFSET(get<T>, {0x6C0, 8, 0, 0})
-	CMember(USkyLightComponent*)                       SkyLightPC                                                  OFFSET(get<T>, {0x6C8, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x6D0, 8, 0, 0})
-	CMember(USkyLightComponent*)                       SkyLightLowMobile                                           OFFSET(get<T>, {0x6D8, 8, 0, 0})
-	CMember(UDirectionalLightComponent*)               DirectionalLightMobile                                      OFFSET(get<T>, {0x6E0, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight_StandaloneForSwitch                                OFFSET(get<T>, {0x6E8, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight5                                                   OFFSET(get<T>, {0x6F0, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight6                                                   OFFSET(get<T>, {0x6F8, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLigh3                                                    OFFSET(get<T>, {0x700, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight2                                                   OFFSET(get<T>, {0x708, 8, 0, 0})
-	CMember(USpotLightComponent*)                      BounceRear1                                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimLowerRight1                                              OFFSET(get<T>, {0x718, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimLeft1                                                    OFFSET(get<T>, {0x720, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimTopRight1                                                OFFSET(get<T>, {0x728, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimBottomLeft1                                              OFFSET(get<T>, {0x730, 8, 0, 0})
-	CMember(USpotLightComponent*)                      Bounce1                                                     OFFSET(get<T>, {0x738, 8, 0, 0})
-	CMember(USceneComponent*)                          LightTransform                                              OFFSET(get<T>, {0x740, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     Plane                                                       OFFSET(get<T>, {0x748, 8, 0, 0})
-	CMember(USkeletalMeshComponent*)                   Sample_Mesh                                                 OFFSET(get<T>, {0x750, 8, 0, 0})
-	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x758, 1, 0, 0})
-	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x759, 1, 0, 0})
-	DMember(bool)                                      debugConstructionLighting                                   OFFSET(get<bool>, {0x75A, 1, 0, 0})
-	CMember(UParticleSystemComponent*)                 ObscuringLoopEmitter                                        OFFSET(get<T>, {0x760, 8, 0, 0})
-	SMember(FRotator)                                  ToonLightRotatio                                            OFFSET(get<T>, {0x768, 24, 0, 0})
-	DMember(bool)                                      bIsBattlePassReward                                         OFFSET(get<bool>, {0x780, 1, 0, 0})
-	SMember(FTimerHandle)                              LOD_StreamingSafetyTimer                                    OFFSET(get<T>, {0x788, 8, 0, 0})
-	CMember(UMaterialInterface*)                       DefaultFloorMaterial                                        OFFSET(get<T>, {0x790, 8, 0, 0})
-	CMember(UMaterialInterface*)                       CustomFloorMaterial                                         OFFSET(get<T>, {0x798, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.Get LOD Streaming Safety Duration
-	// void Get LOD Streaming Safety Duration();                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent|BlueprintPure 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchErebusLighting
-	// void SwitchErebusLighting(bool Visibility);                                                                              // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SetFloorEnabled
-	// void SetFloorEnabled(bool Show Floor);                                                                                   // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.LightControl
-	// void LightControl(bool Active);                                                                                          // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchPCLighting
-	// void SwitchPCLighting(bool Visibility);                                                                                  // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SwitchMobileLighting
-	// void SwitchMobileLighting(bool NewParam);                                                                                // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.UpdateSettings
-	// void UpdateSettings();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnPreviewVisualsSpawned
-	// void OnPreviewVisualsSpawned(bool bUseSecondaryTransitionEffects, bool bShowFloor);                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnSetFloorMaterial
-	// void OnSetFloorMaterial(UMaterialInterface* InMaterialInstance);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnAllLODStreamingComplete
-	// void OnAllLODStreamingComplete();                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnCurrentVisualsCleanedUp
-	// void OnCurrentVisualsCleanedUp();                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.OnUpdateFloorMaterial
-	// void OnUpdateFloorMaterial(bool bEnableAutotestBackground);                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.Backup_LODStreamingFailed
-	// void Backup_LODStreamingFailed();                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.SpawnSoundPlayback
-	// void SpawnSoundPlayback();                                                                                               // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/ItemPreview/ItemOnPawnPreview.ItemOnPawnPreview_C.ExecuteUbergraph_ItemOnPawnPreview
-	// void ExecuteUbergraph_ItemOnPawnPreview(int32_t EntryPoint);                                                             // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C
-/// Size: 0x0050 (0x000290 - 0x0002E0)
-class AVaultWeaponPlacementHelper_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 736;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CUBE                                                        OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Sparkle                                         OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Swirl02                                         OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(UParticleSystemComponent*)                 PS_NoPlayer_Swirl01                                         OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CharacterPlacement                                          OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(UStaticMesh*)                              Mesh                                                        OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	SMember(FMulticastInlineDelegate)                  NewEventDispatcher                                          OFFSET(get<T>, {0x2D0, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.GetFrontendAnimInstance
-	// void GetFrontendAnimInstance();                                                                                          // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.OnFrontEndCameraChanged
-	// void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);                                      // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.Initialize
-	// void Initialize();                                                                                                       // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.InitializeContextEvents
-	// void InitializeContextEvents();                                                                                          // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.ItemRez
-	// void ItemRez();                                                                                                          // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.ExecuteUbergraph_VaultWeaponPlacementHelper
-	// void ExecuteUbergraph_VaultWeaponPlacementHelper(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultWeaponPlacementHelper.VaultWeaponPlacementHelper_C.NewEventDispatcher_0__DelegateSignature
-	// void NewEventDispatcher_0__DelegateSignature();                                                                          // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
-/// Class /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C
-/// Size: 0x00C8 (0x000290 - 0x000358)
-class AVaultCharacterPlacementHelper_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 856;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     floor                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(UStaticMeshComponent*)                     CharacterPlacement                                          OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(USceneComponent*)                          Root                                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	SMember(FTransform)                                OriginalTransform                                           OFFSET(get<T>, {0x2B0, 96, 0, 0})
-	SMember(FVector)                                   OffsetTranslate                                             OFFSET(get<T>, {0x310, 24, 0, 0})
-	SMember(FRotator)                                  OffsetRotate                                                OFFSET(get<T>, {0x328, 24, 0, 0})
-	DMember(bool)                                      Athena                                                      OFFSET(get<bool>, {0x340, 1, 0, 0})
-	SMember(FMulticastInlineDelegate)                  OnZoomLevelUpdated                                          OFFSET(get<T>, {0x348, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UpdatePosition For Camera
-	// void UpdatePosition For Camera(EFrontEndCamera FrontEndCamera);                                                          // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|HasDefaults|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.SubGameChanged_Event
-	// void SubGameChanged_Event(ESubGame SubGame);                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.OnFrontEndCameraChanged
-	// void OnFrontEndCameraChanged(EFrontEndCamera NewCamera, EFrontEndCamera OldCamera);                                      // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.ExecuteUbergraph_VaultCharacterPlacementHelper
-	// void ExecuteUbergraph_VaultCharacterPlacementHelper(int32_t EntryPoint);                                                 // [0x1ebf994] Final|HasDefaults    
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterPlacementHelper.VaultCharacterPlacementHelper_C.OnZoomLevelUpdated__DelegateSignature
-	// void OnZoomLevelUpdated__DelegateSignature(double CurrentZoomLevel);                                                     // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
-/// Class /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C
-/// Size: 0x0028 (0x0002A8 - 0x0002D0)
-class UUI_Background_Strings_C : public UUserWidget
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 720;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(UCommonRichTextBlock*)                     CustomString                                                OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	SMember(FText)                                     CustomText                                                  OFFSET(get<T>, {0x2B8, 24, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C.PreConstruct
-	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C.Construct
-	// void Construct();                                                                                                        // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BackgroundString/UI_Background_Strings.UI_Background_Strings_C.ExecuteUbergraph_UI_Background_Strings
-	// void ExecuteUbergraph_UI_Background_Strings(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
-/// Class /Game/Environments/FrontEnd/BackPlates/Blueprint/BP_Background_Raytracing.BP_Background_Raytracing_C
-/// Size: 0x0040 (0x000290 - 0x0002D0)
-class ABP_Background_Raytracing_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 720;
-
-public:
-	CMember(UStaticMeshComponent*)                     SM_InvertedSphere_BackPlate_Half                            OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
-	DMember(bool)                                      FullSphere                                                  OFFSET(get<bool>, {0x2A0, 1, 0, 0})
-	DMember(bool)                                      UseCubemap                                                  OFFSET(get<bool>, {0x2A1, 1, 0, 0})
-	DMember(double)                                    Brightness                                                  OFFSET(get<double>, {0x2A8, 8, 0, 0})
-	CMember(UTexture*)                                 _2dTexture                                                  OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UTexture*)                                 Cubemap                                                     OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	SMember(FLinearColor)                              FadeColor                                                   OFFSET(get<T>, {0x2C0, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/BackPlates/Blueprint/BP_Background_Raytracing.BP_Background_Raytracing_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-/// Class /Game/Environments/FrontEnd/BackPlates/CMSLobbyDirector.CMSLobbyDirector_C
-/// Size: 0x0008 (0x000460 - 0x000468)
-class ACMSLobbyDirector_C : public ADynamicBackgroundDirector
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 1128;
-
-public:
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x460, 8, 0, 0})
-};
-
-/// Class /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C
-/// Size: 0x0010 (0x000290 - 0x0002A0)
-class ABP_CharacterRimlightDisabler_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 672;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(USceneComponent*)                          DefaultSceneRoot                                            OFFSET(get<T>, {0x298, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C.ReceiveEndPlay
-	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/BP_CharacterRimlightDisabler.BP_CharacterRimlightDisabler_C.ExecuteUbergraph_BP_CharacterRimlightDisabler
-	// void ExecuteUbergraph_BP_CharacterRimlightDisabler(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
-/// Class /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C
-/// Size: 0x0020 (0x000A00 - 0x000A20)
-class AFortnitePartyHeroSelect_Camera_C : public AFortCameraBase
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2592;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA00, 8, 0, 0})
-	CMember(UCameraComponent*)                         CameraActor                                                 OFFSET(get<T>, {0xA08, 8, 0, 0})
-	DMember(bool)                                      MouseDown                                                   OFFSET(get<bool>, {0xA10, 1, 0, 0})
-	CMember(AFortPlayerPawn*)                          CachedPawn                                                  OFFSET(get<T>, {0xA18, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMousePress
-	// void HandleMousePress();                                                                                                 // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.HandleMouseRelease
-	// void HandleMouseRelease();                                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent
-	// void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent(FKey Key);                                                           // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_LeftMouseButton_K2Node_InputKeyEvent
-	// void InpActEvt_LeftMouseButton_K2Node_InputKeyEvent(FKey Key);                                                           // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent
-	// void InpActEvt_RightMouseButton_K2Node_InputKeyEvent(FKey Key);                                                          // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.InpActEvt_RightMouseButton_K2Node_InputKeyEvent
-	// void InpActEvt_RightMouseButton_K2Node_InputKeyEvent(FKey Key);                                                          // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.BP_OnActivated
-	// void BP_OnActivated(AFortPlayerController* PlayerController);                                                            // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.BP_OnDeactivated
-	// void BP_OnDeactivated(AFortPlayerController* PlayerController);                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ReceiveTick
-	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/FortnitePartyHeroSelect_Camera.FortnitePartyHeroSelect_Camera_C.ExecuteUbergraph_FortnitePartyHeroSelect_Camera
-	// void ExecuteUbergraph_FortnitePartyHeroSelect_Camera(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C
-/// Size: 0x00D0 (0x000290 - 0x000360)
-class AVaultCharacterLightingBP_C : public AActor
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 864;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x290, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow1                                                      OFFSET(get<T>, {0x298, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight4                                                   OFFSET(get<T>, {0x2A0, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight3                                                   OFFSET(get<T>, {0x2A8, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight2                                                   OFFSET(get<T>, {0x2B0, 8, 0, 0})
-	CMember(UPostProcessComponent*)                    PostProcess_Mobile                                          OFFSET(get<T>, {0x2B8, 8, 0, 0})
-	CMember(UPostProcessComponent*)                    PostProcess_LOWPC                                           OFFSET(get<T>, {0x2C0, 8, 0, 0})
-	CMember(USkyLightComponent*)                       SkyLight_LOWPC                                              OFFSET(get<T>, {0x2C8, 8, 0, 0})
-	CMember(UDirectionalLightComponent*)               DirectionalLight_LOWPC                                      OFFSET(get<T>, {0x2D0, 8, 0, 0})
-	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2D8, 8, 0, 0})
-	CMember(UDirectionalLightComponent*)               DirectionalLightMobile                                      OFFSET(get<T>, {0x2E0, 8, 0, 0})
-	CMember(USkyLightComponent*)                       SkyLightLowMobil                                            OFFSET(get<T>, {0x2E8, 8, 0, 0})
-	CMember(USkyLightComponent*)                       SkyLight                                                    OFFSET(get<T>, {0x2F0, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimLowerRight                                               OFFSET(get<T>, {0x2F8, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimLeft                                                     OFFSET(get<T>, {0x300, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimTopRight                                                 OFFSET(get<T>, {0x308, 8, 0, 0})
-	CMember(USpotLightComponent*)                      RimBottomLeft                                               OFFSET(get<T>, {0x310, 8, 0, 0})
-	CMember(USpotLightComponent*)                      KeyLight                                                    OFFSET(get<T>, {0x318, 8, 0, 0})
-	CMember(USpotLightComponent*)                      Bounce                                                      OFFSET(get<T>, {0x320, 8, 0, 0})
-	CMember(USpotLightComponent*)                      BounceRear                                                  OFFSET(get<T>, {0x328, 8, 0, 0})
-	CMember(USceneComponent*)                          SharedRoot                                                  OFFSET(get<T>, {0x330, 8, 0, 0})
-	DMember(bool)                                      DebugMobile_Lighting                                        OFFSET(get<bool>, {0x338, 1, 0, 0})
-	DMember(bool)                                      DebugLightingPC                                             OFFSET(get<bool>, {0x339, 1, 0, 0})
-	DMember(bool)                                      IsActive                                                    OFFSET(get<bool>, {0x33A, 1, 0, 0})
-	DMember(bool)                                      AlwaysOn                                                    OFFSET(get<bool>, {0x33B, 1, 0, 0})
-	DMember(bool)                                      DebugLighting_LOWDetailPC                                   OFFSET(get<bool>, {0x33C, 1, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightVector                                    OFFSET(get<T>, {0x340, 16, 0, 0})
-	SMember(FLinearColor)                              MPC_ManualSunlightColor                                     OFFSET(get<T>, {0x350, 16, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting_LOWDetail
-	// void SwitchPCLighting_LOWDetail(bool Visibility);                                                                        // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchPCLighting
-	// void SwitchPCLighting(bool Visibility);                                                                                  // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.SwitchMobileLighting
-	// void SwitchMobileLighting(bool Visibilty);                                                                               // [0x1ebf994] Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.UserConstructionScript
-	// void UserConstructionScript();                                                                                           // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.UpdateSettings
-	// void UpdateSettings();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.ToggleLighting
-	// void ToggleLighting();                                                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.OVERRIDELIGHTING
-	// void OVERRIDELIGHTING();                                                                                                 // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.LightControl
-	// void LightControl(bool NewParam);                                                                                        // [0x1ebf994] BlueprintCallable|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.ReceiveBeginPlay
-	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
-	// Function /Game/Environments/FrontEnd/Blueprints/VaultCharacterLightingBP.VaultCharacterLightingBP_C.ExecuteUbergraph_VaultCharacterLightingBP
-	// void ExecuteUbergraph_VaultCharacterLightingBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final                

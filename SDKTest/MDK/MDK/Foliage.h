@@ -220,13 +220,13 @@ public:
 	DMember(float)                                     MaxTouchImpulse                                             OFFSET(get<float>, {0x320, 4, 0, 0})
 	DMember(float)                                     MaxForce                                                    OFFSET(get<float>, {0x324, 4, 0, 0})
 	DMember(float)                                     Mass                                                        OFFSET(get<float>, {0x328, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Foliage.InteractiveFoliageActor.CapsuleTouched
 	// void CapsuleTouched(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& OverlapInfo); // [0x56a3058] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/Foliage.ProceduralFoliageBlockingVolume
 /// Size: 0x0098 (0x0002C8 - 0x000360)
 class AProceduralFoliageBlockingVolume : public AVolume
@@ -268,13 +268,13 @@ public:
 	CMember(TArray<FFoliageTypeObject>)                FoliageTypes                                                OFFSET(get<T>, {0x40, 16, 0, 0})
 	DMember(bool)                                      bUseOverrideFoliageTerrainMaterials                         OFFSET(get<bool>, {0x50, 1, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    OverrideFoliageTerrainMaterials                             OFFSET(get<T>, {0x58, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Foliage.ProceduralFoliageSpawner.Simulate
 	// void Simulate(int32_t NumSteps);                                                                                         // [0x56a3ad8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Foliage.ProceduralFoliageTile
 /// Size: 0x0148 (0x000028 - 0x000170)
 class UProceduralFoliageTile : public UObject

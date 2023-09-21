@@ -39,10 +39,10 @@ class ABuildingGameplayActorRadioTower : public ABuildingGameplayActor
 
 public:
 	SMember(FScalableFloat)                            MarkLinkedRadioTowerTerminal                                OFFSET(get<T>, {0x978, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MidMatchRadioTowerGameplayRuntime.BuildingGameplayActorRadioTower.GetLinkedRadioTowerTerminal
 	// ARadioTowerTerminal* GetLinkedRadioTowerTerminal();                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent|Const 
+};
+

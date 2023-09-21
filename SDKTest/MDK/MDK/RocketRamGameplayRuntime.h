@@ -25,13 +25,13 @@ public:
 	CMember(UCurveFloat*)                              SpeedCurve                                                  OFFSET(get<T>, {0x138, 8, 0, 0})
 	DMember(float)                                     FloorTraceHeight                                            OFFSET(get<float>, {0x140, 4, 0, 0})
 	CMember(UCurveVector*)                             PathOffsetCurve                                             OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/RocketRamGameplayRuntime.AbilityTask_ApplyRootMotion_RocketRam.ApplyRootMotion_RocketRam
 	// UAbilityTask_ApplyRootMotion_RocketRam* ApplyRootMotion_RocketRam(UGameplayAbility* InOwningAbility, FName InTaskInstanceName, float InDuration, FVector InInitialDirection, FVector InEndingDirection, float InMinSpeed, float InMaxSpeed, UCurveFloat* InSpeedCurve, float InFloorTraceHeight, UCurveVector* InPathOffsetCurve, ERootMotionFinishVelocityMode InVelocityOnFinishMode, FVector InSetVelocityOnFinish, float InClampVelocityOnFinish); // [0x9a427ac] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Struct /Script/RocketRamGameplayRuntime.RootMotionSource_RocketRam
 /// Size: 0x0060 (0x0000E0 - 0x000140)
 class FRootMotionSource_RocketRam : public FRootMotionSource

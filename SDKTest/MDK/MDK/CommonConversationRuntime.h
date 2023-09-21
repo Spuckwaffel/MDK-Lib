@@ -21,13 +21,13 @@ public:
 	SMember(FString)                                   NodeName                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FGuid)                                     Compiled_NodeGUID                                           OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(UConversationNode*)                        ParentNode                                                  OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonConversationRuntime.ConversationNode.GetDebugParticipantColor
 	// FLinearColor GetDebugParticipantColor(FGameplayTag ParticipantID);                                                       // [0x6d584c0] Final|Native|Protected|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CommonConversationRuntime.ConversationSubNode
 /// Size: 0x0000 (0x000058 - 0x000058)
 class UConversationSubNode : public UConversationNode
@@ -48,13 +48,13 @@ class UConversationChoiceNode : public UConversationSubNode
 public:
 	SMember(FText)                                     DefaultChoiceDisplayText                                    OFFSET(get<T>, {0x58, 24, 0, 0})
 	SMember(FGameplayTagContainer)                     ChoiceTags                                                  OFFSET(get<T>, {0x70, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonConversationRuntime.ConversationChoiceNode.FillChoice
 	// void FillChoice(FConversationContext& Context, FClientConversationOptionEntry& ChoiceEntry);                             // [0x6d558a4] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/CommonConversationRuntime.ConversationContextHelpers
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UConversationContextHelpers : public UBlueprintFunctionLibrary
@@ -135,8 +135,6 @@ class UConversationTaskNode : public UConversationNodeWithLinks
 public:
 	CMember(TArray<UConversationSubNode*>)             SubNodes                                                    OFFSET(get<T>, {0x68, 16, 0, 0})
 	DMember(bool)                                      bIgnoreRequirementsWhileAdvancingConversations              OFFSET(get<bool>, {0x78, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -150,6 +148,8 @@ public:
 	// FConversationTaskResult ExecuteTaskNode(FConversationContext& Context);                                                  // [0x6d551bc] BlueprintAuthorityOnly|Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/CommonConversationRuntime.ConversationTaskNode.ExecuteClientEffects
 	// void ExecuteClientEffects(FConversationContext& Context);                                                                // [0x6d54b00] BlueprintCosmetic|Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/CommonConversationRuntime.ConversationLinkNode
 /// Size: 0x0008 (0x000080 - 0x000088)
 class UConversationLinkNode : public UConversationTaskNode
@@ -173,8 +173,6 @@ public:
 	CMember(UConversationInstance*)                    Auth_CurrentConversation                                    OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(TArray<UConversationInstance*>)            Auth_Conversations                                          OFFSET(get<T>, {0x110, 16, 0, 0})
 	SMember(FClientConversationMessagePayload)         LastMessage                                                 OFFSET(get<T>, {0x120, 120, 0, 0})
-};
-
 
 
 	/// Functions
@@ -204,6 +202,8 @@ public:
 	// void ClientExitConversation(FConversationParticipants InParticipants);                                                   // [0x6d54224] Net|NetReliableNative|Event|Protected|NetClient 
 	// Function /Script/CommonConversationRuntime.ConversationParticipantComponent.ClientExecuteTaskAndSideEffects
 	// void ClientExecuteTaskAndSideEffects(FConversationNodeHandle Handle);                                                    // [0x6d540b8] Net|NetReliableNative|Event|Protected|NetClient 
+};
+
 /// Class /Script/CommonConversationRuntime.ConversationRegistry
 /// Size: 0x01C8 (0x000030 - 0x0001F8)
 class UConversationRegistry : public UWorldSubsystem

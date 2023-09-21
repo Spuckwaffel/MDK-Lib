@@ -74,13 +74,13 @@ public:
 	SMember(FText)                                     ButtonText                                                  OFFSET(get<T>, {0x1480, 24, 0, 0})
 	SMember(FDataTableRowHandle)                       buttonInputAction                                           OFFSET(get<T>, {0x1498, 16, 0, 0})
 	DMember(bool)                                      bAutoCapitalize                                             OFFSET(get<bool>, {0x14A8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelectorButton.SetButtonText
 	// void SetButtonText(FText& InText);                                                                                       // [0x9a9b700] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile
 /// Size: 0x00B0 (0x0014B0 - 0x001560)
 class UClassSelectorTeamTile : public UCreativeClassSelectorButton
@@ -91,8 +91,6 @@ class UClassSelectorTeamTile : public UCreativeClassSelectorButton
 public:
 	CMember(UTextBlock*)                               PlayerCount                                                 OFFSET(get<T>, {0x1540, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         TeamIconImage                                               OFFSET(get<T>, {0x1548, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -104,6 +102,8 @@ public:
 	// void OnTeamColorIndexSet(int32_t TeamColorIndex);                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/CRD_ClassSelectorUI.ClassSelectorTeamTile.OnPlayerCountSet
 	// void OnPlayerCountSet(int32_t NewPlayerCount);                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/CRD_ClassSelectorUI.ClassSelectorTeamTiles
 /// Size: 0x0048 (0x0002D0 - 0x000318)
 class UClassSelectorTeamTiles : public UCommonUserWidget
@@ -138,8 +138,6 @@ class UCreativeClassEntry : public UCreativeClassSelectorButton
 
 public:
 	CMember(UCreativeClassItemInfo*)                   ItemInfo                                                    OFFSET(get<T>, {0x14B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -147,6 +145,8 @@ public:
 	// void OnClassEntryDataSet(bool bIsCurrentClass, bool bIsPendingClass);                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/CRD_ClassSelectorUI.CreativeClassEntry.OnBrowsingLoadout
 	// void OnBrowsingLoadout(bool bBrowsingLoadout);                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassSelector
 /// Size: 0x0138 (0x0003E8 - 0x000520)
 class UCreativeClassSelector : public UCommonActivatableWidget
@@ -188,8 +188,6 @@ public:
 	SMember(FDataTableRowHandle)                       ReturnToClassSelectionInputAction                           OFFSET(get<T>, {0x4E8, 16, 0, 0})
 	DMember(float)                                     LoadoutScrollPadding                                        OFFSET(get<float>, {0x4F8, 4, 0, 0})
 	CMember(UCreativeClassItemInfo*)                   SelectedClassItemInfo                                       OFFSET(get<T>, {0x518, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -205,6 +203,8 @@ public:
 	// void HandleMinigameStateChanged(AFortMinigame* Minigame, EFortMinigameState MinigameState);                              // [0x9a9b640] Final|Native|Protected 
 	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelector.GetFirstLoadoutItem
 	// UWidget* GetFirstLoadoutItem();                                                                                          // [0x9a9b604] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CRD_ClassSelectorUI.CreativeClassSelectorMapTab
 /// Size: 0x0060 (0x0003E8 - 0x000448)
 class UCreativeClassSelectorMapTab : public UCommonActivatableWidget
@@ -215,13 +215,13 @@ class UCreativeClassSelectorMapTab : public UCommonActivatableWidget
 public:
 	SMember(FAthenaMapScreenContainerTabInfo)          MapTabInfo                                                  OFFSET(get<T>, {0x3F8, 72, 0, 0})
 	CMember(UCreativeClassSelector*)                   CreativeClassSelector                                       OFFSET(get<T>, {0x440, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CRD_ClassSelectorUI.CreativeClassSelectorMapTab.SetTabName
 	// void SetTabName(FText& TabName);                                                                                         // [0x9a9b79c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/CRD_ClassSelectorUI.Mutator_ClassSelectorUI
 /// Size: 0x0000 (0x000338 - 0x000338)
 class AMutator_ClassSelectorUI : public AFortAthenaMutator

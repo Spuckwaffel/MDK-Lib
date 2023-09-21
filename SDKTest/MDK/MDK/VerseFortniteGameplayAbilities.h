@@ -32,8 +32,6 @@ class UFortGameplayAbility_PlayAnim : public UFortGameplayAbility
 public:
 	CMember(UAnimMontage*)                             MontageToPlay                                               OFFSET(get<T>, {0xB28, 8, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0xB30, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -45,6 +43,8 @@ public:
 	// void OnCancelled();                                                                                                      // [0x98f8860] Final|Native|Private 
 	// Function /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnim.OnBlendOut
 	// void OnBlendOut();                                                                                                       // [0x2d79908] Final|Native|Private 
+};
+
 /// Class /Script/VerseFortniteGameplayAbilities.FortGameplayAbility_PlayAnimAndApplyEffect
 /// Size: 0x0018 (0x000B38 - 0x000B50)
 class UFortGameplayAbility_PlayAnimAndApplyEffect : public UFortGameplayAbility_PlayAnim

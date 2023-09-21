@@ -11,7 +11,7 @@
 
 #include <string>
 
-// base class
+// base class, you can get this file from https://github.com/Spuckwaffel/MDKTest and for setup help
 #include "../MDK.h"
 
 #include "MDK/BasicType.h"

@@ -41,13 +41,13 @@ class UAIBehaviorScriptComponent : public UFortUserOptionContainerComponent
 
 public:
 	CMember(UAIBehaviorScript*)                        AIBehaviorScript                                            OFFSET(get<T>, {0x110, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VerseAIBase.AIBehaviorScriptComponent.GetBehaviorScript
 	// UAIBehaviorScript* GetBehaviorScript();                                                                                  // [0x98fddcc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/VerseAIBase.FortAthenaAISpawnerDataComponent_Verse
 /// Size: 0x0018 (0x000030 - 0x000048)
 class UFortAthenaAISpawnerDataComponent_Verse : public UFortAthenaAISpawnerDataComponent_ScriptBase
@@ -58,8 +58,6 @@ class UFortAthenaAISpawnerDataComponent_Verse : public UFortAthenaAISpawnerDataC
 public:
 	CMember(TArray<UClass*>)                           EntityComponents                                            OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TWeakObjectPtr<UAIBehaviorScript*>)        AIBehaviorScript                                            OFFSET(get<T>, {0x40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,6 +65,8 @@ public:
 	// void SetAIBehaviorScript(UAIBehaviorScript* InAIBehaviorScript);                                                         // [0x98fe180] Final|Native|Public|BlueprintCallable 
 	// Function /Script/VerseAIBase.FortAthenaAISpawnerDataComponent_Verse.AddUniqueEntityComponent
 	// void AddUniqueEntityComponent(UClass* EntityComponent);                                                                  // [0x98fdd4c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/VerseAIBase.VerseAISpawner
 /// Size: 0x0080 (0x000BC8 - 0x000C48)
 class AVerseAISpawner : public AFortCreativeDeviceProp
@@ -82,8 +82,6 @@ public:
 	CMember(UFortAISpawnerUtilityComponent*)           AISpawnerUtilityComponent                                   OFFSET(get<T>, {0xBF8, 8, 0, 0})
 	CMember(UFortActorOptionsComponent*)               OptionsComponent                                            OFFSET(get<T>, {0xC00, 8, 0, 0})
 	CMember(TWeakObjectPtr<UEnvQuery*>)                SpawnEQSQuery                                               OFFSET(get<T>, {0xC08, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -103,3 +101,5 @@ public:
 	// void InternalOnSpawned(APawn* Pawn, int32_t RequestID);                                                                  // [0x98fdf7c] Final|Native|Private 
 	// Function /Script/VerseAIBase.VerseAISpawner.InternalOnAIDied
 	// void InternalOnAIDied(AController* KilledController, bool bIsABot, AFortPawn* KilledAIPawn, AFortPlayerPawn* KilledPlayerPawn, AController* KillerController); // [0x98fdde4] Final|Native|Private 
+};
+

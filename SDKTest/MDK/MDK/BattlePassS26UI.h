@@ -38,13 +38,13 @@ public:
 	CMember(UBattlePassLandingPageButton*)             Button_WeeklyRewards                                        OFFSET(get<T>, {0x560, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_SeasonNumber                                           OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UAthenaSeasonItemData_BattleStar*)         SeasonData_BattleStar                                       OFFSET(get<T>, {0x570, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/BattlePassS26UI.BattlePassLandingPageS26.OnBattlePassSubscriptionAllowed
 	// void OnBattlePassSubscriptionAllowed(bool bSubscriptionAllowed);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/BattlePassS26UI.BattlePassRewardPageS26
 /// Size: 0x00A0 (0x000500 - 0x0005A0)
 class UBattlePassRewardPageS26 : public UBattlePassRewardPageBase
@@ -70,8 +70,6 @@ public:
 	CMember(UBattlePassBulkBuyInputData*)              BulkBuyInputData                                            OFFSET(get<T>, {0x568, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_NextPage                                             OFFSET(get<T>, {0x570, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_PreviousPage                                         OFFSET(get<T>, {0x578, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -87,6 +85,8 @@ public:
 	// UWidget* HandleRewardTracksBoundaryNavigation(EUINavigation InNavigation);                                               // [0x98aa5f8] Final|Native|Private 
 	// Function /Script/BattlePassS26UI.BattlePassRewardPageS26.GetRewardPageBackgroundData
 	// FVaultWorldBackgroundData GetRewardPageBackgroundData();                                                                 // [0x98aa3dc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/BattlePassS26UI.BattlePassScreenS26
 /// Size: 0x04D8 (0x0008C8 - 0x000DA0)
 class UBattlePassScreenS26 : public UBattlePassScreenBase
@@ -147,8 +147,6 @@ public:
 	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_BattleStars                                 OFFSET(get<T>, {0xBB8, 8, 0, 0})
 	CMember(UFortBattlePassTutorialTooltipS26*)        TutorialTooltip_StylePoints                                 OFFSET(get<T>, {0xBC0, 8, 0, 0})
 	CMember(UFortSwipePanel*)                          SwipePanel_Navigation                                       OFFSET(get<T>, {0xBC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -200,6 +198,8 @@ public:
 	// void GoBackOneScreen();                                                                                                  // [0x98aa478] Final|Native|Public|BlueprintCallable 
 	// Function /Script/BattlePassS26UI.BattlePassScreenS26.GetQuestPageDelay
 	// FTimespan GetQuestPageDelay();                                                                                           // [0x98aa3b0] Final|Native|Protected|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/BattlePassS26UI.FortBattlePassCustomSkinPageS26
 /// Size: 0x0018 (0x0005B0 - 0x0005C8)
 class UFortBattlePassCustomSkinPageS26 : public UFortBattlePassCustomSkinPageBase
@@ -224,8 +224,6 @@ public:
 	CMember(UCommonTextBlock*)                         Text_StylePointsAmount                                      OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UBorder*)                                  Border_StylePointsRewardsTag                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UBorder*)                                  Border_BattleStarsRewardsTag                                OFFSET(get<T>, {0x2F8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -233,6 +231,8 @@ public:
 	// void OnStylePointsRewardsSet(int32_t Rewards);                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/BattlePassS26UI.FortBattlePassResourcesWidgetS26.OnBattleStarRewardsSet
 	// void OnBattleStarRewardsSet(int32_t Rewards);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/BattlePassS26UI.FortBattlePassTutorialTooltipS26
 /// Size: 0x0010 (0x0002D0 - 0x0002E0)
 class UFortBattlePassTutorialTooltipS26 : public UCommonUserWidget
@@ -242,8 +242,6 @@ class UFortBattlePassTutorialTooltipS26 : public UCommonUserWidget
 
 public:
 	CMember(UCommonRichTextBlock*)                     Text_Tooltip                                                OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -253,6 +251,8 @@ public:
 	// void SetText(FText Text);                                                                                                // [0x9891c58] Final|Native|Public|BlueprintCallable 
 	// Function /Script/BattlePassS26UI.FortBattlePassTutorialTooltipS26.HideTooltip
 	// void HideTooltip();                                                                                                      // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Enum /Script/BattlePassS26UI.EBattlePassStatusBarTypeS26
 /// Size: 0x08
 enum EBattlePassStatusBarTypeS26 : uint8_t

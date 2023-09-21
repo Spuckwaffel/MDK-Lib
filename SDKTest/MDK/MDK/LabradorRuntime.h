@@ -54,8 +54,6 @@ public:
 	SMember(FString)                                   InstigatorAwakeNetIDString                                  OFFSET(get<T>, {0x110, 16, 0, 0})
 	CMember(ELabradorDespawnReason)                    DespawnReason                                               OFFSET(get<T>, {0x120, 1, 0, 0})
 	DMember(float)                                     DamageReceivedFromPlayers                                   OFFSET(get<float>, {0x124, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -65,6 +63,8 @@ public:
 	// void OnTeleport();                                                                                                       // [0x9a2314c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LabradorRuntime.FortLabradorComponent_Telemetry.OnDamaged
 	// void OnDamaged(AActor* DamagedActor, float Damage, AController* InstigatedBy, AActor* DamageCauser, FVector HitLocation, UPrimitiveComponent* FHitComponent, FName BoneName, FVector Momentum); // [0x9a22bc8] Final|Native|Private|HasDefaults 
+};
+
 /// Enum /Script/LabradorRuntime.ELabradorDespawnReason
 /// Size: 0x07
 enum ELabradorDespawnReason : uint8_t

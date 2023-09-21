@@ -27,8 +27,6 @@ class UTypedElementSelectionSet : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnPreSelectionChange                                        OFFSET(get<T>, {0x828, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSelectionChange                                           OFFSET(get<T>, {0x838, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -80,6 +78,8 @@ public:
 	// bool CanDeselectElement(FScriptTypedElementHandle& InElementHandle, FTypedElementSelectionOptions InSelectionOptions);   // [0x5160248] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TypedElementRuntime.TypedElementSelectionSet.AllowSelectionModifiers
 	// bool AllowSelectionModifiers(FScriptTypedElementHandle& InElementHandle);                                                // [0x5160050] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/TypedElementRuntime.TypedElementAssetDataInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTypedElementAssetDataInterface : public UInterface

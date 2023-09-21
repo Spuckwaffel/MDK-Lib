@@ -61,8 +61,6 @@ class UAthenaQuickBarSlotCraftingIndicator : public UAthenaQuickBarSlotExtension
 
 public:
 	DMember(bool)                                      bCheckForIngredientChangesWhenCraftable                     OFFSET(get<bool>, {0x2F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -74,6 +72,8 @@ public:
 	// void OnCanCraftNowChanged(bool bCanCraftNow);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CraftingUI.AthenaQuickBarSlotCraftingIndicator.HandleWeaponEquipped
 	// void HandleWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                              // [0x9956214] Final|Native|Private 
+};
+
 /// Class /Script/CraftingUI.FortCookingScreen
 /// Size: 0x0050 (0x0003E8 - 0x000438)
 class UFortCookingScreen : public UCommonActivatableWidget
@@ -114,13 +114,13 @@ public:
 	CMember(UCommonTextBlock*)                         Text_NumRequired                                            OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UAthenaItemIcon*)                          ItemIcon                                                    OFFSET(get<T>, {0x2E8, 8, 0, 0})
 	CMember(UCommonLazyImage*)                         LazyImage_Icon                                              OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingIngredientWidget.OnIngredientWidgetUpdated
 	// void OnIngredientWidgetUpdated(int32_t NumAvailable, int32_t NumRequired, bool bIsPrimaryIngredient, bool bIsLastIngredient); // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CraftingUI.FortCraftingItemInfoWidget
 /// Size: 0x0068 (0x0003E8 - 0x000450)
 class UFortCraftingItemInfoWidget : public UCommonActivatableWidget
@@ -138,13 +138,13 @@ public:
 	CMember(UAthenaInventoryItemStatsWidget*)          ItemStatsWidget                                             OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UFortCraftingFormulaIngredientsWidget*)    IngredientsWidget                                           OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UCommonButtonLegacy*)                      Button_StartCrafting                                        OFFSET(get<T>, {0x440, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingItemInfoWidget.OnItemRaritySet
 	// void OnItemRaritySet(EFortRarity Rarity, FFortRarityItemData RarityItemData);                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CraftingUI.FortCraftingListEntry
 /// Size: 0x0020 (0x0014C0 - 0x0014E0)
 class UFortCraftingListEntry : public UCommonButtonLegacy
@@ -155,13 +155,13 @@ class UFortCraftingListEntry : public UCommonButtonLegacy
 public:
 	CMember(UAthenaItemIcon*)                          ItemIcon                                                    OFFSET(get<T>, {0x14C8, 8, 0, 0})
 	DMember(bool)                                      bCanCraftItem                                               OFFSET(get<bool>, {0x14D0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CraftingUI.FortCraftingListEntry.OnCraftingListItemSet
 	// void OnCraftingListItemSet();                                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CraftingUI.FortCraftingTab
 /// Size: 0x0148 (0x0003E8 - 0x000530)
 class UFortCraftingTab : public UCommonActivatableWidget
@@ -176,8 +176,6 @@ public:
 	CMember(UFortCraftingItemInfoWidget*)              CraftingItemInfo                                            OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UCommonListView*)                          ListView_Recipes                                            OFFSET(get<T>, {0x518, 8, 0, 0})
 	CMember(UAthenaQuickbarEditorBase*)                QuickbarEditor                                              OFFSET(get<T>, {0x520, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -185,6 +183,8 @@ public:
 	// void OnFormulaListUpdated(int32_t NumFormulas);                                                                          // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CraftingUI.FortCraftingTab.HandleInventoryItemSelected
 	// void HandleInventoryItemSelected(UFortItem* Item);                                                                       // [0x99560d0] Final|Native|Private 
+};
+
 /// Class /Script/CraftingUI.FortPotContentsPopup
 /// Size: 0x0028 (0x0002A8 - 0x0002D0)
 class UFortPotContentsPopup : public UUserWidget
@@ -197,13 +197,13 @@ public:
 	CMember(UCommonTileView*)                          TileView_PotContents                                        OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_MoreItems                                              OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UWidget*)                                  Overlay_Popup                                               OFFSET(get<T>, {0x2C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CraftingUI.FortPotContentsPopup.SetOwningCraftingObject
 	// void SetOwningCraftingObject(ACraftingObjectBGA* InCraftingObject);                                                      // [0x99562d0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CraftingUI.FortPotContentsTile
 /// Size: 0x0010 (0x0014C0 - 0x0014D0)
 class UFortPotContentsTile : public UCommonButtonLegacy

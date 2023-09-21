@@ -47,8 +47,6 @@ class USynthComponentMoto : public USynthComponent
 public:
 	CMember(UMotoSynthPreset*)                         MotoSynthPreset                                             OFFSET(get<T>, {0x900, 8, 0, 0})
 	DMember(float)                                     RPM                                                         OFFSET(get<float>, {0x908, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -60,6 +58,8 @@ public:
 	// bool IsEnabled();                                                                                                        // [0x981c3c4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MotoSynth.SynthComponentMoto.GetRPMRange
 	// void GetRPMRange(float& OutMinRPM, float& OutMaxRPM);                                                                    // [0x981c2ec] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/MotoSynth.MotoSynthRuntimeSettings
 /// Size: 0x0138 (0x000000 - 0x000138)
 class FMotoSynthRuntimeSettings : public MDKStruct

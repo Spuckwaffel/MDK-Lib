@@ -37,8 +37,6 @@ public:
 	CMember(UUIFrameworkPresenter*)                    Presenter                                                   OFFSET(get<T>, {0x3C0, 8, 0, 0})
 	CMember(TSet<int32_t>)                             NetReplicationPending                                       OFFSET(get<T>, {0x3C8, 80, 0, 0})
 	CMember(TSet<int32_t>)                             AddPending                                                  OFFSET(get<T>, {0x418, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -48,6 +46,8 @@ public:
 	// void RemoveWidget(UUIFrameworkWidget* Widget);                                                                           // [0x97662cc] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/UIFramework.UIFrameworkPlayerComponent.AddWidget
 	// void AddWidget(FUIFrameworkGameLayerSlot Widget);                                                                        // [0x97658c4] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UIFramework.UIFrameworkPresenter
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UUIFrameworkPresenter : public UObject
@@ -93,8 +93,6 @@ public:
 	CMember(TScriptInterface<Class>)                   Wrapper                                                     OFFSET(get<T>, {0x98, 16, 0, 0})
 	SMember(FUIFrameworkParentWidget)                  AuthorityParent                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(UWidget*)                                  LocalUMGWidget                                              OFFSET(get<T>, {0xC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -102,6 +100,8 @@ public:
 	// void OnRep_Visibility();                                                                                                 // [0x9766198] Final|Native|Private 
 	// Function /Script/UIFramework.UIFrameworkWidget.OnRep_IsEnabled
 	// void OnRep_IsEnabled();                                                                                                  // [0x9765f6c] Final|Native|Private 
+};
+
 /// Class /Script/UIFramework.UIFrameworkButton
 /// Size: 0x0058 (0x0000C8 - 0x000120)
 class UUIFrameworkButton : public UUIFrameworkWidget
@@ -111,8 +111,6 @@ class UUIFrameworkButton : public UUIFrameworkWidget
 
 public:
 	SMember(FUIFrameworkSimpleSlot)                    Slot                                                        OFFSET(get<T>, {0xE0, 64, 0, 0})
-};
-
 
 
 	/// Functions
@@ -126,6 +124,8 @@ public:
 	// void HandleClick();                                                                                                      // [0x9765dd0] Final|Native|Private 
 	// Function /Script/UIFramework.UIFrameworkButton.GetContent
 	// FUIFrameworkSimpleSlot GetContent();                                                                                     // [0x9765c70] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UIFramework.UIFrameworkButtonWidget
 /// Size: 0x0000 (0x0005D0 - 0x0005D0)
 class UUIFrameworkButtonWidget : public UButton
@@ -145,8 +145,6 @@ class UUIFrameworkCanvasBox : public UUIFrameworkWidget
 
 public:
 	SMember(FUIFrameworkCanvasBoxSlotList)             ReplicatedSlotList                                          OFFSET(get<T>, {0xC8, 288, 0, 0})
-};
-
 
 
 	/// Functions
@@ -154,6 +152,8 @@ public:
 	// void RemoveWidget(UUIFrameworkWidget* Widget);                                                                           // [0x97661cc] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/UIFramework.UIFrameworkCanvasBox.AddWidget
 	// void AddWidget(FUIFrameworkCanvasBoxSlot Widget);                                                                        // [0x97655e0] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UIFramework.UIFrameworkColorBlock
 /// Size: 0x0018 (0x0000C8 - 0x0000E0)
 class UUIFrameworkColorBlock : public UUIFrameworkWidget
@@ -164,8 +164,6 @@ class UUIFrameworkColorBlock : public UUIFrameworkWidget
 public:
 	SMember(FLinearColor)                              Color                                                       OFFSET(get<T>, {0xC8, 16, 0, 0})
 	SMember(FVector2f)                                 DesiredSize                                                 OFFSET(get<T>, {0xD8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -181,6 +179,8 @@ public:
 	// FVector2f GetDesiredSize();                                                                                              // [0x82ba034] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UIFramework.UIFrameworkColorBlock.GetColor
 	// FLinearColor GetColor();                                                                                                 // [0x9765c54] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UIFramework.UIFrameworkImageBlock
 /// Size: 0x0060 (0x0000C8 - 0x000128)
 class UUIFrameworkImageBlock : public UUIFrameworkWidget
@@ -191,8 +191,6 @@ class UUIFrameworkImageBlock : public UUIFrameworkWidget
 public:
 	SMember(FUIFrameworkImageBlockData)                Data                                                        OFFSET(get<T>, {0xC8, 64, 0, 0})
 	DMember(bool)                                      bWaitForResourceToBeLoaded                                  OFFSET(get<bool>, {0x108, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -216,6 +214,8 @@ public:
 	// FVector2f GetDesiredSize();                                                                                              // [0x58167b4] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UIFramework.UIFrameworkImageBlock.GeResourceObject
 	// TWeakObjectPtr<UObject*> GeResourceObject();                                                                             // [0x9765ba8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UIFramework.UIFrameworkOverlay
 /// Size: 0x0120 (0x0000C8 - 0x0001E8)
 class UUIFrameworkOverlay : public UUIFrameworkWidget
@@ -225,8 +225,6 @@ class UUIFrameworkOverlay : public UUIFrameworkWidget
 
 public:
 	SMember(FUIFrameworkOverlaySlotList)               ReplicatedSlotList                                          OFFSET(get<T>, {0xC8, 288, 0, 0})
-};
-
 
 
 	/// Functions
@@ -234,6 +232,8 @@ public:
 	// void RemoveWidget(UUIFrameworkWidget* Widget);                                                                           // [0x976624c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/UIFramework.UIFrameworkOverlay.AddWidget
 	// void AddWidget(FUIFrameworkOverlaySlot Widget);                                                                          // [0x9765754] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UIFramework.UIFrameworkSimpleButton
 /// Size: 0x0058 (0x0000C8 - 0x000120)
 class UUIFrameworkSimpleButton : public UUIFrameworkWidget
@@ -245,8 +245,6 @@ public:
 	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0xC8, 24, 0, 0})
 	SMember(FLocalizableMessage)                       Message                                                     OFFSET(get<T>, {0xE0, 48, 0, 0})
 	SMember(FUIFrameworkClickEventArgument)            ClickEvent                                                  OFFSET(get<T>, {0x110, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -256,6 +254,8 @@ public:
 	// void OnRep_Message();                                                                                                    // [0x9765fd0] Final|Native|Private 
 	// Function /Script/UIFramework.UIFrameworkSimpleButton.OnClick
 	// void OnClick(FMVVMEventField Field);                                                                                     // [0x9765de4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UIFramework.UIFrameworkStackBox
 /// Size: 0x0128 (0x0000C8 - 0x0001F0)
 class UUIFrameworkStackBox : public UUIFrameworkWidget
@@ -266,8 +266,6 @@ class UUIFrameworkStackBox : public UUIFrameworkWidget
 public:
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0xC8, 1, 0, 0})
 	SMember(FUIFrameworkStackBoxSlotList)              ReplicatedSlotList                                          OFFSET(get<T>, {0xD0, 288, 0, 0})
-};
-
 
 
 	/// Functions
@@ -277,6 +275,8 @@ public:
 	// void OnRep_Orientation();                                                                                                // [0x9766054] Final|Native|Private 
 	// Function /Script/UIFramework.UIFrameworkStackBox.AddWidget
 	// void AddWidget(FUIFrameworkStackBoxSlot Widget);                                                                         // [0x9765a34] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/UIFramework.UIFrameworkTextBase
 /// Size: 0x0060 (0x0000C8 - 0x000128)
 class UUIFrameworkTextBase : public UUIFrameworkWidget
@@ -290,8 +290,6 @@ public:
 	SMember(FLinearColor)                              TextColor                                                   OFFSET(get<T>, {0x110, 16, 0, 0})
 	CMember(TEnumAsByte<ETextJustify>)                 Justification                                               OFFSET(get<T>, {0x120, 1, 0, 0})
 	CMember(ETextOverflowPolicy)                       OverflowPolicy                                              OFFSET(get<T>, {0x121, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -317,6 +315,8 @@ public:
 	// ETextOverflowPolicy GetOverflowPolicy();                                                                                 // [0x9765d00] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UIFramework.UIFrameworkTextBase.GetJustification
 	// TEnumAsByte<ETextJustify> GetJustification();                                                                            // [0x9765ce8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UIFramework.UIFrameworkTextBlock
 /// Size: 0x0018 (0x000128 - 0x000140)
 class UUIFrameworkTextBlock : public UUIFrameworkTextBase
@@ -327,8 +327,6 @@ class UUIFrameworkTextBlock : public UUIFrameworkTextBase
 public:
 	SMember(FVector2f)                                 ShadowOffset                                                OFFSET(get<T>, {0x128, 8, 0, 0})
 	SMember(FLinearColor)                              ShadowColor                                                 OFFSET(get<T>, {0x130, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -344,6 +342,8 @@ public:
 	// FVector2f GetShadowOffset();                                                                                             // [0x9765d34] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UIFramework.UIFrameworkTextBlock.GetShadowColor
 	// FLinearColor GetShadowColor();                                                                                           // [0x9765d18] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UIFramework.UIFrameworkUserWidget
 /// Size: 0x0120 (0x0000C8 - 0x0001E8)
 class UUIFrameworkUserWidget : public UUIFrameworkWidget
@@ -353,8 +353,6 @@ class UUIFrameworkUserWidget : public UUIFrameworkWidget
 
 public:
 	SMember(FUIFrameworkUserWidgetSlotList)            ReplicatedSlotList                                          OFFSET(get<T>, {0xC8, 288, 0, 0})
-};
-
 
 
 	/// Functions
@@ -362,6 +360,8 @@ public:
 	// void SetWidgetClass(TWeakObjectPtr<UClass*> Value);                                                                      // [0x9767304] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/UIFramework.UIFrameworkUserWidget.SetNamedSlot
 	// void SetNamedSlot(FName SlotName, UUIFrameworkWidget* Widget);                                                           // [0x9766c08] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/UIFramework.UIFrameworkSimpleEventArgument
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FUIFrameworkSimpleEventArgument : public MDKStruct

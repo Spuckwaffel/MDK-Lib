@@ -19,8 +19,6 @@ class UAbilityTask_PerformTargeting : public UAbilityTask
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnTargetReady                                               OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,6 +26,8 @@ public:
 	// UAbilityTask_PerformTargeting* PerformTargetingRequest(UGameplayAbility* OwningAbility, UTargetingPreset* InTargetingPreset, bool bAllowAsync); // [0x6bc2830] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TargetingSystem.AbilityTask_PerformTargeting.PerformFilteringRequest
 	// UAbilityTask_PerformTargeting* PerformFilteringRequest(UGameplayAbility* OwningAbility, UTargetingPreset* TargetingPreset, TArray<AActor*> InTargets, bool bAllowAsync); // [0x6bc23c4] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/TargetingSystem.AsyncAction_PerformTargeting
 /// Size: 0x0038 (0x000030 - 0x000068)
 class UAsyncAction_PerformTargeting : public UBlueprintAsyncActionBase
@@ -42,8 +42,6 @@ public:
 	CMember(TArray<AActor*>)                           InitialTargets                                              OFFSET(get<T>, {0x50, 16, 0, 0})
 	SMember(FTargetingRequestHandle)                   TargetingHandle                                             OFFSET(get<T>, {0x60, 4, 0, 0})
 	DMember(bool)                                      bUseAsyncTargeting                                          OFFSET(get<bool>, {0x64, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -53,6 +51,8 @@ public:
 	// UAsyncAction_PerformTargeting* PerformFilteringRequest(AActor* SourceActor, UTargetingPreset* TargetingPreset, bool bUseAsyncTargeting, TArray<AActor*> InTargets); // [0x6bc257c] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/TargetingSystem.AsyncAction_PerformTargeting.GetTargetingHandle
 	// FTargetingRequestHandle GetTargetingHandle();                                                                            // [0x6bc1b50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/TargetingSystem.TargetingTask
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTargetingTask : public UObject
@@ -116,8 +116,6 @@ public:
 	SMember(FScalableFloat)                            Radius                                                      OFFSET(get<T>, {0x78, 40, 0, 0})
 	SMember(FScalableFloat)                            HalfHeight                                                  OFFSET(get<T>, {0xA0, 40, 0, 0})
 	SMember(FName)                                     ComponentTag                                                OFFSET(get<T>, {0xC8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -127,6 +125,8 @@ public:
 	// FVector GetSourceOffset(FTargetingRequestHandle& TargetingHandle);                                                       // [0x6bc18a0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_AOE.GetSourceLocation
 	// FVector GetSourceLocation(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6bc1740] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
+};
+
 /// Class /Script/TargetingSystem.TargetingSelectionTask_SourceActor
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTargetingSelectionTask_SourceActor : public UTargetingTask
@@ -155,8 +155,6 @@ public:
 	DMember(bool)                                      bComplexTrace                                               OFFSET(get<bool>, {0xB0, 1, 1, 0})
 	DMember(bool)                                      bIgnoreSourceActor                                          OFFSET(get<bool>, {0xB0, 1, 1, 1})
 	DMember(bool)                                      bIgnoreInstigatorActor                                      OFFSET(get<bool>, {0xB0, 1, 1, 2})
-};
-
 
 
 	/// Functions
@@ -172,6 +170,8 @@ public:
 	// FVector GetSourceLocation(FTargetingRequestHandle& TargetingHandle);                                                     // [0x6bc17f0] Native|Event|Protected|HasOutParms|HasDefaults|BlueprintEvent|Const 
 	// Function /Script/TargetingSystem.TargetingSelectionTask_Trace.GetAdditionalActorsToIgnore
 	// void GetAdditionalActorsToIgnore(FTargetingRequestHandle& TargetingHandle, TArray<AActor*>& OutAdditionalActorsToIgnore); // [0x6bc1640] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/TargetingSystem.TargetingSortTask_Base
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UTargetingSortTask_Base : public UTargetingTask
@@ -192,8 +192,6 @@ class UTargetingSubsystem : public UGameInstanceSubsystem
 
 public:
 	CMember(TArray<FTargetingRequestHandle>)           AsyncTargetingRequests                                      OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -211,6 +209,8 @@ public:
 	// void GetTargetingResults(FTargetingRequestHandle TargetingHandle, TArray<FHitResult>& OutTargets);                       // [0x6bc1b64] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TargetingSystem.TargetingSubsystem.ExecuteTargetingRequest
 	// void ExecuteTargetingRequest(UTargetingPreset* TargetingPreset, FTargetingSourceContext& InSourceContext, FDelegateProperty CompletionDynamicDelegate); // [0x6bc133c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/TargetingSystem.TargetingFilterTask_SortByDistance
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UTargetingFilterTask_SortByDistance : public UTargetingSortTask_Base

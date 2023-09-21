@@ -19,8 +19,6 @@ class UFortPowerupReticleExtensionWidget : public UFortWeaponReticleExtensionWid
 
 public:
 	CMember(EPowerupHeatState)                         LastPowerupHeatState                                        OFFSET(get<T>, {0x328, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -30,6 +28,8 @@ public:
 	// float GetCurrentOverheatValue();                                                                                         // [0x99b9f6c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CorruptionGameplayCodeUI.FortPowerupReticleExtensionWidget.GetCurrentOverheatPercent
 	// float GetCurrentOverheatPercent();                                                                                       // [0x99b9f44] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Enum /Script/CorruptionGameplayCodeUI.EPowerupHeatState
 /// Size: 0x04
 enum EPowerupHeatState : uint8_t

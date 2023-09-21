@@ -66,13 +66,13 @@ public:
 	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  Editing                                                     OFFSET(get<T>, {0x82, 1, 0, 0})
 	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  EditingHostile                                              OFFSET(get<T>, {0x83, 1, 0, 0})
 	CMember(TEnumAsByte<EPlayerSettingStateInternal>)  TrapPlacement                                               OFFSET(get<T>, {0x84, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VerseFortniteInternal.FortBuildingSettingsComponentBase.OnRep_Settings
 	// void OnRep_Settings();                                                                                                   // [0x97c9cc8] Final|Native|Private 
+};
+
 /// Class /Script/VerseFortniteInternal.FortPlayspaceComponentHelper
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UFortPlayspaceComponentHelper : public UObject

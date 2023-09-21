@@ -27,8 +27,6 @@ public:
 	CMember(USoundSubmixBase*)                         DefaultSubmix                                               OFFSET(get<T>, {0x130, 8, 0, 0})
 	CMember(USoundSubmixBase*)                         LicensedSubmix                                              OFFSET(get<T>, {0x138, 8, 0, 0})
 	CMember(UMediaSoundComponent*)                     MediaSoundComponent                                         OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -82,6 +80,8 @@ public:
 	// bool GetLicensedAudio();                                                                                                 // [0x581675c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EpicMediaBasePlayer.EpicBaseStreamingVideo.ClearSyncTimes
 	// void ClearSyncTimes();                                                                                                   // [0x6d49fa8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/EpicMediaBasePlayer.BaseMediaDelayConfig
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FBaseMediaDelayConfig : public MDKStruct

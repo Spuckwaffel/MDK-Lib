@@ -20,8 +20,6 @@ class UFocusButton : public UBacchusActionButton
 public:
 	CMember(UPaperSprite*)                             StartFocusingSprite                                         OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(UPaperSprite*)                             StopFocusingSprite                                          OFFSET(get<T>, {0x420, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -29,6 +27,8 @@ public:
 	// void HandleEventModeFocusingChanged(bool bIsEventModeFocusing);                                                          // [0x9b7c840] Final|Native|Private 
 	// Function /Script/EventModeUI.FocusButton.HandleCanUseEventModeFocusChanged
 	// void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);                                                      // [0x9b7c7c4] Final|Native|Private 
+};
+
 /// Class /Script/EventModeUI.FortEventModeEmotesWidget
 /// Size: 0x0098 (0x000310 - 0x0003A8)
 class UFortEventModeEmotesWidget : public UFortHUDElementWidget
@@ -45,8 +45,6 @@ public:
 	CMember(URichTextBlock*)                           Text_Emote2                                                 OFFSET(get<T>, {0x390, 8, 0, 0})
 	CMember(URichTextBlock*)                           Text_Emote3                                                 OFFSET(get<T>, {0x398, 8, 0, 0})
 	CMember(URichTextBlock*)                           Text_EmoteRandom                                            OFFSET(get<T>, {0x3A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -54,6 +52,8 @@ public:
 	// void OnFocusStateChanged(bool bIsFocusing);                                                                              // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/EventModeUI.FortEventModeEmotesWidget.OnFocusAvailableChanged
 	// void OnFocusAvailableChanged(bool bIsFocusAvailable);                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/EventModeUI.FortMobileActionButtonBehavior_Focus
 /// Size: 0x0008 (0x000120 - 0x000128)
 class UFortMobileActionButtonBehavior_Focus : public UFortMobileActionButtonBehavior
@@ -63,8 +63,6 @@ class UFortMobileActionButtonBehavior_Focus : public UFortMobileActionButtonBeha
 
 public:
 	CMember(UPaperSprite*)                             StopFocusingSprite                                          OFFSET(get<T>, {0x120, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -72,3 +70,5 @@ public:
 	// void HandleEventModeFocusingChanged(bool bIsEventModeFocusing);                                                          // [0x9074b78] Final|Native|Private 
 	// Function /Script/EventModeUI.FortMobileActionButtonBehavior_Focus.HandleCanUseEventModeFocusChanged
 	// void HandleCanUseEventModeFocusChanged(bool bCanUseEventModeFocus);                                                      // [0x9074bf8] Final|Native|Private 
+};
+

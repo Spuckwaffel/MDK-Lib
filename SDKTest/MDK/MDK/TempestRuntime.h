@@ -50,13 +50,13 @@ public:
 	DMember(bool)                                      bShouldIgnoreZMovement                                      OFFSET(get<bool>, {0x178, 1, 1, 0})
 	DMember(bool)                                      bFloatOnWater                                               OFFSET(get<bool>, {0x178, 1, 1, 1})
 	SMember(FScalableFloat)                            WaterTraceZOffset                                           OFFSET(get<T>, {0x180, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/TempestRuntime.TempestMovementComponent.OnRep_MovementData
 	// void OnRep_MovementData();                                                                                               // [0x9e7025c] Final|Native|Private|Const 
+};
+
 /// Class /Script/TempestRuntime.TempestStateMachineComponent
 /// Size: 0x00D0 (0x0000A0 - 0x000170)
 class UTempestStateMachineComponent : public UGameFrameworkComponent
@@ -71,8 +71,6 @@ public:
 	SMember(FScalableFloat)                            DissipationDuration                                         OFFSET(get<T>, {0xF8, 40, 0, 0})
 	SMember(FTempestStateInfo)                         CurrentStateInfo                                            OFFSET(get<T>, {0x120, 12, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTempestStateChangedDelegate                               OFFSET(get<T>, {0x148, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -86,6 +84,8 @@ public:
 	// ETempestState GetCurrentState();                                                                                         // [0x9765ce8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/TempestRuntime.TempestStateMachineComponent.ForceDissipate
 	// void ForceDissipate(FString InDissipationReason);                                                                        // [0x9e6fb20] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/TempestRuntime.TempestStateInfo
 /// Size: 0x000C (0x000000 - 0x00000C)
 class FTempestStateInfo : public MDKStruct

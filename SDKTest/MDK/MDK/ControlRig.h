@@ -24,8 +24,6 @@ class UControlRigShapeLibraryLink : public UNameSpacedUserData
 public:
 	CMember(UControlRigShapeLibrary*)                  ShapeLibrary                                                OFFSET(get<T>, {0x100, 8, 0, 0})
 	CMember(TArray<FName>)                             ShapeNames                                                  OFFSET(get<T>, {0x108, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,6 +31,8 @@ public:
 	// void SetShapeLibrary(UControlRigShapeLibrary* InShapeLibrary);                                                           // [0x6de7714] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ControlRig.ControlRigShapeLibraryLink.GetShapeLibrary
 	// UControlRigShapeLibrary* GetShapeLibrary();                                                                              // [0x6d74778] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ControlRig.RigHierarchy
 /// Size: 0x0358 (0x000028 - 0x000380)
 class URigHierarchy : public UObject
@@ -50,8 +50,6 @@ public:
 	CMember(URigHierarchyController*)                  HierarchyController                                         OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(TMap<FRigElementKey, FRigElementKey>)      PreviousNameMap                                             OFFSET(get<T>, {0x208, 80, 0, 0})
 	CMember(URigHierarchy*)                            HierarchyForCacheValidation                                 OFFSET(get<T>, {0x2D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -377,6 +375,8 @@ public:
 	// void CopyHierarchy(URigHierarchy* InHierarchy);                                                                          // [0x6dd0854] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ControlRig.RigHierarchy.Contains_ForBlueprint
 	// bool Contains_ForBlueprint(FRigElementKey InKey);                                                                        // [0x6dd06ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ControlRig.TransformableControlHandle
 /// Size: 0x0028 (0x000058 - 0x000080)
 class UTransformableControlHandle : public UTransformableHandle
@@ -408,8 +408,6 @@ public:
 	CMember(UControlRig*)                              InteractionRig                                              OFFSET(get<T>, {0x510, 8, 0, 0})
 	CMember(UClass*)                                   InteractionRigClass                                         OFFSET(get<T>, {0x518, 8, 0, 0})
 	SMember(FMulticastSparseDelegate)                  OnControlSelected_BP                                        OFFSET(get<T>, {0x5F0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -441,6 +439,8 @@ public:
 	// UTransformableControlHandle* CreateTransformableControlHandle(UObject* Outer, FName& ControlName);                       // [0x6e1a948] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ControlRig.ControlRig.ClearControlSelection
 	// bool ClearControlSelection();                                                                                            // [0x6e19c1c] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ControlRig.ControlRigAnimInstance
 /// Size: 0x0000 (0x000350 - 0x000350)
 class UControlRigAnimInstance : public UAnimInstance
@@ -489,8 +489,6 @@ public:
 	DMember(bool)                                      bDrawBones                                                  OFFSET(get<bool>, {0x604, 1, 0, 0})
 	DMember(bool)                                      bShowDebugDrawing                                           OFFSET(get<bool>, {0x605, 1, 0, 0})
 	CMember(UControlRig*)                              ControlRig                                                  OFFSET(get<T>, {0x608, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -588,6 +586,8 @@ public:
 	// void AddMappedComponents(TArray<FControlRigComponentMappedComponent> Components);                                        // [0x6e18734] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
 	// void AddMappedCompleteSkeletalMesh(USkeletalMeshComponent* SkeletalMeshComponent);                                       // [0x6e18690] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ControlRig.ControlRigControlActor
 /// Size: 0x00A8 (0x000290 - 0x000338)
 class AControlRigControlActor : public AActor
@@ -610,8 +610,6 @@ public:
 	CMember(TArray<UStaticMeshComponent*>)             Components                                                  OFFSET(get<T>, {0x310, 16, 0, 0})
 	CMember(TArray<UMaterialInstanceDynamic*>)         Materials                                                   OFFSET(get<T>, {0x320, 16, 0, 0})
 	SMember(FName)                                     ColorParameterName                                          OFFSET(get<T>, {0x330, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -621,6 +619,8 @@ public:
 	// void Refresh();                                                                                                          // [0x6e1c250] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ControlRig.ControlRigControlActor.Clear
 	// void Clear();                                                                                                            // [0x6e19c08] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ControlRig.ControlRigShapeActor
 /// Size: 0x00B0 (0x000290 - 0x000340)
 class AControlRigShapeActor : public AActor
@@ -638,8 +638,6 @@ public:
 	SMember(FName)                                     ColorParameterName                                          OFFSET(get<T>, {0x2B4, 4, 0, 0})
 	DMember(bool)                                      bSelected                                                   OFFSET(get<bool>, {0x330, 1, 1, 0})
 	DMember(bool)                                      bHovered                                                    OFFSET(get<bool>, {0x330, 1, 1, 1})
-};
-
 
 
 	/// Functions
@@ -671,6 +669,8 @@ public:
 	// bool IsEnabled();                                                                                                        // [0x6e1bd38] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ControlRig.ControlRigShapeActor.GetGlobalTransform
 	// FTransform GetGlobalTransform();                                                                                         // [0x6e1b748] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ControlRig.ControlRigShapeLibrary
 /// Size: 0x0118 (0x000028 - 0x000140)
 class UControlRigShapeLibrary : public UObject
@@ -700,8 +700,6 @@ public:
 	CMember(TArray<FControlRigTestDataFrame>)          OutputFrames                                                OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(TArray<int32_t>)                           FramesToSkip                                                OFFSET(get<T>, {0xF0, 16, 0, 0})
 	DMember(double)                                    Tolerance                                                   OFFSET(get<double>, {0x100, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -723,6 +721,8 @@ public:
 	// int32_t GetFrameIndexForTime(double InSeconds, bool bInput);                                                             // [0x6e1b67c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ControlRig.ControlRigTestData.CreateNewAsset
 	// UControlRigTestData* CreateNewAsset(FString InDesiredPackagePath, FString InBlueprintPathName);                          // [0x6e19c58] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/ControlRig.ControlRigValidator
 /// Size: 0x0040 (0x000028 - 0x000068)
 class UControlRigValidator : public UObject
@@ -776,8 +776,6 @@ class URigHierarchyController : public UObject
 public:
 	DMember(bool)                                      bReportWarningsAndErrors                                    OFFSET(get<bool>, {0x28, 1, 0, 0})
 	CMember(TWeakObjectPtr<URigHierarchy*>)            Hierarchy                                                   OFFSET(get<T>, {0x2C, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -839,6 +837,8 @@ public:
 	// FRigElementKey AddBone(FName InName, FRigElementKey InParent, FTransform InTransform, bool bTransformInGlobal, ERigBoneType InBoneType, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e89458] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/ControlRig.RigHierarchyController.AddAnimationChannel_ForBlueprint
 	// FRigElementKey AddAnimationChannel_ForBlueprint(FName InName, FRigElementKey InParentControl, FRigControlSettings InSettings, bool bSetupUndo, bool bPrintPythonCommand); // [0x6e88f10] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ControlRig.ControlRigLayerInstance
 /// Size: 0x0000 (0x000350 - 0x000350)
 class UControlRigLayerInstance : public UAnimInstance
@@ -924,8 +924,6 @@ class UControlRigPoseAsset : public UObject
 
 public:
 	SMember(FControlRigControlPose)                    Pose                                                        OFFSET(get<T>, {0x28, 96, 0, 0})
-};
-
 
 
 	/// Functions
@@ -943,6 +941,8 @@ public:
 	// TArray<FName> GetControlNames();                                                                                         // [0x6e8c924] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/ControlRig.ControlRigPoseAsset.DoesMirrorMatch
 	// bool DoesMirrorMatch(UControlRig* ControlRig, FName& ControlName);                                                       // [0x6e8b8f0] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ControlRig.ControlRigPoseMirrorSettings
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UControlRigPoseMirrorSettings : public UObject
@@ -978,13 +978,13 @@ class UControlRigWorkflowOptions : public URigVMUserWorkflowOptions
 public:
 	CMember(URigHierarchy*)                            Hierarchy                                                   OFFSET(get<T>, {0x98, 8, 0, 0})
 	CMember(TArray<FRigElementKey>)                    Selection                                                   OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ControlRig.ControlRigWorkflowOptions.EnsureAtLeastOneRigElementSelected
 	// bool EnsureAtLeastOneRigElementSelected();                                                                               // [0x6e8bb68] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/ControlRig.ControlRigTransformWorkflowOptions
 /// Size: 0x0008 (0x0000B0 - 0x0000B8)
 class UControlRigTransformWorkflowOptions : public UControlRigWorkflowOptions
@@ -994,13 +994,13 @@ class UControlRigTransformWorkflowOptions : public UControlRigWorkflowOptions
 
 public:
 	CMember(TEnumAsByte<ERigTransformType>)            TransformType                                               OFFSET(get<T>, {0xB0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/ControlRig.ControlRigTransformWorkflowOptions.ProvideWorkflows
 	// TArray<FRigVMUserWorkflow> ProvideWorkflows(UObject* InSubject);                                                         // [0x6e8e5d4] Final|Native|Public  
+};
+
 /// Class /Script/ControlRig.ControlRigNumericalValidationPass
 /// Size: 0x0090 (0x000028 - 0x0000B8)
 class UControlRigNumericalValidationPass : public UControlRigValidationPass

@@ -31,8 +31,6 @@ public:
 	SMember(FCreativeDataChannelEvents)                Events                                                      OFFSET(get<T>, {0x318, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnEventsRep                                                 OFFSET(get<T>, {0x328, 16, 0, 0})
 	SMember(FCreativeDataChannelEvents)                EventsCache                                                 OFFSET(get<T>, {0x338, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -42,6 +40,8 @@ public:
 	// void OnRep_Events();                                                                                                     // [0x2d79908] Final|Native|Public  
 	// Function /Script/CreativeDataChannelTriggerRuntime.CreativeDataChannelTarget.FireEvent
 	// void FireEvent(FName EventName);                                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/CreativeDataChannelTriggerRuntime.CreativeDataChannelTargetFN
 /// Size: 0x02B8 (0x000308 - 0x0005C0)
 class ACreativeDataChannelTargetFN : public AElectraDataChannelTarget
@@ -139,8 +139,6 @@ public:
 	DMember(int32_t)                                   FinaleState                                                 OFFSET(get<int32_t>, {0x7B0, 4, 0, 0})
 	SMember(FCDCInt)                                   FinaleStateTracker                                          OFFSET(get<T>, {0x7B4, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  FinaleStateEvent                                            OFFSET(get<T>, {0x7B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -180,6 +178,8 @@ public:
 	// void OnRep_FinaleState();                                                                                                // [0x9abb74c] Final|Native|Public  
 	// Function /Script/CreativeDataChannelTriggerRuntime.CreativeDataChannelTargetRL.OnRep_BallCoords
 	// void OnRep_BallCoords();                                                                                                 // [0x9abb738] Final|Native|Public  
+};
+
 /// Struct /Script/CreativeDataChannelTriggerRuntime.CDCStringFloatArrayMap
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FCDCStringFloatArrayMap : public MDKStruct

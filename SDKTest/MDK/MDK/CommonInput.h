@@ -83,13 +83,13 @@ public:
 	CMember(TWeakObjectPtr<UTexture2D*>)               ControllerButtonMaskTexture                                 OFFSET(get<T>, {0xA8, 32, 0, 0})
 	CMember(TArray<FCommonInputKeyBrushConfiguration>) InputBrushDataMap                                           OFFSET(get<T>, {0xC8, 16, 0, 0})
 	CMember(TArray<FCommonInputKeySetBrushConfiguration>) InputBrushKeySets                                        OFFSET(get<T>, {0xD8, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonInput.CommonInputBaseControllerData.GetRegisteredGamepads
 	// TArray<FName> GetRegisteredGamepads();                                                                                   // [0x662ba3c] Final|Native|Static|Public 
+};
+
 /// Class /Script/CommonInput.CommonInputPlatformSettings
 /// Size: 0x0030 (0x000040 - 0x000070)
 class UCommonInputPlatformSettings : public UPlatformSettings
@@ -129,13 +129,13 @@ public:
 	CMember(TWeakObjectPtr<UCommonInputActionDomainTable*>) ActionDomainTable                                      OFFSET(get<T>, {0xD0, 32, 0, 0})
 	CMember(UClass*)                                   InputDataClass                                              OFFSET(get<T>, {0xF8, 8, 0, 0})
 	CMember(UCommonInputActionDomainTable*)            ActionDomainTablePtr                                        OFFSET(get<T>, {0x100, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CommonInput.CommonInputSettings.IsEnhancedInputSupportEnabled
 	// bool IsEnhancedInputSupportEnabled();                                                                                    // [0x662ba68] Final|Native|Static|Public 
+};
+
 /// Class /Script/CommonInput.CommonInputSubsystem
 /// Size: 0x00D8 (0x000030 - 0x000108)
 class UCommonInputSubsystem : public ULocalPlayerSubsystem
@@ -154,8 +154,6 @@ public:
 	CMember(TMap<FName, ECommonInputType>)             CurrentInputLocks                                           OFFSET(get<T>, {0x98, 80, 0, 0})
 	CMember(UCommonInputActionDomainTable*)            ActionDomainTable                                           OFFSET(get<T>, {0xF0, 8, 0, 0})
 	DMember(bool)                                      bIsGamepadSimulatedClick                                    OFFSET(get<bool>, {0xF8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -177,6 +175,8 @@ public:
 	// FName GetCurrentGamepadName();                                                                                           // [0x3405268] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CommonInput.CommonInputSubsystem.BroadcastInputMethodChanged
 	// void BroadcastInputMethodChanged();                                                                                      // [0x662ba00] Final|Native|Protected 
+};
+
 /// Struct /Script/CommonInput.CommonInputKeyBrushConfiguration
 /// Size: 0x00E0 (0x000000 - 0x0000E0)
 class FCommonInputKeyBrushConfiguration : public MDKStruct

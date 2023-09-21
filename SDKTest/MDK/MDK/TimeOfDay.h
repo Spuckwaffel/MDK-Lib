@@ -94,8 +94,6 @@ public:
 	SMember(FVector4)                                  Evening                                                     OFFSET(get<T>, {0x1280, 32, 0, 0})
 	SMember(FVector4)                                  Day                                                         OFFSET(get<T>, {0x12A0, 32, 0, 0})
 	SMember(FVector4)                                  Morning                                                     OFFSET(get<T>, {0x12C0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -133,6 +131,8 @@ public:
 	// void UpdateSSAO();                                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/TimeOfDay/TODM/MASTER_TODM.MASTER_TODM_C.ExecuteUbergraph_MASTER_TODM
 	// void ExecuteUbergraph_MASTER_TODM(int32_t EntryPoint);                                                                   // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/TimeOfDay/TODM/TODM_Disabled.TODM_Disabled_C
 /// Size: 0x0008 (0x0012E0 - 0x0012E8)
 class ATODM_Disabled_C : public AMASTER_TODM_C
@@ -142,8 +142,6 @@ class ATODM_Disabled_C : public AMASTER_TODM_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x12E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -161,3 +159,5 @@ public:
 	// void Update Scalabilty Settings();                                                                                       // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/TimeOfDay/TODM/TODM_Disabled.TODM_Disabled_C.ExecuteUbergraph_TODM_Disabled
 	// void ExecuteUbergraph_TODM_Disabled(int32_t EntryPoint);                                                                 // [0x1ebf994] Final                
+};
+

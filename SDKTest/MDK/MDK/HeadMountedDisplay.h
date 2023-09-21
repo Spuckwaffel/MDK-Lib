@@ -35,8 +35,6 @@ public:
 	CMember(UStaticMesh*)                              CustomDisplayMesh                                           OFFSET(get<T>, {0x580, 8, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               DisplayMeshMaterialOverrides                                OFFSET(get<T>, {0x588, 16, 0, 0})
 	CMember(UPrimitiveComponent*)                      DisplayComponent                                            OFFSET(get<T>, {0x598, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -68,6 +66,8 @@ public:
 	// FVector GetHandJointPosition(int32_t jointIndex, bool& bValueFound);                                                     // [0x5551f4c] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/HeadMountedDisplay.MotionControllerComponent.GetAngularVelocity
 	// bool GetAngularVelocity(FRotator& OutAngularVelocity);                                                                   // [0x5551eb8] Final|RequiredAPI|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/HeadMountedDisplay.XRHMDData
 /// Size: 0x0060 (0x000000 - 0x000060)
 class FXRHMDData : public MDKStruct

@@ -28,8 +28,6 @@ public:
 	SMember(FLinearColor)                              MeterClippingColor                                          OFFSET(get<T>, {0x664, 16, 0, 0})
 	SMember(FLinearColor)                              MeterScaleColor                                             OFFSET(get<T>, {0x674, 16, 0, 0})
 	SMember(FLinearColor)                              MeterScaleLabelColor                                        OFFSET(get<T>, {0x684, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -53,6 +51,8 @@ public:
 	// TArray<FMeterChannelInfo> GetMeterChannelInfo__DelegateSignature();                                                      // [0x1ebf994] Public|Delegate      
 	// Function /Script/AudioWidgets.AudioMeter.GetMeterChannelInfo
 	// TArray<FMeterChannelInfo> GetMeterChannelInfo();                                                                         // [0x99f84d8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AudioWidgets.AudioRadialSlider
 /// Size: 0x0208 (0x000178 - 0x000380)
 class UAudioRadialSlider : public UWidget
@@ -77,8 +77,6 @@ public:
 	DMember(float)                                     SliderThickness                                             OFFSET(get<float>, {0x1FC, 4, 0, 0})
 	SMember(FVector2D)                                 OutputRange                                                 OFFSET(get<T>, {0x200, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(get<T>, {0x210, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -112,6 +110,8 @@ public:
 	// float GetSliderValue(float OutputValue);                                                                                 // [0x99f8ca8] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioRadialSlider.GetOutputValue
 	// float GetOutputValue(float InSliderValue);                                                                               // [0x99f8b78] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioWidgets.AudioVolumeRadialSlider
 /// Size: 0x0000 (0x000380 - 0x000380)
 class UAudioVolumeRadialSlider : public UAudioRadialSlider
@@ -159,8 +159,6 @@ public:
 	SMember(FDelegateProperty)                         WidgetBackgroundColorDelegate                               OFFSET(get<T>, {0x228, 12, 0, 0})
 	CMember(TEnumAsByte<EOrientation>)                 Orientation                                                 OFFSET(get<T>, {0x234, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnValueChanged                                              OFFSET(get<T>, {0x238, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -190,6 +188,8 @@ public:
 	// float GetOutputValue(float InSliderValue);                                                                               // [0x99f8c10] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioWidgets.AudioSliderBase.GetLinValue
 	// float GetLinValue(float OutputValue);                                                                                    // [0x99f8448] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioWidgets.AudioSlider
 /// Size: 0x0010 (0x000930 - 0x000940)
 class UAudioSlider : public UAudioSliderBase

@@ -22,8 +22,6 @@ public:
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x2E0, 1, 0, 0})
 	DMember(bool)                                      bPropertiesCopiedIndicator                                  OFFSET(get<bool>, {0x2E3, 1, 0, 0})
 	CMember(TWeakObjectPtr<ALandscapePatchManager*>)   PreviousPatchManager                                        OFFSET(get<T>, {0x2E8, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -43,6 +41,8 @@ public:
 	// ALandscapePatchManager* GetPatchManager();                                                                               // [0xa3cba04] Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LandscapePatch.LandscapePatchComponent.GetLandscapeHeightmapCoordsToWorld
 	// FTransform GetLandscapeHeightmapCoordsToWorld();                                                                         // [0xa3cb988] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/LandscapePatch.LandscapeCircleHeightPatch
 /// Size: 0x0010 (0x000310 - 0x000320)
 class ULandscapeCircleHeightPatch : public ULandscapePatchComponent
@@ -158,8 +158,6 @@ public:
 	DMember(int32_t)                                   InitTextureSizeX                                            OFFSET(get<int32_t>, {0x37C, 4, 0, 0})
 	DMember(int32_t)                                   InitTextureSizeY                                            OFFSET(get<int32_t>, {0x380, 4, 0, 0})
 	CMember(TEnumAsByte<ETextureRenderTargetFormat>)   HeightRenderTargetFormat                                    OFFSET(get<T>, {0x384, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -233,6 +231,8 @@ public:
 	// void ClearWeightPatchBlendModeOverride(FName& InWeightmapLayerName);                                                     // [0xa3cb6cc] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LandscapePatch.LandscapeTexturePatch.AddWeightPatch
 	// void AddWeightPatch(FName& InWeightmapLayerName, ELandscapeTexturePatchSourceMode SourceMode, bool bUseAlphaChannel);    // [0xa3cb4f0] Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Struct /Script/LandscapePatch.LandscapePatchComponentInstanceData
 /// Size: 0x0008 (0x0000B8 - 0x0000C0)
 class FLandscapePatchComponentInstanceData : public FSceneComponentInstanceData

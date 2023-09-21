@@ -31,8 +31,6 @@ public:
 	CMember(TArray<FPaperFlipbookKeyFrame>)            Keyframes                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultMaterial                                             OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(TEnumAsByte<EFlipbookCollisionMode>)       CollisionSource                                             OFFSET(get<T>, {0x48, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -50,6 +48,8 @@ public:
 	// int32_t GetNumFrames();                                                                                                  // [0x69de3a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Paper2D.PaperFlipbook.GetKeyFrameIndexAtTime
 	// int32_t GetKeyFrameIndexAtTime(float Time, bool bClampToEnds);                                                           // [0x69de0e0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Paper2D.PaperFlipbookActor
 /// Size: 0x0008 (0x000290 - 0x000298)
 class APaperFlipbookActor : public AActor
@@ -80,8 +80,6 @@ public:
 	SMember(FLinearColor)                              SpriteColor                                                 OFFSET(get<T>, {0x5C0, 16, 0, 0})
 	CMember(UBodySetup*)                               CachedBodySetup                                             OFFSET(get<T>, {0x5D0, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFinishedPlaying                                           OFFSET(get<T>, {0x5D8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -133,6 +131,8 @@ public:
 	// float GetFlipbookFramerate();                                                                                            // [0x69dde80] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Paper2D.PaperFlipbookComponent.GetFlipbook
 	// UPaperFlipbook* GetFlipbook();                                                                                           // [0x69dde58] Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/Paper2D.PaperGroupedSpriteActor
 /// Size: 0x0008 (0x000290 - 0x000298)
 class APaperGroupedSpriteActor : public AActor
@@ -154,8 +154,6 @@ class UPaperGroupedSpriteComponent : public UMeshComponent
 public:
 	CMember(TArray<UMaterialInterface*>)               InstanceMaterials                                           OFFSET(get<T>, {0x5A0, 16, 0, 0})
 	CMember(TArray<FSpriteInstanceData>)               PerInstanceSpriteData                                       OFFSET(get<T>, {0x5B0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -175,6 +173,8 @@ public:
 	// void ClearInstances();                                                                                                   // [0x5e9af48] Native|Public|BlueprintCallable 
 	// Function /Script/Paper2D.PaperGroupedSpriteComponent.AddInstance
 	// int32_t AddInstance(FTransform& Transform, UPaperSprite* Sprite, bool bWorldSpace, FLinearColor Color);                  // [0x69dd450] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Paper2D.PaperRuntimeSettings
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UPaperRuntimeSettings : public UObject
@@ -252,8 +252,6 @@ public:
 	CMember(UPaperSprite*)                             SourceSprite                                                OFFSET(get<T>, {0x5A0, 8, 0, 0})
 	CMember(UMaterialInterface*)                       MaterialOverride                                            OFFSET(get<T>, {0x5A8, 8, 0, 0})
 	SMember(FLinearColor)                              SpriteColor                                                 OFFSET(get<T>, {0x5B0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -263,6 +261,8 @@ public:
 	// bool SetSprite(UPaperSprite* NewSprite);                                                                                 // [0x69df80c] Native|Public|BlueprintCallable 
 	// Function /Script/Paper2D.PaperSpriteComponent.GetSprite
 	// UPaperSprite* GetSprite();                                                                                               // [0x69dde58] Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/Paper2D.PaperTileLayer
 /// Size: 0x0070 (0x000028 - 0x000098)
 class UPaperTileLayer : public UObject
@@ -345,8 +345,6 @@ public:
 	DMember(int32_t)                                   UseSingleLayerIndex                                         OFFSET(get<int32_t>, {0x5E0, 4, 0, 0})
 	DMember(bool)                                      bUseSingleLayer                                             OFFSET(get<bool>, {0x5E4, 1, 0, 0})
 	CMember(UPaperTileMap*)                            TileMap                                                     OFFSET(get<T>, {0x5E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -388,6 +386,8 @@ public:
 	// void CreateNewTileMap(int32_t MapWidth, int32_t MapHeight, int32_t TileWidth, int32_t TileHeight, float PixelsPerUnrealUnit, bool bCreateLayer); // [0x69ddc94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Paper2D.PaperTileMapComponent.AddNewLayer
 	// UPaperTileLayer* AddNewLayer();                                                                                          // [0x69dd7c4] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Paper2D.PaperTileSet
 /// Size: 0x0080 (0x000028 - 0x0000A8)
 class UPaperTileSet : public UObject
@@ -459,13 +459,13 @@ public:
 	CMember(TEnumAsByte<ESpriteCollisionMode>)         SpriteCollisionDomain                                       OFFSET(get<T>, {0x59C, 1, 0, 0})
 	DMember(float)                                     CollisionThickness                                          OFFSET(get<float>, {0x5A0, 4, 0, 0})
 	CMember(UBodySetup*)                               CachedBodySetup                                             OFFSET(get<T>, {0x5A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Paper2D.PaperTerrainComponent.SetTerrainColor
 	// void SetTerrainColor(FLinearColor NewColor);                                                                             // [0x69e0328] Final|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Paper2D.PaperTerrainMaterial
 /// Size: 0x0018 (0x000030 - 0x000048)
 class UPaperTerrainMaterial : public UDataAsset

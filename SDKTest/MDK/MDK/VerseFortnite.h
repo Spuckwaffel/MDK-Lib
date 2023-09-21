@@ -101,8 +101,6 @@ class UVerseFortnitePlayspace : public UVerseFortniteActorWrapper
 
 public:
 	CMember(TArray<UVerseFortnitePlayspaceExtensionBase*>) Extensions                                              OFFSET(get<T>, {0xA8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -110,6 +108,8 @@ public:
 	// void OnMinigameSetUp(AFortMinigame* Minigame);                                                                           // [0x96f6274] Final|Native|Private 
 	// Function /Script/VerseFortnite.VerseFortnitePlayspace.OnMinigamePlayerAdded
 	// void OnMinigamePlayerAdded(FUniqueNetIdRepl UniqueNetId, bool bIsLocalPlayer);                                           // [0x96f5f24] Final|Native|Private 
+};
+
 /// Class /Script/VerseFortnite.VerseFortnitePlayspaceExtensionBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerseFortnitePlayspaceExtensionBase : public UObject

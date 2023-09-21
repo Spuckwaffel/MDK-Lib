@@ -24,13 +24,13 @@ class UFortMobileButtonBehaviorComponent_AugmentsListIconPicker : public UFortMo
 public:
 	DMember(bool)                                      bCachedIsInInventoryView                                    OFFSET(get<bool>, {0x48, 1, 0, 0})
 	CMember(UPaperSprite*)                             ListViewSprite                                              OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/PlayerAugmentsUI.FortMobileButtonBehaviorComponent_AugmentsListIconPicker.OnAugmentToolViewSwap
 	// void OnAugmentToolViewSwap(bool bIsInInventoryView);                                                                     // [0x9cf8b84] Final|Native|Private 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortMobileButtonBehaviorComponent_AugmentsListVisibility
 /// Size: 0x0008 (0x000048 - 0x000050)
 class UFortMobileButtonBehaviorComponent_AugmentsListVisibility : public UFortMobileButtonBehaviorComponent_Visibility
@@ -78,8 +78,6 @@ public:
 	CMember(UCommonTextBlock*)                         NativeAugmentTimerText                                      OFFSET(get<T>, {0x350, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         NativeAnimTimerTextCountdownUpdated                         OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         NativeAnimProgressBarCountdownUpdated                       OFFSET(get<T>, {0x360, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -91,6 +89,8 @@ public:
 	// void OnCountdownActivated();                                                                                             // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentHUDSelectionTimerWidget.IsCountdownVisible
 	// bool IsCountdownVisible();                                                                                               // [0x9cf8b60] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortMobileActionBBE_AugmentShoot
 /// Size: 0x0010 (0x000080 - 0x000090)
 class UFortMobileActionBBE_AugmentShoot : public UFortMobileActionButtonBehaviorExtension
@@ -124,8 +124,6 @@ class UFortMobilePlayerAugmentTimer : public UFortMobileHUDElement
 public:
 	CMember(TWeakObjectPtr<UFortControllerComponent_AugmentGrantingSystem*>) AugmentControllerComponent            OFFSET(get<T>, {0x338, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_PlayerAugmentTimer                                   OFFSET(get<T>, {0x340, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -133,6 +131,8 @@ public:
 	// void HandleHUDElementVisibilityChanged(FGameplayTagContainer& HiddenElementTagContainer);                                // [0x9cf82dc] Final|Native|Private|HasOutParms 
 	// Function /Script/PlayerAugmentsUI.FortMobilePlayerAugmentTimer.BP_OnHUDElementVisibilityChanged
 	// void BP_OnHUDElementVisibilityChanged(FGameplayTagContainer& HiddenElementTagContainer, bool bForceCollapse);            // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPickupInteractOverrideComponent_Augments
 /// Size: 0x0000 (0x0000C0 - 0x0000C0)
 class UFortPickupInteractOverrideComponent_Augments : public UFortPickupInteractOverrideComponent
@@ -203,8 +203,6 @@ class UFortPlayerAugmentGranterWidget : public UFortHUDElementWidget
 public:
 	CMember(TArray<UFortPlayerAugmentItemDefinition*>) AvailableAugmentItemDefinitions                             OFFSET(get<T>, {0x310, 16, 0, 0})
 	CMember(UWidget*)                                  Overlay_Reroll                                              OFFSET(get<T>, {0x320, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -256,6 +254,8 @@ public:
 	// void HandleAugmentHighlighted(int32_t HighlightedAugmentIndex);                                                          // [0x9cf7bcc] Final|Native|Private 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentGranterWidget.GetPendingAugmentsToGrant
 	// int32_t GetPendingAugmentsToGrant();                                                                                     // [0x9cf7b0c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentHUDQuickbarWidget
 /// Size: 0x0048 (0x0002D0 - 0x000318)
 class UFortPlayerAugmentHUDQuickbarWidget : public UCommonUserWidget
@@ -266,13 +266,13 @@ class UFortPlayerAugmentHUDQuickbarWidget : public UCommonUserWidget
 public:
 	SMember(FGameplayTagContainer)                     HiddenAugmentGameplayTags                                   OFFSET(get<T>, {0x2D0, 32, 0, 0})
 	SMember(FScalableFloat)                            NumAugmentGrantRoundsForPlaylist                            OFFSET(get<T>, {0x2F0, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentHUDQuickbarWidget.OnAugmentsUpdated
 	// void OnAugmentsUpdated(TArray<UFortPlayerAugmentItemDefinition*>& ActiveAugments);                                       // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentHUDRerollWidget
 /// Size: 0x0050 (0x0002D0 - 0x000320)
 class UFortPlayerAugmentHUDRerollWidget : public UCommonUserWidget
@@ -288,8 +288,6 @@ public:
 	CMember(UImage*)                                   Image_ProgressBar                                           OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_OwnedCurrency                                          OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_RerollCost                                             OFFSET(get<T>, {0x300, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -309,6 +307,8 @@ public:
 	// void HandleAugmentSelectorOpenedStatusChanged(bool bIsOpened, bool bViewingInventory);                                   // [0x9cf7d90] Final|Native|Private 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentHUDRerollWidget.EndRerollHoldProgress
 	// void EndRerollHoldProgress();                                                                                            // [0x9cf7a58] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentInfoEntryWidget
 /// Size: 0x0068 (0x0002D0 - 0x000338)
 class UFortPlayerAugmentInfoEntryWidget : public UCommonUserWidget
@@ -328,8 +328,6 @@ public:
 	CMember(UWidget*)                                  Overlay_LenderAvatarIcon                                    OFFSET(get<T>, {0x320, 8, 0, 0})
 	CMember(UFortLazyImage*)                           Image_LenderSquadColor                                      OFFSET(get<T>, {0x328, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_BorrowingText                                          OFFSET(get<T>, {0x330, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -341,6 +339,8 @@ public:
 	// void OnItemPinColorSet(FLinearColor PinColor);                                                                           // [0x1ebf994] Event|Protected|HasDefaults|BlueprintEvent 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentInfoEntryWidget.OnItemNewOrBorrowedSet
 	// void OnItemNewOrBorrowedSet(bool bIsNew, bool bIsBorrowed);                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentInGameCarriedWidget
 /// Size: 0x0000 (0x000310 - 0x000310)
 class UFortPlayerAugmentInGameCarriedWidget : public UFortHUDElementWidget
@@ -378,8 +378,6 @@ public:
 	CMember(UFortSocialAvatarIcon*)                    Icon_LenderAvatarIcon                                       OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UFortLazyImage*)                           Image_LenderSquadColor                                      OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_BorrowingText                                          OFFSET(get<T>, {0x440, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -387,6 +385,8 @@ public:
 	// void OnItemRaritySet(EFortRarity Rarity, FFortRarityItemData RarityItemData);                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentInventoryInfoWidget.OnItemNewOrBorrowedSet
 	// void OnItemNewOrBorrowedSet(bool bIsNew, bool bIsBorrowed);                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentInventoryListEntry
 /// Size: 0x0010 (0x001470 - 0x001480)
 class UFortPlayerAugmentInventoryListEntry : public UCommonButtonBase
@@ -411,8 +411,6 @@ public:
 	SMember(FFortTabButtonLabelInfo)                   TabButtonLabelInfo                                          OFFSET(get<T>, {0x440, 240, 0, 0})
 	CMember(UFortPlayerAugmentInventoryInfoWidget*)    AugmentInfo                                                 OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(UCommonListView*)                          ListView_Augments                                           OFFSET(get<T>, {0x538, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -438,6 +436,8 @@ public:
 	// void HandleAugmentGrantingTimersFinishedForMatch();                                                                      // [0x9cf7b90] Final|Native|Private 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentInventoryTab.GetPendingAugmentsToGrant
 	// int32_t GetPendingAugmentsToGrant();                                                                                     // [0x9cf7b58] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentLobbyWidget
 /// Size: 0x0000 (0x0002D0 - 0x0002D0)
 class UFortPlayerAugmentLobbyWidget : public UCommonUserWidget
@@ -457,13 +457,13 @@ class UFortPlayerAugmentPostMatchUnlocksWidget : public UFortHUDElementWidget
 
 public:
 	SMember(FScalableFloat)                            AugmentsEnabledViaHotfix                                    OFFSET(get<T>, {0x310, 40, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentPostMatchUnlocksWidget.OnShowUnlockedAugments
 	// void OnShowUnlockedAugments(TArray<UFortPlayerAugmentItemDefinition*>& UnlockedAugments);                                // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/PlayerAugmentsUI.FortPlayerAugmentSpecialAcquiredNotificationWidget
 /// Size: 0x0090 (0x000310 - 0x0003A0)
 class UFortPlayerAugmentSpecialAcquiredNotificationWidget : public UFortHUDElementWidget
@@ -474,8 +474,6 @@ class UFortPlayerAugmentSpecialAcquiredNotificationWidget : public UFortHUDEleme
 public:
 	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x370, 2, 0, 0})
 	SMember(FGameplayTagContainer)                     TargetGameplayTags                                          OFFSET(get<T>, {0x378, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -491,3 +489,5 @@ public:
 	// FText ConstructEventDescription(UFortPlayerAugmentItemDefinition* ItemDef);                                              // [0x9cf79a8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/PlayerAugmentsUI.FortPlayerAugmentSpecialAcquiredNotificationWidget.CloseWidget
 	// void CloseWidget();                                                                                                      // [0x9cf7994] Final|Native|Protected|BlueprintCallable 
+};
+

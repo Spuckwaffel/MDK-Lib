@@ -36,13 +36,13 @@ public:
 	CMember(UClass*)                                   Shake_BP                                                    OFFSET(get<T>, {0x38, 8, 0, 0})
 	DMember(double)                                    Shake_Scale                                                 OFFSET(get<double>, {0x40, 8, 0, 0})
 	CMember(ECameraShakePlaySpace)                     Shake_Space                                                 OFFSET(get<T>, {0x48, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Animation/Game/BP_AnimNotify_CameraShake.BP_AnimNotify_CameraShake_C.Received_Notify
 	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Animation/Game/MainPlayer/Locomotion/Medium/Male/Jog/HeavyWeapon/BP_GCSteps.BP_GCSteps_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UBP_GCSteps_C : public ULegacyCameraShake
@@ -63,8 +63,6 @@ class UAnimNotifyState_HolsterWeapon_C : public UAnimNotifyState
 public:
 	DMember(bool)                                      PlayEquipAnim                                               OFFSET(get<bool>, {0x30, 1, 0, 0})
 	SMember(FName)                                     AnimNotifyStateHolster                                      OFFSET(get<T>, {0x34, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -74,6 +72,8 @@ public:
 	// bool Received_NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon.AnimNotifyState_HolsterWeapon_C.Received_NotifyBegin
 	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_PlaySoundWithCondition.AnimNotify_PlaySoundWithCondition_C
 /// Size: 0x0000 (0x000050 - 0x000050)
 class UAnimNotify_PlaySoundWithCondition_C : public UFortAnimNotify_PlaySoundConditional
@@ -94,8 +94,6 @@ class UAnimNotify_FootStep_C : public UAnimNotify
 public:
 	DMember(int32_t)                                   FootIndex                                                   OFFSET(get<int32_t>, {0x38, 4, 0, 0})
 	SMember(FFortPlayerFoleyContextSettings)           PreviewSettings                                             OFFSET(get<T>, {0x3C, 20, 0, 0})
-};
-
 
 
 	/// Functions
@@ -103,6 +101,8 @@ public:
 	// void AudioPreview(AActor* InActor);                                                                                      // [0x1ebf994] Public|HasDefaults|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_FootStep.AnimNotify_FootStep_C.Received_Notify
 	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_FootStep_Left.AnimNotify_FootStep_Left_C
 /// Size: 0x0000 (0x000050 - 0x000050)
 class UAnimNotify_FootStep_Left_C : public UAnimNotify_FootStep_C
@@ -254,8 +254,6 @@ public:
 	SMember(FAnimNode_StateResult)                     AnimGraphNode_StateResult27                                 OFFSET(get<T>, {0x1CB0, 32, 0, 0})
 	SMember(FAnimNode_StateMachine)                    AnimGraphNode_StateMachine1                                 OFFSET(get<T>, {0x1CD0, 200, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x1D98, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -263,14 +261,6 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Animation/Game/MainPlayer/Facial/FaceGameplay/Gameplay_FaceSystem_StateMachine_AnimBP.Gameplay_FaceSystem_StateMachine_AnimBP_C.ExecuteUbergraph_Gameplay_FaceSystem_StateMachine_AnimBP
 	// void ExecuteUbergraph_Gameplay_FaceSystem_StateMachine_AnimBP(int32_t EntryPoint);                                       // [0x1ebf994] Final                
-/// Class /Game/Animation/Libraries/FortAnimationBPFunctionLibrary.FortAnimationBPFunctionLibrary_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UFortAnimationBPFunctionLibrary_C : public UBlueprintFunctionLibrary
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
 };
 
 /// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_DisablePawnRotation.AnimNotifyState_DisablePawnRotation_C
@@ -296,8 +286,6 @@ public:
 	DMember(bool)                                      Looping                                                     OFFSET(get<bool>, {0x68, 1, 0, 0})
 	DMember(double)                                    PlayRate                                                    OFFSET(get<double>, {0x70, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     DoNotAttachTagContainer                                     OFFSET(get<T>, {0x78, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -305,6 +293,8 @@ public:
 	// bool Received_NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
 	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_AttachAsset.AnimNotifyState_AttachAsset_C.Received_NotifyBegin
 	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_StopMontageGroup.AnimNotifyState_StopMontageGroup_C
 /// Size: 0x0010 (0x000030 - 0x000040)
 class UAnimNotifyState_StopMontageGroup_C : public UAnimNotifyState
@@ -315,13 +305,13 @@ class UAnimNotifyState_StopMontageGroup_C : public UAnimNotifyState
 public:
 	SMember(FName)                                     GroupNameToStop                                             OFFSET(get<T>, {0x30, 4, 0, 0})
 	DMember(double)                                    BlendOutTime                                                OFFSET(get<double>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_StopMontageGroup.AnimNotifyState_StopMontageGroup_C.Received_NotifyBegin
 	// bool Received_NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_PlayForceFeedback.AnimNotify_PlayForceFeedback_C
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UAnimNotify_PlayForceFeedback_C : public UAnimNotify
@@ -335,13 +325,13 @@ public:
 	DMember(bool)                                      bPlayAtWorldLocation                                        OFFSET(get<bool>, {0x48, 1, 0, 0})
 	DMember(double)                                    InnerRadius                                                 OFFSET(get<double>, {0x50, 8, 0, 0})
 	DMember(double)                                    OuterRadius                                                 OFFSET(get<double>, {0x58, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_PlayForceFeedback.AnimNotify_PlayForceFeedback_C.Received_Notify
 	// bool Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, FAnimNotifyEventReference& EventReference); // [0x1ebf994] Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+
 /// Class /Game/Animation/AnimNotifies/AnimNotifyEvent/AnimNotify_EliminationBotM2.AnimNotify_EliminationBotM2_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UAnimNotify_EliminationBotM2_C : public UAnimNotify
@@ -358,6 +348,16 @@ class UAnimNotifyState_TeleportFinished_C : public UAnimNotifyState
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+};
+
+/// Class /Game/Animation/Libraries/FortAnimationBPFunctionLibrary.FortAnimationBPFunctionLibrary_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UFortAnimationBPFunctionLibrary_C : public UBlueprintFunctionLibrary
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
 };
@@ -652,8 +652,6 @@ public:
 	DMember(bool)                                      Play_Land_Additive                                          OFFSET(get<bool>, {0x59B1, 1, 0, 0})
 	DMember(bool)                                      Was_Turning_Right                                           OFFSET(get<bool>, {0x59B2, 1, 0, 0})
 	DMember(double)                                    Backwards_Play_Rate                                         OFFSET(get<double>, {0x59B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -675,6 +673,8 @@ public:
 	// void BlueprintCollectRidableAnimBPData(UAnimInstance* RidableAnimInstance);                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /RidingContent/Animation/HardSaddle/Boar/BoarRidingPlayerLayerAnimBP.BoarRidingPlayerLayerAnimBP_C.ExecuteUbergraph_BoarRidingPlayerLayerAnimBP
 	// void ExecuteUbergraph_BoarRidingPlayerLayerAnimBP(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /RidingContent/Animation/HardSaddle/Wolf/WolfRidingPlayerLayerAnimBP.WolfRidingPlayerLayerAnimBP_C
 /// Size: 0x4AD8 (0x000AD0 - 0x0055A8)
 class UWolfRidingPlayerLayerAnimBP_C : public UFortVehicleLayerAnimInstance_Riding
@@ -943,8 +943,6 @@ public:
 	DMember(bool)                                      Was_Turning_Right                                           OFFSET(get<bool>, {0x5590, 1, 0, 0})
 	DMember(double)                                    Turn_in_Place_Rotation_Speed                                OFFSET(get<double>, {0x5598, 8, 0, 0})
 	DMember(double)                                    Backwards_Play_Rate                                         OFFSET(get<double>, {0x55A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -974,6 +972,8 @@ public:
 	// void PlaceHandIKTargets();                                                                                               // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /RidingContent/Animation/HardSaddle/Wolf/WolfRidingPlayerLayerAnimBP.WolfRidingPlayerLayerAnimBP_C.ExecuteUbergraph_WolfRidingPlayerLayerAnimBP
 	// void ExecuteUbergraph_WolfRidingPlayerLayerAnimBP(int32_t EntryPoint);                                                   // [0x1ebf994] Final                
+};
+
 /// Class /RidingContent/Animation/Proto/RidingPlayerLayerAnimBP.RidingPlayerLayerAnimBP_C
 /// Size: 0x18A9 (0x000870 - 0x002119)
 class URidingPlayerLayerAnimBP_C : public UFortValetPassengerAnimInstance
@@ -1051,8 +1051,6 @@ public:
 	DMember(bool)                                      IsSmackie                                                   OFFSET(get<bool>, {0x2108, 1, 0, 0})
 	DMember(double)                                    Velocity                                                    OFFSET(get<double>, {0x2110, 8, 0, 0})
 	DMember(bool)                                      IsNug                                                       OFFSET(get<bool>, {0x2118, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1074,6 +1072,8 @@ public:
 	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Animation/Proto/RidingPlayerLayerAnimBP.RidingPlayerLayerAnimBP_C.ExecuteUbergraph_RidingPlayerLayerAnimBP
 	// void ExecuteUbergraph_RidingPlayerLayerAnimBP(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /GrindRail/Animation/AnimNotify_GrindRailLand.AnimNotify_GrindRailLand_C
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UAnimNotify_GrindRailLand_C : public UAnimNotify
@@ -1353,8 +1353,6 @@ public:
 	SMember(FAnimNode_RotationOffsetBlendSpace)        AnimGraphNode_RotationOffsetBlendSpace5                     OFFSET(get<T>, {0x5C58, 280, 0, 0})
 	SMember(FAnimNode_BlendSpacePlayer)                AnimGraphNode_BlendSpacePlayer7                             OFFSET(get<T>, {0x5D70, 112, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root7                                         OFFSET(get<T>, {0x5DE0, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1388,187 +1386,6 @@ public:
 	// void EvaluateGraphExposedInputs_ExecuteUbergraph_GrindRail_Player_LayerAnimBP_AnimGraphNode_TransitionResult_3BE669A04B6B559EC4783B8E897AD836(); // [0x1ebf994] BlueprintEvent       
 	// Function /GrindRail/Animation/GrindRail_Player_LayerAnimBP.GrindRail_Player_LayerAnimBP_C.ExecuteUbergraph_GrindRail_Player_LayerAnimBP
 	// void ExecuteUbergraph_GrindRail_Player_LayerAnimBP(int32_t EntryPoint);                                                  // [0x1ebf994] Final                
-/// Struct /Game/Animation/Libraries/RBANParamsStruct.RBANParamsStruct
-/// Size: 0x0B40 (0x000000 - 0x000B40)
-class FRBANParamsStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 2880;
-
-public:
-	SMember(FRBANSettingStruct)                        Skydive_GoingUp_56_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(get<T>, {0x0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_FloatingDown_57_2CBF3D3F421785F8994502931454A81F    OFFSET(get<T>, {0x90, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_DivingDown_58_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(get<T>, {0x120, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_Parachuting_60_A88C4A0A407F497561D31287CB20250F     OFFSET(get<T>, {0x1B0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Standing_59_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(get<T>, {0x240, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Moving_65_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(get<T>, {0x2D0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Crouch_Moving_61_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(get<T>, {0x360, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        EmoteOrMelee_62_CFCF66B5492987CBD638EC98EB34D572            OFFSET(get<T>, {0x3F0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Swimming_64_33CE87CE4D4F712B1384E29115845962                OFFSET(get<T>, {0x480, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Front_End_63_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(get<T>, {0x510, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        DBNO_68_2D70D4004D0E9B117F6CE9A09C362B74                    OFFSET(get<T>, {0x5A0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        DBNO_Carried_67_99829B99495FCFE3488A9A86B549ECE5            OFFSET(get<T>, {0x630, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        OnGround_Falling_66_CDAA0F4D476157E4137548BDCE8776F2        OFFSET(get<T>, {0x6C0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Ziplining_75_BCCDB7E1431A4C174F1040ABC81FD8A8               OFFSET(get<T>, {0x750, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Skydive_Surfing_74_408E65FF484AA54111E1ED8A69D8240D         OFFSET(get<T>, {0x7E0, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Riding_Standing_69_952A2A43408C37C44E4CBFAE3F3001B0         OFFSET(get<T>, {0x870, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Riding_Moving_72_EE7A01794460B9753E5076A5A3B3080A           OFFSET(get<T>, {0x900, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Riding_Moving_Targeting_73_2F57FD9E477C515D70B3DA9D75453357 OFFSET(get<T>, {0x990, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Tactical_Sprint_70_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(get<T>, {0xA20, 144, 0, 0})
-	SMember(FRBANSettingStruct)                        Rail_Grinding_71_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(get<T>, {0xAB0, 144, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/WindGustParamsStruct.WindGustParamsStruct
-/// Size: 0x0960 (0x000000 - 0x000960)
-class FWindGustParamsStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 2400;
-
-public:
-	SMember(FWindGustSettingStruct)                    Skydive_GoingUp_28_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(get<T>, {0x0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Skydive_FloatingDown_29_2CBF3D3F421785F8994502931454A81F    OFFSET(get<T>, {0x78, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Skydive_DivingDown_30_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(get<T>, {0xF0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Skydive_Parachuting_31_A88C4A0A407F497561D31287CB20250F     OFFSET(get<T>, {0x168, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    OnGround_Standing_32_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(get<T>, {0x1E0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    OnGround_Moving_33_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(get<T>, {0x258, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    OnGround_Crouch_Moving_34_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(get<T>, {0x2D0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    EmoteOrMelee_35_CFCF66B5492987CBD638EC98EB34D572            OFFSET(get<T>, {0x348, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Swimming_36_33CE87CE4D4F712B1384E29115845962                OFFSET(get<T>, {0x3C0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Front_End_37_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(get<T>, {0x438, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    DBNO_41_0C046BF1406AB4B752DB3A99949FE3A3                    OFFSET(get<T>, {0x4B0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    DBNO_Carried_42_3E9FADC247359FEE88C7B4A3453449E6            OFFSET(get<T>, {0x528, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    OnGround_Falling_46_2CC5CD2149D12B7C53D91E8D6AA90C03        OFFSET(get<T>, {0x5A0, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Ziplining_47_B8BBEA804F8C515EA80FE7897BB99CF6               OFFSET(get<T>, {0x618, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Skydive_Surfing_50_2B64886E4E6F0E8CFC180E81FDF37F62         OFFSET(get<T>, {0x690, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Riding_Standing_55_206A781845EAC0A66D2BBC8981041DBD         OFFSET(get<T>, {0x708, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Riding_Moving_56_963FD3424B0D070C81120599A5AED02A           OFFSET(get<T>, {0x780, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Riding_Moving_Targeting_59_93868B48485365007E3BD8BD8A527B39 OFFSET(get<T>, {0x7F8, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Tactical_Sprint_58_7E4BD4244308EE1199AA48ACF8871E68         OFFSET(get<T>, {0x870, 120, 0, 0})
-	SMember(FWindGustSettingStruct)                    Rail_Grinding_62_FF88FD5F4A9AB308E2F095B9F0657D82           OFFSET(get<T>, {0x8E8, 120, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/ClothParamsStruct.ClothParamsStruct
-/// Size: 0x0780 (0x000000 - 0x000780)
-class FClothParamsStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 1920;
-
-public:
-	SMember(FClothSettingStruct)                       Skydive_GoingUp_12_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(get<T>, {0x0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Skydive_FloatingDown_10_2CBF3D3F421785F8994502931454A81F    OFFSET(get<T>, {0x60, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Skydive_DivingDown_11_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(get<T>, {0xC0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Skydive_Parachuting_13_A88C4A0A407F497561D31287CB20250F     OFFSET(get<T>, {0x120, 96, 0, 0})
-	SMember(FClothSettingStruct)                       OnGround_Standing_15_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(get<T>, {0x180, 96, 0, 0})
-	SMember(FClothSettingStruct)                       OnGround_Moving_16_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(get<T>, {0x1E0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       OnGround_Crouch_Moving_27_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(get<T>, {0x240, 96, 0, 0})
-	SMember(FClothSettingStruct)                       EmoteOrMelee_25_CFCF66B5492987CBD638EC98EB34D572            OFFSET(get<T>, {0x2A0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Swimming_3_33CE87CE4D4F712B1384E29115845962                 OFFSET(get<T>, {0x300, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Front_End_20_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(get<T>, {0x360, 96, 0, 0})
-	SMember(FClothSettingStruct)                       DBNO_30_2D70D4004D0E9B117F6CE9A09C362B74                    OFFSET(get<T>, {0x3C0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       DBNO_Carried_32_99829B99495FCFE3488A9A86B549ECE5            OFFSET(get<T>, {0x420, 96, 0, 0})
-	SMember(FClothSettingStruct)                       OnGround_Falling_36_CDAA0F4D476157E4137548BDCE8776F2        OFFSET(get<T>, {0x480, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Ziplining_39_BCCDB7E1431A4C174F1040ABC81FD8A8               OFFSET(get<T>, {0x4E0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Skydive_Surfing_42_408E65FF484AA54111E1ED8A69D8240D         OFFSET(get<T>, {0x540, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Riding_Standing_46_952A2A43408C37C44E4CBFAE3F3001B0         OFFSET(get<T>, {0x5A0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Riding_Moving_47_EE7A01794460B9753E5076A5A3B3080A           OFFSET(get<T>, {0x600, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Riding_Moving_Targeting_52_2F57FD9E477C515D70B3DA9D75453357 OFFSET(get<T>, {0x660, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Tactical_Sprint_51_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(get<T>, {0x6C0, 96, 0, 0})
-	SMember(FClothSettingStruct)                       Rail_Grinding_55_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(get<T>, {0x720, 96, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/RBANSettingStruct.RBANSettingStruct
-/// Size: 0x0090 (0x000000 - 0x000090)
-class FRBANSettingStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 144;
-
-public:
-	SMember(FVector)                                   ComponentLinearAccScale_28_9CBE863E417FC965C07809A2FE55ADFD OFFSET(get<T>, {0x0, 24, 0, 0})
-	SMember(FVector)                                   ComponentLinearVelScale_31_6A3DFE4A481AD4D7CB18D79F95CC88E8 OFFSET(get<T>, {0x18, 24, 0, 0})
-	SMember(FSimSpaceSettings)                         SimSpaceSettings_34_FE68F666411FF9F29BA84CB4BE726A52        OFFSET(get<T>, {0x30, 96, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/ClothSettingStruct.ClothSettingStruct
-/// Size: 0x005C (0x000000 - 0x00005C)
-class FClothSettingStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 92;
-
-public:
-	SMember(FVector)                                   LinearVelocityScale_7_9CBE863E417FC965C07809A2FE55ADFD      OFFSET(get<T>, {0x0, 24, 0, 0})
-	DMember(float)                                     AngularVelocityScale_6_6A3DFE4A481AD4D7CB18D79F95CC88E8     OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     FictitiousAngularScale_10_C5F4D16F48D0BEDC3F0FA38B2648511B  OFFSET(get<float>, {0x1C, 4, 0, 0})
-	SMember(FVector)                                   GravityOverride_15_9C3CF2B14934A1AC917C4C99F03AFC6E         OFFSET(get<T>, {0x20, 24, 0, 0})
-	SMember(FVector2D)                                 DragCoefficient_23_FE68F666411FF9F29BA84CB4BE726A52         OFFSET(get<T>, {0x38, 16, 0, 0})
-	SMember(FVector2D)                                 LiftCoefficient_24_BB285D994A5B3AFF167F4793D7ECA837         OFFSET(get<T>, {0x48, 16, 0, 0})
-	SMember(FName)                                     JointName_27_C74F3B2245EA319DE82A629FF3C17CCA               OFFSET(get<T>, {0x58, 4, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/WindGustLocalSettingStruct.WindGustLocalSettingStruct
-/// Size: 0x0014 (0x000000 - 0x000014)
-class FWindGustLocalSettingStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 20;
-
-public:
-	DMember(float)                                     ElapsedTime_48_9A24DA0842E21D5736699499F1DE1171             OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     TimeBetweenGusts_54_E1D59EA94088FB83508636942434066D        OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     GustStrength_55_7788D1D04920E9BC2F96FCBDDCA7C33A            OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     GustDuration_56_E42A0C8341E10ACAC2016FA7F726B406            OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     FinalGustStrengthLocal_57_BD76FBFF47687A7C38D40EAD653D5618  OFFSET(get<float>, {0x10, 4, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/ClothCoreSettingStruct.ClothCoreSettingStruct
-/// Size: 0x0080 (0x000000 - 0x000080)
-class FClothCoreSettingStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 128;
-
-public:
-	SMember(FVector2D)                                 EdgeStiffness_28_9A24DA0842E21D5736699499F1DE1171           OFFSET(get<T>, {0x0, 16, 0, 0})
-	SMember(FVector2D)                                 BendingStiffness_29_6CD0864B4078D8378C061197E9B1B094        OFFSET(get<T>, {0x10, 16, 0, 0})
-	SMember(FVector2D)                                 AreaStiffness_30_0D981B4E4039D5A0C6A4C78D6F09D510           OFFSET(get<T>, {0x20, 16, 0, 0})
-	SMember(FVector2D)                                 TetherStiffness_24_A5C4B017498D3154D76CECAB9AE7BDF2         OFFSET(get<T>, {0x30, 16, 0, 0})
-	DMember(float)                                     CollisionThickness_14_DACF320B4C03C6BD248A8E9B7B867FC7      OFFSET(get<float>, {0x40, 4, 0, 0})
-	DMember(float)                                     FrictionCoefficient_15_E5761CE84E8E52EEBD663B9DC3A0906F     OFFSET(get<float>, {0x44, 4, 0, 0})
-	DMember(float)                                     SelfCollisionThickness_16_98974B1C4B5ABE4EA1CFF7A791319392  OFFSET(get<float>, {0x48, 4, 0, 0})
-	DMember(float)                                     DampingCoefficient_17_A343D5A54D704F5B249C8E907DA80101      OFFSET(get<float>, {0x4C, 4, 0, 0})
-	DMember(float)                                     LocalDampingCoefficient_33_993AFAEA430EEBF424A7D0B8BB57CFB5 OFFSET(get<float>, {0x50, 4, 0, 0})
-	SMember(FVector2D)                                 AnimDriveStiffness_27_E54C28B348B4C35A1D0817AFA9FF0423      OFFSET(get<T>, {0x58, 16, 0, 0})
-	SMember(FVector2D)                                 AnimDriveDamping_26_F9EDBF5240E75A4905AFA1A8240922C8        OFFSET(get<T>, {0x68, 16, 0, 0})
-	DMember(int32_t)                                   NumberIterations_21_8E04A8E94B2040C7DBF93194733AC36A        OFFSET(get<int32_t>, {0x78, 4, 0, 0})
-	DMember(int32_t)                                   NumberSubsteps_23_5108D5FA40140A1AAD38459100B14261          OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
-};
-
-/// Struct /Game/Animation/Libraries/WindGustSettingStruct.WindGustSettingStruct
-/// Size: 0x0078 (0x000000 - 0x000078)
-class FWindGustSettingStruct : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 120;
-
-public:
-	DMember(float)                                     MinTimeBetweenGusts_25_6CD0864B4078D8378C061197E9B1B094     OFFSET(get<float>, {0x0, 4, 0, 0})
-	DMember(float)                                     MaxTimeBetweenGusts_28_0D981B4E4039D5A0C6A4C78D6F09D510     OFFSET(get<float>, {0x4, 4, 0, 0})
-	DMember(float)                                     MinGustStrength_26_A5C4B017498D3154D76CECAB9AE7BDF2         OFFSET(get<float>, {0x8, 4, 0, 0})
-	DMember(float)                                     MaxGustStrength_29_DACF320B4C03C6BD248A8E9B7B867FC7         OFFSET(get<float>, {0xC, 4, 0, 0})
-	DMember(float)                                     MinGustDuration_27_E5761CE84E8E52EEBD663B9DC3A0906F         OFFSET(get<float>, {0x10, 4, 0, 0})
-	DMember(float)                                     MaxGustDuration_30_98974B1C4B5ABE4EA1CFF7A791319392         OFFSET(get<float>, {0x14, 4, 0, 0})
-	DMember(float)                                     WindTurbulenceScalarA_48_A343D5A54D704F5B249C8E907DA80101   OFFSET(get<float>, {0x18, 4, 0, 0})
-	DMember(float)                                     WindTurbulenceScalarB_47_E54C28B348B4C35A1D0817AFA9FF0423   OFFSET(get<float>, {0x1C, 4, 0, 0})
-	DMember(float)                                     MinUpInterpSpeed_36_8E04A8E94B2040C7DBF93194733AC36A        OFFSET(get<float>, {0x20, 4, 0, 0})
-	DMember(float)                                     MaxUpInterpSpeed_37_5108D5FA40140A1AAD38459100B14261        OFFSET(get<float>, {0x24, 4, 0, 0})
-	DMember(float)                                     MinDownInterpSpeed_40_C3AD555846C2AEB9625C4E93B6758BB8      OFFSET(get<float>, {0x28, 4, 0, 0})
-	DMember(float)                                     MaxDownInterpSpeed_41_394B2B66448D9D21249A288C7DEC98F1      OFFSET(get<float>, {0x2C, 4, 0, 0})
-	SMember(FVector)                                   WindFrequency_51_9F209DFA4F7AB96CE220578516F0B4CF           OFFSET(get<T>, {0x30, 24, 0, 0})
-	SMember(FVector)                                   WindAmplitude_54_E174BDEC415CE55F6A1475B799695475           OFFSET(get<T>, {0x48, 24, 0, 0})
-	SMember(FVector)                                   WindOffset_55_91DD775940222EE47FDA3BA8695E8FE9              OFFSET(get<T>, {0x60, 24, 0, 0})
 };
 
 /// Struct /Game/Animation/Libraries/GravityOverrideParamsStruct.GravityOverrideParamsStruct
@@ -1613,5 +1430,188 @@ public:
 	SMember(FVector)                                   WindOffset_32_C5F4D16F48D0BEDC3F0FA38B2648511B              OFFSET(get<T>, {0x30, 24, 0, 0})
 	SMember(FVector)                                   GravityOverride_15_9C3CF2B14934A1AC917C4C99F03AFC6E         OFFSET(get<T>, {0x48, 24, 0, 0})
 	SMember(FName)                                     JointName_27_C74F3B2245EA319DE82A629FF3C17CCA               OFFSET(get<T>, {0x60, 4, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/WindGustSettingStruct.WindGustSettingStruct
+/// Size: 0x0078 (0x000000 - 0x000078)
+class FWindGustSettingStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 120;
+
+public:
+	DMember(float)                                     MinTimeBetweenGusts_25_6CD0864B4078D8378C061197E9B1B094     OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     MaxTimeBetweenGusts_28_0D981B4E4039D5A0C6A4C78D6F09D510     OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     MinGustStrength_26_A5C4B017498D3154D76CECAB9AE7BDF2         OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     MaxGustStrength_29_DACF320B4C03C6BD248A8E9B7B867FC7         OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     MinGustDuration_27_E5761CE84E8E52EEBD663B9DC3A0906F         OFFSET(get<float>, {0x10, 4, 0, 0})
+	DMember(float)                                     MaxGustDuration_30_98974B1C4B5ABE4EA1CFF7A791319392         OFFSET(get<float>, {0x14, 4, 0, 0})
+	DMember(float)                                     WindTurbulenceScalarA_48_A343D5A54D704F5B249C8E907DA80101   OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     WindTurbulenceScalarB_47_E54C28B348B4C35A1D0817AFA9FF0423   OFFSET(get<float>, {0x1C, 4, 0, 0})
+	DMember(float)                                     MinUpInterpSpeed_36_8E04A8E94B2040C7DBF93194733AC36A        OFFSET(get<float>, {0x20, 4, 0, 0})
+	DMember(float)                                     MaxUpInterpSpeed_37_5108D5FA40140A1AAD38459100B14261        OFFSET(get<float>, {0x24, 4, 0, 0})
+	DMember(float)                                     MinDownInterpSpeed_40_C3AD555846C2AEB9625C4E93B6758BB8      OFFSET(get<float>, {0x28, 4, 0, 0})
+	DMember(float)                                     MaxDownInterpSpeed_41_394B2B66448D9D21249A288C7DEC98F1      OFFSET(get<float>, {0x2C, 4, 0, 0})
+	SMember(FVector)                                   WindFrequency_51_9F209DFA4F7AB96CE220578516F0B4CF           OFFSET(get<T>, {0x30, 24, 0, 0})
+	SMember(FVector)                                   WindAmplitude_54_E174BDEC415CE55F6A1475B799695475           OFFSET(get<T>, {0x48, 24, 0, 0})
+	SMember(FVector)                                   WindOffset_55_91DD775940222EE47FDA3BA8695E8FE9              OFFSET(get<T>, {0x60, 24, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/ClothCoreSettingStruct.ClothCoreSettingStruct
+/// Size: 0x0080 (0x000000 - 0x000080)
+class FClothCoreSettingStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 128;
+
+public:
+	SMember(FVector2D)                                 EdgeStiffness_28_9A24DA0842E21D5736699499F1DE1171           OFFSET(get<T>, {0x0, 16, 0, 0})
+	SMember(FVector2D)                                 BendingStiffness_29_6CD0864B4078D8378C061197E9B1B094        OFFSET(get<T>, {0x10, 16, 0, 0})
+	SMember(FVector2D)                                 AreaStiffness_30_0D981B4E4039D5A0C6A4C78D6F09D510           OFFSET(get<T>, {0x20, 16, 0, 0})
+	SMember(FVector2D)                                 TetherStiffness_24_A5C4B017498D3154D76CECAB9AE7BDF2         OFFSET(get<T>, {0x30, 16, 0, 0})
+	DMember(float)                                     CollisionThickness_14_DACF320B4C03C6BD248A8E9B7B867FC7      OFFSET(get<float>, {0x40, 4, 0, 0})
+	DMember(float)                                     FrictionCoefficient_15_E5761CE84E8E52EEBD663B9DC3A0906F     OFFSET(get<float>, {0x44, 4, 0, 0})
+	DMember(float)                                     SelfCollisionThickness_16_98974B1C4B5ABE4EA1CFF7A791319392  OFFSET(get<float>, {0x48, 4, 0, 0})
+	DMember(float)                                     DampingCoefficient_17_A343D5A54D704F5B249C8E907DA80101      OFFSET(get<float>, {0x4C, 4, 0, 0})
+	DMember(float)                                     LocalDampingCoefficient_33_993AFAEA430EEBF424A7D0B8BB57CFB5 OFFSET(get<float>, {0x50, 4, 0, 0})
+	SMember(FVector2D)                                 AnimDriveStiffness_27_E54C28B348B4C35A1D0817AFA9FF0423      OFFSET(get<T>, {0x58, 16, 0, 0})
+	SMember(FVector2D)                                 AnimDriveDamping_26_F9EDBF5240E75A4905AFA1A8240922C8        OFFSET(get<T>, {0x68, 16, 0, 0})
+	DMember(int32_t)                                   NumberIterations_21_8E04A8E94B2040C7DBF93194733AC36A        OFFSET(get<int32_t>, {0x78, 4, 0, 0})
+	DMember(int32_t)                                   NumberSubsteps_23_5108D5FA40140A1AAD38459100B14261          OFFSET(get<int32_t>, {0x7C, 4, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/WindGustLocalSettingStruct.WindGustLocalSettingStruct
+/// Size: 0x0014 (0x000000 - 0x000014)
+class FWindGustLocalSettingStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 20;
+
+public:
+	DMember(float)                                     ElapsedTime_48_9A24DA0842E21D5736699499F1DE1171             OFFSET(get<float>, {0x0, 4, 0, 0})
+	DMember(float)                                     TimeBetweenGusts_54_E1D59EA94088FB83508636942434066D        OFFSET(get<float>, {0x4, 4, 0, 0})
+	DMember(float)                                     GustStrength_55_7788D1D04920E9BC2F96FCBDDCA7C33A            OFFSET(get<float>, {0x8, 4, 0, 0})
+	DMember(float)                                     GustDuration_56_E42A0C8341E10ACAC2016FA7F726B406            OFFSET(get<float>, {0xC, 4, 0, 0})
+	DMember(float)                                     FinalGustStrengthLocal_57_BD76FBFF47687A7C38D40EAD653D5618  OFFSET(get<float>, {0x10, 4, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/ClothSettingStruct.ClothSettingStruct
+/// Size: 0x005C (0x000000 - 0x00005C)
+class FClothSettingStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 92;
+
+public:
+	SMember(FVector)                                   LinearVelocityScale_7_9CBE863E417FC965C07809A2FE55ADFD      OFFSET(get<T>, {0x0, 24, 0, 0})
+	DMember(float)                                     AngularVelocityScale_6_6A3DFE4A481AD4D7CB18D79F95CC88E8     OFFSET(get<float>, {0x18, 4, 0, 0})
+	DMember(float)                                     FictitiousAngularScale_10_C5F4D16F48D0BEDC3F0FA38B2648511B  OFFSET(get<float>, {0x1C, 4, 0, 0})
+	SMember(FVector)                                   GravityOverride_15_9C3CF2B14934A1AC917C4C99F03AFC6E         OFFSET(get<T>, {0x20, 24, 0, 0})
+	SMember(FVector2D)                                 DragCoefficient_23_FE68F666411FF9F29BA84CB4BE726A52         OFFSET(get<T>, {0x38, 16, 0, 0})
+	SMember(FVector2D)                                 LiftCoefficient_24_BB285D994A5B3AFF167F4793D7ECA837         OFFSET(get<T>, {0x48, 16, 0, 0})
+	SMember(FName)                                     JointName_27_C74F3B2245EA319DE82A629FF3C17CCA               OFFSET(get<T>, {0x58, 4, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/RBANSettingStruct.RBANSettingStruct
+/// Size: 0x0090 (0x000000 - 0x000090)
+class FRBANSettingStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 144;
+
+public:
+	SMember(FVector)                                   ComponentLinearAccScale_28_9CBE863E417FC965C07809A2FE55ADFD OFFSET(get<T>, {0x0, 24, 0, 0})
+	SMember(FVector)                                   ComponentLinearVelScale_31_6A3DFE4A481AD4D7CB18D79F95CC88E8 OFFSET(get<T>, {0x18, 24, 0, 0})
+	SMember(FSimSpaceSettings)                         SimSpaceSettings_34_FE68F666411FF9F29BA84CB4BE726A52        OFFSET(get<T>, {0x30, 96, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/ClothParamsStruct.ClothParamsStruct
+/// Size: 0x0780 (0x000000 - 0x000780)
+class FClothParamsStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 1920;
+
+public:
+	SMember(FClothSettingStruct)                       Skydive_GoingUp_12_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(get<T>, {0x0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Skydive_FloatingDown_10_2CBF3D3F421785F8994502931454A81F    OFFSET(get<T>, {0x60, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Skydive_DivingDown_11_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(get<T>, {0xC0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Skydive_Parachuting_13_A88C4A0A407F497561D31287CB20250F     OFFSET(get<T>, {0x120, 96, 0, 0})
+	SMember(FClothSettingStruct)                       OnGround_Standing_15_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(get<T>, {0x180, 96, 0, 0})
+	SMember(FClothSettingStruct)                       OnGround_Moving_16_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(get<T>, {0x1E0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       OnGround_Crouch_Moving_27_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(get<T>, {0x240, 96, 0, 0})
+	SMember(FClothSettingStruct)                       EmoteOrMelee_25_CFCF66B5492987CBD638EC98EB34D572            OFFSET(get<T>, {0x2A0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Swimming_3_33CE87CE4D4F712B1384E29115845962                 OFFSET(get<T>, {0x300, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Front_End_20_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(get<T>, {0x360, 96, 0, 0})
+	SMember(FClothSettingStruct)                       DBNO_30_2D70D4004D0E9B117F6CE9A09C362B74                    OFFSET(get<T>, {0x3C0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       DBNO_Carried_32_99829B99495FCFE3488A9A86B549ECE5            OFFSET(get<T>, {0x420, 96, 0, 0})
+	SMember(FClothSettingStruct)                       OnGround_Falling_36_CDAA0F4D476157E4137548BDCE8776F2        OFFSET(get<T>, {0x480, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Ziplining_39_BCCDB7E1431A4C174F1040ABC81FD8A8               OFFSET(get<T>, {0x4E0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Skydive_Surfing_42_408E65FF484AA54111E1ED8A69D8240D         OFFSET(get<T>, {0x540, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Riding_Standing_46_952A2A43408C37C44E4CBFAE3F3001B0         OFFSET(get<T>, {0x5A0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Riding_Moving_47_EE7A01794460B9753E5076A5A3B3080A           OFFSET(get<T>, {0x600, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Riding_Moving_Targeting_52_2F57FD9E477C515D70B3DA9D75453357 OFFSET(get<T>, {0x660, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Tactical_Sprint_51_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(get<T>, {0x6C0, 96, 0, 0})
+	SMember(FClothSettingStruct)                       Rail_Grinding_55_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(get<T>, {0x720, 96, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/WindGustParamsStruct.WindGustParamsStruct
+/// Size: 0x0960 (0x000000 - 0x000960)
+class FWindGustParamsStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 2400;
+
+public:
+	SMember(FWindGustSettingStruct)                    Skydive_GoingUp_28_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(get<T>, {0x0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Skydive_FloatingDown_29_2CBF3D3F421785F8994502931454A81F    OFFSET(get<T>, {0x78, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Skydive_DivingDown_30_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(get<T>, {0xF0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Skydive_Parachuting_31_A88C4A0A407F497561D31287CB20250F     OFFSET(get<T>, {0x168, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    OnGround_Standing_32_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(get<T>, {0x1E0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    OnGround_Moving_33_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(get<T>, {0x258, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    OnGround_Crouch_Moving_34_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(get<T>, {0x2D0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    EmoteOrMelee_35_CFCF66B5492987CBD638EC98EB34D572            OFFSET(get<T>, {0x348, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Swimming_36_33CE87CE4D4F712B1384E29115845962                OFFSET(get<T>, {0x3C0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Front_End_37_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(get<T>, {0x438, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    DBNO_41_0C046BF1406AB4B752DB3A99949FE3A3                    OFFSET(get<T>, {0x4B0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    DBNO_Carried_42_3E9FADC247359FEE88C7B4A3453449E6            OFFSET(get<T>, {0x528, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    OnGround_Falling_46_2CC5CD2149D12B7C53D91E8D6AA90C03        OFFSET(get<T>, {0x5A0, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Ziplining_47_B8BBEA804F8C515EA80FE7897BB99CF6               OFFSET(get<T>, {0x618, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Skydive_Surfing_50_2B64886E4E6F0E8CFC180E81FDF37F62         OFFSET(get<T>, {0x690, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Riding_Standing_55_206A781845EAC0A66D2BBC8981041DBD         OFFSET(get<T>, {0x708, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Riding_Moving_56_963FD3424B0D070C81120599A5AED02A           OFFSET(get<T>, {0x780, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Riding_Moving_Targeting_59_93868B48485365007E3BD8BD8A527B39 OFFSET(get<T>, {0x7F8, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Tactical_Sprint_58_7E4BD4244308EE1199AA48ACF8871E68         OFFSET(get<T>, {0x870, 120, 0, 0})
+	SMember(FWindGustSettingStruct)                    Rail_Grinding_62_FF88FD5F4A9AB308E2F095B9F0657D82           OFFSET(get<T>, {0x8E8, 120, 0, 0})
+};
+
+/// Struct /Game/Animation/Libraries/RBANParamsStruct.RBANParamsStruct
+/// Size: 0x0B40 (0x000000 - 0x000B40)
+class FRBANParamsStruct : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 2880;
+
+public:
+	SMember(FRBANSettingStruct)                        Skydive_GoingUp_56_C026BDA74BFBABA6672DFE8FFDAAFC1B         OFFSET(get<T>, {0x0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_FloatingDown_57_2CBF3D3F421785F8994502931454A81F    OFFSET(get<T>, {0x90, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_DivingDown_58_EC7BEC4D406A8A98E60D7B9374C5E457      OFFSET(get<T>, {0x120, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_Parachuting_60_A88C4A0A407F497561D31287CB20250F     OFFSET(get<T>, {0x1B0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Standing_59_267DB1464D0D3A29D99E94ADFCB4AFEC       OFFSET(get<T>, {0x240, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Moving_65_807A66B64D7B3B2FCF080B833B8A6254         OFFSET(get<T>, {0x2D0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Crouch_Moving_61_CE0B8BFB4E3417C0F790F7AE38DD7735  OFFSET(get<T>, {0x360, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        EmoteOrMelee_62_CFCF66B5492987CBD638EC98EB34D572            OFFSET(get<T>, {0x3F0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Swimming_64_33CE87CE4D4F712B1384E29115845962                OFFSET(get<T>, {0x480, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Front_End_63_C7A4562A48E9BC9B4CD34D963CFC6490               OFFSET(get<T>, {0x510, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        DBNO_68_2D70D4004D0E9B117F6CE9A09C362B74                    OFFSET(get<T>, {0x5A0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        DBNO_Carried_67_99829B99495FCFE3488A9A86B549ECE5            OFFSET(get<T>, {0x630, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        OnGround_Falling_66_CDAA0F4D476157E4137548BDCE8776F2        OFFSET(get<T>, {0x6C0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Ziplining_75_BCCDB7E1431A4C174F1040ABC81FD8A8               OFFSET(get<T>, {0x750, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Skydive_Surfing_74_408E65FF484AA54111E1ED8A69D8240D         OFFSET(get<T>, {0x7E0, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Riding_Standing_69_952A2A43408C37C44E4CBFAE3F3001B0         OFFSET(get<T>, {0x870, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Riding_Moving_72_EE7A01794460B9753E5076A5A3B3080A           OFFSET(get<T>, {0x900, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Riding_Moving_Targeting_73_2F57FD9E477C515D70B3DA9D75453357 OFFSET(get<T>, {0x990, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Tactical_Sprint_70_5B2273A1499D34BDEC52E6A8E3F274D4         OFFSET(get<T>, {0xA20, 144, 0, 0})
+	SMember(FRBANSettingStruct)                        Rail_Grinding_71_DEEB00A04DB992DF5EEB40BD6518EA4E           OFFSET(get<T>, {0xAB0, 144, 0, 0})
 };
 

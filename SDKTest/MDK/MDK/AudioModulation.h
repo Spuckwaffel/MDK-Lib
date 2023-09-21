@@ -109,8 +109,6 @@ class USoundControlBusMix : public UObject
 public:
 	DMember(uint32_t)                                  ProfileIndex                                                OFFSET(get<uint32_t>, {0x28, 4, 0, 0})
 	CMember(TArray<FSoundControlBusMixStage>)          MixStages                                                   OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -126,6 +124,8 @@ public:
 	// void DeactivateAllMixes();                                                                                               // [0x7211460] Final|Native|Protected 
 	// Function /Script/AudioModulation.SoundControlBusMix.ActivateMix
 	// void ActivateMix();                                                                                                      // [0x721079c] Final|Native|Protected 
+};
+
 /// Class /Script/AudioModulation.SoundModulationParameter
 /// Size: 0x0010 (0x000028 - 0x000038)
 class USoundModulationParameter : public UObject

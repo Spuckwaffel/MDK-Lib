@@ -70,13 +70,13 @@ public:
 	CMember(UFortPlayspaceComponent_NaniteSettingsOverride*) NaniteSettingsOverrideComponent                       OFFSET(get<T>, {0x770, 8, 0, 0})
 	CMember(UPlayspaceComponent_PlaysetRootSpawner*)   PlaysetRootSpawnerComponent                                 OFFSET(get<T>, {0x778, 8, 0, 0})
 	CMember(UPlayspaceComponent_PlayerPawnOverrides*)  PlayerPawnOverridesComponent                                OFFSET(get<T>, {0x780, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VKEditGameplay.VKEditPlayspace.OnClientActivatedContent
 	// void OnClientActivatedContent(FUniqueNetIdRepl& ClientNetId);                                                            // [0x9ead510] Final|Native|Private|HasOutParms|Const 
+};
+
 /// Class /Script/VKEditGameplay.PlayspaceComponent_EditConnectionManager
 /// Size: 0x0088 (0x0000F8 - 0x000180)
 class UPlayspaceComponent_EditConnectionManager : public UFortPlayspaceComponent
@@ -88,8 +88,6 @@ public:
 	DMember(int32_t)                                   EditConnections                                             OFFSET(get<int32_t>, {0x158, 4, 0, 0})
 	CMember(EVkEditStatus)                             VkEditStatus                                                OFFSET(get<T>, {0x15C, 1, 0, 0})
 	SMember(FGameplayTagContainer)                     UITagsToHide                                                OFFSET(get<T>, {0x160, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -97,3 +95,5 @@ public:
 	// void OnRep_VkEditStatus();                                                                                               // [0x9ead64c] Final|Native|Protected|Const 
 	// Function /Script/VKEditGameplay.PlayspaceComponent_EditConnectionManager.OnRep_EditConnections
 	// void OnRep_EditConnections();                                                                                            // [0x9ead5e0] Final|Native|Protected|Const 
+};
+

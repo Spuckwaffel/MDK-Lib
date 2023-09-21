@@ -50,8 +50,6 @@ public:
 	SMember(FSoftClassPath)                            GlobalDefaultServerGameMode                                 OFFSET(get<T>, {0xB8, 24, 0, 0})
 	CMember(TArray<FGameModeName>)                     GameModeMapPrefixes                                         OFFSET(get<T>, {0xD0, 16, 0, 0})
 	CMember(TArray<FGameModeName>)                     GameModeClassAliases                                        OFFSET(get<T>, {0xE0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -61,6 +59,8 @@ public:
 	// bool GetSkipAssigningGamepadToPlayer1();                                                                                 // [0x4de529c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EngineSettings.GameMapsSettings.GetGameMapsSettings
 	// UGameMapsSettings* GetGameMapsSettings();                                                                                // [0x4de526c] Final|RequiredAPI|Native|Static|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/EngineSettings.GameNetworkManagerSettings
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UGameNetworkManagerSettings : public UObject

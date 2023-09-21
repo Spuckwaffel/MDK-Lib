@@ -23,8 +23,6 @@ public:
 	CMember(TArray<AActor*>)                           TimedEventActorTargets                                      OFFSET(get<T>, {0x2E8, 16, 0, 0})
 	SMember(FMediaTimeEventArray)                      TimedEventsArray                                            OFFSET(get<T>, {0x300, 280, 0, 0})
 	SMember(FString)                                   ScreenName                                                  OFFSET(get<T>, {0x430, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -40,6 +38,8 @@ public:
 	// void OnRep_ScreenName(FString PreviousValue);                                                                            // [0x9cdb580] Final|Native|Private 
 	// Function /Script/PapayaTimedEvents.PapayaTimedEvents.AddTimedEvent_Native
 	// void AddTimedEvent_Native(FString EventName, int64_t Time, FString EventParam);                                          // [0x9cda880] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/PapayaTimedEvents.PapayaTimedEventsResponderComponent
 /// Size: 0x0078 (0x0000E8 - 0x000160)
 class UPapayaTimedEventsResponderComponent : public UFortEventResponderComponent

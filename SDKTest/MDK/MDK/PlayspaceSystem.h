@@ -66,8 +66,6 @@ public:
 	CMember(ACameraActor*)                             SpawnCameraActor                                            OFFSET(get<T>, {0xB0, 8, 0, 0})
 	DMember(bool)                                      bClientReadyForSpawning                                     OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	SMember(FReplicatedSpawnInfo)                      ReplicatedSpawnInfo                                         OFFSET(get<T>, {0xC0, 88, 0, 0})
-};
-
 
 
 	/// Functions
@@ -79,6 +77,8 @@ public:
 	// FReplicatedSpawnInfo GetSpawnInfo();                                                                                     // [0x6bb673c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning.ClientReplicatedSpawnInfo
 	// void ClientReplicatedSpawnInfo(FReplicatedSpawnInfo InReplicatedSpawnInfo);                                              // [0x6bb601c] Final|Net|NetReliableNative|Event|Private|NetClient 
+};
+
 /// Class /Script/PlayspaceSystem.PlayspaceGameStateComponent
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UPlayspaceGameStateComponent : public UGameStateComponent
@@ -137,8 +137,6 @@ public:
 	CMember(APlayspace*)                               Playspace                                                   OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     VolumeTags                                                  OFFSET(get<T>, {0x2D0, 32, 0, 0})
 	CMember(UOverlapComponent*)                        BoundsComponent                                             OFFSET(get<T>, {0x2F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -150,6 +148,8 @@ public:
 	// void InitializeBoundsComponent(UOverlapComponent* NewBoundsComponent);                                                   // [0x6bb6794] Final|Native|Private|BlueprintCallable 
 	// Function /Script/PlayspaceSystem.GameplayVolume.GetPlayspace
 	// APlayspace* GetPlayspace();                                                                                              // [0x29c0cf8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/PlayspaceSystem.Playspace
 /// Size: 0x02F0 (0x000290 - 0x000580)
 class APlayspace : public AInfo
@@ -176,8 +176,6 @@ public:
 	DMember(bool)                                      bIsInitialized                                              OFFSET(get<bool>, {0x558, 1, 0, 0})
 	DMember(bool)                                      bMatchHasEnded                                              OFFSET(get<bool>, {0x55A, 1, 0, 0})
 	DMember(float)                                     MatchStartTime                                              OFFSET(get<float>, {0x55C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -189,6 +187,8 @@ public:
 	// void OnRep_bMatchHasEnded();                                                                                             // [0x31146a0] Final|RequiredAPI|Native|Protected 
 	// Function /Script/PlayspaceSystem.Playspace.OnRep_bIsInitialized
 	// void OnRep_bIsInitialized();                                                                                             // [0x5e35ca4] Final|RequiredAPI|Native|Protected 
+};
+
 /// Class /Script/PlayspaceSystem.PlayspaceComponent_Logic
 /// Size: 0x0000 (0x0000A0 - 0x0000A0)
 class UPlayspaceComponent_Logic : public UGameFrameworkComponent
@@ -210,13 +210,13 @@ public:
 	CMember(TArray<FPlayspace_ControllerComponentInfo>) ControllerComponents                                       OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<FPlayspace_PlayerStateComponentInfo>) PlayerStateComponents                                     OFFSET(get<T>, {0xB0, 16, 0, 0})
 	CMember(TArray<FPlayspace_ActorComponentInfo>)     ActorComponents                                             OFFSET(get<T>, {0xC0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/PlayspaceSystem.PlayspaceComponent_PlayerManager.OnPlayerPawnSet
 	// void OnPlayerPawnSet(APlayerState* Player, APawn* NewPawn, APawn* OldPawn);                                              // [0x6bb6e3c] Final|Native|Protected 
+};
+
 /// Class /Script/PlayspaceSystem.PlayspaceLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UPlayspaceLibrary : public UBlueprintFunctionLibrary
@@ -239,8 +239,6 @@ public:
 	DMember(bool)                                      bAutoStartMatchOnServerStart                                OFFSET(get<bool>, {0x298, 1, 0, 0})
 	DMember(bool)                                      bMatchHasEnded                                              OFFSET(get<bool>, {0x29A, 1, 0, 0})
 	DMember(float)                                     MatchStartTime                                              OFFSET(get<float>, {0x29C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -248,6 +246,8 @@ public:
 	// void OnRep_MatchStartTime();                                                                                             // [0x2c813d4] Native|Protected     
 	// Function /Script/PlayspaceSystem.PlayspaceLogic.OnRep_bMatchHasEnded
 	// void OnRep_bMatchHasEnded();                                                                                             // [0xfcc560] Final|Native|Private 
+};
+
 /// Class /Script/PlayspaceSystem.PlayspaceManagerComponent
 /// Size: 0x01B0 (0x0000A0 - 0x000250)
 class UPlayspaceManagerComponent : public UGameStateComponent
@@ -261,8 +261,6 @@ public:
 	CMember(TArray<FActorOverlapEvent>)                UnhandledEnterEvents                                        OFFSET(get<T>, {0x1E0, 16, 0, 0})
 	CMember(TArray<FActorOverlapEvent>)                UnhandledExitEvents                                         OFFSET(get<T>, {0x1F0, 16, 0, 0})
 	CMember(TSet<APlayerController*>)                  UnassignedPlayers                                           OFFSET(get<T>, {0x200, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -274,6 +272,8 @@ public:
 	// void OnPlayerEndOverlapGameplayVolume(APlayerState* PlayerState, AGameplayVolume* Volume);                               // [0x6bb6d78] Final|Native|Private 
 	// Function /Script/PlayspaceSystem.PlayspaceManagerComponent.OnPlayerBeginOverlapGameplayVolume
 	// void OnPlayerBeginOverlapGameplayVolume(APlayerState* PlayerState, AGameplayVolume* Volume);                             // [0x6bb6cb4] Final|Native|Private 
+};
+
 /// Class /Script/PlayspaceSystem.PlayspaceSpawnActor
 /// Size: 0x0008 (0x000290 - 0x000298)
 class APlayspaceSpawnActor : public AActor

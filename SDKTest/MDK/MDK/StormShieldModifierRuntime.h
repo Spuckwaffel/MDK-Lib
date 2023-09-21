@@ -38,8 +38,6 @@ public:
 	SMember(FSplitStormProxyCircle)                    ProxyEndCircle                                              OFFSET(get<T>, {0x5E0, 32, 0, 0})
 	SMember(FSplitStormProxyCircle)                    ProxyHoldCircle                                             OFFSET(get<T>, {0x600, 32, 0, 0})
 	SMember(FSplitStormProxyCircle)                    CurrentProxyCircle                                          OFFSET(get<T>, {0x620, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -59,6 +57,8 @@ public:
 	// void OnSafeZoneIndicatorSpawned(FFortSafeZoneIndicatorUpdatedEvent& Event);                                              // [0x754208c] Final|Native|Private|HasOutParms 
 	// Function /Script/StormShieldModifierRuntime.FortAthenaMutator_SplitStorm.OnRep_CurrentProxyCircle
 	// void OnRep_CurrentProxyCircle();                                                                                         // [0x9e5ff00] Final|Native|Private 
+};
+
 /// Struct /Script/StormShieldModifierRuntime.SplitStormProxyCircle
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FSplitStormProxyCircle : public MDKStruct

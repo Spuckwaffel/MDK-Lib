@@ -51,8 +51,6 @@ class UPictureInPictureFNEventsController : public UPictureInPictureMediaControl
 public:
 	CMember(UPictureInPictureFNEventsClient*)          FNEventsClient                                              OFFSET(get<T>, {0x6D8, 8, 0, 0})
 	CMember(ULiveEventHUDAd*)                          HUDAdvertWidget                                             OFFSET(get<T>, {0x6E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -70,3 +68,5 @@ public:
 	// void ExitEvent();                                                                                                        // [0x9ced8c0] Final|Native|Private 
 	// Function /Script/PictureInPictureFNEvents.PictureInPictureFNEventsController.AddPartnerActionAnalytics
 	// void AddPartnerActionAnalytics(FString InPartnerName, PictureInPictureAction InActionType);                              // [0x9ced1e0] Final|Native|Private 
+};
+

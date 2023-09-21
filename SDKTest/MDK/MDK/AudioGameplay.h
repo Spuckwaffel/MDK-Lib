@@ -54,8 +54,6 @@ public:
 	CMember(TArray<FAudioParameter>)                   ParamsToSet                                                 OFFSET(get<T>, {0x2F8, 16, 0, 0})
 	CMember(TArray<FAudioParameter>)                   PersistentParams                                            OFFSET(get<T>, {0x308, 16, 0, 0})
 	CMember(TArray<TScriptInterface>)                  Extensions                                                  OFFSET(get<T>, {0x318, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -103,6 +101,8 @@ public:
 	// void AddExternalComponent(UAudioComponent* ComponentToAdd);                                                              // [0x6369d34] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
 	// Function /Script/AudioGameplay.AudioComponentGroup.AddExtension
 	// void AddExtension(TScriptInterface<Class> NewExtension);                                                                 // [0x6369bd0] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioGameplay.AudioGameplayComponent
 /// Size: 0x0008 (0x0000A0 - 0x0000A8)
 class UAudioGameplayComponent : public UActorComponent
@@ -134,13 +134,13 @@ class UAudioParameterComponent : public UAudioGameplayComponent
 public:
 	CMember(TArray<TWeakObjectPtr>)                    ActiveComponents                                            OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(TArray<FAudioParameter>)                   Parameters                                                  OFFSET(get<T>, {0xC8, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AudioGameplay.AudioParameterComponent.GetParameters
 	// TArray<FAudioParameter> GetParameters();                                                                                 // [0x29a1e38] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/AudioGameplay.AudioGameplayRequirements
 /// Size: 0x0050 (0x000000 - 0x000050)
 class FAudioGameplayRequirements : public MDKStruct

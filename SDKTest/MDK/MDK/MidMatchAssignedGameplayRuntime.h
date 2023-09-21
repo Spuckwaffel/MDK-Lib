@@ -28,8 +28,6 @@ public:
 	SMember(FScalableFloat)                            SpawnObjectivesInsideSafeZonePct                            OFFSET(get<T>, {0x170, 40, 0, 0})
 	CMember(TWeakObjectPtr<UEnvQuery*>)                AssignedObjectiveLocationEnvQuery                           OFFSET(get<T>, {0x198, 32, 0, 0})
 	CMember(TArray<FFortAssignedObjectiveData>)        AssignedObjectives                                          OFFSET(get<T>, {0x1B8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// void OnAssignedObjectiveReady(FFortAssignedObjectiveData& ObjectiveData);                                                // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/MidMatchAssignedGameplayRuntime.FortGameStateComponent_AssignedObjective.CalculateSquadAvgLocation
 	// FVector CalculateSquadAvgLocation(char SquadId, UObject* WorldContextObject);                                            // [0x9c2f4e8] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/MidMatchAssignedGameplayRuntime.FortQueryContext_SpawnedObjectiveLocations
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortQueryContext_SpawnedObjectiveLocations : public UEnvQueryContext

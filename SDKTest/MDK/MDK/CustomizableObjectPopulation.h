@@ -18,8 +18,6 @@ public:
 	SMember(FString)                                   Name                                                        OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FClassWeightPair>)                  ClassWeights                                                OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(UCustomizableObjectPopulationGenerator*)   Generator                                                   OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -27,6 +25,8 @@ public:
 	// bool RegeneratePopulation(int32_t Seed, TArray<UCustomizableObjectInstance*>& OutInstances, int32_t NumInstancesToGenerate); // [0x9c0c844] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CustomizableObjectPopulation.CustomizableObjectPopulation.GeneratePopulation
 	// int32_t GeneratePopulation(TArray<UCustomizableObjectInstance*>& OutInstances, int32_t NumInstancesToGenerate);          // [0x9c0c078] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CustomizableObjectPopulation.CustomizableObjectPopulationClass
 /// Size: 0x0068 (0x000028 - 0x000090)
 class UCustomizableObjectPopulationClass : public UObject

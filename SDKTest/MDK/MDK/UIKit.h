@@ -38,8 +38,6 @@ public:
 	CMember(UCommonTextBlock*)                         TextBlock                                                   OFFSET(get<T>, {0x328, 8, 0, 0})
 	SMember(FSlateFontInfo)                            Font                                                        OFFSET(get<T>, {0x330, 88, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 FontDynamicMaterial                                         OFFSET(get<T>, {0x388, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -69,6 +67,8 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/UIKit/Buttons/Blocks/WBP_UIKit_ButtonText_CTA.WBP_UIKit_ButtonText_CTA_C.ExecuteUbergraph_WBP_UIKit_ButtonText_CTA
 	// void ExecuteUbergraph_WBP_UIKit_ButtonText_CTA(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
+};
+
 /// Class /FortUILibrary/UIKit/Buttons/Blocks/WBP_UIKit_ButtonBackground_CTA.WBP_UIKit_ButtonBackground_CTA_C
 /// Size: 0x007D (0x0002FB - 0x000378)
 class UWBP_UIKit_ButtonBackground_CTA_C : public UWBP_UIKit_Block_Base_C
@@ -92,8 +92,6 @@ public:
 	CMember(UMaterialInstance*)                        BackgroundMaterial                                          OFFSET(get<T>, {0x360, 8, 0, 0})
 	DMember(bool)                                      AdditiveBorder                                              OFFSET(get<bool>, {0x368, 1, 0, 0})
 	CMember(UMaterialInstanceDynamic*)                 BackgroundDynamicMaterial                                   OFFSET(get<T>, {0x370, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -125,6 +123,8 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/UIKit/Buttons/Blocks/WBP_UIKit_ButtonBackground_CTA.WBP_UIKit_ButtonBackground_CTA_C.ExecuteUbergraph_WBP_UIKit_ButtonBackground_CTA
 	// void ExecuteUbergraph_WBP_UIKit_ButtonBackground_CTA(int32_t EntryPoint);                                                // [0x1ebf994] Final                
+};
+
 /// Class /FortUILibrary/UIKit/Buttons/WBP_UIKit_Button_Quiet.WBP_UIKit_Button_Quiet_C
 /// Size: 0x0009 (0x0019F0 - 0x0019F9)
 class UWBP_UIKit_Button_Quiet_C : public UWBP_UIKit_ButtonCTA_Base_C
@@ -135,8 +135,6 @@ class UWBP_UIKit_Button_Quiet_C : public UWBP_UIKit_ButtonCTA_Base_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x19F0, 8, 0, 0})
 	DMember(bool)                                      isDarkBackground                                            OFFSET(get<bool>, {0x19F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -152,6 +150,8 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/UIKit/Buttons/WBP_UIKit_Button_Quiet.WBP_UIKit_Button_Quiet_C.ExecuteUbergraph_WBP_UIKit_Button_Quiet
 	// void ExecuteUbergraph_WBP_UIKit_Button_Quiet(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /FortUILibrary/UIKit/Buttons/WBP_UIKit_Button_Regular.WBP_UIKit_Button_Regular_C
 /// Size: 0x0009 (0x0019F0 - 0x0019F9)
 class UWBP_UIKit_Button_Regular_C : public UWBP_UIKit_ButtonCTA_Base_C
@@ -162,8 +162,6 @@ class UWBP_UIKit_Button_Regular_C : public UWBP_UIKit_ButtonCTA_Base_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x19F0, 8, 0, 0})
 	CMember(TEnumAsByte<E_UI_CTAButtonType>)           ButtonType                                                  OFFSET(get<T>, {0x19F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -173,6 +171,8 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/UIKit/Buttons/WBP_UIKit_Button_Regular.WBP_UIKit_Button_Regular_C.ExecuteUbergraph_WBP_UIKit_Button_Regular
 	// void ExecuteUbergraph_WBP_UIKit_Button_Regular(int32_t EntryPoint);                                                      // [0x1ebf994] Final                
+};
+
 /// Class /FortUILibrary/UIKit/Buttons/WBP_UIKit_Button_Loud.WBP_UIKit_Button_Loud_C
 /// Size: 0x0008 (0x0019F0 - 0x0019F8)
 class UWBP_UIKit_Button_Loud_C : public UWBP_UIKit_ButtonCTA_Base_C
@@ -182,8 +182,6 @@ class UWBP_UIKit_Button_Loud_C : public UWBP_UIKit_ButtonCTA_Base_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x19F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -191,6 +189,8 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/UIKit/Buttons/WBP_UIKit_Button_Loud.WBP_UIKit_Button_Loud_C.ExecuteUbergraph_WBP_UIKit_Button_Loud
 	// void ExecuteUbergraph_WBP_UIKit_Button_Loud(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
 /// Class /FortUILibrary/UIKit/Buttons/Blocks/ButtonStyle_UIKit_CTA.ButtonStyle_UIKit_CTA_C
 /// Size: 0x0000 (0x000730 - 0x000730)
 class UButtonStyle_UIKit_CTA_C : public UButtonStyle_Base_C
@@ -211,8 +211,6 @@ class UWBP_UIKit_Dialog_C : public UWBP_UIKit_Dialog_Base_C
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x920, 8, 0, 0})
 	CMember(UUIKitDialogViewModel*)                    UIKitDialogViewModel                                        OFFSET(get<T>, {0x928, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -222,3 +220,5 @@ public:
 	// void PreConstruct(bool IsDesignTime);                                                                                    // [0x1ebf994] BlueprintCosmetic|Event|Public|BlueprintEvent 
 	// Function /FortUILibrary/UIKit/Dialogs/WBP_UIKit_Dialog.WBP_UIKit_Dialog_C.ExecuteUbergraph_WBP_UIKit_Dialog
 	// void ExecuteUbergraph_WBP_UIKit_Dialog(int32_t EntryPoint);                                                              // [0x1ebf994] Final                
+};
+

@@ -19,10 +19,10 @@ class UFortHoagieVehicleReticle : public UFortAthenaVehicleDashboardWidget
 
 public:
 	CMember(AFortHoagieVehicle*)                       OwningHoagieVehicle                                         OFFSET(get<T>, {0x480, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/HoagieUI.FortHoagieVehicleReticle.OnSetupComplete
 	// void OnSetupComplete(bool bVehicleUsesFuelSystem);                                                                       // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+

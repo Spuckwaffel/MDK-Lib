@@ -119,13 +119,13 @@ class UFortSoundCueTemplateDefaultSettings : public UDataAsset
 
 public:
 	CMember(TMap<UClass*, UFortSoundCueTemplateDefaults*>) TemplateDefaults                                        OFFSET(get<T>, {0x30, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortSoundCueTemplates.FortSoundCueTemplateDefaultSettings.GetSettingsForTemplateType
 	// UFortSoundCueTemplateDefaults* GetSettingsForTemplateType(UClass* TemplateType);                                         // [0xa246090] Final|Native|Public  
+};
+
 /// Class /Script/FortSoundCueTemplates.FortSoundCueTemplateSettings
 /// Size: 0x0020 (0x000030 - 0x000050)
 class UFortSoundCueTemplateSettings : public UDeveloperSettings
@@ -135,13 +135,13 @@ class UFortSoundCueTemplateSettings : public UDeveloperSettings
 
 public:
 	CMember(TWeakObjectPtr<UFortSoundCueTemplateDefaultSettings*>) DefaultTemplateSettings                         OFFSET(get<T>, {0x30, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/FortSoundCueTemplates.FortSoundCueTemplateSettings.GetDefaultSettingsForTemplateType
 	// UFortSoundCueTemplateDefaults* GetDefaultSettingsForTemplateType(UClass* TemplateType);                                  // [0xa245fec] Final|Native|Public|Const 
+};
+
 /// Class /Script/FortSoundCueTemplates.FortSoundCueTemplateSimple
 /// Size: 0x0000 (0x000560 - 0x000560)
 class UFortSoundCueTemplateSimple : public UFortSoundCueTemplateBase

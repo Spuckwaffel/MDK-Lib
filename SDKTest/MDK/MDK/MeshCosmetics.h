@@ -74,13 +74,13 @@ class UFortCustomizableObjectParameterVariant : public UFortCosmeticVariantBacke
 
 public:
 	CMember(TArray<FCustomizableObjectParamsVariantDef>) ParameterOptions                                          OFFSET(get<T>, {0x70, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MeshCosmetics.FortCustomizableObjectParameterVariant.ApplyVariants
 	// void ApplyVariants(AActor* Actor, FFortAthenaLoadout& Loadout);                                                          // [0x9c03488] Final|Native|Static|Private|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MeshCosmetics.FortCustomizableObjectSprayVariant
 /// Size: 0x0238 (0x000070 - 0x0002A8)
 class UFortCustomizableObjectSprayVariant : public UFortCosmeticVariant

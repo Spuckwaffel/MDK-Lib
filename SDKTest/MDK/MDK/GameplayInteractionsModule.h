@@ -38,8 +38,6 @@ public:
 	CMember(UAITask_MoveTo*)                           MoveToTask                                                  OFFSET(get<T>, {0x110, 8, 0, 0})
 	SMember(FSmartObjectClaimHandle)                   ClaimedHandle                                               OFFSET(get<T>, {0x118, 32, 0, 0})
 	SMember(FGameplayInteractionAbortContext)          AbortContext                                                OFFSET(get<T>, {0x138, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -49,6 +47,8 @@ public:
 	// void RequestAbort();                                                                                                     // [0x7471298] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayInteractionsModule.AITask_UseGameplayInteraction.MoveToAndUseSmartObjectWithGameplayInteraction
 	// UAITask_UseGameplayInteraction* MoveToAndUseSmartObjectWithGameplayInteraction(AAIController* Controller, FSmartObjectClaimHandle ClaimHandle, bool bLockAILogic); // [0x7470e08] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayInteractionsModule.GameplayInteractionStateTreeSchema
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UGameplayInteractionStateTreeSchema : public UStateTreeSchema
@@ -85,8 +85,6 @@ public:
 	DMember(float)                                     DelayBetweenLoops                                           OFFSET(get<float>, {0x6C, 4, 0, 0})
 	DMember(float)                                     RandomDeviationBetweenLoops                                 OFFSET(get<float>, {0x70, 4, 0, 0})
 	CMember(TArray<FContextualAnimWarpTarget>)         WarpTargets                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -94,6 +92,8 @@ public:
 	// void OnNotifyBeginReceived(FName NotifyName, FBranchingPointNotifyPayload& BranchingPointNotifyPayload);                 // [0x74711b8] Final|Native|Public|HasOutParms 
 	// Function /Script/GameplayInteractionsModule.StateTreeTask_PlayContextualAnim_InstanceData.OnMontageEnded
 	// void OnMontageEnded(UAnimMontage* EndedMontage, bool bInterrupted);                                                      // [0x74710f0] Final|Native|Public  
+};
+
 /// Struct /Script/GameplayInteractionsModule.GameplayInteractionContext
 /// Size: 0x0068 (0x000000 - 0x000068)
 class FGameplayInteractionContext : public MDKStruct

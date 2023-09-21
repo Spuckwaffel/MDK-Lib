@@ -67,8 +67,6 @@ class UConcurrency_mind : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 96;
 
 public:
-};
-
 
 
 	/// Functions
@@ -82,6 +80,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Solaris/_Verse/VNI/VerseNative.Concurrency_mind.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Solaris/_Verse/VNI/VerseNative.Concurrency_task
 /// Size: 0x0118 (0x000028 - 0x000140)
 class UConcurrency_task : public UObject
@@ -90,8 +90,6 @@ class UConcurrency_task : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-};
-
 
 
 	/// Functions
@@ -121,6 +119,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Solaris/_Verse/VNI/VerseNative.Concurrency_task.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Solaris/_Verse/VNI/VerseNative.Native
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UNative : public UObject
@@ -141,13 +141,13 @@ class Utask_Concurrency_awaitable_Await : public UConcurrency_task
 public:
 	CMember(UConcurrency_awaitable*)                   _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Solaris/_Verse/VNI/VerseNative.task_Concurrency_awaitable$Await.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /Solaris/_Verse/VNI/VerseNative.task_Concurrency_task$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Concurrency_task_Await : public UConcurrency_task
@@ -158,13 +158,13 @@ class Utask_Concurrency_task_Await : public UConcurrency_task
 public:
 	CMember(UConcurrency_task*)                        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Solaris/_Verse/VNI/VerseNative.task_Concurrency_task$Await.Update
 	// int64_t Update();                                                                                                        // [0x66618e0] Native|Public|HasOutParms 
+};
+
 /// Class /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.EpicGames_Input_verse_ue_input_component
 /// Size: 0x0208 (0x000440 - 0x000648)
 class UEpicGames_Input_verse_ue_input_component : public UVerseUEInputComponentBase
@@ -173,8 +173,6 @@ class UEpicGames_Input_verse_ue_input_component : public UVerseUEInputComponentB
 	static inline constexpr uint64_t __MDKClassSize = 1608;
 
 public:
-};
-
 
 
 	/// Functions
@@ -216,6 +214,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.EpicGames_Input_verse_ue_input_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.task_EpicGames_Input_verse_ue_input_component$WaitForAction_L_Nverse__ue__input__component_M_N_Kchar_M_Ninput__event_R
 /// Size: 0x0028 (0x000140 - 0x000168)
 class Utask_EpicGames_Input_verse_ue_input_component_WaitForAction_L_Nverse__ue__input__component_M_N_Kchar_M_Ninput__event_R : public UConcurrency_task
@@ -226,13 +226,13 @@ class Utask_EpicGames_Input_verse_ue_input_component_WaitForAction_L_Nverse__ue_
 public:
 	CMember(UEpicGames_Input_verse_ue_input_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_Lverse__ue__input__component_M_Kchar_Minput__event_R) __verse_0xB2CDDD72_Argument               OFFSET(get<T>, {0x148, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /EpicGamesEngine/_Verse/VNI/EpicGamesEngine.task_EpicGames_Input_verse_ue_input_component$WaitForAction_L_Nverse__ue__input__component_M_N_Kchar_M_Ninput__event_R.Update
 	// int64_t Update();                                                                                                        // [0x96d0290] Native|Public|HasOutParms 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Colors
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UColors : public UObject
@@ -398,13 +398,13 @@ public:
 	SMember(FColors_color)                             __verse_0xBE90A762_WhiteSmoke                               OFFSET(get<T>, {0xDA8, 24, 0, 0})
 	SMember(FColors_color)                             __verse_0xC763C8E1_Yellow                                   OFFSET(get<T>, {0xDC0, 24, 0, 0})
 	SMember(FColors_color)                             __verse_0xF10B434A_YellowGreen                              OFFSET(get<T>, {0xDD8, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Verse/_Verse/VNI/Verse.Colors_NamedColors.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Random
 /// Size: 0x0000 (0x000028 - 0x000028)
 class URandom : public UObject
@@ -425,13 +425,13 @@ class Utask_Verse_event_Await : public UConcurrency_task
 public:
 	CMember(UVerse_event*)                             _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Verse/_Verse/VNI/Verse.task_Verse_event$Await.Update
 	// int64_t Update();                                                                                                        // [0x66ac90c] Native|Public|HasOutParms 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UVerse : public UObject
@@ -441,8 +441,6 @@ class UVerse : public UObject
 
 public:
 	DMember(double)                                    __verse_0x34BB10F0_PiFloat                                  OFFSET(get<double>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -598,6 +596,8 @@ public:
 	// FVerse_locale Verse_locale$Factory();                                                                                    // [0x1ebf994] Static|HasOutParms   
 	// Function /Verse/_Verse/VNI/Verse.Verse.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_cancelable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerse_cancelable : public UObject
@@ -626,8 +626,6 @@ class UVerse_event : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 128;
 
 public:
-};
-
 
 
 	/// Functions
@@ -643,6 +641,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Verse/_Verse/VNI/Verse.Verse_event.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_invalidatable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerse_invalidatable : public UObject
@@ -682,8 +682,6 @@ class UVerse_localizable_float : public UVerse_localizable_value
 
 public:
 	DMember(double)                                    __verse_0x31A8F10C_Value                                    OFFSET(get<double>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -693,6 +691,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Verse/_Verse/VNI/Verse.Verse_localizable_float.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_localizable_int
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UVerse_localizable_int : public UVerse_localizable_value
@@ -702,8 +702,6 @@ class UVerse_localizable_int : public UVerse_localizable_value
 
 public:
 	DMember(int64_t)                                   __verse_0x31A8F10C_Value                                    OFFSET(get<int64_t>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -713,6 +711,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Verse/_Verse/VNI/Verse.Verse_localizable_int.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_localizable_message
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UVerse_localizable_message : public UVerse_localizable_value
@@ -722,8 +722,6 @@ class UVerse_localizable_message : public UVerse_localizable_value
 
 public:
 	CMember(UVerse_message*)                           __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -733,6 +731,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Verse/_Verse/VNI/Verse.Verse_localizable_message.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_localizable_string
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UVerse_localizable_string : public UVerse_localizable_value
@@ -741,8 +741,6 @@ class UVerse_localizable_string : public UVerse_localizable_value
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-};
-
 
 
 	/// Functions
@@ -752,6 +750,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Verse/_Verse/VNI/Verse.Verse_localizable_string.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_message
 /// Size: 0x0070 (0x000028 - 0x000098)
 class UVerse_message : public UObject
@@ -761,8 +761,6 @@ class UVerse_message : public UObject
 
 public:
 	CMember(TMap<__verse_0x85420AD2_Substitutions, UVerse_localizable_value*>) __verse_0x85420AD2_Substitutions    OFFSET(get<T>, {0x48, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -772,6 +770,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /Verse/_Verse/VNI/Verse.Verse_message.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /Verse/_Verse/VNI/Verse.Verse_signalable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerse_signalable : public UObject
@@ -810,8 +810,6 @@ class UCurves_editable_curve : public UCurveFloat
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-};
-
 
 
 	/// Functions
@@ -823,6 +821,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Curves_editable_curve.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UDiagnostics : public UObject
@@ -836,13 +836,13 @@ public:
 	DMember(double)                                    __verse_0x455A65A8_DefaultDebugDrawDuration                 OFFSET(get<double>, {0x48, 8, 0, 0})
 	DMember(double)                                    __verse_0xD30692C9_DefaultDebugDrawSize                     OFFSET(get<double>, {0x50, 8, 0, 0})
 	DMember(double)                                    __verse_0xA45DC86B_DefaultDebugDrawThickness                OFFSET(get<double>, {0x58, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics_debug_draw
 /// Size: 0x00D8 (0x000028 - 0x000100)
 class UDiagnostics_debug_draw : public UObject
@@ -852,8 +852,6 @@ class UDiagnostics_debug_draw : public UObject
 
 public:
 	CMember(UClass*)                                   __verse_0xFAE6EE9E_Channel                                  OFFSET(get<T>, {0xE8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -887,6 +885,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics_debug_draw.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics_debug_draw_channel
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDiagnostics_debug_draw_channel : public UObject
@@ -907,8 +907,6 @@ class UDiagnostics_log : public UObject
 public:
 	CMember(UClass*)                                   __verse_0xFAE6EE9E_Channel                                  OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(Diagnostics_log_level)                     __verse_0x540F3253_DefaultLevel                             OFFSET(get<T>, {0x50, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -922,6 +920,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics_log.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /UnrealEngineExperimental/_Verse/VNI/UnrealEngineExperimental.Diagnostics_log_channel
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDiagnostics_log_channel : public UObject
@@ -930,6 +930,62 @@ class UDiagnostics_log_channel : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 40;
 
 public:
+};
+
+/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted
+/// Size: 0x0000 (0x000028 - 0x000028)
+class URestricted : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event
+/// Size: 0x0090 (0x000028 - 0x0000B8)
+class URestricted_sticky_event : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 184;
+
+public:
+
+
+	/// Functions
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R
+	// void _L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x96a95a4] Native|Public|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled
+	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96a959c] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount
+	// int64_t _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96a9594] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal
+	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96a958c] Native|Public|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.Await
+	// UConcurrency_task* Await(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasOutParms|BlueprintCallable 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await
+/// Size: 0x0020 (0x000140 - 0x000160)
+class Utask_Restricted_sticky_event_Await : public UConcurrency_task
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 352;
+
+public:
+	CMember(URestricted_sticky_event*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+
+
+	/// Functions
+	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await.Update
+	// int64_t Update();                                                                                                        // [0x96a9584] Native|Public|HasOutParms 
 };
 
 /// Class /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags
@@ -960,8 +1016,6 @@ class UTags_tag_container : public UVerseGameplayTagContainerBase
 	static inline constexpr uint64_t __MDKClassSize = 248;
 
 public:
-};
-
 
 
 	/// Functions
@@ -995,6 +1049,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags_tag_container.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags_tag_container_component
 /// Size: 0x0040 (0x000070 - 0x0000B0)
 class UTags_tag_container_component : public UEntityTagContainerComponent
@@ -1003,8 +1059,6 @@ class UTags_tag_container_component : public UEntityTagContainerComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-};
-
 
 
 	/// Functions
@@ -1022,6 +1076,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags_tag_container_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags_tag_search_criteria
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UTags_tag_search_criteria : public UObject
@@ -1034,8 +1090,6 @@ public:
 	CMember(TArray<UTags_tag*>)                        __verse_0xDC4AEE52_PreferredTags                            OFFSET(get<T>, {0x38, 16, 0, 0})
 	CMember(TArray<UTags_tag*>)                        __verse_0x321D6A7B_ExclusionTags                            OFFSET(get<T>, {0x48, 16, 0, 0})
 	CMember(Tags_tag_search_sort_type)                 __verse_0xBFD91910_SortType                                 OFFSET(get<T>, {0x58, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1045,6 +1099,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags_tag_search_criteria.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseGameplayTags/_Verse/VNI/VerseGameplayTags.Tags_tag_view
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTags_tag_view : public UObject
@@ -1055,389 +1111,6 @@ class UTags_tag_view : public UObject
 public:
 };
 
-/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted
-/// Size: 0x0000 (0x000028 - 0x000028)
-class URestricted : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event
-/// Size: 0x0090 (0x000028 - 0x0000B8)
-class URestricted_sticky_event : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 184;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R
-	// void _L_2fVerse_2eorg_2fVerse_2fsignalable_2fsignalable_Lpayload_R_N_RSignal_L_Npayload_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x96a95a4] Native|Public|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled
-	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RIsSignaled(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96a959c] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount
-	// int64_t _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RGetAwaitCount(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96a9594] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event._L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal
-	// void _L_2fVerse_2eorg_2fRestricted_2fsticky__event_2fsticky__event_Lt_R_N_RClearSignal(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96a958c] Native|Public|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.Await
-	// UConcurrency_task* Await(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasOutParms|BlueprintCallable 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.Restricted_sticky_event.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await
-/// Size: 0x0020 (0x000140 - 0x000160)
-class Utask_Restricted_sticky_event_Await : public UConcurrency_task
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 352;
-
-public:
-	CMember(URestricted_sticky_event*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /VerseRestricted/_Verse/VNI/VerseRestricted.task_Restricted_sticky_event$Await.Update
-	// int64_t Update();                                                                                                        // [0x96a9584] Native|Public|HasOutParms 
-/// Class /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVerseExperimental : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_date_time_ticks
-/// Size: 0x0048 (0x000028 - 0x000070)
-class UVerseExperimental_date_time_ticks : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 112;
-
-public:
-	DMember(int64_t)                                   __verse_0x8DE5F121_NanosecondsPerTick                       OFFSET(get<int64_t>, {0x28, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0x358147B9_TicksPerDay                              OFFSET(get<int64_t>, {0x30, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0x5C0949D3_TicksPerHour                             OFFSET(get<int64_t>, {0x38, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0x59DFB831_TicksPerMicrosecond                      OFFSET(get<int64_t>, {0x40, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0xD20E16AF_TicksPerMillisecond                      OFFSET(get<int64_t>, {0x48, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0x4420B794_TicksPerMinute                           OFFSET(get<int64_t>, {0x50, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0x3E0178E0_TicksPerSecond                           OFFSET(get<int64_t>, {0x58, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0xA7911900_TicksPerWeek                             OFFSET(get<int64_t>, {0x60, 8, 0, 0})
-	DMember(int64_t)                                   __verse_0xE371C089_TicksPerYear                             OFFSET(get<int64_t>, {0x68, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_date_time_ticks.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.task_VerseEngine_subscribable_event$Await
-/// Size: 0x0020 (0x000140 - 0x000160)
-class Utask_VerseEngine_subscribable_event_Await : public UConcurrency_task
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 352;
-
-public:
-	CMember(UVerseEngine_subscribable_event*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.task_VerseEngine_subscribable_event$Await.Update
-	// int64_t Update();                                                                                                        // [0x96ae660] Native|Public|HasOutParms 
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVerseEngine : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity
-/// Size: 0x00B8 (0x000028 - 0x0000E0)
-class UVerseEngine_Entity_entity : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 224;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RRemoveComponent_L_Ncomponent_R
-	// bool _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RRemoveComponent_L_Ncomponent_R(UEntityComponent* __verse_0xB2CDDD72_Argument); // [0x96ae6c0] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RIsEqual_L_Nentity_R
-	// bool _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RIsEqual_L_Nentity_R(UVerseEngine_Entity_entity* __verse_0xB2CDDD72_Argument); // [0x96ae6b8] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RHasComponents_L_N_Ksubtype_Lcomponent_R_R
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RHasComponents_L_N_Ksubtype_Lcomponent_R_R(TArray<UClass*> __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetOrCreateComponentOfType_L_NComponentType_20where_20ComponentType_R
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetOrCreateComponentOfType_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae6b0] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetName
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetName(Ftuple_L_R __verse_0xB2CDDD72_Argument);                // [0x96ae6a8] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetFullname
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetFullname(Ftuple_L_R __verse_0xB2CDDD72_Argument);            // [0x96ae6a0] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetComponentOfType_L_NComponentType_20where_20ComponentType_R
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetComponentOfType_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae698] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetAllComponentsOfType_L_NComponentType_20where_20ComponentType_R
-	// TArray<UEntityComponent*> _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetAllComponentsOfType_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae690] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_REnsureComponents_L_N_Ksubtype_Lcomponent_R_R
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_REnsureComponents_L_N_Ksubtype_Lcomponent_R_R(TArray<UClass*> __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasDefaults|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RDestroy
-	// bool _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RDestroy(Ftuple_L_R __verse_0xB2CDDD72_Argument);                // [0x96ae688] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RAddComponent_L_NComponentType_20where_20ComponentType_R
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RAddComponent_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae680] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_EntityHelpers
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVerseEngine_Entity_EntityHelpers : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_base
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVerseEngine_multicast_delegate_base : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate
-/// Size: 0x0070 (0x000028 - 0x000098)
-class UVerseEngine_multicast_delegate : public UVerseEngine_multicast_delegate_base
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 152;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate._L_2fVerse_2eorg_2fVerse_2fsubscribable_2fsubscribable_Lt_R_N_RSubscribe_L_Nt_Tvoid_R
-	// UObject* _L_2fVerse_2eorg_2fVerse_2fsubscribable_2fsubscribable_Lt_R_N_RSubscribe_L_Nt_Tvoid_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x96ae6e0] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate._L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_REmpty
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_REmpty(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96ae6d0] Native|Public|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate._L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_RBroadcast_L_Nt_R
-	// void _L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_RBroadcast_L_Nt_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x96ae6c8] Native|Public|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription
-/// Size: 0x0028 (0x000028 - 0x000050)
-class UVerseEngine_multicast_delegate_subscription : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 80;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription._L_2fVerse_2eorg_2fVerse_2fcancelable_N_RCancel
-	// void _L_2fVerse_2eorg_2fVerse_2fcancelable_N_RCancel(Ftuple_L_R __verse_0xB2CDDD72_Argument);                            // [0x96ae6d8] Native|Public|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event
-/// Size: 0x0038 (0x000098 - 0x0000D0)
-class UVerseEngine_subscribable_event : public UVerseEngine_multicast_delegate
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 208;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.Await
-	// UConcurrency_task* Await(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasOutParms|BlueprintCallable 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation
-/// Size: 0x0000 (0x000028 - 0x000028)
-class USimulation : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_agent
-/// Size: 0x0000 (0x000030 - 0x000030)
-class USimulation_agent : public UVerseAgent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 48;
-
-public:
-};
-
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent
-/// Size: 0x0008 (0x000028 - 0x000030)
-class USimulation_localizable_agent : public UVerse_localizable_value
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 48;
-
-public:
-	CMember(USimulation_agent*)                        __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player
-/// Size: 0x0018 (0x000030 - 0x000048)
-class USimulation_player : public USimulation_agent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 72;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player._L_2fVerse_2eorg_2fSimulation_2fplayer_N_RIsActive
-	// void _L_2fVerse_2eorg_2fSimulation_2fplayer_N_RIsActive(Ftuple_L_R __verse_0xB2CDDD72_Argument);                         // [0x96d7a2c] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_array_helper
-/// Size: 0x0000 (0x000028 - 0x000028)
-class USimulation_player_array_helper : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component
-/// Size: 0x0010 (0x0000D0 - 0x0000E0)
-class USimulation_player_component : public UEntityActorPlayerComponent
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 224;
-
-public:
-};
-
-
-
-	/// Functions
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component._L_2fVerse_2eorg_2fSimulation_2fplayer__component_N_RGetHandle
-	// USimulation_player* _L_2fVerse_2eorg_2fSimulation_2fplayer__component_N_RGetHandle(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96d7a3c] Native|Public|HasOutParms|BlueprintCallable 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component.$InitInstance
-	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component.$Block
-	// void $Block();                                                                                                           // [0x1ebf994] None                 
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component.$InitCDO
-	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_multicast_delegate
-/// Size: 0x0000 (0x000098 - 0x000098)
-class USimulation_player_multicast_delegate : public UVerseEngine_multicast_delegate
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 152;
-
-public:
-};
-
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_session
-/// Size: 0x0000 (0x000028 - 0x000028)
-class USimulation_session : public UObject
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_team
-/// Size: 0x0000 (0x000028 - 0x000028)
-class USimulation_team : public UVerseTeam
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.task_Simulation$Sleep_L_Nfloat_R
-/// Size: 0x0008 (0x000140 - 0x000148)
-class Utask_Simulation_Sleep_L_Nfloat_R : public UConcurrency_task
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 328;
-
-public:
-	DMember(double)                                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<double>, {0x140, 8, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.task_Simulation$Sleep_L_Nfloat_R.Update
-	// int64_t Update();                                                                                                        // [0x96d7a24] Native|Public|HasOutParms 
 /// Class /VerseEngine/_Verse/VNI/VerseAssets.Assets
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAssets : public UObject
@@ -1456,8 +1129,6 @@ class UAssets_asset : public UVerseAssetPtr
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-};
-
 
 
 	/// Functions
@@ -1475,6 +1146,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseEngine/_Verse/VNI/VerseAssets.Assets_asset.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseEngine/_Verse/VNI/VerseAssets.Assets_animation
 /// Size: 0x0000 (0x0000C8 - 0x0000C8)
 class UAssets_animation : public UAssets_asset
@@ -1605,6 +1278,333 @@ class UAssets_texture : public UAssets_texture_base
 public:
 };
 
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.task_VerseEngine_subscribable_event$Await
+/// Size: 0x0020 (0x000140 - 0x000160)
+class Utask_VerseEngine_subscribable_event_Await : public UConcurrency_task
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 352;
+
+public:
+	CMember(UVerseEngine_subscribable_event*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
+	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
+
+
+	/// Functions
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.task_VerseEngine_subscribable_event$Await.Update
+	// int64_t Update();                                                                                                        // [0x96ae660] Native|Public|HasOutParms 
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UVerseEngine : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity
+/// Size: 0x00B8 (0x000028 - 0x0000E0)
+class UVerseEngine_Entity_entity : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 224;
+
+public:
+
+
+	/// Functions
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RRemoveComponent_L_Ncomponent_R
+	// bool _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RRemoveComponent_L_Ncomponent_R(UEntityComponent* __verse_0xB2CDDD72_Argument); // [0x96ae6c0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RIsEqual_L_Nentity_R
+	// bool _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RIsEqual_L_Nentity_R(UVerseEngine_Entity_entity* __verse_0xB2CDDD72_Argument); // [0x96ae6b8] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RHasComponents_L_N_Ksubtype_Lcomponent_R_R
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RHasComponents_L_N_Ksubtype_Lcomponent_R_R(TArray<UClass*> __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasOutParms|HasDefaults|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetOrCreateComponentOfType_L_NComponentType_20where_20ComponentType_R
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetOrCreateComponentOfType_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae6b0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetName
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetName(Ftuple_L_R __verse_0xB2CDDD72_Argument);                // [0x96ae6a8] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetFullname
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetFullname(Ftuple_L_R __verse_0xB2CDDD72_Argument);            // [0x96ae6a0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetComponentOfType_L_NComponentType_20where_20ComponentType_R
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetComponentOfType_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae698] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetAllComponentsOfType_L_NComponentType_20where_20ComponentType_R
+	// TArray<UEntityComponent*> _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RGetAllComponentsOfType_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae690] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_REnsureComponents_L_N_Ksubtype_Lcomponent_R_R
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_REnsureComponents_L_N_Ksubtype_Lcomponent_R_R(TArray<UClass*> __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasDefaults|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RDestroy
+	// bool _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RDestroy(Ftuple_L_R __verse_0xB2CDDD72_Argument);                // [0x96ae688] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity._L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RAddComponent_L_NComponentType_20where_20ComponentType_R
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fEntity_2fentity_N_RAddComponent_L_NComponentType_20where_20ComponentType_R(UClass* __verse_0xB2CDDD72_Argument); // [0x96ae680] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_entity.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_Entity_EntityHelpers
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UVerseEngine_Entity_EntityHelpers : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_base
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UVerseEngine_multicast_delegate_base : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate
+/// Size: 0x0070 (0x000028 - 0x000098)
+class UVerseEngine_multicast_delegate : public UVerseEngine_multicast_delegate_base
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 152;
+
+public:
+
+
+	/// Functions
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate._L_2fVerse_2eorg_2fVerse_2fsubscribable_2fsubscribable_Lt_R_N_RSubscribe_L_Nt_Tvoid_R
+	// UObject* _L_2fVerse_2eorg_2fVerse_2fsubscribable_2fsubscribable_Lt_R_N_RSubscribe_L_Nt_Tvoid_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x96ae6e0] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate._L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_REmpty
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_REmpty(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96ae6d0] Native|Public|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate._L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_RBroadcast_L_Nt_R
+	// void _L_2fVerse_2eorg_2fVerseEngine_2fmulticast__delegate_2fmulticast__delegate_Lt_R_N_RBroadcast_L_Nt_R(__verse_0xB2CDDD72_Argument __verse_0xB2CDDD72_Argument); // [0x96ae6c8] Native|Public|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription
+/// Size: 0x0028 (0x000028 - 0x000050)
+class UVerseEngine_multicast_delegate_subscription : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 80;
+
+public:
+
+
+	/// Functions
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription._L_2fVerse_2eorg_2fVerse_2fcancelable_N_RCancel
+	// void _L_2fVerse_2eorg_2fVerse_2fcancelable_N_RCancel(Ftuple_L_R __verse_0xB2CDDD72_Argument);                            // [0x96ae6d8] Native|Public|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_multicast_delegate_subscription.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event
+/// Size: 0x0038 (0x000098 - 0x0000D0)
+class UVerseEngine_subscribable_event : public UVerseEngine_multicast_delegate
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 208;
+
+public:
+
+
+	/// Functions
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.Await
+	// UConcurrency_task* Await(UConcurrency_task* __verse_0xC1E81372_CallingTask, int64_t __verse_0xA3A00DDB_CallerResumeState, int64_t __verse_0x2AC0E4D8_CallerCancelState, Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x1ebf994] Public|HasOutParms|BlueprintCallable 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseEngine/_Verse/VNI/VerseEngine.VerseEngine_subscribable_event.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USimulation : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_agent
+/// Size: 0x0000 (0x000030 - 0x000030)
+class USimulation_agent : public UVerseAgent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent
+/// Size: 0x0008 (0x000028 - 0x000030)
+class USimulation_localizable_agent : public UVerse_localizable_value
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 48;
+
+public:
+	CMember(USimulation_agent*)                        __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 8, 0, 0})
+
+
+	/// Functions
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_localizable_agent.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player
+/// Size: 0x0018 (0x000030 - 0x000048)
+class USimulation_player : public USimulation_agent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 72;
+
+public:
+
+
+	/// Functions
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player._L_2fVerse_2eorg_2fSimulation_2fplayer_N_RIsActive
+	// void _L_2fVerse_2eorg_2fSimulation_2fplayer_N_RIsActive(Ftuple_L_R __verse_0xB2CDDD72_Argument);                         // [0x96d7a2c] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_array_helper
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USimulation_player_array_helper : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component
+/// Size: 0x0010 (0x0000D0 - 0x0000E0)
+class USimulation_player_component : public UEntityActorPlayerComponent
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 224;
+
+public:
+
+
+	/// Functions
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component._L_2fVerse_2eorg_2fSimulation_2fplayer__component_N_RGetHandle
+	// USimulation_player* _L_2fVerse_2eorg_2fSimulation_2fplayer__component_N_RGetHandle(Ftuple_L_R __verse_0xB2CDDD72_Argument); // [0x96d7a3c] Native|Public|HasOutParms|BlueprintCallable 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component.$InitInstance
+	// void $InitInstance();                                                                                                    // [0x1ebf994] None                 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component.$Block
+	// void $Block();                                                                                                           // [0x1ebf994] None                 
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_component.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_player_multicast_delegate
+/// Size: 0x0000 (0x000098 - 0x000098)
+class USimulation_player_multicast_delegate : public UVerseEngine_multicast_delegate
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 152;
+
+public:
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_session
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USimulation_session : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.Simulation_team
+/// Size: 0x0000 (0x000028 - 0x000028)
+class USimulation_team : public UVerseTeam
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseSimulation/_Verse/VNI/VerseSimulation.task_Simulation$Sleep_L_Nfloat_R
+/// Size: 0x0008 (0x000140 - 0x000148)
+class Utask_Simulation_Sleep_L_Nfloat_R : public UConcurrency_task
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 328;
+
+public:
+	DMember(double)                                    __verse_0xB2CDDD72_Argument                                 OFFSET(get<double>, {0x140, 8, 0, 0})
+
+
+	/// Functions
+	// Function /VerseSimulation/_Verse/VNI/VerseSimulation.task_Simulation$Sleep_L_Nfloat_R.Update
+	// int64_t Update();                                                                                                        // [0x96d7a24] Native|Public|HasOutParms 
+};
+
+/// Class /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UVerseExperimental : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_date_time_ticks
+/// Size: 0x0048 (0x000028 - 0x000070)
+class UVerseExperimental_date_time_ticks : public UObject
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 112;
+
+public:
+	DMember(int64_t)                                   __verse_0x8DE5F121_NanosecondsPerTick                       OFFSET(get<int64_t>, {0x28, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0x358147B9_TicksPerDay                              OFFSET(get<int64_t>, {0x30, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0x5C0949D3_TicksPerHour                             OFFSET(get<int64_t>, {0x38, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0x59DFB831_TicksPerMicrosecond                      OFFSET(get<int64_t>, {0x40, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0xD20E16AF_TicksPerMillisecond                      OFFSET(get<int64_t>, {0x48, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0x4420B794_TicksPerMinute                           OFFSET(get<int64_t>, {0x50, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0x3E0178E0_TicksPerSecond                           OFFSET(get<int64_t>, {0x58, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0xA7911900_TicksPerWeek                             OFFSET(get<int64_t>, {0x60, 8, 0, 0})
+	DMember(int64_t)                                   __verse_0xE371C089_TicksPerYear                             OFFSET(get<int64_t>, {0x68, 8, 0, 0})
+
+
+	/// Functions
+	// Function /VerseExperimental/_Verse/VNI/VerseExperimental.VerseExperimental_date_time_ticks.$InitCDO
+	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Components_dynamic_activation_component$WaitForTransitionBegin
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_VGameplayRst_Components_dynamic_activation_component_WaitForTransitionBegin : public UConcurrency_task
@@ -1615,13 +1615,13 @@ class Utask_VGameplayRst_Components_dynamic_activation_component_WaitForTransiti
 public:
 	CMember(UVGameplayRst_Components_dynamic_activation_component*) _Self                                          OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Components_dynamic_activation_component$WaitForTransitionBegin.Update
 	// int64_t Update();                                                                                                        // [0x9724718] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Components_dynamic_activation_component$WaitForTransitionComplete
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_VGameplayRst_Components_dynamic_activation_component_WaitForTransitionComplete : public UConcurrency_task
@@ -1632,13 +1632,13 @@ class Utask_VGameplayRst_Components_dynamic_activation_component_WaitForTransiti
 public:
 	CMember(UVGameplayRst_Components_dynamic_activation_component*) _Self                                          OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Components_dynamic_activation_component$WaitForTransitionComplete.Update
 	// int64_t Update();                                                                                                        // [0x9724720] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Messaging_debug_command_component$__WaitForCommand_L_N_Kchar_R
 /// Size: 0x0028 (0x000140 - 0x000168)
 class Utask_VGameplayRst_Messaging_debug_command_component___WaitForCommand_L_N_Kchar_R : public UConcurrency_task
@@ -1648,13 +1648,13 @@ class Utask_VGameplayRst_Messaging_debug_command_component___WaitForCommand_L_N_
 
 public:
 	CMember(UVGameplayRst_Messaging_debug_command_component*) _Self                                                OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Messaging_debug_command_component$__WaitForCommand_L_N_Kchar_R.Update
 	// int64_t Update();                                                                                                        // [0x9724a98] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_collision_component$WaitBeginOverlap
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_VGameplayRst_Physics_collision_component_WaitBeginOverlap : public UConcurrency_task
@@ -1666,13 +1666,13 @@ public:
 	CMember(UVGameplayRst_Physics_collision_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(UVGameplayRst_Physics_overlap_result*)     _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_collision_component$WaitBeginOverlap.Update
 	// int64_t Update();                                                                                                        // [0x9724708] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_collision_component$WaitEndOverlap
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_VGameplayRst_Physics_collision_component_WaitEndOverlap : public UConcurrency_task
@@ -1684,13 +1684,13 @@ public:
 	CMember(UVGameplayRst_Physics_collision_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(UVGameplayRst_Physics_overlap_result*)     _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_collision_component$WaitEndOverlap.Update
 	// int64_t Update();                                                                                                        // [0x9724710] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_collision_component$WaitHit
 /// Size: 0x0050 (0x000140 - 0x000190)
 class Utask_VGameplayRst_Physics_collision_component_WaitHit : public UConcurrency_task
@@ -1702,13 +1702,13 @@ public:
 	CMember(UVGameplayRst_Physics_collision_component*) _Self                                                      OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	SMember(FVGameplayRst_Physics_hit_result)          _RetVal                                                     OFFSET(get<T>, {0x150, 64, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_collision_component$WaitHit.Update
 	// int64_t Update();                                                                                                        // [0x9724728] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_physics_trace$WaitPhysicsTrace
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_VGameplayRst_Physics_physics_trace_WaitPhysicsTrace : public UConcurrency_task
@@ -1720,13 +1720,13 @@ public:
 	CMember(UVGameplayRst_Physics_physics_trace*)      _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(TArray<FVGameplayRst_Physics_hit_result>)  _RetVal                                                     OFFSET(get<T>, {0x150, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.task_VGameplayRst_Physics_physics_trace$WaitPhysicsTrace.Update
 	// int64_t Update();                                                                                                        // [0x9724730] Native|Public|HasOutParms 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Audio_audio_component
 /// Size: 0x0030 (0x000098 - 0x0000C8)
 class UVGameplayRst_Audio_audio_component : public UAudioComponentBase
@@ -1735,8 +1735,6 @@ class UVGameplayRst_Audio_audio_component : public UAudioComponentBase
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-};
-
 
 
 	/// Functions
@@ -1752,6 +1750,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Audio_audio_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Components_dynamic_activation_component
 /// Size: 0x0078 (0x0000B0 - 0x000128)
 class UVGameplayRst_Components_dynamic_activation_component : public UEntityDynamicActivationComponent
@@ -1760,8 +1760,6 @@ class UVGameplayRst_Components_dynamic_activation_component : public UEntityDyna
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-};
-
 
 
 	/// Functions
@@ -1783,6 +1781,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Components_dynamic_activation_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Components_script_component
 /// Size: 0x0158 (0x0000B0 - 0x000208)
 class UVGameplayRst_Components_script_component : public UEntityScriptComponent
@@ -1792,8 +1792,6 @@ class UVGameplayRst_Components_script_component : public UEntityScriptComponent
 
 public:
 	DMember(bool)                                      __verse_0xFAA77A2E_AllowMultiple                            OFFSET(get<bool>, {0x1C0, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -1835,6 +1833,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Components_script_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Datastore_datastore_component
 /// Size: 0x0000 (0x000210 - 0x000210)
 class UVGameplayRst_Datastore_datastore_component : public UDatastoreComponentBase
@@ -1889,8 +1889,6 @@ public:
 	CMember(UVGameplayRst_Transform_position_component*) __verse_0x325D2C22_PositionComp                           OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(UVGameplayRst_Transform_rotation_component*) __verse_0xF3C6D2D3_RotationComp                           OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(UVGameplayRst_Transform_scale_component*)  __verse_0x1A7B631A_ScaleComp                                OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1916,6 +1914,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_GameObjects_immutable_model.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_GameObjects_model
 /// Size: 0x0160 (0x000028 - 0x000188)
 class UVGameplayRst_GameObjects_model : public UObject
@@ -1930,8 +1930,6 @@ public:
 	CMember(UVGameplayRst_Transform_position_component*) __verse_0x325D2C22_PositionComp                           OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(UVGameplayRst_Transform_rotation_component*) __verse_0xF3C6D2D3_RotationComp                           OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(UVGameplayRst_Transform_scale_component*)  __verse_0x1A7B631A_ScaleComp                                OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1979,6 +1977,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_GameObjects_model.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_GameObjects_model_interface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVGameplayRst_GameObjects_model_interface : public UObject
@@ -2009,8 +2009,6 @@ class UVGameplayRst_GameObjects_world_anchor : public UObject
 public:
 	CMember(UVerseEngine_Entity_entity*)               __verse_0xC79F2B5D_InternalObject                           OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UVGameplayRst_Transform_position_component*) __verse_0x325D2C22_PositionComp                           OFFSET(get<T>, {0x30, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2028,6 +2026,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_GameObjects_world_anchor.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Geometry_fixed_mesh_component
 /// Size: 0x0088 (0x0000A0 - 0x000128)
 class UVGameplayRst_Geometry_fixed_mesh_component : public UEntityActorStaticMeshRenderComponent
@@ -2036,8 +2036,6 @@ class UVGameplayRst_Geometry_fixed_mesh_component : public UEntityActorStaticMes
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2063,6 +2061,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Geometry_fixed_mesh_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Geometry_skeletal_mesh_component
 /// Size: 0x00D0 (0x000078 - 0x000148)
 class UVGameplayRst_Geometry_skeletal_mesh_component : public UEntityActorSkeletalMeshRenderComponent
@@ -2071,8 +2071,6 @@ class UVGameplayRst_Geometry_skeletal_mesh_component : public UEntityActorSkelet
 	static inline constexpr uint64_t __MDKClassSize = 328;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2108,6 +2106,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Geometry_skeletal_mesh_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_LevelStreaming_level_streaming_component
 /// Size: 0x0020 (0x000130 - 0x000150)
 class UVGameplayRst_LevelStreaming_level_streaming_component : public UVerseLevelStreamingComponentBase
@@ -2116,8 +2116,6 @@ class UVGameplayRst_LevelStreaming_level_streaming_component : public UVerseLeve
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2131,6 +2129,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_LevelStreaming_level_streaming_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Lights_point_light_component
 /// Size: 0x00A0 (0x000090 - 0x000130)
 class UVGameplayRst_Lights_point_light_component : public UPointLightComponentBase
@@ -2139,8 +2139,6 @@ class UVGameplayRst_Lights_point_light_component : public UPointLightComponentBa
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2170,6 +2168,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Lights_point_light_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Lights_spot_light_component
 /// Size: 0x00E0 (0x000090 - 0x000170)
 class UVGameplayRst_Lights_spot_light_component : public USpotLightComponentBase
@@ -2178,8 +2178,6 @@ class UVGameplayRst_Lights_spot_light_component : public USpotLightComponentBase
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2217,6 +2215,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Lights_spot_light_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Messaging_debug_command_component
 /// Size: 0x0078 (0x000058 - 0x0000D0)
 class UVGameplayRst_Messaging_debug_command_component : public UEntityComponent
@@ -2225,8 +2225,6 @@ class UVGameplayRst_Messaging_debug_command_component : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2238,6 +2236,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Messaging_debug_command_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVGameplayRst_Physics : public UObject
@@ -2256,8 +2256,6 @@ class UVGameplayRst_Physics_collision_component : public UEntityActorCollisionCo
 	static inline constexpr uint64_t __MDKClassSize = 696;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2317,6 +2315,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics_collision_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics_overlap_result
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UVGameplayRst_Physics_overlap_result : public UObject
@@ -2330,8 +2330,6 @@ public:
 	DMember(bool)                                      __verse_0xCDE15551_FromSweep                                OFFSET(get<bool>, {0x38, 1, 1, 0})
 	SMember(FSpatialMath_vector3)                      __verse_0x02291CB0_SweepHitNormal                           OFFSET(get<T>, {0x40, 24, 0, 0})
 	SMember(FSpatialMath_vector3)                      __verse_0xF4E2A3DA_SweepHitLocation                         OFFSET(get<T>, {0x58, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2341,6 +2339,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics_overlap_result.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics_physics_trace
 /// Size: 0x00E8 (0x000028 - 0x000110)
 class UVGameplayRst_Physics_physics_trace : public UObject
@@ -2349,8 +2349,6 @@ class UVGameplayRst_Physics_physics_trace : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 272;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2364,6 +2362,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Physics_physics_trace.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Transform_mutable_positionable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVGameplayRst_Transform_mutable_positionable : public UObject
@@ -2402,8 +2402,6 @@ class UVGameplayRst_Transform_position_component : public UEntityActorPositionCo
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2419,6 +2417,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Transform_position_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Transform_positionable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVGameplayRst_Transform_positionable : public UObject
@@ -2447,8 +2447,6 @@ class UVGameplayRst_Transform_rotation_component : public UEntityActorRotationCo
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2472,6 +2470,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Transform_rotation_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Transform_scalable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVGameplayRst_Transform_scalable : public UObject
@@ -2490,8 +2490,6 @@ class UVGameplayRst_Transform_scale_component : public UEntityActorScaleComponen
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2507,6 +2505,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_Transform_scale_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_VFX_particle_system_component
 /// Size: 0x0030 (0x000098 - 0x0000C8)
 class UVGameplayRst_VFX_particle_system_component : public UParticleSystemComponentBase
@@ -2515,8 +2515,6 @@ class UVGameplayRst_VFX_particle_system_component : public UParticleSystemCompon
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2532,6 +2530,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VGameplayRst/_Verse/VNI/VGameplayRst.VGameplayRst_VFX_particle_system_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerseMovement : public UObject
@@ -2560,8 +2560,6 @@ class UVerseMovement_movement_component : public UVerseMovementComponentBase
 	static inline constexpr uint64_t __MDKClassSize = 296;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2591,6 +2589,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_movement_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_VerseMovementUtil
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UVerseMovement_VerseMovementUtil : public UObject
@@ -2600,13 +2600,13 @@ class UVerseMovement_VerseMovementUtil : public UObject
 
 public:
 	SMember(FVerseMovement_move_config)                __verse_0x40F5E85A_CarConfig                                OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseMovement/_Verse/VNI/VerseMovement.VerseMovement_VerseMovementUtil.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UUI : public UObject
@@ -2625,8 +2625,6 @@ class UUI_player_ui : public UVersePlayerUIEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 264;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2642,6 +2640,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_player_ui.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_widget
 /// Size: 0x0060 (0x000038 - 0x000098)
 class UUI_widget : public UVerseWidgetNativeBase
@@ -2650,8 +2650,6 @@ class UUI_widget : public UVerseWidgetNativeBase
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-};
-
 
 
 	/// Functions
@@ -2673,6 +2671,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_widget.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_button
 /// Size: 0x0058 (0x000098 - 0x0000F0)
 class UUI_button : public UUI_widget
@@ -2683,8 +2683,6 @@ class UUI_button : public UUI_widget
 public:
 	SMember(FUI_button_slot)                           __verse_0x9693E4CD_Slot                                     OFFSET(get<T>, {0xB8, 48, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x6B2BB37E_OnClickInternal                          OFFSET(get<T>, {0xE8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2698,6 +2696,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_button.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_canvas
 /// Size: 0x0030 (0x000098 - 0x0000C8)
 class UUI_canvas : public UUI_widget
@@ -2707,8 +2707,6 @@ class UUI_canvas : public UUI_widget
 
 public:
 	CMember(TArray<FUI_canvas_slot>)                   __verse_0x5AE077E0_Slots                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2722,6 +2720,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_canvas.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_color_block
 /// Size: 0x0090 (0x000098 - 0x000128)
 class UUI_color_block : public UUI_widget
@@ -2733,8 +2733,6 @@ public:
 	SMember(FColors_color)                             __verse_0xA0FC371C_DefaultColor                             OFFSET(get<T>, {0xF8, 24, 0, 0})
 	DMember(double)                                    __verse_0x5DA10C15_DefaultOpacity                           OFFSET(get<double>, {0x110, 8, 0, 0})
 	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(get<T>, {0x118, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2756,6 +2754,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_color_block.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_material_block
 /// Size: 0x0090 (0x000098 - 0x000128)
 class UUI_material_block : public UUI_widget
@@ -2767,8 +2767,6 @@ public:
 	CMember(UAssets_material*)                         __verse_0x800C064C_DefaultImage                             OFFSET(get<T>, {0xF8, 8, 0, 0})
 	SMember(FColors_color)                             __verse_0xC0C585F9_DefaultTint                              OFFSET(get<T>, {0x100, 24, 0, 0})
 	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(get<T>, {0x118, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2790,6 +2788,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_material_block.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_overlay
 /// Size: 0x0030 (0x000098 - 0x0000C8)
 class UUI_overlay : public UUI_widget
@@ -2799,8 +2799,6 @@ class UUI_overlay : public UUI_widget
 
 public:
 	CMember(TArray<FUI_overlay_slot>)                  __verse_0x5AE077E0_Slots                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2814,6 +2812,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_overlay.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_simple_button_internal
 /// Size: 0x0030 (0x000098 - 0x0000C8)
 class UUI_simple_button_internal : public UUI_widget
@@ -2824,8 +2824,6 @@ class UUI_simple_button_internal : public UUI_widget
 public:
 	CMember(UVerse_message*)                           __verse_0xEDB05B46_DefaultText                              OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x6B2BB37E_OnClickInternal                          OFFSET(get<T>, {0xC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2839,6 +2837,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_simple_button_internal.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_stack_box
 /// Size: 0x0038 (0x000098 - 0x0000D0)
 class UUI_stack_box : public UUI_widget
@@ -2849,8 +2849,6 @@ class UUI_stack_box : public UUI_widget
 public:
 	CMember(TArray<FUI_stack_box_slot>)                __verse_0x5AE077E0_Slots                                    OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(UI_orientation)                            __verse_0x4DFAB8C8_Orientation                              OFFSET(get<T>, {0xC8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2864,6 +2862,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_stack_box.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_text_base
 /// Size: 0x00D0 (0x000098 - 0x000168)
 class UUI_text_base : public UUI_widget
@@ -2877,8 +2877,6 @@ public:
 	DMember(double)                                    __verse_0x1EA9AC7C_DefaultTextOpacity                       OFFSET(get<double>, {0x158, 8, 0, 0})
 	CMember(UI_text_justification)                     __verse_0x616A37A2_DefaultJustification                     OFFSET(get<T>, {0x160, 1, 0, 0})
 	CMember(UI_text_overflow_policy)                   __verse_0x5C09BE1D_DefaultOverflowPolicy                    OFFSET(get<T>, {0x161, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2908,6 +2906,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_text_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_text_block_internal
 /// Size: 0x0000 (0x000168 - 0x000168)
 class UUI_text_block_internal : public UUI_text_base
@@ -2931,8 +2931,6 @@ public:
 	SMember(FSpatialMath_vector2)                      __verse_0x4DD253BC_DefaultDesiredSize                       OFFSET(get<T>, {0x138, 16, 0, 0})
 	CMember(UI_image_tiling)                           __verse_0xAF9B7624_DefaultHorizontalTiling                  OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(UI_image_tiling)                           __verse_0xF679588B_DefaultVerticalTiling                    OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2958,6 +2956,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_texture_block.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_user_widget
 /// Size: 0x0028 (0x000098 - 0x0000C0)
 class UUI_user_widget : public UUI_widget
@@ -2968,8 +2968,6 @@ class UUI_user_widget : public UUI_widget
 public:
 	CMember(UUI_widget_class*)                         __verse_0x26CD6686_Asset                                    OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(TArray<FUI_user_widget_slot>)              __verse_0x5AE077E0_Slots                                    OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2981,6 +2979,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseUI/_Verse/VNI/VerseUI.UI_user_widget.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseUI/_Verse/VNI/VerseUI.UI_widget_class
 /// Size: 0x0000 (0x0000C8 - 0x0000C8)
 class UUI_widget_class : public UAssets_client_asset
@@ -3019,8 +3019,6 @@ class UVerseWorldPartition_data_layer_manager : public UVerseDataLayerManagerBas
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3034,6 +3032,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseWorldPartition/_Verse/VNI/VerseWorldPartition.VerseWorldPartition_data_layer_manager.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VersePlayspace/_Verse/VNI/VersePlayspace.Playspace_playspace_component
 /// Size: 0x00E0 (0x000058 - 0x000138)
 class UPlayspace_playspace_component : public UEntityComponent
@@ -3042,8 +3042,6 @@ class UPlayspace_playspace_component : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3071,6 +3069,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VersePlayspace/_Verse/VNI/VersePlayspace.Playspace_playspace_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForMatchBegin
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_Playspace_playspace_component___WaitForMatchBegin : public UConcurrency_task
@@ -3081,13 +3081,13 @@ class Utask_Playspace_playspace_component___WaitForMatchBegin : public UConcurre
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForMatchBegin.Update
 	// int64_t Update();                                                                                                        // [0x97b448c] Native|Public|HasOutParms 
+};
+
 /// Class /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForMatchEnd
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_Playspace_playspace_component___WaitForMatchEnd : public UConcurrency_task
@@ -3098,13 +3098,13 @@ class Utask_Playspace_playspace_component___WaitForMatchEnd : public UConcurrenc
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForMatchEnd.Update
 	// int64_t Update();                                                                                                        // [0x97b4494] Native|Public|HasOutParms 
+};
+
 /// Class /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForPlayerAdded
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_Playspace_playspace_component___WaitForPlayerAdded : public UConcurrency_task
@@ -3116,13 +3116,13 @@ public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(USimulation_player_component*)             _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForPlayerAdded.Update
 	// int64_t Update();                                                                                                        // [0x9724718] Native|Public|HasOutParms 
+};
+
 /// Class /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForPlayerRemoved
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_Playspace_playspace_component___WaitForPlayerRemoved : public UConcurrency_task
@@ -3134,13 +3134,13 @@ public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(USimulation_player_component*)             _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForPlayerRemoved.Update
 	// int64_t Update();                                                                                                        // [0x97b449c] Native|Public|HasOutParms 
+};
+
 /// Class /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForSetupComplete
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_Playspace_playspace_component___WaitForSetupComplete : public UConcurrency_task
@@ -3151,13 +3151,13 @@ class Utask_Playspace_playspace_component___WaitForSetupComplete : public UConcu
 public:
 	CMember(UPlayspace_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VersePlayspace/_Verse/VNI/VersePlayspace.task_Playspace_playspace_component$__WaitForSetupComplete.Update
 	// int64_t Update();                                                                                                        // [0x97b44a4] Native|Public|HasOutParms 
+};
+
 /// Class /VerseBasicGameplay/_Verse/VNI/VerseBasicGameplay.task_VerseBasicGameplay_PlayerManager_basic_player_manager_impl$BeginWaitingForEvents
 /// Size: 0x02A0 (0x000140 - 0x0003E0)
 class Utask_VerseBasicGameplay_PlayerManager_basic_player_manager_impl_BeginWaitingForEvents : public UConcurrency_task
@@ -3214,13 +3214,13 @@ public:
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x8C908304_MulticastDelegate3                       OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(USimulation_player_multicast_delegate*)    __verse_0x00000000_11                                       OFFSET(get<T>, {0x3B0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x3B8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseBasicGameplay/_Verse/VNI/VerseBasicGameplay.task_VerseBasicGameplay_PlayerManager_basic_player_manager_impl$BeginWaitingForEvents.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseBasicGameplay/_Verse/VNI/VerseBasicGameplay.VerseBasicGameplay_PlayerManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerseBasicGameplay_PlayerManager : public UObject
@@ -3242,8 +3242,6 @@ public:
 	CMember(UPlayspace_playspace_component*)           __verse_0xBC454097_ThePlayspace                             OFFSET(get<T>, {0x28, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x7DC483AF_PlayerAddedEvent                         OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x5DE94DD9_PlayerRemovedEvent                       OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3257,6 +3255,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseBasicGameplay/_Verse/VNI/VerseBasicGameplay.VerseBasicGameplay_PlayerManager_basic_player_manager.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseBasicGameplay/_Verse/VNI/VerseBasicGameplay.VerseBasicGameplay_PlayerManager_basic_player_manager_impl
 /// Size: 0x0010 (0x000060 - 0x000070)
 class UVerseBasicGameplay_PlayerManager_basic_player_manager_impl : public UVerseBasicGameplay_PlayerManager_basic_player_manager
@@ -3265,8 +3265,6 @@ class UVerseBasicGameplay_PlayerManager_basic_player_manager_impl : public UVers
 	static inline constexpr uint64_t __MDKClassSize = 112;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3278,6 +3276,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseBasicGameplay/_Verse/VNI/VerseBasicGameplay.VerseBasicGameplay_PlayerManager_basic_player_manager_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.AI
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAI : public UObject
@@ -3296,8 +3296,6 @@ class UAI_ai_behavior : public UAIBehaviorScript
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3313,6 +3311,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.AI_ai_behavior.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.AI_focus_interface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAI_focus_interface : public UObject
@@ -3399,8 +3399,6 @@ public:
 	CMember(UVerseEngine_subscribable_event*)          __verse_0xCE63A4CB_JumpedEventInternal                      OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x242DF4E0_SprintedEventInternal                    OFFSET(get<T>, {0x300, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x5587B813_EliminatedEventInternal                  OFFSET(get<T>, {0x308, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3490,6 +3488,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Characters_fort_character_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.FortPlayerUtilities
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortPlayerUtilities : public UObject
@@ -3519,8 +3519,6 @@ class UGame_agent_instigator_impl : public UObject
 
 public:
 	CMember(USimulation_agent*)                        __verse_0x8D191063_TheAgent                                 OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3530,6 +3528,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Game_agent_instigator_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.Game_damageable
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGame_damageable : public UObject
@@ -3620,8 +3620,6 @@ class UPlayspaces_fort_playspace_impl : public UVerseFortnitePlayspace
 public:
 	CMember(UVerseEngine_subscribable_event*)          __verse_0xD574E81A_PlayerAddedEventInternal                 OFFSET(get<T>, {0xF8, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x91891F4A_PlayerRemovedEventInternal               OFFSET(get<T>, {0x100, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3639,6 +3637,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Playspaces_fort_playspace_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_ai_behavior$OnBegin
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_AI_ai_behavior_OnBegin : public UConcurrency_task
@@ -3649,13 +3649,13 @@ class Utask_AI_ai_behavior_OnBegin : public UConcurrency_task
 public:
 	CMember(UAI_ai_behavior*)                          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_ai_behavior$OnBegin.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_focus_interface$MaintainFocus_L_Nagent_R
 /// Size: 0x0010 (0x000140 - 0x000150)
 class Utask_AI_focus_interface_MaintainFocus_L_Nagent_R : public UConcurrency_task
@@ -3666,13 +3666,13 @@ class Utask_AI_focus_interface_MaintainFocus_L_Nagent_R : public UConcurrency_ta
 public:
 	CMember(UAI_focus_interface*)                      _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_focus_interface$MaintainFocus_L_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_focus_interface$MaintainFocus_L_Nvector3_R
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_AI_focus_interface_MaintainFocus_L_Nvector3_R : public UConcurrency_task
@@ -3683,13 +3683,13 @@ class Utask_AI_focus_interface_MaintainFocus_L_Nvector3_R : public UConcurrency_
 public:
 	CMember(UAI_focus_interface*)                      _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_focus_interface$MaintainFocus_L_Nvector3_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_navigatable$NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R
 /// Size: 0x0029 (0x000140 - 0x000169)
 class Utask_AI_navigatable_NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -3701,13 +3701,13 @@ public:
 	CMember(UAI_navigatable*)                          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 32, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x168, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_navigatable$NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_navigatable$Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_AI_navigatable_Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -3717,13 +3717,13 @@ class Utask_AI_navigatable_Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : publi
 
 public:
 	CMember(UAI_navigatable*)                          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.task_AI_navigatable$Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_fort_br_team_collection
 /// Size: 0x0070 (0x000090 - 0x000100)
 class UTeams_fort_br_team_collection : public UVerseFortniteBRTeamCollection
@@ -3732,8 +3732,6 @@ class UTeams_fort_br_team_collection : public UVerseFortniteBRTeamCollection
 	static inline constexpr uint64_t __MDKClassSize = 256;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3757,6 +3755,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_fort_br_team_collection.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_fort_minigame_team_collection
 /// Size: 0x0070 (0x000048 - 0x0000B8)
 class UTeams_fort_minigame_team_collection : public UVerseFortniteMinigameTeamCollection
@@ -3765,8 +3765,6 @@ class UTeams_fort_minigame_team_collection : public UVerseFortniteMinigameTeamCo
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3790,6 +3788,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_fort_minigame_team_collection.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortnite/_Verse/VNI/VerseFortnite.Teams_fort_team_collection
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UTeams_fort_team_collection : public UObject
@@ -3829,8 +3829,6 @@ class UVehicles_fort_vehicle_impl : public UVerseFortniteActorWrapper
 
 public:
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x4996425D_DamagedEventInternal                     OFFSET(get<T>, {0x108, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -3864,6 +3862,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortnite/_Verse/VNI/VerseFortnite.Vehicles_fort_vehicle_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component
 /// Size: 0x00A8 (0x000090 - 0x000138)
 class UGame_Abilities_ability_component : public UVerseFortniteAbilityComponentBase
@@ -3872,8 +3872,6 @@ class UGame_Abilities_ability_component : public UVerseFortniteAbilityComponentB
 	static inline constexpr uint64_t __MDKClassSize = 312;
 
 public:
-};
-
 
 
 	/// Functions
@@ -3891,6 +3889,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_ability_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.Game_Abilities_AbilityComponent
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGame_Abilities_AbilityComponent : public UObject
@@ -3932,13 +3932,13 @@ public:
 	CMember(UGame_Abilities_ability_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument   OFFSET(get<T>, {0x148, 24, 0, 0})
 	CMember(Game_Abilities_activate_ability_result)    _RetVal                                                     OFFSET(get<T>, {0x160, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortniteGameplayAbilities/_Verse/VNI/VerseFortniteGameplayAbilities.task_Game_Abilities_ability_component$ActivateAbility_L_Ngameplay__ability__asset_M_N_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x98f8830] Native|Public|HasOutParms 
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$AttackObstacle_L_Nfort__obstacle__info_R
 /// Size: 0x0031 (0x000140 - 0x000171)
 class Utask_VerseAIBase_fort_character_actions_interface_AttackObstacle_L_Nfort__obstacle__info_R : public UConcurrency_task
@@ -3950,13 +3950,13 @@ public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$AttackObstacle_L_Nfort__obstacle__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$AttackThreat_L_Nfort__threat__info_R
 /// Size: 0x0041 (0x000140 - 0x000181)
 class Utask_VerseAIBase_fort_character_actions_interface_AttackThreat_L_Nfort__threat__info_R : public UConcurrency_task
@@ -3968,13 +3968,13 @@ public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x180, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$AttackThreat_L_Nfort__threat__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$LootObject_L_Nfort__loot__info_R
 /// Size: 0x0031 (0x000140 - 0x000171)
 class Utask_VerseAIBase_fort_character_actions_interface_LootObject_L_Nfort__loot__info_R : public UConcurrency_task
@@ -3986,13 +3986,13 @@ public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FVerseAIBase_fort_loot_info)               __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$LootObject_L_Nfort__loot__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$PlayRandomEmote
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_actions_interface_PlayRandomEmote : public UConcurrency_task
@@ -4004,13 +4004,13 @@ public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$PlayRandomEmote.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$Revive_L_Nagent_R
 /// Size: 0x0011 (0x000140 - 0x000151)
 class Utask_VerseAIBase_fort_character_actions_interface_Revive_L_Nagent_R : public UConcurrency_task
@@ -4022,13 +4022,13 @@ public:
 	CMember(UVerseAIBase_fort_character_actions_interface*) _Self                                                  OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 8, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        _RetVal                                                     OFFSET(get<T>, {0x150, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_actions_interface$Revive_L_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Crouch
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_movement_interface_Crouch : public UConcurrency_task
@@ -4040,13 +4040,13 @@ public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Crouch.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Jump
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_movement_interface_Jump : public UConcurrency_task
@@ -4058,13 +4058,13 @@ public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Jump.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Slide
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_movement_interface_Slide : public UConcurrency_task
@@ -4076,13 +4076,13 @@ public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Slide.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Sprint
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_movement_interface_Sprint : public UConcurrency_task
@@ -4094,13 +4094,13 @@ public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Sprint.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$TacticalSprint
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_movement_interface_TacticalSprint : public UConcurrency_task
@@ -4112,13 +4112,13 @@ public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$TacticalSprint.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Walk
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_character_movement_interface_Walk : public UConcurrency_task
@@ -4130,13 +4130,13 @@ public:
 	CMember(UVerseAIBase_fort_character_movement_interface*) _Self                                                 OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_character_movement_interface$Walk.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_navigatable$MoveInRangeToAttack
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_navigatable_MoveInRangeToAttack : public UConcurrency_task
@@ -4148,13 +4148,13 @@ public:
 	CMember(UVerseAIBase_fort_navigatable*)            _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_navigatable$MoveInRangeToAttack.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_navigatable$RoamAround
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseAIBase_fort_navigatable_RoamAround : public UConcurrency_task
@@ -4166,13 +4166,13 @@ public:
 	CMember(UVerseAIBase_fort_navigatable*)            _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseAIBase/_Verse/VNI/VerseAIBase.task_VerseAIBase_fort_navigatable$RoamAround.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseAIBase/_Verse/VNI/VerseAIBase.VerseAIBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVerseAIBase : public UObject
@@ -4513,13 +4513,13 @@ class Utask_VerseCreature_creature_component_MaintainFocus_L_Nagent_R : public U
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$MaintainFocus_L_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x990b05c] Native|Public|HasOutParms 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$MaintainFocus_L_Nvector3_R
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_VerseCreature_creature_component_MaintainFocus_L_Nvector3_R : public UConcurrency_task
@@ -4530,13 +4530,13 @@ class Utask_VerseCreature_creature_component_MaintainFocus_L_Nvector3_R : public
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$MaintainFocus_L_Nvector3_R.Update
 	// int64_t Update();                                                                                                        // [0x990b064] Native|Public|HasOutParms 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$MoveInRangeToAttack
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseCreature_creature_component_MoveInRangeToAttack : public UConcurrency_task
@@ -4548,13 +4548,13 @@ public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$MoveInRangeToAttack.Update
 	// int64_t Update();                                                                                                        // [0x990b06c] Native|Public|HasOutParms 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R
 /// Size: 0x0029 (0x000140 - 0x000169)
 class Utask_VerseCreature_creature_component_NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -4566,13 +4566,13 @@ public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 32, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x168, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a78] Native|Public|HasOutParms 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$RoamAround
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseCreature_creature_component_RoamAround : public UConcurrency_task
@@ -4584,13 +4584,13 @@ public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$RoamAround.Update
 	// int64_t Update();                                                                                                        // [0x990b06c] Native|Public|HasOutParms 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_VerseCreature_creature_component_Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -4600,13 +4600,13 @@ class Utask_VerseCreature_creature_component_Wait_L_N_QDuration_Nfloat_20_3d_20_
 
 public:
 	CMember(UVerseCreature_creature_component*)        _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.task_VerseCreature_creature_component$Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x9909ab0] Native|Public|HasOutParms 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.VerseCreature_creature_component
 /// Size: 0x0080 (0x0000B0 - 0x000130)
 class UVerseCreature_creature_component : public UAIActionsComponent
@@ -4615,8 +4615,6 @@ class UVerseCreature_creature_component : public UAIActionsComponent
 	static inline constexpr uint64_t __MDKClassSize = 304;
 
 public:
-};
-
 
 
 	/// Functions
@@ -4642,6 +4640,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.VerseCreature_creature_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseCreature/_Verse/VNI/VerseCreature.VerseCreature_creature_perception_component
 /// Size: 0x0028 (0x0000A0 - 0x0000C8)
 class UVerseCreature_creature_perception_component : public UCreaturePerceptionComponentBase
@@ -4650,8 +4650,6 @@ class UVerseCreature_creature_perception_component : public UCreaturePerceptionC
 	static inline constexpr uint64_t __MDKClassSize = 200;
 
 public:
-};
-
 
 
 	/// Functions
@@ -4665,6 +4663,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseCreature/_Verse/VNI/VerseCreature.VerseCreature_creature_perception_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$AttackObstacle_L_Nfort__obstacle__info_R
 /// Size: 0x0031 (0x000140 - 0x000171)
 class Utask_VerseNPC_npc_component_AttackObstacle_L_Nfort__obstacle__info_R : public UConcurrency_task
@@ -4676,13 +4676,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FVerseAIBase_fort_obstacle_info)           __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$AttackObstacle_L_Nfort__obstacle__info_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a38] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$AttackThreat_L_Nfort__threat__info_R
 /// Size: 0x0041 (0x000140 - 0x000181)
 class Utask_VerseNPC_npc_component_AttackThreat_L_Nfort__threat__info_R : public UConcurrency_task
@@ -4694,13 +4694,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FAI_fort_threat_info)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 56, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x180, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$AttackThreat_L_Nfort__threat__info_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a40] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Crouch
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_Crouch : public UConcurrency_task
@@ -4712,13 +4712,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Crouch.Update
 	// int64_t Update();                                                                                                        // [0x9909a48] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Jump
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_Jump : public UConcurrency_task
@@ -4730,13 +4730,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Jump.Update
 	// int64_t Update();                                                                                                        // [0x9909a50] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$LootObject_L_Nfort__loot__info_R
 /// Size: 0x0031 (0x000140 - 0x000171)
 class Utask_VerseNPC_npc_component_LootObject_L_Nfort__loot__info_R : public UConcurrency_task
@@ -4748,13 +4748,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FVerseAIBase_fort_loot_info)               __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 40, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x170, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$LootObject_L_Nfort__loot__info_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a58] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$MaintainFocus_L_Nagent_R
 /// Size: 0x0010 (0x000140 - 0x000150)
 class Utask_VerseNPC_npc_component_MaintainFocus_L_Nagent_R : public UConcurrency_task
@@ -4765,13 +4765,13 @@ class Utask_VerseNPC_npc_component_MaintainFocus_L_Nagent_R : public UConcurrenc
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$MaintainFocus_L_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a60] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$MaintainFocus_L_Nvector3_R
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_VerseNPC_npc_component_MaintainFocus_L_Nvector3_R : public UConcurrency_task
@@ -4782,13 +4782,13 @@ class Utask_VerseNPC_npc_component_MaintainFocus_L_Nvector3_R : public UConcurre
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(FSpatialMath_vector3)                      __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$MaintainFocus_L_Nvector3_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a68] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$MoveInRangeToAttack
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_MoveInRangeToAttack : public UConcurrency_task
@@ -4800,13 +4800,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$MoveInRangeToAttack.Update
 	// int64_t Update();                                                                                                        // [0x9909a70] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R
 /// Size: 0x0029 (0x000140 - 0x000169)
 class Utask_VerseNPC_npc_component_NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -4818,13 +4818,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_Lnavigation__target_M_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R) __verse_0xB2CDDD72_Argument OFFSET(get<T>, {0x148, 32, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x168, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$NavigateTo_L_Nnavigation__target_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a78] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$PlayRandomEmote
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_PlayRandomEmote : public UConcurrency_task
@@ -4836,13 +4836,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$PlayRandomEmote.Update
 	// int64_t Update();                                                                                                        // [0x9909a80] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Revive_L_Nagent_R
 /// Size: 0x0011 (0x000140 - 0x000151)
 class Utask_VerseNPC_npc_component_Revive_L_Nagent_R : public UConcurrency_task
@@ -4854,13 +4854,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	CMember(USimulation_agent*)                        __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 8, 0, 0})
 	CMember(VerseAIBase_fallible_action_result)        _RetVal                                                     OFFSET(get<T>, {0x150, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Revive_L_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x9909a88] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$RoamAround
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_RoamAround : public UConcurrency_task
@@ -4872,13 +4872,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(AI_navigation_result)                      _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$RoamAround.Update
 	// int64_t Update();                                                                                                        // [0x9909a90] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Slide
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_Slide : public UConcurrency_task
@@ -4890,13 +4890,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Slide.Update
 	// int64_t Update();                                                                                                        // [0x9909a98] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Sprint
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_Sprint : public UConcurrency_task
@@ -4908,13 +4908,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Sprint.Update
 	// int64_t Update();                                                                                                        // [0x9909aa0] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$TacticalSprint
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_TacticalSprint : public UConcurrency_task
@@ -4926,13 +4926,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$TacticalSprint.Update
 	// int64_t Update();                                                                                                        // [0x9909aa8] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 /// Size: 0x0018 (0x000140 - 0x000158)
 class Utask_VerseNPC_npc_component_Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -4942,13 +4942,13 @@ class Utask_VerseNPC_npc_component_Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R
 
 public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Wait_L_N_QDuration_Nfloat_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x9909ab0] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Walk
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_VerseNPC_npc_component_Walk : public UConcurrency_task
@@ -4960,13 +4960,13 @@ public:
 	CMember(UVerseNPC_npc_component*)                  _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.task_VerseNPC_npc_component$Walk.Update
 	// int64_t Update();                                                                                                        // [0x9909ab8] Native|Public|HasOutParms 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_inventory_component
 /// Size: 0x00C8 (0x000098 - 0x000160)
 class UVerseNPC_inventory_component : public UInventoryComponentBase
@@ -4975,8 +4975,6 @@ class UVerseNPC_inventory_component : public UInventoryComponentBase
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-};
-
 
 
 	/// Functions
@@ -5004,6 +5002,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_inventory_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_leash_component
 /// Size: 0x0030 (0x000090 - 0x0000C0)
 class UVerseNPC_leash_component : public ULeashComponentBase
@@ -5012,8 +5012,6 @@ class UVerseNPC_leash_component : public ULeashComponentBase
 	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
-};
-
 
 
 	/// Functions
@@ -5029,6 +5027,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_leash_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_npc_component
 /// Size: 0x0170 (0x0000B0 - 0x000220)
 class UVerseNPC_npc_component : public UAIActionsComponent
@@ -5037,8 +5037,6 @@ class UVerseNPC_npc_component : public UAIActionsComponent
 	static inline constexpr uint64_t __MDKClassSize = 544;
 
 public:
-};
-
 
 
 	/// Functions
@@ -5094,6 +5092,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_npc_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_npc_perception_component
 /// Size: 0x00F8 (0x0000A0 - 0x000198)
 class UVerseNPC_npc_perception_component : public UNPCPerceptionComponentBase
@@ -5106,8 +5106,6 @@ public:
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x12343732_CurrentThreatStatusChangedEventInternal  OFFSET(get<T>, {0x190, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0xB7573589_ObstacleChangedEventInternal             OFFSET(get<T>, {0x178, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x1F8E9B61_BestObjectToLootChangedEventInternal     OFFSET(get<T>, {0x180, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5135,6 +5133,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseNPC/_Verse/VNI/VerseNPC.VerseNPC_npc_perception_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCompanionAI : public UObject
@@ -5164,8 +5164,6 @@ public:
 	DMember(double)                                    __verse_0x5EF17E77_BackToMeMovementThreshold                OFFSET(get<double>, {0x130, 8, 0, 0})
 	DMember(double)                                    __verse_0x80F3C16A_ReviveDistance                           OFFSET(get<double>, {0x138, 8, 0, 0})
 	DMember(double)                                    __verse_0x53BD03B7_AttackCommand_TargetProximityRadius      OFFSET(get<double>, {0x140, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5177,6 +5175,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_ai.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_ai_runtime
 /// Size: 0x02A0 (0x000028 - 0x0002C8)
 class UCompanionAI_companion_ai_runtime : public UObject
@@ -5197,8 +5197,6 @@ public:
 	CMember(UObject*)                                  __verse_0x0F05355D_ThreatPerception                         OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00C33D6C_ObstaclePerception                       OFFSET(get<T>, {0x78, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x27386837_TargetSelection                          OFFSET(get<T>, {0x80, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5280,6 +5278,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_ai_runtime.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_creature
 /// Size: 0x0060 (0x0000E0 - 0x000140)
 class UCompanionAI_companion_creature : public UAI_ai_behavior
@@ -5294,8 +5294,6 @@ public:
 	SMember(FColors_color)                             __verse_0x71320F52_DebugScreenColor                         OFFSET(get<T>, {0xF8, 24, 0, 0})
 	DMember(double)                                    __verse_0x2D4D6684_DebugScreenDuration                      OFFSET(get<double>, {0x110, 8, 0, 0})
 	DMember(double)                                    __verse_0x474367D7_EngageThreatsWithinDistance              OFFSET(get<double>, {0x118, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5311,6 +5309,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_creature.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_creature_runtime
 /// Size: 0x00E8 (0x000028 - 0x000110)
 class UCompanionAI_companion_creature_runtime : public UObject
@@ -5325,8 +5325,6 @@ public:
 	CMember(UGame_Abilities_ability_component*)        __verse_0x8FB74E85_AbilitySystemComponent                   OFFSET(get<T>, {0x40, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0xDE2F615F_Perception                               OFFSET(get<T>, {0x48, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x8D6253CB_Focus                                    OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5358,6 +5356,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_companion_creature_runtime.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_default_ai_behavior
 /// Size: 0x0000 (0x0000E0 - 0x0000E0)
 class UCompanionAI_default_ai_behavior : public UAI_ai_behavior
@@ -5396,8 +5396,6 @@ class UCompanionAI_fort_creature_component : public UVerseCreature_creature_comp
 	static inline constexpr uint64_t __MDKClassSize = 320;
 
 public:
-};
-
 
 
 	/// Functions
@@ -5409,6 +5407,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_fort_creature_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_fort_npc_component
 /// Size: 0x0020 (0x000220 - 0x000240)
 class UCompanionAI_fort_npc_component : public UVerseNPC_npc_component
@@ -5417,8 +5417,6 @@ class UCompanionAI_fort_npc_component : public UVerseNPC_npc_component
 	static inline constexpr uint64_t __MDKClassSize = 576;
 
 public:
-};
-
 
 
 	/// Functions
@@ -5432,6 +5430,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_fort_npc_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_fort_ping_interface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCompanionAI_fort_ping_interface : public UObject
@@ -5472,8 +5472,6 @@ class UCompanionAI_ping_component : public UPingComponentBase
 public:
 	CMember(UVerseEngine_multicast_delegate*)          __verse_0xC18257FD_ConvertedEventInternal                   OFFSET(get<T>, {0x148, 8, 0, 0})
 	CMember(UVerseEngine_multicast_delegate*)          __verse_0x0E297686_UnconvertedEventInternal                 OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -5503,6 +5501,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.CompanionAI_ping_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai$OnBegin
 /// Size: 0x0818 (0x000140 - 0x000958)
 class Utask_CompanionAI_companion_ai_OnBegin : public UConcurrency_task
@@ -5631,13 +5631,13 @@ public:
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x882, 1, 0, 0})
 	SMember(Ftuple_L_Kchar_M_QDuration_Nfloat_20_3d_20_2e_2e_2e_M_QColor_Ncolor_20_3d_20_2e_2e_2e_R) _ExprResult75 OFFSET(get<T>, {0x898, 64, 0, 0})
 	SMember(Ftuple_L_Kchar_M_QColor_Ncolor_M_QDuration_Nfloat_R) __verse_0x00000000_7                              OFFSET(get<T>, {0x8D8, 64, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai$OnBegin.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms|HasDefaults 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$CheckForReviveTeamMembers_L_Nping__info_R
 /// Size: 0x08A8 (0x000140 - 0x0009E8)
 class Utask_CompanionAI_companion_ai_runtime_CheckForReviveTeamMembers_L_Nping__info_R : public UConcurrency_task
@@ -5729,13 +5729,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult39                                               OFFSET(get<T>, {0x9A8, 1, 0, 0})
 	DMember(bool)                                      __verse_0x87226150_HasRevivedTeamMember1                    OFFSET(get<bool>, {0x9A9, 1, 1, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x9C2, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$CheckForReviveTeamMembers_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$CrouchService
 /// Size: 0x00B0 (0x000140 - 0x0001F0)
 class Utask_CompanionAI_companion_ai_runtime_CrouchService : public UConcurrency_task
@@ -5754,13 +5754,13 @@ public:
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1B8, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x1C0, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1D8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$CrouchService.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$CrouchUntilHit
 /// Size: 0x0248 (0x000140 - 0x000388)
 class Utask_CompanionAI_companion_ai_runtime_CrouchUntilHit : public UConcurrency_task
@@ -5809,13 +5809,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x350, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x358, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x360, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$CrouchUntilHit.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$DrawSphere_L_Nvector3_M_Nfloat_M_Ncolor_R
 /// Size: 0x03C1 (0x000140 - 0x000501)
 class Utask_CompanionAI_companion_ai_runtime_DrawSphere_L_Nvector3_M_Nfloat_M_Ncolor_R : public UConcurrency_task
@@ -5844,13 +5844,13 @@ public:
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x4E0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x4E8, 1, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x500, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$DrawSphere_L_Nvector3_M_Nfloat_M_Ncolor_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GameLoop
 /// Size: 0x0730 (0x000140 - 0x000870)
 class Utask_CompanionAI_companion_ai_runtime_GameLoop : public UConcurrency_task
@@ -5941,13 +5941,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask9                                                 OFFSET(get<T>, {0x848, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0x860, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult9                                               OFFSET(get<int64_t>, {0x868, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GameLoop.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetAttackCommandTarget_L_Nping__info_R
 /// Size: 0x07F0 (0x000140 - 0x000930)
 class Utask_CompanionAI_companion_ai_runtime_GetAttackCommandTarget_L_Nping__info_R : public UConcurrency_task
@@ -6008,13 +6008,13 @@ public:
 	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x808, 24, 0, 0})
 	SMember(FAI_fort_threat_info)                      __verse_0x19FFC917_AttackTarget1                            OFFSET(get<T>, {0x880, 56, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x8F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetAttackCommandTarget_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetNewObstacle
 /// Size: 0x0150 (0x000140 - 0x000290)
 class Utask_CompanionAI_companion_ai_runtime_GetNewObstacle : public UConcurrency_task
@@ -6039,13 +6039,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x268, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x280, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x288, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetNewObstacle.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetNewTargetPerception
 /// Size: 0x0180 (0x000140 - 0x0002C0)
 class Utask_CompanionAI_companion_ai_runtime_GetNewTargetPerception : public UConcurrency_task
@@ -6070,13 +6070,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetNewTargetPerception.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetNewThreat
 /// Size: 0x0180 (0x000140 - 0x0002C0)
 class Utask_CompanionAI_companion_ai_runtime_GetNewThreat : public UConcurrency_task
@@ -6101,13 +6101,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetNewThreat.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetObstacle
 /// Size: 0x0134 (0x000140 - 0x000274)
 class Utask_CompanionAI_companion_ai_runtime_GetObstacle : public UConcurrency_task
@@ -6126,13 +6126,13 @@ public:
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x228, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x270, 1, 0, 0})
 	DMember(bool)                                      _ExprResult3                                                OFFSET(get<bool>, {0x271, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetObstacle.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetThreat
 /// Size: 0x0184 (0x000140 - 0x0002C4)
 class Utask_CompanionAI_companion_ai_runtime_GetThreat : public UConcurrency_task
@@ -6151,13 +6151,13 @@ public:
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x268, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult2                                                OFFSET(get<T>, {0x2C0, 1, 0, 0})
 	DMember(bool)                                      _ExprResult3                                                OFFSET(get<bool>, {0x2C1, 1, 1, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GetThreat.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GoToAndAttackTask_L_Nfort__threat__info_R
 /// Size: 0x0210 (0x000140 - 0x000350)
 class Utask_CompanionAI_companion_ai_runtime_GoToAndAttackTask_L_Nfort__threat__info_R : public UConcurrency_task
@@ -6200,13 +6200,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x318, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x320, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x328, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GoToAndAttackTask_L_Nfort__threat__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GoToPositionTask_L_Nvector3_M_N_Qagent_M_Nlogic_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R
 /// Size: 0x0818 (0x000140 - 0x000958)
 class Utask_CompanionAI_companion_ai_runtime_GoToPositionTask_L_Nvector3_M_N_Qagent_M_Nlogic_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R : public UConcurrency_task
@@ -6286,13 +6286,13 @@ public:
 	CMember(UAI_navigation_target*)                    _ExprResultStack3                                           OFFSET(get<T>, {0x890, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0x908, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0x930, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$GoToPositionTask_L_Nvector3_M_N_Qagent_M_Nlogic_M_N_QReachRadius_Nfloat_20_3d_20_2e_2e_2e_M_N_QAllowPartialPath_Nlogic_20_3d_20_2e_2e_2e_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms|HasDefaults 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleBackToMeCommand_L_Nping__info_R
 /// Size: 0x0710 (0x000140 - 0x000850)
 class Utask_CompanionAI_companion_ai_runtime_HandleBackToMeCommand_L_Nping__info_R : public UConcurrency_task
@@ -6393,13 +6393,13 @@ public:
 	CMember(EVerseTrue)                                _InvokeSureResultDummy8                                     OFFSET(get<T>, {0x808, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x830, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy9                                     OFFSET(get<T>, {0x838, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleBackToMeCommand_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleGoTo_L_Nping__info_R
 /// Size: 0x0AF0 (0x000140 - 0x000C30)
 class Utask_CompanionAI_companion_ai_runtime_HandleGoTo_L_Nping__info_R : public UConcurrency_task
@@ -6504,13 +6504,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask15                                                OFFSET(get<T>, {0xBE8, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult15                                              OFFSET(get<int64_t>, {0xC00, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0xC08, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleGoTo_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleGoToCommand_L_Nping__info_R
 /// Size: 0x0C48 (0x000140 - 0x000D88)
 class Utask_CompanionAI_companion_ai_runtime_HandleGoToCommand_L_Nping__info_R : public UConcurrency_task
@@ -6615,13 +6615,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask13                                                OFFSET(get<T>, {0xD40, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult13                                              OFFSET(get<int64_t>, {0xD58, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0xD60, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleGoToCommand_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleHoldPositionCommand_L_Nping__info_R
 /// Size: 0x0318 (0x000140 - 0x000458)
 class Utask_CompanionAI_companion_ai_runtime_HandleHoldPositionCommand_L_Nping__info_R : public UConcurrency_task
@@ -6660,13 +6660,13 @@ public:
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x418, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x430, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x431, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleHoldPositionCommand_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleNPCCommand_L_Nping__info_R
 /// Size: 0x09A0 (0x000140 - 0x000AE0)
 class Utask_CompanionAI_companion_ai_runtime_HandleNPCCommand_L_Nping__info_R : public UConcurrency_task
@@ -6733,13 +6733,13 @@ public:
 	CMember(UObject*)                                  __verse_0x00000000_9                                        OFFSET(get<T>, {0xA98, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy6                                     OFFSET(get<T>, {0xAA0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0xAB8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleNPCCommand_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleObstacleService_L_N_Qentity_R
 /// Size: 0x0440 (0x000140 - 0x000580)
 class Utask_CompanionAI_companion_ai_runtime_HandleObstacleService_L_N_Qentity_R : public UConcurrency_task
@@ -6785,13 +6785,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x548, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x550, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x558, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleObstacleService_L_N_Qentity_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleReviveCommand_L_Nping__info_R
 /// Size: 0x0280 (0x000140 - 0x0003C0)
 class Utask_CompanionAI_companion_ai_runtime_HandleReviveCommand_L_Nping__info_R : public UConcurrency_task
@@ -6834,13 +6834,13 @@ public:
 	CMember(UObject*)                                  __verse_0x00000000_1                                        OFFSET(get<T>, {0x378, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy4                                     OFFSET(get<T>, {0x380, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x398, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$HandleReviveCommand_L_Nping__info_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$LookAroundTask_L_Nvector3_M_Nfloat_M_Nfloat_R
 /// Size: 0x0520 (0x000140 - 0x000660)
 class Utask_CompanionAI_companion_ai_runtime_LookAroundTask_L_Nvector3_M_Nfloat_M_Nfloat_R : public UConcurrency_task
@@ -6903,13 +6903,13 @@ public:
 	SMember(Ftuple_Lfloat_Mfloat_R)                    _ExprResult9                                                OFFSET(get<T>, {0x620, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x630, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x638, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$LookAroundTask_L_Nvector3_M_Nfloat_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$LookAtOrAttackTarget
 /// Size: 0x0588 (0x000140 - 0x0006C8)
 class Utask_CompanionAI_companion_ai_runtime_LookAtOrAttackTarget : public UConcurrency_task
@@ -6976,13 +6976,13 @@ public:
 	SMember(FSpatialMath_vector3)                      _ExprResultStack1                                           OFFSET(get<T>, {0x670, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult11                                              OFFSET(get<int64_t>, {0x698, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x6A0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$LookAtOrAttackTarget.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$LookAtThreatTask
 /// Size: 0x03A8 (0x000140 - 0x0004E8)
 class Utask_CompanionAI_companion_ai_runtime_LookAtThreatTask : public UConcurrency_task
@@ -7037,13 +7037,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x4B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x4B8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x4C0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$LookAtThreatTask.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$ReviveCommand_L_Nagent_R
 /// Size: 0x05E0 (0x000140 - 0x000720)
 class Utask_CompanionAI_companion_ai_runtime_ReviveCommand_L_Nagent_R : public UConcurrency_task
@@ -7137,13 +7137,13 @@ public:
 	CMember(VerseAIBase_fallible_action_result)        __verse_0x40FB4916_ReviveResult1                            OFFSET(get<T>, {0x692, 1, 0, 0})
 	CMember(UObject*)                                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x698, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x6F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$ReviveCommand_L_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$SetLeashPosition_L_Nvector3_M_Nfloat_M_Nagent_R
 /// Size: 0x0670 (0x000140 - 0x0007B0)
 class Utask_CompanionAI_companion_ai_runtime_SetLeashPosition_L_Nvector3_M_Nfloat_M_Nagent_R : public UConcurrency_task
@@ -7228,13 +7228,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult22                                               OFFSET(get<T>, {0x788, 1, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult23                                               OFFSET(get<T>, {0x789, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy7                                     OFFSET(get<T>, {0x78A, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$SetLeashPosition_L_Nvector3_M_Nfloat_M_Nagent_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$ShootTargetService_L_Nfloat_R
 /// Size: 0x06A8 (0x000140 - 0x0007E8)
 class Utask_CompanionAI_companion_ai_runtime_ShootTargetService_L_Nfloat_R : public UConcurrency_task
@@ -7303,13 +7303,13 @@ public:
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x720, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult13                                               OFFSET(get<T>, {0x7C0, 1, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x7C1, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$ShootTargetService_L_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$SprintService
 /// Size: 0x0070 (0x000140 - 0x0001B0)
 class Utask_CompanionAI_companion_ai_runtime_SprintService : public UConcurrency_task
@@ -7328,13 +7328,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x188, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$SprintService.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$TacticalSprintService
 /// Size: 0x0070 (0x000140 - 0x0001B0)
 class Utask_CompanionAI_companion_ai_runtime_TacticalSprintService : public UConcurrency_task
@@ -7353,13 +7353,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x188, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult1                                                OFFSET(get<T>, {0x1A0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x1A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$TacticalSprintService.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$WaitForDamageService
 /// Size: 0x0208 (0x000140 - 0x000348)
 class Utask_CompanionAI_companion_ai_runtime_WaitForDamageService : public UConcurrency_task
@@ -7404,13 +7404,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult7                                                OFFSET(get<T>, {0x310, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x318, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x320, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$WaitForDamageService.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$WaitForTargetInVehicleService_L_Nfort__character_R
 /// Size: 0x0160 (0x000140 - 0x0002A0)
 class Utask_CompanionAI_companion_ai_runtime_WaitForTargetInVehicleService_L_Nfort__character_R : public UConcurrency_task
@@ -7437,13 +7437,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x258, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x270, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x278, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$WaitForTargetInVehicleService_L_Nfort__character_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$WaitForTargetMovementService_L_Nfort__character_M_Nfloat_R
 /// Size: 0x0350 (0x000140 - 0x000490)
 class Utask_CompanionAI_companion_ai_runtime_WaitForTargetMovementService_L_Nfort__character_M_Nfloat_R : public UConcurrency_task
@@ -7476,13 +7476,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult9                                                OFFSET(get<T>, {0x458, 1, 0, 0})
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x470, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x488, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_ai_runtime$WaitForTargetMovementService_L_Nfort__character_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature$DrawSphere_L_Nvector3_M_Nfloat_M_Ncolor_R
 /// Size: 0x03C1 (0x000140 - 0x000501)
 class Utask_CompanionAI_companion_creature_DrawSphere_L_Nvector3_M_Nfloat_M_Ncolor_R : public UConcurrency_task
@@ -7511,13 +7511,13 @@ public:
 	CMember(UDiagnostics_debug_draw*)                  __verse_0x00000000_5                                        OFFSET(get<T>, {0x4E0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x4E8, 1, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult3                                                OFFSET(get<T>, {0x500, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature$DrawSphere_L_Nvector3_M_Nfloat_M_Ncolor_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature$OnBegin
 /// Size: 0x06DA (0x000140 - 0x00081A)
 class Utask_CompanionAI_companion_creature_OnBegin : public UConcurrency_task
@@ -7618,13 +7618,13 @@ public:
 	CMember(UDiagnostics_log*)                         __verse_0x00000000_15                                       OFFSET(get<T>, {0x7D0, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy13                                    OFFSET(get<T>, {0x7D8, 1, 0, 0})
 	SMember(Ftuple_L_Kchar_M_QLevel_Nlog__level_20_3d_20_2e_2e_2e_R) _ExprResult41                                 OFFSET(get<T>, {0x7F0, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature$OnBegin.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms|HasDefaults 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$ActivateAbilityWhenCloseEnough_L_Nagent_M_Ngameplay__ability__asset_M_Nfloat_M_Nfloat_R
 /// Size: 0x04C8 (0x000140 - 0x000608)
 class Utask_CompanionAI_companion_creature_runtime_ActivateAbilityWhenCloseEnough_L_Nagent_M_Ngameplay__ability__asset_M_Nfloat_M_Nfloat_R : public UConcurrency_task
@@ -7663,13 +7663,13 @@ public:
 	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult7                  OFFSET(get<T>, {0x590, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x5B8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x5E0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$ActivateAbilityWhenCloseEnough_L_Nagent_M_Ngameplay__ability__asset_M_Nfloat_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$DetectMovement_L_Nvector3_M_Nagent_M_Nfloat_R
 /// Size: 0x0330 (0x000140 - 0x000470)
 class Utask_CompanionAI_companion_creature_runtime_DetectMovement_L_Nvector3_M_Nagent_M_Nfloat_R : public UConcurrency_task
@@ -7698,13 +7698,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x428, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x440, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy5                                     OFFSET(get<T>, {0x448, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$DetectMovement_L_Nvector3_M_Nagent_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$DetectNewTarget
 /// Size: 0x0640 (0x000140 - 0x000780)
 class Utask_CompanionAI_companion_creature_runtime_DetectNewTarget : public UConcurrency_task
@@ -7767,13 +7767,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x738, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x750, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x758, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$DetectNewTarget.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$EngageTarget_L_Nagent_M_Ngameplay__ability__asset_R
 /// Size: 0x0288 (0x000140 - 0x0003C8)
 class Utask_CompanionAI_companion_creature_runtime_EngageTarget_L_Nagent_M_Ngameplay__ability__asset_R : public UConcurrency_task
@@ -7822,13 +7822,13 @@ public:
 	SMember(Ftuple_Lagent_Mgameplay__ability__asset_Mtype_7b2_2e000000e_2b02_7d_Mtype_7b3_2e000000_7d_R) _ExprResult7 OFFSET(get<T>, {0x378, 32, 0, 0})
 	DMember(int64_t)                                   _AsyncResult7                                               OFFSET(get<int64_t>, {0x398, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x3A0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$EngageTarget_L_Nagent_M_Ngameplay__ability__asset_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$FaceLKP_L_Nagent_M_Nfloat_R
 /// Size: 0x0248 (0x000140 - 0x000388)
 class Utask_CompanionAI_companion_creature_runtime_FaceLKP_L_Nagent_M_Nfloat_R : public UConcurrency_task
@@ -7869,13 +7869,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x340, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x358, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x360, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$FaceLKP_L_Nagent_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$GameLoop
 /// Size: 0x01B9 (0x000140 - 0x0002F9)
 class Utask_CompanionAI_companion_creature_runtime_GameLoop : public UConcurrency_task
@@ -7914,13 +7914,13 @@ public:
 	SMember(Ftuple_Lagent_Mgameplay__ability__asset_R) _ExprResult4                                                OFFSET(get<T>, {0x2D0, 16, 0, 0})
 	DMember(int64_t)                                   _AsyncResult3                                               OFFSET(get<int64_t>, {0x2E0, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult5                                                OFFSET(get<T>, {0x2F8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$GameLoop.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$Howl
 /// Size: 0x0140 (0x000140 - 0x000280)
 class Utask_CompanionAI_companion_creature_runtime_Howl : public UConcurrency_task
@@ -7945,13 +7945,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x238, 8, 0, 0})
 	SMember(Ftuple_Lgameplay__ability__asset_M_QTarget_N_Qagent_20_3d_20_2e_2e_2e_R) _ExprResult1                  OFFSET(get<T>, {0x250, 24, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x278, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$Howl.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$PatrolAround
 /// Size: 0x0CB0 (0x000140 - 0x000DF0)
 class Utask_CompanionAI_companion_creature_runtime_PatrolAround : public UConcurrency_task
@@ -8030,13 +8030,13 @@ public:
 	SMember(Ftuple_Lvector3_Mvector3_R)                _ExprResult26                                               OFFSET(get<T>, {0xD00, 48, 0, 0})
 	SMember(FSpatialMath_vector3)                      _ExprResult27                                               OFFSET(get<T>, {0xD30, 24, 0, 0})
 	CMember(TMap<$ExprResultStack, bool>)              _ExprResultStack23                                          OFFSET(get<T>, {0xD48, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$PatrolAround.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms|HasDefaults 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$SeekLKP_L_Nagent_M_Nfloat_R
 /// Size: 0x06B8 (0x000140 - 0x0007F8)
 class Utask_CompanionAI_companion_creature_runtime_SeekLKP_L_Nagent_M_Nfloat_R : public UConcurrency_task
@@ -8101,13 +8101,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask5                                                 OFFSET(get<T>, {0x7B0, 8, 0, 0})
 	DMember(int64_t)                                   _AsyncResult5                                               OFFSET(get<int64_t>, {0x7C8, 8, 0, 0})
 	CMember(EVerseTrue)                                _InvokeSureResultDummy3                                     OFFSET(get<T>, {0x7D0, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_companion_creature_runtime$SeekLKP_L_Nagent_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms|HasDefaults 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_default_ai_behavior$OnBegin
 /// Size: 0x0180 (0x000140 - 0x0002C0)
 class Utask_CompanionAI_default_ai_behavior_OnBegin : public UConcurrency_task
@@ -8144,13 +8144,13 @@ public:
 	CMember(UConcurrency_task*)                        _AsyncTask1                                                 OFFSET(get<T>, {0x298, 8, 0, 0})
 	SMember(Ftuple_L_R)                                _ExprResult15                                               OFFSET(get<T>, {0x2B0, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x2B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_default_ai_behavior$OnBegin.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_br_character_actions_interface$RunDefaultBehavior
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_CompanionAI_fort_br_character_actions_interface_RunDefaultBehavior : public UConcurrency_task
@@ -8162,13 +8162,13 @@ public:
 	CMember(UCompanionAI_fort_br_character_actions_interface*) _Self                                               OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_br_character_actions_interface$RunDefaultBehavior.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_br_creature_actions_interface$RunDefaultBehavior
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_CompanionAI_fort_br_creature_actions_interface_RunDefaultBehavior : public UConcurrency_task
@@ -8180,13 +8180,13 @@ public:
 	CMember(UCompanionAI_fort_br_creature_actions_interface*) _Self                                                OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_br_creature_actions_interface$RunDefaultBehavior.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_creature_component$RunDefaultBehavior
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_CompanionAI_fort_creature_component_RunDefaultBehavior : public UConcurrency_task
@@ -8198,13 +8198,13 @@ public:
 	CMember(UCompanionAI_fort_creature_component*)     _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_creature_component$RunDefaultBehavior.Update
 	// int64_t Update();                                                                                                        // [0x990e6e4] Native|Public|HasOutParms 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_npc_component$RunDefaultBehavior
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_CompanionAI_fort_npc_component_RunDefaultBehavior : public UConcurrency_task
@@ -8216,13 +8216,13 @@ public:
 	CMember(UCompanionAI_fort_npc_component*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(VerseAIBase_action_result)                 _RetVal                                                     OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_npc_component$RunDefaultBehavior.Update
 	// int64_t Update();                                                                                                        // [0x990e6ec] Native|Public|HasOutParms 
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_ping_interface$OnNPCCommand
 /// Size: 0x0050 (0x000140 - 0x000190)
 class Utask_CompanionAI_fort_ping_interface_OnNPCCommand : public UConcurrency_task
@@ -8233,13 +8233,13 @@ class Utask_CompanionAI_fort_ping_interface_OnNPCCommand : public UConcurrency_t
 public:
 	CMember(UCompanionAI_fort_ping_interface*)         _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_fort_ping_interface$OnNPCCommand.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_ping_component$OnNPCCommand
 /// Size: 0x0050 (0x000140 - 0x000190)
 class Utask_CompanionAI_ping_component_OnNPCCommand : public UConcurrency_task
@@ -8250,13 +8250,13 @@ class Utask_CompanionAI_ping_component_OnNPCCommand : public UConcurrency_task
 public:
 	CMember(UCompanionAI_ping_component*)              _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /CompanionAI/_Verse/VNI/CompanionAI.task_CompanionAI_ping_component$OnNPCCommand.Update
 	// int64_t Update();                                                                                                        // [0x990e6dc] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UDevices : public UObject
@@ -8266,8 +8266,6 @@ class UDevices : public UObject
 
 public:
 	CMember(UDevices_creative_prop_asset*)             __verse_0x88F30926_DefaultCreativePropAsset                 OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8313,6 +8311,8 @@ public:
 	// FDevices_device_ai_interaction_result Devices_device_ai_interaction_result$Factory();                                    // [0x1ebf994] Static|HasOutParms   
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_device
 /// Size: 0x00A0 (0x0000B0 - 0x000150)
 class UDevices_creative_device : public UVerseCreativeDevice
@@ -8321,8 +8321,6 @@ class UDevices_creative_device : public UVerseCreativeDevice
 	static inline constexpr uint64_t __MDKClassSize = 336;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8352,6 +8350,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_device.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_device_asset
 /// Size: 0x0000 (0x0000C8 - 0x0000C8)
 class UDevices_creative_device_asset : public UAssets_asset
@@ -8370,8 +8370,6 @@ class UDevices_creative_object : public UVerseCreativeObject
 	static inline constexpr uint64_t __MDKClassSize = 208;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8383,6 +8381,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_object.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_device_base
 /// Size: 0x0020 (0x0000D0 - 0x0000F0)
 class UDevices_creative_device_base : public UDevices_creative_object
@@ -8391,8 +8391,6 @@ class UDevices_creative_device_base : public UDevices_creative_object
 	static inline constexpr uint64_t __MDKClassSize = 240;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8406,6 +8404,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_device_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_object_interface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDevices_creative_object_interface : public UObject
@@ -8424,8 +8424,6 @@ class UDevices_creative_prop : public UDevices_creative_object
 	static inline constexpr uint64_t __MDKClassSize = 384;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8457,6 +8455,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_prop.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_creative_prop_asset
 /// Size: 0x0000 (0x000090 - 0x000090)
 class UDevices_creative_prop_asset : public UVerseCreativePropAsset
@@ -8499,8 +8499,6 @@ public:
 	CMember(UObject*)                                  __verse_0x1A3A2D49_KeyframeReachedEvent                     OFFSET(get<T>, {0x100, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0xEC8DE8C6_MovementCompleteEvent                    OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(UObject*)                                  __verse_0xDE60FD58_StateChangedEvent                        OFFSET(get<T>, {0x110, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -8536,6 +8534,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_CreativeAnimation_animation_controller.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_CreativeAnimation_animation_controller_debug_log
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDevices_CreativeAnimation_animation_controller_debug_log : public UDiagnostics_log_channel
@@ -8559,13 +8559,13 @@ public:
 	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xB345298C_EaseIn                          OFFSET(get<T>, {0x68, 32, 0, 0})
 	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0xF59E2BD2_EaseOut                         OFFSET(get<T>, {0x88, 32, 0, 0})
 	SMember(FDevices_CreativeAnimation_cubic_bezier_parameters) __verse_0x29A389AE_EaseInOut                       OFFSET(get<T>, {0xA8, 32, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_CreativeAnimation_InterpolationTypes.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_event
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UDevices_device_event : public UObject
@@ -8574,8 +8574,6 @@ class UDevices_device_event : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8585,6 +8583,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_event.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_event_agent
 /// Size: 0x0000 (0x000078 - 0x000078)
 class UDevices_device_event_agent : public UDevices_device_event
@@ -8613,8 +8613,6 @@ class UDevices_device_event_ai_interaction : public UDevices_device_event
 	static inline constexpr uint64_t __MDKClassSize = 152;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8628,6 +8626,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_event_ai_interaction.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_event_optional_agent
 /// Size: 0x0000 (0x000078 - 0x000078)
 class UDevices_device_event_optional_agent : public UDevices_device_event
@@ -8676,8 +8676,6 @@ class UDevices_device_function : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 88;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8691,6 +8689,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_base
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UDevices_device_function_get_base : public UObject
@@ -8699,8 +8699,6 @@ class UDevices_device_function_get_base : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8710,6 +8708,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_agent
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_agent : public UDevices_device_function_get_base
@@ -8718,8 +8718,6 @@ class UDevices_device_function_get_agent : public UDevices_device_function_get_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8731,6 +8729,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_agent.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_color
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_color : public UDevices_device_function_get_base
@@ -8739,8 +8739,6 @@ class UDevices_device_function_get_color : public UDevices_device_function_get_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8752,6 +8750,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_color.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_float
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_float : public UDevices_device_function_get_base
@@ -8760,8 +8760,6 @@ class UDevices_device_function_get_float : public UDevices_device_function_get_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8773,6 +8771,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_float.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_int
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_int : public UDevices_device_function_get_base
@@ -8781,8 +8781,6 @@ class UDevices_device_function_get_int : public UDevices_device_function_get_bas
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8794,6 +8792,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_int.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_logic
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_logic : public UDevices_device_function_get_base
@@ -8802,8 +8802,6 @@ class UDevices_device_function_get_logic : public UDevices_device_function_get_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8815,6 +8813,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_logic.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_string
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_string : public UDevices_device_function_get_base
@@ -8823,8 +8823,6 @@ class UDevices_device_function_get_string : public UDevices_device_function_get_
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8836,6 +8834,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_string.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_vector3
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_get_vector3 : public UDevices_device_function_get_base
@@ -8844,8 +8844,6 @@ class UDevices_device_function_get_vector3 : public UDevices_device_function_get
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8857,6 +8855,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_get_vector3.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_base
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UDevices_device_function_set_base : public UObject
@@ -8865,8 +8865,6 @@ class UDevices_device_function_set_base : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8876,6 +8874,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_agent
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_agent : public UDevices_device_function_set_base
@@ -8884,8 +8884,6 @@ class UDevices_device_function_set_agent : public UDevices_device_function_set_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8897,6 +8895,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_agent.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_color
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_color : public UDevices_device_function_set_base
@@ -8905,8 +8905,6 @@ class UDevices_device_function_set_color : public UDevices_device_function_set_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8918,6 +8916,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_color.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_float
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_float : public UDevices_device_function_set_base
@@ -8926,8 +8926,6 @@ class UDevices_device_function_set_float : public UDevices_device_function_set_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8939,6 +8937,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_float.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_int
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_int : public UDevices_device_function_set_base
@@ -8947,8 +8947,6 @@ class UDevices_device_function_set_int : public UDevices_device_function_set_bas
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8960,6 +8958,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_int.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_logic
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_logic : public UDevices_device_function_set_base
@@ -8968,8 +8968,6 @@ class UDevices_device_function_set_logic : public UDevices_device_function_set_b
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -8981,6 +8979,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_logic.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_message
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_message : public UDevices_device_function_set_base
@@ -8989,8 +8989,6 @@ class UDevices_device_function_set_message : public UDevices_device_function_set
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9002,6 +9000,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_message.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_multi_parameter_base
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_multi_parameter_base : public UDevices_device_function_set_base
@@ -9010,8 +9010,6 @@ class UDevices_device_function_set_multi_parameter_base : public UDevices_device
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9021,6 +9019,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_multi_parameter_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_name
 /// Size: 0x0060 (0x000048 - 0x0000A8)
 class UDevices_device_function_set_params_by_name : public UDevices_device_function_set_multi_parameter_base
@@ -9030,8 +9030,6 @@ class UDevices_device_function_set_params_by_name : public UDevices_device_funct
 
 public:
 	CMember(TMap<__verse_0x8F623C81_ParameterTypes, UClass*>) __verse_0x8F623C81_ParameterTypes                    OFFSET(get<T>, {0x58, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9043,6 +9041,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_name.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_name_const
 /// Size: 0x0010 (0x0000A8 - 0x0000B8)
 class UDevices_device_function_set_params_by_name_const : public UDevices_device_function_set_params_by_name
@@ -9051,8 +9051,6 @@ class UDevices_device_function_set_params_by_name_const : public UDevices_device
 	static inline constexpr uint64_t __MDKClassSize = 184;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9064,6 +9062,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_name_const.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_type
 /// Size: 0x0020 (0x000048 - 0x000068)
 class UDevices_device_function_set_params_by_type : public UDevices_device_function_set_multi_parameter_base
@@ -9073,8 +9073,6 @@ class UDevices_device_function_set_params_by_type : public UDevices_device_funct
 
 public:
 	CMember(TArray<UClass*>)                           __verse_0x8F623C81_ParameterTypes                           OFFSET(get<T>, {0x58, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9086,6 +9084,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_type.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_type_const
 /// Size: 0x0010 (0x000068 - 0x000078)
 class UDevices_device_function_set_params_by_type_const : public UDevices_device_function_set_params_by_type
@@ -9094,8 +9094,6 @@ class UDevices_device_function_set_params_by_type_const : public UDevices_device
 	static inline constexpr uint64_t __MDKClassSize = 120;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9107,6 +9105,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_params_by_type_const.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_string
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_string : public UDevices_device_function_set_base
@@ -9115,8 +9115,6 @@ class UDevices_device_function_set_string : public UDevices_device_function_set_
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9128,6 +9126,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_string.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_vector3
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UDevices_device_function_set_vector3 : public UDevices_device_function_set_base
@@ -9136,8 +9136,6 @@ class UDevices_device_function_set_vector3 : public UDevices_device_function_set
 	static inline constexpr uint64_t __MDKClassSize = 72;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9149,6 +9147,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_function_set_vector3.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_subscription
 /// Size: 0x0040 (0x000028 - 0x000068)
 class UDevices_device_subscription : public UObject
@@ -9157,8 +9157,6 @@ class UDevices_device_subscription : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9170,6 +9168,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_device_subscription.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_base
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDevices_function_parameter_base : public UObject
@@ -9188,8 +9188,6 @@ class UDevices_function_parameter_agent : public UDevices_function_parameter_bas
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9199,6 +9197,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_agent.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_color
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UDevices_function_parameter_color : public UDevices_function_parameter_base
@@ -9208,8 +9208,6 @@ class UDevices_function_parameter_color : public UDevices_function_parameter_bas
 
 public:
 	SMember(FColors_color)                             __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9219,6 +9217,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_color.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_float
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UDevices_function_parameter_float : public UDevices_function_parameter_base
@@ -9228,8 +9228,6 @@ class UDevices_function_parameter_float : public UDevices_function_parameter_bas
 
 public:
 	DMember(double)                                    __verse_0x31A8F10C_Value                                    OFFSET(get<double>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9239,6 +9237,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_float.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_int
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UDevices_function_parameter_int : public UDevices_function_parameter_base
@@ -9248,8 +9248,6 @@ class UDevices_function_parameter_int : public UDevices_function_parameter_base
 
 public:
 	DMember(int64_t)                                   __verse_0x31A8F10C_Value                                    OFFSET(get<int64_t>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9259,6 +9257,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_int.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_logic
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UDevices_function_parameter_logic : public UDevices_function_parameter_base
@@ -9268,8 +9268,6 @@ class UDevices_function_parameter_logic : public UDevices_function_parameter_bas
 
 public:
 	DMember(bool)                                      __verse_0x31A8F10C_Value                                    OFFSET(get<bool>, {0x28, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -9279,6 +9277,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_logic.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_message
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UDevices_function_parameter_message : public UDevices_function_parameter_base
@@ -9287,8 +9287,6 @@ class UDevices_function_parameter_message : public UDevices_function_parameter_b
 	static inline constexpr uint64_t __MDKClassSize = 48;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9298,6 +9296,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_message.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_string
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UDevices_function_parameter_string : public UDevices_function_parameter_base
@@ -9306,8 +9306,6 @@ class UDevices_function_parameter_string : public UDevices_function_parameter_ba
 	static inline constexpr uint64_t __MDKClassSize = 56;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9317,6 +9315,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_string.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_vector3
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UDevices_function_parameter_vector3 : public UDevices_function_parameter_base
@@ -9326,8 +9326,6 @@ class UDevices_function_parameter_vector3 : public UDevices_function_parameter_b
 
 public:
 	SMember(FSpatialMath_vector3)                      __verse_0x31A8F10C_Value                                    OFFSET(get<T>, {0x28, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9337,6 +9335,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.Devices_function_parameter_vector3.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.Devices_move_to_debug_log
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDevices_move_to_debug_log : public UDiagnostics_log_channel
@@ -9379,13 +9379,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x3A0, 1, 0, 0})
 	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x3B0, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x420, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices$operator_U_2eMoveToInternal_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Ltransform_Mfloat_R_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices$operator_U_2eMoveToInternal_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Lvector3_Mrotation_Mfloat_R_R
 /// Size: 0x03C8 (0x000140 - 0x000508)
 class Utask_Devices_operator_U_2eMoveToInternal_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Lvector3_Mrotation_Mfloat_R_R : public UConcurrency_task
@@ -9414,13 +9414,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult10                                               OFFSET(get<T>, {0x480, 1, 0, 0})
 	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult11                                               OFFSET(get<T>, {0x490, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x500, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices$operator_U_2eMoveToInternal_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Lvector3_Mrotation_Mfloat_R_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices$operator_U_2eMoveToInternalImpl_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Ltransform_Mfloat_R_R
 /// Size: 0x0C28 (0x000140 - 0x000D68)
 class Utask_Devices_operator_U_2eMoveToInternalImpl_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Ltransform_Mfloat_R_R : public UConcurrency_task
@@ -9485,13 +9485,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult19                                               OFFSET(get<T>, {0xBE8, 1, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0xBF0, 8, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) __verse_0x00000000_7                             OFFSET(get<T>, {0xBF8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices$operator_U_2eMoveToInternalImpl_U_L_Ncreative__movable__object__base_M_Ntuple_L_R_M_Ntuple_Ltransform_Mfloat_R_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_device$MoveTo_L_Ntransform_M_Nfloat_R
 /// Size: 0x02C8 (0x000140 - 0x000408)
 class Utask_Devices_creative_device_MoveTo_L_Ntransform_M_Nfloat_R : public UConcurrency_task
@@ -9513,13 +9513,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x380, 1, 0, 0})
 	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x390, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x400, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_device$MoveTo_L_Ntransform_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_device$MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R
 /// Size: 0x0228 (0x000140 - 0x000368)
 class Utask_Devices_creative_device_MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R : public UConcurrency_task
@@ -9541,13 +9541,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x300, 1, 0, 0})
 	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult5                                                OFFSET(get<T>, {0x310, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x360, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_device$MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_device$OnBegin
 /// Size: 0x0009 (0x000140 - 0x000149)
 class Utask_Devices_creative_device_OnBegin : public UConcurrency_task
@@ -9558,13 +9558,13 @@ class Utask_Devices_creative_device_OnBegin : public UConcurrency_task
 public:
 	CMember(UDevices_creative_device*)                 _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_device$OnBegin.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_prop$MoveTo_L_Ntransform_M_Nfloat_R
 /// Size: 0x02C8 (0x000140 - 0x000408)
 class Utask_Devices_creative_prop_MoveTo_L_Ntransform_M_Nfloat_R : public UConcurrency_task
@@ -9586,13 +9586,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x380, 1, 0, 0})
 	SMember(Ftuple_Ltransform_Mfloat_R)                _ExprResult5                                                OFFSET(get<T>, {0x390, 112, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x400, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_prop$MoveTo_L_Ntransform_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_prop$MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R
 /// Size: 0x0228 (0x000140 - 0x000368)
 class Utask_Devices_creative_prop_MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R : public UConcurrency_task
@@ -9614,13 +9614,13 @@ public:
 	SMember(Ftuple_L_R)                                _ExprResult4                                                OFFSET(get<T>, {0x300, 1, 0, 0})
 	SMember(Ftuple_Lvector3_Mrotation_Mfloat_R)        _ExprResult5                                                OFFSET(get<T>, {0x310, 80, 0, 0})
 	DMember(int64_t)                                   _AsyncResult1                                               OFFSET(get<int64_t>, {0x360, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_creative_prop$MoveTo_L_Nvector3_M_Nrotation_M_Nfloat_R.Update
 	// int64_t Update();                                                                                                        // [0x1ebf994] Public|HasOutParms   
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_CreativeAnimation_animation_controller$AwaitNextKeyframe
 /// Size: 0x000A (0x000140 - 0x00014A)
 class Utask_Devices_CreativeAnimation_animation_controller_AwaitNextKeyframe : public UConcurrency_task
@@ -9632,13 +9632,13 @@ public:
 	CMember(UDevices_CreativeAnimation_animation_controller*) _Self                                                OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(Devices_CreativeAnimation_await_next_keyframe_result) _RetVal                                          OFFSET(get<T>, {0x149, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_CreativeAnimation_animation_controller$AwaitNextKeyframe.Update
 	// int64_t Update();                                                                                                        // [0x97b0fbc] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_agent$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_agent_Await : public UConcurrency_task
@@ -9649,13 +9649,13 @@ class Utask_Devices_device_event_agent_Await : public UConcurrency_task
 public:
 	CMember(UDevices_device_event_agent*)              _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_agent$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0fc4] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_agent_int$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_agent_int_Await : public UConcurrency_task
@@ -9666,13 +9666,13 @@ class Utask_Devices_device_event_agent_int_Await : public UConcurrency_task
 public:
 	CMember(UDevices_device_event_agent_int*)          _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_agent_int$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0fcc] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_ai_interaction$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_ai_interaction_Await : public UConcurrency_task
@@ -9683,13 +9683,13 @@ class Utask_Devices_device_event_ai_interaction_Await : public UConcurrency_task
 public:
 	CMember(UDevices_device_event_ai_interaction*)     _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_ai_interaction$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0fd4] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_optional_agent$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_optional_agent_Await : public UConcurrency_task
@@ -9700,13 +9700,13 @@ class Utask_Devices_device_event_optional_agent_Await : public UConcurrency_task
 public:
 	CMember(UDevices_device_event_optional_agent*)     _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_optional_agent$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0fdc] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_optional_agent_int$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_optional_agent_int_Await : public UConcurrency_task
@@ -9717,13 +9717,13 @@ class Utask_Devices_device_event_optional_agent_int_Await : public UConcurrency_
 public:
 	CMember(UDevices_device_event_optional_agent_int*) _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_optional_agent_int$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0fe4] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_vehicle$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_vehicle_Await : public UConcurrency_task
@@ -9734,13 +9734,13 @@ class Utask_Devices_device_event_vehicle_Await : public UConcurrency_task
 public:
 	CMember(UDevices_device_event_vehicle*)            _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_vehicle$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0fec] Native|Public|HasOutParms 
+};
+
 /// Class /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_void$Await
 /// Size: 0x0020 (0x000140 - 0x000160)
 class Utask_Devices_device_event_void_Await : public UConcurrency_task
@@ -9751,13 +9751,13 @@ class Utask_Devices_device_event_void_Await : public UConcurrency_task
 public:
 	CMember(UDevices_device_event_void*)               _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseDevices/_Verse/VNI/VerseDevices.task_Devices_device_event_void$Await.Update
 	// int64_t Update();                                                                                                        // [0x97b0ff4] Native|Public|HasOutParms 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_fort_building_settings_component
 /// Size: 0x0050 (0x000088 - 0x0000D8)
 class UGame_fort_building_settings_component : public UFortBuildingSettingsComponentBase
@@ -9766,8 +9766,6 @@ class UGame_fort_building_settings_component : public UFortBuildingSettingsCompo
 	static inline constexpr uint64_t __MDKClassSize = 216;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9787,6 +9785,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_fort_building_settings_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_fort_item_definition
 /// Size: 0x0000 (0x0000C8 - 0x0000C8)
 class UGame_fort_item_definition : public UAssets_asset
@@ -9805,8 +9805,6 @@ class UGame_fort_playspace_component : public UPlayspace_playspace_component
 	static inline constexpr uint64_t __MDKClassSize = 368;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9818,6 +9816,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_fort_playspace_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_fortnite_building_component
 /// Size: 0x0058 (0x000058 - 0x0000B0)
 class UGame_fortnite_building_component : public UEntityComponent
@@ -9826,8 +9826,6 @@ class UGame_fortnite_building_component : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9847,6 +9845,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_fortnite_building_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Item_item_type
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UGame_Item_item_type : public UObject
@@ -9865,8 +9865,6 @@ class UGame_Item_player_pickup_component : public UEntityComponent
 	static inline constexpr uint64_t __MDKClassSize = 176;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9886,6 +9884,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Item_player_pickup_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Item_PlayerPickupComponent
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGame_Item_PlayerPickupComponent : public UObject
@@ -9904,8 +9904,6 @@ class UGame_Movement_projectile_movement_component : public UVerseFortniteMoveme
 	static inline constexpr uint64_t __MDKClassSize = 232;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9927,6 +9925,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Movement_projectile_movement_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGame_Player : public UObject
@@ -9946,8 +9946,6 @@ class UGame_player_eliminated_result : public UObject
 
 public:
 	CMember(USimulation_player_component*)             __verse_0x7C71103B_EliminatedPlayer                         OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -9957,6 +9955,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_player_eliminated_result.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player_fort_player_component
 /// Size: 0x0040 (0x0000E0 - 0x000120)
 class UGame_Player_fort_player_component : public USimulation_player_component
@@ -9965,8 +9965,6 @@ class UGame_Player_fort_player_component : public USimulation_player_component
 	static inline constexpr uint64_t __MDKClassSize = 288;
 
 public:
-};
-
 
 
 	/// Functions
@@ -9984,6 +9982,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player_fort_player_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player_player_start_component
 /// Size: 0x0030 (0x000058 - 0x000088)
 class UGame_Player_player_start_component : public UEntityComponent
@@ -9993,8 +9993,6 @@ class UGame_Player_player_start_component : public UEntityComponent
 
 public:
 	CMember(TArray<__verse_0x7C32BFF7_tags>)           __verse_0x7C32BFF7_tags                                     OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10008,6 +10006,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player_player_start_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_Player_PlayerAttributes
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGame_Player_PlayerAttributes : public UObject
@@ -10116,8 +10116,6 @@ class UGame_stat_container : public UObject
 	static inline constexpr uint64_t __MDKClassSize = 104;
 
 public:
-};
-
 
 
 	/// Functions
@@ -10133,6 +10131,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_stat_container.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_match_stats
 /// Size: 0x00F0 (0x000068 - 0x000158)
 class UGame_match_stats : public UGame_stat_container
@@ -10141,8 +10141,6 @@ class UGame_match_stats : public UGame_stat_container
 	static inline constexpr uint64_t __MDKClassSize = 344;
 
 public:
-};
-
 
 
 	/// Functions
@@ -10172,6 +10170,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_match_stats.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_player_stat_values
 /// Size: 0x0008 (0x000068 - 0x000070)
 class UGame_player_stat_values : public UGame_stat_container
@@ -10181,8 +10181,6 @@ class UGame_player_stat_values : public UGame_stat_container
 
 public:
 	CMember(USimulation_player*)                       __verse_0xDEE8E111_OwningPlayer                             OFFSET(get<T>, {0x68, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10192,6 +10190,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_player_stat_values.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_StormController_storm_controller_component
 /// Size: 0x0080 (0x000068 - 0x0000E8)
 class UGame_StormController_storm_controller_component : public UEntityFortniteStormControllerComponent
@@ -10203,8 +10203,6 @@ public:
 	DMember(double)                                    __verse_0xA5122212_startRadius                              OFFSET(get<double>, {0xC8, 8, 0, 0})
 	DMember(double)                                    __verse_0xE6BD5D91_boundsRadius                             OFFSET(get<double>, {0xD0, 8, 0, 0})
 	CMember(TArray<UGame_StormController_storm_phase*>) __verse_0xC2790393_phases                                  OFFSET(get<T>, {0xD8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10226,6 +10224,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_StormController_storm_controller_component.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_StormController_storm_phase
 /// Size: 0x0068 (0x000028 - 0x000090)
 class UGame_StormController_storm_phase : public UObject
@@ -10245,8 +10245,6 @@ public:
 	DMember(double)                                    __verse_0xDA5EE7C4_minMovementDistancePercentage            OFFSET(get<double>, {0x68, 8, 0, 0})
 	DMember(double)                                    __verse_0x7B63CDBA_maxMovementDistancePercentage            OFFSET(get<double>, {0x70, 8, 0, 0})
 	SMember(FSpatialMath_vector3)                      __verse_0xD6F5A7B7_endLocation                              OFFSET(get<T>, {0x78, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10256,6 +10254,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_StormController_storm_phase.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_team_stat_values
 /// Size: 0x0088 (0x000068 - 0x0000F0)
 class UGame_team_stat_values : public UGame_stat_container
@@ -10265,8 +10265,6 @@ class UGame_team_stat_values : public UGame_stat_container
 
 public:
 	SMember(FGame_Player_player_team)                  __verse_0x555B2F95_Team                                     OFFSET(get<T>, {0xE8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10282,6 +10280,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_team_stat_values.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.Game_VerseFortniteHacks
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGame_VerseFortniteHacks : public UObject
@@ -10303,13 +10303,13 @@ public:
 	CMember(UGame_fort_playspace_component*)           _Self                                                       OFFSET(get<T>, {0x140, 8, 0, 0})
 	SMember(Ftuple_L_R)                                __verse_0xB2CDDD72_Argument                                 OFFSET(get<T>, {0x148, 1, 0, 0})
 	CMember(UGame_player_eliminated_result*)           _RetVal                                                     OFFSET(get<T>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /VerseFortniteInternal/_Verse/VNI/VerseFortniteInternal.task_Game_fort_playspace_component$__WaitForPlayerEliminated.Update
 	// int64_t Update();                                                                                                        // [0x97c8328] Native|Public|HasOutParms 
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_editable_text_base
 /// Size: 0x00B0 (0x000168 - 0x000218)
 class UUI_editable_text_base : public UUI_text_base
@@ -10319,8 +10319,6 @@ class UUI_editable_text_base : public UUI_text_base
 
 public:
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x90B514C1_OnTextCommittedInternal                  OFFSET(get<T>, {0x210, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10332,6 +10330,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_editable_text_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_editable_text
 /// Size: 0x0000 (0x000218 - 0x000218)
 class UUI_editable_text : public UUI_editable_text_base
@@ -10370,8 +10370,6 @@ class UUI_fort_playspace_hud_controller_impl : public UVerseFortnitePlayspaceHUD
 	static inline constexpr uint64_t __MDKClassSize = 224;
 
 public:
-};
-
 
 
 	/// Functions
@@ -10387,6 +10385,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_fort_playspace_hud_controller_impl.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_hud_element_identifier
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UUI_hud_element_identifier : public UObject
@@ -10406,8 +10406,6 @@ class UUI_hud_element_game_phase_identifier_base : public UUI_hud_element_identi
 
 public:
 	DMember(int64_t)                                   __verse_0xFD438257_InternalIndex                            OFFSET(get<int64_t>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10417,6 +10415,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_hud_element_game_phase_identifier_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_hud_element_gameplay_tag_identifier_base
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UUI_hud_element_gameplay_tag_identifier_base : public UUI_hud_element_identifier
@@ -10426,8 +10426,6 @@ class UUI_hud_element_gameplay_tag_identifier_base : public UUI_hud_element_iden
 
 public:
 	DMember(bool)                                      __verse_0xAD653F0E_TreatAsChildTagCollection                OFFSET(get<bool>, {0x38, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -10437,6 +10435,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_hud_element_gameplay_tag_identifier_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_creative_hud_identifier_all
 /// Size: 0x0000 (0x000060 - 0x000060)
 class UUI_creative_hud_identifier_all : public UUI_hud_element_gameplay_tag_identifier_base
@@ -10706,8 +10706,6 @@ class UUI_hud_element_world_resource_identifier_base : public UUI_hud_element_id
 
 public:
 	DMember(int64_t)                                   __verse_0xFD438257_InternalIndex                            OFFSET(get<int64_t>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10717,6 +10715,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_hud_element_world_resource_identifier_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] None                 
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_hud_identifier_game_phase_bus_flying
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UUI_hud_identifier_game_phase_bus_flying : public UUI_hud_element_game_phase_identifier_base
@@ -10910,8 +10910,6 @@ public:
 	DMember(double)                                    __verse_0xADAE7DFC_DefaultMaxValue                          OFFSET(get<double>, {0x138, 8, 0, 0})
 	DMember(double)                                    __verse_0x8F4BE3BB_DefaultStepSize                          OFFSET(get<double>, {0x140, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0xDA7EA268_OnValueChangedInternal                   OFFSET(get<T>, {0x148, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10939,6 +10937,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_slider_regular.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_text_block
 /// Size: 0x0098 (0x000168 - 0x000200)
 class UUI_text_block : public UUI_text_base
@@ -10948,8 +10948,6 @@ class UUI_text_block : public UUI_text_base
 
 public:
 	SMember(FColors_color)                             __verse_0xAD85CEA8_DefaultShadowColor                       OFFSET(get<T>, {0x1E0, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10971,6 +10969,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_text_block.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_text_button_base
 /// Size: 0x0040 (0x000098 - 0x0000D8)
 class UUI_text_button_base : public UUI_widget
@@ -10981,8 +10981,6 @@ class UUI_text_button_base : public UUI_widget
 public:
 	CMember(UVerse_message*)                           __verse_0xEDB05B46_DefaultText                              OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(UVerseEngine_subscribable_event*)          __verse_0x6B2BB37E_OnClickInternal                          OFFSET(get<T>, {0xD0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -10998,6 +10996,8 @@ public:
 	// void $Block();                                                                                                           // [0x1ebf994] None                 
 	// Function /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_text_button_base.$InitCDO
 	// void $InitCDO();                                                                                                         // [0x1ebf994] HasDefaults          
+};
+
 /// Class /VerseFortniteUI/_Verse/VNI/VerseFortniteUI.UI_button_loud
 /// Size: 0x0000 (0x0000D8 - 0x0000D8)
 class UUI_button_loud : public UUI_text_button_base
@@ -11964,6 +11964,41 @@ public:
 	CMember(UTags_tag*)                                __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
 };
 
+/// Struct /VerseEngine/_Verse/VNI/VerseAssets.tuple_Lany_M_Kchar_R
+/// Size: 0x0018 (0x000000 - 0x000018)
+class Ftuple_Lany_M_Kchar_R : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 24;
+
+public:
+	CMember(UClass*)                                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+};
+
+/// Struct /VerseEngine/_Verse/VNI/VerseEngine.tuple_Lcomponent_Many_R
+/// Size: 0x0010 (0x000000 - 0x000010)
+class Ftuple_Lcomponent_Many_R : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(UEntityComponent*)                         __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
+};
+
+/// Struct /VerseSimulation/_Verse/VNI/VerseSimulation.tuple_Lplayer__component_Many_R
+/// Size: 0x0010 (0x000000 - 0x000010)
+class Ftuple_Lplayer__component_Many_R : public MDKStruct
+{ 
+	friend MDKBase;
+	static inline constexpr uint64_t __MDKClassSize = 16;
+
+public:
+	CMember(USimulation_player_component*)             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
+	CMember(UClass*)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
+};
+
 /// Struct /VerseExperimental/_Verse/VNI/VerseExperimental.tuple_Ldate__time_Mdate__time_R
 /// Size: 0x0010 (0x000000 - 0x000010)
 class Ftuple_Ldate__time_Mdate__time_R : public MDKStruct
@@ -12105,41 +12140,6 @@ class FVerseExperimental_time_span : public MDKStruct
 
 public:
 	DMember(int64_t)                                   __verse_0xD9F5FBDB_Ticks                                    OFFSET(get<int64_t>, {0x0, 8, 0, 0})
-};
-
-/// Struct /VerseEngine/_Verse/VNI/VerseEngine.tuple_Lcomponent_Many_R
-/// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lcomponent_Many_R : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
-
-public:
-	CMember(UEntityComponent*)                         __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UClass*)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
-};
-
-/// Struct /VerseSimulation/_Verse/VNI/VerseSimulation.tuple_Lplayer__component_Many_R
-/// Size: 0x0010 (0x000000 - 0x000010)
-class Ftuple_Lplayer__component_Many_R : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 16;
-
-public:
-	CMember(USimulation_player_component*)             __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
-	CMember(UClass*)                                   __verse_0x7D844C3C_Elem1                                    OFFSET(get<T>, {0x8, 8, 0, 0})
-};
-
-/// Struct /VerseEngine/_Verse/VNI/VerseAssets.tuple_Lany_M_Kchar_R
-/// Size: 0x0018 (0x000000 - 0x000018)
-class Ftuple_Lany_M_Kchar_R : public MDKStruct
-{ 
-	friend MDKBase;
-	static inline constexpr uint64_t __MDKClassSize = 24;
-
-public:
-	CMember(UClass*)                                   __verse_0x18E3F084_Elem0                                    OFFSET(get<T>, {0x0, 8, 0, 0})
 };
 
 /// Struct /VGameplayRst/_Verse/VNI/VGameplayRst.tuple_L_Kchar_Mtransform_M_Kchar_R

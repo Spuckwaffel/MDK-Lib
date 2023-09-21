@@ -22,8 +22,6 @@ class UAudioComponentBase : public UEntityActorComponent
 public:
 	CMember(UVerseAssetPtr*)                           SoundAsset                                                  OFFSET(get<T>, {0x88, 8, 0, 0})
 	SMember(FActiveSoundInfo)                          ActiveSoundInfo                                             OFFSET(get<T>, {0x90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,6 +29,8 @@ public:
 	// void OnRep_SoundAsset();                                                                                                 // [0x9724cec] Final|Native|Protected 
 	// Function /Script/VGameplayRst.AudioComponentBase.OnRep_ActiveSoundInfo
 	// void OnRep_ActiveSoundInfo();                                                                                            // [0x9724af0] Final|Native|Protected 
+};
+
 /// Class /Script/VGameplayRst.ControllerStateComponent
 /// Size: 0x0030 (0x0000A0 - 0x0000D0)
 class UControllerStateComponent : public UControllerComponent
@@ -40,13 +40,13 @@ class UControllerStateComponent : public UControllerComponent
 
 public:
 	CMember(TArray<FString>)                           ActiveStates                                                OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VGameplayRst.ControllerStateComponent.OnRep_ActiveStates
 	// void OnRep_ActiveStates();                                                                                               // [0x9724b20] Final|Native|Private 
+};
+
 /// Class /Script/VGameplayRst.DatastoreComponentBase
 /// Size: 0x0140 (0x0000D0 - 0x000210)
 class UDatastoreComponentBase : public UEntityActorPlayerComponent
@@ -78,8 +78,6 @@ class UVerseLevelStreamingComponentBase : public UEntityActorComponent
 public:
 	SMember(FVerseLevelStreamingLevelIdentifier)       NewLevel                                                    OFFSET(get<T>, {0x88, 40, 0, 0})
 	SMember(FVerseLevelStreamingLevelStatus)           LevelStatus                                                 OFFSET(get<T>, {0xB0, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -93,6 +91,8 @@ public:
 	// void OnLevelShown_Server();                                                                                              // [0x9724ab4] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseLevelStreamingComponentBase.OnLevelShown_Client
 	// void OnLevelShown_Client();                                                                                              // [0x9724aa0] Final|Native|Public  
+};
+
 /// Class /Script/VGameplayRst.PointLightComponentBase
 /// Size: 0x0008 (0x000088 - 0x000090)
 class UPointLightComponentBase : public UEntityActorComponent
@@ -126,8 +126,6 @@ public:
 	DMember(float)                                     Intensity                                                   OFFSET(get<float>, {0x28, 4, 0, 0})
 	SMember(FLinearColor)                              LightColor                                                  OFFSET(get<T>, {0x2C, 16, 0, 0})
 	CMember(ULightComponentBase*)                      LightComponent                                              OFFSET(get<T>, {0x40, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -137,6 +135,8 @@ public:
 	// void OnRep_LightColor();                                                                                                 // [0x9724bd0] Final|Native|Protected 
 	// Function /Script/VGameplayRst.VerseLightPropertiesBase.OnRep_Intensity
 	// void OnRep_Intensity();                                                                                                  // [0x9724b9c] Final|Native|Protected 
+};
+
 /// Class /Script/VGameplayRst.VerseLocalLightProperties
 /// Size: 0x0008 (0x000048 - 0x000050)
 class UVerseLocalLightProperties : public UVerseLightPropertiesBase
@@ -146,13 +146,13 @@ class UVerseLocalLightProperties : public UVerseLightPropertiesBase
 
 public:
 	DMember(float)                                     AttenuationRadius                                           OFFSET(get<float>, {0x48, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VGameplayRst.VerseLocalLightProperties.OnRep_AttenuationRadius
 	// void OnRep_AttenuationRadius();                                                                                          // [0x9724b34] Final|Native|Protected 
+};
+
 /// Class /Script/VGameplayRst.VersePointLightProperties
 /// Size: 0x0008 (0x000050 - 0x000058)
 class UVersePointLightProperties : public UVerseLocalLightProperties
@@ -163,8 +163,6 @@ class UVersePointLightProperties : public UVerseLocalLightProperties
 public:
 	DMember(float)                                     SourceRadius                                                OFFSET(get<float>, {0x50, 4, 0, 0})
 	DMember(float)                                     SourceLength                                                OFFSET(get<float>, {0x54, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -172,6 +170,8 @@ public:
 	// void OnRep_SourceRadius();                                                                                               // [0x9724d48] Final|Native|Public  
 	// Function /Script/VGameplayRst.VersePointLightProperties.OnRep_SourceLength
 	// void OnRep_SourceLength();                                                                                               // [0x9724d14] Final|Native|Public  
+};
+
 /// Class /Script/VGameplayRst.VerseSpotLightProperties
 /// Size: 0x0008 (0x000058 - 0x000060)
 class UVerseSpotLightProperties : public UVersePointLightProperties
@@ -182,8 +182,6 @@ class UVerseSpotLightProperties : public UVersePointLightProperties
 public:
 	DMember(float)                                     InnerConeAngle                                              OFFSET(get<float>, {0x58, 4, 0, 0})
 	DMember(float)                                     OuterConeAngle                                              OFFSET(get<float>, {0x5C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -191,6 +189,8 @@ public:
 	// void OnRep_OuterConeAngle();                                                                                             // [0x9724ca4] Final|Native|Public  
 	// Function /Script/VGameplayRst.VerseSpotLightProperties.OnRep_InnerConeAngle
 	// void OnRep_InnerConeAngle();                                                                                             // [0x9724b68] Final|Native|Public  
+};
+
 /// Class /Script/VGameplayRst.ParticleSystemComponentBase
 /// Size: 0x0010 (0x000088 - 0x000098)
 class UParticleSystemComponentBase : public UEntityActorComponent
@@ -201,8 +201,6 @@ class UParticleSystemComponentBase : public UEntityActorComponent
 public:
 	CMember(UVerseAssetPtr*)                           ParticleSystemAsset                                         OFFSET(get<T>, {0x88, 8, 0, 0})
 	DMember(bool)                                      bActive                                                     OFFSET(get<bool>, {0x90, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -210,6 +208,8 @@ public:
 	// void OnRep_ParticleSystemAsset();                                                                                        // [0x9724cd8] Final|Native|Protected 
 	// Function /Script/VGameplayRst.ParticleSystemComponentBase.OnRep_bActive
 	// void OnRep_bActive();                                                                                                    // [0x9724d7c] Final|Native|Protected 
+};
+
 /// Struct /Script/VGameplayRst.ActiveSoundInfo
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FActiveSoundInfo : public MDKStruct

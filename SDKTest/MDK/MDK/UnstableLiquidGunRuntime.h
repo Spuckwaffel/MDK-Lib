@@ -33,8 +33,6 @@ public:
 	DMember(bool)                                      bDrawDebugCollision                                         OFFSET(get<bool>, {0xB88, 1, 0, 0})
 	DMember(bool)                                      bDrawDebugCollisionOnlyCapsuleTraceHits                     OFFSET(get<bool>, {0xB89, 1, 0, 0})
 	CMember(ELiquidRibbonDetachmentReason)             DetachmentReason                                            OFFSET(get<T>, {0xB8A, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -44,6 +42,8 @@ public:
 	// void HandleSplineHit(FHitResult& Hit);                                                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/UnstableLiquidGunRuntime.FortLiquidGunProjectile.GetDetachmentReason
 	// ELiquidRibbonDetachmentReason GetDetachmentReason();                                                                     // [0x9e913e4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/UnstableLiquidGunRuntime.LiquidRibbonManager
 /// Size: 0x01B8 (0x000290 - 0x000448)
 class ALiquidRibbonManager : public AActor
@@ -83,8 +83,6 @@ public:
 	CMember(TArray<FLiquidRibbonSplineDetachment>)     Detachments                                                 OFFSET(get<T>, {0x418, 16, 0, 0})
 	CMember(TArray<FLiquidRibbonSplineSegment>)        SplineSegments                                              OFFSET(get<T>, {0x428, 16, 0, 0})
 	CMember(TArray<AFortLiquidGunProjectile*>)         Projectiles_Native                                          OFFSET(get<T>, {0x438, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -106,6 +104,8 @@ public:
 	// float CalculatePointSize(int32_t SegmentIndex, int32_t PointIndex);                                                      // [0x9e906f4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/UnstableLiquidGunRuntime.LiquidRibbonManager.CalculatePointFlashIntensity
 	// float CalculatePointFlashIntensity(int32_t PointSize);                                                                   // [0x9e90664] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/UnstableLiquidGunRuntime.LiquidRibbonSplineSegment
 /// Size: 0x0078 (0x000000 - 0x000078)
 class FLiquidRibbonSplineSegment : public MDKStruct

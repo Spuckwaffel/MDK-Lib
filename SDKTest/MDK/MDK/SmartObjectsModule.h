@@ -106,13 +106,13 @@ public:
 	CMember(USmartObjectDefinition*)                   DefinitionAsset                                             OFFSET(get<T>, {0x2C8, 8, 0, 0})
 	SMember(FSmartObjectHandle)                        RegisteredHandle                                            OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	DMember(bool)                                      bCanBePartOfCollection                                      OFFSET(get<bool>, {0x2E8, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/SmartObjectsModule.SmartObjectComponent.ReceiveOnEvent
 	// void ReceiveOnEvent(FSmartObjectEventData& EventData, AActor* Interactor);                                               // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/SmartObjectsModule.SmartObjectContainerRenderingComponent
 /// Size: 0x0000 (0x000570 - 0x000570)
 class USmartObjectContainerRenderingComponent : public UPrimitiveComponent
@@ -228,8 +228,6 @@ public:
 	CMember(TMap<FSmartObjectHandle, FSmartObjectRuntime>) RuntimeSmartObjects                                     OFFSET(get<T>, {0x120, 80, 0, 0})
 	CMember(TArray<USmartObjectComponent*>)            RegisteredSOComponents                                      OFFSET(get<T>, {0x170, 16, 0, 0})
 	CMember(TArray<USmartObjectComponent*>)            PendingSmartObjectRegistration                              OFFSET(get<T>, {0x180, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -275,6 +273,8 @@ public:
 	// void AddTagToSlot(FSmartObjectSlotHandle SlotHandle, FGameplayTag& tag);                                                 // [0x741be28] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/SmartObjectsModule.SmartObjectSubsystem.AddTagToInstance
 	// void AddTagToInstance(FSmartObjectHandle Handle, FGameplayTag& tag);                                                     // [0x741bc70] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/SmartObjectsModule.SmartObjectSubsystemRenderingComponent
 /// Size: 0x0000 (0x0005C0 - 0x0005C0)
 class USmartObjectSubsystemRenderingComponent : public USmartObjectDebugRenderingComponent
@@ -341,8 +341,6 @@ public:
 	CMember(USmartObjectTestRenderingComponent*)       RenderingComponent                                          OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	CMember(USmartObjectSubsystem*)                    SmartObjectSubsystem                                        OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	DMember(bool)                                      bRunTestsEachFrame                                          OFFSET(get<bool>, {0x2B0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -350,6 +348,8 @@ public:
 	// void RunTests();                                                                                                         // [0x741e9e4] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/SmartObjectsModule.SmartObjectTestingActor.ResetTests
 	// void ResetTests();                                                                                                       // [0x741e988] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/SmartObjectsModule.SmartObjectSlotValidationFilter
 /// Size: 0x00E8 (0x000028 - 0x000110)
 class USmartObjectSlotValidationFilter : public UObject

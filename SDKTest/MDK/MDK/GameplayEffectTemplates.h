@@ -118,9 +118,9 @@ class UGET_DirectVehicleDamage_C : public UGet_DirectDamageParent_C
 public:
 };
 
-/// Class /Game/GameplayEffectTemplates/GET_FatalDamage.GET_FatalDamage_C
+/// Class /Game/GameplayEffectTemplates/GET_FallingDamage.GET_FallingDamage_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGET_FatalDamage_C : public UGet_DirectDamageParent_C
+class UGET_FallingDamage_C : public UGet_DirectDamageParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -128,9 +128,9 @@ class UGET_FatalDamage_C : public UGet_DirectDamageParent_C
 public:
 };
 
-/// Class /Game/GameplayEffectTemplates/GET_FallingDamage.GET_FallingDamage_C
+/// Class /Game/GameplayEffectTemplates/GET_FatalDamage.GET_FatalDamage_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGET_FallingDamage_C : public UGet_DirectDamageParent_C
+class UGET_FatalDamage_C : public UGet_DirectDamageParent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;

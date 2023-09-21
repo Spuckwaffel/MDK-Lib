@@ -20,8 +20,6 @@ public:
 	CMember(UREVModel*)                                Model                                                       OFFSET(get<T>, {0x908, 8, 0, 0})
 	CMember(URevSettings*)                             SimSettings                                                 OFFSET(get<T>, {0x910, 8, 0, 0})
 	DMember(float)                                     PitchMultiplier                                             OFFSET(get<float>, {0x918, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,6 +31,8 @@ public:
 	// void SetSettings(URevSettings* InSettings);                                                                              // [0x986d75c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/REVRuntime.REVComponent.SetRevModel
 	// void SetRevModel(UREVModel* InModel);                                                                                    // [0x151a37c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/REVRuntime.REVModel
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UREVModel : public UObject
@@ -69,10 +69,10 @@ public:
 	DMember(float)                                     ClutchRPMSpike                                              OFFSET(get<float>, {0x64, 4, 0, 0})
 	DMember(float)                                     ClutchRPMSpikeDuration                                      OFFSET(get<float>, {0x68, 4, 0, 0})
 	DMember(float)                                     ClutchRPMMergeTime                                          OFFSET(get<float>, {0x6C, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/REVRuntime.RevSettings.UpdateSettings
 	// void UpdateSettings();                                                                                                   // [0x986d9a8] Final|BlueprintCosmetic|Native|Public|BlueprintCallable 
+};
+

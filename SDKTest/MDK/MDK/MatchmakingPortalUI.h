@@ -23,8 +23,6 @@ public:
 	CMember(UFortActivityScalingTextBlock*)            Text_IslandName                                             OFFSET(get<T>, {0x3F8, 8, 0, 0})
 	DMember(float)                                     CountdownTime                                               OFFSET(get<float>, {0x400, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFinishedCountdown                                         OFFSET(get<T>, {0x408, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -34,6 +32,8 @@ public:
 	// void HandleCancelClicked();                                                                                              // [0x9c2e1dc] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/MatchmakingPortalUI.FortMatchmakingPortalCountdown.FinishTimer
 	// void FinishTimer();                                                                                                      // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /Script/MatchmakingPortalUI.FortMatchmakingPortalModal
 /// Size: 0x03E0 (0x000438 - 0x000818)
 class UFortMatchmakingPortalModal : public UFortActivityView
@@ -56,8 +56,6 @@ public:
 	CMember(UCommonButtonBase*)                        Button_Favorite                                             OFFSET(get<T>, {0x800, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_Cancel                                               OFFSET(get<T>, {0x808, 8, 0, 0})
 	CMember(UFortModalBackground*)                     ModalBackground                                             OFFSET(get<T>, {0x810, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -85,6 +83,8 @@ public:
 	// TArray<FString> GetContentWarningStrings();                                                                              // [0x9c2e174] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MatchmakingPortalUI.FortMatchmakingPortalModal.GetCodeTextFormat
 	// FText GetCodeTextFormat(FText& IslandCode);                                                                              // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/MatchmakingPortalUI.FortMatchmakingPortalPopup
 /// Size: 0x0128 (0x0003F0 - 0x000518)
 class UFortMatchmakingPortalPopup : public UFortPortalHUDDetails
@@ -112,8 +112,6 @@ public:
 	CMember(UCommonTextBlock*)                         Text_IslandName                                             OFFSET(get<T>, {0x500, 8, 0, 0})
 	CMember(UDynamicEntryBox*)                         EntryBox_ActivityTags                                       OFFSET(get<T>, {0x508, 8, 0, 0})
 	CMember(UFortKeybindWidget*)                       GlobalActionKeybindWidget                                   OFFSET(get<T>, {0x510, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -145,6 +143,8 @@ public:
 	// bool GetIslandData(FMatchmakingPortalPopupData& OutIslandData, UHeaderDescriptionHUDComponent* HUDComponent);            // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/MatchmakingPortalUI.FortMatchmakingPortalPopup.BindOverlapEvents
 	// void BindOverlapEvents();                                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/MatchmakingPortalUI.FortModalBackground
 /// Size: 0x0038 (0x0003E8 - 0x000420)
 class UFortModalBackground : public UCommonActivatableWidget
@@ -156,13 +156,13 @@ public:
 	CMember(UCommonButtonBase*)                        Button_Back                                                 OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_BackBoard                                            OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_MobileClose                                          OFFSET(get<T>, {0x418, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MatchmakingPortalUI.FortModalBackground.OnPreviewImageChanged
 	// void OnPreviewImageChanged(bool bIsLoading, UTexture* InTexture);                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/MatchmakingPortalUI.FortUIGameFeatureAction_OverridePortalHUDDetails
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UFortUIGameFeatureAction_OverridePortalHUDDetails : public UFortUIGameFeatureAction

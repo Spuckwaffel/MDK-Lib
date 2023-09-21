@@ -29,8 +29,6 @@ class UStateTreeNodeBlueprintBase : public UObject
 
 public:
 	CMember(UObject*)                                  CachedOwner                                                 OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -38,6 +36,8 @@ public:
 	// void SendEvent(FStateTreeEvent& Event);                                                                                  // [0x64b9328] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/StateTreeModule.StateTreeNodeBlueprintBase.RequestTransition
 	// void RequestTransition(FStateTreeStateLink& TargetState, EStateTreeTransitionPriority Priority);                         // [0x64b9188] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/StateTreeModule.StateTreeConditionBlueprintBase
 /// Size: 0x0008 (0x000040 - 0x000048)
 class UStateTreeConditionBlueprintBase : public UStateTreeNodeBlueprintBase
@@ -70,8 +70,6 @@ public:
 	DMember(bool)                                      bShouldCallTickOnlyOnEvents                                 OFFSET(get<bool>, {0x41, 1, 1, 2})
 	DMember(bool)                                      bShouldCopyBoundPropertiesOnTick                            OFFSET(get<bool>, {0x41, 1, 1, 3})
 	DMember(bool)                                      bShouldCopyBoundPropertiesOnExitState                       OFFSET(get<bool>, {0x41, 1, 1, 4})
-};
-
 
 
 	/// Functions
@@ -89,6 +87,8 @@ public:
 	// EStateTreeRunStatus ReceiveEnterState(FStateTreeTransitionResult& TRANSITION);                                           // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/StateTreeModule.StateTreeTaskBlueprintBase.FinishTask
 	// void FinishTask(bool bSucceeded);                                                                                        // [0x64b910c] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/StateTreeModule.StateTree
 /// Size: 0x0150 (0x000030 - 0x000180)
 class UStateTree : public UDataAsset

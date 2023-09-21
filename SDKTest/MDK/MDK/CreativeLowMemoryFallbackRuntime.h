@@ -32,13 +32,13 @@ class UCreativeLowMemoryFallbackWorldSubsystem : public UWorldSubsystem
 
 public:
 	SMember(FCreativeLowMemoryFallbackFreeMemoryThresholds) CurrentThresholds                                      OFFSET(get<T>, {0x30, 12, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CreativeLowMemoryFallbackRuntime.CreativeLowMemoryFallbackWorldSubsystem.OnPlaylistDataChanged
 	// void OnPlaylistDataChanged(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x9a471c4] Final|Native|Private|HasOutParms 
+};
+
 /// Struct /Script/CreativeLowMemoryFallbackRuntime.CreativeLowMemoryFallbackUserFacingText
 /// Size: 0x0048 (0x000000 - 0x000048)
 class FCreativeLowMemoryFallbackUserFacingText : public MDKStruct

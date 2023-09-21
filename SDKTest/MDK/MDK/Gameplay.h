@@ -50,26 +50,6 @@ class UTacticalSprintEnergyComponent_C : public UFortComponent_Energy
 public:
 };
 
-/// Class /VaultingContent/Gameplay/MovementModeExtension/FMM_ExtHurlde.FMM_ExtHurlde_C
-/// Size: 0x0000 (0x0000C0 - 0x0000C0)
-class UFMM_ExtHurlde_C : public UFortMovementMode_ExtLogicHurdle
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 192;
-
-public:
-};
-
-/// Class /VaultingContent/Gameplay/Athena_PlayerCameraMode_Hurdle.Athena_PlayerCameraMode_Hurdle_C
-/// Size: 0x0000 (0x001D50 - 0x001D50)
-class UAthena_PlayerCameraMode_Hurdle_C : public UHurdleCameraMode
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 7504;
-
-public:
-};
-
 /// Class /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C
 /// Size: 0x0008 (0x000B28 - 0x000B30)
 class UGA_Riding_Creature_Burt_SprintCharge_C : public UFortGameplayAbility
@@ -79,8 +59,6 @@ class UGA_Riding_Creature_Burt_SprintCharge_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -92,6 +70,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_Burt_SprintCharge.GA_Riding_Creature_Burt_SprintCharge_C.ExecuteUbergraph_GA_Riding_Creature_Burt_SprintCharge
 	// void ExecuteUbergraph_GA_Riding_Creature_Burt_SprintCharge(int32_t EntryPoint);                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/Camera/Riding_PlayerCameraMode_TacticalSprint.Riding_PlayerCameraMode_TacticalSprint_C
 /// Size: 0x0000 (0x001B70 - 0x001B70)
 class URiding_PlayerCameraMode_TacticalSprint_C : public UFortCameraMode_Riding
@@ -111,8 +91,6 @@ class UGA_Riding_Player_StopRidingOnTriggered_C : public UFortGameplayAbility
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -120,6 +98,18 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Player_StopRidingOnTriggered.GA_Riding_Player_StopRidingOnTriggered_C.ExecuteUbergraph_GA_Riding_Player_StopRidingOnTriggered
 	// void ExecuteUbergraph_GA_Riding_Player_StopRidingOnTriggered(int32_t EntryPoint);                                        // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /RidingContent/Gameplay/General/GE_Riding_EatSlapBerry_TriggerInfiniteStamina.GE_Riding_EatSlapBerry_TriggerInfiniteStamina_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Riding_EatSlapBerry_TriggerInfiniteStamina_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
 /// Class /RidingContent/Gameplay/Camera/RidingCameraMode.RidingCameraMode_C
 /// Size: 0x0000 (0x001B70 - 0x001B70)
 class URidingCameraMode_C : public UFortCameraMode_Riding
@@ -153,8 +143,6 @@ public:
 	CMember(UClass*)                                   GE_PlayerPetting                                            OFFSET(get<T>, {0xB38, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      TagsToCancelPetting                                         OFFSET(get<T>, {0xB40, 16, 0, 0})
 	CMember(AFortPlayerPawn*)                          FortPlayerPawnRider                                         OFFSET(get<T>, {0xB50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -180,14 +168,6 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Player_Petting.GA_Riding_Player_Petting_C.ExecuteUbergraph_GA_Riding_Player_Petting
 	// void ExecuteUbergraph_GA_Riding_Player_Petting(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
-/// Class /RidingContent/Gameplay/General/GE_Riding_EatSlapBerry_TriggerInfiniteStamina.GE_Riding_EatSlapBerry_TriggerInfiniteStamina_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Riding_EatSlapBerry_TriggerInfiniteStamina_C : public UGameplayEffect
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
-
-public:
 };
 
 /// Class /RidingContent/Gameplay/General/GA_Riding_Creature_IsBeingRidden_Passive.GA_Riding_Creature_IsBeingRidden_Passive_C
@@ -199,8 +179,6 @@ class UGA_Riding_Creature_IsBeingRidden_Passive_C : public UGA_NPC_Parent_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xE60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -212,6 +190,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_IsBeingRidden_Passive.GA_Riding_Creature_IsBeingRidden_Passive_C.ExecuteUbergraph_GA_Riding_Creature_IsBeingRidden_Passive
 	// void ExecuteUbergraph_GA_Riding_Creature_IsBeingRidden_Passive(int32_t EntryPoint);                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/General/GE_Riding_Creatue_IsBeingRidden_Passive.GE_Riding_Creatue_IsBeingRidden_Passive_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Creatue_IsBeingRidden_Passive_C : public UGameplayEffect
@@ -231,8 +211,6 @@ class UGA_Riding_Creature_IsBeingRidden_C : public UGA_NPC_Parent_C
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xE60, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -244,6 +222,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_IsBeingRidden.GA_Riding_Creature_IsBeingRidden_C.ExecuteUbergraph_GA_Riding_Creature_IsBeingRidden
 	// void ExecuteUbergraph_GA_Riding_Creature_IsBeingRidden(int32_t EntryPoint);                                              // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/General/GE_Riding_Creatue_IsBeingRidden.GE_Riding_Creatue_IsBeingRidden_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Creatue_IsBeingRidden_C : public UGameplayEffect
@@ -275,8 +255,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	CMember(UAnimMontage*)                             SettleMontageRef                                            OFFSET(get<T>, {0xB30, 8, 0, 0})
 	CMember(UFortAbilityTask_PlayMontageWaitTarget*)   settleMontageTask                                           OFFSET(get<T>, {0xB38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -288,6 +266,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Player_IsRiding.GA_Riding_Player_IsRiding_C.ExecuteUbergraph_GA_Riding_Player_IsRiding
 	// void ExecuteUbergraph_GA_Riding_Player_IsRiding(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/General/GE_Riding_Player_IsRiding.GE_Riding_Player_IsRiding_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Player_IsRiding_C : public UGameplayEffect
@@ -309,8 +289,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     Slap_Berry_Tags                                             OFFSET(get<T>, {0xB30, 32, 0, 0})
 	CMember(UClass*)                                   Slap_Berry_Gameplay_Effect                                  OFFSET(get<T>, {0xB50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -318,6 +296,8 @@ public:
 	// void K2_ActivateAbilityFromEvent(FGameplayEventData& EventData);                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Creature_EatToRefuel.GA_Riding_Creature_EatToRefuel_C.ExecuteUbergraph_GA_Riding_Creature_EatToRefuel
 	// void ExecuteUbergraph_GA_Riding_Creature_EatToRefuel(int32_t EntryPoint);                                                // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/General/GE_Riding_Creature_Grant_EatToRefuel.GE_Riding_Creature_Grant_EatToRefuel_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Creature_Grant_EatToRefuel_C : public UGameplayEffect
@@ -339,8 +319,6 @@ public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xB28, 8, 0, 0})
 	CMember(TArray<FGameplayTag>)                      Tags_to_cancel_sprinting                                    OFFSET(get<T>, {0xB30, 16, 0, 0})
 	DMember(bool)                                      ShouldCancelSprint                                          OFFSET(get<bool>, {0xB40, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -356,6 +334,8 @@ public:
 	// void FailedToActivatePassiveAbility(FGameplayAbilityActorInfo ActorInfo);                                                // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Gameplay/General/GA_Riding_Player_Sprint.GA_Riding_Player_Sprint_C.ExecuteUbergraph_GA_Riding_Player_Sprint
 	// void ExecuteUbergraph_GA_Riding_Player_Sprint(int32_t EntryPoint);                                                       // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Gameplay/General/GE_Riding_Player_Sprint.GE_Riding_Player_Sprint_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Riding_Player_Sprint_C : public UGameplayEffect
@@ -366,9 +346,9 @@ class UGE_Riding_Player_Sprint_C : public UGameplayEffect
 public:
 };
 
-/// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_BoarSprintImpact_BuildDestroy.CameraShake_Riding_BoarSprintImpact_BuildDestroy_C
+/// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_JumpOnCreature.CameraShake_Riding_JumpOnCreature_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UCameraShake_Riding_BoarSprintImpact_BuildDestroy_C : public ULegacyCameraShake
+class UCameraShake_Riding_JumpOnCreature_C : public ULegacyCameraShake
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 496;
@@ -376,9 +356,9 @@ class UCameraShake_Riding_BoarSprintImpact_BuildDestroy_C : public ULegacyCamera
 public:
 };
 
-/// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_BoarSprintImpact_Default.CameraShake_Riding_BoarSprintImpact_Default_C
+/// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_BoarSprintImpact_BuildDestroy.CameraShake_Riding_BoarSprintImpact_BuildDestroy_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UCameraShake_Riding_BoarSprintImpact_Default_C : public ULegacyCameraShake
+class UCameraShake_Riding_BoarSprintImpact_BuildDestroy_C : public ULegacyCameraShake
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 496;
@@ -406,16 +386,6 @@ class UCameraShake_Riding_Sprint_FOVFlare_C : public ULegacyCameraShake
 public:
 };
 
-/// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_JumpOnCreature.CameraShake_Riding_JumpOnCreature_C
-/// Size: 0x0000 (0x0001F0 - 0x0001F0)
-class UCameraShake_Riding_JumpOnCreature_C : public ULegacyCameraShake
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 496;
-
-public:
-};
-
 /// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_BoarSprintImpact_Pawn.CameraShake_Riding_BoarSprintImpact_Pawn_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UCameraShake_Riding_BoarSprintImpact_Pawn_C : public ULegacyCameraShake
@@ -426,12 +396,32 @@ class UCameraShake_Riding_BoarSprintImpact_Pawn_C : public ULegacyCameraShake
 public:
 };
 
-/// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Descending.GE_Ascender_Descending_C
-/// Size: 0x0000 (0x000A68 - 0x000A68)
-class UGE_Ascender_Descending_C : public UGameplayEffect
+/// Class /RidingContent/Gameplay/Camera/CameraShakes/CameraShake_Riding_BoarSprintImpact_Default.CameraShake_Riding_BoarSprintImpact_Default_C
+/// Size: 0x0000 (0x0001F0 - 0x0001F0)
+class UCameraShake_Riding_BoarSprintImpact_Default_C : public ULegacyCameraShake
 { 
 	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2664;
+	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
+};
+
+/// Class /VaultingContent/Gameplay/Athena_PlayerCameraMode_Hurdle.Athena_PlayerCameraMode_Hurdle_C
+/// Size: 0x0000 (0x001D50 - 0x001D50)
+class UAthena_PlayerCameraMode_Hurdle_C : public UHurdleCameraMode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 7504;
+
+public:
+};
+
+/// Class /VaultingContent/Gameplay/MovementModeExtension/FMM_ExtHurlde.FMM_ExtHurlde_C
+/// Size: 0x0000 (0x0000C0 - 0x0000C0)
+class UFMM_ExtHurlde_C : public UFortMovementMode_ExtLogicHurdle
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 192;
 
 public:
 };
@@ -439,6 +429,16 @@ public:
 /// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Ascending.GE_Ascender_Ascending_C
 /// Size: 0x0000 (0x000A68 - 0x000A68)
 class UGE_Ascender_Ascending_C : public UGameplayEffect
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2664;
+
+public:
+};
+
+/// Class /Ascender/Gameplay/Ascender/GameplayEffects/GE_Ascender_Descending.GE_Ascender_Descending_C
+/// Size: 0x0000 (0x000A68 - 0x000A68)
+class UGE_Ascender_Descending_C : public UGameplayEffect
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 2664;
@@ -506,8 +506,6 @@ public:
 	CMember(APlayerState*)                             PlayerStateUsingHandleComponent                             OFFSET(get<T>, {0x1170, 8, 0, 0})
 	CMember(TArray<FAudioParameter>)                   AudioParameters                                             OFFSET(get<T>, {0x1178, 16, 0, 0})
 	CMember(UAudioParameterComponent*)                 ParameterComponent                                          OFFSET(get<T>, {0x1188, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -595,6 +593,8 @@ public:
 	// void HandleLinkedActorDestroyed(AActor* DamageCauser);                                                                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Ascender/Gameplay/Ascender/B_Athena_Zipline_Ascender.B_Athena_Zipline_Ascender_C.ExecuteUbergraph_B_Athena_Zipline_Ascender
 	// void ExecuteUbergraph_B_Athena_Zipline_Ascender(int32_t EntryPoint);                                                     // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Ascender/Gameplay/Ascender/GA_Athena_Ascender_Smash.GA_Athena_Ascender_Smash_C
 /// Size: 0x0059 (0x000BF0 - 0x000C49)
 class UGA_Athena_Ascender_Smash_C : public UGA_Athena_ZipLine_SmashParent_C
@@ -615,8 +615,6 @@ public:
 	CMember(UAnimMontage*)                             F_DescendingAnim                                            OFFSET(get<T>, {0xC38, 8, 0, 0})
 	SMember(FActiveGameplayEffectHandle)               ZiplinePassiveGE                                            OFFSET(get<T>, {0xC40, 8, 0, 0})
 	DMember(bool)                                      bHolsterApplied                                             OFFSET(get<bool>, {0xC48, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -656,6 +654,8 @@ public:
 	// void ZiplinePostBegin_Event();                                                                                           // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Ascender/Gameplay/Ascender/GA_Athena_Ascender_Smash.GA_Athena_Ascender_Smash_C.ExecuteUbergraph_GA_Athena_Ascender_Smash
 	// void ExecuteUbergraph_GA_Athena_Ascender_Smash(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /EmeraldGlass_D/Gameplay/SereneYard/ForceFeedback/CameraShake_Spawn_SereneYard.CameraShake_Spawn_SereneYard_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UCameraShake_Spawn_SereneYard_C : public ULegacyCameraShake
@@ -686,8 +686,6 @@ class UB_MMObj_ObjectiveNotificationControllerComponent_C : public UActorCompone
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0xA0, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnBroadcastNotification                                     OFFSET(get<T>, {0xA8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -697,3 +695,5 @@ public:
 	// void ExecuteUbergraph_B_MMObj_ObjectiveNotificationControllerComponent(int32_t EntryPoint);                              // [0x1ebf994] Final|HasDefaults    
 	// Function /MidMatchObjectivesGameplay/Gameplay/B_MMObj_ObjectiveNotificationControllerComponent.B_MMObj_ObjectiveNotificationControllerComponent_C.OnBroadcastNotification__DelegateSignature
 	// void OnBroadcastNotification__DelegateSignature(FGameplayTag tag);                                                       // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+

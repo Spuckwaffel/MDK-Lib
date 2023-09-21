@@ -48,8 +48,6 @@ public:
 	CMember(UAthenaGiftingWrapOptionsPanel*)           Panel_WrapOptions                                           OFFSET(get<T>, {0x528, 8, 0, 0})
 	CMember(UAthenaGiftConfirmedPanel*)                Panel_GiftConfirmed                                         OFFSET(get<T>, {0x530, 8, 0, 0})
 	CMember(UAthenaGiftingErrorsPanel*)                Panel_GiftingErrors                                         OFFSET(get<T>, {0x538, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -61,6 +59,8 @@ public:
 	// void HandleGiftSent(bool bSuccess, TArray<FString>& IneligibleAccounts, TArray<FString>& ErrorCodes);                    // [0x9bb6da0] Final|Native|Private|HasOutParms 
 	// Function /Script/GiftingUI.AthenaGiftingConfirmationScreen.Dismiss
 	// void Dismiss(bool bGiftConfirmed);                                                                                       // [0x9bb6d04] Final|Native|Private|BlueprintCallable 
+};
+
 /// Class /Script/GiftingUI.AthenaGiftingErrorsPanel
 /// Size: 0x0060 (0x0003E8 - 0x000448)
 class UAthenaGiftingErrorsPanel : public UCommonActivatableWidget
@@ -75,13 +75,13 @@ public:
 	CMember(UCommonButtonBase*)                        Button_Back                                                 OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_Continue                                             OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UTileView*)                                TileView_Items                                              OFFSET(get<T>, {0x440, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GiftingUI.AthenaGiftingErrorsPanel.UpdateGiftEligibility
 	// void UpdateGiftEligibility(bool bStillGiftable);                                                                         // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/GiftingUI.AthenaGiftingPriceWidget
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UAthenaGiftingPriceWidget : public UCommonUserWidget
@@ -94,13 +94,13 @@ public:
 	CMember(UCommonTextBlock*)                         Text_FinalPrice                                             OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_RegularPrice                                           OFFSET(get<T>, {0x2E0, 8, 0, 0})
 	CMember(UWidget*)                                  Overlay_SalePrice                                           OFFSET(get<T>, {0x2E8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GiftingUI.AthenaGiftingPriceWidget.SetPresentationMode
 	// void SetPresentationMode(EGiftingPricePresentationMode Mode);                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/GiftingUI.AthenaGiftingPurchaseButton
 /// Size: 0x0010 (0x001510 - 0x001520)
 class UAthenaGiftingPurchaseButton : public UFortHoldableButton
@@ -127,13 +127,13 @@ public:
 	CMember(UCommonTextBlock*)                         Text_ItemsCount                                             OFFSET(get<T>, {0x418, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_OfferName                                              OFFSET(get<T>, {0x420, 8, 0, 0})
 	CMember(UTileView*)                                TileView_Items                                              OFFSET(get<T>, {0x428, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GiftingUI.AthenaGiftingPurchasePanel.PlayIntroAnimation
 	// void PlayIntroAnimation();                                                                                               // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/GiftingUI.AthenaGiftingScreen
 /// Size: 0x01E0 (0x000708 - 0x0008E8)
 class UAthenaGiftingScreen : public UFortItemPreviewScreen
@@ -173,8 +173,6 @@ public:
 	CMember(UFortItemDefinition*)                      PresentedItemDefinition                                     OFFSET(get<T>, {0x8D0, 8, 0, 0})
 	CMember(UFortStoreFrontOfferInfo*)                 GiftableOfferInfo                                           OFFSET(get<T>, {0x8D8, 8, 0, 0})
 	CMember(UFortStoreFrontOfferInfo*)                 OptionalTokenOfferInfo                                      OFFSET(get<T>, {0x8E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -194,6 +192,8 @@ public:
 	// void OnFilterChanged(EFilterType FilterType);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/GiftingUI.AthenaGiftingScreen.BlockScreenContent
 	// void BlockScreenContent(bool bBlockScreen, FText& ContentBlockedText);                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/GiftingUI.AthenaGiftingWrapOptionsPanel
 /// Size: 0x0068 (0x0003E8 - 0x000450)
 class UAthenaGiftingWrapOptionsPanel : public UCommonActivatableWidget
@@ -221,8 +221,6 @@ public:
 	CMember(UCommonRichTextBlock*)                     RichText_EligibilityStatus                                  OFFSET(get<T>, {0x15A8, 8, 0, 0})
 	CMember(UCommonRichTextBlock*)                     RichText_OwnedItems                                         OFFSET(get<T>, {0x15B0, 8, 0, 0})
 	CMember(UAthenaGiftingPriceWidget*)                Widget_Price                                                OFFSET(get<T>, {0x15B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -236,6 +234,8 @@ public:
 	// void BP_OnTouchSelectionConfirmed();                                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/GiftingUI.FortGiftingSocialUserListEntry.BP_OnHighlightedStateChanged
 	// void BP_OnHighlightedStateChanged(bool bInIsHighlighted, bool bPlayAnimation);                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/GiftingUI.FortGiftingSocialUserListView
 /// Size: 0x00F8 (0x0003A8 - 0x0004A0)
 class UFortGiftingSocialUserListView : public USocialUserListViewBase
@@ -258,8 +258,6 @@ public:
 	CMember(UEditableText*)                            EditableText_SearchFriends                                  OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_ClearQuery                                           OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_SubmitQuery                                          OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -271,6 +269,8 @@ public:
 	// void HandleSearchFriendsTextChanged(FText& Text);                                                                        // [0x9bb6eec] Final|Native|Private|HasOutParms 
 	// Function /Script/GiftingUI.FortGiftingUserSearchWidget.FocusEditableText
 	// void FocusEditableText();                                                                                                // [0x9bb6d84] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/GiftingUI.FortGiftingWrapOptionListEntry
 /// Size: 0x0020 (0x0014C0 - 0x0014E0)
 class UFortGiftingWrapOptionListEntry : public UCommonButtonLegacy

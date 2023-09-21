@@ -139,13 +139,13 @@ public:
 	CMember(TArray<UAudioComponent*>)                  PreallocatedAudioComponents                                 OFFSET(get<T>, {0x348, 16, 0, 0})
 	SMember(FTimerHandle)                              AudioComponentCleanupTimerHandle                            OFFSET(get<T>, {0x358, 8, 0, 0})
 	DMember(double)                                    PreviousLandscapeCharTickTime                               OFFSET(get<double>, {0x360, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/InfernoRuntime.FortCurieVoxelFireNativeFXHandler.OnUserSettingsEffectQualityChanged
 	// void OnUserSettingsEffectQualityChanged();                                                                               // [0x9be5ad4] Final|Native|Private 
+};
+
 /// Class /Script/InfernoRuntime.FortCurieVoxelFireParticleDataInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortCurieVoxelFireParticleDataInterface : public UInterface

@@ -14,16 +14,6 @@
 /// dependency: SrirachaRanch
 /// dependency: SrirachaRanchValet
 
-/// Class /EventMode/Components/EventMode_Activator_Component.EventMode_Activator_Component_C
-/// Size: 0x0000 (0x000210 - 0x000210)
-class UEventMode_Activator_Component_C : public UFortGameFrameworkComponent_EventMode
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 528;
-
-public:
-};
-
 /// Class /RidingContent/Components/RidingGeneric_Interafce.RidingGeneric_Interafce_C
 /// Size: 0x0000 (0x000028 - 0x000028)
 class URidingGeneric_Interafce_C : public UInterface
@@ -47,8 +37,6 @@ public:
 	DMember(double)                                    Jump_Attach_Ground_Height_Buffer                            OFFSET(get<double>, {0xB0, 8, 0, 0})
 	DMember(bool)                                      Uses_Alt_Riding_Message                                     OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	DMember(bool)                                      KillOnRideAttempt                                           OFFSET(get<bool>, {0xB9, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -60,6 +48,8 @@ public:
 	// void AlternateRidingEvent();                                                                                             // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /RidingContent/Components/CreatureBaseNonRidableComponent.CreatureBaseNonRidableComponent_C.ExecuteUbergraph_CreatureBaseNonRidableComponent
 	// void ExecuteUbergraph_CreatureBaseNonRidableComponent(int32_t EntryPoint);                                               // [0x1ebf994] Final                
+};
+
 /// Class /RidingContent/Components/CreatureBaseRidableComponent.CreatureBaseRidableComponent_C
 /// Size: 0x06D0 (0x0006B0 - 0x000D80)
 class UCreatureBaseRidableComponent_C : public UControllableRidableComponent
@@ -181,8 +171,6 @@ public:
 	SMember(FTimerHandle)                              JumpFatigue_RemovalTimerHandle                              OFFSET(get<T>, {0xD48, 8, 0, 0})
 	SMember(FScalableFloat)                            JumpFatigue_GeDurationPostLanding                           OFFSET(get<T>, {0xD50, 40, 0, 0})
 	CMember(UClass*)                                   GE_NotPetable_IsBeingRidden                                 OFFSET(get<T>, {0xD78, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -354,6 +342,8 @@ public:
 	// void AudioOnJumpApex__DelegateSignature();                                                                               // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /RidingContent/Components/CreatureBaseRidableComponent.CreatureBaseRidableComponent_C.AudioOnJump__DelegateSignature
 	// void AudioOnJump__DelegateSignature(double JumpPitchInterpSpeed);                                                        // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /RidingContent/Components/PlayerRiderComponent.PlayerRiderComponent_C
 /// Size: 0x0110 (0x0006C8 - 0x0007D8)
 class UPlayerRiderComponent_C : public UControllingRiderComponent
@@ -380,8 +370,6 @@ public:
 	CMember(UClass*)                                   GE_PlayerPetting                                            OFFSET(get<T>, {0x7A8, 8, 0, 0})
 	SMember(FGameplayTagContainer)                     Tag_Quests_Wildlife_Pet                                     OFFSET(get<T>, {0x7B0, 32, 0, 0})
 	CMember(UAbilityAsync_WaitGameplayTagAdded*)       ActiveRidableBlockRidingGameplayTagAsyncAction              OFFSET(get<T>, {0x7D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -443,6 +431,8 @@ public:
 	// void RiderUIEnd__DelegateSignature(AActor* RidableActor);                                                                // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /RidingContent/Components/PlayerRiderComponent.PlayerRiderComponent_C.RiderUINewStats__DelegateSignature
 	// void RiderUINewStats__DelegateSignature(FText Name, FSlateBrush Icon, AActor* RidableActor);                             // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
+};
+
 /// Class /RidingContent/Components/BoarRidableComponent.BoarRidableComponent_C
 /// Size: 0x0044 (0x000D80 - 0x000DC4)
 class UBoarRidableComponent_C : public UCreatureBaseRidableComponent_C
@@ -461,8 +451,6 @@ public:
 	SMember(FGameplayTag)                              SprintChargeImpact_Default_CueTag                           OFFSET(get<T>, {0xDB8, 4, 0, 0})
 	SMember(FGameplayTag)                              SprintChargeImpact_Pawn_CueTag                              OFFSET(get<T>, {0xDBC, 4, 0, 0})
 	SMember(FGameplayTag)                              SprintChargeImpact_DestroyBuild_CueTag                      OFFSET(get<T>, {0xDC0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -482,12 +470,24 @@ public:
 	// void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /RidingContent/Components/BoarRidableComponent.BoarRidableComponent_C.ExecuteUbergraph_BoarRidableComponent
 	// void ExecuteUbergraph_BoarRidableComponent(int32_t EntryPoint);                                                          // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /RidingContent/Components/WolfRidableComponent.WolfRidableComponent_C
 /// Size: 0x0000 (0x000D80 - 0x000D80)
 class UWolfRidableComponent_C : public UCreatureBaseRidableComponent_C
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 3456;
+
+public:
+};
+
+/// Class /EventMode/Components/EventMode_Activator_Component.EventMode_Activator_Component_C
+/// Size: 0x0000 (0x000210 - 0x000210)
+class UEventMode_Activator_Component_C : public UFortGameFrameworkComponent_EventMode
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 528;
 
 public:
 };
@@ -501,8 +501,6 @@ class USR_Valet_C : public UStreamingRadioPlayerComponent_Valet
 
 public:
 	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x478, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -518,6 +516,8 @@ public:
 	// void On Source Stopped(UStreamingRadioPlayerComponent* Component, FAthenaRadioStation AffectedSource);                   // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /SrirachaRanchValet/Components/SR_Valet.SR_Valet_C.ExecuteUbergraph_SR_Valet
 	// void ExecuteUbergraph_SR_Valet(int32_t EntryPoint);                                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /NPCLibrary/Components/BP_PlayerStateCustomFeedMessages.BP_PlayerStateCustomFeedMessages_C
 /// Size: 0x0000 (0x000108 - 0x000108)
 class UBP_PlayerStateCustomFeedMessages_C : public UFortPlayerStateComponent_CustomFeedMessage

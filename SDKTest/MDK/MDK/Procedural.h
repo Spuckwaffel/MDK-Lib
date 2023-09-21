@@ -19,13 +19,13 @@ public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0x28, 1, 0, 0})
 	DMember(float)                                     Contribution                                                OFFSET(get<float>, {0x2C, 4, 0, 0})
 	CMember(EProceduralParameterModifierBlendMode)     BlendMode                                                   OFFSET(get<T>, {0x30, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Procedural.ProceduralParameterModifier.GetContribution
 	// float GetContribution();                                                                                                 // [0xa346c6c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralDensityModifier
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UProceduralDensityModifier : public UProceduralParameterModifier
@@ -168,8 +168,6 @@ public:
 	CMember(TArray<URuntimeVirtualTexture*>)           RuntimeVirtualTextures                                      OFFSET(get<T>, {0x1E8, 16, 0, 0})
 	DMember(int32_t)                                   VirtualTextureCullMips                                      OFFSET(get<int32_t>, {0x1F8, 4, 0, 0})
 	CMember(ERuntimeVirtualTextureMainPassType)        VirtualTextureRenderPassType                                OFFSET(get<T>, {0x1FC, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -177,6 +175,8 @@ public:
 	// void SetOverriddenLightMapRes(int32_t Value);                                                                            // [0xa347720] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Procedural.HISMBuilderSettings.GetOverriddenLightMapRes
 	// int32_t GetOverriddenLightMapRes();                                                                                      // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralContentVariationsWeightsModifier
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UProceduralContentVariationsWeightsModifier : public UProceduralParameterModifier
@@ -270,8 +270,6 @@ public:
 	CMember(TArray<UProceduralGeneratorContext*>)      GeneratedContexts                                           OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TArray<UProceduralGeneratorContext*>)      RegisteredContexts                                          OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(TMap<FGuid, UProceduralGeneratorContext*>) GeneratorContexts                                           OFFSET(get<T>, {0x50, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -279,6 +277,8 @@ public:
 	// AVolume* GetGenerationVolume();                                                                                          // [0xa347354] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralGenerationContext.GetGenerationComponent
 	// UProceduralGenerationComponent* GetGenerationComponent();                                                                // [0xa347330] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralGenerationVolume
 /// Size: 0x0008 (0x0002C8 - 0x0002D0)
 class AProceduralGenerationVolume : public AVolume
@@ -288,8 +288,6 @@ class AProceduralGenerationVolume : public AVolume
 
 public:
 	CMember(UProceduralGenerationComponent*)           ProceduralComponent                                         OFFSET(get<T>, {0x2C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -297,6 +295,8 @@ public:
 	// void Generate();                                                                                                         // [0xa346c2c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Procedural.ProceduralGenerationVolume.ClearGeneratedContent
 	// void ClearGeneratedContent();                                                                                            // [0xa346be8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Procedural.ProceduralGeneratorContext
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UProceduralGeneratorContext : public UObject
@@ -310,8 +310,6 @@ public:
 	CMember(UProceduralGeneratorContext*)              OwnerContext                                                OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<UObject*>)                          GeneratedObjects                                            OFFSET(get<T>, {0x40, 16, 0, 0})
 	CMember(UProceduralPointCloud*)                    ExportedPointCloud                                          OFFSET(get<T>, {0x50, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -329,6 +327,8 @@ public:
 	// bool Generate();                                                                                                         // [0xa346c48] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Procedural.ProceduralGeneratorContext.ClearGeneratedContent
 	// void ClearGeneratedContent();                                                                                            // [0xa346c04] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Procedural.ProceduralGeneratorStack
 /// Size: 0x0010 (0x000038 - 0x000048)
 class UProceduralGeneratorStack : public UProceduralGenerator
@@ -359,8 +359,6 @@ class UProceduralPointCloud : public UObject
 
 public:
 	CMember(TArray<FProceduralPointCloudPoint>)        Points                                                      OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -368,6 +366,8 @@ public:
 	// TArray<FProceduralPointCloudPoint> GetPointsByTag(FName InTag);                                                          // [0xa347448] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Procedural.ProceduralPointCloud.Empty
 	// void Empty();                                                                                                            // [0xa346c18] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Procedural.ProceduralRotationMapModifier
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UProceduralRotationMapModifier : public UProceduralRotationModifier
@@ -381,8 +381,6 @@ public:
 	SMember(FFloatInterval)                            Roll                                                        OFFSET(get<T>, {0x44, 8, 0, 0})
 	SMember(FFloatInterval)                            Pitch                                                       OFFSET(get<T>, {0x4C, 8, 0, 0})
 	SMember(FFloatInterval)                            Yaw                                                         OFFSET(get<T>, {0x54, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -410,6 +408,8 @@ public:
 	// float GetPitchMin();                                                                                                     // [0x335bb64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralRotationMapModifier.GetPitchMax
 	// float GetPitchMax();                                                                                                     // [0x276e40c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralRotationNoiseModifier
 /// Size: 0x0028 (0x000038 - 0x000060)
 class UProceduralRotationNoiseModifier : public UProceduralRotationModifier
@@ -424,8 +424,6 @@ public:
 	SMember(FFloatInterval)                            RandomPitch                                                 OFFSET(get<T>, {0x48, 8, 0, 0})
 	DMember(bool)                                      bRandomYaw                                                  OFFSET(get<bool>, {0x50, 1, 1, 0})
 	SMember(FFloatInterval)                            RandomYaw                                                   OFFSET(get<T>, {0x54, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -453,6 +451,8 @@ public:
 	// float GetRandomPitchMin();                                                                                               // [0x327b0f0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralRotationNoiseModifier.GetRandomPitchMax
 	// float GetRandomPitchMax();                                                                                               // [0x335bb64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralScaleMapModifier
 /// Size: 0x0018 (0x000038 - 0x000050)
 class UProceduralScaleMapModifier : public UProceduralScaleModifier
@@ -464,8 +464,6 @@ public:
 	DMember(bool)                                      bRemapScale                                                 OFFSET(get<bool>, {0x38, 1, 0, 0})
 	SMember(FFloatInterval)                            RemapScale                                                  OFFSET(get<T>, {0x3C, 8, 0, 0})
 	CMember(UProceduralFloatDataMap*)                  Map                                                         OFFSET(get<T>, {0x48, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -477,6 +475,8 @@ public:
 	// float GetRemapScaleMin();                                                                                                // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralScaleMapModifier.GetRemapScaleMax
 	// float GetRemapScaleMax();                                                                                                // [0x2edc708] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralScaleNoiseModifier
 /// Size: 0x0008 (0x000038 - 0x000040)
 class UProceduralScaleNoiseModifier : public UProceduralScaleModifier
@@ -486,8 +486,6 @@ class UProceduralScaleNoiseModifier : public UProceduralScaleModifier
 
 public:
 	SMember(FFloatInterval)                            Scale                                                       OFFSET(get<T>, {0x38, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -499,6 +497,8 @@ public:
 	// float GetScaleMin();                                                                                                     // [0x5c31240] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralScaleNoiseModifier.GetScaleMax
 	// float GetScaleMax();                                                                                                     // [0x2ee31b4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralScatterContentVariation
 /// Size: 0x00C0 (0x000028 - 0x0000E8)
 class UProceduralScatterContentVariation : public UObject
@@ -647,8 +647,6 @@ public:
 	DMember(bool)                                      bCollisionWithWorld                                         OFFSET(get<bool>, {0x1A4, 1, 1, 0})
 	SMember(FVector)                                   CollisionScale                                              OFFSET(get<T>, {0x1A8, 24, 0, 0})
 	SMember(FColor)                                    DebugColor                                                  OFFSET(get<T>, {0x1C0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -660,6 +658,8 @@ public:
 	// float GetSourcePointDistanceMin();                                                                                       // [0x597c71c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralScatterSettings.GetSourcePointDistanceMax
 	// float GetSourcePointDistanceMax();                                                                                       // [0x7f0f09c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralScatterStaticMeshContentVariation
 /// Size: 0x0080 (0x0000E8 - 0x000168)
 class UProceduralScatterStaticMeshContentVariation : public UProceduralScatterContentVariation
@@ -698,8 +698,6 @@ class UProceduralSurfaceHeightMap : public UProceduralFloatDataMap
 public:
 	DMember(bool)                                      bNormalizedHeight                                           OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	SMember(FFloatInterval)                            HeightRange                                                 OFFSET(get<T>, {0xBC, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -713,6 +711,8 @@ public:
 	// float GetHeightRangeMin();                                                                                               // [0x6c15274] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralSurfaceHeightMap.GetHeightRangeMax
 	// float GetHeightRangeMax();                                                                                               // [0x58f324c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Procedural.ProceduralSurfaceSlopeAngleMap
 /// Size: 0x0010 (0x0000B8 - 0x0000C8)
 class UProceduralSurfaceSlopeAngleMap : public UProceduralFloatDataMap
@@ -723,8 +723,6 @@ class UProceduralSurfaceSlopeAngleMap : public UProceduralFloatDataMap
 public:
 	DMember(bool)                                      bNormalizedSlopeAngle                                       OFFSET(get<bool>, {0xB8, 1, 0, 0})
 	SMember(FFloatInterval)                            SlopeAngleRange                                             OFFSET(get<T>, {0xBC, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -738,6 +736,8 @@ public:
 	// float GetSlopeAngleRangeMin();                                                                                           // [0x6c15274] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Procedural.ProceduralSurfaceSlopeAngleMap.GetSlopeAngleRangeMax
 	// float GetSlopeAngleRangeMax();                                                                                           // [0x58f324c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/Procedural.ProceduralPointCloudPoint
 /// Size: 0x00B0 (0x000000 - 0x0000B0)
 class FProceduralPointCloudPoint : public MDKStruct

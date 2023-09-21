@@ -101,8 +101,6 @@ public:
 	DMember(bool)                                      bUseLandscapeForCullingInvisibleHLODVertices                OFFSET(get<bool>, {0x606, 1, 0, 0})
 	DMember(bool)                                      bHasLayersContent                                           OFFSET(get<bool>, {0x607, 1, 0, 0})
 	DMember(bool)                                      bUseCompressedHeightmapStorage                              OFFSET(get<bool>, {0x608, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -126,6 +124,8 @@ public:
 	// void ChangeLODDistanceFactor(float InLODDistanceFactor);                                                                 // [0x56b9e24] Native|Public|BlueprintCallable 
 	// Function /Script/Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections
 	// void ChangeComponentScreenSizeToUseSubSections(float InComponentScreenSizeToUseSubSections);                             // [0x56b9da0] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Landscape.Landscape
 /// Size: 0x0000 (0x000610 - 0x000610)
 class ALandscape : public ALandscapeProxy
@@ -189,8 +189,6 @@ public:
 	CMember(TArray<UMaterialInterface*>)               MobileMaterialInterfaces                                    OFFSET(get<T>, {0x708, 16, 0, 0})
 	CMember(TArray<UTexture2D*>)                       MobileWeightmapTextures                                     OFFSET(get<T>, {0x718, 16, 0, 0})
 	CMember(TArray<FWeightmapLayerAllocationInfo>)     MobileWeightmapLayerAllocations                             OFFSET(get<T>, {0x728, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -204,6 +202,8 @@ public:
 	// float EditorGetPaintLayerWeightByNameAtLocation(FVector& InLocation, FName InPaintLayerName);                            // [0x56a453c] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/Landscape.LandscapeComponent.EditorGetPaintLayerWeightAtLocation
 	// float EditorGetPaintLayerWeightAtLocation(FVector& InLocation, ULandscapeLayerInfoObject* PaintLayer);                   // [0x56a43b8] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/Landscape.LandscapeGizmoActor
 /// Size: 0x0000 (0x000290 - 0x000290)
 class ALandscapeGizmoActor : public AActor
@@ -272,13 +272,13 @@ public:
 	SMember(FBox)                                      CachedLocalBox                                              OFFSET(get<T>, {0x5B0, 56, 0, 0})
 	CMember(ULandscapeComponent*)                      RenderComponentRef                                          OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	CMember(TArray<UPhysicalMaterial*>)                CookedPhysicalMaterials                                     OFFSET(get<T>, {0x600, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
 	// ULandscapeComponent* GetRenderComponent();                                                                               // [0x56a4774] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Landscape.LandscapeLayerInfoObject
 /// Size: 0x0028 (0x000028 - 0x000050)
 class ULandscapeLayerInfoObject : public UObject
@@ -375,13 +375,13 @@ public:
 	CMember(TArray<ULandscapeSplineControlPoint*>)     ControlPoints                                               OFFSET(get<T>, {0x568, 16, 0, 0})
 	CMember(TArray<ULandscapeSplineSegment*>)          Segments                                                    OFFSET(get<T>, {0x578, 16, 0, 0})
 	CMember(TArray<UMeshComponent*>)                   CookedForeignMeshComponents                                 OFFSET(get<T>, {0x588, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/Landscape.LandscapeSplinesComponent.GetSplineMeshComponents
 	// TArray<USplineMeshComponent*> GetSplineMeshComponents();                                                                 // [0x56a5008] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/Landscape.LandscapeSplineControlPoint
 /// Size: 0x00B0 (0x000028 - 0x0000D8)
 class ULandscapeSplineControlPoint : public UObject

@@ -133,8 +133,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnInterrupted                                               OFFSET(get<T>, {0x48, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnNotifyBegin                                               OFFSET(get<T>, {0x58, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnNotifyEnd                                                 OFFSET(get<T>, {0x68, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -148,6 +146,8 @@ public:
 	// void OnMontageBlendingOut(UAnimMontage* Montage, bool bInterrupted);                                                     // [0x5797c64] Final|RequiredAPI|Native|Protected 
 	// Function /Script/AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
 	// UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(USkeletalMeshComponent* InSkeletalMeshComponent, UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, FName StartingSection); // [0x277614c] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/AnimGraphRuntime.SequenceEvaluatorLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class USequenceEvaluatorLibrary : public UBlueprintFunctionLibrary

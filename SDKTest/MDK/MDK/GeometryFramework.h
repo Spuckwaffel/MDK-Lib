@@ -57,8 +57,6 @@ public:
 	CMember(UMaterialInterface*)                       SecondaryRenderMaterial                                     OFFSET(get<T>, {0x5E8, 8, 0, 0})
 	DMember(bool)                                      bEnableRayTracing                                           OFFSET(get<bool>, {0x5F1, 1, 0, 0})
 	CMember(TArray<UMaterialInterface*>)               BaseMaterials                                               OFFSET(get<T>, {0x5F8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -114,6 +112,8 @@ public:
 	// void ClearSecondaryRenderMaterial();                                                                                     // [0xa3bd65c] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryFramework.BaseDynamicMeshComponent.ClearOverrideRenderMaterial
 	// void ClearOverrideRenderMaterial();                                                                                      // [0xa3bd644] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GeometryFramework.DynamicMeshComponent
 /// Size: 0x0260 (0x000610 - 0x000870)
 class UDynamicMeshComponent : public UBaseDynamicMeshComponent
@@ -131,8 +131,6 @@ public:
 	CMember(UBodySetup*)                               MeshBodySetup                                               OFFSET(get<T>, {0x798, 8, 0, 0})
 	SMember(FKAggregateGeom)                           AggGeom                                                     OFFSET(get<T>, {0x7D8, 120, 0, 0})
 	CMember(TArray<UBodySetup*>)                       AsyncBodySetupQueue                                         OFFSET(get<T>, {0x850, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -160,6 +158,8 @@ public:
 	// void EnableComplexAsSimpleCollision();                                                                                   // [0xa3bd748] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryFramework.DynamicMeshComponent.ConfigureMaterialSet
 	// void ConfigureMaterialSet(TArray<UMaterialInterface*>& NewMaterialSet);                                                  // [0xa3bd674] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GeometryFramework.DynamicMeshActor
 /// Size: 0x0018 (0x000290 - 0x0002A8)
 class ADynamicMeshActor : public AActor
@@ -171,8 +171,6 @@ public:
 	CMember(UDynamicMeshComponent*)                    DynamicMeshComponent                                        OFFSET(get<T>, {0x290, 8, 0, 0})
 	DMember(bool)                                      bEnableComputeMeshPool                                      OFFSET(get<bool>, {0x298, 1, 0, 0})
 	CMember(UDynamicMeshPool*)                         DynamicMeshPool                                             OFFSET(get<T>, {0x2A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -188,6 +186,8 @@ public:
 	// void FreeAllComputeMeshes();                                                                                             // [0xa3bd760] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryFramework.DynamicMeshActor.AllocateComputeMesh
 	// UDynamicMesh* AllocateComputeMesh();                                                                                     // [0xa3bd5f4] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GeometryFramework.DynamicMeshGenerator
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDynamicMeshGenerator : public UObject
@@ -209,8 +209,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  MeshModifiedBPEvent                                         OFFSET(get<T>, {0x70, 16, 0, 0})
 	CMember(UDynamicMeshGenerator*)                    MeshGenerator                                               OFFSET(get<T>, {0xA0, 8, 0, 0})
 	DMember(bool)                                      bEnableMeshGenerator                                        OFFSET(get<bool>, {0xA8, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -222,6 +220,8 @@ public:
 	// bool IsEmpty();                                                                                                          // [0xa3bda4c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GeometryFramework.DynamicMesh.GetTriangleCount
 	// int32_t GetTriangleCount();                                                                                              // [0xa3bd970] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/GeometryFramework.DynamicMeshPool
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UDynamicMeshPool : public UObject
@@ -232,8 +232,6 @@ class UDynamicMeshPool : public UObject
 public:
 	CMember(TArray<UDynamicMesh*>)                     CachedMeshes                                                OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<UDynamicMesh*>)                     AllCreatedMeshes                                            OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -245,6 +243,8 @@ public:
 	// UDynamicMesh* RequestMesh();                                                                                             // [0xa3bdd04] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/GeometryFramework.DynamicMeshPool.FreeAllMeshes
 	// void FreeAllMeshes();                                                                                                    // [0xa3bd788] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/GeometryFramework.DynamicMeshChangeInfo
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FDynamicMeshChangeInfo : public MDKStruct

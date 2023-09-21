@@ -76,8 +76,6 @@ public:
 	DMember(bool)                                      bEnabled                                                    OFFSET(get<bool>, {0xD80, 1, 0, 0})
 	DMember(int32_t)                                   LaserGridPatternIndex                                       OFFSET(get<int32_t>, {0xD84, 4, 0, 0})
 	SMember(FTimerHandle)                              LaserPatternTimerHandle                                     OFFSET(get<T>, {0xD88, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -105,6 +103,8 @@ public:
 	// void CosmeticDestroyOutletInstance(FLaserGridOutletEntry& OutletEntry);                                                  // [0x1ebf994] BlueprintCosmetic|Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/LaserGameplayRuntime.BuildingGameplayActorLaserGrid.CanActorTriggerLaserGrid
 	// bool CanActorTriggerLaserGrid(AActor* TriggeringActor);                                                                  // [0x99d0458] BlueprintAuthorityOnly|Native|Event|Protected|BlueprintEvent|Const 
+};
+
 /// Struct /Script/LaserGameplayRuntime.LaserGridConnectionEntry
 /// Size: 0x000C (0x00000C - 0x000018)
 class FLaserGridConnectionEntry : public FFastArraySerializerItem

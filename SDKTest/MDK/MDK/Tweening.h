@@ -63,8 +63,6 @@ class UTweenManager : public UGameInstanceSubsystem
 
 public:
 	CMember(TMap<int32_t, UObject*>)                   TweenContexts                                               OFFSET(get<T>, {0x38, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -90,6 +88,8 @@ public:
 	// bool KillTween(int32_t InTweenId);                                                                                       // [0xa253fe0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/Tweening.TweenManager.HasTween
 	// bool HasTween(int32_t InTweenId);                                                                                        // [0xa253f54] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/Tweening.TweenSequence
 /// Size: 0x0068 (0x000028 - 0x000090)
 class UTweenSequence : public UObject
@@ -101,8 +101,6 @@ public:
 	CMember(TArray<FTweenSequenceEntry>)               SequenceEntries                                             OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(UTweenManager*)                            TweenManager                                                OFFSET(get<T>, {0x38, 8, 0, 0})
 	CMember(TArray<FTimerHandle>)                      TimerHandles                                                OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -118,6 +116,8 @@ public:
 	// void BP_AppendTween(int32_t& TweenId, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0xa24c148] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Tweening.TweenSequence.BP_AppendSequence
 	// void BP_AppendSequence(UTweenSequence*& SequenceToAppend, float AdditionalDelayAtBeginning, float AdditionalDelayAtEnd, UTweenSequence*& OutSequence); // [0xa24be7c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/Tweening.WidgetTweening
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UWidgetTweening : public UBlueprintFunctionLibrary

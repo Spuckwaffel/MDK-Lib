@@ -72,10 +72,10 @@ public:
 	DMember(int32_t)                                   NumOcclusionLods                                            OFFSET(get<int32_t>, {0x5CC, 4, 0, 0})
 	DMember(bool)                                      bHiddenInEditor                                             OFFSET(get<bool>, {0x5D0, 1, 0, 0})
 	DMember(bool)                                      bWorldPositionOffsetVelocity                                OFFSET(get<bool>, {0x5D1, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VirtualHeightfieldMesh.VirtualHeightfieldMeshComponent.GatherHideFlags
 	// void GatherHideFlags(bool& InOutHidePrimitivesInEditor, bool& InOutHidePrimitivesInGame);                                // [0xa35d4e8] Final|Native|Protected|HasOutParms|Const 
+};
+

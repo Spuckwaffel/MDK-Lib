@@ -20,8 +20,6 @@ class UCreativeGameStreamDeviceComponent : public UActorComponent
 public:
 	SMember(FMulticastSparseDelegate)                  OnTriggered                                                 OFFSET(get<T>, {0xA0, 1, 0, 0})
 	CMember(TWeakObjectPtr<UFortMinigameLogicComponent*>) MinigameLogicComponent                                   OFFSET(get<T>, {0xA4, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -37,6 +35,8 @@ public:
 	// void CreativeGameStreamDeviceComponentSignature__DelegateSignature(UCreativeGameStreamDeviceComponent* CreativeGameStreamDeviceComponent); // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/CRD_GameStreamRuntime.CreativeGameStreamDeviceComponent.AddToEndGameQueue
 	// void AddToEndGameQueue();                                                                                                // [0x2d79908] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CRD_GameStreamRuntime.CreativeGameStreamDeviceCoordinatorComponent
 /// Size: 0x0018 (0x0000A0 - 0x0000B8)
 class UCreativeGameStreamDeviceCoordinatorComponent : public UPlayspaceComponent
@@ -47,10 +47,10 @@ class UCreativeGameStreamDeviceCoordinatorComponent : public UPlayspaceComponent
 public:
 	CMember(TArray<TWeakObjectPtr>)                    EndGameCreativeGameStreamDeviceComponentQueue               OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TWeakObjectPtr<AFortMinigame*>)            Minigame                                                    OFFSET(get<T>, {0xB0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CRD_GameStreamRuntime.CreativeGameStreamDeviceCoordinatorComponent.OnMinigameStateChanged
 	// void OnMinigameStateChanged(AFortMinigame* InMinigame, EFortMinigameState NewMinigameState);                             // [0x7a6342c] Final|Native|Private 
+};
+

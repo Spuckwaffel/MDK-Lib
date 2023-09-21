@@ -28,8 +28,6 @@ public:
 	SMember(FScalableFloat)                            PointProvidersToEnable                                      OFFSET(get<T>, {0x2E0, 40, 0, 0})
 	SMember(FScalableFloat)                            EvaluateAutomatically                                       OFFSET(get<T>, {0x308, 40, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnCompletedEvaluationDelegate                               OFFSET(get<T>, {0x338, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -49,6 +47,8 @@ public:
 	// void EvaluateAndEnablePointProviders();                                                                                  // [0x2d79908] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler.DoesStartEnabled
 	// bool DoesStartEnabled();                                                                                                 // [0x97feb28] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride
 /// Size: 0x0000 (0x000348 - 0x000348)
 class AFortAthenaLivingWorldPointProvidersEnabler_MiniMapDataOverride : public AFortAthenaLivingWorldPointProvidersEnabler
@@ -174,8 +174,6 @@ public:
 	CMember(TArray<AActor*>)                           SpawnedActors                                               OFFSET(get<T>, {0x158, 16, 0, 0})
 	DMember(int32_t)                                   CurrentStageIndex                                           OFFSET(get<int32_t>, {0x170, 4, 0, 0})
 	DMember(bool)                                      bIsPaused                                                   OFFSET(get<bool>, {0x178, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -211,6 +209,8 @@ public:
 	// void AdvanceEncounterStage();                                                                                            // [0x97fe608] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldEncounterInstance.AddAllowedPointProvider
 	// void AddAllowedPointProvider(TScriptInterface<Class>& PointProvider);                                                    // [0x97fe538] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldEventData
 /// Size: 0x0110 (0x000030 - 0x000140)
 class UFortAthenaLivingWorldEventData : public UDataAsset
@@ -265,8 +265,6 @@ public:
 	CMember(TMap<UClass*, UFortAthenaLivingWorldSpawnAction*>) SpawnActionCache                                    OFFSET(get<T>, {0xA68, 80, 0, 0})
 	CMember(AFortAthenaLivingWorldEQSHelper*)          EQSHelper                                                   OFFSET(get<T>, {0xAB8, 8, 0, 0})
 	CMember(UFortAthenaLivingWorldDebugDensityMiniMapIndicator*) DebugDensityMinimapIndicator                      OFFSET(get<T>, {0xAC0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -350,6 +348,8 @@ public:
 	// void CancelSpawnRequest(int32_t RequestID);                                                                              // [0x97fe9a8] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldManager.BuildDataRegistryResolverScope_Implementation
 	// bool BuildDataRegistryResolverScope_Implementation(TArray<FName>& InOutResolverScopes, int32_t& InOutPriority);          // [0x97fe650] Native|Public|HasOutParms|Const 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldNavigationInvokerComponent
 /// Size: 0x00F0 (0x0000A0 - 0x000190)
 class UFortAthenaLivingWorldNavigationInvokerComponent : public UActorComponent
@@ -365,13 +365,13 @@ public:
 	SMember(FScalableFloat)                            RegistrationDistanceToPlayer                                OFFSET(get<T>, {0x120, 40, 0, 0})
 	SMember(FScalableFloat)                            RegistrationDistanceToPlayerHysteresis                      OFFSET(get<T>, {0x148, 40, 0, 0})
 	CMember(TWeakObjectPtr<UFortAthenaLivingWorldManager*>) LivingWorldManager                                     OFFSET(get<T>, {0x170, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldNavigationInvokerComponent.OnCurrentPlaylistLoaded
 	// void OnCurrentPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContextTags);                            // [0x7b4c210] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldPointProviderInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortAthenaLivingWorldPointProviderInterface : public UInterface
@@ -415,8 +415,6 @@ public:
 	DMember(bool)                                      bShouldSpawnerBeAllowedToSpawn                              OFFSET(get<bool>, {0x8F1, 1, 0, 0})
 	DMember(bool)                                      bShouldAlwaysSnapAboveLandscape                             OFFSET(get<bool>, {0x8F2, 1, 0, 0})
 	SMember(FWorldConditionQueryDefinition)            CanSpawnCondition                                           OFFSET(get<T>, {0x8F8, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -442,6 +440,8 @@ public:
 	// void CallWhenAllActorHaveSpawned(FDelegateProperty& DelegateToCall);                                                     // [0x97fe904] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldPrefab.AllowSpawnerToSpawn
 	// void AllowSpawnerToSpawn();                                                                                              // [0x97fe61c] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldPrefabActorSpawner
 /// Size: 0x0130 (0x000290 - 0x0003C0)
 class AFortAthenaLivingWorldPrefabActorSpawner : public AActor
@@ -455,8 +455,6 @@ public:
 	CMember(AFortAthenaPatrolPath*)                    PatrolPath                                                  OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	SMember(FGuid)                                     Guid                                                        OFFSET(get<T>, {0x3A8, 16, 0, 0})
 	CMember(TWeakObjectPtr<AActor*>)                   SpawnedActor                                                OFFSET(get<T>, {0x3B8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -470,6 +468,8 @@ public:
 	// AActor* GetSpawnedActor();                                                                                               // [0x2988f60] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldPrefabActorSpawner.CallWhenActorSpawned
 	// void CallWhenActorSpawned(FDelegateProperty& DelegateToCall);                                                            // [0x97fe7b8] Final|BlueprintAuthorityOnly|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldSpawnAction
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortAthenaLivingWorldSpawnAction : public UObject
@@ -508,8 +508,6 @@ public:
 	CMember(TArray<FPointProviderTagDebugColor>)       DebugColors                                                 OFFSET(get<T>, {0x348, 16, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x358, 8, 0, 0})
 	CMember(UFortAthenaLivingWorldManager*)            CachedLivingWorldManager                                    OFFSET(get<T>, {0x360, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -521,6 +519,8 @@ public:
 	// void EnablePointProvider();                                                                                              // [0x97feb58] Native|Public|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldStaticPointProvider.DisablePointProvider
 	// void DisablePointProvider();                                                                                             // [0x97feadc] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldVehiclePointProvider
 /// Size: 0x0050 (0x000370 - 0x0003C0)
 class AFortAthenaLivingWorldVehiclePointProvider : public AFortAthenaLivingWorldStaticPointProvider
@@ -556,8 +556,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(get<T>, {0x400, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnPointProviderRegistered                                   OFFSET(get<T>, {0x410, 16, 0, 0})
 	CMember(UFortAthenaLivingWorldManager*)            CachedLivingWorldManager                                    OFFSET(get<T>, {0x420, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -589,6 +587,8 @@ public:
 	// bool DoesStartEnabled();                                                                                                 // [0x893a870] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldVolume.DisablePointProvider
 	// void DisablePointProvider();                                                                                             // [0x97feaf8] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaLivingWorldWardComponent
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class UFortAthenaLivingWorldWardComponent : public UActorComponent
@@ -598,8 +598,6 @@ class UFortAthenaLivingWorldWardComponent : public UActorComponent
 
 public:
 	DMember(float)                                     DefaultRadius                                               OFFSET(get<float>, {0xA0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -609,6 +607,8 @@ public:
 	// void OnWorldFinishedInitialization(FGameplayTagContainer& ContextTags);                                                  // [0x9805320] Final|Native|Private|HasOutParms 
 	// Function /Script/LagerRuntime.FortAthenaLivingWorldWardComponent.OnCurrentPlaylistLoaded
 	// void OnCurrentPlaylistLoaded(FName PlaylistName, FGameplayTagContainer& PlaylistContextTags);                            // [0x9803304] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaPatrolPathPointProvider
 /// Size: 0x00D0 (0x000290 - 0x000360)
 class AFortAthenaPatrolPathPointProvider : public AActor
@@ -627,8 +627,6 @@ public:
 	CMember(TWeakObjectPtr<AFortAthenaPatrolPath*>)    RuntimePatrolPathWeakPtr                                    OFFSET(get<T>, {0x340, 8, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x348, 8, 0, 0})
 	CMember(UFortAthenaLivingWorldManager*)            CachedLivingWorldManager                                    OFFSET(get<T>, {0x350, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -640,6 +638,8 @@ public:
 	// void EnablePointProvider();                                                                                              // [0x97feb58] Native|Public|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaPatrolPathPointProvider.DisablePointProvider
 	// void DisablePointProvider();                                                                                             // [0x97feadc] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortAthenaPointAroundPlayerProvider
 /// Size: 0x00C0 (0x000290 - 0x000350)
 class AFortAthenaPointAroundPlayerProvider : public AActor
@@ -657,8 +657,6 @@ public:
 	SMember(FFortAthenaLivingWorldPointProviderSpawnLimiter) SpawnLimiter                                          OFFSET(get<T>, {0x2C8, 104, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnActorSpawnedResult                                        OFFSET(get<T>, {0x330, 16, 0, 0})
 	CMember(AFortGameStateAthena*)                     CachedGameState                                             OFFSET(get<T>, {0x340, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -670,6 +668,8 @@ public:
 	// void EnablePointProvider();                                                                                              // [0x97feb58] RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/LagerRuntime.FortAthenaPointAroundPlayerProvider.DisablePointProvider
 	// void DisablePointProvider();                                                                                             // [0x97feadc] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LagerRuntime.FortCheatManager_LivingWorldManager
 /// Size: 0x0048 (0x000028 - 0x000070)
 class UFortCheatManager_LivingWorldManager : public UChildCheatManager
@@ -684,8 +684,6 @@ public:
 	SMember(FString)                                   CheatSpawnEventName                                         OFFSET(get<T>, {0x48, 16, 0, 0})
 	DMember(int32_t)                                   CheatTriggerEventCount                                      OFFSET(get<int32_t>, {0x58, 4, 0, 0})
 	SMember(FString)                                   CheatTriggerEventName                                       OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -713,6 +711,8 @@ public:
 	// void LivingWorldManagerGDTNextDensityGrid();                                                                             // [0x2d79908] Final|Exec|Native|Public 
 	// Function /Script/LagerRuntime.FortCheatManager_LivingWorldManager.LivingWorldManagerDisplaySpawnPoints
 	// void LivingWorldManagerDisplaySpawnPoints(float MaxDisplayDistance);                                                     // [0x5a9cbc4] Final|Exec|Native|Public 
+};
+
 /// Class /Script/LagerRuntime.FortGameFeatureAction_AddCategoryTableToConfig
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UFortGameFeatureAction_AddCategoryTableToConfig : public UGameFeatureAction

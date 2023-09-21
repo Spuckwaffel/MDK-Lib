@@ -29,8 +29,6 @@ class AMoverBasePawn : public APawn
 
 public:
 	CMember(UKinematicMoverComponent*)                 CharacterMotionComponent                                    OFFSET(get<T>, {0x318, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -38,6 +36,8 @@ public:
 	// FKinematicMoverInputCmdContext OnProduceInputInBlueprint(float DeltaMs, FKinematicMoverInputCmdContext InputCmd);        // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/Mover.MoverBasePawn.GetMoverComponent
 	// UKinematicMoverComponent* GetMoverComponent();                                                                           // [0x74d1288] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Mover.MoverBlackboard
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UMoverBlackboard : public UObject
@@ -119,8 +119,6 @@ public:
 	CMember(UPrimitiveComponent*)                      UpdatedPrimitive                                            OFFSET(get<T>, {0x1A8, 8, 0, 0})
 	CMember(UMovementModeStateMachine*)                ModeFSM                                                     OFFSET(get<T>, {0x258, 8, 0, 0})
 	CMember(UMoverBlackboard*)                         SimBlackboard                                               OFFSET(get<T>, {0x260, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -164,6 +162,8 @@ public:
 	// FKinematicMoverInputCmdContext GetLastInputCmd();                                                                        // [0x74d0c68] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/Mover.KinematicMoverComponent.GetFutureTrajectory
 	// TArray<FTrajectorySampleInfo> GetFutureTrajectory(float FutureSeconds, float SamplesPerSecond);                          // [0x74d0b8c] Final|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/Mover.BaseMovementMode
 /// Size: 0x0008 (0x000028 - 0x000030)
 class UBaseMovementMode : public UObject
@@ -189,8 +189,6 @@ public:
 	DMember(float)                                     VerticalFallingDeceleration                                 OFFSET(get<float>, {0x40, 4, 0, 0})
 	DMember(float)                                     TerminalVerticalSpeed                                       OFFSET(get<float>, {0x44, 4, 0, 0})
 	SMember(FVector)                                   GravityAcceleration                                         OFFSET(get<T>, {0x48, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -198,6 +196,8 @@ public:
 	// void OnSimulationTick(FSimulationTickParams& Params, FKinematicMoverTickEndData& OutputState);                           // [0x74d29c4] Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/Mover.FallingMode.OnGenerateMove
 	// void OnGenerateMove(FKinematicMoverTickStartData& StartState, FMoverTimeStep& TimeStep, FProposedMove& OutProposedMove); // [0x74d26c0] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/Mover.FlyingMode
 /// Size: 0x0000 (0x000030 - 0x000030)
 class UFlyingMode : public UBaseMovementMode

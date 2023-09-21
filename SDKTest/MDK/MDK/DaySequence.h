@@ -37,8 +37,6 @@ public:
 	DMember(bool)                                      bIsComponentEnabled                                         OFFSET(get<bool>, {0x688, 1, 1, 2})
 	DMember(bool)                                      bIsEnabled                                                  OFFSET(get<bool>, {0x688, 1, 1, 3})
 	DMember(bool)                                      bPreview                                                    OFFSET(get<bool>, {0x688, 1, 1, 4})
-};
-
 
 
 	/// Functions
@@ -88,6 +86,8 @@ public:
 	// void AddColorMaterialParameterOverride(UObject* Object, int32_t MaterialIndex, FName ParameterName, FLinearColor Value); // [0x74e7250] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/DaySequence.DaySequenceModifierComponent.AddBoolOverride
 	// void AddBoolOverride(UObject* Object, FName PropertyName, bool bValue);                                                  // [0x74e7154] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/DaySequence.DaySequence
 /// Size: 0x00C8 (0x000068 - 0x000130)
 class UDaySequence : public UMovieSceneSequence
@@ -121,8 +121,6 @@ public:
 	SMember(FTimecode)                                 DayLength                                                   OFFSET(get<T>, {0x31C, 20, 0, 0})
 	SMember(FTimecode)                                 TimePerCycle                                                OFFSET(get<T>, {0x330, 20, 0, 0})
 	SMember(FTimecode)                                 InitialTimeOfDay                                            OFFSET(get<T>, {0x344, 20, 0, 0})
-};
-
 
 
 	/// Functions
@@ -174,6 +172,8 @@ public:
 	// int32_t GetBias(FName SequenceKey);                                                                                      // [0x74e8028] Final|Native|Public|BlueprintCallable 
 	// Function /Script/DaySequence.DaySequenceActor.ContainsDaySequence
 	// bool ContainsDaySequence(UDaySequence* InDaySequence);                                                                   // [0x74e7ee0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/DaySequence.DaySequenceDirector
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UDaySequenceDirector : public UObject
@@ -185,8 +185,6 @@ public:
 	CMember(UDaySequencePlayer*)                       Player                                                      OFFSET(get<T>, {0x28, 8, 0, 0})
 	DMember(int32_t)                                   SubSequenceID                                               OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	DMember(int32_t)                                   MovieScenePlayerIndex                                       OFFSET(get<int32_t>, {0x34, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -208,6 +206,8 @@ public:
 	// TArray<AActor*> GetBoundActors(FMovieSceneObjectBindingID ObjectBinding);                                                // [0x5991d1c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/DaySequence.DaySequenceDirector.GetBoundActor
 	// AActor* GetBoundActor(FMovieSceneObjectBindingID ObjectBinding);                                                         // [0x5991b8c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/DaySequence.DaySequencePlayer
 /// Size: 0x0008 (0x0004C8 - 0x0004D0)
 class UDaySequencePlayer : public UMovieSceneSequencePlayer

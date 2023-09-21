@@ -16,10 +16,10 @@ class UEpicMediaCDNHostnames : public UObject
 
 public:
 	CMember(TArray<float>)                             CDNDistribution                                             OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EpicMediaCDNHostnames.EpicMediaCDNHostnames.GetSelectedHostName
 	// FString GetSelectedHostName();                                                                                           // [0x6d3f8e4] Final|Native|Public|BlueprintCallable 
+};
+

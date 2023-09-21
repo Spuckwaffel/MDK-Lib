@@ -58,8 +58,6 @@ public:
 	DMember(bool)                                      bJumpInputPressed                                           OFFSET(get<bool>, {0xB48, 1, 0, 0})
 	DMember(float)                                     JumpHeldInAirTime                                           OFFSET(get<float>, {0xB4C, 4, 0, 0})
 	SMember(FGameplayTag)                              Tag_DisableClambering                                       OFFSET(get<T>, {0xBB8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -135,6 +133,8 @@ public:
 	// void BP_CanStartTargeting(bool& bCanStartTargeting);                                                                     // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
 	// Function /Script/ClamberingCodeRuntime.ClamberingComponent.BP_CanStartClambering
 	// void BP_CanStartClambering(bool& bCanStartClambering);                                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/ClamberingCodeRuntime.ClamberingLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UClamberingLibrary : public UBlueprintFunctionLibrary

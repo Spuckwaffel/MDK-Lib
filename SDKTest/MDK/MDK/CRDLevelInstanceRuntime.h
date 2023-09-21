@@ -48,8 +48,6 @@ public:
 	CMember(TArray<UClass*>)                           BlacklistedClasses                                          OFFSET(get<T>, {0x400, 16, 0, 0})
 	SMember(FGuid)                                     LevelInstanceSaveActorGuid                                  OFFSET(get<T>, {0x460, 16, 0, 0})
 	CMember(AFortLevelInstanceSaveActor*)              LevelInstanceSaveActor                                      OFFSET(get<T>, {0x470, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -105,6 +103,8 @@ public:
 	// AFortLevelInstanceSaveActor* CreateLevelInstanceSaveActor();                                                             // [0x9ac395c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CRDLevelInstanceRuntime.LevelInstanceGameplayVolume.CheckForOverlappingVolumes
 	// void CheckForOverlappingVolumes();                                                                                       // [0x9ac3948] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/CRDLevelInstanceRuntime.LevelInstanceItemListComponent
 /// Size: 0x0000 (0x000128 - 0x000128)
 class ULevelInstanceItemListComponent : public UFortMinigameItemContainerComponent

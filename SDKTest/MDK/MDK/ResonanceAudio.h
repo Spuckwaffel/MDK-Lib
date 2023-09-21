@@ -51,8 +51,6 @@ class UResonanceAudioReverbPluginPreset : public USoundEffectSubmixPreset
 
 public:
 	SMember(FResonanceAudioReverbPluginSettings)       Settings                                                    OFFSET(get<T>, {0x100, 112, 0, 0})
-};
-
 
 
 	/// Functions
@@ -74,6 +72,8 @@ public:
 	// void SetReflectionScalar(float InReflectionScalar);                                                                      // [0xa30b21c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioReverbPluginPreset.SetEnableRoomEffects
 	// void SetEnableRoomEffects(bool bInEnableRoomEffects);                                                                    // [0xa30b088] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/ResonanceAudio.ResonanceAudioSettings
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UResonanceAudioSettings : public UObject
@@ -105,8 +105,6 @@ public:
 	CMember(ERaDistanceRolloffModel)                   Rolloff                                                     OFFSET(get<T>, {0x40, 1, 0, 0})
 	DMember(float)                                     MinDistance                                                 OFFSET(get<float>, {0x44, 4, 0, 0})
 	DMember(float)                                     MaxDistance                                                 OFFSET(get<float>, {0x48, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -114,6 +112,8 @@ public:
 	// void SetSoundSourceSpread(float InSpread);                                                                               // [0x5b35cf4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceDirectivity
 	// void SetSoundSourceDirectivity(float InPattern, float InSharpness);                                                      // [0xa30bd8c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/ResonanceAudio.ResonanceAudioReverbPluginSettings
 /// Size: 0x0070 (0x000000 - 0x000070)
 class FResonanceAudioReverbPluginSettings : public MDKStruct

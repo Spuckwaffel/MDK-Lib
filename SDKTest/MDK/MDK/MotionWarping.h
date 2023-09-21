@@ -17,8 +17,6 @@ class UAnimNotifyState_MotionWarping : public UAnimNotifyState
 
 public:
 	CMember(URootMotionModifier*)                      RootMotionModifier                                          OFFSET(get<T>, {0x30, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -36,6 +34,8 @@ public:
 	// void OnRootMotionModifierActivate(UMotionWarpingComponent* MotionWarpingComp, URootMotionModifier* Modifier);            // [0x71e9d84] Final|Native|Public|Const 
 	// Function /Script/MotionWarping.AnimNotifyState_MotionWarping.AddRootMotionModifier
 	// URootMotionModifier* AddRootMotionModifier(UMotionWarpingComponent* MotionWarpingComp, UAnimSequenceBase* Animation, float StartTime, float EndTime); // [0x71e7a1c] Native|Event|Public|BlueprintEvent|Const 
+};
+
 /// Class /Script/MotionWarping.MotionWarpingUtilities
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMotionWarpingUtilities : public UBlueprintFunctionLibrary
@@ -59,8 +59,6 @@ public:
 	CMember(TWeakObjectPtr<ACharacter*>)               CharacterOwner                                              OFFSET(get<T>, {0xB8, 8, 0, 0})
 	CMember(TArray<URootMotionModifier*>)              Modifiers                                                   OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(TArray<FMotionWarpingTarget>)              WarpTargets                                                 OFFSET(get<T>, {0xD0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -78,6 +76,8 @@ public:
 	// void AddOrUpdateWarpTargetFromComponent(FName WarpTargetName, USceneComponent* Component, FName BoneName, bool bFollowComponent); // [0x71e6db0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTarget
 	// void AddOrUpdateWarpTarget(FMotionWarpingTarget& WarpTarget);                                                            // [0x71e6ce0] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MotionWarping.RootMotionModifier
 /// Size: 0x00B8 (0x000028 - 0x0000E0)
 class URootMotionModifier : public UObject
@@ -143,13 +143,13 @@ class URootMotionModifier_Scale : public URootMotionModifier
 
 public:
 	SMember(FVector)                                   Scale                                                       OFFSET(get<T>, {0xE0, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MotionWarping.RootMotionModifier_Scale.AddRootMotionModifierScale
 	// URootMotionModifier_Scale* AddRootMotionModifierScale(UMotionWarpingComponent* InMotionWarpingComp, UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, FVector InScale); // [0x71e7b64] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/MotionWarping.RootMotionModifier_AdjustmentBlendWarp
 /// Size: 0x0160 (0x000240 - 0x0003A0)
 class URootMotionModifier_AdjustmentBlendWarp : public URootMotionModifier_Warp

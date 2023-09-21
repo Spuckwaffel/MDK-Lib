@@ -28,8 +28,6 @@ public:
 	CMember(UGameplayStateMachine*)                    CachedGameplayStateMachine                                  OFFSET(get<T>, {0x60, 8, 0, 0})
 	CMember(UGameplayStateMachineManager*)             CachedStateMachineManager                                   OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UGameplayState*)                           Hack_StateToDelayProcess                                    OFFSET(get<T>, {0x70, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -75,6 +73,8 @@ public:
 	// void BeginStateEvent(FGameplayTag& PrevStateId);                                                                         // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/GameplayStateMachine.GameplayState.AddStateRuntimeTag
 	// void AddStateRuntimeTag(FGameplayTag& AddedTag);                                                                         // [0x9ba5ae4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayStateMachine.GameplayStateMachine
 /// Size: 0x0050 (0x000078 - 0x0000C8)
 class UGameplayStateMachine : public UGameplayState
@@ -87,8 +87,6 @@ public:
 	SMember(FActiveGameplayStateData)                  ActiveGameplayStateData                                     OFFSET(get<T>, {0x98, 24, 0, 0})
 	CMember(TArray<FGameplayStateSettings>)            GameplayStateSettings                                       OFFSET(get<T>, {0xB0, 16, 0, 0})
 	SMember(FGameplayTag)                              InitialGameplayStateId                                      OFFSET(get<T>, {0xC0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -104,6 +102,8 @@ public:
 	// FGameplayTag GetActiveStateId();                                                                                         // [0x9ba5bb0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GameplayStateMachine.GameplayStateMachine.EvaluateStateTransition
 	// void EvaluateStateTransition();                                                                                          // [0x34def90] Native|Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/GameplayStateMachine.GameplayStateMachineManager
 /// Size: 0x0120 (0x0000A0 - 0x0001C0)
 class UGameplayStateMachineManager : public UActorComponent

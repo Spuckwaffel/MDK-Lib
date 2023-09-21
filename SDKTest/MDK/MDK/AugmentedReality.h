@@ -58,13 +58,13 @@ class UARSaveWorldAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProx
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AugmentedReality.ARSaveWorldAsyncTaskBlueprintProxy.ARSaveWorld
 	// UARSaveWorldAsyncTaskBlueprintProxy* ARSaveWorld(UObject* WorldContextObject);                                           // [0xa030a38] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy
 /// Size: 0x0060 (0x000050 - 0x0000B0)
 class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
@@ -75,13 +75,13 @@ class UARGetCandidateObjectAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlue
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AugmentedReality.ARGetCandidateObjectAsyncTaskBlueprintProxy.ARGetCandidateObject
 	// UARGetCandidateObjectAsyncTaskBlueprintProxy* ARGetCandidateObject(UObject* WorldContextObject, FVector Location, FVector Extent); // [0xa030754] Final|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.ARComponent
 /// Size: 0x0080 (0x0002A0 - 0x000320)
 class UARComponent : public USceneComponent
@@ -96,8 +96,6 @@ public:
 	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                OFFSET(get<T>, {0x2F0, 8, 0, 0})
 	CMember(UMRMeshComponent*)                         MRMeshComponent                                             OFFSET(get<T>, {0x2F8, 8, 0, 0})
 	CMember(UARTrackedGeometry*)                       MyTrackedGeometry                                           OFFSET(get<T>, {0x300, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -111,6 +109,8 @@ public:
 	// void OnRep_Payload();                                                                                                    // [0x8774a80] Native|Protected     
 	// Function /Script/AugmentedReality.ARComponent.GetMRMesh
 	// UMRMeshComponent* GetMRMesh();                                                                                           // [0xa035a70] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/AugmentedReality.ARPlaneComponent
 /// Size: 0x00D0 (0x000320 - 0x0003F0)
 class UARPlaneComponent : public UARComponent
@@ -120,8 +120,6 @@ class UARPlaneComponent : public UARComponent
 
 public:
 	SMember(FARPlaneUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 208, 0, 0})
-};
-
 
 
 	/// Functions
@@ -137,6 +135,8 @@ public:
 	// void ReceiveAdd(FARPlaneUpdatePayload& Payload);                                                                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARPlaneComponent.GetObjectClassificationDebugColors
 	// TMap<EARObjectClassification, FLinearColor> GetObjectClassificationDebugColors();                                        // [0xa0361a8] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/AugmentedReality.ARPointComponent
 /// Size: 0x0010 (0x000320 - 0x000330)
 class UARPointComponent : public UARComponent
@@ -146,8 +146,6 @@ class UARPointComponent : public UARComponent
 
 public:
 	SMember(FARPointUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -157,6 +155,8 @@ public:
 	// void ReceiveUpdate(FARPointUpdatePayload& Payload);                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARPointComponent.ReceiveAdd
 	// void ReceiveAdd(FARPointUpdatePayload& Payload);                                                                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARFaceComponent
 /// Size: 0x0090 (0x000320 - 0x0003B0)
 class UARFaceComponent : public UARComponent
@@ -169,8 +169,6 @@ public:
 	DMember(bool)                                      bUpdateVertexNormal                                         OFFSET(get<bool>, {0x321, 1, 0, 0})
 	DMember(bool)                                      bFaceOutOfScreen                                            OFFSET(get<bool>, {0x322, 1, 0, 0})
 	SMember(FARFaceUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x328, 96, 0, 0})
-};
-
 
 
 	/// Functions
@@ -182,6 +180,8 @@ public:
 	// void ReceiveUpdate(FARFaceUpdatePayload& Payload);                                                                       // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARFaceComponent.ReceiveAdd
 	// void ReceiveAdd(FARFaceUpdatePayload& Payload);                                                                          // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARImageComponent
 /// Size: 0x00A0 (0x000320 - 0x0003C0)
 class UARImageComponent : public UARComponent
@@ -191,8 +191,6 @@ class UARImageComponent : public UARComponent
 
 public:
 	SMember(FARImageUpdatePayload)                     ReplicatedPayload                                           OFFSET(get<T>, {0x320, 160, 0, 0})
-};
-
 
 
 	/// Functions
@@ -204,6 +202,8 @@ public:
 	// void ReceiveUpdate(FARImageUpdatePayload& Payload);                                                                      // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARImageComponent.ReceiveAdd
 	// void ReceiveAdd(FARImageUpdatePayload& Payload);                                                                         // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARQRCodeComponent
 /// Size: 0x00B0 (0x000320 - 0x0003D0)
 class UARQRCodeComponent : public UARComponent
@@ -213,8 +213,6 @@ class UARQRCodeComponent : public UARComponent
 
 public:
 	SMember(FARQRCodeUpdatePayload)                    ReplicatedPayload                                           OFFSET(get<T>, {0x320, 176, 0, 0})
-};
-
 
 
 	/// Functions
@@ -226,6 +224,8 @@ public:
 	// void ReceiveUpdate(FARQRCodeUpdatePayload& Payload);                                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARQRCodeComponent.ReceiveAdd
 	// void ReceiveAdd(FARQRCodeUpdatePayload& Payload);                                                                        // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARPoseComponent
 /// Size: 0x0070 (0x000320 - 0x000390)
 class UARPoseComponent : public UARComponent
@@ -235,8 +235,6 @@ class UARPoseComponent : public UARComponent
 
 public:
 	SMember(FARPoseUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x320, 112, 0, 0})
-};
-
 
 
 	/// Functions
@@ -248,6 +246,8 @@ public:
 	// void ReceiveUpdate(FARPoseUpdatePayload& Payload);                                                                       // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARPoseComponent.ReceiveAdd
 	// void ReceiveAdd(FARPoseUpdatePayload& Payload);                                                                          // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.AREnvironmentProbeComponent
 /// Size: 0x0060 (0x000320 - 0x000380)
 class UAREnvironmentProbeComponent : public UARComponent
@@ -257,8 +257,6 @@ class UAREnvironmentProbeComponent : public UARComponent
 
 public:
 	SMember(FAREnvironmentProbeUpdatePayload)          ReplicatedPayload                                           OFFSET(get<T>, {0x320, 96, 0, 0})
-};
-
 
 
 	/// Functions
@@ -268,6 +266,8 @@ public:
 	// void ReceiveUpdate(FAREnvironmentProbeUpdatePayload& Payload);                                                           // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.AREnvironmentProbeComponent.ReceiveAdd
 	// void ReceiveAdd(FAREnvironmentProbeUpdatePayload& Payload);                                                              // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARObjectComponent
 /// Size: 0x0060 (0x000320 - 0x000380)
 class UARObjectComponent : public UARComponent
@@ -277,8 +277,6 @@ class UARObjectComponent : public UARComponent
 
 public:
 	SMember(FARObjectUpdatePayload)                    ReplicatedPayload                                           OFFSET(get<T>, {0x320, 96, 0, 0})
-};
-
 
 
 	/// Functions
@@ -288,6 +286,8 @@ public:
 	// void ReceiveUpdate(FARObjectUpdatePayload& Payload);                                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARObjectComponent.ReceiveAdd
 	// void ReceiveAdd(FARObjectUpdatePayload& Payload);                                                                        // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARMeshComponent
 /// Size: 0x0090 (0x000320 - 0x0003B0)
 class UARMeshComponent : public UARComponent
@@ -297,8 +297,6 @@ class UARMeshComponent : public UARComponent
 
 public:
 	SMember(FARMeshUpdatePayload)                      ReplicatedPayload                                           OFFSET(get<T>, {0x320, 144, 0, 0})
-};
-
 
 
 	/// Functions
@@ -308,6 +306,8 @@ public:
 	// void ReceiveUpdate(FARMeshUpdatePayload& Payload);                                                                       // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARMeshComponent.ReceiveAdd
 	// void ReceiveAdd(FARMeshUpdatePayload& Payload);                                                                          // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARGeoAnchorComponent
 /// Size: 0x00A0 (0x000320 - 0x0003C0)
 class UARGeoAnchorComponent : public UARComponent
@@ -317,8 +317,6 @@ class UARGeoAnchorComponent : public UARComponent
 
 public:
 	SMember(FARGeoAnchorUpdatePayload)                 ReplicatedPayload                                           OFFSET(get<T>, {0x320, 160, 0, 0})
-};
-
 
 
 	/// Functions
@@ -330,6 +328,8 @@ public:
 	// void ReceiveUpdate(FARGeoAnchorUpdatePayload& Payload);                                                                  // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AugmentedReality.ARGeoAnchorComponent.ReceiveAdd
 	// void ReceiveAdd(FARGeoAnchorUpdatePayload& Payload);                                                                     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARDependencyHandler
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UARDependencyHandler : public UObject
@@ -360,8 +360,6 @@ class UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy : public UARBaseAsync
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -371,6 +369,8 @@ public:
 	// UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* CheckGeoTrackingAvailabilityAtLocation(UObject* WorldContextObject, float Longitude, float Latitude); // [0xa0334c8] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AugmentedReality.CheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy.CheckGeoTrackingAvailability
 	// UCheckGeoTrackingAvailabilityAsyncTaskBlueprintProxy* CheckGeoTrackingAvailability(UObject* WorldContextObject);         // [0xa03342c] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy
 /// Size: 0x0058 (0x000050 - 0x0000A8)
 class UGetGeoLocationAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintProxy
@@ -381,8 +381,6 @@ class UGetGeoLocationAsyncTaskBlueprintProxy : public UARBaseAsyncTaskBlueprintP
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x50, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFailed                                                    OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -390,6 +388,8 @@ public:
 	// void GetGeoLocationDelegate__DelegateSignature(float Longitude, float Latitude, float Altitude, FString Error);          // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/AugmentedReality.GetGeoLocationAsyncTaskBlueprintProxy.GetGeoLocationAtWorldPosition
 	// UGetGeoLocationAsyncTaskBlueprintProxy* GetGeoLocationAtWorldPosition(UObject* WorldContextObject, FVector& WorldPosition); // [0xa0353ac] Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.ARLifeCycleComponent
 /// Size: 0x0030 (0x0002A0 - 0x0002D0)
 class UARLifeCycleComponent : public USceneComponent
@@ -400,8 +400,6 @@ class UARLifeCycleComponent : public USceneComponent
 public:
 	SMember(FMulticastInlineDelegate)                  OnARActorSpawnedDelegate                                    OFFSET(get<T>, {0x2A0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnARActorToBeDestroyedDelegate                              OFFSET(get<T>, {0x2B0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -413,6 +411,8 @@ public:
 	// void InstanceARActorToBeDestroyedDelegate__DelegateSignature(AARActor* Actor);                                           // [0x1ebf994] MulticastDelegate|Public|Delegate 
 	// Function /Script/AugmentedReality.ARLifeCycleComponent.InstanceARActorSpawnedDelegate__DelegateSignature
 	// void InstanceARActorSpawnedDelegate__DelegateSignature(UClass* ComponentClass, FGuid NativeID, AARActor* SpawnedActor);  // [0x1ebf994] MulticastDelegate|Public|Delegate|HasDefaults 
+};
+
 /// Class /Script/AugmentedReality.ARLightEstimate
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UARLightEstimate : public UObject
@@ -434,8 +434,6 @@ public:
 	DMember(float)                                     AmbientIntensityLumens                                      OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(float)                                     AmbientColorTemperatureKelvin                               OFFSET(get<float>, {0x2C, 4, 0, 0})
 	SMember(FLinearColor)                              AmbientColor                                                OFFSET(get<T>, {0x30, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -445,6 +443,8 @@ public:
 	// float GetAmbientColorTemperatureKelvin();                                                                                // [0x5ffe6ac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARBasicLightEstimate.GetAmbientColor
 	// FLinearColor GetAmbientColor();                                                                                          // [0xa034e38] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.AROriginActor
 /// Size: 0x0000 (0x000290 - 0x000290)
 class AAROriginActor : public AActor
@@ -470,8 +470,6 @@ public:
 	CMember(EARTrackingState)                          TrackingState                                               OFFSET(get<T>, {0x100, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnARTrackingStateChanged                                    OFFSET(get<T>, {0x120, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnARTransformUpdated                                        OFFSET(get<T>, {0x130, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -489,6 +487,8 @@ public:
 	// FName GetDebugName();                                                                                                    // [0xa0351cc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARPin.DebugDraw
 	// void DebugDraw(UWorld* World, FLinearColor& Color, float Scale, float PersistForSeconds);                                // [0xa0338d8] Native|Public|HasOutParms|HasDefaults|Const 
+};
+
 /// Class /Script/AugmentedReality.ARSessionConfig
 /// Size: 0x00E0 (0x000030 - 0x000110)
 class UARSessionConfig : public UDataAsset
@@ -544,8 +544,6 @@ public:
 	CMember(UClass*)                                   GeoAnchorComponentClass                                     OFFSET(get<T>, {0xF8, 8, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultMeshMaterial                                         OFFSET(get<T>, {0x100, 8, 0, 0})
 	CMember(UMaterialInterface*)                       DefaultWireframeMeshMaterial                                OFFSET(get<T>, {0x108, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -619,6 +617,8 @@ public:
 	// void AddCandidateObject(UARCandidateObject* CandidateObject);                                                            // [0xa030c9c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AugmentedReality.ARSessionConfig.AddCandidateImage
 	// void AddCandidateImage(UARCandidateImage* NewCandidateImage);                                                            // [0xa030c1c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.ARSharedWorldGameMode
 /// Size: 0x0068 (0x000378 - 0x0003E0)
 class AARSharedWorldGameMode : public AGameMode
@@ -628,8 +628,6 @@ class AARSharedWorldGameMode : public AGameMode
 
 public:
 	DMember(int32_t)                                   BufferSizePerChunk                                          OFFSET(get<int32_t>, {0x378, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -641,6 +639,8 @@ public:
 	// void SetARSharedWorldData(TArray<char> ARWorldData);                                                                     // [0xa0396d4] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
 	// Function /Script/AugmentedReality.ARSharedWorldGameMode.GetARSharedWorldGameState
 	// AARSharedWorldGameState* GetARSharedWorldGameState();                                                                    // [0x9ad9618] Final|BlueprintAuthorityOnly|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.ARSharedWorldGameState
 /// Size: 0x0038 (0x000300 - 0x000338)
 class AARSharedWorldGameState : public AGameState
@@ -655,13 +655,13 @@ public:
 	DMember(int32_t)                                   ARWorldBytesTotal                                           OFFSET(get<int32_t>, {0x324, 4, 0, 0})
 	DMember(int32_t)                                   PreviewImageBytesDelivered                                  OFFSET(get<int32_t>, {0x328, 4, 0, 0})
 	DMember(int32_t)                                   ARWorldBytesDelivered                                       OFFSET(get<int32_t>, {0x32C, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AugmentedReality.ARSharedWorldGameState.K2_OnARWorldMapIsReady
 	// void K2_OnARWorldMapIsReady();                                                                                           // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/AugmentedReality.ARSharedWorldPlayerController
 /// Size: 0x0008 (0x000850 - 0x000858)
 class AARSharedWorldPlayerController : public APlayerController
@@ -681,13 +681,13 @@ class AARSkyLight : public ASkyLight
 
 public:
 	CMember(UAREnvironmentCaptureProbe*)               CaptureProbe                                                OFFSET(get<T>, {0x2A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AugmentedReality.ARSkyLight.SetEnvironmentCaptureProbe
 	// void SetEnvironmentCaptureProbe(UAREnvironmentCaptureProbe* InCaptureProbe);                                             // [0xa03a8a8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AugmentedReality.ARTexture
 /// Size: 0x0020 (0x000138 - 0x000158)
 class UARTexture : public UTexture
@@ -766,8 +766,6 @@ public:
 	CMember(EARSpatialMeshUsageFlags)                  SpatialMeshUsageFlags                                       OFFSET(get<T>, {0x119, 1, 0, 0})
 	DMember(int32_t)                                   LastUpdateFrameNumber                                       OFFSET(get<int32_t>, {0x130, 4, 0, 0})
 	SMember(FName)                                     DebugName                                                   OFFSET(get<T>, {0x140, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -793,6 +791,8 @@ public:
 	// int32_t GetLastUpdateFrameNumber();                                                                                      // [0xa035538] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARTrackedGeometry.GetDebugName
 	// FName GetDebugName();                                                                                                    // [0x7e58e20] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.ARPlaneGeometry
 /// Size: 0x0050 (0x000160 - 0x0001B0)
 class UARPlaneGeometry : public UARTrackedGeometry
@@ -806,8 +806,6 @@ public:
 	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x178, 24, 0, 0})
 	CMember(TArray<FVector>)                           BoundaryPolygon                                             OFFSET(get<T>, {0x190, 16, 0, 0})
 	CMember(UARPlaneGeometry*)                         SubsumedBy                                                  OFFSET(get<T>, {0x1A0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -821,6 +819,8 @@ public:
 	// FVector GetCenter();                                                                                                     // [0xa035180] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARPlaneGeometry.GetBoundaryPolygonInLocalSpace
 	// TArray<FVector> GetBoundaryPolygonInLocalSpace();                                                                        // [0xa034f7c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.ARTrackedPoint
 /// Size: 0x0000 (0x000160 - 0x000160)
 class UARTrackedPoint : public UARTrackedGeometry
@@ -841,8 +841,6 @@ class UARTrackedImage : public UARTrackedGeometry
 public:
 	CMember(UARCandidateImage*)                        DetectedImage                                               OFFSET(get<T>, {0x158, 8, 0, 0})
 	SMember(FVector2D)                                 EstimatedSize                                               OFFSET(get<T>, {0x160, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -850,6 +848,8 @@ public:
 	// FVector2D GetEstimateSize();                                                                                             // [0x8223c2c] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure 
 	// Function /Script/AugmentedReality.ARTrackedImage.GetDetectedImage
 	// UARCandidateImage* GetDetectedImage();                                                                                   // [0x2fe0980] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.ARTrackedQRCode
 /// Size: 0x0020 (0x000170 - 0x000190)
 class UARTrackedQRCode : public UARTrackedImage
@@ -875,8 +875,6 @@ public:
 	CMember(TMap<EARFaceBlendShape, float>)            BlendShapes                                                 OFFSET(get<T>, {0x178, 80, 0, 0})
 	SMember(FTransform)                                LeftEyeTransform                                            OFFSET(get<T>, {0x200, 96, 0, 0})
 	SMember(FTransform)                                RightEyeTransform                                           OFFSET(get<T>, {0x260, 96, 0, 0})
-};
-
 
 
 	/// Functions
@@ -888,6 +886,8 @@ public:
 	// float GetBlendShapeValue(EARFaceBlendShape BlendShape);                                                                  // [0xa034e50] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARFaceGeometry.GetBlendShapes
 	// TMap<EARFaceBlendShape, float> GetBlendShapes();                                                                         // [0xa034ee0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.AREnvironmentCaptureProbe
 /// Size: 0x0020 (0x000160 - 0x000180)
 class UAREnvironmentCaptureProbe : public UARTrackedGeometry
@@ -898,8 +898,6 @@ class UAREnvironmentCaptureProbe : public UARTrackedGeometry
 public:
 	SMember(FVector)                                   Extent                                                      OFFSET(get<T>, {0x158, 24, 0, 0})
 	CMember(UAREnvironmentCaptureProbeTexture*)        EnvironmentCaptureTexture                                   OFFSET(get<T>, {0x170, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -907,6 +905,8 @@ public:
 	// FVector GetExtent();                                                                                                     // [0xa0352fc] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.AREnvironmentCaptureProbe.GetEnvironmentCaptureTexture
 	// UAREnvironmentCaptureProbeTexture* GetEnvironmentCaptureTexture();                                                       // [0x83a9c6c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/AugmentedReality.ARTrackedObject
 /// Size: 0x0000 (0x000160 - 0x000160)
 class UARTrackedObject : public UARTrackedGeometry
@@ -915,13 +915,13 @@ class UARTrackedObject : public UARTrackedGeometry
 	static inline constexpr uint64_t __MDKClassSize = 352;
 
 public:
-};
-
 
 
 	/// Functions
 	// Function /Script/AugmentedReality.ARTrackedObject.GetDetectedObject
 	// UARCandidateObject* GetDetectedObject();                                                                                 // [0x2fe0980] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.ARTrackedPose
 /// Size: 0x0050 (0x000160 - 0x0001B0)
 class UARTrackedPose : public UARTrackedGeometry
@@ -931,13 +931,13 @@ class UARTrackedPose : public UARTrackedGeometry
 
 public:
 	SMember(FARPose3D)                                 TrackedPose                                                 OFFSET(get<T>, {0x158, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AugmentedReality.ARTrackedPose.GetTrackedPoseData
 	// FARPose3D GetTrackedPoseData();                                                                                          // [0xa0364e8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.ARMeshGeometry
 /// Size: 0x0000 (0x000160 - 0x000160)
 class UARMeshGeometry : public UARTrackedGeometry
@@ -1012,8 +1012,6 @@ public:
 	DMember(float)                                     Width                                                       OFFSET(get<float>, {0x48, 4, 0, 0})
 	DMember(float)                                     Height                                                      OFFSET(get<float>, {0x4C, 4, 0, 0})
 	CMember(EARCandidateImageOrientation)              Orientation                                                 OFFSET(get<T>, {0x50, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1027,6 +1025,8 @@ public:
 	// FString GetFriendlyName();                                                                                               // [0x9020f98] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARCandidateImage.GetCandidateTexture
 	// UTexture2D* GetCandidateTexture();                                                                                       // [0x5ae2078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AugmentedReality.ARCandidateObject
 /// Size: 0x0058 (0x000030 - 0x000088)
 class UARCandidateObject : public UDataAsset
@@ -1038,8 +1038,6 @@ public:
 	CMember(TArray<char>)                              CandidateObjectData                                         OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FString)                                   FriendlyName                                                OFFSET(get<T>, {0x40, 16, 0, 0})
 	SMember(FBox)                                      BoundingBox                                                 OFFSET(get<T>, {0x50, 56, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1055,6 +1053,8 @@ public:
 	// TArray<char> GetCandidateObjectData();                                                                                   // [0xa0350ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AugmentedReality.ARCandidateObject.GetBoundingBox
 	// FBox GetBoundingBox();                                                                                                   // [0xa035010] Final|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/AugmentedReality.TrackedGeometryGroup
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FTrackedGeometryGroup : public MDKStruct

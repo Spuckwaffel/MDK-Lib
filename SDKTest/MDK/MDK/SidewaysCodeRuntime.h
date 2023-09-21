@@ -65,8 +65,6 @@ public:
 	CMember(ESidewaysState)                            SidewaysState                                               OFFSET(get<T>, {0xA0, 1, 0, 0})
 	CMember(ASidewaysPlayspace*)                       SidewaysPlayspace                                           OFFSET(get<T>, {0xA8, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSidewaysStateChangedDelegate                              OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -80,6 +78,8 @@ public:
 	// void HandleSidewaysStateChanged(ASidewaysPlayspace* NewSidewaysPlayspace, ESidewaysState OldState, ESidewaysState NewState); // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/SidewaysCodeRuntime.SidewaysStateComponent.GetSidewaysState
 	// ESidewaysState GetSidewaysState();                                                                                       // [0x754416c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/SidewaysCodeRuntime.SidewaysStateComponent_Player
 /// Size: 0x0048 (0x0000C8 - 0x000110)
 class USidewaysStateComponent_Player : public USidewaysStateComponent

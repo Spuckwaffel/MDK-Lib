@@ -22,8 +22,6 @@ public:
 	SMember(FMusicSequencerHitArray)                   MusicSequencerEventList                                     OFFSET(get<T>, {0xA0, 288, 0, 0})
 	CMember(TArray<USoundBase*>)                       LoadedSoundsList                                            OFFSET(get<T>, {0x1C0, 16, 0, 0})
 	CMember(TArray<UClass*>)                           SoundPreloadClassList                                       OFFSET(get<T>, {0x1D0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -39,6 +37,8 @@ public:
 	// bool AddSequenceHitEvent(TScriptInterface<Class> HitInterface, AController* Instigator);                                 // [0x9a76e98] Final|Native|Protected 
 	// Function /Script/MusicBlocks.MusicSequencerHitComponent.AddMusicSequencerActor
 	// bool AddMusicSequencerActor(TScriptInterface<Class> HitInterface);                                                       // [0x9a76d24] Final|Native|Protected 
+};
+
 /// Class /Script/MusicBlocks.MusicSequencerHitActor
 /// Size: 0x0008 (0x000290 - 0x000298)
 class AMusicSequencerHitActor : public AActor
@@ -48,13 +48,13 @@ class AMusicSequencerHitActor : public AActor
 
 public:
 	CMember(UMusicSequencerHitComponent*)              MusicSequencerHitComponent                                  OFFSET(get<T>, {0x290, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MusicBlocks.MusicSequencerHitActor.GetMusicSequencerHitComponent
 	// UMusicSequencerHitComponent* GetMusicSequencerHitComponent();                                                            // [0x57069a8] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MusicBlocks.MusicSequencerHitAdderComponent
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class UMusicSequencerHitAdderComponent : public UPlayspaceComponent
@@ -65,13 +65,13 @@ class UMusicSequencerHitAdderComponent : public UPlayspaceComponent
 public:
 	CMember(UClass*)                                   MusicSequencerHitActorClass                                 OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(TWeakObjectPtr<AMusicSequencerHitActor*>)  MusicSequencerHitActor                                      OFFSET(get<T>, {0xA8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MusicBlocks.MusicSequencerHitAdderComponent.GetMusicSequencerHitActor
 	// AMusicSequencerHitActor* GetMusicSequencerHitActor();                                                                    // [0x9a7713c] Final|Native|Public|Const 
+};
+
 /// Struct /Script/MusicBlocks.MusicSequencerHitHandle
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FMusicSequencerHitHandle : public MDKStruct

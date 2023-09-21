@@ -31,8 +31,6 @@ public:
 	DMember(bool)                                      bRandomAnimSegment                                          OFFSET(get<bool>, {0x158, 1, 1, 0})
 	DMember(float)                                     OscillatorTimeRemaining                                     OFFSET(get<float>, {0x15C, 4, 0, 0})
 	CMember(USequenceCameraShakePattern*)              SequenceShakePattern                                        OFFSET(get<T>, {0x1D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -48,6 +46,8 @@ public:
 	// bool ReceiveIsFinished();                                                                                                // [0x2d779a4] Native|Event|Public|BlueprintEvent|Const 
 	// Function /Script/GameplayCameras.LegacyCameraShake.BlueprintUpdateCameraShake
 	// void BlueprintUpdateCameraShake(float DeltaTime, float Alpha, FMinimalViewInfo& POV, FMinimalViewInfo& ModifiedPOV);     // [0x1ebf994] Event|Public|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/GameplayCameras.LegacyCameraShakePattern
 /// Size: 0x0000 (0x000028 - 0x000028)
 class ULegacyCameraShakePattern : public UCameraShakePattern
@@ -78,8 +78,6 @@ class UCameraAnimationCameraModifier : public UCameraModifier
 public:
 	CMember(TArray<FActiveCameraAnimationInfo>)        ActiveAnimations                                            OFFSET(get<T>, {0x48, 16, 0, 0})
 	DMember(uint16_t)                                  NextInstanceSerialNumber                                    OFFSET(get<uint16_t>, {0x58, 2, 0, 0})
-};
-
 
 
 	/// Functions
@@ -99,6 +97,8 @@ public:
 	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifierFromID(UObject* WorldContextObject, int32_t ControllerId); // [0x6c73684] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/GameplayCameras.CameraAnimationCameraModifier.GetCameraAnimationCameraModifier
 	// UCameraAnimationCameraModifier* GetCameraAnimationCameraModifier(UObject* WorldContextObject, int32_t PlayerIndex);      // [0x6c735b8] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/GameplayCameras.GameplayCamerasFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UGameplayCamerasFunctionLibrary : public UBlueprintFunctionLibrary

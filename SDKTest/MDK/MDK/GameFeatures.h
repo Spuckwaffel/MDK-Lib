@@ -118,13 +118,13 @@ class UGameFeatureData : public UPrimaryDataAsset
 public:
 	CMember(TArray<UGameFeatureAction*>)               Actions                                                     OFFSET(get<T>, {0x30, 16, 0, 0})
 	CMember(TArray<FPrimaryAssetTypeInfo>)             PrimaryAssetTypesToScan                                     OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameFeatures.GameFeatureData.GetPluginName
 	// void GetPluginName(UGameFeatureData* GFD, FString& PluginName);                                                          // [0x6357044] Final|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameFeatures.GameFeaturePluginStateMachine
 /// Size: 0x01C0 (0x000028 - 0x0001E8)
 class UGameFeaturePluginStateMachine : public UObject

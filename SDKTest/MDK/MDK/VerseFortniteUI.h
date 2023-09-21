@@ -93,8 +93,6 @@ class UVerseFortniteUIFrameworkButton_Base : public UUIFrameworkWidget
 public:
 	SMember(FText)                                     Text                                                        OFFSET(get<T>, {0xC8, 24, 0, 0})
 	SMember(FLocalizableMessage)                       Message                                                     OFFSET(get<T>, {0xE0, 48, 0, 0})
-};
-
 
 
 	/// Functions
@@ -104,6 +102,8 @@ public:
 	// void OnRep_Message();                                                                                                    // [0xa3d53bc] Final|Native|Private 
 	// Function /Script/VerseFortniteUI.VerseFortniteUIFrameworkButton_Base.GetText
 	// FText GetText();                                                                                                         // [0x9765d4c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/VerseFortniteUI.VerseFortniteUIFrameworkButton_Loud
 /// Size: 0x0000 (0x000128 - 0x000128)
 class UVerseFortniteUIFrameworkButton_Loud : public UVerseFortniteUIFrameworkButton_Base
@@ -186,8 +186,6 @@ public:
 	DMember(float)                                     MinValue                                                    OFFSET(get<float>, {0xD4, 4, 0, 0})
 	DMember(float)                                     MaxValue                                                    OFFSET(get<float>, {0xD8, 4, 0, 0})
 	DMember(float)                                     StepSize                                                    OFFSET(get<float>, {0xDC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -221,6 +219,8 @@ public:
 	// float GetMaxValue();                                                                                                     // [0x5fcf63c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VerseFortniteUI.VerseFortniteUIFrameworkSlider.ExecuteServerValueChanged
 	// void ExecuteServerValueChanged(float InNewValue, int32_t InClientID, int32_t InServerID);                                // [0xa3d521c] Final|Native|Public  
+};
+
 /// Struct /Script/VerseFortniteUI.VerseFortniteUIPresenterElement
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FVerseFortniteUIPresenterElement : public MDKStruct

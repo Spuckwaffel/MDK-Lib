@@ -54,8 +54,6 @@ public:
 	CMember(UImage*)                                   DamageTypeCrit                                              OFFSET(get<T>, {0x470, 8, 0, 0})
 	CMember(UImage*)                                   DamageTypeIcon                                              OFFSET(get<T>, {0x478, 8, 0, 0})
 	CMember(UImage*)                                   DamageTypeIcon_EMP                                          OFFSET(get<T>, {0x480, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,6 +65,8 @@ public:
 	// void OnShieldBreak(bool bIsOvershield);                                                                                  // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/DamageNumbersUI.CommonUserWidget_DamageNumbers.OnDamageDealt
 	// void OnDamageDealt(double InDamage, AActor* InActor, bool bInShield, bool bInCrit, FVector InWorldSpacePos, bool bInEMP); // [0x9b05dc0] Final|Native|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/DamageNumbersUI.FortUserWidget_DamageNumbers
 /// Size: 0x0088 (0x0002B8 - 0x000340)
 class UFortUserWidget_DamageNumbers : public UFortUserWidget
@@ -87,8 +87,6 @@ public:
 	CMember(UDynamicEntryBox*)                         DynamicEntryBox_Numbers                                     OFFSET(get<T>, {0x330, 8, 0, 0})
 	SMember(FGameplayTag)                              DamageCueEMPTag                                             OFFSET(get<T>, {0x338, 4, 0, 0})
 	DMember(bool)                                      bPrecreateDamageNumberEntries                               OFFSET(get<bool>, {0x33C, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -104,6 +102,8 @@ public:
 	// void OnDamageDealt(double InDamage, bool bInCritical, bool bInFatal, bool bInShield, AActor* HitActor, FVector HitLocation, FGameplayTagContainer Tags); // [0x9b06150] Final|Native|Protected|HasDefaults|BlueprintCallable 
 	// Function /Script/DamageNumbersUI.FortUserWidget_DamageNumbers.ClearBinding
 	// void ClearBinding();                                                                                                     // [0x9b05dac] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/DamageNumbersUI.FortGameSettingRegistryExtension_DamageNumbers
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UFortGameSettingRegistryExtension_DamageNumbers : public UFortGameSettingRegistryExtension

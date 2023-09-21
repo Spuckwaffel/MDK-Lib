@@ -18,8 +18,6 @@ class AFortCreativeEditCameraController : public AFortFirstPersonCameraControlle
 
 public:
 	SMember(FCreativeOptionVariableBase)               WantsToImmersiveEdit                                        OFFSET(get<T>, {0x368, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,3 +29,5 @@ public:
 	// void OnCreativeEditModeChanged(bool bIsCreativeEditModeEnabled);                                                         // [0x9a452f4] Final|Native|Private 
 	// Function /Script/CreativeEditCameraModeRuntime.FortCreativeEditCameraController.HandleWeaponEquipped
 	// void HandleWeaponEquipped(AFortWeapon* NewWeapon, AFortWeapon* PrevWeapon);                                              // [0x9a45230] Final|Native|Private 
+};
+

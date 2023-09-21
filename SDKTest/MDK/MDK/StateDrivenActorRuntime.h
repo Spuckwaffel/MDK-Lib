@@ -25,8 +25,6 @@ public:
 	CMember(TWeakObjectPtr<UStaticMeshComponent*>)     MeshComponentPtr                                            OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(TWeakObjectPtr<USphereComponent*>)         OverlapComponentPtr                                         OFFSET(get<T>, {0x1D8, 8, 0, 0})
 	SMember(FFortItemEntry)                            SlottedItemEntry                                            OFFSET(get<T>, {0x1E0, 408, 0, 0})
-};
-
 
 
 	/// Functions
@@ -68,6 +66,8 @@ public:
 	// FText GetInteractionString(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x9e5d26c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/StateDrivenActorRuntime.FortActorComponent_StateDriven.GetFailedInteractionString
 	// FText GetFailedInteractionString(AFortPawn* InteractingPawn, TEnumAsByte<EInteractionBeingAttempted> InteractionBeingAttempted); // [0x9e5d188] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Struct /Script/StateDrivenActorRuntime.StateDrivenStateTransitions
 /// Size: 0x0018 (0x000000 - 0x000018)
 class FStateDrivenStateTransitions : public MDKStruct

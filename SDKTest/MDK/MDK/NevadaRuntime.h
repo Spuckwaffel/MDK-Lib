@@ -108,8 +108,6 @@ public:
 	CMember(UForceFeedbackEffect*)                     CockpitDeactivatedForceFeedback                             OFFSET(get<T>, {0x2158, 8, 0, 0})
 	CMember(UClass*)                                   CockpitDestroyedCamShake                                    OFFSET(get<T>, {0x2160, 8, 0, 0})
 	CMember(TArray<UClass*>)                           TractorBeamDisallowedClasses                                OFFSET(get<T>, {0x2168, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -207,6 +205,8 @@ public:
 	// void DisruptTractorBeam();                                                                                               // [0x9ad93ac] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/NevadaRuntime.FortNevadaVehicle.AddPhysicsImpulseToTractorBeamAttachedActor
 	// void AddPhysicsImpulseToTractorBeamAttachedActor(FVector& Impulse, FName BoneName, bool bVelChange);                     // [0x9ad90c0] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/NevadaRuntime.FortNevadaVehicleAnimInstance
 /// Size: 0x00E0 (0x000600 - 0x0006E0)
 class UFortNevadaVehicleAnimInstance : public UFortVehicleAnimInstance
@@ -346,8 +346,6 @@ public:
 	DMember(float)                                     PassByParamValue                                            OFFSET(get<float>, {0x344, 4, 0, 0})
 	DMember(float)                                     LocallyControlledParamValue                                 OFFSET(get<float>, {0x348, 4, 0, 0})
 	DMember(float)                                     LFOParamValue                                               OFFSET(get<float>, {0x34C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -363,6 +361,8 @@ public:
 	// void BP_Update();                                                                                                        // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/NevadaRuntime.FortNevadaAudioController.BP_Init
 	// void BP_Init();                                                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/NevadaRuntime.FortNevadaVehicleConfigs
 /// Size: 0x04A8 (0x0008B0 - 0x000D58)
 class UFortNevadaVehicleConfigs : public UFortPhysicsVehicleConfigs

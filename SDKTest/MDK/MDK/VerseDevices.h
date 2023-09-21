@@ -45,8 +45,6 @@ class AScriptDevice : public ABuildingProp
 public:
 	CMember(UVerseCreativeDevice*)                     Script                                                      OFFSET(get<T>, {0xBB8, 8, 0, 0})
 	CMember(UVerseCreativeDevice*)                     ScriptInstance                                              OFFSET(get<T>, {0xBC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -58,6 +56,8 @@ public:
 	// void HandleMinigameEndGame(AFortPlayerController* PlayerController, EFortMinigameEnd EndMethod, EFortMinigameState NextState); // [0x97b11a4] Final|Native|Public  
 	// Function /Script/VerseDevices.ScriptDevice.BP_SetVisibility
 	// void BP_SetVisibility(bool bVisible);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/VerseDevices.VerseMovableObjectBase
 /// Size: 0x0078 (0x000028 - 0x0000A0)
 class UVerseMovableObjectBase : public UObject

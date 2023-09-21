@@ -17,8 +17,6 @@ class UAnimationSharingStateProcessor : public UObject
 
 public:
 	CMember(TWeakObjectPtr<UEnum*>)                    AnimationStateEnum                                          OFFSET(get<T>, {0x28, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -26,6 +24,8 @@ public:
 	// void ProcessActorState(int32_t& OutState, AActor* InActor, char CurrentState, char OnDemandState, bool& bShouldProcess); // [0x71f443c] Native|Event|Public|HasOutParms|BlueprintEvent 
 	// Function /Script/AnimationSharing.AnimationSharingStateProcessor.GetAnimationStateEnum
 	// UEnum* GetAnimationStateEnum();                                                                                          // [0x71f4378] Native|Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/AnimationSharing.AnimSharingStateInstance
 /// Size: 0x0020 (0x000350 - 0x000370)
 class UAnimSharingStateInstance : public UAnimInstance
@@ -39,13 +39,13 @@ public:
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0x354, 4, 0, 0})
 	DMember(bool)                                      bStateBool                                                  OFFSET(get<bool>, {0x358, 1, 0, 0})
 	CMember(UAnimSharingInstance*)                     Instance                                                    OFFSET(get<T>, {0x360, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AnimationSharing.AnimSharingStateInstance.GetInstancedActors
 	// void GetInstancedActors(TArray<AActor*>& Actors);                                                                        // [0x71f43a0] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AnimationSharing.AnimSharingTransitionInstance
 /// Size: 0x0010 (0x000350 - 0x000360)
 class UAnimSharingTransitionInstance : public UAnimInstance
@@ -99,8 +99,6 @@ class UAnimationSharingManager : public UObject
 public:
 	CMember(TArray<USkeleton*>)                        Skeletons                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<UAnimSharingInstance*>)             PerSkeletonData                                             OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -112,6 +110,8 @@ public:
 	// bool CreateAnimationSharingManager(UObject* WorldContextObject, UAnimationSharingSetup* Setup);                          // [0x71f40ec] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AnimationSharing.AnimationSharingManager.AnimationSharingEnabled
 	// bool AnimationSharingEnabled();                                                                                          // [0x71f40d0] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/AnimationSharing.AnimationSharingSetup
 /// Size: 0x0020 (0x000028 - 0x000048)
 class UAnimationSharingSetup : public UObject

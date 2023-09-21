@@ -45,13 +45,13 @@ public:
 	CMember(UCommonTextBlock*)                         Text_SecondaryLabel                                         OFFSET(get<T>, {0x1518, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_FinalCost                                              OFFSET(get<T>, {0x1520, 8, 0, 0})
 	CMember(UWidget*)                                  Container_SecondaryLabel                                    OFFSET(get<T>, {0x1528, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CrewUI.BattlePassCrewPurchaseButton.OnCurrencyUpdated
 	// void OnCurrencyUpdated();                                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.BattlePassCrewPurchaseContainer
 /// Size: 0x0080 (0x0003E8 - 0x000468)
 class UBattlePassCrewPurchaseContainer : public UCommonActivatableWidget
@@ -67,8 +67,6 @@ public:
 	CMember(UWidgetAnimation*)                         QuickIntro                                                  OFFSET(get<T>, {0x430, 8, 0, 0})
 	CMember(UWidgetAnimation*)                         CrewBenefitsIntro                                           OFFSET(get<T>, {0x438, 8, 0, 0})
 	CMember(UClass*)                                   CrewSubscriptionErrorModalClass                             OFFSET(get<T>, {0x440, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -76,6 +74,8 @@ public:
 	// void OnTriggerIntroAnimation(bool bCanClaimRewards);                                                                     // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.BattlePassCrewPurchaseContainer.OnContentStateUpdated
 	// void OnContentStateUpdated(EBattlePassCrewContentState InState, bool bInScreenOpened);                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.BattlePassSeasonHeading
 /// Size: 0x0008 (0x0002D0 - 0x0002D8)
 class UBattlePassSeasonHeading : public UCommonUserWidget
@@ -108,8 +108,6 @@ public:
 	CMember(UCommonRichTextBlock*)                     RichText_Disclaimer                                         OFFSET(get<T>, {0x520, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_Description                                            OFFSET(get<T>, {0x528, 8, 0, 0})
 	CMember(UCommonAnimatedSwitcher*)                  Switcher_PurchaseState                                      OFFSET(get<T>, {0x530, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -125,6 +123,8 @@ public:
 	// void OnPurchaseStateChanged(EBattlePassPurchaseState InCurrentState);                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.BattlePassPurchaseScreen.OnPurchaseConfirmed
 	// void OnPurchaseConfirmed();                                                                                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.CrewMultiSubscriptionAlertModal
 /// Size: 0x00E0 (0x0003E8 - 0x0004C8)
 class UCrewMultiSubscriptionAlertModal : public UCommonActivatableWidget
@@ -143,13 +143,13 @@ public:
 	CMember(TMap<EAppStore, FText>)                    AppStorePlatformMapping                                     OFFSET(get<T>, {0x430, 80, 0, 0})
 	SMember(FString)                                   HowToCancelURL                                              OFFSET(get<T>, {0x480, 16, 0, 0})
 	SMember(FText)                                     PlatformTextStyle                                           OFFSET(get<T>, {0x4B0, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CrewUI.CrewMultiSubscriptionAlertModal.OnSetHowToCancelURL
 	// void OnSetHowToCancelURL(FString MoreInfoUrl);                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.CrewPriceChangeAcknowledgeModal
 /// Size: 0x0198 (0x0003E8 - 0x000580)
 class UCrewPriceChangeAcknowledgeModal : public UCommonActivatableWidget
@@ -163,8 +163,6 @@ public:
 	CMember(UCommonButtonBase*)                        Button_MoreInfo                                             OFFSET(get<T>, {0x400, 8, 0, 0})
 	CMember(UCommonButtonBase*)                        Button_TextURL                                              OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   CancellationInfoModalClass                                  OFFSET(get<T>, {0x410, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -188,6 +186,8 @@ public:
 	// void OnModalBackout();                                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.CrewPriceChangeAcknowledgeModal.ExitModal
 	// void ExitModal();                                                                                                        // [0x6644d08] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/CrewUI.CrewPurchaseScreen
 /// Size: 0x0178 (0x000428 - 0x0005A0)
 class UCrewPurchaseScreen : public UCMSBackgroundWidget
@@ -218,8 +218,6 @@ public:
 	CMember(UOverlay*)                                 Overlay_UserInformation                                     OFFSET(get<T>, {0x588, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_UserInformation                                        OFFSET(get<T>, {0x590, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_CrewDisclaimer                                         OFFSET(get<T>, {0x598, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -243,6 +241,8 @@ public:
 	// void BlockScreenContent(bool bBlockScreen, FText& ContentBlockedText);                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/CrewUI.CrewPurchaseScreen.BeginProgress
 	// void BeginProgress(FText& ProgressLabel);                                                                                // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.CrewRewardTile
 /// Size: 0x0060 (0x001470 - 0x0014D0)
 class UCrewRewardTile : public UCommonButtonBase
@@ -254,8 +254,6 @@ public:
 	DMember(float)                                     TileImageStreamoutSeconds                                   OFFSET(get<float>, {0x14B0, 4, 0, 0})
 	CMember(UImage*)                                   Image_TileImage                                             OFFSET(get<T>, {0x14B8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         Text_TileLabel                                              OFFSET(get<T>, {0x14C0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -267,6 +265,8 @@ public:
 	// void OnDownloadTileImageComplete(UTexture2D* Texture);                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.CrewRewardTile.IsMonthlyBenefit
 	// bool IsMonthlyBenefit();                                                                                                 // [0x9b04804] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CrewUI.CrewSeasonLaunchScreen
 /// Size: 0x00E8 (0x000428 - 0x000510)
 class UCrewSeasonLaunchScreen : public UCMSBackgroundWidget
@@ -312,13 +312,13 @@ public:
 	CMember(UWidget*)                                  Widget_TabsContainer                                        OFFSET(get<T>, {0x460, 8, 0, 0})
 	DMember(float)                                     SpacingAdjustmentForTabs                                    OFFSET(get<float>, {0x468, 4, 0, 0})
 	SMember(FPrimaryContentSetup)                      ContentSetup                                                OFFSET(get<T>, {0x46C, 3, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CrewUI.CrewSubscriptionContentContainer.OnTabSelected
 	// void OnTabSelected(int32_t TabIndex);                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.CrewSubscriptionErrorModal
 /// Size: 0x0010 (0x0003E8 - 0x0003F8)
 class UCrewSubscriptionErrorModal : public UCommonActivatableWidget
@@ -354,13 +354,13 @@ class UCrewTileDetailsTag : public UCommonUserWidget
 
 public:
 	CMember(UCommonRichTextBlock*)                     Text_Label                                                  OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CrewUI.CrewTileDetailsTag.OnTagSetup
 	// void OnTagSetup(ECrewDetailsTag RewardTag, bool bIsOwnedTag);                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.CrewUIGameFeatureAction
 /// Size: 0x0100 (0x000028 - 0x000128)
 class UCrewUIGameFeatureAction : public UFortUIGameFeatureAction
@@ -416,13 +416,13 @@ class UFortProgressiveScreenBase : public UFortItemPreviewScreen
 
 public:
 	DMember(float)                                     RewardPreviewTime                                           OFFSET(get<float>, {0x75C, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CrewUI.FortProgressiveScreenBase.BP_OnContainerTabVisibilityUpdated
 	// void BP_OnContainerTabVisibilityUpdated(bool bTabsVisible, float SpacingAdjustmentForTabs);                              // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveItemScreen
 /// Size: 0x0110 (0x000770 - 0x000880)
 class UFortProgressiveItemScreen : public UFortProgressiveScreenBase
@@ -446,8 +446,6 @@ public:
 	CMember(UFortProgressiveItemStateTitleWidget*)     ProgressiveItemStateTitle                                   OFFSET(get<T>, {0x7D0, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   MoreInfoModalClass                                          OFFSET(get<T>, {0x7D8, 32, 0, 0})
 	SMember(FName)                                     SubscribedMaterialParameterName                             OFFSET(get<T>, {0x7F8, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -461,6 +459,8 @@ public:
 	// void OnErrorStateTextUpdated(FText& ErrorStateText);                                                                     // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/CrewUI.FortProgressiveItemScreen.BlockScreenContent
 	// void BlockScreenContent(bool bBlockScreen, FText& ContentBlockedText);                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveItemStateTitleWidget
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
 class UFortProgressiveItemStateTitleWidget : public UUserWidget
@@ -481,8 +481,6 @@ class UFortProgressiveItemWidget : public UCommonButtonBase
 public:
 	CMember(UAthenaItemShopReactiveTileText*)          TileText_ItemName                                           OFFSET(get<T>, {0x1470, 8, 0, 0})
 	SMember(FProgressiveStageItemInfo)                 StageItemInfo                                               OFFSET(get<T>, {0x1478, 104, 0, 0})
-};
-
 
 
 	/// Functions
@@ -496,6 +494,8 @@ public:
 	// void OnPeekStateChanged(bool bIsInPeekState);                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.FortProgressiveItemWidget.OnHighlighted
 	// void OnHighlighted();                                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveSetDetailsWidget
 /// Size: 0x0030 (0x0002A8 - 0x0002D8)
 class UFortProgressiveSetDetailsWidget : public UUserWidget
@@ -505,13 +505,13 @@ class UFortProgressiveSetDetailsWidget : public UUserWidget
 
 public:
 	CMember(UCommonButtonBase*)                        Button_MoreInfo                                             OFFSET(get<T>, {0x2A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/CrewUI.FortProgressiveSetDetailsWidget.BP_OnUpdateSetDetails
 	// void BP_OnUpdateSetDetails(FText& SetName, FText& ExpiringText, bool bCompleted);                                        // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveSetList
 /// Size: 0x0080 (0x0003E8 - 0x000468)
 class UFortProgressiveSetList : public UCommonActivatableWidget
@@ -525,8 +525,6 @@ public:
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup_SetTiles                                        OFFSET(get<T>, {0x400, 8, 0, 0})
 	DMember(int32_t)                                   NumTilesPerPage                                             OFFSET(get<int32_t>, {0x408, 4, 0, 0})
 	CMember(TArray<UFortProgressiveSetTile*>)          SetTiles                                                    OFFSET(get<T>, {0x410, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -534,6 +532,8 @@ public:
 	// void ClearSetTiles();                                                                                                    // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.FortProgressiveSetList.AddSetTile
 	// UFortProgressiveSetTile* AddSetTile();                                                                                   // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveSetTile
 /// Size: 0x00A0 (0x001470 - 0x001510)
 class UFortProgressiveSetTile : public UCommonButtonBase
@@ -556,8 +556,6 @@ public:
 	CMember(UAthenaScrollBox*)                         ScrollBox_StageList                                         OFFSET(get<T>, {0x408, 8, 0, 0})
 	CMember(UFortSwipePanel*)                          SwipePanel_Navigation                                       OFFSET(get<T>, {0x410, 8, 0, 0})
 	CMember(TArray<UFortProgressiveStageWidget*>)      Stages                                                      OFFSET(get<T>, {0x420, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -567,6 +565,8 @@ public:
 	// void ClearStageWidgets();                                                                                                // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.FortProgressiveStageList.AddStageWidget
 	// UFortProgressiveStageWidget* AddStageWidget();                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveStageWidget
 /// Size: 0x0020 (0x0002D0 - 0x0002F0)
 class UFortProgressiveStageWidget : public UCommonUserWidget
@@ -576,8 +576,6 @@ class UFortProgressiveStageWidget : public UCommonUserWidget
 
 public:
 	CMember(UCommonTextBlock*)                         Text_Month                                                  OFFSET(get<T>, {0x2D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -591,6 +589,8 @@ public:
 	// void ClearStageItemWidgets();                                                                                            // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /Script/CrewUI.FortProgressiveStageWidget.AddStageItemWidget
 	// UFortProgressiveItemWidget* AddStageItemWidget();                                                                        // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+
 /// Class /Script/CrewUI.FortProgressiveTableOfContentsScreen
 /// Size: 0x0088 (0x000770 - 0x0007F8)
 class UFortProgressiveTableOfContentsScreen : public UFortProgressiveScreenBase
@@ -611,8 +611,6 @@ public:
 	CMember(UCommonButtonGroupBase*)                   ButtonGroup_SetPagesPips                                    OFFSET(get<T>, {0x7B8, 8, 0, 0})
 	CMember(TWeakObjectPtr<UClass*>)                   MoreInfoModalClass                                          OFFSET(get<T>, {0x7C0, 32, 0, 0})
 	SMember(FName)                                     SubscribedMaterialParameterName                             OFFSET(get<T>, {0x7E0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -628,6 +626,8 @@ public:
 	// void BP_OnSetDescriptionText(FText& ProductDescription);                                                                 // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
 	// Function /Script/CrewUI.FortProgressiveTableOfContentsScreen.BlockScreenContent
 	// void BlockScreenContent(bool bBlockScreen, FText& ContentBlockedText);                                                   // [0x1ebf994] Event|Protected|HasOutParms|BlueprintEvent 
+};
+
 /// Struct /Script/CrewUI.CrewSubscriptionContentTabData
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FCrewSubscriptionContentTabData : public MDKStruct

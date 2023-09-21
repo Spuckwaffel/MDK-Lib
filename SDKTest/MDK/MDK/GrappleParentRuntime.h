@@ -41,8 +41,6 @@ public:
 	DMember(float)                                     MaxSlidingSpeedMultiplierOffset                             OFFSET(get<float>, {0x228, 4, 0, 0})
 	CMember(AFortPlayerPawnAthena*)                    CachedPlayer                                                OFFSET(get<T>, {0x230, 8, 0, 0})
 	CMember(AFortWeaponRangedDualSwing*)               CachedWeapon                                                OFFSET(get<T>, {0x238, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -50,6 +48,8 @@ public:
 	// void RemoveSelfFromCameraManager();                                                                                      // [0x9876ff4] Final|Native|Protected 
 	// Function /Script/GrappleParentRuntime.FortCameraModifier_Swinging.CalculateDynamicMultipliers
 	// void CalculateDynamicMultipliers(float& OutFOVBoundsMultiplier, float& OutBoostOffsetMultiplier);                        // [0x9876ce0] Native|Event|Protected|HasOutParms|BlueprintEvent|Const 
+};
+
 /// Class /Script/GrappleParentRuntime.FortSwingingLayerAnimInstance
 /// Size: 0x01A0 (0x000450 - 0x0005F0)
 class UFortSwingingLayerAnimInstance : public UFortBaseLayerAnimInstance
@@ -105,8 +105,6 @@ public:
 	DMember(bool)                                      IsSwingNearGroundToSkid                                     OFFSET(get<bool>, {0x5E5, 1, 0, 0})
 	DMember(bool)                                      IsHangToSwingInAir                                          OFFSET(get<bool>, {0x5E6, 1, 0, 0})
 	DMember(bool)                                      IsHangToSwingNearGround                                     OFFSET(get<bool>, {0x5E7, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -114,6 +112,8 @@ public:
 	// void GetPlayerAnglesFromAttachPoint(float& Pitch, float& Roll, float& Yaw);                                              // [0x9876ecc] Final|Native|Public|HasOutParms 
 	// Function /Script/GrappleParentRuntime.FortSwingingLayerAnimInstance.GetAttachVectorInPlayerSpace
 	// FVector GetAttachVectorInPlayerSpace(FVector& InPlayerToAttachPoint);                                                    // [0x9876dc0] Final|Native|Public|HasOutParms|HasDefaults 
+};
+
 /// Struct /Script/GrappleParentRuntime.SpeedScaledAxisOffsetData
 /// Size: 0x0060 (0x000000 - 0x000060)
 class FSpeedScaledAxisOffsetData : public MDKStruct

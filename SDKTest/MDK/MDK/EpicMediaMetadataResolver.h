@@ -20,8 +20,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnFailure                                                   OFFSET(get<T>, {0xB0, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  MetadataResultExt                                           OFFSET(get<T>, {0xC0, 16, 0, 0})
 	CMember(UEpicMediaCDNHostnames*)                   CDNHostNames                                                OFFSET(get<T>, {0xD0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -29,3 +27,5 @@ public:
 	// bool GetData(FString UID, bool bLive, FEpicMediaOptions InMediaOptions);                                                 // [0x6d44b50] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EpicMediaMetadataResolver.EpicMediaMetadataResolver.GetBlurl
 	// bool GetBlurl(FString InVUID, bool bInBlurlLive, FEpicMediaOptions InMediaOptions);                                      // [0x6d43fc4] Final|Native|Public|BlueprintCallable 
+};
+

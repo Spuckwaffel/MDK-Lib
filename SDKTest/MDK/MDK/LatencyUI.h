@@ -42,8 +42,6 @@ public:
 	CMember(UCommonTextBlock*)                         DriverLatencyUI                                             OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         GPURenderLatencyUI                                          OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(UCommonTextBlock*)                         TweakLatencyUI                                              OFFSET(get<T>, {0x2E0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -51,3 +49,5 @@ public:
 	// void StopTimer();                                                                                                        // [0xa351928] Final|Native|Protected|BlueprintCallable 
 	// Function /Script/LatencyUI.LatencyWidget.StartTimer
 	// void StartTimer();                                                                                                       // [0xa351910] Final|Native|Protected|BlueprintCallable 
+};
+

@@ -21,8 +21,6 @@ public:
 	SMember(FPlatformUserId)                           OwningUserId                                                OFFSET(get<T>, {0x2C, 4, 0, 0})
 	SMember(FText)                                     DisplayName                                                 OFFSET(get<T>, {0x30, 24, 0, 0})
 	CMember(TMap<FName, FKeyMappingRow>)               PlayerMappedKeys                                            OFFSET(get<T>, {0x48, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -52,6 +50,8 @@ public:
 	// void DumpProfileToLog();                                                                                                 // [0x599a338] Native|Public|BlueprintCallable|Const 
 	// Function /Script/EnhancedInput.EnhancedPlayerMappableKeyProfile.DoesMappingPassQueryOptions
 	// bool DoesMappingPassQueryOptions(FPlayerKeyMapping& PlayerMapping, FPlayerMappableKeyQueryOptions& Options);             // [0x6622974] Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EnhancedInput.EnhancedInputUserSettings
 /// Size: 0x00F8 (0x000028 - 0x000120)
 class UEnhancedInputUserSettings : public USaveGame
@@ -66,8 +66,6 @@ public:
 	CMember(TMap<FGameplayTag, UEnhancedPlayerMappableKeyProfile*>) SavedKeyProfiles                               OFFSET(get<T>, {0x78, 80, 0, 0})
 	CMember(TWeakObjectPtr<ULocalPlayer*>)             OwningLocalPlayer                                           OFFSET(get<T>, {0xC8, 8, 0, 0})
 	CMember(TSet<UInputMappingContext*>)               RegisteredMappingContexts                                   OFFSET(get<T>, {0xD0, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -115,6 +113,8 @@ public:
 	// void AsyncSaveSettings();                                                                                                // [0xd30dac] Native|Public|BlueprintCallable 
 	// Function /Script/EnhancedInput.EnhancedInputUserSettings.ApplySettings
 	// void ApplySettings();                                                                                                    // [0x599a338] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EnhancedInput.EnhancedInputActionDelegateBinding
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UEnhancedInputActionDelegateBinding : public UInputDelegateBinding
@@ -189,13 +189,13 @@ class UEnhancedInputPlatformData : public UObject
 
 public:
 	CMember(TMap<UInputMappingContext*, UInputMappingContext*>) MappingContextRedirects                            OFFSET(get<T>, {0x28, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/EnhancedInput.EnhancedInputPlatformData.GetContextRedirect
 	// UInputMappingContext* GetContextRedirect(UInputMappingContext* InContext);                                               // [0x6622e64] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EnhancedInput.EnhancedInputPlatformSettings
 /// Size: 0x0028 (0x000040 - 0x000068)
 class UEnhancedInputPlatformSettings : public UPlatformSettings
@@ -241,8 +241,6 @@ class UEnhancedInputWorldSubsystem : public UWorldSubsystem
 public:
 	CMember(UEnhancedPlayerInput*)                     PlayerInput                                                 OFFSET(get<T>, {0x1D0, 8, 0, 0})
 	CMember(TArray<TWeakObjectPtr>)                    CurrentInputStack                                           OFFSET(get<T>, {0x1E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -250,6 +248,8 @@ public:
 	// bool RemoveActorInputComponent(AActor* Actor);                                                                           // [0x6627308] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EnhancedInput.EnhancedInputWorldSubsystem.AddActorInputComponent
 	// void AddActorInputComponent(AActor* Actor);                                                                              // [0x6621868] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EnhancedInput.EnhancedPlayerInput
 /// Size: 0x0350 (0x000498 - 0x0007E8)
 class UEnhancedPlayerInput : public UPlayerInput
@@ -309,8 +309,6 @@ class UInputMappingContext : public UDataAsset
 public:
 	CMember(TArray<FEnhancedActionKeyMapping>)         Mappings                                                    OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FText)                                     ContextDescription                                          OFFSET(get<T>, {0x40, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -324,6 +322,8 @@ public:
 	// void UnmapAction(UInputAction* Action);                                                                                  // [0x66285a0] Final|Native|Public|BlueprintCallable 
 	// Function /Script/EnhancedInput.InputMappingContext.MapKey
 	// FEnhancedActionKeyMapping MapKey(UInputAction* Action, FKey ToKey);                                                      // [0x6625230] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/EnhancedInput.InputModifier
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UInputModifier : public UObject
@@ -459,8 +459,6 @@ public:
 	DMember(float)                                     ActuationThreshold                                          OFFSET(get<float>, {0x28, 4, 0, 0})
 	DMember(bool)                                      bShouldAlwaysTick                                           OFFSET(get<bool>, {0x2C, 1, 0, 0})
 	SMember(FInputActionValue)                         LastValue                                                   OFFSET(get<T>, {0x30, 32, 0, 0})
-};
-
 
 
 	/// Functions
@@ -470,6 +468,8 @@ public:
 	// bool IsActuated(FInputActionValue& ForValue);                                                                            // [0x662476c] Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EnhancedInput.InputTrigger.GetTriggerType
 	// ETriggerType GetTriggerType();                                                                                           // [0x2d779a4] Native|Event|Public|BlueprintCallable|BlueprintEvent|BlueprintPure|Const 
+};
+
 /// Class /Script/EnhancedInput.InputTriggerTimedBase
 /// Size: 0x0008 (0x000050 - 0x000058)
 class UInputTriggerTimedBase : public UInputTrigger
@@ -607,8 +607,6 @@ public:
 	DMember(bool)                                      bIsDeprecated                                               OFFSET(get<bool>, {0x50, 1, 0, 0})
 	CMember(UObject*)                                  MetaData                                                    OFFSET(get<T>, {0x58, 8, 0, 0})
 	CMember(TMap<UInputMappingContext*, int32_t>)      Contexts                                                    OFFSET(get<T>, {0x60, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -630,6 +628,8 @@ public:
 	// FText GetDisplayName();                                                                                                  // [0x6622f90] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/EnhancedInput.PlayerMappableInputConfig.GetConfigName
 	// FName GetConfigName();                                                                                                   // [0x597e8bc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/EnhancedInput.PlayerMappableKeySettings
 /// Size: 0x0060 (0x000028 - 0x000088)
 class UPlayerMappableKeySettings : public UObject

@@ -20,8 +20,6 @@ class UXpEverywhereAccoladesWidget : public UFortHUDElementWidget
 
 public:
 	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x370, 2, 0, 0})
-};
-
 
 
 	/// Functions
@@ -35,6 +33,8 @@ public:
 	// bool HasMoreXPEvents();                                                                                                  // [0x9cf8b3c] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/XpEverywhereUI.XpEverywhereAccoladesWidget.CloseWidget
 	// void CloseWidget();                                                                                                      // [0x9ec5908] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/XpEverywhereUI.XpEverywhereBar
 /// Size: 0x00D8 (0x0003E8 - 0x0004C0)
 class UXpEverywhereBar : public UCommonActivatableWidget
@@ -45,8 +45,6 @@ class UXpEverywhereBar : public UCommonActivatableWidget
 public:
 	DMember(bool)                                      bXpBarAlwaysActive                                          OFFSET(get<bool>, {0x3E8, 1, 0, 0})
 	CMember(UFortSocialAvatarIcon*)                    SocialAvatarIcon                                            OFFSET(get<T>, {0x3F0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -58,6 +56,8 @@ public:
 	// int32_t GetTotalXpRequiredForLevel(int32_t InLevel);                                                                     // [0x9ec59c8] Final|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/XpEverywhereUI.XpEverywhereBar.DoneUpdatingXpBar
 	// void DoneUpdatingXpBar();                                                                                                // [0x9ec59a0] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/XpEverywhereUI.XpEverywhereLevelUpWidget
 /// Size: 0x0008 (0x0003E8 - 0x0003F0)
 class UXpEverywhereLevelUpWidget : public UCommonActivatableWidget
@@ -93,13 +93,13 @@ public:
 	CMember(UVerticalBox*)                             NotificationUpdatesBox                                      OFFSET(get<T>, {0x380, 8, 0, 0})
 	CMember(TArray<FXpEverywhereNotificationWidgetClass>) NotificationClassPoolData                                OFFSET(get<T>, {0x388, 16, 0, 0})
 	SMember(FFortPrioritizedWidgetData)                PrioritizationData                                          OFFSET(get<T>, {0x398, 2, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/XpEverywhereUI.XpEverywhereRewardWidget.HandleNotificationUpdateFinished
 	// void HandleNotificationUpdateFinished();                                                                                 // [0x9ec5a54] Final|Native|Protected 
+};
+
 /// Class /Script/XpEverywhereUI.XpEverywhereUIComponent
 /// Size: 0x00C0 (0x0000A0 - 0x000160)
 class UXpEverywhereUIComponent : public UActorComponent

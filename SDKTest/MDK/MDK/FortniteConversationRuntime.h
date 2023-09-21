@@ -133,8 +133,6 @@ public:
 	DMember(float)                                     RidingOnActorRangeMultiplierSquared                         OFFSET(get<float>, {0x1C0, 4, 0, 0})
 	CMember(TSet<UFortNonPlayerConversationParticipantComponent*>) IndicatedNPCConversationComponents              OFFSET(get<T>, {0x200, 80, 0, 0})
 	DMember(bool)                                      bMoveShouldAbortConversation                                OFFSET(get<bool>, {0x258, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -156,6 +154,8 @@ public:
 	// void ClientSpectatorCloseUI();                                                                                           // [0x6646580] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/FortniteConversationRuntime.FortPlayerConversationComponent.ClientReceiveConversationGiftUINotification
 	// void ClientReceiveConversationGiftUINotification(FGiftUINotificationInfo ConversationGiftUINotification);                // [0x98ac26c] Net|NetReliableNative|Event|Public|NetClient 
+};
+
 /// Struct /Script/FortniteConversationRuntime.FortConversationEnterEvent
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FFortConversationEnterEvent : public MDKStruct

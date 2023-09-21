@@ -60,13 +60,13 @@ public:
 	DMember(bool)                                      bShouldJumpTrick                                            OFFSET(get<bool>, {0x664, 1, 0, 0})
 	DMember(bool)                                      bStateTransitionRuleToReverseLoop                           OFFSET(get<bool>, {0x665, 1, 0, 0})
 	DMember(bool)                                      bIsReverseNoFeet                                            OFFSET(get<bool>, {0x666, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicleAnimInstance.CollectConditionsFromDriver
 	// void CollectConditionsFromDriver();                                                                                      // [0x9a012e0] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider
 /// Size: 0x0410 (0x000450 - 0x000860)
 class UFortPlayerAnimInstance_MotorcycleRider : public UFortBaseLayerAnimInstance
@@ -190,8 +190,6 @@ public:
 	DMember(float)                                     UpperBodyAdditiveStrength                                   OFFSET(get<float>, {0x850, 4, 0, 0})
 	DMember(float)                                     MovingNoisePlayRate                                         OFFSET(get<float>, {0x854, 4, 0, 0})
 	DMember(bool)                                      bIsFemale                                                   OFFSET(get<bool>, {0x858, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -221,6 +219,8 @@ public:
 	// void CalculateNoiseAlpha();                                                                                              // [0x9a011a4] Final|Native|Public|BlueprintCallable 
 	// Function /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleRider.AnimNotify_JumpEntered
 	// void AnimNotify_JumpEntered();                                                                                           // [0x9a01184] Final|Native|Public  
+};
+
 /// Class /Script/MotorcycleRuntime.FortPlayerAnimInstance_MotorcycleDriver
 /// Size: 0x00C0 (0x000860 - 0x000920)
 class UFortPlayerAnimInstance_MotorcycleDriver : public UFortPlayerAnimInstance_MotorcycleRider
@@ -411,8 +411,6 @@ public:
 	SMember(FGameplayTagQuery)                         InventoryModeTagQuery                                       OFFSET(get<T>, {0x1FC0, 72, 0, 0})
 	SMember(FGameplayTagContainer)                     InputContextBlockedTags                                     OFFSET(get<T>, {0x2008, 32, 0, 0})
 	SMember(FGameplayTag)                              MobileHUDTag                                                OFFSET(get<T>, {0x2040, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -478,6 +476,8 @@ public:
 	// void BP_OnChargingJump(float JumpChargeFactor);                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/MotorcycleRuntime.FortMotorcycleVehicle.BP_OnCancelChargingJump
 	// void BP_OnCancelChargingJump();                                                                                          // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/MotorcycleRuntime.FortMotorcycleVehicleConfigs
 /// Size: 0x02D0 (0x0008B0 - 0x000B80)
 class UFortMotorcycleVehicleConfigs : public UFortPhysicsVehicleConfigs

@@ -29,13 +29,13 @@ public:
 	DMember(bool)                                      bAutoRegisterWithBudgetAllocator                            OFFSET(get<bool>, {0xFB0, 1, 1, 0})
 	DMember(bool)                                      bAutoCalculateSignificance                                  OFFSET(get<bool>, {0xFB0, 1, 1, 1})
 	DMember(bool)                                      bShouldUseActorRenderedFlag                                 OFFSET(get<bool>, {0xFB0, 1, 1, 2})
-};
-
 
 
 	/// Functions
 	// Function /Script/AnimationBudgetAllocator.SkeletalMeshComponentBudgeted.SetAutoRegisterWithBudgetAllocator
 	// void SetAutoRegisterWithBudgetAllocator(bool bInAutoRegisterWithBudgetAllocator);                                        // [0x65f25dc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/AnimationBudgetAllocator.AnimationBudgetAllocatorParameters
 /// Size: 0x0058 (0x000000 - 0x000058)
 class FAnimationBudgetAllocatorParameters : public MDKStruct

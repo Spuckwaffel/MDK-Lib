@@ -35,8 +35,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnMoveToFailed                                              OFFSET(get<T>, {0x88, 16, 0, 0})
 	CMember(UAITask_MoveTo*)                           MoveToTask                                                  OFFSET(get<T>, {0x98, 8, 0, 0})
 	CMember(UGameplayBehavior*)                        GameplayBehavior                                            OFFSET(get<T>, {0xA0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -46,6 +44,8 @@ public:
 	// UAITask_UseGameplayBehaviorSmartObject* UseGameplayBehaviorSmartObject(AAIController* Controller, AActor* SmartObjectActor, USmartObjectComponent* SmartObjectComponent, bool bLockAILogic); // [0x7479eb8] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayBehaviorSmartObjectsModule.AITask_UseGameplayBehaviorSmartObject.MoveToAndUseSmartObjectWithGameplayBehavior
 	// UAITask_UseGameplayBehaviorSmartObject* MoveToAndUseSmartObjectWithGameplayBehavior(AAIController* Controller, FSmartObjectClaimHandle ClaimHandle, bool bLockAILogic); // [0x7479bd0] Final|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayBehaviorSmartObjectsModule.BTTask_FindAndUseGameplayBehaviorSmartObject
 /// Size: 0x00A8 (0x000070 - 0x000118)
 class UBTTask_FindAndUseGameplayBehaviorSmartObject : public UBTTaskNode

@@ -70,8 +70,6 @@ public:
 	CMember(TArray<TWeakObjectPtr>)                    RotationLockedPawns                                         OFFSET(get<T>, {0xF60, 16, 0, 0})
 	CMember(UFortLinkToActorComponent*)                LinkToActorComponent                                        OFFSET(get<T>, {0xFD8, 8, 0, 0})
 	CMember(UFortZiplineLinkComponent*)                ZiplineLinkComponent                                        OFFSET(get<T>, {0xFE0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -115,3 +113,5 @@ public:
 	// void BP_HandlePlayerStartedUsingHandle(AFortPlayerPawn* Player);                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/AscenderCodeRuntime.FortAscenderZipline.ApplyStructureDamage
 	// void ApplyStructureDamage(ABuildingSMActor* BuildingActor, AActor* DamageSource);                                        // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent|Const 
+};
+

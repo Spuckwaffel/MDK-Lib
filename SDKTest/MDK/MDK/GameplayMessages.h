@@ -20,8 +20,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnMessageReceived                                           OFFSET(get<T>, {0x30, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  HandleSavedState                                            OFFSET(get<T>, {0x40, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  HandleStateCleared                                          OFFSET(get<T>, {0x50, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,6 +29,8 @@ public:
 	// UAsyncAction_RegisterGameplayMessageReceiver* RegisterGameplayMessageReceiver(UObject* WorldContextObject, FEventMessageTag Channel, UScriptStruct* PayloadType, EGameplayMessageMatchType MatchType, AActor* ActorContext); // [0x210dc3c] Final|Native|Static|Public|BlueprintCallable 
 	// Function /Script/GameplayMessages.AsyncAction_RegisterGameplayMessageReceiver.GetPayload
 	// bool GetPayload(int32_t& OutPayload);                                                                                    // [0x340a2e4] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/GameplayMessages.GameplayMessageReplicator
 /// Size: 0x0000 (0x000290 - 0x000290)
 class AGameplayMessageReplicator : public AActor
@@ -50,8 +50,6 @@ class UGameplayMessageRouter : public UGameInstanceSubsystem
 
 public:
 	CMember(AGameplayMessageReplicator*)               MessageReplicator                                           OFFSET(get<T>, {0xD0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -61,6 +59,8 @@ public:
 	// bool HasValidSavedMessage(FEventMessageTag Channel);                                                                     // [0x6365ccc] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/GameplayMessages.GameplayMessageRouter.ClearSavedMessage
 	// void ClearSavedMessage(FEventMessageTag Channel);                                                                        // [0x2ef72a8] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayMessages.BlueprintEventMessageTagLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UBlueprintEventMessageTagLibrary : public UBlueprintFunctionLibrary

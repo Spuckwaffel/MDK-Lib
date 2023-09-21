@@ -19,8 +19,6 @@ class UFortMobileActionButtonBehavior_ToggleRadio : public UFortMobileActionButt
 
 public:
 	CMember(UPaperSprite*)                             ToggleRadioOffSprite                                        OFFSET(get<T>, {0x120, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -28,6 +26,8 @@ public:
 	// void HandleRadioStopped(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x9871b34] Final|Native|Private 
 	// Function /Script/SrirachaRanchUI.FortMobileActionButtonBehavior_ToggleRadio.HandleRadioPlaying
 	// void HandleRadioPlaying(UStreamingRadioPlayerComponent* Radio, FAthenaRadioStation Source);                              // [0x9871974] Final|Native|Private 
+};
+
 /// Class /Script/SrirachaRanchUI.RadioPlayerWidgetBase
 /// Size: 0x0050 (0x000310 - 0x000360)
 class URadioPlayerWidgetBase : public UFortHUDElementWidget
@@ -38,8 +38,6 @@ class URadioPlayerWidgetBase : public UFortHUDElementWidget
 public:
 	SMember(FFortPrioritizedWidgetData)                PriorityData                                                OFFSET(get<T>, {0x350, 2, 0, 0})
 	CMember(UStreamingRadioPlayerComponent*)           LastValidComp                                               OFFSET(get<T>, {0x358, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -65,3 +63,5 @@ public:
 	// void NativeExitedVehicle();                                                                                              // [0x9871d08] Final|Native|Protected 
 	// Function /Script/SrirachaRanchUI.RadioPlayerWidgetBase.NativeEnteredVehicle
 	// void NativeEnteredVehicle();                                                                                             // [0x9871cf4] Final|Native|Protected 
+};
+

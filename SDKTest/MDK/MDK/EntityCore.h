@@ -102,13 +102,13 @@ class UEntityEnableableComponent : public UEntityComponent
 public:
 	DMember(bool)                                      IsEnabled                                                   OFFSET(get<bool>, {0x58, 1, 1, 0})
 	DMember(bool)                                      LastIsEnabled                                               OFFSET(get<bool>, {0x58, 1, 1, 1})
-};
-
 
 
 	/// Functions
 	// Function /Script/EntityCore.EntityEnableableComponent.OnRep_Enabled
 	// void OnRep_Enabled();                                                                                                    // [0x66cac78] Final|Native|Private 
+};
+
 /// Class /Script/EntityCore.EntityTickableComponent
 /// Size: 0x0038 (0x000078 - 0x0000B0)
 class UEntityTickableComponent : public UEntityEnableableComponent

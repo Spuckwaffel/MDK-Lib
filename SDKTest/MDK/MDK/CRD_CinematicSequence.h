@@ -28,8 +28,6 @@ public:
 	CMember(ECinematicSequenceVisibility)              Visibility                                                  OFFSET(get<T>, {0xBF9, 1, 0, 0})
 	DMember(bool)                                      bLevelSequenceActorAlwaysRelevant                           OFFSET(get<bool>, {0xBFA, 1, 0, 0})
 	DMember(float)                                     PlayRate                                                    OFFSET(get<float>, {0xBFC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -59,6 +57,8 @@ public:
 	// float GetPlaybackTime();                                                                                                 // [0x9a97764] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CRD_CinematicSequence.CinematicSequenceDeviceBase.GetPlaybackFrame
 	// int32_t GetPlaybackFrame();                                                                                              // [0x9a97740] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Enum /Script/CRD_CinematicSequence.ECinematicSequenceVisibility
 /// Size: 0x04
 enum ECinematicSequenceVisibility : uint8_t

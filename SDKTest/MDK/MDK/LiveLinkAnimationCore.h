@@ -16,8 +16,6 @@ class ULiveLinkInstance : public UAnimInstance
 	static inline constexpr uint64_t __MDKClassSize = 848;
 
 public:
-};
-
 
 
 	/// Functions
@@ -25,6 +23,8 @@ public:
 	// void SetSubject(FLiveLinkSubjectName SubjectName);                                                                       // [0xa00dc54] Final|Native|Public|BlueprintCallable 
 	// Function /Script/LiveLinkAnimationCore.LiveLinkInstance.SetRetargetAsset
 	// void SetRetargetAsset(UClass* RetargetAsset);                                                                            // [0xa00db94] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/LiveLinkAnimationCore.LiveLinkRetargetAsset
 /// Size: 0x0000 (0x000028 - 0x000028)
 class ULiveLinkRetargetAsset : public UObject

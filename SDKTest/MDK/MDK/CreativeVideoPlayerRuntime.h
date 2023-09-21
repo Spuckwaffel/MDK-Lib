@@ -35,8 +35,6 @@ public:
 	CMember(UMediaSoundComponent*)                     ExtMediaSoundComponentCached                                OFFSET(get<T>, {0xB98, 8, 0, 0})
 	DMember(bool)                                      bExtComponentsSet                                           OFFSET(get<bool>, {0xBA0, 1, 0, 0})
 	DMember(bool)                                      bActivatedFullscreen                                        OFFSET(get<bool>, {0xBA1, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -62,6 +60,8 @@ public:
 	// void ClientTransitionToFullscreenVideo();                                                                                // [0x7616530] Final|Net|NetReliableNative|Event|Private|NetClient 
 	// Function /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFullscreenGameplayAbility.ClientLeaveFullscreenVideo
 	// void ClientLeaveFullscreenVideo();                                                                                       // [0x7616438] Final|Net|NetReliableNative|Event|Private|NetClient 
+};
+
 /// Class /Script/CreativeVideoPlayerRuntime.CreativeVideoPlayerFunctionLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCreativeVideoPlayerFunctionLibrary : public UBlueprintFunctionLibrary

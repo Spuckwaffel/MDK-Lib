@@ -122,8 +122,6 @@ public:
 	CMember(UMutableMaskOutCache*)                     MaskOutCache_HardRef                                        OFFSET(get<T>, {0x470, 8, 0, 0})
 	SMember(FGuid)                                     CompilationGuid                                             OFFSET(get<T>, {0x478, 16, 0, 0})
 	CMember(UCustomizableObjectBulk*)                  BulkData                                                    OFFSET(get<T>, {0x488, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -185,6 +183,8 @@ public:
 	// int32_t FindParameter(FString Name);                                                                                     // [0x65bd570] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/CustomizableObject.CustomizableObject.CreateInstance
 	// UCustomizableObjectInstance* CreateInstance();                                                                           // [0x65bc07c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CustomizableObject.DGGUI
 /// Size: 0x0000 (0x0002A8 - 0x0002A8)
 class UDGGUI : public UUserWidget
@@ -218,8 +218,6 @@ public:
 	CMember(TArray<FCustomizableObjectVectorParameterValue>) VectorParameters                                      OFFSET(get<T>, {0x318, 16, 0, 0})
 	CMember(TArray<FCustomizableObjectProjectorParameterValue>) ProjectorParameters                                OFFSET(get<T>, {0x328, 16, 0, 0})
 	CMember(TMap<FName, FMultilayerProjector>)         MultilayerProjectors                                        OFFSET(get<T>, {0x338, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -379,6 +377,8 @@ public:
 	// int32_t AddValueToIntRange(FString ParamName);                                                                           // [0x65bb214] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CustomizableObject.CustomizableObjectInstance.AddValueToFloatRange
 	// int32_t AddValueToFloatRange(FString ParamName);                                                                         // [0x65bab1c] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CustomizableObject.MutableTextureMipDataProviderFactory
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UMutableTextureMipDataProviderFactory : public UTextureMipDataProviderFactory
@@ -425,8 +425,6 @@ public:
 	CMember(UCustomizableInstanceLODManagementBase*)   DefaultInstanceLODManagement                                OFFSET(get<T>, {0x50, 8, 0, 0})
 	CMember(UCustomizableInstanceLODManagementBase*)   CurrentInstanceLODManagement                                OFFSET(get<T>, {0x58, 8, 0, 0})
 	CMember(TArray<UTexture2D*>)                       ProtectedCachedTextures                                     OFFSET(get<T>, {0x60, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -446,6 +444,8 @@ public:
 	// UCustomizableObjectSystem* GetInstance();                                                                                // [0x65eff9c] Final|Native|Static|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/CustomizableObject.CustomizableObjectSystem.GetAverageBuildTime
 	// int32_t GetAverageBuildTime();                                                                                           // [0x65eff6c] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/CustomizableObject.CustomizableSkeletalComponent
 /// Size: 0x0040 (0x0002A0 - 0x0002E0)
 class UCustomizableSkeletalComponent : public USceneComponent
@@ -457,8 +457,6 @@ public:
 	DMember(float)                                     SkippedLastRenderTime                                       OFFSET(get<float>, {0x2A4, 4, 0, 0})
 	CMember(UCustomizableObjectInstance*)              CustomizableObjectInstance                                  OFFSET(get<T>, {0x2A8, 8, 0, 0})
 	DMember(int32_t)                                   ComponentIndex                                              OFFSET(get<int32_t>, {0x2B0, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -466,6 +464,8 @@ public:
 	// void UpdateSkeletalMeshAsyncResult(FDelegateProperty Callback, bool bIgnoreCloseDist, bool bForceHighPriority);          // [0x65f017c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/CustomizableObject.CustomizableSkeletalComponent.UpdateSkeletalMeshAsync
 	// void UpdateSkeletalMeshAsync(bool bNeverSkipUpdate);                                                                     // [0x65f0100] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/CustomizableObject.CustomizableSkeletalMeshActor
 /// Size: 0x0028 (0x000310 - 0x000338)
 class ACustomizableSkeletalMeshActor : public ASkeletalMeshActor

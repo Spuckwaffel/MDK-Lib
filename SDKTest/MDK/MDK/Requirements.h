@@ -18,10 +18,10 @@ class UBP_ControllerRequirement_CheckLivingWorldManagerBudget_C : public UFortCo
 public:
 	DMember(int32_t)                                   RequiredBudget                                              OFFSET(get<int32_t>, {0x30, 4, 0, 0})
 	SMember(FDataTableRowHandle)                       EventRowHandle                                              OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Lager/Requirements/BP_ControllerRequirement_CheckLivingWorldManagerBudget.BP_ControllerRequirement_CheckLivingWorldManagerBudget_C.IsRequirementMetInternal
 	// bool IsRequirementMetInternal(FControllerRequirementTestContext& RequestContext);                                        // [0x1ebf994] Event|Protected|HasOutParms|BlueprintCallable|BlueprintEvent|Const 
+};
+

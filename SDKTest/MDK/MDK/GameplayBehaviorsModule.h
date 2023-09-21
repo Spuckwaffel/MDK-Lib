@@ -69,8 +69,6 @@ public:
 	CMember(AActor*)                                   TransientSmartObjectOwner                                   OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(AActor*)                                   TransientAvatar                                             OFFSET(get<T>, {0x70, 8, 0, 0})
 	CMember(TArray<UGameplayTask*>)                    ActiveTasks                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -94,6 +92,8 @@ public:
 	// void K2_EndBehavior(AActor* Avatar);                                                                                     // [0x7475adc] Final|Native|Public|BlueprintCallable 
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior.K2_AbortBehavior
 	// void K2_AbortBehavior(AActor* Avatar);                                                                                   // [0x7475a58] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/GameplayBehaviorsModule.GameplayBehavior_BehaviorTree
 /// Size: 0x0020 (0x000088 - 0x0000A8)
 class UGameplayBehavior_BehaviorTree : public UGameplayBehavior
@@ -161,13 +161,13 @@ class UGameplayBehavior_AnimationBased : public UGameplayBehavior
 
 public:
 	CMember(TArray<FMontagePlaybackData>)              ActivePlayback                                              OFFSET(get<T>, {0x88, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/GameplayBehaviorsModule.GameplayBehavior_AnimationBased.OnMontageFinished
 	// void OnMontageFinished(UAnimMontage* Montage, bool bInterrupted, AActor* InAvatar);                                      // [0x7475d1c] Final|Native|Protected 
+};
+
 /// Struct /Script/GameplayBehaviorsModule.AgentGameplayBehaviors
 /// Size: 0x0010 (0x000000 - 0x000010)
 class FAgentGameplayBehaviors : public MDKStruct

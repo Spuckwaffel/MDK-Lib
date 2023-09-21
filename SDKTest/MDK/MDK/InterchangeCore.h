@@ -16,13 +16,13 @@ class UInterchangeFactoryBase : public UObject
 
 public:
 	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x28, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/InterchangeCore.InterchangeFactoryBase.GetFactoryClass
 	// UClass* GetFactoryClass();                                                                                               // [0x271cd04] Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/InterchangeCore.InterchangeSourceData
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UInterchangeSourceData : public UObject
@@ -32,8 +32,6 @@ class UInterchangeSourceData : public UObject
 
 public:
 	SMember(FString)                                   Filename                                                    OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -41,6 +39,8 @@ public:
 	// bool SetFilename(FString InFilename);                                                                                    // [0xa4eef94] Final|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeSourceData.GetFilename
 	// FString GetFilename();                                                                                                   // [0xa4dd184] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/InterchangeCore.InterchangeWriterBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UInterchangeWriterBase : public UObject
@@ -61,8 +61,6 @@ class UInterchangePipelineBase : public UObject
 public:
 	CMember(UInterchangeResultsContainer*)             Results                                                     OFFSET(get<T>, {0x30, 8, 0, 0})
 	CMember(TMap<FName, FInterchangePipelinePropertyStates>) PropertiesStates                                      OFFSET(get<T>, {0x38, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -84,6 +82,8 @@ public:
 	// FInterchangePipelinePropertyStates FindOrAddPropertyStates(FName PropertyPath);                                          // [0xa4da268] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangePipelineBase.DoesPropertyStatesExist
 	// bool DoesPropertyStatesExist(FName PropertyPath);                                                                        // [0xa4da0c0] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/InterchangeCore.InterchangeResult
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UInterchangeResult : public UObject
@@ -213,8 +213,6 @@ class UInterchangeBaseNodeContainer : public UObject
 
 public:
 	CMember(TMap<FString, UInterchangeBaseNode*>)      Nodes                                                       OFFSET(get<T>, {0x28, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -248,6 +246,8 @@ public:
 	// void ComputeChildrenCache();                                                                                             // [0xa4d78dc] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/InterchangeCore.InterchangeBaseNodeContainer.AddNode
 	// FString AddNode(UInterchangeBaseNode* Node);                                                                             // [0xa4d5d7c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/InterchangeCore.InterchangeFactoryBaseNode
 /// Size: 0x00E0 (0x000060 - 0x000140)
 class UInterchangeFactoryBaseNode : public UInterchangeBaseNode

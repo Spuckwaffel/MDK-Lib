@@ -73,8 +73,6 @@ public:
 	CMember(UAudioComponent*)                          PIPSoundComponent                                           OFFSET(get<T>, {0x4D8, 8, 0, 0})
 	SMember(FPiPPartnerSource)                         CurrentSource                                               OFFSET(get<T>, {0x4E0, 488, 0, 0})
 	CMember(USubtitleDisplay*)                         Subtitles                                                   OFFSET(get<T>, {0x6D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -102,6 +100,8 @@ public:
 	// void DestroyPIPSoundComponent();                                                                                         // [0x9ceb3f0] Final|Native|Private|BlueprintCallable 
 	// Function /Script/PictureInPictureUI.PictureInPicturePanelWidget.AutoEnableController
 	// void AutoEnableController();                                                                                             // [0x3581160] Final|Native|Private 
+};
+
 /// Class /Script/PictureInPictureUI.PictureInPictureSourcePicker
 /// Size: 0x01F8 (0x0003E8 - 0x0005E0)
 class UPictureInPictureSourcePicker : public UCommonActivatableWidget
@@ -121,8 +121,6 @@ public:
 	CMember(UOverlay*)                                 Overlay_Main                                                OFFSET(get<T>, {0x5B8, 8, 0, 0})
 	CMember(UTexture2D*)                               DefaultItemTexture                                          OFFSET(get<T>, {0x5C0, 8, 0, 0})
 	CMember(UPictureInPictureMediaController*)         CurrentPartner                                              OFFSET(get<T>, {0x5C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -130,3 +128,5 @@ public:
 	// void HandleOnPartnerSourceChanged(TArray<FPiPPartnerSource>& CurrentSources);                                            // [0x9ceb9f0] Final|Native|Private|HasOutParms 
 	// Function /Script/PictureInPictureUI.PictureInPictureSourcePicker.HandleOnPartnerChanged
 	// void HandleOnPartnerChanged(UPictureInPicturePartnerControls* NewPartner);                                               // [0x9ceb8a8] Final|Native|Private 
+};
+

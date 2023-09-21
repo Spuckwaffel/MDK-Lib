@@ -35,8 +35,6 @@ public:
 	DMember(bool)                                      bShowCraftingUI                                             OFFSET(get<bool>, {0x9D0, 1, 0, 0})
 	DMember(bool)                                      bSendEventMessageOnLocalInteract                            OFFSET(get<bool>, {0x9D1, 1, 0, 0})
 	CMember(UStaticMeshComponent*)                     CraftingObjectMesh                                          OFFSET(get<T>, {0x9D8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -44,6 +42,8 @@ public:
 	// void HandleInteractionRangeEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex); // [0x994af4c] Final|Native|Private 
 	// Function /Script/CraftingRuntime.CraftingObjectBGA.HandleInteractionRangeBeginOverlap
 	// void HandleInteractionRangeBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, FHitResult& SweepResult); // [0x994ad4c] Final|Native|Private|HasOutParms 
+};
+
 /// Class /Script/CraftingRuntime.CraftingCheatManager
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UCraftingCheatManager : public UChildCheatManager
@@ -93,8 +93,6 @@ public:
 	DMember(bool)                                      bScaleMultiCraftingTime                                     OFFSET(get<bool>, {0x2C8, 1, 0, 0})
 	SMember(FGameplayTagContainer)                     CraftingFailedTags                                          OFFSET(get<T>, {0x2D0, 32, 0, 0})
 	DMember(bool)                                      FreeCraftingEnabled                                         OFFSET(get<bool>, {0x438, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -104,6 +102,8 @@ public:
 	// void HandlePickupCraftingItemPickedUp(AFortPickup* Pickup, AFortPawn* InteractingPawn, UFortWorldItemDefinition* WorldItemDefinition, FVector PickupLocation); // [0x994b108] Final|Native|Private|HasDefaults 
 	// Function /Script/CraftingRuntime.CraftingObjectComponent.CraftingObjectOnFormulaCraftableChanged__DelegateSignature
 	// void CraftingObjectOnFormulaCraftableChanged__DelegateSignature(FName& FormulaRowName, bool bIsCraftable);               // [0x1ebf994] MulticastDelegate|Public|Delegate|HasOutParms 
+};
+
 /// Class /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents
 /// Size: 0x0010 (0x0000A8 - 0x0000B8)
 class UFortControllerComponent_CraftingNetworkEvents : public UFortControllerComponent
@@ -113,8 +113,6 @@ class UFortControllerComponent_CraftingNetworkEvents : public UFortControllerCom
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnCraftingSuccess                                           OFFSET(get<T>, {0xA8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -140,6 +138,8 @@ public:
 	// void ClientNotifyCraftingSuccess(AActor* CraftingObject, FName FormulaRowName, FCraftingMultiKey Key);                   // [0x99484bc] Net|NetReliableNative|Event|Public|NetClient 
 	// Function /Script/CraftingRuntime.FortControllerComponent_CraftingNetworkEvents.ClientNotifyCraftingFailed
 	// void ClientNotifyCraftingFailed(AActor* CraftingObject, FGameplayTagContainer FailedReason, FCraftingMultiKey Key);      // [0x99481f0] Net|Native|Event|Public|NetClient 
+};
+
 /// Class /Script/CraftingRuntime.FortGameStateComponent_Crafting
 /// Size: 0x01A8 (0x0000A0 - 0x000248)
 class UFortGameStateComponent_Crafting : public UFortGameStateComponent
@@ -151,8 +151,6 @@ public:
 	SMember(FDataRegistryType)                         CraftingFormulaRegistryType                                 OFFSET(get<T>, {0xA0, 4, 0, 0})
 	SMember(FDataRegistryType)                         CraftingIngredientsUIDataRegistryType                       OFFSET(get<T>, {0xA4, 4, 0, 0})
 	CMember(TArray<FCraftingResult>)                   CraftingResultsList                                         OFFSET(get<T>, {0x1E8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -160,6 +158,8 @@ public:
 	// void OnRep_CraftingResultsList();                                                                                        // [0x994c098] Final|Native|Protected 
 	// Function /Script/CraftingRuntime.FortGameStateComponent_Crafting.OnPlaylistDataReady
 	// void OnPlaylistDataReady(AFortGameStateAthena* GameState, UFortPlaylist* Playlist, FGameplayTagContainer& PlaylistContextTags); // [0x994b8bc] Final|Native|Protected|HasOutParms 
+};
+
 /// Class /Script/CraftingRuntime.FortPickupInteractOverrideComponent_Crafting
 /// Size: 0x0020 (0x0000C0 - 0x0000E0)
 class UFortPickupInteractOverrideComponent_Crafting : public UFortPickupInteractOverrideComponent

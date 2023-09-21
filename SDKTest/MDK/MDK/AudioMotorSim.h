@@ -18,8 +18,6 @@ class UAudioMotorModelComponent : public UActorComponent
 public:
 	CMember(TArray<FMotorSimEntry>)                    SimComponents                                               OFFSET(get<T>, {0xA0, 16, 0, 0})
 	CMember(TArray<TScriptInterface>)                  AudioComponents                                             OFFSET(get<T>, {0xB0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -47,6 +45,8 @@ public:
 	// void AddMotorSimComponent(TScriptInterface<Class> InComponent, int32_t SortOrder);                                       // [0x1664828] Final|Native|Public|BlueprintCallable 
 	// Function /Script/AudioMotorSim.AudioMotorModelComponent.AddMotorAudioComponent
 	// void AddMotorAudioComponent(TScriptInterface<Class> InComponent);                                                        // [0x12840bc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AudioMotorSim.AudioMotorSim
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAudioMotorSim : public UInterface

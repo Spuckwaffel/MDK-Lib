@@ -53,8 +53,6 @@ public:
 	CMember(TArray<FAudioWorldizationSettings>)        SettingsStack                                               OFFSET(get<T>, {0x138, 16, 0, 0})
 	CMember(TArray<USoundControlBus*>)                 QuadrantEnclosureBuses                                      OFFSET(get<T>, {0x148, 16, 0, 0})
 	CMember(TArray<USoundControlBus*>)                 QuadrantWallDistanceBuses                                   OFFSET(get<T>, {0x158, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -72,6 +70,8 @@ public:
 	// float GetEnclosureFactor();                                                                                              // [0x74fa378] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AudioWorldization.AudioWorldizationSubsystem.GetAverageTraceDistance
 	// float GetAverageTraceDistance();                                                                                         // [0x74fa360] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AudioWorldization.AudioWorldizationTraceDirectionPolicyBase
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAudioWorldizationTraceDirectionPolicyBase : public UObject

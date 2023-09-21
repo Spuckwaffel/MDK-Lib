@@ -60,8 +60,6 @@ public:
 	SMember(FFortAthenaVehicleInputState)              PendingDriverInputState                                     OFFSET(get<T>, {0x1C80, 64, 0, 0})
 	SMember(FFortAthenaVehicleInputState)              PrevDriverInputState                                        OFFSET(get<T>, {0x1CC0, 64, 0, 0})
 	SMember(FVector)                                   EnterExitImpulse                                            OFFSET(get<T>, {0x1D00, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -81,6 +79,8 @@ public:
 	// FFortAthenaVehicleInputState GetDriverInput();                                                                           // [0x9d12958] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RockVehicleRuntime.RockVehicle.GetCurrentRockRuntimeConfigOverrides
 	// FRockRuntimeConfigOverrides GetCurrentRockRuntimeConfigOverrides();                                                      // [0x9d12940] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RockVehicleRuntime.RockVehicleAbility
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class URockVehicleAbility : public UActorComponent
@@ -92,8 +92,6 @@ public:
 	CMember(ARockVehicle*)                             Vehicle                                                     OFFSET(get<T>, {0xA0, 8, 0, 0})
 	DMember(float)                                     ActiveSeconds                                               OFFSET(get<float>, {0xA8, 4, 0, 0})
 	DMember(float)                                     LastDeactivationTimeSeconds                                 OFFSET(get<float>, {0xAC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -103,6 +101,8 @@ public:
 	// float GetInactiveSeconds();                                                                                              // [0x9d129a4] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RockVehicleRuntime.RockVehicleAbility.GetActiveSeconds
 	// float GetActiveSeconds();                                                                                                // [0x315ad40] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RockVehicleRuntime.RockVehicleAbility_Physics
 /// Size: 0x0058 (0x0000B0 - 0x000108)
 class URockVehicleAbility_Physics : public URockVehicleAbility
@@ -184,8 +184,6 @@ public:
 	DMember(float)                                     BoostRechargeRate                                           OFFSET(get<float>, {0x114, 4, 0, 0})
 	DMember(float)                                     BoostRechargeDelay                                          OFFSET(get<float>, {0x118, 4, 0, 0})
 	DMember(float)                                     SecondsRemaining                                            OFFSET(get<float>, {0x11C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -201,6 +199,8 @@ public:
 	// float GetPercentRemaining();                                                                                             // [0x9d129ec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/RockVehicleRuntime.RockVehicleBoostTank.GetMaxBoostInSeconds
 	// float GetMaxBoostInSeconds();                                                                                            // [0x6645eac] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RockVehicleRuntime.RockVehicleAbility_Dodge
 /// Size: 0x0330 (0x000108 - 0x000438)
 class URockVehicleAbility_Dodge : public URockVehicleAbility_Physics
@@ -266,8 +266,6 @@ public:
 	CMember(UNiagaraSystem*)                           HandbrakeSystem                                             OFFSET(get<T>, {0xD8, 8, 0, 0})
 	CMember(TArray<UNiagaraComponent*>)                GroundTrailComponents                                       OFFSET(get<T>, {0xE0, 16, 0, 0})
 	CMember(TArray<UNiagaraComponent*>)                HandbrakeComponents                                         OFFSET(get<T>, {0xF0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -275,6 +273,8 @@ public:
 	// void SetEnabled(bool bValue);                                                                                            // [0x7ec1340] Final|Native|Public|BlueprintCallable 
 	// Function /Script/RockVehicleRuntime.RockVehicleAbility_GroundTrails.OnSurfaceChanged
 	// void OnSurfaceChanged(TEnumAsByte<EPhysicalSurface> NewSurface);                                                         // [0x9d134d8] Final|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/RockVehicleRuntime.RockVehicleAbility_Jump
 /// Size: 0x00D8 (0x000108 - 0x0001E0)
 class URockVehicleAbility_Jump : public URockVehicleAbility_Physics
@@ -332,8 +332,6 @@ class URockVehicleAnalyticsComponent : public UActorComponent
 public:
 	SMember(FRockVehicleAnalyticsSession)              CurrentSession                                              OFFSET(get<T>, {0xA8, 40, 0, 0})
 	CMember(ARockVehicle*)                             Vehicle                                                     OFFSET(get<T>, {0xD0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -351,6 +349,8 @@ public:
 	// void OnDoubleJumped(UActorComponent* InComp, bool bInReset);                                                             // [0x9d12bc4] Final|Native|Private 
 	// Function /Script/RockVehicleRuntime.RockVehicleAnalyticsComponent.OnDodged
 	// void OnDodged(UActorComponent* InComp, bool bInReset);                                                                   // [0x9d12b0c] Final|Native|Private 
+};
+
 /// Class /Script/RockVehicleRuntime.RockVehicleAnimInstance
 /// Size: 0x0180 (0x000600 - 0x000780)
 class URockVehicleAnimInstance : public UFortVehicleAnimInstance
@@ -383,8 +383,6 @@ public:
 	DMember(bool)                                      bInWater                                                    OFFSET(get<bool>, {0x398, 1, 0, 0})
 	CMember(UAudioMotorModelComponent*)                MotorModel                                                  OFFSET(get<T>, {0x3A0, 8, 0, 0})
 	CMember(ARockVehicle*)                             CachedVehicle                                               OFFSET(get<T>, {0x3A8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -396,6 +394,8 @@ public:
 	// void OnInAirUpdated(bool bNewInAir);                                                                                     // [0x1ebf994] Event|Public|BlueprintCallable|BlueprintEvent 
 	// Function /Script/RockVehicleRuntime.RockVehicleAudioController.GetMotorSimComponent
 	// UAudioMotorModelComponent* GetMotorSimComponent();                                                                       // [0x8e279a0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/RockVehicleRuntime.RockVehicleCameraMode
 /// Size: 0x0200 (0x001B70 - 0x001D70)
 class URockVehicleCameraMode : public UFortCameraMode_AthenaVehicle

@@ -20,8 +20,6 @@ public:
 	CMember(USceneComponent*)                          Scene                                                       OFFSET(get<T>, {0x298, 8, 0, 0})
 	CMember(UArrowComponent*)                          Arrow                                                       OFFSET(get<T>, {0x2A0, 8, 0, 0})
 	SMember(FLinearColor)                              SunLightColor                                               OFFSET(get<T>, {0x2A8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -33,3 +31,5 @@ public:
 	// void ReceiveTick(float DeltaSeconds);                                                                                    // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Tools/Turntable_2/SunDirectionandColorSet.SunDirectionandColorSet_C.ExecuteUbergraph_SunDirectionandColorSet
 	// void ExecuteUbergraph_SunDirectionandColorSet(int32_t EntryPoint);                                                       // [0x1ebf994] Final                
+};
+

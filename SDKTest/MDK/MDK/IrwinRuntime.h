@@ -71,8 +71,6 @@ public:
 	DMember(bool)                                      bIsInTractorBeam                                            OFFSET(get<bool>, {0x6B8, 1, 0, 0})
 	DMember(bool)                                      bIsFloating                                                 OFFSET(get<bool>, {0x6B9, 1, 0, 0})
 	DMember(float)                                     JustGotPlayerInitialDelaySec                                OFFSET(get<float>, {0x6BC, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -98,6 +96,8 @@ public:
 	// void FinishFootPhaseStopUpdate();                                                                                        // [0x5ae1b54] Native|Event|Public|BlueprintEvent 
 	// Function /Script/IrwinRuntime.FortAIFaunaAnimInstance.CalculateLookAtAlpha
 	// void CalculateLookAtAlpha(bool bForceDisableLookAt, float DeltaSeconds);                                                 // [0x97d2894] Final|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/IrwinRuntime.FortAIFaunaAnimInstance_Burt
 /// Size: 0x00A0 (0x0006E0 - 0x000780)
 class UFortAIFaunaAnimInstance_Burt : public UFortAIFaunaAnimInstance
@@ -267,8 +267,6 @@ public:
 	DMember(float)                                     StateTimeFromEndThreshold                                   OFFSET(get<float>, {0x784, 4, 0, 0})
 	DMember(float)                                     SpeedIdleStartTurnThreshold                                 OFFSET(get<float>, {0x788, 4, 0, 0})
 	DMember(float)                                     SpeedFallMovingThreshold                                    OFFSET(get<float>, {0x78C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -306,6 +304,8 @@ public:
 	// float CalculateLocomotionPoseAlpha();                                                                                    // [0x97d286c] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/IrwinRuntime.FortAIFaunaAnimInstance_Grandma.CalculateBlinkAlpha
 	// float CalculateBlinkAlpha();                                                                                             // [0x97d281c] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/IrwinRuntime.FortAIFaunaAnimInstance_Grandma_Hitchhiker
 /// Size: 0x0000 (0x0007A0 - 0x0007A0)
 class UFortAIFaunaAnimInstance_Grandma_Hitchhiker : public UFortAIFaunaAnimInstance_Grandma
@@ -530,8 +530,6 @@ public:
 	DMember(float)                                     SpeedIdleMoveTransition                                     OFFSET(get<float>, {0x884, 4, 0, 0})
 	DMember(float)                                     SpeedToMoveMin                                              OFFSET(get<float>, {0x888, 4, 0, 0})
 	DMember(float)                                     StateTimeFromEndThreshold                                   OFFSET(get<float>, {0x88C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -553,6 +551,8 @@ public:
 	// bool DetermineEnableHeadTiltDownAdditive();                                                                              // [0x97d29bc] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/IrwinRuntime.FortAIFaunaAnimInstance_Robert.CalculateLocomotionPoseAdditiveAlpha
 	// float CalculateLocomotionPoseAdditiveAlpha();                                                                            // [0x97d2844] Final|Native|Public|BlueprintCallable|BlueprintPure 
+};
+
 /// Class /Script/IrwinRuntime.FortAIFaunaAnimInstance_Smackie
 /// Size: 0x0030 (0x0006E0 - 0x000710)
 class UFortAIFaunaAnimInstance_Smackie : public UFortAIFaunaAnimInstance

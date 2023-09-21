@@ -38,8 +38,6 @@ public:
 	DMember(float)                                     CurrentAspectRatio                                          OFFSET(get<float>, {0x150, 4, 0, 0})
 	CMember(TEnumAsByte<MediaTextureOrientation>)      CurrentOrientation                                          OFFSET(get<T>, {0x154, 1, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x158, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -57,6 +55,8 @@ public:
 	// int32_t GetHeight();                                                                                                     // [0x597bc24] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaTexture.GetAspectRatio
 	// float GetAspectRatio();                                                                                                  // [0x597b848] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MediaAssets.MediaSource
 /// Size: 0x0058 (0x000028 - 0x000080)
 class UMediaSource : public UObject
@@ -88,13 +88,13 @@ class UFileMediaSource : public UBaseMediaSource
 public:
 	SMember(FString)                                   FilePath                                                    OFFSET(get<T>, {0x88, 16, 0, 0})
 	DMember(bool)                                      PrecacheFile                                                OFFSET(get<bool>, {0x98, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MediaAssets.FileMediaSource.SetFilePath
 	// void SetFilePath(FString Path);                                                                                          // [0x59804ec] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MediaAssets.MediaComponent
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class UMediaComponent : public UActorComponent
@@ -105,8 +105,6 @@ class UMediaComponent : public UActorComponent
 public:
 	CMember(UMediaTexture*)                            MediaTexture                                                OFFSET(get<T>, {0xA0, 8, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0xA8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -114,6 +112,8 @@ public:
 	// UMediaTexture* GetMediaTexture();                                                                                        // [0x2bcf41c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaComponent.GetMediaPlayer
 	// UMediaPlayer* GetMediaPlayer();                                                                                          // [0x597bd64] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MediaAssets.MediaTimeStampInfo
 /// Size: 0x0010 (0x000028 - 0x000038)
 class UMediaTimeStampInfo : public UObject
@@ -157,8 +157,6 @@ public:
 	DMember(float)                                     VerticalFieldOfView                                         OFFSET(get<float>, {0xFC, 4, 0, 0})
 	SMember(FRotator)                                  ViewRotation                                                OFFSET(get<T>, {0x100, 24, 0, 0})
 	SMember(FGuid)                                     PlayerGuid                                                  OFFSET(get<T>, {0x140, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -312,6 +310,8 @@ public:
 	// bool CanPlaySource(UMediaSource* MediaSource);                                                                           // [0x597aa34] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlayer.CanPause
 	// bool CanPause();                                                                                                         // [0x597a9bc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/MediaAssets.MediaPlayerProxyInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UMediaPlayerProxyInterface : public UInterface
@@ -331,8 +331,6 @@ class UMediaPlaylist : public UObject
 
 public:
 	CMember(TArray<UMediaSource*>)                     Items                                                       OFFSET(get<T>, {0x28, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -360,6 +358,8 @@ public:
 	// bool AddFile(FString FilePath);                                                                                          // [0x5979aa0] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/MediaAssets.MediaPlaylist.Add
 	// bool Add(UMediaSource* MediaSource);                                                                                     // [0x59799e8] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/MediaAssets.MediaSoundComponent
 /// Size: 0x00E0 (0x000900 - 0x0009E0)
 class UMediaSoundComponent : public USynthComponent
@@ -373,8 +373,6 @@ public:
 	DMember(float)                                     RateAdjustmentFactor                                        OFFSET(get<float>, {0x908, 4, 0, 0})
 	SMember(FFloatRange)                               RateAdjustmentRange                                         OFFSET(get<T>, {0x90C, 16, 0, 0})
 	CMember(UMediaPlayer*)                             MediaPlayer                                                 OFFSET(get<T>, {0x920, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -398,6 +396,8 @@ public:
 	// float GetEnvelopeValue();                                                                                                // [0x597bbf8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
 	// bool BP_GetAttenuationSettingsToApply(FSoundAttenuationSettings& OutAttenuationSettings);                                // [0x597a8cc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MediaAssets.PlatformMediaSource
 /// Size: 0x0008 (0x000080 - 0x000088)
 class UPlatformMediaSource : public UMediaSource

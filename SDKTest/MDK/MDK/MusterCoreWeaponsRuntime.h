@@ -31,8 +31,6 @@ public:
 	CMember(UMaterialInterface*)                       DecalMaterial                                               OFFSET(get<T>, {0xC80, 8, 0, 0})
 	CMember(USoundBase*)                               Cue_CloseSound                                              OFFSET(get<T>, {0xC88, 8, 0, 0})
 	CMember(USoundBase*)                               Cue_DistantSound                                            OFFSET(get<T>, {0xC90, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -44,6 +42,8 @@ public:
 	// void SetHitLocation(FVector& NewHitLocation);                                                                            // [0x9957cb4] Final|Native|Protected|HasOutParms|HasDefaults|BlueprintCallable 
 	// Function /Script/MusterCoreWeaponsRuntime.FortMusterExplosiveARProjectile.OnRep_HitLocation
 	// void OnRep_HitLocation();                                                                                                // [0x9957c04] Final|Native|Protected 
+};
+
 /// Class /Script/MusterCoreWeaponsRuntime.MusterCoreWeaponsAnimInstance
 /// Size: 0x0020 (0x000350 - 0x000370)
 class UMusterCoreWeaponsAnimInstance : public UAnimInstance
@@ -83,8 +83,6 @@ public:
 	SMember(FLinearColor)                              EmissivePurpleColor                                         OFFSET(get<T>, {0xC78, 16, 0, 0})
 	DMember(float)                                     MinPitchForRotationAdjustment                               OFFSET(get<float>, {0xC88, 4, 0, 0})
 	DMember(float)                                     MaxPitchForRotationAdjustment                               OFFSET(get<float>, {0xC8C, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -110,3 +108,5 @@ public:
 	// void OnAttachedActorDestroyed(AActor* DestroyedActor);                                                                   // [0x99575d8] Final|Native|Protected 
 	// Function /Script/MusterCoreWeaponsRuntime.FortExCaliberProjectile.BP_OnProjectileStopped
 	// void BP_OnProjectileStopped();                                                                                           // [0x1ebf994] Event|Protected|BlueprintEvent 
+};
+

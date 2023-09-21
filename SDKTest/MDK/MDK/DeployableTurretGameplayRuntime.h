@@ -34,13 +34,13 @@ public:
 	DMember(float)                                     TurnEndCurveThreshold                                       OFFSET(get<float>, {0x358, 4, 0, 0})
 	SMember(FRotator)                                  AimRotationInComponentSpace                                 OFFSET(get<T>, {0x360, 24, 0, 0})
 	SMember(FRotator)                                  SurfaceRotation                                             OFFSET(get<T>, {0x378, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/DeployableTurretGameplayRuntime.DeployableTurretAnimInstance.SetNativeVariables
 	// void SetNativeVariables(ABuildingGameplayActor* OwningTurretBGA, FDeployableTurretBPAnimData& AnimData);                 // [0x2278440] Final|Native|Protected|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/DeployableTurretGameplayRuntime.DeployableTurretLibrary
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UDeployableTurretLibrary : public UBlueprintFunctionLibrary

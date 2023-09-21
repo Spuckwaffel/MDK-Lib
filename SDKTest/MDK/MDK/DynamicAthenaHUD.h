@@ -21,8 +21,6 @@ public:
 	CMember(UDynamicUIScene*)                          CreativeQuickbarScene                                       OFFSET(get<T>, {0x2B8, 8, 0, 0})
 	CMember(UDynamicUIScene*)                          TournamentScene                                             OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	CMember(UDynamicUIScene*)                          ArenaTournamentScene                                        OFFSET(get<T>, {0x2C8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -32,3 +30,5 @@ public:
 	// void HandleEnteringVehicle();                                                                                            // [0x9b57f14] Final|Native|Private 
 	// Function /Script/DynamicAthenaHUD.DynamicAthenaHUDDirector.HandleCreativeQuickbarEquippedChanged
 	// void HandleCreativeQuickbarEquippedChanged(bool bIsQuickbarEquipped);                                                    // [0x9b57e94] Final|Native|Private 
+};
+

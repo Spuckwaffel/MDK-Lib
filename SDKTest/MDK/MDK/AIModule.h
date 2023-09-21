@@ -20,13 +20,13 @@ class UAIAsyncTaskBlueprintProxy : public UObject
 public:
 	SMember(FMulticastInlineDelegate)                  OnSuccess                                                   OFFSET(get<T>, {0x28, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnFail                                                      OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
 	// void OnMoveCompleted(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult> MovementResult);                          // [0x6412218] Final|RequiredAPI|Native|Public 
+};
+
 /// Class /Script/AIModule.AIResourceInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAIResourceInterface : public UInterface
@@ -223,8 +223,6 @@ public:
 	DMember(bool)                                      bReplaceActiveSameClassInstance                             OFFSET(get<bool>, {0x80, 1, 1, 1})
 	DMember(bool)                                      bShouldPauseMovement                                        OFFSET(get<bool>, {0x80, 1, 1, 2})
 	DMember(bool)                                      bAlwaysNotifyOnFinished                                     OFFSET(get<bool>, {0x80, 1, 1, 3})
-};
-
 
 
 	/// Functions
@@ -234,6 +232,8 @@ public:
 	// void Finish(TEnumAsByte<EPawnActionResult> WithResult);                                                                  // [0x6411000] RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/AIModule.PawnAction.CreateActionInstance
 	// UPawnAction* CreateActionInstance(UObject* WorldContextObject, UClass* ActionClass);                                     // [0x6410e84] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.PawnActionsComponent
 /// Size: 0x0038 (0x0000A0 - 0x0000D8)
 class UPawnActionsComponent : public UActorComponent
@@ -246,8 +246,6 @@ public:
 	CMember(TArray<FPawnActionStack>)                  ActionStacks                                                OFFSET(get<T>, {0xA8, 16, 0, 0})
 	CMember(TArray<FPawnActionEvent>)                  ActionEvents                                                OFFSET(get<T>, {0xB8, 16, 0, 0})
 	CMember(UPawnAction*)                              CurrentAction                                               OFFSET(get<T>, {0xC8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -259,6 +257,8 @@ public:
 	// TEnumAsByte<EPawnActionAbortState> K2_ForceAbortAction(UPawnAction* ActionToAbort);                                      // [0x641132c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.PawnActionsComponent.K2_AbortAction
 	// TEnumAsByte<EPawnActionAbortState> K2_AbortAction(UPawnAction* ActionToAbort);                                           // [0x6411278] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.PawnAction_BlueprintBase
 /// Size: 0x0000 (0x000090 - 0x000090)
 class UPawnAction_BlueprintBase : public UPawnAction
@@ -350,8 +350,6 @@ public:
 	CMember(UGameplayTasksComponent*)                  CachedGameplayTasksComponent                                OFFSET(get<T>, {0x390, 8, 0, 0})
 	CMember(UClass*)                                   DefaultNavigationFilterClass                                OFFSET(get<T>, {0x398, 8, 0, 0})
 	SMember(FMulticastInlineDelegate)                  ReceiveMoveCompleted                                        OFFSET(get<T>, {0x3A0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -399,6 +397,8 @@ public:
 	// UAIPerceptionComponent* GetAIPerceptionComponent();                                                                      // [0x6411084] Final|Native|Public|BlueprintCallable|BlueprintPure 
 	// Function /Script/AIModule.AIController.ClaimTaskResource
 	// void ClaimTaskResource(UClass* ResourceClass);                                                                           // [0x6410d90] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AIResource_Movement
 /// Size: 0x0000 (0x000038 - 0x000038)
 class UAIResource_Movement : public UGameplayTaskResource
@@ -461,8 +461,6 @@ public:
 	CMember(TArray<UAIAsyncTaskBlueprintProxy*>)       AllProxyObjects                                             OFFSET(get<T>, {0xF8, 16, 0, 0})
 	CMember(UAIHotSpotManager*)                        HotSpotManager                                              OFFSET(get<T>, {0x108, 8, 0, 0})
 	CMember(UNavLocalGridManager*)                     NavLocalGrids                                               OFFSET(get<T>, {0x110, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -470,6 +468,8 @@ public:
 	// void AILoggingVerbose();                                                                                                 // [0x2f21640] RequiredAPI|Exec|Native|Public 
 	// Function /Script/AIModule.AISystem.AIIgnorePlayers
 	// void AIIgnorePlayers();                                                                                                  // [0x1fd6cc8] RequiredAPI|Exec|Native|Public 
+};
+
 /// Class /Script/AIModule.BehaviorTree
 /// Size: 0x0040 (0x000028 - 0x000068)
 class UBehaviorTree : public UObject
@@ -494,8 +494,6 @@ class UBrainComponent : public UActorComponent
 public:
 	CMember(UBlackboardComponent*)                     BlackboardComp                                              OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(AAIController*)                            AIOwner                                                     OFFSET(get<T>, {0xB0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -509,6 +507,8 @@ public:
 	// bool IsRunning();                                                                                                        // [0x64762d8] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BrainComponent.IsPaused
 	// bool IsPaused();                                                                                                         // [0x64762b0] RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.BehaviorTreeComponent
 /// Size: 0x01A0 (0x0000F8 - 0x000298)
 class UBehaviorTreeComponent : public UBrainComponent
@@ -519,8 +519,6 @@ class UBehaviorTreeComponent : public UBrainComponent
 public:
 	CMember(TArray<UBTNode*>)                          NodeInstances                                               OFFSET(get<T>, {0x118, 16, 0, 0})
 	CMember(UBehaviorTree*)                            DefaultBehaviorTreeAsset                                    OFFSET(get<T>, {0x270, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -530,6 +528,8 @@ public:
 	// double GetTagCooldownEndTime(FGameplayTag CooldownTag);                                                                  // [0x64390c4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BehaviorTreeComponent.AddCooldownTagDuration
 	// void AddCooldownTagDuration(FGameplayTag CooldownTag, float CooldownDuration, bool bAddToExistingDuration);              // [0x6437638] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.BehaviorTreeManager
 /// Size: 0x0028 (0x000028 - 0x000050)
 class UBehaviorTreeManager : public UObject
@@ -575,8 +575,6 @@ public:
 	CMember(UBlackboardData*)                          DefaultBlackboardAsset                                      OFFSET(get<T>, {0xA8, 8, 0, 0})
 	CMember(UBlackboardData*)                          BlackboardAsset                                             OFFSET(get<T>, {0xB0, 8, 0, 0})
 	CMember(TArray<UBlackboardKeyType*>)               KeyInstances                                                OFFSET(get<T>, {0xD8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -628,6 +626,8 @@ public:
 	// bool GetLocationFromEntry(FName& KeyName, FVector& ResultLocation);                                                      // [0x6438d50] Final|RequiredAPI|Native|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BlackboardComponent.ClearValue
 	// void ClearValue(FName& KeyName);                                                                                         // [0x6437ac4] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.BlackboardData
 /// Size: 0x0020 (0x000030 - 0x000050)
 class UBlackboardData : public UDataAsset
@@ -924,8 +924,6 @@ public:
 	CMember(TArray<FName>)                             ObservedKeyNames                                            OFFSET(get<T>, {0x78, 16, 0, 0})
 	DMember(bool)                                      bShowPropertyDetails                                        OFFSET(get<bool>, {0x98, 1, 1, 0})
 	DMember(bool)                                      bCheckConditionOnlyBlackBoardChanges                        OFFSET(get<bool>, {0x98, 1, 1, 1})
-};
-
 
 
 	/// Functions
@@ -957,6 +955,8 @@ public:
 	// bool IsDecoratorObserverActive();                                                                                        // [0x64398cc] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.BTDecorator_BlueprintBase.IsDecoratorExecutionActive
 	// bool IsDecoratorExecutionActive();                                                                                       // [0x6439854] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.BTDecorator_CheckGameplayTagsOnActor
 /// Size: 0x0060 (0x000068 - 0x0000C8)
 class UBTDecorator_CheckGameplayTagsOnActor : public UBTDecorator
@@ -1170,8 +1170,6 @@ public:
 	CMember(AActor*)                                   ActorOwner                                                  OFFSET(get<T>, {0x78, 8, 0, 0})
 	DMember(bool)                                      bShowPropertyDetails                                        OFFSET(get<bool>, {0x90, 1, 1, 0})
 	DMember(bool)                                      bShowEventDetails                                           OFFSET(get<bool>, {0x90, 1, 1, 1})
-};
-
 
 
 	/// Functions
@@ -1193,6 +1191,8 @@ public:
 	// void ReceiveActivation(AActor* OwnerActor);                                                                              // [0x1ebf994] RequiredAPI|Event|Protected|BlueprintEvent 
 	// Function /Script/AIModule.BTService_BlueprintBase.IsServiceActive
 	// bool IsServiceActive();                                                                                                  // [0x6476300] Final|RequiredAPI|Native|Protected|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.BTService_DefaultFocus
 /// Size: 0x0008 (0x000098 - 0x0000A0)
 class UBTService_DefaultFocus : public UBTService_BlackboardBase
@@ -1239,8 +1239,6 @@ public:
 	CMember(AActor*)                                   ActorOwner                                                  OFFSET(get<T>, {0x78, 8, 0, 0})
 	SMember(FIntervalCountdown)                        TickInterval                                                OFFSET(get<T>, {0x80, 8, 0, 0})
 	DMember(bool)                                      bShowPropertyDetails                                        OFFSET(get<bool>, {0xA0, 1, 1, 0})
-};
-
 
 
 	/// Functions
@@ -1268,6 +1266,8 @@ public:
 	// void FinishExecute(bool bSuccess);                                                                                       // [0x6475c80] Final|RequiredAPI|Native|Protected|BlueprintCallable 
 	// Function /Script/AIModule.BTTask_BlueprintBase.FinishAbort
 	// void FinishAbort();                                                                                                      // [0x6475c18] Final|RequiredAPI|Native|Protected|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.BTTask_FinishWithResult
 /// Size: 0x0008 (0x000070 - 0x000078)
 class UBTTask_FinishWithResult : public UBTTaskNode
@@ -1628,8 +1628,6 @@ public:
 	CMember(UClass*)                                   ItemType                                                    OFFSET(get<T>, {0x58, 8, 0, 0})
 	DMember(int32_t)                                   OptionIndex                                                 OFFSET(get<int32_t>, {0x60, 4, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnQueryFinishedEvent                                        OFFSET(get<T>, {0x68, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1647,6 +1645,8 @@ public:
 	// float GetItemScore(int32_t ItemIndex);                                                                                   // [0x6475f80] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.EnvQueryInstanceBlueprintWrapper.EQSQueryDoneSignature__DelegateSignature
 	// void EQSQueryDoneSignature__DelegateSignature(UEnvQueryInstanceBlueprintWrapper* QueryInstance, TEnumAsByte<EEnvQueryStatus> QueryStatus); // [0x1ebf994] MulticastDelegate|Public|Delegate 
+};
+
 /// Class /Script/AIModule.EnvQueryManager
 /// Size: 0x0120 (0x000038 - 0x000158)
 class UEnvQueryManager : public UAISubsystem
@@ -1665,13 +1665,13 @@ public:
 	DMember(double)                                    ExecutionTimeWarningSeconds                                 OFFSET(get<double>, {0x140, 8, 0, 0})
 	DMember(double)                                    HandlingResultTimeWarningSeconds                            OFFSET(get<double>, {0x148, 8, 0, 0})
 	DMember(double)                                    GenerationTimeWarningSeconds                                OFFSET(get<double>, {0x150, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.EnvQueryManager.RunEQSQuery
 	// UEnvQueryInstanceBlueprintWrapper* RunEQSQuery(UObject* WorldContextObject, UEnvQuery* QueryTemplate, UObject* Querier, TEnumAsByte<EEnvQueryRunMode> RunMode, UClass* WrapperClass); // [0x6476980] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.EnvQueryOption
 /// Size: 0x0018 (0x000028 - 0x000040)
 class UEnvQueryOption : public UObject
@@ -1771,8 +1771,6 @@ public:
 	SMember(FText)                                     GeneratorsActionDescription                                 OFFSET(get<T>, {0x50, 24, 0, 0})
 	CMember(UClass*)                                   Context                                                     OFFSET(get<T>, {0x68, 8, 0, 0})
 	CMember(UClass*)                                   GeneratedItemType                                           OFFSET(get<T>, {0x70, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -1786,6 +1784,8 @@ public:
 	// void AddGeneratedVector(FVector GeneratedVector);                                                                        // [0x6475584] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|Const 
 	// Function /Script/AIModule.EnvQueryGenerator_BlueprintBase.AddGeneratedActor
 	// void AddGeneratedActor(AActor* GeneratedActor);                                                                          // [0x6475504] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/AIModule.EnvQueryGenerator_Composite
 /// Size: 0x0020 (0x000050 - 0x000070)
 class UEnvQueryGenerator_Composite : public UEnvQueryGenerator
@@ -2138,8 +2138,6 @@ class UPathFollowingComponent : public UActorComponent
 public:
 	CMember(UNavMovementComponent*)                    MovementComp                                                OFFSET(get<T>, {0xD8, 8, 0, 0})
 	CMember(ANavigationData*)                          MyNavData                                                   OFFSET(get<T>, {0xE8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2151,6 +2149,8 @@ public:
 	// FVector GetPathDestination();                                                                                            // [0x649b3b4] Final|RequiredAPI|Native|Public|HasDefaults|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.PathFollowingComponent.GetPathActionType
 	// TEnumAsByte<EPathFollowingAction> GetPathActionType();                                                                   // [0x649b33c] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.CrowdFollowingComponent
 /// Size: 0x0050 (0x0002C8 - 0x000318)
 class UCrowdFollowingComponent : public UPathFollowingComponent
@@ -2160,13 +2160,13 @@ class UCrowdFollowingComponent : public UPathFollowingComponent
 
 public:
 	SMember(FVector)                                   CrowdAgentMoveDirection                                     OFFSET(get<T>, {0x2E0, 24, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.CrowdFollowingComponent.SuspendCrowdSteering
 	// void SuspendCrowdSteering(bool bSuspend);                                                                                // [0x649be90] RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.CrowdManager
 /// Size: 0x00C8 (0x000028 - 0x0000F0)
 class UCrowdManager : public UCrowdManagerBase
@@ -2223,8 +2223,6 @@ public:
 	CMember(UNavLinkCustomComponent*)                  SmartLinkComp                                               OFFSET(get<T>, {0x2C0, 8, 0, 0})
 	DMember(bool)                                      bSmartLinkIsRelevant                                        OFFSET(get<bool>, {0x2C8, 1, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnSmartLinkReached                                          OFFSET(get<T>, {0x2D0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2238,6 +2236,8 @@ public:
 	// bool IsSmartLinkEnabled();                                                                                               // [0x649b5d8] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.NavLinkProxy.HasMovingAgents
 	// bool HasMovingAgents();                                                                                                  // [0x649b570] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.NavLocalGridManager
 /// Size: 0x0030 (0x000028 - 0x000058)
 class UNavLocalGridManager : public UObject
@@ -2273,8 +2273,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionForgotten                                 OFFSET(get<T>, {0x158, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionUpdated                                   OFFSET(get<T>, {0x168, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnTargetPerceptionInfoUpdated                               OFFSET(get<T>, {0x178, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2296,6 +2294,8 @@ public:
 	// bool GetActorsPerception(AActor* Actor, FActorPerceptionBlueprintInfo& Info);                                            // [0x649af30] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionComponent.ForgetAll
 	// void ForgetAll();                                                                                                        // [0x649af1c] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AIPerceptionListenerInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAIPerceptionListenerInterface : public UInterface
@@ -2316,8 +2316,6 @@ class UAIPerceptionStimuliSourceComponent : public UActorComponent
 public:
 	DMember(bool)                                      bAutoRegisterAsSource                                       OFFSET(get<bool>, {0xA0, 1, 1, 0})
 	CMember(TArray<UClass*>)                           RegisterAsSourceForSenses                                   OFFSET(get<T>, {0xA8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2329,6 +2327,8 @@ public:
 	// void RegisterWithPerceptionSystem();                                                                                     // [0x64a8c6c] Final|RequiredAPI|Native|Public|BlueprintCallable 
 	// Function /Script/AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
 	// void RegisterForSense(UClass* SenseClass);                                                                               // [0x64a8994] Final|RequiredAPI|Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AIPerceptionSystem
 /// Size: 0x00F8 (0x000038 - 0x000130)
 class UAIPerceptionSystem : public UAISubsystem
@@ -2339,8 +2339,6 @@ class UAIPerceptionSystem : public UAISubsystem
 public:
 	CMember(TArray<UAISense*>)                         Senses                                                      OFFSET(get<T>, {0x88, 16, 0, 0})
 	DMember(float)                                     PerceptionAgingRate                                         OFFSET(get<float>, {0x98, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2354,6 +2352,8 @@ public:
 	// void OnPerceptionStimuliSourceEndPlay(AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);                         // [0x195f720] Final|RequiredAPI|Native|Protected 
 	// Function /Script/AIModule.AIPerceptionSystem.GetSenseClassForStimulus
 	// UClass* GetSenseClassForStimulus(UObject* WorldContextObject, FAIStimulus& Stimulus);                                    // [0x64a87f4] Final|RequiredAPI|Native|Static|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AISense
 /// Size: 0x0050 (0x000028 - 0x000078)
 class UAISense : public UObject
@@ -2390,8 +2390,6 @@ public:
 	CMember(UClass*)                                   ListenerDataType                                            OFFSET(get<T>, {0x78, 8, 0, 0})
 	CMember(TArray<UAIPerceptionComponent*>)           ListenerContainer                                           OFFSET(get<T>, {0x80, 16, 0, 0})
 	CMember(TArray<UAISenseEvent*>)                    UnprocessedEvents                                           OFFSET(get<T>, {0x90, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2409,6 +2407,8 @@ public:
 	// void GetAllListenerComponents(TArray<UAIPerceptionComponent*>& ListenerComponents);                                      // [0x64a80cc] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.AISense_Blueprint.GetAllListenerActors
 	// void GetAllListenerActors(TArray<AActor*>& ListenerActors);                                                              // [0x64a8030] Final|RequiredAPI|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.AISense_Damage
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAISense_Damage : public UAISense
@@ -2418,13 +2418,13 @@ class UAISense_Damage : public UAISense
 
 public:
 	CMember(TArray<FAIDamageEvent>)                    RegisteredEvents                                            OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Damage.ReportDamageEvent
 	// void ReportDamageEvent(UObject* WorldContextObject, AActor* DamagedActor, AActor* Instigator, float DamageAmount, FVector EventLocation, FVector HitLocation, FName tag); // [0x64a8c80] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AISense_Hearing
 /// Size: 0x0068 (0x000078 - 0x0000E0)
 class UAISense_Hearing : public UAISense
@@ -2435,13 +2435,13 @@ class UAISense_Hearing : public UAISense
 public:
 	CMember(TArray<FAINoiseEvent>)                     NoiseEvents                                                 OFFSET(get<T>, {0x78, 16, 0, 0})
 	DMember(float)                                     SpeedOfSoundSq                                              OFFSET(get<float>, {0x88, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Hearing.ReportNoiseEvent
 	// void ReportNoiseEvent(UObject* WorldContextObject, FVector NoiseLocation, float Loudness, AActor* Instigator, float MaxRange, FName tag); // [0x64a91c8] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AISense_Prediction
 /// Size: 0x0010 (0x000078 - 0x000088)
 class UAISense_Prediction : public UAISense
@@ -2451,8 +2451,6 @@ class UAISense_Prediction : public UAISense
 
 public:
 	CMember(TArray<FAIPredictionEvent>)                RegisteredEvents                                            OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2460,6 +2458,8 @@ public:
 	// void RequestPawnPredictionEvent(APawn* Requestor, AActor* PredictedActor, float PredictionTime);                         // [0x64a9c3c] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
 	// Function /Script/AIModule.AISense_Prediction.RequestControllerPredictionEvent
 	// void RequestControllerPredictionEvent(AAIController* Requestor, AActor* PredictedActor, float PredictionTime);           // [0x64a9b44] Final|RequiredAPI|Native|Static|Public|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AISense_Sight
 /// Size: 0x0130 (0x000078 - 0x0001A8)
 class UAISense_Sight : public UAISense
@@ -2499,13 +2499,13 @@ class UAISense_Touch : public UAISense
 
 public:
 	CMember(TArray<FAITouchEvent>)                     RegisteredEvents                                            OFFSET(get<T>, {0x78, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.AISense_Touch.ReportTouchEvent
 	// void ReportTouchEvent(UObject* WorldContextObject, AActor* TouchReceiver, AActor* OtherActor, FVector Location);         // [0x64a993c] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AISightTargetInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UAISightTargetInterface : public UInterface
@@ -2537,8 +2537,6 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnHearNoise                                                 OFFSET(get<T>, {0xD0, 16, 0, 0})
 	DMember(float)                                     PeripheralVisionAngle                                       OFFSET(get<float>, {0xE0, 4, 0, 0})
 	DMember(float)                                     PeripheralVisionCosine                                      OFFSET(get<float>, {0xE4, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -2556,6 +2554,8 @@ public:
 	// float GetPeripheralVisionCosine();                                                                                       // [0x64a87dc] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/AIModule.PawnSensingComponent.GetPeripheralVisionAngle
 	// float GetPeripheralVisionAngle();                                                                                        // [0x64a87c4] Final|RequiredAPI|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/AIModule.AITask
 /// Size: 0x0008 (0x000060 - 0x000068)
 class UAITask : public UGameplayTask
@@ -2588,13 +2588,13 @@ public:
 	SMember(FMulticastInlineDelegate)                  OnRequestFailed                                             OFFSET(get<T>, {0x68, 16, 0, 0})
 	SMember(FMulticastInlineDelegate)                  OnMoveFinished                                              OFFSET(get<T>, {0x78, 16, 0, 0})
 	SMember(FAIMoveRequest)                            MoveRequest                                                 OFFSET(get<T>, {0x88, 80, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/AIModule.AITask_MoveTo.AIMoveTo
 	// UAITask_MoveTo* AIMoveTo(AAIController* Controller, FVector GoalLocation, AActor* GoalActor, float AcceptanceRadius, TEnumAsByte<EAIOptionFlag> StopOnOverlap, TEnumAsByte<EAIOptionFlag> AcceptPartialPath, bool bUsePathfinding, bool bLockAILogic, bool bUseContinuousGoalTracking, TEnumAsByte<EAIOptionFlag> ProjectGoalOnNavigation); // [0x64a75ec] Final|RequiredAPI|Native|Static|Public|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/AIModule.AITask_RunEQS
 /// Size: 0x0078 (0x000068 - 0x0000E0)
 class UAITask_RunEQS : public UAITask

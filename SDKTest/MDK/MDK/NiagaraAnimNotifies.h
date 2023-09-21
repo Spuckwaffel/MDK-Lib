@@ -21,13 +21,13 @@ public:
 	SMember(FVector)                                   LocationOffset                                              OFFSET(get<T>, {0x40, 24, 0, 0})
 	SMember(FRotator)                                  RotationOffset                                              OFFSET(get<T>, {0x58, 24, 0, 0})
 	DMember(bool)                                      bDestroyAtEnd                                               OFFSET(get<bool>, {0x70, 1, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffect.GetSpawnedEffect
 	// UFXSystemComponent* GetSpawnedEffect(UMeshComponent* MeshComp);                                                          // [0x2ba62a4] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffectAdvanced
 /// Size: 0x0068 (0x000078 - 0x0000E0)
 class UAnimNotifyState_TimedNiagaraEffectAdvanced : public UAnimNotifyState_TimedNiagaraEffect
@@ -39,13 +39,13 @@ public:
 	DMember(bool)                                      bEnableNormalizedNotifyProgress                             OFFSET(get<bool>, {0x78, 1, 0, 0})
 	SMember(FName)                                     NotifyProgressUserParameter                                 OFFSET(get<T>, {0x7C, 4, 0, 0})
 	CMember(TArray<FCurveParameterPair>)               AnimCurves                                                  OFFSET(get<T>, {0x80, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NiagaraAnimNotifies.AnimNotifyState_TimedNiagaraEffectAdvanced.GetNotifyProgress
 	// float GetNotifyProgress(UMeshComponent* MeshComp);                                                                       // [0x69c3824] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect
 /// Size: 0x0098 (0x000038 - 0x0000D0)
 class UAnimNotify_PlayNiagaraEffect : public UAnimNotify
@@ -61,13 +61,13 @@ public:
 	DMember(bool)                                      bAbsoluteScale                                              OFFSET(get<bool>, {0x88, 1, 0, 0})
 	DMember(bool)                                      Attached                                                    OFFSET(get<bool>, {0xC0, 1, 1, 0})
 	SMember(FName)                                     SocketName                                                  OFFSET(get<T>, {0xC4, 4, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
 	// UFXSystemComponent* GetSpawnedEffect();                                                                                  // [0x25b9af0] Final|RequiredAPI|Native|Public|BlueprintCallable|Const 
+};
+
 /// Struct /Script/NiagaraAnimNotifies.CurveParameterPair
 /// Size: 0x0008 (0x000000 - 0x000008)
 class FCurveParameterPair : public MDKStruct

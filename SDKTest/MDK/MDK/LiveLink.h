@@ -61,8 +61,6 @@ class ULiveLinkComponent : public UActorComponent
 
 public:
 	SMember(FMulticastInlineDelegate)                  OnLiveLinkUpdated                                           OFFSET(get<T>, {0xA0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -74,6 +72,8 @@ public:
 	// void GetSubjectData(FName SubjectName, bool& bSuccess, FSubjectFrameHandle& SubjectFrameHandle);                         // [0xa144ce8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/LiveLink.LiveLinkComponent.GetAvailableSubjectNames
 	// void GetAvailableSubjectNames(TArray<FName>& SubjectNames);                                                              // [0xa1433c8] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/LiveLink.LiveLinkDrivenComponent
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class ULiveLinkDrivenComponent : public UActorComponent
@@ -128,8 +128,6 @@ class ULiveLinkPreset : public UObject
 public:
 	CMember(TArray<FLiveLinkSourcePreset>)             Sources                                                     OFFSET(get<T>, {0x28, 16, 0, 0})
 	CMember(TArray<FLiveLinkSubjectPreset>)            Subjects                                                    OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -141,6 +139,8 @@ public:
 	// bool ApplyToClient();                                                                                                    // [0xa1408dc] Final|Native|Public|BlueprintCallable|Const 
 	// Function /Script/LiveLink.LiveLinkPreset.AddToClient
 	// bool AddToClient(bool bRecreatePresets);                                                                                 // [0xa14084c] Final|Native|Public|BlueprintCallable|Const 
+};
+
 /// Class /Script/LiveLink.LiveLinkUserSettings
 /// Size: 0x0010 (0x000028 - 0x000038)
 class ULiveLinkUserSettings : public UObject

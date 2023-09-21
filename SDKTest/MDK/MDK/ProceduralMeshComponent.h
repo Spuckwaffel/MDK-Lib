@@ -33,8 +33,6 @@ public:
 	CMember(TArray<FKConvexElem>)                      CollisionConvexElems                                        OFFSET(get<T>, {0x5C8, 16, 0, 0})
 	SMember(FBoxSphereBounds)                          LocalBounds                                                 OFFSET(get<T>, {0x5D8, 56, 0, 0})
 	CMember(TArray<UBodySetup*>)                       AsyncBodySetupQueue                                         OFFSET(get<T>, {0x610, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -60,6 +58,8 @@ public:
 	// void ClearAllMeshSections();                                                                                             // [0xa23ca8c] Final|Native|Public|BlueprintCallable 
 	// Function /Script/ProceduralMeshComponent.ProceduralMeshComponent.AddCollisionConvexMesh
 	// void AddCollisionConvexMesh(TArray<FVector> ConvexVerts);                                                                // [0xa23bbbc] Final|Native|Public|BlueprintCallable 
+};
+
 /// Struct /Script/ProceduralMeshComponent.ProcMeshTangent
 /// Size: 0x0020 (0x000000 - 0x000020)
 class FProcMeshTangent : public MDKStruct

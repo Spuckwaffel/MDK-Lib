@@ -20,67 +20,79 @@ class UMelee_CameraShake_C : public ULegacyCameraShake
 public:
 };
 
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C
+/// Size: 0x0BC8 (0x000700 - 0x0012C8)
+class UEmberRae_Axe_L_AnimBP_Post_C : public UCustomCharacterPartAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4808;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x808, 32, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x830, 2384, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1180, 296, 0, 0})
+	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x12A8, 8, 0, 0})
+	SMember(FVector)                                   TranslateMSTR                                               OFFSET(get<T>, {0x12B0, 24, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.BlueprintUpdateAnimation
+	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.BlueprintInitializeAnimation
+	// void BlueprintInitializeAnimation();                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.ExecuteUbergraph_EmberRae_Axe_L_AnimBP_Post
+	// void ExecuteUbergraph_EmberRae_Axe_L_AnimBP_Post(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C
+/// Size: 0x0E20 (0x000700 - 0x001520)
+class UEmberRae_Axe_R_AnimBP_Post_C : public UCustomCharacterPartAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 5408;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
+	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x808, 32, 0, 0})
+	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x830, 2384, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1180, 296, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(get<T>, {0x12A8, 296, 0, 0})
+	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(get<T>, {0x13D0, 296, 0, 0})
+	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x14F8, 8, 0, 0})
+	SMember(FVector)                                   TranslateMSTR                                               OFFSET(get<T>, {0x1500, 24, 0, 0})
+	DMember(double)                                    StrapScaleAlpha                                             OFFSET(get<double>, {0x1518, 8, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.BlueprintInitializeAnimation
+	// void BlueprintInitializeAnimation();                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.BlueprintUpdateAnimation
+	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.ExecuteUbergraph_EmberRae_Axe_R_AnimBP_Post
+	// void ExecuteUbergraph_EmberRae_Axe_R_AnimBP_Post(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Weapons/Tracers/TracerGeneric.TracerGeneric_C
 /// Size: 0x0000 (0x000370 - 0x000370)
 class ATracerGeneric_C : public AFortTracerBase
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 880;
-
-public:
-};
-
-/// Class /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C
-/// Size: 0x14B0 (0x000540 - 0x0019F0)
-class UBlueprint_Paper_VIM_C : public UFortAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 6640;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x540, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x548, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x550, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x558, 32, 0, 0})
-	SMember(FAnimNode_MeshSpaceRefPose)                AnimGraphNode_MeshRefPose                                   OFFSET(get<T>, {0x578, 16, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x588, 32, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics                                  OFFSET(get<T>, {0x5B0, 1296, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics1                                 OFFSET(get<T>, {0xAC0, 1296, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics2                                 OFFSET(get<T>, {0xFD0, 1296, 0, 0})
-	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics3                                 OFFSET(get<T>, {0x14E0, 1296, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.AnimGraph
-	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_9E5EF2534AF35AEF656F7798016DF75B
-	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_9E5EF2534AF35AEF656F7798016DF75B(); // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_3AF159404BD341EBBF1D83916A014149
-	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_3AF159404BD341EBBF1D83916A014149(); // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_ADC4973B4FF994FAB62509B5C600BF73
-	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_ADC4973B4FF994FAB62509B5C600BF73(); // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_BCA43E284168E0AB05BB9E98D217441B
-	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_BCA43E284168E0AB05BB9E98D217441B(); // [0x1ebf994] BlueprintEvent       
-	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.ExecuteUbergraph_Blueprint_Paper_VIM
-	// void ExecuteUbergraph_Blueprint_Paper_VIM(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
-/// Class /Game/Weapons/FORT_BuildingTools/Blueprints/DefaultEditingTool.DefaultEditingTool_C
-/// Size: 0x0000 (0x001238 - 0x001238)
-class ADefaultEditingTool_C : public AFortWeap_EditingTool
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4664;
-
-public:
-};
-
-/// Class /Game/Weapons/FORT_BuildingTools/Blueprints/DefaultBuildingTool.DefaultBuildingTool_C
-/// Size: 0x0000 (0x001340 - 0x001340)
-class ADefaultBuildingTool_C : public AFortWeap_BuildingTool
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4928;
 
 public:
 };
@@ -95,32 +107,6 @@ class ABP_Hook_Camera_LensEffect_C : public AEmitterCameraLensEffectBase
 public:
 };
 
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C
-/// Size: 0x08B8 (0x000700 - 0x000FB8)
-class UM_MED_Patches_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4024;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x718, 176, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x7C8, 32, 0, 0})
-	SMember(FGravityOverrideParamsStruct)              Gravity_Override_Params                                     OFFSET(get<T>, {0x7E8, 1976, 0, 0})
-	SMember(FVector)                                   GravityOverride                                             OFFSET(get<T>, {0xFA0, 24, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C.BlueprintUpdateAnimation
-	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C.ExecuteUbergraph_M_MED_Patches_Axe_AnimBP
-	// void ExecuteUbergraph_M_MED_Patches_Axe_AnimBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
 /// Class /Game/Weapons/Blueprints/B_Ranged_Generic.B_Ranged_Generic_C
 /// Size: 0x037D (0x001920 - 0x001C9D)
 class AB_Ranged_Generic_C : public AFortWeaponRanged
@@ -218,8 +204,6 @@ public:
 	DMember(bool)                                      Is_Rocket_Launcher                                          OFFSET(get<bool>, {0x1C88, 1, 0, 0})
 	SMember(FLinearColor)                              Rocket_Launcher_Spark_Color                                 OFFSET(get<T>, {0x1C8C, 16, 0, 0})
 	DMember(bool)                                      Reload_Ejects_Shells                                        OFFSET(get<bool>, {0x1C9C, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -387,73 +371,63 @@ public:
 	// void OnStartFiring__DelegateSignature();                                                                                 // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Weapons/Blueprints/B_Ranged_Generic.B_Ranged_Generic_C.onAimDownSightsChanged__DelegateSignature
 	// void onAimDownSightsChanged__DelegateSignature(bool AimDownsights);                                                      // [0x1ebf994] Public|Delegate|BlueprintCallable|BlueprintEvent 
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C
-/// Size: 0x0BC8 (0x000700 - 0x0012C8)
-class UEmberRae_Axe_L_AnimBP_Post_C : public UCustomCharacterPartAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4808;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x808, 32, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x830, 2384, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1180, 296, 0, 0})
-	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x12A8, 8, 0, 0})
-	SMember(FVector)                                   TranslateMSTR                                               OFFSET(get<T>, {0x12B0, 24, 0, 0})
 };
 
+/// Class /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C
+/// Size: 0x14B0 (0x000540 - 0x0019F0)
+class UBlueprint_Paper_VIM_C : public UFortAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 6640;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x540, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x548, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x550, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x558, 32, 0, 0})
+	SMember(FAnimNode_MeshSpaceRefPose)                AnimGraphNode_MeshRefPose                                   OFFSET(get<T>, {0x578, 16, 0, 0})
+	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x588, 32, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics                                  OFFSET(get<T>, {0x5B0, 1296, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics1                                 OFFSET(get<T>, {0xAC0, 1296, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics2                                 OFFSET(get<T>, {0xFD0, 1296, 0, 0})
+	SMember(FAnimNode_AnimDynamics)                    AnimGraphNode_AnimDynamics3                                 OFFSET(get<T>, {0x14E0, 1296, 0, 0})
 
 
 	/// Functions
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.BlueprintUpdateAnimation
-	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.BlueprintInitializeAnimation
-	// void BlueprintInitializeAnimation();                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_L_AnimBP_Post.EmberRae_Axe_L_AnimBP_Post_C.ExecuteUbergraph_EmberRae_Axe_L_AnimBP_Post
-	// void ExecuteUbergraph_EmberRae_Axe_L_AnimBP_Post(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C
-/// Size: 0x0E20 (0x000700 - 0x001520)
-class UEmberRae_Axe_R_AnimBP_Post_C : public UCustomCharacterPartAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 5408;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-	SMember(FAnimNode_ConvertComponentToLocalSpace)    AnimGraphNode_ComponentToLocalSpace                         OFFSET(get<T>, {0x7E8, 32, 0, 0})
-	SMember(FAnimNode_ConvertLocalToComponentSpace)    AnimGraphNode_LocalToComponentSpace                         OFFSET(get<T>, {0x808, 32, 0, 0})
-	SMember(FAnimNode_RigidBody)                       AnimGraphNode_RigidBody                                     OFFSET(get<T>, {0x830, 2384, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1180, 296, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone1                                   OFFSET(get<T>, {0x12A8, 296, 0, 0})
-	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone2                                   OFFSET(get<T>, {0x13D0, 296, 0, 0})
-	CMember(USkeletalMeshComponent*)                   SkeletalMesh                                                OFFSET(get<T>, {0x14F8, 8, 0, 0})
-	SMember(FVector)                                   TranslateMSTR                                               OFFSET(get<T>, {0x1500, 24, 0, 0})
-	DMember(double)                                    StrapScaleAlpha                                             OFFSET(get<double>, {0x1518, 8, 0, 0})
+	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.AnimGraph
+	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_9E5EF2534AF35AEF656F7798016DF75B
+	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_9E5EF2534AF35AEF656F7798016DF75B(); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_3AF159404BD341EBBF1D83916A014149
+	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_3AF159404BD341EBBF1D83916A014149(); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_ADC4973B4FF994FAB62509B5C600BF73
+	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_ADC4973B4FF994FAB62509B5C600BF73(); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_BCA43E284168E0AB05BB9E98D217441B
+	// void EvaluateGraphExposedInputs_ExecuteUbergraph_Blueprint_Paper_VIM_AnimGraphNode_AnimDynamics_BCA43E284168E0AB05BB9E98D217441B(); // [0x1ebf994] BlueprintEvent       
+	// Function /Game/Weapons/FORT_BuildingTools/Meshes/Blueprint_Paper_VIM.Blueprint_Paper_VIM_C.ExecuteUbergraph_Blueprint_Paper_VIM
+	// void ExecuteUbergraph_Blueprint_Paper_VIM(int32_t EntryPoint);                                                           // [0x1ebf994] Final                
 };
 
+/// Class /Game/Weapons/FORT_BuildingTools/Blueprints/DefaultBuildingTool.DefaultBuildingTool_C
+/// Size: 0x0000 (0x001340 - 0x001340)
+class ADefaultBuildingTool_C : public AFortWeap_BuildingTool
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4928;
 
+public:
+};
 
-	/// Functions
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.BlueprintInitializeAnimation
-	// void BlueprintInitializeAnimation();                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.BlueprintUpdateAnimation
-	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_EmberRae/Meshes/EmberRae_Axe_R_AnimBP_Post.EmberRae_Axe_R_AnimBP_Post_C.ExecuteUbergraph_EmberRae_Axe_R_AnimBP_Post
-	// void ExecuteUbergraph_EmberRae_Axe_R_AnimBP_Post(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+/// Class /Game/Weapons/FORT_BuildingTools/Blueprints/DefaultEditingTool.DefaultEditingTool_C
+/// Size: 0x0000 (0x001238 - 0x001238)
+class ADefaultEditingTool_C : public AFortWeap_EditingTool
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4664;
+
+public:
+};
+
 /// Class /Game/Weapons/FORT_Melee/Blueprints/B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C
 /// Size: 0x0090 (0x001520 - 0x0015B0)
 class AB_Athena_Pickaxe_Generic_C : public AFortWeaponPickaxeAthena
@@ -477,8 +451,6 @@ public:
 	CMember(UFXSystemComponent*)                       Impact_FX                                                   OFFSET(get<T>, {0x1578, 8, 0, 0})
 	SMember(FRotator)                                  Left_Swing_Rotation                                         OFFSET(get<T>, {0x1580, 24, 0, 0})
 	SMember(FRotator)                                  Right_Swing_Rotation                                        OFFSET(get<T>, {0x1598, 24, 0, 0})
-};
-
 
 
 	/// Functions
@@ -562,12 +534,44 @@ public:
 	// void Vehicle Passenger(AFortPlayerPawn* FortPlayerPawn, AActor* NewVehicle, AActor* OldVehicle);                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Weapons/FORT_Melee/Blueprints/B_Athena_Pickaxe_Generic.B_Athena_Pickaxe_Generic_C.ExecuteUbergraph_B_Athena_Pickaxe_Generic
 	// void ExecuteUbergraph_B_Athena_Pickaxe_Generic(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /Game/Weapons/FORT_Melee/Blueprints/Impact/Harvest_CameraShake.Harvest_CameraShake_C
 /// Size: 0x0000 (0x0001F0 - 0x0001F0)
 class UHarvest_CameraShake_C : public ULegacyCameraShake
 { 
 	friend MDKHandler;
 	static inline constexpr uint64_t __MDKClassSize = 496;
+
+public:
+};
+
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_Bistro_Astronaut_Female/Scripts/VariantScript_Pickaxe_BistroAstronaut_Color.VariantScript_Pickaxe_BistroAstronaut_Color_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UVariantScript_Pickaxe_BistroAstronaut_Color_C : public UFortLoadoutTagDrivenVariantScript
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_Bistro_Astronaut_Female/Scripts/VariantScript_Pickaxe_BistroAstronaut_Style.VariantScript_Pickaxe_BistroAstronaut_Style_C
+/// Size: 0x0000 (0x000028 - 0x000028)
+class UVariantScript_Pickaxe_BistroAstronaut_Style_C : public UFortLoadoutTagDrivenVariantScript
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 40;
+
+public:
+};
+
+/// Class /Game/Weapons/FORT_BuildingTools/DecoTool.DecoTool_C
+/// Size: 0x0000 (0x001248 - 0x001248)
+class ADecoTool_C : public AFortDecoTool
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4680;
 
 public:
 };
@@ -598,8 +602,6 @@ public:
 	SMember(FRotator)                                  Left_Swing_Rotation                                         OFFSET(get<T>, {0x18B0, 24, 0, 0})
 	SMember(FRotator)                                  Right_Swing_Rotation                                        OFFSET(get<T>, {0x18C8, 24, 0, 0})
 	DMember(bool)                                      Swing_Right_1                                               OFFSET(get<bool>, {0x18E0, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -671,81 +673,8 @@ public:
 	// void Vehicle Passenger(AFortPlayerPawn* FortPlayerPawn, AActor* NewVehicle, AActor* OldVehicle);                         // [0x1ebf994] BlueprintCallable|BlueprintEvent 
 	// Function /Game/Weapons/FORT_Melee/Blueprints/B_Athena_Pickaxe_DualWield_Generic.B_Athena_Pickaxe_DualWield_Generic_C.ExecuteUbergraph_B_Athena_Pickaxe_DualWield_Generic
 	// void ExecuteUbergraph_B_Athena_Pickaxe_DualWield_Generic(int32_t EntryPoint);                                            // [0x1ebf994] Final|HasDefaults    
-/// Class /Game/Weapons/FORT_BuildingTools/DecoTool.DecoTool_C
-/// Size: 0x0000 (0x001248 - 0x001248)
-class ADecoTool_C : public AFortDecoTool
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 4680;
-
-public:
 };
 
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_Bistro_Astronaut_Female/Scripts/VariantScript_Pickaxe_BistroAstronaut_Style.VariantScript_Pickaxe_BistroAstronaut_Style_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVariantScript_Pickaxe_BistroAstronaut_Style_C : public UFortLoadoutTagDrivenVariantScript
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_Bistro_Astronaut_Female/Scripts/VariantScript_Pickaxe_BistroAstronaut_Color.VariantScript_Pickaxe_BistroAstronaut_Color_C
-/// Size: 0x0000 (0x000028 - 0x000028)
-class UVariantScript_Pickaxe_BistroAstronaut_Color_C : public UFortLoadoutTagDrivenVariantScript
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 40;
-
-public:
-};
-
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_LoudPhoenix/Meshes/LoudPhoenix_Axe_AnimBP.LoudPhoenix_Axe_AnimBP_C
-/// Size: 0x00E8 (0x000700 - 0x0007E8)
-class ULoudPhoenix_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2024;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_LoudPhoenix/Meshes/LoudPhoenix_Axe_AnimBP.LoudPhoenix_Axe_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_LoudPhoenix/Meshes/LoudPhoenix_Axe_AnimBP.LoudPhoenix_Axe_AnimBP_C.ExecuteUbergraph_LoudPhoenix_Axe_AnimBP
-	// void ExecuteUbergraph_LoudPhoenix_Axe_AnimBP(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
-/// Class /Game/Weapons/FORT_Melee/Pickaxe_NitroFlow/Meshes/NitroFlow_Axe_AnimBP.NitroFlow_Axe_AnimBP_C
-/// Size: 0x0130 (0x000700 - 0x000830)
-class UNitroFlow_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
-{ 
-	friend MDKHandler;
-	static inline constexpr uint64_t __MDKClassSize = 2096;
-
-public:
-	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
-	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
-	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
-	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(get<T>, {0x7E8, 72, 0, 0})
-};
-
-
-
-	/// Functions
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_NitroFlow/Meshes/NitroFlow_Axe_AnimBP.NitroFlow_Axe_AnimBP_C.AnimGraph
-	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
-	// Function /Game/Weapons/FORT_Melee/Pickaxe_NitroFlow/Meshes/NitroFlow_Axe_AnimBP.NitroFlow_Axe_AnimBP_C.ExecuteUbergraph_NitroFlow_Axe_AnimBP
-	// void ExecuteUbergraph_NitroFlow_Axe_AnimBP(int32_t EntryPoint);                                                          // [0x1ebf994] Final                
 /// Class /Game/Weapons/FORT_Melee/Pickaxe_HightowerTapas/Meshes/HighTower_Tapas_Axe_AnimBP.HighTower_Tapas_Axe_AnimBP_C
 /// Size: 0x1370 (0x000700 - 0x001A70)
 class UHighTower_Tapas_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance_HightowerTapasAxe
@@ -779,8 +708,6 @@ public:
 	SMember(FAnimNode_SaveCachedPose)                  AnimGraphNode_SaveCachedPose1                               OFFSET(get<T>, {0x1910, 120, 0, 0})
 	SMember(FAnimNode_TwoWayBlend)                     AnimGraphNode_TwoWayBlend                                   OFFSET(get<T>, {0x1988, 192, 0, 0})
 	SMember(FAnimNode_UseCachedPose)                   AnimGraphNode_UseCachedPose3                                OFFSET(get<T>, {0x1A48, 40, 0, 0})
-};
-
 
 
 	/// Functions
@@ -788,6 +715,8 @@ public:
 	// void AnimGraph(FPoseLink& AnimGraph);                                                                                    // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Weapons/FORT_Melee/Pickaxe_HightowerTapas/Meshes/HighTower_Tapas_Axe_AnimBP.HighTower_Tapas_Axe_AnimBP_C.ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP
 	// void ExecuteUbergraph_HighTower_Tapas_Axe_AnimBP(int32_t EntryPoint);                                                    // [0x1ebf994] Final                
+};
+
 /// Class /Game/Weapons/FORT_Melee/Pickaxe_Mechanical_Engineer_Female/Meshes/Mechanical_Engineer_Female_AnimBP.Mechanical_Engineer_Female_AnimBP_C
 /// Size: 0x10D8 (0x000700 - 0x0017D8)
 class UMechanical_Engineer_Female_AnimBP_C : public UCustomCharacterPartAnimInstance
@@ -808,8 +737,6 @@ public:
 	SMember(FAnimNode_ModifyBone)                      AnimGraphNode_ModifyBone                                    OFFSET(get<T>, {0x1690, 296, 0, 0})
 	SMember(FRotator)                                  gear_rot                                                    OFFSET(get<T>, {0x17B8, 24, 0, 0})
 	CMember(USkeletalMeshComponent*)                   skel_mesh                                                   OFFSET(get<T>, {0x17D0, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -821,6 +748,79 @@ public:
 	// void BlueprintInitializeAnimation();                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Game/Weapons/FORT_Melee/Pickaxe_Mechanical_Engineer_Female/Meshes/Mechanical_Engineer_Female_AnimBP.Mechanical_Engineer_Female_AnimBP_C.ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP
 	// void ExecuteUbergraph_Mechanical_Engineer_Female_AnimBP(int32_t EntryPoint);                                             // [0x1ebf994] Final                
+};
+
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C
+/// Size: 0x08B8 (0x000700 - 0x000FB8)
+class UM_MED_Patches_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 4024;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x718, 176, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x7C8, 32, 0, 0})
+	SMember(FGravityOverrideParamsStruct)              Gravity_Override_Params                                     OFFSET(get<T>, {0x7E8, 1976, 0, 0})
+	SMember(FVector)                                   GravityOverride                                             OFFSET(get<T>, {0xFA0, 24, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C.BlueprintUpdateAnimation
+	// void BlueprintUpdateAnimation(float DeltaTimeX);                                                                         // [0x1ebf994] Event|Public|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_M_MED_Patches/Meshes/M_MED_Patches_Axe_AnimBP.M_MED_Patches_Axe_AnimBP_C.ExecuteUbergraph_M_MED_Patches_Axe_AnimBP
+	// void ExecuteUbergraph_M_MED_Patches_Axe_AnimBP(int32_t EntryPoint);                                                      // [0x1ebf994] Final|HasDefaults    
+};
+
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_NitroFlow/Meshes/NitroFlow_Axe_AnimBP.NitroFlow_Axe_AnimBP_C
+/// Size: 0x0130 (0x000700 - 0x000830)
+class UNitroFlow_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2096;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+	SMember(FAnimNode_Slot)                            AnimGraphNode_Slot                                          OFFSET(get<T>, {0x7E8, 72, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_NitroFlow/Meshes/NitroFlow_Axe_AnimBP.NitroFlow_Axe_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_NitroFlow/Meshes/NitroFlow_Axe_AnimBP.NitroFlow_Axe_AnimBP_C.ExecuteUbergraph_NitroFlow_Axe_AnimBP
+	// void ExecuteUbergraph_NitroFlow_Axe_AnimBP(int32_t EntryPoint);                                                          // [0x1ebf994] Final                
+};
+
+/// Class /Game/Weapons/FORT_Melee/Pickaxe_LoudPhoenix/Meshes/LoudPhoenix_Axe_AnimBP.LoudPhoenix_Axe_AnimBP_C
+/// Size: 0x00E8 (0x000700 - 0x0007E8)
+class ULoudPhoenix_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
+{ 
+	friend MDKHandler;
+	static inline constexpr uint64_t __MDKClassSize = 2024;
+
+public:
+	SMember(FPointerToUberGraphFrame)                  UberGraphFrame                                              OFFSET(get<T>, {0x700, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_PropertyAccess                       OFFSET(get<T>, {0x708, 8, 0, 0})
+	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
+	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
+	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
+
+
+	/// Functions
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_LoudPhoenix/Meshes/LoudPhoenix_Axe_AnimBP.LoudPhoenix_Axe_AnimBP_C.AnimGraph
+	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
+	// Function /Game/Weapons/FORT_Melee/Pickaxe_LoudPhoenix/Meshes/LoudPhoenix_Axe_AnimBP.LoudPhoenix_Axe_AnimBP_C.ExecuteUbergraph_LoudPhoenix_Axe_AnimBP
+	// void ExecuteUbergraph_LoudPhoenix_Axe_AnimBP(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Class /Game/Weapons/FORT_Melee/Pickaxe_MetalScout/Meshes/MetalScout_Axe_AnimBP.MetalScout_Axe_AnimBP_C
 /// Size: 0x00E8 (0x000700 - 0x0007E8)
 class UMetalScout_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
@@ -834,8 +834,6 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
 	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-};
-
 
 
 	/// Functions
@@ -843,6 +841,8 @@ public:
 	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Weapons/FORT_Melee/Pickaxe_MetalScout/Meshes/MetalScout_Axe_AnimBP.MetalScout_Axe_AnimBP_C.ExecuteUbergraph_MetalScout_Axe_AnimBP
 	// void ExecuteUbergraph_MetalScout_Axe_AnimBP(int32_t EntryPoint);                                                         // [0x1ebf994] Final                
+};
+
 /// Class /Game/Weapons/FORT_Melee/Pickaxe_GoldenGuard/Meshes/GoldenGuard_Axe_AnimBP.GoldenGuard_Axe_AnimBP_C
 /// Size: 0x00E8 (0x000700 - 0x0007E8)
 class UGoldenGuard_Axe_AnimBP_C : public UCustomCharacterPartAnimInstance
@@ -856,8 +856,6 @@ public:
 	SMember(FAnimSubsystemInstance)                    AnimBlueprintExtension_Base                                 OFFSET(get<T>, {0x710, 8, 0, 0})
 	SMember(FAnimNode_Root)                            AnimGraphNode_Root                                          OFFSET(get<T>, {0x718, 32, 0, 0})
 	SMember(FAnimNode_LinkedInputPose)                 AnimGraphNode_SubInput                                      OFFSET(get<T>, {0x738, 176, 0, 0})
-};
-
 
 
 	/// Functions
@@ -865,6 +863,8 @@ public:
 	// void AnimGraph(FPoseLink InPose, FPoseLink& AnimGraph);                                                                  // [0x1ebf994] HasOutParms|BlueprintCallable|BlueprintEvent 
 	// Function /Game/Weapons/FORT_Melee/Pickaxe_GoldenGuard/Meshes/GoldenGuard_Axe_AnimBP.GoldenGuard_Axe_AnimBP_C.ExecuteUbergraph_GoldenGuard_Axe_AnimBP
 	// void ExecuteUbergraph_GoldenGuard_Axe_AnimBP(int32_t EntryPoint);                                                        // [0x1ebf994] Final                
+};
+
 /// Enum /Game/Weapons/Blueprints/En_ShellTypes_01.En_ShellTypes_01
 /// Size: 0x06
 enum En_ShellTypes_01 : uint8_t

@@ -40,13 +40,13 @@ class UMetaSoundOutputSubsystem : public UTickableWorldSubsystem
 
 public:
 	CMember(TArray<UMetasoundGeneratorHandle*>)        TrackedGenerators                                           OFFSET(get<T>, {0x40, 16, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/MetasoundEngine.MetaSoundOutputSubsystem.WatchOutput
 	// bool WatchOutput(UAudioComponent* AudioComponent, FName OutputName, FDelegateProperty& OnOutputValueChanged, FName AnalyzerName, FName AnalyzerOutputName); // [0x70c4604] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MetasoundEngine.MetaSoundSettings
 /// Size: 0x0048 (0x000030 - 0x000078)
 class UMetaSoundSettings : public UDeveloperSettings
@@ -97,8 +97,6 @@ class UMetaSoundAssetSubsystem : public UEngineSubsystem
 
 public:
 	CMember(TArray<FMetaSoundAsyncAssetDependencies>)  LoadingDependencies                                         OFFSET(get<T>, {0x38, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -106,6 +104,8 @@ public:
 	// void UnregisterAssetClassesInDirectories(TArray<FMetaSoundAssetDirectory>& Directories);                                 // [0x70c44e0] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
 	// void RegisterAssetClassesInDirectories(TArray<FMetaSoundAssetDirectory>& Directories);                                   // [0x70c3ac8] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MetasoundEngine.MetaSoundBuilderBase
 /// Size: 0x0038 (0x000028 - 0x000060)
 class UMetaSoundBuilderBase : public UObject
@@ -116,8 +116,6 @@ class UMetaSoundBuilderBase : public UObject
 public:
 	SMember(FMetaSoundFrontendDocumentBuilder)         Builder                                                     OFFSET(get<T>, {0x28, 48, 0, 0})
 	DMember(bool)                                      bIsAttached                                                 OFFSET(get<bool>, {0x58, 1, 0, 0})
-};
-
 
 
 	/// Functions
@@ -221,6 +219,8 @@ public:
 	// FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(FName Name, FName DataType, FMetasoundFrontendLiteral DefaultValue, EMetaSoundBuilderResult& OutResult, bool bIsConstructorOutput); // [0x70bd5f4] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
 	// FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(FName Name, FName DataType, FMetasoundFrontendLiteral DefaultValue, EMetaSoundBuilderResult& OutResult, bool bIsConstructorInput); // [0x70bd22c] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MetasoundEngine.MetaSoundPatchBuilder
 /// Size: 0x0000 (0x000060 - 0x000060)
 class UMetaSoundPatchBuilder : public UMetaSoundBuilderBase
@@ -251,8 +251,6 @@ class UMetaSoundBuilderSubsystem : public UEngineSubsystem
 public:
 	CMember(TMap<FName, UMetaSoundBuilderBase*>)       NamedBuilders                                               OFFSET(get<T>, {0x38, 80, 0, 0})
 	CMember(TMap<FName, TWeakObjectPtr>)               AssetBuilders                                               OFFSET(get<T>, {0x88, 80, 0, 0})
-};
-
 
 
 	/// Functions
@@ -306,6 +304,8 @@ public:
 	// FMetasoundFrontendLiteral CreateBoolMetaSoundLiteral(bool Value, FName& DataType);                                       // [0x70bedc8] Final|Native|Public|HasOutParms|BlueprintCallable 
 	// Function /Script/MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
 	// FMetasoundFrontendLiteral CreateBoolArrayMetaSoundLiteral(TArray<bool>& Value, FName& DataType);                         // [0x70bec48] Final|Native|Public|HasOutParms|BlueprintCallable 
+};
+
 /// Class /Script/MetasoundEngine.MetaSoundSource
 /// Size: 0x0400 (0x000480 - 0x000880)
 class UMetaSoundSource : public USoundWaveProcedural

@@ -46,8 +46,6 @@ public:
 	DMember(float)                                     TurretPitchDegMin                                           OFFSET(get<float>, {0x1680, 4, 0, 0})
 	DMember(float)                                     TurretPitchDegMax                                           OFFSET(get<float>, {0x1684, 4, 0, 0})
 	DMember(float)                                     LocalPlayerTurretPitchEaseRate                              OFFSET(get<float>, {0x1688, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -67,6 +65,8 @@ public:
 	// FTransform GetFootAttachTransform(USkeletalMeshComponent* BusMeshComponent);                                             // [0x981eb58] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/ArmoredBattleBusRuntime.FortArmoredBattleBusPassengerAnimInstance.GenerateCharacterPitchAndYawForSlopedTerrain
 	// void GenerateCharacterPitchAndYawForSlopedTerrain(AFortAthenaVehicle* VehicleActor, float& TurretYaw, float& TurretPitch, FRotator& PawnYawRotator); // [0x981e9ec] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+
 /// Class /Script/ArmoredBattleBusRuntime.FortArmoredBattleBusVehicleAnimInstance
 /// Size: 0x0090 (0x000600 - 0x000690)
 class UFortArmoredBattleBusVehicleAnimInstance : public UFortVehicleAnimInstance
@@ -95,8 +95,6 @@ public:
 	DMember(float)                                     RearPassengerYawOffset                                      OFFSET(get<float>, {0x678, 4, 0, 0})
 	SMember(FName)                                     FrontPassengerBoneName                                      OFFSET(get<T>, {0x67C, 4, 0, 0})
 	SMember(FName)                                     RearPassengerBoneName                                       OFFSET(get<T>, {0x680, 4, 0, 0})
-};
-
 
 
 	/// Functions
@@ -108,3 +106,5 @@ public:
 	// float UpdateSmoothedVehicleYawRate(AFortAthenaVehicle* VehicleActor, FRotator PreviousRotator);                          // [0x981f3b0] Final|Native|Public|HasDefaults|BlueprintCallable 
 	// Function /Script/ArmoredBattleBusRuntime.FortArmoredBattleBusVehicleAnimInstance.GetPitchAndYaw
 	// void GetPitchAndYaw(AFortAthenaVehicle* VehicleActor, AFortPlayerPawn* GunnerActor, float& AdjustedPitch, float& AdjustedYaw, bool& bIsLocalPlayerControlled, FRotator& YawRotator); // [0x981ee20] Final|Native|Public|HasOutParms|HasDefaults|BlueprintCallable 
+};
+

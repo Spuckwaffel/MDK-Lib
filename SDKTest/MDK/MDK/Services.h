@@ -22,8 +22,6 @@ public:
 	CMember(UNiagaraComponent*)                        Niagara                                                     OFFSET(get<T>, {0x298, 8, 0, 0})
 	DMember(double)                                    SpawnDelay                                                  OFFSET(get<double>, {0x2A0, 8, 0, 0})
 	SMember(FDataTableRowHandle)                       EventRowHandle                                              OFFSET(get<T>, {0x2A8, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -31,6 +29,8 @@ public:
 	// void ReceiveBeginPlay();                                                                                                 // [0x1ebf994] Event|Protected|BlueprintEvent 
 	// Function /BattlePassS26_Quests/Services/BP_VendAISpawner_Base.BP_VendAISpawner_Base_C.ExecuteUbergraph_BP_VendAISpawner_Base
 	// void ExecuteUbergraph_BP_VendAISpawner_Base(int32_t EntryPoint);                                                         // [0x1ebf994] Final|HasDefaults    
+};
+
 /// Class /BattlePassS26_Quests/Services/BP_VendAISpawner_Nug.BP_VendAISpawner_Nug_C
 /// Size: 0x0000 (0x0002B8 - 0x0002B8)
 class ABP_VendAISpawner_Nug_C : public ABP_VendAISpawner_Base_C

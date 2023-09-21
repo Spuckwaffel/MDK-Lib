@@ -36,13 +36,13 @@ public:
 	SMember(FVector2f)                                 ThrottleRange                                               OFFSET(get<T>, {0xF8, 8, 0, 0})
 	DMember(float)                                     OnsetInterpTime                                             OFFSET(get<float>, {0x100, 4, 0, 0})
 	CMember(UCurveFloat*)                              CurrentCurve                                                OFFSET(get<T>, {0x108, 8, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VehicleAudioRuntime.FortMotorSimComponent_SurfaceModifier.SetSurface
 	// void SetSurface(FName NewSurface);                                                                                       // [0x986e4f0] Final|Native|Private|BlueprintCallable 
+};
+
 /// Class /Script/VehicleAudioRuntime.VehicleAudioLifecycleInterface
 /// Size: 0x0000 (0x000028 - 0x000028)
 class UVehicleAudioLifecycleInterface : public UInterface
@@ -74,8 +74,6 @@ public:
 	CMember(UAudioMotorModelComponent*)                AudioMotorModelComponent                                    OFFSET(get<T>, {0x2D0, 8, 0, 0})
 	CMember(UREVComponent*)                            REVComponent                                                OFFSET(get<T>, {0x2D8, 8, 0, 0})
 	CMember(TArray<UFortVehicleSoundComponent*>)       VehicleSoundComponents                                      OFFSET(get<T>, {0x2E0, 16, 0, 0})
-};
-
 
 
 	/// Functions
@@ -117,6 +115,8 @@ public:
 	// UAudioMotorModelComponent* GetAudioMotorModelComponent();                                                                // [0x3583ee0] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleAudioController.CacheJitterTime
 	// void CacheJitterTime();                                                                                                  // [0x2154680] Native|Public|BlueprintCallable 
+};
+
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundComponent
 /// Size: 0x0010 (0x0000A0 - 0x0000B0)
 class UFortVehicleSoundComponent : public UActorComponent
@@ -126,8 +126,6 @@ class UFortVehicleSoundComponent : public UActorComponent
 
 public:
 	CMember(TWeakObjectPtr<AFortVehicleAudioController*>) AudioController                                          OFFSET(get<T>, {0xA8, 8, 0, 0})
-};
-
 
 
 	/// Functions
@@ -153,6 +151,8 @@ public:
 	// UAudioParameterComponent* GetAudioParameterComponent();                                                                  // [0x10c6cec] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent.GetAudioController
 	// AFortVehicleAudioController* GetAudioController();                                                                       // [0x27d6078] Final|Native|Public|BlueprintCallable|BlueprintPure|Const 
+};
+
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Speed
 /// Size: 0x0040 (0x0000B0 - 0x0000F0)
 class UFortVehicleSoundComponent_Speed : public UFortVehicleSoundComponent
@@ -162,13 +162,13 @@ class UFortVehicleSoundComponent_Speed : public UFortVehicleSoundComponent
 
 public:
 	SMember(FFortAudioFloatParameter)                  Speed                                                       OFFSET(get<T>, {0xB0, 56, 0, 0})
-};
-
 
 
 	/// Functions
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Speed.OnReversedChanged
 	// void OnReversedChanged(bool bReversing);                                                                                 // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface
 /// Size: 0x00A8 (0x0000B0 - 0x000158)
 class UFortVehicleSoundComponent_Surface : public UFortVehicleSoundComponent
@@ -178,8 +178,6 @@ class UFortVehicleSoundComponent_Surface : public UFortVehicleSoundComponent
 
 public:
 	SMember(FFortVehicleSoundComponent_SurfaceContext) Context                                                     OFFSET(get<T>, {0xB0, 168, 0, 0})
-};
-
 
 
 	/// Functions
@@ -191,6 +189,8 @@ public:
 	// void OnInAirChanged(bool bNewState);                                                                                     // [0x1ebf994] Event|Public|BlueprintEvent 
 	// Function /Script/VehicleAudioRuntime.FortVehicleSoundComponent_Surface.OnBrakingChanged
 	// void OnBrakingChanged(bool bNewState);                                                                                   // [0x1ebf994] Event|Public|BlueprintEvent 
+};
+
 /// Class /Script/VehicleAudioRuntime.FortVehicleSoundData
 /// Size: 0x0040 (0x000030 - 0x000070)
 class UFortVehicleSoundData : public UDataAsset
